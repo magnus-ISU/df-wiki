@@ -74,6 +74,10 @@ NS_PRIORITY = [0, 116, 102, 104, 1000, 200, 12, 100, 4, 14, 10, 828,
 stop = False
 
 
+class PageError(Exception):
+    """One page could not be fetched; the crawl carries on without it."""
+
+
 def _on_signal(signum, frame):
     global stop
     stop = True
@@ -151,14 +155,14 @@ class Api:
                 self._sleep(backoff)
                 backoff = min(backoff * 2, 900)
                 continue
-            if r.status_code in (429, 502, 503, 504):
+            if r.status_code in (403, 404, 429, 500, 502, 503, 504):
                 wait = int(r.headers.get("Retry-After") or backoff)
                 log(f"  HTTP {r.status_code}; retry in {wait}s")
                 self._sleep(wait)
                 backoff = min(backoff * 2, 900)
                 continue
             if r.status_code != 200:
-                raise RuntimeError(f"HTTP {r.status_code} for {params.get('page') or params}")
+                raise PageError(f"HTTP {r.status_code} for {params.get('page') or params}")
             try:
                 data = r.json()
             except ValueError:
@@ -171,7 +175,7 @@ class Api:
                 self._sleep(60)
                 continue
             return data
-        raise RuntimeError("gave up after repeated failures")
+        raise PageError(f"gave up after {tries} failures")
 
     def _sleep(self, seconds):
         end = time.monotonic() + seconds
@@ -416,6 +420,7 @@ def cmd_fetch(args):
         images = {ln.strip() for ln in open(IMAGES, encoding="utf-8") if ln.strip()}
     fetched = 0
     since_commit = 0
+    failures = 0
 
     for page in todo:
         if stop:
@@ -425,9 +430,14 @@ def cmd_fetch(args):
                             "prop": "wikitext|text|revid|categories",
                             "disablelimitreport": "1", "disableeditsection": "1",
                             "disabletoc": "1"})
-        except RuntimeError as exc:
+        except PageError as exc:
             log(f"! {page['t']}: {exc}")
-            break
+            failures += 1
+            if failures >= 20:
+                log("20 pages in a row failed - the wiki looks down; stopping")
+                break
+            continue
+        failures = 0
         if "error" in data:
             code = data["error"].get("code")
             log(f"! {page['t']}: api error {code}")
