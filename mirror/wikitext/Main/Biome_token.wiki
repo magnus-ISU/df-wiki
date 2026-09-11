@@ -1,0 +1,184 @@
+{{Quality|Superior}}
+{{av}}
+{{Modding}}
+
+'''Biome tokens''' are used to indicate [[biome]]s for [[creature]]s, [[plant]]s and [[civilisation|entities]].
+
+All objects that use biome tokens can take multiple entries, so they can be found in many different locations.
+
+==Individual Biomes==
+{| {{prettytable}}
+|- bgcolor="#ddd"
+! ID !! Token !! Description
+|-
+| 0 || {{text anchor|MOUNTAIN}} or {{text anchor|MOUNTAINS}} || Mountain
+|-
+| 1 || {{text anchor|GLACIER}} || Glacier
+|-
+| 2 || {{text anchor|TUNDRA}} || Tundra
+|-
+| 3 || {{text anchor|SWAMP_TEMPERATE_FRESHWATER}} || Temperate Freshwater Swamp
+|-
+| 4 || {{text anchor|SWAMP_TEMPERATE_SALTWATER}} || Temperate Saltwater Swamp
+|-
+| 5 || {{text anchor|MARSH_TEMPERATE_FRESHWATER}} || Temperate Freshwater Marsh
+|-
+| 6 || {{text anchor|MARSH_TEMPERATE_SALTWATER}} || Temperate Saltwater Marsh
+|-
+| 7 || {{text anchor|SWAMP_TROPICAL_FRESHWATER}} || Tropical Freshwater Swamp
+|-
+| 8 || {{text anchor|SWAMP_TROPICAL_SALTWATER}} || Tropical Saltwater Swamp
+|-
+| 9 || {{text anchor|SWAMP_MANGROVE}} || Mangrove Swamp
+|-
+| 10 || {{text anchor|MARSH_TROPICAL_FRESHWATER}} || Tropical Freshwater Marsh
+|-
+| 11 || {{text anchor|MARSH_TROPICAL_SALTWATER}} || Tropical Saltwater Marsh
+|-
+| 12 || {{text anchor|FOREST_TAIGA}} or {{text anchor|TAIGA}} || Taiga
+|-
+| 13 || {{text anchor|FOREST_TEMPERATE_CONIFER}} || Temperate Coniferous Forest
+|-
+| 14 || {{text anchor|FOREST_TEMPERATE_BROADLEAF}} || Temperate Broadleaf Forest
+|-
+| 15 || {{text anchor|FOREST_TROPICAL_CONIFER}} || Tropical Coniferous Forest
+|-
+| 16 || {{text anchor|FOREST_TROPICAL_DRY_BROADLEAF}} || Tropical Dry Broadleaf Forest
+|-
+| 17 || {{text anchor|FOREST_TROPICAL_MOIST_BROADLEAF}} || Tropical Moist Broadleaf Forest
+|-
+| 18 || {{text anchor|GRASSLAND_TEMPERATE}} || Temperate Grassland
+|-
+| 19 || {{text anchor|SAVANNA_TEMPERATE}} || Temperate Savanna
+|-
+| 20 || {{text anchor|SHRUBLAND_TEMPERATE}} || Temperate Shrubland
+|-
+| 21 || {{text anchor|GRASSLAND_TROPICAL}} || Tropical Grassland
+|-
+| 22 || {{text anchor|SAVANNA_TROPICAL}} || Tropical Savanna
+|-
+| 23 || {{text anchor|SHRUBLAND_TROPICAL}} || Tropical Shrubland
+|-
+| 24 || {{text anchor|DESERT_BADLAND}} || Badlands
+|-
+| 25 || {{text anchor|DESERT_ROCK}} || Rocky Wasteland
+|-
+| 26 || {{text anchor|DESERT_SAND}} || Sand Desert
+|-
+| 27 || {{text anchor|OCEAN_TROPICAL}} || Tropical Ocean
+|-
+| 28 || {{text anchor|OCEAN_TEMPERATE}} || Temperate Ocean
+|-
+| 29 || {{text anchor|OCEAN_ARCTIC}} || Arctic Ocean
+|-
+| 30 || {{text anchor|POOL_TEMPERATE_FRESHWATER}} || Temperate Freshwater Pool
+|-
+| 31 || {{text anchor|POOL_TEMPERATE_BRACKISHWATER}} || Temperate Brackish Pool
+|-
+| 32 || {{text anchor|POOL_TEMPERATE_SALTWATER}} || Temperate Saltwater Pool
+|-
+| 33 || {{text anchor|POOL_TROPICAL_FRESHWATER}} || Tropical Freshwater Pool
+|-
+| 34 || {{text anchor|POOL_TROPICAL_BRACKISHWATER}} || Tropical Brackish Pool
+|-
+| 35 || {{text anchor|POOL_TROPICAL_SALTWATER}} || Tropical Saltwater Pool
+|-
+| 36 || {{text anchor|LAKE_TEMPERATE_FRESHWATER}} || Temperate Freshwater Lake
+|-
+| 37 || {{text anchor|LAKE_TEMPERATE_BRACKISHWATER}} || Temperate Brackish Lake
+|-
+| 38 || {{text anchor|LAKE_TEMPERATE_SALTWATER}} || Temperate Saltwater Lake
+|-
+| 39 || {{text anchor|LAKE_TROPICAL_FRESHWATER}} || Tropical Freshwater Lake
+|-
+| 40 || {{text anchor|LAKE_TROPICAL_BRACKISHWATER}} || Tropical Brackish Lake
+|-
+| 41 || {{text anchor|LAKE_TROPICAL_SALTWATER}} || Tropical Saltwater Lake
+|-
+| 42 || {{text anchor|RIVER_TEMPERATE_FRESHWATER}} || Temperate Freshwater River
+|-
+| 43 || {{text anchor|RIVER_TEMPERATE_BRACKISHWATER}} || Temperate Brackish River
+|-
+| 44 || {{text anchor|RIVER_TEMPERATE_SALTWATER}} || Temperate Saltwater River
+|-
+| 45 || {{text anchor|RIVER_TROPICAL_FRESHWATER}} || Tropical Freshwater River
+|-
+| 46 || {{text anchor|RIVER_TROPICAL_BRACKISHWATER}} || Tropical Brackish River
+|-
+| 47 || {{text anchor|RIVER_TROPICAL_SALTWATER}} || Tropical Saltwater River
+|-
+| 48 || {{text anchor|SUBTERRANEAN_WATER}} || Underground caverns (in water)
+|-
+| 49 || {{text anchor|SUBTERRANEAN_CHASM}} || Underground caverns (out of water)
+|-
+| 50 || {{text anchor|SUBTERRANEAN_LAVA}} || Magma sea
+|}
+
+
+==Biome Sets==
+{| {{prettytable}}
+|- bgcolor="#ddd"
+! Token !! Biomes !! Description
+|-
+| {{text anchor|ALL_MAIN}} || 0-29, 36-41 || All biomes excluding pools, rivers, and underground features
+|-
+| {{text anchor|ANY_LAND}} || 0-26 || All main biomes excluding oceans and lakes
+|-
+| {{text anchor|ANY_OCEAN}} || 27-29 || All ocean biomes
+|-
+| {{text anchor|ANY_LAKE}} || 36-41 || All lake biomes
+|-
+| {{text anchor|ANY_TEMPERATE_LAKE}} || 36-38 || All temperate lake biomes
+|-
+| {{text anchor|ANY_TROPICAL_LAKE}} || 39-41 || All tropical lake biomes
+|-
+| {{text anchor|ANY_RIVER}} || 42-47 || All river biomes
+|-
+| {{text anchor|ANY_TEMPERATE_RIVER}} || 42-44 || All temperate river biomes
+|-
+| {{text anchor|ANY_TROPICAL_RIVER}} || 45-47 || All tropical river biomes
+|-
+| {{text anchor|ANY_POOL}} || 30-35 || All pool biomes
+|-
+| {{text anchor|NOT_FREEZING}} || 3-26 || All land biomes excluding Mountain, Glacier, and Tundra
+|-
+| {{text anchor|ANY_TEMPERATE}} || 3-6, 13-14, 18-20 || All Temperate land biomes - marshes, swamps, forests, grassland, savanna, and shrubland
+|-
+| {{text anchor|ANY_TROPICAL}} || 7-11, 15-17, 21-23 || All Tropical land biomes - marshes, swamps (including Mangrove), forests, grassland, savanna, and shrubland
+|-
+| {{text anchor|ANY_FOREST}} || 13-17 || All Forest biomes (excluding Taiga)
+|-
+| {{text anchor|ANY_SHRUBLAND}} || 20, 23 || Temperate and Tropical Shrubland
+|-
+| {{text anchor|ANY_GRASSLAND}} || 18, 21 || Temperate and Tropical Grassland
+|-
+| {{text anchor|ANY_SAVANNA}} || 19, 22 || Temperate and Tropical Savanna
+|-
+| {{text anchor|ANY_TEMPERATE_FOREST}} || 13-14 || Temperate Coniferous and Broadleaf Forests
+|-
+| {{text anchor|ANY_TROPICAL_FOREST}} || 15-17 || Tropical Coniferous and Dry/Moist Broadleaf Forests
+|-
+| {{text anchor|ANY_TEMPERATE_BROADLEAF}} || 3-6, 14, 18-20 || Temperate Broadleaf Forest, Grassland/Savanna/Shrubland, Swamps, and Marshes
+|-
+| {{text anchor|ANY_TROPICAL_BROADLEAF}} || 7-11, 16-17, 21-23 || Tropical Dry/Moist Broadleaf Forest, Grassland/Savanna/Shrubland, Swamps (including Mangrove), and Marshes
+|-
+| {{text anchor|ANY_WETLAND}} || 3-11 || All swamps and marshes
+|-
+| {{text anchor|ANY_TEMPERATE_WETLAND}} || 3-6 || All temperate swamps and marshes
+|-
+| {{text anchor|ANY_TROPICAL_WETLAND}} || 7-11 || All tropical swamps and marshes
+|-
+| {{text anchor|ANY_TROPICAL_MARSH}} || 10-11 || All tropical marshes
+|-
+| {{text anchor|ANY_TEMPERATE_MARSH}} || 5-6 || All temperate marshes
+|-
+| {{text anchor|ANY_TROPICAL_SWAMP}} || 7-9 || All tropical swamps (including Mangrove)
+|-
+| {{text anchor|ANY_TEMPERATE_SWAMP}} || 3-4 || All temperate swamps
+|-
+| {{text anchor|ANY_DESERT}} || 24-26 || Badlands, Rocky Wasteland, and Sand Desert
+|}
+
+{{Category|Modding}}
+{{Category|Tokens}}
+[[ru:Biome token]][[zh:Biome token]]

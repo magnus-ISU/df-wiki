@@ -1,0 +1,135 @@
+{{Quality|Exceptional}}{{av}}
+{{For/see|built horizontal and vertical bars|[[Bars]]}}
+{{For/see|designated tavern locations|[[Tavern]]}}
+[[File:metal_bars_preview.png|right]]A '''bar''' (also known as an "ingot") is a sub-type of building material (interchangeable with a [[block]] for that purpose), and is the base individual unit of [[metal]], [[charcoal]], [[coke]], [[potash]], [[ash]], [[pearlash]], and [[soap]].  All [[metal]]s are created as bars at a [[smelter]], whether processed from [[ore]]s, [[alloy]]ed with other metals, or [[melt]]ed down from existing metal items.
+
+As intermediate products, bars never have quality levels and, with the exception of soap, aren't used directly by dwarves. Other than construction, the uses of bars are:
+
+{| class="wikitable"
+! Bar !! Used for
+|-
+| [[ash]] || making [[lye]] or [[potash]]
+|-
+| [[fuel|charcoal<br />or coke]]|| powering standard [[forge]]s, [[smelter]]s, [[kiln]]s, and [[glass furnace]]s,<br />and making [[pig iron]] and [[steel]]
+|-
+| [[metal]] || [[blacksmith|smithing]] 
+|-
+| [[pearlash]] || making clear or crystal [[glass]]
+|-
+| [[potash]] || [[potash|fertilizing]] [[farming|farm]]s or making [[pearlash]]
+|-
+| [[soap]] || [[health care]] and [[cleaning|cleaning self]]
+|-
+|}
+
+All "bars" items are 6000 cm<sup>3</sup> in [[size]], which means up to 10 will fit into a [[Storage#Quick_Reference|60000-capacity]] [[bin]]. The only exception to this 6000 cm<sup>3</sup> size are possibly partially-used soap bars. In the real world, a single [http://upload.wikimedia.org/wikipedia/commons/c/c6/Gold_bullion_2.jpg 400-tr.oz. bar of gold] is 645 cm<sup>3</sup>, which suggests that Dwarf Fortress's "bars" items consist of multiple bars (since a single "gold bars" item weighs 115 kilograms).
+
+Only metal bars can be used to build [[workshop]]s, [[road]]s, [[bridge]]s, and other [[construction]]s. "Bars" of [[adamantine]] metal are referred to as "wafers", but when used as building material they function the same as any other bars.
+
+<!-- I will turn this into a template when I can! Promise! -->
+==Pure metals==
+{{v50 pure metal bars table head}}
+{{v50 metal bars table row|name=Aluminum|tile={{Tile|≡|7:1}}|image=[[File:aluminum_bar_sprite.png]]|source=[[Native aluminum]]|density=2.70|mp=11188|val=40|valinc=+0|notes=}}
+
+{{v50 metal bars table row|name=Bismuth|tile={{Tile|≡|5:1}}|image=[[File:bismuth_bar_sprite.png]]|source=[[Bismuthinite]]|density=8.93|mp=10488|val=2|valinc=+1|notes=Only useful for alloying into [[bismuth bronze]].}}
+
+{{v50 metal bars table row|name=Copper|tile={{Tile|≡|6:0}}|image=[[File:bismuth_bronze_bar_sprite.png]]|source=[[Native copper]], [[Malachite]], [[Tetrahedrite]]|density=8.93|mp=11952|val=2|valinc=+0, +0, -1*|notes=Can be used to forge all weapons, armor, ammunition, and picks.}}
+
+{{v50 metal bars table row|name=Gold|tile={{Tile|≡|6:1}}|image=[[File:gold_bar_sprite.png]]|source=[[Native gold]]|density=19.32|mp=11915|val=30|valinc=+0|notes=}}
+
+{{v50 metal bars table row|name=Iron|tile={{Tile|≡|0:1}}|image=[[File:iron_bar_sprite.png]]|source=[[Hematite]], [[Limonite]], [[Magnetite]]|density=7.85|mp=12768|val=10|valinc=+2|notes=Can be used to forge all weapons, armor, ammunition, picks, and anvils.}}
+
+{{v50 metal bars table row|name=Lead|tile={{Tile|≡|0:1}}|image=[[File:bismuth_bronze_bar_sprite.png]]|source=[[Galena]]|density=11.34|mp=10589|val=2|valinc=-3*|notes=}}
+
+{{v50 metal bars table row|name=Nickel|tile={{Tile|≡|7:0}}|image=[[File:nickel_bar_sprite.png]]|source=[[Garnierite]]|density=8.80|mp=12619|val=2|valinc=+0|notes=}}
+
+{{v50 metal bars table row|name=Platinum|tile={{Tile|≡|7:1}}|image=[[File:platinum_bar_sprite.png]]|source=[[Native platinum]]|density=21.40|mp=13182|val=40|valinc=+0|notes=}}
+
+{{v50 metal bars table row|name=Silver|tile={{Tile|≡|7:1}}|image=[[File:generic_grey_bar_sprite.png]]|source=[[Native silver]], [[Horn silver]], [[Galena]] (50%), [[Tetrahedrite]] (20%)|density=10.49|mp=11731|val=10|valinc=+0, +0, +5*, +7*|notes=Can be used to forge melee weapons and ammunition.}}
+
+{{v50 metal bars table row|name=Tin|tile={{Tile|≡|7:0}}|image=[[File:generic_grey_bar_sprite.png]]|source=[[Cassiterite]]|density=7.28|mp=10417|val=2|valinc=+0|notes=}}
+
+{{v50 metal bars table row|name=Zinc|tile={{Tile|≡|7:0}}|image=[[File:generic_grey_bar_sprite.png]]|source=[[Sphalerite]]|density=7.13|mp=10755|val=2|valinc=+0|notes=}}
+|}
+''Legend:''
+:* '''Tile Color''' corresponds to how items made from that metal are displayed in game, foreground and background colors.
+:*'''Source''' indicates the specific ores that can provide a metal. If production of the metal is not guaranteed, a percent chance is indicated following the ore.
+:*'''Density''' is used to determine the different weight of finished objects.
+:*'''[[Material value]]''' is what the base value of an object made of this metal is multiplied by to determine its worth.
+::'''*''' – Values marked with an asterisk denote ores that can yield multiple metals.
+:*'''Value difference''' indicates the difference in material value between the metal and the ore, separated with commas in cases where multiple ore values differ. Also keep in mind that multiple bars are produced for each ore boulder smelted, increasing the value difference even further.
+::'''*''' – Values marked with an asterisk denote ores that can yield multiple metals. On average, the expected difference in value from smelting [[tetrahedrite]] is +1 and [[galena]] is +2.
+
+==Alloys==
+{{v50 alloy metal bars table head}}
+{{v50 metal bars table row|name=Billon|tile={{Tile|≡|7:0}}|image=[[File:billion_bar_sprite.png]]|source=[[Silver]] + [[Copper]]|density=8.93|mp=11188|val=6|valinc=+0|notes=see note 1.}}
+
+{{v50 metal bars table row|name=Bismuth bronze|tile={{Tile|≡|6:1}}|image=[[File:bismuth_bronze_bar_sprite.png]]|source=1 [[Tin]] + 2 [[Copper]] + 1 [[Bismuth]]*|density=8.25|mp=11868|val=6|valinc=+4|notes=Can be used to forge all weapons, armor, ammunition, and picks. Combat relevant stats are identical to standard '''Bronze'''.}}
+
+{{v50 metal bars table row|name=Black bronze|tile={{Tile|≡|5:0}}|image=[[File:black_bronze_bar_sprite.png]]|source=2 [[Copper]] + 1 [[Silver]] + 1 [[Gold]]*|density=8.93|mp=11952|val=11|valinc=+0|notes=Unique color.}}
+
+{{v50 metal bars table row|name=Brass|tile={{Tile|≡|6:1}}|image=[[File:brass_bar_sprite.png]]|source=[[Zinc]] + [[Copper]]|density=8.55|mp=11656|val=7|valinc=+5|notes=Value difference is +4.5 if [[tetrahedrite]] is used instead of [[copper]].}}
+
+{{v50 metal bars table row|name=Bronze|tile={{Tile|≡|6:0}}|image=[[File:bronze_bar_sprite.png]]|source=[[Tin]] + [[Copper]]|density=8.25|mp=11868|val=5|valinc=+3|notes=Value difference is +2.5 if [[tetrahedrite]] is used instead of [[copper]]. Can be used to forge all weapons, armor, ammunition, and picks.}}
+
+{{v50 metal bars table row|name=Electrum|tile={{Tile|≡|6:1}}|image=[[File:electrum_bar_sprite.png]]|source=[[Silver]] + [[Gold]]|density=14.905|mp=11828|val=20|valinc=+0|notes=See note 2.}}
+
+{{v50 metal bars table row|name=Fine pewter|tile={{Tile|≡|7:1}}|image=[[File:generic_grey_bar_sprite.png]]|source=3 [[Tin]] + 1 [[Copper]]|density=7.28|mp=10417|val=5|valinc=+3|notes=Value difference is +2.75 if [[tetrahedrite]] is used instead of [[copper]].}}
+
+{{v50 metal bars table row|name=Lay pewter|tile={{Tile|≡|3:0}}|image=[[File:platinum_bar_sprite.png]]|source=2 [[Tin]] + 1 [[Copper]] + 1 [[Lead]]|density=7.28|mp=10417|val=5|valinc=+1|notes=Unique color.}}
+
+{{v50 metal bars table row|name=Nickel silver|tile={{Tile|≡|7:1}}|image=[[File:generic_grey_bar_sprite.png]]|source=2 [[Nickel]] + 1 [[Copper]] + 1 [[Zinc]]*|density=8.65|mp=11620|val=3|valinc=+1|notes=}}
+
+{{v50 metal bars table row|name=Pig iron|tile={{Tile|≡|0:1}}|image=[[File:lead_bar_sprite.png]]|source=[[Iron]] + [[flux]] stone + [[fuel]]*|density=7.85|mp=12106|val=10|valinc=+0|notes=Only used to make [[steel]].}}
+
+{{v50 metal bars table row|name=Rose gold|tile={{Tile|≡|5:1}}|image=[[File:rose_gold_bar_sprite.png]]|source=3 [[Gold]] + 1 [[Copper]]*|density=19.32|mp=11915|val=23|valinc=+0|notes=Unique color.}}
+
+{{v50 metal bars table row|name=Steel|tile={{Tile|≡|7:0}}|image=[[File:steel_bar_sprite.png]]|source=[[Iron]] + [[Pig iron]] + [[flux]] stone + [[fuel]]*|density=7.85|mp=12718|val=30|valinc=+20|notes=Can be used to forge all weapons, armor, ammunition, picks, and anvils.}}
+
+{{v50 metal bars table row|name=Sterling silver|tile={{Tile|≡|7:1}}|image=[[File:platinum_bar_sprite.png]]|source=3 [[Silver]]<br>+ 1  [[Copper]]*|density=10.49|mp=11602|val=8|valinc=+0|notes=}}
+
+{{v50 metal bars table row|name=Trifle pewter|tile={{Tile|≡|7:0}}|image=[[File:lead_bar_sprite.png]]|source=2 [[Tin]] + 1 [[Copper]]|density=7.28|mp=10417|val=4|valinc=+2|notes=Value difference is +1.67 if [[tetrahedrite]] is used instead of [[copper]].}}
+|}
+
+; Notes:
+: 1) '''Billon''' can be made with [[tetrahedrite]] or [[galena]] ore (instead of [[silver]] bars) for increased value: (Copper ore + Tetrahedrite: +3.5; Tetrahedrite + Tetrahedrite: +3; Copper ore + Galena: + 2.5; Tetrahedrite + Galena: + 2). 
+
+: 2) '''Electrum''' can be made with [[tetrahedrite]] or [[galena]] ore (instead of [[silver]] bars) for increased value: (Gold + Tetrahedrite: +3.5; Gold + Galena: +2.5).
+
+''Legend:''
+:* '''Tile Color''' corresponds to how items made from that metal are displayed in game, foreground and background colors.
+:*'''Source''' indicates the basic recipe for an alloy – this does not include any [[fuel]] necessary to operate the smelter. See the article for that alloy or [[smelting]] for possible alternatives.
+::<nowiki>*</nowiki> – ''You can use only [[bar]]s of metal in this reaction, not ores.
+:*'''Density''' is used to determine the different weight of finished objects.
+:*'''[[Material value]]''' is what the base value of an object made of this metal is multiplied by to determine its worth.
+:*'''Value difference''' indicates the difference between the average [[value]] of the required bars of metals vs. the value of the resulting bars of alloy – what went in vs. what comes out, measured per bar. "+0" indicates that the resulting alloy is a perfectly average value of the component metals. Note that substituting tetrahedrite for copper ore always results in a value decrease, while substituting tetrahedrite or galena for silver bars always results in a value increase.
+
+==Special metals==
+{{minorspoiler}}
+{{v50 pure metal bars table head}}
+{{v50 metal bars table row|name=Adamantine|tile={{Tile|≡|3:1}}|image=[[File:adamantine_bar_sprite.png]]|source=[[Raw adamantine]]|density=0.200|mp=25000|val=300|valinc=+50|notes=(See below)}}
+{{v50 metal bars table row|name=Divine metal|tile={{Tile|≡|7:0}}|image=[[File:Divine metal anim.gif]]|source=None|density=1|mp=None|val=300|valinc=|notes=(See below)}}
+|}
+'''Adamantine''' cannot be smelted directly, and must be [[Strand extractor|extracted]] first.
+* Can be used to forge anything except beds
+* Blades are 10× sharper than standard metals, which when combined with its very high shear fracture/yield makes it more than 100x as effective as steel for bladed weapons
+* Too light to make effective blunt weapons despite nearly unsurpassed yield and fracture values.
+
+'''Divine metal''' has procedurally generated (i.e. semi-random) names associated with [[deity|deities]].
+* Blades are 1.2× sharper than standard metals
+* Low density makes it worse than all conventional metals for blunt, although it's still better than adamantine
+* Overall stats make it stronger than steel but weaker than adamantine.
+
+==See also==
+* [[Block]]
+* [[Stack]]
+
+{{Translation
+| dwarven = ish
+| elvish  = emu
+| goblin  = zak
+| human   = tod
+}}
+
+{{Category|Materials}}
+[[ru:Bar]]
