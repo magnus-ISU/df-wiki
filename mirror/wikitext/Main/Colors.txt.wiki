@@ -1,0 +1,30 @@
+{{Quality|Fine}}
+{{av}}
+{{file|prefs/colors.txt}}
+The '''colors.txt''' file defines the [[color scheme]] used by DF, in standard RGB color code. The default settings can be found at ``data/init/colors.txt`` and can be changed by manually placing your own file at ``prefs/colors.txt``{{version|52.02}}; the location of the ``prefs`` [[Game folders and files|folder]] depends on the [[Settings#Portable mode|portable mode setting]] (there is also a ``data`` folder there, but if you put a ``data/init/colors.txt`` there it will not be read). Changes made to these files take effect the next time ''Dwarf Fortress'' is run, and apply to all worlds. Files in both ``data/init/`` and ``prefs/`` are read when ''Dwarf Fortress'' starts, in that order, with the last value read for an option being used.
+
+== Default colors.txt ==
+{{color scheme
+|black=#000000
+|dgray=#a0a0a0
+|blue=#207df1
+|lblue=#8c66ff
+|green=#a2dc34
+|lgreen=#13fd65
+|cyan=#71bbb0
+|lcyan=#12fecf
+|red=#ff113a
+|lred=#ff7111
+|magenta=#a73cd5
+|lmagenta=#e811ff
+|brown=#d79b2d
+|yellow=#ffe111
+|lgray=#c0c0c0
+|white=#ffffff
+}}
+
+== See also ==
+* [[Color scheme]] for example color schemes
+
+{{files}}
+[[ru:Colors.txt]]

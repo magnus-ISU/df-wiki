@@ -1,0 +1,1816 @@
+{{Quality|Exceptional}}
+{{av}}
+
+:''For a discussion of how DF displays different items, and decides which colors get altered and when, see [[color]].''
+
+''Dwarf Fortress'' uses '''color schemes''' to determine how the game will be presented during play, with the default color scheme data located in the [[colors.txt]] file, found in the <code>Dwarf Fortress/data/init</code> folder, but <code>prefs/colors.txt</code>{{version|52.02}} will override that, if it exists.
+
+[https://manmademagic.github.io/DFColorGen/ DFColorgen] is a web tool to create and visualize color schemes.
+
+==What colors show up where==
+A color scheme is broken down into 16 color labels:
+
+:BLACK, DGRAY
+:BLUE, LBLUE
+:GREEN, LGREEN
+:CYAN, LCYAN
+:RED, LRED
+:MAGENTA, LMAGENTA
+:BROWN, YELLOW
+:LGRAY, WHITE
+
+The easiest place to see all the colors next to each other is in the {{k|u}}nits list, where the different [[Skill#Professions.2C_colors.2C_.26_skill_categories|professional categories]] all have their identifying colors.  In that order (and with the default color values), they are...
+{| style="margin: 0 auto"
+|-
+| valign='top' |
+
+{{Skill Box|BLACK|0:0|0:0|
+''background''
+}}
+
+{{Skill Box|LCYAN|0:0|3:1|
+''current job listing''
+}}
+
+{{Skill Box|LGRAY|7:0|7:0|
+[[Miner]]s
+}}
+
+{{Skill Box|YELLOW|6:1|6:1|
+[[Woodworker]]s
+}}
+
+| valign='top' |
+
+{{Skill Box|WHITE|7:1|7:1|
+[[Stoneworker]]s
+}}
+
+{{Skill Box|GREEN|2:0|2:0|
+[[Ranger]]s
+}}
+
+{{Skill Box|DGRAY|0:1|0:1|
+[[Metalsmith]]s
+}}
+
+{{Skill Box|LGREEN|2:1|2:1|
+[[Jeweler]]s
+}}
+
+| valign='top' |
+
+{{Skill Box|LBLUE|1:1|1:1|
+[[Craftsdwarf]]s
+}}
+
+{{Skill Box|BLUE|1:0|1:0|
+[[Fishery worker]]
+}}
+
+{{Skill Box|BROWN|6:0|6:0|
+[[Farmer]]s
+}}
+
+{{Skill Box|LRED|4:1|4:1|
+[[Engineer]]s
+}}
+
+| valign='top' |
+
+{{Skill Box|MAGENTA|5:0|5:0|
+[[Administrator]]s
+}}
+
+{{Skill Box|CYAN|3:0|3:0|
+[[Peasant]]s
+}}
+
+{{Skill Box|RED|4:0|4:0|
+[[Child]]ren
+}}
+
+{{Skill Box|LMAGENTA|0:0|5:1|
+[[Monarch]]s,
+''deceased''
+}}
+|}
+
+Some other color uses:
+* [[Magma]] is LRED. (Magma 1 level lower than current view is RED.)
+* [[Water]] is LBLUE. (Water 1 level lower than current view is BLUE.)
+* [[Brook]]s are LCYAN on their surface (with water below).
+* For aesthetic purposes, almost all colours can be represented in stones (with the exception of LMAGENTA, CYAN, and BLACK). 
+** BLACK: The background color, which should not be used by anything.
+** DGRAY: A wide variety of stones are DGRAY, one example being [[gabbro]].
+** BLUE: [[Kimberlite]] is the only stone that is BLUE. [[Nether-cap]]s also produce BLUE wood.
+** LBLUE: [[Cobaltite]] is the only stone that is LBLUE.
+** GREEN: [[Olivine]] is GREEN, as are malachite and [[serpentine]].
+** LGREEN: [[Garnierite]] is the only LGREEN stone.
+** CYAN: While there are no stones, [[spore tree]]s are CYAN.
+** LCYAN: [[Microcline]] is an LCYAN rock. [[Adamantine]] and its ore, [[raw adamantine]], also display in LCYAN.
+** RED: [[Bauxite]] and [[kaolinite]] are RED, as is the [[blood thorn]] tree.
+** LRED: [[Realgar]], [[petrified wood]], and [[cinnabar]] are LRED. [[Goblin-cap]]s are also LRED.
+** MAGENTA: [[Rutile]] and [[pitchblende]] are MAGENTA, and [[glumprong]]s are MAGENTA trees.
+** LMAGENTA: No stones are LMAGENTA, but [[tunnel tube]]s are.
+** BROWN: A lot of stones are BROWN; [[chert]] is one example.
+** YELLOW: [[Brimstone]], [[gypsum]], [[orthoclase]] and many other stones are YELLOW, as is the [[fungiwood]] tree.
+** LGRAY: Lots of stones are LGRAY, such as [[granite]].
+** WHITE: Many stones are WHITE, such as [[limestone]], or [[rock salt]]. The [[tower-cap]] and [[feather tree]] both produce WHITE wood.
+
+See [[color#By Color|color]] for a more complete list.
+
+= Default Scheme =
+
+The default ''Dwarf Fortress'' color scheme is based off the 16 standard HTML colors, as discussed [http://en.wikipedia.org/wiki/Web_colors#HTML_color_names here].  (Some have been renamed in DF, but the tones themselves are the same.)
+
+These are broken up into 8 pairs, one darker, one lighter, as ordered below.  When a color is flashing or a displayed tile is "dark/bright" according to the game display, these colors are the two that work "together" to create that contrast.  Keep this in mind if creating a [[Color scheme#Custom color schemes|custom color scheme]], as described below.  (See [[Color]] for a more complete discussion.)
+
+If you lose the default scheme and neglected to make a backup ''(didn't we warn you to use "care and caution" when modding?)'', you can find the standard scheme below, without having to download DF again.
+
+Open Dwarf Fortress/data/init/[[colors.txt]], and copy the text as seen below over the values found at the very bottom of the file.  Save that file, restart ''Dwarf Fortress'', and you're set.
+
+{{color scheme
+|black=#000000
+|dgray=#a0a0a0
+|blue=#207df1
+|lblue=#8c66ff
+|green=#a2dc34
+|lgreen=#13fd65
+|cyan=#71bbb0
+|lcyan=#12fecf
+|red=#ff113a
+|lred=#ff7111
+|magenta=#a73cd5
+|lmagenta=#e811ff
+|brown=#d79b2d
+|yellow=#ffe111
+|lgray=#c0c0c0
+|white=#ffffff
+}}
+
+= Custom color schemes =
+{{mod}}
+
+Players who are not satisfied with the default color scheme can alter things to suit their aesthetic tastes. In order for any scheme changes to take effect, the "colors.txt" file must be altered and saved. This file can be found in the data/init/ directory of your ''Dwarf Fortress'' installation. The changes will not take effect until after you close and restart ''Dwarf Fortress''.
+
+The 16 colors are not fixed, except by their definitions in colors.txt.  If you wanted to change YELLOW to something slightly brighter or darker, or more orange, or into deep purple, you can by changing the values listed under the label "YELLOW".  Note that the color names are ''case sensitive'' - the color is "YELLOW", not "Yellow" or "yellow".
+
+When designing a custom color, 3 "lights" of color are used: '''R'''ed, '''G'''reen, and '''B'''lue (RGB), on a scale of 0-255.  The more light (the higher the value), the brighter the color; the less light (the lower the value), the darker. Using "light" is not the same as using "pigment" ''(the standard "paint mixing" formulae we learned in school, where Magenta, Yellow, and Cyan are the 3 basic ingredients)'' - M+C does not give "blue" in this format.  
+
+Since we're using Red, Green and Blue light, some form of those three colors is relatively easy to achieve - but look at examples of the other standard colors below to understand how they mix together and how to "shade" or "tint", or brighten or darken a color - or you can simply find a color below that you like and go from that, or use one of these [[Color#Color_tokens|standard RGB colors]].  Always use caution to avoid ending up with colors that are "too similar".
+
+To change to a new color scheme, copy/paste a color list (or part of one or more) found below (or make your own up) over the existing scheme - don't worry, if you don't like it, the original, default scheme is listed above.
+
+''(Note also that when posting screenshots to this wiki (and the forum boards), custom color schemes (or [[tilesets]]) can cause confusion with players who do not use those specific mixes.  This wiki requests you use one of the default set-ups that come with the game to post screenshots here.)''
+
+
+----
+
+=== Pre-v50 Default Scheme ===
+The old default color scheme from earlier versions of Dwarf Fortress, for those who prefer it.
+
+{{color scheme
+|black=#000000
+|dgray=#808080
+|blue=#000080
+|lblue=#0000ff
+|green=#008000
+|lgreen=#00ff00
+|cyan=#008080
+|lcyan=#00ffff
+|red=#800000
+|lred=#ff0000
+|magenta=#800080
+|lmagenta=#ff00ff
+|brown=#808000
+|yellow=#ffff00
+|lgray=#c0c0c0
+|white=#ffffff
+}}
+
+----
+
+=== Lee's Colour scheme ===
+A quest to provide the optimal set of colours: all colours very easily distinguishable and earthy/natural without being washed out or too bright and garish.
+
+{{color scheme
+|black=#000000
+|dgray=#646464
+|blue=#1E55A5
+|lblue=#5A82D2
+|green=#467D37
+|lgreen=#6EB437
+|cyan=#2D9187
+|lcyan=#46D7C3
+|red=#AA1400
+|lred=#D73C00
+|magenta=#822873
+|lmagenta=#D255BE
+|brown=#785032
+|yellow=#EBB400
+|lgray=#A0A0A0
+|white=#FAFAFA
+}}
+
+====Lee's Colour Scheme v2====
+New and Improved! All colours have been altered slightly but most notably the brown is much better, the magentas are more of a grape/bubblegum mix, the greens are brighter and less depressing, and the whole thing feels more cohesive.
+
+{{color scheme
+|black=#15130F
+|dgray=#746E71
+|blue=#2D5AA0
+|lblue=#6987E1
+|green=#508714
+|lgreen=#7DB937
+|cyan=#198C8C
+|lcyan=#3CCDBE
+|red=#A0140A
+|lred=#DC3214
+|magenta=#873C82
+|lmagenta=#BE6EB9
+|brown=#964B37
+|yellow=#E6AA1E
+|lgray=#B2AFAC
+|white=#E8E3E8
+}}
+
+----
+
+=== "Natural" scheme ===
+
+This mix softens the glaring colors of the original to earthtones.
+
+{{color scheme
+|black=#000000
+|dgray=#585356
+|blue=#0d67c4
+|lblue=#91caff
+|green=#449e35
+|lgreen=#83d452
+|cyan=#56a3cd
+|lcyan=#b0dfd7
+|red=#971a1a
+|lred=#ff2222
+|magenta=#ff6ebb
+|lmagenta=#ffa7f6
+|brown=#785e2f
+|yellow=#ffda5a
+|lgray=#b9c0a2
+|white=#ffffff
+}}
+
+----
+
+=== True Brown ===
+
+Default scheme with BROWN actually being a shade of brown (rather than Olive Green). Created by [[User:Met|Met]].
+
+{{color scheme
+|black=#000000
+|dgray=#505050
+|blue=#000080
+|lblue=#0000ff
+|green=#008000
+|lgreen=#00ff00
+|cyan=#008080
+|lcyan=#00ffff
+|red=#800000
+|lred=#ff0000
+|magenta=#800080
+|lmagenta=#ff00ff
+|brown=#785e30
+|yellow=#ffff00
+|lgray=#c0c0c0
+|white=#ffffff
+}}
+
+----
+
+=== Another natural scheme ===
+
+{{color scheme
+|black=#000000
+|dgray=#505050
+|blue=#495f9d
+|lblue=#6f8aa5
+|green=#597537
+|lgreen=#a0c852
+|cyan=#65909e
+|lcyan=#9fc4d2
+|red=#920000
+|lred=#ce4901
+|magenta=#a53665
+|lmagenta=#ef96cf
+|brown=#8a693b
+|yellow=#ffc600
+|lgray=#808080
+|white=#ffffff
+}}
+
+----
+
+=== Higher-visibility scheme ===
+
+Tired of trying to see your metalsmiths (dark grey) and fishery workers (navy blue) against a black background?  This scheme "brightens" most of the colors, while trying to stay true to the original tone when possible.  (Except BROWN, which is now actually "brown", not olive green.)
+
+{{color scheme
+|black=#000000|blackt=*
+|dgray=#787878
+|blue=#2c88de
+|lblue=#90caff
+|green=#209020
+|lgreen=#42e828
+|cyan=#008080|cyant=*
+|lcyan=#80e0d8
+|red=#b00808
+|lred=#ff0000|lredt=*
+|magenta=#b038a0
+|lmagenta=#ff54ff
+|brown=#785e30
+|yellow=#ffec30
+|lgray=#b0b0b0
+|white=#ffffff|whitet=*
+}}
+:''(* unchanged'')
+
+Original on the left, this scheme on the right...
+
+{| style="margin: 0 auto"
+|-
+| valign='top' |
+
+{{Skill Box|DGRAY|#888|#888|
+[[Metalsmith]]s
+}}
+
+{{Skill Box|GREEN|#080|#080|
+[[Ranger]]s
+}}
+
+{{Skill Box|BLUE|rgb(00, 00, 80)|rgb(00, 00, 80)|
+[[Fishery worker]]
+}}
+
+{{Skill Box|LBLUE|#00f|#00f|
+[[Craftsdwarf]]s
+}}
+
+{{Skill Box|BROWN|#880|#880|
+[[Farmer]]s
+}}
+
+{{Skill Box|MAGENTA|#808|#808|
+[[Administrator]]s
+}}
+
+{{Skill Box|RED|#800|#800|
+[[Child]]ren
+}}
+
+| valign='top' |
+
+{{Skill Box|DGRAY|rgb(176, 176, 176)|rgb(176, 176, 176)|
+[[Metalsmith]]s
+}}
+
+{{Skill Box|GREEN|rgb(32, 144, 32)|rgb(32, 144, 32)|
+[[Ranger]]s
+}}
+
+{{Skill Box|BLUE|rgb(44, 136, 222)|rgb(44, 136, 222)|
+[[Fishery worker]]
+}}
+
+{{Skill Box|LBLUE|rgb(144, 202, 255)|rgb(144, 202, 255)|
+[[Craftsdwarf]]s
+}}
+
+{{Skill Box|BROWN|rgb(120, 94, 48)|rgb(120, 94, 48)|
+[[Farmer]]s
+}}
+
+{{Skill Box|MAGENTA|rgb(176, 56, 160)|rgb(176, 56, 160)|
+[[Administrator]]s
+}}
+
+{{Skill Box|RED|rgb(176, 8, 8)|rgb(176, 8, 8)|
+[[Child]]ren
+}}
+|}
+
+----
+
+=== (Yet) Another scheme ===
+
+{{color scheme
+|black=#000000
+|dgray=#707070
+|blue=#203090
+|lblue=#2838ff
+|green=#309020
+|lgreen=#30f020
+|cyan=#208090
+|lcyan=#38d0ff
+|red=#971a1a
+|lred=#ff3020
+|magenta=#702090
+|lmagenta=#d038ff
+|brown=#907030
+|yellow=#ffe020
+|lgray=#b0b0b0
+|white=#ffffff
+}}
+
+----
+
+=== True CGA Scheme ===
+
+This scheme uses the genuine [http://en.wikipedia.org/wiki/Color_Graphics_Adapter CGA] palette, in case you're an old-school purist.  
+
+''(Note that the CGA "brown" can be difficult to distinguish from "red" unless it is immediately nearby.  For a slightly more readable version, you can "cheat" and replace the'' [BROWN_G:85]
+''with  ''[BROWN_G:170]. '')''
+
+
+{{color scheme
+|black=#000000
+|dgray=#555555
+|blue=#0000aa
+|lblue=#5555ff
+|green=#00aa00
+|lgreen=#55ff55
+|cyan=#00aaaa
+|lcyan=#55ffff
+|red=#aa0000
+|lred=#ff5555
+|magenta=#aa00aa
+|lmagenta=#ff55ff
+|brown=#aa5500
+|yellow=#ffff55
+|lgray=#aaaaaa
+|white=#ffffff
+}}
+
+----
+
+=== For the Chromatically Challenged ===
+
+Colour blindness can result in colours being too similar, such as red and brown, so this scheme sacrifices true colour accuracy for a greater difference in hues. If you have normal colour vision, then this probably looks really weird.
+
+
+{{color scheme
+|black=#000000
+|dgray=#808080
+|blue=#0000C0
+|lblue=#3030FF
+|green=#008000
+|lgreen=#00D000
+|cyan=#007090
+|lcyan=#40D0FF
+|red=#C00000
+|lred=#FF3030
+|magenta=#A00080
+|lmagenta=#FF40D0
+|brown=#606000
+|yellow=#FFFF40
+|lgray=#C0C0C0
+|white=#FFFFFF
+}}
+
+----
+
+=== Red/Green Colorblindness ===
+
+A modification of the chromatically challenged color scheme above, made to the tastes of someone with Red/Green colorblindness.
+
+{{color scheme
+|black=#000000
+|dgray=#707070
+|blue=#0000F0
+|lblue=#5050FF
+|green=#008000
+|lgreen=#00D000
+|cyan=#007090
+|lcyan=#40D0FF
+|red=#F00000
+|lred=#FF5050
+|magenta=#A00080
+|lmagenta=#FF30F0
+|brown=#806000
+|yellow=#FFFF40
+|lgray=#D0D0D0
+|white=#FFFFFF
+}}
+
+----
+
+=== Tango Scheme ===
+
+Color scheme to match [http://tango.freedesktop.org/Tango_Icon_Theme_Guidelines Tango palette]. Cyan values were missing from palette, so blue/plum values are used instead.
+
+{{color scheme
+|black=#2E3436
+|dgray=#888a85
+|blue=#204a87
+|lblue=#3465a4
+|green=#4e9a06
+|lgreen=#8ae234
+|cyan=#75507b
+|lcyan=#729fcf
+|red=#a40000
+|lred=#ef2929
+|magenta=#5c3566
+|lmagenta=#ad7fa8
+|brown=#ce5c00
+|yellow=#fce94f
+|lgray=#babdb6
+|white=#eeeeec
+}}
+
+----
+
+=== AngleWyrm's Colorset ===
+Blues greens and brown that are easy on the eyes.
+
+{{color scheme
+|black=#000
+|dgray=#484848
+|blue=#303c78
+|lblue=#5064b4
+|green=#1e6428
+|lgreen=#289632
+|cyan=#285a82
+|lcyan=#729fcf
+|red=#a40000
+|lred=#ef2929
+|magenta=#5c3566
+|lmagenta=#ad7fa8
+|brown=#785032
+|yellow=#b4aa3c
+|lgray=#808080
+|white=#eeeeec
+}}
+
+----
+
+=== Putnam's Fortbent Color Scheme ===
+
+A color scheme designed for closest accuracy to Homestuck's colors; no accuracy to actual in-game colors guaranteed. 
+
+{{color scheme
+|black=#000000
+|dgray=#626262
+|dgrayt=(Caliborn gray tumut)
+|blue=#000056
+|bluet=(Equius B100)
+|lblue=#005682
+|lbluet=(Vriska Cerulean!!!!!!!!)
+|green=#416600
+|greent=(:33 < *nepeta green*)
+|lgreen=#00FF00
+|lgreent=(Calliope's blood)
+|cyan=#008282
+|cyant=(T3R3Z1 T34L)
+|lcyan=#00FFFF
+|red=#a10000
+|redt=(aradia red)
+|lred=#FF0000
+|magenta=#6a006a
+|magentat=(eridan vviolet)
+|lmagenta=#77003c
+|lmagentat=(meenah purple)
+|brown=#a15000
+|brownt=(uHH, tAVROS BROWN)
+|yellow=#a1a100
+|yellowt=(yucky mu2tard yellow)
+|lgray=#929292
+|lgrayt=(Calliope gray!)
+|white=#FFFFFF
+}}
+
+----
+
+=== nocpur's Color Scheme ===
+A soft, earth-toned color scheme. Used by nocpur in screenshots of the fortress [http://www.bay12forums.com/smf/index.php?topic=180198 Striketrampled].
+
+{{color scheme
+|black=#15130F
+|dgray=#746E71
+|blue=#2B86A1
+|lblue=#3FA4B8
+|green=#5B8722
+|lgreen=#A5B91F
+|cyan=#1A996A
+|lcyan=#22D4A5
+|red=#A01838
+|lred=#C91E35
+|magenta=#872B72
+|lmagenta=#BE6EB9
+|brown=#965A1E
+|yellow=#DEA035
+|lgray=#B2AFAC
+|white=#FFFDFC
+}}
+
+----
+
+=== Vherid's Color Schemes ===
+
+====Default +====
+{{color scheme
+|black=#000000
+|dgray=#505050
+|blue=#1233af
+|lblue=#0072ff
+|green=#008000
+|lgreen=#00ff00
+|cyan=#00b2b2
+|lcyan=#00ffff
+|red=#6b0000
+|lred=#ff0000
+|magenta=#800080
+|lmagenta=#d100ac
+|brown=#765e00
+|yellow=#ffff00
+|lgray=#c0c0c0
+|white=#ffffff
+}}
+
+====Natural====
+{{color scheme
+|black=#1b1209
+|dgray=#464132
+|blue=#203296
+|lblue=#0078ff
+|green=#1e6428
+|lgreen=#aaff00
+|cyan=#107873
+|lcyan=#1bd2cd
+|red=#6e1414
+|lred=#c02424
+|magenta=#8511ab
+|lmagenta=#e647aa
+|brown=#64402a
+|yellow=#fab40a
+|lgray=#746c54
+|white=#dcdcdc
+}}
+
+====Warm====
+{{color scheme
+|black=#1b1209
+|dgray=#3e352c
+|blue=#1a41a5
+|lblue=#006cff
+|green=#6e7b15
+|lgreen=#c4db26
+|cyan=#007860
+|lcyan=#00ffcc
+|red=#521900
+|lred=#c03d24
+|magenta=#4c0037
+|lmagenta=#ff208d
+|brown=#623d26
+|yellow=#ffbf00
+|lgray=#9a846d
+|white=#ffedda
+}}
+
+====Bone====
+{{color scheme
+|black=#26170a
+|dgray=#41352b
+|blue=#0f52ba
+|lblue=#008aff
+|green=#788617
+|lgreen=#c4db26
+|cyan=#56b872
+|lcyan=#48ffb8
+|red=#840000
+|lred=#c03d24
+|magenta=#7c1a60
+|lmagenta=#ff4282
+|brown=#684b3a
+|yellow=#ffc322
+|lgray=#9a846d
+|white=#fcfad0
+}}
+
+====Mishka====
+{{color scheme
+|black=#170f0d
+|dgray=#4a342e
+|blue=#005fff
+|lblue=#00b3ff
+|green=#57a000
+|lgreen=#c0d600
+|cyan=#00875f
+|lcyan=#00ffb4
+|red=#ba5300
+|lred=#ea8400
+|magenta=#a72400
+|lmagenta=#ff4310
+|brown=#b08951
+|yellow=#e4b31b
+|lgray=#79644b
+|white=#f1e3b8
+}}
+
+====Dusk====
+{{color scheme
+|black=#0a0a0a
+|dgray=#30262d
+|blue=#04518c
+|lblue=#00b0ee
+|green=#5d6d06
+|lgreen=#a6b000
+|cyan=#0c4f4c
+|lcyan=#0cbba0
+|red=#8e2800
+|lred=#ce4901
+|magenta=#830034
+|lmagenta=#a00307
+|brown=#eb8800
+|yellow=#ffb74d
+|lgray=#806d63
+|white=#f2f7e6
+}}
+
+====Sorrow====
+{{color scheme
+|black=#050011
+|dgray=#392a20
+|blue=#2e495e
+|lblue=#4c889e
+|green=#55532a
+|lgreen=#afb54b
+|cyan=#437d42
+|lcyan=#79bd8f
+|red=#8e2800
+|lred=#b64926
+|magenta=#7b2636
+|lmagenta=#a15642
+|brown=#816535
+|yellow=#cb9a45
+|lgray=#878e5d
+|white=#fff782
+}}
+
+====Jade====
+{{color scheme
+|black=#110b09
+|dgray=#2a1e1b
+|blue=#2e495e
+|lblue=#4c889e
+|green=#6c6b25
+|lgreen=#c3c13d
+|cyan=#5c633a
+|lcyan=#70a16c
+|red=#762a1b
+|lred=#af652f
+|magenta=#ae2c3b
+|lmagenta=#ab421e
+|brown=#725539
+|yellow=#cb9a45
+|lgray=#453c31
+|white=#dbd69c
+}}
+
+====Dark Sand====
+{{color scheme
+|black=#020110
+|dgray=#112334
+|blue=#04518c
+|lblue=#00b0ee
+|green=#5d6d06
+|lgreen=#a6b000
+|cyan=#0c4f4c
+|lcyan=#0cbba0
+|red=#8e2800
+|lred=#ce4901
+|magenta=#830034
+|lmagenta=#a00307
+|brown=#72593a
+|yellow=#ffb74d
+|lgray=#334555
+|white=#e6f5f7
+}}
+
+====Matrix====
+{{color scheme
+|black=#192007
+|dgray=#383a26
+|blue=#18774f
+|lblue=#0dbd75
+|green=#4d7218
+|lgreen=#88be12
+|cyan=#b38700
+|lcyan=#ffcc00
+|red=#76440b
+|lred=#b96706
+|magenta=#204631
+|lmagenta=#527f39
+|brown=#4d5407
+|yellow=#b9da1c
+|lgray=#6b6f4b
+|white=#d7e894
+}}
+
+====Ash====
+{{color scheme
+|black=#000000
+|dgray=#343434
+|blue=#494949
+|lblue=#818181
+|green=#676767
+|lgreen=#dbdbdb
+|cyan=#a5a5a5
+|lcyan=#f7f7f7
+|red=#252525
+|lred=#505050
+|magenta=#555555
+|lmagenta=#777778
+|brown=#3c3c3c
+|yellow=#b6b6b6
+|lgray=#8e8e8e
+|white=#ffffff
+}}
+
+====Fields====
+{{color scheme
+|black=#0c0811
+|dgray=#342d28
+|blue=#27445c
+|lblue=#2facc7
+|green=#6b6819
+|lgreen=#bebc27
+|cyan=#3e7466
+|lcyan=#9ddc85
+|red=#5c2514
+|lred=#af3b14
+|magenta=#621805
+|lmagenta=#a42405
+|brown=#8d550b
+|yellow=#e0a403
+|lgray=#4f433a
+|white=#ebdec6
+}}
+
+====Heat====
+{{color scheme
+|black=#170a0a
+|dgray=#47341b
+|blue=#394b45
+|lblue=#42b0b6
+|green=#7d6f10
+|lgreen=#c7c01a
+|cyan=#517a4e
+|lcyan=#aade6c
+|red=#6e2c0c
+|lred=#ba420c
+|magenta=#741e03
+|lmagenta=#b02a03
+|brown=#9c5c07
+|yellow=#e4a801
+|lgray=#624a28
+|white=#eee0b5
+}}
+
+
+====Lazer====
+{{color scheme
+|black=#090900
+|dgray=#292701
+|blue=#003321
+|lblue=#287035
+|green=#886d23
+|lgreen=#efc140
+|cyan=#088313
+|lcyan=#23ca37
+|red=#62200b
+|lred=#af3b14
+|magenta=#4a0d02
+|lmagenta=#a52102
+|brown=#844e06
+|yellow=#e9ab03
+|lgray=#384023
+|white=#ccef73
+}}
+
+====Mud====
+{{color scheme
+|black=#201e15
+|dgray=#323723
+|blue=#234353
+|lblue=#30798f
+|green=#777136
+|lgreen=#ada45e
+|cyan=#445415
+|lcyan=#768b20
+|red=#89360e
+|lred=#bc4a13
+|magenta=#846722
+|lmagenta=#cca036
+|brown=#5c4f28
+|yellow=#fba612
+|lgray=#4e5537
+|white=#fffce3
+}}
+
+====Fallen====
+{{color scheme
+|black=#201e15
+|dgray=#323723
+|blue=#234353
+|lblue=#30798f
+|green=#777136
+|lgreen=#efc140
+|cyan=#3f522b
+|lcyan=#737d26
+|red=#6a2713
+|lred=#b24c15
+|magenta=#681708
+|lmagenta=#b52a0b
+|brown=#5c4f28
+|yellow=#fba612
+|lgray=#4e5537
+|white=#f4ffd0
+}}
+
+----
+=== Koumakan's Color Schemes ===
+
+KMK Systems color schemes can be found at http://www.bay12forums.com/smf/index.php?topic=169671.0.
+
+====Soyuz====
+"The colorscheme shown is my Soyuz colorscheme I made for one of Taffer's more experimental variants of his tileset, check his stuff out if you haven't, it's easily one of the best ASCII sets for DF."
+{{color scheme
+|black=#281100
+|dgray=#4A3226
+|blue=#2E495E
+|lblue=#4C889E
+|green=#333100
+|lgreen=#56571B
+|cyan=#527F39
+|lcyan=#A3B934
+|red=#7C0000
+|lred=#DB2700
+|magenta=#776A36
+|lmagenta=#EFC140
+|brown=#7C5434
+|yellow=#FF9A0A
+|lgray=#B98764
+|white=#FFF0AD
+}}
+
+====Bonsai====
+"These colors are based off of Cyprinodon's work that you can see [http://www.bay12forums.com/smf/index.php?topic=150763.0 HERE]
+I really liked his color scheme at the time and made a handful of tweaks years ago to try some things out while still keeping the original BG color."
+{{color scheme
+|black=#2E0018
+|dgray=#443025
+|blue=#0443B7
+|lblue=#0099F0
+|green=#076F29
+|lgreen=#27EC48
+|cyan=#1D9661
+|lcyan=#2AFF98
+|red=#710000
+|lred=#D32800
+|magenta=#80234E
+|lmagenta=#E559A5
+|brown=#724E2F
+|yellow=#FFA200
+|lgray=#B07F5A
+|white=#FFEFA0
+}}
+
+====Gordon====
+
+{{color scheme
+|black=#150F0A
+|dgray=#32230F
+|blue=#193A91
+|lblue=#2595CF
+|green=#334B0E
+|lgreen=#88C922
+|cyan=#08C49F
+|lcyan=#7FE8B5
+|red=#550F0A
+|lred=#EF3A0C
+|magenta=#562E73
+|lmagenta=#A03A9E
+|brown=#624C01
+|yellow=#FFA200
+|lgray=#684C3C
+|white=#EFD8A1
+}}
+
+----
+
+===Monokai===
+{{color scheme
+|black=#000
+|dgray=#555
+|blue=#7accda
+|lblue=#66d9f9
+|green=#9dc54b
+|lgreen=#a6e22e
+|cyan=#00d9d9
+|lcyan=#c8f0f0
+|red=#d34278
+|lred=#f92672
+|magenta=#ae81ff
+|lmagenta=#b392ef
+|brown=#d1ca89
+|yellow=#e6db74
+|lgray=#f5deb3
+|white=#fff
+}}
+
+----
+
+===Qud===
+
+A color scheme based on the game [https://www.cavesofqud.com/ Caves of Qud]. Original by Corporal_Klinger on the DF forums, modified for visibility by Mabelmabel on the CoQ discord.
+
+{{color scheme
+|black=#0F3B3A
+|dgray=#51797A
+|blue=#0048BD
+|lblue=#0096FF
+|green=#009403
+|lgreen=#009403
+|cyan=#40A4B9
+|lcyan=#77BFCF
+|red=#A64A2E
+|lred=#D74200
+|magenta=#B154CF
+|lmagenta=#DA5BD6
+|brown=#98875F
+|yellow=#CFC041
+|lgray=#B1C9C3
+|white=#fff
+}}
+
+----
+
+===Solarized===
+
+Based on [http://ethanschoonover.com/solarized Ethan Schoonover's syntax highlighting color scheme]. Designed to be easily distinguishable and visible colors that also reduce eye strain and fatigue.
+
+{{color scheme
+|black=#002b36
+|dgray=#586e75
+|blue=#268bd2
+|lblue=#7baee6
+|green=#859900
+|lgreen=#adcb67
+|cyan=#2aa198
+|lcyan=#7fd7ca
+|red=#dc322f
+|lred=#f76a6a
+|magenta=#d33682
+|lmagenta=#f186aa
+|brown=#b58a00
+|yellow=#ecc853
+|lgray=#93a1a1
+|white=#fdf6e3
+}}
+
+----
+
+===elementary===
+{{color scheme
+|black=#303030
+|dgray=#5d5d5d
+|blue=#004f9e
+|lblue=#0071ff
+|green=#6ab017
+|lgreen=#7bc91f
+|cyan=#2aa7e7
+|lcyan=#4bb8fd
+|red=#e1321a
+|lred=#ff361e
+|magenta=#ec0048
+|lmagenta=#ff1d62
+|brown=#ffc005
+|yellow=#ffd00a
+|lgray=#999
+|white=#f2f2f2
+}}
+
+=== Pseudo Naturalistic Color Scheme ===
+
+Natural colours based on classic colours. Designed for [http://www.bay12forums.com/smf/index.php?topic=53180.4710 Ironhand tileset and DF2014 (see discussion)] but looks nice with ASCII too. Created by [[User:Harmonica|Harmonica]].
+
+This particularly works well with Ironhand due to the colour blending (nice minerals and plants), and also works nicely with the new trees.
+
+{{color scheme
+|black=#000000
+|dgray=#808080
+|blue=#3636ab
+|lblue=#628aea
+|green=#3daf3d
+|lgreen=#70de70
+|cyan=#3aafc3
+|lcyan=#00ffff
+|red=#ab2929
+|lred=#f3714b
+|magenta=#ab33ab
+|lmagenta=#e691e6
+|brown=#795c38
+|yellow=#e6e600
+|lgray=#c0c0c0
+|white=#FFFFFF
+}}
+
+----
+
+=== CowThing's color schemes ===
+
+This color scheme is for a softer, happier game. Colors were chosen for easy visibility and to be easy on the eyes.
+{{color scheme
+|black=#31313e
+|dgray=#767681
+|blue=#4051da
+|lblue=#6295ed
+|green=#56b636
+|lgreen=#aff239
+|cyan=#52b7c0
+|lcyan=#acebd9
+|red=#ce3137
+|lred=#f8503e
+|magenta=#8e3aba
+|lmagenta=#dd62c5
+|brown=#f0a22a
+|yellow=#fcef62
+|lgray=#afb5b7
+|white=#ffffff
+}}
+
+A darker version of the above color scheme.
+{{color scheme
+|black=#1f1d26
+|dgray=#544f53
+|blue=#334ca0
+|lblue=#4b99d5
+|green=#398f29
+|lgreen=#79d733
+|cyan=#49948a
+|lcyan=#94daaf
+|red=#9e2c24
+|lred=#d64d2c
+|magenta=#6f2a71
+|lmagenta=#c3498c
+|brown=#bd7e24
+|yellow=#ebc942
+|lgray=#84827c
+|white=#f5f0da
+}}
+
+== Snackfox's color scheme ==
+
+This color scheme was designed to be light, pretty, and easy on the eyes, with an emphasis on purples and blues.
+{{color scheme
+|black=#453c57
+|dgray=#9e8db0
+|blue=#7062d6
+|lblue=#a499fa
+|green=#238a64
+|lgreen=#17eda6
+|cyan=#0099ff
+|lcyan=#00ffff
+|red=#b300b0
+|lred=#ff21a6
+|magenta=#d92eff
+|lmagenta=#ff8abf
+|brown=#b57438
+|yellow=#fff652
+|lgray=#cecef5
+|white=#fffbc8
+}}
+
+----
+
+== Runeset Mapmaker ==
+
+This color scheme was designed to work with Runeset to produce beautiful sepia toned fantasy maps.
+{{color scheme
+|black=#A59B78
+|dgray=#48453C
+|blue=#2D91DC
+|lblue=#8796B9
+|green=#2D6E32
+|lgreen=#82A569
+|cyan=#788C96
+|lcyan=#AAC0CD
+|red=#640505
+|lred=#911E23
+|magenta=#642369
+|lmagenta=#8C14A0
+|brown=#73694B
+|yellow=#C6C482
+|lgray=#C8C8B4
+|white=#FFFFFF
+}}
+
+== Runeset ==
+
+A more playable version of Runeset Mapmaker that doesn't make every embark site look like the desert. It's a milder toned scheme with decent contrast.
+{{color scheme
+|black=#000000
+|dgray=#48453C
+|blue=#2D91DC
+|lblue=#8796B9
+|green=#2D6E32
+|lgreen=#82A569
+|cyan=#788C96
+|lcyan=#AAC0CD
+|red=#640505
+|lred=#911E23
+|magenta=#642369
+|lmagenta=#8C14A0
+|brown=#5F4628
+|yellow=#B4B473
+|lgray=#A0A0A0
+|white=#FFFFFF
+}}
+
+----
+
+== Kyzer's Themes ==
+
+=== Kyzer's Light Scheme ===
+A light color scheme meant to be easy on the eyes using yellows and relatively low contrast colors. '''Note: cyan is now purple!'''
+{{color scheme
+|black=#D3C89C
+|dgray=#474747
+|blue=#C4E6F2
+|lblue=#6590F4
+|green=#1C851E
+|lgreen=#0EB500
+|cyan=#683D91
+|lcyan=#BD89FA
+|red=#AD3636
+|lred=#E66060
+|magenta=#C95EAC
+|lmagenta=#733663
+|brown=#A66624
+|yellow=#9F9A17
+|lgray=#737373
+|white=#141414
+}}
+
+=== Kyzer's 'true color' Scheme ===
+A high brightness color scheme with a lot of contrast, base colors (RED and BLUE, for example) are the most saturated and brightest they can be. Light colors are actually light versions of the previous colors now.
+{{color scheme
+|black=#000000
+|dgray=#595959
+|blue=#0000FF
+|lblue=#7D89FF
+|green=#00FF00
+|lgreen=#89FF7D
+|cyan=#00FFFF
+|lcyan=#9EFDFF
+|red=#FF0000
+|lred=#FF8787
+|magenta=#FF00FF
+|lmagenta=#FE8CFF
+|brown=#FFA33B
+|yellow=#FFFF85
+|lgray=#BABABA
+|white=#FFFFF
+}}
+
+=== Kyzer's Low Contrast Scheme ===
+A low contrast, dark theme which prevents your eyes from having issues focusing because of overly bright tones. Basically, it has the same effect of turning your monitor down, without turning it down.
+{{color scheme
+|black=#000000
+|dgray=#292929
+|blue=#00285C
+|lblue=#004399
+|green=#005200
+|lgreen=#007A00
+|cyan=#005252
+|lcyan=#008585
+|red=#4F0000
+|lred=#7D0000
+|magenta=#400063
+|lmagenta=#540082
+|brown=#733300
+|yellow=#877F00
+|lgray=#595959
+|white=#828282
+}}
+
+== Zippy's Themes ==
+=== Zippy's Vibrant ===
+Colors here are designed to be much softer, richer and brighter than the game's default colors. Most colors are very slightly dimmed as to appear less over saturated than the original color scheme, but still manage to show as unique and vibrant colors.
+
+{{color scheme
+|black=#111111
+|dgray=#a1a1a1
+|blue=#406fec
+|lblue=#43c6f7
+|green=#539f47
+|lgreen=#5fe34d
+|cyan=#4fc0d9
+|lcyan=#81edef
+|red=#b81d1d
+|lred=#f13636
+|magenta=#cb4096
+|lmagenta=#f97ad9
+|brown=#ab7611
+|yellow=#ffcc00
+|lgray=#a19d9a
+|white=#fffaf5
+}}
+
+=== Zippy's Low Contrast ===
+An alternate color scheme where the colors - as the title would denote - have less contrast, as all the colors are much closer to their counterparts. This color scheme may be hard to see on a darker monitor.
+
+{{color scheme
+|black=#111111
+|dgray=#a1a1a1
+|blue=#3a65d7
+|lblue=#33D4DF
+|green=#39912B
+|lgreen=#B2FFA7
+|cyan=#4BC8B6
+|lcyan=#66FFFA
+|red=#d03a17
+|lred=#FF8C8C
+|magenta=#A821A0
+|lmagenta=#FFA6C8
+|brown=#B34109
+|yellow=#FFBE7D
+|lgray=#a19d9a
+|white=#ffffff
+}}
+
+----
+
+== DPh Kraken's Themes ==
+
+===Minecraft Wool===
+Uses the exact hex codes of each wool dye color from Minecraft. 
+
+{{color scheme
+|black=#1D1D21
+|dgray=#474F52
+|blue=#8932B8
+|lblue=#3C44AA
+|green=#5E7C16
+|lgreen=#80C71F
+|cyan=#169C9C
+|lcyan=#3AB3DA
+|red=#B02E26
+|lred=#F9801D
+|magenta=#C74EBD
+|lmagenta=#F38BAA
+|brown=#835432
+|yellow=#FED83D
+|lgray=#9D9D97
+|white=#F9FFFE
+}}
+
+===Minecraft Map===
+Another Minecraft-themed set, this uses a selection of tile colors as they appear on Java Edition maps.
+
+{{color scheme
+|black=#191919
+|dgray=#707070
+|blue=#2C2CB2
+|lblue=#4040FF
+|green=#007C00
+|lgreen=#7FB238
+|cyan=#7070B4
+|lcyan=#A0A0FF
+|red=#B40000
+|lred=#DC0000
+|magenta=#7D3598
+|lmagenta=#B24CD8
+|brown=#8F7748
+|yellow=#F7E9A3
+|lgray=#A7A7A7
+|white=#FFFFFF
+}}
+
+===Painterly===
+Uses dye colors from the Painterly texture pack for Minecraft. Dark and saturated.
+
+{{color scheme
+|black=#0B0B0B
+|dgray=#434343
+|blue=#65008F
+|lblue=#003DA5
+|green=#003C00
+|lgreen=#73913A
+|cyan=#2A89F4
+|lcyan=#47F0E9
+|red=#8A0000
+|lred=#E77B00
+|magenta=#C20089
+|lmagenta=#F6959B
+|brown=#56390B
+|yellow=#F3D233
+|lgray=#A8A8A8
+|white=#FFFFFF
+}}
+
+===Minty===
+Based on the default dark mode (Mint-Y-Dark) terminal colors for Linux Mint.
+
+{{color scheme
+|black=#2E3435
+|dgray=#535756
+|blue=#34659F
+|lblue=#729FD2
+|green=#4E980D
+|lgreen=#8AE340
+|cyan=#069696
+|lcyan=#39E2DE
+|red=#CD0001
+|lred=#F02727
+|magenta=#725179
+|lmagenta=#AC7FA5
+|brown=#C4A106
+|yellow=#FEEA57
+|lgray=#A4A5A2
+|white=#EDEEE9
+}}
+
+== Spaceman00's Themes ==
+=== Matrix 1 ===
+Pallete inspired by matrix movie screen colors.<br>
+Only, green, light green, blue, light blue, white and black are different as they are the only colors present at the screen.
+
+{{color scheme
+|black=#0E0E0E
+|dgray=#808080
+|blue=#384B89
+|lblue=#6588BC
+|green=#8EC58C
+|lgreen=#B2D8A7
+|cyan=#008080
+|lcyan=#00FFFF
+|red=#800000
+|lred=#FF0000
+|magenta=#800080
+|lmagenta=#FF00FF
+|brown=#808000
+|yellow=#FFFF00
+|lgray=#C0C0C0
+|white=#E4E4E2
+}}
+
+=== Matrix 2===
+Pallete inspired by matrix movie screen colors.<br>
+Only, green, light green, blue, light blue, white and black are from the movie, other colors are decided following some pattern related to original DF pallete pattern.
+
+{{color scheme
+|black=#0E0E0E
+|dgray=#797978
+|blue=#384B89
+|lblue=#6588BC
+|green=#8EC58C
+|lgreen=#B2D8A7
+|cyan=#3A7365
+|lcyan=#65D8BC
+|red=#4E1422
+|lred=#8D1A36
+|magenta=#27142C
+|lmagenta=#401A49
+|brown=#4E3C21
+|yellow=#8D6A34
+|lgray=#AFAFAD
+|white=#E4E4E2
+}}
+
+=== Matrix 3===
+Pallete inspired by matrix movie screen colors.<br>
+Only, green, light green, blue, light blue, white and black are from the movie, other colors are decided following some pattern related to original DF pallete pattern.<br>
+This one assumes, R, G or B, are actually not N but N^2.2.
+
+{{color scheme
+|black=#0E0E0E
+|dgray=#A7A7A5
+|blue=#384B89
+|lblue=#6588BC
+|green=#8EC58C
+|lgreen=#B2D8A7
+|cyan=#4A9EA7
+|lcyan=#65D8BC
+|red=#993F77
+|lred=#D255A3
+|magenta=#713F77
+|lmagenta=#9A55A3
+|brown=#998C77
+|yellow=#D2C0A3
+|lgray=#C8C8C6
+|white=#E4E4E2
+}}
+
+=== Matrix 4===
+Pallete inspired by matrix movie screen colors.<br>
+Only, green, light green, blue, light blue, white and black are from the movie, other colors are decided following some pattern related to original DF pallete pattern.<br>
+This one assumes, R, G or B, are actually not N but N^2.2. It also assumes DF dark colors values are not the mid point between DF white and DF light version of the color but take into account N^2.2 too.
+
+{{color scheme
+|black=#0E0E0E
+|dgray=#737372
+|blue=#384B89
+|lblue=#6588BC
+|green=#8EC58C
+|lgreen=#B2D8A7
+|cyan=#346D5F
+|lcyan=#65D8BC
+|red=#6A2C52
+|lred=#D255A3
+|magenta=#4E2C52
+|lmagenta=#9A55A3
+|brown=#6A6152
+|yellow=#D2C0A3
+|lgray=#ACACAA
+|white=#E4E4E2
+}}
+
+==Avenskol==
+An assortment of combinations fitting various themes and settings.
+
+===Aizalvaran===
+
+{{color scheme
+|black=#000000
+|dgray=#968386
+|blue=#850038
+|lblue=#B2004B
+|green=#997C99
+|lgreen=#C8A2C8
+|cyan=#A83D5D
+|lcyan=#E75480
+|red=#662244
+|lred=#993366
+|magenta=#BA8C94
+|lmagenta=#FFC0CB
+|brown=#5E3E47
+|yellow=#915F6D
+|lgray=#C4ABAE
+|white=#FADADD
+}}
+
+===Ashilesian===
+
+{{color scheme
+|black=#000000
+|dgray=#5F7A5F
+|blue=#21633E
+|lblue=#2E8B57
+|green=#719625
+|lgreen=#9ACD32
+|cyan=#77C777
+|lcyan=#98FF98
+|red=#525200
+|lred=#808000
+|magenta=#3A4722
+|lmagenta=#556832
+|brown=#80BD23
+|yellow=#ADFF2F
+|lgray=#85AB85
+|white=#ADDFAD
+}}
+
+===Azkuvalian===
+
+{{color scheme
+|black=#000000
+|dgray=#7C7C9C
+|blue=#C4949C
+|lblue=#FFC0CB
+|green=#877C31
+|lgreen=#B5A642
+|cyan=#C2A9AB
+|lcyan=#FADADD
+|red=#B55A3F
+|lred=#E97451
+|magenta=#AB3E5F
+|lmagenta=#E75480
+|brown=#8A6F5C
+|yellow=#BC987E
+|lgray=#A5A5CF
+|white=#CCCCFF
+}}
+
+===Dasdarfoxan===
+
+{{color scheme
+|black=#000000
+|dgray=#3D2F22
+|blue=#4A2311
+|lblue=#6F351A
+|green=#5C5233
+|lgreen=#918151
+|cyan=#572017
+|lcyan=#8A3324
+|red=#472500
+|lred=#7B3F00
+|magenta=#63453F
+|lmagenta=#986960
+|brown=#59430E
+|yellow=#967117
+|lgray=#6B533B
+|white=#987654
+}}
+
+===Doratorian===
+
+{{color scheme
+|black=#000000
+|dgray=#8A7C61
+|blue=#358550
+|lblue=#50C878
+|green=#719625
+|lgreen=#9ACD32
+|cyan=#00C261
+|lcyan=#00FF7F
+|red=#BAA300
+|lred=#FFDF00
+|magenta=#5C5233
+|lmagenta=#918151
+|brown=#918560
+|yellow=#C2B280
+|lgray=#C7B38C
+|white=#FFE5B4
+}}
+
+===Eilasalian===
+
+{{color scheme
+|black=#000000
+|dgray=#5A5A70
+|blue=#0054A8
+|lblue=#007FFF
+|green=#006B44
+|lgreen=#00A86B
+|cyan=#454F59
+|lcyan=#708090
+|red=#78505A
+|lred=#CC8899
+|magenta=#856B85
+|lmagenta=#C8A2C8
+|brown=#50A600
+|yellow=#7BFF00
+|lgray=#8F8FB3
+|white=#CCCCFF
+}}
+
+===Eilsavian===
+
+{{color scheme
+|black=#000000
+|dgray=#262B30
+|blue=#1B0036
+|lblue=#310062
+|green=#2A3319
+|lgreen=#556832
+|cyan=#330059
+|lcyan=#4B0082
+|red=#4F4F00
+|lred=#808000
+|magenta=#38252F
+|lmagenta=#614051
+|brown=#304A28
+|yellow=#4F7942
+|lgray=#454F59
+|white=#708090
+}}
+
+===Eiltaresian===
+
+{{color scheme
+|black=#000000
+|dgray=#658A8A
+|blue=#62A362
+|lblue=#98FF98
+|green=#246B42
+|lgreen=#2E8B57
+|cyan=#87AD87
+|lcyan=#ADDFAD
+|red=#2C004D
+|lred=#4B0082
+|magenta=#1C0038
+|lmagenta=#310062
+|brown=#6D9123
+|yellow=#9ACD32
+|lgray=#85B5B5
+|white=#AFEEEE
+}}
+
+===Einfieran===
+
+{{color scheme
+|black=#000000
+|dgray=#695353
+|blue=#5E3D3D
+|lblue=#905D5D
+|green=#52353D
+|lgreen=#915F6D
+|cyan=#964444
+|lcyan=#CD5C5C
+|red=#A32F25
+|lred=#E34234
+|magenta=#593A43
+|lmagenta=#915F75
+|brown=#732600
+|yellow=#C04000
+|lgray=#B08C8C
+|white=#F4C2C2
+}}
+
+===Octusarian===
+
+{{color scheme
+|black=#000000
+|dgray=#7B408C
+|blue=#270030
+|lblue=#5C0262
+|green=#2E004F
+|lgreen=#4B0082
+|cyan=#43215C
+|lcyan=#673189
+|red=#420042
+|lred=#660066
+|magenta=#6C00C7
+|lmagenta=#8B00FF
+|brown=#452D39
+|yellow=#614051
+|lgray=#AC59C4
+|white=#DF73FF
+}}
+
+===Pakacit's Shade===
+
+{{color scheme
+|black=#000000
+|dgray=#3B3B3B
+|blue=#4C4B66
+|lblue=#6C6799
+|green=#4A664F
+|lgreen=#6B9968
+|cyan=#4A6663
+|lcyan=#6A9899
+|red=#664545
+|lred=#996E6E
+|magenta=#664262
+|lmagenta=#996A92
+|brown=#646645
+|yellow=#969968
+|lgray=#666666
+|white=#999999
+}}
+
+===Pakacit's Shine===
+
+{{color scheme
+|black=#000000
+|dgray=#666666
+|blue=#737199
+|lblue=#9790D4
+|green=#6B9970
+|lgreen=#96D490
+|cyan=#709995
+|lcyan=#92D3D4
+|red=#996A6A
+|lred=#D49797
+|magenta=#996396
+|lmagenta=#D494C8
+|brown=#93996D
+|yellow=#CED490
+|lgray=#999999
+|white=#D4D4D4
+}}
+
+===Syrenalian===
+
+{{color scheme
+|black=#000000
+|dgray=#968A51
+|blue=#00BDBD
+|lblue=#00FFFF
+|green=#89C925
+|lgreen=#ADFF2F
+|cyan=#5BB899
+|lcyan=#7FFFD4
+|red=#A87F19
+|lred=#DAA520
+|magenta=#6D4991
+|lmagenta=#9966CC
+|brown=#B89324
+|yellow=#F4C430
+|lgray=#C2B269
+|white=#F0DC82
+}}
+
+{{Category|Interface}}
+[[ru:Color scheme]]

@@ -1,0 +1,602 @@
+<div class="mw-parser-output"><h2><span class="mw-headline" id="Creature_or_Unit_flags">Creature or Unit flags</span></h2>
+<p>Thanks to ToadyOne for explaining what these bits do.
+</p><p>Checkbox labels 
+</p>
+<h3><span id="Flags_Word_0_(32_bits)"></span><span class="mw-headline" id="Flags_Word_0_.2832_bits.29">Flags Word 0 (32 bits)</span></h3>
+<table class="wikitable">
+<tbody><tr>
+<th>Bit
+</th>
+<th>Integer Value (hex)
+</th>
+<th><a href="/index.php/User:Bartavelle/DwarfCompanion" class="mw-redirect" title="User:Bartavelle/DwarfCompanion">DwarfCompanion</a>
+</th>
+<th>Meaning
+</th></tr>
+<tr>
+<th>0
+</th>
+<td>0x00000001
+</td>
+<td>0x1
+</td>
+<td>Can the dwarf move or are they waiting for their movement timer
+</td></tr>
+<tr>
+<th>1
+</th>
+<td>0x00000002
+</td>
+<td>dead?
+</td>
+<td>Dead (might also be set for incoming/leaving critters that are alive)
+</td></tr>
+<tr>
+<th>2
+</th>
+<td>0x00000004
+</td>
+<td>0x4
+</td>
+<td>Currently in mood
+</td></tr>
+<tr>
+<th>3
+</th>
+<td>0x00000008
+</td>
+<td>artifact
+</td>
+<td>Had a mood
+</td></tr>
+<tr>
+<th>4
+</th>
+<td>0x00000010
+</td>
+<td>0x10
+</td>
+<td>"marauder" -- wide class of invader/inside creature attackers
+</td></tr>
+<tr>
+<th>5
+</th>
+<td>0x00000020
+</td>
+<td>0x20
+</td>
+<td>Drowning
+</td></tr>
+<tr>
+<th>6
+</th>
+<td>0x00000040
+</td>
+<td>merch1?
+</td>
+<td>Active merchant
+</td></tr>
+<tr>
+<th>7
+</th>
+<td>0x00000080
+</td>
+<td>caravan guard?
+</td>
+<td>"forest" (used for units no longer linked to merchant/diplomacy, they just try to leave mostly)
+</td></tr>
+<tr>
+<th>8
+</th>
+<td>0x00000100
+</td>
+<td>0x100
+</td>
+<td>Left (left the map)
+</td></tr>
+<tr>
+<th>9
+</th>
+<td>0x00000200
+</td>
+<td>0x200
+</td>
+<td>Rider
+</td></tr>
+<tr>
+<th>10
+</th>
+<td>0x00000400
+</td>
+<td>!unitlist
+</td>
+<td>Incoming
+</td></tr>
+<tr>
+<th>11
+</th>
+<td>0x00000800
+</td>
+<td>liaison?
+</td>
+<td>Diplomat
+</td></tr>
+<tr>
+<th>12
+</th>
+<td>0x00001000
+</td>
+<td>zombie
+</td>
+<td>Zombie
+</td></tr>
+<tr>
+<th>13
+</th>
+<td>0x00002000
+</td>
+<td>skel
+</td>
+<td>Skeleton
+</td></tr>
+<tr>
+<th>14
+</th>
+<td>0x00004000
+</td>
+<td>working?
+</td>
+<td>Can swap tiles during movement (prevents multiple swaps)
+</td></tr>
+<tr>
+<th>15
+</th>
+<td>0x00008000
+</td>
+<td>prone
+</td>
+<td>On the ground (can be conscious)
+</td></tr>
+<tr>
+<th>16
+</th>
+<td>0x00010000
+</td>
+<td>0x1.4
+</td>
+<td>Projectile
+</td></tr>
+<tr>
+<th>17
+</th>
+<td>0x00020000
+</td>
+<td>inv1
+</td>
+<td>Active invader (for organized ones)
+</td></tr>
+<tr>
+<th>18
+</th>
+<td>0x00040000
+</td>
+<td>hidden
+</td>
+<td>Hidden in ambush
+</td></tr>
+<tr>
+<th>19
+</th>
+<td>0x00080000
+</td>
+<td>inv2
+</td>
+<td>Invader origin (could be inactive and fleeing)
+</td></tr>
+<tr>
+<th>20
+</th>
+<td>0x00100000
+</td>
+<td>0x1.5
+</td>
+<td>Will flee if invasion turns around
+</td></tr>
+<tr>
+<th>21
+</th>
+<td>0x00200000
+</td>
+<td>0x2.5
+</td>
+<td>Active marauder/invader moving inward
+</td></tr>
+<tr>
+<th>22
+</th>
+<td>0x00400000
+</td>
+<td>0x4.5
+</td>
+<td>Marauder resident/invader moving in all the way
+</td></tr>
+<tr>
+<th>23
+</th>
+<td>0x00800000
+</td>
+<td>0x8.5
+</td>
+<td>Check against flows next time you get a chance
+</td></tr>
+<tr>
+<th>24
+</th>
+<td>0x01000000
+</td>
+<td>0x1.6
+</td>
+<td>Ridden
+</td></tr>
+<tr>
+<th>25
+</th>
+<td>0x02000000
+</td>
+<td>0x2.6
+</td>
+<td>Caged
+</td></tr>
+<tr>
+<th>26
+</th>
+<td>0x04000000
+</td>
+<td>tame
+</td>
+<td>Tame
+</td></tr>
+<tr>
+<th>27
+</th>
+<td>0x08000000
+</td>
+<td>0x8.6
+</td>
+<td>Chained
+</td></tr>
+<tr>
+<th>28
+</th>
+<td>0x10000000
+</td>
+<td>r.guard
+</td>
+<td>Royal guard
+</td></tr>
+<tr>
+<th>29
+</th>
+<td>0x20000000
+</td>
+<td>f.guard
+</td>
+<td>Fortress guard
+</td></tr>
+<tr>
+<th>30
+</th>
+<td>0x40000000
+</td>
+<td>0x4.7
+</td>
+<td>Suppress wield for beatings/etc
+</td></tr>
+<tr>
+<th>31
+</th>
+<td>0x80000000
+</td>
+<td>0x8.7
+</td>
+<td>Is an important historical figure
+</td></tr></tbody></table>
+<h3><span id="Flags_Word_1_(32_bits)"></span><span class="mw-headline" id="Flags_Word_1_.2832_bits.29">Flags Word 1 (32 bits)</span></h3>
+<table class="wikitable">
+<tbody><tr>
+<th>Bit
+</th>
+<th>Integer Value (hex)
+</th>
+<th><a href="/index.php/User:Bartavelle/DwarfCompanion" class="mw-redirect" title="User:Bartavelle/DwarfCompanion">DwarfCompanion</a>
+</th>
+<th>Meaning
+</th></tr>
+<tr>
+<th>0
+</th>
+<td>0x00000001
+</td>
+<td>0x1b
+</td>
+<td>Swimming
+</td></tr>
+<tr>
+<th>1
+</th>
+<td>0x00000002
+</td>
+<td>0x2b
+</td>
+<td>Play combat for sparring
+</td></tr>
+<tr>
+<th>2
+</th>
+<td>0x00000004
+</td>
+<td>0x4b
+</td>
+<td>Do not notify about level gains (for embark etc)
+</td></tr>
+<tr>
+<th>3
+</th>
+<td>0x00000008
+</td>
+<td>0x8b
+</td>
+<td>Unused
+</td></tr>
+<tr>
+<th>4
+</th>
+<td>0x00000010
+</td>
+<td>0x10b
+</td>
+<td>Nerves calculated
+</td></tr>
+<tr>
+<th>5
+</th>
+<td>0x00000020
+</td>
+<td>0x20b
+</td>
+<td>Body part info calculated
+</td></tr>
+<tr>
+<th>6
+</th>
+<td>0x00000040
+</td>
+<td>0x4b
+</td>
+<td>Is important historical figure (slight variation)
+</td></tr>
+<tr>
+<th>7
+</th>
+<td>0x00000080
+</td>
+<td>dead
+</td>
+<td>Has been killed by kill function (slightly different from dead, not necessarily violent death)
+</td></tr>
+<tr>
+<th>8
+</th>
+<td>0x00000100
+</td>
+<td>vanish
+</td>
+<td>Must be forgotten by forget function (just cleanup)
+</td></tr>
+<tr>
+<th>9
+</th>
+<td>0x00000200
+</td>
+<td>0x200b
+</td>
+<td>Must be deleted (cleanup)
+</td></tr>
+<tr>
+<th>10
+</th>
+<td>0x00000400
+</td>
+<td>0x400b
+</td>
+<td>Recently forgotten (cleanup)
+</td></tr>
+<tr>
+<th>11
+</th>
+<td>0x00000800
+</td>
+<td>0x800b
+</td>
+<td>Offered for trade
+</td></tr>
+<tr>
+<th>12
+</th>
+<td>0x00001000
+</td>
+<td>0x1000b
+</td>
+<td>Trade resolved
+</td></tr>
+<tr>
+<th>13
+</th>
+<td>0x00002000
+</td>
+<td>winded?
+</td>
+<td>Has breaks
+</td></tr>
+<tr>
+<th>14
+</th>
+<td>0x00004000
+</td>
+<td>0x4000b
+</td>
+<td>Gutted
+</td></tr>
+<tr>
+<th>15
+</th>
+<td>0x00008000
+</td>
+<td>ground
+</td>
+<td>Circulatory spray
+</td></tr>
+<tr>
+<th>16
+</th>
+<td>0x00010000
+</td>
+<td>flying
+</td>
+<td>Locked in for trading (it's a projectile on the other set of flags, might be what the flying was)
+</td></tr>
+<tr>
+<th>17
+</th>
+<td>0x00020000
+</td>
+<td>slaughter
+</td>
+<td>Marked for slaughter
+</td></tr>
+<tr>
+<th>18
+</th>
+<td>0x00040000
+</td>
+<td>underwrld
+</td>
+<td>Underworld creature
+</td></tr>
+<tr>
+<th>19
+</th>
+<td>0x00080000
+</td>
+<td>can't eat
+</td>
+<td>Current resident
+</td></tr>
+<tr>
+<th>20
+</th>
+<td>0x00100000
+</td>
+<td>0x1.5b
+</td>
+<td>Marked for special cleanup as unused load from unit block on disk
+</td></tr>
+<tr>
+<th>21
+</th>
+<td>0x00200000
+</td>
+<td>0x2.5b
+</td>
+<td>Insulation from clothing calculated
+</td></tr>
+<tr>
+<th>22
+</th>
+<td>0x00400000
+</td>
+<td>0x4.5b
+</td>
+<td>Uninvited guest
+</td></tr>
+<tr>
+<th>23
+</th>
+<td>0x00800000
+</td>
+<td>visitor?
+</td>
+<td>Visitor
+</td></tr>
+<tr>
+<th>24
+</th>
+<td>0x01000000
+</td>
+<td>0x1.6b
+</td>
+<td>Inventory order calculated
+</td></tr>
+<tr>
+<th>25
+</th>
+<td>0x02000000
+</td>
+<td>0x2.6b
+</td>
+<td>Vision -- have good part
+</td></tr>
+<tr>
+<th>26
+</th>
+<td>0x04000000
+</td>
+<td>0x4.6b
+</td>
+<td>Vision -- have damaged part
+</td></tr>
+<tr>
+<th>27
+</th>
+<td>0x08000000
+</td>
+<td>0x8.6b
+</td>
+<td>Vision -- have missing part
+</td></tr>
+<tr>
+<th>28
+</th>
+<td>0x10000000
+</td>
+<td>0x1.7b
+</td>
+<td>Breathing -- have good part
+</td></tr>
+<tr>
+<th>29
+</th>
+<td>0x20000000
+</td>
+<td>winded?
+</td>
+<td>Breathing -- having a problem
+</td></tr>
+<tr>
+<th>30
+</th>
+<td>0x40000000
+</td>
+<td>0x4.7b
+</td>
+<td>Roaming wilderness population source
+</td></tr>
+<tr>
+<th>31
+</th>
+<td>0x80000000
+</td>
+<td>tame2
+</td>
+<td>Roaming wilderness population source -- not a map feature
+</td></tr></tbody></table></div>

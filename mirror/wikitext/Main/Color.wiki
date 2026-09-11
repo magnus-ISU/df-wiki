@@ -1,0 +1,2364 @@
+{{Quality|Exceptional}}
+{{av}}
+: {{for/see|an overview of graphics in Dwarf Fortress|[[Graphics]]}}
+: {{for/see|user-compiled colors|[[color scheme]]}}
+: {{for/see|lists of the colors of materials, professions, creatures, etc.|[[Color#Color lists|the "Color Lists" at the bottom of this page]]}}
+[[File:color_preview.png|180px|right]]''Dwarf Fortress'' can use roughly 8424 '''colors''' to give many tiles such as foregrounds, backgrounds and sprites different colors. These colors make up the [[color scheme]]. Which of these colors are assigned to a given tile is often decided by values in its raw file. Whether a pixel shows foreground, background, black or anything in between is influenced by its brightness and opacity. These colors are shown at the right:
+
+The original game used a simplistic 16-color palette, with 8 of those colors: black, blue, green, cyan, red, purple, yellow, grey, and a lighter version of those colors creating a total of 16. The game also has an option to use the classic ASCII visuals, mimicking the classic version of the game by using 16 colors. Even with the updated graphics turned on, the text in the GUI still references the color scheme. Color is also used to express various information, from a dwarf's [[profession]], to the natural color of a terrain feature, to the material an item is made of.
+
+Some sprite sheets contain their own dedicated color palettes.
+== Overview ==
+=== The tileset influences color display ===
+<div style="margin-bottom:-26px;"></div> <!-- This undoes the weird space creation that the modding template causes. -->
+{{Modding}}
+[[File:palettes_v50.png|right]]
+[[File:Tileset-color-processing.png|300px|thumb|right]]
+In the simplest case, a pixel on a tileset is either white (foreground) or transparent* (background). However, black, and anything in between is possible as well (even color):
+* a white pixel will show the foreground color
+* a transparent* pixel will show the background color
+* a black pixel will stay black	
+The darker a white pixel is (i.e. a shade of gray), the darker the foreground color will be displayed. Similarly, a black pixel with lower opacity will result in a darker background color. 
+A partially transparent, non-black pixel shows both the background and foreground color.{{verify}}
+
+<small>*magenta for .bmp files.</small>
+
+=== Colors are assigned based on material and other raw values ===
+To decide which colors to use for a tile in ASCII mode, DF looks at raw values for that object (color value or color token) and selects a foreground and background color from the 16 colors in the [[color scheme]]. When a color value is defined, it directly picks it from the 16. When instead a color token is defined, the game compares the color token definition to all 16 colors in the color scheme and picks the closest match.
+
+For tiles in graphics mode, it instead uses a raw-defined palette. The default palette image is shown above. It checks for each color in the row defined by the PALETTE_DEFAULT token--in this case, the first row--and then maps it to the corresponding color in the same column, based on the STATE_COLOR of the object that the tile being printed corresponds to. For the vanilla raws, this is all in alphabetical order. New palettes and colors can be defined in the same way.
+
+<!-- TODO
+clearly define somewhere when and how the article refers to background/foreground one one hand and pixels on the tileset on the other hand.
+== How the tileset influences color display ==
+TODO: look through commented out section of tileset page, correct it, update it, etc.
+adapt as section here.
+
+go into more detail about color in tilesets.
+
+=== tricks === (<- keep short, focus on tools/facts, not applications; those go into future "custom tileset" page)
+-tiles that are used for several things, one of which uses a black background others that don't can display different things:
+-mention walls/engravings as example.: smoothed walls use foreground color of material and black background. Engraved walls use foreground color and dark foreground color as background (actually, verify that. Isn't info on that in the old section right below?). So all black pixels (on the tileset) will be "invisible" on smooth walls (because the background is also black), but with engraved walls having a background color, you can see a pattern.
+-Other ("advanced") example with transparency: 50%opacity white pixels next to 100%opacity 50% gray pixels
+-other tricks I'm forgetting? check through old tileset threads on bay12
+insert images showing the examples
+
+-->
+== How colors are assigned ==
+Colors of [[Status icon]]s, [[profession]]s, text and the [[interface]] in general are hardcoded. [[Item]]s, [[furniture]], [[construction]]s, and geographic features get the color of their [[material]]. Dyes and material contaminants use color tokens.
+===Wall and floor color===
+[[image:Towercaps-sandy.jpg|thumb|400px|[[Phyllite]] (to the left) has {{token|DISPLAY_COLOR|md|0:7:1}} and {{token|BASIC_COLOR|md|7:0}}.  The [[white sand]] present has {{token|DISPLAY_COLOR|md|7:6:1}} and so the actual floor color is ``7:1`` (white).]]
+
+While the foreground, background and brightness shown in the [[Material definition token|RAW]] files will be applied to [[wall]]s, the [[stone|mineral]]'s "secondary" color will end up different.  Here is how it works:
+* If the {{token|BASIC_COLOR|md}} tag is specified, it will use that color.  Note that the {{token|BASIC_COLOR|md}} tag only has foreground and brightness as arguments.
+* If {{token|BASIC_COLOR|md}} is left out:
+** The background color is forced to 0 (effectively stripping it).
+** If the foreground color is 0, the game will display it as dark gray, color 8 (in other words, color 0 with brightness 1).
+This is effective for [[stairs]], [[floor]]s, [[ramp]]s, and [[construction]]s (in the case of stone).  When stone is [[engraving|engraved]], it uses the material's {{token|TILE_COLOR|md}} (which is the same as the {{token|DISPLAY_COLOR|md}} unless overridden).
+
+=== Color values ===
+
+Colors are primarily defined using the {{token|COLOR|c|x:y:z}} or {{token|DISPLAY_COLOR|md|x:y:z}} tokens. The three arguments are:
+
+# Foreground color [0-7]
+# Background color [0-7]
+# Brightness of the foreground color [0 or 1]
+
+The brightness of the background color is always 0.
+
+By default*, the following 8 pairs of colors are displayed.  These are bright and dark shades of the primary colors, as well as black, white, and two grays:
+
+{| style="margin: 0 auto; border-spacing: 0"
+|-
+| style="vertical-align: top; padding: 0" | 
+{| style="text-align: center; border-spacing: 0 1px; margin: 0 auto; background: black; border-left: 1px solid black; border-right: 1px solid black"
+|- style="background: #fff"
+! style="padding: 0.15em 0.4em; width: 3em" | Col.
+! style="padding: 0.15em 0.4em; width: 3em" | Bri.
+! style="padding: 0.15em 0.4em; width: 9em; text-align: left" | Name
+|- style="color: white; background: {{fgcolor|0:0}}"
+| style="padding: 0.15em 0.4em" | 0
+| style="padding: 0.15em 0.4em" | 0
+| style="padding: 0.15em 0.4em; text-align: left" | BLACK
+|- style="color: white; background: {{fgcolor|1:0}}"
+| style="padding: 0.15em 0.4em" | 1
+| style="padding: 0.15em 0.4em" | 0
+| style="padding: 0.15em 0.4em; text-align: left" | BLUE
+|- style="color: black; background: {{fgcolor|2:0}}"
+| style="padding: 0.15em 0.4em" | 2
+| style="padding: 0.15em 0.4em" | 0
+| style="padding: 0.15em 0.4em; text-align: left" | GREEN
+|- style="color: black; background: {{fgcolor|3:0}}"
+| style="padding: 0.15em 0.4em" | 3
+| style="padding: 0.15em 0.4em" | 0
+| style="padding: 0.15em 0.4em; text-align: left" | CYAN
+|- style="color: white; background: {{fgcolor|4:0}}"
+| style="padding: 0.15em 0.4em" | 4
+| style="padding: 0.15em 0.4em" | 0
+| style="padding: 0.15em 0.4em; text-align: left" | RED
+|- style="color: white; background: {{fgcolor|5:0}}"
+| style="padding: 0.15em 0.4em" | 5
+| style="padding: 0.15em 0.4em" | 0
+| style="padding: 0.15em 0.4em; text-align: left" | MAGENTA
+|- style="color: black; background: {{fgcolor|6:0}}"
+| style="padding: 0.15em 0.4em" | 6
+| style="padding: 0.15em 0.4em" | 0
+| style="padding: 0.15em 0.4em; text-align: left" | BROWN
+|- style="color: black; background: {{fgcolor|7:0}}"
+| style="padding: 0.15em 0.4em" | 7
+| style="padding: 0.15em 0.4em" | 0
+| style="padding: 0.15em 0.4em; text-align: left" | LGRAY
+|}
+| style="vertical-align: top; padding: 0" | 
+{| style="text-align: center; border-spacing: 0 1px; margin: 0 auto; background: black; border-left: 1px solid black; border-right: 1px solid black"
+|- style="background: #fff"
+! style="padding: 0.15em 0.4em; width: 3em" | Col.
+! style="padding: 0.15em 0.4em; width: 3em" | Bri.
+! style="padding: 0.15em 0.4em; width: 9em; text-align: left" | Name
+! style="padding: 0.15em 0.4em; width: 3em" | Alt.
+|- style="color: black; background: {{fgcolor|0:1}}"
+| style="padding: 0.15em 0.4em" | 0
+| style="padding: 0.15em 0.4em" | 1
+| style="padding: 0.15em 0.4em; text-align: left" | DGRAY
+| style="padding: 0.15em 0.4em" | 8
+|- style="color: black; background: {{fgcolor|1:1}}"
+| style="padding: 0.15em 0.4em" | 1
+| style="padding: 0.15em 0.4em" | 1
+| style="padding: 0.15em 0.4em; text-align: left" | LBLUE
+| style="padding: 0.15em 0.4em" | 9
+|- style="color: black; background: {{fgcolor|2:1}}"
+| style="padding: 0.15em 0.4em" | 2
+| style="padding: 0.15em 0.4em" | 1
+| style="padding: 0.15em 0.4em; text-align: left" | LGREEN
+| style="padding: 0.15em 0.4em" | 10
+|- style="color: black; background: {{fgcolor|3:1}}"
+| style="padding: 0.15em 0.4em" | 3
+| style="padding: 0.15em 0.4em" | 1
+| style="padding: 0.15em 0.4em; text-align: left" | LCYAN
+| style="padding: 0.15em 0.4em" | 11
+|- style="color: black; background: {{fgcolor|4:1}}"
+| style="padding: 0.15em 0.4em" | 4
+| style="padding: 0.15em 0.4em" | 1
+| style="padding: 0.15em 0.4em; text-align: left" | LRED
+| style="padding: 0.15em 0.4em" | 12
+|- style="color: black; background: {{fgcolor|5:1}}"
+| style="padding: 0.15em 0.4em" | 5
+| style="padding: 0.15em 0.4em" | 1
+| style="padding: 0.15em 0.4em; text-align: left" | LMAGENTA
+| style="padding: 0.15em 0.4em" | 13
+|- style="color: black; background: {{fgcolor|6:1}}"
+| style="padding: 0.15em 0.4em" | 6
+| style="padding: 0.15em 0.4em" | 1
+| style="padding: 0.15em 0.4em; text-align: left" | YELLOW
+| style="padding: 0.15em 0.4em" | 14
+|- style="color: black; background: {{fgcolor|7:1}}"
+| style="padding: 0.15em 0.4em" | 7
+| style="padding: 0.15em 0.4em" | 1
+| style="padding: 0.15em 0.4em; text-align: left" | WHITE
+| style="padding: 0.15em 0.4em" | 15
+|}
+|}
+::::''(* See [[color scheme]] for information about how to change the actual various colors as displayed.)''
+
+Sometimes the color numbers are part of another token, e.g. {{token|LEAVES|plant|quarry bush leaf:quarry bush leaves:6:7:0:0:0:0:1:LOCAL_PLANT_MAT:LEAF}} specifies the colors ``7:0:0`` for quarry bush leaves and ``0:0:1`` for wilted quarry bush leaves.
+
+====Values 8-15====
+
+If the brightness value is 1 or another nonzero number, it adds 8 to the foreground color. If the final value of the foreground or background is 8-15, it appears as a "bright" color. 
+
+As these values can be manually typed in instead of using the brightness value, you can also give the background a bright color with this method. For example, for a white background color, add 8 to 7 = 15. For a light green background color, you add 8 to 2 = 10.
+
+=== Color tokens ===
+
+When in graphics mode, most things do not use color flags. Instead, they reference [[Descriptor color token|color tokens]] defined in ``descriptor_color_standard.txt``. Color tokens are referenced by their token name, e.g. {{token|STATE_COLOR|md|SOLID:DARK_GREEN}} or {{token|POWDER_DYE|md|EMERALD}}. The defined RGB values are not displayed in-game; instead, it assigns colors in the sprite from the top row of the palette file (see [[Graphics#Palettes]]) to the row defined in ``data/vanilla/vanilla_descriptors_graphics/graphics/palette_default.txt``, or any user-defined palette objects.
+
+The following colors are grouped according to their corresponding display color in ASCII mode. Hexadecimal color values are not used in the raws, but correspond to the RGB values that are. For further information, see the Wikipedia article on [[wikipedia:Web colors|web colors]].
+
+{| style="margin: 1em 0; border-spacing: 0"
+|- style="vertical-align: top; padding: 0 1em"
+|
+{| style="text-align: right; border-spacing: 0 1px; margin: 1em auto 0; background: black; border-left: 1px solid black; border-right: 1px solid black; width: 100%"
+|+ '''DGRAY colors'''
+|- style="background: {{fgcolor|0:1}}"
+! style="text-align: center; padding: 0.15em 0.4em" | Token
+! style="text-align: center; padding: 0.15em 0.4em" colspan="3" | RGB
+! style="text-align: center; padding: 0.15em 0.4em" | Hex
+! style="text-align: center; padding: 0.15em 0.4em" | Palette
+|- style="color: white; background: rgb(0, 0, 0)"
+| style="padding: 0.15em 0.4em; text-align: left" | BLACK
+| style="padding: 0.15em 0.4em" | 0
+| style="padding: 0.15em 0.4em" | 0
+| style="padding: 0.15em 0.4em" | 0
+| style="padding: 0.15em 0.4em" | #000000
+| style="padding: 0.15em 0.4em" |{{Colorramp|#241f28|#28212c|#28242b|#29252a|#29282c|#2e2f30|#4f4d49|#6f6d68|#a4a8ab}}
+|- style="color: white; background: rgb(128, 128, 128)"
+| style="padding: 0.15em 0.4em; text-align: left" | CLEAR
+| style="padding: 0.15em 0.4em" | 128
+| style="padding: 0.15em 0.4em" | 128
+| style="padding: 0.15em 0.4em" | 128
+| style="padding: 0.15em 0.4em" | #808080
+| style="padding: 0.15em 0.4em" |{{Colorramp|#27252d|#36313c|#3f3743|#514955|#645a67|#8b7f8c|#9e9ca9|#bdd3d6|#eef4f0}}
+|- style="color: white; background: rgb(128, 128, 128)"
+| style="padding: 0.15em 0.4em; text-align: left" | GRAY
+| style="padding: 0.15em 0.4em" | 128
+| style="padding: 0.15em 0.4em" | 128
+| style="padding: 0.15em 0.4em" | 128
+| style="padding: 0.15em 0.4em" | #808080
+| style="padding: 0.15em 0.4em" |{{Colorramp|#2c2d33|#3a3a3e|#48484b|#565659|#68686a|#838382|#9f9c99|#bfbaaf|#f1f1f0}}
+|- style="color: black; background: rgb(139, 133, 137)"
+| style="padding: 0.15em 0.4em; text-align: left" | TAUPE_GRAY
+| style="padding: 0.15em 0.4em" | 139
+| style="padding: 0.15em 0.4em" | 133
+| style="padding: 0.15em 0.4em" | 137
+| style="padding: 0.15em 0.4em" | #8B8589
+| style="padding: 0.15em 0.4em" |{{Colorramp|#27201e|#2b2726|#322f2e|#3c3835|#453e3a|#5d544d|#6b6058|#7e7269|#c1b7a3}}
+|}
+|- style="vertical-align: top; padding: 0 1em"
+|
+{| style="text-align: right; border-spacing: 0 1px; margin: 1em auto 0; background: black; border-left: 1px solid black; border-right: 1px solid black; width: 100%"
+|+ '''LGRAY colors'''
+|- style="background: {{fgcolor|7:0}}"
+! style="text-align: center; padding: 0.15em 0.4em" | Token
+! style="text-align: center; padding: 0.15em 0.4em" colspan="3" | RGB
+! style="text-align: center; padding: 0.15em 0.4em" | Hex
+! style="text-align: center; padding: 0.15em 0.4em" | Palette
+|- style="color: black; background: rgb(192, 192, 192)"
+| style="padding: 0.15em 0.4em; text-align: left" | SILVER
+| style="padding: 0.15em 0.4em" | 192
+| style="padding: 0.15em 0.4em" | 192
+| style="padding: 0.15em 0.4em" | 192
+| style="padding: 0.15em 0.4em" | #C0C0C0
+| style="padding: 0.15em 0.4em" |{{Colorramp|#1f2028|#2d2d35|#384149|#4f5a67|#696f87|#9d9994|#b8bcc3|#dee3e1|#ffffff}}
+|- style="color: black; background: rgb(178, 190, 181)"
+| style="padding: 0.15em 0.4em; text-align: left" | ASH_GRAY
+| style="padding: 0.15em 0.4em" | 178
+| style="padding: 0.15em 0.4em" | 190
+| style="padding: 0.15em 0.4em" | 181
+| style="padding: 0.15em 0.4em" | #B2BEB5
+| style="padding: 0.15em 0.4em" |{{Colorramp|#2e2d34|#3a393f|#48464c|#56545b|#68666b|#838482|#9f9e99|#bebdb0|#f2f1f1}}
+|}
+|
+{| style="text-align: right; border-spacing: 0 1px; margin: 1em auto 0; background: black; border-left: 1px solid black; border-right: 1px solid black; width: 100%"
+|+ '''WHITE colors'''
+|- style="background: {{fgcolor|7:1}}"
+! style="text-align: center; padding: 0.15em 0.4em" | Token
+! style="text-align: center; padding: 0.15em 0.4em" colspan="3" | RGB
+! style="text-align: center; padding: 0.15em 0.4em" | Hex
+! style="text-align: center; padding: 0.15em 0.4em" | Palette
+|- style="color: black; background: rgb(255, 255, 255)"
+| style="padding: 0.15em 0.4em; text-align: left" | WHITE
+| style="padding: 0.15em 0.4em" | 255
+| style="padding: 0.15em 0.4em" | 255
+| style="padding: 0.15em 0.4em" | 255
+| style="padding: 0.15em 0.4em" | #FFFFFF
+| style="padding: 0.15em 0.4em" |{{Colorramp|#2f2f39|#595864|#76767f|#8f919a|#9ea1a9|#b3b6bf|#c8c9d0|#e3e3e4|#ffffff}}
+|- style="color: black; background: rgb(245, 245, 220)"
+| style="padding: 0.15em 0.4em; text-align: left" | BEIGE
+| style="padding: 0.15em 0.4em" | 245
+| style="padding: 0.15em 0.4em" | 245
+| style="padding: 0.15em 0.4em" | 220
+| style="padding: 0.15em 0.4em" | #F5F5DC
+| style="padding: 0.15em 0.4em" |{{Colorramp|#3d2728|#4b2f2e|#61423a|#6c4e41|#866e5a|#a18d70|#b6a792|#c6b8a5|#e6dccf}}
+|- style="color: black; background: rgb(255, 255, 240)"
+| style="padding: 0.15em 0.4em; text-align: left" | IVORY
+| style="padding: 0.15em 0.4em" | 255
+| style="padding: 0.15em 0.4em" | 255
+| style="padding: 0.15em 0.4em" | 240
+| style="padding: 0.15em 0.4em" | #FFFFF0
+| style="padding: 0.15em 0.4em" |{{Colorramp|#2e2a2e|#4a3a33|#5f4e41|#75644f|#8e836c|#aaa287|#bfb8a6|#cdc6b6|#e9e4d9}}
+|- style="color: black; background: rgb(230, 230, 250)"
+| style="padding: 0.15em 0.4em; text-align: left" | LAVENDER
+| style="padding: 0.15em 0.4em" | 230
+| style="padding: 0.15em 0.4em" | 230
+| style="padding: 0.15em 0.4em" | 250
+| style="padding: 0.15em 0.4em" | #E6E6FA
+| style="padding: 0.15em 0.4em" |{{Colorramp|#2f2c31|#463b44|#584758|#6c526a|#7a5978|#9c6f9a|#a883a7|#b89bb7|#e2cfdd}}
+|- style="color: black; background: rgb(255, 240, 245)"
+| style="padding: 0.15em 0.4em; text-align: left" | LAVENDER_BLUSH
+| style="padding: 0.15em 0.4em" | 255
+| style="padding: 0.15em 0.4em" | 240
+| style="padding: 0.15em 0.4em" | 245
+| style="padding: 0.15em 0.4em" | #FFF0F5
+| style="padding: 0.15em 0.4em" |{{Colorramp|#2f2c32|#483e47|#604f5f|#775e76|#8c6d8a|#ae84ac|#ba98b7|#c7adc6|#e9dae5}}
+|}
+|- style="vertical-align: top; padding: 0 1em"
+|
+{| style="text-align: right; border-spacing: 0 1px; margin: 1em auto 0; background: black; border-left: 1px solid black; border-right: 1px solid black; width: 100%"
+|+ '''RED colors'''
+|- style="background: {{fgcolor|4:0}}; color: white"
+! style="text-align: center; padding: 0.15em 0.4em" | Token
+! style="text-align: center; padding: 0.15em 0.4em" colspan="3" | RGB
+! style="text-align: center; padding: 0.15em 0.4em" | Hex
+! style="text-align: center; padding: 0.15em 0.4em" | Palette
+|- style="color: white; background: rgb(128, 0, 0)"
+| style="padding: 0.15em 0.4em; text-align: left" | MAROON
+| style="padding: 0.15em 0.4em" | 128
+| style="padding: 0.15em 0.4em" | 0
+| style="padding: 0.15em 0.4em" | 0
+| style="padding: 0.15em 0.4em" | #800000
+| style="padding: 0.15em 0.4em" |{{Colorramp|#24232d|#3c2b39|#4f3140|#5b2f3f|#5f2e3f|#792d33|#963335|#ae4d42|#d67a64}}
+|- style="color: white; background: rgb(205, 92, 92)"
+| style="padding: 0.15em 0.4em; text-align: left" | CHESTNUT
+| style="padding: 0.15em 0.4em" | 205
+| style="padding: 0.15em 0.4em" | 92
+| style="padding: 0.15em 0.4em" | 92
+| style="padding: 0.15em 0.4em" | #CD5C5C
+| style="padding: 0.15em 0.4em" |{{Colorramp|#27272e|#362e34|#45353b|#4e373c|#56383c|#6d3e3b|#8f4e45|#ad6947|#e0a36b}}
+|- style="color: black; background: rgb(244, 194, 194)"
+| style="padding: 0.15em 0.4em; text-align: left" | ROSE
+| style="padding: 0.15em 0.4em" | 244
+| style="padding: 0.15em 0.4em" | 194
+| style="padding: 0.15em 0.4em" | 194
+| style="padding: 0.15em 0.4em" | #F4C2C2
+| style="padding: 0.15em 0.4em" |{{Colorramp|#332f36|#473843|#53434e|#5e4b52|#6b5559|#866164|#9c6567|#bd7376|#e2acaf}}
+|- style="color: white; background: rgb(255, 0, 0)"
+| style="padding: 0.15em 0.4em; text-align: left" | RED
+| style="padding: 0.15em 0.4em" | 255
+| style="padding: 0.15em 0.4em" | 0
+| style="padding: 0.15em 0.4em" | 0
+| style="padding: 0.15em 0.4em" | #FF0000
+| style="padding: 0.15em 0.4em" |{{Colorramp|#381d20|#4b2323|#562926|#5e3029|#66362c|#853b31|#a43f36|#ce4c3d|#e5a09c}}
+|- style="color: white; background: rgb(227, 66, 52)"
+| style="padding: 0.15em 0.4em; text-align: left" | VERMILION
+| style="padding: 0.15em 0.4em" | 227
+| style="padding: 0.15em 0.4em" | 66
+| style="padding: 0.15em 0.4em" | 52
+| style="padding: 0.15em 0.4em" | #E34234
+| style="padding: 0.15em 0.4em" |{{Colorramp|#441823|#542123|#682f27|#703c32|#78463c|#954c3c|#ad4c34|#ca664c|#e39782}}
+|- style="color: white; background: rgb(152, 105, 96)"
+| style="padding: 0.15em 0.4em; text-align: left" | DARK_CHESTNUT
+| style="padding: 0.15em 0.4em" | 152
+| style="padding: 0.15em 0.4em" | 105
+| style="padding: 0.15em 0.4em" | 96
+| style="padding: 0.15em 0.4em" | #986960
+| style="padding: 0.15em 0.4em" |{{Colorramp|#1c1c20|#252126|#30272d|#39292d|#3c292d|#4e2f2e|#6b433d|#8c614b|#b8916a}}
+|- style="color: black; background: rgb(233, 116, 81)"
+| style="padding: 0.15em 0.4em; text-align: left" | BURNT_SIENNA
+| style="padding: 0.15em 0.4em" | 233
+| style="padding: 0.15em 0.4em" | 116
+| style="padding: 0.15em 0.4em" | 81
+| style="padding: 0.15em 0.4em" | #E97451
+| style="padding: 0.15em 0.4em" |{{Colorramp|#232229|#2d282e|#392c32|#432d31|#4b3033|#613731|#7f493a|#9c6642|#c19862}}
+|- style="color: white; background: rgb(192, 64, 0)"
+| style="padding: 0.15em 0.4em; text-align: left" | MAHOGANY
+| style="padding: 0.15em 0.4em" | 192
+| style="padding: 0.15em 0.4em" | 64
+| style="padding: 0.15em 0.4em" | 0
+| style="padding: 0.15em 0.4em" | #C04000
+| style="padding: 0.15em 0.4em" |{{Colorramp|#26262c|#3b3039|#4c3942|#553b44|#5a3c46|#6e4043|#884c4c|#9c5f4d|#c49476}}
+|- style="color: white; background: rgb(152, 118, 84)"
+| style="padding: 0.15em 0.4em; text-align: left" | PALE_BROWN
+| style="padding: 0.15em 0.4em" | 152
+| style="padding: 0.15em 0.4em" | 118
+| style="padding: 0.15em 0.4em" | 84
+| style="padding: 0.15em 0.4em" | #987654
+| style="padding: 0.15em 0.4em" |{{Colorramp|#2e2d31|#3d3537|#493f40|#534848|#5f504f|#78655c|#937f71|#ac9d8e|#cec4b3}}
+|- style="color: white; background: rgb(255, 25, 128)"
+| style="padding: 0.15em 0.4em; text-align: left" | RASPBERRY_PINK
+| style="padding: 0.15em 0.4em" | 255
+| style="padding: 0.15em 0.4em" | 25
+| style="padding: 0.15em 0.4em" | 128
+| style="padding: 0.15em 0.4em" | #FF1980
+| style="padding: 0.15em 0.4em" |{{Colorramp|#241F28|#241F28|#2C202C|#382132|#452039|#5D1F3D|#6E1F43|#83224F|#BF698A}}
+|- style="color: white; background: rgb(178, 0, 75)"
+| style="padding: 0.15em 0.4em; text-align: left" | RED_PURPLE
+| style="padding: 0.15em 0.4em" | 178
+| style="padding: 0.15em 0.4em" | 0
+| style="padding: 0.15em 0.4em" | 75
+| style="padding: 0.15em 0.4em" | #B2004B
+| style="padding: 0.15em 0.4em" |{{Colorramp|#322933|#3e303d|#483843|#523d46|#5c454b|#724c50|#894e54|#ab5a62|#de959d}}
+|- style="color: black; background: rgb(231, 84, 128)"
+| style="padding: 0.15em 0.4em; text-align: left" | DARK_PINK
+| style="padding: 0.15em 0.4em" | 231
+| style="padding: 0.15em 0.4em" | 84
+| style="padding: 0.15em 0.4em" | 128
+| style="padding: 0.15em 0.4em" | #E75480
+| style="padding: 0.15em 0.4em" |{{Colorramp|#1e1f22|#29252a|#332930|#392b33|#432b36|#552b34|#6e323a|#8c3c45|#c48b89}}
+|- style="color: white; background: rgb(86, 3, 25)"
+| style="padding: 0.15em 0.4em; text-align: left" | DARK_SCARLET
+| style="padding: 0.15em 0.4em" | 86
+| style="padding: 0.15em 0.4em" | 3
+| style="padding: 0.15em 0.4em" | 25
+| style="padding: 0.15em 0.4em" | #560319
+| style="padding: 0.15em 0.4em" |{{Colorramp|#251016|#2f1519|#361a1c|#3a1f21|#442424|#622320|#7d251e|#a32e26|#d7665d}}
+|- style="color: white; background: rgb(220, 20, 60)"
+| style="padding: 0.15em 0.4em; text-align: left" | CRIMSON
+| style="padding: 0.15em 0.4em" | 220
+| style="padding: 0.15em 0.4em" | 20
+| style="padding: 0.15em 0.4em" | 60
+| style="padding: 0.15em 0.4em" | #DC143C
+| style="padding: 0.15em 0.4em" |{{Colorramp|#22242c|#302833|#442b3b|#4e2c3e|#592e41|#712a38|#942c39|#c0323f|#df8a85}}
+|- style="color: white; background: rgb(150, 0, 24)"
+| style="padding: 0.15em 0.4em; text-align: left" | CARMINE
+| style="padding: 0.15em 0.4em" | 150
+| style="padding: 0.15em 0.4em" | 0
+| style="padding: 0.15em 0.4em" | 24
+| style="padding: 0.15em 0.4em" | #960018
+| style="padding: 0.15em 0.4em" |{{Colorramp|#1c1c23|#261f27|#2f202a|#3e212d|#4f2030|#701929|#8b1827|#a41e2e|#d96b70}}
+|- style="color: white; background: rgb(196, 30, 58)"
+| style="padding: 0.15em 0.4em; text-align: left" | CARDINAL
+| style="padding: 0.15em 0.4em" | 196
+| style="padding: 0.15em 0.4em" | 30
+| style="padding: 0.15em 0.4em" | 58
+| style="padding: 0.15em 0.4em" | #C41E3A
+| style="padding: 0.15em 0.4em" |{{Colorramp|#22222c|#322933|#442b35|#4e2c36|#592e37|#712c2a|#963a2e|#c44935|#d8957a}}
+|}
+|
+{| style="text-align: right; border-spacing: 0 1px; margin: 1em auto 0; background: black; border-left: 1px solid black; border-right: 1px solid black; width: 100%"
+|+ '''LRED colors'''
+|- style="background: {{fgcolor|4:1}}"
+! style="text-align: center; padding: 0.15em 0.4em" | Token
+! style="text-align: center; padding: 0.15em 0.4em" colspan="3" | RGB
+! style="text-align: center; padding: 0.15em 0.4em" | Hex
+! style="text-align: center; padding: 0.15em 0.4em" | Palette
+|- style="color: white; background: rgb(183, 65, 14)"
+| style="padding: 0.15em 0.4em; text-align: left" | RUST
+| style="padding: 0.15em 0.4em" | 183
+| style="padding: 0.15em 0.4em" | 65
+| style="padding: 0.15em 0.4em" | 14
+| style="padding: 0.15em 0.4em" | #B7410E
+| style="padding: 0.15em 0.4em" |{{Colorramp|#3a2426|#4f2f2a|#653124|#7d3b24|#7f4a30|#88573f|#9d6f4c|#c69d63|#e4bf8a}}
+|- style="color: black; background: rgb(255, 117, 24)"
+| style="padding: 0.15em 0.4em; text-align: left" | PUMPKIN
+| style="padding: 0.15em 0.4em" | 255
+| style="padding: 0.15em 0.4em" | 117
+| style="padding: 0.15em 0.4em" | 24
+| style="padding: 0.15em 0.4em" | #FF7518
+| style="padding: 0.15em 0.4em" |{{Colorramp|#2d241b|#402f19|#4f3620|#5d3c2a|#6a432a|#8c4f25|#b3672f|#cb8947|#ecbf84}}
+|- style="color: white; background: rgb(112, 66, 20)"
+| style="padding: 0.15em 0.4em; text-align: left" | SEPIA
+| style="padding: 0.15em 0.4em" | 112
+| style="padding: 0.15em 0.4em" | 66
+| style="padding: 0.15em 0.4em" | 20
+| style="padding: 0.15em 0.4em" | #704214
+| style="padding: 0.15em 0.4em" |{{Colorramp|#3a2325|#52352e|#643d31|#7c4f3c|#805d48|#8a6c5b|#9f846f|#b2997e|#dac19b}}
+|- style="color: white; background: rgb(150, 75, 0)"
+| style="padding: 0.15em 0.4em; text-align: left" | BROWN
+| style="padding: 0.15em 0.4em" | 150
+| style="padding: 0.15em 0.4em" | 75
+| style="padding: 0.15em 0.4em" | 0
+| style="padding: 0.15em 0.4em" | #964B00
+| style="padding: 0.15em 0.4em" |{{Colorramp|#2b272e|#3b3035|#483a3e|#514141|#604a48|#7a5d4d|#987a62|#b09a81|#d2c4aa}}
+|- style="color: white; background: rgb(123, 63, 0)"
+| style="padding: 0.15em 0.4em; text-align: left" | CINNAMON
+| style="padding: 0.15em 0.4em" | 123
+| style="padding: 0.15em 0.4em" | 63
+| style="padding: 0.15em 0.4em" | 0
+| style="padding: 0.15em 0.4em" | #7B3F00
+| style="padding: 0.15em 0.4em" |{{Colorramp|#28272e|#352e32|#453538|#4e3739|#553839|#6d443d|#8e5848|#ad774b|#dbb070}}
+|- style="color: black; background: rgb(210, 180, 140)"
+| style="padding: 0.15em 0.4em; text-align: left" | TAN
+| style="padding: 0.15em 0.4em" | 210
+| style="padding: 0.15em 0.4em" | 180
+| style="padding: 0.15em 0.4em" | 140
+| style="padding: 0.15em 0.4em" | #D2B48C
+| style="padding: 0.15em 0.4em" |{{Colorramp|#312e36|#44393e|#544648|#655653|#76645e|#907d66|#a59479|#b4a992|#d3cfbf}}
+|- style="color: white; background: rgb(115, 74, 18)"
+| style="padding: 0.15em 0.4em; text-align: left" | RAW_UMBER
+| style="padding: 0.15em 0.4em" | 115
+| style="padding: 0.15em 0.4em" | 74
+| style="padding: 0.15em 0.4em" | 18
+| style="padding: 0.15em 0.4em" | #734A12
+| style="padding: 0.15em 0.4em" |{{Colorramp|#2b2729|#38302d|#443b36|#4e433d|#5c4d44|#775f4b|#937d5f|#ac9d7e|#d0c9a8}}
+|- style="color: white; background: rgb(150, 113, 23)"
+| style="padding: 0.15em 0.4em; text-align: left" | TAUPE_SANDY
+| style="padding: 0.15em 0.4em" | 150
+| style="padding: 0.15em 0.4em" | 113
+| style="padding: 0.15em 0.4em" | 23
+| style="padding: 0.15em 0.4em" | #967117
+| style="padding: 0.15em 0.4em" |{{Colorramp|#27201e|#3a3023|#463a2c|#4c4336|#554a3a|#70604a|#806d53|#998261|#cfc19c}}
+|- style="color: black; background: rgb(194, 178, 128)"
+| style="padding: 0.15em 0.4em; text-align: left" | ECRU
+| style="padding: 0.15em 0.4em" | 194
+| style="padding: 0.15em 0.4em" | 178
+| style="padding: 0.15em 0.4em" | 128
+| style="padding: 0.15em 0.4em" | #C2B280
+| style="padding: 0.15em 0.4em" |{{Colorramp|#342425|#4c302e|#61423a|#6c4e41|#866e5a|#a18d70|#b8aa85|#ccc09b|#e5ddc4}}
+|- style="color: white; background: rgb(255, 36, 0)"
+| style="padding: 0.15em 0.4em; text-align: left" | SCARLET
+| style="padding: 0.15em 0.4em" | 255
+| style="padding: 0.15em 0.4em" | 36
+| style="padding: 0.15em 0.4em" | 0
+| style="padding: 0.15em 0.4em" | #FF2400
+| style="padding: 0.15em 0.4em" |{{Colorramp|#401c2b|#4d252d|#612c2c|#6b3734|#743f3c|#96433d|#ae3f35|#cd4835|#e79a91}}
+|}
+|- style="vertical-align: top; padding: 0 1em"
+|
+{| style="text-align: right; border-spacing: 0 1px; margin: 1em auto 0; background: black; border-left: 1px solid black; border-right: 1px solid black; width: 100%"
+|+ '''BROWN colors'''
+|- style="background: {{fgcolor|6:0}}"
+! style="text-align: center; padding: 0.15em 0.4em" | Token
+! style="text-align: center; padding: 0.15em 0.4em" colspan="3" | RGB
+! style="text-align: center; padding: 0.15em 0.4em" | Hex
+! style="text-align: center; padding: 0.15em 0.4em" | Palette
+|- style="color: white; background: rgb(138, 51, 36)"
+| style="padding: 0.15em 0.4em; text-align: left" | BURNT_UMBER
+| style="padding: 0.15em 0.4em" | 138
+| style="padding: 0.15em 0.4em" | 51
+| style="padding: 0.15em 0.4em" | 36
+| style="padding: 0.15em 0.4em" | #8A3324
+| style="padding: 0.15em 0.4em" |{{Colorramp|#1d1e23|#262227|#2f262c|#34282f|#392931|#462a2e|#613030|#754035|#b7856d}}
+|- style="color: white; background: rgb(111, 53, 26)"
+| style="padding: 0.15em 0.4em; text-align: left" | AUBURN
+| style="padding: 0.15em 0.4em" | 111
+| style="padding: 0.15em 0.4em" | 53
+| style="padding: 0.15em 0.4em" | 26
+| style="padding: 0.15em 0.4em" | #6F351A
+| style="padding: 0.15em 0.4em" |{{Colorramp|#3d231f|#51281a|#642e1d|#713e20|#7e4b2a|#8f5826|#a56f29|#bc9562|#e3d0a6}}
+|- style="color: white; background: rgb(210, 105, 30)"
+| style="padding: 0.15em 0.4em; text-align: left" | CHOCOLATE
+| style="padding: 0.15em 0.4em" | 210
+| style="padding: 0.15em 0.4em" | 105
+| style="padding: 0.15em 0.4em" | 30
+| style="padding: 0.15em 0.4em" | #DC691E
+| style="padding: 0.15em 0.4em" |{{Colorramp|#232329|#2d292d|#392f31|#413031|#463333|#5b3f37|#785142|#916b46|#caac77}}
+|- style="color: black; background: rgb(188, 152, 126)"
+| style="padding: 0.15em 0.4em; text-align: left" | TAUPE_PALE
+| style="padding: 0.15em 0.4em" | 188
+| style="padding: 0.15em 0.4em" | 152
+| style="padding: 0.15em 0.4em" | 126
+| style="padding: 0.15em 0.4em" | #BC987E
+| style="padding: 0.15em 0.4em" |{{Colorramp|#27201e|#342b26|#403730|#49413b|#524941|#6f6257|#7e6f62|#908172|#cabea8}}
+|- style="color: black; background: rgb(184, 115, 51)"
+| style="padding: 0.15em 0.4em; text-align: left" | COPPER
+| style="padding: 0.15em 0.4em" | 184
+| style="padding: 0.15em 0.4em" | 115
+| style="padding: 0.15em 0.4em" | 51
+| style="padding: 0.15em 0.4em" | #B87333
+| style="padding: 0.15em 0.4em" |{{Colorramp|#212c35|#2e3840|#463f46|#5a4246|#68403c|#884833|#a65835|#c78151|#edb88c}}
+|- style="color: white; background: rgb(101, 67, 33)"
+| style="padding: 0.15em 0.4em; text-align: left" | DARK_BROWN
+| style="padding: 0.15em 0.4em" | 101
+| style="padding: 0.15em 0.4em" | 67
+| style="padding: 0.15em 0.4em" | 33
+| style="padding: 0.15em 0.4em" | #654321
+| style="padding: 0.15em 0.4em" |{{Colorramp|#1f1e21|#262427|#2d292c|#352f30|#3b3131|#4c3d39|#68544c|#876f58|#d7c093}}
+|- style="color: black; background: rgb(205, 133, 63)"
+| style="padding: 0.15em 0.4em; text-align: left" | LIGHT_BROWN
+| style="padding: 0.15em 0.4em" | 205
+| style="padding: 0.15em 0.4em" | 133
+| style="padding: 0.15em 0.4em" | 63
+| style="padding: 0.15em 0.4em" | #CD853F
+| style="padding: 0.15em 0.4em" |{{Colorramp|#2b282e|#3f3338|#504144|#604d4e|#735c59|#8e705f|#a98e76|#c0ac96|#dcd1bb}}
+|- style="color: black; background: rgb(205, 127, 50)"
+| style="padding: 0.15em 0.4em; text-align: left" | BRONZE
+| style="padding: 0.15em 0.4em" | 205
+| style="padding: 0.15em 0.4em" | 127
+| style="padding: 0.15em 0.4em" | 50
+| style="padding: 0.15em 0.4em" | #CD7F32
+| style="padding: 0.15em 0.4em" |{{Colorramp|#27252c|#302b30|#403033|#493335|#523738|#69453a|#895b45|#a87d4f|#d1b373}}
+|- style="color: black; background: rgb(204, 119, 34)"
+| style="padding: 0.15em 0.4em; text-align: left" | OCHRE
+| style="padding: 0.15em 0.4em" | 204
+| style="padding: 0.15em 0.4em" | 119
+| style="padding: 0.15em 0.4em" | 34
+| style="padding: 0.15em 0.4em" | #CC7722
+| style="padding: 0.15em 0.4em" |{{Colorramp|#27232e|#352c31|#4c3334|#5a3b35|#674332|#81532a|#a26e2f|#bf903f|#e2bc6d}}
+|- style="color: black; background: rgb(218, 165, 32)"
+| style="padding: 0.15em 0.4em; text-align: left" | GOLDENROD
+| style="padding: 0.15em 0.4em" | 218
+| style="padding: 0.15em 0.4em" | 165
+| style="padding: 0.15em 0.4em" | 32
+| style="padding: 0.15em 0.4em" | #DAA520
+| style="padding: 0.15em 0.4em" |{{Colorramp|#2c2933|#413035|#553736|#654138|#754b3a|#996736|#c38b3e|#e4b748|#f7ec93}}
+|- style="color: black; background: rgb(212, 175, 55)"
+| style="padding: 0.15em 0.4em; text-align: left" | GOLD
+| style="padding: 0.15em 0.4em" | 212
+| style="padding: 0.15em 0.4em" | 175
+| style="padding: 0.15em 0.4em" | 55
+| style="padding: 0.15em 0.4em" | #D4AF37
+| style="padding: 0.15em 0.4em" |{{Colorramp|#2c2a33|#3f3236|#513a3a|#61453e|#6f4e41|#8d6741|#b3884d|#d0ae59|#f4eb96}}
+|- style="color: black; background: rgb(181, 166, 66)"
+| style="padding: 0.15em 0.4em; text-align: left" | BRASS
+| style="padding: 0.15em 0.4em" | 181
+| style="padding: 0.15em 0.4em" | 166
+| style="padding: 0.15em 0.4em" | 66
+| style="padding: 0.15em 0.4em" | #B5A642
+| style="padding: 0.15em 0.4em" |{{Colorramp|#2c2932|#3c3033|#4c3936|#58433b|#644d3f|#816a3f|#a58c4b|#c0b155|#dce18b}}
+|- style="color: white; background: rgb(128, 128, 0)"
+| style="padding: 0.15em 0.4em; text-align: left" | OLIVE
+| style="padding: 0.15em 0.4em" | 128
+| style="padding: 0.15em 0.4em" | 128
+| style="padding: 0.15em 0.4em" | 0
+| style="padding: 0.15em 0.4em" | #808000
+| style="padding: 0.15em 0.4em" |{{Colorramp|#252823|#2c2f2a|#34382b|#424637|#555542|#696f48|#8d8c56|#aaa371|#d4d1a9}}
+|}
+|
+{| style="text-align: right; border-spacing: 0 1px; margin: 1em auto 0; background: black; border-left: 1px solid black; border-right: 1px solid black; width: 100%"
+|+ '''YELLOW colors'''
+|- style="background: {{fgcolor|6:1}}"
+! style="text-align: center; padding: 0.15em 0.4em" | Token
+! style="text-align: center; padding: 0.15em 0.4em" colspan="3" | RGB
+! style="text-align: center; padding: 0.15em 0.4em" | Hex
+! style="text-align: center; padding: 0.15em 0.4em" | Palette
+|- style="color: black; background: rgb(255, 218, 185)"
+| style="padding: 0.15em 0.4em; text-align: left" | DARK_PEACH
+| style="padding: 0.15em 0.4em" | 255
+| style="padding: 0.15em 0.4em" | 218
+| style="padding: 0.15em 0.4em" | 185
+| style="padding: 0.15em 0.4em" | #FFDAB9
+| style="padding: 0.15em 0.4em" |{{Colorramp|#1e1e23|#30272e|#3d2d33|#463135|#503537|#683f37|#855748|#9b735a|#c4a685}}
+|- style="color: black; background: rgb(255, 165, 0)"
+| style="padding: 0.15em 0.4em; text-align: left" | ORANGE
+| style="padding: 0.15em 0.4em" | 255
+| style="padding: 0.15em 0.4em" | 165
+| style="padding: 0.15em 0.4em" | 0
+| style="padding: 0.15em 0.4em" | #FFA500
+| style="padding: 0.15em 0.4em" |{{Colorramp|#362d27|#4b3624|#573d2c|#664437|#724837|#925031|#b6633a|#cd8251|#e5ae7f}}
+|- style="color: black; background: rgb(255, 229, 180)"
+| style="padding: 0.15em 0.4em; text-align: left" | PEACH
+| style="padding: 0.15em 0.4em" | 255
+| style="padding: 0.15em 0.4em" | 229
+| style="padding: 0.15em 0.4em" | 180
+| style="padding: 0.15em 0.4em" | #FFE5B4
+| style="padding: 0.15em 0.4em" |{{Colorramp|#322c30|#432f2d|#523a37|#5f4341|#6f4f4f|#8d5852|#a76a62|#bc8273|#e4b7a1}}
+|- style="color: black; background: rgb(244, 196, 48)"
+| style="padding: 0.15em 0.4em; text-align: left" | SAFFRON
+| style="padding: 0.15em 0.4em" | 244
+| style="padding: 0.15em 0.4em" | 196
+| style="padding: 0.15em 0.4em" | 48
+| style="padding: 0.15em 0.4em" | #F4C430
+| style="padding: 0.15em 0.4em" |{{Colorramp|#2e2e34|#483a3d|#5a3f3e|#6a4941|#775243|#99693e|#bf8746|#dead4d|#f8e389}}
+|- style="color: black; background: rgb(255, 191, 0)"
+| style="padding: 0.15em 0.4em; text-align: left" | AMBER
+| style="padding: 0.15em 0.4em" | 255
+| style="padding: 0.15em 0.4em" | 191
+| style="padding: 0.15em 0.4em" | 0
+| style="padding: 0.15em 0.4em" | #FFBF00
+| style="padding: 0.15em 0.4em" |{{Colorramp|#392d2d|#643622|#7d4128|#8e5625|#aa7637|#c79433|#e1b439|#efd68f|#f9f5ec}}
+|- style="color: black; background: rgb(240, 234, 214)"
+| style="padding: 0.15em 0.4em; text-align: left" | PEARL
+| style="padding: 0.15em 0.4em" | 240
+| style="padding: 0.15em 0.4em" | 234
+| style="padding: 0.15em 0.4em" | 214
+| style="padding: 0.15em 0.4em" | #F0EBD6
+| style="padding: 0.15em 0.4em" |{{Colorramp|#332c2e|#46373c|#56444c|#68535b|#7b5e66|#a3797b|#c7a6a3|#dac2bf|#ebdbd5}}
+|- style="color: black; background: rgb(240, 220, 130)"
+| style="padding: 0.15em 0.4em; text-align: left" | BUFF
+| style="padding: 0.15em 0.4em" | 240
+| style="padding: 0.15em 0.4em" | 220
+| style="padding: 0.15em 0.4em" | 130
+| style="padding: 0.15em 0.4em" | #F0DC82
+| style="padding: 0.15em 0.4em" |{{Colorramp|#2b2830|#3a3234|#4a3a39|#54433e|#604d43|#786345|#988153|#b1a05f|#d4d392}}
+|- style="color: black; background: rgb(238, 220, 130)"
+| style="padding: 0.15em 0.4em; text-align: left" | FLAX
+| style="padding: 0.15em 0.4em" | 238
+| style="padding: 0.15em 0.4em" | 220
+| style="padding: 0.15em 0.4em" | 130
+| style="padding: 0.15em 0.4em" | #EEDC82
+| style="padding: 0.15em 0.4em" |{{Colorramp|#362127|#442e29|#583e32|#65483d|#7c6b4e|#958552|#b6ab66|#d0ca7f|#e1e9b1}}
+|- style="color: black; background: rgb(255, 223, 0)"
+| style="padding: 0.15em 0.4em; text-align: left" | GOLDEN_YELLOW
+| style="padding: 0.15em 0.4em" | 255
+| style="padding: 0.15em 0.4em" | 223
+| style="padding: 0.15em 0.4em" | 0
+| style="padding: 0.15em 0.4em" | #FFDF00
+| style="padding: 0.15em 0.4em" |{{Colorramp|#2c2933|#413033|#553c37|#644839|#75553d|#9a7739|#c4a043|#e4cf4e|#f3f795}}
+|- style="color: black; background: rgb(253, 233, 16)"
+| style="padding: 0.15em 0.4em; text-align: left" | LEMON
+| style="padding: 0.15em 0.4em" | 253
+| style="padding: 0.15em 0.4em" | 233
+| style="padding: 0.15em 0.4em" | 16
+| style="padding: 0.15em 0.4em" | #FDE910
+| style="padding: 0.15em 0.4em" |{{Colorramp|#2e2c33|#493939|#614e42|#715d44|#826d49|#a69849|#d3c854|#e3ed5c|#f7f9d7}}
+|- style="color: black; background: rgb(255, 253, 208)"
+| style="padding: 0.15em 0.4em; text-align: left" | CREAM
+| style="padding: 0.15em 0.4em" | 255
+| style="padding: 0.15em 0.4em" | 253
+| style="padding: 0.15em 0.4em" | 208
+| style="padding: 0.15em 0.4em" | #FFFDD0
+| style="padding: 0.15em 0.4em" |{{Colorramp|#342b2f|#563431|#664539|#7f5b46|#997e64|#b09d7d|#c3b49e|#d1c3b0|#f3e8da}}
+|- style="color: black; background: rgb(255, 255, 0)"
+| style="padding: 0.15em 0.4em; text-align: left" | YELLOW
+| style="padding: 0.15em 0.4em" | 255
+| style="padding: 0.15em 0.4em" | 255
+| style="padding: 0.15em 0.4em" | 0
+| style="padding: 0.15em 0.4em" | #FFFF00
+| style="padding: 0.15em 0.4em" |{{Colorramp|#2f2d2b|#554322|#635329|#756836|#8a7d3f|#a99748|#cab348|#e5cc57|#fbf078}}
+|- style="color: black; background: rgb(204, 255, 0)"
+| style="padding: 0.15em 0.4em; text-align: left" | LIME
+| style="padding: 0.15em 0.4em" | 204
+| style="padding: 0.15em 0.4em" | 255
+| style="padding: 0.15em 0.4em" | 0
+| style="padding: 0.15em 0.4em" | #CCFF00
+| style="padding: 0.15em 0.4em" |{{Colorramp|#2c2f30|#3f3e33|#55503c|#636341|#707649|#91a258|#bacf71|#d1f082|#f2fadc}}
+|}
+|- style="vertical-align: top; padding: 0 1em"
+|
+{| style="text-align: right; border-spacing: 0 1px; margin: 1em auto 0; background: black; border-left: 1px solid black; border-right: 1px solid black; width: 100%"
+|+ '''GREEN colors'''
+|- style="background: {{fgcolor|2:0}}"
+! style="text-align: center; padding: 0.15em 0.4em" | Token
+! style="text-align: center; padding: 0.15em 0.4em" colspan="3" | RGB
+! style="text-align: center; padding: 0.15em 0.4em" | Hex
+! style="text-align: center; padding: 0.15em 0.4em" | Palette
+|- style="color: white; background: rgb(72, 60, 50)"
+| style="padding: 0.15em 0.4em; text-align: left" | TAUPE_DARK
+| style="padding: 0.15em 0.4em" | 72
+| style="padding: 0.15em 0.4em" | 60
+| style="padding: 0.15em 0.4em" | 50
+| style="padding: 0.15em 0.4em" | #483C32
+| style="padding: 0.15em 0.4em" |{{Colorramp|#27201e|#2d2523|#2f2827|#342e2c|#3d342c|#544438|#614f3f|#7a5e4b|#bcaa8b}}
+|- style="color: black; background: rgb(145, 129, 81)"
+| style="padding: 0.15em 0.4em; text-align: left" | DARK_TAN
+| style="padding: 0.15em 0.4em" | 145
+| style="padding: 0.15em 0.4em" | 129
+| style="padding: 0.15em 0.4em" | 81
+| style="padding: 0.15em 0.4em" | #918151
+| style="padding: 0.15em 0.4em" |{{Colorramp|#27252b|#342e31|#413435|#483c3a|#544540|#695544|#806d53|#91846b|#beb798}}
+|- style="color: black; background: rgb(154, 205, 50)"
+| style="padding: 0.15em 0.4em; text-align: left" | YELLOW_GREEN
+| style="padding: 0.15em 0.4em" | 154
+| style="padding: 0.15em 0.4em" | 205
+| style="padding: 0.15em 0.4em" | 50
+| style="padding: 0.15em 0.4em" | #9ACD32
+| style="padding: 0.15em 0.4em" |{{Colorramp|#2c2f2b|#464d24|#575c2c|#6c6b38|#787938|#939542|#acaf4c|#c2c85b|#f4f296}}
+|- style="color: white; background: rgb(85, 104, 50)"
+| style="padding: 0.15em 0.4em; text-align: left" | DARK_OLIVE
+| style="padding: 0.15em 0.4em" | 85
+| style="padding: 0.15em 0.4em" | 104
+| style="padding: 0.15em 0.4em" | 50
+| style="padding: 0.15em 0.4em" | #556832
+| style="padding: 0.15em 0.4em" |{{Colorramp|#181c1a|#1c201e|#1f2520|#262c25|#303727|#464c30|#67673b|#908c5b|#c7c594}}
+|- style="color: black; background: rgb(173, 255, 47)"
+| style="padding: 0.15em 0.4em; text-align: left" | GREEN-YELLOW
+| style="padding: 0.15em 0.4em" | 173
+| style="padding: 0.15em 0.4em" | 255
+| style="padding: 0.15em 0.4em" | 47
+| style="padding: 0.15em 0.4em" | #ADFF2F
+| style="padding: 0.15em 0.4em" |{{Colorramp|#2a2e21|#37381b|#443e1f|#514523|#5c4f27|#777528|#97913c|#b4b24d|#cedf7e}}
+|- style="color: black; background: rgb(97, 178, 53)"
+| style="padding: 0.15em 0.4em; text-align: left" | APPLE_GREEN
+| style="padding: 0.15em 0.4em" | 97
+| style="padding: 0.15em 0.4em" | 178
+| style="padding: 0.15em 0.4em" | 53
+| style="padding: 0.15em 0.4em" | #61B235
+| style="padding: 0.15em 0.4em" |{{Colorramp|#25292B|#2A3030|#2B3431|#334234|#44533E|#5A6F4D|#6B8B58|#84A871|#BAD6A9}}
+|}
+|
+{| style="text-align: right; border-spacing: 0 1px; margin: 1em auto 0; background: black; border-left: 1px solid black; border-right: 1px solid black; width: 100%"
+|+ '''LGREEN colors'''
+|- style="background: {{fgcolor|2:1}}"
+! style="text-align: center; padding: 0.15em 0.4em" | Token
+! style="text-align: center; padding: 0.15em 0.4em" colspan="3" | RGB
+! style="text-align: center; padding: 0.15em 0.4em" | Hex
+! style="text-align: center; padding: 0.15em 0.4em" | Palette
+|- style="color: black; background: rgb(127, 255, 0)"
+| style="padding: 0.15em 0.4em; text-align: left" | CHARTREUSE
+| style="padding: 0.15em 0.4em" | 127
+| style="padding: 0.15em 0.4em" | 255
+| style="padding: 0.15em 0.4em" | 0
+| style="padding: 0.15em 0.4em" | #7BFF00
+| style="padding: 0.15em 0.4em" |{{Colorramp|#243023|#2c3b1f|#3a4724|#465027|#53592a|#6b6d31|#8c8a46|#b1b362|#d1e879}}
+|- style="color: black; background: rgb(80, 229, 0)"
+| style="padding: 0.15em 0.4em; text-align: left" | BRIGHT_GREEN
+| style="padding: 0.15em 0.4em" | 80
+| style="padding: 0.15em 0.4em" | 229
+| style="padding: 0.15em 0.4em" | 0
+| style="padding: 0.15em 0.4em" | #50E500
+| style="padding: 0.15em 0.4em" |{{Colorramp|#283336|#2E5049|#386351|#417555|#4A8852|#64A95E|#82C479|#92C985|#A4D59B}}
+|- style="color: white; background: rgb(25, 178, 17)"
+| style="padding: 0.15em 0.4em; text-align: left" | LEAF_GREEN
+| style="padding: 0.15em 0.4em" | 25
+| style="padding: 0.15em 0.4em" | 178
+| style="padding: 0.15em 0.4em" | 17
+| style="padding: 0.15em 0.4em" | #19B211
+| style="padding: 0.15em 0.4em" |{{Colorramp|#24252B|#272C30|#2B3636|#32463B|#39553C|#437343|#4B924C|#63AE65|#BAE0A4}}
+|- style="color: black; background: rgb(55, 229, 45)"
+| style="padding: 0.15em 0.4em; text-align: left" | ZESTY_GREEN
+| style="padding: 0.15em 0.4em" | 55
+| style="padding: 0.15em 0.4em" | 229
+| style="padding: 0.15em 0.4em" | 45
+| style="padding: 0.15em 0.4em" | #37E52D
+| style="padding: 0.15em 0.4em" |{{Colorramp|#243328|#2F4828|#355E2E|#3B6635|#467240|#518C48|#58A458|#67B868|#8ADD8D}}
+|- style="color: black; background: rgb(0, 255, 0)"
+| style="padding: 0.15em 0.4em; text-align: left" | GREEN
+| style="padding: 0.15em 0.4em" | 0
+| style="padding: 0.15em 0.4em" | 255
+| style="padding: 0.15em 0.4em" | 0
+| style="padding: 0.15em 0.4em" | #00FF00
+| style="padding: 0.15em 0.4em" |{{Colorramp|#252e22|#313b1f|#3e4422|#4c5027|#565b2c|#59702b|#789040|#8dac50|#b0d78c}}
+|- style="color: white; background: rgb(15, 153, 49)"
+| style="padding: 0.15em 0.4em; text-align: left" | WOODLAND_GREEN
+| style="padding: 0.15em 0.4em" | 15
+| style="padding: 0.15em 0.4em" | 153
+| style="padding: 0.15em 0.4em" | 49
+| style="padding: 0.15em 0.4em" | #0F9931
+| style="padding: 0.15em 0.4em" |{{Colorramp|#242328|#242628|#242C2E|#2A3635|#324D3B|#3C6541|#71965F|#80AE6C|#AED497}}
+|- style="color: black; background: rgb(0, 204, 51)"
+| style="padding: 0.15em 0.4em; text-align: left" | GRASS_GREEN
+| style="padding: 0.15em 0.4em" | 0
+| style="padding: 0.15em 0.4em" | 204
+| style="padding: 0.15em 0.4em" | 51
+| style="padding: 0.15em 0.4em" | #00CC33
+| style="padding: 0.15em 0.4em" |{{Colorramp|#242E28|#273828|#324929|#3E572F|#577042|#598947|#7AAC62|#8FC574|#B5E1A0}}
+|- style="color: black; background: rgb(25, 255, 82)"
+| style="padding: 0.15em 0.4em; text-align: left" | VIBRANT_GREEN
+| style="padding: 0.15em 0.4em" | 25
+| style="padding: 0.15em 0.4em" | 255
+| style="padding: 0.15em 0.4em" | 82
+| style="padding: 0.15em 0.4em" | #19FF52
+| style="padding: 0.15em 0.4em" |{{Colorramp|#242428|#243028|#243928|#2A442E|#2C6238|#307D43|#3EA255|#74D78B|#74D78B}}
+|- style="color: black; background: rgb(80, 200, 120)"
+| style="padding: 0.15em 0.4em; text-align: left" | EMERALD
+| style="padding: 0.15em 0.4em" | 80
+| style="padding: 0.15em 0.4em" | 200
+| style="padding: 0.15em 0.4em" | 120
+| style="padding: 0.15em 0.4em" | #50C878
+| style="padding: 0.15em 0.4em" |{{Colorramp|#25272d|#282d31|#293434|#304339|#38523b|#416d42|#478849|#5fa462|#9ad39c}}
+|- style="color: white; background: rgb(1, 50, 32)"
+| style="padding: 0.15em 0.4em; text-align: left" | DARK_GREEN
+| style="padding: 0.15em 0.4em" | 1
+| style="padding: 0.15em 0.4em" | 50
+| style="padding: 0.15em 0.4em" | 32
+| style="padding: 0.15em 0.4em" | #013220
+| style="padding: 0.15em 0.4em" |{{Colorramp|#171c1c|#1b2021|#1e2526|#232c2b|#27362e|#324c37|#3e653d|#568451|#8eb88b}}
+|- style="color: white; background: rgb(0, 168, 107)"
+| style="padding: 0.15em 0.4em; text-align: left" | JADE
+| style="padding: 0.15em 0.4em" | 0
+| style="padding: 0.15em 0.4em" | 168
+| style="padding: 0.15em 0.4em" | 107
+| style="padding: 0.15em 0.4em" | #00A86B
+| style="padding: 0.15em 0.4em" |{{Colorramp|#23222c|#282a31|#293135|#314540|#385343|#40704f|#468d5f|#5ea978|#9ae0b3}}
+|- style="color: white; background: rgb(0, 51, 102)"
+| style="padding: 0.15em 0.4em; text-align: left" | MIDNIGHT_BLUE
+| style="padding: 0.15em 0.4em" | 0
+| style="padding: 0.15em 0.4em" | 51
+| style="padding: 0.15em 0.4em" | 102
+| style="padding: 0.15em 0.4em" | #003366
+| style="padding: 0.15em 0.4em" |{{Colorramp|#1c1a2d|#212034|#26253a|#2b2b41|#33334f|#40415d|#4e4f6a|#686988|#aaaabe}}
+|}
+|- style="vertical-align: top; padding: 0 1em"
+|
+{| style="text-align: right; border-spacing: 0 1px; margin: 1em auto 0; background: black; border-left: 1px solid black; border-right: 1px solid black; width: 100%"
+|+ '''CYAN colors'''
+|- style="background: {{fgcolor|3:0}}"
+! style="text-align: center; padding: 0.15em 0.4em" | Token
+! style="text-align: center; padding: 0.15em 0.4em" colspan="3" | RGB
+! style="text-align: center; padding: 0.15em 0.4em" | Hex
+! style="text-align: center; padding: 0.15em 0.4em" | Palette
+|- style="color: white; background: rgb(117, 90, 87)"
+| style="padding: 0.15em 0.4em; text-align: left" | RUSSET
+| style="padding: 0.15em 0.4em" | 117
+| style="padding: 0.15em 0.4em" | 90
+| style="padding: 0.15em 0.4em" | 87
+| style="padding: 0.15em 0.4em" | #755A57
+| style="padding: 0.15em 0.4em" |{{Colorramp|#322528|#3f2d2d|#4b3432|#503b37|#58423d|#6c4841|#814f44|#a25f50|#d79a8c}}
+|- style="color: white; background: rgb(103, 76, 71)"
+| style="padding: 0.15em 0.4em; text-align: left" | TAUPE_MEDIUM
+| style="padding: 0.15em 0.4em" | 103
+| style="padding: 0.15em 0.4em" | 76
+| style="padding: 0.15em 0.4em" | 71
+| style="padding: 0.15em 0.4em" | #674C47
+| style="padding: 0.15em 0.4em" |{{Colorramp|#28201d|#2f2823|#382f28|#403832|#4a3f37|#635549|#726153|#867261|#c7b89e}}
+|- style="color: white; background: rgb(79, 121, 66)"
+| style="padding: 0.15em 0.4em; text-align: left" | FERN_GREEN
+| style="padding: 0.15em 0.4em" | 79
+| style="padding: 0.15em 0.4em" | 121
+| style="padding: 0.15em 0.4em" | 66
+| style="padding: 0.15em 0.4em" | #4F7942
+| style="padding: 0.15em 0.4em" |{{Colorramp|#28282d|#32363c|#3a4146|#455052|#505e5c|#607760|#6b9463|#99ba87|#cee3c3}}
+|- style="color: black; background: rgb(173, 223, 173)"
+| style="padding: 0.15em 0.4em; text-align: left" | MOSS_GREEN
+| style="padding: 0.15em 0.4em" | 173
+| style="padding: 0.15em 0.4em" | 223
+| style="padding: 0.15em 0.4em" | 173
+| style="padding: 0.15em 0.4em" | #ADDFAD
+| style="padding: 0.15em 0.4em" |{{Colorramp|#262e30|#2b3b39|#304642|#3b544a|#446252|#4e7c49|#7ba655|#b8d27e|#e9f7c9}}
+|- style="color: black; background: rgb(152, 255, 152)"
+| style="padding: 0.15em 0.4em; text-align: left" | MINT_GREEN
+| style="padding: 0.15em 0.4em" | 152
+| style="padding: 0.15em 0.4em" | 255
+| style="padding: 0.15em 0.4em" | 152
+| style="padding: 0.15em 0.4em" | #98FF98
+| style="padding: 0.15em 0.4em" |{{Colorramp|#2c2c31|#32363c|#3c4047|#494f55|#555e62|#66786f|#779777|#9bbe94|#d7ebd1}}
+|- style="color: white; background: rgb(76, 153, 141)"
+| style="padding: 0.15em 0.4em; text-align: left" | EUCALYPTUS
+| style="padding: 0.15em 0.4em" | 76
+| style="padding: 0.15em 0.4em" | 153
+| style="padding: 0.15em 0.4em" | 141
+| style="padding: 0.15em 0.4em" | #4C998D
+| style="padding: 0.15em 0.4em" |{{Colorramp|#2B2B2E|#2E2F32|#313539|#383F41|#435051|#4C6863|#588272|#6D9D86|#A6D7C1}}
+|- style="color: black; background: rgb(173, 216, 230)"
+| style="padding: 0.15em 0.4em; text-align: left" | LIGHT_BLUE
+| style="padding: 0.15em 0.4em" | 173
+| style="padding: 0.15em 0.4em" | 216
+| style="padding: 0.15em 0.4em" | 230
+| style="padding: 0.15em 0.4em" | #ADD8E6
+| style="padding: 0.15em 0.4em" |{{Colorramp|#2b293b|#423f5e|#4e4e6e|#595b7d|#686c90|#7886a5|#8e98b5|#a5aac7|#c3c9e7}}
+|- style="color: white; background: rgb(112, 128, 144)"
+| style="padding: 0.15em 0.4em; text-align: left" | SLATE_GRAY
+| style="padding: 0.15em 0.4em" | 112
+| style="padding: 0.15em 0.4em" | 128
+| style="padding: 0.15em 0.4em" | 144
+| style="padding: 0.15em 0.4em" | #708090
+| style="padding: 0.15em 0.4em" |{{Colorramp|#2e2c35|#393845|#464552|#4f505f|#5b5e6e|#777f8d|#8d96a3|#a6acb6|#d1d4da}}
+|- style="color: black; background: rgb(186, 202, 226)"
+| style="padding: 0.15em 0.4em; text-align: left" | BLUE-GRAY
+| style="padding: 0.15em 0.4em" | 186
+| style="padding: 0.15em 0.4em" | 202
+| style="padding: 0.15em 0.4em" | 226
+| style="padding: 0.15em 0.4em" | #BACAE2
+| style="padding: 0.15em 0.4em" |{{Colorramp|#242331|#393947|#51525c|#676977|#777b8a|#8f94a5|#acafbc|#d3d4d9|#ffffff}}
+|- style="color: black; background: rgb(221, 173, 175)"
+| style="padding: 0.15em 0.4em; text-align: left" | PALE_CHESTNUT
+| style="padding: 0.15em 0.4em" | 221
+| style="padding: 0.15em 0.4em" | 173
+| style="padding: 0.15em 0.4em" | 175
+| style="padding: 0.15em 0.4em" | #DDADAF
+| style="padding: 0.15em 0.4em" |{{Colorramp|#2c2c30|#383336|#473e40|#524446|#5a494b|#6d5452|#8a6763|#a07c6b|#ccb299}}
+|}
+|
+{| style="text-align: right; border-spacing: 0 1px; margin: 1em auto 0; background: black; border-left: 1px solid black; border-right: 1px solid black; width: 100%"
+|+ '''LCYAN colors'''
+|- style="background: {{fgcolor|3:1}}"
+! style="text-align: center; padding: 0.15em 0.4em" | Token
+! style="text-align: center; padding: 0.15em 0.4em" colspan="3" | RGB
+! style="text-align: center; padding: 0.15em 0.4em" | Hex
+! style="text-align: center; padding: 0.15em 0.4em" | Palette
+|- style="color: black; background: rgb(0, 255, 127)"
+| style="padding: 0.15em 0.4em; text-align: left" | SPRING_GREEN
+| style="padding: 0.15em 0.4em" | 0
+| style="padding: 0.15em 0.4em" | 255
+| style="padding: 0.15em 0.4em" | 127
+| style="padding: 0.15em 0.4em" | #00FF7F
+| style="padding: 0.15em 0.4em" |{{Colorramp|#2d2f36|#323c40|#344a47|#435e50|#4c6f52|#568b56|#5aa45d|#75bd77|#a8dca9}}
+|- style="color: black; background: rgb(127, 255, 212)"
+| style="padding: 0.15em 0.4em; text-align: left" | AQUAMARINE
+| style="padding: 0.15em 0.4em" | 127
+| style="padding: 0.15em 0.4em" | 255
+| style="padding: 0.15em 0.4em" | 212
+| style="padding: 0.15em 0.4em" | #7FFFD4
+| style="padding: 0.15em 0.4em" |{{Colorramp|#2a3036|#2d484a|#3b5e5d|#456e6a|#508079|#69a490|#88beac|#a7cec2|#dbe9e3}}
+|- style="color: black; background: rgb(25, 255, 220)"
+| style="padding: 0.15em 0.4em; text-align: left" | SEA_FOAM
+| style="padding: 0.15em 0.4em" | 25
+| style="padding: 0.15em 0.4em" | 255
+| style="padding: 0.15em 0.4em" | 220
+| style="padding: 0.15em 0.4em" | #19FFDC
+| style="padding: 0.15em 0.4em" |{{Colorramp|#25202B|#282B35|#2A343D|#2E4348|#395E58|#428071|#49A58F|#62C3AD|#9FE7D6}}
+|- style="color: black; background: rgb(48, 213, 200)"
+| style="padding: 0.15em 0.4em; text-align: left" | TURQUOISE
+| style="padding: 0.15em 0.4em" | 48
+| style="padding: 0.15em 0.4em" | 213
+| style="padding: 0.15em 0.4em" | 200
+| style="padding: 0.15em 0.4em" | #30D5C8
+| style="padding: 0.15em 0.4em" |{{Colorramp|#12301e|#164f2d|#255a42|#2d634c|#376e56|#3c8666|#4da187|#5bb49b|#65f3cc}}
+|- style="color: black; background: rgb(0, 255, 255)"
+| style="padding: 0.15em 0.4em; text-align: left" | AQUA
+| style="padding: 0.15em 0.4em" | 0
+| style="padding: 0.15em 0.4em" | 255
+| style="padding: 0.15em 0.4em" | 255
+| style="padding: 0.15em 0.4em" | #00FFFF
+| style="padding: 0.15em 0.4em" |{{Colorramp|#26293d|#323e55|#3d5168|#486178|#56758d|#6793a3|#87aebd|#a6c2ce|#dbe6e9}}
+|- style="color: black; background: rgb(25, 220, 255)"
+| style="padding: 0.15em 0.4em; text-align: left" | GLACIER_BLUE
+| style="padding: 0.15em 0.4em" | 25
+| style="padding: 0.15em 0.4em" | 220
+| style="padding: 0.15em 0.4em" | 255
+| style="padding: 0.15em 0.4em" | #19DCFF
+| style="padding: 0.15em 0.4em" |{{Colorramp|#241F28|#24212B|#292B3F|#242B4D|#2A4A61|#36808C|#3F96A6|#50B9CD|#9BD8E3}}
+|- style="color: black; background: rgb(135, 206, 235)"
+| style="padding: 0.15em 0.4em; text-align: left" | SKY_BLUE
+| style="padding: 0.15em 0.4em" | 135
+| style="padding: 0.15em 0.4em" | 206
+| style="padding: 0.15em 0.4em" | 235
+| style="padding: 0.15em 0.4em" | #87CEEB
+| style="padding: 0.15em 0.4em" |{{Colorramp|#2a2b3f|#323a5a|#394868|#445678|#516a8e|#6187a5|#779bb6|#92abc1|#c5ced3}}
+|- style="color: black; background: rgb(200, 162, 200)"
+| style="padding: 0.15em 0.4em; text-align: left" | LILAC
+| style="padding: 0.15em 0.4em" | 200
+| style="padding: 0.15em 0.4em" | 162
+| style="padding: 0.15em 0.4em" | 200
+| style="padding: 0.15em 0.4em" | #C8A2C8
+| style="padding: 0.15em 0.4em" |{{Colorramp|#302c32|#473b43|#5a4755|#705569|#825d79|#a6759b|#b288a9|#c09eb8|#e6d4de}}
+|}
+|- style="vertical-align: top; padding: 0 1em"
+|
+{| style="text-align: right; border-spacing: 0 1px; margin: 1em auto 0; background: black; border-left: 1px solid black; border-right: 1px solid black; width: 100%"
+|+ '''BLUE colors'''
+|- style="background: {{fgcolor|1:0}}; color: white"
+! style="text-align: center; padding: 0.15em 0.4em" | Token
+! style="text-align: center; padding: 0.15em 0.4em" colspan="3" | RGB
+! style="text-align: center; padding: 0.15em 0.4em" | Hex
+! style="text-align: center; padding: 0.15em 0.4em" | Palette
+|- style="color: white; background: rgb(46, 139, 87)"
+| style="padding: 0.15em 0.4em; text-align: left" | SEA_GREEN
+| style="padding: 0.15em 0.4em" | 46
+| style="padding: 0.15em 0.4em" | 139
+| style="padding: 0.15em 0.4em" | 87
+| style="padding: 0.15em 0.4em" | #2E8B57
+| style="padding: 0.15em 0.4em" |{{Colorramp|#2b3136|#2f4a4b|#395d57|#446e5f|#508363|#64a26e|#80bd87|#9ecaa2|#cce0cd}}
+|- style="color: white; background: rgb(1, 121, 111)"
+| style="padding: 0.15em 0.4em; text-align: left" | PINE_GREEN
+| style="padding: 0.15em 0.4em" | 1
+| style="padding: 0.15em 0.4em" | 121
+| style="padding: 0.15em 0.4em" | 111
+| style="padding: 0.15em 0.4em" | #01796F
+| style="padding: 0.15em 0.4em" |{{Colorramp|#2c2e31|#2e3234|#31393b|#374343|#3f524f|#446758|#4b815e|#609d6f|#99d7aa}}
+|- style="color: white; background: rgb(0, 128, 128)"
+| style="padding: 0.15em 0.4em; text-align: left" | TEAL
+| style="padding: 0.15em 0.4em" | 0
+| style="padding: 0.15em 0.4em" | 128
+| style="padding: 0.15em 0.4em" | 128
+| style="padding: 0.15em 0.4em" | #008080
+| style="padding: 0.15em 0.4em" |{{Colorramp|#152b28|#274542|#3a5355|#465b5e|#53676a|#5b777c|#64878e|#7ca4ab|#a0dae4}}
+|- style="color: white; background: rgb(0, 123, 167)"
+| style="padding: 0.15em 0.4em; text-align: left" | CERULEAN
+| style="padding: 0.15em 0.4em" | 0
+| style="padding: 0.15em 0.4em" | 123
+| style="padding: 0.15em 0.4em" | 167
+| style="padding: 0.15em 0.4em" | #007BA7
+| style="padding: 0.15em 0.4em" |{{Colorramp|#222339|#2a3350|#33435f|#3d506e|#4c6382|#597e96|#7193aa|#8da6b8|#c1cacd}}
+|- style="color: white; background: rgb(61, 139, 204)"
+| style="padding: 0.15em 0.4em; text-align: left" | RIVER_BLUE
+| style="padding: 0.15em 0.4em" | 61
+| style="padding: 0.15em 0.4em" | 139
+| style="padding: 0.15em 0.4em" | 204
+| style="padding: 0.15em 0.4em" | #3D8BCC
+| style="padding: 0.15em 0.4em" |{{Colorramp|#241F2F|#24283E|#282E49|#354061|#425275|#56708F|#7088A4|#9CABC1|#C8D1D9}}
+|- style="color: black; background: rgb(76, 174, 255)"
+| style="padding: 0.15em 0.4em; text-align: left" | CORNFLOWER
+| style="padding: 0.15em 0.4em" | 76
+| style="padding: 0.15em 0.4em" | 174
+| style="padding: 0.15em 0.4em" | 255
+| style="padding: 0.15em 0.4em" | #4CAEFF
+| style="padding: 0.15em 0.4em" |{{Colorramp|#241F33|#24264B|#293257|#334770|#415B85|#5781A3|#769BBA|#98B3CA|#D3DDE4}}
+|- style="color: white; background: rgb(0, 127, 255)"
+| style="padding: 0.15em 0.4em; text-align: left" | AZURE
+| style="padding: 0.15em 0.4em" | 0
+| style="padding: 0.15em 0.4em" | 127
+| style="padding: 0.15em 0.4em" | 255
+| style="padding: 0.15em 0.4em" | #007FFF
+| style="padding: 0.15em 0.4em" |{{Colorramp|#27253f|#303457|#3b4469|#465279|#55668f|#6683a7|#829cbd|#a2b5cd|#d9e1e8}}
+|- style="color: white; background: rgb(0, 63, 255)"
+| style="padding: 0.15em 0.4em; text-align: left" | ULTRAMARINE
+| style="padding: 0.15em 0.4em" | 0
+| style="padding: 0.15em 0.4em" | 63
+| style="padding: 0.15em 0.4em" | 255
+| style="padding: 0.15em 0.4em" | #003FFF
+| style="padding: 0.15em 0.4em" |{{Colorramp|#241F2C|#241F3B|#241F46|#241F55|#242761|#242875|#283093|#243A9D|#4252AB}}
+|- style="color: white; background: rgb(0, 71, 171)"
+| style="padding: 0.15em 0.4em; text-align: left" | COBALT
+| style="padding: 0.15em 0.4em" | 0
+| style="padding: 0.15em 0.4em" | 71
+| style="padding: 0.15em 0.4em" | 171
+| style="padding: 0.15em 0.4em" | #0047AB
+| style="padding: 0.15em 0.4em" |{{Colorramp|#201d3c|#262b4d|#2a3866|#354678|#40598d|#4f76a4|#6a8eb8|#98b0d0|#c6d3df}}
+|- style="color: white; background: rgb(0, 38, 153)"
+| style="padding: 0.15em 0.4em; text-align: left" | DEEP_SEA_BLUE
+| style="padding: 0.15em 0.4em" | 0
+| style="padding: 0.15em 0.4em" | 38
+| style="padding: 0.15em 0.4em" | 153
+| style="padding: 0.15em 0.4em" | #002699
+| style="padding: 0.15em 0.4em" |{{Colorramp|#241F28|#241F2D|#241F32|#241F38|#241F3D|#241F4B|#242559|#242A6D|#4A54AD}}
+|- style="color: white; background: rgb(45, 91, 229)"
+| style="padding: 0.15em 0.4em; text-align: left" | DARK_AZURE
+| style="padding: 0.15em 0.4em" | 45
+| style="padding: 0.15em 0.4em" | 91
+| style="padding: 0.15em 0.4em" | 229
+| style="padding: 0.15em 0.4em" | #2D5BE5
+| style="padding: 0.15em 0.4em" |{{Colorramp|#241F28|#241F2F|#241F3E|#241F4B|#242B5B|#244573|#26548A|#44679A|#6075A1}}
+|- style="color: white; background: rgb(0, 0, 139)"
+| style="padding: 0.15em 0.4em; text-align: left" | DARK_BLUE
+| style="padding: 0.15em 0.4em" | 0
+| style="padding: 0.15em 0.4em" | 0
+| style="padding: 0.15em 0.4em" | 139
+| style="padding: 0.15em 0.4em" | #00008B
+| style="padding: 0.15em 0.4em" |{{Colorramp|#171732|#1b1c3a|#202342|#242749|#292e5d|#323b71|#3e4782|#565ba7|#839bd7}}
+|- style="color: white; background: rgb(0, 0, 255)"
+| style="padding: 0.15em 0.4em; text-align: left" | BLUE
+| style="padding: 0.15em 0.4em" | 0
+| style="padding: 0.15em 0.4em" | 0
+| style="padding: 0.15em 0.4em" | 255
+| style="padding: 0.15em 0.4em" | #0000FF
+| style="padding: 0.15em 0.4em" |{{Colorramp|#282339|#302c48|#33335d|#3c3e6b|#484e7f|#586995|#7080a9|#8f9ab8|#c2c7cf}}
+|- style="color: black; background: rgb(204, 204, 255)"
+| style="padding: 0.15em 0.4em; text-align: left" | PERIWINKLE
+| style="padding: 0.15em 0.4em" | 204
+| style="padding: 0.15em 0.4em" | 204
+| style="padding: 0.15em 0.4em" | 255
+| style="padding: 0.15em 0.4em" | #CCCCFF
+| style="padding: 0.15em 0.4em" |{{Colorramp|#2e2c34|#3b3544|#464256|#55516a|#63617f|#7c809f|#9396b5|#adafc3|#dbdae2}}
+|- style="color: white; background: rgb(55, 45, 229)"
+| style="padding: 0.15em 0.4em; text-align: left" | SAPPHIRE
+| style="padding: 0.15em 0.4em" | 55
+| style="padding: 0.15em 0.4em" | 45
+| style="padding: 0.15em 0.4em" | 229
+| style="padding: 0.15em 0.4em" | #372DE5
+| style="padding: 0.15em 0.4em" |{{Colorramp|#241F3B|#241F56|#243168|#243E7B|#275496|#3E83B9|#5D98C5|#78A5CD|#BBD0DB}}
+|}
+|
+{| style="text-align: right; border-spacing: 0 1px; margin: 1em auto 0; background: black; border-left: 1px solid black; border-right: 1px solid black; width: 100%"
+|+ '''LBLUE colors'''
+|- style="background: {{fgcolor|1:1}}"
+! style="text-align: center; padding: 0.15em 0.4em" | Token
+! style="text-align: center; padding: 0.15em 0.4em" colspan="3" | RGB
+! style="text-align: center; padding: 0.15em 0.4em" | Hex
+! style="text-align: center; padding: 0.15em 0.4em" | Palette
+|- style="color: white; background: rgb(144, 93, 93)"
+| style="padding: 0.15em 0.4em; text-align: left" | TAUPE_ROSE
+| style="padding: 0.15em 0.4em" | 144
+| style="padding: 0.15em 0.4em" | 93
+| style="padding: 0.15em 0.4em" | 93
+| style="padding: 0.15em 0.4em" | #905D5D
+| style="padding: 0.15em 0.4em" |{{Colorramp|#2c2120|#362824|#3f302a|#473a35|#503f39|#6a5449|#7a5d52|#8e6d60|#cbb59d}}
+|- style="color: black; background: rgb(175, 238, 238)"
+| style="padding: 0.15em 0.4em; text-align: left" | PALE_BLUE
+| style="padding: 0.15em 0.4em" | 175
+| style="padding: 0.15em 0.4em" | 238
+| style="padding: 0.15em 0.4em" | 238
+| style="padding: 0.15em 0.4em" | #AFEEEE
+| style="padding: 0.15em 0.4em" |{{Colorramp|#2f2f39|#3f4156|#484e62|#4f596f|#5d6b81|#7892a4|#90a8b9|#abbbc6|#dadee3}}
+|- style="color: white; background: rgb(110, 45, 229)"
+| style="padding: 0.15em 0.4em; text-align: left" | CROCUS_PURPLE
+| style="padding: 0.15em 0.4em" | 110
+| style="padding: 0.15em 0.4em" | 45
+| style="padding: 0.15em 0.4em" | 229
+| style="padding: 0.15em 0.4em" | #6E2DE5
+| style="padding: 0.15em 0.4em" |{{Colorramp|#26252B|#322446|#372256|#412E60|#50416C|#534577|#685B8B|#7F6F9E|#B5A9C9}}
+|- style="color: black; background: rgb(153, 102, 204)"
+| style="padding: 0.15em 0.4em; text-align: left" | AMETHYST
+| style="padding: 0.15em 0.4em" | 153
+| style="padding: 0.15em 0.4em" | 102
+| style="padding: 0.15em 0.4em" | 204
+| style="padding: 0.15em 0.4em" | #9966CC
+| style="padding: 0.15em 0.4em" |{{Colorramp|#302735|#3d333f|#524453|#665063|#7d5974|#9f6a8a|#c07ea7|#ce9dba|#f2dde7}}
+|- style="color: white; background: rgb(139, 0, 255)"
+| style="padding: 0.15em 0.4em; text-align: left" | VIOLET
+| style="padding: 0.15em 0.4em" | 139
+| style="padding: 0.15em 0.4em" | 0
+| style="padding: 0.15em 0.4em" | 255
+| style="padding: 0.15em 0.4em" | #8B00FF
+| style="padding: 0.15em 0.4em" |{{Colorramp|#2d282e|#4e2e4c|#633361|#6c3e6b|#774f77|#815785|#946c98|#a97faa|#d1b3d0}}
+|- style="color: white; background: rgb(145, 95, 109)"
+| style="padding: 0.15em 0.4em; text-align: left" | MAUVE_TAUPE
+| style="padding: 0.15em 0.4em" | 145
+| style="padding: 0.15em 0.4em" | 95
+| style="padding: 0.15em 0.4em" | 109
+| style="padding: 0.15em 0.4em" | #915F6D
+| style="padding: 0.15em 0.4em" |{{Colorramp|#2b2325|#393031|#4b3b3c|#5f494c|#6d5254|#886669|#94787a|#a18b8d|#c2b7b7}}
+|}
+|- style="vertical-align: top; padding: 0 1em"
+|
+{| style="text-align: right; border-spacing: 0 1px; margin: 1em auto 0; background: black; border-left: 1px solid black; border-right: 1px solid black; width: 100%"
+|+ '''MAGENTA colors'''
+|- style="background: {{fgcolor|5:0}}; color: white"
+! style="text-align: center; padding: 0.15em 0.4em" | Token
+! style="text-align: center; padding: 0.15em 0.4em" colspan="3" | RGB
+! style="text-align: center; padding: 0.15em 0.4em" | Hex
+! style="text-align: center; padding: 0.15em 0.4em" | Palette
+|- style="color: white; background: rgb(54, 69, 79)"
+| style="padding: 0.15em 0.4em; text-align: left" | CHARCOAL
+| style="padding: 0.15em 0.4em" | 54
+| style="padding: 0.15em 0.4em" | 69
+| style="padding: 0.15em 0.4em" | 79
+| style="padding: 0.15em 0.4em" | #36454F
+| style="padding: 0.15em 0.4em" |{{Colorramp|#1f1e24|#29272f|#2c2a31|#302e32|#343335|#3e3f3e|#5e5b5a|#7d7a77|#a7a9aa}}
+|- style="color: white; background: rgb(66, 49, 137)"
+| style="padding: 0.15em 0.4em; text-align: left" | DARK_VIOLET
+| style="padding: 0.15em 0.4em" | 66
+| style="padding: 0.15em 0.4em" | 49
+| style="padding: 0.15em 0.4em" | 137
+| style="padding: 0.15em 0.4em" | #423189
+| style="padding: 0.15em 0.4em" |{{Colorramp|#261a28|#2d1f31|#312236|#36253c|#422846|#4b2c54|#583562|#74477c|#b578c0}}
+|- style="color: white; background: rgb(49, 0, 98)"
+| style="padding: 0.15em 0.4em; text-align: left" | DARK_INDIGO
+| style="padding: 0.15em 0.4em" | 49
+| style="padding: 0.15em 0.4em" | 0
+| style="padding: 0.15em 0.4em" | 98
+| style="padding: 0.15em 0.4em" | #310062
+| style="padding: 0.15em 0.4em" |{{Colorramp|#191527|#1c192d|#1f1c33|#232038|#292640|#353255|#413c6d|#5c518f|#858dcf}}
+|- style="color: white; background: rgb(75, 0, 130)"
+| style="padding: 0.15em 0.4em; text-align: left" | INDIGO
+| style="padding: 0.15em 0.4em" | 75
+| style="padding: 0.15em 0.4em" | 0
+| style="padding: 0.15em 0.4em" | 130
+| style="padding: 0.15em 0.4em" | #4B0082
+| style="padding: 0.15em 0.4em" |{{Colorramp|#261e36|#2b263e|#312b45|#383152|#423a5c|#4c466d|#59527b|#726794|#9396c4}}
+|- style="color: white; background: rgb(165, 45, 229)"
+| style="padding: 0.15em 0.4em; text-align: left" | FOXGLOVE
+| style="padding: 0.15em 0.4em" | 165
+| style="padding: 0.15em 0.4em" | 45
+| style="padding: 0.15em 0.4em" | 229
+| style="padding: 0.15em 0.4em" | #A52DE5
+| style="padding: 0.15em 0.4em" |{{Colorramp|#241F2E|#241F3B|#2C234B|#3F325E|#523D6F|#75538E|#8A60AC|#9A6EC1|#D2BEE2}}
+|- style="color: white; background: rgb(102, 0, 153)"
+| style="padding: 0.15em 0.4em; text-align: left" | PURPLE
+| style="padding: 0.15em 0.4em" | 102
+| style="padding: 0.15em 0.4em" | 0
+| style="padding: 0.15em 0.4em" | 153
+| style="padding: 0.15em 0.4em" | #660099
+| style="padding: 0.15em 0.4em" |{{Colorramp|#332334|#432a43|#553552|#674461|#78506c|#956680|#b6799c|#cd89b2|#e6c9d9}}
+|- style="color: white; background: rgb(102, 0, 102)"
+| style="padding: 0.15em 0.4em; text-align: left" | PLUM
+| style="padding: 0.15em 0.4em" | 102
+| style="padding: 0.15em 0.4em" | 0
+| style="padding: 0.15em 0.4em" | 102
+| style="padding: 0.15em 0.4em" | #660066
+| style="padding: 0.15em 0.4em" |{{Colorramp|#2d1c2b|#3a2637|#4c2d45|#5d3d54|#6a485b|#886172|#ab778d|#c188a4|#dfc2ce}}
+|- style="color: white; background: rgb(80, 64, 77)"
+| style="padding: 0.15em 0.4em; text-align: left" | TAUPE_PURPLE
+| style="padding: 0.15em 0.4em" | 80
+| style="padding: 0.15em 0.4em" | 64
+| style="padding: 0.15em 0.4em" | 77
+| style="padding: 0.15em 0.4em" | #50404D
+| style="padding: 0.15em 0.4em" |{{Colorramp|#282125|#2e262a|#362d30|#3f3638|#483c3e|#5f4f50|#6b585a|#7f686b|#beab9e}}
+|- style="color: white; background: rgb(97, 64, 81)"
+| style="padding: 0.15em 0.4em; text-align: left" | EGGPLANT
+| style="padding: 0.15em 0.4em" | 97
+| style="padding: 0.15em 0.4em" | 64
+| style="padding: 0.15em 0.4em" | 81
+| style="padding: 0.15em 0.4em" | #614051
+| style="padding: 0.15em 0.4em" |{{Colorramp|#271d27|#2f242f|#352833|#412e3d|#483441|#5b434e|#70505e|#7d5a6b|#ae8899}}
+|- style="color: white; background: rgb(153, 51, 102)"
+| style="padding: 0.15em 0.4em; text-align: left" | MAUVE
+| style="padding: 0.15em 0.4em" | 153
+| style="padding: 0.15em 0.4em" | 51
+| style="padding: 0.15em 0.4em" | 102
+| style="padding: 0.15em 0.4em" | #993366
+| style="padding: 0.15em 0.4em" |{{Colorramp|#2c252c|#3d3139|#4e3f49|#634d5e|#73576c|#8f6c87|#9c7f95|#aa92a4|#ccbfc6}}
+|}
+|
+{| style="text-align: right; border-spacing: 0 1px; margin: 1em auto 0; background: black; border-left: 1px solid black; border-right: 1px solid black; width: 100%"
+|+ '''LMAGENTA colors'''
+|- style="background: {{fgcolor|5:1}}"
+! style="text-align: center; padding: 0.15em 0.4em" | Token
+! style="text-align: center; padding: 0.15em 0.4em" colspan="3" | RGB
+! style="text-align: center; padding: 0.15em 0.4em" | Hex
+! style="text-align: center; padding: 0.15em 0.4em" | Palette
+|- style="color: black; background: rgb(223, 115, 255)"
+| style="padding: 0.15em 0.4em; text-align: left" | HELIOTROPE
+| style="padding: 0.15em 0.4em" | 223
+| style="padding: 0.15em 0.4em" | 115
+| style="padding: 0.15em 0.4em" | 255
+| style="padding: 0.15em 0.4em" | #DF73FF
+| style="padding: 0.15em 0.4em" |{{Colorramp|#332a32|#40343c|#4f3d4c|#62465d|#744e6c|#95608c|#a2739b|#b28bab|#dec5d5}}
+|- style="color: white; background: rgb(229, 91, 195)"
+| style="padding: 0.15em 0.4em; text-align: left" | ORCHID_PINK
+| style="padding: 0.15em 0.4em" | 229
+| style="padding: 0.15em 0.4em" | 91
+| style="padding: 0.15em 0.4em" | 195
+| style="padding: 0.15em 0.4em" | #E55BC3
+| style="padding: 0.15em 0.4em" |{{Colorramp|#382C30|#533944|#5F4152|#6C475F|#7E5472|#A36F9F|#B888B4|#C5A5C2|#E2D8E0}}
+|- style="color: white; background: rgb(244, 0, 161)"
+| style="padding: 0.15em 0.4em; text-align: left" | FUCHSIA
+| style="padding: 0.15em 0.4em" | 244
+| style="padding: 0.15em 0.4em" | 0
+| style="padding: 0.15em 0.4em" | 161
+| style="padding: 0.15em 0.4em" | #F400A1
+| style="padding: 0.15em 0.4em" |{{Colorramp|#2a2227|#2f282d|#3c2c34|#513343|#633a4f|#7a3256|#903663|#a34273|#cb8ca4}}
+|- style="color: black; background: rgb(204, 136, 153)"
+| style="padding: 0.15em 0.4em; text-align: left" | PUCE
+| style="padding: 0.15em 0.4em" | 204
+| style="padding: 0.15em 0.4em" | 136
+| style="padding: 0.15em 0.4em" | 153
+| style="padding: 0.15em 0.4em" | #CC8899
+| style="padding: 0.15em 0.4em" |{{Colorramp|#31262f|#3e3037|#4e3d42|#5e464a|#725153|#8f625d|#ad776f|#c0988f|#e4d1c4}}
+|- style="color: black; background: rgb(255, 192, 203)"
+| style="padding: 0.15em 0.4em; text-align: left" | PINK
+| style="padding: 0.15em 0.4em" | 255
+| style="padding: 0.15em 0.4em" | 192
+| style="padding: 0.15em 0.4em" | 203
+| style="padding: 0.15em 0.4em" | #FFC0CB
+| style="padding: 0.15em 0.4em" |{{Colorramp|#402537|#4a3541|#5d434f|#704c58|#845660|#a7656b|#c4737a|#d19499|#f6e0dc}}
+|- style="color: black; background: rgb(250, 218, 221)"
+| style="padding: 0.15em 0.4em; text-align: left" | PALE_PINK
+| style="padding: 0.15em 0.4em" | 250
+| style="padding: 0.15em 0.4em" | 218
+| style="padding: 0.15em 0.4em" | 221
+| style="padding: 0.15em 0.4em" | #FADADD
+| style="padding: 0.15em 0.4em" |{{Colorramp|#332b2e|#3d3336|#534447|#665156|#745a60|#93717a|#a0838b|#ad979d|#d8cdce}}
+|}
+|}
+
+{{gamedata|{{#df_raw:v50:descriptor_color_standard.txt}}}}
+
+== Color lists ==
+:''For the different colors used to represent different professions, see [[Skill#Skill categories|Skill categories]].''
+:''For a list of the colors of items listed in the {{k|k}}-stocks menu, see [[Stocks#Color_Code|Stocks]].''
+:''For the colors of the various creatures, see [[creature]]''
+:''For the colors of status icons, see [[status icon]]''
+
+=== Material by color ===
+{{Material properties}}
+For those who want to know which materials display as which color, for [[lever]]s, aesthetic concerns, etc.
+
+====Graphics Mode====
+Premium graphics use color palettes used for a tile based on a material's color token
+{{clear}}
+{| class="wikitable"
+|-
+!width="90"| Palette
+! Token
+!width="360"| Stones
+!width="360"| Ores
+!width="360"| Metals
+!width="360"| Wood
+|-valign="top" 
+|{{Colorramp|#241f28|#28212c|#28242b|#29252a|#29282c|#2e2f30|#4f4d49|#6f6d68|#a4a8ab}}
+|BLACK 
+|[[Obsidian]] 
+| 
+|[[Black bronze]] 
+|[[Black-cap]] 
+|-valign="top" 
+|{{Colorramp|#27252d|#36313c|#3f3743|#514955|#645a67|#8b7f8c|#9e9ca9|#bdd3d6|#eef4f0}}
+|CLEAR 
+|[[Granite]] 
+| 
+| 
+| 
+|-valign="top" 
+|{{Colorramp|#2c2d33|#3a3a3e|#48484b|#565659|#68686a|#838382|#9f9c99|#bfbaaf|#f1f1f0}}
+|GRAY 
+|[[Phyllite]], [[Andesite]], [[Gabbro]], [[Hornblende]], [[Mudstone]] 
+|[[Magnetite]], [[Cassiterite]] 
+|[[Iron]] 
+| 
+|-valign="top" 
+|{{Colorramp|#27201e|#2b2726|#322f2e|#3c3835|#453e3a|#5d544d|#6b6058|#7e7269|#c1b7a3}}
+|TAUPE_GRAY 
+|[[Basalt]] 
+| 
+|[[Trifle pewter]], [[Lead]], [[Pig Iron]] 
+| 
+|-valign="top" 
+|{{Colorramp|#1f2028|#2d2d35|#384149|#4f5a67|#696f87|#9d9994|#b8bcc3|#dee3e1|#ffffff}}
+|SILVER 
+|[[Borax]], [[Limestone]], [[Dacite]], [[Diorite]] 
+|[[Galena]], [[Native platinum]], [[Native silver]], [[Tetrahedrite]] 
+|[[Silver]], [[Fine pewter]], [[Nickel silver]], [[Nickel]], [[Tin]], [[Zinc]] 
+| 
+|-valign="top" 
+|{{Colorramp|#2e2d34|#3a393f|#48464c|#56545b|#68666b|#838482|#9f9e99|#bebdb0|#f2f1f1}}
+|ASH_GRAY 
+| 
+| 
+| 
+|[[Citron]], [[Pomelo]] 
+|-valign="top"
+|{{Colorramp|#2f2f39|#595864|#76767f|#8f919a|#9ea1a9|#b3b6bf|#c8c9d0|#e3e3e4|#ffffff}}
+|WHITE 
+|[[Marble]] 
+| 
+|[[Platinum]], [[Aluminum]], [[Sterling silver]], [[Lay pewter]] 
+|[[Tower-cap]] 
+|-valign="top"
+ |{{Colorramp|#3d2728|#4b2f2e|#61423a|#6c4e41|#866e5a|#a18d70|#b6a792|#c6b8a5|#e6dccf}}
+|BEIGE 
+|[[Chalk]], [[Talc]] 
+| 
+| 
+|[[Pine]] 
+|-valign="top" 
+|{{Colorramp|#2e2a2e|#4a3a33|#5f4e41|#75644f|#8e836c|#aaa287|#bfb8a6|#cdc6b6|#e9e4d9}}
+|IVORY 
+|[[Alabaster]], [[Satinspar]], [[Selenite]], [[Saltpeter]] 
+|[[Native aluminum]] 
+| 
+| 
+|-valign="top" 
+|{{Colorramp|#2f2c31|#463b44|#584758|#6c526a|#7a5978|#9c6f9a|#a883a7|#b89bb7|#e2cfdd}}
+|LAVENDER 
+| 
+| 
+| 
+| 
+|-valign="top" 
+|{{Colorramp|#2f2c32|#483e47|#604f5f|#775e76|#8c6d8a|#ae84ac|#ba98b7|#c7adc6|#e9dae5}}
+|LAVENDER_BLUSH 
+|[[Quartzite]] 
+| 
+| 
+| 
+|-valign="top" 
+|{{Colorramp|#24232d|#3c2b39|#4f3140|#5b2f3f|#5f2e3f|#792d33|#963335|#ae4d42|#d67a64}}
+|MAROON 
+| 
+|[[Hematite]] 
+| 
+| 
+|-valign="top" 
+|{{Colorramp|#27272e|#362e34|#45353b|#4e373c|#56383c|#6d3e3b|#8f4e45|#ad6947|#e0a36b}}
+|CHESTNUT 
+|[[Orthoclase]] 
+| 
+| 
+|[[Avocado]] 
+|-valign="top" 
+|{{Colorramp|#332f36|#473843|#53434e|#5e4b52|#6b5559|#866164|#9c6567|#bd7376|#e2acaf}}
+|ROSE 
+| 
+| 
+| 
+| 
+|-valign="top" 
+|{{Colorramp|#381d20|#4b2323|#562926|#5e3029|#66362c|#853b31|#a43f36|#ce4c3d|#e5a09c}}
+|RED 
+|[[Cinnabar]], [[Realgar]] 
+| 
+| 
+|[[Goblin-cap]] 
+|-valign="top" 
+|{{Colorramp|#441823|#542123|#682f27|#703c32|#78463c|#954c3c|#ad4c34|#ca664c|#e39782}}
+|VERMILION 
+|[[Sylvite]], [[Bauxite]] 
+| 
+| 
+| 
+|-valign="top" 
+|{{Colorramp|#1c1c20|#252126|#30272d|#39292d|#3c292d|#4e2f2e|#6b433d|#8c614b|#b8916a}}
+|DARK_CHESTNUT 
+|[[Schist]] 
+| 
+| 
+|[[Cashew]], [[Chestnut]] 
+|-valign="top" 
+|{{Colorramp|#232229|#2d282e|#392c32|#432d31|#4b3033|#613731|#7f493a|#9c6642|#c19862}}
+|BURNT_SIENNA 
+| 
+| 
+| 
+|[[Date palm]], [[Mango tree]], [[Orange]], [[Birch]] 
+|-valign="top" 
+|{{Colorramp|#26262c|#3b3039|#4c3942|#553b44|#5a3c46|#6e4043|#884c4c|#9c5f4d|#c49476}}
+|MAHOGANY 
+| 
+| 
+| 
+|[[Mahogany]] 
+|-valign="top" 
+|{{Colorramp|#2e2d31|#3d3537|#493f40|#534848|#5f504f|#78655c|#937f71|#ac9d8e|#cec4b3}}
+|PALE_BROWN 
+| 
+| 
+|[[Billon]] 
+|[[Ash]], [[Bayberry]], [[Macadamia]], [[Plum]], [[Olive]] 
+|-valign="top" 
+|{{Colorramp|#241F28|#241F28|#2C202C|#382132|#452039|#5D1F3D|#6E1F43|#83224F|#BF698A}}
+|RASPBERRY_PINK 
+| 
+| 
+| 
+| 
+|-valign="top" 
+|{{Colorramp|#322933|#3e303d|#483843|#523d46|#5c454b|#724c50|#894e54|#ab5a62|#de959d}}
+|RED_PURPLE 
+| 
+| 
+| 
+| 
+|-valign="top" 
+|{{Colorramp|#1e1f22|#29252a|#332930|#392b33|#432b36|#552b34|#6e323a|#8c3c45|#c48b89}}
+|DARK_PINK 
+| 
+| 
+| 
+| 
+|-valign="top" 
+|{{Colorramp|#251016|#2f1519|#361a1c|#3a1f21|#442424|#622320|#7d251e|#a32e26|#d7665d}}
+|DARK_SCARLET 
+| 
+| 
+| 
+| 
+|-valign="top" 
+|{{Colorramp|#22242c|#302833|#442b3b|#4e2c3e|#592e41|#712a38|#942c39|#c0323f|#df8a85}}
+|CRIMSON 
+| 
+| 
+| 
+|[[Blood thorn]] 
+|-valign="top" 
+|{{Colorramp|#1c1c23|#261f27|#2f202a|#3e212d|#4f2030|#701929|#8b1827|#a41e2e|#d96b70}}
+|CARMINE 
+| 
+| 
+| 
+| 
+|-valign="top" 
+|{{Colorramp|#22222c|#322933|#442b35|#4e2c36|#592e37|#712c2a|#963a2e|#c44935|#d8957a}}
+|CARDINAL 
+| 
+| 
+| 
+| 
+|-valign="top" 
+|{{Colorramp|#3a2426|#4f2f2a|#653124|#7d3b24|#7f4a30|#88573f|#9d6f4c|#c69d63|#e4bf8a}}
+|RUST 
+| 
+| 
+| 
+|[[Maple]] 
+|-valign="top"
+ |{{Colorramp|#2d241b|#402f19|#4f3620|#5d3c2a|#6a432a|#8c4f25|#b3672f|#cb8947|#ecbf84}}
+|PUMPKIN 
+| 
+| 
+| 
+| 
+|-valign="top" 
+|{{Colorramp|#3a2325|#52352e|#643d31|#7c4f3c|#805d48|#8a6c5b|#9f846f|#b2997e|#dac19b}}
+|SEPIA
+| 
+| 
+| 
+| 
+|-valign="top" 
+|{{Colorramp|#2b272e|#3b3035|#483a3e|#514141|#604a48|#7a5d4d|#987a62|#b09a81|#d2c4aa}}
+|BROWN 
+| 
+| 
+| 
+|[[Highwood]], [[Wagon]] 
+|-valign="top" 
+|{{Colorramp|#28272e|#352e32|#453538|#4e3739|#553839|#6d443d|#8e5848|#ad774b|#dbb070}}
+|CINNAMON 
+| 
+| 
+| 
+| 
+|-valign="top" 
+|{{Colorramp|#312e36|#44393e|#544648|#655653|#76645e|#907d66|#a59479|#b4a992|#d3cfbf}}
+|TAN 
+| 
+| 
+|[[Bismuth bronze]] 
+|[[Kapok]], [[Custard-apple]], [[Willow]], [[Alder]], [[Desert lime]], [[Finger lime]], [[Lime]], [[Round lime]], [[Guava]], [[Persimmon]] 
+|-valign="top" 
+|{{Colorramp|#2b2729|#38302d|#443b36|#4e433d|#5c4d44|#775f4b|#937d5f|#ac9d7e|#d0c9a8}}
+|RAW_UMBER 
+| 
+| 
+| 
+| 
+|-valign="top" 
+|{{Colorramp|#27201e|#3a3023|#463a2c|#4c4336|#554a3a|#70604a|#806d53|#998261|#cfc19c}}
+|TAUPE_SANDY 
+| 
+| 
+| 
+|[[Lychee]] 
+|-valign="top" 
+|{{Colorramp|#342425|#4c302e|#61423a|#6c4e41|#866e5a|#a18d70|#b8aa85|#ccc09b|#e5ddc4}}
+|ECRU 
+|[[Siltstone]] 
+| 
+| 
+|[[Saguaro]] 
+|-valign="top" 
+|{{Colorramp|#401c2b|#4d252d|#612c2c|#6b3734|#743f3c|#96433d|#ae3f35|#cd4835|#e79a91}}
+|SCARLET 
+| 
+| 
+| 
+| 
+|-valign="top" 
+|{{Colorramp|#1d1e23|#262227|#2f262c|#34282f|#392931|#462a2e|#613030|#754035|#b7856d}}
+|BURNT_UMBER 
+| 
+|[[Bismuthinite]] 
+| 
+| 
+|-valign="top" 
+|{{Colorramp|#3d231f|#51281a|#642e1d|#713e20|#7e4b2a|#8f5826|#a56f29|#bc9562|#e3d0a6}}
+|AUBURN 
+| 
+| 
+| 
+|[[Oak]] 
+|-valign="top" 
+|{{Colorramp|#232329|#2d292d|#392f31|#413031|#463333|#5b3f37|#785142|#916b46|#caac77}}
+|CHOCOLATE 
+|[[Claystone]] 
+| 
+| 
+|[[Apple]], [[Cacao tree]] 
+|-valign="top" 
+|{{Colorramp|#27201e|#342b26|#403730|#49413b|#524941|#6f6257|#7e6f62|#908172|#cabea8}}
+|TAUPE_PALE 
+|[[Chert]] 
+| 
+| 
+|[[Papaya]], [[Durian]], [[Tea]], [[Hazel]], [[Bitter orange]], [[Kumquat]], [[Coffee]] 
+|-valign="top" 
+|{{Colorramp|#212c35|#2e3840|#463f46|#5a4246|#68403c|#884833|#a65835|#c78151|#edb88c}}
+|COPPER 
+| 
+|[[Native copper]] 
+|[[Copper]] 
+|[[Almond]] 
+|-valign="top" 
+|{{Colorramp|#1f1e21|#262427|#2d292c|#352f30|#3b3131|#4c3d39|#68544c|#876f58|#d7c093}}
+|DARK_BROWN 
+| 
+| 
+| 
+| 
+|-valign="top" 
+|{{Colorramp|#2b282e|#3f3338|#504144|#604d4e|#735c59|#8e705f|#a98e76|#c0ac96|#dcd1bb}}
+|LIGHT_BROWN 
+| 
+| 
+| 
+|[[Apricot]], [[Paradise nut]], [[Larch]] 
+|-valign="top" 
+|{{Colorramp|#27252c|#302b30|#403033|#493335|#523738|#69453a|#895b45|#a87d4f|#d1b373}}
+|BRONZE 
+| 
+| 
+|[[Bronze]] 
+|[[Rambutan]] 
+|-valign="top" 
+|{{Colorramp|#27232e|#352c31|#4c3334|#5a3b35|#674332|#81532a|#a26e2f|#bf903f|#e2bc6d}}
+|OCHRE 
+| 
+| 
+|[[Electrum]] 
+|[[Candlenut]] 
+|-valign="top" 
+|{{Colorramp|#2c2933|#413035|#553736|#654138|#754b3a|#996736|#c38b3e|#e4b748|#f7ec93}}
+|GOLDENROD 
+|[[Petrified wood]] 
+| 
+| 
+| 
+|-valign="top" 
+|{{Colorramp|#2c2a33|#3f3236|#513a3a|#61453e|#6f4e41|#8d6741|#b3884d|#d0ae59|#f4eb96}}
+|GOLD 
+| 
+|[[Native gold]] 
+|[[Gold]] 
+|[[Cherry]] 
+|-valign="top" 
+|{{Colorramp|#2c2932|#3c3033|#4c3936|#58433b|#644d3f|#816a3f|#a58c4b|#c0b155|#dce18b}}
+|BRASS 
+| 
+|[[Horn silver]] 
+|[[Brass]] 
+| 
+|-valign="top" 
+|{{Colorramp|#252823|#2c2f2a|#34382b|#424637|#555542|#696f48|#8d8c56|#aaa371|#d4d1a9}}
+|OLIVE 
+|[[Pitchblende]] 
+| 
+| 
+|[[Cedar]] 
+|-valign="top" 
+|{{Colorramp|#1e1e23|#30272e|#3d2d33|#463135|#503537|#683f37|#855748|#9b735a|#c4a685}}
+|DARK_PEACH 
+| 
+| 
+| 
+| 
+|-valign="top" 
+|{{Colorramp|#362d27|#4b3624|#573d2c|#664437|#724837|#925031|#b6633a|#cd8251|#e5ae7f}}
+|ORANGE 
+| 
+| 
+| 
+| 
+|-valign="top" 
+|{{Colorramp|#322c30|#432f2d|#523a37|#5f4341|#6f4f4f|#8d5852|#a76a62|#bc8273|#e4b7a1}}
+|PEACH 
+| 
+| 
+| 
+|[[Acacia]], [[Ginkgo]], [[Pecan]], [[Pomegranate]] 
+|-valign="top" 
+|{{Colorramp|#2e2e34|#483a3d|#5a3f3e|#6a4941|#775243|#99693e|#bf8746|#dead4d|#f8e389}}
+|SAFFRON 
+|[[Mica]], [[Puddingstone]], [[Sandstone]] 
+|[[Limonite]] 
+| 
+| 
+|-valign="top" 
+|{{Colorramp|#392d2d|#643622|#7d4128|#8e5625|#aa7637|#c79433|#e1b439|#efd68f|#f9f5ec}}
+|AMBER 
+|[[Orpiment]]
+| 
+| 
+| 
+|-valign="top" 
+|{{Colorramp|#332c2e|#46373c|#56444c|#68535b|#7b5e66|#a3797b|#c7a6a3|#dac2bf|#ebdbd5}}
+|PEARL 
+|[[Kaolinite]], [[Porcelain]] 
+| 
+| 
+| 
+|-valign="top" 
+|{{Colorramp|#2b2830|#3a3234|#4a3a39|#54433e|#604d43|#786345|#988153|#b1a05f|#d4d392}}
+|BUFF 
+|[[Cryolite]], [[Rhyolite]], [[Gypsum]] 
+| 
+| 
+|[[Pear]], [[Sand pear]] 
+|-valign="top" 
+|{{Colorramp|#362127|#442e29|#583e32|#65483d|#7c6b4e|#958552|#b6ab66|#d0ca7f|#e1e9b1}}
+|FLAX 
+|[[Calcite]], [[Gneiss]], [[Rutile]] 
+| 
+| 
+|[[Carambola]], [[Rubber tree]] 
+|-valign="top" 
+|{{Colorramp|#2c2933|#413033|#553c37|#644839|#75553d|#9a7739|#c4a043|#e4cf4e|#f3f795}}
+|GOLDEN_YELLOW 
+| 
+| 
+| 
+| 
+|-valign="top"
+ |{{Colorramp|#2e2c33|#493939|#614e42|#715d44|#826d49|#a69849|#d3c854|#e3ed5c|#f7f9d7}}
+|LEMON 
+| 
+| 
+| 
+|[[Fungiwood]] 
+|-valign="top" 
+|{{Colorramp|#342b2f|#563431|#664539|#7f5b46|#997e64|#b09d7d|#c3b49e|#d1c3b0|#f3e8da}}
+|CREAM 
+| 
+| 
+| 
+|[[Feather tree]] 
+|-valign="top" 
+|{{Colorramp|#2f2d2b|#554322|#635329|#756836|#8a7d3f|#a99748|#cab348|#e5cc57|#fbf078}}
+|YELLOW 
+|[[Brimstone]] 
+| 
+| 
+| 
+|-valign="top"
+ |{{Colorramp|#2c2f30|#3f3e33|#55503c|#636341|#707649|#91a258|#bacf71|#d1f082|#f2fadc}}
+|LIME 
+| 
+| 
+| 
+| 
+|-valign="top" 
+|{{Colorramp|#27201e|#2d2523|#2f2827|#342e2c|#3d342c|#544438|#614f3f|#7a5e4b|#bcaa8b}}
+|TAUPE_DARK 
+| 
+| 
+| 
+|[[Coconut palm]], [[Mangrove]] 
+|-valign="top" 
+|{{Colorramp|#27252b|#342e31|#413435|#483c3a|#544540|#695544|#806d53|#91846b|#beb798}}
+|DARK_TAN 
+|[[Ilmenite]] 
+| 
+| 
+|[[Peach]], [[Walnut]] 
+|-valign="top" 
+|{{Colorramp|#2c2f2b|#464d24|#575c2c|#6c6b38|#787938|#939542|#acaf4c|#c2c85b|#f4f296}}
+|YELLOW_GREEN 
+|[[Olivine]] 
+| 
+| 
+| 
+|-valign="top" 
+|{{Colorramp|#181c1a|#1c201e|#1f2520|#262c25|#303727|#464c30|#67673b|#908c5b|#c7c594}}
+|DARK_OLIVE 
+| 
+| 
+| 
+| 
+|-valign="top" 
+|{{Colorramp|#2a2e21|#37381b|#443e1f|#514523|#5c4f27|#777528|#97913c|#b4b24d|#cedf7e}}
+|GREEN-YELLOW 
+|[[Marcasite]] 
+| 
+| 
+| 
+|-valign="top"
+ |{{Colorramp|#25292B|#2A3030|#2B3431|#334234|#44533E|#5A6F4D|#6B8B58|#84A871|#BAD6A9}}
+|APPLE_GREEN 
+| 
+| 
+| 
+| 
+|-valign="top" 
+|{{Colorramp|#243023|#2c3b1f|#3a4724|#465027|#53592a|#6b6d31|#8c8a46|#b1b362|#d1e879}}
+|CHARTREUSE 
+|[[Periclase]], [[Serpentine]] 
+| 
+| 
+| 
+|-valign="top" 
+|{{Colorramp|#283336|#2E5049|#386351|#417555|#4A8852|#64A95E|#82C479|#92C985|#A4D59B}}
+|BRIGHT_GREEN 
+| 
+| 
+| 
+| 
+|-valign="top"
+|{{Colorramp|#24252B|#272C30|#2B3636|#32463B|#39553C|#437343|#4B924C|#63AE65|#BAE0A4}}
+|LEAF_GREEN 
+| 
+| 
+| 
+| 
+|-valign="top" 
+|{{Colorramp|#243328|#2F4828|#355E2E|#3B6635|#467240|#518C48|#58A458|#67B868|#8ADD8D}}
+|ZESTY_GREEN 
+| 
+| 
+| 
+| 
+|-valign="top" 
+|{{Colorramp|#252e22|#313b1f|#3e4422|#4c5027|#565b2c|#59702b|#789040|#8dac50|#b0d78c}}
+|GREEN 
+| 
+| 
+| 
+| 
+|-valign="top" 
+|{{Colorramp|#242328|#242628|#242C2E|#2A3635|#324D3B|#3C6541|#71965F|#80AE6C|#AED497}}
+|WOODLAND_GREEN 
+| 
+| 
+| 
+| 
+|-valign="top" 
+|{{Colorramp|#242E28|#273828|#324929|#3E572F|#577042|#598947|#7AAC62|#8FC574|#B5E1A0}}
+|GRASS_GREEN 
+| 
+| 
+| 
+| 
+|-valign="top" 
+|{{Colorramp|#242428|#243028|#243928|#2A442E|#2C6238|#307D43|#3EA255|#74D78B|#74D78B}}
+|VIBRANT_GREEN 
+| 
+| 
+| 
+| 
+|-valign="top" 
+|{{Colorramp|#25272d|#282d31|#293434|#304339|#38523b|#416d42|#478849|#5fa462|#9ad39c}}
+|EMERALD 
+| 
+| 
+| 
+| 
+|-valign="top" 
+|{{Colorramp|#171c1c|#1b2021|#1e2526|#232c2b|#27362e|#324c37|#3e653d|#568451|#8eb88b}}
+|DARK_GREEN 
+| 
+| 
+| 
+| 
+|-valign="top" 
+|{{Colorramp|#23222c|#282a31|#293135|#314540|#385343|#40704f|#468d5f|#5ea978|#9ae0b3}}
+|JADE 
+| 
+| 
+| 
+| 
+|-valign="top" 
+|{{Colorramp|#1c1a2d|#212034|#26253a|#2b2b41|#33334f|#40415d|#4e4f6a|#686988|#aaaabe}}
+|MIDNIGHT_BLUE 
+|[[Jet]] 
+| 
+| 
+| 
+|-valign="top" 
+|{{Colorramp|#322528|#3f2d2d|#4b3432|#503b37|#58423d|#6c4841|#814f44|#a25f50|#d79a8c}}
+|RUSSET 
+|[[Slate]] 
+| 
+| 
+| 
+|-valign="top" 
+|{{Colorramp|#28201d|#2f2823|#382f28|#403832|#4a3f37|#635549|#726153|#867261|#c7b89e}}
+|TAUPE_MEDIUM 
+|[[Shale]] 
+| 
+| 
+| 
+|-valign="top" 
+|{{Colorramp|#28282d|#32363c|#3a4146|#455052|#505e5c|#607760|#6b9463|#99ba87|#cee3c3}}
+|FERN_GREEN 
+| 
+| 
+| 
+| 
+|-valign="top" 
+|{{Colorramp|#262e30|#2b3b39|#304642|#3b544a|#446252|#4e7c49|#7ba655|#b8d27e|#e9f7c9}}
+|MOSS_GREEN 
+| 
+| 
+| 
+| 
+|-valign="top" 
+|{{Colorramp|#2c2c31|#32363c|#3c4047|#494f55|#555e62|#66786f|#779777|#9bbe94|#d7ebd1}}
+|MINT_GREEN 
+| 
+| 
+| 
+| 
+|-valign="top" 
+|{{Colorramp|#2B2B2E|#2E2F32|#313539|#383F41|#435051|#4C6863|#588272|#6D9D86|#A6D7C1}}
+|EUCALYPTUS 
+| 
+| 
+| 
+| 
+|-valign="top" 
+|{{Colorramp|#2b293b|#423f5e|#4e4e6e|#595b7d|#686c90|#7886a5|#8e98b5|#a5aac7|#c3c9e7}}
+|LIGHT_BLUE 
+| 
+| 
+| 
+| 
+|-valign="top" 
+|{{Colorramp|#2e2c35|#393845|#464552|#4f505f|#5b5e6e|#777f8d|#8d96a3|#a6acb6|#d1d4da}}
+|SLATE_GRAY 
+| 
+|[[Lignite]] 
+| 
+| 
+|-valign="top" 
+|{{Colorramp|#242331|#393947|#51525c|#676977|#777b8a|#8f94a5|#acafbc|#d3d4d9|#ffffff}}
+|BLUE-GRAY 
+| 
+| 
+|[[Steel]] 
+| 
+|-valign="top" 
+|{{Colorramp|#2c2c30|#383336|#473e40|#524446|#5a494b|#6d5452|#8a6763|#a07c6b|#ccb299}}
+|PALE_CHESTNUT 
+| 
+| 
+| 
+| 
+|-valign="top" 
+|{{Colorramp|#2d2f36|#323c40|#344a47|#435e50|#4c6f52|#568b56|#5aa45d|#75bd77|#a8dca9}}
+|SPRING_GREEN 
+| 
+| 
+| 
+| 
+|-valign="top" 
+|{{Colorramp|#2a3036|#2d484a|#3b5e5d|#456e6a|#508079|#69a490|#88beac|#a7cec2|#dbe9e3}}
+|AQUAMARINE 
+| 
+| 
+| 
+| 
+|-valign="top" 
+|{{Colorramp|#25202B|#282B35|#2A343D|#2E4348|#395E58|#428071|#49A58F|#62C3AD|#9FE7D6}}
+|SEA_FOAM 
+| 
+| 
+| 
+| 
+|-valign="top" 
+|{{Colorramp|#12301e|#164f2d|#255a42|#2d634c|#376e56|#3c8666|#4da187|#5bb49b|#65f3cc}}
+|TURQUOISE 
+| 
+|[[Malachite]] 
+| 
+| 
+|-valign="top" 
+|{{Colorramp|#26293d|#323e55|#3d5168|#486178|#56758d|#6793a3|#87aebd|#a6c2ce|#dbe6e9}}
+|AQUA 
+|[[Microcline]] 
+|[[Raw adamantine]] 
+|[[Adamantine]] 
+| 
+|-valign="top" 
+|{{Colorramp|#241F28|#24212B|#292B3F|#242B4D|#2A4A61|#36808C|#3F96A6|#50B9CD|#9BD8E3}}
+|GLACIER_BLUE 
+| 
+| 
+| 
+| 
+|-valign="top" 
+|{{Colorramp|#2a2b3f|#323a5a|#394868|#445678|#516a8e|#6187a5|#779bb6|#92abc1|#c5ced3}}
+|SKY_BLUE 
+| 
+| 
+| 
+| 
+|-valign="top" 
+|{{Colorramp|#302c32|#473b43|#5a4755|#705569|#825d79|#a6759b|#b288a9|#c09eb8|#e6d4de}}
+|LILAC 
+| 
+| 
+| 
+| 
+|-valign="top" 
+|{{Colorramp|#2b3136|#2f4a4b|#395d57|#446e5f|#508363|#64a26e|#80bd87|#9ecaa2|#cce0cd}}
+|SEA_GREEN 
+| 
+| 
+| 
+| 
+|-valign="top" 
+|{{Colorramp|#2c2e31|#2e3234|#31393b|#374343|#3f524f|#446758|#4b815e|#609d6f|#99d7aa}}
+|PINE_GREEN 
+| 
+| 
+| 
+| 
+|-valign="top" 
+|{{Colorramp|#152b28|#274542|#3a5355|#465b5e|#53676a|#5b777c|#64878e|#7ca4ab|#a0dae4}}
+|TEAL 
+| 
+| 
+| 
+|[[Spore tree]] 
+|-valign="top" 
+|{{Colorramp|#222339|#2a3350|#33435f|#3d506e|#4c6382|#597e96|#7193aa|#8da6b8|#c1cacd}}
+|CERULEAN 
+|[[Stibnite]], [[Kimberlite]] 
+| 
+| 
+| 
+|-valign="top" 
+|{{Colorramp|#241F2F|#24283E|#282E49|#354061|#425275|#56708F|#7088A4|#9CABC1|#C8D1D9}}
+|RIVER_BLUE 
+| 
+| 
+| 
+| 
+|-valign="top" 
+|{{Colorramp|#241F33|#24264B|#293257|#334770|#415B85|#5781A3|#769BBA|#98B3CA|#D3DDE4}}
+|CORNFLOWER 
+| 
+| 
+| 
+| 
+|-valign="top" 
+|{{Colorramp|#27253f|#303457|#3b4469|#465279|#55668f|#6683a7|#829cbd|#a2b5cd|#d9e1e8}}
+|AZURE 
+| 
+| 
+| 
+| 
+|-valign="top" 
+|{{Colorramp|#241F2C|#241F3B|#241F46|#241F55|#242761|#242875|#283093|#243A9D|#4252AB}}
+|ULTRAMARINE 
+| 
+| 
+| 
+| 
+|-valign="top" 
+|{{Colorramp|#201d3c|#262b4d|#2a3866|#354678|#40598d|#4f76a4|#6a8eb8|#98b0d0|#c6d3df}}
+|COBALT 
+| 
+| 
+| 
+| 
+|-valign="top" 
+|{{Colorramp|#241F28|#241F2D|#241F32|#241F38|#241F3D|#241F4B|#242559|#242A6D|#4A54AD}}
+|DEEP_SEA_BLUE 
+| 
+| 
+| 
+| 
+|-valign="top" 
+|{{Colorramp|#241F28|#241F2F|#241F3E|#241F4B|#242B5B|#244573|#26548A|#44679A|#6075A1}}
+|DARK_AZURE 
+| 
+| 
+| 
+| 
+|-valign="top" 
+|{{Colorramp|#171732|#1b1c3a|#202342|#242749|#292e5d|#323b71|#3e4782|#565ba7|#839bd7}}
+|DARK_BLUE 
+| 
+| 
+| 
+| 
+|-valign="top" 
+|{{Colorramp|#282339|#302c48|#33335d|#3c3e6b|#484e7f|#586995|#7080a9|#8f9ab8|#c2c7cf}}
+|BLUE 
+| 
+| 
+| 
+| 
+|-valign="top" 
+|{{Colorramp|#2e2c34|#3b3544|#464256|#55516a|#63617f|#7c809f|#9396b5|#adafc3|#dbdae2}}
+|PERIWINKLE 
+|[[Anhydrite]] 
+|[[Garnierite]] 
+| 
+| 
+|-valign="top" 
+|{{Colorramp|#241F3B|#241F56|#243168|#243E7B|#275496|#3E83B9|#5D98C5|#78A5CD|#BBD0DB}}
+|SAPPHIRE 
+| 
+| 
+| 
+| 
+|-valign="top" 
+|{{Colorramp|#2c2120|#362824|#3f302a|#473a35|#503f39|#6a5449|#7a5d52|#8e6d60|#cbb59d}}
+|TAUPE_ROSE 
+|[[Conglomerate]] 
+| 
+| 
+| 
+|-valign="top" 
+|{{Colorramp|#2f2f39|#3f4156|#484e62|#4f596f|#5d6b81|#7892a4|#90a8b9|#abbbc6|#dadee3}}
+|PALE_BLUE 
+| 
+| 
+| 
+| 
+|-valign="top" 
+|{{Colorramp|#26252B|#322446|#372256|#412E60|#50416C|#534577|#685B8B|#7F6F9E|#B5A9C9}}
+|CROCUS_PURPLE 
+| 
+| 
+| 
+| 
+|-valign="top" 
+|{{Colorramp|#302735|#3d333f|#524453|#665063|#7d5974|#9f6a8a|#c07ea7|#ce9dba|#f2dde7}}
+|AMETHYST 
+| 
+| 
+| 
+| 
+|-valign="top" 
+|{{Colorramp|#2d282e|#4e2e4c|#633361|#6c3e6b|#774f77|#815785|#946c98|#a97faa|#d1b3d0}}
+|VIOLET 
+| 
+| 
+| 
+|[[Tunnel tube]] 
+|-valign="top" 
+|{{Colorramp|#2b2325|#393031|#4b3b3c|#5f494c|#6d5254|#886669|#94787a|#a18b8d|#c2b7b7}}
+|MAUVE_TAUPE 
+| 
+| 
+| 
+| 
+|-valign="top" 
+|{{Colorramp|#1f1e24|#29272f|#2c2a31|#302e32|#343335|#3e3f3e|#5e5b5a|#7d7a77|#a7a9aa}}
+|CHARCOAL 
+|[[Graphite]], [[Pyrolusite]], [[Cobaltite]] 
+|[[Bituminous coal]] 
+| 
+| 
+|-valign="top" 
+|{{Colorramp|#261a28|#2d1f31|#312236|#36253c|#422846|#4b2c54|#583562|#74477c|#b578c0}}
+|DARK_VIOLET 
+| 
+| 
+| 
+| 
+|-valign="top" 
+|{{Colorramp|#191527|#1c192d|#1f1c33|#232038|#292640|#353255|#413c6d|#5c518f|#858dcf}}
+|DARK_INDIGO 
+|[[Chromite]] 
+| 
+| 
+|[[Nether-cap]] 
+|-valign="top" 
+|{{Colorramp|#261e36|#2b263e|#312b45|#383152|#423a5c|#4c466d|#59527b|#726794|#9396c4}}
+|INDIGO
+|
+|
+|
+|
+
+|-valign="top" 
+|{{Colorramp|#241F2E|#241F3B|#2C234B|#3F325E|#523D6F|#75538E|#8A60AC|#9A6EC1|#D2BEE2}}
+
+|FOXGLOVE 
+| 
+| 
+| 
+| 
+|-valign="top" 
+|{{Colorramp|#332334|#432a43|#553552|#674461|#78506c|#956680|#b6799c|#cd89b2|#e6c9d9}}
+|PURPLE 
+| [[Alunite]]
+|
+| 
+| 
+|-valign="top" 
+|{{Colorramp|#2d1c2b|#3a2637|#4c2d45|#5d3d54|#6a485b|#886172|#ab778d|#c188a4|#dfc2ce}}
+|PLUM 
+| 
+|[[Sphalerite]] 
+| 
+|[[Glumprong]] 
+|-valign="top" 
+|{{Colorramp|#282125|#2e262a|#362d30|#3f3638|#483c3e|#5f4f50|#6b585a|#7f686b|#beab9e}}
+|TAUPE_PURPLE 
+| 
+| 
+| 
+| 
+|-valign="top" 
+|{{Colorramp|#271d27|#2f242f|#352833|#412e3d|#483441|#5b434e|#70505e|#7d5a6b|#ae8899}}
+|EGGPLANT 
+| 
+| 
+| 
+| 
+|-valign="top" 
+|{{Colorramp|#2c252c|#3d3139|#4e3f49|#634d5e|#73576c|#8f6c87|#9c7f95|#aa92a4|#ccbfc6}}
+|MAUVE 
+| 
+| 
+| 
+| 
+|-valign="top" 
+|{{Colorramp|#332a32|#40343c|#4f3d4c|#62465d|#744e6c|#95608c|#a2739b|#b28bab|#dec5d5}}
+|HELIOTROPE 
+| 
+| 
+| 
+| 
+|-valign="top" 
+|{{Colorramp|#382C30|#533944|#5F4152|#6C475F|#7E5472|#A36F9F|#B888B4|#C5A5C2|#E2D8E0}}
+|ORCHID_PINK 
+| 
+| 
+|[[Bismuth]] 
+| 
+|-valign="top" 
+|{{Colorramp|#2a2227|#2f282d|#3c2c34|#513343|#633a4f|#7a3256|#903663|#a34273|#cb8ca4}}
+|FUCHSIA 
+| 
+| 
+| 
+| 
+|-valign="top" 
+|{{Colorramp|#31262f|#3e3037|#4e3d42|#5e464a|#725153|#8f625d|#ad776f|#c0988f|#e4d1c4}}
+|PUCE 
+| 
+| 
+| 
+| 
+|-valign="top" 
+|{{Colorramp|#402537|#4a3541|#5d434f|#704c58|#845660|#a7656b|#c4737a|#d19499|#f6e0dc}}
+|PINK 
+|[[Rock salt]] 
+| 
+| 
+| 
+|-valign="top" 
+|{{Colorramp|#332b2e|#3d3336|#534447|#665156|#745a60|#93717a|#a0838b|#ad979d|#d8cdce}}
+|PALE_PINK 
+|[[Dolomite]] 
+| 
+|[[Rose gold]] 
+| 
+|} 
+
+====ASCII Mode====
+Color names listed and the colors shown below match the colors from default init/color.txt. To change these from the default tones, see [[Color scheme]]. 
+{{clear}}
+{| class="wikitable"
+|-
+!width="90"| Color
+! Stones
+! Ores
+! Metals
+! Other
+|-valign="top"
+|{{Raw Tile|•|7:1}} WHITE
+|[[Alabaster]], [[Alunite]], [[Borax]], [[Calcite]], [[Chalk]], [[Cryolite]], [[Dolomite]], [[Limestone]], [[Marble]], [[Marcasite]], [[Periclase]], [[Quartzite]], [[Rock salt]], [[Satinspar]], [[Selenite]], [[Talc]]
+|[[Galena]], [[Horn silver]], [[Native aluminum]], [[Native platinum]], [[Native silver]]
+|[[Silver]], [[Platinum]], [[Aluminum]], [[Fine pewter]], [[Nickel silver]], [[Sterling silver]]
+|[[Crystal glass]], [[Feather tree]], [[Tower-cap]]
+|-valign="top"
+|{{Raw Tile|•|7:0}} LGRAY
+|[[Anhydrite]], [[Dacite]], [[Gneiss]], [[Granite]], [[Phyllite]], [[Stibnite]]
+|[[Bismuthinite]]
+|[[Nickel]], [[Tin]], [[Zinc]], [[Billon]], [[Trifle pewter]]
+|
+|-valign="top"
+|{{Raw Tile|•|0:1}} DGRAY
+|[[Andesite]], [[Basalt]], [[Claystone]], [[Chromite]], [[Diorite]], [[Gabbro]], [[Graphite]], [[Hornblende]], [[Ilmenite]], [[Jet]], [[Mica]], [[Pyrolusite]], [[Rhyolite]], [[Shale]], [[Slate]], [[Obsidian]]
+|[[Bituminous coal]], [[Lignite]], [[Magnetite]], [[Sphalerite]], [[Tetrahedrite]]
+|[[Iron]], [[Steel]], [[Lead]], [[Pig iron]]
+|[[Black-cap]]
+|-valign="top"
+|{{Raw Tile|•|6:0}} BROWN
+|[[Chert]], [[Conglomerate]], [[Mudstone]], [[Puddingstone]], [[Sandstone]], [[Schist]], [[Siltstone]]
+|[[Cassiterite]], [[Native copper]]
+|[[Copper]], [[Bronze]]
+|[[Tree|All other aboveground trees]]
+|-valign="top"
+|{{Raw Tile|•|6:1}} YELLOW
+|[[Brimstone]], [[Orpiment]], [[Orthoclase]], [[Saltpeter]], [[Sylvite]], [[Gypsum]]
+|[[Limonite]], [[Native gold]]
+|[[Gold]], [[Bismuth bronze]], [[Brass]], [[Electrum]]
+|[[Fungiwood]]
+|-valign="top"
+|{{Raw Tile|•|4:0}} RED
+|[[Bauxite]], [[Kaolinite]]
+|[[Hematite]]
+|
+|[[Blood thorn]]
+|-valign="top"
+|{{Raw Tile|•|4:1}} LRED
+|[[Cinnabar]], [[Petrified wood]], [[Realgar]]
+|
+|
+|[[Goblin-cap]]
+|-valign="top"
+|{{Raw Tile|•|2:0}} GREEN
+|[[Olivine]], [[Serpentine]]
+|[[Malachite]]
+|
+|[[Green glass]]
+|-valign="top"
+|{{Raw Tile|•|2:1}} LGREEN
+|
+|[[Garnierite]]
+|
+|
+|-valign="top"
+|{{Raw Tile|•|3:0}} CYAN
+|
+|
+|[[Lay pewter]]
+|[[Clear glass]], [[Spore tree]]
+|-valign="top"
+|{{Raw Tile|•|3:1}} LCYAN
+|[[Microcline]]
+|[[Raw adamantine]]
+|[[Adamantine]]
+|[[Ice]]
+|-valign="top"
+|{{Raw Tile|•|1:0}} BLUE
+|[[Kimberlite]]
+|
+|
+|[[Nether-cap]]
+|-valign="top"
+|{{Raw Tile|•|1:1}} LBLUE
+|[[Cobaltite]]
+|
+|
+|
+|-valign="top"
+|{{Raw Tile|•|5:0}} MAGENTA
+|[[Pitchblende]], [[Rutile]]
+|
+|[[Black bronze]]
+|[[Glumprong]]
+|-valign="top"
+|{{Raw Tile|•|5:1}} LMAGENTA
+|
+|
+|[[Bismuth]], [[Rose gold]]
+|[[Tunnel tube]]
+|}
+
+{{Translation
+| dwarven = dakas
+| elvish  = mima
+| goblin  = zon
+| human   = rusna
+}}
+
+{{Category|Modding}}
+{{Category|Interface}}

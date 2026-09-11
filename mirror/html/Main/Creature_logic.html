@@ -1,0 +1,1038 @@
+<div class="mw-parser-output"><table class="metadata plainlinks ambox ambox-content" style="background-color:#fc9;" role="presentation">
+<tbody><tr><td class="mbox-image"><div style="width: 52px;"><a href="/index.php/File:Announce_migrant_icon.png" class="image"><img alt="Announce migrant icon.png" src="/images/5/5f/Announce_migrant_icon.png" decoding="async" width="32" height="32" /></a></div></td><td class="mbox-text" style=""><span class="mbox-text-span">This article was migrated from <a href="/index.php/DF2014:Creature_logic" title="DF2014:Creature logic">DF2014:Creature logic</a> and may be inaccurate for the current version of DF (v53.16). See <a href="/index.php/Dwarf_Fortress_Wiki:Version_migration" title="Dwarf Fortress Wiki:Version migration">this page</a> for more information.<span class="hide-when-compact">  </span><span class="hide-when-compact"> </span></span></td></tr></tbody></table><div id="page-quality-rating" style="text-align: right;margin: 0.8em 0;font-size:75%">
+<a href="/index.php/Dwarf_Fortress_Wiki:Quality#Unknown" title="Dwarf Fortress Wiki:Quality"><span id="unknown-quality" style="padding:.2em; border:1px solid #f00; border-radius: 2px; -webkit-border-radius: 2px; -moz-border-radius: 2px; -o-border-radius: 2px; -ms-border-radius: 2px; background:#ffccaa;text-decoration:none; color:#ff0000">!!UNKNOWN!!</span></a> <span style="font-weight:bold;" class="dot">&#160;·</span> <a href="/index.php/Dwarf_Fortress_Wiki:Quality#Tattered" title="Dwarf Fortress Wiki:Quality"><span id="stub-quality" style="text-decoration:none; color:#333333">xTATTEREDx</span></a> <span style="font-weight:bold;" class="dot">&#160;·</span> <a href="/index.php/Dwarf_Fortress_Wiki:Quality#Fine" title="Dwarf Fortress Wiki:Quality"><span id="fine-quality" style="text-decoration:none; color:#CA7A02;">+FINE+</span></a> <span style="font-weight:bold;" class="dot">&#160;·</span> <a href="/index.php/Dwarf_Fortress_Wiki:Quality#Superior" title="Dwarf Fortress Wiki:Quality"><span id="superior-quality" style="text-decoration:none; color:#8800cc;">*SUPERIOR*</span></a> <span style="font-weight:bold;" class="dot">&#160;·</span> <a href="/index.php/Dwarf_Fortress_Wiki:Quality#Exceptional" title="Dwarf Fortress Wiki:Quality"><span id="exceptional-quality" style="text-decoration:none; color:#0088CC;">≡EXCEPTIONAL≡</span></a> <span style="font-weight:bold;" class="dot">&#160;·</span> <a href="/index.php/Dwarf_Fortress_Wiki:Quality#Masterwork" title="Dwarf Fortress Wiki:Quality"><span id="masterwork-quality" style="text-decoration:none; color:#72A329;">☼MASTERWORK☼</span></a></div>
+<table class="vertical-navbox nowraplinks" cellspacing="5" cellpadding="0" style="float:right;clear:right;width:22.0em;margin:0 0 1.0em 1.0em;background:#f9f9f9;border:1px solid #aaa;padding:0.2em;border-spacing:0.4em 0;text-align:center;line-height:1.4em;font-size:88%;"><tbody><tr><td class="" style=";padding-top:0.4em;line-height:1.2em;">Part of a series on</td>
+      </tr><tr><th class="" style=";padding:0.2em 0.4em 0.2em;padding-top:0;font-size:145%;line-height:1.2em;"><a href="/index.php/Computing" title="Computing">Computing</a></th>
+      </tr><tr><td class="" style="padding:0.2em 0 0.4em;"><div class="center"><div class="floatnone"><a href="/index.php/File:7x191.PNG" class="image"><img alt="7x191.PNG" src="/images/thumb/8/84/7x191.PNG/200px-7x191.PNG" decoding="async" width="200" height="231" srcset="/images/thumb/8/84/7x191.PNG/300px-7x191.PNG 1.5x, /images/8/84/7x191.PNG 2x" /></a></div></div></td>
+      </tr><tr>
+<td class="" style="padding:0 0.1em 0.4em;font-size: 12px; padding-left: 5px; text-align: center;;">
+<b><a href="/index.php/Category:Logic" title="Category:Logic">Logic</a></b>: <a href="/index.php/Animal_logic" title="Animal logic">Animal</a> • <a class="mw-selflink selflink">Creature</a> • <a href="/index.php/Fluid_logic" title="Fluid logic">Fluid</a> • <a href="/index.php/Mechanical_logic" title="Mechanical logic">Mechanical</a> • <a href="/index.php/Minecart_logic" title="Minecart logic">Minecart</a></td>
+</tr><tr>
+<td class="" style="padding:0 0.1em 0.4em;font-size: 12px; padding-left: 5px; text-align: center;;">
+<b><a href="/index.php/Category:Computing" title="Category:Computing">Components</a></b>: <a href="/index.php/Adder_(Computing)" title="Adder (Computing)">Adder</a> • <a href="/index.php/Memory_(computing)" title="Memory (computing)">Memory</a> • <a href="/index.php/Repeater" title="Repeater">Repeater</a></td>
+</tr><tr><td style="text-align:right;font-size:115%;"><div class="noprint plainlinks hlist navbar mini" style="text-transform:uppercase; font-size:80%;"><div><span class="nv-view"><a href="/index.php/Template:V50_computing" title="Template:V50 computing"><span title="View this template" style="">v</span></a></span><span style="font-weight:bold;" class="dot">&#160;·</span> <span class="nv-talk"><a href="/index.php?title=Template_talk:V50_computing&amp;action=edit&amp;redlink=1" class="new" title="Template talk:V50 computing (page does not exist)"><span title="Discuss this template" style="">t</span></a></span><span style="font-weight:bold;" class="dot">&#160;·</span> <span class="nv-edit"><a rel="nofollow" class="external text" href="//dwarffortresswiki.org/index.php?title=Template:V50_computing&amp;action=edit"><span title="Edit this template" style="">e</span></a></span></div></div></td></tr>
+</tbody></table>
+<table class="version-table" style="text-align: center; margin: 3px auto 5px; padding: 0.25em; border-radius: 3px; -webkit-border-radius: 3px; -moz-border-radius: 3px; -o-border-radius: 3px; -ms-border-radius: 3px;; border: 2px solid #bbdd88; background: #f5ffee; min-width:27em"><tbody><tr><td style="padding: 0.3em 0.3em; width: 100%;"><div style="margin-bottom:6px;" class="version-links-r1"><span style="font-size:100%"><span class="version-link"><span style="text-decoration: none; color: #72A329; background-color: #E2FDCE; border-radius: 2px; -webkit-border-radius: 2px; -moz-border-radius: 2px; -o-border-radius: 2px; -ms-border-radius: 2px; border: 1px solid #bbdd88; padding: 0.2em;"><b>v53.16</b></span></span><span style="font-weight:bold;" class="dot">&#160;·</span> <span class="version-link"><a href="/index.php/DF2014:Creature_logic" title="DF2014:Creature logic"><span style="text-decoration: none; color: #72A329;">v0.47.05</span></a></span></span></div><span>This article is about the current version of DF.<br />Note that some content may still need to be updated.</span><br />
+<div style="float: right; font-size:75%; padding-right:2px; margin-top:-2px; margin-bottom:-7px;"><span class="version-link"><a href="/index.php/Dwarf_Fortress_Wiki:V" class="mw-redirect" title="Dwarf Fortress Wiki:V"><span style="text-decoration: none; color: #72A329;">More Info</span></a></span><span style="font-weight:bold;" class="dot">&#160;·</span> <span class="version-link"><a href="/index.php/Template:Av" class="mw-redirect" title="Template:Av"><span style="text-decoration: none; color: #72A329;">V</span></a></span></div></td></tr>
+</tbody></table>
+<p><b>Creature logic</b> is a form of dwarven <a href="/index.php/Computing" title="Computing">computing</a> that functions by taking advantage of a creature's natural <a href="/index.php/Path" title="Path">path</a>-finding goals to trigger pressure plates.  Creature logic is complete-- you can build memory, repeaters, or any sort of logical circuit.
+</p>
+
+<h2><span class="mw-headline" id="Creature_logic_vs_other_disciplines">Creature logic vs other disciplines</span></h2>
+<p>Pros:
+</p>
+<ul><li>Creature logic requires no <a href="/index.php/Water" title="Water">fluid</a> or <a href="/index.php/Windmill" title="Windmill">wind</a>.  In dry, windless environments, circuits are limited to creature logic or <a href="/index.php/Minecart_logic" title="Minecart logic">minecart logic</a>.</li>
+<li>Similarly, creature logic requires no infrastructure-- you can build your circuits anywhere, without worrying about bringing water or <a href="/index.php/Power" title="Power">power</a> from one end of your map to the other.</li>
+<li>All creature logic circuits can be designed with only <a href="/index.php/Stone" title="Stone">stone</a> and a pick-- although you're free to use <a href="/index.php/Wood" title="Wood">wood</a> or <a href="/index.php/Metal" title="Metal">metal</a> if you prefer!</li>
+<li>Creature logic doesn't need anything but creatures to send or receive signals.  There's no need to translate signals as with <a href="/index.php/Mechanical_logic" title="Mechanical logic">mechanical logic</a>.</li>
+<li>Creature logic can be very intuitive.  Watching creatures physically travel through your logic pathways simplifies debugging.</li>
+<li>It's fun to watch the creatures run around!</li></ul>
+<p>Cons:
+</p>
+<ul><li>Reliable creature logic requires a ridiculous number of <a href="/index.php/Hatch" class="mw-redirect" title="Hatch">hatches</a>, <a href="/index.php/Door" title="Door">doors</a>, and <a href="/index.php/Mechanism" title="Mechanism">mechanisms</a>-- not to mention connections between pressure plates.</li>
+<li>Creature logic requires creatures-- sometimes, a great number of them.  Sometimes, those creatures die or have babies.  Sometimes, they interrupt your <a href="/index.php/Dwarf" title="Dwarf">dwarves</a>.  Sometimes, your dwarves fill them full of crossbow bolts (<i>which would be a particular kind of death, per se</i>).</li>
+<li>Creature logic is vulnerable (surprise) to the presence of unexpected creatures in the logic circuits.  Because creature logic circuits require a path either to the map edge, or to the <a href="/index.php/Activity_zone#Meeting_Area" class="mw-redirect" title="Activity zone">meeting hall</a> (in most cases), this is a real possibility.</li>
+<li>Creature logic requires large amounts of space.</li></ul>
+<h2><span class="mw-headline" id="Free_range_or_one_path">Free range or one path</span></h2>
+<p>There are two incompatible design philosophies associated with creature logic-- mostly, the creatures you use will determine which is appropriate.
+</p><p>Free range creature logic generally gives a path to creatures when certain criteria are met, and otherwise, lets them wander (in a constrained space).  This simplifies design and permits constant evaluation of criteria, but any creature that paces in captivity can easily foul up your circuits-- for instance, a pacing creature may prevent a door from closing, causing an AND to evaluate as true even though both operands were never true at the same time.  Additionally, it gives no clear indication that an evaluation has been completed-- if you want to evaluate your AND statement, you only ever know that it's been evaluated as true, never as false.
+</p><p>One path design constrains creatures to a single tile when they have no path available.  Whenever the creature is permitted movement for evaluation of operands, the creature is guaranteed one and only one path.  This requires explicit designation of 'else' paths, and requires that operands be evaluated at specific times rather than undergoing constant evaluation, but guarantees complete reliability, and allows the circuit to return both 'true' and 'false' evaluations, meaning that you can know for sure that a signal has been evaluated, rather than guessing if the creature has had sufficient time to path or not path.
+</p>
+<h2><span class="mw-headline" id="Animal_logic">Animal logic</span></h2>
+<p><a href="/index.php/Animal_logic" title="Animal logic">Animal logic</a> relies on a special case of free range creature logic that is specific to animals that are unable to open doors, by pathing them through tightly closed doors.  Animal logic can be very space efficient and easy to build in comparison to most kinds of creature logic, but is somewhat unreliable.
+</p>
+<h2><span class="mw-headline" id="Gates">Gates</span></h2>
+<p>Creature logic relies on the ability or inability of a creature to path through a specific area.  "One path" design requires explicit 'else' arms.  Because of that, the following logic gates are shown in complementary pairs to guarantee a path to the creature.
+</p><p>All of these gates can be easily altered to take more than two operands.
+</p>
+<h4><span class="mw-headline" id="Key">Key</span></h4>
+<p>In all of the following diagrams, the creature is assumed to start at <span style="color: #0FF; background: #000; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; padding: 0; line-height: 1;">s</span> (if given).  <span style="color: #F00; background: #000; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; padding: 0; line-height: 1;">p</span> means that the square contains a path to the creature's pathing goal.  Doors <span style="color: #FF0; background: #000; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; padding: 0; line-height: 1;">┼</span> and hatches <span style="color: #FF0; background: #000; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; padding: 0; line-height: 1;">¢</span> are displayed in the same color as the <a href="/index.php/Pressure_plate" title="Pressure plate">pressure plate</a> <span style="color: #FF0; background: #000; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; padding: 0; line-height: 1;">^</span> that links to them.  If no pressure plate exists for a color, furniture of that color is opened or closed from outside of the circuit pictured; if a hatch and a door are the same color, that means they receive signals from the same source.  Output pressure plates are displayed in magenta <span style="color: #F0F; background: #000; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; padding: 0; line-height: 1;">^</span>, as is any furniture in the circuit that is linked with the output plate.  In the rare case that part of a circuit is linked with multiple elements, it will be displayed with foreground and background colors and explained in text-- for instance, <span style="color: #F0F; background: #0FF; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; padding: 0; line-height: 1;">^</span> is linked both to cyan furniture and output.
+</p>
+<h3><span class="mw-headline" id="Identity_with_NOT_gate">Identity with NOT gate</span></h3>
+<table style="border-spacing: 0; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-size: 135%; font-weight: bold; color:#C0C0C0; background:#000; line-height:.98em;">
+
+<tbody><tr>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">╔
+</td>
+<td style="padding:0;color:;background:;width:.63em;">═
+</td>
+<td style="padding:0;color:;background:;width:.63em;">═
+</td>
+<td style="padding:0;color:;background:;width:.63em;">╗
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td></tr>
+<tr>
+<td style="padding:0;color:;background:;width:.63em;">═
+</td>
+<td style="padding:0;color:;background:;width:.63em;">╝
+</td>
+<td style="padding:0;color:#0F0;background:;width:.63em;">┼
+</td>
+<td style="padding:0;color:#F0F;background:;width:.63em;">^
+</td>
+<td style="padding:0;color:;background:;width:.63em;">╚
+</td>
+<td style="padding:0;color:;background:;width:.63em;">═
+</td></tr>
+<tr>
+<td style="padding:0;color:#0FF;background:;width:.63em;">s
+</td>
+<td style="padding:0;color:;background:;width:.63em;">+
+</td>
+<td style="padding:0;color:;background:;width:.63em;">O
+</td>
+<td style="padding:0;color:;background:;width:.63em;">O
+</td>
+<td style="padding:0;color:;background:;width:.63em;">+
+</td>
+<td style="padding:0;color:#F00;background:;width:.63em;">p
+</td></tr>
+<tr>
+<td style="padding:0;color:;background:;width:.63em;">═
+</td>
+<td style="padding:0;color:;background:;width:.63em;">╗
+</td>
+<td style="padding:0;color:#0F0;background:;width:.63em;">¢
+</td>
+<td style="padding:0;color:;background:;width:.63em;">+
+</td>
+<td style="padding:0;color:;background:;width:.63em;">╔
+</td>
+<td style="padding:0;color:;background:;width:.63em;">═
+</td></tr>
+<tr>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">╚
+</td>
+<td style="padding:0;color:;background:;width:.63em;">═
+</td>
+<td style="padding:0;color:;background:;width:.63em;">═
+</td>
+<td style="padding:0;color:;background:;width:.63em;">╝
+</td></tr></tbody></table>
+<p>This function takes a single operand.  If the operand is true, the creature travels through the upper path (identity); otherwise, the creature takes the lower path (NOT).  The pressure plate signals when the operand is true.  This gate is the basis of all to follow.
+</p><p>Identity is also a simple delay.  When the path receives a signal, it propagates it after a short period.  That period depends on the speed of the creature moving through the gate.
+</p>
+<h3><span class="mw-headline" id="AND_gate_with_NAND_gate">AND gate with NAND gate</span></h3>
+<table style="border-spacing: 0; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-size: 135%; font-weight: bold; color:#C0C0C0; background:#000; line-height:.98em;">
+
+<tbody><tr>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">╔
+</td>
+<td style="padding:0;color:;background:;width:.63em;">═
+</td>
+<td style="padding:0;color:;background:;width:.63em;">═
+</td>
+<td style="padding:0;color:;background:;width:.63em;">═
+</td>
+<td style="padding:0;color:;background:;width:.63em;">╗
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td></tr>
+<tr>
+<td style="padding:0;color:;background:;width:.63em;">═
+</td>
+<td style="padding:0;color:;background:;width:.63em;">╝
+</td>
+<td style="padding:0;color:#0F0;background:;width:.63em;">┼
+</td>
+<td style="padding:0;color:#FF0;background:;width:.63em;">┼
+</td>
+<td style="padding:0;color:#F0F;background:;width:.63em;">^
+</td>
+<td style="padding:0;color:;background:;width:.63em;">╚
+</td>
+<td style="padding:0;color:;background:;width:.63em;">═
+</td></tr>
+<tr>
+<td style="padding:0;color:#0FF;background:;width:.63em;">s
+</td>
+<td style="padding:0;color:;background:;width:.63em;">+
+</td>
+<td style="padding:0;color:;background:;width:.63em;">O
+</td>
+<td style="padding:0;color:;background:;width:.63em;">═
+</td>
+<td style="padding:0;color:;background:;width:.63em;">O
+</td>
+<td style="padding:0;color:;background:;width:.63em;">+
+</td>
+<td style="padding:0;color:#F00;background:;width:.63em;">p
+</td></tr>
+<tr>
+<td style="padding:0;color:;background:;width:.63em;">═
+</td>
+<td style="padding:0;color:;background:;width:.63em;">╗
+</td>
+<td style="padding:0;color:;background:;width:.63em;">+
+</td>
+<td style="padding:0;color:#0F0;background:;width:.63em;">¢
+</td>
+<td style="padding:0;color:;background:;width:.63em;">+
+</td>
+<td style="padding:0;color:;background:;width:.63em;">╔
+</td>
+<td style="padding:0;color:;background:;width:.63em;">═
+</td></tr>
+<tr>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">╚
+</td>
+<td style="padding:0;color:;background:;width:.63em;">╗
+</td>
+<td style="padding:0;color:#FF0;background:;width:.63em;">¢
+</td>
+<td style="padding:0;color:;background:;width:.63em;">╔
+</td>
+<td style="padding:0;color:;background:;width:.63em;">╝
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td></tr>
+<tr>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">╚
+</td>
+<td style="padding:0;color:;background:;width:.63em;">═
+</td>
+<td style="padding:0;color:;background:;width:.63em;">╝
+</td></tr></tbody></table>
+<p>The doors at the top are both open if both operands are true (AND); the hatches at the bottom permit path if either operand is false (NAND).  The pressure plate will signal when both operands are true.
+</p>
+<h3><span class="mw-headline" id="NOR_gate_with_OR_gate">NOR gate with OR gate</span></h3>
+<table style="border-spacing: 0; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-size: 135%; font-weight: bold; color:#C0C0C0; background:#000; line-height:.98em;">
+
+<tbody><tr>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">╔
+</td>
+<td style="padding:0;color:;background:;width:.63em;">═
+</td>
+<td style="padding:0;color:;background:;width:.63em;">═
+</td>
+<td style="padding:0;color:;background:;width:.63em;">═
+</td>
+<td style="padding:0;color:;background:;width:.63em;">╗
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td></tr>
+<tr>
+<td style="padding:0;color:;background:;width:.63em;">═
+</td>
+<td style="padding:0;color:;background:;width:.63em;">╝
+</td>
+<td style="padding:0;color:#0F0;background:;width:.63em;">¢
+</td>
+<td style="padding:0;color:#FF0;background:;width:.63em;">¢
+</td>
+<td style="padding:0;color:#F0F;background:;width:.63em;">^
+</td>
+<td style="padding:0;color:;background:;width:.63em;">╚
+</td>
+<td style="padding:0;color:;background:;width:.63em;">═
+</td></tr>
+<tr>
+<td style="padding:0;color:#0FF;background:;width:.63em;">s
+</td>
+<td style="padding:0;color:;background:;width:.63em;">+
+</td>
+<td style="padding:0;color:;background:;width:.63em;">O
+</td>
+<td style="padding:0;color:;background:;width:.63em;">═
+</td>
+<td style="padding:0;color:;background:;width:.63em;">O
+</td>
+<td style="padding:0;color:;background:;width:.63em;">+
+</td>
+<td style="padding:0;color:#F00;background:;width:.63em;">p
+</td></tr>
+<tr>
+<td style="padding:0;color:;background:;width:.63em;">═
+</td>
+<td style="padding:0;color:;background:;width:.63em;">╗
+</td>
+<td style="padding:0;color:;background:;width:.63em;">+
+</td>
+<td style="padding:0;color:#0F0;background:;width:.63em;">┼
+</td>
+<td style="padding:0;color:;background:;width:.63em;">+
+</td>
+<td style="padding:0;color:;background:;width:.63em;">╔
+</td>
+<td style="padding:0;color:;background:;width:.63em;">═
+</td></tr>
+<tr>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">╚
+</td>
+<td style="padding:0;color:;background:;width:.63em;">╗
+</td>
+<td style="padding:0;color:#FF0;background:;width:.63em;">┼
+</td>
+<td style="padding:0;color:;background:;width:.63em;">╔
+</td>
+<td style="padding:0;color:;background:;width:.63em;">╝
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td></tr>
+<tr>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">╚
+</td>
+<td style="padding:0;color:;background:;width:.63em;">═
+</td>
+<td style="padding:0;color:;background:;width:.63em;">╝
+</td></tr></tbody></table>
+<p>The hatches at the top permit path only if neither operand is true (NOR); the doors at the bottom permit path if either operand is true (OR).  The pressure plate will signal when neither operand is true.
+</p>
+<h3><span class="mw-headline" id="XOR_gate_with_expanded_XNOR_gate">XOR gate with expanded XNOR gate</span></h3>
+<table style="border-spacing: 0; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-size: 135%; font-weight: bold; color:#C0C0C0; background:#000; line-height:.98em;">
+
+<tbody><tr>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">╔
+</td>
+<td style="padding:0;color:;background:;width:.63em;">═
+</td>
+<td style="padding:0;color:;background:;width:.63em;">╦
+</td>
+<td style="padding:0;color:;background:;width:.63em;">═
+</td>
+<td style="padding:0;color:;background:;width:.63em;">╗
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td></tr>
+<tr>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">╔
+</td>
+<td style="padding:0;color:;background:;width:.63em;">╝
+</td>
+<td style="padding:0;color:#0F0;background:;width:.63em;">┼
+</td>
+<td style="padding:0;color:;background:;width:.63em;">O
+</td>
+<td style="padding:0;color:#0F0;background:;width:.63em;">¢
+</td>
+<td style="padding:0;color:;background:;width:.63em;">╚
+</td>
+<td style="padding:0;color:;background:;width:.63em;">╗
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td></tr>
+<tr>
+<td style="padding:0;color:;background:;width:.63em;">═
+</td>
+<td style="padding:0;color:;background:;width:.63em;">╝
+</td>
+<td style="padding:0;color:;background:;width:.63em;">+
+</td>
+<td style="padding:0;color:#FF0;background:;width:.63em;">┼
+</td>
+<td style="padding:0;color:;background:;width:.63em;">+
+</td>
+<td style="padding:0;color:#FF0;background:;width:.63em;">¢
+</td>
+<td style="padding:0;color:#F0F;background:;width:.63em;">^
+</td>
+<td style="padding:0;color:;background:;width:.63em;">╚
+</td>
+<td style="padding:0;color:;background:;width:.63em;">═
+</td></tr>
+<tr>
+<td style="padding:0;color:#0FF;background:;width:.63em;">s
+</td>
+<td style="padding:0;color:;background:;width:.63em;">+
+</td>
+<td style="padding:0;color:;background:;width:.63em;">O
+</td>
+<td style="padding:0;color:;background:;width:.63em;">═
+</td>
+<td style="padding:0;color:;background:;width:.63em;">═
+</td>
+<td style="padding:0;color:;background:;width:.63em;">═
+</td>
+<td style="padding:0;color:;background:;width:.63em;">O
+</td>
+<td style="padding:0;color:;background:;width:.63em;">+
+</td>
+<td style="padding:0;color:#F00;background:;width:.63em;">p
+</td></tr>
+<tr>
+<td style="padding:0;color:;background:;width:.63em;">═
+</td>
+<td style="padding:0;color:;background:;width:.63em;">╗
+</td>
+<td style="padding:0;color:;background:;width:.63em;">+
+</td>
+<td style="padding:0;color:#0F0;background:;width:.63em;">┼
+</td>
+<td style="padding:0;color:#FF0;background:;width:.63em;">┼
+</td>
+<td style="padding:0;color:;background:;width:.63em;">+
+</td>
+<td style="padding:0;color:;background:;width:.63em;">+
+</td>
+<td style="padding:0;color:;background:;width:.63em;">╔
+</td>
+<td style="padding:0;color:;background:;width:.63em;">═
+</td></tr>
+<tr>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">║
+</td>
+<td style="padding:0;color:;background:;width:.63em;">+
+</td>
+<td style="padding:0;color:;background:;width:.63em;">O
+</td>
+<td style="padding:0;color:;background:;width:.63em;">O
+</td>
+<td style="padding:0;color:;background:;width:.63em;">+
+</td>
+<td style="padding:0;color:;background:;width:.63em;">╔
+</td>
+<td style="padding:0;color:;background:;width:.63em;">╝
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td></tr>
+<tr>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">╚
+</td>
+<td style="padding:0;color:;background:;width:.63em;">╗
+</td>
+<td style="padding:0;color:#0F0;background:;width:.63em;">¢
+</td>
+<td style="padding:0;color:#FF0;background:;width:.63em;">¢
+</td>
+<td style="padding:0;color:;background:;width:.63em;">╔
+</td>
+<td style="padding:0;color:;background:;width:.63em;">╝
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td></tr>
+<tr>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">╚
+</td>
+<td style="padding:0;color:;background:;width:.63em;">═
+</td>
+<td style="padding:0;color:;background:;width:.63em;">═
+</td>
+<td style="padding:0;color:;background:;width:.63em;">╝
+</td></tr></tbody></table>
+<p><br />
+As XOR is the intersection of OR and NAND, it is simply an OR followed by a NAND.  The XNOR, as the union of AND and NOR, requires two arms.  Each operand is linked to one door and one hatch in the XOR path, and to one door and one hatch in the XNOR path.  The pressure plate will signal when either operand is true but not both are true.  When modifying the XOR to take more than two operands, be careful to leave space between the doors and hatches as shown; this space is unnecessary for evaluation of two operands.  Similarly, the expanded XNOR is appropriate when dealing with more than two operands, but a condensed version for taking only two operands exists.
+</p>
+<h3><span class="mw-headline" id="Multiple_use">Multiple use</span></h3>
+<p>The gates above are single use gates; the creatures will escape after pathing through each gate.  Circuits which return the creature to the beginning of the path are possible via altering the path in-route.
+</p>
+<table style="border-spacing: 0; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-size: 135%; font-weight: bold; color:#C0C0C0; background:#000; line-height:.98em;">
+
+<tbody><tr>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">║
+</td>
+<td style="padding:0;color:#F00;background:;width:.63em;">p
+</td>
+<td style="padding:0;color:;background:;width:.63em;">║
+</td></tr>
+<tr>
+<td style="padding:0;color:;background:;width:.63em;">═
+</td>
+<td style="padding:0;color:;background:;width:.63em;">═
+</td>
+<td style="padding:0;color:;background:;width:.63em;">╝
+</td>
+<td style="padding:0;color:#0F0;background:;width:.63em;">¢
+</td>
+<td style="padding:0;color:;background:;width:.63em;">║
+</td></tr>
+<tr>
+<td style="padding:0;color:#0FF;background:;width:.63em;">s
+</td>
+<td style="padding:0;color:#0F0;background:;width:.63em;">¢
+</td>
+<td style="padding:0;color:#0F0;background:;width:.63em;">^
+</td>
+<td style="padding:0;color:;background:;width:.63em;">O
+</td>
+<td style="padding:0;color:;background:;width:.63em;">╣
+</td></tr>
+<tr>
+<td style="padding:0;color:;background:;width:.63em;">═
+</td>
+<td style="padding:0;color:;background:;width:.63em;">═
+</td>
+<td style="padding:0;color:;background:;width:.63em;">╗
+</td>
+<td style="padding:0;color:#0F0;background:;width:.63em;">┼
+</td>
+<td style="padding:0;color:;background:;width:.63em;">║
+</td></tr>
+<tr>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">║
+</td>
+<td style="padding:0;color:#F00;background:;width:.63em;">p
+</td>
+<td style="padding:0;color:;background:;width:.63em;">║
+</td></tr></tbody></table>
+<p>This is one such device for re-routing creatures mid-path.  Upon stepping on the pressure plate, the creature opens two hatches, thus blocking retrograde motion as well as access to its pathing goal, and opens a door, giving access to a new pathing goal.  This new pathing goal can lead back to the original position of the creature.  This principle is demonstrated in the designs to follow.  Because the creature is constrained on the pressure plate, the door can be opened by outside mechanisms rather than being linked to the pressure plate, permitting controlled movement of a creature through one or more arms of a circuit.
+</p>
+<h3><span class="mw-headline" id="Reversibility">Reversibility</span></h3>
+<p>The reader may have noticed the near symmetry of the preceding gates.  However, the output works as well when placed before the path-limiting furniture as after!  While it's easier to visualize the effects of these circuits when displayed as above, it is often more effective to use a reversed design.  When a single creature is used to traverse a large, compound circuit, reverse design can lead to reduced latency.  A clever logician might wonder, "But if they can evaluate the signal before traversing the path, why traverse the path at all?"  Consider the following XOR/XNOR gate, redesigned both for reuse and reversed operation:
+</p>
+<table style="border-spacing: 0; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-size: 135%; font-weight: bold; color:#C0C0C0; background:#000; line-height:.98em;">
+
+<tbody><tr>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">╔
+</td>
+<td style="padding:0;color:;background:;width:.63em;">═
+</td>
+<td style="padding:0;color:;background:;width:.63em;">╦
+</td>
+<td style="padding:0;color:;background:;width:.63em;">═
+</td>
+<td style="padding:0;color:;background:;width:.63em;">╗
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td></tr>
+<tr>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">╔
+</td>
+<td style="padding:0;color:;background:;width:.63em;">╝
+</td>
+<td style="padding:0;color:#0F0;background:#F0F;width:.63em;">¢
+</td>
+<td style="padding:0;color:;background:;width:.63em;">O
+</td>
+<td style="padding:0;color:#0F0;background:;width:.63em;">┼
+</td>
+<td style="padding:0;color:;background:;width:.63em;">╚
+</td>
+<td style="padding:0;color:;background:;width:.63em;">╗
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td></tr>
+<tr>
+<td style="padding:0;color:;background:;width:.63em;">═
+</td>
+<td style="padding:0;color:;background:;width:.63em;">═
+</td>
+<td style="padding:0;color:;background:;width:.63em;">═
+</td>
+<td style="padding:0;color:;background:;width:.63em;">═
+</td>
+<td style="padding:0;color:;background:;width:.63em;">╝
+</td>
+<td style="padding:0;color:#F0F;background:;width:.63em;">^
+</td>
+<td style="padding:0;color:#FF0;background:#F0F;width:.63em;">¢
+</td>
+<td style="padding:0;color:;background:;width:.63em;">+
+</td>
+<td style="padding:0;color:#FF0;background:;width:.63em;">┼
+</td>
+<td style="padding:0;color:;background:;width:.63em;">+
+</td>
+<td style="padding:0;color:;background:;width:.63em;">╚
+</td>
+<td style="padding:0;color:;background:;width:.63em;">═
+</td></tr>
+<tr>
+<td style="padding:0;color:#F00;background:;width:.63em;">p
+</td>
+<td style="padding:0;color:#F0F;background:#00F;width:.63em;">┼
+</td>
+<td style="padding:0;color:#0FF;background:;width:.63em;">¢
+</td>
+<td style="padding:0;color:#0FF;background:;width:.63em;">^
+</td>
+<td style="padding:0;color:#0FF;background:;width:.63em;">¢
+</td>
+<td style="padding:0;color:;background:;width:.63em;">O
+</td>
+<td style="padding:0;color:;background:;width:.63em;">═
+</td>
+<td style="padding:0;color:;background:;width:.63em;">═
+</td>
+<td style="padding:0;color:;background:;width:.63em;">═
+</td>
+<td style="padding:0;color:;background:;width:.63em;">O
+</td>
+<td style="padding:0;color:;background:;width:.63em;">+
+</td>
+<td style="padding:0;color:#F00;background:;width:.63em;">p
+</td></tr>
+<tr>
+<td style="padding:0;color:;background:;width:.63em;">═
+</td>
+<td style="padding:0;color:;background:;width:.63em;">═
+</td>
+<td style="padding:0;color:;background:;width:.63em;">═
+</td>
+<td style="padding:0;color:;background:;width:.63em;">═
+</td>
+<td style="padding:0;color:;background:;width:.63em;">╗
+</td>
+<td style="padding:0;color:#00F;background:;width:.63em;">^
+</td>
+<td style="padding:0;color:#00F;background:#0F0;width:.63em;">¢
+</td>
+<td style="padding:0;color:#FF0;background:;width:.63em;">¢
+</td>
+<td style="padding:0;color:;background:;width:.63em;">+
+</td>
+<td style="padding:0;color:;background:;width:.63em;">+
+</td>
+<td style="padding:0;color:;background:;width:.63em;">╔
+</td>
+<td style="padding:0;color:;background:;width:.63em;">═
+</td></tr>
+<tr>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">║
+</td>
+<td style="padding:0;color:#00F;background:;width:.63em;">¢
+</td>
+<td style="padding:0;color:;background:;width:.63em;">O
+</td>
+<td style="padding:0;color:;background:;width:.63em;">O
+</td>
+<td style="padding:0;color:;background:;width:.63em;">+
+</td>
+<td style="padding:0;color:;background:;width:.63em;">╔
+</td>
+<td style="padding:0;color:;background:;width:.63em;">╝
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td></tr>
+<tr>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">╚
+</td>
+<td style="padding:0;color:;background:;width:.63em;">╗
+</td>
+<td style="padding:0;color:#0F0;background:;width:.63em;">┼
+</td>
+<td style="padding:0;color:#FF0;background:;width:.63em;">┼
+</td>
+<td style="padding:0;color:;background:;width:.63em;">╔
+</td>
+<td style="padding:0;color:;background:;width:.63em;">╝
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td></tr>
+<tr>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">╚
+</td>
+<td style="padding:0;color:;background:;width:.63em;">═
+</td>
+<td style="padding:0;color:;background:;width:.63em;">═
+</td>
+<td style="padding:0;color:;background:;width:.63em;">╝
+</td></tr></tbody></table>
+<p>A creature waits at the start point, atop the cyan hatch, until evaluation is triggered by an <b>off</b> signal to the cyan hatches (typically following a redundant <b>on</b> signal).  The creature, suddenly granted path to its goal, races toward either XOR or XNOR, but evaluation occurs earlier than in previous designs.  Its original path is blocked upon evaluation and the creature is rerouted back to its start point.  (Note that while the creature is reset in this design, furniture is not necessarily reset.  Some circuits may require additional furniture to control path without altering operands.)
+</p><p>Whereas the creature needed to travel 8 tiles for evaluation in the previous design, this allows evaluation in 2 tiles, and the refractory period-- the time during which the circuit cannot be used to evaluate another operand-- is improved to an even larger extent.
+</p>
+<h2><span class="mw-headline" id="Creature_memory">Creature memory</span></h2>
+<table style="border-spacing: 0; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-size: 135%; font-weight: bold; color:#C0C0C0; background:#000; line-height:.98em;">
+
+<tbody><tr>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">╔
+</td>
+<td style="padding:0;color:;background:;width:.63em;">═
+</td>
+<td style="padding:0;color:;background:;width:.63em;">╗
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td></tr>
+<tr>
+<td style="padding:0;color:;background:;width:.63em;">═
+</td>
+<td style="padding:0;color:;background:;width:.63em;">═
+</td>
+<td style="padding:0;color:;background:;width:.63em;">═
+</td>
+<td style="padding:0;color:;background:;width:.63em;">╝
+</td>
+<td style="padding:0;color:#0F0;background:;width:.63em;">┼
+</td>
+<td style="padding:0;color:;background:;width:.63em;">╚
+</td>
+<td style="padding:0;color:;background:;width:.63em;">═
+</td>
+<td style="padding:0;color:;background:;width:.63em;">═
+</td></tr>
+<tr>
+<td style="padding:0;color:#F00;background:;width:.63em;">p
+</td>
+<td style="padding:0;color:#FF0;background:;width:.63em;">¢
+</td>
+<td style="padding:0;color:#FF0;background:;width:.63em;">^
+</td>
+<td style="padding:0;color:#FF0;background:;width:.63em;">¢
+</td>
+<td style="padding:0;color:#00F;background:;width:.63em;">¢
+</td>
+<td style="padding:0;color:#F0F;background:#00F;width:.63em;">^
+</td>
+<td style="padding:0;color:#00F;background:;width:.63em;">¢
+</td>
+<td style="padding:0;color:#F00;background:;width:.63em;">p
+</td></tr>
+<tr>
+<td style="padding:0;color:;background:;width:.63em;">═
+</td>
+<td style="padding:0;color:;background:;width:.63em;">═
+</td>
+<td style="padding:0;color:;background:;width:.63em;">╗
+</td>
+<td style="padding:0;color:#0FF;background:;width:.63em;">┼
+</td>
+<td style="padding:0;color:;background:;width:.63em;">╔
+</td>
+<td style="padding:0;color:;background:;width:.63em;">═
+</td>
+<td style="padding:0;color:;background:;width:.63em;">═
+</td>
+<td style="padding:0;color:;background:;width:.63em;">═
+</td></tr>
+<tr>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">╚
+</td>
+<td style="padding:0;color:;background:;width:.63em;">═
+</td>
+<td style="padding:0;color:;background:;width:.63em;">╝
+</td></tr></tbody></table>
+<p>This is a low latency version (not the simplest version, not the most full-featured) of creature-based memory.  Each pressure plate is linked to each adjacent hatch.  Memory is set by sending an open (followed closely by a close) to either door.
+</p><p>Note that in this diagram, both ends need to lead to the pathing goal.  The creature can enter by either side, but will be constrained to either pressure plate during normal operation.
+</p>
+<h2><span id="Clock_generation,_repeaters,_and_delay"></span><span class="mw-headline" id="Clock_generation.2C_repeaters.2C_and_delay">Clock generation, repeaters, and delay</span></h2>
+<p>A high resolution borg-logic clock or delay can be designed around the rate with which creatures fall.  A simpler, low resolution clock can be designed based around the military <a href="/index.php/Scheduling" title="Scheduling">scheduling</a> menu or <a href="/index.php/Minecart" title="Minecart">minecart</a> routes.
+</p><p>The memory design above, slightly modified, can make a decent (not perfectly regular) repeater.
+</p>
+<table style="border-spacing: 0; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-size: 135%; font-weight: bold; color:#C0C0C0; background:#000; line-height:.98em;">
+
+<tbody><tr>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">╔
+</td>
+<td style="padding:0;color:;background:;width:.63em;">═
+</td>
+<td style="padding:0;color:;background:;width:.63em;">╗
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td></tr>
+<tr>
+<td style="padding:0;color:;background:;width:.63em;">═
+</td>
+<td style="padding:0;color:;background:;width:.63em;">═
+</td>
+<td style="padding:0;color:;background:;width:.63em;">═
+</td>
+<td style="padding:0;color:;background:;width:.63em;">╝
+</td>
+<td style="padding:0;color:#FF0;background:;width:.63em;">¢
+</td>
+<td style="padding:0;color:;background:;width:.63em;">╚
+</td>
+<td style="padding:0;color:;background:;width:.63em;">═
+</td>
+<td style="padding:0;color:;background:;width:.63em;">═
+</td></tr>
+<tr>
+<td style="padding:0;color:#F00;background:;width:.63em;">p
+</td>
+<td style="padding:0;color:#FF0;background:;width:.63em;">¢
+</td>
+<td style="padding:0;color:#FF0;background:;width:.63em;">^
+</td>
+<td style="padding:0;color:#FF0;background:;width:.63em;">¢
+</td>
+<td style="padding:0;color:#00F;background:;width:.63em;">¢
+</td>
+<td style="padding:0;color:#F0F;background:#00F;width:.63em;">^
+</td>
+<td style="padding:0;color:#00F;background:;width:.63em;">¢
+</td>
+<td style="padding:0;color:#F00;background:;width:.63em;">p
+</td></tr>
+<tr>
+<td style="padding:0;color:;background:;width:.63em;">═
+</td>
+<td style="padding:0;color:;background:;width:.63em;">═
+</td>
+<td style="padding:0;color:;background:;width:.63em;">╗
+</td>
+<td style="padding:0;color:#00F;background:;width:.63em;">¢
+</td>
+<td style="padding:0;color:;background:;width:.63em;">╔
+</td>
+<td style="padding:0;color:;background:;width:.63em;">═
+</td>
+<td style="padding:0;color:;background:;width:.63em;">═
+</td>
+<td style="padding:0;color:;background:;width:.63em;">═
+</td></tr>
+<tr>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">╚
+</td>
+<td style="padding:0;color:;background:;width:.63em;">═
+</td>
+<td style="padding:0;color:;background:;width:.63em;">╝
+</td></tr></tbody></table>
+<p>Here, each pressure plate is linked to the two orthogonally adjacent hatches.  The southern hatch is linked to the eastern pressure plate, while the northern hatch is linked to western pressure plate.  This repeater tends to fire about every 250 ticks, with open and close signals offset by about 125 ticks, when built as shown.  It's very effective at rapidly triggering any device with a refractory period of 100.  Similar, non-repeating systems can be used to institute delay.
+</p><p>Linking both pressure plates to output doubles its rate, turning it into very effective spike repeater.  The period can be increased by introducing floor space into the center of the design.
+</p>
+<h2><span class="mw-headline" id="Edge_Detection">Edge Detection</span></h2>
+<table style="border-spacing: 0; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-size: 135%; font-weight: bold; color:#C0C0C0; background:#000; line-height:.98em;">
+
+<tbody><tr>
+<td style="padding:0;color:;background:;width:.63em;">║
+</td>
+<td style="padding:0;color:#F00;background:;width:.63em;">p
+</td>
+<td style="padding:0;color:;background:;width:.63em;">║
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">║
+</td>
+<td style="padding:0;color:#F00;background:;width:.63em;">p
+</td>
+<td style="padding:0;color:;background:;width:.63em;">║
+</td></tr>
+<tr>
+<td style="padding:0;color:;background:;width:.63em;">║
+</td>
+<td style="padding:0;color:#0F0;background:;width:.63em;">¢
+</td>
+<td style="padding:0;color:;background:;width:.63em;">╚
+</td>
+<td style="padding:0;color:;background:;width:.63em;">═
+</td>
+<td style="padding:0;color:;background:;width:.63em;">═
+</td>
+<td style="padding:0;color:;background:;width:.63em;">═
+</td>
+<td style="padding:0;color:;background:;width:.63em;">╝
+</td>
+<td style="padding:0;color:#FF0;background:;width:.63em;">¢
+</td>
+<td style="padding:0;color:;background:;width:.63em;">║
+</td></tr>
+<tr>
+<td style="padding:0;color:;background:;width:.63em;">╠
+</td>
+<td style="padding:0;color:;background:;width:.63em;">O
+</td>
+<td style="padding:0;color:#0F0;background:;width:.63em;">^
+</td>
+<td style="padding:0;color:#0FF;background:;width:.63em;">┼
+</td>
+<td style="padding:0;color:#F0F;background:;width:.63em;">^
+</td>
+<td style="padding:0;color:#FF0;background:;width:.63em;">¢
+</td>
+<td style="padding:0;color:#FF0;background:;width:.63em;">^
+</td>
+<td style="padding:0;color:;background:;width:.63em;">O
+</td>
+<td style="padding:0;color:;background:;width:.63em;">╣
+</td></tr>
+<tr>
+<td style="padding:0;color:;background:;width:.63em;">║
+</td>
+<td style="padding:0;color:#0F0;background:;width:.63em;">¢
+</td>
+<td style="padding:0;color:;background:;width:.63em;">O
+</td>
+<td style="padding:0;color:;background:;width:.63em;">═
+</td>
+<td style="padding:0;color:;background:;width:.63em;">═
+</td>
+<td style="padding:0;color:;background:;width:.63em;">═
+</td>
+<td style="padding:0;color:;background:;width:.63em;">O
+</td>
+<td style="padding:0;color:#0FF;background:;width:.63em;">¢
+</td>
+<td style="padding:0;color:;background:;width:.63em;">║
+</td></tr>
+<tr>
+<td style="padding:0;color:;background:;width:.63em;">╚
+</td>
+<td style="padding:0;color:;background:;width:.63em;">╗
+</td>
+<td style="padding:0;color:;background:;width:.63em;">+
+</td>
+<td style="padding:0;color:;background:;width:.63em;">+
+</td>
+<td style="padding:0;color:#F0F;background:;width:.63em;">^
+</td>
+<td style="padding:0;color:;background:;width:.63em;">+
+</td>
+<td style="padding:0;color:;background:;width:.63em;">+
+</td>
+<td style="padding:0;color:;background:;width:.63em;">╔
+</td>
+<td style="padding:0;color:;background:;width:.63em;">╝
+</td></tr>
+<tr>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">╚
+</td>
+<td style="padding:0;color:;background:;width:.63em;">═
+</td>
+<td style="padding:0;color:;background:;width:.63em;">═
+</td>
+<td style="padding:0;color:;background:;width:.63em;">═
+</td>
+<td style="padding:0;color:;background:;width:.63em;">═
+</td>
+<td style="padding:0;color:;background:;width:.63em;">═
+</td>
+<td style="padding:0;color:;background:;width:.63em;">╝
+</td></tr></tbody></table>
+<p>North of the circuit is the pathing goal.  The eastern and western pressure plates are linked to adjacent hatches.  Input is linked to the hatch southeast of the eastern pressure plate and to the door.  The central and southern pressure plates are linked to output.  This circuit generates both an open and a close every time it is sent an open or a close signal from input -- that is, it generates two properly-ordered signals for every properly-ordered signal it is sent, allowing for <i>edge triggered</i> logic.  Either output pressure plate can be removed to send an open and a close only upon receiving one kind of signal or the other kind of signal.  Output can linked to the same device or to two different devices.
+</p><p>Note that the memory design forms a sort of inverse of this circuit, in that a single open-close cycle is translated into a single on or off signal.
+</p>
+<h2><span class="mw-headline" id="Alternative_design">Alternative design</span></h2>
+<p>Multiple choices of furniture are available for the doors or hatches in the above diagrams.  Various reasons exist for substitution.
+</p>
+<h4><span class="mw-headline" id="Doorless_design">Doorless design</span></h4>
+<p>Of all alternative designs, doorless design is the most practical.  All doors are replaced with hatches over <a href="/index.php/Stair" class="mw-redirect" title="Stair">stairs</a> or <a href="/index.php/Ramp" title="Ramp">ramps</a>, and the path continues one z-level down or up.  This makes it more difficult to visualize the circuit, and some very efficient designs may require more significant changes, but every circuit possible can be created without doors.  Use of hatches instead of doors protects against the effects of doors being blocked open by unexpected creatures or objects-- the original bug, after all, took the form of <a href="/index.php/Vermin" title="Vermin">vermin</a> remains.  Retracting <a href="/index.php/Bridge" title="Bridge">bridges</a> can be used the same way, but lead to problematic delays.
+</p>
+<h4><span class="mw-headline" id="Hatchless_design">Hatchless design</span></h4>
+<p>Hatchless design is much more difficult and of very limited use.  Signal inversion can make a door act like a hatch; a raising bridge acts like a hatch.  Both of these institute delays in processing that require large expansion of logic circuits and limit the effectiveness of memory, but they may be necessary when using submerged logic or flyers-- bragging rights for a logic system submerged in <a href="/index.php/Magma" title="Magma">magma</a> that processes via <a href="/index.php/Fire_imp" title="Fire imp">fire imps</a> may be worth the headache.
+</p>
+<h4><span class="mw-headline" id="Bridge_design">Bridge design</span></h4>
+<p>Bridge design uses bridges instead of both doors and hatches.  Doors are replaced with retracting bridges over ramps or staircases; hatches are replaced with raising bridges, or with retracting bridges over channels.  Bridge design causes frustrating delays, but it is the only way to use <a href="/index.php/Building_destroyer" title="Building destroyer">building destroyers</a> in a logic circuit.  The irony of making your <a href="/index.php/Minotaur" title="Minotaur">minotaur</a> run an impossible labyrinth may be worth the design headache.  As an added bonus, bridges are nearly unobstructable-- offensive vermin remains in your logic circuits will be smashed from this plane.
+</p>
+<h2><span class="mw-headline" id="Creature_choice">Creature choice</span></h2>
+<p>Multiple choices exist for creatures to run logic circuits.  Each has its own advantages and disadvantages.
+</p>
+<h4><span class="mw-headline" id="Domestic_animals">Domestic animals</span></h4>
+<p><a href="/index.php/Domestic_animal" title="Domestic animal">Domestic animals</a> are valid choices for creature logic, but come with a host of disadvantages.  Many females are capable of giving birth inside of your logic gates;  their <a href="/index.php/Child" class="mw-redirect" title="Child">children</a> can block the closing of doors or set off pressure plates.  <a href="/index.php/Pasture" title="Pasture">Grazers</a>, of course, will starve inside most logic circuits, although some special designs may be capable of supporting a grazer.  Some domestics are too small to set off pressure plates; some are capable of flight, requiring hatchless design.  All unmodded domestic animals will die of old age, requiring periodic replacement.  Most domestic animals have relatively short lifespans.  Logic involving domestic animals must be built with pressure plates that can be triggered by citizens, and building these circuits may turn into a nightmare of job cancellations and stranded, starving dwarves.  Domestic animals have one huge advantage, however: the location of their pathing goal can be altered with direct, unmediated action of the player, by placement of a meeting zone.
+</p>
+<h4><span class="mw-headline" id="Invaders">Invaders</span></h4>
+<p><a href="/index.php/Invader" title="Invader">Invaders</a> are readily available on most maps, rarely or never give birth, and require no sustenance.  Pressure plates don't need to be built triggerable by citizens.  <a href="/index.php/Elf" title="Elf">Elves</a> and <a href="/index.php/Goblin" title="Goblin">goblins</a> will never die of old age.  However, invaders cause their own problems.  Invaders can cause job cancellations, and in some circuits may escape, wreaking havoc deep in your fortress.  Dwarves armed with bolts and crossbows will take potshots at your computers periodically.  Finally, invader-based logic must have a path to the map edge for predictable pathing.  If your logic circuit is inside of your fortress, walling off, even through something as simple as raising a bridge at your entrance, will lead to unpredictable pathing.
+</p>
+<h4><span class="mw-headline" id="Dwarves">Dwarves</span></h4>
+<p>Dwarves themselves can be used to run logic circuits, and are perhaps the most interesting choice; logic designs involving dwarves are generally referred to as borg logic.  While longer-lived than most domestics, dwarves <a href="/index.php/Food" title="Food">starve</a> and <a href="/index.php/Alcohol" title="Alcohol">dehydrate</a> easily, requiring frequent, careful maintenance.  Idle dwarves path unpredictably, and dwarves are vulnerable to <a href="/index.php/Sleep" title="Sleep">drowsiness</a>, leading to very high latency.  Married female dwarves are fecund.  At the same time, dwarves are excellent choices for logic circuits because of their varied pathing goals that can be altered through direct interaction by the player.  Dwarves can trigger events both through the use of pressure plates and through the use of <a href="/index.php/Lever" title="Lever">levers</a>, while their pathing goals can be controlled by many means-- most easily and predictably, by military scheduling or minecart routes.  In fact, one can see the entire game of Dwarf Fortress as one big logic circuit with dwarves as the driving creature.  The more philosophically oriented overseer may wonder what cyclopean, ineffable circuit he or she is traversing through the act of playing Dwarf Fortress....
+</p>
+<h3><span class="mw-headline" id="Undead">Undead</span></h3>
+<p><a href="/index.php/Undead" title="Undead">Undead</a> are an intriguing choice for creature logic choices.  The absence of attribute rust opens up the possibility for a more consistent repeater.  They can be used in fully submerged circuits-- even in magma-submerged systems.  In some <a href="/index.php/Biome" title="Biome">biomes</a>, they are self-repairing.  However, undead path like wildlife, which can make it difficult to set up a circuit for them.  Without a clear target, they may not behave predictably.  One way to work around this is to build a visible target to which the undead path, by walling the circuit with <a href="/index.php/Channel" title="Channel">channels</a> instead of walls, and placing a captured invader in clear line-of-sight of the undead logician.
+</p>
+<h3><span class="mw-headline" id="Other_choices">Other choices</span></h3>
+<p>There are a few things to stay away from, but in general, any sufficiently understood creature can be used for creature logic.  Building destroyers are problematic, but full-bridge design is possible.  Likewise, flyers and swimmers cause difficulty, but nothing that can't be worked around.  Creatures with trapavoid are nearly useless, though <a href="/index.php/Gremlin" title="Gremlin">gremlins</a> might be able to output via levers; stun-able creatures like <a href="/index.php/Kobold" title="Kobold">kobolds</a> can trigger pressure plates when dropped/stunned; and non-web-immune creatures trigger pressure plates that have been <a href="/index.php/Web" title="Web">webbed</a>. Creatures with a <a href="/index.php/Size" title="Size">size</a> less than 10000 are too small to set off pressure plates, thus requiring additional "hardware" (such as a tame creature that "flees" or "charges" over a pressure plate).  The essence of creature logic, however, is predictable pathing.  This may or may not exclude the use of certain types of wildlife.
+</p></div>
