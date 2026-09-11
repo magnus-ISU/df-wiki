@@ -47,6 +47,11 @@ Offline commands, safe to run any time — they never touch the network:
 ./crawl.py index         # rebuild the folder READMEs
 ```
 
+`state/index-all.jsonl` holds the full enumeration of all 38,395 pages,
+including the `File:`, `40d:`, `23a:`, `v0.31:` and `v0.34:` namespaces this
+mirror currently skips — copy it over `state/index.jsonl` to widen the crawl
+without asking the wiki for the page list again.
+
 Useful flags: `--delay` (seconds between requests, default 10),
 `--commit-every` (default 200), `--limit`, `--push`,
 `--namespaces` (for `enumerate`; defaults to the content namespaces and skips

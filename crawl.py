@@ -59,8 +59,17 @@ USER_AGENT = (
 
 # Content namespaces.  Talk/User pages are conversation, not reference, and
 # they triple the crawl; pass --namespaces to include them anyway.
-DEFAULT_NAMESPACES = [0, 4, 6, 10, 12, 14, 100, 102, 104, 106, 108, 110, 112,
-                      114, 116, 200, 828, 1000]
+DEFAULT_NAMESPACES = [0, 4, 10, 12, 14, 100, 102, 104, 116, 200, 828, 1000]
+
+# Everything the wiki has, for a wider re-run:
+#   6 File, 106 40d, 108 Unused, 110 23a, 112 v0.31, 114 v0.34
+ALL_NAMESPACES = [0, 4, 6, 10, 12, 14, 100, 102, 104, 106, 108, 110, 112,
+                  114, 116, 200, 828, 1000]
+
+# Fetch order: current reference material first, so the mirror is useful long
+# before the crawl finishes.
+NS_PRIORITY = [0, 116, 102, 104, 1000, 200, 12, 100, 4, 14, 10, 828,
+               106, 114, 112, 110, 6, 108]
 
 stop = False
 
@@ -392,6 +401,8 @@ def cmd_fetch(args):
         sys.exit("no state/index.jsonl - run `./crawl.py enumerate` first")
     done = {r["t"] for r in read_jsonl(FETCHED)} if not args.force else set()
     todo = [p for p in pages if p["t"] not in done]
+    todo.sort(key=lambda p: (NS_PRIORITY.index(p["ns"]) if p["ns"] in NS_PRIORITY else 99,
+                             p["t"].lower()))
     if args.limit:
         todo = todo[:args.limit]
     log(f"{len(pages)} pages indexed, {len(pages) - len(todo) if not args.force else 0} already stored, "
