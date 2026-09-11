@@ -1,0 +1,192 @@
+{{Quality|Exceptional}}
+{{av}}
+[[File:v50_announcements_preview.png|thumb|250px|right|List of announcements.]]An '''announcement''' is a message displayed at the top left of the game screen used to indicate something important. Major announcements will pause gameplay and center the camera on the event in question, and game-changing ones will both do that and provide a framed message box presenting the event in question. The announcements list ({{Menu icon|N}}) lists all game announcements in dated order; some (but not all) can be zoomed to. (<!-- may be more confusing than helpful for v50 but leaving it for now -->Announcements are not to be confused with [[reports]], which detail combat results.)
+
+When some major or important game-changing announcements occur, the following icon will appear, accompanied with a wooden ticking-like sound effect:<br>
+[[File:alert_icon_anim.gif]]
+== Controlling which announcements pause and recenter ==
+{{main|announcements.txt}}
+
+You can control which types of announcements do and don't pause and/or recenter the game in the [[Settings#Announcements|Announcements tab of Settings]] or by editing the <code>announcements.txt</code> file.  
+==== Announcement Settings ====
+To change the behavior of announcements via the in game Settings, open [[Settings]], select the [[Settings#Announcements|Announcements]] tab. Then you'll need to find the setting of interest ([[announcements.txt#List_of_announcements|announcements.txt wiki page]] may be able to help). You'll see the available options for each event includes, <code>Popup</code>, <code>Pause</code>, <code>Recenter</code>, and <code>Alert</code>. That's the functionality you're most likely to want to adjust. For example, if you want an Alert on the left side of the screen for combat strikes and wounds you would scroll down to 'Strike' and 'Wounds' and change the Alert column to 'Yes' - but don't get ambitious and change all the combat events to Alert, you'll regret it! (one at a time is recommended). More information on what each of these options do, including <code>Adv</code>, <code>Fort</code>, <code>Report</code>, and <code>Report (Active)</code> is available on the [[announcements.txt]] wiki page (and probably needs to become shared content between these two pages).
+
+==== announcements.txt ====
+To change the behavior of announcements via the <code>announcements.txt</code> file you'll need to adjust the <code>:options</code> for the particular event of interest. An announcement type containing ''''':P''''' will pause when that announcement type is made, and one containing ''''':R''''' will re-center when that announcement type is made.  For example,
+
+:<tt>[MIGRANT_ARRIVAL:A_D:D_D:P:R]</tt>
+
+means that the game will pause and recenter upon the announcement of migrants arriving.  You could change it to
+
+:<tt>[MIGRANT_ARRIVAL:A_D:D_D:R]</tt>
+
+to cause the game to recenter on the arriving migrants, but to not pause the game.
+
+'''Note:'''
+* <code>/init/announcements.txt</code> is for the '''Default''' settings
+* <code>/prefs/announcements.txt</code> is for the '''Current''' settings
+
+== Announcements ==
+'''''Note:''' Some of the icons may be incorrect. A question mark placeholder icon is in place of unknown icons. Please update them with the correct ones as soon as possible.''
+
+{|class = "wikitable"
+! Icon !! Importance !! Description
+|-
+|colspan="3" style="padding:7px;" | ''Minor'' announcements are the simplest and most common announcements, and will flicker through the announcements window very quickly. This is typically used for things that happen a lot in a well-developed fortress.
+|-
+|[[File:announce_cancel_icon.png]] || style="background:#ffffc0; text-align:center" | Minor || Job cancellation with a stated reason (building site submerged, item blocking site, dangerous terrain, needs rough picture jaspers, etc.), followed by a [[suspend|suspension]] notice if the job is [[furniture]] placement or building a [[construction]].  The [[standing orders]] menu (tab in {{menu icon|y}}) allows you to filter job cancellation spam, between none, some, most, and all (default is some).
+|-
+|[[File:announce_weather_icon.png]] || style="background:#ffffc0; text-align:center" | Minor || Standard changes in [[weather]]: "It has started raining," "The weather has cleared," or "A snow storm has arrived." Changes in the season.
+|-
+|[[File:announce_birth_icon.png]] || style="background:#ffffc0; text-align:center" | Minor || [[Creatures]] and [[dwarves]] (and apparently [[ghost]]s as well) [[age|growing up]] and progressing from baby to child to adult. Animals jump straight from babies to adults. A dwarf cancelling a job with the reason of "Seeking infant." may also occur.
+|-
+|[[File:announce_masterpiece_icon.png]] || style="background:#ffffc0; text-align:center" | Minor || The creation of [[quality|masterpieces]]. Can get quite annoying in mature fortresses, when the announcements will stack up the products of legendary dwarves.
+|-
+|[[File:announce_noble_icon.png]] || style="background:#ffffc0; text-align:center" | Minor || A location and the surrounding areas have been made a county.
+|-
+|[[File:announce_crime_icon.png]] || style="background:#ffffc0; text-align:center" | Minor || An artifact is not where it was last seen.
+|-
+|[[File:announce_crime_icon.png]] || style="background:#ffffc0; text-align:center" | Minor || Something was stolen.
+|-
+|[[File:announce_crime_icon.png]] || style="background:#ffffc0; text-align:center" | Minor || Something has escaped a cage.
+|-
+|[[File:announce_general_icon.png]] || style="background:#ffffc0; text-align:center" | Minor || A diplomat could not complete a meeting and left unhappy.
+|-
+|[[File:announce_artdeface_icon.png]] || style="background:#ffffc0; text-align:center" | Minor || A masterpiece quality item has been lost or destroyed.
+|-
+|[[File:announce_digging_icon.png]] || style="background:#ffffc0; text-align:center" | Minor || A new type of stone or ore has been found while digging.
+|-
+|[[File:announce_military_icon.png]] || style="background:#ffffc0; text-align:center" | Minor || Individuals are changing their status because they're in a squad.
+|-
+|[[File:announce_labor_icon.png]] || style="background:#ffffc0; text-align:center" | Minor || Changes in [[profession]], for both civilian and [[military]] dwarves. The start of every month is usually marked by rotations within your militia and thus a bevy of messages of this type.
+|-
+|[[File:announce_hunting_icon.png]] || style="background:#ffffc0; text-align:center" | Minor || A dwarf has begun [[Ambusher|hunting]] for animals.
+|-
+|[[File:announce_death_icon.png]] || style="background:#ffffc0; text-align:center" | Minor || When an animal is [[butcher's shop|slaughtered]], or a tame animal or dwarf is struck down within view of other dwarves.
+|-
+|[[File:announce_guzzler_icon.png]] || style="background:#ffffc0; text-align:center" | Minor || When a creature is guzzling a fortress' alcohol.{{Verify}}
+|-
+|[[File:announce_research_icon.png]] || style="background:#ffffc0; text-align:center" | Minor || A scholar has discovered discourse on the nature of events.
+|-
+|[[File:announce_loseemotion_icon.png]] || style="background:#ffffc0; text-align:center" | Minor || An individual has lost their emotions.{{Verify}}
+|-
+|[[File:announce_birth_icon.png]] || style="background:#ffffc0; text-align:center" | Minor || Animals giving birth.
+|-
+|[[File:announce_guest_icon.png]] || style="background:#ffffc0; text-align:center" | Minor || A [[guest]] is visiting your fortress.
+|-
+|[[File:announce_guest_icon.png]] || style="background:#ffffc0; text-align:center" | Minor || A [[messenger]] has returned with either success or failure with making contract with another settlement.
+|-
+|[[File:announce_marriage_icon.png]] || style="background:#ffffc0; text-align:center" | Minor || Two dwarves have gotten [[marriage|married]].
+|-
+|[[File:announce_cancel_icon.png]] || style="background:#ffffc0; text-align:center" | Minor || Dwarves getting spooked by other creatures, and cancelling their jobs.
+|-
+|[[File:announce_combat_icon.png]] || style="background:#ffffc0; text-align:center" | Minor || Combat is taking place, or someone has died in combat.
+|-
+|[[File:announce_sparring_icon.png]] || style="background:#ffffc0; text-align:center" | Minor || Sparring is taking place.
+|-
+|[[File:announce_artdeface_icon.png]] || style="background:#ffffc0; text-align:center" | Minor || A workshop has been vandalized.
+|-
+|[[File:announce_agreement_icon.png]] || style="background:#ffffc0; text-align:center" | Minor || An agreement or [[mandate]] is active.
+|-
+|[[File:announce_animal_icon.png]] || style="background:#ffffc0; text-align:center" | Minor || An animal has been caught in a [[Animal_trap|trap]].
+|-
+|[[File:announce_animal_icon.png]] || style="background:#ffffc0; text-align:center" | Minor || An animal has broken free of an animal trap. <!-- Is this the correct icon? -->
+|-
+|[[File:announce_animal_icon.png]] || style="background:#ffffc0; text-align:center" | Minor || A [[animal training|trained]] creature going semi-wild (feral), the last stage before becoming wild again.
+|-
+|[[File:announce_animal_icon.png]] || style="background:#ffffc0; text-align:center" | Minor || An animal has been [[Pet|adopted]], or a cat has adopted a citizen.
+|-
+|[[File:announce_martial_icon.png]] || style="background:#ffffc0; text-align:center" | Minor || A dwarf is in a [[martial trance]].
+|-
+|[[File:announce_noble_icon.png]] || style="background:#ffffc0; text-align:center" | Minor || Dwarves getting promoted and/or elected to a noble status. Such as [[baron]], [[count]] or [[duke|duke/duchess]].
+|-
+|[[File:announce_ghost_icon.png]] || style="background:#ffffc0; text-align:center" | Minor || The raising of a [[ghost]].
+|-
+|[[File:announce_stress_icon.png]] || style="background:#ffffc0; text-align:center" | Minor || A citizen is undergoing a stressful breakdown.
+|-
+|[[File:announce_death_icon.png]] || style="background:#ffffc0; text-align:center" | Minor || Putting a citizen (and their associated ghost) to rest with a memorial [[slab]] or a [[coffin]].
+|-
+|[[File:announce_death_icon.png]] || style="background:#ffffc0; text-align:center" | Minor || After one week, a dwarf or tame creature has been missing, or if a dwarf comes across a corpse.
+|-
+|[[File:announce_agreement_icon.png]] || style="background:#ffffc0; text-align:center" | Minor || A [[Work orders|work order]] has been completed.
+|-
+|[[File:announce_military_icon.png]] || style="background:#ffffc0; text-align:center" | Minor || Dwarves growing [[Attachment|attached]] to their weapons or armor.
+
+|-
+|[[File:announce_rumor_icon.png]] || style="background:#ffffc0; text-align:center" | Minor || A [[rumor]] has been passed on to your dwarves.
+|-
+|[[File:announce_vermin_icon.png]] || style="background:#ffffc0; text-align:center" | Minor || A creature is stung by a [[bee]].
+|-
+|[[File:announce_agreement_icon.png]] || style="background:#ffffc0; text-align:center" | Minor || A citizen has become someone's student.
+|-
+|colspan="3" style="padding:7px;" | ''Major'' announcements are more important than minor announcements, and in addition to playing their message, the game may be paused and zoom to the location of the event. This is used for things that rarely happen, but aren't the ''most'' important. A wooden "ticking" sound effect is played for these announcement types.
+|-
+|[[File:announce_trade_icon.png]] || style="background:#ffb464; text-align:center" | Major || The arrival of a [[caravan]]. Best to get ready for [[thief|thieves]] and [[ambush]]es as well.
+|-
+|[[File:announce_trade_icon.png]] || style="background:#ffb464; text-align:center" | Major || The arrival of the [[outpost liaison]], although this always happens at the same time as the arrival of the dwarven caravan.
+|-
+|[[File:announce_migrant_icon.png]] || style="background:#ffb464; text-align:center" | Major || The arrival of [[migrants]].
+|-
+|[[File:announce_era_icon.png]] || style="background:#ffb464; text-align:center" | Major || A new [[Calendar|era]] has begun.
+|-
+|[[File:announce_general_icon.png]] || style="background:#ffb464; text-align:center" | Major || Uncovering of a [[thief]]. End them quickly!
+|-
+|[[File:announce_ambush_icon.png]] || style="background:#ffb464; text-align:center" | Major || Uncovering an [[ambush]] - ''very'' nasty if the dwarf in question is, for instance, just a poor old [[wood cutter]] out doing their job.
+|-
+|[[File:announce_ambush_icon.png]] || style="background:#ffb464; text-align:center" | Major || Discovering a [[gremlin]].
+|-
+|[[File:announce_crime_icon.png]] || style="background:#ffb464; text-align:center" | Major || Someone is caught sneaking around.
+|-
+|[[File:announce_digging_icon.png]] || style="background:#ffb464; text-align:center" | Major || A section of a cavern has collapsed. This is usually caused by improper digging.
+|-
+|[[File:announce_mood_icon.png]] || style="background:#ffb464; text-align:center" | Major || A dwarf entering a [[strange mood]], claiming a workshop, setting to work, and either completing a [[legendary artifact]] or going [[insanity|insane]] in the attempt. (Each step gets its own announcement.)
+|-
+|[[File:announce_monster_icon.png]] || style="background:#ffb464; text-align:center" | Major || "We checked that stone for heat! What devilry is this?!" A single stream of flame will burst out in a random direction, setting someone on fire if it hits them. Only encountered in the deeper layers of the world.
+|-
+|[[File:announce_berserk_icon.png]] || style="background:#ffb464; text-align:center" | Major || A dwarf has gone berserk. This can happen if the dwarf is undergoing a strange mood, and does not have the required materials to construct an artifact.
+|-
+|[[File:announce_monster_icon.png]] || style="background:#ffb464; text-align:center" | Major || A [[bogeyman]] transforms. Can be seen in the [[object testing arena]].
+|-
+|[[File:announce_noble_icon.png]] || style="background:#ffb464; text-align:center" | Major || Someone has inherited a position, or a discussion has led someone else to do so.
+|-
+|[[File:announce_noble_icon.png]] || style="background:#ffb464; text-align:center" | Major || The arrival of the [[king]] or queen.
+|-
+|[[File:announce_military_icon.png]] || style="background:#ffb464; text-align:center" | Major || A citizen in the military bestowed a name onto a shield or weapon.
+|-
+|[[File:announce_digging_icon.png]] || style="background:#ffb464; text-align:center" | Major || You have discovered an unusual volcanic wall studded with gems.
+|-
+|[[File:announce_monster_icon.png]] || style="background:#ffb464; text-align:center" | Major || The arrival of a [[semi-megabeast]].
+|-
+|[[File:announce_weather_icon.png]] || style="background:#ffb464; text-align:center" | Major || The appearance of a [[Weather#Evil weather|creeping cloud]] in [[Surroundings|evil biomes]].
+|-
+|[[File:Announce death icon.png]] || style="background:#ffb464; text-align:center" | Major || No available food is present. The ability to resolve this can depend on the surroundings around your fortress and what you already have.
+|-
+|[[File:announce_deitycurse_icon.png]] || style="background:#ffb464; text-align:center" | Major || A deity is disturbed, and/or lays a curse.
+|-
+|[[File:announce_general_icon.png]] || style="background:#ffb464; text-align:center" | Major || A monarch is satisfied with their position, but feels that there should be more development. We must dig deeper.
+|-
+|colspan="3" style="padding:7px;" | {{colortext|#900|'''''Warning:''' Minor spoilers ahead''}}<br>
+''Game-changing'' announcements are among the most important in the game. When these announcements occur, they pause the game, zoom to the location, ''and'' present a message box detailing the occurrence, in addition to repeating the message contained therein in the main feed after you close the box, for good measure. These are also reserved for incredibly rare, and potentially once-in-a-playthrough events.{{spoil small|[[File:Eerie cavern.png|center|500px]]|An example of a game-changing announcement, in ASCII mode.}}
+|-
+|[[File:announce_masterpiece_icon.png]] || style="background:#ff4141; color:white; text-align:center" | Important || The creation of an [[artifact]], whether from a [[strange mood]] or from a [[soldier]] bestowing a name upon his/her equipment.
+|-
+|[[File:announce_digging_icon.png]] || style="background:#ff4141; color:white; text-align:center" | Important || Discovering a [[cavern]] layer or the [[magma sea]]
+|-
+|[[File:announce_attack_icon.png]] || style="background:#ff4141; color:white; text-align:center" | Important || The arrival of a siege.
+|-
+|[[File:announce_general_icon.png]] || style="background:#ff4141; color:white; text-align:center" | Important || Your fortress becomes the capital.
+|-
+|[[File:announce_monster_icon.png]] || style="background:#ff4141; color:white; text-align:center" | Important || The arrival of a [[megabeast]], [[titan]], [[forgotten beast]], transformed [[werebeast]], or an [[undead]] siege.
+|-
+|[[File:announce_monster_icon.png]] || style="background:#ff4141; color:white; text-align:center" | Important || The reveal of a [[demon]], [[angel]], artifacts, or fire in an [[Unusual volcanic wall]]
+|-
+|[[File:announce_digging_icon.png]] || style="background:#ff4141; color:white; text-align:center" | Important || Discovering a [[deep pit]], [[magma pool]], or downward passage in a cavern.
+|-
+|[[File:announce_digging_icon.png]] || style="background:#ff4141; color:white; text-align:center" | Important || Discovering [[adamantine]] - Praise the miners!
+|-
+|[[File:announce_digging_icon.png]] || style="background:#ff4141; color:white; text-align:center" | Important || Discovering the [[Underworld]].
+|-
+|[[File:announce_holdings_icon.png]] || style="background:#ff4141; color:white; text-align:center" | Important || An area has been founded, and is incorporated into your fortress' holdings.
+|}
+{{Category|Interface}}
+[[ru:Announcement]]

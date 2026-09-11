@@ -1,0 +1,213 @@
+[[File:audio_preview.png|right]]
+:''For "sounds" that disturb Dwarves while they sleep, see [[Noise]].
+
+''Dwarf Fortress'' contains [[soundtrack|music tracks]] which play at various points in game, including the main menu theme. Some types of '''audio''' seem to be triggered by events, while others play randomly while certain criteria are met. These seem to include some [[weather]] sounds, wild ambience, building sounds, river etc.
+
+According to [[Toady One|Tarn]], there are different settings for every track. One depends on the caverns being opened, one plays only after the second year, one is a first year track.  Strike the Earth plays when you first embark, and then gets mixed in with the others afterward.  And so forth; there's a raw format for this so you can change it if you like.[http://www.bay12forums.com/smf/index.php?topic=169696.msg8403423#msg8403423]
+
+Game Audio settings can be adjusted in the [[Settings#Audio|settings]] menu.
+== Modding==
+<div id="test1" style="margin-bottom:-20px;">{{main|modding}}</div>{{Modding}}
+All sound and [[Soundtrack|music]] files used by ''Dwarf Fortress'' are stored in the [https://en.wikipedia.org/wiki/Ogg .ogg] format within the <code>[[Game folder|<Dwarf Fortress>]]/data/sound/</code> subfolders. You can replace the existing ogg files with different ones. That has to be performed manually and isn't actually supported by the game. You can also change some of the definitions of when certain musical cues are played, using available music tokens and sound tokens in the [[raw file]]s found in <code>[[Game folder|<Dwarf Fortress>]]\data\vanilla\vanilla_music\</code>. You can add new music and sounds with raws in the sound folder{{version|0.50.09}}, formatted like so:
+
+==Identifiers==
+To allow the game to read audio files consistently, they must be given an identifier. Identifiers can be any arbitrary string, just like any other raw object.
+
+Identifier files are stored in a mod's <code>sound/</code> directory (not the <code>objects/</code> directory, where the logic for playing them is stored), and their name must start with <code>sound_file_</code> or <code>music_file_</code>.
+
+Their first line must be the filename, followed by <code> [OBJECT:SOUND_FILE]</code> or <code>[OBJECT:MUSIC_FILE]</code> respectively.
+
+ sound_file_example
+ [OBJECT:SOUND_FILE]
+ [SOUND_FILE:<identifier>]
+     [FILE:file name]
+
+ music_file_example
+ [OBJECT:MUSIC_FILE]
+ [MUSIC_FILE:<identifier>]
+     [FILE:file name]
+     [AUTHOR:author name]
+     [LOOPS] optional
+     [TITLE:piece title]
+
+{| {{prettytable}}
+|- bgcolor="#dddddd"
+!Token
+!Arguments
+!Extra Information
+|-
+| {{text anchor|FILE}}
+|
+* path to audio
+| (Required) Usually stored as <code>sound/...ogg</code>.
+|-
+| {{text anchor|AUTHOR}}
+|
+* string
+| (Music only) Displays as the song author on pause menu.
+|-
+| {{text anchor|LOOPS}}
+| 
+| (Music only) If set, should play continuously until interrupted.{{verify}}
+|-
+| {{text anchor|TITLE}}
+|
+* string
+| (Music only) Displays as track title on pause menu.
+|}
+
+==Sound effects==
+
+All vanilla sound tokens are found within <code>objects/sound_standard.txt</code>. All sound definition raws must begin with <code>sound_</code>, followed by the <code>[OBJECT:SOUND]</code> token that tells the game that the file contains sound definitions.
+
+ [SOUND:<identifier>]
+     [FILE:<[[Audio#Identifiers|file identifier]]>]
+     [ANNOUNCEMENT:<announcement>]
+     ...
+     [ANNOUNCEMENT:<announcement n>]
+
+{| {{prettytable}}
+|- bgcolor="#dddddd"
+!Token
+!Arguments
+!Extra Information
+|-
+| {{text anchor|FILE}}
+|
+* [[Audio#Identifiers|sound file]]
+| (Required) [[Audio#Identifiers|File identifiers]] can be any of various hardcoded sounds (all present in the vanilla raws) or custom [SOUND_FILE] objects.
+|-
+| {{text anchor|ANNOUNCEMENT}}
+|
+* [[Announcements.txt|announcement(s)]]
+| Trigger condition, can use more than one announcement in the list.
+|-
+| {{text anchor|SAVAGE_AREA}}
+| 
+| Played randomly in a [[Surroundings#Savage|savage]] area.
+|}
+
+==Music tracks==
+All vanilla music tokens are found within <code>objects/music_standard.txt</code>. All music logic raws must begin with <code>music_</code>, followed by the <code>[OBJECT:MUSIC]</code> token that tells the game that the file contains music definitions.
+
+ [MUSIC:TRACK_02]
+ 	[FILE:EXPANSIVE_CAVERN]
+ 		[CARD:EXPANSIVE_CAVERN_CARD_1] for the shuffled deck of short bits
+ 		[CARD:EXPANSIVE_CAVERN_CARD_2]
+ 		[CARD:EXPANSIVE_CAVERN_CARD_3]
+ 		[CARD:EXPANSIVE_CAVERN_CARD_4]
+ 	[EVENT:FIRST_CAVERN_OPENED]
+ 	[CONTEXT:CAVERNS_OPENED]
+ 	[FREQUENCY:UNCOMMON]
+
+{| {{prettytable}}
+|- bgcolor="#dddddd"
+!Token
+!Arguments
+!Extra Information
+|-
+| {{text anchor|FILE}}
+|
+* [[Audio#Identifiers|music file]]
+| (Required) Can be any of the many hardcoded [[Audio#Identifiers|files]] for the [[soundtrack]], or it can be a custom [MUSIC_FILE] object.
+|-
+| {{text anchor|CARD}}
+|
+* [[Audio#Identifiers|music file(s)]]
+| Mostly unexplored, listed as a "shuffled deck of short bits." Appears to be played only if no song is currently playing? Before the song proper starts, the game will play a few of these in random order. You can find the parts in the subfolders in ...\common\Dwarf Fortress\data\sound\tracks folder. 
+|-
+| {{text anchor|CONTEXT}}
+| [[Audio#Contexts|context(s)]]
+| This song can randomly play if any of the contexts are met.
+|-
+| {{text anchor|EVENT}}
+| [[Audio#Events|event(s)]]
+| When the chosen event occurs, this song automatically plays and overrides the current song. If multiple songs match the event, a random song will be played from among them.
+|-
+| {{text anchor|FREQUENCY}}
+|
+* UNCOMMON or RARE
+| Can be set to 'UNCOMMON' to set the frequency half as often as the other candidates or 'RARE' to make it 1/5 as often as other candidates.
+|}
+
+===Contexts===
+{| {{prettytable}}
+|- bgcolor="#dddddd"
+!Token
+!Extra Information
+|-
+| {{text anchor|ANY}}
+| Can play at any time, including in menus.
+|-
+| {{text anchor|MAIN}}
+| The gamemode is [[Fortress Mode]].
+|-
+| {{text anchor|FIRST_YEAR}}
+| You are controlling a fortress that is less than one year old.
+|-
+| {{text anchor|SECOND_YEAR_PLUS}}
+| Your fortress has been around for more than one year.
+|-
+| {{text anchor|CAVERNS_OPENED}}
+| Your fortress has access to the [[cavern]]s.
+|-
+| {{text anchor|SPRING}}
+| The current season is [[spring]]. Appears to also be played in Legends mode and the main menu.
+|-
+| {{text anchor|SUMMER}}
+| The current season is [[summer]]. Appears to also be played in Legends mode and the main menu.
+|-
+| {{text anchor|AUTUMN}}
+| The current season is [[autumn]]. Appears to also be played in Legends mode and the main menu.
+|-
+| {{text anchor|WINTER}}
+| The current season is [[winter]].
+|}
+
+===Events===
+{| {{prettytable}}
+|- bgcolor="#dddddd"
+!Token
+!Extra Information
+|-
+| {{text anchor|JUST_EMBARKED}}
+| Plays when [[embark|founding]] a new fortress.
+|-
+| {{text anchor|SIEGE}}
+| A [[siege]] is announced.
+|-
+| {{text anchor|FIRST_CAVERN_OPENED}}
+| A new cave layer is discovered {{verify}}
+|-
+| {{text anchor|MEGABEAST_ATTACK}}
+| Plays when a [[megabeast]]'s arrival is announced. It is unknown if it is also relevant for [[Semi-megabeast|semi-megabeasts]] or [[Titan|titans]].
+|-
+| {{text anchor|FORGOTTEN_BEAST_ATTACK}}
+| Plays when a [[forgotten beast]]'s arrival is announced.
+|-
+| {{text anchor|DEATH_SPIRAL}}
+| Many citizen deaths have occurred in short succession.
+|-
+| {{text anchor|TAVERN_MUSIC_PRESENT}}
+| Many units have gathered to perform or watch a [[Performer#Music|musical form]].
+|-
+| {{text anchor|TAVERN_DANCE_PRESENT}}
+| Many units have gathered to perform or watch a [[Performer#Dance|dance]].
+|-
+| {{text anchor|LOST_FORT}}
+| Ending a game: a fortress has just been [[Reclaim fortress mode|abandoned or retired]] or your [[adventurer]] has died.
+|-
+| {{text anchor|FORT_LEVEL}}{{v|51.01-beta28}}
+| May relate to reaching higher ranks of [[Fortress#Nomenclature]].{{verify}}
+|-
+| {{text anchor|FIRST_GHOST}}{{v|51.01-beta28}}
+| The first time a [[ghost]] attacks.{{verify}}
+|}
+
+== See Also== 
+* [[Soundtrack]] 
+* [https://www.youtube.com/watch?v=mJyMhgadpcQ ambiences and music snippets]
+* [[Soundsense]]
+* [https://github.com/Putnam3145/dwarf-fortress-example-sound-mod Example sound mod] by [[User:Putnam3145|Putnam]]
+
+[[Category:game]]

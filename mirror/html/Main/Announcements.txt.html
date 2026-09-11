@@ -1,0 +1,3477 @@
+<div class="mw-parser-output"><div id="page-quality-rating" style="text-align: right;margin: 0.8em 0;font-size:75%">
+ <a href="/index.php/Dwarf_Fortress_Wiki:Quality#Tattered" title="Dwarf Fortress Wiki:Quality"><span id="stub-quality" style="padding:0.2em; border:1px solid #333; border-radius: 2px; -webkit-border-radius: 2px; -moz-border-radius: 2px; -o-border-radius: 2px; -ms-border-radius: 2px; background:#CCCCCC;; color:#333333">xTATTEREDx</span></a> <span style="font-weight:bold;" class="dot">&#160;·</span> <a href="/index.php/Dwarf_Fortress_Wiki:Quality#Fine" title="Dwarf Fortress Wiki:Quality"><span id="fine-quality" style="text-decoration:none; color:#CA7A02;">+FINE+</span></a> <span style="font-weight:bold;" class="dot">&#160;·</span> <a href="/index.php/Dwarf_Fortress_Wiki:Quality#Superior" title="Dwarf Fortress Wiki:Quality"><span id="superior-quality" style="text-decoration:none; color:#8800cc;">*SUPERIOR*</span></a> <span style="font-weight:bold;" class="dot">&#160;·</span> <a href="/index.php/Dwarf_Fortress_Wiki:Quality#Exceptional" title="Dwarf Fortress Wiki:Quality"><span id="exceptional-quality" style="text-decoration:none; color:#0088CC;">≡EXCEPTIONAL≡</span></a> <span style="font-weight:bold;" class="dot">&#160;·</span> <a href="/index.php/Dwarf_Fortress_Wiki:Quality#Masterwork" title="Dwarf Fortress Wiki:Quality"><span id="masterwork-quality" style="text-decoration:none; color:#72A329;">☼MASTERWORK☼</span></a></div>
+<table class="version-table" style="text-align: center; margin: 3px auto 5px; padding: 0.25em; border-radius: 3px; -webkit-border-radius: 3px; -moz-border-radius: 3px; -o-border-radius: 3px; -ms-border-radius: 3px;; border: 2px solid #bbdd88; background: #f5ffee; min-width:27em"><tbody><tr><td style="padding: 0.3em 0.3em; width: 100%;"><div style="margin-bottom:6px;" class="version-links-r1"><span style="font-size:100%"><span class="version-link"><span style="text-decoration: none; color: #72A329; background-color: #E2FDCE; border-radius: 2px; -webkit-border-radius: 2px; -moz-border-radius: 2px; -o-border-radius: 2px; -ms-border-radius: 2px; border: 1px solid #bbdd88; padding: 0.2em;"><b>v53.16</b></span></span><span style="font-weight:bold;" class="dot">&#160;·</span> <span class="version-link"><a href="/index.php/DF2014:Announcements.txt" title="DF2014:Announcements.txt"><span style="text-decoration: none; color: #72A329;">v0.47.05</span></a></span></span></div><span>This article is about the current version of DF.<br />Note that some content may still need to be updated.</span><br />
+<div style="float: right; font-size:75%; padding-right:2px; margin-top:-2px; margin-bottom:-7px;"><span class="version-link"><a href="/index.php/Dwarf_Fortress_Wiki:V" class="mw-redirect" title="Dwarf Fortress Wiki:V"><span style="text-decoration: none; color: #72A329;">More Info</span></a></span><span style="font-weight:bold;" class="dot">&#160;·</span> <span class="version-link"><a href="/index.php/Template:Av" class="mw-redirect" title="Template:Av"><span style="text-decoration: none; color: #72A329;">V</span></a></span></div></td></tr>
+</tbody></table>
+<table class="metadata plainlinks ambox ambox-speedy" style="background-color:#fcc;" role="presentation">
+<tbody><tr><td class="mbox-image"><div style="width: 52px;"><a href="/index.php/Category:Bugs" title="Category:Bugs"><img alt="Giant mosquito sprite.png" src="/images/1/16/Giant_mosquito_sprite.png" decoding="async" width="24" height="25" /></a></div></td><td class="mbox-text" style=""><span class="mbox-text-span">This feature has one or more outstanding <b>bugs</b>. Please view the <a href="#Bugs">Bugs</a> section for details.<span class="hide-when-compact">  </span><span class="hide-when-compact"> </span></span></td></tr></tbody></table>
+<div style="float:right; min-width:12em;"><table style="width:100%; background-color:#f3f3f3; border: 1px solid #cccccc">
+<tbody><tr><th><a href="/index.php/Category:Files" title="Category:Files">File</a></th></tr>
+<tr><td style="padding-left:0px;">
+<p><a href="/index.php/File:Folder.svg" class="image"><img alt="Folder.svg" src="https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f3/Folder.svg/20px-Folder.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=imageinfo&amp;utm_content=thumbnail" decoding="async" width="18" height="18" srcset="https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f3/Folder.svg/40px-Folder.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=imageinfo&amp;utm_content=thumbnail 1.5x" /></a> prefs
+</p>
+</td></tr>
+<tr><td style="padding-left:8px;">
+<p><a href="/index.php/File:Text-x-generic.svg" class="image"><img alt="Text-x-generic.svg" src="https://thumb.wikimedia.org/wikipedia/commons/thumb/2/20/Text-x-generic.svg/20px-Text-x-generic.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=imageinfo&amp;utm_content=thumbnail" decoding="async" width="18" height="18" srcset="https://thumb.wikimedia.org/wikipedia/commons/thumb/2/20/Text-x-generic.svg/40px-Text-x-generic.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=imageinfo&amp;utm_content=thumbnail 1.5x" /></a> announcements.txt
+</p>
+</td></tr>
+
+</tbody></table></div>
+<p><b>Announcements.txt</b> determines how and whether announcements appear and can be adjusted in game on that tab in the <a href="/index.php/Settings" title="Settings">settings</a><small><sup>v50.10</sup></small>; those settings are stored in the <code>announcements.txt</code> files, with the defaults in <code>data/init/announcements.txt</code>, and the current settings in <code>prefs/announcements.txt</code>; the location of the <code>prefs</code> <a href="/index.php/Game_folders_and_files" title="Game folders and files">folder</a> depends on the <a href="/index.php/Settings#Portable_mode" title="Settings">portable mode setting</a> (there can also be a <code>data</code> folder there, but if you put a <code>data/init/announcements.txt</code> there it will not be read). These adjustments are mainly useful for changing whether an announcement pauses the game or recenters the view.
+</p>
+
+<h2><span class="mw-headline" id="Syntax">Syntax</span></h2>
+<pre>[<i><b>EVENT_LABEL''</b></i>:option:option<i>...]</i>
+</pre>
+<h3><span class="mw-headline" id="Available_options">Available options</span></h3>
+<table class="wikitable">
+
+<tbody><tr>
+<th><a href="/index.php/Settings" title="Settings">Settings</a><br />Options
+</th>
+<th>announcements.txt<br /><i>:options</i>
+</th>
+<th>Description
+</th>
+<th>Notes
+</th></tr>
+<tr>
+<td><span id="Popup" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#Popup">Popup</a></span>
+</td>
+<td><span id="BOX" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#BOX">BOX</a></span> or <span id="DO_MEGA" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#DO_MEGA">DO_MEGA</a></span>
+</td>
+<td>Causes a box to appear in the middle of the screen, requiring a click on the Okay button to close it. If multiple boxes are displayed at the same time, the button says More and displays the next box.
+</td>
+<td>This is often used with <a href="/index.php/Announcement#Game-changing_announcements" title="Announcement">game-changing announcements</a>.
+</td>
+<td>
+</td></tr>
+<tr>
+<td><span id="Pause" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#Pause">Pause</a></span>
+</td>
+<td><span id="P" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#P">P</a></span> or <span id="PAUSE" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#PAUSE">PAUSE</a></span>
+</td>
+<td>Pauses the game when the announcement occurs.
+</td>
+<td>
+</td></tr>
+<tr>
+<td><span id="Recenter" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#Recenter">Recenter</a></span>
+</td>
+<td><span id="R" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#R">R</a></span> or <span id="RECENTER" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#RECENTER">RECENTER</a></span>
+</td>
+<td>Recenters the game to the location of the announcement when the announcement occurs.
+</td>
+<td>Commonly used for <a href="/index.php/Baby" class="mw-redirect" title="Baby">births</a>, <a href="/index.php/Caravan" title="Caravan">caravan</a> arrivals, and <a href="/index.php/Ambush" title="Ambush">ambushes</a>. Use of this without the <a href="#PAUSE">pause</a> option is not recommended, since your screen will recenter without warning.
+</td></tr>
+<tr>
+<td><span id="Adv" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#Adv">Adv</a></span>
+</td>
+<td><span id="A_D" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#A_D">A_D</a></span> or <span id="A_DISPLAY" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#A_DISPLAY">A_DISPLAY</a></span>
+</td>
+<td>Causes the announcement to be displayed at the bottom of the screen in <a href="/index.php/Adventure_mode" class="mw-redirect" title="Adventure mode">adventure mode</a> (and be viewable in the <span style="white-space: nowrap;"><span class="keyboard-key nowrap" style="border: 1px solid #aaa; border-radius: 0.2em; -webkit-border-radius: 0.2em; -moz-border-radius: 0.2em; -o-border-radius: 0.2em; -ms-border-radius: 0.2em; -moz-box-shadow: 0.1em 0.2em 0.2em #ddd; -webkit-box-shadow: 0.1em 0.2em 0.2em #ddd; box-shadow: 0.1em 0.2em 0.2em #ddd; background-color: #f9f9f9; background-image: -moz-linear-gradient(top, #eee, #f9f9f9, #eee); background-image: -o-linear-gradient(top, #eee, #f9f9f9, #eee); background-image: -webkit-linear-gradient(top, #eee, #f9f9f9, #eee); background-image: linear-gradient(to bottom, #eee, #f9f9f9, #eee); padding: 0.1em 0.3em; font-family: inherit; font-size: 0.9em;" title="">a</span></span>nnouncements list).
+</td>
+<td>
+</td></tr>
+<tr>
+<td><span id="Fort" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#Fort">Fort</a></span>
+</td>
+<td><span id="D_D" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#D_D">D_D</a></span> or <span id="D_DISPLAY" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#D_DISPLAY">D_DISPLAY</a></span>
+</td>
+<td>Causes the announcement to appear under one of the categories at the left side of the screen in <a href="/index.php/Fortress_mode" class="mw-redirect" title="Fortress mode">fortress mode</a>.
+</td>
+<td>The default for <a href="/index.php/Announcement#Minor_announcements" title="Announcement">minor announcements</a> including profession changes, <a href="/index.php/Weather" title="Weather">weather</a>, job cancellations, and striking new minerals while <a href="/index.php/Mining" title="Mining">mining</a>.<br />While playing in Fortress mode, enabling/disabling Adv has no impact on your announcement experience.
+</td></tr>
+<tr>
+<td><span id="Report" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#Report">Report</a></span>
+</td>
+<td><span id="UCR" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#UCR">UCR</a></span> or <span id="UNIT_COMBAT_REPORT" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#UNIT_COMBAT_REPORT">UNIT_COMBAT_REPORT</a></span>
+</td>
+<td>Causes the announcement to appear in all <a href="/index.php/Reports" title="Reports">reports</a>. A new report will be created if none are active.
+</td>
+<td>Commonly used for logging combat details.
+</td></tr>
+<tr>
+<td><span id="Report_.28Active.29" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#Report_.28Active.29">Report (Active)</a></span>
+</td>
+<td><span id="UCR_A" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#UCR_A">UCR_A</a></span> or <span id="UNIT_COMBAT_REPORT_ALL_ACTIVE" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#UNIT_COMBAT_REPORT_ALL_ACTIVE">UNIT_COMBAT_REPORT_ALL_ACTIVE</a></span>
+</td>
+<td>Nearly identical to <a href="#UCR">UNIT_COMBAT_REPORT</a>, but does not create a new report if none are active.
+</td>
+<td>There is no difference between having 'Report (Active)/UCR_A' and 'Report/UCR' enabled verse having only 'Report/UCR' enabled. Use Report (Active)/UCR_A for things you want in the combat reports that would be too chatty to always generate a combat report for (Urist Falls down) but don't forget to disable 'Report/UCR' or you won't get the benefit.
+</td></tr>
+<tr>
+<td><span id="Alert" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#Alert">Alert</a></span>
+</td>
+<td><span id="ALERT" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#ALERT">ALERT</a></span>
+</td>
+<td>Causes the announcement to appear under the alert button at the left side of the screen in <a href="/index.php/Fortress_mode" class="mw-redirect" title="Fortress mode">fortress mode</a>.
+</td>
+<td>
+</td></tr></tbody></table>
+<h2><span class="mw-headline" id="_List_of_announcements"><span id="List_of_announcements" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#List_of_announcements">List of announcements</a></span></span></h2>
+<table class="wikitable sortable">
+
+<tbody><tr>
+<th><a href="/index.php/Settings" title="Settings">Settings</a><br />Name
+</th>
+<th>announcements.txt<br />EVENT_LABEL
+</th>
+<th>Example
+</th>
+<th>Description/Notes
+</th></tr>
+<tr>
+<td><span id="Reached_peak" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#Reached_peak">Reached peak</a></span>
+</td>
+<td><span id="REACHED_PEAK" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#REACHED_PEAK">REACHED_PEAK</a></span>
+</td>
+<td>
+</td>
+<td rowspan="2">See <a href="/index.php/Calendar" title="Calendar">calendar</a>
+</td></tr>
+<tr>
+<td><span id="Era_change" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#Era_change">Era change</a></span>
+</td>
+<td><span id="ERA_CHANGE" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#ERA_CHANGE">ERA_CHANGE</a></span>
+</td>
+<td><span style="color: #FFFFFF; font-size: 12.5px; font-family: &#39;fixedsys&#39;, &#39;IBM Plex Mono Medium&#39;, &#39;Consolas&#39;, monospace; background: #000000">The world has passed into The Dwarven Age.</span>
+</td></tr>
+<tr>
+<td><span id="Endgame_event_1" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#Endgame_event_1">Endgame event 1</a></span>
+</td>
+<td><span id="ENDGAME_EVENT_1" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#ENDGAME_EVENT_1">ENDGAME_EVENT_1</a></span>
+</td>
+<td>
+</td>
+<td rowspan="3">Discovery of the <a href="/index.php/HFS" class="mw-redirect" title="HFS">HFS</a>
+</td></tr>
+<tr>
+<td><span id="Endgame_event_1B" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#Endgame_event_1B">Endgame event 1B</a></span>
+</td>
+<td><span id="ENDGAME_EVENT_1B" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#ENDGAME_EVENT_1B">ENDGAME_EVENT_1B</a></span>
+</td>
+<td>
+</td></tr>
+<tr>
+<td><span id="Endgame_event_2" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#Endgame_event_2">Endgame event 2</a></span>
+</td>
+<td><span id="ENDGAME_EVENT_2" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#ENDGAME_EVENT_2">ENDGAME_EVENT_2</a></span>
+</td>
+<td>
+</td></tr>
+<tr>
+<td><span id="Found_a_feature" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#Found_a_feature">Found a feature</a></span>
+</td>
+<td><span id="FEATURE_DISCOVERY" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#FEATURE_DISCOVERY">FEATURE_DISCOVERY</a></span>
+</td>
+<td><span style="color: #FFFFFF; font-size: 12.5px; font-family: &#39;fixedsys&#39;, &#39;IBM Plex Mono Medium&#39;, &#39;Consolas&#39;, monospace; background: #000000">You have discovered an expansive cavern deep underground.</span>
+</td>
+<td>Discovery of <a href="/index.php/Cavern" title="Cavern">caverns</a> and their various features
+</td></tr>
+<tr>
+<td><span id="Praise_the_miners" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#Praise_the_miners">Praise the miners</a></span>
+</td>
+<td><span id="STRUCK_DEEP_METAL" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#STRUCK_DEEP_METAL">STRUCK_DEEP_METAL</a></span>
+</td>
+<td><span style="color: #12FECF; font-size: 12.5px; font-family: &#39;fixedsys&#39;, &#39;IBM Plex Mono Medium&#39;, &#39;Consolas&#39;, monospace; background: #000000">Raw adamantine! Praise the miners!</span>
+</td>
+<td>Striking <a href="/index.php/Adamantine" title="Adamantine">adamantine</a>
+</td></tr>
+<tr>
+<td><span id="Struck_mineral" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#Struck_mineral">Struck mineral</a></span>
+</td>
+<td><span id="STRUCK_MINERAL" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#STRUCK_MINERAL">STRUCK_MINERAL</a></span>
+</td>
+<td><span style="color: #FFE111; font-size: 12.5px; font-family: &#39;fixedsys&#39;, &#39;IBM Plex Mono Medium&#39;, &#39;Consolas&#39;, monospace; background: #000000">You have struck mica!</span>
+</td>
+<td rowspan="2">Striking a mineral while <a href="/index.php/Mining" title="Mining">mining</a>
+</td></tr>
+<tr>
+<td><span id="Struck_economic_mineral" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#Struck_economic_mineral">Struck economic mineral</a></span>
+</td>
+<td><span id="STRUCK_ECONOMIC_MINERAL" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#STRUCK_ECONOMIC_MINERAL">STRUCK_ECONOMIC_MINERAL</a></span>
+</td>
+<td><span style="color: #FFE111; font-size: 12.5px; font-family: &#39;fixedsys&#39;, &#39;IBM Plex Mono Medium&#39;, &#39;Consolas&#39;, monospace; background: #000000">You have struck hematite!</span>
+</td></tr>
+<tr>
+<td><span id="Weapon_twist" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#Weapon_twist">Weapon twist</a></span>
+</td>
+<td><span id="COMBAT_TWIST_WEAPON" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#COMBAT_TWIST_WEAPON">COMBAT_TWIST_WEAPON</a></span>
+</td>
+<td>
+</td>
+<td rowspan="43">Used in <a href="/index.php/Combat" title="Combat">combat</a>, most often in <a href="/index.php/Adventure_mode" class="mw-redirect" title="Adventure mode">adventure mode</a> (also in the <a href="/index.php/Object_testing_arena" title="Object testing arena">arena</a>)
+</td></tr>
+<tr>
+<td><span id="Drop_item" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#Drop_item">Drop item</a></span>
+</td>
+<td><span id="COMBAT_LET_ITEM_DROP" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#COMBAT_LET_ITEM_DROP">COMBAT_LET_ITEM_DROP</a></span>
+</td>
+<td>
+</td></tr>
+<tr>
+<td><span id="Charge" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#Charge">Charge</a></span>
+</td>
+<td><span id="COMBAT_START_CHARGE" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#COMBAT_START_CHARGE">COMBAT_START_CHARGE</a></span>
+</td>
+<td><span style="color: #FFE111; font-size: 12.5px; font-family: &#39;fixedsys&#39;, &#39;IBM Plex Mono Medium&#39;, &#39;Consolas&#39;, monospace; background: #000000">The Swordsdwarf charges at The Wolf!</span>
+</td></tr>
+<tr>
+<td><span id="Surprised" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#Surprised">Surprised</a></span>
+</td>
+<td><span id="COMBAT_SURPRISE_CHARGE" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#COMBAT_SURPRISE_CHARGE">COMBAT_SURPRISE_CHARGE</a></span>
+</td>
+<td><span style="color: #E811FF; font-size: 12.5px; font-family: &#39;fixedsys&#39;, &#39;IBM Plex Mono Medium&#39;, &#39;Consolas&#39;, monospace; background: #000000">The Wolf looks suprised by the ferocity of The Swordsdwarf's onslaught!</span>
+</td></tr>
+<tr>
+<td><span id="Jump-dodge_.28proj.29" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#Jump-dodge_.28proj.29">Jump-dodge (proj)</a></span>
+</td>
+<td><span id="COMBAT_JUMP_DODGE_PROJ" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#COMBAT_JUMP_DODGE_PROJ">COMBAT_JUMP_DODGE_PROJ</a></span>
+</td>
+<td><span style="color: #12FECF; font-size: 12.5px; font-family: &#39;fixedsys&#39;, &#39;IBM Plex Mono Medium&#39;, &#39;Consolas&#39;, monospace; background: #000000">The Wolf jumps away from the flying +bronze bolt+!</span>
+</td></tr>
+<tr>
+<td><span id="Jump-dodge_.28strike.29" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#Jump-dodge_.28strike.29">Jump-dodge (strike)</a></span>
+</td>
+<td><span id="COMBAT_JUMP_DODGE_STRIKE" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#COMBAT_JUMP_DODGE_STRIKE">COMBAT_JUMP_DODGE_STRIKE</a></span>
+</td>
+<td>
+</td></tr>
+<tr>
+<td><span id="Dodge" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#Dodge">Dodge</a></span>
+</td>
+<td><span id="COMBAT_DODGE" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#COMBAT_DODGE">COMBAT_DODGE</a></span>
+</td>
+<td>
+</td></tr>
+<tr>
+<td><span id="Counterstrike" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#Counterstrike">Counterstrike</a></span>
+</td>
+<td><span id="COMBAT_COUNTERSTRIKE" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#COMBAT_COUNTERSTRIKE">COMBAT_COUNTERSTRIKE</a></span>
+</td>
+<td>
+</td></tr>
+<tr>
+<td><span id="Block" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#Block">Block</a></span>
+</td>
+<td><span id="COMBAT_BLOCK" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#COMBAT_BLOCK">COMBAT_BLOCK</a></span>
+</td>
+<td>
+</td></tr>
+<tr>
+<td><span id="Parry" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#Parry">Parry</a></span>
+</td>
+<td><span id="COMBAT_PARRY" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#COMBAT_PARRY">COMBAT_PARRY</a></span>
+</td>
+<td>
+</td></tr>
+<tr>
+<td><span id=".28Charge.29_Collision" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#.28Charge.29_Collision">(Charge) Collision</a></span>
+</td>
+<td><span id="COMBAT_CHARGE_COLLISION" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#COMBAT_CHARGE_COLLISION">COMBAT_CHARGE_COLLISION</a></span>
+</td>
+<td><span style="color: #FFE111; font-size: 12.5px; font-family: &#39;fixedsys&#39;, &#39;IBM Plex Mono Medium&#39;, &#39;Consolas&#39;, monospace; background: #000000">The Swordsdwarf collides with The Wolf!</span>
+</td></tr>
+<tr>
+<td><span id=".28Charge.29_.28D.29_Tumble" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#.28Charge.29_.28D.29_Tumble">(Charge) (D) Tumble</a></span>
+</td>
+<td><span id="COMBAT_CHARGE_DEFENDER_TUMBLES" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#COMBAT_CHARGE_DEFENDER_TUMBLES">COMBAT_CHARGE_DEFENDER_TUMBLES</a></span>
+</td>
+<td><span style="color: #FFE111; font-size: 12.5px; font-family: &#39;fixedsys&#39;, &#39;IBM Plex Mono Medium&#39;, &#39;Consolas&#39;, monospace; background: #000000">The Wolf is knocked over and tumbles backwards!</span>
+</td></tr>
+<tr>
+<td><span id=".28Charge.29_.28D.29_Knocked_over" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#.28Charge.29_.28D.29_Knocked_over">(Charge) (D) Knocked over</a></span>
+</td>
+<td><span id="COMBAT_CHARGE_DEFENDER_KNOCKED_OVER" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#COMBAT_CHARGE_DEFENDER_KNOCKED_OVER">COMBAT_CHARGE_DEFENDER_KNOCKED_OVER</a></span>
+</td>
+<td><span style="color: #FFE111; font-size: 12.5px; font-family: &#39;fixedsys&#39;, &#39;IBM Plex Mono Medium&#39;, &#39;Consolas&#39;, monospace; background: #000000">The Wolf is knocked over!</span>
+</td></tr>
+<tr>
+<td><span id=".28Charge.29_.28A.29_Tumble" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#.28Charge.29_.28A.29_Tumble">(Charge) (A) Tumble</a></span>
+</td>
+<td><span id="COMBAT_CHARGE_ATTACKER_TUMBLES" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#COMBAT_CHARGE_ATTACKER_TUMBLES">COMBAT_CHARGE_ATTACKER_TUMBLES</a></span>
+</td>
+<td>
+</td></tr>
+<tr>
+<td><span id=".28Charge.29_.28A.29_Knocked_over" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#.28Charge.29_.28A.29_Knocked_over">(Charge) (A) Knocked over</a></span>
+</td>
+<td><span id="COMBAT_CHARGE_ATTACKER_BOUNCE_BACK" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#COMBAT_CHARGE_ATTACKER_BOUNCE_BACK">COMBAT_CHARGE_ATTACKER_BOUNCE_BACK</a></span>
+</td>
+<td><span style="color: #FFE111; font-size: 12.5px; font-family: &#39;fixedsys&#39;, &#39;IBM Plex Mono Medium&#39;, &#39;Consolas&#39;, monospace; background: #000000">The Swordsdwarf bounces backwards!</span>
+</td></tr>
+<tr>
+<td><span id=".28Charge.29_Tangle" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#.28Charge.29_Tangle">(Charge) Tangle</a></span>
+</td>
+<td><span id="COMBAT_CHARGE_TANGLE_TOGETHER" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#COMBAT_CHARGE_TANGLE_TOGETHER">COMBAT_CHARGE_TANGLE_TOGETHER</a></span>
+</td>
+<td>
+</td></tr>
+<tr>
+<td><span id=".28Charge.29_Tangle.2Ftumble" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#.28Charge.29_Tangle.2Ftumble">(Charge) Tangle/tumble</a></span>
+</td>
+<td><span id="COMBAT_CHARGE_TANGLE_TUMBLE" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#COMBAT_CHARGE_TANGLE_TUMBLE">COMBAT_CHARGE_TANGLE_TUMBLE</a></span>
+</td>
+<td><span style="color: #FFE111; font-size: 12.5px; font-family: &#39;fixedsys&#39;, &#39;IBM Plex Mono Medium&#39;, &#39;Consolas&#39;, monospace; background: #000000">They tangle together and tumble forward!</span>
+</td></tr>
+<tr>
+<td>
+</td>
+<td><span id="COMBAT_CHARGE_RUSH_BY" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#COMBAT_CHARGE_RUSH_BY">COMBAT_CHARGE_RUSH_BY</a></span>
+</td>
+<td>
+</td></tr>
+<tr>
+<td>
+</td>
+<td><span id="COMBAT_CHARGE_MANAGE_STOP" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#COMBAT_CHARGE_MANAGE_STOP">COMBAT_CHARGE_MANAGE_STOP</a></span>
+</td>
+<td>
+</td></tr>
+<tr>
+<td>
+</td>
+<td><span id="COMBAT_CHARGE_OBSTACLE_SLAM" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#COMBAT_CHARGE_OBSTACLE_SLAM">COMBAT_CHARGE_OBSTACLE_SLAM</a></span>
+</td>
+<td>
+</td></tr>
+<tr>
+<td><span id=".28Wrestle.29_Joint_lock" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#.28Wrestle.29_Joint_lock">(Wrestle) Joint lock</a></span>
+</td>
+<td><span id="COMBAT_WRESTLE_LOCK" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#COMBAT_WRESTLE_LOCK">COMBAT_WRESTLE_LOCK</a></span>
+</td>
+<td>
+</td></tr>
+<tr>
+<td><span id=".28Wrestle.29_Chokehold" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#.28Wrestle.29_Chokehold">(Wrestle) Chokehold</a></span>
+</td>
+<td><span id="COMBAT_WRESTLE_CHOKEHOLD" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#COMBAT_WRESTLE_CHOKEHOLD">COMBAT_WRESTLE_CHOKEHOLD</a></span>
+</td>
+<td>
+</td></tr>
+<tr>
+<td><span id=".28Wrestle.29_Takedown" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#.28Wrestle.29_Takedown">(Wrestle) Takedown</a></span>
+</td>
+<td><span id="COMBAT_WRESTLE_TAKEDOWN" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#COMBAT_WRESTLE_TAKEDOWN">COMBAT_WRESTLE_TAKEDOWN</a></span>
+</td>
+<td><span style="color: #E811FF; font-size: 12.5px; font-family: &#39;fixedsys&#39;, &#39;IBM Plex Mono Medium&#39;, &#39;Consolas&#39;, monospace; background: #000000">The Swordsdwarf takes The Wolf down by the neck with The Swordsdwarf's right lower arm!</span>
+</td></tr>
+<tr>
+<td><span id=".28Wrestle.29_Throw" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#.28Wrestle.29_Throw">(Wrestle) Throw</a></span>
+</td>
+<td><span id="COMBAT_WRESTLE_THROW" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#COMBAT_WRESTLE_THROW">COMBAT_WRESTLE_THROW</a></span>
+</td>
+<td><span style="color: #E811FF; font-size: 12.5px; font-family: &#39;fixedsys&#39;, &#39;IBM Plex Mono Medium&#39;, &#39;Consolas&#39;, monospace; background: #000000">The Swordsdwarf throws The Wolf by the neck with The Swordsdwarf's right lower arm!</span>
+</td></tr>
+<tr>
+<td><span id=".28Wrestle.29_Release_lock" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#.28Wrestle.29_Release_lock">(Wrestle) Release lock</a></span>
+</td>
+<td><span id="COMBAT_WRESTLE_RELEASE_LOCK" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#COMBAT_WRESTLE_RELEASE_LOCK">COMBAT_WRESTLE_RELEASE_LOCK</a></span>
+</td>
+<td>
+</td></tr>
+<tr>
+<td><span id=".28Wrestle.29_Release_choke" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#.28Wrestle.29_Release_choke">(Wrestle) Release choke</a></span>
+</td>
+<td><span id="COMBAT_WRESTLE_RELEASE_CHOKE" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#COMBAT_WRESTLE_RELEASE_CHOKE">COMBAT_WRESTLE_RELEASE_CHOKE</a></span>
+</td>
+<td>
+</td></tr>
+<tr>
+<td><span id=".28Wrestle.29_Release" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#.28Wrestle.29_Release">(Wrestle) Release</a></span>
+</td>
+<td><span id="COMBAT_WRESTLE_RELEASE_GRIP" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#COMBAT_WRESTLE_RELEASE_GRIP">COMBAT_WRESTLE_RELEASE_GRIP</a></span>
+</td>
+<td>
+</td></tr>
+<tr>
+<td><span id=".28Wrestle.29_Struggle" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#.28Wrestle.29_Struggle">(Wrestle) Struggle</a></span>
+</td>
+<td><span id="COMBAT_WRESTLE_STRUGGLE" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#COMBAT_WRESTLE_STRUGGLE">COMBAT_WRESTLE_STRUGGLE</a></span>
+</td>
+<td>
+</td></tr>
+<tr>
+<td><span id=".28Wrestle.29_Latch_on" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#.28Wrestle.29_Latch_on">(Wrestle) Latch on</a></span>
+</td>
+<td><span id="COMBAT_WRESTLE_RELEASE_LATCH" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#COMBAT_WRESTLE_RELEASE_LATCH">COMBAT_WRESTLE_RELEASE_LATCH</a></span>
+</td>
+<td>
+</td></tr>
+<tr>
+<td><span id=".28Wrestle.29_Strangle" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#.28Wrestle.29_Strangle">(Wrestle) Strangle</a></span>
+</td>
+<td><span id="COMBAT_WRESTLE_STRANGLE_KO" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#COMBAT_WRESTLE_STRANGLE_KO">COMBAT_WRESTLE_STRANGLE_KO</a></span>
+</td>
+<td>
+</td></tr>
+<tr>
+<td><span id=".28Wrestle.29_Adjust_grip" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#.28Wrestle.29_Adjust_grip">(Wrestle) Adjust grip</a></span>
+</td>
+<td><span id="COMBAT_WRESTLE_ADJUST_GRIP" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#COMBAT_WRESTLE_ADJUST_GRIP">COMBAT_WRESTLE_ADJUST_GRIP</a></span>
+</td>
+<td>
+</td></tr>
+<tr>
+<td><span id=".28Wrestle.29_Part_ripped_away" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#.28Wrestle.29_Part_ripped_away">(Wrestle) Part ripped away</a></span>
+</td>
+<td><span id="COMBAT_GRAB_TEAR" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#COMBAT_GRAB_TEAR">COMBAT_GRAB_TEAR</a></span>
+</td>
+<td>
+</td></tr>
+<tr>
+<td><span id=".28Combat.29_Strike" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#.28Combat.29_Strike">(Combat) Strike</a></span>
+</td>
+<td><span id="COMBAT_STRIKE_DETAILS" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#COMBAT_STRIKE_DETAILS">COMBAT_STRIKE_DETAILS</a></span>
+</td>
+<td>
+</td></tr>
+<tr>
+<td><span id=".28Combat.29_Wounds" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#.28Combat.29_Wounds">(Combat) Wounds</a></span>
+</td>
+<td><span id="COMBAT_STRIKE_DETAILS_2" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#COMBAT_STRIKE_DETAILS_2">COMBAT_STRIKE_DETAILS_2</a></span>
+</td>
+<td>
+</td></tr>
+<tr>
+<td><span id=".28Combat.29_Enraged" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#.28Combat.29_Enraged">(Combat) Enraged</a></span>
+</td>
+<td><span id="COMBAT_EVENT_ENRAGED" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#COMBAT_EVENT_ENRAGED">COMBAT_EVENT_ENRAGED</a></span>
+</td>
+<td><span style="color: #FF7111; font-size: 12.5px; font-family: &#39;fixedsys&#39;, &#39;IBM Plex Mono Medium&#39;, &#39;Consolas&#39;, monospace; background: #000000">The Wolf has become enraged!</span>
+</td></tr>
+<tr>
+<td><span id=".28Combat.29_Attack_stuck_in" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#.28Combat.29_Attack_stuck_in">(Combat) Attack stuck in</a></span>
+</td>
+<td><span id="COMBAT_EVENT_STUCKIN" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#COMBAT_EVENT_STUCKIN">COMBAT_EVENT_STUCKIN</a></span>
+</td>
+<td><span style="color: #E811FF; font-size: 12.5px; font-family: &#39;fixedsys&#39;, &#39;IBM Plex Mono Medium&#39;, &#39;Consolas&#39;, monospace; background: #000000">The *bronze spear* has lodged firmly in the wound!</span>
+</td></tr>
+<tr>
+<td><span id=".28Combat.29_Natural_attack_latched" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#.28Combat.29_Natural_attack_latched">(Combat) Natural attack latched</a></span>
+</td>
+<td><span id="COMBAT_EVENT_LATCH_BP" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#COMBAT_EVENT_LATCH_BP">COMBAT_EVENT_LATCH_BP</a></span>
+</td>
+<td>
+</td></tr>
+<tr>
+<td><span id=".28Combat.29_Attack_latched" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#.28Combat.29_Attack_latched">(Combat) Attack latched</a></span>
+</td>
+<td><span id="COMBAT_EVENT_LATCH_GENERAL" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#COMBAT_EVENT_LATCH_GENERAL">COMBAT_EVENT_LATCH_GENERAL</a></span>
+</td>
+<td><span style="color: #E811FF; font-size: 12.5px; font-family: &#39;fixedsys&#39;, &#39;IBM Plex Mono Medium&#39;, &#39;Consolas&#39;, monospace; background: #000000">The Wolf latches on firmly!</span>
+</td></tr>
+<tr>
+<td><span id=".28Combat.29_Propelling_blow" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#.28Combat.29_Propelling_blow">(Combat) Propelling blow</a></span>
+</td>
+<td><span id="COMBAT_EVENT_PROPELLED_AWAY" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#COMBAT_EVENT_PROPELLED_AWAY">COMBAT_EVENT_PROPELLED_AWAY</a></span>
+</td>
+<td><span style="color: #FFE111; font-size: 12.5px; font-family: &#39;fixedsys&#39;, &#39;IBM Plex Mono Medium&#39;, &#39;Consolas&#39;, monospace; background: #000000">The Wolf is propelled away by the force of the blow!</span>
+</td></tr>
+<tr>
+<td><span id=".28Combat.29_Knocked_out" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#.28Combat.29_Knocked_out">(Combat) Knocked out</a></span>
+</td>
+<td><span id="COMBAT_EVENT_KNOCKED_OUT" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#COMBAT_EVENT_KNOCKED_OUT">COMBAT_EVENT_KNOCKED_OUT</a></span>
+</td>
+<td><span style="color: #FFFFFF; font-size: 12.5px; font-family: &#39;fixedsys&#39;, &#39;IBM Plex Mono Medium&#39;, &#39;Consolas&#39;, monospace; background: #000000">The Wolf has been knocked unconscious!</span>
+</td></tr>
+<tr>
+<td><span id=".28Combat.29_Stunned" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#.28Combat.29_Stunned">(Combat) Stunned</a></span>
+</td>
+<td><span id="COMBAT_EVENT_STUNNED" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#COMBAT_EVENT_STUNNED">COMBAT_EVENT_STUNNED</a></span>
+</td>
+<td><span style="color: #12FECF; font-size: 12.5px; font-family: &#39;fixedsys&#39;, &#39;IBM Plex Mono Medium&#39;, &#39;Consolas&#39;, monospace; background: #000000">The Wolf has been stunned!</span>
+</td></tr>
+<tr>
+<td><span id=".28Combat.29_Winded" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#.28Combat.29_Winded">(Combat) Winded</a></span>
+</td>
+<td><span id="COMBAT_EVENT_WINDED" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#COMBAT_EVENT_WINDED">COMBAT_EVENT_WINDED</a></span>
+</td>
+<td><span style="color: #C0C0C0; font-size: 12.5px; font-family: &#39;fixedsys&#39;, &#39;IBM Plex Mono Medium&#39;, &#39;Consolas&#39;, monospace; background: #000000">The Wolf is having trouble breathing!</span>
+</td></tr>
+<tr>
+<td><span id=".28Combat.29_Nauseated" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#.28Combat.29_Nauseated">(Combat) Nauseated</a></span>
+</td>
+<td><span id="COMBAT_EVENT_NAUSEATED" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#COMBAT_EVENT_NAUSEATED">COMBAT_EVENT_NAUSEATED</a></span>
+</td>
+<td><span style="color: #13FD65; font-size: 12.5px; font-family: &#39;fixedsys&#39;, &#39;IBM Plex Mono Medium&#39;, &#39;Consolas&#39;, monospace; background: #000000">The Wolf looks sick!</span>
+</td></tr>
+<tr>
+<td>
+</td>
+<td><span id="MIGRANT_ARRIVAL_NAMED" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#MIGRANT_ARRIVAL_NAMED">MIGRANT_ARRIVAL_NAMED</a></span>
+</td>
+<td>
+</td>
+<td>
+</td></tr>
+<tr>
+<td>
+</td>
+<td><span id="MIGRANT_ARRIVAL" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#MIGRANT_ARRIVAL">MIGRANT_ARRIVAL</a></span>
+</td>
+<td>
+</td>
+<td>The arrival of <a href="/index.php/Migrants" class="mw-redirect" title="Migrants">migrants</a>
+</td></tr>
+<tr>
+<td><span id="Dig_canceled_.28warm.29" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#Dig_canceled_.28warm.29">Dig canceled (warm)</a></span>
+</td>
+<td><span id="DIG_CANCEL_WARM" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#DIG_CANCEL_WARM">DIG_CANCEL_WARM</a></span>
+</td>
+<td><span style="color: #FFE111; font-size: 12.5px; font-family: &#39;fixedsys&#39;, &#39;IBM Plex Mono Medium&#39;, &#39;Consolas&#39;, monospace; background: #000000">Digging designation cancelled: warm stone located.</span>
+</td>
+<td rowspan="2">The <a href="/index.php/Digging_designation_canceled" title="Digging designation canceled">cancellation</a> of a mining task due to potentially dangerous stone; can be disabled in <a href="/index.php/Standing_orders#Other" title="Standing orders">Standing orders</a><small><sup>v53.12</sup></small>
+</td></tr>
+<tr>
+<td><span id="Dig_canceled_.28wet.29" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#Dig_canceled_.28wet.29">Dig canceled (wet)</a></span>
+</td>
+<td><span id="DIG_CANCEL_DAMP" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#DIG_CANCEL_DAMP">DIG_CANCEL_DAMP</a></span>
+</td>
+<td><span style="color: #FFE111; font-size: 12.5px; font-family: &#39;fixedsys&#39;, &#39;IBM Plex Mono Medium&#39;, &#39;Consolas&#39;, monospace; background: #000000">Digging designation cancelled: damp stone located.</span>
+</td></tr>
+<tr>
+<td><span id="Regular_beast" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#Regular_beast">Regular beast</a></span>
+</td>
+<td><span id="BEAST_AMBUSH" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#BEAST_AMBUSH">BEAST_AMBUSH</a></span>
+</td>
+<td>
+</td>
+<td>
+</td></tr>
+<tr>
+<td>
+</td>
+<td><span id="AMBUSH_DEFENDER" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#AMBUSH_DEFENDER">AMBUSH_DEFENDER</a></span>
+</td>
+<td>
+</td>
+<td rowspan="14">Discovering an <a href="/index.php/Ambush" title="Ambush">ambush</a>
+</td></tr>
+<tr>
+<td><span id="Ambush_.28resident.29" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#Ambush_.28resident.29">Ambush (resident)</a></span>
+</td>
+<td><span id="AMBUSH_RESIDENT" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#AMBUSH_RESIDENT">AMBUSH_RESIDENT</a></span>
+</td>
+<td>
+</td></tr>
+<tr>
+<td><span id="Thief_.28villain.29" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#Thief_.28villain.29">Thief (villain)</a></span>
+</td>
+<td><span id="AMBUSH_HERO" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#AMBUSH_HERO">AMBUSH_HERO</a></span>
+</td>
+<td>
+</td></tr>
+<tr>
+<td><span id="Ambush_.28thief.29" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#Ambush_.28thief.29">Ambush (thief)</a></span>
+</td>
+<td><span id="AMBUSH_THIEF" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#AMBUSH_THIEF">AMBUSH_THIEF</a></span>
+</td>
+<td><span style="color: #FF7111; font-size: 12.5px; font-family: &#39;fixedsys&#39;, &#39;IBM Plex Mono Medium&#39;, &#39;Consolas&#39;, monospace; background: #000000">Thief! Protect the hoard from skulking filth!</span>
+</td></tr>
+<tr>
+<td><span id="Ambush_.28thief.2C_sulking.29" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#Ambush_.28thief.2C_sulking.29">Ambush (thief, sulking)</a></span>
+</td>
+<td><span id="AMBUSH_THIEF_SUPPORT_SKULKING" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#AMBUSH_THIEF_SUPPORT_SKULKING">AMBUSH_THIEF_SUPPORT_SKULKING</a></span>
+</td>
+<td>
+</td></tr>
+<tr>
+<td><span id="Ambush_.28thief.2C_nature.29" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#Ambush_.28thief.2C_nature.29">Ambush (thief, nature)</a></span>
+</td>
+<td><span id="AMBUSH_THIEF_SUPPORT_NATURE" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#AMBUSH_THIEF_SUPPORT_NATURE">AMBUSH_THIEF_SUPPORT_NATURE</a></span>
+</td>
+<td>
+</td></tr>
+<tr>
+<td><span id="Ambush_.28thief.2C_other.29" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#Ambush_.28thief.2C_other.29">Ambush (thief, other)</a></span>
+</td>
+<td><span id="AMBUSH_THIEF_SUPPORT" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#AMBUSH_THIEF_SUPPORT">AMBUSH_THIEF_SUPPORT</a></span>
+</td>
+<td>
+</td></tr>
+<tr>
+<td><span id="Gremlin" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#Gremlin">Gremlin</a></span>
+</td>
+<td><span id="AMBUSH_MISCHIEVOUS" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#AMBUSH_MISCHIEVOUS">AMBUSH_MISCHIEVOUS</a></span>
+</td>
+<td><span style="color: #FF7111; font-size: 12.5px; font-family: &#39;fixedsys&#39;, &#39;IBM Plex Mono Medium&#39;, &#39;Consolas&#39;, monospace; background: #000000">A gremlin! Drive it away!</span>
+</td></tr>
+<tr>
+<td><span id="Snatcher" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#Snatcher">Snatcher</a></span>
+</td>
+<td><span id="AMBUSH_SNATCHER" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#AMBUSH_SNATCHER">AMBUSH_SNATCHER</a></span>
+</td>
+<td><span style="color: #FF7111; font-size: 12.5px; font-family: &#39;fixedsys&#39;, &#39;IBM Plex Mono Medium&#39;, &#39;Consolas&#39;, monospace; background: #000000">Snatcher! Protect the children!</span>
+</td></tr>
+<tr>
+<td><span id="Ambush_.28snatcher.29" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#Ambush_.28snatcher.29">Ambush (snatcher)</a></span>
+</td>
+<td><span id="AMBUSH_SNATCHER_SUPPORT" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#AMBUSH_SNATCHER_SUPPORT">AMBUSH_SNATCHER_SUPPORT</a></span>
+</td>
+<td>
+</td></tr>
+<tr>
+<td><span id="Ambush_.28nature.29" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#Ambush_.28nature.29">Ambush (nature)</a></span>
+</td>
+<td><span id="AMBUSH_AMBUSHER_NATURE" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#AMBUSH_AMBUSHER_NATURE">AMBUSH_AMBUSHER_NATURE</a></span>
+</td>
+<td>
+</td></tr>
+<tr>
+<td><span id="Ambush" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#Ambush">Ambush</a></span>
+</td>
+<td><span id="AMBUSH_AMBUSHER" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#AMBUSH_AMBUSHER">AMBUSH_AMBUSHER</a></span>
+</td>
+<td>
+</td></tr>
+<tr>
+<td><span id="Ambush_.28injured_creature.29" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#Ambush_.28injured_creature.29">Ambush (injured creature)</a></span>
+</td>
+<td><span id="AMBUSH_INJURED" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#AMBUSH_INJURED">AMBUSH_INJURED</a></span>
+</td>
+<td>
+</td></tr>
+<tr>
+<td><span id="Ambush_.28uninjured_creature.29" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#Ambush_.28uninjured_creature.29">Ambush (uninjured creature)</a></span>
+</td>
+<td><span id="AMBUSH_OTHER" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#AMBUSH_OTHER">AMBUSH_OTHER</a></span>
+</td>
+<td>
+</td></tr>
+<tr>
+<td><span id="Ambush_.28incapacitated_creature.29" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#Ambush_.28incapacitated_creature.29">Ambush (incapacitated creature)</a></span>
+</td>
+<td><span id="AMBUSH_INCAPACITATED" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#AMBUSH_INCAPACITATED">AMBUSH_INCAPACITATED</a></span>
+</td>
+<td>
+</td></tr>
+<tr>
+<td><span id="Caravan" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#Caravan">Caravan</a></span>
+</td>
+<td><span id="CARAVAN_ARRIVAL" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#CARAVAN_ARRIVAL">CARAVAN_ARRIVAL</a></span>
+</td>
+<td><span style="color: #8C66FF; font-size: 12.5px; font-family: &#39;fixedsys&#39;, &#39;IBM Plex Mono Medium&#39;, &#39;Consolas&#39;, monospace; background: #000000">A caravan from Sarvesh Langgud has arrived.</span>
+</td>
+<td>Arrival of a <a href="/index.php/Caravan" title="Caravan">caravan</a>
+</td></tr>
+<tr>
+<td><span id="Noble" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#Noble">Noble</a></span>
+</td>
+<td><span id="NOBLE_ARRIVAL" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#NOBLE_ARRIVAL">NOBLE_ARRIVAL</a></span>
+</td>
+<td>
+</td>
+<td>Arrival of a <a href="/index.php/Noble" title="Noble">noble</a>
+</td></tr>
+<tr>
+<td><span id="Migrants" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#Migrants">Migrants</a></span>
+</td>
+<td><span id="D_MIGRANTS_ARRIVAL" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#D_MIGRANTS_ARRIVAL">D_MIGRANTS_ARRIVAL</a></span>
+</td>
+<td><span style="color: #C0C0C0; font-size: 12.5px; font-family: &#39;fixedsys&#39;, &#39;IBM Plex Mono Medium&#39;, &#39;Consolas&#39;, monospace; background: #000000">Some migrants have arrived.</span>
+</td>
+<td rowspan="3">Arrival of a <a href="/index.php/Migrant" class="mw-redirect" title="Migrant">migrant</a> wave
+</td></tr>
+<tr>
+<td><span id="Migrant_.28one.29" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#Migrant_.28one.29">Migrant (one)</a></span>
+</td>
+<td><span id="D_MIGRANT_ARRIVAL" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#D_MIGRANT_ARRIVAL">D_MIGRANT_ARRIVAL</a></span>
+</td>
+<td><span style="color: #C0C0C0; font-size: 12.5px; font-family: &#39;fixedsys&#39;, &#39;IBM Plex Mono Medium&#39;, &#39;Consolas&#39;, monospace; background: #000000">A migrant has arrived.</span>
+</td></tr>
+<tr>
+<td><span id="Migrants_.28danger.29" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#Migrants_.28danger.29">Migrants (danger)</a></span>
+</td>
+<td><span id="D_MIGRANT_ARRIVAL_DISCOURAGED" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#D_MIGRANT_ARRIVAL_DISCOURAGED">D_MIGRANT_ARRIVAL_DISCOURAGED</a></span>
+</td>
+<td><span style="color: #C0C0C0; font-size: 12.5px; font-family: &#39;fixedsys&#39;, &#39;IBM Plex Mono Medium&#39;, &#39;Consolas&#39;, monospace; background: #000000">Some migrants have arrived, despite the danger.</span>
+</td></tr>
+<tr>
+<td><span id="No_migrants" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#No_migrants">No migrants</a></span>
+</td>
+<td><span id="D_NO_MIGRANT_ARRIVAL" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#D_NO_MIGRANT_ARRIVAL">D_NO_MIGRANT_ARRIVAL</a></span>
+</td>
+<td><span style="color: #D79B2D; font-size: 12.5px; font-family: &#39;fixedsys&#39;, &#39;IBM Plex Mono Medium&#39;, &#39;Consolas&#39;, monospace; background: #000000">The fortress attracted no migrants this season.</span>
+</td>
+<td>The failure of <a href="/index.php/Migrants" class="mw-redirect" title="Migrants">migrants</a> to show up in Fortress mode
+</td></tr>
+<tr>
+<td><span id="Animal_trapped" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#Animal_trapped">Animal trapped</a></span>
+</td>
+<td><span id="ANIMAL_TRAP_CATCH" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#ANIMAL_TRAP_CATCH">ANIMAL_TRAP_CATCH</a></span>
+</td>
+<td>
+</td>
+<td>A <a href="/index.php/Vermin" title="Vermin">vermin</a> was caught in an <a href="/index.php/Animal_trap" title="Animal trap">animal trap</a>
+</td></tr>
+<tr>
+<td><span id="Animal_trap_robbed" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#Animal_trap_robbed">Animal trap robbed</a></span>
+</td>
+<td><span id="ANIMAL_TRAP_ROBBED" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#ANIMAL_TRAP_ROBBED">ANIMAL_TRAP_ROBBED</a></span>
+</td>
+<td>
+</td>
+<td>Failure to catch a <a href="/index.php/Vermin" title="Vermin">vermin</a>
+</td></tr>
+<tr>
+<td><span id="Gremlin_pulled_lever" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#Gremlin_pulled_lever">Gremlin pulled lever</a></span>
+</td>
+<td><span id="MISCHIEF_LEVER" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#MISCHIEF_LEVER">MISCHIEF_LEVER</a></span>
+</td>
+<td>
+</td>
+<td rowspan="4">Fun caused by a <a href="/index.php/Gremlin" title="Gremlin">certain mischievous creature</a>
+</td></tr>
+<tr>
+<td><span id="Gremlin_triggered_plate" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#Gremlin_triggered_plate">Gremlin triggered plate</a></span>
+</td>
+<td><span id="MISCHIEF_PLATE" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#MISCHIEF_PLATE">MISCHIEF_PLATE</a></span>
+</td>
+<td>
+</td></tr>
+<tr>
+<td><span id="Gremlin_opened_cage" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#Gremlin_opened_cage">Gremlin opened cage</a></span>
+</td>
+<td><span id="MISCHIEF_CAGE" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#MISCHIEF_CAGE">MISCHIEF_CAGE</a></span>
+</td>
+<td><span style="color: #E811FF; font-size: 12.5px; font-family: &#39;fixedsys&#39;, &#39;IBM Plex Mono Medium&#39;, &#39;Consolas&#39;, monospace; background: #000000">Something has emptied in a cage!</span>
+</td></tr>
+<tr>
+<td><span id="Gremlin_unshackled_something" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#Gremlin_unshackled_something">Gremlin unshackled something</a></span>
+</td>
+<td><span id="MISCHIEF_CHAIN" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#MISCHIEF_CHAIN">MISCHIEF_CHAIN</a></span>
+</td>
+<td>
+</td></tr>
+<tr>
+<td><span id="Diplomat" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#Diplomat">Diplomat</a></span>
+</td>
+<td><span id="DIPLOMAT_ARRIVAL" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#DIPLOMAT_ARRIVAL">DIPLOMAT_ARRIVAL</a></span>
+</td>
+<td>
+</td>
+<td>Arrival of a <a href="/index.php/Diplomat" title="Diplomat">diplomat</a>
+</td></tr>
+<tr>
+<td><span id="Liaison" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#Liaison">Liaison</a></span>
+</td>
+<td><span id="LIAISON_ARRIVAL" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#LIAISON_ARRIVAL">LIAISON_ARRIVAL</a></span>
+</td>
+<td><span style="color: #FFFFFF; font-size: 12.5px; font-family: &#39;fixedsys&#39;, &#39;IBM Plex Mono Medium&#39;, &#39;Consolas&#39;, monospace; background: #000000">The outpost liaison Tun Unnostobul from Sarvesh Langgud has arrived.</span>
+</td>
+<td>Arrival of an <a href="/index.php/Outpost_liaison" title="Outpost liaison">outpost liaison</a>
+</td></tr>
+<tr>
+<td><span id="Trade_diplomat" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#Trade_diplomat">Trade diplomat</a></span>
+</td>
+<td><span id="TRADE_DIPLOMAT_ARRIVAL" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#TRADE_DIPLOMAT_ARRIVAL">TRADE_DIPLOMAT_ARRIVAL</a></span>
+</td>
+<td>
+</td>
+<td>
+</td></tr>
+<tr>
+<td><span id="Cave-in" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#Cave-in">Cave-in</a></span>
+</td>
+<td><span id="CAVE_COLLAPSE" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#CAVE_COLLAPSE">CAVE_COLLAPSE</a></span>
+</td>
+<td><span style="color: #FF7111; font-size: 12.5px; font-family: &#39;fixedsys&#39;, &#39;IBM Plex Mono Medium&#39;, &#39;Consolas&#39;, monospace; background: #000000">A section of the cavern has collapsed!</span>
+</td>
+<td>
+</td></tr>
+<tr>
+<td><span id="Citizen_birth" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#Citizen_birth">Citizen birth</a></span>
+</td>
+<td><span id="BIRTH_CITIZEN" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#BIRTH_CITIZEN">BIRTH_CITIZEN</a></span>
+</td>
+<td><span style="color: #13FD65; font-size: 12.5px; font-family: &#39;fixedsys&#39;, &#39;IBM Plex Mono Medium&#39;, &#39;Consolas&#39;, monospace; background: #000000">Fath Ikudäs, Miner has given birth to a girl.</span>
+</td>
+<td>
+</td></tr>
+<tr>
+<td><span id="Animal_birth" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#Animal_birth">Animal birth</a></span>
+</td>
+<td><span id="BIRTH_ANIMAL" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#BIRTH_ANIMAL">BIRTH_ANIMAL</a></span>
+</td>
+<td><span style="color: #13FD65; font-size: 12.5px; font-family: &#39;fixedsys&#39;, &#39;IBM Plex Mono Medium&#39;, &#39;Consolas&#39;, monospace; background: #000000">Stray Dog (Tame) has given birth to puppies.</span>
+</td>
+<td>
+</td></tr>
+<tr>
+<td><span id="Wild_animal_gave_birth" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#Wild_animal_gave_birth">Wild animal gave birth</a></span>
+</td>
+<td><span id="BIRTH_WILD_ANIMAL" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#BIRTH_WILD_ANIMAL">BIRTH_WILD_ANIMAL</a></span>
+</td>
+<td>
+</td>
+<td>
+</td></tr>
+<tr>
+<td><span id="Strange_mood" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#Strange_mood">Strange mood</a></span>
+</td>
+<td><span id="STRANGE_MOOD" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#STRANGE_MOOD">STRANGE_MOOD</a></span>
+</td>
+<td><span style="color: #E811FF; font-size: 12.5px; font-family: &#39;fixedsys&#39;, &#39;IBM Plex Mono Medium&#39;, &#39;Consolas&#39;, monospace; background: #000000">Zon Urabasub, Metalcrafter is taken by a fey mood!</span>
+<p><span style="color: #E811FF; font-size: 12.5px; font-family: &#39;fixedsys&#39;, &#39;IBM Plex Mono Medium&#39;, &#39;Consolas&#39;, monospace; background: #000000">Logem Stinthdkithn, Bowyer has been possessed!</span>
+</p>
+</td>
+<td>
+</td></tr>
+<tr>
+<td><span id="Artifact_made" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#Artifact_made">Artifact made</a></span>
+</td>
+<td><span id="MADE_ARTIFACT" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#MADE_ARTIFACT">MADE_ARTIFACT</a></span>
+</td>
+<td><span style="color: #FFE111; font-size: 12.5px; font-family: &#39;fixedsys&#39;, &#39;IBM Plex Mono Medium&#39;, &#39;Consolas&#39;, monospace; background: #000000">Zon Urabasub, Metalcrafter has created Lonsust Stato, a platinum amulet!</span>
+</td>
+<td>
+</td></tr>
+<tr>
+<td><span id="Item_given_name" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#Item_given_name">Item given name</a></span>
+</td>
+<td><span id="NAMED_ARTIFACT" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#NAMED_ARTIFACT">NAMED_ARTIFACT</a></span>
+</td>
+<td><span style="color: #12FECF; font-size: 12.5px; font-family: &#39;fixedsys&#39;, &#39;IBM Plex Mono Medium&#39;, &#39;Consolas&#39;, monospace; background: #000000">Urdim Arbanerib, Mace Lord has bestowed the name Ostar Kinem upon a iron buckler!</span>
+</td>
+<td>A soldier named their equipment.
+</td></tr>
+<tr>
+<td><span id="Attachment_to_item" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#Attachment_to_item">Attachment to item</a></span>
+</td>
+<td><span id="ITEM_ATTACHMENT" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#ITEM_ATTACHMENT">ITEM_ATTACHMENT</a></span>
+</td>
+<td><span style="color: #71BBB0; font-size: 12.5px; font-family: &#39;fixedsys&#39;, &#39;IBM Plex Mono Medium&#39;, &#39;Consolas&#39;, monospace; background: #000000">Kirkrost Inethnosig, mayor has grown attached to a steel crossbow!</span>
+</td>
+<td>
+</td></tr>
+<tr>
+<td><span id="Vermin_escaped_from_cage" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#Vermin_escaped_from_cage">Vermin escaped from cage</a></span>
+</td>
+<td><span id="VERMIN_CAGE_ESCAPE" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#VERMIN_CAGE_ESCAPE">VERMIN_CAGE_ESCAPE</a></span>
+</td>
+<td>
+</td>
+<td>A <a href="/index.php/Vermin" title="Vermin">vermin</a> escapes from a <a href="/index.php/Cage" title="Cage">cage</a>/<a href="/index.php/Animal_trap" title="Animal trap">animal trap</a>
+</td></tr>
+<tr>
+<td><span id="Entangled_in_hidden_web" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#Entangled_in_hidden_web">Entangled in hidden web</a></span>
+</td>
+<td><span id="TRIGGER_WEB" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#TRIGGER_WEB">TRIGGER_WEB</a></span>
+</td>
+<td>
+</td>
+<td>
+</td></tr>
+<tr>
+<td><span id=".28Strange_mood.29_Building_claimed" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#.28Strange_mood.29_Building_claimed">(Strange mood) Building claimed</a></span>
+</td>
+<td><span id="MOOD_BUILDING_CLAIMED" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#MOOD_BUILDING_CLAIMED">MOOD_BUILDING_CLAIMED</a></span>
+</td>
+<td><span style="color: #A0A0A0; font-size: 12.5px; font-family: &#39;fixedsys&#39;, &#39;IBM Plex Mono Medium&#39;, &#39;Consolas&#39;, monospace; background: #000000">Zon Urabasub, Metalcrafter has claimed a Metalsmith's Forge.</span>
+</td>
+<td>A <a href="/index.php/Strange_mood" title="Strange mood">moody</a> dwarf has claimed a workshop
+</td></tr>
+<tr>
+<td><span id="Artifact_construction_begun" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#Artifact_construction_begun">Artifact construction begun</a></span>
+</td>
+<td><span id="ARTIFACT_BEGUN" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#ARTIFACT_BEGUN">ARTIFACT_BEGUN</a></span>
+</td>
+<td><span style="color: #FFFFFF; font-size: 12.5px; font-family: &#39;fixedsys&#39;, &#39;IBM Plex Mono Medium&#39;, &#39;Consolas&#39;, monospace; background: #000000">Zon Urabasub, Metalcrafter has begun a mysterious construction!</span>
+</td>
+<td>A dwarf has begun construction of an <a href="/index.php/Artifact" class="mw-redirect" title="Artifact">artifact</a>
+</td></tr>
+<tr>
+<td><span id="Megabeast" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#Megabeast">Megabeast</a></span>
+</td>
+<td><span id="MEGABEAST_ARRIVAL" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#MEGABEAST_ARRIVAL">MEGABEAST_ARRIVAL</a></span>
+</td>
+<td><span style="color: #FF7111; font-size: 12.5px; font-family: &#39;fixedsys&#39;, &#39;IBM Plex Mono Medium&#39;, &#39;Consolas&#39;, monospace; background: #000000">The Forgotten Beast Smespu has come! An enormous hairy ceratopsoid. It has an enormous shell and it is slavering. Its sea green hair is patchy. Beware its deadly dust!</span>
+</td>
+<td>Arrival of a <a href="/index.php/Megabeast" title="Megabeast">megabeast</a>
+</td></tr>
+<tr>
+<td><span id="Werebeast" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#Werebeast">Werebeast</a></span>
+</td>
+<td><span id="WEREBEAST_ARRIVAL" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#WEREBEAST_ARRIVAL">WEREBEAST_ARRIVAL</a></span>
+</td>
+<td><span style="color: #FF7111; font-size: 12.5px; font-family: &#39;fixedsys&#39;, &#39;IBM Plex Mono Medium&#39;, &#39;Consolas&#39;, monospace; background: #000000">The Werepanda Onget Râlukerib has come! A large panda twisted into humanoid form. It is crazed for blood and flesh. Its eyes glow spring green. Its sepia hair is long and straight. Now you will know why you fear the night.</span>
+</td>
+<td>Arrival of a <a href="/index.php/Werebeast" title="Werebeast">werebeast</a>
+</td></tr>
+<tr>
+<td><span id="Berserk" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#Berserk">Berserk</a></span>
+</td>
+<td><span id="BERSERK_CITIZEN" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#BERSERK_CITIZEN">BERSERK_CITIZEN</a></span>
+</td>
+<td><span style="color: #FF7111; font-size: 12.5px; font-family: &#39;fixedsys&#39;, &#39;IBM Plex Mono Medium&#39;, &#39;Consolas&#39;, monospace; background: #000000">Lòr Eralamug, Weaponsmith has gone berserk!</span>
+</td>
+<td>A citizen has gone <a href="/index.php/Berserk" class="mw-redirect" title="Berserk">berserk</a>
+</td></tr>
+<tr>
+<td><span id="Magma_defaces_engraving" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#Magma_defaces_engraving">Magma defaces engraving</a></span>
+</td>
+<td><span id="MAGMA_DEFACES_ENGRAVING" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#MAGMA_DEFACES_ENGRAVING">MAGMA_DEFACES_ENGRAVING</a></span>
+</td>
+<td>
+</td>
+<td rowspan="2">An <a href="/index.php/Engraving" title="Engraving">engraving</a> has melted in magma
+</td></tr>
+<tr>
+<td><span id="Engraving_melted" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#Engraving_melted">Engraving melted</a></span>
+</td>
+<td><span id="ENGRAVING_MELTS" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#ENGRAVING_MELTS">ENGRAVING_MELTS</a></span>
+</td>
+<td>
+</td></tr>
+<tr>
+<td><span id="Masterwork_made" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#Masterwork_made">Masterwork made</a></span>
+</td>
+<td><span id="MASTERPIECE_CONSTRUCTION" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#MASTERPIECE_CONSTRUCTION">MASTERPIECE_CONSTRUCTION</a></span>
+</td>
+<td>
+</td></tr>
+<tr>
+<td><span id="Masterwork_architecture_lost" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#Masterwork_architecture_lost">Masterwork architecture lost</a></span>
+</td>
+<td><span id="MASTER_ARCHITECTURE_LOST" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#MASTER_ARCHITECTURE_LOST">MASTER_ARCHITECTURE_LOST</a></span>
+</td>
+<td>
+</td>
+<td>A <a href="/index.php/Masterwork" class="mw-redirect" title="Masterwork">masterpiece</a> <a href="/index.php/Building" title="Building">building</a> has been destroyed
+</td></tr>
+<tr>
+<td><span id="Masterwork_construction_lost" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#Masterwork_construction_lost">Masterwork construction lost</a></span>
+</td>
+<td><span id="MASTER_CONSTRUCTION_LOST" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#MASTER_CONSTRUCTION_LOST">MASTER_CONSTRUCTION_LOST</a></span>
+</td>
+<td>
+</td></tr>
+<tr>
+<td><span id=".28Adventure.29_Awaken" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#.28Adventure.29_Awaken">(Adventure) Awaken</a></span>
+</td>
+<td><span id="ADV_AWAKEN" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#ADV_AWAKEN">ADV_AWAKEN</a></span>
+</td>
+<td>
+</td>
+<td rowspan="3">Related to <a href="/index.php/Adventure_mode" class="mw-redirect" title="Adventure mode">adventure mode</a>
+</td></tr>
+<tr>
+<td><span id=".28Adventure.29_Sleep_interrupted" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#.28Adventure.29_Sleep_interrupted">(Adventure) Sleep interrupted</a></span>
+</td>
+<td><span id="ADV_SLEEP_INTERRUPTED" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#ADV_SLEEP_INTERRUPTED">ADV_SLEEP_INTERRUPTED</a></span>
+</td>
+<td>
+</td></tr>
+<tr>
+<td><span id=".28Adventure.29_Made_item" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#.28Adventure.29_Made_item">(Adventure) Made item</a></span>
+</td>
+<td><span id="ADV_REACTION_PRODUCTS" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#ADV_REACTION_PRODUCTS">ADV_REACTION_PRODUCTS</a></span>
+</td>
+<td>
+</td></tr>
+<tr>
+<td><span id="Job_cancellation" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#Job_cancellation">Job cancellation</a></span>
+</td>
+<td><span id="CANCEL_JOB" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#CANCEL_JOB">CANCEL_JOB</a></span>
+</td>
+<td><span style="color: #FF7111; font-size: 12.5px; font-family: &#39;fixedsys&#39;, &#39;IBM Plex Mono Medium&#39;, &#39;Consolas&#39;, monospace; background: #000000">Sibrek ùshrireshon, Mechanic cancels Load Cage Trap: Needs empty cage.</span>
+</td>
+<td>
+</td></tr>
+<tr>
+<td><span id=".28Adventure.29_Death" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#.28Adventure.29_Death">(Adventure) Death</a></span>
+</td>
+<td><span id="ADV_CREATURE_DEATH" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#ADV_CREATURE_DEATH">ADV_CREATURE_DEATH</a></span>
+</td>
+<td><span style="color: #E811FF; font-size: 12.5px; font-family: &#39;fixedsys&#39;, &#39;IBM Plex Mono Medium&#39;, &#39;Consolas&#39;, monospace; background: #000000">The Wolf has been struck down.</span>
+</td>
+<td>
+</td></tr>
+<tr>
+<td><span id="Citizen_death" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#Citizen_death">Citizen death</a></span>
+</td>
+<td><span id="CITIZEN_DEATH" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#CITIZEN_DEATH">CITIZEN_DEATH</a></span>
+</td>
+<td><span style="color: #E811FF; font-size: 12.5px; font-family: &#39;fixedsys&#39;, &#39;IBM Plex Mono Medium&#39;, &#39;Consolas&#39;, monospace; background: #000000">Lòr Eralamug, Weaponsmith has been found dead.</span>
+</td>
+<td>Death of a citizen in <a href="/index.php/Fortress_mode" class="mw-redirect" title="Fortress mode">fortress mode</a>
+</td></tr>
+<tr>
+<td><span id="Pet_death" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#Pet_death">Pet death</a></span>
+</td>
+<td><span id="PET_DEATH" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#PET_DEATH">PET_DEATH</a></span>
+</td>
+<td><span style="color: #E811FF; font-size: 12.5px; font-family: &#39;fixedsys&#39;, &#39;IBM Plex Mono Medium&#39;, &#39;Consolas&#39;, monospace; background: #000000">The Stray Boar (Tame) has been slaughtered.</span>
+</td>
+<td>The death of a <a href="/index.php/Pet" title="Pet">pet</a>, causing a negative <a href="/index.php/Thought" title="Thought">thought</a> for its owner Also used when a butcher slaughters unadopted <a href="/index.php/Livestock" class="mw-redirect" title="Livestock">livestock</a>
+</td></tr>
+<tr>
+<td><span id="Fall_over" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#Fall_over">Fall over</a></span>
+</td>
+<td><span id="FALL_OVER" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#FALL_OVER">FALL_OVER</a></span>
+</td>
+<td><span style="color: #D79B2D; font-size: 12.5px; font-family: &#39;fixedsys&#39;, &#39;IBM Plex Mono Medium&#39;, &#39;Consolas&#39;, monospace; background: #000000">The Wolf falls over.</span>
+</td>
+<td>
+</td></tr>
+<tr>
+<td><span id="Caught_in_flame" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#Caught_in_flame">Caught in flame</a></span>
+</td>
+<td><span id="CAUGHT_IN_FLAMES" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#CAUGHT_IN_FLAMES">CAUGHT_IN_FLAMES</a></span>
+</td>
+<td><span style="color: #FF7111; font-size: 12.5px; font-family: &#39;fixedsys&#39;, &#39;IBM Plex Mono Medium&#39;, &#39;Consolas&#39;, monospace; background: #000000">The Swordsdwarf is caught in a burst of forgotten beast flames!</span>
+</td>
+<td>Also used when a creature is caught in poison gas/vapors or cave-in dust.
+</td></tr>
+<tr>
+<td><span id="Caught_in_web" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#Caught_in_web">Caught in web</a></span>
+</td>
+<td><span id="CAUGHT_IN_WEB" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#CAUGHT_IN_WEB">CAUGHT_IN_WEB</a></span>
+</td>
+<td><span style="color: #FF7111; font-size: 12.5px; font-family: &#39;fixedsys&#39;, &#39;IBM Plex Mono Medium&#39;, &#39;Consolas&#39;, monospace; background: #000000">The Wolf is caught up in a web!</span>
+</td>
+<td>
+</td></tr>
+<tr>
+<td><span id="Slam_into_obstacle_.28blow_apart.29" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#Slam_into_obstacle_.28blow_apart.29">Slam into obstacle (blow apart)</a></span>
+</td>
+<td><span id="UNIT_PROJECTILE_SLAM_BLOW_APART" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#UNIT_PROJECTILE_SLAM_BLOW_APART">UNIT_PROJECTILE_SLAM_BLOW_APART</a></span>
+</td>
+<td><span style="color: #E811FF; font-size: 12.5px; font-family: &#39;fixedsys&#39;, &#39;IBM Plex Mono Medium&#39;, &#39;Consolas&#39;, monospace; background: #000000">The Wolf slams into an obstacle and blows apart!</span>
+</td>
+<td>
+</td></tr>
+<tr>
+<td><span id="Slam_into_obstacle" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#Slam_into_obstacle">Slam into obstacle</a></span>
+</td>
+<td><span id="UNIT_PROJECTILE_SLAM" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#UNIT_PROJECTILE_SLAM">UNIT_PROJECTILE_SLAM</a></span>
+</td>
+<td><span style="color: #D79B2D; font-size: 12.5px; font-family: &#39;fixedsys&#39;, &#39;IBM Plex Mono Medium&#39;, &#39;Consolas&#39;, monospace; background: #000000">The Wolf slams into an obstacle!</span>
+</td>
+<td>
+</td></tr>
+<tr>
+<td><span id="Slam_into_unit" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#Slam_into_unit">Slam into unit</a></span>
+</td>
+<td><span id="UNIT_PROJECTILE_SLAM_INTO_UNIT" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#UNIT_PROJECTILE_SLAM_INTO_UNIT">UNIT_PROJECTILE_SLAM_INTO_UNIT</a></span>
+</td>
+<td><span style="color: #8C66FF; font-size: 12.5px; font-family: &#39;fixedsys&#39;, &#39;IBM Plex Mono Medium&#39;, &#39;Consolas&#39;, monospace; background: #000000">The Wolf slams into the Wolf!</span>
+</td>
+<td>
+</td></tr>
+<tr>
+<td><span id="Vomit" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#Vomit">Vomit</a></span>
+</td>
+<td><span id="VOMIT" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#VOMIT">VOMIT</a></span>
+</td>
+<td><span style="color: #A2DC34; font-size: 12.5px; font-family: &#39;fixedsys&#39;, &#39;IBM Plex Mono Medium&#39;, &#39;Consolas&#39;, monospace; background: #000000">The Wolf vomits.</span>
+</td>
+<td>
+</td></tr>
+<tr>
+<td><span id="Lose_hold_of_item" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#Lose_hold_of_item">Lose hold of item</a></span>
+</td>
+<td><span id="LOSE_HOLD_OF_ITEM" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#LOSE_HOLD_OF_ITEM">LOSE_HOLD_OF_ITEM</a></span>
+</td>
+<td><span style="color: #D79B2D; font-size: 12.5px; font-family: &#39;fixedsys&#39;, &#39;IBM Plex Mono Medium&#39;, &#39;Consolas&#39;, monospace; background: #000000">The Goblin Bowman loses the hold of the (bismuth bronze bow).</span>
+</td>
+<td>
+</td></tr>
+<tr>
+<td><span id="Regain_consciousness" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#Regain_consciousness">Regain consciousness</a></span>
+</td>
+<td><span id="REGAIN_CONSCIOUSNESS" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#REGAIN_CONSCIOUSNESS">REGAIN_CONSCIOUSNESS</a></span>
+</td>
+<td><span style="color: #C0C0C0; font-size: 12.5px; font-family: &#39;fixedsys&#39;, &#39;IBM Plex Mono Medium&#39;, &#39;Consolas&#39;, monospace; background: #000000">The Wolf regains consciousness.</span>
+</td>
+<td>
+</td></tr>
+<tr>
+<td><span id="Free_from_web" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#Free_from_web">Free from web</a></span>
+</td>
+<td><span id="FREE_FROM_WEB" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#FREE_FROM_WEB">FREE_FROM_WEB</a></span>
+</td>
+<td><span style="color: #C0C0C0; font-size: 12.5px; font-family: &#39;fixedsys&#39;, &#39;IBM Plex Mono Medium&#39;, &#39;Consolas&#39;, monospace; background: #000000">The Wolf is partially free from the web.</span>
+</td>
+<td>
+</td></tr>
+<tr>
+<td><span id="Paralyzed" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#Paralyzed">Paralyzed</a></span>
+</td>
+<td><span id="PARALYZED" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#PARALYZED">PARALYZED</a></span>
+</td>
+<td><span style="color: #12FECF; font-size: 12.5px; font-family: &#39;fixedsys&#39;, &#39;IBM Plex Mono Medium&#39;, &#39;Consolas&#39;, monospace; background: #000000">The Wolf is completely paralyzed!</span>
+</td>
+<td>
+</td></tr>
+<tr>
+<td><span id="Overcome_paralysis" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#Overcome_paralysis">Overcome paralysis</a></span>
+</td>
+<td><span id="OVERCOME_PARALYSIS" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#OVERCOME_PARALYSIS">OVERCOME_PARALYSIS</a></span>
+</td>
+<td>
+</td>
+<td>A creature is no longer <a href="/index.php/Syndrome" title="Syndrome">paralyzed</a>
+</td></tr>
+<tr>
+<td><span id="No_longer_stunned" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#No_longer_stunned">No longer stunned</a></span>
+</td>
+<td><span id="NOT_STUNNED" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#NOT_STUNNED">NOT_STUNNED</a></span>
+</td>
+<td><span style="color: #12FECF; font-size: 12.5px; font-family: &#39;fixedsys&#39;, &#39;IBM Plex Mono Medium&#39;, &#39;Consolas&#39;, monospace; background: #000000">The Wolf is no longer stunned.</span>
+</td>
+<td>A creature is no longer <a href="/index.php/Stun" class="mw-redirect" title="Stun">stunned</a>
+</td></tr>
+<tr>
+<td><span id="Exhausted" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#Exhausted">Exhausted</a></span>
+</td>
+<td><span id="EXHAUSTION" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#EXHAUSTION">EXHAUSTION</a></span>
+</td>
+<td>
+</td>
+<td><a href="/index.php/Exhaustion" class="mw-redirect" title="Exhaustion">Exhaustion</a>
+</td></tr>
+<tr>
+<td><span id="Give_into_pain" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#Give_into_pain">Give into pain</a></span>
+</td>
+<td><span id="PAIN_KO" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#PAIN_KO">PAIN_KO</a></span>
+</td>
+<td><span style="color: #D79B2D; font-size: 12.5px; font-family: &#39;fixedsys&#39;, &#39;IBM Plex Mono Medium&#39;, &#39;Consolas&#39;, monospace; background: #000000">The Wolf gives in to pain.</span>
+</td>
+<td>
+</td></tr>
+<tr>
+<td><span id=".28Wrestling.29_Break_grip" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#.28Wrestling.29_Break_grip">(Wrestling) Break grip</a></span>
+</td>
+<td><span id="BREAK_GRIP" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#BREAK_GRIP">BREAK_GRIP</a></span>
+</td>
+<td><span style="color: #E811FF; font-size: 12.5px; font-family: &#39;fixedsys&#39;, &#39;IBM Plex Mono Medium&#39;, &#39;Consolas&#39;, monospace; background: #000000">The Swordsdwarf breaks the grip of the Wolf's teeth on the Swordsdwarf's left upper arm.</span>
+</td>
+<td>
+</td></tr>
+<tr>
+<td><span id=".28Wrestling.29_Cannot_break_grip" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#.28Wrestling.29_Cannot_break_grip">(Wrestling) Cannot break grip</a></span>
+</td>
+<td><span id="NO_BREAK_GRIP" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#NO_BREAK_GRIP">NO_BREAK_GRIP</a></span>
+</td>
+<td><span style="color: #E811FF; font-size: 12.5px; font-family: &#39;fixedsys&#39;, &#39;IBM Plex Mono Medium&#39;, &#39;Consolas&#39;, monospace; background: #000000">The Swordsdwarf struggles in vain against the grip of the Wolf's teeth on the Swordsdwarf's left upper arm.</span>
+</td>
+<td>
+</td></tr>
+<tr>
+<td><span id="Block_fire" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#Block_fire">Block fire</a></span>
+</td>
+<td><span id="BLOCK_FIRE" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#BLOCK_FIRE">BLOCK_FIRE</a></span>
+</td>
+<td>
+</td>
+<td>Blocking a <a href="/index.php/Fire" title="Fire">fire</a> attack
+</td></tr>
+<tr>
+<td><span id="Breathe_fire" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#Breathe_fire">Breathe fire</a></span>
+</td>
+<td><span id="BREATHE_FIRE" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#BREATHE_FIRE">BREATHE_FIRE</a></span>
+</td>
+<td><span style="color: #FF7111; font-size: 12.5px; font-family: &#39;fixedsys&#39;, &#39;IBM Plex Mono Medium&#39;, &#39;Consolas&#39;, monospace; background: #000000">The Fire Imp breathes fire!</span>
+</td>
+<td>A creature breathes <a href="/index.php/Fire" title="Fire">fire</a>
+</td></tr>
+<tr>
+<td><span id="Shoot_web" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#Shoot_web">Shoot web</a></span>
+</td>
+<td><span id="SHOOT_WEB" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#SHOOT_WEB">SHOOT_WEB</a></span>
+</td>
+<td><span style="color: #FF7111; font-size: 12.5px; font-family: &#39;fixedsys&#39;, &#39;IBM Plex Mono Medium&#39;, &#39;Consolas&#39;, monospace; background: #000000">The Giant Cave Spider shoots out thick strands of webbing!</span>
+</td>
+<td>
+</td></tr>
+<tr>
+<td><span id="Pull_out_and_drop_item" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#Pull_out_and_drop_item">Pull out and drop item</a></span>
+</td>
+<td><span id="PULL_OUT_DROP" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#PULL_OUT_DROP">PULL_OUT_DROP</a></span>
+</td>
+<td>
+</td>
+<td>
+</td></tr>
+<tr>
+<td><span id="Stand_up" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#Stand_up">Stand up</a></span>
+</td>
+<td><span id="STAND_UP" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#STAND_UP">STAND_UP</a></span>
+</td>
+<td><span style="color: #C0C0C0; font-size: 12.5px; font-family: &#39;fixedsys&#39;, &#39;IBM Plex Mono Medium&#39;, &#39;Consolas&#39;, monospace; background: #000000">The Wolf stands up.</span>
+</td>
+<td>
+</td></tr>
+<tr>
+<td><span id="Martial_trance" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#Martial_trance">Martial trance</a></span>
+</td>
+<td><span id="MARTIAL_TRANCE" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#MARTIAL_TRANCE">MARTIAL_TRANCE</a></span>
+</td>
+<td><span style="color: #13FD65; font-size: 12.5px; font-family: &#39;fixedsys&#39;, &#39;IBM Plex Mono Medium&#39;, &#39;Consolas&#39;, monospace; background: #000000">Mörul Bardumoslan, Hammerdwarf has entered a martial trance!</span>
+</td>
+<td>
+</td></tr>
+<tr>
+<td><span id="Breath_attack" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#Breath_attack">Breath attack</a></span>
+</td>
+<td><span id="MAT_BREATH" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#MAT_BREATH">MAT_BREATH</a></span>
+</td>
+<td><span style="color: #FF7111; font-size: 12.5px; font-family: &#39;fixedsys&#39;, &#39;IBM Plex Mono Medium&#39;, &#39;Consolas&#39;, monospace; background: #000000">The Forgotten Beast breathes a cloud of Mirgur Sealhorse the Infinite Shadows's forgotten beast extract!</span>
+</td>
+<td>
+</td></tr>
+<tr>
+<td><span id=".28Adventure.29_Night_Creature_Attack" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#.28Adventure.29_Night_Creature_Attack">(Adventure) Night Creature Attack</a></span>
+</td>
+<td><span id="NIGHT_ATTACK_STARTS" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#NIGHT_ATTACK_STARTS">NIGHT_ATTACK_STARTS</a></span>
+</td>
+<td><span style="color: #E811FF; font-size: 12.5px; font-family: &#39;fixedsys&#39;, &#39;IBM Plex Mono Medium&#39;, &#39;Consolas&#39;, monospace; background: #000000">You are surrounded by incessant cackling.</span>
+</td>
+<td rowspan="3"><a href="/index.php/Bogeymen" class="mw-redirect" title="Bogeymen">Bogeymen</a> attack
+</td></tr>
+<tr>
+<td><span id=".28Adventure.29_Cackling_fades" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#.28Adventure.29_Cackling_fades">(Adventure) Cackling fades</a></span>
+</td>
+<td><span id="NIGHT_ATTACK_ENDS" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#NIGHT_ATTACK_ENDS">NIGHT_ATTACK_ENDS</a></span>
+</td>
+<td><span style="color: #E811FF; font-size: 12.5px; font-family: &#39;fixedsys&#39;, &#39;IBM Plex Mono Medium&#39;, &#39;Consolas&#39;, monospace; background: #000000">The cackling fades away.</span>
+</td></tr>
+<tr>
+<td>
+</td>
+<td><span id="NIGHT_ATTACK_TRAVEL" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#NIGHT_ATTACK_TRAVEL">NIGHT_ATTACK_TRAVEL</a></span>
+</td>
+<td><span style="color: #E811FF; font-size: 12.5px; font-family: &#39;fixedsys&#39;, &#39;IBM Plex Mono Medium&#39;, &#39;Consolas&#39;, monospace; background: #000000">You are still surrounded by cackling.</span>
+</td></tr>
+<tr>
+<td><span id="Ghost_attack" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#Ghost_attack">Ghost attack</a></span>
+</td>
+<td><span id="GHOST_ATTACK" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#GHOST_ATTACK">GHOST_ATTACK</a></span>
+</td>
+<td><span style="color: #FF7111; font-size: 12.5px; font-family: &#39;fixedsys&#39;, &#39;IBM Plex Mono Medium&#39;, &#39;Consolas&#39;, monospace; background: #000000">Lòr Eralamug, Ghostly Weaponsmith has arisen and is haunting the fortress!</span>
+</td>
+<td>
+</td></tr>
+<tr>
+<td><span id="Discovered_site" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#Discovered_site">Discovered site</a></span>
+</td>
+<td><span id="TRAVEL_SITE_DISCOVERY" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#TRAVEL_SITE_DISCOVERY">TRAVEL_SITE_DISCOVERY</a></span>
+</td>
+<td><span style="color: #FFE111; font-size: 12.5px; font-family: &#39;fixedsys&#39;, &#39;IBM Plex Mono Medium&#39;, &#39;Consolas&#39;, monospace; background: #000000">You have discovered a lair.</span>
+</td>
+<td>
+</td></tr>
+<tr>
+<td><span id="Cannot_travel_through_site" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#Cannot_travel_through_site">Cannot travel through site</a></span>
+</td>
+<td><span id="TRAVEL_SITE_BUMP" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#TRAVEL_SITE_BUMP">TRAVEL_SITE_BUMP</a></span>
+</td>
+<td><span style="color: #FFE111; font-size: 12.5px; font-family: &#39;fixedsys&#39;, &#39;IBM Plex Mono Medium&#39;, &#39;Consolas&#39;, monospace; background: #000000">You cannot travel through the Lair.</span>
+</td>
+<td>
+</td></tr>
+<tr>
+<td><span id="Intro" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#Intro">Intro</a></span>
+</td>
+<td><span id="ADVENTURE_INTRO" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#ADVENTURE_INTRO">ADVENTURE_INTRO</a></span>
+</td>
+<td><span style="color: #FFFFFF; font-size: 12.5px; font-family: &#39;fixedsys&#39;, &#39;IBM Plex Mono Medium&#39;, &#39;Consolas&#39;, monospace; background: #000000">You've finally got your equipment together, such as it is. Now it's time for action and adventure! In the rush of excitement, you've forgotten where you're going to go. Perhaps some of your friends might have ideas.</span>
+</td>
+<td>Beginning <a href="/index.php/Adventure_mode" class="mw-redirect" title="Adventure mode">adventure mode</a>
+</td></tr>
+<tr>
+<td><span id="Creature_sound" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#Creature_sound">Creature sound</a></span>
+</td>
+<td><span id="CREATURE_SOUND" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#CREATURE_SOUND">CREATURE_SOUND</a></span>
+</td>
+<td><span style="color: #12FECF; font-size: 12.5px; font-family: &#39;fixedsys&#39;, &#39;IBM Plex Mono Medium&#39;, &#39;Consolas&#39;, monospace; background: #000000">The capybara barks.</span>
+</td>
+<td>
+</td></tr>
+<tr>
+<td><span id="Mechanism_sounds" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#Mechanism_sounds">Mechanism sounds</a></span>
+</td>
+<td><span id="MECHANISM_SOUND" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#MECHANISM_SOUND">MECHANISM_SOUND</a></span>
+</td>
+<td>
+</td>
+<td>
+</td></tr>
+<tr>
+<td><span id="Creature_stolen_object" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#Creature_stolen_object">Creature stolen object</a></span>
+</td>
+<td><span id="CREATURE_STEALS_OBJECT" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#CREATURE_STEALS_OBJECT">CREATURE_STEALS_OBJECT</a></span>
+</td>
+<td><span style="color: #FFE111; font-size: 12.5px; font-family: &#39;fixedsys&#39;, &#39;IBM Plex Mono Medium&#39;, &#39;Consolas&#39;, monospace; background: #000000">A gray langur has stolen a -giant bat bone amulet-!</span>
+</td>
+<td>
+</td></tr>
+<tr>
+<td><span id="Found_trap" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#Found_trap">Found trap</a></span>
+</td>
+<td><span id="FOUND_TRAP" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#FOUND_TRAP">FOUND_TRAP</a></span>
+</td>
+<td>
+</td>
+<td>Discovery of a <a href="/index.php/Trap" title="Trap">trap</a> in <a href="/index.php/Adventure_mode" class="mw-redirect" title="Adventure mode">adventure mode</a>
+</td></tr>
+<tr>
+<td><span id="Transformation" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#Transformation">Transformation</a></span>
+</td>
+<td><span id="BODY_TRANSFORMATION" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#BODY_TRANSFORMATION">BODY_TRANSFORMATION</a></span>
+</td>
+<td><span style="color: #12FECF; font-size: 12.5px; font-family: &#39;fixedsys&#39;, &#39;IBM Plex Mono Medium&#39;, &#39;Consolas&#39;, monospace; background: #000000">Iden Ustuthod, Fisherdwarf has transformed into a wereskink!</span>
+</td>
+<td>
+</td></tr>
+<tr>
+<td><span id="Interaction_.28user.29" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#Interaction_.28user.29">Interaction (user)</a></span>
+</td>
+<td><span id="INTERACTION_ACTOR" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#INTERACTION_ACTOR">INTERACTION_ACTOR</a></span>
+</td>
+<td>
+</td>
+<td>See <a href="/index.php/Interaction_token#VERB" title="Interaction token">Interaction token#VERB</a>
+</td></tr>
+<tr>
+<td><span id="Interaction_.28target.29" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#Interaction_.28target.29">Interaction (target)</a></span>
+</td>
+<td><span id="INTERACTION_TARGET" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#INTERACTION_TARGET">INTERACTION_TARGET</a></span>
+</td>
+<td>
+</td>
+<td>See <a href="/index.php/Interaction_token#TARGET_VERB" title="Interaction token">Interaction token#TARGET_VERB</a>
+</td></tr>
+<tr>
+<td><span id="Undead_attack" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#Undead_attack">Undead attack</a></span>
+</td>
+<td><span id="UNDEAD_ATTACK" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#UNDEAD_ATTACK">UNDEAD_ATTACK</a></span>
+</td>
+<td><span style="color: #E811FF; font-size: 12.5px; font-family: &#39;fixedsys&#39;, &#39;IBM Plex Mono Medium&#39;, &#39;Consolas&#39;, monospace; background: #000000">The dead walk. Hide while you still can!</span>
+</td>
+<td>Arrival of a horde of <a href="/index.php/Undead" title="Undead">undead</a>.
+</td></tr>
+<tr>
+<td><span id="Citizen_missing" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#Citizen_missing">Citizen missing</a></span>
+</td>
+<td><span id="CITIZEN_MISSING" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#CITIZEN_MISSING">CITIZEN_MISSING</a></span>
+</td>
+<td><span style="color: #E811FF; font-size: 12.5px; font-family: &#39;fixedsys&#39;, &#39;IBM Plex Mono Medium&#39;, &#39;Consolas&#39;, monospace; background: #000000">Lòr Eralamug, Weaponsmith has been missing for a week.</span>
+</td>
+<td>
+</td></tr>
+<tr>
+<td><span id="Pet_missing" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#Pet_missing">Pet missing</a></span>
+</td>
+<td><span id="PET_MISSING" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#PET_MISSING">PET_MISSING</a></span>
+</td>
+<td>
+</td>
+<td>A pet has gone missing
+</td></tr>
+<tr>
+<td><span id="Weird_weather" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#Weird_weather">Weird weather</a></span>
+</td>
+<td><span id="STRANGE_RAIN_SNOW" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#STRANGE_RAIN_SNOW">STRANGE_RAIN_SNOW</a></span>
+</td>
+<td><span style="color: #FF7111; font-size: 12.5px; font-family: &#39;fixedsys&#39;, &#39;IBM Plex Mono Medium&#39;, &#39;Consolas&#39;, monospace; background: #000000">It is raining rotten sludge!</span>
+</td>
+<td rowspan="2">The appearance of unusual <a href="/index.php/Weather" title="Weather">weather</a>
+</td></tr>
+<tr>
+<td><span id="Evil_cloud" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#Evil_cloud">Evil cloud</a></span>
+</td>
+<td><span id="STRANGE_CLOUD" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#STRANGE_CLOUD">STRANGE_CLOUD</a></span>
+</td>
+<td><span style="color: #FF7111; font-size: 12.5px; font-family: &#39;fixedsys&#39;, &#39;IBM Plex Mono Medium&#39;, &#39;Consolas&#39;, monospace; background: #000000">A cloud of haunting fog has drifted nearby!</span>
+</td></tr>
+<tr>
+<td><span id="Animal_Action" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#Animal_Action">Animal Action</a></span>
+</td>
+<td><span id="SIMPLE_ANIMAL_ACTION" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#SIMPLE_ANIMAL_ACTION">SIMPLE_ANIMAL_ACTION</a></span>
+</td>
+<td>
+</td>
+<td>
+</td></tr>
+<tr>
+<td><span id="Flounder_in_water" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#Flounder_in_water">Flounder in water</a></span>
+</td>
+<td><span id="FLOUNDER_IN_LIQUID" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#FLOUNDER_IN_LIQUID">FLOUNDER_IN_LIQUID</a></span>
+</td>
+<td><span style="color: #FFE111; font-size: 12.5px; font-family: &#39;fixedsys&#39;, &#39;IBM Plex Mono Medium&#39;, &#39;Consolas&#39;, monospace; background: #000000">You flounder in the water!</span>
+</td>
+<td>
+</td></tr>
+<tr>
+<td><span id="Semi-wild" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#Semi-wild">Semi-wild</a></span>
+</td>
+<td><span id="TRAINING_DOWN_TO_SEMI_WILD" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#TRAINING_DOWN_TO_SEMI_WILD">TRAINING_DOWN_TO_SEMI_WILD</a></span>
+</td>
+<td><span style="color: #FFE111; font-size: 12.5px; font-family: &#39;fixedsys&#39;, &#39;IBM Plex Mono Medium&#39;, &#39;Consolas&#39;, monospace; background: #000000">The Stray war Cave Dragon (Semi-Wild) has forgotten its training!</span>
+</td>
+<td>A trained animal has reverted to a semi-wild state (Fortress mode). If the animal is not <a href="/index.php/Animal_trainer" title="Animal trainer">trained</a> properly, it will become wild and possibly attack your dwarves.
+</td></tr>
+<tr>
+<td><span id="Full_reversion" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#Full_reversion">Full reversion</a></span>
+</td>
+<td><span id="TRAINING_FULL_REVERSION" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#TRAINING_FULL_REVERSION">TRAINING_FULL_REVERSION</a></span>
+</td>
+<td><span style="color: #FF7111; font-size: 12.5px; font-family: &#39;fixedsys&#39;, &#39;IBM Plex Mono Medium&#39;, &#39;Consolas&#39;, monospace; background: #000000">The war Cave Dragon has reverted to a wild state!</span>
+</td>
+<td>An animal has reverted to a wild state (follows the previous announcement)
+</td></tr>
+<tr>
+<td><span id="Gained_knowledge" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#Gained_knowledge">Gained knowledge</a></span>
+</td>
+<td><span id="ANIMAL_TRAINING_KNOWLEDGE" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#ANIMAL_TRAINING_KNOWLEDGE">ANIMAL_TRAINING_KNOWLEDGE</a></span>
+</td>
+<td><span style="color: #12FECF; font-size: 12.5px; font-family: &#39;fixedsys&#39;, &#39;IBM Plex Mono Medium&#39;, &#39;Consolas&#39;, monospace; background: #000000">The dwarves of the Monastery of Tin are now quite knowledgable cave dragon trainers.</span>
+</td>
+<td>See <a href="/index.php/Animal_trainer#Taming" title="Animal trainer">Animal trainer</a>
+</td></tr>
+<tr>
+<td><span id="Skipped_on_liquid" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#Skipped_on_liquid">Skipped on liquid</a></span>
+</td>
+<td><span id="SKIP_ON_LIQUID" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#SKIP_ON_LIQUID">SKIP_ON_LIQUID</a></span>
+</td>
+<td>
+</td>
+<td>
+</td></tr>
+<tr>
+<td><span id="Dodge_projectile" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#Dodge_projectile">Dodge projectile</a></span>
+</td>
+<td><span id="DODGE_FLYING_OBJECT" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#DODGE_FLYING_OBJECT">DODGE_FLYING_OBJECT</a></span>
+</td>
+<td>
+</td>
+<td>Dodging a shot <a href="/index.php/Arrow" title="Arrow">arrow</a>
+</td></tr>
+<tr>
+<td><span id="Conversation" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#Conversation">Conversation</a></span>
+</td>
+<td><span id="REGULAR_CONVERSATION" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#REGULAR_CONVERSATION">REGULAR_CONVERSATION</a></span>
+</td>
+<td><span style="color: #12FECF; font-size: 12.5px; font-family: &#39;fixedsys&#39;, &#39;IBM Plex Mono Medium&#39;, &#39;Consolas&#39;, monospace; background: #000000">Caspa Linkon, Human Swordsman: I must pray to Uspram Boldyell the Contest of Stability. I'm uneasy.</span>
+</td>
+<td>
+</td></tr>
+<tr>
+<td><span id="Conversation_.28conflict.29" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#Conversation_.28conflict.29">Conversation (conflict)</a></span>
+</td>
+<td><span id="CONFLICT_CONVERSATION" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#CONFLICT_CONVERSATION">CONFLICT_CONVERSATION</a></span>
+</td>
+<td><span style="color: #12FECF; font-size: 12.5px; font-family: &#39;fixedsys&#39;, &#39;IBM Plex Mono Medium&#39;, &#39;Consolas&#39;, monospace; background: #000000">Caspa Linkon, Human Swordsman: This is my fight too. I will take revenge!</span>
+</td>
+<td>
+</td></tr>
+<tr>
+<td><span id="Hit_by_ball_of_flames" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#Hit_by_ball_of_flames">Hit by ball of flames</a></span>
+</td>
+<td><span id="FLAME_HIT" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#FLAME_HIT">FLAME_HIT</a></span>
+</td>
+<td>
+</td>
+<td>
+</td></tr>
+<tr>
+<td><span id="Embrace" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#Embrace">Embrace</a></span>
+</td>
+<td><span id="EMBRACE" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#EMBRACE">EMBRACE</a></span>
+</td>
+<td>
+</td>
+<td>
+</td></tr>
+<tr>
+<td><span id="Bandit_empties_container" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#Bandit_empties_container">Bandit empties container</a></span>
+</td>
+<td><span id="BANDIT_EMPTY_CONTAINER" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#BANDIT_EMPTY_CONTAINER">BANDIT_EMPTY_CONTAINER</a></span>
+</td>
+<td>
+</td>
+<td>
+</td></tr>
+<tr>
+<td><span id="Bandit_grabs_item" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#Bandit_grabs_item">Bandit grabs item</a></span>
+</td>
+<td><span id="BANDIT_GRAB_ITEM" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#BANDIT_GRAB_ITEM">BANDIT_GRAB_ITEM</a></span>
+</td>
+<td>
+</td>
+<td>
+</td></tr>
+<tr>
+<td><span id="Attack_interrupted" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#Attack_interrupted">Attack interrupted</a></span>
+</td>
+<td><span id="COMBAT_EVENT_ATTACK_INTERRUPTED" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#COMBAT_EVENT_ATTACK_INTERRUPTED">COMBAT_EVENT_ATTACK_INTERRUPTED</a></span>
+</td>
+<td><span style="color: #FF7111; font-size: 12.5px; font-family: &#39;fixedsys&#39;, &#39;IBM Plex Mono Medium&#39;, &#39;Consolas&#39;, monospace; background: #000000">The Wolf's attack is interrupted!</span>
+</td>
+<td><a href="/index.php/Wrestling" title="Wrestling">Wrestling</a> interrupts opponent's attack
+</td></tr>
+<tr>
+<td><span id="Attack_caught" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#Attack_caught">Attack caught</a></span>
+</td>
+<td><span id="COMBAT_WRESTLE_CATCH_ATTACK" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#COMBAT_WRESTLE_CATCH_ATTACK">COMBAT_WRESTLE_CATCH_ATTACK</a></span>
+</td>
+<td>
+</td>
+<td>
+</td></tr>
+<tr>
+<td><span id="Fail_to_grab_hold" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#Fail_to_grab_hold">Fail to grab hold</a></span>
+</td>
+<td><span id="FAIL_TO_GRAB_SURFACE" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#FAIL_TO_GRAB_SURFACE">FAIL_TO_GRAB_SURFACE</a></span>
+</td>
+<td>
+</td>
+<td>Failing to grab a tile
+</td></tr>
+<tr>
+<td><span id="Lose_hold_of_surface" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#Lose_hold_of_surface">Lose hold of surface</a></span>
+</td>
+<td><span id="LOSE_HOLD_OF_SURFACE" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#LOSE_HOLD_OF_SURFACE">LOSE_HOLD_OF_SURFACE</a></span>
+</td>
+<td>
+</td>
+<td>Losing hold of a surface while <a href="/index.php/Climb" class="mw-redirect" title="Climb">climbing</a>
+</td></tr>
+<tr>
+<td><span id="Travel_complaint" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#Travel_complaint">Travel complaint</a></span>
+</td>
+<td><span id="TRAVEL_COMPLAINT" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#TRAVEL_COMPLAINT">TRAVEL_COMPLAINT</a></span>
+</td>
+<td>
+</td>
+<td>
+</td></tr>
+<tr>
+<td><span id="No_longer_overwhelmed" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#No_longer_overwhelmed">No longer overwhelmed</a></span>
+</td>
+<td><span id="LOSE_EMOTION" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#LOSE_EMOTION">LOSE_EMOTION</a></span>
+</td>
+<td>
+</td>
+<td>
+</td></tr>
+<tr>
+<td><span id="Reorganize_possessions" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#Reorganize_possessions">Reorganize possessions</a></span>
+</td>
+<td><span id="REORGANIZE_POSSESSIONS" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#REORGANIZE_POSSESSIONS">REORGANIZE_POSSESSIONS</a></span>
+</td>
+<td><span style="color: #D79B2D; font-size: 12.5px; font-family: &#39;fixedsys&#39;, &#39;IBM Plex Mono Medium&#39;, &#39;Consolas&#39;, monospace; background: #000000">The Human Pikeman reorganizes his possessions.</span>
+</td>
+<td>
+</td></tr>
+<tr>
+<td><span id="Push_item" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#Push_item">Push item</a></span>
+</td>
+<td><span id="PUSH_ITEM" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#PUSH_ITEM">PUSH_ITEM</a></span>
+</td>
+<td>
+</td>
+<td>
+</td></tr>
+<tr>
+<td><span id="Draw_item" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#Draw_item">Draw item</a></span>
+</td>
+<td><span id="DRAW_ITEM" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#DRAW_ITEM">DRAW_ITEM</a></span>
+</td>
+<td>
+</td>
+<td>
+</td></tr>
+<tr>
+<td><span id="Strap_item" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#Strap_item">Strap item</a></span>
+</td>
+<td><span id="STRAP_ITEM" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#STRAP_ITEM">STRAP_ITEM</a></span>
+</td>
+<td>
+</td>
+<td>
+</td></tr>
+<tr>
+<td><span id="Gained_site_control" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#Gained_site_control">Gained site control</a></span>
+</td>
+<td><span id="GAIN_SITE_CONTROL" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#GAIN_SITE_CONTROL">GAIN_SITE_CONTROL</a></span>
+</td>
+<td><span style="color: #12FECF; font-size: 12.5px; font-family: &#39;fixedsys&#39;, &#39;IBM Plex Mono Medium&#39;, &#39;Consolas&#39;, monospace; background: #000000">You are now in control of Tanfield, ruling The Ignition of Churches from The Holy Saturninity.</span>
+</td>
+<td>
+</td></tr>
+<tr>
+<td><span id="Assumed_position" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#Assumed_position">Assumed position</a></span>
+</td>
+<td><span id="FORT_POSITION_SUCCESSION" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#FORT_POSITION_SUCCESSION">FORT_POSITION_SUCCESSION</a></span>
+</td>
+<td>
+</td>
+<td>
+</td></tr>
+<tr>
+<td><span id="Citizen_overwhelmed_by_stress" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#Citizen_overwhelmed_by_stress">Citizen overwhelmed by stress</a></span>
+</td>
+<td><span id="STRESSED_CITIZEN" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#STRESSED_CITIZEN">STRESSED_CITIZEN</a></span>
+</td>
+<td><span style="color: #71BBB0; font-size: 12.5px; font-family: &#39;fixedsys&#39;, &#39;IBM Plex Mono Medium&#39;, &#39;Consolas&#39;, monospace; background: #000000">Lòr Eralamug, Weaponsmith is stumbling obliviously!</span>
+</td>
+<td>
+</td></tr>
+<tr>
+<td><span id="Citizen_lost_to_stress" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#Citizen_lost_to_stress">Citizen lost to stress</a></span>
+</td>
+<td><span id="CITIZEN_LOST_TO_STRESS" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#CITIZEN_LOST_TO_STRESS">CITIZEN_LOST_TO_STRESS</a></span>
+</td>
+<td><span style="color: #12FECF; font-size: 12.5px; font-family: &#39;fixedsys&#39;, &#39;IBM Plex Mono Medium&#39;, &#39;Consolas&#39;, monospace; background: #000000">Lòr Eralamug, Weaponsmith has gone stark raving mad!</span>
+</td>
+<td>
+</td></tr>
+<tr>
+<td><span id="Tantrum" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#Tantrum">Tantrum</a></span>
+</td>
+<td><span id="CITIZEN_TANTRUM" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#CITIZEN_TANTRUM">CITIZEN_TANTRUM</a></span>
+</td>
+<td><span style="color: #FFE111; font-size: 12.5px; font-family: &#39;fixedsys&#39;, &#39;IBM Plex Mono Medium&#39;, &#39;Consolas&#39;, monospace; background: #000000">Lòr Eralamug, Weaponsmith is throwing a tantrum!</span>
+</td>
+<td>
+</td></tr>
+<tr>
+<td><span id="Enemy_moved_out_of_range" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#Enemy_moved_out_of_range">Enemy moved out of range</a></span>
+</td>
+<td><span id="MOVED_OUT_OF_RANGE" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#MOVED_OUT_OF_RANGE">MOVED_OUT_OF_RANGE</a></span>
+</td>
+<td><span style="color: #FFFFFF; font-size: 12.5px; font-family: &#39;fixedsys&#39;, &#39;IBM Plex Mono Medium&#39;, &#39;Consolas&#39;, monospace; background: #000000">The Wolf has moved out of range!</span>
+</td>
+<td>An <a href="/index.php/Attack" title="Attack">attacked</a> creature has moved out of range
+</td></tr>
+<tr>
+<td><span id="Cannot_jump" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#Cannot_jump">Cannot jump</a></span>
+</td>
+<td><span id="CANNOT_JUMP" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#CANNOT_JUMP">CANNOT_JUMP</a></span>
+</td>
+<td><span style="color: #D79B2D; font-size: 12.5px; font-family: &#39;fixedsys&#39;, &#39;IBM Plex Mono Medium&#39;, &#39;Consolas&#39;, monospace; background: #000000">You cannot jump while prone.</span>
+</td>
+<td>
+</td></tr>
+<tr>
+<td><span id="No_tracks" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#No_tracks">No tracks</a></span>
+</td>
+<td><span id="NO_TRACKS" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#NO_TRACKS">NO_TRACKS</a></span>
+</td>
+<td>
+</td>
+<td>
+</td></tr>
+<tr>
+<td><span id="Already_searched" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#Already_searched">Already searched</a></span>
+</td>
+<td><span id="ALREADY_SEARCHED_AREA" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#ALREADY_SEARCHED_AREA">ALREADY_SEARCHED_AREA</a></span>
+</td>
+<td><span style="color: #D79B2D; font-size: 12.5px; font-family: &#39;fixedsys&#39;, &#39;IBM Plex Mono Medium&#39;, &#39;Consolas&#39;, monospace; background: #000000">You've already searched this area recently.</span>
+</td>
+<td>
+</td></tr>
+<tr>
+<td><span id="Search_found_something" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#Search_found_something">Search found something</a></span>
+</td>
+<td><span id="SEARCH_FOUND_SOMETHING" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#SEARCH_FOUND_SOMETHING">SEARCH_FOUND_SOMETHING</a></span>
+</td>
+<td>
+</td>
+<td>
+</td></tr>
+<tr>
+<td><span id="Search_found_nothing" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#Search_found_nothing">Search found nothing</a></span>
+</td>
+<td><span id="SEARCH_FOUND_NOTHING" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#SEARCH_FOUND_NOTHING">SEARCH_FOUND_NOTHING</a></span>
+</td>
+<td><span style="color: #D79B2D; font-size: 12.5px; font-family: &#39;fixedsys&#39;, &#39;IBM Plex Mono Medium&#39;, &#39;Consolas&#39;, monospace; background: #000000">Your intense search turns up nothing.</span>
+</td>
+<td>
+</td></tr>
+<tr>
+<td><span id="Nothing_to_interact" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#Nothing_to_interact">Nothing to interact</a></span>
+</td>
+<td><span id="NOTHING_TO_INTERACT" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#NOTHING_TO_INTERACT">NOTHING_TO_INTERACT</a></span>
+</td>
+<td><span style="color: #D79B2D; font-size: 12.5px; font-family: &#39;fixedsys&#39;, &#39;IBM Plex Mono Medium&#39;, &#39;Consolas&#39;, monospace; background: #000000">You have nothing with which to interact.</span>
+</td>
+<td>
+</td></tr>
+<tr>
+<td><span id="Nothing_to_examine" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#Nothing_to_examine">Nothing to examine</a></span>
+</td>
+<td><span id="NOTHING_TO_EXAMINE" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#NOTHING_TO_EXAMINE">NOTHING_TO_EXAMINE</a></span>
+</td>
+<td><span style="color: #D79B2D; font-size: 12.5px; font-family: &#39;fixedsys&#39;, &#39;IBM Plex Mono Medium&#39;, &#39;Consolas&#39;, monospace; background: #000000">You have nothing to examine.</span>
+</td>
+<td>
+</td></tr>
+<tr>
+<td><span id="You_yield" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#You_yield">You yield</a></span>
+</td>
+<td><span id="YOU_YIELDED" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#YOU_YIELDED">YOU_YIELDED</a></span>
+</td>
+<td><span style="color: #FFE111; font-size: 12.5px; font-family: &#39;fixedsys&#39;, &#39;IBM Plex Mono Medium&#39;, &#39;Consolas&#39;, monospace; background: #000000">You assume a submissive posture.</span>
+</td>
+<td rowspan="2"><a href="/index.php?title=Yield&amp;action=edit&amp;redlink=1" class="new" title="Yield (page does not exist)">Yielding</a> in adventure mode
+</td></tr>
+<tr>
+<td><span id="You_unyield" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#You_unyield">You unyield</a></span>
+</td>
+<td><span id="YOU_UNYIELDED" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#YOU_UNYIELDED">YOU_UNYIELDED</a></span>
+</td>
+<td><span style="color: #FFE111; font-size: 12.5px; font-family: &#39;fixedsys&#39;, &#39;IBM Plex Mono Medium&#39;, &#39;Consolas&#39;, monospace; background: #000000">You no longer assume a submissive posture.</span>
+</td></tr>
+<tr>
+<td><span id="You_strap_item" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#You_strap_item">You strap item</a></span>
+</td>
+<td><span id="YOU_STRAP_ITEM" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#YOU_STRAP_ITEM">YOU_STRAP_ITEM</a></span>
+</td>
+<td><span style="color: #FFE111; font-size: 12.5px; font-family: &#39;fixedsys&#39;, &#39;IBM Plex Mono Medium&#39;, &#39;Consolas&#39;, monospace; background: #000000">You strap the steel short sword to your Upper body.</span>
+</td>
+<td>
+</td></tr>
+<tr>
+<td><span id="You_draw" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#You_draw">You draw</a></span>
+</td>
+<td><span id="YOU_DRAW_ITEM" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#YOU_DRAW_ITEM">YOU_DRAW_ITEM</a></span>
+</td>
+<td><span style="color: #FFE111; font-size: 12.5px; font-family: &#39;fixedsys&#39;, &#39;IBM Plex Mono Medium&#39;, &#39;Consolas&#39;, monospace; background: #000000">You draw the steel short sword with your Right hand.</span>
+</td>
+<td>
+</td></tr>
+<tr>
+<td><span id="No_grasp_to_draw" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#No_grasp_to_draw">No grasp to draw</a></span>
+</td>
+<td><span id="NO_GRASP_TO_DRAW_ITEM" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#NO_GRASP_TO_DRAW_ITEM">NO_GRASP_TO_DRAW_ITEM</a></span>
+</td>
+<td><span style="color: #D79B2D; font-size: 12.5px; font-family: &#39;fixedsys&#39;, &#39;IBM Plex Mono Medium&#39;, &#39;Consolas&#39;, monospace; background: #000000">You do not have a free grasp for the steel short sword.</span>
+</td>
+<td>
+</td></tr>
+<tr>
+<td><span id="No_item_to_strap" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#No_item_to_strap">No item to strap</a></span>
+</td>
+<td><span id="NO_ITEM_TO_STRAP" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#NO_ITEM_TO_STRAP">NO_ITEM_TO_STRAP</a></span>
+</td>
+<td><span style="color: #D79B2D; font-size: 12.5px; font-family: &#39;fixedsys&#39;, &#39;IBM Plex Mono Medium&#39;, &#39;Consolas&#39;, monospace; background: #000000">You have nothing left to draw or put away.</span>
+</td>
+<td>
+</td></tr>
+<tr>
+<td><span id="No_item_to_remove" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#No_item_to_remove">No item to remove</a></span>
+</td>
+<td><span id="NO_INV_TO_REMOVE" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#NO_INV_TO_REMOVE">NO_INV_TO_REMOVE</a></span>
+</td>
+<td><span style="color: #D79B2D; font-size: 12.5px; font-family: &#39;fixedsys&#39;, &#39;IBM Plex Mono Medium&#39;, &#39;Consolas&#39;, monospace; background: #000000">You have nothing left to remove.</span>
+</td>
+<td>
+</td></tr>
+<tr>
+<td><span id="No_item_to_wear" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#No_item_to_wear">No item to wear</a></span>
+</td>
+<td><span id="NO_INV_TO_WEAR" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#NO_INV_TO_WEAR">NO_INV_TO_WEAR</a></span>
+</td>
+<td><span style="color: #D79B2D; font-size: 12.5px; font-family: &#39;fixedsys&#39;, &#39;IBM Plex Mono Medium&#39;, &#39;Consolas&#39;, monospace; background: #000000">You have nothing left to wear.</span>
+</td>
+<td>
+</td></tr>
+<tr>
+<td><span id="No_item_to_eat" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#No_item_to_eat">No item to eat</a></span>
+</td>
+<td><span id="NO_INV_TO_EAT" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#NO_INV_TO_EAT">NO_INV_TO_EAT</a></span>
+</td>
+<td><span style="color: #D79B2D; font-size: 12.5px; font-family: &#39;fixedsys&#39;, &#39;IBM Plex Mono Medium&#39;, &#39;Consolas&#39;, monospace; background: #000000">You have nothing left to eat or drink.</span>
+</td>
+<td>
+</td></tr>
+<tr>
+<td><span id="No_item_to_contain" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#No_item_to_contain">No item to contain</a></span>
+</td>
+<td><span id="NO_INV_TO_CONTAIN" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#NO_INV_TO_CONTAIN">NO_INV_TO_CONTAIN</a></span>
+</td>
+<td><span style="color: #D79B2D; font-size: 12.5px; font-family: &#39;fixedsys&#39;, &#39;IBM Plex Mono Medium&#39;, &#39;Consolas&#39;, monospace; background: #000000">You have nothing to put inside a container.</span>
+</td>
+<td>
+</td></tr>
+<tr>
+<td><span id="No_item_to_drop" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#No_item_to_drop">No item to drop</a></span>
+</td>
+<td><span id="NO_INV_TO_DROP" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#NO_INV_TO_DROP">NO_INV_TO_DROP</a></span>
+</td>
+<td><span style="color: #D79B2D; font-size: 12.5px; font-family: &#39;fixedsys&#39;, &#39;IBM Plex Mono Medium&#39;, &#39;Consolas&#39;, monospace; background: #000000">You have nothing left to drop.</span>
+</td>
+<td>
+</td></tr>
+<tr>
+<td><span id="No_item_to_pick_up" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#No_item_to_pick_up">No item to pick up</a></span>
+</td>
+<td><span id="NOTHING_TO_PICK_UP" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#NOTHING_TO_PICK_UP">NOTHING_TO_PICK_UP</a></span>
+</td>
+<td><span style="color: #D79B2D; font-size: 12.5px; font-family: &#39;fixedsys&#39;, &#39;IBM Plex Mono Medium&#39;, &#39;Consolas&#39;, monospace; background: #000000">There is nothing to pick up here.</span>
+</td>
+<td>
+</td></tr>
+<tr>
+<td><span id="No_item_to_throw" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#No_item_to_throw">No item to throw</a></span>
+</td>
+<td><span id="NO_INV_TO_THROW" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#NO_INV_TO_THROW">NO_INV_TO_THROW</a></span>
+</td>
+<td><span style="color: #D79B2D; font-size: 12.5px; font-family: &#39;fixedsys&#39;, &#39;IBM Plex Mono Medium&#39;, &#39;Consolas&#39;, monospace; background: #000000">You have nothing left to throw.</span>
+</td>
+<td>
+</td></tr>
+<tr>
+<td><span id="No_item_to_throw" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#No_item_to_throw">No item to throw</a></span>
+</td>
+<td><span id="NO_INV_TO_FIRE" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#NO_INV_TO_FIRE">NO_INV_TO_FIRE</a></span>
+</td>
+<td><span style="color: #D79B2D; font-size: 12.5px; font-family: &#39;fixedsys&#39;, &#39;IBM Plex Mono Medium&#39;, &#39;Consolas&#39;, monospace; background: #000000">You have nothing left to fire.</span>
+</td>
+<td>
+</td></tr>
+<tr>
+<td><span id="Check_smells" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#Check_smells">Check smells</a></span>
+</td>
+<td><span id="CURRENT_SMELL" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#CURRENT_SMELL">CURRENT_SMELL</a></span>
+</td>
+<td>
+</td>
+<td><a href="/index.php/Smell" title="Smell">Smelling</a> in <a href="/index.php/Adventure_mode" class="mw-redirect" title="Adventure mode">adventure mode</a>
+</td></tr>
+<tr>
+<td><span id="Check_weather" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#Check_weather">Check weather</a></span>
+</td>
+<td><span id="CURRENT_WEATHER" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#CURRENT_WEATHER">CURRENT_WEATHER</a></span>
+</td>
+<td><span style="color: #FFFFFF; font-size: 12.5px; font-family: &#39;fixedsys&#39;, &#39;IBM Plex Mono Medium&#39;, &#39;Consolas&#39;, monospace; background: #000000">The sky is clear above you.</span>
+</td>
+<td>Checking <a href="/index.php/Weather" title="Weather">weather</a> in <a href="/index.php/Adventure_mode" class="mw-redirect" title="Adventure mode">adventure mode</a>
+</td></tr>
+<tr>
+<td><span id="Check_temperature" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#Check_temperature">Check temperature</a></span>
+</td>
+<td><span id="CURRENT_TEMPERATURE" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#CURRENT_TEMPERATURE">CURRENT_TEMPERATURE</a></span>
+</td>
+<td>
+</td>
+<td>Checking <a href="/index.php/Temperature" title="Temperature">temperature</a> in <a href="/index.php/Adventure_mode" class="mw-redirect" title="Adventure mode">adventure mode</a>
+</td></tr>
+<tr>
+<td><span id="Check_date" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#Check_date">Check date</a></span>
+</td>
+<td><span id="CURRENT_DATE" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#CURRENT_DATE">CURRENT_DATE</a></span>
+</td>
+<td><span style="color: #FFFFFF; font-size: 12.5px; font-family: &#39;fixedsys&#39;, &#39;IBM Plex Mono Medium&#39;, &#39;Consolas&#39;, monospace; background: #000000">It is the 14th of Granite, 250.</span>
+</td>
+<td>Checking <a href="/index.php/Time" title="Time">time</a> in <a href="/index.php/Adventure_mode" class="mw-redirect" title="Adventure mode">adventure mode</a>
+</td></tr>
+<tr>
+<td><span id="No_hands_to_pick_up" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#No_hands_to_pick_up">No hands to pick up</a></span>
+</td>
+<td><span id="NO_GRASP_FOR_PICKUP" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#NO_GRASP_FOR_PICKUP">NO_GRASP_FOR_PICKUP</a></span>
+</td>
+<td><span style="color: #D79B2D; font-size: 12.5px; font-family: &#39;fixedsys&#39;, &#39;IBM Plex Mono Medium&#39;, &#39;Consolas&#39;, monospace; background: #000000">You do not have a free grasp.</span>
+</td>
+<td>
+</td></tr>
+<tr>
+<td><span id="Cannot_climb" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#Cannot_climb">Cannot climb</a></span>
+</td>
+<td><span id="CANNOT_CLIMB" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#CANNOT_CLIMB">CANNOT_CLIMB</a></span>
+</td>
+<td>
+</td>
+<td>You are unable to <a href="/index.php/Climb" class="mw-redirect" title="Climb">climb</a>
+</td></tr>
+<tr>
+<td><span id="Cannot_stand" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#Cannot_stand">Cannot stand</a></span>
+</td>
+<td><span id="CANNOT_STAND" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#CANNOT_STAND">CANNOT_STAND</a></span>
+</td>
+<td>
+</td>
+<td>You are unable to stand up
+</td></tr>
+<tr>
+<td><span id="Must_unretract_first" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#Must_unretract_first">Must unretract first</a></span>
+</td>
+<td><span id="MUST_UNRETRACT_FIRST" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#MUST_UNRETRACT_FIRST">MUST_UNRETRACT_FIRST</a></span>
+</td>
+<td><span style="color: #FFE111; font-size: 12.5px; font-family: &#39;fixedsys&#39;, &#39;IBM Plex Mono Medium&#39;, &#39;Consolas&#39;, monospace; background: #000000">You must unroll.</span>
+</td>
+<td>
+</td></tr>
+<tr>
+<td><span id="Cannot_rest" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#Cannot_rest">Cannot rest</a></span>
+</td>
+<td><span id="CANNOT_REST" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#CANNOT_REST">CANNOT_REST</a></span>
+</td>
+<td>
+</td>
+<td>
+</td></tr>
+<tr>
+<td><span id="Cannot_make_campfire" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#Cannot_make_campfire">Cannot make campfire</a></span>
+</td>
+<td><span id="CANNOT_MAKE_CAMPFIRE" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#CANNOT_MAKE_CAMPFIRE">CANNOT_MAKE_CAMPFIRE</a></span>
+</td>
+<td>
+</td>
+<td>
+</td></tr>
+<tr>
+<td><span id="Made_a_campfire" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#Made_a_campfire">Made a campfire</a></span>
+</td>
+<td><span id="MADE_CAMPFIRE" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#MADE_CAMPFIRE">MADE_CAMPFIRE</a></span>
+</td>
+<td>
+</td>
+<td>You make a <a href="/index.php/Campfire" title="Campfire">campfire</a>
+</td></tr>
+<tr>
+<td><span id="Cannot_set_a_fire" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#Cannot_set_a_fire">Cannot set a fire</a></span>
+</td>
+<td><span id="CANNOT_SET_FIRE" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#CANNOT_SET_FIRE">CANNOT_SET_FIRE</a></span>
+</td>
+<td>
+</td>
+<td>
+</td></tr>
+<tr>
+<td><span id="Set_fire" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#Set_fire">Set fire</a></span>
+</td>
+<td><span id="SET_FIRE" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#SET_FIRE">SET_FIRE</a></span>
+</td>
+<td>
+</td>
+<td>You set a <a href="/index.php/Fire" title="Fire">fire</a>
+</td></tr>
+<tr>
+<td><span id="Break_of_dawn" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#Break_of_dawn">Break of dawn</a></span>
+</td>
+<td><span id="DAWN_BREAKS" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#DAWN_BREAKS">DAWN_BREAKS</a></span>
+</td>
+<td><span style="color: #FFE111; font-size: 12.5px; font-family: &#39;fixedsys&#39;, &#39;IBM Plex Mono Medium&#39;, &#39;Consolas&#39;, monospace; background: #000000">The dawn is breaking.</span>
+</td>
+<td rowspan="3">Change of the time of day
+</td></tr>
+<tr>
+<td><span id="Noon" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#Noon">Noon</a></span>
+</td>
+<td><span id="NOON" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#NOON">NOON</a></span>
+</td>
+<td>
+</td></tr>
+<tr>
+<td><span id="Nightfall" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#Nightfall">Nightfall</a></span>
+</td>
+<td><span id="NIGHTFALL" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#NIGHTFALL">NIGHTFALL</a></span>
+</td>
+<td><span style="color: #8C66FF; font-size: 12.5px; font-family: &#39;fixedsys&#39;, &#39;IBM Plex Mono Medium&#39;, &#39;Consolas&#39;, monospace; background: #000000">The night is falling.</span>
+</td></tr>
+<tr>
+<td><span id="Nothing_to_do_with_item" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#Nothing_to_do_with_item">Nothing to do with item</a></span>
+</td>
+<td><span id="NO_INV_INTERACTION" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#NO_INV_INTERACTION">NO_INV_INTERACTION</a></span>
+</td>
+<td>
+</td>
+<td>
+</td></tr>
+<tr>
+<td><span id="Empty_a_container" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#Empty_a_container">Empty a container</a></span>
+</td>
+<td><span id="EMPTY_CONTAINER" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#EMPTY_CONTAINER">EMPTY_CONTAINER</a></span>
+</td>
+<td><span style="color: #D79B2D; font-size: 12.5px; font-family: &#39;fixedsys&#39;, &#39;IBM Plex Mono Medium&#39;, &#39;Consolas&#39;, monospace; background: #000000">You empty your giant moon snail leather backpack.</span>
+</td>
+<td>Emptying a container in <a href="/index.php/Adventure_mode" class="mw-redirect" title="Adventure mode">adventure mode</a>
+</td></tr>
+<tr>
+<td><span id="Take_out_of_a_container" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#Take_out_of_a_container">Take out of a container</a></span>
+</td>
+<td><span id="TAKE_OUT_OF_CONTAINER" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#TAKE_OUT_OF_CONTAINER">TAKE_OUT_OF_CONTAINER</a></span>
+</td>
+<td>
+</td>
+<td>Taking an item out of container in <a href="/index.php/Adventure_mode" class="mw-redirect" title="Adventure mode">adventure mode</a>
+</td></tr>
+<tr>
+<td><span id="No_container_to_insert_item" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#No_container_to_insert_item">No container to insert item</a></span>
+</td>
+<td><span id="NO_CONTAINER_FOR_ITEM" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#NO_CONTAINER_FOR_ITEM">NO_CONTAINER_FOR_ITEM</a></span>
+</td>
+<td><span style="color: #D79B2D; font-size: 12.5px; font-family: &#39;fixedsys&#39;, &#39;IBM Plex Mono Medium&#39;, &#39;Consolas&#39;, monospace; background: #000000">You don't have a suitable container.</span>
+</td>
+<td>
+</td></tr>
+<tr>
+<td><span id="Put_into_container" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#Put_into_container">Put into container</a></span>
+</td>
+<td><span id="PUT_INTO_CONTAINER" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#PUT_INTO_CONTAINER">PUT_INTO_CONTAINER</a></span>
+</td>
+<td>
+</td>
+<td>
+</td></tr>
+<tr>
+<td><span id="Eat" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#Eat">Eat</a></span>
+</td>
+<td><span id="EAT_ITEM" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#EAT_ITEM">EAT_ITEM</a></span>
+</td>
+<td>
+</td>
+<td>You eat an item
+</td></tr>
+<tr>
+<td><span id="Drink" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#Drink">Drink</a></span>
+</td>
+<td><span id="DRINK_ITEM" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#DRINK_ITEM">DRINK_ITEM</a></span>
+</td>
+<td>
+</td>
+<td>You drink an item
+</td></tr>
+<tr>
+<td><span id="Failed_to_eat.2Fdrink" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#Failed_to_eat.2Fdrink">Failed to eat/drink</a></span>
+</td>
+<td><span id="CONSUME_FAILURE" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#CONSUME_FAILURE">CONSUME_FAILURE</a></span>
+</td>
+<td>
+</td>
+<td>You lick an item
+</td></tr>
+<tr>
+<td><span id="Drop" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#Drop">Drop</a></span>
+</td>
+<td><span id="DROP_ITEM" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#DROP_ITEM">DROP_ITEM</a></span>
+</td>
+<td>
+</td>
+<td>You drop an item
+</td></tr>
+<tr>
+<td><span id="Pick_up" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#Pick_up">Pick up</a></span>
+</td>
+<td><span id="PICK_UP_ITEM" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#PICK_UP_ITEM">PICK_UP_ITEM</a></span>
+</td>
+<td>
+</td>
+<td>You pick up an item
+</td></tr>
+<tr>
+<td><span id="You_interact_with_building" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#You_interact_with_building">You interact with building</a></span>
+</td>
+<td><span id="YOU_BUILDING_INTERACTION" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#YOU_BUILDING_INTERACTION">YOU_BUILDING_INTERACTION</a></span>
+</td>
+<td>
+</td>
+<td>Interaction with a <a href="/index.php/Building" title="Building">building</a> in <a href="/index.php/Adventure_mode" class="mw-redirect" title="Adventure mode">adventure mode</a>
+</td></tr>
+<tr>
+<td><span id="You_interact_with_item" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#You_interact_with_item">You interact with item</a></span>
+</td>
+<td><span id="YOU_ITEM_INTERACTION" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#YOU_ITEM_INTERACTION">YOU_ITEM_INTERACTION</a></span>
+</td>
+<td>
+</td>
+<td>Interaction with an <a href="/index.php/Item" title="Item">item</a> in <a href="/index.php/Adventure_mode" class="mw-redirect" title="Adventure mode">adventure mode</a>
+</td></tr>
+<tr>
+<td><span id="You_feel_hot.2Fcold" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#You_feel_hot.2Fcold">You feel hot/cold</a></span>
+</td>
+<td><span id="YOU_TEMPERATURE_EFFECTS" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#YOU_TEMPERATURE_EFFECTS">YOU_TEMPERATURE_EFFECTS</a></span>
+</td>
+<td><span style="color: #FF7111; font-size: 12.5px; font-family: &#39;fixedsys&#39;, &#39;IBM Plex Mono Medium&#39;, &#39;Consolas&#39;, monospace; background: #000000">You are melting!</span>
+</td>
+<td>
+</td></tr>
+<tr>
+<td><span id=".28Combat.29_Gain.2Flose_possession_of_item" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#.28Combat.29_Gain.2Flose_possession_of_item">(Combat) Gain/lose possession of item</a></span>
+</td>
+<td><span id="RESOLVE_SHARED_ITEMS" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#RESOLVE_SHARED_ITEMS">RESOLVE_SHARED_ITEMS</a></span>
+</td>
+<td>
+</td>
+<td>
+</td></tr>
+<tr>
+<td><span id="Cough_blood" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#Cough_blood">Cough blood</a></span>
+</td>
+<td><span id="COUGH_BLOOD" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#COUGH_BLOOD">COUGH_BLOOD</a></span>
+</td>
+<td>
+</td>
+<td><a href="/index.php/Syndrome" title="Syndrome">Coughing blood</a>
+</td></tr>
+<tr>
+<td><span id="Vomit_blood" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#Vomit_blood">Vomit blood</a></span>
+</td>
+<td><span id="VOMIT_BLOOD" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#VOMIT_BLOOD">VOMIT_BLOOD</a></span>
+</td>
+<td>
+</td>
+<td><a href="/index.php/Syndrome" title="Syndrome">Vomiting blood</a>
+</td></tr>
+<tr>
+<td><span id="Learned_a_power" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#Learned_a_power">Learned a power</a></span>
+</td>
+<td><span id="POWER_LEARNED" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#POWER_LEARNED">POWER_LEARNED</a></span>
+</td>
+<td>
+</td>
+<td>Learning a new power
+</td></tr>
+<tr>
+<td><span id="You_feed_on_victim" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#You_feed_on_victim">You feed on victim</a></span>
+</td>
+<td><span id="YOU_FEED_ON_SUCKEE" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#YOU_FEED_ON_SUCKEE">YOU_FEED_ON_SUCKEE</a></span>
+</td>
+<td>
+</td>
+<td><a href="/index.php/Vampire" title="Vampire">Sucking blood</a>
+</td></tr>
+<tr>
+<td><span id="Profession_change" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#Profession_change">Profession change</a></span>
+</td>
+<td><span id="PROFESSION_CHANGES" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#PROFESSION_CHANGES">PROFESSION_CHANGES</a></span>
+</td>
+<td>
+</td>
+<td>Changing a profession
+</td></tr>
+<tr>
+<td><span id="Recruit_gains_skill" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#Recruit_gains_skill">Recruit gains skill</a></span>
+</td>
+<td><span id="RECRUIT_PROMOTED" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#RECRUIT_PROMOTED">RECRUIT_PROMOTED</a></span>
+</td>
+<td>
+</td>
+<td>
+</td></tr>
+<tr>
+<td><span id="Soldier_becomes_a_master" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#Soldier_becomes_a_master">Soldier becomes a master</a></span>
+</td>
+<td><span id="SOLDIER_BECOMES_MASTER" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#SOLDIER_BECOMES_MASTER">SOLDIER_BECOMES_MASTER</a></span>
+</td>
+<td>
+</td>
+<td>A <a href="/index.php/Soldier" title="Soldier">soldier</a> has mastered a weapon <a href="/index.php/Skill" title="Skill">skill</a>
+</td></tr>
+<tr>
+<td><span id="Merchants_unloading" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#Merchants_unloading">Merchants unloading</a></span>
+</td>
+<td><span id="MERCHANTS_UNLOADING" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#MERCHANTS_UNLOADING">MERCHANTS_UNLOADING</a></span>
+</td>
+<td><span style="color: #FFE111; font-size: 12.5px; font-family: &#39;fixedsys&#39;, &#39;IBM Plex Mono Medium&#39;, &#39;Consolas&#39;, monospace; background: #000000">The merchants from Sarvesh Langgud have arrived and are unloading their goods.</span>
+</td>
+<td>
+</td></tr>
+<tr>
+<td><span id="Merchants_need_depot" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#Merchants_need_depot">Merchants need depot</a></span>
+</td>
+<td><span id="MERCHANTS_NEED_DEPOT" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#MERCHANTS_NEED_DEPOT">MERCHANTS_NEED_DEPOT</a></span>
+</td>
+<td><span style="color: #FFE111; font-size: 12.5px; font-family: &#39;fixedsys&#39;, &#39;IBM Plex Mono Medium&#39;, &#39;Consolas&#39;, monospace; background: #000000">The merchants need a trade depot to unload their goods.</span>
+</td>
+<td>
+</td></tr>
+<tr>
+<td><span id="Wagons_bypassed_inaccessible_site" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#Wagons_bypassed_inaccessible_site">Wagons bypassed inaccessible site</a></span>
+</td>
+<td><span id="MERCHANT_WAGONS_BYPASSED" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#MERCHANT_WAGONS_BYPASSED">MERCHANT_WAGONS_BYPASSED</a></span>
+</td>
+<td>
+</td>
+<td>The <a href="/index.php/Merchants" class="mw-redirect" title="Merchants">merchants</a>' wagons have bypassed the site
+</td></tr>
+<tr>
+<td><span id="Merchants_leaving_soon" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#Merchants_leaving_soon">Merchants leaving soon</a></span>
+</td>
+<td><span id="MERCHANTS_LEAVING_SOON" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#MERCHANTS_LEAVING_SOON">MERCHANTS_LEAVING_SOON</a></span>
+</td>
+<td><span style="color: #FFE111; font-size: 12.5px; font-family: &#39;fixedsys&#39;, &#39;IBM Plex Mono Medium&#39;, &#39;Consolas&#39;, monospace; background: #000000">The merchants from Sarvesh Langgud will be leaving soon.</span>
+</td>
+<td>
+</td></tr>
+<tr>
+<td><span id="Merchants_leaving_now" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#Merchants_leaving_now">Merchants leaving now</a></span>
+</td>
+<td><span id="MERCHANTS_EMBARKED" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#MERCHANTS_EMBARKED">MERCHANTS_EMBARKED</a></span>
+</td>
+<td><span style="color: #FFE111; font-size: 12.5px; font-family: &#39;fixedsys&#39;, &#39;IBM Plex Mono Medium&#39;, &#39;Consolas&#39;, monospace; background: #000000">The merchants from Sarvesh Langgud have embarked on their journey.</span>
+</td>
+<td>
+</td></tr>
+<tr>
+<td><span id="Pet_loses_dead_owner" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#Pet_loses_dead_owner">Pet loses dead owner</a></span>
+</td>
+<td><span id="PET_LOSES_DEAD_OWNER" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#PET_LOSES_DEAD_OWNER">PET_LOSES_DEAD_OWNER</a></span>
+</td>
+<td>
+</td>
+<td>
+</td></tr>
+<tr>
+<td><span id="Pet_adopts_owner" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#Pet_adopts_owner">Pet adopts owner</a></span>
+</td>
+<td><span id="PET_ADOPTS_OWNER" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#PET_ADOPTS_OWNER">PET_ADOPTS_OWNER</a></span>
+</td>
+<td>
+</td>
+<td>
+</td></tr>
+<tr>
+<td><span id="Vermin_bite" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#Vermin_bite">Vermin bite</a></span>
+</td>
+<td><span id="VERMIN_BITE" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#VERMIN_BITE">VERMIN_BITE</a></span>
+</td>
+<td><span style="color: #FFE111; font-size: 12.5px; font-family: &#39;fixedsys&#39;, &#39;IBM Plex Mono Medium&#39;, &#39;Consolas&#39;, monospace; background: #000000">The Stray Cow (Tame) has been stung by a honey bee!</span>
+</td>
+<td>A <a href="/index.php/Vermin" title="Vermin">vermin</a> bites/stings a creature
+</td></tr>
+<tr>
+<td><span id="Unable_to_complete_building" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#Unable_to_complete_building">Unable to complete building</a></span>
+</td>
+<td><span id="UNABLE_TO_COMPLETE_BUILDING" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#UNABLE_TO_COMPLETE_BUILDING">UNABLE_TO_COMPLETE_BUILDING</a></span>
+</td>
+<td><span style="color: #FFE111; font-size: 12.5px; font-family: &#39;fixedsys&#39;, &#39;IBM Plex Mono Medium&#39;, &#39;Consolas&#39;, monospace; background: #000000">The dwarves were unable to complete the Wall.</span>
+</td>
+<td>
+</td></tr>
+<tr>
+<td><span id="Job_removed_from_unpowered_building" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#Job_removed_from_unpowered_building">Job removed from unpowered building</a></span>
+</td>
+<td><span id="JOBS_REMOVED_FROM_UNPOWERED_BUILDING" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#JOBS_REMOVED_FROM_UNPOWERED_BUILDING">JOBS_REMOVED_FROM_UNPOWERED_BUILDING</a></span>
+</td>
+<td>
+</td>
+<td>
+</td></tr>
+<tr>
+<td><span id="Citizen_kidnapped" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#Citizen_kidnapped">Citizen kidnapped</a></span>
+</td>
+<td><span id="CITIZEN_SNATCHED" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#CITIZEN_SNATCHED">CITIZEN_SNATCHED</a></span>
+</td>
+<td><span style="color: #E811FF; font-size: 12.5px; font-family: &#39;fixedsys&#39;, &#39;IBM Plex Mono Medium&#39;, &#39;Consolas&#39;, monospace; background: #000000">A kidnapper has made off with the Dwarven child Ustuth Therlethendok!</span>
+</td>
+<td>
+</td></tr>
+<tr>
+<td><span id="Vermin_disturbed" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#Vermin_disturbed">Vermin disturbed</a></span>
+</td>
+<td><span id="VERMIN_DISTURBED" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#VERMIN_DISTURBED">VERMIN_DISTURBED</a></span>
+</td>
+<td>
+</td>
+<td>
+</td></tr>
+<tr>
+<td><span id="Land_gains_a_status" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#Land_gains_a_status">Land gains a status</a></span>
+</td>
+<td><span id="LAND_GAINS_STATUS" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#LAND_GAINS_STATUS">LAND_GAINS_STATUS</a></span>
+</td>
+<td>
+</td>
+<td>
+</td></tr>
+<tr>
+<td><span id="Land.27s_status_elevated" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#Land.27s_status_elevated">Land's status elevated</a></span>
+</td>
+<td><span id="LAND_ELEVATED_STATUS" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#LAND_ELEVATED_STATUS">LAND_ELEVATED_STATUS</a></span>
+</td>
+<td>
+</td>
+<td>
+</td></tr>
+<tr>
+<td><span id="Masterpiece_crafted" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#Masterpiece_crafted">Masterpiece crafted</a></span>
+</td>
+<td><span id="MASTERPIECE_CRAFTED" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#MASTERPIECE_CRAFTED">MASTERPIECE_CRAFTED</a></span>
+</td>
+<td><span style="color: #12FECF; font-size: 12.5px; font-family: &#39;fixedsys&#39;, &#39;IBM Plex Mono Medium&#39;, &#39;Consolas&#39;, monospace; background: #000000">Fikod Razulban has created a masterpiece ☼Juwog Minedscratch's forgotten beast silk cloth☼</span>
+</td>
+<td>
+</td></tr>
+<tr>
+<td><span id="Masterpiece_defaced" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#Masterpiece_defaced">Masterpiece defaced</a></span>
+</td>
+<td><span id="ARTWORK_DEFACED" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#ARTWORK_DEFACED">ARTWORK_DEFACED</a></span>
+</td>
+<td><span style="color: #FF113A; font-size: 12.5px; font-family: &#39;fixedsys&#39;, &#39;IBM Plex Mono Medium&#39;, &#39;Consolas&#39;, monospace; background: #000000">A foolish builder defaced a Edëm Stinzas!</span>
+</td>
+<td>A <a href="/index.php/Masterwork" class="mw-redirect" title="Masterwork">masterwork</a> was destroyed
+</td></tr>
+<tr>
+<td><span id="Animal_trained" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#Animal_trained">Animal trained</a></span>
+</td>
+<td><span id="ANIMAL_TRAINED" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#ANIMAL_TRAINED">ANIMAL_TRAINED</a></span>
+</td>
+<td><span style="color: #13FD65; font-size: 12.5px; font-family: &#39;fixedsys&#39;, &#39;IBM Plex Mono Medium&#39;, &#39;Consolas&#39;, monospace; background: #000000">An animal has become a Stray war Dog.</span>
+</td>
+<td>
+</td></tr>
+<tr>
+<td><span id="Masterful_dye" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#Masterful_dye">Masterful dye</a></span>
+</td>
+<td><span id="DYED_MASTERPIECE" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#DYED_MASTERPIECE">DYED_MASTERPIECE</a></span>
+</td>
+<td>
+</td>
+<td>An item has been <a href="/index.php/Masterwork" class="mw-redirect" title="Masterwork">masterfully</a> <a href="/index.php/Dyer" title="Dyer">dyed</a>
+</td></tr>
+<tr>
+<td><span id="Masterwork_food" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#Masterwork_food">Masterwork food</a></span>
+</td>
+<td><span id="COOKED_MASTERPIECE" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#COOKED_MASTERPIECE">COOKED_MASTERPIECE</a></span>
+</td>
+<td><span style="color: #12FECF; font-size: 12.5px; font-family: &#39;fixedsys&#39;, &#39;IBM Plex Mono Medium&#39;, &#39;Consolas&#39;, monospace; background: #000000">Atír Sigunzlir has cooked a masterful meal!</span>
+</td>
+<td>Cooking a <a href="/index.php/Masterwork" class="mw-redirect" title="Masterwork">masterful</a> <a href="/index.php/Prepared_meal" class="mw-redirect" title="Prepared meal">meal</a>
+</td></tr>
+<tr>
+<td><span id="Mandate_ends" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#Mandate_ends">Mandate ends</a></span>
+</td>
+<td><span id="MANDATE_ENDS" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#MANDATE_ENDS">MANDATE_ENDS</a></span>
+</td>
+<td><span style="color: #12FECF; font-size: 12.5px; font-family: &#39;fixedsys&#39;, &#39;IBM Plex Mono Medium&#39;, &#39;Consolas&#39;, monospace; background: #000000"> Medtob Aludineth, mayor has ended a mandate.</span>
+</td>
+<td>A <a href="/index.php/Noble" title="Noble">noble</a> ended a <a href="/index.php/Mandate" title="Mandate">mandate</a>
+</td></tr>
+<tr>
+<td>
+</td>
+<td><span id="SLOWDOWN_ENDS" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#SLOWDOWN_ENDS">SLOWDOWN_ENDS</a></span>
+</td>
+<td>
+</td>
+<td>
+</td></tr>
+<tr>
+<td><span id="Diplomat_bids_farewell" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#Diplomat_bids_farewell">Diplomat bids farewell</a></span>
+</td>
+<td><span id="FAREWELL_HELPER" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#FAREWELL_HELPER">FAREWELL_HELPER</a></span>
+</td>
+<td>
+</td>
+<td>
+</td></tr>
+<tr>
+<td><span id="Election" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#Election">Election</a></span>
+</td>
+<td><span id="ELECTION_RESULTS" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#ELECTION_RESULTS">ELECTION_RESULTS</a></span>
+</td>
+<td>
+</td>
+<td>
+</td></tr>
+<tr>
+<td><span id="Site_located" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#Site_located">Site located</a></span>
+</td>
+<td><span id="SITE_PRESENT" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#SITE_PRESENT">SITE_PRESENT</a></span>
+</td>
+<td>
+</td>
+<td>A site already exists at the location you are trying to embark to
+</td></tr>
+<tr>
+<td><span id="Construction_suspended" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#Construction_suspended">Construction suspended</a></span>
+</td>
+<td><span id="CONSTRUCTION_SUSPENDED" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#CONSTRUCTION_SUSPENDED">CONSTRUCTION_SUSPENDED</a></span>
+</td>
+<td>
+</td>
+<td>Construction of a <a href="/index.php/Building" title="Building">building</a> was suspended
+</td></tr>
+<tr>
+<td><span id="Machine_link_suspended" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#Machine_link_suspended">Machine link suspended</a></span>
+</td>
+<td><span id="LINKAGE_SUSPENDED" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#LINKAGE_SUSPENDED">LINKAGE_SUSPENDED</a></span>
+</td>
+<td>
+</td>
+<td>
+</td></tr>
+<tr>
+<td><span id="Work_order_completed" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#Work_order_completed">Work order completed</a></span>
+</td>
+<td><span id="QUOTA_FILLED" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#QUOTA_FILLED">QUOTA_FILLED</a></span>
+</td>
+<td>
+</td>
+<td>A <a href="/index.php/Manager" title="Manager">work order</a> was completed
+</td></tr>
+<tr>
+<td><span id="Job_overwritten" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#Job_overwritten">Job overwritten</a></span>
+</td>
+<td><span id="JOB_OVERWRITTEN" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#JOB_OVERWRITTEN">JOB_OVERWRITTEN</a></span>
+</td>
+<td>
+</td>
+<td>
+</td></tr>
+<tr>
+<td><span id="No_fish_to_catch" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#No_fish_to_catch">No fish to catch</a></span>
+</td>
+<td><span id="NOTHING_TO_CATCH_IN_WATER" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#NOTHING_TO_CATCH_IN_WATER">NOTHING_TO_CATCH_IN_WATER</a></span>
+</td>
+<td><span style="color: #D79B2D; font-size: 12.5px; font-family: &#39;fixedsys&#39;, &#39;IBM Plex Mono Medium&#39;, &#39;Consolas&#39;, monospace; background: #000000">There is nothing to catch in the river.</span>
+</td>
+<td>
+</td></tr>
+<tr>
+<td><span id="Demand_forgotten" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#Demand_forgotten">Demand forgotten</a></span>
+</td>
+<td><span id="DEMAND_FORGOTTEN" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#DEMAND_FORGOTTEN">DEMAND_FORGOTTEN</a></span>
+</td>
+<td>
+</td>
+<td>
+</td></tr>
+<tr>
+<td><span id="New_demand" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#New_demand">New demand</a></span>
+</td>
+<td><span id="NEW_DEMAND" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#NEW_DEMAND">NEW_DEMAND</a></span>
+</td>
+<td>
+</td>
+<td>
+</td></tr>
+<tr>
+<td><span id="New_mandate" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#New_mandate">New mandate</a></span>
+</td>
+<td><span id="NEW_MANDATE" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#NEW_MANDATE">NEW_MANDATE</a></span>
+</td>
+<td><span style="color: #12FECF; font-size: 12.5px; font-family: &#39;fixedsys&#39;, &#39;IBM Plex Mono Medium&#39;, &#39;Consolas&#39;, monospace; background: #000000">Medtob Aludineth, mayor has imposed a ban on certain exports.</span>
+</td>
+<td>
+</td></tr>
+<tr>
+<td>
+</td>
+<td><span id="PRICES_ALTERED" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#PRICES_ALTERED">PRICES_ALTERED</a></span>
+</td>
+<td>
+</td>
+<td>
+</td></tr>
+<tr>
+<td><span id="Local_resident_creature_named" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#Local_resident_creature_named">Local resident creature named</a></span>
+</td>
+<td><span id="NAMED_RESIDENT_CREATURE" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#NAMED_RESIDENT_CREATURE">NAMED_RESIDENT_CREATURE</a></span>
+</td>
+<td>
+</td>
+<td>
+</td></tr>
+<tr>
+<td><span id="Somebody_grows_up" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#Somebody_grows_up">Somebody grows up</a></span>
+</td>
+<td><span id="SOMEBODY_GROWS_UP" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#SOMEBODY_GROWS_UP">SOMEBODY_GROWS_UP</a></span>
+</td>
+<td>
+</td>
+<td>Somebody has grown up
+</td></tr>
+<tr>
+<td>
+</td>
+<td><span id="GUILD_REQUEST_TAKEN" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#GUILD_REQUEST_TAKEN">GUILD_REQUEST_TAKEN</a></span>
+</td>
+<td>
+</td>
+<td>
+</td></tr>
+<tr>
+<td>
+</td>
+<td><span id="GUILD_WAGES_CHANGED" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#GUILD_WAGES_CHANGED">GUILD_WAGES_CHANGED</a></span>
+</td>
+<td>
+</td>
+<td>
+</td></tr>
+<tr>
+<td>
+</td>
+<td><span id="NEW_WORK_MANDATE" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#NEW_WORK_MANDATE">NEW_WORK_MANDATE</a></span>
+</td>
+<td>
+</td>
+<td>
+</td></tr>
+<tr>
+<td><span id="Citizen_becomes_soldier" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#Citizen_becomes_soldier">Citizen becomes soldier</a></span>
+</td>
+<td><span id="CITIZEN_BECOMES_SOLDIER" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#CITIZEN_BECOMES_SOLDIER">CITIZEN_BECOMES_SOLDIER</a></span>
+</td>
+<td>
+</td>
+<td>Shown when dwarves assume soldier role, for standing orders or direct orders
+</td></tr>
+<tr>
+<td><span id="Citizen_becomes_civilian" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#Citizen_becomes_civilian">Citizen becomes civilian</a></span>
+</td>
+<td><span id="CITIZEN_BECOMES_NONSOLDIER" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#CITIZEN_BECOMES_NONSOLDIER">CITIZEN_BECOMES_NONSOLDIER</a></span>
+</td>
+<td>
+</td>
+<td>Shown when soldier dwarves no longer have active military orders, and return to civilian life
+</td></tr>
+<tr>
+<td><span id="Party_organized" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#Party_organized">Party organized</a></span>
+</td>
+<td><span id="PARTY_ORGANIZED" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#PARTY_ORGANIZED">PARTY_ORGANIZED</a></span>
+</td>
+<td>
+</td>
+<td>
+</td></tr>
+<tr>
+<td><span id="Trantrum_.28possessed_by_ghost.29" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#Trantrum_.28possessed_by_ghost.29">Trantrum (possessed by ghost)</a></span>
+</td>
+<td><span id="POSSESSED_TANTRUM" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#POSSESSED_TANTRUM">POSSESSED_TANTRUM</a></span>
+</td>
+<td>
+</td>
+<td>A dwarf possessed by a <a href="/index.php/Ghost" title="Ghost">ghost</a> is throwing a <a href="/index.php/Tantrum" class="mw-redirect" title="Tantrum">tantrum</a>
+</td></tr>
+<tr>
+<td><span id="Building_toppled_by_ghost" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#Building_toppled_by_ghost">Building toppled by ghost</a></span>
+</td>
+<td><span id="BUILDING_TOPPLED_BY_GHOST" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#BUILDING_TOPPLED_BY_GHOST">BUILDING_TOPPLED_BY_GHOST</a></span>
+</td>
+<td>
+</td>
+<td>A building was toppled by a <a href="/index.php/Ghost" title="Ghost">ghost</a>
+</td></tr>
+<tr>
+<td><span id="Masterwork_improvement" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#Masterwork_improvement">Masterwork improvement</a></span>
+</td>
+<td><span id="MASTERFUL_IMPROVEMENT" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#MASTERFUL_IMPROVEMENT">MASTERFUL_IMPROVEMENT</a></span>
+</td>
+<td>
+</td>
+<td>An item has been <a href="/index.php/Masterwork" class="mw-redirect" title="Masterwork">masterfully</a> decorated
+</td></tr>
+<tr>
+<td><span id="Masterwork_engraving" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#Masterwork_engraving">Masterwork engraving</a></span>
+</td>
+<td><span id="MASTERPIECE_ENGRAVING" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#MASTERPIECE_ENGRAVING">MASTERPIECE_ENGRAVING</a></span>
+</td>
+<td>
+</td>
+<td>A <a href="/index.php/Masterwork" class="mw-redirect" title="Masterwork">masterpiece</a> <a href="/index.php/Engraving" title="Engraving">engraving</a> was created
+</td></tr>
+<tr>
+<td><span id="Wedding" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#Wedding">Wedding</a></span>
+</td>
+<td><span id="MARRIAGE" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#MARRIAGE">MARRIAGE</a></span>
+</td>
+<td>
+</td>
+<td>
+</td></tr>
+<tr>
+<td>
+</td>
+<td><span id="NO_MARRIAGE_CELEBRATION" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#NO_MARRIAGE_CELEBRATION">NO_MARRIAGE_CELEBRATION</a></span>
+</td>
+<td>
+</td>
+<td>
+</td></tr>
+<tr>
+<td><span id="Beast_guzzles_drink" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#Beast_guzzles_drink">Beast guzzles drink</a></span>
+</td>
+<td><span id="CURIOUS_GUZZLER" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#CURIOUS_GUZZLER">CURIOUS_GUZZLER</a></span>
+</td>
+<td>
+</td>
+<td>An animal drank stockpiled <a href="/index.php/Booze" class="mw-redirect" title="Booze">booze</a>
+</td></tr>
+<tr>
+<td><span id="Clear_weather" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#Clear_weather">Clear weather</a></span>
+</td>
+<td><span id="WEATHER_BECOMES_CLEAR" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#WEATHER_BECOMES_CLEAR">WEATHER_BECOMES_CLEAR</a></span>
+</td>
+<td><span style="color: #C0C0C0; font-size: 12.5px; font-family: &#39;fixedsys&#39;, &#39;IBM Plex Mono Medium&#39;, &#39;Consolas&#39;, monospace; background: #000000">The weather has cleared.</span>
+</td>
+<td>
+</td></tr>
+<tr>
+<td><span id="Snow" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#Snow">Snow</a></span>
+</td>
+<td><span id="WEATHER_BECOMES_SNOW" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#WEATHER_BECOMES_SNOW">WEATHER_BECOMES_SNOW</a></span>
+</td>
+<td><span style="color: #FFFFFF; font-size: 12.5px; font-family: &#39;fixedsys&#39;, &#39;IBM Plex Mono Medium&#39;, &#39;Consolas&#39;, monospace; background: #000000">A snow storm has come.</span>
+</td>
+<td>
+</td></tr>
+<tr>
+<td><span id="Rain" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#Rain">Rain</a></span>
+</td>
+<td><span id="WEATHER_BECOMES_RAIN" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#WEATHER_BECOMES_RAIN">WEATHER_BECOMES_RAIN</a></span>
+</td>
+<td><span style="color: #8C66FF; font-size: 12.5px; font-family: &#39;fixedsys&#39;, &#39;IBM Plex Mono Medium&#39;, &#39;Consolas&#39;, monospace; background: #000000">It has started raining.</span>
+</td>
+<td>
+</td></tr>
+<tr>
+<td><span id="Wet_season" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#Wet_season">Wet season</a></span>
+</td>
+<td><span id="SEASON_WET" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#SEASON_WET">SEASON_WET</a></span>
+</td>
+<td>
+</td>
+<td>
+</td></tr>
+<tr>
+<td><span id="Dry_season" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#Dry_season">Dry season</a></span>
+</td>
+<td><span id="SEASON_DRY" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#SEASON_DRY">SEASON_DRY</a></span>
+</td>
+<td>
+</td>
+<td>
+</td></tr>
+<tr>
+<td><span id="Spring" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#Spring">Spring</a></span>
+</td>
+<td><span id="SEASON_SPRING" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#SEASON_SPRING">SEASON_SPRING</a></span>
+</td>
+<td><span style="color: #13FD65; font-size: 12.5px; font-family: &#39;fixedsys&#39;, &#39;IBM Plex Mono Medium&#39;, &#39;Consolas&#39;, monospace; background: #000000">Spring has arrived!</span>
+</td>
+<td rowspan="4">Change of a season
+</td></tr>
+<tr>
+<td><span id="Summer" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#Summer">Summer</a></span>
+</td>
+<td><span id="SEASON_SUMMER" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#SEASON_SUMMER">SEASON_SUMMER</a></span>
+</td>
+<td><span style="color: #FFE111; font-size: 12.5px; font-family: &#39;fixedsys&#39;, &#39;IBM Plex Mono Medium&#39;, &#39;Consolas&#39;, monospace; background: #000000">It is now summer.</span>
+</td></tr>
+<tr>
+<td><span id="Autumn" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#Autumn">Autumn</a></span>
+</td>
+<td><span id="SEASON_AUTUMN" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#SEASON_AUTUMN">SEASON_AUTUMN</a></span>
+</td>
+<td><span style="color: #FF7111; font-size: 12.5px; font-family: &#39;fixedsys&#39;, &#39;IBM Plex Mono Medium&#39;, &#39;Consolas&#39;, monospace; background: #000000">Autumn has come.</span>
+</td></tr>
+<tr>
+<td><span id="Winter" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#Winter">Winter</a></span>
+</td>
+<td><span id="SEASON_WINTER" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#SEASON_WINTER">SEASON_WINTER</a></span>
+</td>
+<td><span style="color: #FFFFFF; font-size: 12.5px; font-family: &#39;fixedsys&#39;, &#39;IBM Plex Mono Medium&#39;, &#39;Consolas&#39;, monospace; background: #000000">Winter is here.</span>
+</td></tr>
+<tr>
+<td><span id="Guest_arrives" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#Guest_arrives">Guest arrives</a></span>
+</td>
+<td><span id="GUEST_ARRIVAL" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#GUEST_ARRIVAL">GUEST_ARRIVAL</a></span>
+</td>
+<td><span style="color: #13FD65; font-size: 12.5px; font-family: &#39;fixedsys&#39;, &#39;IBM Plex Mono Medium&#39;, &#39;Consolas&#39;, monospace; background: #000000">Vusdom Ilerane, Human Spearman is visiting.</span>
+</td>
+<td>Arrival of visitors, and also squads returning from missions.
+</td></tr>
+<tr>
+<td><span id="You_cannot_speak" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#You_cannot_speak">You cannot speak</a></span>
+</td>
+<td><span id="CANNOT_SPEAK" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#CANNOT_SPEAK">CANNOT_SPEAK</a></span>
+</td>
+<td><span style="color: #D79B2D; font-size: 12.5px; font-family: &#39;fixedsys&#39;, &#39;IBM Plex Mono Medium&#39;, &#39;Consolas&#39;, monospace; background: #000000">A troglodyte cannot speak.</span>
+</td>
+<td>When playing adventure mode as a creature that doesn't speak.
+</td></tr>
+<tr>
+<td><span id="Research_breakthrough" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#Research_breakthrough">Research breakthrough</a></span>
+</td>
+<td><span id="RESEARCH_BREAKTHROUGH" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#RESEARCH_BREAKTHROUGH">RESEARCH_BREAKTHROUGH</a></span>
+</td>
+<td>
+</td>
+<td>
+</td></tr>
+<tr>
+<td><span id="Your_order_delivered" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#Your_order_delivered">Your order delivered</a></span>
+</td>
+<td><span id="SERVICE_ORDER_DELIVERY" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#SERVICE_ORDER_DELIVERY">SERVICE_ORDER_DELIVERY</a></span>
+</td>
+<td>
+</td>
+<td>
+</td></tr>
+<tr>
+<td><span id="You_cannot_perform" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#You_cannot_perform">You cannot perform</a></span>
+</td>
+<td><span id="PERFORMANCE_START_FAILURE" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#PERFORMANCE_START_FAILURE">PERFORMANCE_START_FAILURE</a></span>
+</td>
+<td>
+</td>
+<td>
+</td></tr>
+<tr>
+<td><span id="Begin_activity" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#Begin_activity">Begin activity</a></span>
+</td>
+<td><span id="BEGIN_ACTIVITY" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#BEGIN_ACTIVITY">BEGIN_ACTIVITY</a></span>
+</td>
+<td>
+</td>
+<td>
+</td></tr>
+<tr>
+<td><span id="Activity_ongoing" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#Activity_ongoing">Activity ongoing</a></span>
+</td>
+<td><span id="MIDDLE_OF_ACTIVITY" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#MIDDLE_OF_ACTIVITY">MIDDLE_OF_ACTIVITY</a></span>
+</td>
+<td>
+</td>
+<td>
+</td></tr>
+<tr>
+<td><span id="Activity_section_change" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#Activity_section_change">Activity section change</a></span>
+</td>
+<td><span id="ACTIVITY_SECTION_CHANGE" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#ACTIVITY_SECTION_CHANGE">ACTIVITY_SECTION_CHANGE</a></span>
+</td>
+<td>
+</td>
+<td>
+</td></tr>
+<tr>
+<td><span id="Activity_end" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#Activity_end">Activity end</a></span>
+</td>
+<td><span id="CONCLUDE_ACTIVITY" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#CONCLUDE_ACTIVITY">CONCLUDE_ACTIVITY</a></span>
+</td>
+<td>
+</td>
+<td>
+</td></tr>
+<tr>
+<td><span id="Learned_written_content" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#Learned_written_content">Learned written content</a></span>
+</td>
+<td><span id="LEARNED_WRITTEN_CONTENT" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#LEARNED_WRITTEN_CONTENT">LEARNED_WRITTEN_CONTENT</a></span>
+</td>
+<td>
+</td>
+<td>
+</td></tr>
+<tr>
+<td><span id="Learned_art_form" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#Learned_art_form">Learned art form</a></span>
+</td>
+<td><span id="LEARNED_ART_FORM" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#LEARNED_ART_FORM">LEARNED_ART_FORM</a></span>
+</td>
+<td>
+</td>
+<td>
+</td></tr>
+<tr>
+<td><span id="Performance_quality" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#Performance_quality">Performance quality</a></span>
+</td>
+<td><span id="PERFORMER_UPDATE" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#PERFORMER_UPDATE">PERFORMER_UPDATE</a></span>
+</td>
+<td>
+</td>
+<td>
+</td></tr>
+<tr>
+<td><span id="Building_destroyed.2Ftoppled" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#Building_destroyed.2Ftoppled">Building destroyed/toppled</a></span>
+</td>
+<td><span id="BUILDING_DESTROYED_OR_TOPPLED" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#BUILDING_DESTROYED_OR_TOPPLED">BUILDING_DESTROYED_OR_TOPPLED</a></span>
+</td>
+<td>
+</td>
+<td>A <a href="/index.php/Creature" title="Creature">creature</a> destroyed a <a href="/index.php/Building" title="Building">building</a>
+</td></tr>
+<tr>
+<td><span id="Cursed_by_deity" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#Cursed_by_deity">Cursed by deity</a></span>
+</td>
+<td><span id="DEITY_CURSE" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#DEITY_CURSE">DEITY_CURSE</a></span>
+</td>
+<td>
+</td>
+<td>Being cursed by a <a href="/index.php/Deity" title="Deity">deity</a>
+</td></tr>
+<tr>
+<td><span id="Composition_complete" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#Composition_complete">Composition complete</a></span>
+</td>
+<td><span id="COMPOSITION_COMPLETE" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#COMPOSITION_COMPLETE">COMPOSITION_COMPLETE</a></span>
+</td>
+<td>
+</td>
+<td>
+</td></tr>
+<tr>
+<td><span id="Composition_failed" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#Composition_failed">Composition failed</a></span>
+</td>
+<td><span id="COMPOSITION_FAILED" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#COMPOSITION_FAILED">COMPOSITION_FAILED</a></span>
+</td>
+<td>
+</td>
+<td>
+</td></tr>
+<tr>
+<td><span id="New_apprenticeship" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#New_apprenticeship">New apprenticeship</a></span>
+</td>
+<td><span id="NEW_APPRENTICESHIP" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#NEW_APPRENTICESHIP">NEW_APPRENTICESHIP</a></span>
+</td>
+<td>
+</td>
+<td>
+</td></tr>
+<tr>
+<td><span id="Petition_ignored" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#Petition_ignored">Petition ignored</a></span>
+</td>
+<td><span id="PETITION_IGNORED" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#PETITION_IGNORED">PETITION_IGNORED</a></span>
+</td>
+<td><span style="color: #FF7111; font-size: 12.5px; font-family: &#39;fixedsys&#39;, &#39;IBM Plex Mono Medium&#39;, &#39;Consolas&#39;, monospace; background: #000000">The petition of Vusdom Ilerane, Human Spearman has been ignored.</span>
+</td>
+<td>
+</td></tr>
+<tr>
+<td><span id="Cannot_chop_tree" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#Cannot_chop_tree">Cannot chop tree</a></span>
+</td>
+<td><span id="CANNOT_CHOP_TREE" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#CANNOT_CHOP_TREE">CANNOT_CHOP_TREE</a></span>
+</td>
+<td><span style="color: #FFE111; font-size: 12.5px; font-family: &#39;fixedsys&#39;, &#39;IBM Plex Mono Medium&#39;, &#39;Consolas&#39;, monospace; background: #000000">You cannot fell trees in the arena.</span>
+</td>
+<td>
+</td></tr>
+<tr>
+<td><span id="Tree_chopped" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#Tree_chopped">Tree chopped</a></span>
+</td>
+<td><span id="CHOP_TREE" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#CHOP_TREE">CHOP_TREE</a></span>
+</td>
+<td>
+</td>
+<td>Chopping <a href="/index.php/Tree" title="Tree">trees</a> in <a href="/index.php/Adventure_mode" class="mw-redirect" title="Adventure mode">adventure mode</a>
+</td></tr>
+<tr>
+<td><span id="You_cannot_construct_here" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#You_cannot_construct_here">You cannot construct here</a></span>
+</td>
+<td><span id="CANNOT_CONSTRUCT" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#CANNOT_CONSTRUCT">CANNOT_CONSTRUCT</a></span>
+</td>
+<td><span style="color: #FFE111; font-size: 12.5px; font-family: &#39;fixedsys&#39;, &#39;IBM Plex Mono Medium&#39;, &#39;Consolas&#39;, monospace; background: #000000">You cannot construct at this site.</span>
+</td>
+<td>
+</td></tr>
+<tr>
+<td><span id="Rumor_spread_by_citizen" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#Rumor_spread_by_citizen">Rumor spread by citizen</a></span>
+</td>
+<td><span id="RUMOR_SPREAD" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#RUMOR_SPREAD">RUMOR_SPREAD</a></span>
+</td>
+<td>
+</td>
+<td>
+</td></tr>
+<tr>
+<td><span id="Visitor_shared_rumor.28s.29" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#Visitor_shared_rumor.28s.29">Visitor shared rumor(s)</a></span>
+</td>
+<td><span id="SERVICE_ORDER_RUMOR_RECEIVED" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#SERVICE_ORDER_RUMOR_RECEIVED">SERVICE_ORDER_RUMOR_RECEIVED</a></span>
+</td>
+<td>
+</td>
+<td>
+</td></tr>
+<tr>
+<td><span id="Returning_soldiers_bring_rumor.28s.29" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#Returning_soldiers_bring_rumor.28s.29">Returning soldiers bring rumor(s)</a></span>
+</td>
+<td><span id="RETURNING_RUMOR_RECEIVED" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#RETURNING_RUMOR_RECEIVED">RETURNING_RUMOR_RECEIVED</a></span>
+</td>
+<td>
+</td>
+<td>
+</td></tr>
+<tr>
+<td><span id="New_site_founded_nearby" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#New_site_founded_nearby">New site founded nearby</a></span>
+</td>
+<td><span id="NEW_HOLDING" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#NEW_HOLDING">NEW_HOLDING</a></span>
+</td>
+<td>
+</td>
+<td>
+</td></tr>
+<tr>
+<td><span id="Nearby_site_linked_economically" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#Nearby_site_linked_economically">Nearby site linked economically</a></span>
+</td>
+<td><span id="NEW_MARKET_LINK" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#NEW_MARKET_LINK">NEW_MARKET_LINK</a></span>
+</td>
+<td>
+</td>
+<td>
+</td></tr>
+<tr>
+<td><span id="You_given_emergency_tactical_control" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#You_given_emergency_tactical_control">You given emergency tactical control</a></span>
+</td>
+<td><span id="EMERGENCY_TACTICAL_CONTROL" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#EMERGENCY_TACTICAL_CONTROL">EMERGENCY_TACTICAL_CONTROL</a></span>
+</td>
+<td>
+</td>
+<td>
+</td></tr>
+<tr>
+<td><span id="Agreement_satisfied" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#Agreement_satisfied">Agreement satisfied</a></span>
+</td>
+<td><span id="AGREEMENT_SATISFIED" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#AGREEMENT_SATISFIED">AGREEMENT_SATISFIED</a></span>
+</td>
+<td>
+</td>
+<td>
+</td></tr>
+<tr>
+<td><span id="Priesthood_needs_recognized" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#Priesthood_needs_recognized">Priesthood needs recognized</a></span>
+</td>
+<td><span id="AGREEMENT_WARNING" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#AGREEMENT_WARNING">AGREEMENT_WARNING</a></span>
+</td>
+<td>
+</td>
+<td>
+</td></tr>
+<tr>
+<td><span id="Agreement_abandoned" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#Agreement_abandoned">Agreement abandoned</a></span>
+</td>
+<td><span id="AGREEMENT_ABANDONED" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#AGREEMENT_ABANDONED">AGREEMENT_ABANDONED</a></span>
+</td>
+<td>
+</td>
+<td>
+</td></tr>
+<tr>
+<td><span id="Guild_founded" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#Guild_founded">Guild founded</a></span>
+</td>
+<td><span id="NEW_GUILD" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#NEW_GUILD">NEW_GUILD</a></span>
+</td>
+<td>
+</td>
+<td>
+</td></tr>
+<tr>
+<td><span id="Witnessed_item_handoff" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#Witnessed_item_handoff">Witnessed item handoff</a></span>
+</td>
+<td><span id="CRIME_WITNESS_HANDOFF" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#CRIME_WITNESS_HANDOFF">CRIME_WITNESS_HANDOFF</a></span>
+</td>
+<td>
+</td>
+<td>
+</td></tr>
+<tr>
+<td><span id="Witnessed_item_stolen" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#Witnessed_item_stolen">Witnessed item stolen</a></span>
+</td>
+<td><span id="CRIME_WITNESS_STOLEN" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#CRIME_WITNESS_STOLEN">CRIME_WITNESS_STOLEN</a></span>
+</td>
+<td>
+</td>
+<td>
+</td></tr>
+<tr>
+<td><span id="Witnessed_item_has_been_moved" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#Witnessed_item_has_been_moved">Witnessed item has been moved</a></span>
+</td>
+<td><span id="CRIME_WITNESS_ITEM_MOVED" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#CRIME_WITNESS_ITEM_MOVED">CRIME_WITNESS_ITEM_MOVED</a></span>
+</td>
+<td>
+</td>
+<td>
+</td></tr>
+<tr>
+<td><span id="Witnessed_item_missing" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#Witnessed_item_missing">Witnessed item missing</a></span>
+</td>
+<td><span id="CRIME_WITNESS_ITEM_MISSING" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#CRIME_WITNESS_ITEM_MISSING">CRIME_WITNESS_ITEM_MISSING</a></span>
+</td>
+<td>
+</td>
+<td>
+</td></tr>
+<tr>
+<td><span id="Mount" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#Mount">Mount</a></span>
+</td>
+<td><span id="MOUNT" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#MOUNT">MOUNT</a></span>
+</td>
+<td>
+</td>
+<td>
+</td></tr>
+<tr>
+<td><span id="You_cannot_mount" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#You_cannot_mount">You cannot mount</a></span>
+</td>
+<td><span id="CANNOT_MOUNT" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#CANNOT_MOUNT">CANNOT_MOUNT</a></span>
+</td>
+<td>
+</td>
+<td>
+</td></tr>
+<tr>
+<td><span id="You_failed_to_mount" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#You_failed_to_mount">You failed to mount</a></span>
+</td>
+<td><span id="FAILED_MOUNT" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#FAILED_MOUNT">FAILED_MOUNT</a></span>
+</td>
+<td>
+</td>
+<td>
+</td></tr>
+<tr>
+<td><span id="Dismount" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#Dismount">Dismount</a></span>
+</td>
+<td><span id="DISMOUNT" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#DISMOUNT">DISMOUNT</a></span>
+</td>
+<td>
+</td>
+<td>
+</td></tr>
+<tr>
+<td><span id="You_failed_to_dismount" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#You_failed_to_dismount">You failed to dismount</a></span>
+</td>
+<td><span id="FAILED_DISMOUNT" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#FAILED_DISMOUNT">FAILED_DISMOUNT</a></span>
+</td>
+<td>
+</td>
+<td>
+</td></tr>
+<tr>
+<td><span id="Diplomat_left_unhappy" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#Diplomat_left_unhappy">Diplomat left unhappy</a></span>
+</td>
+<td><span id="DIPLOMAT_LEFT_UNHAPPY" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#DIPLOMAT_LEFT_UNHAPPY">DIPLOMAT_LEFT_UNHAPPY</a></span>
+</td>
+<td>
+</td>
+<td>
+</td></tr>
+<tr>
+<td><span id="Embark" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#Embark">Embark</a></span>
+</td>
+<td><span id="EMBARK_MESSAGE" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#EMBARK_MESSAGE">EMBARK_MESSAGE</a></span>
+</td>
+<td>
+</td>
+<td>
+</td></tr>
+<tr>
+<td><span id="First_caravan" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#First_caravan">First caravan</a></span>
+</td>
+<td><span id="FIRST_CARAVAN_ARRIVAL" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#FIRST_CARAVAN_ARRIVAL">FIRST_CARAVAN_ARRIVAL</a></span>
+</td>
+<td>
+</td>
+<td>
+</td></tr>
+<tr>
+<td><span id="Monarch_arrived" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#Monarch_arrived">Monarch arrived</a></span>
+</td>
+<td><span id="MONARCH_ARRIVAL" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#MONARCH_ARRIVAL">MONARCH_ARRIVAL</a></span>
+</td>
+<td>
+</td>
+<td>
+</td></tr>
+<tr>
+<td><span id="Monarch_arrived_early" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#Monarch_arrived_early">Monarch arrived early</a></span>
+</td>
+<td><span id="HASTY_MONARCH" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#HASTY_MONARCH">HASTY_MONARCH</a></span>
+</td>
+<td>
+</td>
+<td>
+</td></tr>
+<tr>
+<td><span id="Satisfied_monarch" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#Satisfied_monarch">Satisfied monarch</a></span>
+</td>
+<td><span id="SATISFIED_MONARCH" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#SATISFIED_MONARCH">SATISFIED_MONARCH</a></span>
+</td>
+<td><span style="color: #FFFFFF; font-size: 12.5px; font-family: &#39;fixedsys&#39;, &#39;IBM Plex Mono Medium&#39;, &#39;Consolas&#39;, monospace; background: #000000">The queen Fikod Rîsennikot is satisfied with their position here. Everything is properly royal, properly furnished. And yet? A true Mountainhome must have a true throne! And a true ruler requires seven symbols, symbols not of this world. Mere steel will not suffice. Deeper. We must dig deeper.</span>
+</td>
+<td>
+</td></tr>
+<tr>
+<td><span id="Mountainhome_achieved" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#Mountainhome_achieved">Mountainhome achieved</a></span>
+</td>
+<td><span id="MOUNTAINHOME" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#MOUNTAINHOME">MOUNTAINHOME</a></span>
+</td>
+<td>
+</td>
+<td>You have acquired the status of mountainhome, the new dwarven capital
+</td></tr>
+<tr>
+<td><span id="No_food" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#No_food">No food</a></span>
+</td>
+<td><span id="FOOD_WARNING" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#FOOD_WARNING">FOOD_WARNING</a></span>
+</td>
+<td>
+</td>
+<td>
+</td></tr></tbody></table>
+<h2><span class="mw-headline" id="Bugs">Bugs</span></h2>
+<ul><li>Removing an <i>:option</i> from <code>DF<b>/prefs/</b>announcements.txt</code> will not disable that option if it is enabled by <code>DF<b>/data/init/</b>announcements.txt</code>; the workaround is to remove the option from both <code>DF<b>/prefs/</b>announcements.txt</code> and <code>DF<b>/data/init/</b>announcements.txt</code>.<span class=""><sup><a href="#Bugs">Bug</a>:<a rel="nofollow" class="external text" href="https://dwarffortressbugtracker.com/view.php?id=13034">13034</a></sup></span><sup style="font-size: 80%;">&#91;<a href="/index.php?title=Talk:Announcements.txt&amp;action=edit&amp;redlink=1" class="new" title="Talk:Announcements.txt (page does not exist)"><span title="is this what is causing this bug?">Verify</span></a>&#93;</sup></li></ul>
+<div style="clear:both;"></div>
+<table class="collapsible collapsed infobox gamedata" style="background: #fdfdfd; border: 1px solid #aaa; font-size: 88%; margin: 0 auto -1px; vertical-align: middle; width: 100%; max-width: 100em; table-layout: fixed;">
+<tbody><tr style="line-height: 1.5em;"><th scope="col" style="background: #cce6b3; padding: 0.25em 1em; text-align: center; display: table-cell;&#32;;"><div style="font-size: 114%; margin: 0 9em;"><a href="/index.php/Announcements.txt/raw" title="Announcements.txt/raw">Raws</a></div></th></tr>
+<tr style="line-height: 1.5em; text-align: left; display: table-cell;"><td><div style="overflow: auto;"><span class="gamedata-content" style="font-family: monospace; font-size:1.25em; white-space:pre;">
+BOX or DO_MEGA: the announcment will appear in a box and pause the game
+P or PAUSE: the announcement will cause the game to pause
+R or RECENTER: the announcement will cause the game to recenter (if possible)
+A_D or A_DISPLAY: the announcement will be displayed in the main adventure announcement log (and on screen)
+D_D or D_DISPLAY: the announcement will be displayed in the dwarf announcement alerts
+UCR or UNIT_COMBAT_REPORT: the announcement will be associated to the unit combat/hunting/sparring reports
+UCR_A or UNIT_COMBAT_REPORT_ALL_ACTIVE: the announcement will be associated to any active unit combat/hunting/sparring reports, but if there are no reports it will not create one
+ALERT: the announcement will cause the alert button to light up
+
+[REACHED_PEAK:A_D:D_D:BOX]
+[ERA_CHANGE:A_D:D_D:BOX]
+[ENDGAME_EVENT_1:A_D:D_D:BOX]
+[ENDGAME_EVENT_1B:A_D:D_D:BOX]
+[ENDGAME_EVENT_2:A_D:D_D:BOX]
+[FEATURE_DISCOVERY:A_D:D_D:BOX]
+[STRUCK_DEEP_METAL:A_D:D_D:BOX]
+[STRUCK_MINERAL:A_D:D_D]
+[STRUCK_ECONOMIC_MINERAL:A_D:D_D]
+[COMBAT_TWIST_WEAPON:A_D:UCR]
+[COMBAT_LET_ITEM_DROP:A_D:UCR]
+[COMBAT_START_CHARGE:A_D:UCR]
+[COMBAT_SURPRISE_CHARGE:A_D:UCR]
+[COMBAT_JUMP_DODGE_PROJ:A_D:UCR]
+[COMBAT_JUMP_DODGE_STRIKE:A_D:UCR]
+[COMBAT_DODGE:A_D:UCR]
+[COMBAT_COUNTERSTRIKE:A_D:UCR]
+[COMBAT_BLOCK:A_D:UCR]
+[COMBAT_PARRY:A_D:UCR]
+[COMBAT_CHARGE_COLLISION:A_D:UCR]
+[COMBAT_CHARGE_DEFENDER_TUMBLES:A_D:UCR]
+[COMBAT_CHARGE_DEFENDER_KNOCKED_OVER:A_D:UCR]
+[COMBAT_CHARGE_ATTACKER_TUMBLES:A_D:UCR]
+[COMBAT_CHARGE_ATTACKER_BOUNCE_BACK:A_D:UCR]
+[COMBAT_CHARGE_TANGLE_TOGETHER:A_D:UCR]
+[COMBAT_CHARGE_TANGLE_TUMBLE:A_D:UCR]
+[COMBAT_CHARGE_RUSH_BY:A_D:UCR]
+[COMBAT_CHARGE_MANAGE_STOP:A_D:UCR]
+[COMBAT_CHARGE_OBSTACLE_SLAM:A_D:UCR]
+[COMBAT_WRESTLE_LOCK:A_D:UCR]
+[COMBAT_WRESTLE_CHOKEHOLD:A_D:UCR]
+[COMBAT_WRESTLE_TAKEDOWN:A_D:UCR]
+[COMBAT_WRESTLE_THROW:A_D:UCR]
+[COMBAT_WRESTLE_RELEASE_LOCK:A_D:UCR]
+[COMBAT_WRESTLE_RELEASE_CHOKE:A_D:UCR]
+[COMBAT_WRESTLE_RELEASE_GRIP:A_D:UCR]
+[COMBAT_WRESTLE_STRUGGLE:A_D:UCR]
+[COMBAT_WRESTLE_RELEASE_LATCH:A_D:UCR]
+[COMBAT_WRESTLE_STRANGLE_KO:A_D:UCR]
+[COMBAT_WRESTLE_ADJUST_GRIP:A_D:UCR]
+[COMBAT_GRAB_TEAR:A_D:UCR]
+[COMBAT_STRIKE_DETAILS:A_D:UCR]
+[COMBAT_STRIKE_DETAILS_2:A_D:UCR]
+[COMBAT_EVENT_ENRAGED:A_D:UCR]
+[COMBAT_EVENT_STUCKIN:A_D:UCR]
+[COMBAT_EVENT_LATCH_BP:A_D:UCR]
+[COMBAT_EVENT_LATCH_GENERAL:A_D:UCR]
+[COMBAT_EVENT_PROPELLED_AWAY:A_D:UCR]
+[COMBAT_EVENT_KNOCKED_OUT:A_D:UCR]
+[COMBAT_EVENT_STUNNED:A_D:UCR]
+[COMBAT_EVENT_WINDED:A_D:UCR]
+[COMBAT_EVENT_NAUSEATED:A_D:UCR]
+[MIGRANT_ARRIVAL_NAMED:A_D:D_D]
+[MIGRANT_ARRIVAL:A_D:D_D]
+[DIG_CANCEL_WARM:A_D:D_D]
+[DIG_CANCEL_DAMP:A_D:D_D]
+[BEAST_AMBUSH:A_D:D_D:ALERT]
+[AMBUSH_DEFENDER:A_D:D_D:ALERT]
+[AMBUSH_RESIDENT:A_D:D_D:ALERT]
+[AMBUSH_HERO:A_D:D_D:BOX:ALERT]
+[AMBUSH_THIEF:A_D:D_D:ALERT]
+[AMBUSH_THIEF_SUPPORT_SKULKING:A_D:D_D:ALERT]
+[AMBUSH_THIEF_SUPPORT_NATURE:A_D:D_D:ALERT]
+[AMBUSH_THIEF_SUPPORT:A_D:D_D:ALERT]
+[AMBUSH_MISCHIEVOUS:A_D:D_D:ALERT]
+[AMBUSH_SNATCHER:A_D:D_D:ALERT]
+[AMBUSH_SNATCHER_SUPPORT:A_D:D_D:ALERT]
+[AMBUSH_AMBUSHER_NATURE:A_D:D_D:ALERT]
+[AMBUSH_AMBUSHER:A_D:D_D:ALERT]
+[AMBUSH_INJURED:A_D:D_D:ALERT]
+[AMBUSH_OTHER:A_D:D_D:ALERT]
+[AMBUSH_INCAPACITATED:A_D:D_D:ALERT]
+[CARAVAN_ARRIVAL:A_D:D_D:ALERT]
+[NOBLE_ARRIVAL:A_D:D_D]
+[D_MIGRANTS_ARRIVAL:A_D:D_D]
+[D_MIGRANT_ARRIVAL:A_D:D_D]
+[D_MIGRANT_ARRIVAL_DISCOURAGED:A_D:D_D]
+[D_NO_MIGRANT_ARRIVAL:A_D:D_D]
+[ANIMAL_TRAP_CATCH:A_D:D_D]
+[ANIMAL_TRAP_ROBBED:A_D:D_D]
+[MISCHIEF_LEVER:A_D:D_D]
+[MISCHIEF_PLATE:A_D:D_D]
+[MISCHIEF_CAGE:A_D:D_D]
+[MISCHIEF_CHAIN:A_D:D_D]
+[DIPLOMAT_ARRIVAL:A_D:D_D]
+[LIAISON_ARRIVAL:A_D:D_D]
+[TRADE_DIPLOMAT_ARRIVAL:A_D:D_D]
+[CAVE_COLLAPSE:A_D:D_D:ALERT]
+[BIRTH_CITIZEN:A_D:D_D]
+[BIRTH_ANIMAL:A_D:D_D]
+[BIRTH_WILD_ANIMAL:A_D:D_D]
+[STRANGE_MOOD:A_D:D_D]
+[MADE_ARTIFACT:A_D:D_D:BOX]
+[NAMED_ARTIFACT:A_D:D_D:BOX]
+[ITEM_ATTACHMENT:A_D:D_D]
+[VERMIN_CAGE_ESCAPE:A_D:D_D]
+[TRIGGER_WEB:A_D:D_D]
+[MOOD_BUILDING_CLAIMED:A_D:D_D]
+[ARTIFACT_BEGUN:A_D:D_D]
+[MEGABEAST_ARRIVAL:A_D:D_D:BOX]
+[WEREBEAST_ARRIVAL:A_D:D_D:BOX]
+[BERSERK_CITIZEN:A_D:D_D]
+[MAGMA_DEFACES_ENGRAVING:A_D:D_D]
+[ENGRAVING_MELTS:A_D:D_D]
+[MASTERPIECE_CONSTRUCTION:A_D:D_D]
+[MASTER_ARCHITECTURE_LOST:A_D:D_D]
+[MASTER_CONSTRUCTION_LOST:A_D:D_D]
+[ADV_AWAKEN:A_D:D_D]
+[ADV_SLEEP_INTERRUPTED:A_D:D_D]
+[ADV_REACTION_PRODUCTS:A_D:D_D]
+[CANCEL_JOB:A_D:D_D]
+[ADV_CREATURE_DEATH:A_D:D_D:UCR_A]
+[CITIZEN_DEATH:A_D:D_D:UCR_A:ALERT]
+[PET_DEATH:A_D:D_D:UCR_A]
+[FALL_OVER:A_D:UCR_A]
+[CAUGHT_IN_FLAMES:A_D:UCR_A]
+[CAUGHT_IN_WEB:A_D:UCR_A]
+[UNIT_PROJECTILE_SLAM_BLOW_APART:A_D:UCR_A]
+[UNIT_PROJECTILE_SLAM:A_D:UCR_A]
+[UNIT_PROJECTILE_SLAM_INTO_UNIT:A_D:UCR_A]
+[VOMIT:A_D:UCR_A]
+[LOSE_HOLD_OF_ITEM:A_D:UCR_A]
+[REGAIN_CONSCIOUSNESS:A_D:UCR_A]
+[FREE_FROM_WEB:A_D:UCR_A]
+[PARALYZED:A_D:UCR_A]
+[OVERCOME_PARALYSIS:A_D:UCR_A]
+[NOT_STUNNED:A_D:UCR_A]
+[EXHAUSTION:A_D:UCR_A]
+[PAIN_KO:A_D:UCR_A]
+[BREAK_GRIP:A_D:UCR_A]
+[NO_BREAK_GRIP:A_D:UCR_A]
+[BLOCK_FIRE:A_D:UCR_A]
+[BREATHE_FIRE:A_D:UCR_A]
+[SHOOT_WEB:A_D:UCR_A]
+[PULL_OUT_DROP:A_D:UCR_A]
+[STAND_UP:A_D:UCR_A]
+[MARTIAL_TRANCE:A_D:D_D]
+[MAT_BREATH:A_D:UCR_A]
+[NIGHT_ATTACK_STARTS:A_D:D_D:BOX]
+[NIGHT_ATTACK_ENDS:A_D:D_D:BOX]
+[NIGHT_ATTACK_TRAVEL:A_D:D_D]
+[GHOST_ATTACK:A_D:D_D:UCR_A]
+[TRAVEL_SITE_DISCOVERY:A_D:D_D:BOX]
+[TRAVEL_SITE_BUMP:A_D:D_D]
+[ADVENTURE_INTRO:BOX]
+[CREATURE_SOUND:A_D]
+[MECHANISM_SOUND:A_D]
+[CREATURE_STEALS_OBJECT:A_D:D_D]
+[FOUND_TRAP:A_D:D_D]
+[BODY_TRANSFORMATION:A_D:D_D]
+[INTERACTION_ACTOR:A_D:UCR]
+[INTERACTION_TARGET:A_D:UCR]
+[UNDEAD_ATTACK:A_D:D_D:BOX]
+[CITIZEN_MISSING:A_D:D_D:UCR_A:ALERT]
+[PET_MISSING:A_D:D_D:UCR_A]
+[STRANGE_RAIN_SNOW:A_D:D_D]
+[STRANGE_CLOUD:A_D:D_D]
+[SIMPLE_ANIMAL_ACTION:A_D]
+[FLOUNDER_IN_LIQUID:A_D]
+[TRAINING_DOWN_TO_SEMI_WILD:A_D:D_D]
+[TRAINING_FULL_REVERSION:A_D:D_D]
+[ANIMAL_TRAINING_KNOWLEDGE:A_D:D_D]
+[SKIP_ON_LIQUID:A_D:UCR_A]
+[DODGE_FLYING_OBJECT:A_D:UCR_A]
+[REGULAR_CONVERSATION:A_D]
+[CONFLICT_CONVERSATION:A_D:UCR_A]
+[FLAME_HIT:A_D:UCR]
+[EMBRACE:A_D]
+[BANDIT_EMPTY_CONTAINER:A_D]
+[BANDIT_GRAB_ITEM:A_D]
+[COMBAT_EVENT_ATTACK_INTERRUPTED:A_D:UCR]
+[COMBAT_WRESTLE_CATCH_ATTACK:A_D:UCR]
+[FAIL_TO_GRAB_SURFACE:A_D:UCR_A]
+[LOSE_HOLD_OF_SURFACE:A_D:UCR_A]
+[TRAVEL_COMPLAINT:A_D:D_D:BOX]
+[LOSE_EMOTION:A_D:UCR_A]
+[REORGANIZE_POSSESSIONS:A_D]
+[PUSH_ITEM:A_D:UCR_A]
+[DRAW_ITEM:A_D]
+[STRAP_ITEM:A_D]
+[GAIN_SITE_CONTROL:A_D:D_D:BOX]
+[FORT_POSITION_SUCCESSION:A_D:D_D:BOX]
+[STRESSED_CITIZEN:A_D:D_D]
+[CITIZEN_LOST_TO_STRESS:A_D:D_D]
+[CITIZEN_TANTRUM:A_D:D_D]
+[MOVED_OUT_OF_RANGE:A_D:D_D]
+[CANNOT_JUMP:A_D:D_D]
+[NO_TRACKS:A_D:D_D]
+[ALREADY_SEARCHED_AREA:A_D:D_D]
+[SEARCH_FOUND_SOMETHING:A_D:D_D]
+[SEARCH_FOUND_NOTHING:A_D:D_D]
+[NOTHING_TO_INTERACT:A_D:D_D]
+[NOTHING_TO_EXAMINE:A_D:D_D]
+[YOU_YIELDED:A_D:D_D]
+[YOU_UNYIELDED:A_D:D_D]
+[YOU_STRAP_ITEM:A_D:D_D]
+[YOU_DRAW_ITEM:A_D:D_D]
+[NO_GRASP_TO_DRAW_ITEM:A_D:D_D]
+[NO_ITEM_TO_STRAP:A_D:D_D]
+[NO_INV_TO_REMOVE:A_D:D_D]
+[NO_INV_TO_WEAR:A_D:D_D]
+[NO_INV_TO_EAT:A_D:D_D]
+[NO_INV_TO_CONTAIN:A_D:D_D]
+[NO_INV_TO_DROP:A_D:D_D]
+[NOTHING_TO_PICK_UP:A_D:D_D]
+[NO_INV_TO_THROW:A_D:D_D]
+[NO_INV_TO_FIRE:A_D:D_D]
+[CURRENT_SMELL:A_D:D_D]
+[CURRENT_WEATHER:A_D:D_D]
+[CURRENT_TEMPERATURE:A_D:D_D]
+[CURRENT_DATE:A_D:D_D]
+[NO_GRASP_FOR_PICKUP:A_D:D_D]
+[CANNOT_CLIMB:A_D:D_D]
+[CANNOT_STAND:A_D:D_D]
+[MUST_UNRETRACT_FIRST:A_D:D_D]
+[CANNOT_REST:A_D:D_D]
+[CANNOT_MAKE_CAMPFIRE:A_D:D_D]
+[MADE_CAMPFIRE:A_D:D_D]
+[CANNOT_SET_FIRE:A_D:D_D]
+[SET_FIRE:A_D:D_D]
+[DAWN_BREAKS:A_D:D_D]
+[NOON:A_D:D_D]
+[NIGHTFALL:A_D:D_D]
+[NO_INV_INTERACTION:A_D:D_D]
+[EMPTY_CONTAINER:A_D:D_D]
+[TAKE_OUT_OF_CONTAINER:A_D:D_D]
+[NO_CONTAINER_FOR_ITEM:A_D:D_D]
+[PUT_INTO_CONTAINER:A_D:D_D]
+[EAT_ITEM:A_D]
+[DRINK_ITEM:A_D]
+[CONSUME_FAILURE:A_D]
+[DROP_ITEM:A_D]
+[PICK_UP_ITEM:A_D]
+[YOU_BUILDING_INTERACTION:A_D:D_D]
+[YOU_ITEM_INTERACTION:A_D:D_D]
+[YOU_TEMPERATURE_EFFECTS:A_D:D_D]
+[RESOLVE_SHARED_ITEMS:A_D:UCR]
+[COUGH_BLOOD:A_D:D_D]
+[VOMIT_BLOOD:A_D:D_D]
+[POWER_LEARNED:A_D:D_D]
+[YOU_FEED_ON_SUCKEE:A_D:D_D]
+[PROFESSION_CHANGES:A_D:D_D]
+[RECRUIT_PROMOTED:A_D:D_D]
+[SOLDIER_BECOMES_MASTER:A_D:D_D]
+[MERCHANTS_UNLOADING:A_D:D_D]
+[MERCHANTS_NEED_DEPOT:A_D:D_D:ALERT]
+[MERCHANT_WAGONS_BYPASSED:A_D:D_D:ALERT]
+[MERCHANTS_LEAVING_SOON:A_D:D_D]
+[MERCHANTS_EMBARKED:A_D:D_D]
+[PET_LOSES_DEAD_OWNER:A_D:D_D]
+[PET_ADOPTS_OWNER:A_D:D_D]
+[VERMIN_BITE:A_D:D_D]
+[UNABLE_TO_COMPLETE_BUILDING:A_D:D_D]
+[JOBS_REMOVED_FROM_UNPOWERED_BUILDING:A_D:D_D]
+[CITIZEN_SNATCHED:A_D:D_D]
+[VERMIN_DISTURBED:A_D:D_D]
+[LAND_GAINS_STATUS:A_D:D_D]
+[LAND_ELEVATED_STATUS:A_D:D_D]
+[MASTERPIECE_CRAFTED:A_D:D_D]
+[ARTWORK_DEFACED:A_D:D_D]
+[ANIMAL_TRAINED:A_D:D_D]
+[DYED_MASTERPIECE:A_D:D_D]
+[COOKED_MASTERPIECE:A_D:D_D]
+[MANDATE_ENDS:A_D:D_D]
+[SLOWDOWN_ENDS:A_D:D_D]
+[FAREWELL_HELPER:A_D:D_D]
+[ELECTION_RESULTS:A_D:D_D]
+[SITE_PRESENT:A_D:D_D]
+[CONSTRUCTION_SUSPENDED:A_D:D_D]
+[LINKAGE_SUSPENDED:A_D:D_D]
+[QUOTA_FILLED:A_D:D_D]
+[JOB_OVERWRITTEN:A_D:D_D]
+[NOTHING_TO_CATCH_IN_WATER:A_D:D_D]
+[DEMAND_FORGOTTEN:A_D:D_D]
+[NEW_DEMAND:A_D:D_D]
+[NEW_MANDATE:A_D:D_D]
+[PRICES_ALTERED:A_D:D_D]
+[NAMED_RESIDENT_CREATURE:A_D:D_D]
+[SOMEBODY_GROWS_UP:A_D:D_D]
+[GUILD_REQUEST_TAKEN:A_D:D_D]
+[GUILD_WAGES_CHANGED:A_D:D_D]
+[NEW_WORK_MANDATE:A_D:D_D]
+[CITIZEN_BECOMES_SOLDIER:A_D:D_D]
+[CITIZEN_BECOMES_NONSOLDIER:A_D:D_D]
+[PARTY_ORGANIZED:A_D:D_D]
+[POSSESSED_TANTRUM:A_D:D_D]
+[BUILDING_TOPPLED_BY_GHOST:A_D:D_D]
+[MASTERFUL_IMPROVEMENT:A_D:D_D]
+[MASTERPIECE_ENGRAVING:A_D:D_D]
+[MARRIAGE:A_D:D_D]
+[NO_MARRIAGE_CELEBRATION:A_D:D_D]
+[CURIOUS_GUZZLER:A_D:D_D]
+[WEATHER_BECOMES_CLEAR:A_D:D_D]
+[WEATHER_BECOMES_SNOW:A_D:D_D]
+[WEATHER_BECOMES_RAIN:A_D:D_D]
+[SEASON_WET:A_D:D_D]
+[SEASON_DRY:A_D:D_D]
+[SEASON_SPRING:A_D:D_D]
+[SEASON_SUMMER:A_D:D_D]
+[SEASON_AUTUMN:A_D:D_D]
+[SEASON_WINTER:A_D:D_D]
+[GUEST_ARRIVAL:A_D:D_D]
+[CANNOT_SPEAK:A_D:D_D]
+[RESEARCH_BREAKTHROUGH:A_D:D_D]
+[SERVICE_ORDER_DELIVERY:A_D]
+[PERFORMANCE_START_FAILURE:A_D]
+[BEGIN_ACTIVITY:A_D]
+[MIDDLE_OF_ACTIVITY:A_D]
+[ACTIVITY_SECTION_CHANGE:A_D]
+[CONCLUDE_ACTIVITY:A_D]
+[LEARNED_WRITTEN_CONTENT:A_D]
+[LEARNED_ART_FORM:A_D]
+[PERFORMER_UPDATE:A_D]
+[BUILDING_DESTROYED_OR_TOPPLED:A_D:D_D]
+[DEITY_CURSE:A_D:D_D:BOX]
+[COMPOSITION_COMPLETE:A_D]
+[COMPOSITION_FAILED:A_D]
+[NEW_APPRENTICESHIP:A_D:D_D]
+[PETITION_IGNORED:A_D:D_D]
+[CANNOT_CHOP_TREE:A_D:D_D]
+[CHOP_TREE:A_D:D_D]
+[CANNOT_CONSTRUCT:A_D:D_D]
+[RUMOR_SPREAD:A_D:D_D]
+[SERVICE_ORDER_RUMOR_RECEIVED:A_D:D_D]
+[RETURNING_RUMOR_RECEIVED:A_D:D_D]
+[NEW_HOLDING:A_D:D_D:BOX]
+[NEW_MARKET_LINK:A_D:D_D:BOX]
+[EMERGENCY_TACTICAL_CONTROL:A_D:D_D:BOX]
+[AGREEMENT_SATISFIED:A_D:D_D]
+[AGREEMENT_WARNING:A_D:D_D]
+[AGREEMENT_ABANDONED:A_D:D_D]
+[NEW_GUILD:A_D:D_D]
+[CRIME_WITNESS_HANDOFF:A_D:D_D:BOX]
+[CRIME_WITNESS_STOLEN:A_D:D_D:BOX]
+[CRIME_WITNESS_ITEM_MOVED:A_D:D_D:BOX]
+[CRIME_WITNESS_ITEM_MISSING:A_D:D_D:BOX]
+[MOUNT:A_D:UCR]
+[CANNOT_MOUNT:A_D]
+[FAILED_MOUNT:A_D:UCR]
+[DISMOUNT:A_D:UCR]
+[FAILED_DISMOUNT:A_D:UCR]
+[DIPLOMAT_LEFT_UNHAPPY:A_D:D_D]
+[EMBARK_MESSAGE:BOX]
+[FIRST_CARAVAN_ARRIVAL:BOX]
+[MONARCH_ARRIVAL:A_D:D_D:BOX]
+[HASTY_MONARCH:A_D:D_D:BOX]
+[SATISFIED_MONARCH:A_D:D_D:BOX]
+[MOUNTAINHOME:A_D:D_D:BOX]
+[FOOD_WARNING:A_D:D_D:ALERT]
+</span></div></td></tr></tbody></table>
+<table class="collapsible autocollapse infobox" style="background: #fdfdfd; border: 1px solid #aaa; font-size: 88%; margin: 0 auto -1px; vertical-align: middle; width: 100%; max-width: 100em;"><tbody><tr style="line-height: 1.5em;"><th scope="col" colspan="2" style="background: #ccf; padding: 0.25em 1em; text-align: center; background-color: #f0eaff;;"><div class="plainlinks" style="float: left; padding-left: 0.4em; font-size: 70%; font-weight: normal; white-space: nowrap;"><a href="/index.php/Template:V50_files" title="Template:V50 files"><span title="View this template">V</span></a><span style="font-weight: bold; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;">&#160;·&#160;</span><a href="/index.php?title=Template_talk:V50_files&amp;action=edit&amp;redlink=1" class="new" title="Template talk:V50 files (page does not exist)"><span title="Discuss this template">T</span></a><span style="font-weight: bold; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;">&#160;·&#160;</span><a rel="nofollow" class="external text" href="https://dwarffortresswiki.org/index.php?title=Template:V50_files&amp;action=edit"><span title="Edit this template">E</span></a></div><div style="font-size: 114%; margin: 0 6em;">
+<a href="/index.php/Category:Files" title="Category:Files">Files</a></div></th></tr><tr style="line-height: 1.5em;"><th scope="row" style="background: #ddf; padding: 0.25em 1em; text-align: right; white-space: nowrap; width: 1%; background-color: #f0eaff;;&#32;;">Settings</th><td style="background: transparent; padding: 0; text-align: left;&#32;;"><div style="padding: 0em 0.25em">
+<a href="/index.php/Colors.txt" title="Colors.txt">colors.txt</a> • <a href="/index.php/Init.txt" title="Init.txt">init.txt</a> • <a href="/index.php/Interface.txt" title="Interface.txt">interface.txt</a></div></td></tr><tr style="line-height: 1.5em;"><th scope="row" style="background: #ddf; padding: 0.25em 1em; text-align: right; white-space: nowrap; width: 1%; background-color: #f0eaff;;&#32;;">Gameplay settings</th><td style="background: transparent; padding: 0; text-align: left;&#32;;"><div style="padding: 0em 0.25em">
+<a class="mw-selflink selflink">announcements.txt</a> • <a href="/index.php/D_init.txt" title="D init.txt">d_init.txt</a></div></td></tr><tr style="line-height: 1.5em;"><th scope="row" style="background: #ddf; padding: 0.25em 1em; text-align: right; white-space: nowrap; width: 1%; background-color: #f0eaff;;&#32;;">Log files</th><td style="background: transparent; padding: 0; text-align: left;&#32;;"><div style="padding: 0em 0.25em">
+<a href="/index.php/Errorlog.txt" title="Errorlog.txt">errorlog.txt</a> • <a href="/index.php/Gamelog.txt" title="Gamelog.txt">gamelog.txt</a> • <a href="/index.php/Map_rejection_log.txt" class="mw-redirect" title="Map rejection log.txt">map_rejection_log.txt</a></div></td></tr><tr style="line-height: 1.5em;"><th scope="row" style="background: #ddf; padding: 0.25em 1em; text-align: right; white-space: nowrap; width: 1%; background-color: #f0eaff;;&#32;;">Other</th><td style="background: transparent; padding: 0; text-align: left;&#32;;"><div style="padding: 0em 0.25em">
+<a href="/index.php/Arena.txt" class="mw-redirect" title="Arena.txt">arena.txt</a> • <a href="/index.php/Embark_profiles.txt" title="Embark profiles.txt">embark_profiles.txt</a> • <a href="/index.php/World_gen.txt" title="World gen.txt">world_gen.txt</a></div></td></tr></tbody></table></div>
