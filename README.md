@@ -59,14 +59,10 @@ Talk and User pages).
 
 ### Images
 
-Image files are not fetched by default — pages link to the live wiki for them.
-To pull down every image the mirrored pages reference (at the same 10s pace)
-and have `display/` point at the local copies instead:
-
-```sh
-./crawl.py images --push   # then:
-./crawl.py render
-```
+**This mirror deliberately does not include image files** — pages link to the
+live wiki for them. The crawler still records every referenced image path in
+`state/images.txt`, so the option stays open: `crawl.py images` would pull them
+down at the same 10s pace and repoint `display/` at the local copies.
 
 ## Layout details
 
