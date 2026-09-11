@@ -1,0 +1,6 @@
+# Mirrored content is machine-written; keep it out of language stats and
+# collapse it in diffs.
+mirror/** linguist-generated=true
+display/** linguist-generated=true
+state/*.jsonl -diff
+*.wiki linguist-language=Wikitext
