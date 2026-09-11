@@ -3,7 +3,7 @@
 
 # %s
 
-*[Source](https://dwarffortresswiki.org/index.php/%25s) &middot; revision 17821 &middot; retrieved 2026-09-11 &middot; [wikitext](../../mirror/wikitext/Main/%s.wiki)*
+*[Source](https://dwarffortresswiki.org/index.php/%25s) &middot; revision 17821 &middot; retrieved 2026-09-11 &middot; [wikitext](../../mirror/wikitext/Main/%25s.wiki)*
 
 ---
 Redirect to:
