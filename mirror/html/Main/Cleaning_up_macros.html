@@ -1,0 +1,52 @@
+<div class="mw-parser-output"><table class="metadata plainlinks ambox ambox-content" style="background-color:#fc9;" role="presentation">
+<tbody><tr><td class="mbox-image"><div style="width: 52px;"><a href="/index.php/File:Announce_migrant_icon.png" class="image"><img alt="Announce migrant icon.png" src="/images/5/5f/Announce_migrant_icon.png" decoding="async" width="32" height="32" /></a></div></td><td class="mbox-text" style=""><span class="mbox-text-span">This article was migrated from <a href="/index.php/DF2014:Cleaning_up_macros" title="DF2014:Cleaning up macros">DF2014:Cleaning up macros</a> and may be inaccurate for the current version of DF (v53.16). See <a href="/index.php/Dwarf_Fortress_Wiki:Version_migration" title="Dwarf Fortress Wiki:Version migration">this page</a> for more information.<span class="hide-when-compact">  </span><span class="hide-when-compact"> </span></span></td></tr></tbody></table>
+<table class="version-table" style="text-align: center; margin: 3px auto 5px; padding: 0.25em; border-radius: 3px; -webkit-border-radius: 3px; -moz-border-radius: 3px; -o-border-radius: 3px; -ms-border-radius: 3px;; border: 2px solid #bbdd88; background: #f5ffee; min-width:27em"><tbody><tr><td style="padding: 0.3em 0.3em; width: 100%;"><div style="margin-bottom:6px;" class="version-links-r1"><span style="font-size:100%"><span class="version-link"><span style="text-decoration: none; color: #72A329; background-color: #E2FDCE; border-radius: 2px; -webkit-border-radius: 2px; -moz-border-radius: 2px; -o-border-radius: 2px; -ms-border-radius: 2px; border: 1px solid #bbdd88; padding: 0.2em;"><b>v53.16</b></span></span><span style="font-weight:bold;" class="dot">&#160;·</span> <span class="version-link"><a href="/index.php/DF2014:Cleaning_up_macros" title="DF2014:Cleaning up macros"><span style="text-decoration: none; color: #72A329;">v0.47.05</span></a></span></span></div><span>This article is about the current version of DF.<br />Note that some content may still need to be updated.</span><br />
+<div style="float: right; font-size:75%; padding-right:2px; margin-top:-2px; margin-bottom:-7px;"><span class="version-link"><a href="/index.php/Dwarf_Fortress_Wiki:V" class="mw-redirect" title="Dwarf Fortress Wiki:V"><span style="text-decoration: none; color: #72A329;">More Info</span></a></span><span style="font-weight:bold;" class="dot">&#160;·</span> <span class="version-link"><a href="/index.php/Template:Av" class="mw-redirect" title="Template:Av"><span style="text-decoration: none; color: #72A329;">V</span></a></span></div></td></tr>
+</tbody></table>
+<p>This page is dedicated to help with cleaning up <a href="/index.php/Macro" class="mw-redirect" title="Macro">macros</a>. This is useful because a recorded macro contains quite a lot of other interface interaction, which can really slow down the execution of a macro. 
+</p>
+
+<h2><span class="mw-headline" id="Cleaning_up_Macros">Cleaning up Macros</span></h2>
+<p>Because DF caches macros, you must change at least the name of the macro (for example, incrementing a counter); otherwise, the oldest loaded version will be used.
+</p><p>If you make macros that do a repetitive job in a single menu, you can easily use <a rel="nofollow" class="external text" href="http://gnuwin32.sourceforge.net/packages/grep.htm">grep</a> and a menu macro file. Grep is a GNU utility, that process an input (text) file, and only returns lines that match the filtering options. It's a very powerful utility, and more information can be found in its <a rel="nofollow" class="external text" href="http://unixhelp.ed.ac.uk/CGI/man-cgi?grep">manual</a>. Be warned that grep is case-sensitive - you will either need to specify the case correctly (usually uppercase for macros) or use the <code>-i</code> flag to ignore case.
+</p>
+<h3><span class="mw-headline" id="Using_grep">Using grep</span></h3>
+<p>Because using grep to filter out unwanted lines also filters out the name of the macro, you have to prepend it manually. This can be done by using <code>echo macro_name &gt; macro_name.mak</code>.
+</p><p>Grep can read patterns from a file or from command-line options. Files should have one pattern per line (see <a href="#Useful_Filters">below</a> for examples). For example, a file to only return scrolling commands could look like this:
+</p>
+<pre>SCROLL_
+SECONDSCROLL_
+</pre>
+<p>To use this method, create a file with the appropriate patterns (for example, build_menu.txt), and then:
+</p>
+<pre>echo my1 &gt; my1.mak
+grep -f build_menu.txt my.mak &gt;&gt; my1.mak
+</pre>
+<p>(my.mak is the original macro and my1.mak is the "cleaned" macro.)
+Don't forget to clean up any empty lines from the pattern file; otherwise, nothing will be filtered out.
+</p><p>Alternatively, each pattern can be specified on the command line with <code>-e</code>:
+</p>
+<pre>echo my2 &gt; my2.mak
+grep -e line_1_from_file -e line_2_from_file -e line_3_from_file my.mak &gt;&gt; my2.mak
+</pre>
+<p>In both cases, the first line is writing "my2" (the name of the macro) into the file. <b>This operation will overwrite the existing content of the file if it exists</b>, so make sure this file doesn't exist or is unimportant. The second line is actually doing the filtering and writing the macro to the file. (This command can be run multiple times &#8212; since it appends to the file, it can be used to make multiple copies of the macro in a file. It may be necessary to delete the "End of macro" lines in the middle of the file.)
+</p>
+<h2><span class="mw-headline" id="Useful_Filters">Useful Filters</span></h2>
+<h3><span class="mw-headline" id="Build_Menu">Build Menu</span></h3>
+<p>If you wish to build anything, and you are not intending to leave the build menu, and the macro is not selecting the building type, you can use the following file to filter your macro. (Essentially, you manually select the first position, and the building type, and then run the macro.)
+</p>
+<pre>SELECT
+End of group
+CURSOR_
+End of macro
+</pre>
+<h3><span class="mw-headline" id="Resizing_Menu">Resizing Menu</span></h3>
+<p>If you wish to resize some building, you can use this filter to speed things up. It will leave all the resizing commands, so it will be still valid for other building resizing (e.g. a macro recorded for bedrooms will still work for statue gardens).
+</p>
+<pre>SELECT
+SECONDSCROLL_
+CURSOR_
+_SIZE
+End of group
+End of macro
+</pre></div>

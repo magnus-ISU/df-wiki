@@ -1,0 +1,44 @@
+{{migrated article}}
+{{av}}
+
+This page is dedicated to help with cleaning up [[macro]]s. This is useful because a recorded macro contains quite a lot of other interface interaction, which can really slow down the execution of a macro. 
+
+== Cleaning up Macros ==
+Because DF caches macros, you must change at least the name of the macro (for example, incrementing a counter); otherwise, the oldest loaded version will be used.
+
+If you make macros that do a repetitive job in a single menu, you can easily use [http://gnuwin32.sourceforge.net/packages/grep.htm grep] and a menu macro file. Grep is a GNU utility, that process an input (text) file, and only returns lines that match the filtering options. It's a very powerful utility, and more information can be found in its [http://unixhelp.ed.ac.uk/CGI/man-cgi?grep manual]. Be warned that grep is case-sensitive - you will either need to specify the case correctly (usually uppercase for macros) or use the <code>-i</code> flag to ignore case.
+
+=== Using grep ===
+Because using grep to filter out unwanted lines also filters out the name of the macro, you have to prepend it manually. This can be done by using <code>echo macro_name > macro_name.mak</code>.
+
+Grep can read patterns from a file or from command-line options. Files should have one pattern per line (see [[#Useful Filters|below]] for examples). For example, a file to only return scrolling commands could look like this:
+ SCROLL_
+ SECONDSCROLL_
+To use this method, create a file with the appropriate patterns (for example, build_menu.txt), and then:
+ echo my1 > my1.mak
+ grep -f build_menu.txt my.mak >> my1.mak
+
+(my.mak is the original macro and my1.mak is the "cleaned" macro.)
+Don't forget to clean up any empty lines from the pattern file; otherwise, nothing will be filtered out.
+
+Alternatively, each pattern can be specified on the command line with <code>-e</code>:
+ echo my2 > my2.mak
+ grep -e line_1_from_file -e line_2_from_file -e line_3_from_file my.mak >> my2.mak
+
+In both cases, the first line is writing "my2" (the name of the macro) into the file. '''This operation will overwrite the existing content of the file if it exists''', so make sure this file doesn't exist or is unimportant. The second line is actually doing the filtering and writing the macro to the file. (This command can be run multiple times &mdash; since it appends to the file, it can be used to make multiple copies of the macro in a file. It may be necessary to delete the "End of macro" lines in the middle of the file.)
+== Useful Filters ==
+=== Build Menu ===
+If you wish to build anything, and you are not intending to leave the build menu, and the macro is not selecting the building type, you can use the following file to filter your macro. (Essentially, you manually select the first position, and the building type, and then run the macro.)
+ SELECT
+ End of group
+ CURSOR_
+ End of macro
+
+=== Resizing Menu ===
+If you wish to resize some building, you can use this filter to speed things up. It will leave all the resizing commands, so it will be still valid for other building resizing (e.g. a macro recorded for bedrooms will still work for statue gardens).
+ SELECT
+ SECONDSCROLL_
+ CURSOR_
+ _SIZE
+ End of group
+ End of macro
