@@ -456,6 +456,7 @@ def cmd_fetch(args):
 
         if since_commit >= args.commit_every:
             write_file(IMAGES, "\n".join(sorted(images)) + "\n")
+            build_indexes(pages)
             sync(f"mirror: {fetched} pages this run (through {page['t']})", args.push)
             since_commit = 0
 
