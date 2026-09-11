@@ -447,7 +447,9 @@ def cmd_fetch(args):
                 src = "https:" + src
             if urllib.parse.urlsplit(src).path.startswith("/images/"):
                 images.add(urllib.parse.urlsplit(src).path)
-        append_jsonl(FETCHED, {"t": page["t"], "rev": revid, "at": now_iso()})
+        cats = [c if isinstance(c, str) else c.get("category", "")
+                for c in (parse.get("categories") or [])]
+        append_jsonl(FETCHED, {"t": page["t"], "rev": revid, "at": now_iso(), "cats": cats})
         fetched += 1
         since_commit += 1
         log(f"{fetched}/{len(todo)} {page['t']} (rev {revid}, {len(wikitext)} bytes)")
@@ -517,9 +519,9 @@ def cmd_render(args):
             continue
         with open(src, encoding="utf-8") as fh:
             html = fh.read()
-        revid = fetch_log.get(page["t"], {}).get("rev", 0)
+        record = fetch_log.get(page["t"], {})
         write_file(os.path.join(DISPLAY_DIR, page["p"] + ".md"),
-                   renderer.render(page, html, revid, []))
+                   renderer.render(page, html, record.get("rev", 0), record.get("cats") or []))
         count += 1
         if count % 500 == 0:
             log(f"rendered {count}")
