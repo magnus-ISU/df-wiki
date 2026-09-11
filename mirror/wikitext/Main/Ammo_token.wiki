@@ -1,0 +1,45 @@
+{{Quality|Fine}}
+{{av}}
+{{Modding}}
+
+'''Ammo tokens''' are an [[item definition token]] for [[ammunition]].
+{{clear}}
+
+== Tokens ==
+{| {{prettytable}}
+|- bgcolor="#ddd"
+! Token
+! Arguments
+! Description
+
+|-
+| {{text anchor|NAME}}
+| singular:plural
+| What this item will be called in-game.
+
+|-
+| {{text anchor|CLASS}}
+| anything
+| This ammo can be fired from a weapon that is set to fire the same ammo type. Defaults to BOLT.
+
+|-
+| {{text anchor|SIZE}} / {{text anchor|WEIGHT}}
+| value
+| How large the ammunition is. <font color="red">Required</font>.
+
+|-
+| {{text anchor|ATTACK}}
+| 
+*attacktype:BLUNT or EDGE
+*contact_area:value
+*penetration_size:value
+*verb2nd:string
+*verb3rd:string
+*noun:string
+*velocity_multiplier:value
+| Specifies the attack characteristics of the ammunition.
+|}
+
+{{Category|Modding}}
+{{Category|Tokens}}
+[[ru:Ammo token]]

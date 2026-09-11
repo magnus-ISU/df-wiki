@@ -141,25 +141,36 @@ class Api:
             time.sleep(min(gap, 1.0))
             gap = self.delay - (time.monotonic() - self.last)
 
-    def get(self, params, tries=6):
+    # The wiki's front end sporadically 404s (or 500s) a request that works a
+    # few seconds later; that is flakiness, not a refusal, so retry it quickly.
+    # 429/503 are the server actually asking for room, so back off hard.
+    SOFT = {403, 404, 500, 502, 504}
+    HARD = {429, 503}
+
+    def get(self, params, tries=8):
         """One API call, with backoff.  Returns parsed JSON or raises."""
         params = dict(params, format="json", formatversion="2", maxlag="5")
-        backoff = 30
+        backoff = 5
         for attempt in range(1, tries + 1):
             self.wait()
             self.last = time.monotonic()
             try:
                 r = self.session.get(API, params=params, timeout=self.timeout)
             except requests.RequestException as exc:
-                log(f"  network error ({exc.__class__.__name__}); retry in {backoff}s")
-                self._sleep(backoff)
-                backoff = min(backoff * 2, 900)
+                wait = max(backoff, 15)
+                log(f"  network error ({exc.__class__.__name__}); retry in {wait}s")
+                self._sleep(wait)
+                backoff = min(backoff * 2, 300)
                 continue
-            if r.status_code in (403, 404, 429, 500, 502, 503, 504):
-                wait = int(r.headers.get("Retry-After") or backoff)
+            if r.status_code in self.SOFT or r.status_code in self.HARD:
+                if r.status_code in self.HARD:
+                    wait = int(r.headers.get("Retry-After") or max(backoff, 60))
+                    backoff = min(max(backoff * 2, 120), 900)
+                else:
+                    wait = backoff
+                    backoff = min(backoff * 2, 120)
                 log(f"  HTTP {r.status_code}; retry in {wait}s")
                 self._sleep(wait)
-                backoff = min(backoff * 2, 900)
                 continue
             if r.status_code != 200:
                 raise PageError(f"HTTP {r.status_code} for {params.get('page') or params}")
@@ -168,7 +179,7 @@ class Api:
             except ValueError:
                 log(f"  non-JSON reply ({len(r.content)} bytes); retry in {backoff}s")
                 self._sleep(backoff)
-                backoff = min(backoff * 2, 900)
+                backoff = min(backoff * 2, 120)
                 continue
             if isinstance(data.get("error"), dict) and data["error"].get("code") == "maxlag":
                 log("  wiki is lagging; retry in 60s")
