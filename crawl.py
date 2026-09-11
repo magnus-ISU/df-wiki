@@ -143,8 +143,8 @@ class Api:
 
     # The wiki's front end sporadically 404s (or 500s) a request that works a
     # few seconds later; that is flakiness, not a refusal, so retry it quickly.
-    # Its Varnish caches those errors against the exact URL, so a retry of the
-    # same URL re-serves the cached failure -- hence the requestid below.
+    # Its Varnish caches those errors against the exact URL, so any repeat of
+    # the same URL re-serves the cached failure -- hence the requestid below.
     # 429/503 are the server actually asking for room, so back off hard.
     SOFT = {403, 404, 500, 502, 504}
     HARD = {429, 503}
@@ -156,10 +156,11 @@ class Api:
         for attempt in range(1, tries + 1):
             self.wait()
             self.last = time.monotonic()
-            if attempt > 1:
-                # Vary the URL so Varnish cannot hand back the cached error.
-                # The first attempt stays cacheable, which is kinder to the wiki.
-                params["requestid"] = "retry%d-%d" % (attempt, time.time_ns() // 1000)
+            # Vary the URL so Varnish cannot hand back a cached error.  Each
+            # page is requested exactly once in a crawl, so a cache hit could
+            # only ever be somebody else's identical query -- there is nothing
+            # to lose here, and a cached 404 costs a whole retry.
+            params["requestid"] = "df-wiki-%d" % (time.time_ns() // 1000)
             try:
                 r = self.session.get(API, params=params, timeout=self.timeout)
             except requests.RequestException as exc:
