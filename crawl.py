@@ -256,9 +256,10 @@ def git(*args, check=False):
 
 
 def sync(message, push):
-    if git("status", "--porcelain").stdout.strip() == "":
+    if git("status", "--porcelain", "--", "mirror", "display", "state").stdout.strip() == "":
         return
-    git("add", "-A")
+    # Only the crawl's own output; a source edit in flight is not ours to commit.
+    git("add", "--", "mirror", "display", "state")
     res = git("commit", "-m", message)
     if res.returncode != 0 and "nothing to commit" not in res.stdout:
         log(f"  git commit failed: {res.stdout.strip() or res.stderr.strip()}")
