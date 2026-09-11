@@ -43,9 +43,12 @@
 - [Anaconda_man](Anaconda_man/)
 - [Anchovy](Anchovy/)
 - [Andesite](Andesite/)
+- [Andrewsarchus](Andrewsarchus/)
 - [Andrewsarchus_man](Andrewsarchus_man/)
+- [Angel](Angel/)
+- [Angelshark](Angelshark/)
 
-## Pages (129)
+## Pages (132)
 
 - [!!](!!.md)
 - [%s](%25s.md)
@@ -176,3 +179,6 @@
 - [Andesite](Andesite.md)
 - [Andrewsarchus](Andrewsarchus.md)
 - [Andrewsarchus man](Andrewsarchus_man.md)
+- [Angel](Angel.md)
+- [Angelshark](Angelshark.md)
+- [Angry living flamethrowers](Angry_living_flamethrowers.md)
