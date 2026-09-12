@@ -1,0 +1,35 @@
+
+{{Quality|Fine}}
+{{av}}
+[[File:Gypsum Only.jpg|Thumb|right|350px]]
+
+'''Gypsum plaster''' powder (or just '''plaster powder''' on some screens) is produced at a [[kiln]] or [[magma kiln]] from [[gypsum]], [[alabaster]], [[selenite]], or [[satinspar]] (but '''not''' [[anhydrite]]) and an empty [[bag]]. The production of gypsum plaster powder requires the [[furnace operating]] skill. It is used in the production of [[plaster cast]]s, an item used by [[bone doctor]]s to immobilize the broken bones of injured [[dwarves]], serving the same role as [[splint]]s.
+
+Bags of plaster powder are automatically stored in [[chest]]s located in [[hospital]] zones, provided there is room.
+
+At a kiln, if the option to produce it is unavailable despite meeting all requirements, the command "make plaster powder" in the manager menu should be used.
+
+==Gypsum plaster stockpiles==
+
+[[File:gypsum_plaster.jpg|thumb|300px|right|Gypsum plaster being applied to a wall.]]No [[stockpile]] options exist for controlling the storage of gypsum plaster - although it is listed under the "Stone/Clay" material groups for Furniture, Blocks, and Finished Goods, these settings have no effect because such objects will never actually be made '''of''' gypsum plaster; gypsum plaster bags are always stockpiled in the "Furniture/Siege Ammo" category as "Bags", as though they were empty. They will not be stored in barrels or bins.
+
+If you want all your plaster to be stored in your main [[hospital]], simply maximize a limit to 999.
+
+If you want to have a large amount of gypsum plaster stored in dedicated stockpile containing '''only''' gypsum plaster, you can exploit the hospital storage to force dwarves to move gypsum plaster to a particular location:
+
+# Make a new {{menu icon|z}} zone ([[Dormitory|dormitory]] for example), a 3×3 square works well for a small stockpile.
+# After placing the zone, inspect ({{menu icon|z}}) and then specify it as a [[File:Icon hospital.png]] hospital.
+# Set the hospital information ([[File:Ui location details.png]])
+# Use [[File:Gui ota minus.png]] to reduce the Thread, Cloth, Splints, Crutches, Buckets and Soap to 0.
+# Use [[File:Button input number.png]] to manually type the limit of "Powder for casts" to the maximum (999).
+# Place an empty chest in the middle of the hospital area (with {{menu icon|b|f|h}}).
+# Dwarves should now automatically move any available gypsum bags into the new hospital area. You can inspect the building contents by clicking on it to confirm the gypsum bags are placed inside the container.
+# Remove the chest (click on it and choose [[File:Button remove building.png]]). The gypsum bags will explode out of the building in a 3x3 grid.
+# Before the dwarves remove all the powder bags elsewhere, make a stockpile (using {{menu icon|p}}-[[File:V50 stockpile create button.png]]) under the gypsum bags. Specify the stockpile as only allowing "Furniture/Siege Ammo". Remove all types except for bags.
+# You may remove the hospital area if desired ({{menu icon|z}} > choose zone > click [[File:UI Delete Area.png]]).
+
+{{gamedata}}
+{{materials}}
+
+{{Category|Healthcare}}
+[[ru:Gypsum plaster]]

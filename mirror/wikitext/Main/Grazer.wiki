@@ -1,0 +1,554 @@
+{{Quality|Superior}}
+{{av}}{{buggy}}
+[[File:v50_grazing_preview.png|thumb|right|The grass tastes exactly like ramen to them.]]Tame '''grazing''' animals (those with the {{token|STANDARD_GRAZER}} token) require a constant source of [[grass]] or [[cave moss]] to survive. [[Pasture]]s are currently the easiest such source, however care must be taken to ensure that the pasture is large enough to provide food for all the assigned animals (and any auto-assigned babies). Other sources are [[Animal caretaker|animal caretakers]] feeding chained/caged creatures, and dwarves feeding their [[pet]]s.
+
+==Grazing animals and pasture size==
+Grazing animals use the {{token|STANDARD_GRAZER}} which calculates a value from this formula{{cite forum|140544/5655205}}:
+
+ GRAZER = 20000 &times; G &times; (max size)<sup>-3/4</sup>
+
+'''''G''' can be set in d_init or the game tab in settings, listed as Grazing Coefficient (100 by default)''
+
+'''''max size''' is the maximum size a creature can reach, divided by 10.''
+
+''The minimum resulting GRAZER value is capped at 150, the maximum at 3 million.''
+
+For custom creatures, you could also set the value directly with the {{token|GRAZER|cr|<value>}} token.  In either case, this is an inverse number - the GRAZER value signifies how much hunger is reduced when eating a unit of grass. (Hunger increases every tick; a creature dies when it reaches 100,000). A creature with ten times the grazer value needs one tenth the amount of grass (and hence, pasture land) as a creature with a small grazer value. Because of this, it may be wise to give larger animals grazing areas separate from other animals, as the larger animals are likely to not leave enough grass for other animals, which can lead to them starving. If you started your fortress in an undead biome, you may need to assign more space for a pasture, as much of the grass is dead - animals will not eat dead grass and will only eat the still-living patches.
+
+Animals which graze are typically good livestock candidates, as many of them can be [[milk]]ed and three also can be [[shear]]ed for [[wool]]. Creatures with larger sizes consume more grass, but also produce more meat when [[butcher]]ed. Grazing animals who are pets will occasionally be fed by their owners, allowing them to roam free without the need of a pasture, however this is unreliable due to pet feeding being a very low-priority job, often leading to these pets starving and possibly dying if not supervised.  If grazing animals consume all the grass on a tile, the tile will be reverted to the base layer material, which may be [[sand]], [[clay]] or [[soil]]. In this way, you receive a visual clue as to the size of the pasture required.
+
+==List of grazing animals==
+{{catbox}}
+Take the following numbers with a grain of salt; they ignore the differing abilities of various biomes to replenish grass and are instead based on a rule of thumb that 20000=Grazer*Required_tiles. Usually you can get along with way smaller pastures. Nevertheless, a fairly large herd can cause overgrazing fast, so keep an eye out for hungry animals and desolate [[grass]]less pastures.
+
+{| class="wikitable sortable" style="text-align:left"
+|-
+! Animal
+! Grazer<br>value
+! Creature<br>Size
+! [[Milking|Milkable]]
+! [[Shearing|Shearable]]
+! Recommended Pasture Size<br>per individual
+! Needed Tiles (per rule-of-thumb)
+! Sqrt of Needed Tiles
+|-
+
+| [[Elephant]]
+|style="text-align:right"| 106.366
+|style="text-align:right"| 5,000,000
+|| || || 19 × 10 || 188.03 || 13.7
+|-
+
+| [[Giant moose|Giant bull moose]]
+|style="text-align:right"| 119.990
+|style="text-align:right"| 4,257,750
+| 
+| 
+| 14 × 12
+| 166.68
+| 12.9
+|-
+
+| [[Rhinoceros]]
+|style="text-align:right"| 156.023
+|style="text-align:right"| 3,000,000
+| 
+| 
+| 13 × 10
+| 128.19
+| 11.3
+|-
+
+| [[Giant moose|Giant moose cow]]
+|style="text-align:right"| 176.008
+|style="text-align:right"| 2,554,650
+| 
+| 
+| 13 × 9
+| 113.63
+| 10.7
+|-
+
+| [[Draltha]]
+|style="text-align:right"| 178.885
+|style="text-align:right"| 2,500,000
+| 
+| 
+| 14 × 8
+| 111.80
+| 10.6
+|-
+
+| [[Gigantic panda]]
+|style="text-align:right"| 318.005
+|style="text-align:right"| 1,160,900
+| 
+| 
+| <s>9 × 7</s> ♠
+| <s>62.89</s> ♠
+| <s>7.9</s> ♠
+|-
+
+| [[Water buffalo]]
+|style="text-align:right"| 355.656
+|style="text-align:right"| 1,000,000
+| style="text-align:center"| Yes 
+| 
+| 10 × 6
+| 56.23
+| 7.5
+|-
+
+| [[Giraffe]]
+|style="text-align:right"| 355.656
+|style="text-align:right"| 1,000,000
+| 
+| 
+| 10 × 6
+| 56.23
+| 7.5
+|-
+
+| [[Yak]]
+|style="text-align:right"| 464.736
+|style="text-align:right"| 700,000
+| style="text-align:center"| Yes 
+| 
+| 9 × 5
+| 43.04
+| 6.6
+|-
+
+| [[Cow]]
+|style="text-align:right"| 521.695
+|style="text-align:right"| 600,000
+| style="text-align:center"| Yes 
+| 
+| 8 × 5
+| 38.34
+| 6.2
+|-
+
+| [[Unicorn]]
+|style="text-align:right"| 521.695
+|style="text-align:right"| 600,000
+| 
+| 
+| 8 × 5
+| 38.34
+| 6.2
+|-
+
+| [[Moose|Bull moose]]
+|style="text-align:right"| 576.648
+|style="text-align:right"| 525,000
+| 
+| 
+| 7 × 5
+| 34.68
+| 5.9
+|-
+
+| [[Giant capybara]]
+|style="text-align:right"| 578.011
+|style="text-align:right"| 523,350
+| 
+| 
+| 7 × 5
+| 34.60
+| 5.9
+|-
+
+| [[Horse]]
+|style="text-align:right"| 598.140
+|style="text-align:right"| 500,000
+| style="text-align:center"| Yes 
+| 
+| 7 × 5
+| 33.44
+| 5.8
+|-
+
+| [[Camel]] (both)
+|style="text-align:right"| 598.140
+|style="text-align:right"| 500,000
+| style="text-align:center"| Yes 
+| 
+| 7 × 5
+| 33.44
+| 5.8
+|-
+
+| [[Mule]]
+|style="text-align:right"| 707.107
+|style="text-align:right"| 400,000
+| 
+| 
+| 6 × 5
+| 28.28
+| 5.3
+|-
+
+| [[Moose|Cow moose]]
+|style="text-align:right"| 845.857
+|style="text-align:right"| 315,000
+| 
+| 
+| 5 × 5
+| 23.64
+| 4.9
+|-
+
+| [[Donkey]]
+|style="text-align:right"| 877.383
+|style="text-align:right"| 300,000
+| style="text-align:center"| Yes 
+| 
+| 5 × 5
+| 22.80
+| 4.8
+|-
+
+| [[Elk]]
+|style="text-align:right"| 877.383
+|style="text-align:right"| 300,000
+| 
+| 
+| 5 × 5
+| 22.80
+| 4.8
+|-
+
+| [[Muskox]]
+|style="text-align:right"| 911.793
+|style="text-align:right"| 285,000
+| 
+| 
+| 5 × 5
+| 21.93
+| 4.7
+|-
+
+| [[Giant red panda]]
+|style="text-align:right"| 1,053.393
+|style="text-align:right"| 235,100
+| 
+| 
+| <strike>5 × 4</strike> ♠
+| <strike>18.99</strike> ♠
+| <strike>4.4</strike> ♠
+|-
+
+| [[Tapir]]
+|style="text-align:right"| 1,189.207
+|style="text-align:right"| 200,000
+| style="text-align:center"| Yes 
+| 
+| 6 × 3
+| 16.82
+| 4.1
+|-
+
+| [[Llama]]
+|style="text-align:right"| 1,286.991
+|style="text-align:right"| 180,000
+| style="text-align:center"| Yes 
+| style="text-align:center"| Yes 
+| 4 × 4
+| 15.54
+| 3.9
+|-
+
+| [[Deer]]
+|style="text-align:right"| 1,553.939
+|style="text-align:right"| 140,000
+| 
+| 
+| 5 × 3
+| 12.87
+| 3.6
+|-
+
+| [[Reindeer]]
+|style="text-align:right"| 1,642.754
+|style="text-align:right"| 130,000
+| style="text-align:center"| Yes 
+| 
+| 5 × 3
+| 12.17
+| 3.5
+|-
+
+| [[Panda]]
+|style="text-align:right"| 1,642.754
+|style="text-align:right"| 130,000
+| 
+| 
+| <strike>5 × 3</strike> ♠
+| <strike>12.17</strike> ♠
+| <strike>3.5</strike> ♠
+|-
+
+| [[Warthog]]
+|style="text-align:right"| 2,000.000
+|style="text-align:right"| 100,000
+| 
+| 
+| 4 × 3
+| 10.00
+| 3.2
+|-
+
+| [[Elk bird]]
+|style="text-align:right"| 2,000.000
+|style="text-align:right"| 100,000
+| 
+| 
+| 4 × 3
+| 10.00
+| 3.2
+|-
+
+| [[Kangaroo]]
+|style="text-align:right"| 2,164.453
+|style="text-align:right"| 90,000
+| style="text-align:center"| Yes 
+| 
+| 4 × 3
+| 9.24
+| 3.0
+|-
+
+| [[Alpaca]]
+|style="text-align:right"| 2,613.403
+|style="text-align:right"| 70,000
+| style="text-align:center"| Yes 
+| style="text-align:center"| Yes 
+| 4 × 2
+| 7.65
+| 2.8
+|-
+
+| [[Goat]]
+|style="text-align:right"| 3,363.586
+|style="text-align:right"| 50,000
+| style="text-align:center"| Yes 
+| 
+| 3 × 2
+| 5.95
+| 2.4
+|-
+
+| [[Mountain goat]]
+|style="text-align:right"| 3,363.586
+|style="text-align:right"| 50,000
+| 
+| 
+| 3 × 2
+| 5.95
+| 2.4
+|-
+
+| [[Ibex]]
+|style="text-align:right"| 3,363.586
+|style="text-align:right"| 50,000
+| 
+| 
+| 3 × 2
+| 5.95
+| 2.4
+|-
+
+| [[Impala]]
+|style="text-align:right"| 3,363.586
+|style="text-align:right"| 50,000
+| 
+| 
+| 3 × 2
+| 5.95
+| 2.4
+|-
+
+| [[Sheep]]
+|style="text-align:right"| 3,363.586
+|style="text-align:right"| 50,000
+| style="text-align:center"| Yes 
+| style="text-align:center"| Yes 
+| 3 × 2
+| 5.95
+| 2.4
+|-
+
+| [[Capybara]]
+|style="text-align:right"| 3,640.161
+|style="text-align:right"| 45,000
+| 
+| 
+| 3 × 2
+| 5.49
+| 2.3
+|-
+
+| [[Wombat]]
+|style="text-align:right"| 5,656.854
+|style="text-align:right"| 25,000
+| 
+| 
+| 2 × 2
+| 3.54
+| 1.9
+|-
+
+| [[Gazelle]]
+|style="text-align:right"| 6,687.403
+|style="text-align:right"| 20,000
+| 
+| 
+| 2 × 2
+| 2.99
+| 1.7
+|-
+
+| [[Hoary marmot]]
+|style="text-align:right"| 11,246.827
+|style="text-align:right"| 10,000
+| 
+| 
+| 2 × 1
+| 1.78
+| 1.3
+|-
+
+| [[Red panda]]
+|style="text-align:right"| 18,914.832
+|style="text-align:right"| 5,000
+| 
+| 
+| <strike>2 × 1</strike> ♠
+| <strike>1.06</strike> ♠
+| <strike>1.0</strike> ♠
+|-
+
+| [[Hare]]
+|style="text-align:right"| 24,716.044
+|style="text-align:right"| 3,500
+| 
+| 
+| 1 × 1
+| 0.81
+| 0.9
+|-
+
+| [[Groundhog]]
+|style="text-align:right"| 27,745.276
+|style="text-align:right"| 3,000
+| 
+| 
+| 1 × 1
+| 0.72
+| 0.8
+|-
+
+| [[Cavy]]
+|style="text-align:right"| 74767.439
+|style="text-align:right"| 800
+| 
+| 
+| 1 × 1
+| 0.27
+| 0.5
+|-
+
+| [[Rabbit]]
+|style="text-align:right"| 106365.918
+|style="text-align:right"| 500
+| 
+| 
+| 1 × 1
+| 0.19
+| 0.4
+|-
+|}
+;Key: ♠ the four panda species will eat ''only bamboo'' (any type), in effect requiring much larger pasture areas even on maps where bamboo does grow, and modding to survive on maps where it doesn't
+
+The giant animals not listed here are not included yet because that's a bunch more work, and I'm unsure how many of them (if any) are still bugged.<!--
+
+The following giant animals do not modify the grazer token inherited from their parents and are bugged to eat less than their size would indicate.
+
+{| class="wikitable sortable" style="text-align:right"
+|-
+! Animal
+! Grazer<br>value
+! Creature<br>Size
+! [[Milking|Milkable]]
+! [[Shearing|Shearable]]
+! Recommended Pasture Size<br>per individual
+! Pasture Area
+|-
+
+|style="text-align:left"| [[Giant tapir]]
+| 300
+| 1,700,000
+| Yes
+|
+|style="text-align:left"| 9 × 9 ?
+||81
+|-
+
+|style="text-align:left"| [[Giant kangaroo]]
+| 667
+| 857,700
+| Yes
+|
+|style="text-align:left"| 6 × 6
+||36
+|-
+
+|style="text-align:left"| [[Giant ibex]]
+| 1,200
+| 560,000
+| 
+| 
+|style="text-align:left"| 4 × 4
+||20
+|-
+
+|style="text-align:left"| [[Giant impala]]
+| 1,200
+| 560,000
+| 
+| 
+|style="text-align:left"| 4 × 4
+||20
+|-
+
+|style="text-align:left"| [[Giant wombat]]
+| 2,308
+| 377,750
+| 
+| 
+|style="text-align:left"| 3 × 3 ?
+||9
+|-
+
+|style="text-align:left"| [[Giant hare]]
+| 17,143
+| 224,560
+|
+|
+|style="text-align:left"| 1 × 1 ?
+||1
+|-
+|}
+-->
+
+==Bugs==
+
+* Grass does not grow back on mountain biomes.{{bug|4164}}
+* Egg-laying grazers will starve themselves sitting on a [[nest box]].{{bug|4637}}
+** Some workarounds are detailed in [http://www.bay12forums.com/smf/index.php?topic=175915.0 this forum thread.]
+* Grazing juveniles tend to clump in the same tile as their mother, leading to starvation and [[overcrowding]]. This is particularly problematic for species with large litters, like [[giant capybara]]s.{{verify|no bug report}}
+* When a [[civilian alert]] is active, grazers outside of the alert burrow refuse to eat.{{bug|6240}}
+[[ru:Grazer]]
+
+{{category|Fortress mode}}
