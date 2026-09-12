@@ -1,0 +1,556 @@
+{{quality|Superior}}{{av}}{{old}}
+[[File:emotions_preview.png|202px|right]]Certain circumstances can evoke a wide range of '''emotions''', both negative and positive, affecting dwarves' [[stress]] levels. Emotional reactions can result from immediate experience, or from revisiting a long-term memory, and are affected by dwarves' [[personalities]] and values, resulting in different reactions to the same circumstances. Recent emotions experienced by dwarves(listed along with their circumstance pairs) are listed in the [[Thoughts and Preferences]] screen. 
+
+Different [[thoughts]] can have different "strength", denoting the effect the emotion has on a dwarf's stress levels (negative numbers reduce stress, while positive numbers increase it) and depends on time elapsed and dwarven personality. This thought strength is then divided by the 'Divider' numbers given in the table.
+
+: Note that positive thoughts have a ''negative'' number, as they ''reduce'' stress. Numbers closer to 1 or -1 have the strongest effect on stress.
+Many examples of a dwarf feeling emotions are as follows:<br>
+{{dftext|He was |0:1}}{{dftext|frustrated|6:0}}{{dftext| after being kept from alcohol for too long.|0:1}}<br>
+{{dftext|She was |0:1}}{{dftext|resentful|6:0}}{{dftext| after getting into an argument.|0:1}}<br>
+{{dftext|She was |0:1}}{{dftext|blissful|2:1}}{{dftext| after sleeping in a good bedroom.|0:1}}<br>
+{{dftext|He was |0:1}}{{dftext|satisfied|1:1}}{{dftext| near a fine Bed.|0:1}}<br>
+{{dftext|He felt |0:1}}{{dftext|fondness|3:1}}{{dftext| talking with an acquaintance.|0:1}}<br>
+{{dftext|Within the last season, he was |0:1}}{{dftext|angry|4:1}}{{dftext| dwelling upon|5:0}}{{dftext| getting into an argument.|0:1}}
+
+Syndromes can cause a creature to feel particular emotions using the CE_FEEL_EMOTION tag.
+When a creature's stress level is high enough, certain negative emotions may create additional effects. These emotions will display a string in the dwarf's General status screen.
+
+A total of 180 emotions are defined within the code, but only 130 of them are currently implemented: 
+{| class="wikitable sortable"
+|-
+! ID !! Emotion !! Divider !! Additional text / Effects at high stress
+|-
+| -1 
+|style="background-color:#000000"|{{DFtext|Anything|7:0}}
+|style="background-color:#FFFFFF"| 0
+|-
+| 0 
+|style="background-color:#000000"|{{DFtext|Acceptance|7:0}}
+|style="background-color:#DDFFDD"| -8
+|-
+| 1 
+|style="background-color:#000000"|{{DFtext|Adoration|3:1}}
+|style="background-color:#77FF77"| -1
+|-
+| 2 
+|style="background-color:#000000"|{{DFtext|Affection|3:1}}
+|style="background-color:#99FF99"| -2
+|-
+| 3 
+|style="background-color:#000000"|{{DFtext|Agitation|6:0}}
+|style="background-color:#FFBBBB"| 4
+|-
+| 4 
+|style="background-color:#000000"|{{DFtext|Aggravation|6:0}}
+|style="background-color:#FFBBBB"| 4
+|-
+| 5 
+|style="background-color:#000000"|{{DFtext|Agony|6:1}}
+|style="background-color:#FF7777"| 1
+|"Writhing in agony!"
+|-
+| 6 
+|style="background-color:#000000"|{{DFtext|Alarm|4:1}}
+|style="background-color:#FFBBBB"| 4
+|-
+| 7 
+|style="background-color:#000000"|{{DFtext|Alienation|6:0}}
+|style="background-color:#FFDDDD"| 8
+|-
+| 8 
+|style="background-color:#000000"|{{DFtext|Amazement|1:1}}
+|style="background-color:#FFFFFF"| 0
+|-
+| 9 
+|style="background-color:#000000"|{{DFtext|Ambivalence|7:0}}
+|style="background-color:#FFFFFF"| 0
+|-
+| 10 
+|style="background-color:#000000"|{{DFtext|Amusement|2:1}}
+|style="background-color:#BBFFBB"| -4
+|-
+| 11 
+|style="background-color:#000000"|{{DFtext|Anger|4:1}}
+|style="background-color:#FF9999"| 2
+|-
+| 12 
+|style="background-color:#000000"|{{DFtext|Angst|6:1}}
+|style="background-color:#FF7777"| 1
+|"In existential crisis!" Creature will lie on the ground, pondering the meaning of life, and will not move.
+|-
+| 13 
+|style="background-color:#000000"|{{DFtext|Anguish|6:1}}
+|style="background-color:#FF7777"| 1
+|"Anguished!" Creature will lie on the ground crying and will not move.
+|-
+| 14 
+|style="background-color:#000000"|{{DFtext|Annoyance|6:0}}
+|style="background-color:#FFDDDD"| 8
+|-
+| 16 
+|style="background-color:#000000"|{{DFtext|Anxiety|6:0}}
+|style="background-color:#FFBBBB"| 4
+|-
+| 17 
+|style="background-color:#000000"|{{DFtext|Apathy|7:0}}
+|style="background-color:#FFFFFF"| 0
+|-
+| 19 
+|style="background-color:#000000"|{{DFtext|Arousal|3:1}}
+|style="background-color:#DDFFDD"| -8
+|-
+| 20 
+|style="background-color:#000000"|{{DFtext|Astonishment|1:1}}
+|style="background-color:#FFFFFF"| 0
+|-
+| 22 
+|style="background-color:#000000"|{{DFtext|Aversion|6:0}}
+|style="background-color:#FFBBBB"| 4
+|-
+| 23 
+|style="background-color:#000000"|{{DFtext|Awe|1:1}}
+|style="background-color:#FFFFFF"| 0
+|-
+| 24 
+|style="background-color:#000000"|{{DFtext|Bitterness|6:0}}
+|style="background-color:#FF9999"| 2
+|-
+| 25 
+|style="background-color:#000000"|{{DFtext|Bliss|2:1}}
+|style="background-color:#77FF77"| -1
+|-
+| 26 
+|style="background-color:#000000"|{{DFtext|Boredom|6:0}}
+|style="background-color:#FFDDDD"| 8
+|-
+| 27 
+|style="background-color:#000000"|{{DFtext|Caring|3:1}}
+|style="background-color:#99FF99"| -2
+|-
+| 29 
+|style="background-color:#000000"|{{DFtext|Confusion|6:0}}
+|style="background-color:#FFDDDD"| 8
+|-
+| 30 
+|style="background-color:#000000"|{{DFtext|Contempt|6:0}}
+|style="background-color:#FFBBBB"| 4
+|-
+| 31 
+|style="background-color:#000000"|{{DFtext|Contentment|2:1}}
+|style="background-color:#DDFFDD"| -8
+|-
+| 34 
+|style="background-color:#000000"|{{DFtext|Defeat|6:1}}
+|style="background-color:#FF9999"| 2
+|-
+| 35 
+|style="background-color:#000000"|{{DFtext|Dejection|6:0}}
+|style="background-color:#FFBBBB"| 4
+|-
+| 36 
+|style="background-color:#000000"|{{DFtext|Delight|2:1}}
+|style="background-color:#77FF77"| -1
+|-
+| 39 
+|style="background-color:#000000"|{{DFtext|Despair|6:1}}
+|style="background-color:#FF7777"| 1
+|-
+| 40 
+|style="background-color:#000000"|{{DFtext|Disappointment|6:0}}
+|style="background-color:#FFDDDD"| 8
+|-
+| 41 
+|style="background-color:#000000"|{{DFtext|Disgust|6:1}}
+|style="background-color:#FFBBBB"| 4
+|-
+| 42 
+|style="background-color:#000000"|{{DFtext|Disillusionment|6:0}}
+|style="background-color:#FFDDDD"| 8
+|-
+| 43 
+|style="background-color:#000000"|{{DFtext|Dislike|6:0}}
+|style="background-color:#FFDDDD"| 8
+|-
+| 44 
+|style="background-color:#000000"|{{DFtext|Dismay|6:1}}
+|style="background-color:#FF9999"| 2
+|-
+| 45 
+|style="background-color:#000000"|{{DFtext|Displeasure|6:0}}
+|style="background-color:#FFDDDD"| 8
+|-
+| 46 
+|style="background-color:#000000"|{{DFtext|Distress|6:1}}
+|style="background-color:#FF9999"| 2
+|-
+| 47 
+|style="background-color:#000000"|{{DFtext|Doubt|6:0}}
+|style="background-color:#FFDDDD"| 8
+|-
+| 49 
+|style="background-color:#000000"|{{DFtext|Eagerness|1:1}}
+|style="background-color:#BBFFBB"| -4
+|-
+| 51 
+|style="background-color:#000000"|{{DFtext|Elation|2:1}}
+|style="background-color:#99FF99"| -2
+|-
+| 52 
+|style="background-color:#000000"|{{DFtext|Embarrassment|6:0}}
+|style="background-color:#FFDDDD"| 8
+|-
+| 53 
+|style="background-color:#000000"|{{DFtext|Empathy|3:1}}
+|style="background-color:#99FF99"| -2
+|-
+| 54 
+|style="background-color:#000000"|{{DFtext|Emptiness|6:1}}
+|style="background-color:#FFBBBB"| 4
+|-
+| 55 
+|style="background-color:#000000"|{{DFtext|Enjoyment|2:1}}
+|style="background-color:#DDFFDD"| -8
+|-
+| 57 
+|style="background-color:#000000"|{{DFtext|Enthusiasm|2:1}}
+|style="background-color:#DDFFDD"| -8
+|-
+| 59 
+|style="background-color:#000000"|{{DFtext|Euphoria|2:1}}
+|style="background-color:#77FF77"| -1
+|-
+| 60 
+|style="background-color:#000000"|{{DFtext|Exasperation|6:0}}
+|style="background-color:#FFDDDD"| 8
+|-
+| 61 
+|style="background-color:#000000"|{{DFtext|Excitement|1:1}}
+|style="background-color:#99FF99"| -2
+|-
+| 62 
+|style="background-color:#000000"|{{DFtext|Exhilaration|1:1}}
+|style="background-color:#99FF99"| -2
+|-
+| 63 
+|style="background-color:#000000"|{{DFtext|Expectancy|2:1}}
+|style="background-color:#DDFFDD"| -8
+|-
+| 64 
+|style="background-color:#000000"|{{DFtext|Fear|4:1}}
+|style="background-color:#FF7777"| 1
+|"Experiencing mortal fear!"
+|-
+| 65 
+|style="background-color:#000000"|{{DFtext|Ferocity|4:1}}
+|style="background-color:#FF9999"| 2
+|-
+| 66 
+|style="background-color:#000000"|{{DFtext|Fondness|3:1}}
+|style="background-color:#DDFFDD"| -8
+|-
+| 67 
+|style="background-color:#000000"|{{DFtext|Freedom|2:1}}
+|style="background-color:#BBFFBB"| -4
+|-
+| 68 
+|style="background-color:#000000"|{{DFtext|Fright|6:1}}
+|style="background-color:#FF9999"| 2
+|-
+| 69 
+|style="background-color:#000000"|{{DFtext|Frustration|6:0}}
+|style="background-color:#FFDDDD"| 8
+|-
+| 71 
+|style="background-color:#000000"|{{DFtext|Gaiety|2:1}}
+|style="background-color:#99FF99"| -2
+|-
+| 73 
+|style="background-color:#000000"|{{DFtext|Glee|2:1}}
+|style="background-color:#99FF99"| -2
+|-
+| 74 
+|style="background-color:#000000"|{{DFtext|Gloom|6:0}}
+|style="background-color:#FFBBBB"| 4
+|-
+| 75 
+|style="background-color:#000000"|{{DFtext|Glumness|6:0}}
+|style="background-color:#FFDDDD"| 8
+|-
+| 76 
+|style="background-color:#000000"|{{DFtext|Gratitude|3:1}}
+|style="background-color:#BBFFBB"| -4
+|-
+| 78 
+|style="background-color:#000000"|{{DFtext|Grief|6:1}}
+|style="background-color:#FF9999"| 2
+|-
+| 79 
+|style="background-color:#000000"|{{DFtext|Grim Satisfaction|5:1}}
+|style="background-color:#FFFFFF"| 0
+|-
+| 80 
+|style="background-color:#000000"|{{DFtext|Grouchiness|6:0}}
+|style="background-color:#FFDDDD"| 8
+|-
+| 81 
+|style="background-color:#000000"|{{DFtext|Grumpiness|6:0}}
+|style="background-color:#FFDDDD"| 8
+|-
+| 82 
+|style="background-color:#000000"|{{DFtext|Guilt|6:0}}
+|style="background-color:#FFBBBB"| 4
+|-
+| 83 
+|style="background-color:#000000"|{{DFtext|Happiness|2:1}}
+|style="background-color:#99FF99"| -2
+|-
+| 84 
+|style="background-color:#000000"|{{DFtext|Hatred|4:1}}
+|style="background-color:#FF9999"| 2
+|-
+| 86 
+|style="background-color:#000000"|{{DFtext|Hope|2:1}}
+|style="background-color:#99FF99"| -2
+|-
+| 87 
+|style="background-color:#000000"|{{DFtext|Hopelessness|6:1}}
+|style="background-color:#FF9999"| 2
+|-
+| 88 
+|style="background-color:#000000"|{{DFtext|Horror|4:1}}
+|style="background-color:#FF7777"| 1
+|"Overwhelmed by horror!"
+|-
+| 90 
+|style="background-color:#000000"|{{DFtext|Humiliation|6:1}}
+|style="background-color:#FFBBBB"| 4
+|-
+| 95 
+|style="background-color:#000000"|{{DFtext|Insult|6:0}}
+|style="background-color:#FFBBBB"| 4
+|-
+| 96 
+|style="background-color:#000000"|{{DFtext|Interest|1:1}}
+|style="background-color:#DDFFDD"| -8
+|-
+| 97 
+|style="background-color:#000000"|{{DFtext|Irritation|6:0}}
+|style="background-color:#FFDDDD"| 8
+|-
+| 98 
+|style="background-color:#000000"|{{DFtext|Isolation|6:0}}
+|style="background-color:#FFBBBB"| 4
+|-
+| 100 
+|style="background-color:#000000"|{{DFtext|Jolliness|2:1}}
+|style="background-color:#BBFFBB"| -4
+|-
+| 101 
+|style="background-color:#000000"|{{DFtext|Joviality|2:1}}
+|style="background-color:#99FF99"| -2
+|-
+| 102 
+|style="background-color:#000000"|{{DFtext|Joy|2:1}}
+|style="background-color:#77FF77"| -1
+|-
+| 103 
+|style="background-color:#000000"|{{DFtext|Jubilation|2:1}}
+|style="background-color:#77FF77"| -1
+|-
+| 105 
+|style="background-color:#000000"|{{DFtext|Loathing|4:1}}
+|style="background-color:#FF9999"| 2
+|-
+| 106 
+|style="background-color:#000000"|{{DFtext|Loneliness|6:0}}
+|style="background-color:#FFBBBB"| 4
+|-
+| 108 
+|style="background-color:#000000"|{{DFtext|Love|3:1}}
+|style="background-color:#77FF77"| -1
+|-
+| 110 
+|style="background-color:#000000"|{{DFtext|Lust|3:1}}
+|style="background-color:#DDFFDD"| -8
+|-
+| 112 
+|style="background-color:#000000"|{{DFtext|Misery|6:1}}
+|style="background-color:#FF7777"| 1
+|"Wallowing in misery!" Creature will lie on the ground crying and will not move.
+|-
+| 113 
+|style="background-color:#000000"|{{DFtext|Mortification|6:1}}
+|style="background-color:#FF9999"| 2
+|-
+| 115 
+|style="background-color:#000000"|{{DFtext|Nervousness|6:0}}
+|style="background-color:#FFDDDD"| 8
+|-
+| 116 
+|style="background-color:#000000"|{{DFtext|Nostalgia|1:1}}
+|style="background-color:#DDFFDD"| -8
+|-
+| 117 
+|style="background-color:#000000"|{{DFtext|Optimism|2:1}}
+|style="background-color:#BBFFBB"| -4
+|-
+| 118 
+|style="background-color:#000000"|{{DFtext|Outrage|4:1}}
+|style="background-color:#FF9999"| 2
+|-
+| 119 
+|style="background-color:#000000"|{{DFtext|Panic|6:1}}
+|style="background-color:#FF7777"| 1
+|-
+| 120 
+|style="background-color:#000000"|{{DFtext|Patience|7:0}}
+|style="background-color:#DDFFDD"| -8
+|-
+| 121 
+|style="background-color:#000000"|{{DFtext|Passion|3:1}}
+|style="background-color:#99FF99"| -2
+|-
+| 122 
+|style="background-color:#000000"|{{DFtext|Pessimism|6:0}}
+|style="background-color:#FFDDDD"| 8
+|-
+| 124 
+|style="background-color:#000000"|{{DFtext|Pleasure|3:1}}
+|style="background-color:#BBFFBB"| -4
+|-
+| 125 
+|style="background-color:#000000"|{{DFtext|Pride|3:1}}
+|style="background-color:#BBFFBB"| -4
+|-
+| 126 
+|style="background-color:#000000"|{{DFtext|Rage|4:1}}
+|style="background-color:#FF7777"| 1
+|"Enraged at all enemies!" Causes Enraged.
+|-
+| 127 
+|style="background-color:#000000"|{{DFtext|Rapture|3:1}}
+|style="background-color:#77FF77"| -1
+|-
+| 128 
+|style="background-color:#000000"|{{DFtext|Rejection|6:0}}
+|style="background-color:#FFBBBB"| 4
+|-
+| 129 
+|style="background-color:#000000"|{{DFtext|Relief|2:1}}
+|style="background-color:#99FF99"| -2
+|-
+| 130 
+|style="background-color:#000000"|{{DFtext|Regret|6:0}}
+|style="background-color:#FFDDDD"| 8
+|-
+| 131 
+|style="background-color:#000000"|{{DFtext|Remorse|6:0}}
+|style="background-color:#FFBBBB"| 4
+|-
+| 132 
+|style="background-color:#000000"|{{DFtext|Repentance|1:1}}
+|style="background-color:#99FF99"| -2
+|-
+| 133 
+|style="background-color:#000000"|{{DFtext|Resentment|6:0}}
+|style="background-color:#FFDDDD"| 8
+|-
+| 135 
+|style="background-color:#000000"|{{DFtext|Righteous Indignation|6:0}}
+|style="background-color:#FFDDDD"| 8
+|-
+| 136 
+|style="background-color:#000000"|{{DFtext|Sadness|6:1}}
+|style="background-color:#FFBBBB"| 4
+|-
+| 137 
+|style="background-color:#000000"|{{DFtext|Satisfaction|2:1}}
+|style="background-color:#DDFFDD"| -8
+|-
+| 139 
+|style="background-color:#000000"|{{DFtext|Self Pity|6:0}}
+|style="background-color:#FFDDDD"| 8
+|-
+| 141 
+|style="background-color:#000000"|{{DFtext|Servile|1:1}}
+|style="background-color:#FFFFFF"| 0
+|-
+| 142 
+|style="background-color:#000000"|{{DFtext|Shaken|6:1}}
+|style="background-color:#FF7777"| 1
+|"Shaken to the core!"
+|-
+| 143 
+|style="background-color:#000000"|{{DFtext|Shame|6:1}}
+|style="background-color:#FFBBBB"| 4
+|-
+| 144 
+|style="background-color:#000000"|{{DFtext|Shock|6:1}}
+|style="background-color:#FF7777"| 1
+|"In emotional shock!"
+|-
+| 149 
+|style="background-color:#000000"|{{DFtext|Suspicion|5:1}}
+|style="background-color:#FFDDDD"| 8
+|-
+| 150 
+|style="background-color:#000000"|{{DFtext|Sympathy|3:1}}
+|style="background-color:#DDFFDD"| -8
+|-
+| 151 
+|style="background-color:#000000"|{{DFtext|Tenderness|3:1}}
+|style="background-color:#99FF99"| -2
+|-
+| 153 
+|style="background-color:#000000"|{{DFtext|Terror|4:1}}
+|style="background-color:#FF7777"| 1
+|"Overcome by terror!" Creature will flee from enemies. 
+Default behavior when experiencing high stress in combat.
+|-
+| 154 
+|style="background-color:#000000"|{{DFtext|Thrill|1:1}}
+|style="background-color:#99FF99"| -2
+|-
+| 156 
+|style="background-color:#000000"|{{DFtext|Triumph|2:1}}
+|style="background-color:#99FF99"| -2
+|-
+| 157 
+|style="background-color:#000000"|{{DFtext|Uneasiness|6:0}}
+|style="background-color:#FFDDDD"| 8
+|-
+| 158 
+|style="background-color:#000000"|{{DFtext|Unhappiness|6:0}}
+|style="background-color:#FFBBBB"| 4
+|-
+| 159 
+|style="background-color:#000000"|{{DFtext|Vengefulness|4:1}}
+|style="background-color:#FFBBBB"| 4
+|-
+| 161 
+|style="background-color:#000000"|{{DFtext|Wonder|1:1}}
+|style="background-color:#DDFFDD"| -8
+|-
+| 162 
+|style="background-color:#000000"|{{DFtext|Worry|6:0}}
+|style="background-color:#FFDDDD"| 8
+|-
+| 163 
+|style="background-color:#000000"|{{DFtext|Wrath|4:1}}
+|style="background-color:#FF7777"| 1
+|-
+| 164 
+|style="background-color:#000000"|{{DFtext|Zeal|1:1}}
+|style="background-color:#BBFFBB"| -4
+|-
+| 168 
+|style="background-color:#000000"|{{DFtext|Restless|6:0}}
+|style="background-color:#FFDDDD"| 8
+|-
+| 169 
+|style="background-color:#000000"|{{DFtext|Admiration|3:1}}
+|style="background-color:#DDFFDD"| -8
+|}
+
+{{Category|Thoughts}}
+[[ru:Emotion]]

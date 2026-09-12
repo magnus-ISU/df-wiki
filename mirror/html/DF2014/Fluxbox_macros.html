@@ -1,0 +1,90 @@
+<div class="mw-parser-output"><table class="version-table" style="text-align: center; margin: 3px auto 5px; padding: 0.25em; border-radius: 3px; -webkit-border-radius: 3px; -moz-border-radius: 3px; -o-border-radius: 3px; -ms-border-radius: 3px;; border: 2px solid #ddbb88; background: #fff5ee; min-width:27em"><tbody><tr><td style="padding: 0.3em 0.3em; width: 100%;"><div style="margin-bottom:6px;" class="version-links-r1"><span style="font-size:100%"><span class="version-link"><a href="/index.php/Fluxbox_macros" title="Fluxbox macros"><span style="text-decoration: none; color: #CA7A02;">v53.16</span></a></span><span style="font-weight:bold;" class="dot">&#160;·</span> <span class="version-link"><span style="text-decoration: none; color: #CA7A02; background-color: #FFE0CC; border-radius: 2px; -webkit-border-radius: 2px; -moz-border-radius: 2px; -o-border-radius: 2px; -ms-border-radius: 2px; border: 1px solid #ddbb88; padding: 0.2em;"><b>v0.47.05</b></span></span><span style="font-weight:bold;" class="dot">&#160;·</span> <span class="version-link"><a href="/index.php/v0.34:Fluxbox_macros" title="v0.34:Fluxbox macros"><span style="text-decoration: none; color: #CA7A02;">v0.34</span></a></span><span style="font-weight:bold;" class="dot">&#160;·</span> <span class="version-link"><a href="/index.php?title=v0.31:Fluxbox_macros&amp;action=edit&amp;redlink=1" class="new" title="v0.31:Fluxbox macros (page does not exist)"><span style="text-decoration: none; color: #888;">v0.31</span></a></span><span style="font-weight:bold;" class="dot">&#160;·</span> <span class="version-link"><a href="/index.php?title=40d:Fluxbox_macros&amp;action=edit&amp;redlink=1" class="new" title="40d:Fluxbox macros (page does not exist)"><span style="text-decoration: none; color: #888;">v0.28</span></a></span><span style="font-weight:bold;" class="dot">&#160;·</span> <span class="version-link"><a href="/index.php?title=23a:Fluxbox_macros&amp;action=edit&amp;redlink=1" class="new" title="23a:Fluxbox macros (page does not exist)"><span style="text-decoration: none; color: #888;">v0.23</span></a></span></span></div><span>This article is about an <b>older version</b> of DF.</span><br />
+<div style="float: right; font-size:75%; padding-right:2px; margin-top:-2px; margin-bottom:-7px;"><span class="version-link"><a href="/index.php/Dwarf_Fortress_Wiki:V" class="mw-redirect" title="Dwarf Fortress Wiki:V"><span style="text-decoration: none; color: #CA7A02;">More Info</span></a></span><span style="font-weight:bold;" class="dot">&#160;·</span> <span class="version-link"><a href="/index.php/Template:Av" class="mw-redirect" title="Template:Av"><span style="text-decoration: none; color: #CA7A02;">V</span></a></span></div></td></tr>
+</tbody></table>
+
+<h3><span id="Macros_with_fluxbox_&amp;_xvkbd"></span><span class="mw-headline" id="Macros_with_fluxbox_.26_xvkbd">Macros with fluxbox &amp; xvkbd</span></h3>
+<p>In this context the macro is mean a set of keystrokes / input from the player. Keymap is a set of special key combinations to get special function, or shorten input.
+</p><p>What this is good for?
+Did you had a migrants of 20 or more, and you were in trouble of make enough accommodations for them, before they got unhappy thoughts? Were you bored, by the repetitive creation of a big bedroom? Not to worry anymore, it's possible to break down the task into much less interaction, and to speed up things.
+</p><p>What you need:
+under linux:
+</p>
+<pre>* fluxbox (or your steady window manager, or shortcut editor)
+* xvkbd (or anything, that allows you to type something into an active window / program, as came from stdin)
+</pre>
+<p>winder windows:
+</p>
+<pre>*a good (free) program, that can do the same, and supports special characters
+</pre>
+<h3><span class="mw-headline" id="Fluxbox">Fluxbox</span></h3>
+<p>Fluxbox is a tiny window manager, that allows a lot of powerful customization. If you don't want to install fluxbox just for this, you should look for other solutions in your distro (KDE / Gnome). If you use / successfully setup fluxbox <a rel="nofollow" class="external autonumber" href="http://fluxbox.org/help">[1]</a> you only need to edit .fluxbox/keys files. This contains the keyboard shortcuts.
+</p><p>Mod1 Mod4 m None d b :ExecCommand xvkbd -text "\D2r\[+]\[+]\[+]\[+]\[+]\[+]\[+]\[+]\[+]\[+]\[+]\[+]\r"
+</p>
+<pre>Mod1 means windows / command funciton key (If you use keychains, the order of the modificators seems important&#160;:( )
+Mod4 means alt 
+m is for the key m (so this will be windows + alt + m (special enough not to used in any other application 
+(this is important, because if fluxbox is intercepting a hotkey, it not pass along to the active application!))
+None the following combinations are not using modifications keys (Important: use your last key in keychain as 
+non-modified key, or a big enough delay, or else your macro input will be applied to the modifier, you currently 
+pressing (see below))
+d is for key D (like Dwarf Fortress)
+b is for key B (as bedroom)
+: means, that this is the end of key combinations, and from here the command to apply.
+</pre>
+<p>So, to start this particular keychain (hotkey), <b>(windows + alt + m) d b</b>
+</p>
+<pre>:ExecCommand  tells fluxbox, to execute the followings
+</pre>
+<pre>xvkbd this the virtual keyboard we will use
+-text tells xvkbd to don't display the virtual keyboard, just get the input from command line 
+(there's file input is available, but it does not support special keys so easily)
+"\D2r\[+]\[+]\[+]\[+]\[+]\[+]\[+]\[+]\[+]\[+]\[+]\[+]\r" This is the input, we will pass to 
+Dwarf Fortress (which will press r, and gives 12 + and a final enter)
+The beginning <b>\D2</b> commands xvkbd to wait 2*100ms. You might want to play with this, but I found, 
+that I need this, because the first input key is not passed always otherwise.
+</pre>
+<p>The + is used on keypad under DF, we access this by \[]. The enter is also a special character, used by \r. You might want to take a peek into the xvkbd's man page for some special keys.
+</p><p>So what this macro does at all:
+if you press: if you have large bedroom, and you don't want to make the boring task to create a large bedroom for all the beds, you can manage the bed by <b>q</b> (task and preferences in DF), and then press <b>(windows + alt + m) d b</b>, which will give the order of <b>r</b> ++++++++++++ and an enter.
+</p>
+<h3><span class="mw-headline" id="Trouble_shooting">Trouble shooting</span></h3>
+<ul><li>My first characters are missing from the input
+<ul><li>- You have most probably insufficient delay at the start of the text. Try a bigger number, or a delay at all (<b>\D2</b>)</li></ul></li>
+<li>My macro fails / I cannot get it work at, and not even prints into a textbox.
+<ul><li>- You might have a last keychain key with a modifier.</li></ul></li></ul>
+<pre> <b>Mod1 Mod4 b :ExecCommand xvkbd -text "Hello World"</b>
+ This will most probably not give you any output, or even worst, start a few other applications. This is because the 
+ keyboard interface is behaving additively. This means, if you plug 2 keyboards, and press a key on one of them, and 
+ press another on the other one, the OS will see as both of them pressed. So, if you press on your keyboard Mod1 + Mod4, 
+ and sending a stream of keys on the other, they will add up, and you will end up, as you typed the <b>Hellow World</b> 
+ with Mod1 + Mod4 pressed (Windows + Alt).
+ Solutions:
+ **Set a big enough delay at the beginning of your string (<b>\D5Hello World</b>), so you can release them.
+ <b>Mod1 Mod4 b :ExecCommand xvkbd -text "\D5Hello World"</b>
+ **Set the hotkey to a keychain that ends with a non-modified key
+ <b>Mod1 Mod4 m None b :ExecCommand xvkbd -text "Hello World"</b>
+</pre>
+<h3><span class="mw-headline" id="Some_useful_macros_with_a_short_description">Some useful macros with a short description</span></h3>
+<ul><li>Quick resizes a (bed)room (from the 'q' and set into cursored the bed)</li></ul>
+<pre><b>Mod1 Mod4 m None d b :ExecCommand xvkbd -text "\D2r\[+]\[+]\[+]\[+]\[+]\[+]\[+]\[+]\[+]\[+]\[+]\[+]\r"</b>
+<b>(Windows + Alt + m) d b</b>
+</pre>
+<ul><li>Quick resizes 6 (bed)room, that are inline to the right with a distance of 2 title.</li></ul>
+<pre><b>Mod1 Mod4 m None d v :ExecCommand xvkbd -text "\D2r\[+]\[+]\[+]\[+]\[+]\[+]\[+]\[+]\[+]\[+]\[+]\[+]\r\[Right]\[Right]\[Right]r\[+]\[+]\[+]\[+]\[+]\[+]\[+]\[+]\[+]\[+]\[+]\[+]\r\[Right]\[Right]\[Right]r\[+]\[+]\[+]\[+]\[+]\[+]\[+]\[+]\[+]\[+]\[+]\[+]\r\[Right]\[Right]\[Right]r\[+]\[+]\[+]\[+]\[+]\[+]\[+]\[+]\[+]\[+]\[+]\[+]\r\[Right]\[Right]\[Right]r\[+]\[+]\[+]\[+]\[+]\[+]\[+]\[+]\[+]\[+]\[+]\[+]\r\[Right]\[Right]\[Right]r\[+]\[+]\[+]\[+]\[+]\[+]\[+]\[+]\[+]\[+]\[+]\[+]\r\[Right]\[Right]\[Right]"</b>
+<b>(Windows + Alt + m) d v</b>
+b..b..b..b..b..b..x (and the cursor will be stopped at the next item)
+</pre>
+<ul><li>Mass selector. It selects a lot of items from a list ((enter then down) * 39) (this is about 3 page down)) I use this particular macro to sell Junk to traders, without selling the bins. <i>(If you select the bin, and then select any item for trading, the bin will be deselected.)</i></li></ul>
+<pre><b>Mod1 Mod4 m None d t :ExecCommand xvkbd -text "\r\[Down]\r\[Down]\r\[Down]\r\[Down]\r\[Down]\r\[Down]\r\[Down]\r\[Down]\r\[Down]\r\[Down]\r\[Down]\r\[Down]\r\[Down]\r\[Down]\r\[Down]\r\[Down]\r\[Down]\r\[Down]\r\[Down]\r\[Down]\r\[Down]\r\[Down]\r\[Down]\r\[Down]\r\[Down]\r\[Down]\r\[Down]\r\[Down]\r\[Down]\r\[Down]\r\[Down]\r\[Down]\r\[Down]\r\[Down]\r\[Down]\r\[Down]\r\[Down]\r\[Down]\r\[Down]"</b>
+<b>(Windows + Alt + m) d t</b>
+Warning, if you sell ~20 finished goods bins' contents, then you may expect that 
+the merchants will pack up for a while (probably for a few months).
+</pre>
+<ul><li>Quick macro to build a repeating pattern. For example, you want to build a bedroom, where the dwarf's items are 3 titles apart (2 title between them, and 6 of them). Will select the first available item, so if there's something, you don't want to used, forbid them (coffers / bags).</li></ul>
+<pre><b>Mod1 Mod4 m None d 3 :ExecCommand xvkbd -text "\r\r\r\[Right]\[Right]\[Right]\r\r\r\[Right]\[Right]\[Right]\r\r\r\[Right]\[Right]\[Right]\r\r\r\[Right]\[Right]\[Right]\r\r\r\[Right]\[Right]\[Right]"</b>
+Build menu, and select the item, you want to build (with /*-+, not the keycode!, otherwise you end up 
+one wanted item, and 5 other armor stands) <b>(Windows + Alt + m) d 3</b>
+b..b..b..b..b..x (and the cursor will be stopped at the next item)
+</pre>
+<p>Feel free, to add your own macros.
+</p></div>

@@ -1,0 +1,43 @@
+{{Quality|Superior|01:46, 28 October 2013 (UTC)}}
+{{av}}
+{{old}}
+[[File:DF_Cheese.jpg|208px|thumb|right|A dwarf eating cheese]]
+The process of '''engraving''' [[smoothing|smoothed]] [[wall]]s and [[floor]]s increases their value further, and gives them a [[quality]] level. Engravings made with a quality of -Well-crafted- and higher will usually be in reference to previous events.  Unlike [[furniture]], engravings won't give passing dwarves happy [[thought]]s. You can examine the contents of an engraving by pressing {{k|k}}->{{k|Enter}}.
+
+Any natural tiles composed of non-{{token|SOIL|imat}} material can be [[smoothing|smoothed]] and then engraved, even [[slade]] and the materials that exist in geological layers only as a [[Duplicated raws#Duplicated materials|result of a glitch]]. Engraved  [[ice]] is called 'Sculpted Ice'.
+
+==Process==
+You can only engrave [[smoothing|smoothed]] natural floors and walls. The material the tile is composed of has no effect on the process of engraving, but [[soil]] tiles cannot be smoothed beforehand and thus cannot be engraved.  Once the area has been smoothed, you may designate it to be engraved using {{k|d}}-{{k|e}}.  The dwarf must have the [[engraver|Stone Detailing]] labor active.  You cannot engrave [[construction|constructed]] floors or walls.
+
+Once a tile is designated, the theme or content of the engraving can be selected using {{k|d}}-{{k|D}}; otherwise it is left to the choice of the engraver performing the job.
+
+Engravings are directional--only the side the engraving dwarf stood on will receive the engraving value bonus. There is no way to engrave more than one side of a single wall tile. 
+
+Using only highly-skilled engravers will result in high-quality engravings, and therefore higher room and fortress value. One way to achieve this is to have a limited number of dwarves with the Stone Detailing labor active, smooth large areas of the fortress until the dwarves are experienced and then have those same dwarves engrave.
+
+==Toggling==
+The content of engravings can either be shown or obscured. If shown, the tile used to draw the engraved wall or floor will represent the content of the engraving (e.g. an engraving of a dog would use the tile 'd'). If obscured, all engravings will display a generic engraved tile similar to smoothed stone. Sticklers for uniformity will likely want to obscure their engravings. There are two ways to toggle engravings:
+
+* [[d_init.txt]] has an entry called ENGRAVINGS_START_OBSCURED, which can be set to either YES or NO.
+* While playing, one can use the designate menu ({{k|d}}->{{k|v}}) to toggle selected engravings.
+
+==Removal==
+Floor engravings of unsatisfactory quality and/or content (e.g. carvings of elephants mauling dwarves) can be removed by {{k|d}}esignating the carving of minecart {{k|T}}racks over them. The tracks can then be removed by smoothing the stone, which results in fresh, smooth stone tiles ready for another attempt at engraving. Floor engravings can also be removed by placing and removing a [[construction]] or a paved [[road]]. Note that this takes much longer than engraving and smoothing over a track. It will also leave behind a floor made of the surrounding layer material, which can undo the work invested in creating non-layer floors, e.g. through [[obsidian]] casting or [[cave-in]]s. 
+
+Floor engravings can also be removed by allowing [[magma]] to flow over them, which reverts the tiles to their smooth form. Using either method to erase a masterwork engraving will cause an unhappy [[thought]] in the artist who engraved it, as will mining a wall with a masterpiece on it.
+
+Building and removing constructions or roads will not remove engravings in ice floors. They can be removed by engraving and smoothing track.
+
+==Effects on [[room]] value==
+
+Dwarves never actually look at engravings - they simply take their perceived value into account when evaluating the value of a particular room.
+
+The effect on room value in cases of [[temple]]s and [[guildhall]]s is its material [[value]] multiplied by its [[Item_quality#Quality_grades|quality grade]] value multiplier, plus an additional 2x multiplier if the dwarf has a [[preference]] for the stone in which the engraving was carved.
+
+==Bugs== 
+* While the [[quality]] rating of engravings on ice walls is shown properly, the quality of engravings on ice ''floors''  is not shown when looking at a tile with {{k|k}}, only when hitting {{k|enter}} to inspect the engraving. This gives the false impression that engraved ice floors have no quality levels.{{bug|13543}}
+* Engravings on floors made of ice are described as "engraved on the wall" instead of "on the floor".{{bug|3920}}
+[[File:engraving_preview.jpg|thumb|320px|center|Engraving of a Hindu civilization.]]
+
+{{Category|Fortress mode}}
+[[ru:Engraving]]

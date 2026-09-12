@@ -1,0 +1,102 @@
+{{Quality|Exceptional|17:32, 2 February 2015 (UTC)}}
+{{av}}
+{{updated for v0.42|link=http://dwarffortresswiki.org/index.php?title=DF2014:Finished_goods&oldid=215721}}
+
+'''Finished goods''' are items that go to a finished goods [[stockpile]] when made. Many of these items are frequently referred to as trade goods as they are lightweight and suitably valuable  for [[trading]]. They include '''crafts''', '''goblets''', '''instruments''', '''toys''', '''large gems''', and '''totems''', some of which have several sub-types.  
+
+Finished good types with several sub-types may have generic workshop orders to produce random sub-type items, e.g. "Make crafts". Additionally, some specific subtypes of goods can be ordered directly at an appropriate workshop or through the [[manager]]. If you have a mandate to make rings, you can order rings directly, instead of waiting for a generic "crafts" job to produce rings; others, like puzzleboxes, though, can only be produced by generic jobs ("toys").
+
+Some types of trade goods (Crafts and Goblets) can be produced in multiples. It is possible to get up to three crafts from a single resource. Skill does not affect the chance to produce multiples.
+
+==Types of trade goods==
+
+===Crafts===
+Crafts include [[figurine|'''figurines''']], [[jewelry|'''rings''', '''earrings''', '''amulets''', '''bracelets''', '''crowns''']], and '''[[scepter]]s'''. They are the only type of trade good that appears on its own page in the Trade Depot menu. Some subtypes of crafts can reference [[historical figure]]s and events (figurines, for example); this does not have any meaningful effect on the value of the craft.
+
+One generic order to "make crafts" consumes one resource and produces one to three items, two on average. All subtypes, if they can be produced from the chosen material, have an identical chance to be produced.
+
+Most crafts can be worn by dwarves like clothing (figurines and scepters can only be carried in hands).  Dwarves ordered to haul a craft will occasionally claim it instead (either putting it on or storing it in a room), satisfying the "acquire something" [[need]]; this is much more likely to happen if the dwarf has [[preference]] for the item.
+
+Gem and glass crafts cannot be made directly; they may only be produced randomly by gem cutting jobs.
+
+===Goblets===
+{{Tile|¶|7:1}} 
+[[File:BLW Betrothal Goblet.jpg|thumb|160px|right|A goblet.]]Goblets have no subtypes, but have different names depending on the material from which they are made: [[metal]] and [[glass]] goblets are simply '''goblets''', [[stone]] goblets are called '''mugs''', and [[wood]]en goblets are called '''cups'''.
+
+Goblets are always produced at a 3:1 ratio. Metal goblets are made at a [[metalsmith's forge]]. Glass goblets are made at a [[glass furnace]]. Rock mugs and wooden cups are made at a [[craftsdwarf's workshop]].
+
+Goblets can be used by dwarves for [[drink]]ing {{version|0.42.01}}. If no goblets are available in a dining room stockpile or a coffer in a [[tavern]], a thirsty dwarf can drink [[alcohol]] straight from the [[barrel]], but this will result in an unhappy [[thought]]. If a dwarf is unable to use their arms, they will stall on picking up a goblet rather than drinking straight from the barrel{{bug|9440}}. Goblets can also be used to transport liquids in [[adventurer mode]].
+
+===Instruments===
+{{main|Instruments}}
+[[File:wood_inst.jpg|thumb|150px|right|Wooden instruments.]]{{Tile|¿|7:1}} Instruments can be composed of one or more components made from specific materials. The presence of multiple high-value components can increase the trade value of an instrument far beyond any other finished good. Instruments can also be used by [[performer]]s in [[tavern]]s or [[temple]]s.
+
+===Toys===
+{{Tile|æ|7:1}} Toys include '''mini-forges''', '''toy hammers''', '''toy axes''', '''toy boats''', and '''puzzleboxes'''. Dwarven children can play with toys.
+
+===Totems===
+[[Image:Skull totem.jpg|right|thumb|200px|An example of a skull totem.]]
+
+{{Tile|ç|7:1}} Totems are made from skulls by a [[bone carver]] at a [[craftsdwarf's workshop]].
+
+Although totems have the same base [[value]] as all other crafts, totems made from the skulls of more valuable animals like [[unicorn]]s will fetch a hefty price.
+
+===Large gems===
+{{Tile|♦|7:1}} Large gems have no subtypes. Large gems can be ordered cut from every material '''except''' gems and glass (including beeswax and soap). For [[gem]] or [[glass]] large gems, a Gem Cutting job will occasionally produce a large gem. It can be assumed that this represents the rarity of large gem-quality rough gemstones, and the difficulty of creating thick evenly structured glass pieces. Large gems currently have no use beyond trade.
+
+==Materials==
+Most materials can be used to make trade goods - on occasion, a [[dwarf]] in a [[strange mood]] will make a trade good out of a material not normally suited for it (e. g., a bone toy).
+
+{| class="wikitable"
+| align="center" style="background:#f0f0f0;"|'''Material'''
+| align="center" style="background:#f0f0f0;"|'''Labor'''
+| align="center" style="background:#f0f0f0;"|'''Workshop'''
+| align="center" style="background:#f0f0f0;"|'''Crafts'''
+| align="center" style="background:#f0f0f0;"|'''Goblets'''
+| align="center" style="background:#f0f0f0;"|'''Toys'''
+| align="center" style="background:#f0f0f0;"|'''Large Gems'''
+| align="center" style="background:#f0f0f0;"|'''Instruments'''
+|-
+| [[Stone]]||[[Stone crafter|Stonecrafting]]||[[Craftsdwarf's workshop]]||Y||Y||Y||Y||Y<sup>1</sup>
+|-
+| [[Wood]]||[[Wood crafter|Woodcrafting]]||[[Craftsdwarf's workshop]]||Y||Y||Y<sup>2</sup>||Y||Y<sup>1</sup>
+|-
+| [[Leather]]||[[Leatherworker|Leatherworking]]||[[Craftsdwarf's workshop]]||Y<sup>4</sup>||N||N||N||Y<sup>1</sup>
+|-
+| [[Cloth]]<sup>3</sup>||[[Clothier|Clothesmaking]]||[[Craftsdwarf's workshop]]||Y<sup>4</sup>||N||N||N||N
+|-
+| [[Bone]]<sup>5</sup>||[[Bone carving]]||[[Craftsdwarf's workshop]]||Y||N||N||Y||Y<sup>1</sup>
+|-
+| [[Shell]]||[[Bone carving]]||[[Craftsdwarf's workshop]]||Y||N||N||Y||Y<sup>1</sup>
+|-
+| [[Horn]]||[[Bone carving]]||[[Craftsdwarf's workshop]]||Y||N||N||Y||Y<sup>1</sup>
+|-
+| [[Ivory]]||[[Bone carving]]||[[Craftsdwarf's workshop]]||Y||N||N||Y||N
+|-
+| [[Pearl]]||[[Bone carving]]||[[Craftsdwarf's workshop]]||Y||N||N||Y||N
+|-
+| [[Ceramic]]||[[Potter|Pottery]]||[[Kiln]] or [[Magma kiln]]||Y||N||N||N||Y<sup>1</sup>
+|-
+| [[Wax]]||[[Wax worker|Wax working]]||[[Craftsdwarf's workshop]]||Y||N||N||N||N
+|-
+| [[Metal]]||[[Metalcrafting]]||[[Metalsmith's forge]] or [[Magma forge]]||Y||Y||Y||Y||Y<sup>1</sup>
+|-
+| [[Glass]]||[[Glassmaker|Glassmaking]]||[[Glass furnace]] or [[Magma glass furnace]]||Y<sup>6</sup>||Y||Y||Y<sup>6</sup>||Y<sup>1</sup>
+|-
+| [[Gem|Gems]]||[[Gem cutting]]||[[Jeweler's workshop]]||Y<sup>6</sup>||N||N||Y<sup>6</sup>||N
+|}
+<sup>1</sup> Instruments and their components are procedurally generated items; the materials they can be made from depend on the particular world.
+
+<sup>2</sup> Wooden toys can only be made using the job [[manager]], as the craftsdwarf's workshop interface does not permit selecting them. {{bug|3119}}
+
+<sup>3</sup> [[Adamantine]] cloth cannot be used to make crafts (Adamantine crafts can be created at a [[Metalsmith's forge]]).
+
+<sup>4</sup> Amulets, Earrings and Bracelets are the only crafts that can be produced from [[leather]], [[plant]] cloth, and [[silk]] cloth. All crafts can be produced from [[yarn]] cloth.
+
+<sup>5</sup> Skull totems, like bone crafts, are made by a bone carver at a craftsdwarf's workshop.
+
+<sup>6</sup> Crafts and large gems are produced randomly by cutting jobs at a [[Jeweler's workshop]], with the [[Gem cutting]] labor. Raw glass has a 33% chance to be cut into a large gem or a craft (with 11 crafts for every 16 large gems). Raw gems have a 5% chance to be cut into a large gem or a craft (with 1 craft for every 8 large gems). See [[DF2012_Talk:Finished_goods|the talk page]] for more info.
+
+{{Category|Items}}
+{{Industry}}
+[[ru:Finished goods]]
