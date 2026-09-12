@@ -1,0 +1,307 @@
+<div class="mw-parser-output"><div id="page-quality-rating" style="text-align: right;margin: 0.8em 0;font-size:75%">
+ <a href="/index.php/Dwarf_Fortress_Wiki:Quality#Tattered" title="Dwarf Fortress Wiki:Quality"><span id="stub-quality" style="text-decoration:none; color:#333333">xTATTEREDx</span></a> <span style="font-weight:bold;" class="dot">&#160;·</span> <a href="/index.php/Dwarf_Fortress_Wiki:Quality#Fine" title="Dwarf Fortress Wiki:Quality"><span id="fine-quality" style="padding:0.2em; border:1px solid #db8; border-radius: 2px; -webkit-border-radius: 2px; -moz-border-radius: 2px; -o-border-radius: 2px; -ms-border-radius: 2px; background:#FFE0CC; color:#CA7A02;">+FINE+</span></a> <span style="font-weight:bold;" class="dot">&#160;·</span> <a href="/index.php/Dwarf_Fortress_Wiki:Quality#Superior" title="Dwarf Fortress Wiki:Quality"><span id="superior-quality" style="text-decoration:none; color:#8800cc;">*SUPERIOR*</span></a> <span style="font-weight:bold;" class="dot">&#160;·</span> <a href="/index.php/Dwarf_Fortress_Wiki:Quality#Exceptional" title="Dwarf Fortress Wiki:Quality"><span id="exceptional-quality" style="text-decoration:none; color:#0088CC;">≡EXCEPTIONAL≡</span></a> <span style="font-weight:bold;" class="dot">&#160;·</span> <a href="/index.php/Dwarf_Fortress_Wiki:Quality#Masterwork" title="Dwarf Fortress Wiki:Quality"><span id="masterwork-quality" style="text-decoration:none; color:#72A329;">☼MASTERWORK☼</span></a></div><table class="version-table" style="text-align: center; margin: 3px auto 5px; padding: 0.25em; border-radius: 3px; -webkit-border-radius: 3px; -moz-border-radius: 3px; -o-border-radius: 3px; -ms-border-radius: 3px;; border: 2px solid #bbdd88; background: #f5ffee; min-width:27em"><tbody><tr><td style="padding: 0.3em 0.3em; width: 100%;"><div style="margin-bottom:6px;" class="version-links-r1"><span style="font-size:100%"><span class="version-link"><span style="text-decoration: none; color: #72A329; background-color: #E2FDCE; border-radius: 2px; -webkit-border-radius: 2px; -moz-border-radius: 2px; -o-border-radius: 2px; -ms-border-radius: 2px; border: 1px solid #bbdd88; padding: 0.2em;"><b>v53.16</b></span></span><span style="font-weight:bold;" class="dot">&#160;·</span> <span class="version-link"><a href="/index.php/DF2014:Weight" title="DF2014:Weight"><span style="text-decoration: none; color: #72A329;">v0.47.05</span></a></span></span></div><span>This article is about the current version of DF.<br />Note that some content may still need to be updated.</span><br />
+<div style="float: right; font-size:75%; padding-right:2px; margin-top:-2px; margin-bottom:-7px;"><span class="version-link"><a href="/index.php/Dwarf_Fortress_Wiki:V" class="mw-redirect" title="Dwarf Fortress Wiki:V"><span style="text-decoration: none; color: #72A329;">More Info</span></a></span><span style="font-weight:bold;" class="dot">&#160;·</span> <span class="version-link"><a href="/index.php/Template:Av" class="mw-redirect" title="Template:Av"><span style="text-decoration: none; color: #72A329;">V</span></a></span></div></td></tr>
+</tbody></table>
+<div class="floatright"><a href="/index.php/File:Weight_burden_preview.png" class="image"><img alt="Weight burden preview.png" src="/images/8/86/Weight_burden_preview.png" decoding="async" width="170" height="170" /></a></div><p><b>Weight</b>, or sometimes more correctly termed <b>mass</b>, is an item property, and is measured in the unit <i>Γ</i>, also sometimes known as <i>urists</i>, or more commonly as the <i>kilogram</i>, its equivalent real-life unit.
+</p><p>Weight is largely used by the game to determine how fast someone or something should move, due to encumbrance effects and carry weight restrictions; to calculate damage, since object mass factors into impact momentum; and to some extent to make temperature calculations, as mass factors into heat capacity. Note that, for DF, weight and mass are currently indistinguishable because, as it stands, DF gravity is <a rel="nofollow" class="external text" href="http://www.bay12games.com/media/df_talk_8_transcript.html">uniform both across the whole universe and from world to world</a> and buoyancy isn't implemented.
+</p><p>Weight is displayed as a quantity associated with an item. Weight calculation is not entirely straightforward, since each item category &#8212; or sometimes even individual items &#8212; have their own formula for determining weight.
+</p><p>In <a href="/index.php/Adventure_mode" class="mw-redirect" title="Adventure mode">adventure mode</a> (where weight is referred to as "burden"), carrying too much weight in a character's inventory will cause them to move more slowly, the more they carry beyond their limits. When this happens, an icon appears above the inventory icon. Movement speed is reduced based on how much you exceed your carrying capacity, it will never reach zero, however, even if you are carrying hundreds of units above your carrying capacity. Characters can carry more the higher their strength attribute is - naturally, stronger, larger characters (such as an <a href="/index.php/Elephant_man" title="Elephant man">elephant man</a>) are able to carry more.
+</p>
+<h2><span class="mw-headline" id="Weight_Calculation">Weight Calculation</span></h2>
+<p>The general form for calculating weight in DF is to take the material <a href="/index.php/Density" title="Density">density</a> (as found in the raws) multiplied by the item's <a href="/index.php/Size" title="Size">volume</a>.
+</p>
+<dl><dd>Weight (in Γ) = Density (in kg/m<sup>3</sup>) * Volume (in cm<sup>3</sup>) / 1,000,000 (cm<sup>3</sup>/m<sup>3</sup>)</dd></dl>
+<p>Internally, all custom volume/capacity numbers are rounded <i>down</i> to the nearest multiple of 10 - thus, if you define a tool with [SIZE:15], it will actually behave as if you had specified [SIZE:10].<a rel="nofollow" class="external autonumber" href="http://www.bay12forums.com/smf/index.php?topic=169696.msg8300987#msg8300987">[1]</a>
+</p><p>An item's volume is also used to determine workshop <a href="/index.php/Clutter" title="Clutter">clutter</a> as well as how many items can fit into a container.
+</p>
+<h2><span class="mw-headline" id="Assorted_item_weights">Assorted item weights</span></h2>
+<p>Weight displayed in-game is rounded down to a whole number.
+</p>
+<table class="sortable" border="1" cellpadding="4" cellspacing="0" style="margin: 1em 1em 1em 0; background: #f9f9f9; border: 1px #aaa solid; border-collapse: collapse;">
+
+<tbody><tr bgcolor="#999999">
+<th>Item
+</th>
+<th>Weight in Γ(kg)
+</th>
+<th>Notes
+</th></tr>
+<tr>
+<td><a href="/index.php/Iron" title="Iron">Iron</a> <a href="/index.php/Anvil" title="Anvil">anvil</a>
+</td>
+<td style="text-align:right">78.5000
+</td>
+<td>Same as a steel anvil.
+</td></tr>
+<tr>
+<td><a href="/index.php/Aluminum" title="Aluminum">Aluminum</a> <a href="/index.php/Bar" title="Bar">bar</a>
+</td>
+<td style="text-align:right">16.2000
+</td>
+<td>Least dense normal metal.
+</td></tr>
+<tr>
+<td><a href="/index.php/Steel" title="Steel">Steel</a> bar
+</td>
+<td style="text-align:right">47.1000
+</td>
+<td>Same as an iron or pig iron bar.
+</td></tr>
+<tr>
+<td><a href="/index.php/Platinum" title="Platinum">Platinum</a> bar
+</td>
+<td style="text-align:right">128.4000
+</td>
+<td>Most dense metal.
+</td></tr>
+<tr>
+<td>1 <a href="/index.php/Copper" title="Copper">Copper</a> <a href="/index.php/Coin" class="mw-redirect" title="Coin">coin</a>
+</td>
+<td style="text-align:right">0.0893
+</td>
+<td>Weight per coin varies with stack size, see <a href="/index.php/Size" title="Size">Size</a> for details.
+</td></tr>
+<tr>
+<td>500 Copper coins
+</td>
+<td style="text-align:right">2.7683
+</td>
+<td>This is 0.0055366 per coin, but that varies with stack size.
+</td></tr>
+<tr>
+<td>500 <a href="/index.php/Silver" title="Silver">Silver</a> coins
+</td>
+<td style="text-align:right">3.2519
+</td>
+<td>This is 0.0065038 per coin, but that varies with stack size.
+</td></tr>
+<tr>
+<td>500 <a href="/index.php/Gold" title="Gold">Gold</a> coins
+</td>
+<td style="text-align:right">5.9892
+</td>
+<td>This is 0.0119784 per coin, but that varies with stack size.
+</td></tr>
+<tr>
+<td><a href="/index.php/Feather_tree" title="Feather tree">Feather (wood)</a> <a href="/index.php/Barrel" title="Barrel">barrel</a>
+</td>
+<td style="text-align:right">2.0000
+</td>
+<td>Least dense <a href="/index.php/Wood" title="Wood">wood</a>, found only in good biomes.
+</td></tr>
+<tr>
+<td><a href="/index.php/Willow" title="Willow">Willow</a> barrel
+</td>
+<td style="text-align:right">7.8000
+</td>
+<td>Least dense common wood, found near water in many biomes.
+</td></tr>
+<tr>
+<td><a href="/index.php/Tunnel_tube" title="Tunnel tube">Tunnel tube</a> barrel
+</td>
+<td style="text-align:right">10.0000
+</td>
+<td>Least dense cavern wood, found only in lower caverns.
+</td></tr>
+<tr>
+<td><a href="/index.php/Tower_cap" class="mw-redirect" title="Tower cap">Tower cap</a> barrel
+</td>
+<td style="text-align:right">12.0000
+</td>
+<td>Same as a barrel of acacia, ash, fungiwood, goblin-cap, mahogany, pear, or spore <a href="/index.php/Wood" title="Wood">wood</a>.
+</td></tr>
+<tr>
+<td><a href="/index.php/Blood_thorn" title="Blood thorn">Blood thorn</a> barrel
+</td>
+<td style="text-align:right">25.0000
+</td>
+<td>Most dense wood, found only in lowest caverns.
+</td></tr>
+<tr>
+<td><a href="/index.php/Jet" title="Jet">Jet</a> <a href="/index.php/Block" title="Block">block</a>
+</td>
+<td style="text-align:right">7.9200
+</td>
+<td>Least dense non-economic stone.
+</td></tr>
+<tr>
+<td><a href="/index.php/Shale" title="Shale">Shale</a> block
+</td>
+<td style="text-align:right">13.5000
+</td>
+<td>
+</td></tr>
+<tr>
+<td><a href="/index.php/Cinnabar" title="Cinnabar">Cinnabar</a> block
+</td>
+<td style="text-align:right">48.6000
+</td>
+<td>Most dense non-economic stone.
+</td></tr>
+<tr>
+<td><a href="/index.php/Sheep" title="Sheep">Sheep</a> <a href="/index.php/Cheese" title="Cheese">cheese</a>
+</td>
+<td style="text-align:right">1.2000
+</td>
+<td>All cheeses seem to use the default density of 1200 kg/m<sup>3</sup>.
+</td></tr>
+<tr>
+<td>Willow <a href="/index.php/Large_pot" title="Large pot">large pot</a>
+</td>
+<td style="text-align:right">1.9500
+</td>
+<td>Least dense common wood, found near water in many biomes.
+</td></tr>
+<tr>
+<td>Tower cap large pot
+</td>
+<td style="text-align:right">3.0000
+</td>
+<td>Same as a large pot of acacia, ash, fungiwood, goblin-cap, mahogany, pear, or spore <a href="/index.php/Wood" title="Wood">wood</a>.
+</td></tr>
+<tr>
+<td>Blood thorn large pot
+</td>
+<td style="text-align:right">6.2500
+</td>
+<td>Most dense wood, found only in lowest caverns.
+</td></tr>
+<tr>
+<td>Jet large pot
+</td>
+<td style="text-align:right">6.6000
+</td>
+<td>Least dense non-economic stone.
+</td></tr>
+<tr>
+<td><a href="/index.php/Earthenware" title="Earthenware">Earthenware</a> large pot
+</td>
+<td style="text-align:right">6.8000
+</td>
+<td>Must be glazed to hold liquids (or maybe any food).
+</td></tr>
+<tr>
+<td><a href="/index.php/Stoneware" title="Stoneware">Stoneware</a> large pot
+</td>
+<td style="text-align:right">10.0000
+</td>
+<td>Does not need glazing.
+</td></tr>
+<tr>
+<td>Shale large pot
+</td>
+<td style="text-align:right">11.2500
+</td>
+<td>
+</td></tr>
+<tr>
+<td><a href="/index.php/Porcelain" title="Porcelain">Porcelain</a> large pot
+</td>
+<td style="text-align:right">12.0150
+</td>
+<td>Not an unlimited resource like other ceramics.
+</td></tr>
+<tr>
+<td>Glass large pot
+</td>
+<td style="text-align:right">13.0000
+</td>
+<td>All three types of glass have the same density.
+</td></tr>
+<tr>
+<td>Cinnabar large pot
+</td>
+<td style="text-align:right">40.5000
+</td>
+<td>Most dense non-economic stone.
+</td></tr>
+<tr>
+<td>Feather <a href="/index.php/Log" class="mw-redirect" title="Log">log</a>
+</td>
+<td style="text-align:right">5.0000
+</td>
+<td>Least dense wood, found only in good biomes.
+</td></tr>
+<tr>
+<td>Willow log
+</td>
+<td style="text-align:right">19.5000
+</td>
+<td>Least dense common wood, found near water in many biomes.
+</td></tr>
+<tr>
+<td>Tunnel tube log
+</td>
+<td style="text-align:right">25.0000
+</td>
+<td>Least dense cavern wood, found only in lower caverns.
+</td></tr>
+<tr>
+<td>Tower cap log
+</td>
+<td style="text-align:right">30.0000
+</td>
+<td>Same as a log of acacia, ash, fungiwood, goblin-cap, mahogany, pear, or spore <a href="/index.php/Wood" title="Wood">wood</a>.
+</td></tr>
+<tr>
+<td>Blood thorn log
+</td>
+<td style="text-align:right">62.5000
+</td>
+<td>Most dense wood, found only in lowest caverns.
+</td></tr>
+<tr>
+<td>Jet <a href="/index.php/Stone" title="Stone">stone</a>
+</td>
+<td style="text-align:right">132.0000
+</td>
+<td>Least dense non-economic stone.
+</td></tr>
+<tr>
+<td>Shale stone
+</td>
+<td style="text-align:right">225.0000
+</td>
+<td>
+</td></tr>
+<tr>
+<td>Cinnabar stone
+</td>
+<td style="text-align:right">810.0000
+</td>
+<td>Most dense non-economic stone.
+</td></tr></tbody></table>
+<h2><span class="mw-headline" id="See_also">See also</span></h2>
+<ul><li><a href="/index.php/Density" title="Density">Density</a></li>
+<li><a href="/index.php/Size" title="Size">Size</a></li></ul>
+<table class="wikitable floatright" style="text-align:center;">
+<tbody><tr>
+<td>"Weight" in other <b><a href="/index.php/Language" title="Language">Languages</a></b> <a href="/index.php/File:Story_tell_indicator.png" class="image"><img alt="Story tell indicator.png" src="/images/9/90/Story_tell_indicator.png" decoding="async" width="20" height="18" /></a>
+<table style="text-align:left;">
+
+
+
+<tbody><tr>
+<th><b><a href="/index.php/Dwarven_language" title="Dwarven language">Dwarven</a></b>:
+</th>
+<td>âl
+</td></tr>
+
+<tr>
+<th><b><a href="/index.php/Elven_language" title="Elven language">Elven</a></b>:
+</th>
+<td>eba
+</td></tr>
+
+<tr>
+<th><b><a href="/index.php/Goblin_language" title="Goblin language">Goblin</a></b>:
+</th>
+<td>deslo
+</td></tr>
+
+<tr>
+<th><b><a href="/index.php/Human_language" title="Human language">Human</a></b>:
+</th>
+<td>ketas
+</td></tr></tbody></table>
+</td></tr></tbody></table></div>

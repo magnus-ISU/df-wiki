@@ -1,0 +1,567 @@
+{{migrated article}}
+{{Quality|Unrated}}
+[[Category:Game development]]
+{{av}}
+'''Version numbers''' (also known as "software versioning") - by definition - are numbers designated to any kind of software, including video games. Version numbers increase as more features, fixes and changes are added over time. The number that increases is heavily dependent on how much changes are made. For example, a complete redo of a type of software can bring a version from 1.0 to 2.0. A major improvement of software could bring version 1.0 to 1.1. A minor change could bring version 1.0 to 1.0.1, and so on. Different developers have their own way of incorporating version numbers, but the general concept is always the same between them.
+
+When software is in the early stages of development, such as alpha or beta, it will likely have version numbers starting with zero, such as 0.3 or 0.23.5. This is currently the case with ''[[Main:Dwarf Fortress|Dwarf Fortress]]''.
+
+[[Main:Toady|Tarn Adams]] assigns a version number for every ''Dwarf Fortress'' release. Version numbers contain two number sections defining the release information, but don't let this deceive you:  the system is more complicated than simple [https://semver.org/ semantic versioning]. Releases from 2009 and earlier contained ''four'' numbers and a letter - see the [[40d:Version number|older versions of this page]] for more information.
+
+# The first number is how many hundreds of core components have been completed.
+# The second number is the total number of [http://www.bay12games.com/dwarves/dev.html core] components completed.
+# The third number is increased by one for each "minor" release (one that does not advance the core components completed, usually a bug-fix release) of a version.
+
+==Example==
+{{#vardefine:minor-version|{{#strsplit:{{current/version/ns}}|.|1}}}}{{#vardefine:patch-version|{{#strsplit:{{current/version/ns}}|.|2}}}}
+v{{current/version/ns}}, the {{ordinal|{{#var:patch-version}}}} minor release of the version of ''Dwarf Fortress'' with {{#var:minor-version}} core components complete.
+{| style='width: 25em; margin: 1em auto; border-spacing: 0; text-align: center'
+|-
+| colspan='3' |
+| colspan='2' style='font-size: 200%; padding: 0.2em; border-bottom: 3px solid #999; background: #eeeeee' | 0
+| colspan='1' style='font-size: 200%; padding: 0' | .
+| colspan='2' style='font-size: 200%; padding: 0.2em; border-bottom: 3px solid #9df; background: #eef5ff' | {{#var:minor-version}}
+| colspan='1' style='font-size: 200%; padding: 0' | .
+| colspan='2' style='font-size: 200%; padding: 0.2em; border-bottom: 3px solid #db8; background: #fff5ee' | {{#var:patch-version}}
+| colspan='2' |
+|-
+| style='height: 1em' |
+| colspan='2' style='border-bottom: 1px solid #999' |
+| style='border-right: 1px solid #999; border-bottom: 1px solid #999' |
+| style='border-left: 1px solid #999' |
+| |
+| style='border-right: 1px solid #9df' |
+| style='border-left: 1px solid #9df' |
+| |
+| style='border-right: 1px solid #db8' |
+| style='border-left: 1px solid #db8; border-bottom: 1px solid #db8' |
+| colspan='2' style='border-bottom: 1px solid #db8' |
+| style='height: 1em' |
+|-
+| style='border-right: 1px solid #999; height: 1em' |
+| style='border-left: 1px solid #999; border-top: 1px solid #999' |
+| colspan='2' style='border-top: 1px solid #999' |
+| colspan='2' |
+| style='border-right: 1px solid #9df; height: 1em' |
+| style='border-left: 1px solid #9df' |
+| colspan='2' |
+| colspan='2' style='border-top: 1px solid #db8' |
+| style='border-right: 1px solid #db8; border-top: 1px solid #db8' |
+| style='border-left: 1px solid #db8; height: 1em' |
+|-
+| colspan='2' style='padding: 0.25em; border: 2px solid #999; background: #eeeeee' | Fewer than 100 '''core''' components complete
+| width='2em' |<div style='width: 1.5em'></div>
+| colspan='8' style='padding: 0.25em; border: 2px solid #9df; background: #eef5ff' | {{#var:minor-version}} '''core''' components completed
+| width='2em' |<div style='width: 1.5em'></div>
+| colspan='2' style='padding: 0.25em; border: 2px solid #db8; background: #fff5ee' | {{ordinal|{{#var:patch-version}}}} '''minor''' release
+|}
+
+= The core components list =
+{| border="1" cellpadding="4"
+|+
+! #
+! Name of Core
+! Status
+! Description
+|-
+|Core1
+|WRESTLING
+|'''Completed'''
+|Introduce close combat with various manuevers.
+|-
+|Core2
+|ADVENTURER EATING AND DRINKING
+|'''Completed'''
+|Start the adventurer with food and allow them to eat and drink.
+|-
+|Core3
+|CARAVANS
+|(Future)
+|Use resource tracking and the adventurer travel infrastructure to set up groups of traders that go between sites. Make sure to respect the current flow of the dwarf game, though caravans will no longer be 'generated' when needed. Related to entity knowledge transfer if we are there by this time. The trading done by caravans would interface with the resource tracking system and thus be immediately available to adventurers. This includes items traded away by your dwarf fortress, although it's possible they could be abstracted a bit if they are too numerous. Requires Core38.
+|-
+|Core4
+|GROUND INTERACTIONS
+|'''Completed'''
+|Introduce adventurer interacting with the environment.
+|-
+|Core5
+|ADVENTURER TRAVEL
+|'''Completed'''
+|Allow the adventurer and companions to travel between sites on the world map.
+|-
+|Core6
+|BASIC ADVENTURER ENVIRONMENTAL EFFECTS
+|'''Completed'''
+|Things like rain, snow, temperature, sunlight. No temperature or local lighting effects yet.
+|-
+|Core7
+|CONVERSATIONS
+|'''Completed'''
+|Add the ability to talk to other creatures in adventure mode.
+|-
+|Core8
+|ADVENTURER SHOPS
+|'''Completed'''
+|Basic buying and selling of objects in adventure mode.
+|-
+|Core9
+|TOWNS
+|'''Completed'''
+|Add basic town maps to adventure mode, making use of the Z coordinate to do basements and second stories.
+|-
+|Core10
+|OO CODE UPDATE
+|'''Completed'''
+|Update all of the major code objects to C++.
+|-
+|Core11
+|ENEMY PETS
+|(Future)
+|Can give the leaders creatures depending on their personal likes, race, the entity definition and the local available wilderness populations. These pets can have names and profiles like regular creatures. Can co-opt some of the behavior from dwarven pet owners.
+|-
+|Core12
+|END GAME
+|'''Completed'''
+|Handled dwarf mode end game.
+|-
+|Core13
+|BEAST ATTACKS
+|'''Completed'''
+|Have the larger beasts that live in the caves attack your fortress during dwarf mode.
+|-
+|Core14
+|FIRE
+|'''Completed'''
+|Have items catch on fire. Fire spreads. Trees outside can catch fire. Creatures catch on fire when appropriate. Items become damaged. Very hot metal objects can melt, and they can melt over characters carrying them, using the same "contaminant" system that currently handles poison injections.
+|-
+|Core15
+|PRESENTATION OF ENEMY LEADERS AND OTHER IMPORTANT FIGURES
+|(Future)
+|Enemy leaders play an important part in creating a story around otherwise by-the-numbers conflicts that can occur, so the leaders can afford to be presented in such a way that you as the player can learn something about their background, motivations and appearance without digging around in the legends screen. There can be a variety of mechanisms for this. Diplomats and others that visit your fortress could be afforded the same treatment, as well as the people you talk to and about in adventure mode conversations, etc.
+|-
+|Core16
+|END GAME 2
+|'''Completed'''
+|Additional dwarf mode end game.
+|-
+|Core17
+|LEGENDS
+|'''Completed'''
+|Introduce the legends screen, historical events and historical figures.
+|-
+|Core18
+|INTERFACE KEYS
+|'''Completed'''
+|Put the interface keys in editable files.
+|-
+|Core19
+|TUTORIALS
+|'''Completed'''
+|Set up small tutorial files that you can load up. These would have text instructions and little activities for you to do so you can learn how to play more easily.
+|-
+|Core20
+|TITLE MOVIES
+|'''Completed'''
+|Do the intro movies with sound.
+|-
+|Core21
+|SOUND
+|'''Completed'''
+|Make all music/sounds optional, in groups. More songs (possibly seasonal), incidental music (like spotting the first kobold in a cave, etc.), various combat type sounds and ambient sounds, pleasing interface clicks.
+|-
+|Core22
+|ADVISORS
+|(Future)
+|Either some kind of abstract advisors, or the actual dwarves that are living there. They can look over the state of the fortress and come up with some suggestions to help you survive and advance up the noble chain.
+|-
+|Core23
+|THE MANUAL
+|'''Completed'''
+|Do all of the sections of a basic manual to be viewed in-game.
+|-
+|Core24
+|ADVENTURER PARTIES
+|(Future)
+|Create up to, say, 6 characters at once. These are controlled as with the dwarven raiding parties. If the scenarios are in, it can generate historical connections that explain why they are together. Could give your group a name, like the dwarf squads, and non-players could be admitted, as in the standard adventure mode 'join' option. Related to Core61.
+|-
+|Core25
+|PLOT CLEANUP
+|'''Completed'''
+|The dwarf mode used to have some fixed plot events, like an attack by an undead army and so on. These were excised, but there's a lot of associated cleanup needed. Once this is established, the game will be ready for armies.
+|-
+|Core26
+|OVERLAND ARMIES ATTACKS
+|(Future)
+|The invasions by various creatures should no longer generate soldiers, but should use overland armies instead. There should be some AI limits in place to stop early dwarven outposts from being overwhelmed (at least as a default). Requires Core25 and Core45.
+|-
+|Core27
+|ARMIES OF DWARVES
+|'''Completed'''
+|You should be able to send patrols (and, as you get more dwarves, armies) out over the world map. They could attack smaller nearby threats, such as a kobold cave, or let you know about incoming invasions. Requires Core26.
+|-
+|Core28
+|CONTROL OF TERRITORY AND EXTERNAL LOCATIONS
+|(Future)
+|As your fortress expands into a barony, county and duchy, these words should attain some meaning with regards to the surrounding lands. Additional outposts/villages/work camps might be founded under your control, but out of the playable view, providing local trade and a further population pool for warfare and other endeavors. The scope is undecided, but this might include typical mountainside outposts, dwarf/human/mixed villages nearby in other biomes, or deeper sites that you found in tunnels that you carve via the next core item. Related to Core29 and Bloat172.
+|-
+|Core29
+|EXTERNAL CONSTRUCTIONS
+|(Future)
+|World map roads, bridges, walls and tunnels shouldn't just be products of world generation. You should be able to dispatch dwarves and materials to accomplish these tasks (though the amount of material used in a typical world generation road would virtually prohibit doing this as it currently stands, so something has to change). Requires Core28.
+|-
+|Core30
+|KINGDOM
+|(Future)
+|If you manage to get the monarch of the dwarves to arrive, you should obtain at least indirect control over the entire corresponding dwarven civilization. This includes the movement of all dwarven armies on the map and the ability to make the most important diplomatic decisions. Requires Core28.
+|-
+|Core31
+|MAPS FOR SITES
+|'''Completed'''
+|Caves and goblin fortress maps.
+|-
+|Core32
+|STARTING QUESTS
+|'''Completed'''
+|Set up asking about surroundings, basic quests and town defense.
+|-
+|Core33
+|SERVING YOUR MONARCH
+|(Future)
+|Once you have an outside village (or even before), you could receive orders from the dwarven leader to serve up some of your population as troops. If the soldier is one of your familiar fortress units, you could control them in any future army fights later in that game, or you might control an entire squad if more of your soldiers were drafted.
+|-
+|Core34
+|ABANDONMENT
+|'''Completed'''
+|Preserved dwarves when you abandon a game in an 'army' for later use.
+|-
+|Core35
+|DWARF RAIDS
+|(Future)
+|If you send one of your patrols to attack a site, and it is small enough, you should be able to control the units individually, as in adventure mode. If your group is large, then you could either control one squad as a party, and have the others on AI, or you could let the whole thing run real-time as in dwarf mode. Requires Core27.
+|-
+|Core36
+|BURROWS
+|'''Completed'''
+|You should be able to associate buildings and dwarves to areas called burrows. A dwarf would only work on jobs at its burrow, and could not haul between burrows unless specifically designated to do so. Miners, outside workers, engravers and so on would be exempt while doing those jobs. Burrows could have general goals for the amount of objects, such as bins, that they need to have, and you could order transfers between burrows with the manager. Manager work orders could specify burrows. Once your fortress is large, having such a system to reduce the amount of hauling is very important. Coupled with some of the other ideas, large fortresses should become easier to manage.
+|-
+|Core37
+|RETIREMENT
+|'''Completed'''
+|Add the ability to retire (or rest) your adventurer in any town.
+|-
+|Core38
+|SITE RESOURCES
+|(Future)
+|The objects at a site need to be tracked in an abstract form so that the world can use them without loading up the site files. The different profession holders working at a town in world-gen and then during play should be able to produce and use resources based on these stockpiles and local map propertioes. Any changes could be applied to existing site files retroactively when they are loaded. Stores should restock their inventories. The objects need to be separated based on the entity that owns them, since several entities can potentially operate at one site.
+|-
+|Core39
+|END GAME 3
+|'''Completed'''
+|Additional handling of dwarf mode end game.
+|-
+|Core40
+|MONSTERS
+|(Future)
+|Dragon attacks need to be more righteous. Their flying needs to be more of a benefit. Snatching and dropping people should be possible. Would also be good to get the wizards and undead armies from the old fixed-plot stuff back into the mix. There was a time when the dead dwarves and pets would suddenly rise in your fortress, due to a plot event. That might have to wait for magic.
+|-
+|Core41
+|TOWN, HOME AND SCHEDULES
+|'''Completed'''
+|People in towns should have families and they should live in locations together. People should have a rough idea of where they should be over the course of the day. The peasants should need to eat and sleep, but for now they'll be well provided for. Many of the armed people in the town should be guards that won't join you.
+|-
+|Core42
+|TOWN, ITEMS
+|(Future)
+|Basic items all around the town, including differentiations between the homes of various people. Keys. Clothes, outfits, uniforms and symbols. Workshops/etc. in towns related to professions, trade and resources.
+|-
+|Core43
+|TOWN, IMPORTANT LOCATIONS
+|(Future)
+|Make the important people stay in relevant locations. Make the keep in the capital more interesting. Interesting adornments. Add a bit more culture to the mead hall where the mayor and drunks stay. Requires Core42.
+|-
+|Core44
+|OVERLAND TOWN MIGRANTS
+|'''Completed'''
+|If towns become depopulated (by an adventurer perhaps!), migrants can appear on map edges or seashores from seas adjacent to map edges. These groups can enter towns and join with existing towns (possibly at a low allegiance level). You can meet these groups in adventure mode.
+|-
+|Core45
+|CIVILIZATIONS AT WAR
+|(Future)
+|Civilizations (for example, goblins or expansionist humans) should be able to declare war on each other and raise armies. They can send messengers to outlying towns or gather soldiers as they march from town to town toward their destinations. Requires Core44.
+|-
+|Core46
+|ARMY BATTLES
+|(Future)
+|Hostile armies that meet each other should be able to fight and take losses. Armies should be able to attack towns, take captive historical figures, and switch towns to new allegiances over time. Does not include protracted sieges, tactics or strategy -- just the basics. An adventurer at the site of an army battle can observe it. Requires Core45.
+|-
+|Core47
+|CLEANING HISTORY
+|'''Completed'''
+|Unimportant dead historical figures should be abstracted away to save space.
+|-
+|Core48
+|SEAMLESS MAP
+|'''Completed'''
+|The adventurer should be able to move between areas of the map from the local view without having to leave from an edge. Current sites should respect this.
+|-
+|Core49
+|FULL Z AXIS
+|'''Completed'''
+|The Z-axis should be supported in dwarf mode and elevations should be respected in adventure mode.
+|-
+|Core50
+|TILESET SUPPORT
+|'''Completed'''
+|Allow graphical tiles to be used for all game objects.
+|-
+|Core51
+|SIZEABLE GAME WINDOW
+|'''Completed'''
+|Allow the resizing of the game windows, and possibly the support of variable width fonts to allow more text to be displayed.
+|-
+|Core52
+|INTERFACE OVERHAUL
+|'''Completed'''
+|A coherent interface, additional options and mouse support.
+|-
+|Core53
+|MORE RAW FILES
+|(Future)
+|Everything should be moved out of the code and into the raw folders, insofar as the processor will allow it. There needs to be a generalized framework for things like plant and animal related materials and products. Not all of the building types will make it out, but workshop and furnace types are certainly good candidates.
+|-
+|Core54
+|TRANSLATION SUPPORT
+|(Future)
+|Announcements and other interface text needs to come out of the game and be placed in an editable format to support any potential translators, though current font implementations restrict this process at the moment if non-ASCII characters are to be involved.
+|-
+|Core55
+|LIGHTING
+|(Future)
+|This is essentially the old lighting dev item, upgraded, since it's important that proper lighting, vision, torches, etc. are recognized. The most necessary parts are making vision depending on the lighting of the location in question rather than where you are standing and adding some means of producing light (torches, candles, etc). Related to Req96.
+|-
+|Core56
+|IMPROVED FORTRESS TRANSPORTATION
+|(Future)
+|Though there's always going to be room for improvement here, some basics are needed in the first version. Work animals, carts or wheelbarrows, perhaps some more mechanical options, and the ability to organize stockpiles, workshops and other elements of the fortress so that transport of items can be done with less pain.
+|-
+|Core57
+|IMPROVED FORTRESS AUTOMATION AND WORKSHOP HANDLING
+|(Future)
+|As with transportation, the goal itself is pretty open-ended, but certain basics goals need to be reached for v1. Ability to use specific materials more easily, job priorities, better automatic job creation via manager triggers etc., and whatever else is deemed essential.
+|-
+|Core58
+|DOCUMENTATION
+|(Future)
+|The in-game documentation is dire -- not quite like the Dire Wolf of the Pleistocene, but more like a "dire economic forecast". Any of manual improvements, context-based help with the mouse, or an in-game encyclopedia might make the game more accessible, along with tutorials and more graphical options.
+|-
+|Core59
+|LOVE AND ROMANCE
+|(Future)
+|Though some of the dialog is likely to be an entertaining trainwreck, especially if coupled with a random poem generator (yes, that's a threat), love of all sorts is very important for driving stories and situations and needs to come in all over the place -- world generation, the world during play, dwarf mode and adventure mode.
+|-
+|Core60
+|HEIRS
+|(Future)
+|Having playable heirs in adventure mode would be fun. Dwarves should also do a bit more for their children than sometimes running to pick them up when they are crawling toward the magma vent as infants, and the notion of the family in general could afford to have more impact on the game.
+|-
+|Core61
+|ADVENTURER ENTITIES
+|(Future)
+|Your adventuring group deserves entity status, as it's quite possibly one of the most important groups in all of history. This will activate all of the entity vs. entity and individual vs. entity mechanics in the game and allow you to establish your place in the world as army/entity changes allow you to delegate orders to subordinates and so on. It would be possible for the group to persist between games and adventurers, perhaps even harassing a new fortress when bandits are put in. Related to Core24.
+|-
+|Core62
+|FURTHER DIPLOMACY
+|(Future)
+|Diplomacy in dwarf mode could afford a lot of changes. Aside from trade agreements that are more interesting, fun to uphold and related to the state of the world, all sorts of relationships could be established with both neighboring civilizations and the parent civilization. Though we'll leave quite a bit of work for later versions, the system should be satisfying for version 1 as it merges with the caravan arc, wars, tribute and succession conflicts described in other v1 dev items.
+|-
+|Core63
+|SUCCESSION, ASSOCIATED CONFLICTS AND SCHISMS
+|(Future)
+|First of all, succession for positions needs to occur in play, so that dead liaisons are replaced, as well as dead monarchs. Then the process needs to be made messier all around. Wars over succession, schisms over religious disagreements, etc., starting from world gen and coming into regular play. In dwarf mode, you might be involved on one side or the other, directly or indirectly, relying on more involved diplomacy and army code than we currently have, and adventure mode can also gain a lot from such conflicts.
+|-
+|Core64
+|INDIVIDUAL AFFILIATIONS
+|(Future)
+|People in towns should be more distinct, and almost all of them should have goals that the player can help them out with. These might be based on likes and dislikes, relationships with other people in town or farther away, etc., and though they'll start in world gen it's imperative that new goals, etc. be formed as well, especially as the Life Cycles Arc comes in. Individual goals are vital to break up the AI brain-death caused by homogeneous entity affiliations and to create tension within entities that can serve to spontaneously create complicated situations. These provide useful material for adventure mode (possibly the bulk of it), and any changes beyond what already exists in dwarf mode can be adopted for your dwarves as well.
+|-
+|Core65
+|ADVENTURER SITE AFFILIATIONS
+|(Future)
+|When you perform a task for an entity, you currently can an affiliation with it, but that's all. This needs to be expanded greatly. Not only should you be given various positions of responsibility, but you should also become accepted by the group in question and given some way of obtaining living space, equipment, pay, etc. as appropriate. It would also be good for tasks to be appropriate for the goals of the entity, and where possible, to soften the notion of a task -- if you do something that benefits a group, even if the group didn't explicitly ask for it, this should raise your standing with them in general (to the extent that the action/benefit is detectable from a technical standpoint), and a person at an appropriate position within a group should in some circumstances be able to act under their own power with entity subordinates. The primary target entities/positions here for version 1 are soldiers (either proper ones or loosely defined mead hall groups), caravan guards, bandits and religious groups.
+|-
+|Core66
+|HIDDEN FUN STUFF
+|(Future)
+|No game is complete without it!
+|-
+|Core67
+|RUINS
+|(Future)
+|There used to be ruins with skeletons and zombies with architecture not found elsewhere in the world. This can be recovered in various ways, the most prominent of which is just having civilizations with different architectures bury their dead and those they die out can have proper ruins. Lost and buried ruins, as in those found at dig sites, are possible with some work. Whether or not the dead rise or there are just traps or nothing at all can also depend on all sorts of things, mainly the civilization in question and what happened to ruin it in the first place. Related to Core68.
+|-
+|Core68
+|GRAVEYARDS AND TOMBS
+|(Future)
+|Right now the dead are so dead they don't exist outside of the fantastic memories of the people that have heard of them. There should be various methods of disposal, some adventure-full ones being graveyards and tombs, including large and elaborate tombs with all sorts of treasure and traps appropriate for the civilization that created them. Related to Core67.
+|-
+|Core69
+|OLD BATTLEFIELDS
+|(Future)
+|Battlefields are currently referenced by their general coordinates on the world map during legends, but they don't actually exist as places. Though not all battles would leave traces, especially after a long time has passed, others would, and since this is a fantasy game, it's important to take this in various directions. The first target would be world gen battlefields, but battlefields that occur once armies are fighting need to be handled as well, whether you are present as an adventurer or dwarven army or not.
+|-
+|Core70
+|FORTRESS RUINS, PRODUCTION TRACKING AND HISTORY TRIGGERS
+|(Future)
+|Right now, an abandoned fortress is basically a scattered mass of crap. If any item is moved, there should at least be a plausible reason for it to happen. Additionally, since tracking too many items in fortress mode can lead to problems, one early idea was to add additional items after abandonment that would flesh out the fortress, such as production logs and diaries. These would have to be squared with reclaim, however. Depending on how that works out, the items themselves might occur during standard play instead or not at all. In any case, various facts about production and prominent (and other) artisans need to be tracked and available after sufficient poking around (or earlier should the parameters call for it, as with historical events).
+|-
+|Core71
+|BANDITS AND CULTS
+|(Future)
+|It's important to have groups acting on their own or generally causing trouble without necessarily belonging to an entirely different civilization. Bandits and cults are good choices to start. Bandits could harass or make demands of an early fortress, cults could spring up in a later one, and the adventurer could end up a member or an adversary.
+|-
+|Core72
+|ROBUST ATTRIBUTE SYSTEM
+|(Future)
+|Attributes are a sad, sad placeholder right now. There should be more attributes, say those from Armok 1, and their development, to the extent that they change, should depend on use rather than random assignment. They should degrade slowly over time if left completely unused.
+|-
+|Core73
+|COMBAT OVERHAUL
+|(Future)
+|This one is a bit vague, mostly because the Combat Arc consists of so many small changes rather than a few sweeping additions. Aside from obvious changes to projectiles and the wrestling interface, skills could afford to overlap, attributes need to be associated to skills properly, skills could become rusty and ultimately degrade as in Armok 1, new general combat related skills can be added, styles/techniques for weapon/weaponless fighting roughly along the path Armok 1 had started, etc. As a dev item, this'll be done when combat more or less makes sense.
+|-
+|Core74
+|WOUND HANDLING
+|(Future)
+|Wounds are dull right now and lead to at least one major problem (extreme and long-lasting phantom limb pain). Proper descriptions, scarring, infections and so on are in order here.
+|-
+|Core75
+|ADVENTURER GENERATION AND SCENARIOS
+|(Future)
+|"The adventurer" is quite a nebulous object at this point. There are a variety of angles that can be taken here, from weaving the adventurer fully into their starting location's history, actually playing an existing creature in the world, creating starting scenarios that at least make sense of the adventurer's existence and/or mysterious arrival, etc.
+|-
+|Core76
+|EMBARK SCENARIOS
+|(Future)
+|Embarking in dwarf mode is one of the more sterile, gameish parts of the... game, and it can afford to be spruced up. Though a full take-your-wagons-from-here-to-there style embark is probably beyond the scope of version 1, at least giving the backstory for the journey and adding various game effects and alterations to starting conditions based on it would help with immersion.
+|-
+|Core77
+|AGE AND POPULATION TRACKING FOR ENTITIES
+|(Future)
+|Once world gen terminates, age-related deaths only occur locally and people never have children again. This needs to be corrected, especially as armies and migrants start being pulled from actual populations rather than being generated on the spot.
+|-
+|Core78
+|WILDERNESS POPULATION TRACKING
+|(Future)
+|Wilderness population is quite limited, and worse in a few ways than it was back before the Z coordinate. This should be fixed in world gen and in regular play in all modes for all categories of wilderness or subterranean creature.
+|-
+|Core79
+|COLLECTORS AND FINDING BUYERS
+|(Future)
+|As an extension of the dwarf mode system of likes and dislikes, you should be able to find people that are collecting objects, starting with simple objects like coins and bugs. It should also be an adventure unto itself to find a buyer for many valuable objects, if you want to get more than a local merchant would be able to provide, and news of your acquisition should keep your life interesting.
+|-
+|Core80
+|ARTIFACT MAGIC
+|(Future)
+|An early angle on magic that should find its way into the game. Although ultimately influenced by world parameters, stock DF will likely focus on rare, unique, somewhat mysterious effects without tables, to the extent that that's possible. Some cliches are probably unavoidable, he he he. The artifact process is likely to be changed somewhat to align with this, and artifacts should be created in world-generation and elsewhere during play, though a good player artifact should still have high importance.
+|-
+|Core81
+|TRIBUTE
+|(Future)
+|The tribute relationships established during world generation should be fleshed out there and then brought into regular play with tribute being transported across the map. These could also occur as part of dwarf mode diplomacy and dwarf mode world map play.
+|-
+|Core82
+|THIEF AND SUPPORTING CAST
+|(Future)
+|Aside from the issues dealt with in the next dev item, a thief in adventure mode can only sell their items all the way over at the next civilization and is immediately considered a criminal throughout the original civilization, causing subsequent thefts there to be more the acts of a crazed bandit than a thief. There are lots of ways in which this should be fixed. Crimes should not immediately be tied to the adventurer, and in large enough cities, there should be enough of an underbelly to be a successful criminal without even leaving town, at least for a while. None of the existing cities are really large enough for this right now, though the most populous cities of large empires should be after the relevant dev items are complete. Whether general criminal behavior will be extended to dwarf mode, beyond what's there now, is an open question.
+|-
+|Core83
+|ARREST AND PUNISHMENT
+|(Future)
+|The guards shouldn't just kill you. You have rights, sort of. It's important that there are jails and dungeons and executions, anyway. The guards will need to arrest you to put you into the system, and once you've been arrested, there are various delicate steps that need to be performed properly for everything to work out. Whatever happens in adventure mode should be tied back in to dwarf mode. If this includes beard-shaving, well, you'd better just obey the law.
+|-
+|Core84
+|HUNTING AND GATHERING
+|(Future)
+|You need to be able to obtain food from the wilderness and perform other tasks related to processing a hunted creature's body, trading with the a town perhaps but able to survive in the wilds. More abstract hunting on the travel view needs to be roughly equivalent to hunting only on the local view. You should be able to find signs of animals to help you out, and you should be able to gather any plants you find.
+|-
+|Core85
+|CHOP, DIG, BUILD!
+|(Future)
+|As an adventurer, chop down trees, dig channels, mine into a cliff face, build whatever structure you have the patience for. Your efforts should be saved as a proper site or at least some similar notion (whatever inns and so on along roads end up using), and the contents should remain relatively undisturbed with proper precautions.
+|-
+|Core86
+|ADVANCED ADVENTURER SKILLS
+|(Future)
+|Virtually every job available in dwarf mode should be available to you as an adventurer, though it might rely on town infrastructure, especially at first.
+|-
+|Core87
+|PROPER DWARVES
+|(Future)
+|Dwarves are, of course, proper when they are played in dwarf mode, but their sites in adventure mode are completely lacking and their society isn't really realized anywhere outside of dwarf mode play. They need to be brought up to standards throughout the world and in adventure mode. Also note, for this and the following three core items, there will be some emphasis not on just building up the stock universe, but extending modding/random possibilities for all civilizations by providing these as fleshed-out and somewhat diverse examples.
+|-
+|Core88
+|PROPER ELVES
+|(Future)
+|As with the dwarves, the current elves, especially their sites, suffer from a lack of almost everything. Multi-tile trees, how the druids and the regional forces interact, their relationship with animals and the animal people, their dining habits in-game rather than just in world generation...
+|-
+|Core89
+|PROPER GOBLINS
+|(Future)
+|At the very least, the role of baby-snatching needs to be further sorted, and their demonic leaders should have proper world-spanning aspirations. Many of the elements of their might-makes-right ethical framework need to be fleshed out and used in actual play.
+|-
+|Core90
+|PROPER KOBOLDS
+|(Future)
+|Of course, this means different things to different people. To us, a proper kobold is neither a chihuahua man nor a mini-draconian, but instead sort of a small mammaloreptilian humanoid with pointy ears and yellow eyes with a penchant for trickery and mischief, context-based sublanguage, poisonous critter collection, traps and kleptomaniacal hoarding.
+|-
+|Core91
+|PROPER UNDERGROUND/MAP FEATURES
+|(Future)
+|Underground is currently where the stone and boring stuff and occasionally something else is. There needs to be more something else and less boring and stone, though stone might be bored. This project includes areas outside the mountains, as well as some interesting natural features in the mostly featureless above ground areas.
+|-
+|Core92
+|APPEARANCE VARIABLES/DESCRIPTIONS
+|(Future)
+|This is especially relevant for individualizing civilized critters you meet, but important elsewhere as well, and will be the springboard for randomly-generated beasties and other stuffs.
+|-
+|Core93
+|RANDOMIZED MEGABEASTS AND POWERS
+|(Future)
+|(Semi)megabeasts and powers can be randomly generated, in accordance with existing local belief structures or regional sphere alignments when that goes in. The degree of randomization should depend on world parameters so that stock creatures can still be used. Requires Core92.
+|-
+|Core94
+|RANDOMIZED REGIONS AND THEIR FLORA/FAUNA
+|(Future)
+|The current good/evil regions should be scrapped and replaced by a system that aligns a region to varying degrees with a set of spheres. In this way you could end up with a desert where the stones sing or a forest where the trees bleed, with all sorts of randomly generated creatures and plants that are appropriate to the sphere settings. It's important that randomly generated objects be introduced to the player carefully during play rather than just being thrown one after another to allow for immersion, though there's also something to be said for cold dumping the player in a world with completely random settings, provided they can access enough information by looking/listening and having conversations, etc. Requires Core92.
+|-
+|Core95
+|RANDOMIZED ENTITIES AND CIVILIZED CREATURES
+|(Future)
+|As a further project of random generation, an entire entity definition complete with creature definitions, items, etc. could be generated and introduced into the world. As with other random settings, the degree to which this process is used would depend on world generation parameters, and the generation procedures would be accessible through raw objects. Requires Core93 and Core94.
+|-
+|Core96
+|GENERALIZED CURSES AND OTHER ALTERATIONS
+|(Future)
+|"Zombie" and "Skeleton" modified creatures aren't really satisfying right now, since zombies, ghosts, and so on gain some of their interest from the details surrounding the transformation and the particulars of the creature so transformed. Generalized curses and sphere-based alterations could vary from world to world and involve all sorts of changes to creatures (and other objects). Requires Core92.
+|-
+|Core97
+|IMPROVED PHRASE STORAGE
+|(Future)
+|The current system of storing names is not very extendable, so it needs to be altered to support later changes.
+|-
+|Core98
+|BASIC GRAMMAR
+|(Future)
+|The abstract phrases can be realized by each of the in-game languages in vastly different ways, and a framework for this needs to be realized in the raw files. Requires Core97.
+|-
+|Core99
+|WRITING
+|(Future)
+|Existing objects (such as wall engravings and blades) need to be able to support writing in any of the in-game languages, and there can be associated skills/professions for this. Requires Core98.
+|-
+|Core100
+|NEW LANGUAGE ITEMS
+|(Future)
+|Parchment, vellum and their buddies then books, songs, poems... all for your entertainment (and horror, if there are random poems). Requires Core99.
+|}
+[[ru:Version number]]
