@@ -1,0 +1,235 @@
+{{Quality|Exceptional}}
+{{av}}
+{{for/see|temperature as it relates to choosing an embarkation site|[[Climate]]}}
+
+{{buggy}}
+[[File:temp_preview.png|right]]'''Temperature''' - by definition - is a measurable quantity that represents how hot or cold a given area or object is. Temperature is also a very large element in the climate of an area, or more specifically, a [[biome]]. In both ''Dwarf Fortress'' and real life, there are two units to measure temperature, although the game uses a made-up, unique additional unit. The real life units are [https://en.wikipedia.org/wiki/Celsius Celsius (°C)], and [https://en.wikipedia.org/wiki/Kelvin Kelvin (K)]; other units, such as [https://en.wikipedia.org/wiki/R%C3%A9aumur_scale Réaumur (°r, °Re, or °Ré)], [https://en.wikipedia.org/wiki/Fahrenheit Fahrenheit (°F)] or [https://en.wikipedia.org/wiki/Rankine_scale Rankine (°R or °Ra)] have been proposed and occasionally used. While the unique unit used by the game has no definite name, the designation "Urist" (°U) is used throughout this wiki and the community to reduce confusion.
+
+==[[Adventure mode]]==
+In adventure mode, the temperature of the player character's surroundings is always displayed in the top-right corner. Being near elements and [[creature]]s that affect temperature (for example, being near a [[fire man]]) will also alter the temperature reading:<br />
+[[File:temperatures_preview.png]]
+
+==Temperature scale==
+Temperatures in ''Dwarf Fortress'' are measured in the game's own, unnamed temperature scale, since termed "degrees [[Main:Urist|Urist]]" by the community. Temperatures in ''Dwarf Fortress'' are stored as sixteen-bit unsigned integers, which translates into a minimum value of 0&nbsp;°U and a technical maximum of 65535&nbsp;°U (2<sup>16</sup>-1), although this is internally limited to 60000&nbsp;°U, as 60001&nbsp;°U is used for temperatures which have been set to {{tt|NONE}}. Floating point values are not considered, and when they appear, any decimals are either sheared off or rounded away by the game. For example, the number 2999.999, would be rounded to 3000. Urists are scaled logically against the Fahrenheit scale, so conversions are non-intuitive:
+:{|
+|-
+|{{tt|[URIST]}}&nbsp;= || {{tt|[FAHRENHEIT]}} + 9968
+|-
+| ||{{tt|[RANKINE]}} + 9508.33
+|-
+| ||{{tt|[CELSIUS]}} * 9/5 + 10000
+|-
+| ||{{tt|[KELVIN]}} * 9/5 + 9508.33
+|}
+According to Toady One in a [http://www.bay12forums.com/smf/index.php?topic=169696.msg8395484#msg8395484 Future of the Fortress post], the temperature scale used in the advanced worldgen settings is related to regular degrees Urist by the equation "local temp = world temp * 0.75 + 10000". This scale doesn't seem to be used anywhere else in the game.
+
+Some reference numbers:
+{| {{prettytable}}
+|- bgcolor="#ddd"
+! Significance
+! DF Scale
+! worldgen
+! Celsius (°C)
+! Kelvin
+! Fahrenheit (°F)
+! Rankine (°Ra)
+|- style="text-align:right;"
+| [[#Boiling point|Boiling point of water]]
+| 10180
+| 240.0
+| 100.00 °C
+| 373.150 K
+| 212.00 °F
+| 671.67 °Ra
+|- style="text-align:right;"
+| [[Creature token#HOMEOTHERM|Dwarven body temperature]]
+| 10067
+| 89.{{Macron|3}}
+| 37.2{{Macron|2}} °C
+| 310.37{{Macron|2}} K
+| 99.00 °F
+| 558.67 °Ra
+|- style="text-align:right;"
+| [[Water#Freezing point|Freezing point of water]]
+| 10000
+| 0.0
+| 0.00 °C
+| 273.150 K
+| 32.00 °F
+| 491.67 °Ra
+|- style="text-align:right;"
+| [[wikipedia:Ethanol (data page)|Freezing point of ≈89% ABV]]
+| 9850
+| -200.0
+| −83.3{{Macron|3}} °C
+| 189.81{{Macron|6}} K
+| −118.00 °F
+| 341.67 °Ra
+|- style="text-align:right;"
+| [[wikipedia:Absolute zero|Absolute zero]]
+| *9508
+| -656.0
+| −273.15 °C
+| 0 K
+| −459.67 °F
+| 0 °Ra
+|- style="text-align:right;"
+| Zero degrees Urist
+| 0
+| -13333.{{Macron|3}}
+| −5555.5{{Macron|5}} °C
+| −5282.40{{Macron|5}} K
+| −9968.00 °F
+| −9508.33 °Ra
+|- style="text-align:right;"
+| Highest possible temperature
+| 60000
+| 66666.{{Macron|6}}
+| 27777.7{{Macron|7}} °C
+| 28050.92{{Macron|7}} K
+| 50032.00 °F
+| 50491.67 °Ra
+|}
+
+<sup>＊</sup>Absolute Zero is rounded down internally to avoid decimals. If it was more-precisely converted, it would be 9508.33°U. Also interesting is the fact that temperatures in ''Dwarf Fortress'' can go ''far, far'' below absolute zero, which is physically impossible; considering ''Dwarf Fortress'' also allows [[water wheel#Perpetual motion|perpetual motion]], sometimes it's best not to ask questions.
+
+Values with an {{Macron|overline}} are truncated values with ending numbers that go on indefinitely, so a value of 45.73{{Macron|8}} is technically 45.738888888888- with the 8's going on indefinitely.
+
+{{Urist asks|q=I'm a modder who needs to work with temperature conversions all the time. Is there any tool I can use to lessen the amount of work involved?|a=Temperature conversions are usually only useful when [[modding]], and can be annoying to do manually; luckily a simple {{dffd|4028|temperature conversion utility}} has been created for those who find themselves having to convert a lot of temperatures to and/or from degrees Urist often.
+
+An online temperature conversion utility can be found at https://jose96xd.github.io/DF_Tools/Modules/TemperatureConverter.html}}
+
+Examples of some temperatures encountered in ''Dwarf Fortress'', the most important ones in bold:
+{| class="wikitable sortable"
+|-
+! Event / location
+! Native °U
+! °C
+! °F
+|- style="text-align:right;"
+| <abbr title="Freezing point of booze in game, equivalent to about 89% ABV aqueous solution in real life. 100% ethanol would freeze at about −114 °C ≈ 9795 °U.">Alcohol freezes</abbr>
+| 9850
+| -83.{{Macron|3}} °C
+| -118 °F
+|- style="text-align:right;"
+| '''<abbr title="Below this temperature, fat, present on all organic creatures, will start to take cold damage, eventually killing them.">Lowest survivable temperature</abbr>'''
+| '''9900'''
+| -55.{{Macron|5}} °C
+| -68 °F
+|- style="text-align:right;"
+| Outside, freezing climate (varies)
+| 9960
+| -22.{{Macron|2}} °C
+| -8 °F
+|- style="text-align:right;"
+| Underground, glacier ice
+| 9990
+| -5.{{Macron|5}} °C
+| 22 °F
+|- style="text-align:right;"
+| '''Water freezes'''
+| '''10000'''
+| 0 °C
+| 32 °F
+|- style="text-align:right;"
+| <abbr title="Nether-cap temperatures are fixed to 10000 degrees Urist, regardless of the surrounding environment.">Nether-cap</abbr>
+| 10000
+| 0 °C
+| 32 °F
+|- style="text-align:right;"
+| '''Underground'''
+| '''10015'''
+| 8.{{Macron|3}} °C
+| 47 °F
+|- style="text-align:right;"
+| [[Creature token#H|Dwarf/human homeotherm]]
+| 10067
+| 37.{{Macron|2}} °C
+| 99 °F
+|- style="text-align:right;"
+| Tiles next to [[magma]] ([[warm stone]])
+| 10075
+| 41.{{Macron|6}} °C
+| 107 °F
+|- style="text-align:right;"
+| '''<abbr title="Above this temperature, fat, present on all all organic creatures, will start to melt (turning into grease), eventually killing them.">Highest survivable temperature</abbr>'''
+| '''10078'''
+| 43.{{Macron|3}} °C
+| 110 °F
+|- style="text-align:right;"
+| Outside, [[Climate#Scorching|scorching climate]] (varies)
+| 10080
+| 44.{{Macron|4}} °C
+| 112 °F
+|- style="text-align:right;"
+| [[Water]] boils
+| 10180
+| 100 °C
+| 212 °F
+|- style="text-align:right;"
+| [[Fire|Ignition of organic materials]]
+| 10508
+| 282.{{Macron|2}} °C
+| 540 °F
+|- style="text-align:right;"
+| [[Wood]] [[fire]] (max)
+| 10708
+| 393.{{Macron|3}} °C
+| 740 °F
+|- style="text-align:right;"
+| Material is [[fire-safe]]
+| 11000
+| 555.{{Macron|5}} °C
+| 1,032 °F
+|- style="text-align:right;"
+| Common stone melts (varies)
+| 11500
+| 833.{{Macron|3}} °C
+| 1,532 °F
+|- style="text-align:right;"
+| [[Coal]] [[fire]] (max)
+| 11640
+| 911.{{Macron|1}} °C
+| 1,672 °F
+|- style="text-align:right;"
+| '''Magma'''
+| '''12000'''
+| 1,111.{{Macron|1}} °C
+| 2,032 °F
+|- style="text-align:right;"
+| Material is [[magma-safe]]
+| 12000
+| 1,111.{{Macron|1}} °C
+| 2,032 °F
+|- style="text-align:right;"
+| [[Creature]]s made of flame/fire
+| 14000
+| 2,222.{{Macron|2}} °C
+| 4,032 °F
+|- style="text-align:right;"
+| [[Dragonfire]]
+| 50000
+| 22,222.{{Macron|2}} °C
+| 40,032 °F
+|-
+|}
+
+==Material values==
+{{Material properties}}
+Temperature has important constraints on the [[material]]s in the game, and dictates a number of [[material science|material properties]] related to states of matter and heat/cold [[wear|damage]]. These are defined by [[material definition token]]s in the material [[raw file]]s, most of which use temperature as an input field:
+* {{token|MELTING_POINT|md}} — This is the temperature at which a liquid material will freeze, or a solid material will melt. In ''Dwarf Fortress'' the melting point and freezing point coincide exactly; this is contrary to many real-life materials, which can be supercooled.
+* {{token|BOILING_POINT|md}} — This is the temperature at which the material will boil or condense. Water boils at {{ct|10180}}.
+* {{token|IGNITE_POINT|md}} — This is the temperature at which the material will catch fire.
+* {{token|HEATDAM_POINT|md}} — This is the temperature above which the material will begin to take heat [[wear|damage]]. Burning items without a heat damage point (or with an exceptionally high one) will take damage very slowly, causing them to burn for a very long time (9 months and 16.8 days) before disappearing.
+* {{token|COLDDAM_POINT|md}} — This is the temperature below which the material will begin to take frost [[wear|damage]].
+* {{token|SPEC_HEAT|md}} — This determines how long it takes the material to heat up or cool down. A material with a high specific heat capacity will hold more heat and affect its surroundings more before cooling down or heating up to equilibrium. The input for this token is not temperature, but rather the [[wikipedia:Specific heat capacity|specific heat capacity]] of the material.
+* {{token|MAT_FIXED_TEMP|md}} — A material's temperature can be forced to always be a certain value via the MAT_FIXED_TEMP [[material definition token]]. The only standard material which uses this is [[nether-cap]] wood, whose temperature is always at the melting point of water. If a material's temperature is fixed to between its cold damage point and its heat damage point, then items made from that material will never suffer cold/heat damage. This makes nether-caps [[fire-safe]] and [[magma-safe]] despite being a type of [[wood]].
+
+An important thing to remember when testing mods: Due to the way fixed temperature is handled, giving a material a fixed temperature will not cause its actual temperature to change accordingly &mdash; instead, its temperature will simply be permanently locked at whatever it was previously. ''Removing'' a material's fixed temperature, however, will cause all items made of it to heat or cool until reaching equilibrium with their surroundings. The fixed temperature of a [[Storage|container]] does affect its contents, but you can't freeze [[water]] by putting it into a [[bucket]] made from nether-cap because water will not freeze until it cools ''below'' {{ct|10000}}. The fixed temperature of an inorganic material has no effect on unmined walls made from that material, though boulders '''will''' take on that temperature as they are produced via mining.
+
+==Temperature transfer==
+Temperature transfer in ''Dwarf Fortress'' is fairly simple - every [[time|tick]], an [[item]] that is exposed to a hotter/colder environment (or another item) will adjust its temperature by the difference (in °U) divided by the item's specific heat. Fractions are retained, but not used in calculations. For example, a piece of [[lignite]] (which has {{token|SPEC_HEAT|md|409}}) at temperature 10015 (room temperature underground) exposed to [[magma]] (temperature 12000) will heat up by (12000-10015)/409 = 4.853 °U in the first tick, then gradually slower. In order to reach its [[fire|ignition point]] of 11440, it would need to be in the magma for a total of 517 ticks, over 5 seconds at 100 [[FPS]].
+
+==Bugs==
+* Temperature calculations are a known cause of lag. If [[maximizing framerate]] is a concern, you can disable temperature calculations in the [[Settings#Feature_toggles|settings]]. With temperature calculations disabled, effects such as water freezing, melting, or evaporating, or creatures and items taking temperature-related damage will not occur.
+* When temperature calculations are disabled, dwarves will refuse to set foot in a cast [[obsidian]] tile (or any other tiles previously occupied by [[magma]]).{{bug|8391}} Occasionally, this can also occur when temperature calculations are still enabled. {{bug|1272}}

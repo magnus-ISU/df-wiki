@@ -1,0 +1,918 @@
+{{migrated article}}
+{{Quality|Unrated}}{{av}}
+
+==Table==
+===Legend===
+{| {{prettytable}}
+|-
+! style="font-family: monospace;" | {{tile|•|0:0:1}} {{tile|╬|0:7:0}}
+|lava stone ([[obsidian]])
+|-
+! style="font-family: monospace;" | {{tile|•|7:0:0}} {{tile|╬|0:7:0}}
+|layer stone
+|-
+! style="font-family: monospace;" | {{tile|•|3:0:0}} {{tile|╬|0:3:0}}
+|mineral
+|-
+! style="font-family: monospace;" | {{tile|•|4:0:0}}
+|soil
+|-
+! style="font-family: monospace;" | {{tile|•|2:0:0}}
+|plant/dark grass
+|-
+! style="font-family: monospace;" | {{tile|•|2:0:1}}
+|light grass
+|-
+! style="font-family: monospace;" | {{tile|•|6:0:1}}
+|dry grass
+|-
+! style="font-family: monospace;" | {{tile|•|6:0:0}}
+|dead grass/plant
+|-
+! style="font-family: monospace;" | {{tile|•|3:0:1}} {{tile|╬|0:3:1}}
+|frozen liquid ([[ice]])
+|-
+! style="font-family: monospace;" | {{tile|•|5:0:1}} {{tile|╬|0:5:0}}
+|map feature stone ([[raw adamantine]] or [[slade]])
+|-
+! style="font-family: monospace;" | {{tile|•|7:0:1}} {{tile|╬|0:7:1}}
+|construction
+|}
+
+Known tile types should each have a descriptive title attribute, which will appear (on mouseover) as a tooltip in most browsers.
+
+===xx 00===
+
+{| {{prettytable}} style="font-family: monospace;"
+|-
+|
+!.0
+!.1
+!.2
+!.3
+!.4
+!.5
+!.6
+!.7
+!.8
+!.9
+!.A
+!.B
+!.C
+!.D
+!.E
+!.F
+|-
+!0.
+| title="null" |{{tile|&nbsp;|0:0:0}}
+| title="downward ramp (takes material from tile below)" |{{tile|▼|7:0:1}}
+| title="murky pool" |{{tile|≈|6:0:0}}
+| title="murky pool slope" |{{tile|▲|6:0:0}}
+| title="Underworld Gate" |{{tile|&lt;|5:5:1}}
+| title="Underworld Gate" |{{tile|&gt;|5:5:1}}
+| title="Underworld Gate" |{{tile|X|5:5:1}}
+|07
+|08
+|09
+|0A
+|0B
+|0C
+|0D
+|0E
+|0F
+|-
+!1.
+|10
+|11
+|12
+| title="driftwood" |{{tile|≡|6:0:0}}
+|14
+|15
+|16
+|17
+|18
+| title="ice up/down stairway" |{{tile|X|3:0:1}}
+| title="ice downward stairway" |{{tile|&gt;|3:0:1}}
+| title="ice upward stairway" |{{tile|&lt;|3:0:1}}
+|1C
+|1D
+|1E
+|1F
+|-
+!2.
+| title="empty space" |{{tile|&nbsp;|0:0:0}}
+|21
+| title="shrub" |{{tile|"|2:0:0}}
+| title="chasm" |{{tile|#|0:0:1}}
+| title="obsidian up/down stairway" |{{tile|X|0:0:1}}
+| title="obsidian downward stairway" |{{tile|&gt;|0:0:1}}
+| title="obsidian upward stairway" |{{tile|&lt;|0:0:1}}
+| title="soil up/down stairway" |{{tile|X|4:0:0}}
+| title="soil downward stairway" |{{tile|&gt;|4:0:0}}
+| title="soil upward stairway" |{{tile|&lt;|4:0:0}}
+| title="glowing pit" |{{tile|*|4:0:1}}
+| title="smooth layer-stone floor" |{{tile|+|7:0:0}}
+| title="smooth obsidian floor" |{{tile|+|0:0:1}}
+| title="smooth map feature floor" |{{tile|+|5:0:1}}
+| title="smooth mineral floor" |{{tile|+|3:0:0}}
+| title="smooth ice floor" |{{tile|+|3:0:1}}
+|-
+!3.
+|30
+| title="grassy up/down stairway" |{{tile|X|2:0:1}}
+| title="grassy downward stairway" |{{tile|&gt;|2:0:1}}
+| title="grassy upward stairway" |{{tile|&lt;|2:0:1}}
+| title="grassy up/down stairway" |{{tile|X|2:0:0}}
+| title="grassy downward stairway" |{{tile|&gt;|2:0:0}}
+| title="grassy upward stairway" |{{tile|&lt;|2:0:0}}
+| title="layer-stone up/down stairway" |{{tile|X|7:0:0}}
+| title="layer-stone downward stairway" |{{tile|&gt;|7:0:0}}
+| title="layer-stone upward stairway" |{{tile|&lt;|7:0:0}}
+| title="mineral up/down stairway" |{{tile|X|3:0:0}}
+| title="mineral downward stairway" |{{tile|&gt;|3:0:0}}
+| title="mineral upward stairway" |{{tile|&lt;|3:0:0}}
+| title="map feature up/down stairway" |{{tile|X|5:0:1}}
+| title="map feature downward stairway" |{{tile|&gt;|5:0:1}}
+| title="map feature upward stairway" |{{tile|&lt;|5:0:1}}
+|-
+!4.
+|40
+| title="layer-stone fortification" |{{tile|╬|7:0:0}}
+|42
+| title="campfire" |{{tile|☼|4:0:1}}
+|44
+|45
+| title="burning grass" |{{tile|.|4:0:1}}
+| title="burning tree trunk" |{{tile|‼|4:0:1}}
+| title="burning tree branches" |{{tile|¼|4:0:1}}
+| title="burning tree twigs" |{{tile|;|4:0:1}}
+| title="burning tree cap wall" |{{tile|‼|4:0:1}}
+| title="burning tree cap ramp" |{{tile|▲|4:0:1}}
+| title="burning tree cap floor" |{{tile|.|4:0:1}}
+|4D
+|4E
+| title="layer-stone pillar" |{{tile|O|7:0:0}}
+|-
+!5.
+| title="obsidian pillar" |{{tile|O|0:0:1}}
+| title="map feature pillar" |{{tile|O|5:0:1}}
+| title="mineral pillar" |{{tile|O|3:0:0}}
+| title="ice pillar" |{{tile|O|3:0:1}}
+|54
+|55
+|56
+|57
+|58
+| title="waterfall" |{{tile|≈|6:0:0}}
+| title="river source" |{{tile|≈|6:0:0}}
+| title="sloping tree roots" |{{tile|⌂|6:0:0}}
+| title="tree roots" |{{tile|¼|6:0:0}}
+| title="tree trunk pillar" |{{tile|O|6:0:0}}
+| title="sloping tree trunk" |{{tile|⌂|6:0:0}}
+| title="tree trunk (N)" |{{tile|═|2:0:0}}
+|-
+!6.
+| title="tree trunk (S)" |{{tile|═|2:0:0}}
+| title="tree trunk (E)" |{{tile|║|2:0:0}}
+| title="tree trunk (W)" |{{tile|║|2:0:0}}
+| title="tree trunk (NW)" |{{tile|╔|2:0:0}}
+| title="tree trunk (NE)" |{{tile|╗|2:0:0}}
+| title="tree trunk (SW)" |{{tile|╚|2:0:0}}
+| title="tree trunk (SE)" |{{tile|╝|2:0:0}}
+| title="tree trunk branch (N)" |{{tile|╧|2:0:0}}
+| title="tree trunk branch (S)" |{{tile|╤|2:0:0}}
+| title="tree trunk branch (E)" |{{tile|╢|2:0:0}}
+| title="tree trunk branch (W)" |{{tile|╟|2:0:0}}
+| title="tree branch (NS)" |{{tile|│|2:0:0}}
+| title="tree branch (EW)" |{{tile|─|2:0:0}}
+| title="smooth tree branches" |{{tile|#|2:0:0}}
+| title="smooth dead tree branches" |{{tile|#|6:0:0}}
+| title="tree branch (NW)" |{{tile|┘|2:0:0}}
+|-
+!7.
+| title="tree branch (NE)" |{{tile|└|2:0:0}}
+| title="tree branch (SW)" |{{tile|┐|2:0:0}}
+| title="tree branch (SE)" |{{tile|┌|2:0:0}}
+| title="tree branches" |{{tile|¼|2:0:0}}
+| title="tree twigs" |{{tile|;|2:0:0}}
+| title="tree cap ramp" |{{tile|▲|2:0:0}}
+| title="tree cap pillar" |{{tile|O|2:0:0}}
+| title="tree cap wall (N)" |{{tile|═|2:0:0}}
+| title="tree cap wall (S)" |{{tile|═|2:0:0}}
+| title="tree cap wall (E)" |{{tile|║|2:0:0}}
+| title="tree cap wall (W)" |{{tile|║|2:0:0}}
+| title="tree cap wall (NW)" |{{tile|╔|2:0:0}}
+| title="tree cap wall (NE)" |{{tile|╗|2:0:0}}
+| title="tree cap wall (SW)" |{{tile|╚|2:0:0}}
+| title="tree cap wall (SE)" |{{tile|╝|2:0:0}}
+| title="tree cap floor" |{{tile|∙|2:0:0}}
+|-
+!8.
+| title="tree cap floor" |{{tile|∙|2:0:0}}
+| title="tree cap floor" |{{tile|∙|2:0:0}}
+| title="tree cap floor" |{{tile|∙|2:0:0}}
+| title="dead sloping tree roots" |{{tile|⌂|6:0:0}}
+| title="dead tree roots" |{{tile|¼|6:0:0}}
+| title="dead tree trunk pillar" |{{tile|O|6:0:0}}
+| title="dead sloping tree trunk" |{{tile|⌂|6:0:0}}
+| title="dead tree trunk (N)" |{{tile|═|6:0:0}}
+| title="dead tree trunk (S)" |{{tile|═|6:0:0}}
+| title="dead tree trunk (E)" |{{tile|║|6:0:0}}
+| title="dead tree trunk (W)" |{{tile|║|6:0:0}}
+| title="dead tree trunk (NW)" |{{tile|╔|6:0:0}}
+| title="dead tree trunk (NE)" |{{tile|╗|6:0:0}}
+| title="dead tree trunk (SW)" |{{tile|╚|6:0:0}}
+| title="dead tree trunk (SE)" |{{tile|╝|6:0:0}}
+| title="dead tree trunk branch (N)" |{{tile|╧|6:0:0}}
+|-
+!9.
+| title="dead tree trunk branch (S)" |{{tile|╤|6:0:0}}
+| title="dead tree trunk branch (E)" |{{tile|╢|6:0:0}}
+| title="dead tree trunk branch (W)" |{{tile|╟|6:0:0}}
+| title="dead tree branch (NS)" |{{tile|│|6:0:0}}
+| title="dead tree branch (EW)" |{{tile|─|6:0:0}}
+|95
+|96
+| title="dead tree branch (NW)" |{{tile|┘|6:0:0}}
+| title="dead tree branch (NE)" |{{tile|└|6:0:0}}
+| title="dead tree branch (SW)" |{{tile|┐|6:0:0}}
+| title="dead tree branch (SE)" |{{tile|┌|6:0:0}}
+| title="dead tree branches" |{{tile|¼|6:0:0}}
+| title="dead tree twigs" |{{tile|;|6:0:0}}
+| title="dead tree cap ramp" |{{tile|▲|6:0:0}}
+| title="dead tree cap pillar" |{{tile|O|6:0:0}}
+| title="dead tree cap wall (N)" |{{tile|═|6:0:0}}
+|-
+!A.
+| title="dead tree cap wall (S)" |{{tile|═|6:0:0}}
+| title="dead tree cap wall (E)" |{{tile|║|6:0:0}}
+| title="dead tree cap wall (W)" |{{tile|║|6:0:0}}
+| title="dead tree cap wall (NW)" |{{tile|╔|6:0:0}}
+| title="dead tree cap wall (NE)" |{{tile|╗|6:0:0}}
+| title="dead tree cap wall (SW)" |{{tile|╚|6:0:0}}
+| title="dead tree cap wall (SE)" |{{tile|╝|6:0:0}}
+| title="dead tree cap floor" |{{tile|∙|6:0:0}}
+| title="dead tree cap floor" |{{tile|∙|6:0:0}}
+| title="dead tree cap floor" |{{tile|∙|6:0:0}}
+| title="dead tree cap floor" |{{tile|∙|6:0:0}}
+|AB
+| title="partially mined layer-stone wall" |{{tile|░|7:0:0}}
+| title="partially mined layer-stone wall" |{{tile|▒|7:0:0}}
+| title="partially mined layer-stone wall" |{{tile|▓|7:0:0}}
+| title="tree branch (NSE)" |{{tile|├|2:0:0}}
+|-
+!B.
+| title="tree branch (NSW)" |{{tile|┤|2:0:0}}
+| title="tree branch (NEW)" |{{tile|┴|2:0:0}}
+| title="tree branch (SEW)" |{{tile|┬|2:0:0}}
+| title="tree branch (NSEW)" |{{tile|┼|2:0:0}}
+| title="dead tree branch (NSE)" |{{tile|├|6:0:0}}
+| title="dead tree branch (NSW)" |{{tile|┤|6:0:0}}
+| title="dead tree branch (NEW)" |{{tile|┴|6:0:0}}
+| title="dead tree branch (SEW)" |{{tile|┬|6:0:0}}
+| title="dead tree branch (NSEW)" |{{tile|┼|6:0:0}}
+| title="tree trunk (NSE)" |{{tile|╠|2:0:0}}
+| title="tree trunk (NSW)" |{{tile|╣|2:0:0}}
+| title="tree trunk (NEW)" |{{tile|╩|2:0:0}}
+| title="tree trunk (SEW)" |{{tile|╦|2:0:0}}
+| title="tree trunk (NS)" |{{tile|║|2:0:0}}
+| title="tree trunk (EW)" |{{tile|═|2:0:0}}
+| title="tree trunk (NSEW)" |{{tile|╬|2:0:0}}
+|-
+!C.
+| title="tree trunk interior" |{{tile|◙|2:0:0}}
+| title="dead tree trunk (NSE)" |{{tile|╠|6:0:0}}
+| title="dead tree trunk (NSW)" |{{tile|╣|6:0:0}}
+| title="dead tree trunk (NEW)" |{{tile|╩|6:0:0}}
+| title="dead tree trunk (SEW)" |{{tile|╦|6:0:0}}
+| title="dead tree trunk (NS)" |{{tile|║|6:0:0}}
+| title="dead tree trunk (EW)" |{{tile|═|6:0:0}}
+| title="dead tree trunk (NSEW)" |{{tile|╬|6:0:0}}
+| title="dead tree trunk interior" |{{tile|◙|6:0:0}}
+|C9
+|CA
+|CB
+|CC
+|CD
+|CE
+|CF
+|-
+!D.
+|D0
+|D1
+|D2
+|D3
+|D4
+|D5
+|D6
+| title="rough layer-stone wall" |{{tile|█|7:0:0}}
+|D8
+|D9
+|DA
+|DB
+|DC
+|DD
+|DE
+|DF
+|-
+!E.
+|E0
+|E1
+|E2
+| title="sapling" |{{tile|τ|2:0:0}}
+|E4
+| title="dry grass upward slope" |{{tile|▲|6:0:1}}
+| title="dead grass upward slope" |{{tile|▲|6:0:0}}
+| title="grassy upward slope" |{{tile|▲|2:0:1}}
+| title="grassy upward slope" |{{tile|▲|2:0:0}}
+| title="layer-stone upward slope" |{{tile|▲|7:0:0}}
+| title="obsidian upward slope" |{{tile|▲|0:0:1}}
+| title="map feature upward slope" |{{tile|▲|5:0:1}}
+| title="mineral upward slope" |{{tile|▲|3:0:0}}
+| title="soil upward slope" |{{tile|▲|4:0:0}}
+| title="ashes" |{{tile|≥|0:0:1}}
+| title="ashes" |{{tile|≤|0:0:1}}
+|-
+!F.
+| title="ashes" |{{tile|~|0:0:1}}
+| title="glacial upward slope" |{{tile|▲|3:0:1}}
+|F2
+|F3
+|F4
+|F5
+|F6
+|F7
+|F8
+|F9
+|FA
+|FB
+|FC
+|FD
+| title="rough ice floor" |{{tile|▓|3:0:1}}
+| title="rough ice floor" |{{tile|▓|3:0:1}}
+|}
+
+===xx 01===
+
+{| {{prettytable}} style="font-family: monospace;"
+|-
+|
+!.0
+!.1
+!.2
+!.3
+!.4
+!.5
+!.6
+!.7
+!.8
+!.9
+!.A
+!.B
+!.C
+!.D
+!.E
+!.F
+|-
+!0.
+| title="rough ice floor" |{{tile|▓|3:0:1}}
+| title="furrowed soil" |{{tile|~|4:0:0}}
+| title="rough ice floor" |{{tile|▓|3:0:1}}
+| title="semi-molten rock" |{{tile|░|4:0:1}}
+| title="magma flow" |{{tile|≈|4:0:0}}
+| title="soil wall" |{{tile|█|4:0:0}}
+| title="glowing barrier" |{{tile|╬|3:3:1}}
+| title="glowing floor" |{{tile|┼|3:3:1}}
+|08
+| title="smooth obsidian wall" |{{tile|╓|0:0:1}}
+| title="smooth obsidian wall" |{{tile|╒|0:0:1}}
+| title="smooth obsidian wall" |{{tile|╘|0:0:1}}
+| title="smooth obsidian wall" |{{tile|╙|0:0:1}}
+| title="smooth obsidian wall" |{{tile|╛|0:0:1}}
+| title="smooth obsidian wall" |{{tile|╜|0:0:1}}
+| title="smooth obsidian wall" |{{tile|╕|0:0:1}}
+|-
+!1.
+| title="smooth obsidian wall" |{{tile|╖|0:0:1}}
+| title="smooth obsidian wall" |{{tile|╬|0:0:1}}
+| title="smooth obsidian wall" |{{tile|╠|0:0:1}}
+| title="smooth obsidian wall" |{{tile|╦|0:0:1}}
+| title="smooth obsidian wall" |{{tile|╩|0:0:1}}
+| title="smooth obsidian wall" |{{tile|╣|0:0:1}}
+| title="smooth obsidian wall" |{{tile|╔|0:0:1}}
+| title="smooth obsidian wall" |{{tile|╚|0:0:1}}
+| title="smooth obsidian wall" |{{tile|╝|0:0:1}}
+| title="smooth obsidian wall" |{{tile|╗|0:0:1}}
+| title="smooth obsidian wall" |{{tile|║|0:0:1}}
+| title="smooth obsidian wall" |{{tile|═|0:0:1}}
+| title="smooth map feature wall" |{{tile|╓|5:0:1}}
+| title="smooth map feature wall" |{{tile|╒|5:0:1}}
+| title="smooth map feature wall" |{{tile|╘|5:0:1}}
+| title="smooth map feature wall" |{{tile|╙|5:0:1}}
+|-
+!2.
+| title="smooth map feature wall" |{{tile|╛|5:0:1}}
+| title="smooth map feature wall" |{{tile|╜|5:0:1}}
+| title="smooth map feature wall" |{{tile|╕|5:0:1}}
+| title="smooth map feature wall" |{{tile|╖|5:0:1}}
+| title="smooth map feature wall" |{{tile|╬|5:0:1}}
+| title="smooth map feature wall" |{{tile|╠|5:0:1}}
+| title="smooth map feature wall" |{{tile|╦|5:0:1}}
+| title="smooth map feature wall" |{{tile|╩|5:0:1}}
+| title="smooth map feature wall" |{{tile|╣|5:0:1}}
+| title="smooth map feature wall" |{{tile|╔|5:0:1}}
+| title="smooth map feature wall" |{{tile|╚|5:0:1}}
+| title="smooth map feature wall" |{{tile|╝|5:0:1}}
+| title="smooth map feature wall" |{{tile|╗|5:0:1}}
+| title="smooth map feature wall" |{{tile|║|5:0:1}}
+| title="smooth map feature wall" |{{tile|═|5:0:1}}
+| title="smooth layer-stone wall" |{{tile|╓|7:0:0}}
+|-
+!3.
+| title="smooth layer-stone wall" |{{tile|╒|7:0:0}}
+| title="smooth layer-stone wall" |{{tile|╘|7:0:0}}
+| title="smooth layer-stone wall" |{{tile|╙|7:0:0}}
+| title="smooth layer-stone wall" |{{tile|╛|7:0:0}}
+| title="smooth layer-stone wall" |{{tile|╜|7:0:0}}
+| title="smooth layer-stone wall" |{{tile|╕|7:0:0}}
+| title="smooth layer-stone wall" |{{tile|╖|7:0:0}}
+| title="smooth layer-stone wall" |{{tile|╬|7:0:0}}
+| title="smooth layer-stone wall" |{{tile|╠|7:0:0}}
+| title="smooth layer-stone wall" |{{tile|╦|7:0:0}}
+| title="smooth layer-stone wall" |{{tile|╩|7:0:0}}
+| title="smooth layer-stone wall" |{{tile|╣|7:0:0}}
+| title="smooth layer-stone wall" |{{tile|╔|7:0:0}}
+| title="smooth layer-stone wall" |{{tile|╚|7:0:0}}
+| title="smooth layer-stone wall" |{{tile|╝|7:0:0}}
+| title="smooth layer-stone wall" |{{tile|╗|7:0:0}}
+|-
+!4.
+| title="smooth layer-stone wall" |{{tile|║|7:0:0}}
+| title="smooth layer-stone wall" |{{tile|═|7:0:0}}
+| title="obsidian fortification" |{{tile|╬|0:0:1}}
+| title="map feature fortification" |{{tile|╬|5:0:1}}
+| title="partially mined obsidian wall" |{{tile|░|0:0:1}}
+| title="partially mined obsidian wall" |{{tile|▒|0:0:1}}
+| title="partially mined obsidian wall" |{{tile|▓|0:0:1}}
+| title="rough obsidian wall" |{{tile|█|0:0:1}}
+| title="partially mined map feature wall" |{{tile|░|5:0:1}}
+| title="partially mined map feature wall" |{{tile|▒|5:0:1}}
+| title="partially mined map feature wall" |{{tile|▓|5:0:1}}
+| title="rough map feature wall" |{{tile|█|5:0:1}}
+| title="rough layer-stone floor" |{{tile|'|7:0:0}}
+| title="rough layer-stone floor" |{{tile|,|7:0:0}}
+| title="rough layer-stone floor" |{{tile|`|7:0:0}}
+| title="rough layer-stone floor" |{{tile|.|7:0:0}}
+|-
+!5.
+| title="rough obsidian floor" |{{tile|'|0:0:1}}
+| title="rough obsidian floor" |{{tile|,|0:0:1}}
+| title="rough obsidian floor" |{{tile|`|0:0:1}}
+| title="rough obsidian floor" |{{tile|.|0:0:1}}
+| title="rough map feature floor" |{{tile|'|5:0:1}}
+| title="rough map feature floor" |{{tile|,|5:0:1}}
+| title="rough map feature floor" |{{tile|`|5:0:1}}
+| title="rough map feature floor" |{{tile|.|5:0:1}}
+| title="grass" |{{tile|'|2:0:0}}
+| title="grass" |{{tile|,|2:0:0}}
+| title="grass" |{{tile|`|2:0:0}}
+| title="grass" |{{tile|.|2:0:0}}
+| title="soil" |{{tile|'|4:0:0}}
+| title="soil" |{{tile|,|4:0:0}}
+| title="soil" |{{tile|`|4:0:0}}
+| title="soil" |{{tile|.|4:0:0}}
+|-
+!6.
+| title="wet soil" |{{tile|'|4:0:0}}
+| title="wet soil" |{{tile|,|4:0:0}}
+| title="wet soil" |{{tile|`|4:0:0}}
+| title="wet soil" |{{tile|.|4:0:0}}
+| title="ice fortification" |{{tile|╬|3:0:1}}
+| title="partially mined ice wall" |{{tile|░|3:0:1}}
+| title="partially mined ice wall" |{{tile|▒|3:0:1}}
+| title="partially mined ice wall" |{{tile|▓|3:0:1}}
+| title="ice wall" |{{tile|█|3:0:1}}
+| title="river (N)" |{{tile|≈|1:0:0}}
+| title="river (S)" |{{tile|≈|1:0:0}}
+| title="river (E)" |{{tile|≈|1:0:0}}
+| title="river (W)" |{{tile|≈|1:0:0}}
+| title="river (NW)" |{{tile|≈|1:0:0}}
+| title="river (NE)" |{{tile|≈|1:0:0}}
+| title="river (SW)" |{{tile|≈|1:0:0}}
+|-
+!7.
+| title="river (SE)" |{{tile|≈|1:0:0}}
+| title="brook (N)" |{{tile|≈|3:0:0}}
+| title="brook (S)" |{{tile|≈|3:0:0}}
+| title="brook (E)" |{{tile|≈|3:0:0}}
+| title="brook (W)" |{{tile|≈|3:0:0}}
+| title="brook (NW)" |{{tile|≈|3:0:0}}
+| title="brook (NE)" |{{tile|≈|3:0:0}}
+| title="brook (SW)" |{{tile|≈|3:0:0}}
+| title="brook (SE)" |{{tile|≈|3:0:0}}
+| title="brook surface" |{{tile|≈|3:0:1}}
+|7A
+|7B
+|7C
+|7D
+|7E
+| title="dry grass" |{{tile|'|6:0:1}}
+|-
+!8.
+| title="dry grass" |{{tile|,|6:0:1}}
+| title="dry grass" |{{tile|`|6:0:1}}
+| title="dry grass" |{{tile|.|6:0:1}}
+|83
+| title="dead sapling" |{{tile|τ|0:0:1}}
+| title="dead shrub" |{{tile|"|6:0:0}}
+| title="dead grass" |{{tile|'|6:0:0}}
+| title="dead grass" |{{tile|,|6:0:0}}
+| title="dead grass" |{{tile|`|6:0:0}}
+| title="dead grass" |{{tile|.|6:0:0}}
+| title="grass" |{{tile|'|2:0:1}}
+| title="grass" |{{tile|,|2:0:1}}
+| title="grass" |{{tile|`|2:0:1}}
+| title="grass" |{{tile|.|2:0:1}}
+| title="layer-stone boulder" |{{tile|∞|7:0:0}}
+| title="obsidian boulder" |{{tile|∞|0:0:1}}
+|-
+!9.
+| title="map feature boulder" |{{tile|∞|5:0:1}}
+| title="layer-stone pebbles" |{{tile|'|7:0:0}}
+| title="layer-stone pebbles" |{{tile|,|7:0:0}}
+| title="layer-stone pebbles" |{{tile|`|7:0:0}}
+| title="layer-stone pebbles" |{{tile|.|7:0:0}}
+| title="obsidian pebbles" |{{tile|'|0:0:1}}
+| title="obsidian pebbles" |{{tile|,|0:0:1}}
+| title="obsidian pebbles" |{{tile|`|0:0:1}}
+| title="obsidian pebbles" |{{tile|.|0:0:1}}
+| title="map feature pebbles" |{{tile|'|5:0:1}}
+| title="map feature pebbles" |{{tile|,|5:0:1}}
+| title="map feature pebbles" |{{tile|`|5:0:1}}
+| title="map feature pebbles" |{{tile|.|5:0:1}}
+| title="smooth mineral wall" |{{tile|╓|3:0:0}}
+| title="smooth mineral wall" |{{tile|╒|3:0:0}}
+| title="smooth mineral wall" |{{tile|╘|3:0:0}}
+|-
+!A.
+| title="smooth mineral wall" |{{tile|╙|3:0:0}}
+| title="smooth mineral wall" |{{tile|╛|3:0:0}}
+| title="smooth mineral wall" |{{tile|╜|3:0:0}}
+| title="smooth mineral wall" |{{tile|╕|3:0:0}}
+| title="smooth mineral wall" |{{tile|╖|3:0:0}}
+| title="smooth mineral wall" |{{tile|╬|3:0:0}}
+| title="smooth mineral wall" |{{tile|╠|3:0:0}}
+| title="smooth mineral wall" |{{tile|╦|3:0:0}}
+| title="smooth mineral wall" |{{tile|╩|3:0:0}}
+| title="smooth mineral wall" |{{tile|╣|3:0:0}}
+| title="smooth mineral wall" |{{tile|╔|3:0:0}}
+| title="smooth mineral wall" |{{tile|╚|3:0:0}}
+| title="smooth mineral wall" |{{tile|╝|3:0:0}}
+| title="smooth mineral wall" |{{tile|╗|3:0:0}}
+| title="smooth mineral wall" |{{tile|║|3:0:0}}
+| title="smooth mineral wall" |{{tile|═|3:0:0}}
+|-
+!B.
+| title="mineral fortification" |{{tile|╬|3:0:0}}
+| title="partially mined mineral wall" |{{tile|░|3:0:0}}
+| title="partially mined mineral wall" |{{tile|▒|3:0:0}}
+| title="partially mined mineral wall" |{{tile|▓|3:0:0}}
+| title="rough mineral wall" |{{tile|█|3:0:0}}
+| title="rough mineral floor" |{{tile|'|3:0:0}}
+| title="rough mineral floor" |{{tile|,|3:0:0}}
+| title="rough mineral floor" |{{tile|`|3:0:0}}
+| title="rough mineral floor" |{{tile|.|3:0:0}}
+| title="mineral boulder" |{{tile|∞|3:0:0}}
+| title="mineral pebbles" |{{tile|'|3:0:0}}
+| title="mineral pebbles" |{{tile|,|3:0:0}}
+| title="mineral pebbles" |{{tile|`|3:0:0}}
+| title="mineral pebbles" |{{tile|.|3:0:0}}
+| title="straight ice wall" |{{tile|╓|3:0:1}}
+| title="straight ice wall" |{{tile|╒|3:0:1}}
+|-
+!C.
+| title="straight ice wall" |{{tile|╘|3:0:1}}
+| title="straight ice wall" |{{tile|╙|3:0:1}}
+| title="straight ice wall" |{{tile|╛|3:0:1}}
+| title="straight ice wall" |{{tile|╜|3:0:1}}
+| title="straight ice wall" |{{tile|╕|3:0:1}}
+| title="straight ice wall" |{{tile|╖|3:0:1}}
+| title="straight ice wall" |{{tile|╬|3:0:1}}
+| title="straight ice wall" |{{tile|╠|3:0:1}}
+| title="straight ice wall" |{{tile|╦|3:0:1}}
+| title="straight ice wall" |{{tile|╩|3:0:1}}
+| title="straight ice wall" |{{tile|╣|3:0:1}}
+| title="straight ice wall" |{{tile|╔|3:0:1}}
+| title="straight ice wall" |{{tile|╚|3:0:1}}
+| title="straight ice wall" |{{tile|╝|3:0:1}}
+| title="straight ice wall" |{{tile|╗|3:0:1}}
+| title="straight ice wall" |{{tile|║|3:0:1}}
+|-
+!D.
+| title="straight ice wall" |{{tile|═|3:0:1}}
+| title="river slope (N)" |{{tile|▲|1:0:0}}
+| title="river slope (S)" |{{tile|▲|1:0:0}}
+| title="river slope (E)" |{{tile|▲|1:0:0}}
+| title="river slope (W)" |{{tile|▲|1:0:0}}
+| title="river slope (NW)" |{{tile|▲|1:0:0}}
+| title="river slope (NE)" |{{tile|▲|1:0:0}}
+| title="river slope (SW)" |{{tile|▲|1:0:0}}
+| title="river slope (SE)" |{{tile|▲|1:0:0}}
+|D9
+|DA
+|DB
+|DC
+|DD
+|DE
+|DF
+|-
+!E.
+|E0
+|E1
+|E2
+|E3
+|E4
+|E5
+|E6
+|E7
+|E8
+| title="constructed floor" |{{tile|+|7:0:1}}
+| title="constructed fortification" |{{tile|╬|7:0:1}}
+| title="constructed pillar" |{{tile|O|7:0:1}}
+| title="constructed wall" |{{tile|╓|7:0:1}}
+| title="constructed wall" |{{tile|╒|7:0:1}}
+| title="constructed wall" |{{tile|╘|7:0:1}}
+| title="constructed wall" |{{tile|╙|7:0:1}}
+|-
+!F.
+| title="constructed wall" |{{tile|╛|7:0:1}}
+| title="constructed wall" |{{tile|╜|7:0:1}}
+| title="constructed wall" |{{tile|╕|7:0:1}}
+| title="constructed wall" |{{tile|╖|7:0:1}}
+| title="constructed wall" |{{tile|╬|7:0:1}}
+| title="constructed wall" |{{tile|╠|7:0:1}}
+| title="constructed wall" |{{tile|╦|7:0:1}}
+| title="constructed wall" |{{tile|╩|7:0:1}}
+| title="constructed wall" |{{tile|╣|7:0:1}}
+| title="constructed wall" |{{tile|╔|7:0:1}}
+| title="constructed wall" |{{tile|╚|7:0:1}}
+| title="constructed wall" |{{tile|╝|7:0:1}}
+| title="constructed wall" |{{tile|╗|7:0:1}}
+| title="constructed wall" |{{tile|║|7:0:1}}
+| title="constructed wall" |{{tile|═|7:0:1}}
+| title="constructed up/down stairway" |{{tile|X|7:0:1}}
+|}
+
+===xx 02===
+
+{| {{prettytable}} style="font-family: monospace;"
+|-
+|
+!.0
+!.1
+!.2
+!.3
+!.4
+!.5
+!.6
+!.7
+!.8
+!.9
+!.A
+!.B
+!.C
+!.D
+!.E
+!.F
+|-
+!0.
+| title="constructed downward stairway" |{{tile|&gt;|7:0:1}}
+| title="constructed upward stairway" |{{tile|&lt;|7:0:1}}
+| title="constructed ramp" |{{tile|▲|7:0:1}}
+| title="layer-stone floor track (N)" |{{tile|╨|0:7:0}}
+| title="layer-stone floor track (S)" |{{tile|╥|0:7:0}}
+| title="layer-stone floor track (E)" |{{tile|╞|0:7:0}}
+| title="layer-stone floor track (W)" |{{tile|╡|0:7:0}}
+| title="layer-stone floor track (NS)" |{{tile|║|0:7:0}}
+| title="layer-stone floor track (NE)" |{{tile|╚|0:7:0}}
+| title="layer-stone floor track (NW)" |{{tile|╝|0:7:0}}
+| title="layer-stone floor track (SE)" |{{tile|╔|0:7:0}}
+| title="layer-stone floor track (SW)" |{{tile|╗|0:7:0}}
+| title="layer-stone floor track (EW)" |{{tile|═|0:7:0}}
+| title="layer-stone floor track (NSE)" |{{tile|╠|0:7:0}}
+| title="layer-stone floor track (NSW)" |{{tile|╣|0:7:0}}
+| title="layer-stone floor track (NEW)" |{{tile|╩|0:7:0}}
+
+|-
+!1.
+| title="layer-stone floor track (SEW)" |{{tile|╦|0:7:0}}
+| title="layer-stone floor track (NSEW)" |{{tile|╬|0:7:0}}
+| title="obsidian floor track (N)" |{{tile|╨|0:7:0}}
+| title="obsidian floor track (S)" |{{tile|╥|0:7:0}}
+| title="obsidian floor track (E)" |{{tile|╞|0:7:0}}
+| title="obsidian floor track (W)" |{{tile|╡|0:7:0}}
+| title="obsidian floor track (NS)" |{{tile|║|0:7:0}}
+| title="obsidian floor track (NE)" |{{tile|╚|0:7:0}}
+| title="obsidian floor track (NW)" |{{tile|╝|0:7:0}}
+| title="obsidian floor track (SE)" |{{tile|╔|0:7:0}}
+| title="obsidian floor track (SW)" |{{tile|╗|0:7:0}}
+| title="obsidian floor track (EW)" |{{tile|═|0:7:0}}
+| title="obsidian floor track (NSE)" |{{tile|╠|0:7:0}}
+| title="obsidian floor track (NSW)" |{{tile|╣|0:7:0}}
+| title="obsidian floor track (NEW)" |{{tile|╩|0:7:0}}
+| title="obsidian floor track (SEW)" |{{tile|╦|0:7:0}}
+
+|-
+!2.
+| title="obsidian floor track (NSEW)" |{{tile|╬|0:7:0}}
+| title="map feature floor track (N)" |{{tile|╨|0:5:0}}
+| title="map feature floor track (S)" |{{tile|╥|0:5:0}}
+| title="map feature floor track (E)" |{{tile|╞|0:5:0}}
+| title="map feature floor track (W)" |{{tile|╡|0:5:0}}
+| title="map feature floor track (NS)" |{{tile|║|0:5:0}}
+| title="map feature floor track (NE)" |{{tile|╚|0:5:0}}
+| title="map feature floor track (NW)" |{{tile|╝|0:5:0}}
+| title="map feature floor track (SE)" |{{tile|╔|0:5:0}}
+| title="map feature floor track (SW)" |{{tile|╗|0:5:0}}
+| title="map feature floor track (EW)" |{{tile|═|0:5:0}}
+| title="map feature floor track (NSE)" |{{tile|╠|0:5:0}}
+| title="map feature floor track (NSW)" |{{tile|╣|0:5:0}}
+| title="map feature floor track (NEW)" |{{tile|╩|0:5:0}}
+| title="map feature floor track (SEW)" |{{tile|╦|0:5:0}}
+| title="map feature floor track (NSEW)" |{{tile|╬|0:5:0}}
+
+|-
+!3.
+| title="mineral floor track (N)" |{{tile|╨|0:3:0}}
+| title="mineral floor track (S)" |{{tile|╥|0:3:0}}
+| title="mineral floor track (E)" |{{tile|╞|0:3:0}}
+| title="mineral floor track (W)" |{{tile|╡|0:3:0}}
+| title="mineral floor track (NS)" |{{tile|║|0:3:0}}
+| title="mineral floor track (NE)" |{{tile|╚|0:3:0}}
+| title="mineral floor track (NW)" |{{tile|╝|0:3:0}}
+| title="mineral floor track (SE)" |{{tile|╔|0:3:0}}
+| title="mineral floor track (SW)" |{{tile|╗|0:3:0}}
+| title="mineral floor track (EW)" |{{tile|═|0:3:0}}
+| title="mineral floor track (NSE)" |{{tile|╠|0:3:0}}
+| title="mineral floor track (NSW)" |{{tile|╣|0:3:0}}
+| title="mineral floor track (NEW)" |{{tile|╩|0:3:0}}
+| title="mineral floor track (SEW)" |{{tile|╦|0:3:0}}
+| title="mineral floor track (NSEW)" |{{tile|╬|0:3:0}}
+| title="ice floor track (N)" |{{tile|╨|0:3:1}}
+
+|-
+!4.
+| title="ice floor track (S)" |{{tile|╥|0:3:1}}
+| title="ice floor track (E)" |{{tile|╞|0:3:1}}
+| title="ice floor track (W)" |{{tile|╡|0:3:1}}
+| title="ice floor track (NS)" |{{tile|║|0:3:1}}
+| title="ice floor track (NE)" |{{tile|╚|0:3:1}}
+| title="ice floor track (NW)" |{{tile|╝|0:3:1}}
+| title="ice floor track (SE)" |{{tile|╔|0:3:1}}
+| title="ice floor track (SW)" |{{tile|╗|0:3:1}}
+| title="ice floor track (EW)" |{{tile|═|0:3:1}}
+| title="ice floor track (NSE)" |{{tile|╠|0:3:1}}
+| title="ice floor track (NSW)" |{{tile|╣|0:3:1}}
+| title="ice floor track (NEW)" |{{tile|╩|0:3:1}}
+| title="ice floor track (SEW)" |{{tile|╦|0:3:1}}
+| title="ice floor track (NSEW)" |{{tile|╬|0:3:1}}
+| title="constructed floor track (N)" |{{tile|╨|0:7:1}}
+| title="constructed floor track (S)" |{{tile|╥|0:7:1}}
+
+|-
+!5.
+| title="constructed floor track (E)" |{{tile|╞|0:7:1}}
+| title="constructed floor track (W)" |{{tile|╡|0:7:1}}
+| title="constructed floor track (NS)" |{{tile|║|0:7:1}}
+| title="constructed floor track (NE)" |{{tile|╚|0:7:1}}
+| title="constructed floor track (NW)" |{{tile|╝|0:7:1}}
+| title="constructed floor track (SE)" |{{tile|╔|0:7:1}}
+| title="constructed floor track (SW)" |{{tile|╗|0:7:1}}
+| title="constructed floor track (EW)" |{{tile|═|0:7:1}}
+| title="constructed floor track (NSE)" |{{tile|╠|0:7:1}}
+| title="constructed floor track (NSW)" |{{tile|╣|0:7:1}}
+| title="constructed floor track (NEW)" |{{tile|╩|0:7:1}}
+| title="constructed floor track (SEW)" |{{tile|╦|0:7:1}}
+| title="constructed floor track (NSEW)" |{{tile|╬|0:7:1}}
+| title="layer-stone ramp track (N)" |{{tile|╨|0:7:0}}
+| title="layer-stone ramp track (S)" |{{tile|╥|0:7:0}}
+| title="layer-stone ramp track (E)" |{{tile|╞|0:7:0}}
+
+|-
+!6.
+| title="layer-stone ramp track (W)" |{{tile|╡|0:7:0}}
+| title="layer-stone ramp track (NS)" |{{tile|║|0:7:0}}
+| title="layer-stone ramp track (NE)" |{{tile|╚|0:7:0}}
+| title="layer-stone ramp track (NW)" |{{tile|╝|0:7:0}}
+| title="layer-stone ramp track (SE)" |{{tile|╔|0:7:0}}
+| title="layer-stone ramp track (SW)" |{{tile|╗|0:7:0}}
+| title="layer-stone ramp track (EW)" |{{tile|═|0:7:0}}
+| title="layer-stone ramp track (NSE)" |{{tile|╠|0:7:0}}
+| title="layer-stone ramp track (NSW)" |{{tile|╣|0:7:0}}
+| title="layer-stone ramp track (NEW)" |{{tile|╩|0:7:0}}
+| title="layer-stone ramp track (SEW)" |{{tile|╦|0:7:0}}
+| title="layer-stone ramp track (NSEW)" |{{tile|╬|0:7:0}}
+| title="obsidian ramp track (N)" |{{tile|╨|0:7:0}}
+| title="obsidian ramp track (S)" |{{tile|╥|0:7:0}}
+| title="obsidian ramp track (E)" |{{tile|╞|0:7:0}}
+| title="obsidian ramp track (W)" |{{tile|╡|0:7:0}}
+
+|-
+!7.
+| title="obsidian ramp track (NS)" |{{tile|║|0:7:0}}
+| title="obsidian ramp track (NE)" |{{tile|╚|0:7:0}}
+| title="obsidian ramp track (NW)" |{{tile|╝|0:7:0}}
+| title="obsidian ramp track (SE)" |{{tile|╔|0:7:0}}
+| title="obsidian ramp track (SW)" |{{tile|╗|0:7:0}}
+| title="obsidian ramp track (EW)" |{{tile|═|0:7:0}}
+| title="obsidian ramp track (NSE)" |{{tile|╠|0:7:0}}
+| title="obsidian ramp track (NSW)" |{{tile|╣|0:7:0}}
+| title="obsidian ramp track (NEW)" |{{tile|╩|0:7:0}}
+| title="obsidian ramp track (SEW)" |{{tile|╦|0:7:0}}
+| title="obsidian ramp track (NSEW)" |{{tile|╬|0:7:0}}
+| title="map feature ramp track (N)" |{{tile|╨|0:5:0}}
+| title="map feature ramp track (S)" |{{tile|╥|0:5:0}}
+| title="map feature ramp track (E)" |{{tile|╞|0:5:0}}
+| title="map feature ramp track (W)" |{{tile|╡|0:5:0}}
+| title="map feature ramp track (NS)" |{{tile|║|0:5:0}}
+
+|-
+!8.
+| title="map feature ramp track (NE)" |{{tile|╚|0:5:0}}
+| title="map feature ramp track (NW)" |{{tile|╝|0:5:0}}
+| title="map feature ramp track (SE)" |{{tile|╔|0:5:0}}
+| title="map feature ramp track (SW)" |{{tile|╗|0:5:0}}
+| title="map feature ramp track (EW)" |{{tile|═|0:5:0}}
+| title="map feature ramp track (NSE)" |{{tile|╠|0:5:0}}
+| title="map feature ramp track (NSW)" |{{tile|╣|0:5:0}}
+| title="map feature ramp track (NEW)" |{{tile|╩|0:5:0}}
+| title="map feature ramp track (SEW)" |{{tile|╦|0:5:0}}
+| title="map feature ramp track (NSEW)" |{{tile|╬|0:5:0}}
+| title="mineral ramp track (N)" |{{tile|╨|0:3:0}}
+| title="mineral ramp track (S)" |{{tile|╥|0:3:0}}
+| title="mineral ramp track (E)" |{{tile|╞|0:3:0}}
+| title="mineral ramp track (W)" |{{tile|╡|0:3:0}}
+| title="mineral ramp track (NS)" |{{tile|║|0:3:0}}
+| title="mineral ramp track (NE)" |{{tile|╚|0:3:0}}
+
+|-
+!9.
+| title="mineral ramp track (NW)" |{{tile|╝|0:3:0}}
+| title="mineral ramp track (SE)" |{{tile|╔|0:3:0}}
+| title="mineral ramp track (SW)" |{{tile|╗|0:3:0}}
+| title="mineral ramp track (EW)" |{{tile|═|0:3:0}}
+| title="mineral ramp track (NSE)" |{{tile|╠|0:3:0}}
+| title="mineral ramp track (NSW)" |{{tile|╣|0:3:0}}
+| title="mineral ramp track (NEW)" |{{tile|╩|0:3:0}}
+| title="mineral ramp track (SEW)" |{{tile|╦|0:3:0}}
+| title="mineral ramp track (NSEW)" |{{tile|╬|0:3:0}}
+| title="ice ramp track (N)" |{{tile|╨|0:3:1}}
+| title="ice ramp track (S)" |{{tile|╥|0:3:1}}
+| title="ice ramp track (E)" |{{tile|╞|0:3:1}}
+| title="ice ramp track (W)" |{{tile|╡|0:3:1}}
+| title="ice ramp track (NS)" |{{tile|║|0:3:1}}
+| title="ice ramp track (NE)" |{{tile|╚|0:3:1}}
+| title="ice ramp track (NW)" |{{tile|╝|0:3:1}}
+
+|-
+!A.
+| title="ice ramp track (SE)" |{{tile|╔|0:3:1}}
+| title="ice ramp track (SW)" |{{tile|╗|0:3:1}}
+| title="ice ramp track (EW)" |{{tile|═|0:3:1}}
+| title="ice ramp track (NSE)" |{{tile|╠|0:3:1}}
+| title="ice ramp track (NSW)" |{{tile|╣|0:3:1}}
+| title="ice ramp track (NEW)" |{{tile|╩|0:3:1}}
+| title="ice ramp track (SEW)" |{{tile|╦|0:3:1}}
+| title="ice ramp track (NSEW)" |{{tile|╬|0:3:1}}
+| title="constructed ramp track (N)" |{{tile|╨|0:7:1}}
+| title="constructed ramp track (S)" |{{tile|╥|0:7:1}}
+| title="constructed ramp track (E)" |{{tile|╞|0:7:1}}
+| title="constructed ramp track (W)" |{{tile|╡|0:7:1}}
+| title="constructed ramp track (NS)" |{{tile|║|0:7:1}}
+| title="constructed ramp track (NE)" |{{tile|╚|0:7:1}}
+| title="constructed ramp track (NW)" |{{tile|╝|0:7:1}}
+| title="constructed ramp track (SE)" |{{tile|╔|0:7:1}}
+
+|-
+!B.
+| title="constructed ramp track (SW)" |{{tile|╗|0:7:1}}
+| title="constructed ramp track (EW)" |{{tile|═|0:7:1}}
+| title="constructed ramp track (NSE)" |{{tile|╠|0:7:1}}
+| title="constructed ramp track (NSW)" |{{tile|╣|0:7:1}}
+| title="constructed ramp track (NEW)" |{{tile|╩|0:7:1}}
+| title="constructed ramp track (SEW)" |{{tile|╦|0:7:1}}
+| title="constructed ramp track (NSEW)" |{{tile|╬|0:7:1}}
+
+|-
+!C.
+|-
+!D.
+|-
+!E.
+|-
+!F.
+|-
+|}
+
+[[Category:Hacking]]
+{{Category|Map tiles|*}}

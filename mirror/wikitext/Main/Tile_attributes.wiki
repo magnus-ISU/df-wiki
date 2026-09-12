@@ -1,0 +1,32 @@
+{{Quality|Superior}}
+{{av}}
+[[File:tile_status_preview.png|thumb|332px|right|Underground and above ground. Simple as that.]]Every tile in ''Dwarf Fortress'' is described as {{DFtext|Outside|3:1}} or {{DFtext|Inside|6:0}}, {{DFtext|Light|6:1}} or {{DFtext|Dark|0:1}}, and {{DFtext|Above Ground|2:1}} or {{DFtext|Subterranean|0:1}}. In this version, these attributes ''cannot'' be viewed directly, but they can still be inferred via other means.
+
+These attributes do ''not'' change what tiles look like.  DFHack's Rendermax plugin implements a lighting system into the game, but this is only an aesthetic change, and does not affect tile attributes.
+
+There are eight different combinations, and only four of them occur naturally:
+* {{DFtext|Outside |3:1}}{{DFtext|Light |6:1}}{{DFtext|Above Ground|2:1}} - Outdoors, or within outdoor-like conditions (such as being indoors but with no roof above the tile, providing direct access to sunlight.)
+* {{DFtext|Outside |3:1}}{{DFtext|Light |6:1}}{{DFtext|Subterranean|0:1}} - Impossible
+* {{DFtext|Outside |3:1}}{{DFtext|Dark |0:1}}{{DFtext|Above Ground|2:1}} - Impossible
+* {{DFtext|Outside |3:1}}{{DFtext|Dark |0:1}}{{DFtext|Subterranean|0:1}} - Impossible
+* {{DFtext|Inside |6:0}}{{DFtext|Light |6:1}}{{DFtext|Above Ground|2:1}} - Constructed buildings on the surface, below-ground-level chambers with constructed floors or buildings only (possibly walls also{{verify}}) above them. Also tiles beneath branches of some trees. 
+* {{DFtext|Inside |6:0}}{{DFtext|Light |6:1}}{{DFtext|Subterranean|0:1}} - Impossible
+* {{DFtext|Inside |6:0}}{{DFtext|Dark |0:1}}{{DFtext|Above Ground|2:1}} - Possible in [[Object testing arena|arena]], does not occur in Adventure mode, but can occur in Fortress mode, e.g: after unretiring on stockpile tiles (biome becoming embark tile level biome). 
+* {{DFtext|Inside |6:0}}{{DFtext|Dark |0:1}}{{DFtext|Subterranean|0:1}} - Underground tunnels, including most of your fortress
+
+Being in the {{DFtext|Dark|0:1}} increases [[cave adaptation]], and being {{DFtext|Outside|3:1}} causes it to be triggered.
+
+The entire [[Location|fortress site]] starts out as {{DFtext|Inside |6:0}}{{DFtext|Dark Subterranean|0:1}}. After that, a ray for {{DFtext|Outside|3:1}} and a ray for {{DFtext|Light |6:1}}{{DFtext|Above Ground|2:1}} falls straight down from the highest [[z-level]] for every (X,Y) position on the local map, changing each tile's modifiers until something that blocks that particular "ray" is encountered. Due to this behavior, any of the previous three tile combinations will never be encountered in the same (X,Y) position on a lower z-level than a higher-numbered combination.
+
+== Outside vs. Inside ==
+
+This attribute is determined by whether there is a roof of some kind over a tile. Weather only affects tiles which are ''Outside''. Almost any kind of geometry will block the ''Outside'' ray including natural and constructed [[wall]]s, [[floor]]s, [[stair]]s, and [[fortification]]s, and [[bridge]]s, [[grate|floor grates]], [[bars|floor bars]], and [[hatch]]es. A tile which is ''Outside'' will always be ''Light Above Ground'', but an ''Inside'' tile may be either ''Light Above Ground'' or ''Dark Subterranean''.
+
+Tiles under a lever-opened bridge, hatch, grate or floor bars will keep counting as inside until any tile in that 1×1 column is built, constructed or dug on to force an update; remaining so after closing until another update.
+
+== Light vs. Dark and Above Ground vs. Subterranean ==
+
+These two attributes are determined in exactly the same way. Once an area is exposed to the outside world, it is ''Above Ground'' and ''Light'' (and thus channelling this tile will make the tile below it also ''Above Ground'' and ''Light''). Even after being covered up again, it will remain this way. This allows growing outdoor crops inside safely.
+
+{{Category|Map tiles|*}}
+[[ru:Tile attributes]]

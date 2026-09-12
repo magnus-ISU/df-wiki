@@ -1,0 +1,199 @@
+<div class="mw-parser-output"><div id="page-quality-rating" style="text-align: right;margin: 0.8em 0;font-size:75%">
+ <a href="/index.php/Dwarf_Fortress_Wiki:Quality#Tattered" title="Dwarf Fortress Wiki:Quality"><span id="stub-quality" style="padding:0.2em; border:1px solid #333; border-radius: 2px; -webkit-border-radius: 2px; -moz-border-radius: 2px; -o-border-radius: 2px; -ms-border-radius: 2px; background:#CCCCCC;; color:#333333">xTATTEREDx</span></a> <span style="font-weight:bold;" class="dot">&#160;·</span> <a href="/index.php/Dwarf_Fortress_Wiki:Quality#Fine" title="Dwarf Fortress Wiki:Quality"><span id="fine-quality" style="text-decoration:none; color:#CA7A02;">+FINE+</span></a> <span style="font-weight:bold;" class="dot">&#160;·</span> <a href="/index.php/Dwarf_Fortress_Wiki:Quality#Superior" title="Dwarf Fortress Wiki:Quality"><span id="superior-quality" style="text-decoration:none; color:#8800cc;">*SUPERIOR*</span></a> <span style="font-weight:bold;" class="dot">&#160;·</span> <a href="/index.php/Dwarf_Fortress_Wiki:Quality#Exceptional" title="Dwarf Fortress Wiki:Quality"><span id="exceptional-quality" style="text-decoration:none; color:#0088CC;">≡EXCEPTIONAL≡</span></a> <span style="font-weight:bold;" class="dot">&#160;·</span> <a href="/index.php/Dwarf_Fortress_Wiki:Quality#Masterwork" title="Dwarf Fortress Wiki:Quality"><span id="masterwork-quality" style="text-decoration:none; color:#72A329;">☼MASTERWORK☼</span></a></div>
+<table class="version-table" style="text-align: center; margin: 3px auto 5px; padding: 0.25em; border-radius: 3px; -webkit-border-radius: 3px; -moz-border-radius: 3px; -o-border-radius: 3px; -ms-border-radius: 3px;; border: 2px solid #bbdd88; background: #f5ffee; min-width:27em"><tbody><tr><td style="padding: 0.3em 0.3em; width: 100%;"><div style="margin-bottom:6px;" class="version-links-r1"><span style="font-size:100%"><span class="version-link"><span style="text-decoration: none; color: #72A329; background-color: #E2FDCE; border-radius: 2px; -webkit-border-radius: 2px; -moz-border-radius: 2px; -o-border-radius: 2px; -ms-border-radius: 2px; border: 1px solid #bbdd88; padding: 0.2em;"><b>v53.16</b></span></span><span style="font-weight:bold;" class="dot">&#160;·</span> <span class="version-link"><a href="/index.php/DF2014:Tile" title="DF2014:Tile"><span style="text-decoration: none; color: #72A329;">v0.47.05</span></a></span></span></div><span>This article is about the current version of DF.<br />Note that some content may still need to be updated.</span><br />
+<div style="float: right; font-size:75%; padding-right:2px; margin-top:-2px; margin-bottom:-7px;"><span class="version-link"><a href="/index.php/Dwarf_Fortress_Wiki:V" class="mw-redirect" title="Dwarf Fortress Wiki:V"><span style="text-decoration: none; color: #72A329;">More Info</span></a></span><span style="font-weight:bold;" class="dot">&#160;·</span> <span class="version-link"><a href="/index.php/Template:Av" class="mw-redirect" title="Template:Av"><span style="text-decoration: none; color: #72A329;">V</span></a></span></div></td></tr>
+</tbody></table>
+<dl><dd><i>For a list of all tile characters used in DF, see <a href="/index.php/Tilesets" title="Tilesets">Tilesets</a>.</i></dd></dl>
+<div class="floatright"><a href="/index.php/File:Tile_preview_anim.gif" class="image"><img alt="Tile preview anim.gif" src="/images/9/96/Tile_preview_anim.gif" decoding="async" width="160" height="160" /></a></div><p><b>Tiles</b> are the square rectangular cuboids that form a map. They are <i>approximately</i> two meters long, two meters wide, and three meters high.<sup><a rel="nofollow" class="external text" href="http://www.bay12forums.com/smf/index.php?topic=140544.msg6700479#msg6700479">[1]</a></sup> However, the physics calculations assume a tile size of 2.8 meters high and a tick rate of 10 ticks per second, and from the listed speeds (in km/h) and gaits (ticks per 100 tiles) and the tick rate of 10 ticks per second, a tile would be about 8×8 feet (2.4×2.4 meters). The horizontal cross-section of a 1×1 <a href="/index.php/Embark" title="Embark">embark</a> is 48×48 tiles; this is also the scale of overland travel tiles in <a href="/index.php/Adventure_mode" class="mw-redirect" title="Adventure mode">adventure mode</a>. 16×16 local tiles, the maximum embark size, covers a region map tile. A single region map tile (the maximum embark size) would have a cross-section of 768×768 embark tiles (approx. 6144 feet or 1873 meters across). As worlds can have between 17 and 257 region map tiles, a world in <i>Dwarf Fortress</i> is between 20 and 300 miles (32 and 481 kilometers) across with a maximum area of 89,434 square miles (231,632 kilometers squared)– which is about 4% smaller than the United Kingdom.
+</p><p>A tile consists of two sections—a wall section and a floor section, shown in cross-section like this:
+</p>
+<pre>▒▒▒▒▒▒▒▒▒▒▒▒▒▒ -|
+▒▒▒▒▒▒▒▒▒▒▒▒▒▒  |
+▒▒▒▒▒▒▒▒▒▒▒▒▒▒  |--&gt; Wall Section
+▒▒▒▒▒▒▒▒▒▒▒▒▒▒  |
+▒▒▒▒▒▒▒▒▒▒▒▒▒▒  |
+▒▒▒▒▒▒▒▒▒▒▒▒▒▒ -|
+▓▓▓▓▓▓▓▓▓▓▓▓▓▓ ----&gt; Floor Section
+</pre>
+<p>When digging and building, this is important, since some designations and constructions will only be done in wall tiles and others will only be done in floor tiles.
+</p>
+
+<h2><span class="mw-headline" id="Stairs">Stairs</span></h2>
+<p>Building a <a href="/index.php/Stair" class="mw-redirect" title="Stair">stairway</a> consists of two elements: an up stair and a down stair, each element is built only in the matching tile section, across two z-levels, like this:
+</p>
+<pre>▒▒▒▒▒▒▒▒▒▒▒▒▒▒ -|                                  -|
+▒▒▒▒▒▒▒▒▒▒▒▒▒▒  |                                   |
+▒▒▒▒▒▒▒▒▒▒▒▒▒▒  |--&gt; Wall Section                   |--&gt; Open Space
+▒▒▒▒▒▒▒▒▒▒▒▒▒▒  |                                   |
+▒▒▒▒▒▒▒▒▒▒▒▒▒▒  |                                   |
+▒▒▒▒▒▒▒▒▒▒▒▒▒▒ -|                                  -|
+▓▓▓▓▓▓▓▓▓▓▓▓▓▓ ----&gt; Floor          ▓      ▓▓▓▓▓▓▓ ----&gt; Down Stair
+▒▒▒▒▒▒▒▒▒▒▒▒▒▒ -|                   ▒▒▒            -|
+▒▒▒▒▒▒▒▒▒▒▒▒▒▒  |                     ▒▒▒           |
+▒▒▒▒▒▒▒▒▒▒▒▒▒▒  |--&gt; Wall Section       ▒▒▒         |--&gt; Up Stair
+▒▒▒▒▒▒▒▒▒▒▒▒▒▒  |                         ▒▒▒       |
+▒▒▒▒▒▒▒▒▒▒▒▒▒▒  |                           ▒▒▒     |
+▒▒▒▒▒▒▒▒▒▒▒▒▒▒ -|                             ▒▒▒  -|
+▓▓▓▓▓▓▓▓▓▓▓▓▓▓ ----&gt; Floor          ▓▓▓▓▓▓▓▓▓▓▓▓▓▓ ----&gt; Floor
+</pre>
+<p>An up-down stair, or building both up and down stairs in the same tile, works like this:
+</p>
+<pre>▒▒▒▒▒▒▒▒▒▒▒▒▒▒ -|                   ▒▒▒            -|               -|
+▒▒▒▒▒▒▒▒▒▒▒▒▒▒  |                     ▒▒▒           |                |
+▒▒▒▒▒▒▒▒▒▒▒▒▒▒  |--&gt; Wall Section       ▒▒▒         |--&gt; Up Stair    | Up/Down
+▒▒▒▒▒▒▒▒▒▒▒▒▒▒  |                         ▒▒▒       |                |  Stair
+▒▒▒▒▒▒▒▒▒▒▒▒▒▒  |                           ▒▒▒     |                |
+▒▒▒▒▒▒▒▒▒▒▒▒▒▒ -|                             ▒▒▒  -|                |
+▓▓▓▓▓▓▓▓▓▓▓▓▓▓ ----&gt; Floor          ▓      ▓▓▓▓▓▓▓ ----&gt; Down Stair -|
+</pre>
+<h2><span class="mw-headline" id="Walls">Walls</span></h2>
+<p>Both naturally-occurring and constructed walls span across two z-levels, the bottom wall section and floor and the top floor section:
+</p>
+<pre>               -|
+                |
+                |--&gt; Open Space Wall
+                |
+                |
+               -|
+▓▓▓▓▓▓▓▓▓▓▓▓▓▓ ----&gt; Floor       -|                     
+▒▒▒▒▒▒▒▒▒▒▒▒▒▒ -|                 |                     
+▒▒▒▒▒▒▒▒▒▒▒▒▒▒  |                 |                     
+▒▒▒▒▒▒▒▒▒▒▒▒▒▒  |--&gt; Wall Section |--&gt; &lt;material&gt; Wall  
+▒▒▒▒▒▒▒▒▒▒▒▒▒▒  |                 |                     
+▒▒▒▒▒▒▒▒▒▒▒▒▒▒  |                 |                     
+▒▒▒▒▒▒▒▒▒▒▒▒▒▒ -|                 |                     
+▓▓▓▓▓▓▓▓▓▓▓▓▓▓ ----&gt; Floor       -|
+</pre>
+<p>Smoothed and engraved walls span across only one z-level, the bottom wall section and floor. The floor above the wall can become "open space" by two methods: felling a tree above the wall, and digging a down stair above the wall, which is technically "open" (by exposing the tile below).
+</p>
+<pre>               -|                                                       -|
+                |                                                        |
+                |--&gt; Open Space Wall                                     |--&gt; Open Space Wall
+                |                                                        |
+                |                                                        |
+               -|                                                       -|
+▓▓▓▓▓▓▓▓▓▓▓▓▓▓ ----&gt; Natural or Constructed Floor                       ----&gt; Open Space Floor (or Down Stair)
+▒▒▒▒▒▒▒▒▒▒▒▒▒▒ -|                -|                      ▒▒▒▒▒▒▒▒▒▒▒▒▒▒ -|                -|
+▒▒▒▒▒▒▒▒▒▒▒▒▒▒  |                 |                      ▒▒▒▒▒▒▒▒▒▒▒▒▒▒  |                 |
+▒▒▒▒▒▒▒▒▒▒▒▒▒▒  |--&gt; Wall Section |--&gt; &lt;material&gt; Wall   ▒▒▒▒▒▒▒▒▒▒▒▒▒▒  |--&gt; Wall Section |--&gt; &lt;material&gt; Wall
+▒▒▒▒▒▒▒▒▒▒▒▒▒▒  |                 |                      ▒▒▒▒▒▒▒▒▒▒▒▒▒▒  |                 |
+▒▒▒▒▒▒▒▒▒▒▒▒▒▒  |                 |                      ▒▒▒▒▒▒▒▒▒▒▒▒▒▒  |                 |
+▒▒▒▒▒▒▒▒▒▒▒▒▒▒ -|                 |                      ▒▒▒▒▒▒▒▒▒▒▒▒▒▒ -|                 |
+▓▓▓▓▓▓▓▓▓▓▓▓▓▓ ----&gt; Floor       -|                      ▓▓▓▓▓▓▓▓▓▓▓▓▓▓ ----&gt; Floor       -|
+</pre>
+<h2><span class="mw-headline" id="Supports_and_Fortifications">Supports and Fortifications</span></h2>
+<p>Unlike walls, <a href="/index.php/Support" title="Support">supports</a> span only one z-level, allow liquids and movement, and don't create a floor on top.
+Constructed fortifications are basically the same, but block movement as well. Note, however, that fully submerged (depth of 7/7) fortifications no longer block creature movement.
+</p>
+<pre>      ▒▒       -|                 |                                     -|                 |
+      ▒▒        |                 |                      ▒▒▒ ▒▒▒▒▒▒ ▒▒▒  |                 |
+      ▒▒        |--&gt; Wall Section |--&gt; &lt;material&gt; Wall   ▒▒▒ ▒▒▒▒▒▒ ▒▒▒  |--&gt; Wall Section |--&gt; &lt;material&gt; Fortification
+      ▒▒        |                 |                      ▒▒▒ ▒▒▒▒▒▒ ▒▒▒  |                 |
+      ▒▒        |                 |                      ▒▒▒ ▒▒▒▒▒▒ ▒▒▒  |                 |
+      ▒▒       -|                 |                      ▒▒▒▒▒▒▒▒▒▒▒▒▒▒ -|                 |
+▓▓▓▓▓▓▓▓▓▓▓▓▓▓ ----&gt; Floor       -|                      ▓▓▓▓▓▓▓▓▓▓▓▓▓▓ ----&gt; Floor       -|
+</pre>
+<h2><span class="mw-headline" id="Furniture">Furniture</span></h2>
+<h3><span class="mw-headline" id="Statues">Statues</span></h3>
+<p><a href="/index.php/Statue" title="Statue">Statues</a> block normal movement, but not unintended movement (dodging, being thrown, swept by current, etc) nor do they block fluids.
+</p>
+<pre>▒▒▒▒▒░░░░▒▒▒▒▒ -|                 |
+▒▒▒▒▒▓░░▓▒▒▒▒▒  |                 |
+▒▒░░░▓▓▓▓░░░▒▒  |--&gt; Wall Section |--&gt; &lt;material&gt; Statue
+▒░░▒░░▓▓░░▒░░▒  |                 |
+▒▒▒▒░░▒▒░░▒▒▒▒  |                 |
+▒▒░░░░▒▒░░░░▒▒ -|                 |
+▒▒▒▒▒▒▒▒▒▒▒▒▒▒ -|                 |
+▓▓▓▓▓▓▓▓▓▓▓▓▓▓ ----&gt; Floor       -|
+</pre>
+<h3><span class="mw-headline" id="Doors_and_Windows">Doors and Windows</span></h3>
+<p><a href="/index.php/Window" title="Window">Windows</a> and <a href="/index.php/Door" title="Door">doors</a> both block fluids (doors only when closed).
+</p>
+<pre>▒▒▒▒▒▒▒▒▒▒▒▒▒▒ -|                 |                     ▒▒▒▒▒▒▒▒▒▒▒▒▒▒ -|                 |
+▒░░░░░░░░░░░░▒  |                 |                     ▒░░░░░░░░░░░░▒  |                 |
+▒░░░░░░░░░░░░▒  |--&gt; Wall Section |--&gt; &lt;material&gt; Door  ▒░░░░░░░░░░░░▒  |--&gt; Wall Section |--&gt; &lt;material&gt; Window
+▒░░░░░░░░░░░░▒  |                 |                     ▒▒▒▒▒▒▒▒▒▒▒▒▒▒  |                 |
+▒░░░░░░░░░▒▒░▒  |                 |                     ▒░░░░░░░░░░░░▒  |                 |
+▒░░░░░░░░░░░░▒ -|                 |                     ▒░░░░░░░░░░░░▒ -|                 |
+▒░░░░░░░░░░░░▒ -|                 |                     ▒▒▒▒▒▒▒▒▒▒▒▒▒▒ -|                 |
+▓▓▓▓▓▓▓▓▓▓▓▓▓▓ ----&gt; Floor       -|                     ▓▓▓▓▓▓▓▓▓▓▓▓▓▓ ----&gt; Floor       -|
+</pre>
+<p>...
+</p>
+<h2><span class="mw-headline" id="Special_Tiles">Special Tiles</span></h2>
+<p>There are some naturally-occurring special tiles, these can't be recreated<sup style="font-size: 80%;">&#91;<a href="/index.php/Talk:Tile" class="mw-redirect" title="Talk:Tile"><span title="The material near this tag is possibly inaccurate or nonfactual.">Verify</span></a>&#93;</sup>:
+</p>
+<h3><span class="mw-headline" id="Murky_pool_tile">Murky pool tile</span></h3>
+<p>Occur on at least<sup style="font-size: 80%;">&#91;<a href="/index.php/Talk:Tile" class="mw-redirect" title="Talk:Tile"><span title="The material near this tag is possibly inaccurate or nonfactual.">Verify</span></a>&#93;</sup> 2 z-levels, as an open space wall section with an open space floor section, and in the lowest z-level another open space wall section (filled with water) with a murky pool floor section, the lower open space wall section can fill with rain water and during winter with an ice wall<sup style="font-size: 80%;">&#91;<a href="/index.php/Talk:Tile" class="mw-redirect" title="Talk:Tile"><span title="The material near this tag is possibly inaccurate or nonfactual.">Verify</span></a>&#93;</sup>
+</p>
+<pre>▒▒▒▒▒▒▒▒▒▒▒▒▒▒ -|                                  -|
+▒▒▒▒▒▒▒▒▒▒▒▒▒▒  |                                   |
+▒▒▒▒▒▒▒▒▒▒▒▒▒▒  |--&gt; Wall Section                   |--&gt; Open Space Wall
+▒▒▒▒▒▒▒▒▒▒▒▒▒▒  |                                   |
+▒▒▒▒▒▒▒▒▒▒▒▒▒▒  |                                   |
+▒▒▒▒▒▒▒▒▒▒▒▒▒▒ -|                                  -|
+▓▓▓▓▓▓▓▓▓▓▓▓▓▓ ----&gt; Floor                         ----&gt; Open Space Floor (an Ice wall creates an Ice floor here)
+▒▒▒▒▒▒▒▒▒▒▒▒▒▒ -|                   ~~~~~~w7~~~~~~ -|
+▒▒▒▒▒▒▒▒▒▒▒▒▒▒  |                   ~~~~~~w6~~~~~~  |
+▒▒▒▒▒▒▒▒▒▒▒▒▒▒  |--&gt; Wall Section   ~~~~~~w5~~~~~~  |--&gt; Open Space Wall (can be filled with Water or Ice)
+▒▒▒▒▒▒▒▒▒▒▒▒▒▒  |                   ~~~~~~w4~~~~~~  |
+▒▒▒▒▒▒▒▒▒▒▒▒▒▒  |                   ~~~~~~w3~~~~~~  |
+▒▒▒▒▒▒▒▒▒▒▒▒▒▒ -|                   ~~~~~~w2~~~~~~ -|
+▓▓▓▓▓▓▓▓▓▓▓▓▓▓ ----&gt; Floor          ▓▓▓▓▓▓w1▓▓▓▓▓▓ ----&gt; Murky Pool ----&gt; <i>1/1 Water or Ice floor{{verify}</i>
+
+                                          w# = water level
+</pre>
+<h3><span class="mw-headline" id="River">River</span></h3><p><sup style="font-size: 80%;">&#91;<a href="/index.php/Talk:Tile" class="mw-redirect" title="Talk:Tile"><span title="The material near this tag is possibly inaccurate or nonfactual.">Verify</span></a>&#93;</sup> under construction...
+</p><p>River Source tiles: generate infinite flowing water for both rivers and brooks??<sup style="font-size: 80%;">&#91;<a href="/index.php/Talk:Tile" class="mw-redirect" title="Talk:Tile"><span title="The material near this tag is possibly inaccurate or nonfactual.">Verify</span></a>&#93;</sup>
+</p>
+<h3><span class="mw-headline" id="Brook_tile">Brook tile</span></h3>
+<p>Brook tiles occur on at least<sup style="font-size: 80%;">&#91;<a href="/index.php/Talk:Tile" class="mw-redirect" title="Talk:Tile"><span title="The material near this tag is possibly inaccurate or nonfactual.">Verify</span></a>&#93;</sup> 2 z-levels, as an open space wall section with a brook floor section, and in the lowest z-level another open space wall section (filled with water) with another brook <i>(or river source)</i> floor section, the lower open space wall section can fill with rain water<sup style="font-size: 80%;">&#91;<a href="/index.php/Talk:Tile" class="mw-redirect" title="Talk:Tile"><span title="The material near this tag is possibly inaccurate or nonfactual.">Verify</span></a>&#93;</sup> and during winter with an ice wall<sup style="font-size: 80%;">&#91;<a href="/index.php/Talk:Tile" class="mw-redirect" title="Talk:Tile"><span title="The material near this tag is possibly inaccurate or nonfactual.">Verify</span></a>&#93;</sup>
+</p>
+<pre>▒▒▒▒▒▒▒▒▒▒▒▒▒▒ -|                                  -|
+▒▒▒▒▒▒▒▒▒▒▒▒▒▒  |                                   |
+▒▒▒▒▒▒▒▒▒▒▒▒▒▒  |--&gt; Wall Section                   |--&gt; Open Space Wall
+▒▒▒▒▒▒▒▒▒▒▒▒▒▒  |                                   |
+▒▒▒▒▒▒▒▒▒▒▒▒▒▒  |                                   |
+▒▒▒▒▒▒▒▒▒▒▒▒▒▒ -|                                  -|
+▓▓▓▓▓▓▓▓▓▓▓▓▓▓ ----&gt; Floor          ▓▓  ▓▓  ▓▓  ▓▓ ----&gt; Brook <i>(freezing effects?<sup style="font-size: 80%;">&#91;<a href="/index.php/Talk:Tile" class="mw-redirect" title="Talk:Tile"><span title="The material near this tag is possibly inaccurate or nonfactual.">Verify</span></a>&#93;</sup>)</i>
+▒▒▒▒▒▒▒▒▒▒▒▒▒▒ -|                   ~~~~~~w7~~~~~~ -|
+▒▒▒▒▒▒▒▒▒▒▒▒▒▒  |                   ~~~~~~w6~~~~~~  |
+▒▒▒▒▒▒▒▒▒▒▒▒▒▒  |--&gt; Wall Section   ~~~~~~w5~~~~~~  |--&gt; Open Space Wall (can be filled with <a href="/index.php/Flow" title="Flow">flowing</a><sup style="font-size: 80%;">&#91;<a href="/index.php/Talk:Tile" class="mw-redirect" title="Talk:Tile"><span title="The material near this tag is possibly inaccurate or nonfactual.">Verify</span></a>&#93;</sup> water or Ice)
+▒▒▒▒▒▒▒▒▒▒▒▒▒▒  |                   ~~~~~~w4~~~~~~  |
+▒▒▒▒▒▒▒▒▒▒▒▒▒▒  |                   ~~~~~~w3~~~~~~  |
+▒▒▒▒▒▒▒▒▒▒▒▒▒▒ -|                   ~~~~~~w2~~~~~~ -|
+▓▓▓▓▓▓▓▓▓▓▓▓▓▓ ----&gt; Floor          ▓▓  ▓▓w1▓▓  ▓▓ ----&gt; Brook / River Source ----&gt; <i>1/1 Water or Ice floor<sup style="font-size: 80%;">&#91;<a href="/index.php/Talk:Tile" class="mw-redirect" title="Talk:Tile"><span title="The material near this tag is possibly inaccurate or nonfactual.">Verify</span></a>&#93;</sup></i>
+</pre>
+<p>Brook tiles work like floor grates, can be walked on, fished through, allow fluids and missiles through, etc...
+</p>
+<table class="wikitable floatright" style="text-align:center;">
+<tbody><tr>
+<td>"Tile" in other <b><a href="/index.php/Language" title="Language">Languages</a></b> <a href="/index.php/File:Story_tell_indicator.png" class="image"><img alt="Story tell indicator.png" src="/images/9/90/Story_tell_indicator.png" decoding="async" width="20" height="18" /></a>
+<table style="text-align:left;">
+
+
+
+<tbody><tr>
+<th><b><a href="/index.php/Dwarven_language" title="Dwarven language">Dwarven</a></b>:
+</th>
+<td>bot
+</td></tr>
+
+<tr>
+<th><b><a href="/index.php/Elven_language" title="Elven language">Elven</a></b>:
+</th>
+<td>çile
+</td></tr>
+
+<tr>
+<th><b><a href="/index.php/Goblin_language" title="Goblin language">Goblin</a></b>:
+</th>
+<td>garspo
+</td></tr>
+
+<tr>
+<th><b><a href="/index.php/Human_language" title="Human language">Human</a></b>:
+</th>
+<td>lir
+</td></tr></tbody></table>
+</td></tr></tbody></table></div>

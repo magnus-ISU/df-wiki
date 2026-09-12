@@ -1,0 +1,161 @@
+{{Quality|Superior}}
+{{av}}
+
+[[File:tools_sprites_preview.png|right]]'''Tools''' are finished goods, used for a variety of mundane purposes by civilians and [[night creature]]s. Some tools can also be used as [[weapon]]s, though it is usually much better to use, say, a [[sword]] over a carving fork. [[Tools#Other tools|Other tools]] can be created and used by your dwarves in [[fortress mode]], including as [[furniture]]. [[Honeycomb]]s also count as tools, and are stockpiled as such.
+
+You can select handheld tools as starting equipment if your adventurer hails from a human civilization.
+
+==Tools Usable as Weapons==
+{| class="wikitable" border="border"
+! Type
+! Graphic
+! Size
+! Attack
+! [[Attack type]]
+! Contact Area
+! Penetration
+! Velocity
+! [[DF2012:Combat_skill#Weapon_skills|Skill Used]]
+|- valign="top"
+|rowspan="3"| Carving knife
+|rowspan="3"|[[File:carving_knife_sprite.png]]
+|rowspan="3"|150
+| Slash || Edge || 800 || 600 || 1.25×
+|rowspan="3"| Dagger
+|-
+| Stab || Edge || 4 || 800 || 1×
+|-
+| Handle strike || Blunt || 15 || (400) || 1×
+|- valign="top"
+|rowspan="3"| Boning knife
+|rowspan="3"|[[File:boning_knife_sprite.png]]
+|rowspan="3"|50
+| Slash || Edge || 500 || 300 || 1.25×
+|rowspan="3"| Dagger
+|-
+| Stab || Edge || 2 || 400 || 1×
+|-
+| Handle strike || Blunt || 10 || (200) || 1×
+|- valign="top"
+|rowspan="3"| Slicing knife
+|rowspan="3"|[[File:slicing_knife_sprite.png]]
+|rowspan="3"|150
+| Slash || Edge || 900 || 700 || 1.25×
+|rowspan="3"| Dagger
+|-
+| Stab || Edge || 3 || 900 || 1x
+|-
+| Handle strike || Blunt || 15 || (400) || 1×
+|- valign="top"
+|rowspan="3"| Meat cleaver
+|rowspan="3"|[[File:meat_cleaver_sprite.png]]
+|rowspan="3"|300
+| Hack || Edge || 800 || 400 || 1.25×
+|rowspan="3"| Axe
+|-
+| Flat slap || Blunt || 800 || (400) || 1.25×
+|-
+| Handle strike || Blunt || 20 || (400) || 1×
+|- valign="top"
+|rowspan="2"| Carving fork
+|rowspan="2"|[[File:carving_fork_sprite.png]]
+|rowspan="2"|150
+| Stab || Edge || 1 || 100 || 1×
+|rowspan="2"| Dagger
+|-
+| Handle strike || Blunt || 15 || 400 || 1×
+|- valign="top"
+|rowspan="3"| (Stone) Axe
+|rowspan="3"|[[File:stone_axe_sprite.png]]
+|rowspan="3"|400
+| Hack || Edge || 800 || 400 || 1.25×
+|rowspan="3"| Axe
+|-
+| Flat slap || Blunt || 800 || 400 || 1×
+|-
+| Helve strike || Blunt || 20 || 400 || 1×
+|}
+
+==Other Tools==
+<!-- 
+If you add anything to the table below, please check if it's present on the tileset page, too, and add it if it's missing.
+-->
+{| class="wikitable sortable" border="border"
+|-
+! Type
+! Tile
+! Graphic
+! Size (cm³)
+! Material
+! Capacity (cm³)
+! Base Value
+! Usage
+|-
+| Cauldron || style="text-align:center;" | {{Tile|ô|7:1}} || style="text-align:center;" | [[File:cauldron_sprite.png]] || 4000 || Metal 6 || 100,000 || 50 || Cooking liquids 
+|-
+| Ladle || style="text-align:center;" | {{Tile|♪|7:1}} || style="text-align:center;" | [[File:ladle_sprite.png]] || 100 || Metal 1 || n/a || 10 || Liquid scoop
+|-
+| Bowl || style="text-align:center;" | {{Tile|°|7:1}} || style="text-align:center;" | [[File:bowl_sprite.png]] || 100 || Stone 1 || 3,000 || 10 || Meal container
+|-
+| Mortar || style="text-align:center;" | {{Tile|°|7:1}} || style="text-align:center;" | [[File:mortar_sprite.png]] || 100 || Stone 1 || 1,000 || 10 || Grind powder, receptacle
+|-
+| Pestle || style="text-align:center;" | {{Tile|/|7:1}} || style="text-align:center;" | [[File:pestle_sprite.png]] || 20 || Stone 1 || n/a || 10 || Grind powder, grinder
+|-
+| [[Nest box]] || style="text-align:center;" | {{Tile|◘|7:1}} || style="text-align:center;" | [[File:nest_box_sprite.png]] || 1000 || Any Hard 1 || 2,000 || 10 || Contains eggs 
+|-
+| [[Jug]] || style="text-align:center;" | {{Tile|σ|7:1}} || style="text-align:center;" | [[File:jug_sprite.png]] || 300 || Any Hard 1 || 10,000 || 10 || Liquid container
+|-
+| [[Large pot]] || style="text-align:center;" | {{Tile|Φ|7:1}} || style="text-align:center;" | [[File:large_pot_sprite.png]] || 5000 || Any Hard 1 || 60,000 || 10 || Food storage
+|-
+| [[Hive]] || style="text-align:center;" | {{Tile|▬|7:1}} || style="text-align:center;" | [[File:hive.png]] || 2000 || Any Hard 1 || 5,000 || 10 || [[Beekeeping industry|Beekeeping]]
+|-
+| [[Honeycomb]] || style="text-align:center;" | {{Tile|∞|7:1}} || style="text-align:center;" | [[File:honeycomb_sprite.png]] || 1000 || n/a 1 || n/a || 10 || n/a
+|-
+| [[Storage|Pouch]] || style="text-align:center;" | {{Tile|¡|7:1}} || style="text-align:center;" | [[File:pouch_sprite.png]] || 100 || Soft 1 || 1,000 || 10 || Small object storage
+|-
+| [[Minecart]] || style="text-align:center;" | {{Tile|■|0:7:1}} || style="text-align:center;" |  [[File:minecart_sprite.png]]  || 40,000 || Wood/Metal 6 || 500,000 || 50 || Tracked cart
+|-
+| [[Wheelbarrow]] || style="text-align:center;" | {{Tile|Ö|7:1}} || style="text-align:center;" |  [[File:wheelbarrow_sprite.png]]  ||30,000 || Wood/Metal 6 || 100,000 || 50 || Heavy object hauling
+|- 
+| [[Stepladder]] || style="text-align:center;" |{{Tile|₧|7:1}} || style="text-align:center;" | [[File:stepladder_sprite.png]] || 40,000 || Wood/Metal 6 || n/a || 50 || Fruit collection
+|- 
+| Scroll rollers || style="text-align:center;" | {{Tile|÷|7:1}} || style="text-align:center;" | [[File:scroll roller sprite.png ]] || 100 || Any Hard 1 || n/a || 10 || Roll up sheets
+|- 
+| [[Book binding]] || style="text-align:center;" |{{Tile|÷|7:1}} || style="text-align:center;" |  [[File:book_binding_sprite.png]]  || 100 || Any Hard 1 || n/a || 10 || Protect folded sheets
+|- 
+| [[Scroll]] || style="text-align:center;" |{{Tile|∞|7:1}} || style="text-align:center;" | [[File:scroll_sprite.png]]  || 200 || Any Sheet 1 || n/a || 20 || Contains writing
+|- 
+| [[Quire]] || style="text-align:center;" |{{Tile|≡|7:1}} || style="text-align:center;" | [[File:quire_sprite.png]]  || 100 || Any Sheet 1 || n/a || 20 || Contains writing
+|- 
+| [[Bookcase]] || style="text-align:center;" |{{Tile|≡|0:7:1}} || style="text-align:center;" | [[File:bookcase_sprite.png]] || 1000 || Any Hard 6 || 100,000 || 10 || Bookcase (Furniture)
+|- 
+| Helve || style="text-align:center;" | {{Tile|\|7:1}} || style="text-align:center;" | [[File:helve_sprite.png]] ||250 || Branch 1 || n/a || 10 || Crafting stone axes in [[adventure mode]]
+|- 
+| [[Pedestal]] || style="text-align:center;" | {{Tile|ï|7:1}} || style="text-align:center;" | [[File:pedestal_sprite.png]] || 500 || Any Hard 6 || || 10 || Display furniture
+|- 
+| [[Display case]] || style="text-align:center;" | {{Tile|π|0:7:1}} || style="text-align:center;" | [[File:display_case_sprite.png]] || 1000 || [[Log]] + [[Window]]|| || 10 || Display furniture
+|- 
+| [[Altar]] || style="text-align:center;" | {{Tile|É|7:1}} || style="text-align:center;" | [[File:altar_sprite.png]] || 500 || Any Hard 6 || || 10 || Offering place (Furniture)
+|- 
+| [[Die]] (a.k.a. dice) || style="text-align:center;" | {{Tile|◘|7:1}} || style="text-align:center;" | [[File:die_sprite.png]] || 5 || Any Hard 1 || || 1 || Divination
+|- 
+| [[Instrument#Components|Instrument component]] || style="text-align:center;" | {{Tile|¢|7:1}}  || style="text-align:center;" | [[File:Instrument sprite.png]] || Varies || Varies || || 10 || Constructing [[instrument]]s
+|}
+
+Hard materials include stone, metal, wood, and glass.<br />Soft materials include silk, plant fibers, leather and adamantine thread.<br />Sheet materials include papyrus, paper, and parchment.
+
+A tool needs capacity of 600 per unit of [[liquid]] to contain: a jug can hold 10,000/600 = 16 units of liquid, a submerged minecart scoops 500,000/600 = 833 units of magma or water, etc.
+
+==See also==
+* [[Tool token]]
+
+{{Translation
+| dwarven = lòr
+| elvish  = wanala
+| goblin  = êngan
+| human   = shem
+}}
+
+{{Category|Items| }}
+{{Gamedata|{{raw|v50:item_tool.txt|}}}}
+[[ru:Tool]]

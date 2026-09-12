@@ -1,0 +1,57 @@
+<div class="mw-parser-output"><div class="mw-highlight mw-highlight-lang-lua mw-content-ltr" dir="ltr"><pre><span></span><span class="n">creatures</span><span class="p">.</span><span class="n">titan</span><span class="p">.</span><span class="n">default</span><span class="o">=</span><span class="kr">function</span><span class="p">(</span><span class="n">subregion</span><span class="p">,</span><span class="n">tok</span><span class="p">)</span>
+    <span class="kd">local</span> <span class="n">tbl</span><span class="o">=</span><span class="p">{}</span>
+    <span class="kd">local</span> <span class="n">options</span><span class="o">=</span><span class="p">{</span>
+        <span class="n">pick_sphere_rcm</span><span class="o">=</span><span class="kc">true</span><span class="p">,</span>
+        <span class="n">strong_attack_tweak</span><span class="o">=</span><span class="kc">true</span><span class="p">,</span>
+        <span class="n">sickness_name</span><span class="o">=</span><span class="s2">&quot;titan sickness&quot;</span><span class="p">,</span>
+        <span class="n">token</span><span class="o">=</span><span class="n">tok</span>
+    <span class="p">}</span>
+    <span class="kd">local</span> <span class="n">atp</span> <span class="o">=</span> <span class="nb">tostring</span><span class="p">(</span><span class="n">world</span><span class="p">.</span><span class="n">param</span><span class="p">.</span><span class="n">titan_attack_trigger_population</span><span class="p">)</span>
+    <span class="kd">local</span> <span class="n">atew</span> <span class="o">=</span> <span class="nb">tostring</span><span class="p">(</span><span class="n">world</span><span class="p">.</span><span class="n">param</span><span class="p">.</span><span class="n">titan_attack_trigger_exported_wealth</span><span class="p">)</span>
+    <span class="kd">local</span> <span class="n">atcw</span> <span class="o">=</span> <span class="nb">tostring</span><span class="p">(</span><span class="n">world</span><span class="p">.</span><span class="n">param</span><span class="p">.</span><span class="n">titan_attack_trigger_created_wealth</span><span class="p">)</span>
+    <span class="n">split_to_lines</span><span class="p">(</span><span class="n">tbl</span><span class="p">,</span><span class="s">[[</span>
+<span class="s">    [TITAN]</span>
+<span class="s">    [ATTACK_TRIGGER:]]</span><span class="o">..</span><span class="n">atp</span><span class="o">..</span><span class="s2">&quot;:&quot;</span><span class="o">..</span><span class="n">atew</span><span class="o">..</span><span class="s2">&quot;:&quot;</span><span class="o">..</span><span class="n">atcw</span><span class="o">..</span><span class="s">[[]</span>
+<span class="s">    [NO_GENDER]</span>
+<span class="s">    [NO_DRINK][NO_EAT][NO_SLEEP]</span>
+<span class="s">    [DIFFICULTY:10]</span>
+<span class="s">    [LAIR:SHRINE:100]</span>
+
+<span class="s">    [NATURAL_SKILL:WRESTLING:6]</span>
+<span class="s">    [NATURAL_SKILL:BITE:6]</span>
+<span class="s">    [NATURAL_SKILL:GRASP_STRIKE:6]</span>
+<span class="s">    [NATURAL_SKILL:STANCE_STRIKE:6]</span>
+<span class="s">    [NATURAL_SKILL:MELEE_COMBAT:6]</span>
+<span class="s">    [NATURAL_SKILL:DODGING:6]</span>
+<span class="s">    [NATURAL_SKILL:SITUATIONAL_AWARENESS:15]</span>
+<span class="s">    ]]</span><span class="p">)</span>
+    <span class="n">add_regular_tokens</span><span class="p">(</span><span class="n">tbl</span><span class="p">,</span><span class="n">options</span><span class="p">)</span>
+    <span class="n">options</span><span class="p">.</span><span class="n">spheres</span><span class="o">=</span><span class="p">{}</span>
+    <span class="kr">if</span> <span class="n">subregion</span> <span class="kr">then</span>
+        <span class="n">map_merge</span><span class="p">(</span><span class="n">options</span><span class="p">.</span><span class="n">spheres</span><span class="p">,</span><span class="n">regiontypes</span><span class="p">[</span><span class="n">subregion</span><span class="p">.</span><span class="n">type</span><span class="p">].</span><span class="n">spheres</span><span class="p">)</span>
+        <span class="kr">if</span> <span class="n">subregion</span><span class="p">.</span><span class="n">is_evil</span> <span class="kr">then</span>
+            <span class="n">options</span><span class="p">.</span><span class="n">spheres</span><span class="p">[</span><span class="n">pick_random</span><span class="p">(</span><span class="n">evil_spheres</span><span class="p">)]</span><span class="o">=</span><span class="kc">true</span>
+            <span class="n">options</span><span class="p">.</span><span class="n">is_evil</span> <span class="o">=</span> <span class="kc">true</span>
+        <span class="kr">elseif</span> <span class="n">subregion</span><span class="p">.</span><span class="n">is_good</span> <span class="kr">then</span>
+            <span class="n">options</span><span class="p">.</span><span class="n">spheres</span><span class="p">[</span><span class="n">pick_random</span><span class="p">(</span><span class="n">good_spheres</span><span class="p">)]</span><span class="o">=</span><span class="kc">true</span>
+            <span class="n">options</span><span class="p">.</span><span class="n">is_good</span> <span class="o">=</span> <span class="kc">true</span>
+        <span class="kr">end</span>
+    <span class="kr">end</span>
+    <span class="n">populate_sphere_info</span><span class="p">(</span><span class="n">tbl</span><span class="p">,</span><span class="n">options</span><span class="p">)</span>
+    <span class="kd">local</span> <span class="n">rcp</span><span class="o">=</span><span class="n">get_random_creature_profile</span><span class="p">(</span><span class="n">options</span><span class="p">)</span>
+    <span class="n">add_body_size</span><span class="p">(</span><span class="n">tbl</span><span class="p">,</span><span class="nb">math.max</span><span class="p">(</span><span class="mi">10000000</span><span class="p">,</span><span class="n">rcp</span><span class="p">.</span><span class="n">min_size</span><span class="p">),</span><span class="n">options</span><span class="p">)</span>
+    <span class="n">tbl</span><span class="p">[</span><span class="o">#</span><span class="n">tbl</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span><span class="o">=</span><span class="s2">&quot;[CREATURE_TILE:&quot;</span><span class="o">..</span><span class="n">tile_string</span><span class="p">(</span><span class="n">rcp</span><span class="p">.</span><span class="n">tile</span><span class="p">)</span><span class="o">..</span><span class="s2">&quot;]&quot;</span>
+    <span class="kr">if</span> <span class="n">options</span><span class="p">.</span><span class="n">is_good</span> <span class="kr">then</span>
+        <span class="n">tbl</span><span class="p">[</span><span class="o">#</span><span class="n">tbl</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span><span class="o">=</span><span class="s2">&quot;[BENIGN]&quot;</span>
+    <span class="kr">else</span>
+        <span class="n">tbl</span><span class="p">[</span><span class="o">#</span><span class="n">tbl</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span><span class="o">=</span><span class="s2">&quot;[LARGE_PREDATOR]&quot;</span>
+    <span class="kr">end</span>
+    <span class="n">build_procgen_creature</span><span class="p">(</span><span class="n">rcp</span><span class="p">,</span><span class="n">tbl</span><span class="p">,</span><span class="n">options</span><span class="p">)</span>
+    <span class="n">tbl</span><span class="p">[</span><span class="o">#</span><span class="n">tbl</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span><span class="o">=</span><span class="s2">&quot;[GO_TO_START]&quot;</span>
+    <span class="kd">local</span> <span class="n">subreg_name</span><span class="o">=</span><span class="n">subregion</span> <span class="ow">and</span> <span class="n">regiontypes</span><span class="p">[</span><span class="n">subregion</span><span class="p">.</span><span class="n">type</span><span class="p">].</span><span class="n">name</span><span class="p">(</span><span class="n">subregion</span><span class="p">)</span> <span class="ow">or</span> <span class="s2">&quot;buggy&quot;</span>
+    <span class="kd">local</span> <span class="n">name_str</span> <span class="o">=</span> <span class="n">subreg_name</span><span class="o">..</span><span class="s2">&quot; titan:&quot;</span><span class="o">..</span><span class="n">subreg_name</span><span class="o">..</span><span class="s2">&quot; titans:&quot;</span><span class="o">..</span><span class="n">subreg_name</span><span class="o">..</span><span class="s2">&quot;-titan]&quot;</span>
+    <span class="n">tbl</span><span class="p">[</span><span class="o">#</span><span class="n">tbl</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span><span class="o">=</span><span class="s2">&quot;[NAME:&quot;</span><span class="o">..</span><span class="n">name_str</span>
+    <span class="n">tbl</span><span class="p">[</span><span class="o">#</span><span class="n">tbl</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span><span class="o">=</span><span class="s2">&quot;[CASTE_NAME:&quot;</span><span class="o">..</span><span class="n">name_str</span>
+    <span class="kr">return</span> <span class="p">{</span><span class="n">creature</span><span class="o">=</span><span class="n">tbl</span><span class="p">,</span><span class="n">weight</span><span class="o">=</span><span class="mi">1</span><span class="p">}</span>
+<span class="kr">end</span>
+</pre></div></div>

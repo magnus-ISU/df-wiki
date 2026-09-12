@@ -1,0 +1,46 @@
+[[File:ZachAdams.jpg|thumb|ThreeToe at Pax 2013]]
+
+{{Translation
+| dwarven = mez-nin
+| elvish  = sara-nani
+| goblin  = rugol-osmnog
+| human   = akku-domi
+}}
+
+'''ThreeToe''' is the nickname used by '''Zach Adams''', co-designer of ''[[Dwarf Fortress]]'' and author of the [http://www.bay12games.com/dwarves/dev_story.html short stories] which highlight ''Dwarf Fortress''<nowiki>'</nowiki>s upcoming features. He can be reached at [http://www.bay12games.com/about.html About Bay 12 Games] or the [http://www.bay12forums.com/smf/ Bay 12 Games Forum].
+
+The other designer, and programmer, is Zach's younger brother, Tarn ([[Toady One]]).
+
+ThreeToe married on July 15, 2017. All we know about his spouse Annie Forsman-Adams is that she has "royal blood". According to him, their wedding was planned to be "as dwarfy as possible." [http://www.bay12games.com/dwarves/dev_2017.html#2017-07-13]
+
+Since March 2019[http://www.bay12games.com/dwarves/dev_2019.html#2019-03-09], ThreeToe has been keeping four smaller [[cavy|threetoes]]: [[Harry, Ramone, Sid and Bowie]].
+
+{{gamedata|[CREATURE:THREE_TOE]
+	[NAME:three toe:three toe:three toe]
+	[TILE:249][COLOR:2:0:0]
+	[FREQUENCY:100]
+	[CAN_LEARN]
+	[CAN_SPEAK]
+	[BENIGN]
+	[CANOPENDOORS]
+	[INTELLIGENT]
+	[AMPHIBIOUS][UNDERSWIM]
+	[BODY:HUMANOID:2EYES:2EARS:NOSE:2LUNGS:HEART:GUTS:ORGANS:HUMANOID_JOINTS:THROAT:NECK:SPINE:BRAIN:5FINGERS:3TOES:MOUTH]
+ 	[ATTACK:MAIN:BYTYPE:GRASP:punch:punches:1:2:BLUDGEON][ATTACKFLAG_WITH]
+ 	[ATTACK:SECOND:BYTYPE:MOUTH:bite:bites:1:1:GORE][ATTACKFLAG_CANLATCH]
+	[MAXAGE:60:120]
+	[SPEED:2900][NATURAL]
+	[FAT:3]
+	[PREFSTRING:ambitious writing]
+	[NOCTURNAL]
+	[HOMEOTHERM:10067] 
+	[STANDARD_FLESH]
+	[SWIMS_INNATE][SWIM_SPEED:2500]
+	[LAYERING:10]
+	[MALE]
+	[SPEECH_MALE:human_male.txt]
+	[MUNDANE]
+}}
+
+[[Category:Game development]]
+[[ru:ThreeToe]]

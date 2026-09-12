@@ -1,0 +1,51 @@
+{{Quality|Exceptional}}
+{{av}}
+
+[[Image:Thirsty_Dwarves.gif‎|thumb|right|Dwarves quenching thirst.]]
+[[Dwarf|Dwarves]], given time, will eventually get '''thirsty''', as indicated by [[File:status_thirst_icon.png]] / {{Tile|↓|1:1}} blinking over the thirsty dwarf. If a dwarf fails to drink in time, the thirst will proceed to dehydration and eventually death. A dwarf needs to drink about once in every three weeks.
+
+A thirsty dwarf prefers to drink [[Alcohol|booze]] - if none is available, they will go to the nearest [[water]] source and drink, ideally being a [[well]] inside the fortress, but they will drink from a [[river]], [[brook]], or even [[murky pool]]s if there are no other sources of water. A dwarf can live indefinitely on water alone, but without alcohol they will suffer bad thoughts, reduced movement speed/workrate, and combat abilities: making a dwarf's efficiency highly alcohol-dependent. While dwarves prefer an abundance of alcohol, dwarves give water to other dwarves when a dwarf is [[rest|resting]] and when a dwarf can't find something to drink on their own.
+
+Dwarves seem to be capable of subsisting on [[vomit]] and slime in particularly dire times, though this is (as to be expected) traumatizing and will quickly result in mental breakdowns and [[insanity]]. This will usually only happen in cases of dwarves walling themselves in and being forgotten, and in challenging embark locations.
+
+A [[rest|resting]] dwarf will not do anything on their own until they have recovered from recent injuries (preferably inside a [[hospital]]), and will depend on others to provide them with food and drink. They will not be given booze but receive water carried in [[bucket]]s.
+
+Any baby being carried by its mother will effectively leech drink from her, causing her to become thirsty at double the usual rate. This does not, however, count as alcohol - when a baby is close to 1 year old, it will have severe withdrawal.
+
+[[Vampire]]s and [[necromancer]]s never dehydrate and thus never drink water, but still enjoy consuming [[alcohol]]. In previous versions, [[Werebeast|werebeasts]] also did not need to drink, but this has since been fixed.
+
+Most types of humanoids who join a [[Fortress mode|fortress]], such as [[Human|humans]] and [[Elf|elves]] need to drink, [[Food|eat]], and [[sleep]]. In [[adventure mode]], these needs are only tracked for the currently-controlled character, and some creature types that can become playable after joining other civilizations, like [[goblin]]s and [[experiment]]s, do not need to drink. 
+
+==Detailed mechanics==
+
+Thirst increments by 1 during each game [[Time|tick]] ''(i.e. 1,200 per day, 33,600 per month, 403,200 per year)'', possibly more if the dwarf is a mother carrying her child. When it reaches certain thresholds, the following things happen.
+
+===Fortress mode===
+:* {{Tooltip|20,000|17 fortress days}} - dwarf starts considering getting something to drink (1/120 chance per tick) if idle
+:* {{Tooltip|22,000|18 fortress days}} - dwarf decides to go get something to drink if idle
+:* {{Tooltip|25,000|21 fortress days}} - dwarf starts flashing {{dftext|Thirsty|6:0}}
+:* {{Tooltip|35,000|29 fortress days}} - dwarf gets an unhappy [[thought]] about being Thirsty, cancels current [[job]] to get something to drink
+:* {{Tooltip|50,000|42 fortress days}} - dwarf starts flashing {{dftext|Dehydrated|4:1}}
+:* {{Tooltip|60,000|51 fortress days}} - dwarf gets an unhappy thought about being Dehydrated
+:* {{Tooltip|75,000|63 fortress days}} - dwarf dies of thirst
+
+===Adventure mode===
+:* {{Tooltip|57,600|8 adventure hours}} - adventurer becomes {{dftext|Thirsty|6:0}}
+:* {{Tooltip|115,200|16 adventure hours}} - adventurer becomes {{dftext|Thirsty|6:1}}
+:* {{Tooltip|172,800|1 adventure day}} - adventurer becomes {{dftext|Very thirsty|5:1}}
+:* {{Tooltip|345,600|2 adventure days}} - adventurer becomes {{dftext|Dehydrated|5:1}}
+:* {{Tooltip|864,000|5 adventure days}} - adventurer has {{dftext|died of thirst|5:1}}
+
+{{Translation
+| dwarven = rëcus
+| elvish  = pacata
+| goblin  = strabtom
+| human   = ethgath
+}}
+Finishing a drink (either through the {{dftext|Drink|3:1}} job or the {{Adv menu icon|e}} command) decreases the relevant counter by {{Tooltip|50,000|42 fortress days, 7 adventure hours}} (to a minimum of zero), though they may also decrement it additional times during the job's progress. An adventurer drinking a [[contaminant]] (such as tears or liquid on an item) leaves the counter unchanged.
+
+Being dehydrated for even a single [[tick]] will cause a [[miscarriage]] among pregnant dwarves.
+
+Prior to version 0.31.07 (and going all the way back to the 2D versions), the unhappy thoughts resulting from hunger/thirst/drowsiness occurred at the exact same time that the dwarf started flashing, but all of the other numbers were otherwise the same. Additionally, in earlier versions (most notably 40d and earlier) dwarves cancelled jobs for food/drink/sleep much more readily.
+{{Category|Dwarves}}
+[[ru:Thirst]]

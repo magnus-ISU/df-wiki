@@ -1,0 +1,50 @@
+{{Quality|Fine}}
+{{av}}
+{{Modding}}
+In ''Dwarf Fortress'', a '''token''' is a piece of text that defines the properties of an object.  An "object" could be a material, a type of tissue, an organ, a piece of armor, a creature, a biome, a civilization, or anything else in the game; a "property" could be how large something is, what it is made from, its melting temperature, its name, its biome preference (for civilizations) or anything else that makes it unique.  All information associated with the properties of an object in the game is defined using tokens. Tokens are used in the [[raws]], which can be easily [[modding|modified]], allowing users to create (and distribute) new content.
+
+:* [[Audio]] tokens define audio metadata, and the triggers to play music and sound.
+:* [[Biome token]]s reference [[biome|environments]] for creatures, plants and [[civilization|entities]].
+:* [[Building token]]s define buildings.
+:* [[Body token]]s determine bodily structure and materials.
+:** [[Bodygloss]] tokens perform a single-word substitution of a creature's body parts.
+:* [[Body detail plan token]]s define some details of a body, similar to body tokens.
+:* [[Creature token]]s determine the properties of creatures, while [[Creature variation token]]s are used to modify creatures.
+:* [[Descriptor color token]]s - not to be confused with [[color scheme]]s - define colors used in text-based descriptions, while [[Descriptor pattern token]]s define color patterns, and [[Descriptor shape token]]s define [[shape]]s.
+:* [[Entity token]]s define entities, or [[civilization]]s.
+:** [[Position token]]s define [[noble]] titles and administrative positions in entities.
+:* [[Graphics token]]s define tile-based [[graphics]].
+:* [[Item token]]s reference the most basic form of items (made specific by material tokens). Item tokens are mainly used in [[reactions]].
+:* [[Item definition token]]s are used to define various types of item.
+:** [[Ammo token]]s define ammunition, such as arrows and bolts.
+:** [[Armor token]]s define armor.
+:** [[Instrument token]]s define instruments.
+:** [[Trap component token]]s define weapons used in traps.
+:** [[Tool token]]s define tools, similar to weapon tokens.
+:** [[Weapon token]]s define weapons.
+:* [[Interaction token]]s define interactions.
+:* [[Labor token]]s reference labors.
+:* [[Language token]]s define a language's vocabulary. Since fictional languages in ''Dwarf Fortress'' are currently only used in names, language tokens do not define grammar.
+:* [[Material token]]s are used to refer to materials, similar to item tokens.
+:* [[Material definition token]]s are used to define materials that appear in a number of object types.
+:** [[Inorganic material definition token]]s are specific to defining inorganic materials.
+:* [[Plant token]]s define plants.
+:* [[Reaction]] tokens define crafting recipes.
+:* [[Skill token]]s reference skills.
+:* [[Speech file]]s define strings used for certain lines of dialog and book titles.
+:* [[Syndrome token]]s define syndromes (ie: conditions, diseases, bonuses and maluses).
+:* [[Tissue definition token]]s define tissues.
+:* [[Unit type token]]s reference by tilesets and entities, for purposes of professions and the like.
+:* [[World token]]s are used in [[advanced world generation]].
+
+Also note the ``[LOG_CURRENT_ENTRY]`` token, available for all object types. For information regarding use, see [[Modding#Modifying the vanilla objects]].
+
+== See also ==
+{{catbox|Tokens}}
+
+* [[Raw file]]
+* [[Modding]]
+* [[Lua scripting]]
+
+[[category:Modding]]
+[[ru:Token]]
