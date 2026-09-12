@@ -1,0 +1,165 @@
+{{Quality|Fine}}
+{{av}}
+{{spoiler}}
+{{infostart|}}
+{{infoheader|Properties}}
+{{infocell|
+* [[Material value]] 300
+{{firemagmasafe|no|no}}
+* [[Melting point]] None
+* [[Boiling point]] None
+* [[Ignition point]] None
+* [[Temperature|Heat damage point]] {{ct|10250}}
+* [[Temperature|Cold damage point]] {{ct|9900}}
+* [[Solid density]] 1
+* [[Specific heat]] 420}}
+{{infoend}}
+'''Divine fabrics''' are special, procedurally generated [[cloth|fabrics]] that can be found in [[vault]]s. Divine fabrics are used as material for items and [[clothing]] used by [[angel]]s, who ruthlessly protect the vault's priceless treasures. Unlike [[divine metal]]s, divine fabrics cannot be modified into other items, nor are they appreciably better than their mundane counterparts. 
+
+As a quirk, [[human]] and [[elven]] caravans may bring [[instrument]]s and instrument parts made out of divine fabric for trade.{{bug|9275}}
+
+== Traits ==
+Divine fabrics appear to have identical [[Material definition token|material properties]] to standard [[silk]] [[cloth]] except a lack of ignition point. Although they cannot catch [[fire]], they still suffer damage from high temperatures and are not [[fire-safe]]. The only differences between types of divine fabric are their name and their color{{verify}}, both decided by a selected [[sphere]] of the deity involved in their creation.
+[[File:divine_fabric_preview.jpg|thumb|300px|center|Its texture can cure depression. Its color can remove pain. Its sheen can spawn happiness.]]
+== Types ==
+{| class="wikitable" style="text-align: left;"
+|+ <!-- caption -->
+|-
+! Sphere     !! Name               !! Color*
+|-
+| Beauty     || dancing wisps      || style="background: {{fgcolor|6:1}};"|Yellow
+|-
+| Blight     || rotted fabric      || style="background: {{fgcolor|0:1}}; color: #fff;"|Black
+|-
+| Chaos      || never-still cloth  || style="background: {{fgcolor|4:1}}; color: #fff;"|Red
+|-
+| Darkness   || liquid darkness    || style="background: {{fgcolor|0:1}}; color: #fff;"|Black
+|-
+| Dawn       || shining cloth      || style="background: {{fgcolor|6:1}};"|Orange
+|-
+| Day        || bright cloth       || style="background: {{fgcolor|7:1}};"|White
+|-
+| Death      || pale fabric        || style="background: {{fgcolor|3:1}};"|Pale blue
+|-
+| Deformity  || twisted fabric     || style="background: {{fgcolor|0:1}}; color: #fff;"|Black
+|-
+| Disease    || patchy cloth       || style="background: {{fgcolor|7:0}};"|Gray
+|-
+| Dreams     || wispy cloth        || style="background: {{fgcolor|1:1}}; color: #fff;"|Blue
+|-
+| Dusk       || translucent cloth  || style="background: {{fgcolor|3:1}};"|Clear
+|-
+| Fire       || flickering cloth   || style="background: {{fgcolor|6:1}};"|Yellow
+|-
+| Jewels     || faceted cloth      || style="background: {{fgcolor|2:1}};"|Green
+|-
+| Lakes      || still blue fabric  || style="background: {{fgcolor|1:1}}; color: #fff;"|Blue
+|-
+| Lies       || heavy cloth        || style="background: {{fgcolor|0:1}}; color: #fff;"|Black
+|-
+| Light      || glowing cloth      || style="background: {{fgcolor|7:1}};"|White
+|-
+| Lightning || flashing sparks || style="background: {{fgcolor|6:1}};"|Yellow
+|-
+| Mist      || misty cloth     || style="background: {{fgcolor|7:0}};"|Clear
+|-
+| Moon       || white cloth        || style="background: {{fgcolor|7:1}};"|White
+|-
+| Muck       || dirty fabric       || style="background: {{fgcolor|6:0}}; color: #fff;"|Brown
+|-
+| Music      || sonorous lines     || style="background: {{fgcolor|0:1}}; color: #fff;"|Black
+|-
+| Night    || pitch-black fabric || style="background: {{fgcolor|0:1}}; color: #fff;"|Black
+|-
+| Nightmares || screaming mouths   || style="background: {{fgcolor|5:0}}; color: #fff;"|Medium taupe
+|-
+| Oceans     || undulating cloth   || style="background: {{fgcolor|3:0}}; color: #fff;"|Sea green
+|-
+| Rain       || moist fabric       || style="background: {{fgcolor|3:1}};"|Clear
+|-
+| Rainbows   || multicolored cloth || style="background: {{fgcolor|2:1}};"|Clear
+|-
+| Rivers     || flowing fabric     || style="background: {{fgcolor|1:1}}; color: #fff;"|Blue
+|-
+| Sky        || clear blue cloth   || style="background: {{fgcolor|3:1}};"|Sky blue
+|-
+| Stars      || motes of light     || style="background: {{fgcolor|7:1}};"|White
+|-
+| Storms     || flowing cloth      || style="background: {{fgcolor|7:0}};"|Gray
+|-
+| Sun        || blazing cloth      || style="background: {{fgcolor|7:1}};"|White
+|-
+| Thunder    || shining cloth      || style="background: {{fgcolor|7:1}};"|White
+|-
+| Trickery   || shimmering cloth   || style="background: {{fgcolor|3:1}};"|Clear
+|-
+| Twilight   || shadow stuff       || style="background: {{fgcolor|0:1}}; color: #fff;"|Black
+|-
+| Volcanos   || molten liquid      || style="background: {{fgcolor|4:1}}; color: #fff;"|Red
+|-
+| Water      || liquid cloth       || style="background: {{fgcolor|1:1}}; color: #fff;"|Blue
+|-
+| Wind       || rustling fabric    || style="background: {{fgcolor|7:0}};"|Gray
+|}
+*The color name represents their arbitrary color token, while the background is their ASCII color. See [[color]].
+
+{{gamedata|title=Example raws (as extracted from world.dat in version 0.47.05)|
+[INORGANIC:DIVINE_2]
+	[GENERATED]
+	[DIVINE]
+	[DISPLAY_COLOR:7:0:1]
+	[BUILD_COLOR:7:0:1]
+	[STATE_COLOR:ALL_SOLID:WHITE]
+	[USE_MATERIAL_TEMPLATE:SILK_TEMPLATE]
+	[STATE_NAME_ADJ:ALL_SOLID:motes of light]
+	[IGNITE_POINT:NONE]
+	[MATERIAL_VALUE:300]
+	[SOLID_DENSITY:1]
+	[MOLAR_MASS:1]
+	[SPHERE:STARS]
+
+[INORGANIC:DIVINE_4]
+	[GENERATED]
+	[DIVINE]
+	[DISPLAY_COLOR:1:0:1]
+	[BUILD_COLOR:1:0:1]
+	[STATE_COLOR:ALL_SOLID:BLUE]
+	[USE_MATERIAL_TEMPLATE:SILK_TEMPLATE]
+	[STATE_NAME_ADJ:ALL_SOLID:liquid cloth]
+	[IGNITE_POINT:NONE]
+	[MATERIAL_VALUE:300]
+	[SOLID_DENSITY:1]
+	[MOLAR_MASS:1]
+	[SPHERE:WATER]
+
+[INORGANIC:DIVINE_6]
+	[GENERATED]
+	[DIVINE]
+	[DISPLAY_COLOR:0:0:1]
+	[BUILD_COLOR:0:0:1]
+	[STATE_COLOR:ALL_SOLID:BLACK]
+	[USE_MATERIAL_TEMPLATE:SILK_TEMPLATE]
+	[STATE_NAME_ADJ:ALL_SOLID:sonorous lines]
+	[IGNITE_POINT:NONE]
+	[MATERIAL_VALUE:300]
+	[SOLID_DENSITY:1]
+	[MOLAR_MASS:1]
+	[SPHERE:MUSIC]
+
+[INORGANIC:DIVINE_8]
+	[GENERATED]
+	[DIVINE]
+	[DISPLAY_COLOR:3:0:1]
+	[BUILD_COLOR:3:0:1]
+	[STATE_COLOR:ALL_SOLID:CLEAR]
+	[USE_MATERIAL_TEMPLATE:SILK_TEMPLATE]
+	[STATE_NAME_ADJ:ALL_SOLID:moist fabric]
+	[IGNITE_POINT:NONE]
+	[MATERIAL_VALUE:300]
+	[SOLID_DENSITY:1]
+	[MOLAR_MASS:1]
+	[SPHERE:RAIN]
+}}
+
+{{Category|Materials}}
+[[ru:Divine fabric]]

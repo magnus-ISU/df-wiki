@@ -1,0 +1,425 @@
+{{Quality|Exceptional}}
+{{av}}
+
+[[File:domestic_sprites_preview.png|right]]'''Domestic animals''' are [[creature]]s that can be used by a [[civilization]] one way or another without any [[Animal training|training]] required, usually for security or food. Distinguished by having the {{token|COMMON_DOMESTIC}} tag in the [[raw file|raws]], they can be bought at [[embark]] or [[trade]]d for with [[caravan]]s. Wild versions of domesticated animals ([[horse]]s, [[turkey]]s, etc.) can be captured in [[cage]] [[trap]]s and receive training, which will turn them completely tame afterwards.
+
+[[Dwarf]], [[human]] and [[elf]] civilizations have access to the same variety of domestic animals, which are listed below. [[Goblin]]s can't use these, but rather have access to domesticated [[beak dog]]s, which dwarves can only access by capturing in the wild or as [[Mission|spoils of war]]. Meanwhile, [[kobold]]s and subterranean [[animal people]] have no 'domestic' animals at all.
+
+Every embark starts with two free, randomly-selected domestic '''draft animals''' which arrive with the [[Wagon (embark)|wagon]] at the fortress site. These can be any of the animals in the list below which are available at embark that have the {{token|WAGON_PULLER}} tag ''(i.e. [[horse]]s, [[yak]]s and [[water buffalo]]es)''. Note that the two animals do not (intentionally) come as a "matched pair", and so may not be from the same species. Embarking with a sufficient quantity of goods can result in multiple wagons, each of which comes with another pair of randomly selected animals. Since fortresses cannot move their wagons ''after'' embark, these "draft" animals can be [[Butcher|slaughtered]] or kept for breeding, or can become [[pet]]s for making certain dwarves [[preferences|happy]].
+
+When purchasing* draft animals at embark, the player may choose which gender of animals (only one male is necessary for breeding). [[cat|Depending on the animal]], you may wish to limit breeding altogether, or assign a [[gelder]].
+
+: ''(* Note that the two free draft animals per wagon are not "purchased", and so are randomly generated, both re species and gender.)''
+
+== Comparison of domestic mammals ==
+
+When butchered, all adult domestic mammals yield one [[skull]] and one [[leather|raw hide]]. All milkable mammals give the same value of [[milk]] and appear to be milkable at the same frequency. The embark costs shown apply to both adults and juveniles of either sex. All domestic mammals reach adolescence at 1 year and adulthood at 2 years, except [[Cavy|cavies]], which take half as long. All [[Grazer|grazing]] animals require a [[pasture]]; the lower the 'grazer' value, the larger the size of the required pasture. Animals can give birth to 1-3 young at a time (unless they use the {{token|LITTERSIZE|c}} token to adjust the minimum and maximum), though those with the {{token|MULTIPLE_LITTER_RARE|c}} token only have a 1/500 chance of giving birth to more than one.
+
+{| border="1px #AAA solid;" style="text-align:center;" class="wikitable sortable"
+<!--
+|+style="border:1px #AAA solid;background:#EEE;"|Titley bit could go here. 
+|-
+-->
+!style="border:1px #AAA solid;background:#DDD;"| Animal
+!style="border:1px #AAA solid;background:#DDD;"| Sprite
+!style="border:1px #AAA solid;background:#DDD;"| Embark cost
+!style="border:1px #AAA solid;background:#DDD;"| Pet value
+!style="border:1px #AAA solid;background:#DDD;"| Size when full-grown<sup>*</sup>
+!style="border:1px #AAA solid;background:#DDD;"| Total edible<sup>†‡</sup>
+!style="border:1px #AAA solid;background:#DDD;"| Bones<sup>‡</sup>
+!style="border:1px #AAA solid;background:#DDD;"| Horns + hooves
+!style="border:1px #AAA solid;background:#DDD;"| Milkable
+!style="border:1px #AAA solid;background:#DDD;"| Shearable
+!style="border:1px #AAA solid;background:#DDD;"| Grazer<sup>§</sup>
+!style="border:1px #AAA solid;background:#DDD;"| Multiple Litter Rare
+!style="border:1px #AAA solid;background:#DDD;"| Notes
+|-
+|style="padding:0.2em;"|[[Alpaca]]
+|style="padding:0.2em;"|[[File:Alpaca sprite.png]]
+|style="padding:0.2em;"|101
+|style="padding:0.2em;"|200
+|style="padding:0.2em;"|70,000
+|style="padding:0.2em;"|35
+|style="padding:0.2em;"|16
+|style="padding:0.2em;"|0
+|style="padding:0.2em;"|Yes
+|style="padding:0.2em;"|Yes
+|style="padding:0.2em;"|2614
+|style="padding:0.2em;"|Yes
+|style="padding:0.2em;"|
+|-
+|style="padding:0.2em;"|[[Beak dog]]
+|style="padding:0.2em;"|[[File:Beak dog sprite.png]]
+|style="padding:0.2em;"|26
+|style="padding:0.2em;"|50
+|style="padding:0.2em;"|150,000
+|style="padding:0.2em;"|35
+|style="padding:0.2em;"|16
+|style="padding:0.2em;"|0
+|style="padding:0.2em;"|No
+|style="padding:0.2em;"|No
+|style="padding:0.2em;"|
+|style="padding:0.2em;"|No
+|style="padding:0.2em;"|Domestic for goblins only, also poultry.
+|-
+|style="padding:0.2em;"|[[Cavy]]
+|style="padding:0.2em;"|[[File:Cavy sprite.png]]
+|style="padding:0.2em;"|2
+|style="padding:0.2em;"|3
+|style="padding:0.2em;"|800
+|style="padding:0.2em;"|0
+|style="padding:0.2em;"|0
+|style="padding:0.2em;"|0
+|style="padding:0.2em;"|No
+|style="padding:0.2em;"|No
+|style="padding:0.2em;"|74768
+|style="padding:0.2em;"|Yes
+|style="padding:0.2em;"|
+|-
+|style="padding:0.2em;"|[[Cat]]
+|style="padding:0.2em;"|[[File:Cat sprite.png]]
+|style="padding:0.2em;"|11
+|style="padding:0.2em;"|20
+|style="padding:0.2em;"|5,000
+|style="padding:0.2em;"|14
+|style="padding:0.2em;"|4
+|style="padding:0.2em;"|0
+|style="padding:0.2em;"|No
+|style="padding:0.2em;"|No
+|style="padding:0.2em;"|
+|style="padding:0.2em;"|No
+|style="padding:0.2em;"|Adopts owners.  Hunts [[vermin]].  Beware [[Catsplosion]]!
+|-
+|style="padding:0.2em;"|[[Cow]]
+|style="padding:0.2em;"|[[File:Cow sprite.png]]
+|style="padding:0.2em;"|151
+|style="padding:0.2em;"|300
+|style="padding:0.2em;"|600,000
+|style="padding:0.2em;"|37
+|style="padding:0.2em;"|15
+|style="padding:0.2em;"|6
+|style="padding:0.2em;"|Yes
+|style="padding:0.2em;"|No
+|style="padding:0.2em;"|522
+|style="padding:0.2em;"|Yes
+|style="padding:0.2em;"|
+|-
+|style="padding:0.2em;"|[[Dog]]
+|style="padding:0.2em;"|[[File:Dog sprite.png]]
+|style="padding:0.2em;"|16
+|style="padding:0.2em;"|30
+|style="padding:0.2em;"|30,000
+|style="padding:0.2em;"|37
+|style="padding:0.2em;"|11
+|style="padding:0.2em;"|0
+|style="padding:0.2em;"|No
+|style="padding:0.2em;"|No
+|style="padding:0.2em;"|
+|style="padding:0.2em;"|No
+|style="padding:0.2em;"|Trainable as war dogs or hunting dogs, which can also be bought for 31☼.
+|-
+|style="padding:0.2em;"|[[Donkey]]
+|style="padding:0.2em;"|[[File:Donkey sprite.png]]
+|style="padding:0.2em;"|101
+|style="padding:0.2em;"|200
+|style="padding:0.2em;"|300,000
+|style="padding:0.2em;"|30
+|style="padding:0.2em;"|13
+|style="padding:0.2em;"|4
+|style="padding:0.2em;"|Yes
+|style="padding:0.2em;"|No
+|style="padding:0.2em;"|878
+|style="padding:0.2em;"|Yes
+|style="padding:0.2em;"|
+|-
+|style="padding:0.2em;"|[[Goat]]
+|style="padding:0.2em;"|[[File:Goat sprite.png]]
+|style="padding:0.2em;"|26
+|style="padding:0.2em;"|50
+|style="padding:0.2em;"|50,000
+|style="padding:0.2em;"|27
+|style="padding:0.2em;"|10
+|style="padding:0.2em;"|6
+|style="padding:0.2em;"|Yes
+|style="padding:0.2em;"|No
+|style="padding:0.2em;"|3364
+|style="padding:0.2em;"|Yes
+|style="padding:0.2em;"|
+|-
+|style="padding:0.2em;"|[[Horse]]
+|style="padding:0.2em;"|[[File:Horse sprite.png]]
+|style="padding:0.2em;"|101
+|style="padding:0.2em;"|200
+|style="padding:0.2em;"|500,000
+|style="padding:0.2em;"|32
+|style="padding:0.2em;"|13
+|style="padding:0.2em;"|4
+|style="padding:0.2em;"|Yes
+|style="padding:0.2em;"|No
+|style="padding:0.2em;"|599
+|style="padding:0.2em;"|Yes
+|style="padding:0.2em;"|
+|-
+|style="padding:0.2em;"|[[Llama]]
+|style="padding:0.2em;"|[[File:Llama sprite.png]]
+|style="padding:0.2em;"|101
+|style="padding:0.2em;"|200
+|style="padding:0.2em;"|180,000
+|style="padding:0.2em;"|36
+|style="padding:0.2em;"|18
+|style="padding:0.2em;"|0
+|style="padding:0.2em;"|Yes
+|style="padding:0.2em;"|Yes
+|style="padding:0.2em;"|1287
+|style="padding:0.2em;"|Yes
+|style="padding:0.2em;"|
+|-
+|style="padding:0.2em;"|[[Mule]]
+|style="padding:0.2em;"|[[File:Mule sprite.png]]
+|style="padding:0.2em;"|101
+|style="padding:0.2em;"|200
+|style="padding:0.2em;"|400,000
+|style="padding:0.2em;"|34
+|style="padding:0.2em;"|13
+|style="padding:0.2em;"|4
+|style="padding:0.2em;"|No
+|style="padding:0.2em;"|No
+|style="padding:0.2em;"|708
+|style="padding:0.2em;"|N/A
+|style="padding:0.2em;"|All-male, cannot breed.
+|-
+|style="padding:0.2em;"|[[One-humped camel]]+
+|style="padding:0.2em;"|[[File:One humped camel sprite.png]]
+|style="padding:0.2em;"|251
+|style="padding:0.2em;"|500
+|style="padding:0.2em;"|500,000
+|style="padding:0.2em;"|54
+|style="padding:0.2em;"|17
+|style="padding:0.2em;"|0
+|style="padding:0.2em;"|Yes
+|style="padding:0.2em;"|No
+|style="padding:0.2em;"|598
+|style="padding:0.2em;"|Yes
+|style="padding:0.2em;"|Domestication not guaranteed.
+|-
+|style="padding:0.2em;"|[[Pig]]
+|style="padding:0.2em;"|[[File:Pig sprite.png]]
+|style="padding:0.2em;"|51
+|style="padding:0.2em;"|100
+|style="padding:0.2em;"|60,000
+|style="padding:0.2em;"|17
+|style="padding:0.2em;"|8
+|style="padding:0.2em;"|4
+|style="padding:0.2em;"|Yes
+|style="padding:0.2em;"|No
+|style="padding:0.2em;"|
+|style="padding:0.2em;"|Yes
+|style="padding:0.2em;"|Only [[Milker|milkable]] domestic animal that does not graze.
+|-
+|style="padding:0.2em;"|[[Rabbit]]
+|style="padding:0.2em;"|[[File:Rabbit sprite.png]]
+|style="padding:0.2em;"|2
+|style="padding:0.2em;"|3
+|style="padding:0.2em;"|500
+|style="padding:0.2em;"|0
+|style="padding:0.2em;"|0
+|style="padding:0.2em;"|0
+|style="padding:0.2em;"|No
+|style="padding:0.2em;"|No
+|style="padding:0.2em;"|106,366
+|style="padding:0.2em;"|No
+|style="padding:0.2em;"|
+|-
+|style="padding:0.2em;"|[[Reindeer]]
+|style="padding:0.2em;"|[[File:Reindeer sprite.png]]
+|style="padding:0.2em;"|101
+|style="padding:0.2em;"|200
+|style="padding:0.2em;"|130,000
+|style="padding:0.2em;"|28
+|style="padding:0.2em;"|16
+|style="padding:0.2em;"|6
+|style="padding:0.2em;"|Yes
+|style="padding:0.2em;"|No
+|style="padding:0.2em;"|1643
+|style="padding:0.2em;"|Yes
+|style="padding:0.2em;"|
+|-
+|style="padding:0.2em;"|[[Sheep]]
+|style="padding:0.2em;"|[[File:Sheep sprite anim.gif]]
+|style="padding:0.2em;"|51
+|style="padding:0.2em;"|100
+|style="padding:0.2em;"|50,000
+|style="padding:0.2em;"|27
+|style="padding:0.2em;"|8 or 10<sup>¶</sup>
+|style="padding:0.2em;"|4 or 6<sup>¶</sup>
+|style="padding:0.2em;"|Yes
+|style="padding:0.2em;"|Yes
+|style="padding:0.2em;"|3364
+|style="padding:0.2em;"|Yes
+|style="padding:0.2em;"|Cheapest [[Shearer|shearable]] domestic animal.
+|-
+|style="padding:0.2em;"|[[Two-humped camel]]+
+|style="padding:0.2em;"|[[File:Two humped camel sprite.png]]
+|style="padding:0.2em;"|251
+|style="padding:0.2em;"|500
+|style="padding:0.2em;"|500,000
+|style="padding:0.2em;"|44
+|style="padding:0.2em;"|17
+|style="padding:0.2em;"|0
+|style="padding:0.2em;"|Yes
+|style="padding:0.2em;"|No
+|style="padding:0.2em;"|598
+|style="padding:0.2em;"|Yes
+|style="padding:0.2em;"|Domestication not guaranteed.
+|-
+|style="padding:0.2em;"|[[Water buffalo]]
+|style="padding:0.2em;"|[[File:Water buffalo sprite.png]]
+|style="padding:0.2em;"|101
+|style="padding:0.2em;"|200
+|style="padding:0.2em;"|1,000,000
+|style="padding:0.2em;"|70
+|style="padding:0.2em;"|20
+|style="padding:0.2em;"|6
+|style="padding:0.2em;"|Yes
+|style="padding:0.2em;"|No
+|style="padding:0.2em;"|356
+|style="padding:0.2em;"|Yes
+|style="padding:0.2em;"|
+|-
+|style="padding:0.2em;"|[[Yak]]
+|style="padding:0.2em;"|[[File:Yak sprite.png]]
+|style="padding:0.2em;"|101
+|style="padding:0.2em;"|200
+|style="padding:0.2em;"|700,000
+|style="padding:0.2em;"|42
+|style="padding:0.2em;"|16
+|style="padding:0.2em;"|6
+|style="padding:0.2em;"|Yes
+|style="padding:0.2em;"|No
+|style="padding:0.2em;"|465
+|style="padding:0.2em;"|Yes
+|style="padding:0.2em;"|
+|}
+
+
+:<nowiki>*</nowiki> Gives a crude estimate of ability in combat, and thus danger to hunters.  This number comes from the raws, so it might also be a better estimate of butchering results than the dodgy numbers from this wiki.<br>
+:† Total of meat, fat, and offal.<br>
+:‡ Maximum reported in infoboxes in this wiki, April 2011. Strongly influenced by individual attributes, especially for larger animals. Use with caution!<br>
+:<nowiki>§</nowiki> A lower number means the animal needs to graze more often, and will thus need a larger [[pasture]].  Cats and dogs have the {{token|CARNIVORE}} tag and do not graze or require pasture.<br>
+:¶ The higher number is for rams.
+:+ These animals don't possess the {{token|COMMON_DOMESTIC}} tag, but may be domesticated due to having {{token|PACK_ANIMAL}}. Unlike the others, they are not guaranteed to exist in your civilization.
+
+== Comparison of domestic poultry == <!-- Linked from Egg production and poultry articles -->
+All domestic poultry have a [[pet]] value of 10 and cost 6[[currency|☼]] at embark. Blue peafowl, geese, and guineafowl reach adolescence at six months and are full-grown after one year; ducks, chickens and turkeys reach adolescence at one year and are full-grown after two years. When butchered, all full-grown poultry yield one [[skull]]; those that yield bones also yield a [[leather|raw hide]]. However, domestic poultry are much more efficient when used for [[egg production]] than as a meat source; over the lifetime of an average hen, many more meals can be produced from the eggs. This is especially true for ducks and guineafowl. 
+
+{| border="1px #AAA solid;" style="text-align:center;" class="wikitable sortable"
+<!--
+|+style="border:1px #AAA solid;background:#EEE;text-align:center;"|All domestic poultry reach adulthood in 1 year and cost 6[[currency|☼]] at embark 
+|-
+-->
+!style="border:1px #AAA solid;background:#DDD;text-align:center;"| Animal
+!style="border:1px #AAA solid;background:#DDD;"| Sprite
+!style="border:1px #AAA solid;background:#DDD;text-align:center;"| Min. [[egg]]s
+!style="border:1px #AAA solid;background:#DDD;text-align:center;"| Max. eggs
+!style="border:1px #AAA solid;background:#DDD;text-align:center;"| Avg. eggs<sup>*</sup>
+!style="border:1px #AAA solid;background:#DDD;text-align:center;"| Egg size<sup>‖</sup>
+!style="border:1px #AAA solid;background:#DDD;text-align:center;"| Years til<br>full-grown
+!style="border:1px #AAA solid;background:#DDD;text-align:center;"| Max Age
+!style="border:1px #AAA solid;background:#DDD;text-align:center;"| Size when full-grown
+!style="border:1px #AAA solid;background:#DDD;text-align:center;"| Total edible<sup>†‡</sup>
+!style="border:1px #AAA solid;background:#DDD;text-align:center;"| Bones<sup>‡</sup>
+|-
+|style="padding:0.2em;text-align:center;"|[[Blue peafowl]]
+|style="padding:0.2em;text-align:center;"|[[File:Peafowls sprite anim.gif|25px]]
+|style="padding:0.2em;text-align:center;"|6
+|style="padding:0.2em;text-align:center;"|8
+|style="padding:0.2em;text-align:center;"|7
+|style="padding:0.2em;text-align:center;"|102
+|style="padding:0.2em;text-align:center;"|1
+|style="padding:0.2em;text-align:center;"|15-30
+|style="padding:0.2em;text-align:center;"|4000
+|style="padding:0.2em;text-align:center;"|17
+|style="padding:0.2em;text-align:center;"|6
+|-
+|style="padding:0.2em;text-align:center;"|[[Beak dog]]
+|style="padding:0.2em;text-align:center;"|[[File:Beak dog sprite.png|25px]]
+|style="padding:0.2em;text-align:center;"|5
+|style="padding:0.2em;text-align:center;"|10
+|style="padding:0.2em;text-align:center;"|7.5
+|style="padding:0.2em;text-align:center;"|1600
+|style="padding:0.2em;text-align:center;"|2
+|style="padding:0.2em;text-align:center;"|10-20
+|style="padding:0.2em;text-align:center;"|150000
+|style="padding:0.2em;text-align:center;"|35
+|style="padding:0.2em;text-align:center;"|16
+|-
+|style="padding:0.2em;text-align:center;"|[[Chicken]]
+|style="padding:0.2em;text-align:center;"|[[File:Chickens sprite anim.gif|25px]]
+|style="padding:0.2em;text-align:center;"|4
+|style="padding:0.2em;text-align:center;"|15
+|style="padding:0.2em;text-align:center;"|9.5
+|style="padding:0.2em;text-align:center;"|62
+|style="padding:0.2em;text-align:center;"|2
+|style="padding:0.2em;text-align:center;"|7-15
+|style="padding:0.2em;text-align:center;"|3000
+|style="padding:0.2em;text-align:center;"|5-13
+|style="padding:0.2em;text-align:center;"|0-4
+|-
+|style="padding:0.2em;text-align:center;"|[[Duck]]
+|style="padding:0.2em;text-align:center;"|[[File:Ducks sprite anim.gif|25px]]
+|style="padding:0.2em;text-align:center;"|8
+|style="padding:0.2em;text-align:center;"|13
+|style="padding:0.2em;text-align:center;"|10.5
+|style="padding:0.2em;text-align:center;"|52
+|style="padding:0.2em;text-align:center;"|2
+|style="padding:0.2em;text-align:center;"|7-9
+|style="padding:0.2em;text-align:center;"|1000
+|style="padding:0.2em;text-align:center;"|0-2
+|style="padding:0.2em;text-align:center;"|0
+|-
+|style="padding:0.2em;text-align:center;"|[[Goose]]
+|style="padding:0.2em;text-align:center;"|[[File:Goose sprite.png|25px]]
+|style="padding:0.2em;text-align:center;"|3
+|style="padding:0.2em;text-align:center;"|8
+|style="padding:0.2em;text-align:center;"|5.5
+|style="padding:0.2em;text-align:center;"|152
+|style="padding:0.2em;text-align:center;"|1
+|style="padding:0.2em;text-align:center;"|10-24
+|style="padding:0.2em;text-align:center;"|4500
+|style="padding:0.2em;text-align:center;"|17-18
+|style="padding:0.2em;text-align:center;"|6
+|-
+|style="padding:0.2em;text-align:center;"|[[Guineafowl]]
+|style="padding:0.2em;text-align:center;"|[[File:Guineafowl sprite.png|25px]]
+|style="padding:0.2em;text-align:center;"|4
+|style="padding:0.2em;text-align:center;"|15
+|style="padding:0.2em;text-align:center;"|9.5
+|style="padding:0.2em;text-align:center;"|42
+|style="padding:0.2em;text-align:center;"|1
+|style="padding:0.2em;text-align:center;"|10-15
+|style="padding:0.2em;text-align:center;"|1500
+|style="padding:0.2em;text-align:center;"|0-4<sup>§</sup>
+|style="padding:0.2em;text-align:center;"|0
+|-
+|style="padding:0.2em;text-align:center;"|[[Turkey]]
+|style="padding:0.2em;text-align:center;"|[[File:Turkey sprite.png|25px]]
+|style="padding:0.2em;text-align:center;"|10
+|style="padding:0.2em;text-align:center;"|14
+|style="padding:0.2em;text-align:center;"|12
+|style="padding:0.2em;text-align:center;"|87
+|style="padding:0.2em;text-align:center;"|2
+|style="padding:0.2em;text-align:center;"|7-10
+|style="padding:0.2em;text-align:center;"|5000
+|style="padding:0.2em;text-align:center;"|19
+|style="padding:0.2em;text-align:center;"|6
+|}
+:<nowiki>*</nowiki> Estimate based on mean of minimum and maximum clutch sizes.<br>
+:† Total of meat, fat, and intestines.<br>
+:‡ Reported in infoboxes in this wiki, April 2011. Might be influenced by individual attributes. Use with caution!<br>
+:§ A yield of 2 meat, 2 fat, a skin, and a skull has been reported for butchering a guineafowl. This seems to be rare.<br> 
+:‖ Egg size does not affect food quantity, only hauling speed.
+
+{{Translation| dwarven = rodnul emär | elvish = wotha fela | goblin = ongob slulasp | human = hustra dik}}
+
+{{Category|Creature attributes}}
+[[ru:Domestic animal]]

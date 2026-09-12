@@ -1,0 +1,11 @@
+{{Quality|Fine}}
+{{av}}
+{{DFtext|Dwarf cancels task: Dropoff inaccessible}}
+
+This occurs when a dwarf is moving an item and the path between the dwarf and stockpile or garbage dump is suddenly blocked, or forbidden by "Dwarves Stay Inside" order; for instance, the stockpile is in a room, and you lock all the doors.
+
+This also occurs (repeatedly) if a dwarf accepts an automatic hauling job that is forbidden by their assigned [[burrow]]. For example, finishing off a barrel of brew leaves the dwarf with an empty barrel automatically hauled in inventory. If a suitable "empty barrel" stockpile is not available in the dwarf's burrow, the dwarf will continually spam error messages until you remove them from the burrow or manually [[forbid]] the hauled item.  
+
+{{Errors FAQ}}
+{{Category|Errors}}
+[[ru:Dwarf cancels task: Dropoff inaccessible]]

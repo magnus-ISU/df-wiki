@@ -1,0 +1,52 @@
+{{Quality|Superior}}
+{{Skill
+| color      = 3:0
+| skill      = Druid
+| profession = N/A
+| job name   = None
+| tasks      = None
+| attributes =
+* Endurance
+* Agility
+* Toughness
+* Empathy
+* Willpower
+* Focus
+}}
+{{av}}
+
+'''Druid''' refers to both an unused skill and a noble position.
+
+== Skill ==
+''Nature'' is a [[skill]] that does not normally appear in ''Dwarf Fortress''. It only exists in the raws as the {{token|MAGIC_NATURE|skill}} token, implying use in [[magic]]. As such, it is sometimes used as an [[Mod skill|extra skill]] by [[Modding|modders]]. However, it has no associated [[labor]]s so it cannot be switched off.
+
+Though a unit's character sheet lists creatures as being a "Dabbling Druid" (and so on), there is no associated [[Unit type token|unit type]] and this name cannot be changed by {{token|PROFESSION_NAME}}.
+{{Skills}}
+
+== Noble ==
+'''Druids''' are also a position of nobility among the [[elf|elves]], responsible for [[religion]] and the worship of [[force]]s. Despite sharing a name, they do not possess the Druid skill. Because they are foreign rulers, druids will not normally visit and cannot be appointed in an unmodded game of [[Fortress mode]].
+
+Druids have the highest precedence in the elven civilization, the same as the dwarven [[monarch]]. The game treats them as the ''de jure'' ruler - in [[Legends]], or if modded to be playable, on the [[embark]] screen and for "[[mountainhome]]" purposes. However, they are not directly responsible for [[civilization|government]] affairs. Instead, they select both the [[Monarch|queen]], the ''de facto'' leader, and the princess, who functions as a [[general]]. They are succeeded by the [[acolyte]] position, which they appoint. This allows druids to choose their intended successor.
+
+If all the acolytes are killed, and then the druid is also killed, before he had the chance to appoint a new acolyte, they remain extinct. The elven civilisation is then doomed, because there is no druid to appoint a new queen when she dies. And thus any other positions can also no longer be filled with new candidates.{{verify}}
+
+{{gamedata|	[POSITION:DRUID]
+		[NAME:druid:druids]
+		[NUMBER:1]
+		[RESPONSIBILITY:RELIGION]
+		[SUCCESSION:BY_POSITION:ACOLYTE]
+		[MENIAL_WORK_EXEMPTION]
+		[PUNISHMENT_EXEMPTION]
+		[ELECTED]
+		[DETERMINES_COIN_DESIGN]
+		[PRECEDENCE:1]
+		[FLASHES]
+		[BRAG_ON_KILL]
+		[CHAT_WORTHY]
+		[DO_NOT_CULL]
+		[KILL_QUEST]
+		[EXPORTED_IN_LEGENDS]
+		[COLOR:2:0:1]
+		[DUTY_BOUND]}}
+{{nobles}}
+[[Category:Religion]]

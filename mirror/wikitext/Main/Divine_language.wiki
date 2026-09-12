@@ -1,0 +1,50 @@
+{{av}}
+{{spoiler}}
+
+[[File:Adam naming the animals. Etching. Wellcome V0034186.jpg|thumb|250px|right|Adam, with the use of divine language, names the animals.]]The '''Divine language''' is used to generate the names of [[angel]]s. It works just like any of the four major languages in the respect that it has its own translation of a set of English words, but unlike the other languages, it is generated individually for each world. Each world has only one divine language, meaning that all angels in all vaults in a given world will use the same language.
+
+==Orthography==
+Each divine language draws from pools of randomly-chosen consonants and vowels for its words, covering the entire ISO basic Latin alphabet. Unlike the other four predefined languages, divine languages never use letters with diacritics. Furthermore, the letters "h" and "y" can be used as both consonants and vowels, and the letters "ng" can also be used together as a single consonant sound.
+
+{| class="wikitable"
+|-
+!rowspan=2| Consonants
+!colspan=12| Common
+!colspan=10| Uncommon
+|-
+| b || p || g || k || c || z || s || d || t || m || n || ng
+| v || f || w || h || j || l || r || q || x || y
+|}
+{| class="wikitable"
+|-
+!rowspan=2| Vowels
+!colspan=5| Monophthongs
+!colspan=30| Diphthongs
+|-
+| a || e || i || o || u
+| ae || ai || ao || au || ea || ei || eo || eu || ia || ie || io || iu || oa || oe || oi || ou || ua || ue || ui || uo || ah || eh || ih || oh || uh || ay || ey || iy || oy || uy
+|}
+
+Each divine language uses 4 sets of letters:
+* A short list of 5 randomly-selected consonants, 80% of which are restricted to the "Common" set
+* A long list of 15 randomly-selected consonants, all drawn from the full set
+* A short list of 5 randomly-selected vowels, 80% of which are restricted to the "Monophthongs" set
+* A long list of 15 randomly-selected vowels, all drawn from the full set
+
+Note that the contents of these lists are not guaranteed to be unique - it is possible for the same consonant or vowel to appear multiple times within the same list, restricting any given language to fewer than 20 distinct consonants and vowels.
+
+==Phonetics and Phonotactics==
+Each word in divine languages is constructed from two randomly-generated components, the first being of the form "CV" or "V", and the second being of the form "C", "CV", or "CVC" (where "C" is a consonant and "V" is a vowel). Thus, all words are of the form "VC", "CVC", "VCV", "CVCV", "VCVC", or "CVCVC".
+
+For each consonant and vowel chosen, 80% are drawn from the "short" lists above, with the remaining 20% drawn from the "long" lists.
+
+==Trivia==
+* The randomly generated divine words are not necessarily unique; the same letter sequence may correspond to two completely different English words.
+* The shortest possible divine words have two letters (e.g. "ac"), while the longest words are typically 5-7 letters (e.g. "ciotayr") and could theoretically approach 10 (if all consonants were chosen to be "ng").
+* In the world raws, the divine language is referred to as ``GEN_DIVINE``. By changing an entity's {{token|TRANSLATION|e}} token to ``GEN_DIVINE``, it's possible to make newly-generated creatures of that civilization use the same names as angels.
+
+{{Scriptdata}}
+{{Language}}
+
+{{Category|Language}}
+[[ru:Divine language]]

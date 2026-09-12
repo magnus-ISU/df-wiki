@@ -1,0 +1,13 @@
+{{Quality|Fine}}
+{{av}}
+{{DFtext|Urist McDwarf cancels Make rock door: Needs non-economic hard stone boulders.|4:1}}
+
+This error message occurs when a dwarf attempts to make a rock object but there are no loose [[stone]]s available. Note that "availability" can be influenced by both [[burrow]]s and linked [[stockpile]]s -- there may be loose stones right next to the workshop, but if they've been excluded by a burrow (see below) or stockpile link, you'll still receive this message. If your stone supply really is exhausted, you can [[Mining|mine]] out [[rock]] to create more stones.  You can also get this error when a dwarf walls themselves into a corner and is unable to leave to get more rocks.
+
+If the workshop is inside a [[burrow]] and there are no non-economic rock stones inside the burrow, the Dwarf will cancel the job throwing the error message ".. Needs non-economic hard rock". It does not matter if no Dwarves are assigned to the burrow. It does not matter if the burrow is paused (not in effect). This may be a bug.
+
+Sometimes the only rocks available are [[economic stone]]s. By default, these types of rock are forbidden for general use. You can toggle economic stones for non-economic use under "Stone" in the [[stocks]] menu -- stones in red are reserved for economic use; stones in green are available for any non-economic use.
+
+{{Category|Errors}}
+{{Errors FAQ}}
+[[ru:Dwarf cancels construct "Rock object": Needs non-economic rock]]
