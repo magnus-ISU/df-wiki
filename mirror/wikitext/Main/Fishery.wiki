@@ -1,0 +1,39 @@
+
+{{Quality|Fine}}
+{{v50 workshop|name=Fishery|key=f|key2=y|job=[[Fish cleaner|Fish cleaning]]
+|icon=[[File:fishery_icon.png]]
+|construction=
+* [[Building material]] (non-[[economic]])
+|construction_job=
+1 of
+* [[Fishing]]
+* [[Fish cleaner|Fish cleaning]]
+|use=
+* Raw [[fish]]
+|production=
+* [[Meat|Fish meat]]
+* [[Shell|Shells]]
+* [[Captured live fish]]
+}}{{av}}
+
+The '''fishery''' [[workshop]] handles the preparation of raw [[fish]]. This process yields prepared fish, [[turtle|turtles]], and [[cave lobster|lobsters]], and will additionally give [[shell|shells]] in the case of turtles, oysters, and other shelled animals. It also allows the capture of live vermin fish using [[animal trap]]s for the purpose of collecting [[extract]]s.
+
+==Menu==
+'''Fishery'''
+
+*Process a Raw Fish
+*Extract from a Raw Fish
+*Capture a Live Fish
+
+==Catch Live Fish task==
+The '''Catch Live Fish''' task requires a dwarf with the fishing labor enabled and an active [[Zone#Fishing|fishing zone]]. But when a dwarf has fishing enabled and there's an active fishing zone with fish, they may prefer to go fishing, and only rarely get assigned the live fish task. To force the Catch Live Fish task, make a landlocked fishing zone, set Fishing from [[Standing_orders#Other|designated zones only]] and deactivate or delete all the other fishing zones. Once the task is assigned, activate a fishing zone next to the water you want the fisherdwarf to catch a live fish from. 
+
+==Notes==
+*The preparation task is automated by default, a procedure that can be changed with {{key|y}} Labor, [[Standing orders]], Automated workshops, Automatically clean fish/No automatic fish cleaning
+* Using the Capture Live Fish task when water sources are frozen results in a fisherdwarf (or any [[Noble]] who 'volunteers' to help the community by helping out the poor, poor, peasants) spending the season outside and holding the trap.
+* Without an available animal trap, the Capture Live Fish task will stop automated fish preparations.
+
+
+[[File:fishery_preview.jpg|thumb|300px|center|Fishery drawing from the olden times.]]
+{{Workshops}}
+{{Category|Farming Workshops}}

@@ -1,0 +1,93 @@
+{{migrated article}}
+{{av}}
+
+=== Macros with fluxbox & xvkbd ===
+
+In this context the macro is mean a set of keystrokes / input from the player. Keymap is a set of special key combinations to get special function, or shorten input.
+
+What this is good for?
+Did you had a migrants of 20 or more, and you were in trouble of make enough accommodations for them, before they got unhappy thoughts? Were you bored, by the repetitive creation of a big bedroom? Not to worry anymore, it's possible to break down the task into much less interaction, and to speed up things.
+
+What you need:
+under linux:
+ * fluxbox (or your steady window manager, or shortcut editor)
+ * xvkbd (or anything, that allows you to type something into an active window / program, as came from stdin)
+winder windows:
+ *a good (free) program, that can do the same, and supports special characters
+
+=== Fluxbox ===
+
+Fluxbox is a tiny window manager, that allows a lot of powerful customization. If you don't want to install fluxbox just for this, you should look for other solutions in your distro (KDE / Gnome). If you use / successfully setup fluxbox [http://fluxbox.org/help] you only need to edit .fluxbox/keys files. This contains the keyboard shortcuts.
+
+Mod1 Mod4 m None d b :ExecCommand xvkbd -text "\D2r\[+]\[+]\[+]\[+]\[+]\[+]\[+]\[+]\[+]\[+]\[+]\[+]\r"
+
+ Mod1 means windows / command funciton key (If you use keychains, the order of the modificators seems important :( )
+ Mod4 means alt 
+ m is for the key m (so this will be windows + alt + m (special enough not to used in any other application 
+ (this is important, because if fluxbox is intercepting a hotkey, it not pass along to the active application!))
+ None the following combinations are not using modifications keys (Important: use your last key in keychain as 
+ non-modified key, or a big enough delay, or else your macro input will be applied to the modifier, you currently 
+ pressing (see below))
+ d is for key D (like Dwarf Fortress)
+ b is for key B (as bedroom)
+ : means, that this is the end of key combinations, and from here the command to apply.
+
+So, to start this particular keychain (hotkey), '''(windows + alt + m) d b'''
+
+ :ExecCommand  tells fluxbox, to execute the followings
+
+ xvkbd this the virtual keyboard we will use
+ -text tells xvkbd to don't display the virtual keyboard, just get the input from command line 
+ (there's file input is available, but it does not support special keys so easily)
+ "\D2r\[+]\[+]\[+]\[+]\[+]\[+]\[+]\[+]\[+]\[+]\[+]\[+]\r" This is the input, we will pass to 
+ Dwarf Fortress (which will press r, and gives 12 + and a final enter)
+ The beginning '''\D2''' commands xvkbd to wait 2*100ms. You might want to play with this, but I found, 
+ that I need this, because the first input key is not passed always otherwise.
+
+The + is used on keypad under DF, we access this by \[]. The enter is also a special character, used by \r. You might want to take a peek into the xvkbd's man page for some special keys.
+
+So what this macro does at all:
+if you press: if you have large bedroom, and you don't want to make the boring task to create a large bedroom for all the beds, you can manage the bed by '''q''' (task and preferences in DF), and then press '''(windows + alt + m) d b''', which will give the order of '''r''' ++++++++++++ and an enter.
+
+=== Trouble shooting ===
+
+* My first characters are missing from the input
+** - You have most probably insufficient delay at the start of the text. Try a bigger number, or a delay at all ('''\D2''') 
+* My macro fails / I cannot get it work at, and not even prints into a textbox.
+** - You might have a last keychain key with a modifier. 
+  '''Mod1 Mod4 b :ExecCommand xvkbd -text "Hello World"'''
+  This will most probably not give you any output, or even worst, start a few other applications. This is because the 
+  keyboard interface is behaving additively. This means, if you plug 2 keyboards, and press a key on one of them, and 
+  press another on the other one, the OS will see as both of them pressed. So, if you press on your keyboard Mod1 + Mod4, 
+  and sending a stream of keys on the other, they will add up, and you will end up, as you typed the '''Hellow World''' 
+  with Mod1 + Mod4 pressed (Windows + Alt).
+  Solutions:
+  **Set a big enough delay at the beginning of your string ('''\D5Hello World'''), so you can release them.
+  '''Mod1 Mod4 b :ExecCommand xvkbd -text "\D5Hello World"'''
+  **Set the hotkey to a keychain that ends with a non-modified key
+  '''Mod1 Mod4 m None b :ExecCommand xvkbd -text "Hello World"'''
+
+=== Some useful macros with a short description ===
+
+* Quick resizes a (bed)room (from the 'q' and set into cursored the bed)
+ '''Mod1 Mod4 m None d b :ExecCommand xvkbd -text "\D2r\[+]\[+]\[+]\[+]\[+]\[+]\[+]\[+]\[+]\[+]\[+]\[+]\r"'''
+ '''(Windows + Alt + m) d b'''
+
+* Quick resizes 6 (bed)room, that are inline to the right with a distance of 2 title.
+ '''Mod1 Mod4 m None d v :ExecCommand xvkbd -text "\D2r\[+]\[+]\[+]\[+]\[+]\[+]\[+]\[+]\[+]\[+]\[+]\[+]\r\[Right]\[Right]\[Right]r\[+]\[+]\[+]\[+]\[+]\[+]\[+]\[+]\[+]\[+]\[+]\[+]\r\[Right]\[Right]\[Right]r\[+]\[+]\[+]\[+]\[+]\[+]\[+]\[+]\[+]\[+]\[+]\[+]\r\[Right]\[Right]\[Right]r\[+]\[+]\[+]\[+]\[+]\[+]\[+]\[+]\[+]\[+]\[+]\[+]\r\[Right]\[Right]\[Right]r\[+]\[+]\[+]\[+]\[+]\[+]\[+]\[+]\[+]\[+]\[+]\[+]\r\[Right]\[Right]\[Right]r\[+]\[+]\[+]\[+]\[+]\[+]\[+]\[+]\[+]\[+]\[+]\[+]\r\[Right]\[Right]\[Right]"'''
+ '''(Windows + Alt + m) d v'''
+ b..b..b..b..b..b..x (and the cursor will be stopped at the next item)
+
+* Mass selector. It selects a lot of items from a list ((enter then down) * 39) (this is about 3 page down)) I use this particular macro to sell Junk to traders, without selling the bins. ''(If you select the bin, and then select any item for trading, the bin will be deselected.)''
+ '''Mod1 Mod4 m None d t :ExecCommand xvkbd -text "\r\[Down]\r\[Down]\r\[Down]\r\[Down]\r\[Down]\r\[Down]\r\[Down]\r\[Down]\r\[Down]\r\[Down]\r\[Down]\r\[Down]\r\[Down]\r\[Down]\r\[Down]\r\[Down]\r\[Down]\r\[Down]\r\[Down]\r\[Down]\r\[Down]\r\[Down]\r\[Down]\r\[Down]\r\[Down]\r\[Down]\r\[Down]\r\[Down]\r\[Down]\r\[Down]\r\[Down]\r\[Down]\r\[Down]\r\[Down]\r\[Down]\r\[Down]\r\[Down]\r\[Down]\r\[Down]"'''
+ '''(Windows + Alt + m) d t'''
+ Warning, if you sell ~20 finished goods bins' contents, then you may expect that 
+ the merchants will pack up for a while (probably for a few months).
+
+* Quick macro to build a repeating pattern. For example, you want to build a bedroom, where the dwarf's items are 3 titles apart (2 title between them, and 6 of them). Will select the first available item, so if there's something, you don't want to used, forbid them (coffers / bags).
+ '''Mod1 Mod4 m None d 3 :ExecCommand xvkbd -text "\r\r\r\[Right]\[Right]\[Right]\r\r\r\[Right]\[Right]\[Right]\r\r\r\[Right]\[Right]\[Right]\r\r\r\[Right]\[Right]\[Right]\r\r\r\[Right]\[Right]\[Right]"'''
+ Build menu, and select the item, you want to build (with /*-+, not the keycode!, otherwise you end up 
+ one wanted item, and 5 other armor stands) '''(Windows + Alt + m) d 3'''
+ b..b..b..b..b..x (and the cursor will be stopped at the next item)
+
+Feel free, to add your own macros.

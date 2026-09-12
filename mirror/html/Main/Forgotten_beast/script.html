@@ -1,0 +1,40 @@
+<div class="mw-parser-output"><div class="mw-highlight mw-highlight-lang-lua mw-content-ltr" dir="ltr"><pre><span></span><span class="n">creatures</span><span class="p">.</span><span class="n">fb</span><span class="p">.</span><span class="n">default</span><span class="o">=</span><span class="kr">function</span><span class="p">(</span><span class="n">layer_type</span><span class="p">,</span><span class="n">tok</span><span class="p">)</span>
+    <span class="kd">local</span> <span class="n">tbl</span><span class="o">=</span><span class="p">{}</span>
+    <span class="kd">local</span> <span class="n">options</span><span class="o">=</span><span class="p">{</span>
+        <span class="n">strong_attack_tweak</span><span class="o">=</span><span class="kc">true</span><span class="p">,</span>
+        <span class="n">spheres</span><span class="o">=</span><span class="p">{</span><span class="n">CAVERNS</span><span class="o">=</span><span class="kc">true</span><span class="p">},</span>
+        <span class="n">is_evil</span><span class="o">=</span><span class="kc">true</span><span class="p">,</span>
+        <span class="n">sickness_name</span><span class="o">=</span><span class="s2">&quot;beast sickness&quot;</span><span class="p">,</span>
+        <span class="n">token</span><span class="o">=</span><span class="n">tok</span>
+    <span class="p">}</span>
+    <span class="n">tbl</span><span class="o">=</span><span class="n">split_to_lines</span><span class="p">(</span><span class="n">tbl</span><span class="p">,</span><span class="s">[[</span>
+<span class="s">    [FEATURE_BEAST]</span>
+<span class="s">    [ATTACK_TRIGGER:0:0:2]</span>
+<span class="s">    [NAME:forgotten beast:forgotten beasts:forgotten beast]</span>
+<span class="s">    [CASTE_NAME:forgotten beast:forgotten beasts:forgotten beast]</span>
+<span class="s">    [NO_GENDER]</span>
+<span class="s">    [CARNIVORE]</span>
+<span class="s">    [DIFFICULTY:10]</span>
+
+<span class="s">    [NATURAL_SKILL:WRESTLING:6]</span>
+<span class="s">    [NATURAL_SKILL:BITE:6]</span>
+<span class="s">    [NATURAL_SKILL:GRASP_STRIKE:6]</span>
+<span class="s">    [NATURAL_SKILL:STANCE_STRIKE:6]</span>
+<span class="s">    [NATURAL_SKILL:MELEE_COMBAT:6]</span>
+<span class="s">    [NATURAL_SKILL:DODGING:6]</span>
+<span class="s">    [NATURAL_SKILL:SITUATIONAL_AWARENESS:6]</span>
+<span class="s">    [LARGE_PREDATOR]</span>
+<span class="s">    ]]</span><span class="p">)</span>
+    <span class="n">add_regular_tokens</span><span class="p">(</span><span class="n">tbl</span><span class="p">,</span><span class="n">options</span><span class="p">)</span>
+    <span class="n">tbl</span><span class="p">[</span><span class="o">#</span><span class="n">tbl</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span><span class="o">=</span><span class="n">layer_type</span><span class="o">==</span><span class="mi">0</span> <span class="ow">and</span> <span class="s2">&quot;[BIOME:SUBTERRANEAN_WATER]&quot;</span> <span class="ow">or</span> <span class="s2">&quot;[BIOME:SUBTERRANEAN_CHASM]&quot;</span>
+    <span class="kr">if</span> <span class="n">layer_type</span><span class="o">==</span><span class="mi">0</span> <span class="kr">then</span> <span class="n">options</span><span class="p">.</span><span class="n">spheres</span><span class="p">.</span><span class="n">WATER</span><span class="o">=</span><span class="kc">true</span> <span class="kr">end</span>
+    <span class="n">options</span><span class="p">.</span><span class="n">spheres</span><span class="p">[</span><span class="n">pick_random</span><span class="p">(</span><span class="n">evil_spheres</span><span class="p">)]</span><span class="o">=</span><span class="kc">true</span>
+    <span class="n">options</span><span class="p">.</span><span class="n">do_water</span><span class="o">=</span><span class="n">layer_type</span><span class="o">==</span><span class="mi">0</span>
+    <span class="n">populate_sphere_info</span><span class="p">(</span><span class="n">tbl</span><span class="p">,</span><span class="n">options</span><span class="p">)</span>
+    <span class="kd">local</span> <span class="n">rcp</span><span class="o">=</span><span class="n">get_random_creature_profile</span><span class="p">(</span><span class="n">options</span><span class="p">)</span>
+    <span class="n">add_body_size</span><span class="p">(</span><span class="n">tbl</span><span class="p">,</span><span class="nb">math.max</span><span class="p">(</span><span class="mi">10000000</span><span class="p">,</span><span class="n">rcp</span><span class="p">.</span><span class="n">min_size</span><span class="p">),</span><span class="n">options</span><span class="p">)</span>
+    <span class="n">tbl</span><span class="p">[</span><span class="o">#</span><span class="n">tbl</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span><span class="o">=</span><span class="s2">&quot;[CREATURE_TILE:&quot;</span><span class="o">..</span><span class="n">tile_string</span><span class="p">(</span><span class="n">rcp</span><span class="p">.</span><span class="n">tile</span><span class="p">)</span><span class="o">..</span><span class="s2">&quot;]&quot;</span>
+    <span class="n">build_procgen_creature</span><span class="p">(</span><span class="n">rcp</span><span class="p">,</span><span class="n">tbl</span><span class="p">,</span><span class="n">options</span><span class="p">)</span>
+    <span class="kr">return</span> <span class="p">{</span><span class="n">creature</span><span class="o">=</span><span class="n">tbl</span><span class="p">,</span><span class="n">weight</span><span class="o">=</span><span class="mi">1</span><span class="p">}</span>
+<span class="kr">end</span>
+</pre></div></div>
