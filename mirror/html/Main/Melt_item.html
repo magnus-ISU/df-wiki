@@ -1,0 +1,686 @@
+<div class="mw-parser-output"><div id="page-quality-rating" style="text-align: right;margin: 0.8em 0;font-size:75%">
+<a href="/index.php/Dwarf_Fortress_Wiki:Quality#Unknown" title="Dwarf Fortress Wiki:Quality"><span id="unknown-quality" style="padding:.2em; border:1px solid #f00; border-radius: 2px; -webkit-border-radius: 2px; -moz-border-radius: 2px; -o-border-radius: 2px; -ms-border-radius: 2px; background:#ffccaa;text-decoration:none; color:#ff0000">!!UNKNOWN!!</span></a> <span style="font-weight:bold;" class="dot">&#160;·</span> <a href="/index.php/Dwarf_Fortress_Wiki:Quality#Tattered" title="Dwarf Fortress Wiki:Quality"><span id="stub-quality" style="text-decoration:none; color:#333333">xTATTEREDx</span></a> <span style="font-weight:bold;" class="dot">&#160;·</span> <a href="/index.php/Dwarf_Fortress_Wiki:Quality#Fine" title="Dwarf Fortress Wiki:Quality"><span id="fine-quality" style="text-decoration:none; color:#CA7A02;">+FINE+</span></a> <span style="font-weight:bold;" class="dot">&#160;·</span> <a href="/index.php/Dwarf_Fortress_Wiki:Quality#Superior" title="Dwarf Fortress Wiki:Quality"><span id="superior-quality" style="text-decoration:none; color:#8800cc;">*SUPERIOR*</span></a> <span style="font-weight:bold;" class="dot">&#160;·</span> <a href="/index.php/Dwarf_Fortress_Wiki:Quality#Exceptional" title="Dwarf Fortress Wiki:Quality"><span id="exceptional-quality" style="text-decoration:none; color:#0088CC;">≡EXCEPTIONAL≡</span></a> <span style="font-weight:bold;" class="dot">&#160;·</span> <a href="/index.php/Dwarf_Fortress_Wiki:Quality#Masterwork" title="Dwarf Fortress Wiki:Quality"><span id="masterwork-quality" style="text-decoration:none; color:#72A329;">☼MASTERWORK☼</span></a></div>
+<table class="version-table" style="text-align: center; margin: 3px auto 5px; padding: 0.25em; border-radius: 3px; -webkit-border-radius: 3px; -moz-border-radius: 3px; -o-border-radius: 3px; -ms-border-radius: 3px;; border: 2px solid #bbdd88; background: #f5ffee; min-width:27em"><tbody><tr><td style="padding: 0.3em 0.3em; width: 100%;"><div style="margin-bottom:6px;" class="version-links-r1"><span style="font-size:100%"><span class="version-link"><span style="text-decoration: none; color: #72A329; background-color: #E2FDCE; border-radius: 2px; -webkit-border-radius: 2px; -moz-border-radius: 2px; -o-border-radius: 2px; -ms-border-radius: 2px; border: 1px solid #bbdd88; padding: 0.2em;"><b>v53.16</b></span></span><span style="font-weight:bold;" class="dot">&#160;·</span> <span class="version-link"><a href="/index.php/DF2014:Melt_item" title="DF2014:Melt item"><span style="text-decoration: none; color: #72A329;">v0.47.05</span></a></span></span></div><span>This article is about the current version of DF.<br />Note that some content may still need to be updated.</span><br />
+<div style="float: right; font-size:75%; padding-right:2px; margin-top:-2px; margin-bottom:-7px;"><span class="version-link"><a href="/index.php/Dwarf_Fortress_Wiki:V" class="mw-redirect" title="Dwarf Fortress Wiki:V"><span style="text-decoration: none; color: #72A329;">More Info</span></a></span><span style="font-weight:bold;" class="dot">&#160;·</span> <span class="version-link"><a href="/index.php/Template:Av" class="mw-redirect" title="Template:Av"><span style="text-decoration: none; color: #72A329;">V</span></a></span></div></td></tr>
+</tbody></table>
+<div class="floatright"><a href="/index.php/File:Melt_icon_preview.png" class="image"><img alt="Melt icon preview.png" src="/images/1/1e/Melt_icon_preview.png" decoding="async" width="72" height="156" /></a></div><p>Metal items can be <b>melted</b> at a <a href="/index.php/Smelter" title="Smelter">smelter</a> using the <a href="/index.php/Furnace_operator" title="Furnace operator">furnace operator</a> labor, to recover some of the <a href="/index.php/Metal" title="Metal">metal</a> they were made of.  <a href="/index.php/Decoration" title="Decoration">Decorations</a> of a different metal are not recovered or considered; the metal recovered is the specific metal that the basic item was listed as being made from. The percentile return is fixed and known for each item type, and ranges from 10%-150% (or more), depending on the item. Higher skill levels in furnace operator speed up the process, but have no effect on the percentile return.
+</p>
+<h2><span class="mw-headline" id="Return">Return</span></h2>
+<p>Recovered metal is measured in tenths (0.1) of a full <a href="/index.php/Bar" title="Bar">bar</a>, and those fractions of a bar of each separate metal are saved at the smelter where the item was melted.  Fractional bars are not "shared" between smelters, nor do they exist as usable objects as is.  When 10/10ths of a type of metal are accumulated at the same smelter, 1 bar of that metal is produced.  If the smelter is torn down or destroyed, all fractions are lost.
+</p>
+<dl><dd><i>Example:</i>
+<ul><li>If 2 items, worth .4 bars each, of the same metal are melted at the same smelter, that smelter now has .8 bars (2 x .4) of that specific metal waiting in it. Not enough to use - yet...</li>
+<li>If a similar item of a <i>different</i> metal is then melted there, that smelter would still have .8 bars of the first metal, and .4 bars of the second metal.</li>
+<li>If a similar item of the <i>first</i> metal is then melted at a <i>different</i> smelter, that other smelter will have .4 of that metal, and have no connection to the fractions in the first smelter.</li>
+<li>If <i>(finally!)</i> a 3rd, similar item of the first metal is melted at the first smelter, that adds another .4 bars to the .8 waiting there. This gives a total of 1.2 bars of that type of metal, meaning 1 <a href="/index.php/Bar" title="Bar">bar</a> of that metal is produced, ready for forging or other use, and .2 of a bar is waiting (plus the .4 of the second metal, also waiting).</li></ul></dd></dl>
+<p>It is most efficient to designate one smelter as a "melting" smelter (or for one metal type), to guarantee that fractions will add up effectively. This becomes less important as more bars of a particular metal are accumulated.
+</p>
+<h2><span class="mw-headline" id="Designating_items_to_melt">Designating items to melt</span></h2>
+<div class="thumb tright"><div class="thumbinner" style="width:52px;"><a href="/index.php/File:DF-melt-button.png" class="image"><img alt="" src="/images/2/2e/DF-melt-button.png" decoding="async" width="50" height="52" class="thumbimage" /></a>  <div class="thumbcaption"><div class="magnify"><a href="/index.php/File:DF-melt-button.png" class="internal" title="Enlarge"></a></div>The melt button.</div></div></div><p>To mark an item for melting when it is:
+</p><dl><dd><ul><li>On the <b>ground</b>:  Click the tile the item is on, then if there is more than one item there, click the tab of the item on the right edge of the sheet window, and click the melt button.</li>
+<li>In a <b>workshop</b>:  Click one of the tiles the workshop, find the item in the list of items in that workshop, and click the melt button.</li>
+<li><b>Held</b> by a dwarf:  View the dwarf's sheet, select the Items tab, find the item in the list, click the button to view the item's sheet, and click the melt button.</li>
+<li>Inside a <b>container</b>:  Display the container's item sheet, find the item in the list of items in that container, and click the melt button.</li>
+<li>In the <b>stocks</b> menu:  Type <span style="white-space: nowrap;"><span class="keyboard-key nowrap" style="border: 1px solid #aaa; border-radius: 0.2em; -webkit-border-radius: 0.2em; -moz-border-radius: 0.2em; -o-border-radius: 0.2em; -ms-border-radius: 0.2em; -moz-box-shadow: 0.1em 0.2em 0.2em #ddd; -webkit-box-shadow: 0.1em 0.2em 0.2em #ddd; box-shadow: 0.1em 0.2em 0.2em #ddd; background-color: #f9f9f9; background-image: -moz-linear-gradient(top, #eee, #f9f9f9, #eee); background-image: -o-linear-gradient(top, #eee, #f9f9f9, #eee); background-image: -webkit-linear-gradient(top, #eee, #f9f9f9, #eee); background-image: linear-gradient(to bottom, #eee, #f9f9f9, #eee); padding: 0.1em 0.3em; font-family: inherit; font-size: 0.9em;" title="">k</span></span> or click the Stocks button, then either:
+<ul><li>click the filter input at the top and enter text to match the item, then click the melt button for the desired item.</li>
+<li>select the item category, scroll to the item, and click the melt button.</li></ul></li></ul></dd></dl>
+<p>If the item is designated for melting and <a href="/index.php/Forbidden" class="mw-redirect" title="Forbidden">forbidden</a> then the item will <b>not</b> be melted.
+</p><p>This process only marks items as available for melting; the job order will still need to be made at a smelter.
+</p>
+<h2><span class="mw-headline" id="Melting_the_items">Melting the items</span></h2>
+<p>Items designated to be melted will be left alone until the "Melt a metal object" job is queued at a <a href="/index.php/Smelter" title="Smelter">Smelter</a>. Melting down an object requires the <a href="/index.php/Furnace_operator" title="Furnace operator">Furnace operator</a> labor (and consumes a unit of <a href="/index.php/Fuel" title="Fuel">fuel</a> for a non-magma smelter).
+</p><p>The job gives the same experience to the <a href="/index.php/Furnace_operator" title="Furnace operator">furnace operator</a> skill, regardless of&#160;% yield of the item melted.
+</p><p>If there are items in a container that is being melted, the items will be placed inside the smelter when the container is destroyed.
+</p>
+<h2><span class="mw-headline" id="Yield">Yield</span></h2>
+<p>Testing is incomplete, but preliminary results show a yield of 0.3 bars*the object's material size for anything that has a material size, or 1 bar for most furniture (regardless of size).
+</p><p>Note that the Efficiency column is only accurate for ordinary metals: when using <a href="/index.php/Adamantine" title="Adamantine">adamantine</a>, one needs a number of wafer equal to the content of the "Material size" column instead of "Bars to make", so if that number is larger, the efficiency will be reduced accordingly. For coins however, the number is accurate for adamantine, which only requires 1 wafers and returns 1.1 wafers when melted.
+</p><p>Note also that some items are always produced in twos (gauntlets, boots) or threes (flasks, goblets), or (in the case of ammo) stacks of 25 at a time, or (for coins) 500 at a time. In the case of crafts, from 1 to 3 are produced. These are shown as "1/x" below, although a single job will never use less than one bar, nor produce less than the pair/trio/etc. of items.
+</p>
+<table style="margin:1em 1em 1em 0;background:#F9F9F9;border:1px #AAA solid;border-collapse:collapse;" class="wikitable sortable">
+<tbody><tr>
+<th>Item</th>
+<th>Material size</th>
+<th>Bars to make</th>
+<th>Bars returned</th>
+<th>Efficiency
+</th></tr>
+<tr>
+<th colspan="5"><a href="/index.php/Armor" title="Armor">Armor</a> (Armorsmith)
+</th></tr>
+<tr>
+<td><a href="/index.php/Armor#Headgear" title="Armor">Cap</a></td>
+<td>1</td>
+<td>1</td>
+<td>0.3</td>
+<td>30%
+</td></tr>
+<tr>
+<td><a href="/index.php/Armor#Headgear" title="Armor">Helm</a></td>
+<td>2</td>
+<td>1</td>
+<td>0.6</td>
+<td>60%
+</td></tr>
+<tr>
+<td><a href="/index.php/Armor#Hands" title="Armor">Gauntlet</a></td>
+<td>2</td>
+<td>1/2</td>
+<td>0.6</td>
+<td><b>120%</b>
+</td></tr>
+<tr>
+<td><a href="/index.php/Armor#Lower_Body" title="Armor">Leggings</a></td>
+<td>5</td>
+<td>1</td>
+<td>1.5</td>
+<td><i><b>150%</b></i>
+</td></tr>
+<tr>
+<td><a href="/index.php/Armor#Lower_Body" title="Armor">Greaves</a></td>
+<td>6</td>
+<td>2</td>
+<td>1.8</td>
+<td>90%
+</td></tr>
+<tr>
+<td><a href="/index.php/Armor#Footwear" title="Armor">Low boot</a></td>
+<td>1</td>
+<td>1/2</td>
+<td>0.3</td>
+<td>60%
+</td></tr>
+<tr>
+<td><a href="/index.php/Armor#Footwear" title="Armor">High boot</a></td>
+<td>2</td>
+<td>1/2</td>
+<td>0.6</td>
+<td><b>120%</b>
+</td></tr>
+<tr>
+<td><a href="/index.php/Buckler" class="mw-redirect" title="Buckler">Buckler</a></td>
+<td>2</td>
+<td>1</td>
+<td>0.6</td>
+<td>60%
+</td></tr>
+<tr>
+<td><a href="/index.php/Shield" class="mw-redirect" title="Shield">Shield</a></td>
+<td>4</td>
+<td>1</td>
+<td>1.2</td>
+<td><b>120%</b>
+</td></tr>
+<tr>
+<td><a href="/index.php/Armor#Upper_Body" title="Armor">Mail shirt</a></td>
+<td>6</td>
+<td>2</td>
+<td>1.8</td>
+<td>90%
+</td></tr>
+<tr>
+<td><a href="/index.php/Armor#Upper_Body" title="Armor">Breastplate</a></td>
+<td>9</td>
+<td>3</td>
+<td>2.7</td>
+<td>90%
+</td></tr>
+<tr>
+<th colspan="5"><a href="/index.php/Weapon" title="Weapon">Weapons</a> (made by Weaponsmith)
+</th></tr>
+<tr>
+<td><a href="/index.php/Crossbow" title="Crossbow">Crossbow</a></td>
+<td>3</td>
+<td>1</td>
+<td>0.9</td>
+<td>90%
+</td></tr>
+<tr>
+<td><a href="/index.php/Mace" title="Mace">Mace</a></td>
+<td>3</td>
+<td>1</td>
+<td>0.9</td>
+<td>90%
+</td></tr>
+<tr>
+<td><a href="/index.php/Spear" title="Spear">Spear</a></td>
+<td>3</td>
+<td>1</td>
+<td>0.9</td>
+<td>90%
+</td></tr>
+<tr>
+<td><a href="/index.php/Short_sword" title="Short sword">Short sword</a></td>
+<td>3</td>
+<td>1</td>
+<td>0.9</td>
+<td>90%
+</td></tr>
+<tr>
+<td><a href="/index.php/War_hammer" title="War hammer">War hammer</a></td>
+<td>3</td>
+<td>1</td>
+<td>0.9</td>
+<td>90%
+</td></tr>
+<tr>
+<td><a href="/index.php/Battle_axe" title="Battle axe">Battle axe</a></td>
+<td>4</td>
+<td>1</td>
+<td>1.2</td>
+<td><b>120%</b>
+</td></tr>
+<tr>
+<td><a href="/index.php/Pick" title="Pick">Pick</a></td>
+<td>4</td>
+<td>1</td>
+<td>1.2</td>
+<td><b>120%</b>
+</td></tr>
+<tr>
+<td><a href="/index.php/Ammo" class="mw-redirect" title="Ammo">Ammo</a> (full stack of 25)</td>
+<td>(1)</td>
+<td>1</td>
+<td>0.3</td>
+<td>30%
+</td></tr>
+<tr>
+<td><a href="/index.php/Ammo" class="mw-redirect" title="Ammo">Ammo</a> (single bolt)</td>
+<td>(1)</td>
+<td>1/25</td>
+<td>0.1</td>
+<td><i><b>250%</b></i>
+</td></tr>
+<tr>
+<th colspan="5">Foreign Weapons
+</th></tr>
+<tr>
+<td><a href="/index.php/Blowgun" title="Blowgun">Blowgun</a></td>
+<td>2</td>
+<td>1</td>
+<td>0.6</td>
+<td>60%
+</td></tr>
+<tr>
+<td><a href="/index.php/Bow" title="Bow">Bow</a></td>
+<td>3</td>
+<td>1</td>
+<td>0.9</td>
+<td>90%
+</td></tr>
+<tr>
+<td><a href="/index.php/Dagger" title="Dagger">Dagger</a></td>
+<td>1</td>
+<td>1</td>
+<td>0.3</td>
+<td>30%
+</td></tr>
+<tr>
+<td><a href="/index.php/Flail" title="Flail">Flail</a></td>
+<td>4</td>
+<td>1</td>
+<td>1.2</td>
+<td>120%
+</td></tr>
+<tr>
+<td><a href="/index.php/Great_axe" title="Great axe">Great axe</a></td>
+<td>5</td>
+<td>1</td>
+<td>1.5</td>
+<td>150%
+</td></tr>
+<tr>
+<td><a href="/index.php/Halberd" title="Halberd">Halberd</a></td>
+<td>5</td>
+<td>1</td>
+<td>1.5</td>
+<td>150%
+</td></tr>
+<tr>
+<td><a href="/index.php/Long_sword" title="Long sword">Long sword</a></td>
+<td>4</td>
+<td>1</td>
+<td>1.2</td>
+<td>120%
+</td></tr>
+<tr>
+<td><a href="/index.php/Maul" title="Maul">Maul</a></td>
+<td>5</td>
+<td>1</td>
+<td>1.5</td>
+<td>150%
+</td></tr>
+<tr>
+<td><a href="/index.php/Morningstar" title="Morningstar">Morningstar</a></td>
+<td>4</td>
+<td>1</td>
+<td>0.9</td>
+<td>90%
+</td></tr>
+<tr>
+<td><a href="/index.php/Pike" class="mw-redirect" title="Pike">Pike</a></td>
+<td>4</td>
+<td>1</td>
+<td>1.2</td>
+<td>120%
+</td></tr>
+<tr>
+<td><a href="/index.php/Scimitar" title="Scimitar">Scimitar</a></td>
+<td>3</td>
+<td>1</td>
+<td>0.9</td>
+<td>90%
+</td></tr>
+<tr>
+<td><a href="/index.php/Scourge" title="Scourge">Scourge</a></td>
+<td>2</td>
+<td>1</td>
+<td>0.6</td>
+<td>60%
+</td></tr>
+<tr>
+<td><a href="/index.php/Two-handed_sword" title="Two-handed sword">Two-handed sword</a></td>
+<td>5</td>
+<td>1</td>
+<td>1.5</td>
+<td>150%
+</td></tr>
+<tr>
+<td><a href="/index.php/Whip" title="Whip">Whip</a></td>
+<td>1</td>
+<td>1</td>
+<td>0.3</td>
+<td>30%
+</td></tr>
+<tr>
+<th colspan="5"><a href="/index.php/Trap_component" title="Trap component">Trap Components</a> (Weaponsmith)
+</th></tr>
+<tr>
+<td><a href="/index.php/Trap_component#Giant_axe_blade" title="Trap component">Giant Axe Blade</a></td>
+<td>5</td>
+<td>1</td>
+<td>1.5</td>
+<td><i><b>150%</b></i>
+</td></tr>
+<tr>
+<td><a href="/index.php/Trap_component#Enormous_corkscrew" title="Trap component">Enormous Corkscrew</a></td>
+<td>5</td>
+<td>1</td>
+<td>1.5</td>
+<td><i><b>150%</b></i>
+</td></tr>
+<tr>
+<td><a href="/index.php/Trap_component#Spiked_ball" title="Trap component">Spiked Ball</a></td>
+<td>4</td>
+<td>1</td>
+<td>1.2</td>
+<td><b>120%</b>
+</td></tr>
+<tr>
+<td><a href="/index.php/Trap_component#Large.2C_serrated_disc" title="Trap component">Large, Serrated Disc</a></td>
+<td>4</td>
+<td>1</td>
+<td>1.2</td>
+<td><b>120%</b>
+</td></tr>
+<tr>
+<td><a href="/index.php/Trap_component#Menacing_spike" title="Trap component">Menacing Spike</a></td>
+<td>5</td>
+<td>1</td>
+<td>1.5</td>
+<td><i><b>150%</b></i>
+</td></tr>
+<tr>
+<th colspan="5"><a href="/index.php/Trap_component" title="Trap component">Trap Components</a> (Mechanic)
+</th></tr>
+<tr>
+<td><a href="/index.php/Mechanisms" class="mw-redirect" title="Mechanisms">Mechanisms</a></td>
+<td>(3)</td>
+<td>1</td>
+<td>0.5</td>
+<td>50%
+</td></tr>
+<tr>
+<th colspan="5">Siege Equipment (Weaponsmith)
+</th></tr>
+<tr>
+<td><a href="/index.php/Ballista_arrow" title="Ballista arrow">Ballista arrow</a></td>
+<td>(4)</td>
+<td>3</td>
+<td>0.5</td>
+<td>17%
+</td></tr>
+<tr>
+<td><a href="/index.php/Ballista_arrowhead" class="mw-redirect" title="Ballista arrowhead">Ballista arrowhead</a></td>
+<td>(4)</td>
+<td>3</td>
+<td>0.5</td>
+<td>17%
+</td></tr>
+<tr>
+<th colspan="5"><a href="/index.php/Tool" title="Tool">Tools</a> (Metalcrafter)
+</th></tr>
+<tr>
+<td><a href="/index.php/Nest_box" title="Nest box">Nest box</a></td>
+<td>1</td>
+<td>1</td>
+<td>0.3</td>
+<td>30%
+</td></tr>
+<tr>
+<td><a href="/index.php/Jug" title="Jug">Jug</a></td>
+<td>1</td>
+<td>1</td>
+<td>0.3</td>
+<td>30%
+</td></tr>
+<tr>
+<td><a href="/index.php/Pot" class="mw-redirect" title="Pot">Pot</a></td>
+<td>1</td>
+<td>1</td>
+<td>0.3</td>
+<td>30%
+</td></tr>
+<tr>
+<td><a href="/index.php/Hive" title="Hive">Hive</a></td>
+<td>1</td>
+<td>1</td>
+<td>0.3</td>
+<td>30%
+</td></tr>
+<tr>
+<td><a href="/index.php/Minecart" title="Minecart">Minecart</a></td>
+<td>6</td>
+<td>2</td>
+<td>1.8</td>
+<td>90%
+</td></tr>
+<tr>
+<td><a href="/index.php/Wheelbarrow" title="Wheelbarrow">Wheelbarrow</a></td>
+<td>6</td>
+<td>2</td>
+<td>1.8</td>
+<td>90%
+</td></tr>
+<tr>
+<th colspan="5"><a href="/index.php/Furniture" title="Furniture">Furniture</a> (Blacksmith / Metalsmith)
+</th></tr>
+<tr>
+<td><a href="/index.php/Anvil" title="Anvil">Anvil</a></td>
+<td>(9)</td>
+<td>3</td>
+<td>1</td>
+<td>33%
+</td></tr>
+<tr>
+<td><a href="/index.php/Armor_stand" title="Armor stand">Armor stand</a></td>
+<td>(9)</td>
+<td>3</td>
+<td>1</td>
+<td>33%
+</td></tr>
+<tr>
+<td><a href="/index.php/Barrel" title="Barrel">Barrel</a></td>
+<td>(9)</td>
+<td>3</td>
+<td>1</td>
+<td>33%
+</td></tr>
+<tr>
+<td><a href="/index.php/Bin" title="Bin">Bin</a></td>
+<td>(9)</td>
+<td>3</td>
+<td>1</td>
+<td>33%
+</td></tr>
+<tr>
+<td><a href="/index.php/Block" title="Block">Blocks</a></td>
+<td>(4)</td>
+<td>1</td>
+<td>0.5</td>
+<td>50%
+</td></tr>
+<tr>
+<td><a href="/index.php/Bucket" title="Bucket">Bucket</a></td>
+<td>(3)</td>
+<td>1</td>
+<td>1</td>
+<td><b>100%</b>
+</td></tr>
+<tr>
+<td><a href="/index.php/Cabinet" title="Cabinet">Cabinet</a></td>
+<td>(9)</td>
+<td>3</td>
+<td>1</td>
+<td>33%
+</td></tr>
+<tr>
+<td><a href="/index.php/Cage" title="Cage">Cage</a></td>
+<td>(6)</td>
+<td>3</td>
+<td>1</td>
+<td>33%
+</td></tr>
+<tr>
+<td><a href="/index.php/Chair" class="mw-redirect" title="Chair">Chair</a></td>
+<td>(9)</td>
+<td>3</td>
+<td>1</td>
+<td>33%
+</td></tr>
+<tr>
+<td><a href="/index.php/Chest" class="mw-redirect" title="Chest">Chest</a></td>
+<td>(9)</td>
+<td>3</td>
+<td>1</td>
+<td>33%
+</td></tr>
+<tr>
+<td><a href="/index.php/Coffin" title="Coffin">Coffin</a></td>
+<td>(9)</td>
+<td>3</td>
+<td>1</td>
+<td>33%
+</td></tr>
+<tr>
+<td><a href="/index.php/Crutch" title="Crutch">Crutch</a></td>
+<td>(3)</td>
+<td>3</td>
+<td>0.5</td>
+<td>17%
+</td></tr>
+<tr>
+<td><a href="/index.php/Door" title="Door">Door</a></td>
+<td>(9)</td>
+<td>3</td>
+<td>1</td>
+<td>33%
+</td></tr>
+<tr>
+<td><a href="/index.php/Floodgate" title="Floodgate">Floodgate</a></td>
+<td>(9)</td>
+<td>3</td>
+<td>1</td>
+<td>33%
+</td></tr>
+<tr>
+<td><a href="/index.php/Grate" title="Grate">Grate</a></td>
+<td>(9)</td>
+<td>3</td>
+<td>1</td>
+<td>33%
+</td></tr>
+<tr>
+<td><a href="/index.php/Hatch_cover" title="Hatch cover">Hatch cover</a></td>
+<td>(9)</td>
+<td>3</td>
+<td>1</td>
+<td>33%
+</td></tr>
+<tr>
+<td><a href="/index.php/Pipe_section" title="Pipe section">Pipe section</a></td>
+<td>(9)</td>
+<td>3</td>
+<td>1</td>
+<td>33%
+</td></tr>
+<tr>
+<td><a href="/index.php/Splint" class="mw-redirect" title="Splint">Splint</a></td>
+<td>(2)</td>
+<td>3</td>
+<td>0.5</td>
+<td>17%
+</td></tr>
+<tr>
+<td><a href="/index.php/Statue" title="Statue">Statue</a></td>
+<td>(9)</td>
+<td>3</td>
+<td>1</td>
+<td>33%
+</td></tr>
+<tr>
+<td><a href="/index.php/Table" title="Table">Table</a></td>
+<td>(9)</td>
+<td>3</td>
+<td>1</td>
+<td>33%
+</td></tr>
+<tr>
+<td><a href="/index.php/Traction_bench" class="mw-redirect" title="Traction bench">Traction bench</a></td>
+<td>(9)</td>
+<td>3</td>
+<td>1</td>
+<td>33%
+</td></tr>
+<tr>
+<td><a href="/index.php/Weapon_rack" title="Weapon rack">Weapon rack</a></td>
+<td>(9)</td>
+<td>3</td>
+<td>1</td>
+<td>33%
+</td></tr>
+<tr>
+<th colspan="5"><a href="/index.php/Furniture" title="Furniture">Furniture</a> (Metalcrafter)
+</th></tr>
+<tr>
+<td><a href="/index.php/Chain" title="Chain">Chain</a></td>
+<td>(4)</td>
+<td>1</td>
+<td>1</td>
+<td><b>100%</b>
+</td></tr>
+<tr>
+<th colspan="5"><a href="/index.php/Furniture" title="Furniture">Furniture</a> (Trapper)
+</th></tr>
+<tr>
+<td><a href="/index.php/Animal_trap" title="Animal trap">Animal trap</a></td>
+<td>(3)</td>
+<td>1</td>
+<td>1</td>
+<td><b>100%</b>
+</td></tr>
+<tr>
+<th colspan="5">Other objects (Metalcrafter)
+</th></tr>
+<tr>
+<td><a href="/index.php/Jewelry" title="Jewelry">Amulet</a></td>
+<td>(1/3 to 1)</td>
+<td>1/3 to 1</td>
+<td>0.1</td>
+<td>10% to 30%
+</td></tr>
+<tr>
+<td><a href="/index.php/Jewelry" title="Jewelry">Bracelet</a></td>
+<td>(1/3 to 1)</td>
+<td>1/3 to 1</td>
+<td>0.1</td>
+<td>10% to 30%
+</td></tr>
+<tr>
+<td><a href="/index.php/Coins" class="mw-redirect" title="Coins">Coins</a> (stack of 500)</td>
+<td>(1)</td>
+<td>1</td>
+<td>1.1</td>
+<td><i><b>110%</b></i>
+</td></tr>
+<tr>
+<td><a href="/index.php/Coins" class="mw-redirect" title="Coins">Coins</a> (stack of 1)</td>
+<td>(1)</td>
+<td>1/500</td>
+<td>0.1</td>
+<td><i><b>5000%</b></i>
+</td></tr>
+<tr>
+<td><a href="/index.php/Jewelry" title="Jewelry">Crown</a></td>
+<td>(1/3 to 1)</td>
+<td>1/3 to 1</td>
+<td>0.1</td>
+<td>10% to 30%
+</td></tr>
+<tr>
+<td><a href="/index.php/Jewelry" title="Jewelry">Earring</a></td>
+<td>(1/3 to 1)</td>
+<td>1/3 to 1</td>
+<td>0.1</td>
+<td>10% to 30%
+</td></tr>
+<tr>
+<td><a href="/index.php/Flask" title="Flask">Flask</a></td>
+<td>(1/3)</td>
+<td>1/3</td>
+<td>0.2</td>
+<td>60%
+</td></tr>
+<tr>
+<td><a href="/index.php/Figurine" title="Figurine">Figurine</a></td>
+<td>(1/3 to 1)</td>
+<td>1/3 to 1</td>
+<td>0.2</td>
+<td>20% to 60%
+</td></tr>
+<tr>
+<td><a href="/index.php/Goblet" class="mw-redirect" title="Goblet">Goblet</a></td>
+<td>(1/3)</td>
+<td>1/3</td>
+<td>0.2</td>
+<td>60%
+</td></tr>
+<tr>
+<td><a href="/index.php/Instrument" title="Instrument">Instrument</a></td>
+<td>(1)</td>
+<td>1</td>
+<td>1</td>
+<td><b>100%</b>
+</td></tr>
+<tr>
+<td><a href="/index.php/Toy" class="mw-redirect" title="Toy">Toy</a></td>
+<td>(1)</td>
+<td>1</td>
+<td>0.2</td>
+<td>20%
+</td></tr>
+<tr>
+<td><a href="/index.php/Ring" class="mw-redirect" title="Ring">Ring</a></td>
+<td>(1/3 to 1)</td>
+<td>1/3 to 1</td>
+<td>0.1</td>
+<td>10% to 30%
+</td></tr>
+<tr>
+<td><a href="/index.php/Finished_goods#Crafts" title="Finished goods">Scepter</a></td>
+<td>(1/3 to 1)</td>
+<td>1/3 to 1</td>
+<td>0.2</td>
+<td>20% to 60%
+</td></tr></tbody></table>
+<p>All melting yields for items <i>not</i> specified in the raws (weapons, armor, tools, etc.) are hardcoded.
+</p><p>Metal bars are able to be melted and remade into half a bar at a smelter. (Melt 1 tin bar, return as 0.5 tin bar + experience.)
+</p>
+<h3><span class="mw-headline" id="Exploit">Exploit</span></h3>
+<p>Items that yield more than 100% can be used to increase the amount of a metal available by producing those items and then melting them down again, as many times as required.  This is generally considered to be an <a href="/index.php/Exploit#Infinite_Adamantine_.2F_Metals" title="Exploit">exploit</a> of an error in the game mechanics. However, using a dwarf with a high skill level to make the items will result in severe tantrums being thrown when all the ☼masterwork☼ creations start being melted, so it is best to utilize low-skill metalworkers and make sure their skill levels don't get too high to avoid masterwork items, or there will be tantrum spirals, fistfights, and/or lots of <s>useless junk</s> valuable trade goods lying around. (A <a href="/index.php/Workshop_profile" class="mw-redirect" title="Workshop profile">workshop profile</a> on the forge can be used to restrict production to dwarves below a certain skill level. Another option is to designate a nearby stockpile for meltable items that doesn't allow Legendary or Master items.)
+For multiplying weapons/armor-grade metals, forging and melting giant axe blades, large serrated discs, and leggings will yield a 50% gain per item; *note that this does not work with adamantine, since adamantine goods require 3 times as many wafers, instead leading to a 70% loss per item.
+</p><p>This method works best when replicating <a href="/index.php/Divine_metal" title="Divine metal">Divine metal</a> (can't be conventionally produced at all) and <a href="/index.php/Adamantine" title="Adamantine">Adamantine</a> (mining of it <a href="/index.php/Underworld" title="Underworld">is very risky</a>). This can also work with expensive complicated materials (e.g. <a href="/index.php/Steel" title="Steel">Steel</a>) or if resources are very scarce on your map.
+</p>
+<h2><span class="mw-headline" id="Bugs">Bugs</span></h2>
+<ul><li>A number of items produce more metal when melted than they cost to produce.<span class=""><sup><a href="#Bugs">Bug</a>:<a rel="nofollow" class="external text" href="https://dwarffortressbugtracker.com/view.php?id=6027">6027</a></sup></span></li>
+<li>Designating items to be melted from the <a href="/index.php/Stocks" title="Stocks">stocks</a> screen can cause a crash.<span class=""><sup><a href="#Bugs">Bug</a>:<a rel="nofollow" class="external text" href="https://dwarffortressbugtracker.com/view.php?id=6431">6431</a></sup></span></li></ul></div>

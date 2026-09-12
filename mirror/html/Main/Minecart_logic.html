@@ -1,0 +1,1530 @@
+<div class="mw-parser-output"><table class="metadata plainlinks ambox ambox-content" style="background-color:#fc9;" role="presentation">
+<tbody><tr><td class="mbox-image"><div style="width: 52px;"><a href="/index.php/File:Announce_migrant_icon.png" class="image"><img alt="Announce migrant icon.png" src="/images/5/5f/Announce_migrant_icon.png" decoding="async" width="32" height="32" /></a></div></td><td class="mbox-text" style=""><span class="mbox-text-span">This article was migrated from <a href="/index.php/DF2014:Minecart_logic" title="DF2014:Minecart logic">DF2014:Minecart logic</a> and may be inaccurate for the current version of DF (v53.16). See <a href="/index.php/Dwarf_Fortress_Wiki:Version_migration" title="Dwarf Fortress Wiki:Version migration">this page</a> for more information.<span class="hide-when-compact">  </span><span class="hide-when-compact"> </span></span></td></tr></tbody></table><div id="page-quality-rating" style="text-align: right;margin: 0.8em 0;font-size:75%">
+<a href="/index.php/Dwarf_Fortress_Wiki:Quality#Unknown" title="Dwarf Fortress Wiki:Quality"><span id="unknown-quality" style="padding:.2em; border:1px solid #f00; border-radius: 2px; -webkit-border-radius: 2px; -moz-border-radius: 2px; -o-border-radius: 2px; -ms-border-radius: 2px; background:#ffccaa;text-decoration:none; color:#ff0000">!!UNKNOWN!!</span></a> <span style="font-weight:bold;" class="dot">&#160;·</span> <a href="/index.php/Dwarf_Fortress_Wiki:Quality#Tattered" title="Dwarf Fortress Wiki:Quality"><span id="stub-quality" style="text-decoration:none; color:#333333">xTATTEREDx</span></a> <span style="font-weight:bold;" class="dot">&#160;·</span> <a href="/index.php/Dwarf_Fortress_Wiki:Quality#Fine" title="Dwarf Fortress Wiki:Quality"><span id="fine-quality" style="text-decoration:none; color:#CA7A02;">+FINE+</span></a> <span style="font-weight:bold;" class="dot">&#160;·</span> <a href="/index.php/Dwarf_Fortress_Wiki:Quality#Superior" title="Dwarf Fortress Wiki:Quality"><span id="superior-quality" style="text-decoration:none; color:#8800cc;">*SUPERIOR*</span></a> <span style="font-weight:bold;" class="dot">&#160;·</span> <a href="/index.php/Dwarf_Fortress_Wiki:Quality#Exceptional" title="Dwarf Fortress Wiki:Quality"><span id="exceptional-quality" style="text-decoration:none; color:#0088CC;">≡EXCEPTIONAL≡</span></a> <span style="font-weight:bold;" class="dot">&#160;·</span> <a href="/index.php/Dwarf_Fortress_Wiki:Quality#Masterwork" title="Dwarf Fortress Wiki:Quality"><span id="masterwork-quality" style="text-decoration:none; color:#72A329;">☼MASTERWORK☼</span></a></div>
+<table class="vertical-navbox nowraplinks" cellspacing="5" cellpadding="0" style="float:right;clear:right;width:22.0em;margin:0 0 1.0em 1.0em;background:#f9f9f9;border:1px solid #aaa;padding:0.2em;border-spacing:0.4em 0;text-align:center;line-height:1.4em;font-size:88%;"><tbody><tr><td class="" style=";padding-top:0.4em;line-height:1.2em;">Part of a series on</td>
+      </tr><tr><th class="" style=";padding:0.2em 0.4em 0.2em;padding-top:0;font-size:145%;line-height:1.2em;"><a href="/index.php/Computing" title="Computing">Computing</a></th>
+      </tr><tr><td class="" style="padding:0.2em 0 0.4em;"><div class="center"><div class="floatnone"><a href="/index.php/File:7x191.PNG" class="image"><img alt="7x191.PNG" src="/images/thumb/8/84/7x191.PNG/200px-7x191.PNG" decoding="async" width="200" height="231" srcset="/images/thumb/8/84/7x191.PNG/300px-7x191.PNG 1.5x, /images/8/84/7x191.PNG 2x" /></a></div></div></td>
+      </tr><tr>
+<td class="" style="padding:0 0.1em 0.4em;font-size: 12px; padding-left: 5px; text-align: center;;">
+<b><a href="/index.php/Category:Logic" title="Category:Logic">Logic</a></b>: <a href="/index.php/Animal_logic" title="Animal logic">Animal</a> • <a href="/index.php/Creature_logic" title="Creature logic">Creature</a> • <a href="/index.php/Fluid_logic" title="Fluid logic">Fluid</a> • <a href="/index.php/Mechanical_logic" title="Mechanical logic">Mechanical</a> • <a class="mw-selflink selflink">Minecart</a></td>
+</tr><tr>
+<td class="" style="padding:0 0.1em 0.4em;font-size: 12px; padding-left: 5px; text-align: center;;">
+<b><a href="/index.php/Category:Computing" title="Category:Computing">Components</a></b>: <a href="/index.php/Adder_(Computing)" title="Adder (Computing)">Adder</a> • <a href="/index.php/Memory_(computing)" title="Memory (computing)">Memory</a> • <a href="/index.php/Repeater" title="Repeater">Repeater</a></td>
+</tr><tr><td style="text-align:right;font-size:115%;"><div class="noprint plainlinks hlist navbar mini" style="text-transform:uppercase; font-size:80%;"><div><span class="nv-view"><a href="/index.php/Template:V50_computing" title="Template:V50 computing"><span title="View this template" style="">v</span></a></span><span style="font-weight:bold;" class="dot">&#160;·</span> <span class="nv-talk"><a href="/index.php?title=Template_talk:V50_computing&amp;action=edit&amp;redlink=1" class="new" title="Template talk:V50 computing (page does not exist)"><span title="Discuss this template" style="">t</span></a></span><span style="font-weight:bold;" class="dot">&#160;·</span> <span class="nv-edit"><a rel="nofollow" class="external text" href="//dwarffortresswiki.org/index.php?title=Template:V50_computing&amp;action=edit"><span title="Edit this template" style="">e</span></a></span></div></div></td></tr>
+</tbody></table>
+<table class="version-table" style="text-align: center; margin: 3px auto 5px; padding: 0.25em; border-radius: 3px; -webkit-border-radius: 3px; -moz-border-radius: 3px; -o-border-radius: 3px; -ms-border-radius: 3px;; border: 2px solid #bbdd88; background: #f5ffee; min-width:27em"><tbody><tr><td style="padding: 0.3em 0.3em; width: 100%;"><div style="margin-bottom:6px;" class="version-links-r1"><span style="font-size:100%"><span class="version-link"><span style="text-decoration: none; color: #72A329; background-color: #E2FDCE; border-radius: 2px; -webkit-border-radius: 2px; -moz-border-radius: 2px; -o-border-radius: 2px; -ms-border-radius: 2px; border: 1px solid #bbdd88; padding: 0.2em;"><b>v53.16</b></span></span><span style="font-weight:bold;" class="dot">&#160;·</span> <span class="version-link"><a href="/index.php/DF2014:Minecart_logic" title="DF2014:Minecart logic"><span style="text-decoration: none; color: #72A329;">v0.47.05</span></a></span></span></div><span>This article is about the current version of DF.<br />Note that some content may still need to be updated.</span><br />
+<div style="float: right; font-size:75%; padding-right:2px; margin-top:-2px; margin-bottom:-7px;"><span class="version-link"><a href="/index.php/Dwarf_Fortress_Wiki:V" class="mw-redirect" title="Dwarf Fortress Wiki:V"><span style="text-decoration: none; color: #72A329;">More Info</span></a></span><span style="font-weight:bold;" class="dot">&#160;·</span> <span class="version-link"><a href="/index.php/Template:Av" class="mw-redirect" title="Template:Av"><span style="text-decoration: none; color: #72A329;">V</span></a></span></div></td></tr>
+</tbody></table>
+<p>The addition of <a href="/index.php/Minecart" title="Minecart">minecarts</a> to <i>Dwarf Fortress</i> has opened up new and exciting logic and computing options for the ambitious <a href="/index.php/Dwarf_fortress_mode" title="Dwarf fortress mode">fortress</a> manager. Minecart-based logic gates and memory cells are easy to build, quick to react, and can even be built without power, water, or creatures. The training your <a href="/index.php/Doctor" title="Doctor">doctors</a> will receive is just one of many reasons to compute with minecarts!
+</p>
+
+<h2><span class="mw-headline" id="Techniques_and_Circuits">Techniques and Circuits</span></h2>
+<p>There exist a great number of different techniques by which a minecart can receive input, compute, and deliver output.  This article does not aim for a comprehensive list of techniques and circuits; the interested reader is encouraged to investigate further.  The following examples were chosen to demonstrate both a variety of techniques and a few commonly used gates.
+</p>
+<h4><span class="mw-headline" id="Key">Key</span></h4>
+<p>Adequately diagramming minecart logic devices can be difficult; each tile on each z-level might need to display up to four slices (track, <a href="/index.php/Ramp" title="Ramp">ramp</a>, <a href="/index.php/Furniture" title="Furniture">furniture</a>, minecart) that can lay on top of each other.  Ramps are displayed on the furniture layer for the sake of simplicity, and some slices may be omitted when unnecessary.  Components of each lower slice are displayed on the higher slice when unchanged by new components to give the reader a sense of position.  Wall <span style="color: #FFF; background: #000; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; padding: 0; line-height: 1;">O</span> is typically displayed only where it is essential to the operation of the circuit, and drawn only as sequences of pillars to avoid confusion with track.  Unengraved floor <span style="color: #FFF; background: #000; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; padding: 0; line-height: 1;">,</span> is sometimes needed for other components, but of course can be smoothed as desired.  Track direction is laid out with <span style="color: #FFF; background: #000; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; padding: 0; line-height: 1;">║</span><span style="color: #FFF; background: #000; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; padding: 0; line-height: 1;">═</span><span style="color: #FFF; background: #000; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; padding: 0; line-height: 1;">╗</span><span style="color: #FFF; background: #000; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; padding: 0; line-height: 1;">╝</span><span style="color: #FFF; background: #000; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; padding: 0; line-height: 1;">╚</span><span style="color: #FFF; background: #000; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; padding: 0; line-height: 1;">╔</span><span style="color: #FFF; background: #000; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; padding: 0; line-height: 1;">╩</span> and ends in a tile with <span style="color: #FFF; background: #000; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; padding: 0; line-height: 1;">╨</span><span style="color: #FFF; background: #000; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; padding: 0; line-height: 1;">╥</span><span style="color: #FFF; background: #000; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; padding: 0; line-height: 1;">╡</span><span style="color: #FFF; background: #000; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; padding: 0; line-height: 1;">╞</span>.  Minecarts <span style="color: #FFF; background: #000; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; padding: 0; line-height: 1;">■</span> are accelerated by rollers to the east <span style="color: #FFF; background: #000; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; padding: 0; line-height: 1;">╟</span> west <span style="color: #FFF; background: #000; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; padding: 0; line-height: 1;">╢</span> north <span style="color: #FFF; background: #000; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; padding: 0; line-height: 1;">╧</span> or south <span style="color: #FFF; background: #000; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; padding: 0; line-height: 1;">╤</span> and decelerated by track stops <span style="color: #FFF; background: #000; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; padding: 0; line-height: 1;">≡</span>.  Rollers are controlled via <a href="/index.php/Gear_assembly" title="Gear assembly">gear assemblies</a>, either engaged <span style="color: #FFF; background: #000; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; padding: 0; line-height: 1;">☼</span> or disengaged <span style="color: #777; background: #000; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; padding: 0; line-height: 1;">☼</span>, typically connected to sufficient <a href="/index.php/Power" title="Power">power</a> <span style="color: #0F0; background: #000; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; padding: 0; line-height: 1;">P</span>.  <a href="/index.php/Pressure_plate" title="Pressure plate">Pressure plates</a> <span style="color: #FFF; background: #000; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; padding: 0; line-height: 1;">^</span> provide output and, in some cases, modulate the circuit itself.  Up <span style="color: #FFF; background: #000; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; padding: 0; line-height: 1;">▲</span> and down <span style="color: #FFF; background: #000; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; padding: 0; line-height: 1;">▼</span> ramps may be necessary to travel z-levels or alter minecart velocity; they may be roofed or covered with empty space <span style="color: #0FF; background: #000; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; padding: 0; line-height: 1;">.</span> in some views.  <a href="/index.php/Hatch" class="mw-redirect" title="Hatch">Hatches</a> <span style="color: #FFF; background: #000; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; padding: 0; line-height: 1;">¢</span> and retractable <a href="/index.php/Bridge" title="Bridge">bridges</a> <span style="color: #000; background: #CCC; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; padding: 0; line-height: 1;">╬</span> are commonly used to control the path of minecarts.  Where necessary, clarification can be found in the descriptions of each circuit.
+</p>
+<h3><span class="mw-headline" id="Power_to_signal">Power to signal</span></h3>
+<table style="border-spacing: 0; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-size: 135%; font-weight: bold; color:#C0C0C0; background:#000; line-height:.98em;">
+
+<tbody><tr>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">O
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">O
+</td></tr>
+<tr>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">╥
+</td>
+<td style="padding:0;color:;background:;width:.63em;">,
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">╤
+</td>
+<td style="padding:0;color:;background:;width:.63em;">☼
+</td></tr>
+<tr>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">║
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:#F0F;background:;width:.63em;">^
+</td>
+<td style="padding:0;color:#0F0;background:;width:.63em;">P
+</td></tr>
+<tr>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">╨
+</td>
+<td style="padding:0;color:;background:;width:.63em;">,
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">╧
+</td>
+<td style="padding:0;color:;background:;width:.63em;">☼
+</td></tr>
+<tr>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">O
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">O
+</td></tr>
+<tr>
+<td style="padding:0;color:;background:;width:.63em;">t
+</td>
+<td style="padding:0;color:;background:;width:.63em;">r
+</td>
+<td style="padding:0;color:;background:;width:.63em;">a
+</td>
+<td style="padding:0;color:;background:;width:.63em;">c
+</td>
+<td style="padding:0;color:;background:;width:.63em;">k
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">f
+</td>
+<td style="padding:0;color:;background:;width:.63em;">u
+</td>
+<td style="padding:0;color:;background:;width:.63em;">r
+</td>
+<td style="padding:0;color:;background:;width:.63em;">n
+</td>
+<td style="padding:0;color:;background:;width:.63em;">i
+</td>
+<td style="padding:0;color:;background:;width:.63em;">t
+</td>
+<td style="padding:0;color:;background:;width:.63em;">u
+</td>
+<td style="padding:0;color:;background:;width:.63em;">r
+</td>
+<td style="padding:0;color:;background:;width:.63em;">e
+</td></tr></tbody></table>
+<p><br />
+In this, the simplest of all designs, the output plate sends an <b>on</b> signal when the gear assemblies <span style="color: #FFF; background: #000; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; padding: 0; line-height: 1;">☼</span> are powered <span style="color: #0F0; background: #000; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; padding: 0; line-height: 1;">P</span>.  When power is lost, the minecart settles onto either the northern or southern roller spaces, and the output plate sends an <b>off</b> signal.
+</p><p>This device is very general purpose.  Left as an exercise for the reader, alternate construction can result in edge detection or in a <a href="/index.php/Repeater" title="Repeater">repeater</a> design.
+</p>
+<h3><span id="Newton's_Cradle_Memory"></span><span class="mw-headline" id="Newton.27s_Cradle_Memory">Newton's Cradle Memory</span></h3>
+<table style="border-spacing: 0; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-size: 135%; font-weight: bold; color:#C0C0C0; background:#000; line-height:.98em;">
+
+<tbody><tr>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">O
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">O
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">O
+</td></tr>
+<tr>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">╥
+</td>
+<td style="padding:0;color:;background:;width:.63em;">,
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">╤
+</td>
+<td style="padding:0;color:#0C0;background:;width:.63em;">☼
+</td>
+<td style="padding:0;color:#0F0;background:;width:.63em;">P
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:#000;background:#0f0;width:.63em;">■
+</td>
+<td style="padding:0;color:#0C0;background:;width:.63em;">☼
+</td>
+<td style="padding:0;color:#0F0;background:;width:.63em;">P
+</td></tr>
+<tr>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">║
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">║
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">║
+</td></tr>
+<tr>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">║
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:#F0F;background:;width:.63em;">^
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:#000;background:#ff0;width:.63em;">■
+</td></tr>
+<tr>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">╨
+</td>
+<td style="padding:0;color:;background:;width:.63em;">,
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">╧
+</td>
+<td style="padding:0;color:#CC0;background:;width:.63em;">☼
+</td>
+<td style="padding:0;color:#0F0;background:;width:.63em;">P
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">╧
+</td>
+<td style="padding:0;color:#CC0;background:;width:.63em;">☼
+</td>
+<td style="padding:0;color:#0F0;background:;width:.63em;">P
+</td></tr>
+<tr>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">O
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">O
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">O
+</td></tr>
+<tr>
+<td style="padding:0;color:;background:;width:.63em;">t
+</td>
+<td style="padding:0;color:;background:;width:.63em;">r
+</td>
+<td style="padding:0;color:;background:;width:.63em;">a
+</td>
+<td style="padding:0;color:;background:;width:.63em;">c
+</td>
+<td style="padding:0;color:;background:;width:.63em;">k
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">f
+</td>
+<td style="padding:0;color:;background:;width:.63em;">u
+</td>
+<td style="padding:0;color:;background:;width:.63em;">r
+</td>
+<td style="padding:0;color:;background:;width:.63em;">n
+</td>
+<td style="padding:0;color:;background:;width:.63em;">i
+</td>
+<td style="padding:0;color:;background:;width:.63em;">t
+</td>
+<td style="padding:0;color:;background:;width:.63em;">u
+</td>
+<td style="padding:0;color:;background:;width:.63em;">r
+</td>
+<td style="padding:0;color:;background:;width:.63em;">e
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">m
+</td>
+<td style="padding:0;color:;background:;width:.63em;">i
+</td>
+<td style="padding:0;color:;background:;width:.63em;">n
+</td>
+<td style="padding:0;color:;background:;width:.63em;">e
+</td>
+<td style="padding:0;color:;background:;width:.63em;">c
+</td>
+<td style="padding:0;color:;background:;width:.63em;">a
+</td>
+<td style="padding:0;color:;background:;width:.63em;">r
+</td>
+<td style="padding:0;color:;background:;width:.63em;">t
+</td></tr></tbody></table>
+<p><br />
+<a href="/index.php/User:TinyPirate" title="User:TinyPirate">TinyPirate</a>'s Newton's Cradle <a href="/index.php/Memory_(computing)" title="Memory (computing)">memory</a> cell is notable both for its small footprint and for demonstrating an important principle of minecarts.  When the northern gear assembly <span style="color: #0C0; background: #000; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; padding: 0; line-height: 1;">☼</span> is briefly engaged, the northern roller <span style="color: #FFF; background: #000; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; padding: 0; line-height: 1;">╤</span> becomes powered, launching the northern minecart <span style="color: #000; background: #0F0; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; padding: 0; line-height: 1;">■</span> into the southern minecart <span style="color: #000; background: #FF0; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; padding: 0; line-height: 1;">■</span>. The southern minecart then leaves the output plate <span style="color: #F0F; background: #000; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; padding: 0; line-height: 1;">^</span> and settles on the southern (unpowered) roller.  When the southern gear assembly is briefly engaged, the situation reverses: the southern minecart settles on the output plate, knocking the northern minecart onto the northern (unpowered) roller-- as in its original state.  A pressure plate is a practical means of briefly engaging gear assemblies. It may be desirable to extend the roller over the empty track if adventure mode use is anticipated, as pressure plates in that mode don't engage long enough to move both carts, causing it not to be set properly.
+</p>
+<h3><span class="mw-headline" id="Continuous_roller_OR">Continuous roller OR</span></h3>
+<table style="border-spacing: 0; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-size: 135%; font-weight: bold; color:#C0C0C0; background:#000; line-height:.98em;">
+
+<tbody><tr>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">╔
+</td>
+<td style="padding:0;color:;background:;width:.63em;">═
+</td>
+<td style="padding:0;color:;background:;width:.63em;">╗
+</td>
+<td style="padding:0;color:;background:;width:.63em;">═
+</td>
+<td style="padding:0;color:;background:;width:.63em;">╗
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">╔
+</td>
+<td style="padding:0;color:;background:;width:.63em;">═
+</td>
+<td style="padding:0;color:;background:;width:.63em;">╗
+</td>
+<td style="padding:0;color:;background:;width:.63em;">═
+</td>
+<td style="padding:0;color:;background:;width:.63em;">╗
+</td></tr>
+<tr>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">║
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">║
+</td>
+<td style="padding:0;color:;background:;width:.63em;">O
+</td>
+<td style="padding:0;color:;background:;width:.63em;">║
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">║
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:#F0F;background:;width:.63em;">^
+</td>
+<td style="padding:0;color:;background:;width:.63em;">O
+</td>
+<td style="padding:0;color:;background:;width:.63em;">║
+</td></tr>
+<tr>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">║
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">║
+</td>
+<td style="padding:0;color:;background:;width:.63em;">O
+</td>
+<td style="padding:0;color:;background:;width:.63em;">║
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">╤
+</td>
+<td style="padding:0;color:#0F0;background:;width:.63em;">☼
+</td>
+<td style="padding:0;color:;background:;width:.63em;">╧
+</td>
+<td style="padding:0;color:;background:;width:.63em;">O
+</td>
+<td style="padding:0;color:;background:;width:.63em;">║
+</td></tr>
+<tr>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">║
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">║
+</td>
+<td style="padding:0;color:;background:;width:.63em;">O
+</td>
+<td style="padding:0;color:;background:;width:.63em;">║
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:#0F0;background:;width:.63em;">P
+</td>
+<td style="padding:0;color:;background:;width:.63em;">╤
+</td>
+<td style="padding:0;color:#FF0;background:;width:.63em;">☼
+</td>
+<td style="padding:0;color:;background:;width:.63em;">╧
+</td>
+<td style="padding:0;color:;background:;width:.63em;">O
+</td>
+<td style="padding:0;color:;background:;width:.63em;">║
+</td></tr>
+<tr>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">╚
+</td>
+<td style="padding:0;color:;background:;width:.63em;">═
+</td>
+<td style="padding:0;color:;background:;width:.63em;">╩
+</td>
+<td style="padding:0;color:;background:;width:.63em;">═
+</td>
+<td style="padding:0;color:;background:;width:.63em;">╝
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">╚
+</td>
+<td style="padding:0;color:;background:;width:.63em;">═
+</td>
+<td style="padding:0;color:;background:;width:.63em;">╧
+</td>
+<td style="padding:0;color:;background:;width:.63em;">═
+</td>
+<td style="padding:0;color:;background:;width:.63em;">╝
+</td></tr>
+<tr>
+<td style="padding:0;color:;background:;width:.63em;">t
+</td>
+<td style="padding:0;color:;background:;width:.63em;">r
+</td>
+<td style="padding:0;color:;background:;width:.63em;">a
+</td>
+<td style="padding:0;color:;background:;width:.63em;">c
+</td>
+<td style="padding:0;color:;background:;width:.63em;">k
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">f
+</td>
+<td style="padding:0;color:;background:;width:.63em;">u
+</td>
+<td style="padding:0;color:;background:;width:.63em;">r
+</td>
+<td style="padding:0;color:;background:;width:.63em;">n
+</td>
+<td style="padding:0;color:;background:;width:.63em;">i
+</td>
+<td style="padding:0;color:;background:;width:.63em;">t
+</td>
+<td style="padding:0;color:;background:;width:.63em;">u
+</td>
+<td style="padding:0;color:;background:;width:.63em;">r
+</td>
+<td style="padding:0;color:;background:;width:.63em;">e
+</td></tr></tbody></table>
+<p><a rel="nofollow" class="external text" href="http://www.bay12forums.com/smf/index.php?topic=114923.msg3891809#msg3891809">Veylon's</a> roller OR continuously evaluates two operands via a minecart traveling counter-clockwise using principles of power transmission through single tile rollers.  Should either input <span style="color: #0F0; background: #000; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; padding: 0; line-height: 1;">☼</span> or <span style="color: #FF0; background: #000; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; padding: 0; line-height: 1;">☼</span> be engaged, power <span style="color: #0F0; background: #000; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; padding: 0; line-height: 1;">P</span> is transmitted to the southernmost, S-&gt;N roller <span style="color: #FFF; background: #000; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; padding: 0; line-height: 1;">╧</span>.  Although the minecart is left with diagonal velocity, walls prevent derailment.  When neither input is engaged, the minecart continues over the T-junction to the east, missing the output plate <span style="color: #F0F; background: #000; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; padding: 0; line-height: 1;">^</span>.
+</p>
+<h3><span class="mw-headline" id="Roller_switched_AND">Roller switched AND</span></h3>
+<table style="border-spacing: 0; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-size: 135%; font-weight: bold; color:#C0C0C0; background:#000; line-height:.98em;">
+
+<tbody><tr>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">║
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">║
+</td></tr>
+<tr>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">╔
+</td>
+<td style="padding:0;color:;background:;width:.63em;">╗
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:#0F0;background:;width:.63em;">P
+</td>
+<td style="padding:0;color:#0F0;background:;width:.63em;">╧
+</td>
+<td style="padding:0;color:;background:;width:.63em;">╗
+</td></tr>
+<tr>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">║
+</td>
+<td style="padding:0;color:;background:;width:.63em;">║
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">║
+</td>
+<td style="padding:0;color:;background:;width:.63em;">║
+</td></tr>
+<tr>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">╔
+</td>
+<td style="padding:0;color:;background:;width:.63em;">╗
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:#0F0;background:;width:.63em;">P
+</td>
+<td style="padding:0;color:#FF0;background:;width:.63em;">╧
+</td>
+<td style="padding:0;color:;background:;width:.63em;">╗
+</td></tr>
+<tr>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">║
+</td>
+<td style="padding:0;color:;background:;width:.63em;">║
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:#F0F;background:;width:.63em;">^
+</td>
+<td style="padding:0;color:;background:;width:.63em;">║
+</td></tr>
+<tr>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">╚
+</td>
+<td style="padding:0;color:;background:;width:.63em;">╗
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">╚
+</td>
+<td style="padding:0;color:;background:;width:.63em;">╗
+</td></tr>
+<tr>
+<td style="padding:0;color:;background:;width:.63em;">t
+</td>
+<td style="padding:0;color:;background:;width:.63em;">r
+</td>
+<td style="padding:0;color:;background:;width:.63em;">a
+</td>
+<td style="padding:0;color:;background:;width:.63em;">c
+</td>
+<td style="padding:0;color:;background:;width:.63em;">k
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">f
+</td>
+<td style="padding:0;color:;background:;width:.63em;">u
+</td>
+<td style="padding:0;color:;background:;width:.63em;">r
+</td>
+<td style="padding:0;color:;background:;width:.63em;">n
+</td>
+<td style="padding:0;color:;background:;width:.63em;">i
+</td>
+<td style="padding:0;color:;background:;width:.63em;">t
+</td>
+<td style="padding:0;color:;background:;width:.63em;">u
+</td>
+<td style="padding:0;color:;background:;width:.63em;">r
+</td>
+<td style="padding:0;color:;background:;width:.63em;">e
+</td></tr></tbody></table>
+<p><a href="/index.php/User:Larix" title="User:Larix">Larix</a>'s roller-switched AND takes advantage of the behavior of rollers to avoid troublesome diagonal velocity.  It is potentially confusing both for the counter-intuitive direction of its rollers as well as the way that rollers respond to signals.  When the minecart encounters either activated (that is, the last signal received was an <b>off</b>) S-&gt;N roller <span style="color: #FF0; background: #000; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; padding: 0; line-height: 1;">╧</span> or <span style="color: #0F0; background: #000; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; padding: 0; line-height: 1;">╧</span>, its velocity is completely rewritten and reversed, sending it onto the alternate (clockwise) path.  Should neither roller be activated (that is, the last signal received by both was an <b>on</b>), the track bends will be ignored and the minecart will travel directly south, over the output plate <span style="color: #F0F; background: #000; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; padding: 0; line-height: 1;">^</span>.
+</p>
+<h3><span class="mw-headline" id="Resetting_bridge-derailment_AND">Resetting bridge-derailment AND</span></h3>
+<table style="border-spacing: 0; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-size: 135%; font-weight: bold; color:#C0C0C0; background:#000; line-height:.98em;">
+
+<tbody><tr>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">O
+</td>
+<td style="padding:0;color:#0FF;background:;width:.63em;">.
+</td>
+<td style="padding:0;color:;background:;width:.63em;">═
+</td>
+<td style="padding:0;color:#0FF;background:;width:.63em;">.
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">O
+</td>
+<td style="padding:0;color:;background:;width:.63em;">▼
+</td>
+<td style="padding:0;color:;background:;width:.63em;">═
+</td>
+<td style="padding:0;color:;background:;width:.63em;">▼
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">O
+</td>
+<td style="padding:0;color:#FF0;background:;width:.63em;">¢
+</td>
+<td style="padding:0;color:;background:;width:.63em;">═
+</td>
+<td style="padding:0;color:;background:;width:.63em;">▼
+</td></tr>
+<tr>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td></tr>
+<tr>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td></tr>
+<tr>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td></tr>
+<tr>
+<td style="padding:0;color:;background:;width:.63em;">t
+</td>
+<td style="padding:0;color:;background:;width:.63em;">r
+</td>
+<td style="padding:0;color:;background:;width:.63em;">a
+</td>
+<td style="padding:0;color:;background:;width:.63em;">c
+</td>
+<td style="padding:0;color:;background:;width:.63em;">k
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">r
+</td>
+<td style="padding:0;color:;background:;width:.63em;">a
+</td>
+<td style="padding:0;color:;background:;width:.63em;">m
+</td>
+<td style="padding:0;color:;background:;width:.63em;">p
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">f
+</td>
+<td style="padding:0;color:;background:;width:.63em;">u
+</td>
+<td style="padding:0;color:;background:;width:.63em;">r
+</td>
+<td style="padding:0;color:;background:;width:.63em;">n
+</td>
+<td style="padding:0;color:;background:;width:.63em;">i
+</td>
+<td style="padding:0;color:;background:;width:.63em;">t
+</td>
+<td style="padding:0;color:;background:;width:.63em;">u
+</td>
+<td style="padding:0;color:;background:;width:.63em;">r
+</td>
+<td style="padding:0;color:;background:;width:.63em;">e
+</td></tr>
+<tr>
+<td style="padding:0;color:;background:;width:.63em;">z
+</td>
+<td style="padding:0;color:;background:;width:.63em;">+
+</td>
+<td style="padding:0;color:;background:;width:.63em;">1
+</td></tr>
+<tr>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">O
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">O
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">O
+</td></tr>
+<tr>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">O
+</td>
+<td style="padding:0;color:;background:;width:.63em;">╔
+</td>
+<td style="padding:0;color:;background:;width:.63em;">O
+</td>
+<td style="padding:0;color:;background:;width:.63em;">╗
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">O
+</td>
+<td style="padding:0;color:;background:;width:.63em;">▲
+</td>
+<td style="padding:0;color:;background:;width:.63em;">O
+</td>
+<td style="padding:0;color:;background:;width:.63em;">▲
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">O
+</td>
+<td style="padding:0;color:;background:;width:.63em;">▲
+</td>
+<td style="padding:0;color:;background:;width:.63em;">O
+</td>
+<td style="padding:0;color:;background:;width:.63em;">▲
+</td></tr>
+<tr>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">╚
+</td>
+<td style="padding:0;color:;background:;width:.63em;">═
+</td>
+<td style="padding:0;color:;background:;width:.63em;">╚
+</td>
+<td style="padding:0;color:;background:;width:.63em;">O
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">╚
+</td>
+<td style="padding:0;color:;background:;width:.63em;">═
+</td>
+<td style="padding:0;color:;background:;width:.63em;">▲
+</td>
+<td style="padding:0;color:;background:;width:.63em;">O
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:#0f0;background:;width:.63em;">╬
+</td>
+<td style="padding:0;color:#F0F;background:;width:.63em;">^
+</td>
+<td style="padding:0;color:;background:;width:.63em;">▲
+</td>
+<td style="padding:0;color:;background:;width:.63em;">O
+</td></tr>
+<tr>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">╚
+</td>
+<td style="padding:0;color:;background:;width:.63em;">═
+</td>
+<td style="padding:0;color:;background:;width:.63em;">╝
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">╚
+</td>
+<td style="padding:0;color:;background:;width:.63em;">═
+</td>
+<td style="padding:0;color:;background:;width:.63em;">╝
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">╚
+</td>
+<td style="padding:0;color:;background:;width:.63em;">═
+</td>
+<td style="padding:0;color:;background:;width:.63em;">╝
+</td></tr>
+<tr>
+<td style="padding:0;color:;background:;width:.63em;">t
+</td>
+<td style="padding:0;color:;background:;width:.63em;">r
+</td>
+<td style="padding:0;color:;background:;width:.63em;">a
+</td>
+<td style="padding:0;color:;background:;width:.63em;">c
+</td>
+<td style="padding:0;color:;background:;width:.63em;">k
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">r
+</td>
+<td style="padding:0;color:;background:;width:.63em;">a
+</td>
+<td style="padding:0;color:;background:;width:.63em;">m
+</td>
+<td style="padding:0;color:;background:;width:.63em;">p
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">f
+</td>
+<td style="padding:0;color:;background:;width:.63em;">u
+</td>
+<td style="padding:0;color:;background:;width:.63em;">r
+</td>
+<td style="padding:0;color:;background:;width:.63em;">n
+</td>
+<td style="padding:0;color:;background:;width:.63em;">i
+</td>
+<td style="padding:0;color:;background:;width:.63em;">t
+</td>
+<td style="padding:0;color:;background:;width:.63em;">u
+</td>
+<td style="padding:0;color:;background:;width:.63em;">r
+</td>
+<td style="padding:0;color:;background:;width:.63em;">e
+</td></tr>
+<tr>
+<td style="padding:0;color:;background:;width:.63em;">z
+</td>
+<td style="padding:0;color:;background:;width:.63em;">+
+</td>
+<td style="padding:0;color:;background:;width:.63em;">0
+</td></tr></tbody></table>
+<p>Walls to the east of the gate are for preventing derailment of minecart. 
+</p><p>When both the yellow hatch <span style="color: #FF0; background: #000; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; padding: 0; line-height: 1;">¢</span> and the green retractable bridge <span style="color: #000; background: #0F0; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; padding: 0; line-height: 1;">╬</span> are open, minecarts on this circuit make a continuous loop, triggering the output plate <span style="color: #F0F; background: #000; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; padding: 0; line-height: 1;">^</span>.  If either is closed, the plate is never activated.  If the bridge is closed, the minecart derails to the southern path, avoiding the plate.  If the hatch is closed, the minecart is unable to drop into the northwest ramp, and so sits on the upper, northwestern tile until the hatch opens.
+</p><p>There are many concerns when using a gate like this.  Minecarts can be flung when a bridge changes state underneath them (if this happens, minecart seem to gain speed at random direction which can derail or slow down or even stop the minecart), and unfortunately, hatch covers cannot provide the same derailment effect on flat track.  Additionally, because your minecart never evaluates both operands at exactly the same moment, it's possible for this gate to output when neither operand is actually true (i.e., last received an <b>on</b> signal) at the same moment (it's usually not a very big trouble though, as the delay between minecart stepping on hatch and bridge is around 8 steps).
+</p><p>It's not always a problem, but this behavior is common to AND gates.  Paradoxically, one solution is to moderate your inputs via an extra AND gate; this design shows how that can be done.  When a large number of circuits such as that shown are created and the hatches of all of them are linked to a single lever, a quick flick (on and off) of that lever can guarantee that all of your circuits fire at the same time-- that is, that all of your inputs for the next computation change state simultaneously.  The minecarts then return to their position atop the hatches, ready for another flick of your clock lever.
+</p><p>Worth noting, as well, is the central eastern impulse ramp that allows the minecart to maintain enough velocity to complete this circuit.  Impulse ramps like this can be used to make unpowered gates.  However, their behavior is unintuitive, and they should only be used with extreme caution.
+</p>
+<h3><span class="mw-headline" id="MPL_NOT">MPL NOT</span></h3>
+<table style="border-spacing: 0; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-size: 135%; font-weight: bold; color:#C0C0C0; background:#000; line-height:.98em;">
+
+<tbody><tr>
+<td style="padding:0;color:;background:;width:.63em;">
+</td></tr>
+<tr>
+<td style="padding:0;color:;background:;width:.63em;">O
+</td>
+<td style="padding:0;color:;background:;width:.63em;">,
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">O
+</td>
+<td style="padding:0;color:;background:;width:.63em;">,
+</td></tr>
+<tr>
+<td style="padding:0;color:;background:;width:.63em;">t
+</td>
+<td style="padding:0;color:;background:;width:.63em;">r
+</td>
+<td style="padding:0;color:;background:;width:.63em;">a
+</td>
+<td style="padding:0;color:;background:;width:.63em;">c
+</td>
+<td style="padding:0;color:;background:;width:.63em;">k
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">r
+</td>
+<td style="padding:0;color:;background:;width:.63em;">a
+</td>
+<td style="padding:0;color:;background:;width:.63em;">m
+</td>
+<td style="padding:0;color:;background:;width:.63em;">p
+</td></tr>
+<tr>
+<td style="padding:0;color:;background:;width:.63em;">z
+</td>
+<td style="padding:0;color:;background:;width:.63em;">+
+</td>
+<td style="padding:0;color:;background:;width:.63em;">2
+</td></tr>
+<tr>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">╔
+</td>
+<td style="padding:0;color:;background:;width:.63em;">═
+</td>
+<td style="padding:0;color:;background:;width:.63em;">╗
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">╔
+</td>
+<td style="padding:0;color:;background:;width:.63em;">═
+</td>
+<td style="padding:0;color:;background:;width:.63em;">╗
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">╔
+</td>
+<td style="padding:0;color:;background:;width:.63em;">═
+</td>
+<td style="padding:0;color:;background:;width:.63em;">╗
+</td></tr>
+<tr>
+<td style="padding:0;color:;background:;width:.63em;">O
+</td>
+<td style="padding:0;color:;background:;width:.63em;">═
+</td>
+<td style="padding:0;color:;background:;width:.63em;">═
+</td>
+<td style="padding:0;color:#0FF;background:;width:.63em;">.
+</td>
+<td style="padding:0;color:#0FF;background:;width:.63em;">.
+</td>
+<td style="padding:0;color:;background:;width:.63em;">╝
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">O
+</td>
+<td style="padding:0;color:;background:;width:.63em;">▲
+</td>
+<td style="padding:0;color:;background:;width:.63em;">═
+</td>
+<td style="padding:0;color:;background:;width:.63em;">▼
+</td>
+<td style="padding:0;color:;background:;width:.63em;">▼
+</td>
+<td style="padding:0;color:;background:;width:.63em;">╝
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">O
+</td>
+<td style="padding:0;color:;background:;width:.63em;">▲
+</td>
+<td style="padding:0;color:#F0F;background:;width:.63em;">^
+</td>
+<td style="padding:0;color:;background:;width:.63em;">▼
+</td>
+<td style="padding:0;color:#0F0;background:;width:.63em;">¢
+</td>
+<td style="padding:0;color:;background:;width:.63em;">╝
+</td></tr>
+<tr>
+<td style="padding:0;color:;background:;width:.63em;">t
+</td>
+<td style="padding:0;color:;background:;width:.63em;">r
+</td>
+<td style="padding:0;color:;background:;width:.63em;">a
+</td>
+<td style="padding:0;color:;background:;width:.63em;">c
+</td>
+<td style="padding:0;color:;background:;width:.63em;">k
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">r
+</td>
+<td style="padding:0;color:;background:;width:.63em;">a
+</td>
+<td style="padding:0;color:;background:;width:.63em;">m
+</td>
+<td style="padding:0;color:;background:;width:.63em;">p
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">f
+</td>
+<td style="padding:0;color:;background:;width:.63em;">u
+</td>
+<td style="padding:0;color:;background:;width:.63em;">r
+</td>
+<td style="padding:0;color:;background:;width:.63em;">n
+</td>
+<td style="padding:0;color:;background:;width:.63em;">i
+</td>
+<td style="padding:0;color:;background:;width:.63em;">t
+</td>
+<td style="padding:0;color:;background:;width:.63em;">u
+</td>
+<td style="padding:0;color:;background:;width:.63em;">r
+</td>
+<td style="padding:0;color:;background:;width:.63em;">e
+</td></tr>
+<tr>
+<td style="padding:0;color:;background:;width:.63em;">z
+</td>
+<td style="padding:0;color:;background:;width:.63em;">+
+</td>
+<td style="padding:0;color:;background:;width:.63em;">1
+</td></tr>
+<tr>
+<td style="padding:0;color:;background:;width:.63em;">
+</td></tr>
+<tr>
+<td style="padding:0;color:;background:;width:.63em;">O
+</td>
+<td style="padding:0;color:;background:;width:.63em;">O
+</td>
+<td style="padding:0;color:;background:;width:.63em;">O
+</td>
+<td style="padding:0;color:;background:;width:.63em;">═
+</td>
+<td style="padding:0;color:;background:;width:.63em;">═
+</td>
+<td style="padding:0;color:;background:;width:.63em;">O
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">O
+</td>
+<td style="padding:0;color:;background:;width:.63em;">O
+</td>
+<td style="padding:0;color:;background:;width:.63em;">O
+</td>
+<td style="padding:0;color:;background:;width:.63em;">▲
+</td>
+<td style="padding:0;color:;background:;width:.63em;">▲
+</td>
+<td style="padding:0;color:;background:;width:.63em;">O
+</td></tr>
+<tr>
+<td style="padding:0;color:;background:;width:.63em;">t
+</td>
+<td style="padding:0;color:;background:;width:.63em;">r
+</td>
+<td style="padding:0;color:;background:;width:.63em;">a
+</td>
+<td style="padding:0;color:;background:;width:.63em;">c
+</td>
+<td style="padding:0;color:;background:;width:.63em;">k
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">
+</td>
+<td style="padding:0;color:;background:;width:.63em;">r
+</td>
+<td style="padding:0;color:;background:;width:.63em;">a
+</td>
+<td style="padding:0;color:;background:;width:.63em;">m
+</td>
+<td style="padding:0;color:;background:;width:.63em;">p
+</td></tr>
+<tr>
+<td style="padding:0;color:;background:;width:.63em;">z
+</td>
+<td style="padding:0;color:;background:;width:.63em;">+
+</td>
+<td style="padding:0;color:;background:;width:.63em;">0
+</td></tr></tbody></table>
+<p>Larix's <a href="/index.php/User:Larix/MPL/2" title="User:Larix/MPL/2">powerless logic gates</a> avoid the reliability and latency issues that plague many minecart designs through the use of paired impulse ramps and hatches that control not just path, but direction of movement.  A minecart traveling the pictured circuit while the input hatch <span style="color: #0F0; background: #000; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; padding: 0; line-height: 1;">¢</span> is open will settle into a counter-clockwise path, regardless of the direction of its initial velocity.  Yet when the hatch becomes closed, the minecart cannot travel counter-clockwise, but instead is accelerated in the clockwise direction, onto the output plate <span style="color: #F0F; background: #000; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; padding: 0; line-height: 1;">^</span>.  It will then oscillate between the far east and far west ramps until the hatch is opened, at which point it will resume counter-clockwise motion.
+</p><p>Use of ramps with high-velocity minecarts may necessitate ceilings as demonstrated on z+2.  The exact nature of the ceiling (floor, wall) is unimportant.  Some diagrammed walls are unnecessary for the design and are drawn to help the reader in orientation.
+</p>
+<h3><span class="mw-headline" id="Other_techniques_and_gates">Other techniques and gates</span></h3>
+<p>Any logic gate can be made with a combination of those shown.  NAND, for instance, is NOT AND; XOR is OR AND (NOT AND).  Clocks and edge detection are suggested and proven designs exist, if not on this page.  But the examples above were chosen for the disparate techniques they demonstrate.  The interested reader is encouraged to further research, or the design of his or her own gates.
+</p><p>Doors can be used to block the travel of a minecart through a circuit, or to prevent derailment, although for reliability's sake, care needs to be taken that the door cannot change state while the minecart is in motion, or it may jam on top of the minecart.  <a href="/index.php/Floodgate" title="Floodgate">Floodgates</a> won't jam in this fashion, although they do introduce some latency.  Minecarts of multiple weights, with pressure plates that trigger only on the weight of one, may be used in certain designs; Bloodbeard's fantastically tiny <a rel="nofollow" class="external text" href="http://www.bay12forums.com/smf/index.php?topic=114923.msg3532411#msg3532411">load-adjusted memory cell</a> is a good example.  Rollers can be used perpendicularly to a track to derail a cart and impart diagonal velocity.  Switchable track stops can prevent or permit derailment.  The possibilities are far from exhausted-- and that's assuming one is only interested in <i>practical</i> techniques.
+</p>
+<h2><span class="mw-headline" id="Integration_with_other_disciplines">Integration with other disciplines</span></h2>
+<p>There's no reason minecart logic needs to be used in isolation. Combining it with other logical disciplines allows one to use each where it is strong, and avoid each where it is weak.
+</p>
+<h3><span class="mw-headline" id="Mechanical_logic">Mechanical logic</span></h3>
+<p>This is the most obvious choice. <a href="/index.php/Mechanical_logic" title="Mechanical logic">Mechanical logic</a> offers the potential for incredible speed, yet requires a medium to generate useful signals or to create delay (hence, to create repeaters), and it's hard to use gear assemblies as memory cells. Minecart logic excels at precisely these tasks. Minecart-based power-to-signal and memory are tiny and fast. Minecart-based delay is precisely tunable. The superiority of minecart logic has made water obsolete for these purposes.
+</p>
+<h3><span class="mw-headline" id="Creature_logic">Creature logic</span></h3>
+<p>Minecart logic, particularly Larix's powerless MPL logic, has replaced <a href="/index.php/Creature_logic" title="Creature logic">creature logic</a> as the logic-of-last-resort (for when power and fluid are unavailable) or first-resort (for when computation is desired before power can be set up or fluid accessed). However, for the borg logic hobbyist, integration with minecarts suggests interesting possibilities. It is difficult to imagine a simpler clock than a minecart with a "push always after x days" condition, and guided minecarts offer unprecedented control over the path of <a href="/index.php/Dwarf" title="Dwarf">dwarves</a>.
+</p>
+<h3><span class="mw-headline" id="Fluid_logic">Fluid logic</span></h3>
+<p>Minecart logic outperforms <a href="/index.php/Fluid_logic" title="Fluid logic">fluid logic</a> sufficiently to have mostly replaced it. However, the problem of automated fluid delivery may be best solved through some fluid logic techniques, and may suggest some <a href="/index.php/Stupid_dwarf_trick" title="Stupid dwarf trick">stupid dwarf tricks</a> for those that want to use the fluid capacity of minecarts to compute.
+</p>
+<h2><span class="mw-headline" id="See_also">See also</span></h2>
+<ul><li>BloodBeard's <a rel="nofollow" class="external text" href="http://www.bay12forums.com/smf/index.php?topic=114923.0">Minecart Dwarfputing Ideas</a> thread.</li>
+<li>TinyPirate's <a rel="nofollow" class="external text" href="http://youtu.be/qgfDPZbdI0A">Minecart Logic 101</a> instructional video.</li>
+<li><a href="/index.php/User:Larix/MPL" title="User:Larix/MPL">Powerless logic</a> based on hatch-switched minecarts. <a href="/index.php/User:Larix/MPL/2" title="User:Larix/MPL/2">Logic gates</a> built under this design doctrine.</li></ul></div>

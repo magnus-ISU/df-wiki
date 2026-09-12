@@ -1,0 +1,285 @@
+{{Quality|Exceptional}}
+{{av}}
+[[File:metal_sprites_preview.png|right]]'''Metal''' is a [[material]] extracted from [[ore]] at a [[smelter]], turning the ore into '''[[Bar|bars]]''' of pure metal. (One [[adamantine|special metal]] becomes wafers instead of bars.) The metal bars resulting from [[smelting]] are used to make items such as [[weapon]]s, [[armor]], [[furniture]], and [[crafts]] at a [[Metalsmith's forge|forge]].
+
+Metals may sometimes be combined to form an '''alloy''' metal ([[#Alloys|see below]]), which is also measured by the bar. An alloy usually improves on the properties of its components to give more uses or increased [[Item value|value]].
+
+Smelting pure ores into the corresponding bars raises the base value from that of stone (3) to that of bars (5). This value is then multiplied against the [[value#Material multipliers|material multiplier]] of the metal to give the final value for the bar.
+
+==Alloys==
+There are eleven pure metals in ''Dwarf Fortress'', plus a twelfth [[Adamantine|special metal]], many of which can be mixed together to create another fourteen '''alloys''' of one type or another.  In some cases, making alloys will result in an overall increase in value, or the resultant alloy will be more powerful when used to forge weapons or armor, though many alloys result in no overall increase in utility or [[Wealth|created wealth]]. (These increases in value can be compared in the "Difference" column of the table below.)
+
+There are many uses for alloys:
+* Increased performance for armor or weapons.
+* Increased value (particularly when a silver-bearing ore is substituted for silver)
+* Stretching your supply of scarce metals.
+* Creating items with distinct colors (for instance, [[rose gold]] is [[Color scheme|magenta]]) for furniture, color-coding rooms or levers, or artistic constructions (including [[floor]] mosaics).
+* Increasing [[thought|happiness]] or perceived [[room value]] for a dwarf who particularly likes a given alloy.
+* Decreased [[fuel]] consumption if making the alloy directly from ores (e.g. [[bronze]] requires only one smelter task to make 8 bars from 2 stones of ore).
+
+The number of bars used to create an alloy always equals the number of bars produced: the number of bars input equals the number of bars of output.  However, the number of bars produced from smelting ores is four times greater (X ores in = 4X bars out).
+
+== List of metals ==
+
+===Pure metals===
+
+{{v50 pure metal table head}}
+
+{{V50 metal table row|name=Aluminum|color-ascii={{Tile|≡|7:1}}{{Tile|‼|7:7:1}}<span style="display:none">7:7:1</span>|color-tileset=AluminumSwatch.png|source=[[Native aluminum]]|notes=|soliddensity=2.70|mp=11188|val=40|valinc=+0|impactyield=1.08|impactfracture=1.08|impactelasticity=1421|shearyield=20|shearfracture=50|shearelasticity=77
+}}
+
+{{V50 metal table row|name=Bismuth|color-ascii={{Tile|≡|5:1}}{{Tile|‼|5:5:1}}<span style="display:none">5:5:1</span>|color-tileset=Bismuth Swatch.png|source=[[Bismuthinite]]|notes=Only useful for alloying into [[bismuth bronze]]|soliddensity=9.78|mp=10488|val=2|valinc=+1|impactyield=1.08|impactfracture=1.08|impactelasticity=3484|shearyield=30|shearfracture=50|shearelasticity=250
+}}
+
+{{V50 metal table row|name=Copper|color-ascii={{Tile|≡|6:0}}{{Tile|‼|6:4:0}}<span style="display:none">6:4:0</span>|color-tileset=Copper Swatch.png|source=[[Native copper]], [[Malachite]], [[Tetrahedrite]]|notes=Can be used to forge all weapons, armor, ammunition, and picks|soliddensity=8.93|mp=11952|val=2|valinc=+0, +0, -1*|impactyield=1.08|impactfracture=1.08|impactelasticity=771|shearyield=70|shearfracture=220|shearelasticity=145
+}}
+
+{{V50 metal table row|name=Gold|color-ascii={{Tile|≡|6:1}}{{Tile|‼|6:6:1}}<span style="display:none">6:6:1</span>|color-tileset=Gold Swatch.png|source=[[Native gold]]|notes=|soliddensity=19.32|mp=11915|val=30|valinc=+0|impactyield=1.08|impactfracture=1.08|impactelasticity=600|shearyield=50|shearfracture=100|shearelasticity=185
+}}
+
+{{V50 metal table row|name=Iron|color-ascii={{Tile|≡|0:1}}{{Tile|‼|0:7:1}}<span style="display:none">0:7:1</span>|color-tileset=Iron Swatch.png|source=[[Hematite]], [[Limonite]], [[Magnetite]]|notes=Can be used to forge all weapons, armor, ammunition, picks, and [[anvil]]s|soliddensity=7.85|mp=12768|val=10|valinc=+2|impactyield=1.08|impactfracture=1.08|impactelasticity=635|shearyield=130|shearfracture=200|shearelasticity=159
+}}
+
+{{V50 metal table row|name=Lead|color-ascii={{Tile|≡|0:1}}{{Tile|‼|0:7:1}}<span style="display:none">0:7:1</span>|color-tileset=Lead Swatch.png|source=[[Galena]]|notes=|soliddensity=11.34|mp=10589|val=2|valinc=-3*|impactyield=1.08|impactfracture=1.08|impactelasticity=2348|shearyield=10|shearfracture=12|shearelasticity=179
+}}
+
+{{V50 metal table row|name=Nickel|color-ascii={{Tile|≡|7:0}}{{Tile|‼|7:3:0}}<span style="display:none">7:3:0</span>|color-tileset=Nickel Swatch.png|source=[[Garnierite]]|notes=|soliddensity=8.80|mp=12619|val=2|valinc=+0|impactyield=1.08|impactfracture=1.08|impactelasticity=660|shearyield=20|shearfracture=160|shearelasticity=26
+}}
+
+{{V50 metal table row|name=Platinum|color-ascii={{Tile|≡|7:1}}{{Tile|‼|7:7:1}}<span style="display:none">7:7:1</span>|color-tileset=Platinum Swatch.png|source=[[Native platinum]]|notes=|soliddensity=21.40|mp=13182|val=40|valinc=+0|impactyield=1.08|impactfracture=1.08|impactelasticity=470|shearyield=100|shearfracture=200|shearelasticity=164
+}}
+
+{{V50 metal table row|name=Silver|color-ascii={{Tile|≡|7:1}}{{Tile|‼|7:7:1}}<span style="display:none">7:7:1</span>|color-tileset=Silver Swatch.png|source=[[Native silver]], [[Horn silver]],<br />[[Galena]] (50%), [[Tetrahedrite]] (20%) |notes=Can be used to forge melee weapons and ammunition|soliddensity=10.49|mp=11731|val=10|valinc=+0, +0,<br />+5*, +7*|impactyield=1.08|impactfracture=1.08|impactelasticity=1080|shearyield=100|shearfracture=170|shearelasticity=333
+}}
+
+{{V50 metal table row|name=Tin|color-ascii={{Tile|≡|7:0}}{{Tile|‼|7:3:0}}<span style="display:none">7:3:0</span>|color-tileset=Tin Swatch.png|source=[[Cassiterite]]|notes=|soliddensity=7.28|mp=10417|val=2|valinc=+0|impactyield=1.08|impactfracture=1.08|impactelasticity=1862|shearyield=12|shearfracture=100|shearelasticity=66
+}}
+
+{{V50 metal table row|name=Zinc|color-ascii={{Tile|≡|7:0}}{{Tile|‼|7:3:0}}<span style="display:none">7:3:0</span>|color-tileset=Zinc Swatch.png|source=[[Sphalerite]]|notes=|soliddensity=7.13|mp=10755|val=2|valinc=+0|impactyield=1.08|impactfracture=1.08|impactelasticity=1542|shearyield=50|shearfracture=150|shearelasticity=116
+}}
+
+|}
+''Legend:''
+:* '''Tile Color''' corresponds to how items made from that metal are displayed in game, foreground and background colors.
+:*'''Source Ore(s)''' indicates the specific ores that can provide a metal. If production of the metal is not guaranteed, a percent chance is indicated following the ore.
+:*'''Density''' is used to determine the different weight of finished objects.
+:*'''Melting point''' is used to determine if a material is [[magma-safe]] or not: magma is 12000°U.
+:*'''[[Material value]]''' is what the base value of an object made of this metal is multiplied by to determine its worth.
+:*'''Value difference''' indicates the difference in material value between the metal and the ore, separated with commas in cases where multiple ore values differ. Also keep in mind that multiple bars are produced for each ore boulder smelted, increasing the value difference even further.
+::'''*''' - Values marked with an asterisk denote ores that can yield multiple metals. On average, the expected difference in value from smelting [[tetrahedrite]] is +1 and [[galena]] is +2.
+
+===Alloys===
+''(Unless specified, ores of the ingredients may be used instead of bars for alloy reactions)''
+{{v50 alloy metal table head}}
+
+{{V50 metal table row|name=Billon|color-ascii={{Tile|≡|7:0}}{{Tile|‼|7:3:0}}<span style="display:none">7:3:0</span>|color-tileset=Billon Swatch.png|source=[[Silver]]<br> + [[Copper]]|notes= see note 1) |soliddensity=8.93|val=6|valinc=+0|mp=11952|impactyield=1.08|impactfracture=1.08|impactelasticity=771|shearyield=70|shearfracture=220|shearelasticity=145
+}}
+
+{{V50 metal table row|name=Bismuth bronze|color-ascii={{Tile|≡|6:1}}{{Tile|‼|6:6:1}}<span style="display:none">6:6:1</span>|color-tileset=BismuthBronze Swatch.png|source=1 [[Tin]]<br>+ 2 [[Copper]]<br> + 1 [[Bismuth]]*|notes=Can be used to forge all weapons, armor, ammunition, and picks. Combat relevant stats are identical to standard '''Bronze'''|soliddensity=8.25|val=6|valinc=+4|mp=11868|impactyield=1.08|impactfracture=1.08|impactelasticity=600|shearyield=137|shearfracture=241|shearelasticity=200
+}}
+
+{{V50 metal table row|name=Black bronze|color-ascii={{Tile|≡|5:0}}{{Tile|‼|5:6:0}}<span style="display:none">5:6:0</span>|color-tileset=BlackBronze Swatch.png|source=2 [[Copper]]<br> + 1 [[Silver]]<br> + 1 [[Gold]]*|notes=Unique color|soliddensity=8.93|val=11|valinc=+0|mp=11952|impactyield=1.08|impactfracture=1.08|impactelasticity=771|shearyield=70|shearfracture=220|shearelasticity=145
+}}
+
+{{V50 metal table row|name=Brass|color-ascii={{Tile|≡|6:1}}{{Tile|‼|6:6:1}}<span style="display:none">6:6:1</span>|color-tileset=Brass Swatch.png|source=[[Zinc]]<br> + [[Copper]]|notes=Value difference is +4.5 if [[tetrahedrite]] is used instead of [[copper]]|soliddensity=8.55|val=7|valinc=+5|mp=11656|impactyield=1.08|impactfracture=1.08|impactelasticity=600|shearyield=200|shearfracture=550|shearelasticity=200
+}}
+
+{{V50 metal table row|name=Bronze|color-ascii={{Tile|≡|6:0}}{{Tile|‼|6:4:0}}<span style="display:none">6:4:0</span>|color-tileset=Bronze Swatch.png|source=[[Tin]]<br> + [[Copper]]|notes=Value difference is +2.5 if [[tetrahedrite]] is used instead of [[copper]]. Can be used to forge all weapons, armor, ammunition, and picks|soliddensity=8.25|val=5|valinc=+3|mp=11868|impactyield=1.08|impactfracture=1.08|impactelasticity=600|shearyield=137|shearfracture=241|shearelasticity=200
+}}
+
+{{V50 metal table row|name=Electrum|color-ascii={{Tile|≡|6:1}}{{Tile|‼|6:6:1}}<span style="display:none">6:6:1</span>|color-tileset=Electrum Swatch.png|source=[[Silver]]<br> + [[Gold]]|notes= see note 2) |soliddensity=14.905|val=20|valinc=+0|mp=11828|impactyield=1.08|impactfracture=1.08|impactelasticity=600|shearyield=50|shearfracture=100|shearelasticity=185
+}}
+
+{{V50 metal table row|name=Fine pewter|color-ascii={{Tile|≡|7:1}}{{Tile|‼|7:7:1}}<span style="display:none">7:7:1</span>|color-tileset=FinePewter Swatch.png|source=3 [[Tin]]<br> + 1 [[Copper]]|notes=Value difference is +2.75 if [[tetrahedrite]] is used instead of [[copper]]|soliddensity=7.28|val=5|valinc=+3|mp=10417|impactyield=1.08|impactfracture=1.08|impactelasticity=1862|shearyield=12|shearfracture=100|shearelasticity=66
+}}
+
+{{V50 metal table row|name=Lay pewter|color-ascii={{Tile|≡|3:0}}{{Tile|‼|3:7:0}}<span style="display:none">3:7:0</span>|color-tileset=LayPewter Swatch.png|source=2 [[Tin]]<br>+ 1 [[Copper]]<br>+ 1 [[Lead]]*|notes=Unique color|soliddensity=7.28|val=3|valinc=+1|mp=10417|impactyield=1.08|impactfracture=1.08|impactelasticity=1862|shearyield=12|shearfracture=100|shearelasticity=66
+}}
+
+{{V50 metal table row|name=Nickel silver|color-ascii={{Tile|≡|7:1}}{{Tile|‼|7:7:1}}<span style="display:none">7:7:1</span>|color-tileset=NickelSilver Swatch.png|source= 2 [[Nickel]]<br>+ 1 [[Copper]]<br>+ 1 [[Zinc]]*|notes=|soliddensity=8.65|val=3|valinc=+1|mp=11620|impactyield=1.08|impactfracture=1.08|impactelasticity=600|shearyield=20|shearfracture=160|shearelasticity=26
+}}
+
+{{V50 metal table row|name=Pig iron|color-ascii={{Tile|≡|0:1}}{{Tile|‼|0:7:1}}<span style="display:none">0:7:1</span>|color-tileset=PigIron Swatch.png|source=[[Iron]]<br>+ [[flux]] stone<br>+ [[fuel]]*|notes=Only used to make [[steel]]|soliddensity=7.85|val=10|valinc=+0|mp=12106|impactyield=1.08|impactfracture=1.08|impactelasticity=635|shearyield=130|shearfracture=200|shearelasticity=159
+}}
+
+{{V50 metal table row|name=Rose gold|color-ascii={{Tile|≡|5:1}}{{Tile|‼|5:5:1}}<span style="display:none">5:5:1</span>|color-tileset=RoseGold Swatch.png|source=3 [[Gold]]<br>+ 1 [[Copper]]*|notes=Unique color|soliddensity=19.32|val=23|valinc=+0|mp=11915|impactyield=1.08|impactfracture=1.08|impactelasticity=600|shearyield=50|shearfracture=100|shearelasticity=185
+}}
+
+{{V50 metal table row|name=Steel|color-ascii={{Tile|≡|7:0}}{{Tile|‼|7:3:0}}<span style="display:none">7:3:0</span>|color-tileset=Steel Swatch.png|source=[[Iron]]<br> + [[Pig iron]]<br>+ [[flux]] stone<br>+ [[fuel]]*|notes=Can be used to forge all weapons, armor, ammunition, picks, and [[anvil]]s|soliddensity=7.85|val=30|valinc=+20|mp=12718|impactyield=1.08|impactfracture=1.08|impactelasticity=675|shearyield=520|shearfracture=860|shearelasticity=500
+}}
+
+{{V50 metal table row|name=Sterling silver|color-ascii={{Tile|≡|7:1}}{{Tile|‼|7:7:1}}<span style="display:none">7:7:1</span>|color-tileset=SterlingSilver Swatch.png|source=3 [[Silver]]<br>+ 1  [[Copper]]* |notes=|soliddensity=10.49|val=8|valinc=+0|mp=11602|impactyield=1.08|impactfracture=1.08|impactelasticity=1080|shearyield=100|shearfracture=170|shearelasticity=333
+}}
+
+{{V50 metal table row|name=Trifle pewter|color-ascii={{Tile|≡|7:0}}{{Tile|‼|7:3:0}}<span style="display:none">7:3:0</span>|color-tileset=TriflePewter Swatch.png|source=2 [[Tin]]<br>+ 1 [[Copper]]|notes=Value difference is +1.67 if [[tetrahedrite]] is used instead of [[copper]]|react=|soliddensity=7.28|val=4|valinc=+2|mp=10417|impactyield=1.08|impactfracture=1.08|impactelasticity=1862|shearyield=12|shearfracture=100|shearelasticity=66
+}}
+|}
+; Notes:
+: 1) '''Billon''' can be made with [[tetrahedrite]] or [[galena]] ore (instead of [[silver]] bars) for increased value: (Copper ore + Tetrahedrite: +3.5; Tetrahedrite + Tetrahedrite: +3; Copper ore + Galena: + 2.5; Tetrahedrite + Galena: + 2). 
+
+: 2) '''Electrum''' can be made with [[tetrahedrite]] or [[galena]] ore (instead of [[silver]] bars) for increased value: (Gold + Tetrahedrite: +3.5; Gold + Galena: +2.5).
+
+''Legend:''
+:* '''Tile Color''' corresponds to how items made from that metal are displayed in game, foreground and background colors.
+:*'''Reaction''' indicates the basic recipe for an alloy - this does not include any [[fuel]] necessary to operate the smelter.  See the article for that alloy or [[smelting]] for possible alternatives.
+::<nowiki>*</nowiki> - ''You can use only [[bar]]s of metal in this reaction, not ores.
+:*'''Density''' is used to determine the different weight of finished objects.
+:*'''Melting point''' is used to determine if a material is [[magma-safe]] or not: magma is 12000°U.
+:*'''[[Material value]]''' is what the base value of an object made of this metal is multiplied by to determine its worth.
+:*'''Value difference''' indicates the difference between the average [[value]] of the required bars of metals vs. the value of the resulting bars of alloy - what went in vs. what comes out, measured per bar. "+0" indicates that the resulting alloy is a perfectly average value of the component metals. Note that substituting tetrahedrite for copper ore always results in a value decrease, while substituting tetrahedrite or galena for silver bars always results in a value increase.
+
+===Special metals===
+{{minorspoiler}}
+{{v50 pure metal table head}}
+
+{{V50 metal table row|name=Adamantine|color-ascii={{Tile|≡|3:1}}{{Tile|‼|3:3:1}}|color-tileset=Adamantine_Swatch.png|source=[[Raw adamantine]]|notes= (see<br>below)
+
+|soliddensity=0.200|mp=25000|val=300|valinc=+50|impactyield=5.00|impactfracture=5.00|impactelasticity=0|shearyield=5000|shearfracture=5000|shearelasticity=0
+}}
+
+{{V50 metal table row|name=Divine metal|color-ascii={{Tile|≡|7:0}}{{Tile|‼|0:0:1}}|color-tileset=DivineMetal_Swatch.png|source=none|notes= (see<br>below)
+|react=|soliddensity=1|val=300|valinc=|mp=none
+}}
+|}
+'''Adamantine''' * cannot be smelted directly, and must be [[Strand extractor|extracted]] first.
+* Can be used to forge anything except beds
+* Blades are 10× sharper than standard metals, which when combined with its very high shear fracture/yield makes it more than 100x as effective as steel for bladed weapons
+* Too light to make effective blunt weapons despite nearly unsurpassed yield and fracture values.
+
+'''Divine metal''' has procedurally generated (i.e. semi-random) names associated with [[deity|deities]].
+* Blades are 1.2× sharper than standard metals
+* Low density makes it worse than all conventional metals for blunt, although it's still better than adamantine
+* Overall stats make it stronger than steel but weaker than adamantine.
+
+== Weapon and armor quality ==
+
+{{v0.31 material metal table head}}
+
+{{v0.31 material metal table row|name=Adamantine|color={{Tile|/|3:1}}<span style="display:none">3:3:1</span>|source=[[Raw adamantine]]|notes=Can be used to forge anything except [[bed]]s|soliddensity=0.200|mp=25000|val=300|valinc=+50|impactyield=5000|impactfracture=5000|impactelasticity=0|shearyield=5000|shearfracture=5000|shearelasticity=0
+}}
+
+{{v0.31 material metal table row|name=Divine metal|color={{Tile|/|7:0}}<span style="display:none">7:0:1</span>|source=[[Vault]]s|notes=Can be used to forge all weapons, armor, ammunition, picks, and [[anvil]]s|soliddensity=1.0|val=300|valinc=N/A|mp=none|impactyield=1000|impactfracture=2000|impactelasticity=0|shearyield=1000|shearfracture=2000|shearelasticity=0
+}}
+
+{{v0.31 material metal table row|name=Steel|color={{Tile|/|0:1}}<span style="display:none">0:7:1</span>|source=[[Iron]] + [[Pig iron]] + [[flux]] stone + [[fuel]] '''!'''|notes=Can be used to forge all weapons, armor, ammunition, picks, and [[anvil]]s|soliddensity=7.85|val=30|valinc=+20|mp=12718|impactyield=1505|impactfracture=2520|impactelasticity=940|shearyield=430|shearfracture=720|shearelasticity=215
+}}
+
+{{v0.31 material metal table row|name=Bismuth bronze|color={{Tile|/|6:1}}<span style="display:none">6:6:1</span>|source=2 [[Copper]] + 1 [[Tin]] + 1 [[Bismuth]] '''!'''|notes=Can be used to forge all weapons, armor, ammunition, and picks|soliddensity=8.25|val=6|valinc=+4|mp=11868|impactyield=602|impactfracture=843|impactelasticity=547|shearyield=172|shearfracture=241|shearelasticity=156
+}}
+
+{{v0.31 material metal table row|name=Bronze|color={{Tile|/|6:0}}<span style="display:none">6:4:0</span>|source=[[Tin]] + [[Copper]]|notes=Can be used to forge all weapons, armor, ammunition, and picks|soliddensity=8.25|val=5|valinc=+3|mp=11868|impactyield=602|impactfracture=843|impactelasticity=547|shearyield=172|shearfracture=241|shearelasticity=156
+}}
+
+{{v0.31 material metal table row|name=Iron|color={{Tile|/|0:1}}<span style="display:none">0:7:1</span>|source=[[Hematite]], [[Limonite]], [[Magnetite]]|notes=Can be used to forge all weapons, armor, ammunition, picks, and [[anvil]]s|soliddensity=7.85|mp=12768|val=10|valinc=+2|impactyield=542|impactfracture=1080|impactelasticity=319|shearyield=155|shearfracture=310|shearelasticity=189
+}}
+
+{{v0.31 material metal table row|name=Copper|color={{Tile|/|6:0}}<span style="display:none">6:4:0</span>|source=[[Native copper]], [[Malachite]], [[Tetrahedrite]]|notes=Can be used to forge all weapons, armor, ammunition, and picks|soliddensity=8.93|mp=11952|val=2|valinc=+0, +0, -1*|impactyield=245|impactfracture=770|impactelasticity=175|shearyield=70|shearfracture=220|shearelasticity=145
+}}
+
+{{v0.31 material metal table row|name=Silver|color={{Tile|/|7:1}}<span style="display:none">7:7:1</span>|source=[[Native silver]], [[Horn silver]], [[Galena]] (50%), [[Tetrahedrite]] (20%) |notes=Can be used to forge melee weapons and ammunition|soliddensity=10.49|mp=11731|val=10|valinc=+0, +0, +5*, +7*|impactyield=350|impactfracture=595|impactelasticity=350|shearyield=100|shearfracture=170|shearelasticity=333
+}}
+
+{{v0.31 material metal table row|name=Platinum|color={{Tile|/|7:1}}<span style="display:none">7:7:1</span>|source=[[Native platinum]]|notes= Only available as [[artifact]] weapons.|soliddensity=21.4|mp=13182|val=40|valinc=+?, +?, +?, +?|impactyield=350|impactfracture=700|impactelasticity=152|shearyield=100|shearfracture=200|shearelasticity=164
+}}
+
+|}
+*''Combat information'' is used internally by the game to determine the [[material science|combat properties]] of weapons and armor made from this metal:
+*:'''Density''': Used in conjunction with other factors - heavier weapons (higher numbers) hit with more force, light weapons tend to have less penetration. Denser armor absorbs more force from being transmitted through it as well, though low elasticity is much more reliable protection. Value shown here is g/cm<sup>3</sup>, which is the raw value divided by 10<sup>3</sup>
+*:'''Impact yield''': Used for blunt-force combat; ''higher'' is better for weapons, but ''lower'' is better for armor. This is the raw value divided by 10<sup>3</sup> (i.e., kPa).  
+*:'''Impact fracture''': Used for blunt-force combat; ''higher'' is better. This is the raw value divided by 10<sup>3</sup> (i.e., kPa).
+*:'''Impact elasticity''': Used for blunt-force combat; ''lower'' is better. This is the raw value.
+*:'''Shear yield''': Used for cutting calculations in combat; ''higher'' is better. This is the raw value divided by 10<sup>3</sup> (i.e., kPa).
+*:'''Shear fracture''': Used for cutting calculations in combat; ''higher'' is better. This is the raw value divided by 10<sup>3</sup> (i.e., kPa).
+*:'''Shear elasticity''': Used for armor protection vs cutting weapons in combat; ''lower'' is better. This is the raw value.
+*General Term Explanations (From Wikipedia)
+*:'''Yield Strength''' - The stress at which material strain changes from elastic deformation to plastic deformation, causing it to deform permanently.
+*:'''Fracture Strength''' - The stress coordinate on the stress-strain curve at the point of rupture.
+*:'''Stress''' - Force per area = F/A
+*:'''Strain''' - Deformation of a solid due to stress = Stress/Young's Modulus
+
+So...
+:Explanations!
+::'''Yield Strength''' is the amount of stress required to permanently deform (bend) a material (plastic deformation)
+::'''Fracture Strength''' is the amount of stress required to permanently break (rupture) a material 
+::'''Elasticity''' (or ''IMPACT_STRAIN_AT_YIELD'' in RAWs) is the amount of deformation (bending) that occurs at the yield point, in parts-per-100,000
+:Implications to ''Dwarf Fortress'' Combat
+::Yield combined with Elasticity can tell what a material will do under stress (be it from a hammer, axe, or arrow)
+::Higher yield means that it takes more stress to deform
+::Lower elasticity means that it will deform less when stress is applied
+
+===Preliminary combat testing and analysis===
+
+For edged weapons and armour, adamantine and steel take first and a very distant second place respectively, with iron and bronze being closely tied for third place. Copper is the second worst material, and as in older versions, silver continues to hold steady as the worst material available (no longer beneficial with wooden training weapons being available now) in regards to edged weaponry.
+
+For blunt weapons, all of the standard materials (so, not adamantine or divine metal) perform respectably well, with a very slight edge towards steel. Here is the thread with the details:
+
+http://www.bay12forums.com/smf/index.php?topic=53571.0
+
+Keep in mind how unbelievably complicated this system is; nothing here should be taken as word of law. These results also ignore the impact of the ''weight'' of equipment on your dwarves. Dwarves, especially weak ones without high [[Combat skill#Equipment_skills|Armor User]] skill, will move much more slowly when wearing heavy armor and carrying heavy weapons and ammunition. This may be a more important consideration than a marginal improvement in protection.
+
+{| class="wikitable"
+|-
+! 
+! Best
+! Better
+! Good
+! Fair
+! Poor
+! Terrible
+! Notes
+|-
+| Armor
+| Adamantine
+| Divine metal, Steel
+| Iron, Bronze, Bismuth Bronze
+| 
+| Copper
+| 
+| 
+|-
+| Edged Weapons
+| Adamantine
+| Divine metal, Steel
+| Iron
+| Bronze, Bismuth Bronze
+| Copper
+| Silver
+| For piercing iron armor, copper is better than bronze.  For piercing copper or bronze armor, bronze is better than copper. Adamantine is over 20x as good as divine metal, and is the only metal that can reliably cut through armor even for slashing attacks.
+|-
+| Ammunition
+| Steel, Divine metal
+| Adamantine
+| Iron
+| Bronze, Bismuth Bronze, Copper
+| Silver
+| 
+| Adamantine bolts deflect off of adamantine armor due to their low momentum, but this is an unusual circumstance. Density does not matter for bolts above 1.333 g/cm<sup>3</sup>, which all ordinary metals exceed at least 5-fold.
+|-
+| Blunt Weapons
+| Platinum ([[artifact]] only)
+| Steel, Silver
+| Copper, Bismuth Bronze, Bronze
+| Iron
+| Divine metal
+| Adamantine
+| All six standard weapon metals perform nearly identically. Steel has a slightly higher rate of critical wounds, while silver is slightly more likely to penetrate armor. Platinum (only available as [[artifact]] weapons) has twice the density of silver and several other improved properties, making it the best metal for impact weapons, though very limited in production.
+|}
+
+Cross referencing this table with the table at the top of this section seems to indicate that low densities, high impact fractures, and high shear fractures contribute to the killing power of edged weapons
+[[File:metal_types.jpg|thumb|400px|center|Different types of pure metals.]]
+
+==See also==
+*Some [[User:Shinziril#Weapons_and_Armor|outstanding research]] on armor vs. different weapon types by Shinziril.
+*[https://www.reddit.com/r/dwarffortress/comments/11w6lwm/science_the_effectiveness_of_metal_bolts_vs_armor/ Bolt material analysis] ([http://www.bay12forums.com/smf/index.php?topic=116151.0 old research] is outdated now that {{bug|5516}} is fixed).
+
+{{Translation
+| dwarven = kel
+| elvish  = lethi
+| goblin  = snusm
+| human   = rigu
+}}
+
+{{materials}}
+
+{{Category|Metals|0}}{{Category|Materials}}
+[[ru:DF2012:Metal]]

@@ -1,0 +1,89 @@
+{{Quality|Exceptional}}
+{{av}}
+[[File:mist_preview_anim.gif|right]]'''Mist''' is created by [[water]] [[Waterfall|falling]] from one [[Z-level]] to another, from [[Ocean#Ocean_waves|ocean waves]], items or creatures skipping across water or just standard splashing. The mist is generated on levels below the top level (from which the water drops), but spreads out similarly to [[miasma]] and, therefore, can appear even on the top level, and lingers and spreads for a short time after any water stops falling.
+
+Walking through mist generates a happy [[thought]] for most intelligent creatures, and can act to [[Cleaning|clean]] various contaminants off of dwarves. Even hostile creatures attempting to [[siege]] a [[fortress]] will get a pleasant feeling from mist.{{cite|1|https://www.reddit.com/r/dwarffortress/comments/10w2paj/just_learned_that_goblin_invaders_get_happy/}}
+Mist is separate from [[magma mist]] and [[steam]].
+
+[[File:mist_preview.png|thumb|120px|right|Rampant [[screw pump]]s are a great mist source.]]
+
+==Generating Mist==
+=== Constructed waterfall ===
+The easiest method is simply to use a constant source of water ([[Screw pump|pumped]] or [[channel]]ed) and let it fall more than 1 z-level next to a path that dwarves use regularly. The actual tile (you only need one) that the water drops should not be part of the path, as dwarves will believe they are in 7/7 water and cancel jobs - a statue on that tile will prevent this nicely, or place the fall itself to the side of the path and make that a [[Traffic#Setting Traffic Areas|restricted traffic]] tile. 
+
+[[Floor grate]]s or [[bars]] on every* tile adjacent to the water flow should be used as part of the drainage system (which should be larger than the intake system, just to be safe!), and to avoid [[mud]] on adjacent tiles.  Use a door, hatch, floodgate or bridge linked to a [[lever]] to turn off the flow if/when desired.
+
+: (* when designing this, remember that grates/bars [[Cave-in|do not support]] floor tiles!)
+
+The problem with this setup is that this amount of constantly falling/flowing water can have a negative impact on your fps rate.  Using a [[repeater]] to allow a non-constant flow, or linking the flow to a [[pressure plate]], where it will only fall when dwarves approach, will help this.
+
+=== Ring generator ===
+[[File:Mist-ring-generator-z0.png|thumb|Mist ring generator  (z = 1)]]
+[[File:Mist-ring-generator-z-1.png|thumb|Mist ring generator (z = 0)]]
+
+AncientEnemy [http://www.bay12forums.com/smf/index.php?topic=34407.0] devised a convenient way to generate mist. This method relies on the fact that [[screw pump|screw pumps]] pump [[water]] faster than water spreads out.[[Image:newmist.jpg|thumb|AncientEnemy's original simple mist generator.]]
+
+Simply put, screw pumps are daisy-chained (output to input) in a circle and then water is added to the system.  Water is typically added by designating one of the inputs to the pump as a [[Pond]] and having dwarves fill it up. Once water is dropped from the floor above it is immediately sucked up by the next pump. Since there is falling water, mist is generated. Ahh, lovely waterfalls!
+
+Below is an example of a simple mist generator.  The Z=0 level can be anything, a booze stockpile, [[barracks]] or even your [[Dwarven_atom_smasher|atom smasher]]. The z=-1 layer can also be identical to the z=0 level. Mist will also be generated there.  Because the water never touches the floor there, you don't have to worry about muddy tiles.
+<diagram>
+Pump Floor (z=1)
+▒▒▒▒▒▒
+▒_[#2:0]÷[#2:1]÷[#]_▒
+▒[#2:1]÷[#]..[#2:0]÷[#]▒ The water can go clockwise or counter clockwise.
+▒[#2:0]÷[#]..[#2:1]÷[#]▒ Make sure your pumps are correctly aligned.
+▒_[#2:1]÷[#2:0]÷[#]_▒
+▒▒▒▒▒▒
+</diagram>
+
+A movie [http://mkv25.net/dfma/movie-1292-ubermistgenerator] best illustrates the operation.
+
+
+It is advisable to put statues under the holes in the bottom layer, so dwarves cannot go under the water, to displace the water, requiring a refill.
+
+Note that if you put grates on the z = 1 layer, the mist will not spread upward, if that is desired.
+
+=== Stack generator ===
+
+A two-pump-stack can be used to lift a single tile of water and drop it back into the reservoir, generating mist (and [[Cleaning#Dwarven_Shower|cleaning dwarves]], if desired).
+
+<diagram>
+
+ sideview 
+  
+   [#2:0]%%[#]_
+   [#6:0]%%[#]_
+ ░░░░[#1:0]▄[#]░░░
+ ░░░░░░░░
+
+</diagram>
+
+The lower (brown) pump (pumping right to left) raises the water from the reservoir on the right to floor level on the left, then the upper (green) pump (pumping left to right) raises that water to the air +2 z-levels above the reservoir. The water then falls through the floor grates ( _ ) into the reservoir, and the cycle can be repeated. Pump build order is important; build the upper (green) pump first, then the lower (brown) pump, to ensure the water is raised in a single tick. Since the water never sits at floor level, no containment walls are necessary (though mud will be created in the tile left of the brown pump). You can toggle power to the pumps as often as desired to provide happy thoughts without constant lag. If used for dwarf-cleaning, a water level of 2/7 or 3/7 will avoid job cancellations.
+
+=== Light aquifer ===
+If your embark location has a light aquifer, it is possible to build an unpowered mist generator-plus-bathing unit combination. You need two floors under the aquifer - lowest floor is for dwarves, second floor is for water to fall a z-level to create mist and to control the amount of water flow. It is also possible to dig out more of the aquifer to increase water flow if needed. You can use this water elsewhere or let it evaporate.{{Verify}}
+
+== General comments ==
+<!-- The extra spaces are for ease of editing only, and do not change the appearance of the page layout.-->
+* Evaporation is nonexistent as long as the pumps are working and the water is moving, even above ground.{{Verify}}
+
+* Job cancellation spam is possible if the water is filled to 4/7 or greater and a dwarf walks where the water falls. Even then, this can be greatly reduced by setting them as [[traffic#Setting Traffic Areas|restricted traffic]] areas, or completely prevented by blocking access to these tiles without blocking the water, such as by placing a [[statue]] underneath.
+
+* Mud will form wherever the water falls. Subterranean [[tree]]s can sprout up and clog the system. Solutions to this problem include: [[statue]]s, [[road|paved roads]], constructed floors or [[fortification]]s, or to simply channel out the space once the mist generator is running.
+
+* These systems work best with a single tile of water (7/7, at most) due to the way water descends z-levels. Any additional water will overflow into nearby tiles.
+
+* Automated mist generators may significantly lower your [[Frames per second|FPS]], particularly if multiple generators are used.{{Verify}} This might be remedied by triggering via a [[repeater]] with a long delay or by one or more [[pressure plate]]s (perhaps set to activate by a passing dwarf).{{Verify}}
+
+[[File:mist_example.jpg|thumb|270px|center|If skin pores could orgasm.]]
+{{Translation
+| dwarven = sôd
+| elvish  = enure
+| goblin  = guslo
+| human   = sitsu
+}}
+
+{{Category|Thoughts}}
+{{Category|World}}
+{{Category|Physics}}
+[[Ru:Mist]]

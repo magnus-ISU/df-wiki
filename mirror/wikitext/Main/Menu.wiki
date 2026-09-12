@@ -1,0 +1,458 @@
+{{migrated article}}
+{{Quality|Tattered}}
+{{av}}
+
+{{Expand Topic}}
+{{old|v=50.01}}
+
+''Dwarf Fortress'' is a complex game, and a complex game requires a complex [[Interface|user interface]]. The purpose of this page is to help players look up the meaning of user interface elements, and it functions like a basic reference of the functions; specific menu items are (mostly) discussed in more detail in their own pages.
+
+If you find a menu where the words have been cut off due to the menu width, press the Tab key to cycle through menu display options.  
+
+==Main menu==
+ [[Image:Main menu v0.44.03.png|right]]
+:The default in-game menu; can be hidden/shown with <tab>
+* {{K|a}}: View Announcements - Displays recent [[announcement]]s
+* {{K|b}}: Building - The [[#Building Menu|Building Menu]]
+* {{K|r}}: Reports - Combat [[reports]]
+* {{K|c}}: Civilizations/World Info - View [[News and rumors]] and [[Civilization]]s, and create [[Mission]]s
+* {{K|d}}: Designations - [[#Designate Menu|Designate Menu]]
+* {{K|o}}: Set Order - [[Standing orders|Orders Menu]]
+* {{K|k}}: Look Around 
+* {{K|j}}: Job List - [[#Jobs Screen|Jobs Screen]]
+* {{K|m}}: Military - [[Military interface|Military Interface]]
+* {{K|s}}: Squads - [[#Squads Menu|Squads Menu]]
+* {{K|N}}: Points/Routes/Notes - [[#Notes Menu|Notes Menu]]
+* {{K|w}}: Define Burrows - [[#Burrows Menu|Burrows Menu]]
+* {{K|h}}: Hauling
+* {{K|p}}: Stockpiles - [[#Stockpiles Menu|Stockpiles Menu]]
+* {{K|i}}: Zones - Place a [[Activity zone|Zone]]
+* {{K|q}}: Set Building Tasks/Prefs - 
+* {{K|R}}: View Rooms/Buildings - View [[Room]]s and [[Building list|Building List]]
+* {{K|t}}: View Items in Buildings
+* {{K|v}}: View Units
+* {{K|H}}: Hot Keys - [[#Hot Keys Menu|Hot Keys Menu]]
+* {{K|l}}: Locations and Occupations - [[#Locations Screen|Locations Screen]]
+* {{K|n}}: Nobles and Administrators - [[#Nobles Screen|Nobles Screen]]
+* {{K|z}}: Status - [[#Status Screen|Status Screen]]
+* {{K|Tab}}: Move this menu/map - Moves the menu/map into another arrangement
+* {{K|?}}: Help - [[#Help Screen|Help Screen]]
+* {{K|Esc}}: Options - Set [[Dwarf fortress mode#Options Screen|Options]]
+* {{K|;}}: Movies
+* {{K|D}}:  Depot Access - View whether your [[Trade depot]]s can be reached by [[trader]]s' [[wagon]]s
+* {{K|Space}}: Resume
+* {{K|.}}: One-Step
+* {{K|u}}: [[#Units Screen|Units List]] - View dwarves, pets, dead, and other animals
+
+
+=== Building Menu ===
+[[Image:Building menu 0.34.11.png|right]]
+:This menu lists objects/buildings that can be placed.  Some require dwarves to have a specific hauling labor set, others require dwarves to have another labor set.
+* Armor Stand ({{K|a}}) - Place a built [[Armor stand]] (req. [[Furniture hauling]])
+* Bed ({{K|b}}) - Place a built [[Bed]] (req. [[Furniture hauling]])
+* Seat ({{K|c}}) - Place a built [[Throne]] (req. [[Furniture hauling]])
+* Burial Receptacle ({{K|n}}) - Place a built [[Coffin]] (req. [[Furniture hauling]])
+* Door ({{K|d}}) - Place a built [[Door]] (req. [[Furniture hauling]])
+* Floodgate ({{K|x}}) - Place a built [[Floodgate]] (req. [[Furniture hauling]])
+* Floor Hatch ({{K|H}}) - Place a built [[Floor hatch]] (req. [[Furniture hauling]])
+* Wall Grate ({{K|W}}) - Place a built [[Wall grate]] (req. [[Furniture hauling]])
+* Floor Grate ({{K|G}}) - Place a built [[Floor grate]] (req. [[Furniture hauling]])
+* Vertical Bars ({{K|B}}) - Place [[Vertical bars]] (req. [[Furniture hauling]])
+* Floor Bars ({{K|Alt}}+({{K|b}}) - Place [[Floor bars]] (req. [[Furniture hauling]])
+* Cabinet ({{K|f}}) - Place a built [[Cabinet]] (req. [[Furniture hauling]])
+* Container ({{K|h}}) - Place a built [[Container]] (req. [[Furniture hauling]])
+* Kennels ({{K|k}}) - Construct a [[Kennel]] (req. [[animal training]], [[small animal dissection]] and/or [[trapping]] labor)
+* Farm Plot ({{K|p}}) - Place a [[Farm]] (req. [[Farming (fields)]] labor)
+* Weapon Rack ({{K|r}}) - Place a built [[Weapon rack]] (req. [[Furniture hauling]])
+* Statue ({{K|s}}) - Place a built [[Statue]] (req. [[Furniture hauling]])
+* Table ({{K|t}}) - Place a built [[Table]] (req. [[Furniture hauling]])
+* Paved Road ({{K|o}}) - Build a [[Road|Paved road]] (req. [[Architecture]] labor)
+* Dirt Road ({{K|O}}) - Build a [[Dirt road]] (req. [[Architecture]] labor)
+* Bridge ({{K|g}}) - Build a [[Bridge]] (req. [[Architecture]] labor)
+* Well ({{K|l}}) - Build a [[Well]] (req. [[Architecture]] labor)
+* Siege Engines ({{K|i}})
+** Ballista ({{K|b}})
+** Catapult ({{K|c}})
+* Workshops ({{K|w}}) - [[#Workshops Menu|Workshops Menu]]  - Menu to build various [[Workshop]]s
+* Furnaces ({{K|e}}) - [[#Furnaces Menu|Furnaces Menu]]  - Menu to build various [[Furnace]]s
+* Glass Window ({{K|y}}) - Place a built [[window|Glass window]] (req. [[Furniture hauling]])
+* Gem Window ({{K|Y}}) - Create a [[Gem window]] ('''with job''')
+* Wall/Floor/Stairs ({{K|C}})
+** Wall ({{K|w}}) - Build a [[Wall]] (req. [[Masonry]]/[[Carpenter]] labor)
+** Floor ({{K|f}}) - Build a [[Floor]] (req. [[Masonry]]/[[Carpenter]] labor)
+** Ramp ({{K|r}}) - Build a [[Ramp]] (req. [[Masonry]]/[[Carpenter]] labor)
+** Up Stair ({{K|u}}) - Build an [[Up stair]] (req. [[Masonry]]/[[Carpenter]] labor)
+** Down Stair ({{K|d}}) - Build a [[Down stair]] (req. [[Masonry]]/[[Carpenter]] labor)
+** Up/Down Stair ({{K|x}}) - Build an [[Stairs|Up/Down Stair]] (req. [[Masonry]]/[[Carpenter]] labor)
+** Fortification ({{K|F}}) - Build a [[Fortification]] (req. [[Masonry]]/[[Carpenter]] labor)
+* Trade Depot ({{K|D}}) - Construct a [[Trade depot]]
+* Traps/Levers ({{K|T}})
+** Stone-Fall Trap ({{K|s}}) - Build a [[Trap|Stone-fall trap]] (req. [[Mechanics]] labor)
+** Weapon Trap ({{K|w}}) - Build a [[Weapon trap]] (req. [[Mechanics]] labor)
+** Lever ({{K|l}}) - Build a [[Lever]] (req. [[Mechanics]] labor)
+** Pressure Plate ({{K|p}}) - Build a [[Pressure plate]] (req. [[Mechanics]] labor)
+** Cage Trap ({{K|c}}) - Build a [[Cage trap]] (req. [[Mechanics]] labor)
+** Upright Spear/Spike ({{K|S}}) - Build an [[Trap|Upright Spear/Spike]] (req. [[Mechanics]] labor)
+* Machine Components ({{K|M}})
+** Screw Pump ({{K|s}}) - Build a [[Screw pump]] (req. [[Mechanics]] labor)
+** Water Wheel ({{K|w}}) - Build a [[Water wheel]] (req. [[Mechanics]] labor)
+** Windmill ({{K|m}}) - Build a [[Windmill]] (req. [[Mechanics]] labor)
+** Gear Assembly ({{K|g}}) - Build a [[Gear assembly]] (req. [[Mechanics]] labor)
+** Horizontal Axle ({{K|h}}) - Build a [[axle|Horizontal axle]] (req. [[Mechanics]] labor)
+** Vertical Axle ({{K|v}}) - Build a [[axle|Vertical axle]] (req. [[Mechanics]] labor)
+* Support ({{K|S}}) - Construct a [[Support]] (req. [[Architecture]] labor)
+* Animal Trap ({{K|m}}) - Place an [[Animal trap]] (with hauling)
+* Restraint ({{K|v}}) - Place a [[Restraint]] (req. [[Furniture hauling]])
+* Cage ({{K|j}}) - Place a built [[Cage]] (req. [[Furniture hauling]])
+* Archery Target ({{K|A}}) - Build an [[Archery target]] (req. [[Architecture]] labor)
+* Traction Bench ({{K|R}}) - Place a [[Traction bench]] (req. [[Furniture hauling]])
+
+
+==== Workshops Menu ====
+[[Image:Workshop menu 0.34.11.png|right]]
+*Leather works ({{K|e}}) - Build a [[Leather works]] (req. [[Leatherworking]] labor)
+*Quern ({{K|q}}) - Build a [[Quern]] (req. [[Milling]] labor)
+*Millstone ({{K|M}}) - Build a [[Millstone]] (req. [[Mechanics]] labor)
+*Loom ({{K|o}}) - Build a [[Loom]] (req. [[Weaving]] labor)
+*Clothier's Shop ({{K|k}}) - Build a [[Clothier's shop]] (req. [[Clothesmaking]] labor)
+*Bowyer's Workshop ({{K|b}}) - Build a [[Bowyer's workshop]] (req. [[Crossbow-making]] labor)
+*Carpenter's Workshop ({{K|c}})  - Build a [[Carpenter's workshop]] (req. [[Carpentry]] labor)
+*Metalsmith's Forge ({{K|f}}) - Build a [[Metalsmith's forge]] (req. [[Weaponsmithing]]/[[Armoring]]/[[Blacksmithing]]/[[Metalcrafting]] labor)
+*Magma Forge ({{K|v}}) - Build a [[Magma forge]] (req. [[Weaponsmithing]]/[[Armoring]]/[[Blacksmithing]]/[[Metalcrafting]] labor)
+*Jeweler's Workshop ({{K|j}}) - Build a [[Jeweler's workshop]] (req. [[Gem cutting]] or [[Gem setting]] labor)
+*Mason's Workshop ({{K|m}}) - Build a [[Mason's workshop]] (req. [[Masonry]] labor)
+*Butcher's Shop ({{K|u}}) - Build a [[Butcher's shop]] (req. [[Butchery]] labor)
+*Tanner's Shop ({{K|n}}) - Build a [[Tanner's shop]] (req. [[Tanning]] labor)
+*Craftsdwarf's Workshop ({{K|r}}) - Build a [[Craftsdwarf's workshop]] (req. [[Woodcrafting]]/[[Bone carving]]/[[Stonecrafting]] labor)
+*Siege Workshop ({{K|s}}) - Build a [[Siege workshop]] (req. [[Siege engineering]] labor)
+*Mechanic's Workshop ({{K|t}}) - Build a [[Mechanic's workshop]] (req. [[Mechanics]] labor)
+*Still ({{K|l}}) - Build a [[Still]] (req. [[Brewing]] labor)
+*Farmer's Workshop ({{K|w}}) - Build a [[Farmer's workshop]] (req. [[Plant processing]]/[[Milking]]/[[Cheese making]] labor)
+*Kitchen ({{K|z}}) - Build a [[Kitchen]] (req. [[Cooking]] labor)
+*Fishery ({{K|h}}) - Build a [[Fishery]] (req. [[Fishing]]/[[Fish cleaning]] labor)
+*Ashery ({{K|y}}) - Build an [[Ashery]] (req. [[Potash making]] or [[Lye making]] labor)
+*Dyer's Shop ({{K|d}}) - Build a [[Dyer's shop]] (req. [[Dyeing]] labor)
+*Soap Maker's Workshop ({{K|S}}) - Build a [[Soap maker's workshop]] (req. [[Soap making]] labor)
+{{-}}
+
+==== Furnaces Menu ====
+[[Image:Furnace menu 0.34.11.png|right]]
+*Wood Furnce ({{K|w}}) - Build a [[Wood furnace]] (req. [[Architecture]] labor)
+*Smelter ({{K|s}}) - Build a [[Smelter]] (req. [[Architecture]] and [[Masonry]] labor)
+*Glass Furnace ({{K|g}}) - Build a [[Glass furnace]] (req. [[Architecture]] and  [[Masonry]]/[[Metalsmithing]] labor)
+*Kiln ({{K|k}}) - Build a [[Kiln]] (req. [[Architecture]] and [[Masonry]] labor)
+*Magma Smelter ({{K|l}}) - Build a [[Magma smelter]] (req. [[Architecture]] and  [[Masonry]] labor)
+*Magma Glass Furnace ({{K|a}}) - Build a [[Magma glass furnace]] (req. [[Architecture]] and  [[Masonry]]/[[Metalsmithing]] labor)
+*Magma Kiln ({{K|n}}) - Build a [[Magma kiln]] (req. [[Architecture]] and  [[Masonry]] labor)
+{{-}}
+
+=== Combat reports screen===
+[[Image:Report screen v0.44.03.png|right|480px]]
+Hit {{k|r}} to enter the report screen, then go through the listing until you find the desired victim.
+{{-}}
+
+=== Civilizations/World Info screen===
+[[Image:World info screen v0.44.03.png|right|480px]]
+{{k|c}} opens the Civilizations/World Info Screen.
+* {{k|w}} to swap to World
+** {{k|y}} to recenter the map on your fort
+* {{k|m}} to view a list of ongoing [[Mission]]s
+* {{k|n}} to view [[News and rumors]]
+* {{k|p}} to view list of recoverable missing citizens
+* {{k|a}} to view a list of known [[Artifact]]s
+* {{k|c}} to view a list of [[Civilization]]s
+{{-}}
+
+=== Designations Menu ===
+[[Image:DesignateMenu2014.PNG|right]]
+
+The [[Designations Menu]] (accessed by {{K|d}}) provides the means to mark tiles with various designations including Mining, Wood Cutting, Plant Gathering, Stone Detailing as well as removing constructions, controlling traffic and other miscellaneous designations. This menu is [[Mouse control|mouse-enabled]].
+{{-}}
+
+=== Standing Orders Menu ===
+
+See [[Standing orders]].
+
+
+===Job List===
+[[Image:Job list screen v0.44.03.png|right|480px]]
+Shows a list of current jobs. Accessed with {{K|j}}.
+*{{K| ↓}}{{K|↑}} - Move between jobs
+*{{K|v}} - View unit (brings up the unit information screen)
+*{{K|z}} - Zoom to unit (recenters screen on unit)
+*{{K|j}} - View job (brings up job information screen)
+*{{K|b}} - Go to building (zoom to building for selected job)
+*{{K|r}} - Repeat job (toggles job repeat status)
+*{{K|s}} - Suspend job (toggles job suspend status)
+*{{K|c}} - Cancel job 
+*{{K|x}} - Remove worker from job
+*{{K|m}} - Open job manager screen
+
+{{-}}
+
+===Job Manager Screen===
+[[Image:Job manager screen v0.44.03.png|right|480px]]
+Shows a list of current manager work orders. Accessed with {{K|m}} from the job list or unit list.
+*{{K| ↓}}{{K|↑}} - Move between work orders
+*{{K|q}} - Create a new work order
+*{{K|r}} - Remove selected work order
+*{{K|p}} - Increase priority of selected work order
+*{{K|t}} - Maximize priority of selected work order
+*{{K|Enter}} - Set maximum workshops for selected work order
+*{{K|c}} - Set conditions for selected work order
+*{{K|d}} - Set details for selected work order
+*{{K|Esc}} - Exit manager screen
+
+{{-}}
+
+===Squads Menu ===
+[[Image:SquadsMenu2010.png|right]]
+:This menu allows you to manage your squads.
+{{-}}
+
+=== Notes Menu ===
+[[Image:NotesMenu2010.png|right]]
+:Allows the placement of notes, also referred to as “points”.  Required to create patrol routes, often used to label levers so you can remember what they are connected to.
+*{{K|p}}: Place - Places a note on the cursor
+*{{K|d}}: Delete - Deletes notes on the cursor
+*{{K|n}}: Name - Name/label the note placed at this point
+*{{K|t}}: Note text - Add additional information for the note
+*{{K|c}}: Change symbol selector - Change which part of the symbol is being modified with {{K|+}}{{K|-}}{{K|*}}{{K|/}}, forecolor, backcolor, or symbol.
+*{{K|s}}: Adopt selected symbol - Makes all future notes use the selected options .
+*{{K|+}}{{K|-}}{{K|*}}{{K|/}} - Modify currently selected (using {{K|c}}) part of the symbol
+*{{K|r}}:Routes – [[#Routes Menu]] allows linking of Notes/points together to form routes for patrols.
+{{-}}
+
+====Routes Menu ====
+[[Image:RoutesMenu2010.png|right]]
+*{{K|a}}: Add route - Create a new route.
+*{{K|e}}: Edit waypts - Edit points that make up the route.
+**{{K|a}}: Add waypt - Add current point to route.
+**{{K|d}}: Add waypt - Delete current point from route.
+**{{K|p}}: Add waypt - Finish editing route.
+*{{K|d}}: Del route - Delete currently selected route.
+*{{K|n}}: Name route - Name current route
+*{{K|c}}: Center - Center on route.
+*{{K|+}}{{K|-}}{{K|*}}{{K|/}} -  Select different routes
+*{{K|p}}: Back to points/notes - Return to [[#Notes Menu|Notes menu]]
+{{-}}
+
+=== Burrows Menu ===
+[[Image:Burrows menu v0.44.03.png|right]]
+:This menu allows the creation and use of Burrows, which help to organize where dwarves are allowed to move/work
+*{{K|a}}: Add new burrow - Create a new burrow
+*{{K|d}}: Delete - Delete currently selected burrow
+*{{K|+}}{{K|-}}{{K|*}}{{K|/}}: Change selection - Switch burrows
+*{{K|Enter}}: Define this burrow - Select areas that make up burrow, multiple areas can be created.
+**{{K|c}}: Change symbol selector - Change which part of the symbol is being modified with {{K|+}}{{K|-}}{{K|*}}{{K|/}}, forecolor, backcolor, or symbol.
+**{{K|+}}{{K|-}}{{K|*}}{{K|/}} - Modify currently selected (using {{K|c}}) part of the symbol
+*{{K|c}}: Add citizens to burrow - Allows you to select which citizens are restricted to this burrow.
+*{{K|w}}: Enable workshop resource restrictions on all workshops in burrow 
+*{{K|z}}: Center on burrow 
+*{{K|Esc}}: Done
+{{-}}
+
+=== Stockpiles Menu ===
+[[Image:StockpilesMenu2010.png|right]]
+:Creates stockpiles, dwarves will place items in the appropriate stockpile if they have the correct hauling labor.
+*{{K|a}}: Animal  - Stores animals in cages/traps, empty cages/traps
+*{{K|f}}: Food - Stores food and food by-products (Meat/Fish/Plants/Drinks/Cheese/Seeds/Leaves/Milled plants/Fat/Blood/Lye/etc.)
+*{{K|u}}: Furniture Storage - Stores furniture and siege ammo
+*{{K|y}}: Graveyard - Stores dead dwarves
+*{{K|r}}: Refuse - Stores garbage/dead animals/bones/skulls/shells
+*{{K|s}}: Stone - Stores stone/ore
+*{{K|w}}: Wood - Stores wood
+*{{K|e}}: Gem - Stores rough/cut gems
+*{{K|b}}: Bar/Block - Stores bars (Metal/Coal/Potash/Ash/Pearlash/Soap), and Blocks (Stone/Glass)
+*{{K|h}}: Cloth - Stores cloth/thread
+*{{K|l}}: Leather - Stores leather
+*{{K|z}}: Ammo - Stores Bolts/Arrows/Blowdarts
+*{{K|n}}: Coins - Stores coins
+*{{K|g}}: Finished Goods - Stores finished goods (chains/crafts/clothing (not armor)/splints/crutches/more)
+*{{K|p}}: Weapons - Stores weapons/trap components
+*{{K|d}}: Armor - Stores armor
+*{{K|c}}: Customer Stockpile - Build custom stockpile (define with {{K|t}})
+*{{K|t}}: Custom Settings - Define custom stockpile
+*{{K|/}}{{K|*}}: Reserved Barrels - Global setting for the number of barrels that will be reserved for workshop jobs (such as the [[brewing]]).
+*{{K|-}}:{{K|+}}: Reserved Bins - Global setting for the number of bins that will be reserved for workshop jobs (no vanilla jobs use bins, so reserved bins will remain unused).
+*{{K|x}}: Remove Designation - Remove stockpiles
+*{{K|Enter}}: Select - Place start/end corner of stockpile.
+
+=== Zones Menu ===
+[[Image:Zones menu v0.44.03.png|right]]
+:Allows the creation and editing of activity zones.
+*{{K|Enter}}: Start a selection (for creation or removal)
+*{{K|x}}: Toggle between creating and removing zones
+*{{K|e}}: Toggle how the zone selection is defined
+With an activity zone selected:
+*{{K|w}}: Toggle use as a water source
+*{{K|f}}: Toggle use as a fishing zone
+*{{K|g}}: Toggle use for fruit gathering
+*{{K|d}}: Toggle use as a [[garbage dump]]
+*{{K|n}}: Toggle use as a [[pasture]]
+*{{K|p}}: Toggle use as a pit or pond zone
+*{{K|s}}: Toggle use for sand collection
+*{{K|c}}: Toggle use for clay collection
+*{{K|m}}: Toggle use as a meeting area (allows assignment to a location)
+*{{K|h}}: Toggle use as a [[hospital]]
+*{{K|t}}: Toggle use for [[animal training]]
+*{{K|a}}: Toggle active/inactive status for the zone
+*{{K|l}}: Assign zone to a location
+*{{K|X}}: Remove selected zone (only in Remove Zones mode)
+
+{{-}}
+
+
+=== Hot Keys Menu ===
+[[Image:HotKeysMenu2010.png|right]]
+:Allows the editing of hotkeys.  Pressing a hotkey, F1-F8 or Shift F1-F8 zooms to that location.
+*{{K|F#}}: Select line F#
+*{{K|Shift}}+{{K|F#}}: Select line Shift+F#
+*{{K|n}}: Change Name - Name this hotkey
+*{{K|z}}: Zoom Here - Set screen to zoom the current location when selected hotkey is pressed.
+{{-}}
+
+===Locations Screen===
+[[Image:Locations screen v0.44.03.png|right|480px]]
+:In this screen various [[location]]s can be viewed and [[occupation]]s can be assigned.
+*{{K|r}}:  Change restriction - Scrolls through location restrictions (All visitors welcome, Citizens and long-term residents only, and Citizens only)
+*{{K|n}}:  Rename location - Renames location
+*{{K|X}}:  Retire location - Removes location
+{{-}}
+
+=== Nobles Screen ===
+[[Image:NoblesScreen2010.png|right|480px]]
+:In this screen various [[nobles]] can be assigned/removed.   See the [[nobles]] article for details on nobles, their requirements/demands/mandates.
+*{{K|Enter}}:  View Unit/Fill Vacancy - Assigns a unit to the position if it's empty, otherwise opens the View screen for that unit.
+*{{K|r}}:  Replace - Replace the current position if possible, or place if empty.
+*{{K|s}}:  Settings - Only available for the [[bookkeeper]]
+{{-}}
+
+=== Status Screen ===
+[[Image:StatusScreen2010.png|right|480px]]
+:Shows basic Fortress status.
+*A - [[#Animals Screen|Animals]]
+*B - [[#Kitchen Screen|Kitchen]]
+*C - [[#Stone Screen|Stone]]
+*D - [[#Stocks Screen|Stocks]]
+*E - [[#Health Screen|Health]]
+*F - [[#Justice Screen|Justice]]
+*G - Date - Day Month, Year, Early/Middle/Late Season - [[Trade]] caravans arrive late in the month.  Elves/Humans/Dwarves : Spring/Summer/Autumn
+*H: Summary of your wealth, requires Broker with Appraisal skill to see - More wealth often leads to larger groups of [[Immigration|immigrants]], and [[siege]]s.  The wealth of unground structures you can't see is listed here.  “?” at the end of a value means you haven't had your bookkeep keep records precise enough to know the exact value yet.
+*I: How much wealth you have acquired through trade, or traded away (Import/Export)
+*J: How much food you have.  Other contains prepared meals, as well as some inedible plants.
+*{{K|←}}{{K|→}} - Move sub-menu
+*{{K|Enter}} - Select sub-menu
+{{-}}
+
+==== Animals Screen ====
+[[Image:Animals screen v0.44.03.png|right|480px]]
+:This shows information about all tame animals at your fortress.
+*A: Category: toggles between individual creatures and overall training status.
+*B: Training status, and trainer assigned (if any)
+*C: Animal type.  Stray Animals can be toggled to become pets, Tame animals are not hostile to your dwarves. Also indicates gender:  Amulet is Female, Bag (circle with arrow) is male.
+*D: Training orders: indicates animals awaiting training.
+*E: Who owns the animal.  Animals marked unavailable can't be adopted.  Animals marked “Ready for Slaughter will be slaughtered by a butcher at a butcher's shop.  Cats are marked as Uninterested and can't be set as available, cats will adopt dwarves themselves.
+*{{K|←}}{{K|→}} - Change category view
+*{{K| ↓}}{{K|↑}} - Move between animals
+*{{K|Enter}} - Toggle pet availability (not possible on untamed or cats)
+*{{K|b}} - Slaughter
+*{{K|x}} - Geld (males only)
+*{{K|t}} - Select trainer
+*{{K|w}} - schedule for war training
+*{{K|h}} - schedule for hunting training
+{{-}}
+
+==== Kitchen Screen ====
+[[Image:Kitchen screen v0.44.03.png|right|480px]]
+:This screen allows you to control what food is processed in which manner.
+*A: Ingredient categories: switch with <tab>
+*B: Available ingredients (those currently on-site)
+*C: Count for that food.  “?” at the end of a value means you haven't had your bookkeep keep records precise enough to know the exact value yet.
+*D: Whether a food is available to be cooked if possible. Blue=Yes/Red=No
+*E: Whether a food is available to be brewed if possible. Blue=Yes/Red=No
+*{{K|tab}} - Switch categories
+*{{K| ↓}}{{K|↑}} - Move between food items
+*{{K|c}} - Toggle cook.
+*{{K|b}} - Toggle brew.
+{{-}}
+
+==== Stone Screen ====
+[[Image:Stone screen v0.44.03.png|right|480px]]
+:This screen lets you restrict usage of stone to specific tasks.  All possible stones are listed here.
+*A: Stone categories: switch with <tab>
+*B: Stones/ores.
+*C: Stone properties
+*D: Various reactions that the selected stone can be used in (<b>these can be selected for more information</b>)
+*{{K|tab}} - Switch categories
+*{{K| ↓}}{{K|↑}} - Select stone
+*{{K|←}}{{K|→}} - View reaction info / return to stone list
+*{{K|Enter}} - Toggle usage restrictions on selected stone
+{{-}}
+
+==== Stocks Screen ====
+[[Image:Stocks screen v0.44.03.png|right|480px]]
+:This screen lists every item in your fortress.
+*A: Categories
+*B: Count of each general type. The white number counts usable items, the red number (if any) counts items that cannot be used, including those which belong to others (such as a caravan) and those which have been forbidden. A “?” at the end of a value means you haven't had your bookkeeper maintain records precise enough to know the exact value yet.
+*C: individual kinds of items.  Items of the same kind but different [[quality]] are grouped together unless {{K|Tab}} is pressed.
+*{{K|tab}}: Mode - Changes between listing single items, and grouping items of different quality but same type together.
+*{{K|z}}: Zoom - only available after pressing {{K|tab}}, zooms screen to selected item.
+*{{K|v}}: View - only available after pressing {{K|tab}}, views information on selected item.
+*{{K|m}}: Melt - Marks/unmarks item or group to be melted
+*{{K|f}}: Forbid - Marks/unmarks item or group to be forbidden
+*{{K|d}}: Dump - Marks/unmarks item or group to be dumped
+*{{K|h}}: Hide - Marks/unmarks item or group to be hidden
+{{-}}
+
+==== Health Screen ====
+[[Image:HealthScreen2010.png|right|480px]]
+:''Main article: [[Health screen]]''
+
+:Lists all types of [[Healthcare]] information about tamed animals and dwarves in your fortress.  Only visible if you have appointed a [[Chief medical dwarf]].
+{{-}}
+
+==== Justice Screen ====
+[[Image:JusticeScreen2010.png|right|480px]]
+:Lists information about Justice at your fortress.
+
+* A - Any criminals currently wanted or being punished are listed here
+* B - Shows details about the currently selected criminal - crimes committed, punishment sentenced, and the officer currently assigned to carry out punishments.
+* C - This lists the number of cages and chains marked for jailing criminals.
+{{-}}
+
+=== Unit List ===
+[[Image:Unit list screen v0.44.03.png|right|480px]]
+Shows a list of all units on site. Accessed with {{K|u}}.
+*A: Unit categories: switch with arrow keys
+*B: List of units in the selected category (in order of arrival on site)
+*C: Current job (status for animals)
+*D: Available (white) and unavailable (gray) controls
+*{{K|←}}{{K|→}} - Switch categories
+*{{K| ↓}}{{K|↑}} - Move between units
+*{{K|v}} - View unit (brings up the unit information screen)
+*{{K|z}} - Zoom to unit (recenters screen on unit)
+*{{K|j}} - View job (brings up job information screen)
+*{{K|b}} - Go to building (zoom to building for current job)
+*{{K|r}} - Repeat job (toggles job repeat status)
+*{{K|s}} - Suspend job (toggles job suspend status)
+*{{K|c}} - Cancel job 
+*{{K|x}} - Remove worker from job
+*{{K|m}} - Open job manager screen
+
+{{-}}
+
+=== Help Screen ===
+[[Image:HelpScreen2010.png|right|480px]]
+Shows basic help on Dwarf Fortress. Accessed by pressing {{K|?}}.
+*Introduction: What you will be doing in the game.
+*Creating Your World: What happens during world generation.
+*Preparing For The Journey: Covers site selection, unit preparation and equipment selection.
+*Your First Outpost: What happens when the game starts, and how to use designations, get food and drinks, make crafts, defence and a few more important topics.
+*The Many Menus: Navigating through the game's many menus, and explanation of every of them.
+*Icons: A small list of game's ASCII icons and their meaning.
+*Tables: There is currently only one table, "Item Designations", which explains what do various symbols around item names (eg. -Steel Sword-) mean.
+*The Adventurer's Manual: Information on Adventure Mode.
+*Technical: Backing up saves, using them in newer versions, changing options and what to do when your keyboard doesn't work.
+{{-}}
+{{Category|Interface}}

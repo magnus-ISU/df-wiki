@@ -1,0 +1,330 @@
+{{migrated article}}
+{{Quality|Unrated}}{{av}}
+Note that this page is superseded by [https://github.com/DFHack/df-structures df-structures].
+
+==Version identification==
+{| {{prettytable}} style="font-family: monospace;"
+|- bgcolor="#ddd"
+! Version
+! MD5 hash
+! PE timestamp
+
+|-
+! 0.40.01 legacy
+| 
+| 
+|-
+! 0.40.01 SDL
+| 
+| 
+
+|-
+! 0.40.02 legacy
+| 
+| 
+|-
+! 0.40.02 SDL
+| 11a7da1fda05dfc826655d8aff4e9f9b
+| 53BEF285
+|-
+! 0.47.04 SDL x86
+| 6df64d9f3b413e6ad436e718ebeee070
+| 5E5B11F9
+
+|}
+
+==General offsets==
+===Legacy versions===
+{| {{prettytable}} style="font-family: monospace"
+|- bgcolor="#ddd"
+! Description
+! 0.40.01 legacy
+! 0.40.02 legacy
+
+|-
+! cursor_xyz
+| colspan="1" rowspan="2" | 
+| colspan="1" rowspan="2" | 
+
+|-
+! mouse_x
+<!-- Cells rowspanned out -->
+|-
+! mouse_y
+| 
+| 
+
+|-
+! mouse_z
+| 
+| 
+
+|-
+! window_dims
+| colspan="1" rowspan="2" | 
+| colspan="1" rowspan="2" | 
+
+|-
+! window_grid_x
+<!-- Cells rowspanned out -->
+|-
+! window_grid_y
+| 
+| 
+
+|-
+! window_x (viewport_x)
+| 
+| 
+
+|-
+! window_y (viewport_y)
+| 
+| 
+
+
+|-
+! window_z (viewport_z)
+| 
+| 
+
+
+|}
+
+
+===SDL versions===
+{| {{prettytable}} style="font-family: monospace"
+|- bgcolor="#ddd"
+! Description
+! 0.40.01 SDL
+! 0.40.02 SDL
+! 0.47.04 SDL x86
+
+|-
+! cursor_xyz
+| colspan="1" rowspan="2" | 
+| colspan="1" rowspan="2" | 1D0CD40
+| colspan="1" rowspan="2" | 20f8bc8
+
+|-
+! mouse_x
+<!-- Cells rowspanned out -->
+|-
+! mouse_y
+| 
+| 1D0CD44
+| 20f8bcc
+
+|-
+! mouse_z
+| 
+| 1D0CD48
+| 20f8bd0
+
+|-
+! window_dims
+| colspan="1" rowspan="2" | 
+| colspan="1" rowspan="2" | 
+| colspan="1" rowspan="2" | 20f8cd0
+
+|-
+! window_grid_x
+<!-- Cells rowspanned out -->
+|-
+! window_grid_y
+| 
+| 
+| 20f8cd8
+
+|-
+! window_x (viewport_x)
+| 
+| 
+| 2a9a2f0
+
+|-
+! window_y (viewport_y)
+| 
+| 
+| 2a9a314
+
+
+|-
+! window_z (viewport_z)
+| 
+| 
+| 2976dac
+
+
+|}
+
+==Map data==
+===Legacy versions===
+
+{| {{prettytable}} style="font-family: monospace"
+|- bgcolor="#ddd"
+! Description
+! 0.40.01 legacy
+! 0.40.02 legacy
+
+|-
+! map_data
+| 
+| 
+
+
+|-
+! [[#map_info struct|map_info]]
+| 
+| 
+
+
+|}
+
+
+===SDL versions===
+{| {{prettytable}} style="font-family: monospace"
+|- bgcolor="#ddd"
+! Description
+! 0.40.01 SDL
+! 0.40.02 SDL
+! 0.47.04 SDL x86
+
+|-
+! map_data
+| 
+| 2996f24
+| 2be609c
+
+
+|-
+! [[#map_info struct|map_info]]
+| 
+| 2996f3c
+| ?
+
+|}
+
+===map_info struct===
+{| {{prettytable}}
+|- bgcolor="#ddd"
+! Type
+! Name
+! Description
+
+|-
+| int32
+| block_count_x
+| rowspan="2" | Size of the current map region in 16x16 blocks.
+|-
+| int32
+| block_count_y
+|-
+| int32
+| block_count_z
+| Should be the same as tile_count_z
+
+|-
+| int32
+| tile_count_x
+| rowspan="3" | Size of the current map region in tiles.
+|-
+| int32
+| tile_count_y
+|-
+| int32
+| tile_count_z
+
+|-
+| int32
+| region_x
+| rowspan="2" | Position of the current map region within the world as a whole.
+|-
+| int32
+| region_y
+|-
+| int32
+| region_z
+| Base Z-level - add this to Z coordinates to get the Z-level displayed on the screen
+
+|}
+
+===Map block data offsets===
+
+{| {{prettytable}} style="font-family: monospace"
+|- bgcolor="#ddd"
+! Description
+! 0.40.01&ndash;02
+! 0.47.04 SDL x86
+
+|-
+! map_data_map_x_offset
+| 0060
+| 0054
+|-
+! map_data_map_y_offset
+| 0062
+| 0056
+|-
+! map_data_map_z_offset
+| 0064
+| 0058
+
+|-
+! map_data_tiletype_offset
+| 006a
+| 005e
+
+|-
+! map_data_designation_offset
+| 026c
+| 0260
+
+|-
+! map_data_occupancy_offset
+| 066c
+| 0660
+
+|-
+! map_data_0a60_offset
+| 0A6c
+| 0A60
+
+|-
+! map_data_pathfinding_offset
+| 0D6c
+| 0D60
+
+|-
+! map_data_1160_offset
+| 116c
+| 1160
+
+|-
+! map_data_1360_offset
+| 136c
+| 1360
+
+|-
+! map_data_temperature1_offset
+| 156c
+| 1560
+
+|-
+! map_data_temperature2_offset
+| 176c
+| 1760
+
+|-
+! map_data_1960_offset
+| 196c
+| 1960
+
+|-
+! map_data_1b60_offset
+| 1B6c
+| 1B60
+
+|}
+
+[[Category:Hacking]]
