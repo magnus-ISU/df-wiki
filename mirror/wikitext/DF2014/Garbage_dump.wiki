@@ -1,0 +1,53 @@
+{{Quality|Superior|12:14, 19 April 2015 (UTC)}}
+{{projects}}{{av}}
+
+[[File:Stockpile.png|thumb|350px|right|Garbage dumps are used most often for clearing out large areas of leftover stone - for instance, when constructing a [[stockpile]].]]
+
+'''Garbage dumps''' are [[activity zone]]s in which dwarves will throw items marked for dumping. (The garbage dump may be inappropriately named, as it's more of a matter compression zone. The specifics are beyond human understanding; however, dwarves are in fact capable of compressing an infinite amount of matter into only one tile, as long as it is specified as a garbage dump.)
+
+Garbage dumps are ''not'' the same as [[Refuse#Refuse|refuse]] stockpiles. 
+* Refuse stockpiles can be designated to accept specific type(s) of refuse, such as animal [[corpse]]s or [[bones]], and then are automatically filled by haulers whenever the items appear on the map. 
+* Garbage dumps don't have categories. If you tell your dwarves to Dump Items from a single block or an area, the dwarves will move all designated objects from those blocks to the Dump, including objects of value!
+
+Garbage dump zones are useful for many things beyond [[garbage disposal]]; they can create [[quantum stockpile]]s, transport materials to a job site, send items to the [[trade depot]] when no caravan is present, [[trap design#Falling_debris_trap|drop rocks]] on enemies below, and numerous other uses.
+
+=== Create Garbage Dump ===
+To place a garbage dump, create a zone ({{k|i}}) on either a relatively empty plot of land or adjacent to a cliff face or hole and enable garbage {{k|d}}umping. If a garbage zone is designated beside a [[cliff]] or hole (both natural or dwarf made) garbage will be thrown off/in the z-space. Each ground tile within that zone is considered a garbage dump tile; thus, if you want to place a single-tile zone, place the zone onto a ground tile (optionally adjacent to a cliff or [[pit]]), not onto an [[open space]]. This mechanic also works with rivers.
+
+=== Marking items to Dump ===
+Items can be marked for dumping either by using {{k|k}}-{{k|d}} (one item at a time), or {{k|d}}-{{k|b}}-{{k|d}} (bulk dumping). 
+'''NOTE:''' Bulk dumping designates ''all'' items on the tiles for dumping, even built [[furniture]], the construction materials making up buildings, items inside [[container]]s, etc. In the case of built furniture and building components, this will have no immediate effect; however, upon deconstruction the item will immediately be dropped on a nearby square by the dwarf hauling the item to await disposal in the nearest dump.
+
+=== Moving items to Dump ===
+Garbage dumps only accept items that have been marked for dumping, require dwarves to have [[refuse hauling]] [[labor]] enabled, and are subject to refuse [[standing orders]] ({{k|o}}-{{k|r}}). 
+
+Dwarves usually throw dumped items in the nearest available garbage dump, although this is not an ironclad rule.  If a nearer zone becomes available after they have already started the job they will ignore it. They also have a preference for open space dumps. If a garbage dump is located next to open space, dwarves will always stand on a garbage dump square when throwing ''into'' that open space, even if it could potentially be done more efficiently.  If a garbage dump is located next to multiple tiles of open space, they seem to prefer the one farthest to the northwest.  If a tile to the north and a tile to the west are the only tiles available, they will throw to the west.  Such garbage dumps can be a very efficient method of moving materials to the lower levels of your fortress. However care must be taken to prevent dwarves and livestock from being struck by falling objects, perhaps with [[traffic]] designations and [[pasture]]s. 
+
+Dwarves will ''not'' dump items that are in a tile marked "Above Ground" unless you allow them to ({{k|o}}->{{k|r}}->{{k|o}}). 
+
+Items dumped into [[magma]] that are not [[magma safe]] will permanently disappear, which is useful for disposing of clutter and increasing [[FPS]]. Otherwise a single tile (either a dump zone, or the ground below the open space) will hold any number of dumped objects. Dumping items into [[magma]] can be [[fun|dangerous]] due to the [[magma mist]] generated when objects fall into magma. It is advised to dump items into magma from a hole several z-levels up to avoid [[Fire|!!Dwarves!!]] running around the fortress.
+
+'''NOTE:''' If you designate items for dumping, but forget to mark an active garbage dump, your dwarves will ignore the item until an active garbage dump is marked.
+
+=== Dumped Items ===
+Dumped items are automatically marked as [[forbid]]den, preventing dwarves from touching them. Therefore, these items can't be used, or even selected, in workshop jobs, etc.
+
+=== Reclaim Dumped Items ===
+If for some reason [[Main:Urist|Urist]] is yet again incapable of locating his favorite pair of cave troll leather socks, he should think to look among the black hole of matter that is the nearest garbage dump, as they could be snugly lodged between a few billion rocks.
+
+You can reclaim Dumped/forbidden items in three different ways:
+* Press {{k|k}} to view the item and {{k|f}} to toggle forbid status.  
+* Use the reclaim [[designation]] to reclaim simultaneously all of the items dumped by using {{k|d}}-{{k|b}}-{{k|c}} and tracing the designation over the objects in question.
+* Remove the Garbage Dump zone with {{k|i}}-{{k|x}}-{{k|Enter}}  (Or {{k|i}}-{{k|x}}-{{k|X}})
+
+===Dwarves won't dump no matter what I do===
+
+# The key to set a zone for dumping is now {{k|d}} instead of {{k|g}}. Make sure that your muscle-memory has not caused you to designate a fruit gathering zone by accident.
+# Probably due to a bug, dwarves occasionally ignore items that are meant to be dumped; viewing the item by pressing {{k|k}} then toggling forbid and dump status on, then off again ({{k|f}}-{{k|f}}-{{k|d}}-{{k|d}}) seems to correct this problem. Dumping items requires the '[[refuse hauling]]' labor. Items located in an "outside" tile will not be moved unless 'gather refuse from outside' is enabled in your [[standing orders]].
+
+=== Strategy ===
+Garbage dumps are great space savers because they can hold an infinite number of items on one tile; with some micromanagement they can even compress large, one-item-per-tile [[stockpile]]s into single-tile [[quantum stockpile]]s (although this requires additional work and is usually considered an [[exploit]]). The most common use for garbage dumps is for cleaning away loose stones left in your fortress by your [[miner]]s: mark them for dumping, wait for the jobs to be completed, and then reclaim them ({{k|d}}-{{k|b}}-{{k|c}}) for use by your stonemasons; bonus points if you do this next to a stoneworking workshop and then re-designate the tile as a stone stockpile. If the dump is designated inside a workshop, the workshop will not become cluttered. However, if you put a garbage dump inside a magma workshop with the intent of dumping ores there, make sure the zone does not overlap any open pits of magma you may have carelessly left around, or as per intended behavior, items will be dumped into the magma.
+
+==See also==
+*[[Garbage disposal]]
+[[ru:Garbage dump]]

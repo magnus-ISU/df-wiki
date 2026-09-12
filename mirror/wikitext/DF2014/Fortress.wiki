@@ -1,0 +1,115 @@
+{{Quality|Exceptional|23:25, 20 September 2016 (UTC)}}
+{{av}}
+[[File:Akershus fortress, drawing.jpg|thumb|300px|right|Akershus fortress drawing, 1899.]]
+:''You may be looking for [[Dwarf fortress mode]].''
+
+[[Dwarf|Dwarves]] live in '''fortresses'''; [[underground]] [[site|complexes]] with all the required buildings for dwarven living. In [[dwarf fortress mode]], the player's expedition team embarks in order to construct and operate a fortress. See the [[quickstart guide]] for a guide on how to establish and maintain your very first fortress. 
+
+== Procedurally-generated ==
+
+[[Dwarf|Dwarven]] [[civilization]]s build their fortresses on the edges of [[Mountain|mountain ranges]], and they will act as the seat of power of a dwarven civilization's leaders. They occupy only 3×3 local tiles, while [[hillock]]s and [[mountain halls|halls]] claim much more territory.
+
+Your adventurer can visit dwarven fortresses {{Raw Tile|Ω|7:0:1}} in [[Adventurer mode|adventure mode]]. 
+
+They consist of a large rectangular structure made out of stone or metal blocks, with a three-tile-wide entrance on one side. Inside, (it is a roofed structure) there will be a [[trade depot]], possibly with traders from other civilizations hanging out around it, and also a two-story [[tavern]], with the rooms for rent on the second floor. In the center of the rectangle will be a large hole, with [[ramp]]s spiraling downwards on the edges. The rampwell is very deep, but following it will eventually lead you past multiple levels filled with rooms and passageways, similar to a [[dungeon]] but less expansive. Some bigger rooms will be filled with [[metalsmith's forge]]s, and some smaller ones with random clothing.
+
+=== Navigation ===
+[[File:Fortress_map_43.png|thumb|300px|A map of a typical procedurally generated fortress, exported from legends mode. The division between a central area(<span style="color:rgb(100,100,100)">█</span>) and a surrounding periphery, consisting of "stacks" of living(<span style="color:rgb(20,50,30)">█</span>) and industrial(<span style="color:rgb(250,50,20)">█</span>) areas, is clear.]]
+Many players find procedurally-generated fortresses hard to navigate, due to their labyrinthine layout. Finding one's way around a fortress gets much easier, once one learns how they are planned.
+
+To begin with, all fortresses are laid out on a 3×3 coordinate grid, where each area occupies exactly one of the nine tiles. The large structure at the ground level can be used as a measure for how big each singular tile is. In the described grid, there is always a main area, placed in the central tile of the grid. The central area stretches from ground level down to the magma sea, and consists of several large halls and corridors, concentrated into several clusters, each on a different depth and used for a different function. Generally, one of the hall clusters will be used for [[stockpile|storage]] and one as meeting areas, while the one near the magma sea will usually contain [[magma forge|magma powered forges]]. The large structure at the ground level also counts as part of this central area, and will always contain a downward ramp way and a [[trade depot]]. Depending on the history of the site, the surface area might also contain a [[tavern]] and a [[library]]. Underground, the central area will branch off into living areas containing [[bedroom]]s, and industrial areas, which may contain [[forge]]s, [[mason's workshop]]s, [[carpenter's workshop]]s, or [[tanner's shop]]s. Halls with statues are common there.
+
+[[File:Df_43_05_generatedfortress.PNG|thumb|center|400px|Inside the generated fortress in v43.05, on the industrial level (mason's workshops, forges and carpentry workshops are seen), with sculpture garden. Bedrooms with passages are on higher level.]]
+
+A typical bedroom in a generated fortress has 4 squares, two of them are occupied with bed and cabinet (with decent leather armor and different clothing) and linked by a 1-tile wide corridor. These areas always occupy the eight peripheral tiles surrounding the central tile in the coordinate grid. Living and industrial areas are often stacked upon one another, and linked with staircases. Additionally, living and industrial areas are always separated into different floors, meaning that peripheral map tiles on a given floor will all be either living areas or industrial dittos, while the floor below will be the opposite. Sometimes, the area may be generated without stairs to the ground level. You may exit the area by using Fast Travel (T). If an underground tunnel is connected to the fortress, it will also be accessible from the central area.
+
+== Dwarf Fortress mode ==
+=== Nomenclature ===
+
+Fortresses are [[Fortress name|named in a specific manner]], usually assigned at random, but can be set at [[embark]] time. The fortress also gains a title according to its population, which is viewable in the upper left of the {{Key|z}} screen, in front of the fortress name. In addition, the fort may be the home of monarchs of the surrounding land and gain an additional noble title.
+
+[[Immigration]] is the main driver of population growth. Each fortress title requires a certain level of population, as well as performing a number of "diverse tasks" over the course of one year, with the Autumn [[caravan]] safely making it home - crafting, metal, wood, gem, stone, and food-related jobs. For example, to become a Town, you must perform 4 of the following: 25 crafting jobs, 25 metal-related jobs, 25 wood-related jobs, 10 gem jobs, 25 stone jobs, 25 food jobs. 
+
+Some fortress titles are required for various game mechanics, e.g. the appointment of landholders is ''not'' linked to your fortress rank; however, your fortress must attain a rank of '''Metropolis''' before you will be eligible to summon your [[monarch]].
+
+{| class=wikitable
+! colspan='2' | Fortress Title
+! Pop
+! Jobs: Craft/Metal/Wood/Gem/Stone/Food
+
+|- style='background-color:#eee'
+| style='background-color:#000; padding:2px 6px' | {{Raw Tile|Ω|#555|#000}}
+| '''Outpost'''
+| style='text-align:right' | -
+| None
+
+|- style='background-color:#ddd'
+| style='background-color:#000;' | {{Raw Tile|Ω|#777|#000}}
+| '''Hamlet'''
+| style='text-align:right' | 20
+| 3 of 10/10/10/4/10/10
+
+|- style='background-color:#eee'
+| style='background-color:#000;' | {{Raw Tile|Ω|#999|#000}}
+| '''Village'''
+| style='text-align:right' | 50
+| 3 of 15/15/15/6/15/15
+
+|- style='background-color:#ddd'
+| style='background-color:#000;' | {{Raw Tile|Ω|#bbb|#000}}
+| '''Town'''
+| style='text-align:right' | 80
+| 4 of 25/25/25/10/25/25
+
+|- style='background-color:#eee'
+| style='background-color:#000;' | {{Raw Tile|Ω|#ddd|#000}}
+| '''City'''
+| style='text-align:right' | 110
+| 4 of 35/35/35/14/35/35
+
+|- style='background-color:#ddd'
+| style='background-color:#000;| {{Raw Tile|Ω|#fff|#000}}
+| '''Metropolis'''
+| style='text-align:right' | 140
+| 5 of 50/50/50/20/50/50
+
+|- style='background-color:#eee'
+| style='background-color:#000;| {{Dwarf|5:1}}
+| '''Mountainhome'''
+| style='text-align:right' | [[Monarch|King]]
+| Special
+|}
+
+{| class=wikitable style='border-spacing: 0 2px'
+! colspan='2' | Noble Title 
+! Description 
+|-
+| style='background-color: #000; padding: 2px 6px;' | {{Dwarf|5:0}}
+! style='text-align: left; background: #fdf;' | Barony capital
+| 
+* Home of the [[Baron|Baron/Baroness]]
+|-
+| style='background-color: #000;| {{Dwarf|5:0}}
+! style='text-align: left; background: #fef;' | County capital
+|
+* Home of the [[Count|Count/Countess]]
+|-
+| style='background-color: #000;| {{Dwarf|5:0}}
+! style='text-align: left; background: #fdf;' | Duchy capital
+| 
+* Home of the [[Duke|Duke/Duchess]]
+|-
+| style='background-color: #000;| {{Dwarf|5:0}}
+! style='text-align: left; background: #fef;' | Mountainhome
+|
+* Home of the [[Monarch|King/Queen]]
+* Capital of its civilization
+|}
+
+{{Translation
+| dwarven = geshud
+| elvish  = abeco
+| goblin  = snusp
+| human   = thrathdad
+}}
+{{World}}

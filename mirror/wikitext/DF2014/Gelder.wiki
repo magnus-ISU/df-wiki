@@ -1,0 +1,30 @@
+{{Quality|Fine|16:19, 27 November 2014 (UTC)}}
+{{Skill
+| color      = 6:0
+| skill      = Gelder
+| profession = [[Farmer]]
+| job name   = [[Gelding]]
+| tasks      = 
+* {{k|x}} Geld animal
+| workshop   = 
+* [[Farmer's workshop]]}}
+{{av}}
+
+'''Gelder''' is the [[skill]] associated with the '''geld''' labor. Gelding allows the castration of [[Gender|male]] animals so they cannot [[Breeding|produce offspring]]. This is useful to stop/prevent [[catsplosion]]s, as the tomcats can no longer breed. A dwarf more skilled in gelding is less likely to be injured performing the job.
+
+Animals can be selected for gelding through the same menus used for [[butcher]]y:
+* go into {{K|v}}iew mode, place the cursor on the animal, go to the {{K|p}}references page and press {{K|x}} to flag (or un-flag) the animal for gelding, or,
+* go to the {{K|z}} ([[Status]]) screen, then the [[Status#Animal_Status_Screen|animal status screen]], select the animal and press {{k|x}} to flag (or un-flag) for gelding.
+
+A geld animal job will then be added to a [[farmer's workshop]]. A gelder will take this job and lead the animal to the workshop, at which point it is instantly castrated. A castrated male's gender will appear as {{DFtext|x{{char|11}}x}} rather than the usual {{DFtext|{{char|11}}}}.
+
+Note that a Geld Animal job will be added to ''every'' available farmer's workshop if the number of animals scheduled to be gelded equals or exceeds those jobs, regardless of the number of dwarves in your fort who have the labor enabled. This leads to your farmer's workshops sitting idle, waiting for an animal to be led in and gelded, heedless of any other jobs that are now sitting idle queued behind a job that won't be happening any time soon. The Geld Animal labor cannot be restricted through a workshop's profile; the only workaround is to suspend the Geld Animal job in ''every'' farmer's workshop you don't want animals being gelded in. Although the jobs will remain in the queue, with them suspended, the next-highest job will become active.
+
+Geldable animals have {{token|SET_BP_GROUP|c|BY_TYPE|c|LOWERBODY}}{{token|BP_ADD_TYPE|c|GELDABLE}} under {{token|CASTE|c|MALE}} section of their RAWs.
+
+[[Egg]]-laying animals are not geldable, neither are [[Giant cave spider]]s.
+
+Incidentally, gelding can occur through combat as well-aimed attacks to the lower body, triggering the message "a gelding strike" or "the geldables have been torn away" for the same effect, though these occurrences do not contribute to the gelder skill.
+
+
+{{skills}}

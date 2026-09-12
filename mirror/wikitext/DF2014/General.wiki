@@ -1,0 +1,60 @@
+{{Quality|Superior|10:37, 18 May 2015 (UTC)}}
+{{Noble
+| noble= General
+| office= Decent office
+| quarters= Quarters
+| dining= Dining room
+| tomb= Grave
+| chests=2
+| cabinets=1
+| racks=3
+| stands=3
+| demands=2
+| arrival = 
+* Arrives with [[monarch]]
+}}{{av}}
+
+The '''general''' is the highest-ranking member of the mostly-unrealized, civilization-wide dwarven army, responsible for determining military strategy as well as the appointment of [[lieutenant]]s and [[captain]]s. The general commands the lieutenants, who in turn command the captains. The general arrives alongside the [[monarch]]. 
+
+In the current implementation, there does not seem to be anything special about the general. There are no squads under the general's control.
+
+[[Human]] and [[goblin]] civilizations occasionally have generals as one of their variable positions, but they aren't guaranteed.
+
+[[Elf|Elves]] additionally have the princess role, with the same functions and likewise appointing [[ranger captain]]s. Despite the name, the position is not inherited, instead appointed by the [[druid]]. However, the princess is defined as the successor to the [[monarch|queen]].
+
+{{Translation
+| dwarven = gärem
+| elvish  = carila
+| goblin  = turu
+| human   = cañar
+}}
+
+{{gamedata|	[POSITION:GENERAL]
+		[NAME:general:generals]
+		[NUMBER:1]
+		[SQUAD:10:soldier:soldiers]
+		[APPOINTED_BY:MONARCH]
+		[RESPONSIBILITY:MILITARY_STRATEGY]
+		[COMMANDER:LIEUTENANT:ALL]
+		[PRECEDENCE:50]
+		[SPECIAL_BURIAL]
+		[MENIAL_WORK_EXEMPTION]
+		[SLEEP_PRETENSION]
+		[PUNISHMENT_EXEMPTION]
+		[FLASHES]
+		[BRAG_ON_KILL]
+		[CHAT_WORTHY]
+		[DO_NOT_CULL]
+		[KILL_QUEST]
+		[ACCOUNT_EXEMPT]
+		[DUTY_BOUND]
+		[DEMAND_MAX:2]
+		[REQUIRED_BOXES:2]
+		[REQUIRED_CABINETS:1]
+		[REQUIRED_RACKS:3]
+		[REQUIRED_STANDS:3]
+		[REQUIRED_OFFICE:500]
+		[REQUIRED_BEDROOM:250]
+		[REQUIRED_DINING:250]
+		[REQUIRED_TOMB:1]}}
+{{Nobles}}
