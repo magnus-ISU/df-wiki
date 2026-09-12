@@ -1,0 +1,19 @@
+{{release notes}}
+:Here's a little patch to clean up some issues that sprang up (broken deconstruction speeds, broken work detail scrollbar.)
+:I've also tried to adjust the new material-based dwarf dig speeds to be faster overall - there had to be give somewhere, so legendary miners now aren't as relatively speedy (they are still twice as fast as a novice.) Native metals were also taking way too long to mine. And the lack of drinks effect was coming on a little too strong too early in mining in a noticeable way.
+:&mdash;[[Toady One]], December 19, 2025
+* [https://www.bay12forums.com/smf/index.php?topic=183626.0 Bay 12 Forum thread]
+* [https://www.bay12games.com/dwarves/index.html#2025-12-19 Patch notes on Bay 12 Games]
+* [https://store.steampowered.com/news/app/975370/view/520859243419534469 Patch notes on Steam]
+* [https://kitfoxgames.itch.io/dwarf-fortress/devlog/1155160/hotfix-patch-5308 Patch notes on itch.io]
+
+== General updates ==
+* Reduced erroneously long deconstruction speeds.
+* Fixed broken scrollbar for work detail labor list.
+* Changed relationship between mining speed, mining skill, and materials.
+* Fixed broken mining speeds for native metals.
+* Moderated lack of drink effect on work speed.
+
+== File changes ==
+* data\vanilla\vanilla_materials\objects\inorganic_stone_mineral.txt
+** Changed yield, fracture, and strain values for NATIVE_GOLD, NATIVE_SILVER, NATIVE_COPPER, NATIVE_PLATINUM, and NATIVE_ALUMINUM to be the same as stone template

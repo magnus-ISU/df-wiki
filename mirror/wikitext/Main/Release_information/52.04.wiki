@@ -1,0 +1,25 @@
+{{release notes}}
+:Here's a release to fix issues with armies/squads traveling, and some others. 
+:&mdash;[[Toady One]], August 28, 2025
+
+:Hey Urists,
+:It's Alexandra here with patch 52.04 to fix issues with armies/squads travelling. We're sorry this was such a pain to deal with in-game, it was a nasty bug. There's also some other fixes in there. The team's focus for September is continuing with the siege update. We will have more news and details to share soon.
+:&mdash;[[Alexandra]], August 28, 2025
+* [https://www.bay12forums.com/smf/index.php?topic=183417.0 Bay 12 Forums thread]
+* [https://www.bay12games.com/dwarves/index.html#2025-08-28 Patch notes on Bay 12 Games]
+* [https://store.steampowered.com/news/app/975370/view/547870690696495555 Patch notes on Steam]
+* [https://kitfoxgames.itch.io/dwarf-fortress/devlog/1019084/patch-5204 Patch notes on itch.io]
+
+== General updates ==
+* Fixed issue with squads/armies breaking into groups and not rejoining.
+* Mod upload doesn't clobber info.txt.
+* Fixes a crash when choosing clothing sizes in workshop.
+* Fixed out-of-bounds error in army processing.
+* Fixed out-of-bounds error in transformed units.
+* Fixed armies deleting items improperly.
+* Fixes a potential crash in wrestling.
+* Fixed issue with plant processing job specifiers being ignored.
+* Mill job plant can be specified.
+* Makes the "placing lakes and minerals" stage of worldgen significantly faster.
+* Moods using bars try to use metal now.
+* [[Animal people]] no longer inherit [[Creature_token#MEANDERER|meandering]] from their base creature.

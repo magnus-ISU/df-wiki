@@ -1,0 +1,29 @@
+{{release notes}}
+
+:Today's patch features the much-anticipated baby update including sprites for children and babies for many of the creatures and outdoor plants. This also includes dragon hatchings! How cute! Other important fixes for buckets and refuse stockpiles.
+:&mdash; Alexandra, May 2, 2023
+*[https://kitfoxgames.itch.io/dwarf-fortress/devlog/525214/the-babies-are-here-patch-notes-v5008-may-2-2023 Patch notes on Itch.io]
+*[https://steamcommunity.com/app/975370 Patch notes on Steam]
+
+== New stuff ==
+* XML export is back in legends mode.
+
+== Major bug fixes ==
+* Cleaned out lingering data from autosaves and manual saves that could cause corruption if multiple worlds were active.
+
+== Graphics additions/changes ==
+* Added graphics for many child/baby creatures.
+* Added hatchling state for dragons.
+* Added crop/sprout pictures for outdoor plants.
+* Added outdoor sapling graphics.
+* Added palettized boulders.
+* Ice wall graphics updated.
+* Smooth ice wall graphics added.
+* Added more fortification images to indicate direction and material.
+
+== Other bug fixes/tweaks ==
+* Stopped dwarves without working grasps from trying to get goblets to drink, failing, and dying of thirst.
+* Allowed most water-based jobs that use buckets to use partially-filled water buckets in addition to empty buckets.
+* Made stocks screen open faster.
+* Made all stockpiles not include the refuse option.
+* Stopped refuse piles that also have armor/finished good settings from degrading contents.

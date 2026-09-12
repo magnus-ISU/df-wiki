@@ -1,0 +1,23 @@
+{{release notes}}
+Dwarf Fortress 50.02 was released as a [[Premium version]] only.
+
+:This is a quick release mainly to handle a widescreen crash and some menu issues there. With that stabilized, we'll be able to start properly addressing the reports and feedback we've collected for a bulkier patch next. Thanks for a wonderful launch!
+:&mdash; Toady One, December 8, 2022
+
+:Editor's note from Kitfox: this will help MANY of the crashes ya'll are experiencing. Basically anytime it crashed in a menu, I suspect this version will fix it. There's still a few less common bugs of course, so we know we have lots of work left, but I suspect this will make it MUCH more stable for those of you who were having trouble and weren't using 1920x1080 resolutions. Thank you for your patience thus far.
+:&mdash; Kitfox Games, December 8, 2022
+*[https://store.steampowered.com/news/app/975370/view/3631620553383112422 Patch notes on Steam]
+
+== Major bug fixes ==
+
+* Fixed crash from compressed menu lists (e.g. workshop assignment) on widescreen default [[settings]]
+* Changed init option for interface pixel width to be a percentage (to fix many widescreen menu issues)
+* Stopped fishing from hugely amplifying [[Creature#Agitation|creature agitation]] in the wilds (zeroed general agitation level in old saves)
+
+== Graphics additions/changes ==
+
+* Improved images for planned walls, floors, and fortifications
+* Updated [[door]]s, [[hatch]]es, [[chest]]s, and other [[Storage|containers]] so that palettes will affect handles and other add-ons if the [[mod]]s desire it, but made the default behavior consistently not palettize these add-ons
+* Missing occupied animal trap images included
+
+[[Category:Release information]]

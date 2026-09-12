@@ -1,0 +1,11 @@
+{{Quality|Fine}}
+{{av}}
+
+A '''revealed tile''', in [[fortress mode]], is any tile that has a description when pointed at with the mouse. 
+
+All [[Tile attributes|above ground]] tiles on the map start out revealed, including tiles above the surface. All [[Tile attributes|subterranean]] tiles must be revealed by [[mining|digging]] into them. All tiles adjacent to a dug tile on the same level will also be revealed, including diagonally: you can see what the rock walls adjacent to a mined-out tile are made of, for instance, and you can see the outermost tile of each z-level of a mountain. You can also see the tile immediately below where a downward or up/down [[stairs|stairway]] has been dug - this is because digging the stairway removes the [[floor]] between the levels. Upward stairways do not reveal the level above, because they do not remove the floor/ceiling above the stairs. With [[premium]] graphics, solid tiles that are not adjacent to open space will still be rendered as unrevealed, but they can still be examined by pointing at them with the mouse.
+
+Underground features like [[cavern]]s and [[Magma#Magma_pools|magma pool]]s start out hidden and must be discovered by mining into them. Upon breaching a feature, an [[announcement]] will be displayed informing the player of the discovery, and a chunk of the new feature "within view" of your dwarves will be revealed; see the [[Cavern#Methods_of_exploration|Methods of exploration]] in the caverns article for information on revealing more. Walls next to water or magma, including vertically, will be damp or warm, and dig designations for such walls will be [[Digging designation canceled|cancelled]] when revealed to avoid potentially flooding the fortress with what is beyond them, by default, though this can be disabled on the [[Standing_orders#Other|Other tab]] on the Standing orders tab in the Labor menu {{Menu icon|y}}{{version|53.12}}.
+
+{{Category|Map tiles}}
+[[ru:Revealed tile]]

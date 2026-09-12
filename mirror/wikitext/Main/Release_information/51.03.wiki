@@ -1,0 +1,14 @@
+{{release notes}}
+
+''Dwarf Fortress'' v51.03 is a [[Premium]]-only patch that was released January 25, 2025. This fixes an issue that greets players with a deafening screech unexpectedly-loud for their volume settings. The noise activates during unlucky random sound selections involved in clicking scroll buttons and combat with goblins.
+
+This patch modifies these two corrupt-looking ogg vorbis files that are the source of the problem:
+*/data/sound/audio/one-shots/goblin-dark-pits/'''one-shot-006.ogg'''
+*/data/sound/audio/ui/scrolls/scroll-1/'''scroll-2.ogg'''
+
+=Official patch notes=
+*[https://kitfoxgames.itch.io/dwarf-fortress/devlog/874664/hotfix-patch-5103 Patch notes on Itch.io]:
+*[https://store.steampowered.com/news/app/975370/view/530962536730723269 Patch notes on Steam]:
+===Hotfix: Patch 51.03===
+=====Patch Note 51.03=====
+*Replaced two audio files causing sound issue

@@ -1,0 +1,60 @@
+{{release notes}}
+
+:Here's another routine patch. Notably, good food should make dwarves happier and they should seek out better food. I've been sick through February so the changes are a bit sparse, but I should be back at things now.
+:&mdash;[[Toady One]], March 4, 2026
+
+:Hey Urists,
+:Alexandra here with with today’s patch and a bunch of community news! We've got an AMA on r/dwarffortress, some support for creating your own Dwarf Fortress gatherings and some cool stuff from the community.
+:&mdash;[[Alexandra]], March 4, 2026
+* [https://www.bay12forums.com/smf/index.php?topic=183759.0 Bay 12 Forum thread]
+* [https://www.bay12games.com/dwarves/index.html#2026-03-04 Patch notes on Bay 12 Games]
+* [https://store.steampowered.com/news/app/975370/view/497222321068572753 Patch notes on Steam]
+* [https://kitfoxgames.itch.io/dwarf-fortress/devlog/1448582/food-fixes-ama-community-spotlight-and-more-dwarf-fortress-patch-5311 Patch notes on itch.io]
+
+== General updates ==
+* Made happy [[food]] [[thought]] levels easier to obtain (more in line with newer food values).
+* Dwarves seek good [[meal]]s more aggressively and value better foods over worse ones more precisely.
+* Stopped dwarves from forgetting friends/grudges they rarely meet after a few years.
+* Added item dimension check to [[strange mood]]s to make sure they don't gather e.g. infinite [[cloth]] from [[hospital]] zones.
+* Stopped [[world gen]] interrogations from sometimes disordering known site records.
+* Fixed crash issue with error-logging for certain modded languages.
+* Fixed some potential multithreading stability issues.
+* Added some crash-proofing to conversations.
+* Worldgen now aborts instead of quitting the whole game when a raw object is missing.
+* Fixed issue causing deletion of nemesis records for units.
+* Made several distance calculations euclidean instead of rectangular.
+* Fixed issue with [[temperature]] check so that certain items (butchery products etc.) respond to temperature properly.
+* Changed filesystem for certain setups to support UTF-8 strings.
+* Fixed problem causing [[Adventurer_mode_character_creation#Party_summary|party]] [[Adventurer_mode_gameplay#Party_members|tactical]] AI settings to be unchangeable.
+* Fixed display problem for desired metal [[cage]]s and [[chain]]s in [[dungeon]]s.
+* Fixed problem causing generated creatures to not be immune to their own [[poison]]s.
+* Stopped [[channel]]ing in the undiggable [[underworld]].
+* Made choreographers and composers use existing [[music]] and [[poem]]s for their works instead of always making new ones.
+* Made [[werebeast]] types duplicate if necessary rather than creating blobs (only applies if werebeast curse number set higher than 72).
+* Fixed typo in [[angel]] descriptions.
+
+== AMA with Kitfox Publishing ==
+Tanya, Tina and I are hosting an AMA on r/dwarffortress on March 9th at 11am ET. Ask us about Dwarf Fortress things, publishing things, anything you’d like! You can [https://www.reddit.com/r/dwarffortress/comments/1rk2tvd/ama_with_kitfox_games_publishing/ submit your questions before the AMA starts here] and we'll answer in the same thread. Looking forward to chatting with you all on Monday!
+
+== Wanted: Your Siege Screenshots ==
+Most of the screenshots on Steam are from community-made forts and we’d like to get some new ones showing off the siege fortifications. If you’d like to show off your fort (with credit) on the Dwarf Fortress store pages, send us your screenshots to info@kitfoxgames.com and include how you’d like to be credited.
+
+== Host your own Dwarf Fortress gathering! ==
+In the past, we’ve hosted a few Dwarf Fortress fan meetups called The Fey Mood Society Gatherings during major events like PAX and Gamescom. Since we can’t always make it to those events, and there’s urists from all over the world, we’d like to support you in hosting your own Fey Mood Gathering. If you have a meetup planned for Dwarf Fortress fans, [https://forms.gle/x2L7XxbvAXikwjsM9 fill out this form] and we might send you a merch package and other Dwarf Fortress goodies to use at your event.
+
+== Adventure Mode Vinyl Update ==
+The Adventure Mode vinyls have started shipping! [https://gamemusicrecords.com/product/dwarf-fortress-adventure-mode-soundtrack-vinyl/ There’s still a few copies in stock] so if you'd like to snag the limited edition version with exclusive colours, now is your chance. If you've already pre-ordered keep your eyes out for the mail.
+
+== Soundtrack Interview with Dabu and Simon ==
+Speaking of music, Blindirl recently interviewed Dabu and Simon Swewer about the creation of the Dwarf Fortress soundtracks. It covers everything from the musical backgrounds of the composers, how the soundtracks were created and the trials and tribulations along the way. [https://www.youtube.com/watch?v=J6lL-GD9_YU Give it a watch!]
+
+== Mod Spotlight - HEWN (A Total Graphical Overhaul) ==
+We wanted to shoutout phlegm7qmtvs for creating the first tileset mod for the Steam version. This mod transforms the game into a classic retro style inspired by traditional roguelikes like Caves of Qud and DF Classic. [https://www.bay12forums.com/smf/index.php?topic=183729.0 Forum thread] [https://dffd.bay12games.com/file.php?id=17759 Classic pack with DFHack] [https://steamcommunity.com/sharedfiles/filedetails/?id=3662002056 Steam workshop]
+
+== File changes ==
+* data\vanilla\vanilla_procedural\scripts\generators\creatures\shared_info.lua
+** Added :ALL to {{token|SYN_IMMUNE_CREATURE|syndrome}} in add_poison_bits
+* data\vanilla\vanilla_procedural\scripts\generators\creatures.lua
+** Added number to internal werebeast name in werebeast_origin_interactions
+** Added werebeast_count and related in creatures.night_creature.werebeast.default
+** Added missing space in angel_description

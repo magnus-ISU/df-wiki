@@ -1,0 +1,34 @@
+{{release notes}}
+
+Dwarf Fortress 50.03 was released as a [[Premium version]] only.
+
+:One more quick release to handle additional stability issues. This version also includes 72 new werebeast tiles, some changes to ambience, and a start to quality of life additions with the ability to select more materials at once when building constructions.
+:&mdash; Toady One, December 12, 2022
+
+:Small note from Kitfox: if your save was previously corrupting and crashed, it probably cannot be revived, sorry. Many of these crashing errors caused garbage to be inserted into the save, which now is irreparable. If you can reload to an autosave, that's more likely to work. Otherwise, you'll have to start a new fort. Sorry! Thanks!
+:&mdash; Kitfox Games, December 12, 2022
+*[https://store.steampowered.com/news/app/975370/view/3631620553397903591 Patch notes on Steam]
+
+== Major bug fixes ==
+* Fixed save corruption from manual saves with case mismatch.
+* Fixed crash when sorting [[Creature#Livestock_and_Domestic_Animals|pets/livestock]] by domestication status.
+* Fixed crash when removing [[burrow]]s from a scrollable burrow list.
+* Fixed crash related to storing objects in recently deleted [[location]] zones.
+* Fixed crash on [[Squad#Equipping Soldiers|squad equipment]] screen when there are multiple traveling squads.
+* Fixed crash related to removing objects from [[Display furniture|display cases/pedestals]].
+* Fixed crash from looking at Groups for certain [[consort]]s.
+
+== Graphics additions/changes ==
+* New graphics for [[werebeast]]s.
+
+== Audio additions/changes ==
+* Updated [[forest]], [[grassland]], [[rainforest]], [[siege]] [[ambience]]s.
+* Added new wild ambience, moved old wild ambience to [[terrifying]] areas.
+* Replaced siege horns with something less intense.
+
+== Other bug fixes/tweaks ==
+* Added ability to add/remove every item of a given material when [[Construct|building]] structures that require multiple items.
+* Holding a navigation key no longer recenters the screen during string entry.
+* Now displays remove construction [[designation]] when designated instead of requiring unpause.
+
+[[Category:Release information]]

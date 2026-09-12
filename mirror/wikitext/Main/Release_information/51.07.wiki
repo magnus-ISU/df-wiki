@@ -1,0 +1,52 @@
+{{release notes}}
+
+==Alexandra's notes==
+Hey everyone,
+
+It's Alexandra here as we continue along with the routine patches after [[Adventure Mode]] release. We have quality of life fixes for [[Fortress Mode]] including the new ability to use the previous [[material]] when replacing [[constructions]]. No need to go back through the menus over and over again! Over in Adventure Mode your [[speed]] is now displayed properly. Lots of other adjustment and fixes here as well.
+
+So far the lua tests are going smoothly and we are receiving really great feedback. If you're a mod-minded urist and want to play round with the [[lua]] update, you can check it out on the Experimental Branch.
+
+See you in the next patch,
+
+[[Alexandra]]
+
+=Official patch notes=
+* [http://bay12games.com/dwarves/#2025-03-12 Patch notes on Bay 12 Games]
+* [http://www.bay12forums.com/smf/index.php?topic=183107.msg8574568#msg8574568 Patch notes on Bay 12 Forum]
+* [https://kitfoxgames.itch.io/dwarf-fortress/devlog/904087/patch-5107 Patch notes on Itch.io]
+* [https://store.steampowered.com/news/app/975370/view/536596480348127731 Patch notes on Steam]
+<hr>
+Release notes for 51.07 (March 12, 2025):
+
+Continuing along with the routine patches after the adventure mode release.
+
+==Fortress mode==
+* Allowed use of last material when placing simple one-stage buildings and constructions
+* Stopped [[land holder]]s without a [[residence]] from automatically moving to and gumming up [[capital]]s
+* [[Animal]]s marked for [[slaughter]] and then assigned as [[war animal]] pets are now unmarked for slaughter
+* Stopped hidden [[zone]]s in NPC [[fortress]]es on [[Reclaim fortress mode|reclaim]]s from clouding information in [[tomb]] and [[dungeon]] sheets
+* [[Work order]]s: changed "stone stones" to "stone boulders" and "stones" to "boulders", because they can be made from ice
+
+==Adventure mode==
+* Allowed ordinary [[destiny]] adventurers to start anywhere in their civilization
+* Handled infinite loop having to do with [[site]]s near [[ocean]]s
+* Unstackable items no longer stacked in character creation
+* Movement blocking announcements are displayed during [[travel]] properly
+* FPS display no longer blocks the speed readout
+* Potential [[container]]s are no longer shown with nonsense directions when placing items
+* Classic combat indicators are displayed in the correct position
+* Changes to fort mode sound level sliders no longer affect adv mode sound levels
+
+==General updates==
+* Stopped projectiles and falling creatures from falling through thin floors if they hit a sideways obstacle first
+* Creatures with [[multigrasp]] weapons should no longer be generated with shields
+* Fixed potential troublesome loop involving stone inclusion loops
+* Creatures without exertion have their exertion set to zero
+* Handled situation where FPS caps could underflow
+* Fixed potential overflow in corpse sizes
+
+=File differences=
+*'''Dwarf Fortress.exe''' - ''modified''
+*'''file changes.txt''' - ''modified''
+*'''release notes.txt''' - ''modified''

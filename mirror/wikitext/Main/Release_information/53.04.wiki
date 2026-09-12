@@ -1,0 +1,49 @@
+{{release notes}}
+
+:Continuing to improve the Siege Update. You can now view and set the status of your siege engines from a centralized tab. Lots of improvement for invader AI, and ogres look properly scary now. There are also some general improvements to item pictures, as well as various stability fixes. 
+:&mdash;[[Toady One]], November 17, 2025
+:Hey Urists,
+:Here's a bigger patch for siege mode and a handful of general fixes. We've also had two hotfixes go live for immediate siege mode fixes, which you can read about here for patch [https://store.steampowered.com/news/app/975370/view/751664371579487577 53.02] and [https://store.steampowered.com/news/app/975370/view/604172030929012295 53.03].
+:We've also got some news about a Fangamer sale and the highly requested restock of the pint glasses.
+:&mdash;[[Alexandra]], November 17, 2025
+* [https://www.bay12games.com/dwarves/index.html#2025-11-17 Patch notes on Bay 12 Games]
+* [https://store.steampowered.com/news/app/975370/view/618809615192162966 Patch notes on Steam]
+* [https://kitfoxgames.itch.io/dwarf-fortress/devlog/1116827/scary-ogres-siege-fixes-fangamer-update-dwarf-fortress-patch-5304 Patch notes on itch.io]
+
+== Siege updates ==
+* Randomized attack times throughout a given season.
+* Added siege engines to Places.
+* Fixed some issues with invader building targeting.
+* Fixed issue causing humans and elves to sometimes be unable to send serious attacks.
+* Fixed an issue causing more brazen thieves to not have their support groups.
+* Fixed issue stopping beasts from exploring the map.
+* Stopped immediate fleeing of non-ranged support groups.
+* Made support groups want to leave soon after the group being supported is done or aborts.
+* Ogres and blind cave ogres have new graphics, including respect of blocks and great picks.
+* Fixed error making certain creatures like ogres appear with incorrect ages.
+* Fixed issue causing catapult/ballista firing job not to cancel when requested.
+* Fixed catapult and ballista hover instructions.
+
+== General updates ==
+* Updated various item graphics:
+** Many tile pages for items were reorganized;
+** Added sprites for [[ammo]] stacks in [[quiver]]s.
+** Added [[Decoration|encrusted]] sprites for some [[Finished goods|goods]] (figurines, scepters, mugs, goblets, rings, bracelets and totems), as well as material color for encrusted [[gem]]s on goods (including crowns, earrings and amulets);
+** Added vermin [[remains]] sprite;
+** New sprite for [[chain]]s, rope sprite now display a material color;
+** New sprites for long [[dice]] (d4, d6 and d8);
+** New sprite for [[Cast|orthopedic cast]].
+* Fixed occasional crash in the justice screen.
+* Fixed justice menu in Classic Mode.
+* Fixed potential crash from constructed walls without materials.
+* Fixed potential load crash from corrupt strings.
+* Fixed issue causing necromancers to always have summons.
+* Fixed lua type issue with world gen seeds.
+* Fixed issue with kitchen ingredient hash.
+* Made multithreading option save after choice during popup.
+* Fixed issue with identity selection of infiltrators versus buildings available for visitors.
+* Some additional stability changes.
+
+== Fangamer Sale and Pint Glass Update ==
+:A few items from the [https://steamcommunity.com/linkfilter/?u=https%3A%2F%2Fwww.fangamer.com%2Fcollections%2Fdwarf-fortress Fangamer Dwarf Fortress collection] are up to 50% and available now in the Fangamer Year-End Sale.
+:We've also had requests make the pint glass available again and we're working with Fangamer to bring them back to the store soon. [https://steamcommunity.com/linkfilter/?u=https%3A%2F%2Fwww.fangamer.com%2Fcollections%2Fdwarf-fortress%2Fproducts%2Fdwarf-fortress-pint-glass You can request to get notified when it's back in stock on the store page].

@@ -1,0 +1,26 @@
+{{release notes}}
+
+:Here's a patch for a linux log crash and tutorial issues, as well as some more minor issues that came up in code analysis.
+&mdash;[[Toady One]], October 3, 2023
+*[http://bay12games.com/dwarves/#2023-10-03 Patch notes on Bay 12 Games]
+
+:We have a quick patch update today with fixes for Linux Mode, the tutorial and more. We will be posting a big update this week with a new roadmap for Adventure Mode and updated FAQ so stay tuned for that!
+&mdash; Alexandra, October 3, 2023
+*[https://kitfoxgames.itch.io/dwarf-fortress/devlog/615546/fixes-for-linux-and-tutorial-patch-notes-for-5011-october-3-2023 Patch notes on Itch.io]
+*[https://store.steampowered.com/news/app/975370/view/3753244909556346261 Patch notes on Steam]
+
+==Major bug fixes==
+* Fixed crash on linux related to game log threading
+* Fixed broken tutorial on click workshop step
+* Stopped tutorial prompt in tiny worlds where tutorial is invalid
+* Cleaned up a source of squad schedule corruption
+* Made classic graphics setting work properly on restart (hopefully for real this time!)
+
+
+==Other bug fixes/tweaks==
+* Fixed potential problem with doctors vs. multiple hospitals
+* Ballista arrows etc. that chop down trees now count for treecap diplomacy
+* Image sets with non-uniform types now properly display as having a variety of types
+* Generic improvements now properly display "made a masterful improvement" in histories
+* Allowed single pair dances to generate properly
+* Fixed potential minor oddity involving animal placement

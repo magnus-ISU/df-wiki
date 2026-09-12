@@ -1,0 +1,124 @@
+{{Quality|Superior}}
+{{av}}
+
+It seems that half the time in [[Fortress mode]], when you aren't building something, you're '''removing''' something - whether that's [[dig|digging]] away part of the landscape, tearing down a [[wall]], ripping up a [[bridge]], or just rearranging the [[furniture]], if it needs to get done, then it needs to get done. Although every specific article should have an explanation of how to remove that specific item or feature, if you're here you may need a more basic "how to".
+
+Here's how to remove...
+
+==Dirt/stone==
+{{main|Mining}}
+[[Digging]] may be the most basic action in ''Dwarf Fortress''. You need a dwarf with the [[mining]] [[labor]] activated, and access to a [[pick]], then you designate an area to be mined with {{Menu icon|m|m}}: left-click with the mouse on a tile, move to create a rectangle, and click again. There is also a [[Settings#Feature_toggles|keyboard cursor]] you can enable and then use the cursor, movement (default WASD), and enter keys.
+
+If you want (or need, to get up/down) to create [[stair]]s or [[ramp]]s instead of a tunnel, it works similarly, but with some additional concerns - read those articles for details and command keys.
+
+===Dug ramps/stairs===
+Similar to the above, but to designate the removal of carved [[ramp]]s or natural [[slope]]s (same thing), or carved [[stair]]s, use {{Menu icon|m|x}}.
+
+===A digging "designation"===
+"Oops"?! Didn't mean to mark that? If the action hasn't been completed yet, don't panic. Use {{Menu icon|x}} as above and click over the part you don't want marked.
+
+==Constructions==
+{{main|Construction}}
+If you're trying to remove anything that is a [[construction]] (that is, anything that was built with {{Menu icon|b|n}}), use {{Menu icon|m|x}}, and mark the construction. Any dwarf will respond and (eventually) tear it down - which takes longer than it took to build.
+
+===A "remove construction" order===
+"Oops"?! Cancel that removal the same as you would other "mining" designation, with {{Menu icon|x}}.
+
+==Buildings==
+===Hiding===
+If you just don't want to see the buildings, they can be hidden with {{Menu icon|i|h}}, or clicking an individual building and toggling the hide (eye) button on all the items used to build it; the building will still be there and available for use. Once a building has been hidden, it cannot be clicked on, so to reveal it, use {{Menu icon|i|H}}. Hidden workshops can still be accessed from the [[places]] menu {{Menu icon|P}}.
+
+===Bridges===
+{{main|Bridge}}
+There are two types of bridges - a retracting bridge / drawbridge as one building, and just a set of [[floor]]s or [[wall]]s spanning a gap.
+
+For the building type, click it to open the information window, then the [[File:Button remove building.png]] button.
+
+The other type is just a construction; remove as above. If it's a long floor or wall, be sure that your dwarves won't be standing on one part while a critical part is removed - see [[cave-in]].
+
+===Furniture===
+{{main|Furniture}}
+Click it to open the information window, then the [[File:Button remove building.png]] button. You'll also need a dwarf with the [[Hauling|furniture hauling]] [[labor]] activated, and then the patience to wait for one to respond.
+
+===Workshops===
+{{main|Workshop}}
+Click it to open the information window, then the [[File:Button remove building.png]] button. You'll need a dwarf with an appropriate [[labor]], depending on the exact workshop - this can be seen on the workshop window once it has been marked for removal.
+
+===A "destroy" order for a building===
+Oops?! Cancel an order to remove furniture or a workshop by clicking it to open the information window, then the {{DFtext|Cancel removal|4:0:1}} button.
+
+==Items==
+===Hiding===
+If you just don't want to see the items, they can be hidden with {{Menu icon|i|h}}, or clicking individual items and toggling the hide (eye) button; the items will still be there and available for use. Once an item has been hidden, it cannot be clicked on, so to reveal it, use {{Menu icon|i|H}}.
+
+===Bodies===
+Bodies of your dwarves, and their body parts, or bones, will be put into your [[graveyard]], or into individual [[Tomb|tombs]] if that dwarf was assigned to it. Built [[Coffin|coffins]] which have been set to 'Use for burial' will This requires the Burial labor enabled on a living dwarf.
+
+Bodies of everything else, from [[vermin]] to [[Titan|Titans]], will be placed in the Refuse Stockpile, by a dwarf with Refuse Hauling. If these corpses are unrotten and butcherable, dwarves with Butchery enabled will take them to the Butcher's workshop and cut them into meat, fat, bones, a skull, and [[Butcher's shop|the other bodily stuff]]. Almost everything will be used as food, and delivered to that stockpile, a few other parts, like [[hair]], becomes refuse. [[Bone|Bones]], [[Skull|skulls]] and some other hard body parts can be made [[Bone carver|use]] of after this.
+
+===Stones===
+Stones are automatically removed by dwarves with the Stone Hauling labor activated, and placed in the stone stockpiles, or a garbage dump if so designated. <!-- Does this need Refuse Hauling, or Stone? -->
+
+===Trash===
+{{main|Stockpile|Zone|Refuse}}
+This is trickier, and there are 2 different approaches.
+
+One is to create a [[refuse stockpile]] (using {{Menu icon|p}})) for that type of item ''(usually remains of [[vermin]] killed by a [[cat]], or items left after [[butcher|butchering]], but other items are possible)'', and wait for a dwarf with the [[Hauling|refuse hauling]] [[labor]] to find the free time to respond.
+
+A more aggressive and specific method is to create a [[dump|garbage dump]] (using {{Menu icon|z}})) and then mark the items for [[dump|dumping]] (using {{Menu icon|i|p}})). Again, this requires refuse hauling, and it can create a [[Exploit#Quantum_stockpiles|quantum dump]] for any type of item. ([[Stone]] is a popular choice.)
+
+==Stockpiles==
+{{main|Stockpile}}
+An entire stockpiles can be removed using {{Menu icon|p}}), then clicking the stockpile to select it, then clicking the Remove stockpile button. A stockpile can also be selected by clicking an empty tile in it, or clicking an item in it, then the {{DFtext|View stockpile|2:0:1}} button.
+
+==Activity zones==
+{{main|Zone}}
+
+==Water==
+{{main|Water}}
+Depending on the quantity and nature of the water in question and the surroundings of your fort, removing water can be performed in a number of ways:
+
+:The most direct method is to either drain it into a lower space, or [[pump]] it elsewhere.
+:In hot environments, standing water is likely to [[evaporation|evaporate]], especially in the summer.
+:Similarly, in [[Climate|freezing]] areas you may be able to wait for water to [[Ice|freeze]] and then [[mine]] it out.
+:Water in ponds or cisterns will evaporate if it reaches a [[Water#Water depth|depth]] of only 1/7 units. Spread it around by channeling a larger area for it to flow into.
+:With careful (and rather [[labor]]-intensive) use of water source and [[pond]] [[Zone|zones]] with [[Bucket|buckets]] you can have your dwarves move water from one location to another, out of your way.
+:If you've got a renewable source of water (a [[river]], for example), you'll have to get creative with engineering to [[dam]] or divert the flow.
+:An advanced method, with the potential for lots of [[Fun]], is to combine [[magma]] with your water. You can get a lot of valuable [[Obsidian|obsidian]] this way, though - see [[Obsidian farming]] for more information.
+
+'''Note:''' [[Murky pool|Murky pools]] will refill when it rains; you may need to take steps to prevent this if you want rid of a body of water permanently.
+
+===Muddy floor===
+After an area has water on it and dries, it will become [[mud|muddy]]. The best way to remove this is to have a dwarf with the [[stonecutter]] [[labor]] activated, and designate the muddy area for smoothing with {{Menu icon|v|m}}.
+
+If the stone is already smooth (or if you don't want it to be smooth in the first place), place a piece of furniture (such as an [[armor stand]], [[statue]], or [[animal trap]]) on top of each muddy tile and the mud will be removed.
+
+==Magma==
+Magma is a very dangerous liquid, but it will [[evaporate]] exactly like water once it drains down to a depth of 1/7.
+
+Alternately, the addition of water to the magma, even if only at a depth of 1/7, will create [[obsidian]].
+
+==Miasma==
+Through the miasma will fade in time, you can assure it to be gone by making an upwards conduit
+(be sure to grate it or else who knows what could get in!)
+
+==Fire==
+Good luck removing [[fire]] - specifically, water will only remove flames if the object is completely immersed in 7/7 water - obviously, this is problematic if a dwarf is burning. Your best bet is to isolate the burning substance/s (clothing, dwarves, alcohol, etc.) and prevent any dwarves or animals from accessing the banned areas until all the flames burn out.
+
+Creating a [[cave-in]] can destroy the burning item completely, which is no loss, since it's already burning. (Read up on cave-ins before doing this to avoid worse problems.)
+
+==Game features==
+Several game features can be toggled off in the [[settings]].
+
+==DFHack tools==
+[[DFHack]] tools that can remove stuff include:
+*[https://docs.dfhack.org/en/stable/docs/tools/gui/mass-remove.html mass-remove]
+*[https://docs.dfhack.org/en/stable/docs/tools/autodump.html autodump]
+*[https://docs.dfhack.org/en/stable/docs/tools/gui/autodump.html gui/autodump]
+*[https://docs.dfhack.org/en/stable/docs/tools/aquifer.html aquifer]
+*[https://docs.dfhack.org/en/stable/docs/tools/modtools/add-syndrome.html modtools/add-syndrome]
+*[https://docs.dfhack.org/en/stable/docs/tools/plant.html plant]
+*[https://docs.dfhack.org/en/stable/docs/tools/remove-stress.html remove-stress]
+*[https://docs.dfhack.org/en/stable/docs/tools/remove-wear.html remove-wear]
+
+[[ru:Remove]]

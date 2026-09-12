@@ -1,0 +1,36 @@
+{{release notes}}
+
+50.06 was superseded by [[Release information/50.07|50.07]] on the same day that it was released due to a bug that prevented embarking.
+
+:Arena mode is here which means you can new test out creatures, trees, materials and certain item mods before publishing them! Also notably we've added new sprites to show the growth progression of crops so now you'll be able to see where and what you plant!
+:&mdash; Alexandra from Kitfox Games, February 7, 2023
+*[https://store.steampowered.com/news/app/975370/view/3665402557276275545 Patch notes on Steam]
+
+== New stuff ==
+* Arena mode is back, with an updated interface.
+
+== Major bug fixes ==
+* Stopped new timelines from always saving into region1.
+* Fixed crash when copying trade information like ownership on certain items.
+* Fixed crash from giant/diagonal activity zones.
+
+== Graphics additions/changes ==
+* Underground crops now have sprouting textures.
+* Added planted soil texture and updated farmplot texture.
+* Fixed list icons for several creatures.
+* Updated designation textures.
+* Updated statue textures.
+
+== Audio additions/changes ==
+* Made ambiences continue from where they left off rather than starting at the beginning each time.
+* Now only plays a few random cards for a song on subsequent playthroughs rather than playing them in order each time.
+* Added neutral cavern ambience.
+* Replaced wild ambience with the biome-specific ambiences (and the existing wild sounds).
+* Updated thunderstorm ambience.
+
+== Other bug fixes/tweaks ==
+* Stopped dragons and other megabeasts from appearing as relatives of random dwarves in the fort.
+* Allowed emotionless creatures to satisfy needs if they still have them.
+* Added a few additional embark warnings.
+* Added culling of certain dead units to help with performance.
+* Made invader summons parts of the invasion.

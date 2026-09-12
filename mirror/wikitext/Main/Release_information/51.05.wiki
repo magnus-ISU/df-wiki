@@ -1,0 +1,124 @@
+{{release notes}}
+
+'''Dwarf Fortress 51.05''' adds a speed indicator window in [[Adventure mode]] and fixes the Adventure mode [[Travel map]] while in ASCII mode. Graphically, it adds images for tree growths and allows disabling varied ground tiles in ASCII mode. And a handful of bugfixes.
+
+The Itch.io and Steam edition of patch notes for this release are particularly interesting because they list several things that were just last week planned for the future between Bay 12 Games and Kitfox Games. These include Lua modding support, the return of building forts in Adventure mode, and then a return to the Villains arc.
+
+=Official patch notes=
+
+* [http://www.bay12forums.com/smf/index.php?topic=183065.msg8569211 Patch notes on Bay 12 Forum]
+* [https://kitfoxgames.itch.io/dwarf-fortress/devlog/886081/next-steps-for-dwarf-fortress-patch-5105-dwarf-fortress-dev-news Patch notes on Itch.io]
+* [https://store.steampowered.com/news/app/975370/view/530964346754301996 Patch notes on Steam]
+<hr>
+
+Hey Urists,
+
+It’s Alexandra from Kitfox! We are back and hope you’ve been enjoying your time with Adventure Mode. It’s been so much fun seeing you discover magical items, creating your adventurers and running into giant snakes (a more common occurrence than I thought would happen). It’s officially time to enter a new era of Dwarf Fortress development.
+
+Now that both modes have been updated for the Steam version, we can focus on quality of life fixes, more modding support and brand new features Tarn’s been excited to add. We will be busy with Dwarf Fortress development for a long time!
+==To start, today!==
+
+Today we have patch 51.05 with some crash fixes and some other helpful changes. We also now have art for all of the tree growths, like fruit, flowers, and leaves.
+===Patch Notes 51.05===
+
+Fortress Mode
+
+* Fixed crash on justice screen and adjusted convicts menu position
+* Fixed crash relating to empty work details list
+* When choosing rectangles, shows dimension of rectangle
+* Allowed numbers and symbols in unit list search
+
+Adventure Mode
+
+* Display speed and gait and momentum on main screen
+* Summoning abilities should work now
+* Stopped creating beast rumors (and thereby kill quests) for civilized predator/subterranean creatures (new worlds only)
+* Added button to go back to destiny/difficulty selection from character creator
+* Classic mode travel maps now show up properly
+
+Graphics additions/changes
+
+* Tree growth pictures (leaves, flowers, fruit, etc.)
+* Added zombie syndrome class to husks so they'll display properly (new worlds only)
+* Option to print only periods for the ground in Classic mode returns
+
+==Next few updates==
+
+Very soon we will also have Programmer Putnam’s Lua upgrade which will allow you to create more powerful mods and lay the foundation for future Myth and Magic updates. We just have a few more fixes to make and then we will be ready to put it out on the experimental branch. Stay tuned!
+
+Our first Fortress Mode releases will focus on improving sieges. We want to give players the tools and abilities to be more properly prepared for an attack.
+
+The update will also add the first Fortress mode abilities to interact with magic systems (beyond necromancers and mods.) Here are some possible changes, none of which are guaranteed, but which we are aiming for:
+
+* Allow siegers to plan and learn, tracking where deaths occur and using alternate routes
+* Properly equipped siegers should be able to build, demolish and dig (default on, can be turned off in difficulty settings)
+* Kidnapped humans and dwarves should be more interesting - warlords and demon-trained sorcerers focused on siege warfare and infiltration (for now)
+* Temple/etc.-based defenses for any magic that proves too annoying to combat with soldiers
+* Ranged weapon/squad fixes
+* Changes to defensive siege weapons to make them more useful
+* If ranged weapon changes remove the delightful effect of fast-shooting crossbows, add a repeating defensive bolt thrower emplacement that uses regular bolts
+* Changes to cage traps to make it more intensive but still possible to e.g. capture megabeasts
+* Make megabeast and kobold attacks more functional and interesting
+* Fix and improve underground civilization attacks (as far as we can without future map changes)
+* Anything from Combat Flow and Combat Styles that comes up, also a notion of reach 
+
+We don’t know how many weeks it will take, but Tarn will be working through the list steadily.
+===After That: Site Building (Adventure Mode)===
+
+We’d like the add the ability to make your own settlements, also known as “Site Building” as the first major Adventure mode feature post launch, since it used to be in the classic game but didn't make it in for the graphical version. This will happen after Fortress Mode gets updated with the siege improvements above. It does involve some new interfaces, and so will be a fair bit of effort, but we know some of you are eagerly awaiting it.
+===After That: Maps===
+
+Next, we’ll focus on world map rewrites and additions and beautifications, especially those needed to get us prepared for a more magical and procedural, dynamically-reactive future. You’ll see this in Fortress Mode since a lot of these changes are underground but there will also be changes aboveground.
+
+We'd also like to further differentiate the existing natural biomes, plus of course anything magical or strange we add.
+===Eventually: A Return to Systems===
+
+Before the Steam version, Tarn was working on various features. Villains, army warfare, civilizations, etc, and this (after Maps) is when Tarn would turn to look at those again.
+
+When will that be exactly? Well.. after siege improvements and Lua becomes more stable we will have a better idea on what will come first and how it will be implemented. We don’t have timelines or exact promises for any of this right now and there’s lots to do beforehand but it’s all coming! We’ve tried to predict how long things take before, and it’s never worked out well for us, so we’ll just take it one release at a time.
+
+Every step of the roadmap above will also include art additions, and even more myth and magic changes and content that make sense to add along the way, and keeps Tarn’s morale high, as he’s been looking forward to those since Tanya met him all those years ago.
+
+So this gives you a general overview of our plans for Dwarf Fortress for a while. Thank you for joining us on this journey beyond quality.
+
+- Alexandra
+
+=File differences=
+
+*data/
+**init/'''d_init_default.txt''' - ''modified'': added [CLASSIC_VARIED_GROUND_TILES:YES]
+**sound/
+***combat/parry/bone/'''fail-002.ogg''' - ''modified''
+***locomotion/footsteps/
+****water-depth-3/'''walk-003.ogg''' - ''modified''
+****wood-crafted/'''walk-005.ogg''' - ''modified''
+****wood-crafted/'''walk-007.ogg''' - ''modified''
+***one-shots/
+****cave/'''one-shot-031.ogg''' - ''modified''
+****fortress/'''one-shot-006.ogg''' - ''modified''
+****fortress/'''one-shot-007.ogg''' - ''modified''
+****glacier/'''one-shot-007.ogg''' - ''modified''
+****goblin-dark-pits/'''one-shot-006.ogg''' - ''modified''
+****good/'''one-shot-007.ogg''' - ''modified''
+****grassland/'''one-shot-011.ogg''' - ''modified''
+****human-hamlet/'''one-shot-009.ogg''' - ''modified''
+****ocean/tropical-temperate/'''one-shot-010.ogg''' - ''modified''
+****tavern/tropical-temperate/'''one-shot-005.ogg''' - ''modified''
+****tavern/tropical-temperate/'''one-shot-007.ogg''' - ''modified''
+****tavern/tropical-temperate/'''one-shot-012.ogg''' - ''modified''
+****tomb/'''one-shot-001.ogg''' - ''modified''
+****tomb/'''one-shot-011.ogg''' - ''modified''
+***ui/clicks/bottom-bar/'''build.ogg''' - ''modified''
+**vanilla/
+***vanilla_interface/
+****'''info.txt''' - ''modified''
+****graphics/'''graphics_interface.txt''' - ''modified''
+****graphics/images/'''interface_bits_adventure.png''' - ''modified''
+***vanilla_plants_graphics/
+****'''info.txt''' - ''modified''
+****graphics/'''graphics_individual_trees.png''' - ''modified''
+****graphics/'''tile_page_plants.txt''' - ''modified''
+****graphics/images/'''tree_grows.png''' - ''NEW''
+*'''Dwarf Fortress.exe''' - ''modified''
+*'''file changes.txt''' - ''modified''
+*'''release notes.txt''' - ''modified''

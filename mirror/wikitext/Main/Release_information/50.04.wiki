@@ -1,0 +1,27 @@
+{{release notes}}
+
+Dwarf Fortress 50.04 was the first version of the 50.x series to also be released as a [[Classic version|classic version]] at [https://www.bay12games.com/dwarves/ bay12games.com]. Like previous 50.x releases, only Windows was supported.
+
+:Here's the first Classic release!  There's a lot left to do, but this version is playable and will give you an idea of where things are at.  Zooming the interface with the mouse wheel is currently disabled because some of the menus don't react well to being small in width.  We'll need to work through those - you can still use the settings to scale it up if you like.  A few other indicators need to come back, and some tiles are working a little oddly (brooks for example).  Also, because of how the graphical release is set up, we're currently stuck with one font size, which will impact some tile sets of course.  We're going to get through all of this (and more keyboard support as well of course).  But I wanted everybody to see what progress has been made and get a chance to try it out.  We should have simultaneous releases from now on, between Steam, itch, and here.
+:&mdash;[[Main:Toady One|Toady One]], December 22, 2022
+
+*[http://bay12games.com/dwarves/#2022-12-22 Patch notes on Bay 12 Games]
+*[https://kitfoxgames.itch.io/dwarf-fortress/devlog/467052/classic-mode-is-here-the-team-grows Patch notes on Itch.io]
+*[https://store.steampowered.com/news/app/975370/view/3625992251197549466 Patch notes on Steam]
+
+== Graphics additions/changes ==
+* Can now swap back and forth from Classic tile mode (in [[Settings#Video|video settings]].)
+* Graphics for some picked outdoor plants.
+* Updated engraved walls.
+* Added some custom symbols.
+
+== Audio additions/changes ==
+* Added a music frequency option in the audio settings (default 3-5 minutes, can be set from 10 minutes to 10 seconds.)
+* Made outdoor [[ambience]]s alternate between being more active and a few neutral wind ambiences.
+* Made the wild ambience use some randomly spaced howls and giant footsteps.
+* Updated trade depot ambience.
+
+== Other bug fixes/tweaks ==
+* Ability to add/remove all civilians/soldiers from a [[burrow]]
+* Can advance the game one frame (default key = period)
+* Made assigning multiple squad positions continue to position 10 instead of stopping at 9

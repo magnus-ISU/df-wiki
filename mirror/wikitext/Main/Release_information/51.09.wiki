@@ -1,0 +1,45 @@
+{{release notes}}
+
+== Official patch notes ==
+* [https://www.bay12games.com/dwarves/index.html#2025-04-02 Patch notes on Bay 12 Games]
+* [https://www.bay12forums.com/smf/index.php?topic=183150.0 Patch notes on Bay 12 Forum]
+* [https://kitfoxgames.itch.io/dwarf-fortress/devlog/917526/patch-5109 Patch notes on Itch.io]
+* [https://store.steampowered.com/news/app/975370/view/547857372725379366 Patch notes on Steam]
+<hr>
+:Another routine patch for the game.
+:&mdash;[[Toady One]], [https://www.bay12games.com/dwarves/index.html#2025-04-02 April 2nd, 2025]
+
+:Hey Urists!
+
+:We are back from GDC with an update for Fortress and Adventure Mode. Next we'll be starting work on sieges, while also keeping a pace of regular fixes and improvements.
+
+:Tarn Time Spring 2025 Edition
+
+:In case you missed it, we also have a seasonal update video from Tarn. He goes over the last few months of updates as well as lua, the upcoming siege and site building updates. [https://youtu.be/zw_-jdN8zcA Watch on Youtube]
+:&mdash;[[Alexandra]], [https://store.steampowered.com/news/app/975370/view/547857372725379366 April 2, 2025]
+
+=== Fortress mode ===
+* Stopped dwarves from using forbidden and uncompleted coffins for burial
+* Stopped greyed out "everybody does this" for mining/hunting/chopping labors from being pressable
+* Stopped Mining, Woodcutting, Hunting from being able to be assigned to the same dwarf
+* Stopped reclaimed/unretired forts with magma features from having magma overflows
+* Stopped unretired forts from being marked as capitals
+* Reordering manager work orders no longer causes display issues in workshop view sheet
+* Can now set pressure plates to include zero depth for water/magma
+* Made squad scrollbar responsive to clicks
+* Fixed custom difficulty settings for irritation in the embark screen
+* Random improvements are no longer applied instantly to fort-made crafts
+* Fixed typo on squad equipment assignment screen
+
+=== Adventure mode ===
+* Made adventure mode respect manual disabling of sound in init file
+
+=== General updates ===
+* Fixed pathing overflow errors in very large and/or twisty forts
+
+== Changed files ==
+* data\vanilla\vanilla_interface\graphics\graphics_classic.txt
+* data\vanilla\vanilla_interface\info.txt
+* Dwarf Fortress.exe
+* file changes.txt
+* release notes.txt

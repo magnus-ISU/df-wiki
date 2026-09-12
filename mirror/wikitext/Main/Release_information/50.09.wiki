@@ -1,0 +1,21 @@
+{{release notes}}
+
+<blockquote>
+In this release, we're updating the engine from SDL to SDL2, and there are many optimizations to go along with it.  Aside from the optimizations, SDL2 is also the stepping stone to ports.  We have Linux compiling and playable; it just needs some testing.
+
+Moreover, there is now a(n experimental) multithreading option in the game settings that makes the game even faster!
+
+We also have some new individual tree graphics, and an update to grass ramps as well.
+
+This has been mostly the hard work of Putnam!  Meanwhile I've started up on adventure mode - the long work of updating menus and adding audio has begun!  Hopefully we'll have some progress to show their soon, as we continue updating fortress mode as well.
+</blockquote>
+&mdash;[[Toady One]], June 28, 2023
+*[{{forum link/url|181776}} Patch notes on Bay 12 Forums]
+
+== New stuff ==
+* Updated to SDL2 and made many surrounding changes.  Various performance gains!
+* Experimental multithreading is available from game settings.
+
+== Graphics additions/changes ==
+* Some more trees now have individual graphics (maple, willow, cedar, larch, kapok, papaya, macademia.)
+* Updated some ramp images.

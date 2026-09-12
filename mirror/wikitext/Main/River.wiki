@@ -1,0 +1,307 @@
+{{Quality|Exceptional}}
+{{av}}
+[[File:river_preview.png|right]]A '''river''' is a body of [[water]] flowing from the [[mountain]] springs towards an [[ocean]] or a [[lake]]. Rivers serve as a terrain feature and gameplay element, coming in a variety of sizes and types. Larger ones will impede movement and may serve as a natural defensive boundary, while [[brook]]s, being the smallest type of river, can be crossed safely without needing to [[swimming|swim]], risk of [[drowning]], or even getting one's feet wet. In hilly terrain, particularly with [[cliff]]s, [[waterfall]]s can be found. Rivers can be the lifeblood of a fortress, potentially providing a renewable source of water and wildlife for [[fishing]], [[hunting]] or danger when traveling near them. They can also [[freezing|freeze]]. 
+
+== Overview ==
+There are five different kinds of surface rivers: major rivers, rivers, minor rivers, streams and '''[[brook]]s'''. For most purposes, each kind will simply be referred to as rivers or brooks. The only differences between the first four types are their appearance on the world map, their width, and possibly their rate of flow. 
+
+=== River ===
+Rivers come in a variety of sizes, from tiny brooks only three or four tiles wide, to major rivers spanning as wide as 40 tiles. Rivers are an effectively unlimited source of water, entering the map at the upstream end and leaving at the downstream end.
+
+To determine which end of a river is downstream, you can carefully look at the ends of the river. The end that has multiple tiles of less than 7/7 water is the downstream end. (This strategy doesn't always work on freshly-generated maps, as the river can still be completely full of water.) Fluid depth display can be toggled with {{Menu icon|f}}. A dwarfier method would be to [[unfortunate accident|kill something]], get its blood in the river, and observe the direction of the blood's movement.
+
+With classic ASCII glyphs, rivers are represented by dark blue {{Tile|≈|1:7:0}} and {{Tile|~|1:7:0}} [[water]] tiles stretching from one edge of the map to another, with banks bounded by [[ramp|downward slopes]] {{Tile|▼|1:7:1}}, or {{Tile|▒|3:7:1}} when frozen. Enabling fluid depth display replaces the tiles with numbers.
+
+Dwarves will not swim across rivers in fortress mode, regardless of their [[swimming]] skill (they will only seek dry routes across rivers, such as a [[bridge]], [[floor]], or [[tunnel]]), and unskilled dwarves that end up in a river can quickly drown in the current.
+
+As a [[biome]], there are six types of rivers, divided by climate and the salinity of the water (see table below). The biome greatly affects the creatures of the water and surrounding land. Additionally, rivers are more prone to having an [[aquifer]] close to the surface, and most riverbeds are made of layers of clay or sand.
+
+{| {{prettytable}}
+|- style="background:#dddddd"
+! style="background:#aaaaaa"| 
+! '''Freshwater''' !! '''Brackish water''' !! '''Saltwater'''
+|-
+! style="background:#dddddd"| '''Temperate'''
+| Temperate freshwater river || Temperate brackish river || Temperate saltwater river
+|-
+! style="background:#dddddd"| '''Tropical'''
+| Tropical freshwater river || Tropical brackish river || Tropical saltwater river
+|}
+
+=== Brook ===
+{{main|Brook}}
+[[Brook]]s are the smallest type of river. They have a unique property that allows creatures (including [[wagon]]s) to travel across them without swimming, or even getting wet. Water and other fluids can fall through the surface of a brook, and [[fisherdwarf|fisherdwarves]] can stand on the surface of a brook to fish. Otherwise, brooks function like any other river.
+
+=== Appearance on the regional map ===
+[[File:Watersystems01.jpg|300px|thumb|Different sorts of rivers in action. ASCII mode.]]
+
+On the regional map, there are five different classifications of rivers, identified by their appearance and the text displayed at the right side of the screen when they are selected in the local map view (major rivers, rivers, minor rivers, streams and brooks). Representing the connectivity hierarchy of how the river from small headwater brooks up to large river mouth emptying into the ocean. Brooks are not directly visible on the regional or world maps, but can still be seen in the local map and will also be indicated at the right if you select a tile containing a brook.
+
+{| class="wikitable"
+! Major rivers || {{Raw Tile|╦╩|1:0}}{{Raw Tile|╩|4:0}}
+| They are the largest rivers, potentially exceeding 40 tiles in width. They usually have minor river tributaries and can often feed large [[lake]]s. The massive amount of flowing water found in a major river may have a negative effect on your [[FPS]].
+|-
+! Rivers || {{Raw Tile|┬┴|1:0}}{{Raw Tile|╦|6:0}}
+| They usually have tributaries of minor rivers. They can often be over 10 tiles wide.
+|-
+! Minor rivers || {{Raw Tile|┬┴|1:1}}{{Raw Tile|┴|4:0}} 
+| They usually have streams as tributaries. They are usually between 7-10 tiles wide.
+|-
+! Streams || {{Raw Tile|┬┴|3:1}}{{Raw Tile|┬|6:0}}
+| They often converge with other streams and have some brooks as tributaries. They tend to be 4-6 tiles wide.
+|-
+! Brooks || 
+| only visible in the local map (not on the world map like the rest). They are the smallest flowing body of [[water]] that can be found in the game, being only 3-4 tiles wide. Brooks are very common - almost every tile around a stream or larger river will have a brook running through it.
+|}
+
+== Other important facts ==
+* Rivers contain an unlimited amount of water and cannot be drained like [[murky pool]]s.  They can, however, be [[dam]]med if you can ''temporarily'' drain part of them to 1/7 or less for long enough to construct [[wall]]s or install [[floodgate]]s. Despite being an unlimited source of water, river source tiles will only refill up to the level of the river's source - it will not overflow if you dam it up. This video demonstrates one way to drain and dam a river: [http://mkv25.net/dfma/movie-196-draininganddammingamajorriver-i]. Another way to dam a river is to direct [[magma]] into it, producing [[obsidian]] in the squares where it encounters water.
+* Even if dammed, a dry riverbed will refill when it [[weather|rains]], similar to a [[murky pool]].
+* A dammed river will cease to produce additional water once all of its tiles reach 7/7, even if the dam is subsequently opened, until the water level near the river's source drops below 7/7.
+* After a river has been drained, the tiles will still appear as "river" when viewed. These appear to have no effect, but can be removed by [[floor]]ing over them or [[mining]]. If a construction is built on a river tile and removed, [[soil|furrowed]] soil will appear.
+* Sometimes, the dwarves end up parking on the ice in cold regions, on arrival to a new settlement area. Needless to say, in places where ice can melt, this is quite dangerous and might result in a lot of [[fun]] when retrieving all the necessary stuff.
+* If embarked on the source of a river, there will be a delta-looking feature that water flows '''from'''. i.e., the source tiles for the head of a river are not at the border of the map, but rather the network of 1-2 tile wide rivulets that converge into the river proper. If you wish to dam this at the source you will need to either go downstream far enough from the source tiles and dam as usual, or use a [[screw pump]] to pump out enough water to wall off the tile. Given the volume of water it outputs, this is difficult and can lead to [[Losing|FUN.]]
+* This guide can teach you how to block one z level river. Repetition of the same process slowly one after another for deep rivers works out as well. Just that it requires quite some time. Here is the link to the guide:- https://steamcommunity.com/sharedfiles/filedetails/?id=3016032201
+
+== Wildlife ==
+=== Creatures ===
+{| class="wikitable"
+! rowspan="2"| Name
+! rowspan="2"| Graphic
+! colspan="3"| Temperate river !! colspan="3"| Tropical river
+|-
+! Freshwater !! Brackish !! Saltwater !! Freshwater !! Brackish !! Saltwater
+|-
+| {{Tile|A|2:0}} [[Alligator]]
+| style="text-align:center;"|[[File:alligator_sprite.png]]
+| {{check}} || {{check}} ||   || {{check}}  || {{check}}  || 
+|-
+| {{Tile|T|2:0}} [[Alligator snapping turtle]]
+| style="text-align:center;"|[[File:alligator_snapping_turtle_sprite.png]]
+| {{check}} || {{check}} ||   ||   ||   || 
+|-
+| {{Tile|b|6:0}} [[Beaver]]
+| style="text-align:center;"|[[File:beaver_sprite.png]]
+| {{check}} || {{check}} || {{check}} ||   ||   ||  
+|-
+| {{Tile|α|3:0}} [[Carp]]
+| style="text-align:center;"|[[File:carp_sprite.png]]
+| {{check}} ||   ||   || {{check}} ||   ||  
+|-
+| {{Tile|t|2:0}} [[Common snapping turtle]]
+| style="text-align:center;"|[[File:snapping_turtle_sprite.png]]
+| {{check}} || {{check}} ||   ||   ||   || 
+|-
+| {{Tile|H|7:0}} [[Hippo]]
+| style="text-align:center;"|[[File:hippo_sprite.png]]
+|   ||   ||   || {{check}} || {{check}} || {{check}}
+|-
+| {{Tile|g|6:0}} [[Longnose gar]]
+| style="text-align:center;"|[[File:longnose_gar_sprite.png]]
+| {{check}} || {{check}} ||   ||   ||   || 
+|-
+| {{Tile|α|3:1}} [[Milkfish]]
+| style="text-align:center;"|[[File:milkfish_sprite.png]]
+|   ||   ||   || {{check}} || {{check}} || {{check}}
+|-
+| {{Tile|m|6:0}} [[Mink]]
+| style="text-align:center;"|[[File:mink_sprite.png]]
+| {{check}} || {{check}} || {{check}} ||   ||   ||  
+|-
+| {{Tile|o|7:1}} [[Osprey]]
+| style="text-align:center;"|[[File:osprey_sprite.png]]
+| {{check}} || {{check}} || {{check}} || {{check}} || {{check}} || {{check}}
+|-
+| {{Tile|α|2:0}} [[Pike]]
+| style="text-align:center;"|[[File:pike_sprite.png]]
+| {{check}} || {{check}} ||   ||   ||   || 
+|-
+| {{Tile|p|6:0}} [[Platypus]]
+| style="text-align:center;"|[[File:platypus_sprite.png]]
+| {{check}} || {{check}} || {{check}} || {{check}} || {{check}} || {{check}}
+|-
+| {{Tile|o|6:0}} [[River otter]]
+| style="text-align:center;"|[[File:river_otter_sprite.png]]
+| {{check}} || {{check}} || {{check}} || {{check}} || {{check}} || {{check}}
+|-
+| {{Tile|C|2:0}} [[Saltwater crocodile]]
+| style="text-align:center;"|[[File:saltwater_crocodile_sprite.png]]
+|   ||   ||   || {{check}} || {{check}} || {{check}}
+|-
+| {{Tile|~|0:1}} [[Sea lamprey]]
+| style="text-align:center;"|[[File:sea_lamprey_sprite.png]]
+| {{check}} || {{check}} || {{check}} ||   ||   ||  
+|-
+| {{Tile|s|4:1}} [[Sponge]]
+| style="text-align:center;"|[[File:sponge_sprite.png]]
+| {{check}} || {{check}} || {{check}} || {{check}} || {{check}} || {{check}}
+|-
+| {{Tile|ò|7:0}} [[Stingray]]
+| style="text-align:center;"|[[File:stingray_sprite.png]]
+|   ||   ||   || {{check}} || {{check}} || {{check}}
+|-
+| {{Tile|α|6:0}} [[Sturgeon]]
+| style="text-align:center;"|[[File:sturgeon_sprite.png]]
+| {{check}} || {{check}} || {{check}} ||   ||   ||  
+|-
+| {{Tile|α|3:1}} [[Tigerfish]]
+| style="text-align:center;"|[[File:tigerfish_sprite.png]]
+|   ||   ||   || {{check}} ||   ||  
+|}
+
+'''In savage rivers:'''
+{| class="wikitable"
+! rowspan="2"| Name
+! rowspan="2"| Graphic
+! colspan="3"| Temperate river !! colspan="3"| Tropical river
+|-
+! Freshwater !! Brackish !! Saltwater !! Freshwater !! Brackish !! Saltwater
+|-
+| {{Tile|A|2:0}} [[Alligator man]]
+| style="text-align:center;"|[[File:alligator_man_sprite.png]]
+| {{check}} || {{check}} ||   ||   ||   || 
+|-
+| {{Tile|b|6:0}} [[Beaver man]]
+| style="text-align:center;"|[[File:beaver_man_sprite.png]]
+| {{check}} || {{check}} || {{check}} ||   ||   ||  
+|-
+| {{Tile|A|2:0}} [[Giant alligator]]
+| style="text-align:center;"|[[File:giant_alligator_sprite.png]]
+| {{check}} || {{check}} ||   ||   ||   || 
+|-
+| {{Tile|B|6:0}} [[Giant beaver]]
+| style="text-align:center;"|[[File:giant_beaver_sprite.png]]
+| {{check}} || {{check}} || {{check}} ||   ||   ||  
+|-
+| {{Tile|H|7:0}} [[Giant hippo]]
+| style="text-align:center;"|[[File:giant_hippo_sprite.png]]
+|   ||   ||   || {{check}} || {{check}} || {{check}}
+|-
+| {{Tile|M|6:0}} [[Giant mink]]
+| style="text-align:center;"|[[File:giant_mink_sprite.png]]
+| {{check}} || {{check}} || {{check}} ||   ||   ||  
+|-
+| {{Tile|O|7:1}} [[Giant osprey]]
+| style="text-align:center;"|[[File:giant_osprey_sprite.png]]
+| {{check}} || {{check}} || {{check}} || {{check}} || {{check}} || {{check}}
+|-
+| {{Tile|P|6:0}} [[Giant platypus]]
+| style="text-align:center;"|[[File:giant_platypus_sprite.png]]
+| {{check}} || {{check}} || {{check}} || {{check}} || {{check}} || {{check}}
+|-
+| {{Tile|O|6:0}} [[Giant otter]]
+| style="text-align:center;"|[[File:giant_otter_sprite.png]]
+| {{check}} || {{check}} || {{check}} || {{check}} || {{check}} || {{check}}
+|-
+| {{Tile|C|2:0}} [[Giant saltwater crocodile]]
+| style="text-align:center;"|[[File:giant_saltwater_crocodile_sprite.png]]
+|   ||   ||   || {{check}} || {{check}} || {{check}}
+|-
+| {{Tile|T|2:0}} [[Giant snapping turtle]]
+| style="text-align:center;"|[[File:giant_snapping_turtle_sprite.png]]
+| {{check}} || {{check}} ||   ||   ||   || 
+|-
+| {{Tile|S|4:1}} [[Giant sponge]]
+| style="text-align:center;"|[[File:giant_sponge_sprite.png]]
+| {{check}} || {{check}} || {{check}} || {{check}} || {{check}} || {{check}}
+|-
+| {{Tile|H|7:0}} [[Hippo man]]
+| style="text-align:center;"|[[File:hippo_man_sprite.png]]
+|   ||   ||   || {{check}} || {{check}} || {{check}}
+|-
+| {{Tile|m|6:0}} [[Mink man]]
+| style="text-align:center;"|[[File:mink_man_sprite.png]]
+| {{check}} || {{check}} || {{check}} ||   ||   ||  
+|-
+| {{Tile|o|7:1}} [[Osprey man]]
+| style="text-align:center;"|[[File:osprey_man_sprite.png]]
+| {{check}} || {{check}} || {{check}} || {{check}} || {{check}} || {{check}}
+|-
+| {{Tile|p|6:0}} [[Platypus man]]
+| style="text-align:center;"|[[File:platypus_man_sprite.png]]
+| {{check}} || {{check}} || {{check}} || {{check}} || {{check}} || {{check}}
+|-
+| {{Tile|o|6:0}} [[Otter man]]
+| style="text-align:center;"|[[File:otter_man_sprite.png]]
+| {{check}} || {{check}} || {{check}} || {{check}} || {{check}} || {{check}}
+|-
+| {{Tile|C|2:0}} [[Saltwater crocodile man]]
+| style="text-align:center;"|[[File:Saltwater_crocodile_man_sprite.png]]
+|   ||   ||   || {{check}} || {{check}} || {{check}}
+|-
+| {{Tile|t|2:0}} [[Snapping turtle man]]
+| style="text-align:center;"|[[File:snapping_turtle_man_sprite.png]]
+| {{check}} || {{check}} ||   ||   ||   || 
+|-
+| {{Tile|s|4:1}} [[Sponge man]]
+| style="text-align:center;"|[[File:sponge_man_sprite.png]]
+| {{check}} || {{check}} || {{check}} || {{check}} || {{check}} || {{check}}
+|}
+
+=== Vermin ===
+{{Translation
+| dwarven = igër
+| elvish  = mimale
+| goblin  = öbtasp
+| human   = omba
+}}
+{| class="wikitable"
+! rowspan="2"| Name
+! rowspan="2"| Graphic
+! colspan="3"| Temperate river !! colspan="3"| Tropical river
+|-
+! Freshwater !! Brackish !! Saltwater !! Freshwater !! Brackish !! Saltwater
+|-
+| {{Tile|α|6:0}} [[Banded knifefish]]
+| style="text-align:center;"|[[File:banded_knifefish_sprite.png]]
+|   ||   ||   || {{check}} ||   || 
+|-
+| {{Tile|~|3:0}} [[Brook lamprey]]
+| style="text-align:center;"|[[File:brook_lamprey_sprite.png]]
+| {{check}} || {{check}} || {{check}} ||   ||   || 
+|-
+| {{Tile|α|0:1}} [[Char]]
+| style="text-align:center;"|[[File:char_sprite.png]]
+| {{check}} ||   ||   ||   ||   || 
+|-
+| {{Tile|α|1:1}} [[Guppy]]
+| style="text-align:center;"|[[File:guppy_sprite.png]]
+|   ||   ||   || {{check}} || {{check}} || {{check}}
+|-
+| {{Tile|α|6:0}} [[Lungfish]]
+| style="text-align:center;"|[[File:lungfish_sprite.png]]
+|   ||   ||   || {{check}} || {{check}} || {{check}}
+|-
+| {{Tile|m|7:1}} [[Mussel]]
+| style="text-align:center;"|[[File:mussel_sprite.png]]
+| {{check}} || {{check}} || {{check}} || {{check}} || {{check}} || {{check}}
+|-
+| {{Tile|α|7:1}} [[Perch]]
+| style="text-align:center;"|[[File:perch_sprite.png]]
+| {{check}} ||   ||   ||   ||   || 
+|-
+| {{Tile|α|2:1}} [[Rainbow trout]]
+| style="text-align:center;"|[[File:rainbow_trout_sprite.png]]
+| {{check}} ||   ||   ||   ||   || 
+|-
+| {{Tile|α|2:0}} [[Sailfin molly]]
+| style="text-align:center;"|[[File:sailfin_molly_sprite.png]]
+| {{check}} || {{check}} || {{check}} ||   ||   || 
+|-
+| {{Tile|α|4:1}} [[Salmon]]
+| style="text-align:center;"|[[File:salmon_sprite.png]]
+| {{check}} || {{check}} || {{check}} ||   ||   || 
+|-
+| {{Tile|α|3:1}} [[Shad]]
+| style="text-align:center;"|[[File:shad_sprite.png]]
+| {{check}} || {{check}} || {{check}} ||   ||   || 
+|-
+| {{Tile|α|3:1}} [[Steelhead trout]]
+| style="text-align:center;"|[[File:steelhead_trout_sprite.png]]
+| {{check}} || {{check}} || {{check}} ||   ||   || 
+|}
+[[File:Hills river swamp.jpg|thumb|350px|center|River flowing into the hills]]
+{{World|Biomes}}
+
+{{Category|Map tiles}}
+{{Category|Biomes}}

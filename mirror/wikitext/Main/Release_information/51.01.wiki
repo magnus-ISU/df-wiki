@@ -1,0 +1,248 @@
+{{release notes}}
+
+:Alexandra here with a post-Adventure Mode beta launch update. We hope you’re enjoying all the mischief and mayhem that the beta has to offer. Some of the stories you’ve been sharing have been hilarious and thought-provoking to say the least. [https://www.reddit.com/r/dwarffortress/comments/1c6eya2/i_accidentally_killed_a_traveler/ This story] about stealing a shield gone wrong made me laugh a lot.
+&mdash; Kitfox and Bay 12 Games, April 18, 2024
+*[https://store.steampowered.com/news/app/975370/view/4186734162824193648 Patch notes on Steam]
+
+The v51 [[Adventure mode]] beta ran from April 17, 2024, to January 23, 2025. During this period, Steam users could access the beta branch to play [[Premium]] Adventure mode. Many non-adventure-specific features were added to later v50 updates during the testing period, as development ran in parallel with the main branch.
+
+==v51.01, Beta 11==
+April 17, 2024 [https://store.steampowered.com/news/app/975370/view/4186734162819864096 patch notes on Steam]:
+*[[Adventurer mode]] is now playable, though missing several features at this state
+*New [[soundtrack]] and [[audio]]
+*Fixed region map scrolling crash
+*Crash fix related to multithreading
+*Portrait [[graphics]] (included in [[Release information/50.13|50.13]])
+
+==v51.01, Beta 12==
+April 18, 2024 [https://store.steampowered.com/news/app/975370/view/4186734162824193648 patch notes on Steam]:
+*Fixed region map scrolling crash
+*Crash fix related to multithreading
+
+==v51.01, Beta 13==
+April 22, 2024 [https://store.steampowered.com/news/app/975370/view/4186734162838584127 patch notes on Steam]:
+
+======New functionality======
+*right click menu has option to move more than one tile
+*npc sheets no longer give away their names unless you know them
+======Major fixes======
+*cleaned up an intermittent crash from playing multiple adventure worlds
+*fixed crash from some old adventurers
+======Minor fixes======
+*stopped lockpicking menu from popping up until that's ready
+*fixed cave adaptation
+*optimization for loading speed with regards to flow events
+*restricted some actions like bookkeeping from happening outside fort mode
+*centered display of some wide-bodied creatures (some bears, anaconda, python, some animal people
+
+==v51.01, Beta 14==
+June 5, 2024 [https://store.steampowered.com/news/app/975370/view/4193492098983971176 patch notes on Steam]:
+*Added the trade/barter/demand [[Talking|conversation]] menu
+*[[Site]]s without [[table]]s in their stockpile get emergency tables for their shops for now
+*Printed tabletop items on tables, and stopped many other building items from printing on top of creatures
+*Sound off init option should work in adventure mode now
+*Adventurers are no longer unaware of their own name
+*Adventurers should no longer be sprinting/walking/etc forever when retired into a fort
+*Fixes that linux crash on the trainer menu again
+*Makes liquids/powders not spill out of containers on unretire
+
+==v51.01, Beta 15==
+June 17, 2024 [https://store.steampowered.com/news/app/975370/view/6340585850824991924 patch notes on Steam]:
+*Abilities menu! Raise the dead if you learn the secrets, pet animals, spit, breathe fire and use other special powers in mods or as an arena-controlled creature/undead
+*Left click to move to distant tiles
+*Interaction-given [[syndrome]] tracking/timing improved
+*NPCs should [[Gait|run]] and [[sleep]] again
+
+==v51.01, Beta 16==
+June 20, 2024 ''(no patch notes)''
+
+==v51.01, Beta 17==
+June 22, 2024 ''(no patch notes)''
+
+==v51.01, Beta 18==
+June 26, 2024 [https://store.steampowered.com/news/app/975370/view/4272308897270676540 patch notes on Steam]:
+*Added [[butcher]]/create menu
+
+==v51.01, Beta 19==
+July 17, 2024 [https://store.steampowered.com/news/app/975370/view/4356753293368674937 patch notes on Steam]:
+===Advancing the beta===
+*Composing poems, music, dances, and writing things down is back in
+*Wrestle button now handles wrestling
+*Encumbrance is visible in inventory screen and there are a few alert levels for being over-encumbered
+*[[Gait|Speed]] is visible in the movement options
+*[[Status icon|Indicators]] for ongoing movement, attacks, and dodges during player's turn in combat
+===General bug fixing===
+*Throwing/shooting crash fixed
+*Fixed input/display issues in kitchen menu
+*Handled several issues with gifting pets
+*Certain goblin torsos weren't being displayed
+==v51.01, Beta 20==
+August 14, 2024 [https://store.steampowered.com/news/app/975370/view/4237410439220288178 patch notes on Steam]:
+*[[Quest]] log and information screen in adventure mode
+*[[Child]] and baby pictures for dwarves
+*Many new fruit, flower, leaf pictures
+*Updated dwarf clothing images
+*Made good/bad thoughts about tombs work
+*Fixed error with [[experiment]] portrait mandibles
+
+New graphics and [[fortress mode]] changes from this patch were included in [[Release information/50.14|50.14]].
+==v51.01, Beta 21==
+August 28, 2024 [https://store.steampowered.com/news/app/975370/view/4579685279874828699 patch notes on Steam]:
+*Your adventurer can {{k|u}} ride and push minecarts, use levers, bash down locked doors and hatches, topple statues
+*You can now use [[wells]] in towns
+*Adventure music plays based on context
+*Full [[personality]] customization available in [[adventurer mode character creation]]
+*A few Linux audio crashes fixed
+
+==v51.01, Beta 22==
+September 4, 2024 [https://store.steampowered.com/news/app/975370/view/4596574412792637532 patch notes on Steam]:
+*Fix for recent audio crash
+*Visible [[Army|soldiers/groups]] on world map in adventure mode
+*Adventure mode sound indicators in unseen areas
+*Ability to assume identity in adventure mode
+*Can view wounds in dwarf mode arena without diagnosis
+*Palettized unit graphics (included in [[Release information/50.14|50.14]])
+
+==v51.01, Beta 23==
+September 30, 2024 [https://store.steampowered.com/news/app/975370/view/4657374909391435287 patch notes on Steam]:
+*Audio crash fixed
+*Update to bin/barrel container graphics so they show their contents in more detail (included in [[Release information/50.15|50.15]])
+*Added tracking symbols ({{Adv menu icon|K}} for now)
+*Added classic glyphs (still need to work on screen layout)
+*Fixed Linux crash-on-exit
+*Better respected caste population ratios
+*Added more information to crash logs
+*Fixed command line world generation
+
+==v51.01, Beta 24==
+October 23, 2024 [https://store.steampowered.com/news/app/975370/view/4542535021336175593 patch notes on Steam]:
+*Started adding [[Adventurer mode]] tutorial (camera, movement, menu options, popups for many menus)
+*Menu sounds during character creation and the adventure log
+*Improved river and campfire audio loops
+*Can click on portrait for status
+*[[Hive]] no longer looks like clothing
+*Made string display more compatible with fan translations
+*Made threading more stable
+*Fixed modding crash involving creature variations
+
+==v51.01, Beta 25==
+October 24, 2024 [https://store.steampowered.com/news/app/975370/view/4542535656071495803 patch notes on Steam]:
+*Fixed crash involving river audio polling
+
+==v51.01, Beta 26==
+November 27, 2024 [https://store.steampowered.com/news/app/975370/view/4440081939137822784 patch notes on Steam]:
+===Toward finishing Adventure Mode beta===
+*Added some [[Mysterious dungeon|mythical dungeons]], [[Primordial remnant|materials]], and related [[temple]] [[quest]]s
+*Added a few [[Magic|magical]] items
+*Added initial [[Deity|god]] quest for [[chosen]] mode
+*Added [[Mythical substance|mythical healing substances]] in [[Mysterious dungeon|mythical sites]]
+*Added messages for healing effects
+*[[Chosen]]/hero get bonus reputation for the purpose of gaining followers
+*Environmental display in top right ([[weather]], light, temp, etc.)
+*Quest journal outline on right side of main screen
+*[[Vampire]] blood sense markers
+*Memory map
+*Stealth vision cones
+*[[Goblin]]/[[kobold]] glowing eyes in the dark
+*Added liquid/ramp arrow toggles to adv mode
+*Announced when somebody pushes past you and cancels your action
+*Made people stop moving when you talk to them (if they aren't fighting)
+*Added shared items to wrestling interface so you can struggle for possession without using inventory screen
+*Fixed audio for snow/mud footsteps
+*Added buttons so ramps can be used with hatches
+*Separated adv/fort volume settings
+*Fixed jump tooltip
+*Stopped adventurers from starting in pits if other sites are available
+*Stopped ``rbut`` from quitting out of character creation
+*Removed adventure mode feature discovery announcements
+*Updated more classic tiles and brought back cursors
+
+===Other changes===
+These changes are also included in [[Release information/50.15|50.15]]
+*Dye vs profession coloration toggleable in both modes
+*Stopped [[migrant]] families with negative age younger siblings in young worlds
+*Removed case sensitivity from unit filters
+*Fixed a crash from subtabbing to certain buildings
+*Made help close button act consistently when help is minimized
+*Fixed bug where syndrome would target too few tissues
+*Fixed issue with occasional infinite loop on population placement
+*Fixed bug where many priests would move to different homes after world generation
+
+==v51.01, Beta 27==
+December 2, 2024 [https://store.steampowered.com/news/app/975370/view/4440081939137823928 patch notes on Steam]:
+*Fixes an audio crash
+*Kobs/gobs shouldn't steal mythic artifacts
+*Undead shouldn't take over mythic sites near to market towns
+*Mythical sites shouldn't be placed over rivers as frequently
+
+==v51.01, Beta 28==
+January 8, 2025 [https://store.steampowered.com/news/app/975370/view/530961267633946651 patch notes on Steam]:
+===Graphics===
+*Child portraits!
+*Baby portraits!
+*Pebble floors are differentiated from stone floors
+*[[Primordial remnant]] images by sphere
+*Fixed broken [[human]] hair palettes
+*Fixed missing hoods for cloaks in portraits
+*Fixed [[coin]] palettes and pile size images
+*Fixed off-center mythical dungeon map images
+
+===Also===
+*Tame vermin can be made available as pets in fort mode!
+*Added adventure soundtrack to Fortress mode
+*Added adventure mode music track credits
+*Improved initial loading speed
+
+===Adventure mode character creation changes===
+*Changed description and added tip if [[chosen]] destiny is disabled
+*Correct destiny name shown on character sheet in creation
+*Difficulty tooltips
+*Creature description tooltips on character creation
+*Civilization description tooltips on character creation
+*Home site description tooltips on character creation
+*Ordered adventurer start sites by population
+*Belief description tooltips on character creation
+*Tweaked spacing in background paragraph in character creation
+*Added character archetypes to character creation for attributes and skills
+*[[Skill]]/[[attribute]] tooltips in character creation
+*Made some additional skills available in character creation
+*Made character creator choose better starting materials if some points can be spared
+*Changed item category order
+*Highlighted item categories in character creation that are for fortress mode
+*[[Item quality]] button explanation in character creation
+
+===Adventure mode general changes===
+*Added [[Dungeon guardian|mythical animal]] populations to mythical sites
+*Made mythical populations wear less armor and decreased [[Dungeon guardian|leader]] skills somewhat
+*Added more protection against unintended infighting at mythical sites, though goblins can still argue
+*Compass for retrieve artifact quest
+*Improved adventure shopkeeper placement and table handling
+*Stopped chosen from starting in towns with ruined temples
+*Added handling of player that has been knocked out or unable to act for a long time
+*Made reputation visible for people and groups in adv log in chosen/hero modes
+*Improved adventurer log map display somewhat
+*Added more information about where companions are located in companion list
+*Right click allows drinking from tiles
+*Right click on self has view option
+*Right click on hatch gives option to go below
+*Made adventurer NPCs tend toward taverns instead of castles
+*Made priests start in their temples more correctly
+*Hover info for sounds, vampire senses, memory map
+*Fixed problem where enemy healing liquids healed you instead
+*Added more chosen god popups
+*Added some adventure mode help guides
+*Made stop travel button flash if travel is impossible
+*Clarified wording of surrounding obstacles message
+*Clarified wording in talk button tutorial window
+*Added announcement button to menu overview
+*Improved travel restrictions check
+*Added highlight for travel restrictions
+*Made divine intervention stronger
+*Fixed divine intervention crash against projectiles
+*Cleaned up quest display between games
+*Added more combat audio layers
+*Changed songs less often in adventure mode
+*Fixed audio crash related to ambiance
+
+===Other tweaks===
+*Fixed broken medium taupe [[color|coloration]] for nightmare [[sphere]] screaming mouths [[Divine fabric|fabric]]

@@ -1,0 +1,29 @@
+{{release notes}}
+:This release improves stability and fixes some odds and ends as we head toward a playable siege update.
+:&mdash;[[Toady One]], October 1, 2025
+
+:Hey Urists,
+:It’s Alexandra here and we’ve got a packed update this week with patch 52.05, siege update footage, merch announcements and an exciting community event. The team is busily finishing the last few features before the siege update is ready to go live.
+:Patch 52.05 brings a bunch of crashing and stability fixes.
+:&mdash;[[Alexandra]], October 1, 2025
+* [https://www.bay12forums.com/smf/index.php?topic=183470.0 Bay 12 Forum thread]
+* [https://www.bay12games.com/dwarves/index.html#2025-10-01 Patch notes on Bay 12 Games]
+* [https://store.steampowered.com/news/app/975370/view/528732929177683220  Patch notes on Steam]
+* [https://kitfoxgames.itch.io/dwarf-fortress/devlog/1063532/siege-update-preview-mod-jam-patch-5205 Patch notes on itch.io]
+
+== General updates ==
+* Fixed crash caused by interrogating certain suspects under certain circumstances in world generation.
+* Fixed crash in legends caused by missing works of art.
+* Fixed potential out of bounds crash setting appearance contributions from parents in world generation.
+* Fixed pathing issues caused by building construction on certain maps.
+* Fixed some other issues related to map block allocation and path connectivity.
+* Made training marksdwarves use the last bolt in a stack.
+* Allowed work orders to specific plants for milling jobs.
+* Stopped dyed items from triggering inappropriate export prohibitions.
+* Specifying wood in certain work quotas will now actually use the specified wood.
+* Stopped meandering behavior for animals that are trained for war or hunting.
+* Again allowed impaled weapons to be dropped by the wielder, leaving the item behind.
+* Fixed a problem causing minerals to not show up in some mods.
+* Fixed issues with blinding and necrosis item powers in scripts.
+* Increased world generation stability.
+* Fixed problem with material initialization causing unpredictable problems.

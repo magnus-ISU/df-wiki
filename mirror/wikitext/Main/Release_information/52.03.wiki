@@ -1,0 +1,57 @@
+{{release notes}}
+:Here is a release to continue to stabilize the lua update. There are several regular fixes as well, listed below in the patch notes.
+:Also, we have some dye improvements for you! You can now mix dyes to produce a variety of colors, and you can tint with dyes to mix the natural color of the material and the color of the dye during the dyeing process. If you make a new world, you'll also have access to some additional outdoor plant dyes. Leather can now be dyed, and there are some new stockpile controls to help you manage all of the new stuff.
+:If you want to see your dwarves in their new outfits after you've made some shiny clothes, there's the existing preference setting to show their dyed outfits rather than coloring them by profession.
+:&mdash;[[Toady One]], August 7, 2025
+:It’s Alexandra here with update 52.03 which brings new colour and options for dying and some general fixes and improvements.
+:&mdash;[[Alexandra]], August 7, 2025
+* [https://www.bay12forums.com/smf/index.php?topic=183387.0 Bay 12 Forum thread]
+* [https://www.bay12games.com/dwarves/index.html#2025-08-07 Patch notes on Bay 12 Games]
+* [https://store.steampowered.com/news/app/975370/view/547868787733430571 Patch notes on Steam]
+* [https://kitfoxgames.itch.io/dwarf-fortress/devlog/1004046/patch-5203 Patch notes on itch.io]
+
+== Dye improvements ==
+* Added dye mixing.
+* Added dyeing of leather.
+* Added partial dyeing of items (tinting).
+* Added 60+ new outdoor plant dyes (in new worlds).
+* Leather, cloth, armor, and finished goods stockpiles can now filter by color and dye status.
+* Plant processing and extraction jobs can have a specific plant set.
+* Added natural colors to undyed cloth, thread, and leather descriptions.
+* Added dye color to dye descriptions.
+* Added 20 new [[Color#Color tokens|color definitions]].
+
+== Modding and lua updates ==
+* Mods in mod_upload are now sorted (first by ID, then name, then numeric version, then description).
+* The "delete" buttons for saves have been replaced with a "Files" button, which, when clicked, gives the previous menu (with a warning that "Delete" is permanent and instant) with an extra button that opens the saves folder (Windows).
+* You may click on mods in the various mod lists to open their folder (Windows).
+* Added logging for missing PERMITTED_REACTION and PERMITTED_BUILDING objects.
+* Reactions associated to entities that use plant reagents will check that the entity has those plants when making powder list (reaction products are not checked.)
+* Changed how duplicate object message boxes work.
+* Possible improvement to Linux message boxes.
+* Added DYER to list of hard-coded buildings permitted for reactions.
+* Nightmares no longer have bogeyman polymorph.
+* Fixed angel sphere descriptions.
+* Fixed attack tweaks and webs on forgotten beasts.
+* Fixed necromancer animation missing IT_MANUAL_INPUT.
+
+== General updates ==
+* Fixed issue with not all save files being copied to the folder.
+* Archers will no longer infinitely flick each frame between archery training and going to some other training if they have no ammo.
+* Fixed problem causing some armies to become stuck.
+* Announcement settings save properly again.
+* Prevented some potential crashes on startup.
+* Removes dead/ghostly/caged/sleeping/paralyzed units from the noble queue.
+* Makes nobles drop their haul items when they go to a meeting.
+* Noble meetings auto-rebuff if meeting data is lost.
+* Improved/optimized memory management for armies/army controllers.
+* Optimized a particularly slow army loop.
+* Fixed crash associated to transformed creatures with fewer body parts than their untransformed body.
+* Fixed the "view sheet" hotkey for items/units.
+* Fixed placement of titan shrines.
+* Made work orders reset their suggested conditions properly when details are changed.
+* Added some crash guards and logs for corrupted units/nemesis records.
+* Made default embark cloth items dyeable.
+* Updated historical nicknames in more places so that legends mode has them.
+* Adds a fix for scrolling on laptop trackpads etc.
+* Fixed typo in nemesis corruption message.

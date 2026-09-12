@@ -1,0 +1,45 @@
+{{release notes}}
+:This patch gives messengers more tasks, like the ability to make peace and improve or open trade relations. You can assign messengers in the same menu where you assign other positions like the manager and broker, and you can give them missions from the world screen (button on the lower right.) There are also some optimizations and other fixes.
+:&mdash;[[Toady One]], May 13, 2026
+
+:Hey Urists,
+:We’ve got another patch/community news hybrid post today! There’s lots on the go right now as we prepare for a packed summer of news and updates. The artists are finishing up dinos and continuing with the art for the Myth and Magic update. You can expect to see the dinosaur update next and we'll be sharing a release date very soon. Tarn is also in full Wizard-mode but in the meantime, he has a new patch with a focus on diplomacy and bugs.
+:See you next time, with dinos!
+:&mdash;[[Alexandra]], May 13, 2026
+* [https://www.bay12forums.com/smf/index.php?topic=183877.0 Bay 12 Forum thread]
+* [https://www.bay12games.com/dwarves/index.html#2026-05-13 Patch notes on Bay 12 Games]
+* [https://store.steampowered.com/news/app/975370/view/693135146596958388 Patch notes on Steam]
+* [https://kitfoxgames.itch.io/dwarf-fortress/devlog/1521849/diplomacy-improvements-20th-anniversary-dwarf-fortress-patch-5313 Patch notes on itch.io]
+
+== Patch notes== 
+=== Diplomacy ===
+* Your appointed [[messenger]]s can now do a variety of diplomatic [[mission]]s from the [[Civilization_and_World_Info|world screen]]. Make peace, declare war, make contact, and improve [[trade]]. You can also seek alliances if you have the [[monarch]] in your fortress.
+* Increased the priority of messenger actions.
+* It's possible to open trade with [[human]]s and [[elf|elves]] before their usual time if you send a messenger. You can also open trade with multiple [[civilization]]s of the same type.
+* If traders don't make decent profits and you do not engage in [[Trade_agreement|negotiations]], trade will taper off.
+* Added confirmation to mission interface.
+* Changed some colors on mission interface.
+* Added a dialog line for dwarven traders from other civilizations.
+* Fixed issue where [[Difficulty#Individual_enemy_toggles|turning enemies off]] lead to early caravans (requires resetting difficulty to apply).
+
+=== General updates ===
+* Optimization: [[Undead|zombies]] don't consider their surrounding until disturbed.
+* Optimization: throttled creatures trying to repeatedly failing [[path]].
+* Added announcements for residents and creatures that have begun throttling pathing.
+* Can view activity details again from the [[Unit list|residents list]].
+* Stopped scroll bar from disappearing when closing bins near the bottom of the trade list.
+* Increased the maximum number of [[announcement]]s that can be saved.
+* Prioritized the removal of [[sparring]] announcements from the announcement list.
+* Tries to repair corrupted musical [[instrument]]s upon load.
+* Did some exception handing for map saving and loading.
+* Added the ability to display all logged errors on screen (useful for debugging mods etc).
+
+== Tarn and Zach open their Magic: The Gathering cards ==
+In case you missed it, Tarn and Zach just received their copies of the new Secret Lair x Dwarf Fortress collection of Magic: The Gathering cards. [https://youtu.be/2nMRSBXQDpw They open their packs together and reminisce about ASCII Dwarf Fortress and getting into Magic in the 90s]. You can still [https://secretlair.wizards.com/us/product/1250417/secret-lair-x-dwarf-fortress-create-new-world pre-order the cards here].
+
+== 20th Anniversary of Dwarf Fortress ==
+[[File:DF20thAnniversary.png|400px|right]]This year we are celebrating the 20th anniversary of Slaves to Armok: God of Blood Chapter II: Dwarf Fortress. To start, we have a new special logo for the occasion featuring Armok himself, who has never been depicted until now! Credit goes to artist Jacob for the new portrait. You can expect to see more 20th anniversary events throughout the rest of the year. If you’re interested in hosting your own Dwarf Fortress gathering, we’ve opened up a [https://forms.gle/TsimLyvt5zLyTikU7 form where you can apply for merch support here].
+
+== File changes ==
+* data\init\init_default.txt
+** Added DISPLAY_ALL_ERRORLOGS

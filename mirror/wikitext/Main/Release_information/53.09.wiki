@@ -1,0 +1,78 @@
+{{release notes}}
+:Here's a patch with lots of routine fixes. Lots of new portraits and some updated portraits. Small experimental beasts now have their own colorful graphics to match the forgotten beasts.
+:&mdash;[[Toady One]], January 7, 2026
+
+:We heard your feedback about the portraits and updated a bunch of them that were feeling inconsistent with the tone of the game. I'm still getting a hang of making art direction decisions and wasn't as careful as I should have been. So Guido/Neoriceisgood and I talked more about the portrait art and I gave him more time to rework them.
+:Although we always welcome feedback, it was disappointing to see disrespectful and disparaging comments directed to Guido/Neoriceisgood who was simply working within the confines of his role. And so I ask that folks be more kind to the dev team in future feedback. I also want to clarify that we do not use generative AI for Dwarf Fortress in any step of development. We make things that make things but we make them by hand.
+:&mdash;[[Alexandra]], January 7, 2026
+* [https://www.bay12forums.com/smf/index.php?topic=183674.0 Bay 12 Forum thread]
+* [https://www.bay12games.com/dwarves/index.html#2026-01-07 Patch notes on Bay 12 Games]
+* [https://store.steampowered.com/news/app/975370/view/520860962365900794 Patch notes on Steam]
+* [https://kitfoxgames.itch.io/dwarf-fortress/devlog/1309415/portrait-update-other-fixes-dwarf-fortress-patch-5309 Patch notes on itch.io]
+
+== Patch notes ==
+=== Graphics updates ===
+* New procedural graphics for small experiments.
+* New animal portraits, and some new full body animal tiles.
+* Can pop up basic small animal sheets to view portraits and read descriptions for small animals.
+* Offering place, display furniture, and nest box show proper item materials when placed as buildings.
+* Uses proper list icons for creatures when choosing animals in embark or adventure setup.
+* Added further box highlighting for chosen/hero/ordinary selection in Classic.
+* Added error log for unrecognized tile graphics rectangle tokens.
+* Properly sized giant flying/gray squirrel list icons and corpses.
+* Fixed upright weapon trap display error.
+* Minimap properly updates on certain recenter commands.
+
+=== General updates ===
+* Stopped mood dwarves from choosing inaccessible workshops and causing path cancellation lag.
+* Dwarves no longer try to store pile and tomb items which are located outside their burrows.
+* Dwarves no longer try to store carried objects outside of their burrows.
+* Stopped dwarves with no working grasps from trying to store owned objects and excess equipment.
+* Made armor appear again on many non-sieging units where it was missing.
+* Mothers seeking lost infants no longer respect burrows but do respect chains.
+* Mothers no longer seek ghostly babies.
+* If an egg hatches and the mother is assigned to a zone (e.g. pasture), the baby is now assigned to the zone.
+* Soldiers given an order while hauling will now drop their hauled job items instead of taking them along on duty.
+* Dwarves heading off to meetings will drop hauled items from cancelled jobs.
+* Dwarves are more likely to handle their hauled drink-related items after drinking.
+* Appropriate buildings now stop rain and snow.
+* Added indication during assignment of specific military items whether the item is already assigned elsewhere.
+* Animal traps can catch subterranean water creatures like cave lobsters again.
+* Cave lobsters can be processed in the fishery and their shell can be used for shell crafts.
+* Creatures that leave statue corpses now leave statues of themselves rather than of random creatures.
+* Prophets and other religious people with prophetic belief systems will no longer include incorrect beliefs in their greetings.
+* Stopped pedestals and display cases from being allowed to display themselves.
+* Made mussels and oysters stop appearing on land when animals root around near oceans.
+* Stopped a few illegal werebeast types from being created.
+* Added visual button to back out of art element creation and deletion.
+* Fixed conflicting hauling/hot keys keybindings. You may have to restore defaults or update it yourself if you have custom bindings.
+* Specified amount created in some job names.
+* Fixed some item description grammar.
+* Fixed broken child/baby strings in certain contexts like action reports.
+* Cleaned up procedural creature text a bit.
+* Fixed incorrect name for coral material.
+* Fixed improper text for mythical dream objects.
+* Giant and animal person variants of pool creatures will now appear in savage lakes. (New worlds)
+* Fixed a few typos with key binding text.
+
+== File changes ==
+* data\init\globals.lua
+** Added blank comment/divider before debug variable at line 146
+* data\init\interface.txt
+** Changed D_HAULING to lower case 'h'
+* data\vanilla\vanilla_creatures\objects\c_variation_default.txt
+** Added CV_CONVERT_TAG ({{token|BIOME|creature}} {{token|ANY_POOL|biome}} to {{token|ANY_LAKE|biome}}) to [[Animal person|ANIMAL_PERSON]], ANIMAL_PERSON_LEGLESS, and [[Giant|GIANT]]
+* data\vanilla\vanilla_creatures\objects\creature_small_ocean.txt
+** Removed {{token|VERMIN_SOIL|creature}} from [[Mussel|MUSSEL]]
+* data\vanilla\vanilla_creatures\objects\creature_subterranean.txt
+** Added white [[color]] for [[chitin]] in [[Cave lobster|LOBSTER_CAVE]]
+* data\vanilla\vanilla_procedural\scripts\generators\creatures\rcp.lua
+** Renamed is_valid_random_creature argument humanoid_only to humanoidable_only
+** In quadruped_function_curry moved BEAST_FRONT_GRASP before any BEAST_QUADRUPED_*
+* data\vanilla\vanilla_procedural\scripts\generators\creatures\shared_info.lua
+** Many changes related to portrait graphics updates
+* data\vanilla\vanilla_procedural\scripts\generators\interactions\mythical.lua
+** Corrected "of stone" to "of sleep" in DREAMS in mythical_adjectives
+* data\vanilla\vanilla_procedural\scripts\generators\creatures.lua
+** More renaming of humanoid_only to humanoidable_only
+** Removed humanoid_only from night_creature_universals, creatures.night_creature.nightmare.default, and creatures.night_creature.werebeast.default

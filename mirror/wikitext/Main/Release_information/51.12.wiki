@@ -1,0 +1,47 @@
+{{release notes}}
+
+<blockquote>
+Here's a new update, focusing on ranged weapons and colorful beasts.
+
+We've reworked ranged weapons and archer behavior in preparation for the siege update.
+
+Ranged weapons can now be nocked/loaded, which takes the bulk of the time, and this can be done before firing ('n' in adventure mode.) This allows archers to be a bit safer, since they won't be paralyzed for a long while after firing a shot. The firing force of bows is affected by strength and skill up to a point, whereas crossbows are slower to load but don't require skill and attributes to get their full force. Crossbows are also easier to aim. Loading speeds of all weapons can be improved with skill.
+
+Ranged projectiles (shot or thrown) can be aimed at specific body parts. It's now also harder to hit targets that are farther away. Adventurers, fortress defenders, and enemies all have access to aiming.
+
+In the fortress, your defenders will try to use nearby fortifications, stay away from the enemy, and not use their crossbows as clubs unless very desperate. Enemy archers will also use fortifications if they can get close. Fortress archers will try to reload from the squad ammo pool rather than engage in melee combat.
+
+We've also brought back the ammo and supply management menus and worked out some old issues with them so they should function more smoothly.
+
+The squad's ammo reserves can be set by selecting a single squad, going to their equipment, and selecting the ammo button. Multiple ammo pools can be set by material, amount, and whether they are used for combat or training (or both.) This allows you to eventually separate out metal bolts for combat and wood/bone bolts for training if you choose. Squads can store ammo in chests in a barracks if the barracks is set to hold that squad's equipment to give you some control over where squad bolts end up. Hunters also have an ammo pool you can set under Labor / Standing Orders / Other.
+
+You can also set a squad's food and drink settings from Equip / Supplies. This allows you to set how many rations are carried in their backpack and whether their flask gets alcohol, water, or nothing.
+
+Forgotten beast and titan graphics have been updated. In new worlds, they will now be generated with colors and multiple decorations.
+
+Also, dwarves that die will lose their room assignments properly and a few crashes and other issues have been fixed.
+</blockquote>
+&mdash;[[Toady One]], June 26, 2025 ([https://www.bay12forums.com/smf/index.php?topic=183326.0 Bay12 Forums] &bull; [https://store.steampowered.com/news/app/975370?emclan=103582791464215078&emgid=547864982714319313 Steam])
+
+== Ranged weapon update ==
+* Stopped ranged soldiers from aggressively entering melee combat when out of ammo.
+* Made ranged units step away from close enemies and try to use any nearby fortifications.
+* Ranged attackers can aim at specific body parts.
+* Added loading and nocking states and actions for ranged weapons.
+* Made firing take much less time than loading.
+* Differentiated shooting and post-shot recovery times.
+* Added weapon-specific attribute and skill effects for aiming and delays.
+* Can set ammunition, food, and drink assignments for squads.
+* Fixed various issues with extra ammo being kept in quivers and ammo not being picked up.
+
+== New graphics ==
+* Added colorful forgotten beasts and titans.
+
+== General updates ==
+* Dwarves that meet with misfortune lose their room assignments properly.
+* Changed how item deletion works to fix some army crashes.
+* Stopped crash from unspecified inorganic dusts.
+* Stopped keyboard cursor from skipping large distances when scroll distance is larger than 1.
+* Made modded night trolls appear even when no night trolls are generated.
+* Made NO_PHYS_ATT_GAIN/RUST add/remove syndromes work properly.
+* Stopped requiring music and sound definitions to load saves (makes classic saves compatible again).

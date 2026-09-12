@@ -1,0 +1,44 @@
+{{release notes}}
+
+<blockquote>
+Here's the long-awaited 50.10! The game is now available for Linux, and this patch has some needed updates, like the ability to look at old alerts, ammo that works when uniforms are changed, and soldiers that don't hoard rotten food in their rooms.
+
+We're going to continue now on parallel tracks. The main work will be on adventure mode. There should be more to show there soon as we get the site travel images in place and get the character running around the world again. Putnam has been working on some interface changes that should allow us to more support the keyboard/mouse interface options as we go, which I know is concerning for some people. It has taken longer than we expected to get the ball rolling generally on adventure mode, but the time ahead is clear now and we're optimistic it'll go smoothly.
+
+We've also got more work to do back in fort mode. Some form of the full ammunition control system needs to come back for instance - we'll continue with patches like this one as we go.
+</blockquote>
+&mdash;Toady One and [[ThreeToe]], September 19, 2023 – (from [https://steamcommunity.com/games/975370/announcements/detail/5430833992895813013 Patch notes on Steam])
+
+<blockquote>
+Linux version is up!
+</blockquote>
+&mdash;[[Toady One]], September 19, 2023 – (from [{{forum link/url|182047}} Patch notes on Bay 12 Forums])
+
+== New stuff ==
+* Can view all alerts, including old ones that have been dismissed
+* Can view combat reports from creature sheets
+* Can pause combat reports whenever new events are added
+* Added crash logging
+
+== Major bug fixes ==
+* Fixed crash from removing zone with assigned unit
+* Fixed multithreading crash related to announcements
+* Fixed a potential crash issue with monarch arrival and made them provide more wagons properly
+* Fixed potential crash related to certain traveling creatures
+* Ammo assignments are updated properly when changing uniforms
+* Removed ownership of food items whenever they are dropped (stops rotten food hoarding in rooms)
+
+== Graphics additions/changes ==
+* New stone ramp graphics
+
+== Other bug fixes/tweaks ==
+* Made creatures more able to get out of trees
+* Sped up mid-level map retrieval (helps slowdowns on large world embarks)
+* Optimized relationship lookup for socializing dwarves
+* Fixed out of bounds issue with wheelbarrows
+* Stopped music mods from throwing error when making a new world
+* Fixed crash when there's an invalid language (mods)
+* Made broker leave depot when last wagon leaves instead of first
+
+== Undocumented changes ==
+* New in game [[Settings]] tab, [[Settings#Annoucements|Announcements]]

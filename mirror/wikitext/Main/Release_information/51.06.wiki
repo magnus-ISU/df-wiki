@@ -1,0 +1,59 @@
+{{release notes}}
+
+'''Dwarf Fortress 51.06''' adds many bug fixes, nerfs prepared food value, and adjusts metal settings.
+
+Two of the metal material values changed are {{token|TORSION_STRAIN_AT_YIELD|md}} and {{token|SHEAR_STRAIN_AT_YIELD|md}}. The increases in these two values for Bronze and Steel bring them within 10% of those previously-suggested by Putnam nearly 10 years ago in this forum post: [http://www.bay12forums.com/smf/index.php?topic=149938.msg6147647#msg6147647 Proper bronze, steel, bone and obsidian elasticity data].
+
+=Release notes=
+* [http://bay12games.com/dwarves/#2025-02-26 Patch notes on Bay 12 Games]
+
+Just posted another fixerly release. Probably do a few more of these before starting on siege stuff, and patches should continue during that process. Also have started what'll hopefully be a quick experimental test with [[Lua scripting|Lua]] over on a Steam branch before we merge that in everywhere.
+
+I did a [https://www.youtube.com/watch?v=bViZEpBZnBY&feature=youtu.be lengthy interview] over on Blind's channel. They also provided a link to the [https://www.blindirl.com/sieges-adventures-magic-and-beyond/ raw audio].
+
+=Official patch notes=
+* [http://www.bay12forums.com/smf/index.php?topic=183091.msg8572048 Patch notes on Bay 12 Forum]
+* [https://kitfoxgames.itch.io/dwarf-fortress/devlog/894968/patch-5106 Patch notes on Itch.io]
+* [https://store.steampowered.com/news/app/975370/view/547854206358257941 Patch notes on Steam]
+<hr>
+Cheerful little release as we get back to regular progress.
+
+Patch 51.06 includes a few fixes and tweaks for Fortress Mode and Adventure Mode.
+
+==Fortress Mode==
+* Made some strange mood dwarves not get stuck at workshop selection stage
+* Stopped people from claiming and using inactive bedroom zones
+* Stopped the dead from claiming inactive tomb zones
+* Decreased prepared food item value
+* Made custom announcement settings load properly
+* Added setting to turn off visible rectangle dimensions
+* Added crash safeguards to report popups and other widgets
+* Fixed seed cap limit and made deletion of seeds over cap respect planting status
+
+==Adventure Mode==
+* Added escape/rbut to leave adventurer difficulty selection
+* Fixed issue with adventurer race selection lists not being unpopulated on exit
+* Fixed buffer overrun involving tents
+* Fixed crash related to site plot use allocations
+* Added highlight to adventurer destiny selection in Classic mode
+
+==General updates==
+* Added crash safeguard for syndromes
+* Updated some metal elasticities
+* Fixed graphics for tiger, whale, and whitetip reef sharks
+
+=File differences=
+
+*data/
+**init/'''d_init_default.txt''' - ''modified'': added [SHOW_RECTANGLE_DIMENSIONS:YES]
+**vanilla/
+***vanilla_creature_graphics/
+****'''info.txt''' - ''modified''
+****graphics/'''graphics_creatures_aquatic_large.txt''' - ''modified'': rotated shark IDs
+***vanilla_materials/
+****'''info.txt''' - ''modified''
+****objects/'''inorganic_metal.txt''' - ''modified'': adjusted values for Brass, Bronze, Bismuth Bronze, and Steel
+***vanilla_plant_graphics/'''info.txt''' - ''modified'': file updated to indicate a change in 51.06, but no accompanying changes
+*'''Dwarf Fortress.exe''' - ''modified''
+*'''file changes.txt''' - ''modified''
+*'''release notes.txt''' - ''modified''

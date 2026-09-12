@@ -1,0 +1,17 @@
+{{release notes}}
+52.02 was a hotfix released on July 24, 2025, three days after [[Release information/52.01|52.01]].
+:Here's a patch for the last one.
+:&mdash;[[Toady One]], July 24, 2025
+* [https://www.bay12forums.com/smf/index.php?topic=183356.msg8591204#msg8591204 Bay 12 Forum post]
+* [https://www.bay12games.com/dwarves/index.html#2025-07-24 Patch notes on Bay 12 Games]
+* [https://store.steampowered.com/news/app/975370/view/547867519580373169 Patch notes on Steam]
+* [https://kitfoxgames.itch.io/dwarf-fortress/devlog/993280/hotfix-patch-5202 Patch notes on itch.io]
+
+== General updates ==
+* Fixed hang on Linux when updating an installed mod the first time.
+* Removed the temporary geology variables placement layer/freq/parent from lua to prevent crashes.
+* Fixed crash when opening the mod menu after deleting the %appdata% folder.
+* Fixed a logic issue where any duplicated raws detected will cause further types of duplicated raws to no longer print.
+* Init files are loaded from the game folder first so that updates always apply properly.
+* The game now checks for prefs/[[arena.txt]] and prefs/[[colors.txt]].
+* Added more cases of auto-toggling portable mode if something fails to save.

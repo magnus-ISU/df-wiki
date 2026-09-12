@@ -1,0 +1,75 @@
+{{release notes}}
+:This patch adds some quality of life features, fixes some bugs, and addresses some issues with the [[Release_information/53.15|extinct creatures patch]]. A key cause of overindulging tavern patrons was fixed. Dinosaurs grow more slowly and dinosaur people have their missing attack types. Divine objects are visible, generally, and visiting scholars should stop walking off with your books and scrolls. And many more!
+:&mdash;[[Toady One]], August 5, 2026
+
+:Hey Urists,
+:We're back and celebrating the 20th anniversary of Dwarf Fortress this week with a special show, Myth & Magic at and music updates and a patch. While Myth & Magic work is very much underway, we also have patch 53.16 today which fixes a bunch of things. We are also preparing to go to Gamescom at the end of the month to show a first-look of Myth & Magic gameplay that you'll be able to watch at home! Dabu and Simon also released their latest Dwarf Fortress track today.
+:&mdash;[[Alexandra]], August 5, 2026
+* [https://www.bay12forums.com/smf/index.php?topic=184026.0 Bay 12 Forum thread]
+* [https://www.bay12games.com/dwarves/index.html#2026-08-05 Patch notes on Bay 12 Games]
+* [https://store.steampowered.com/news/app/975370/view/676253720257759384 Patch notes on Steam]
+* [https://kitfoxgames.itch.io/dwarf-fortress/devlog/1617987/20th-anniversary-myth-magic-art-and-music-dwarf-fortress-patch-5316 Patch notes on itch.io]
+
+== Patch notes ==
+=== General updates ===
+* [[Fanciful]] (but existent) creatures like [[unicorn]]s appear again and have their materials tracked.{{bug|13523}} This also caused some issues with [[zombie]]s coming back to life (and then dying immediately because of their rotted state.{{bug|13519}})
+* [[Tavern]] goers will no longer order a [[drink]] from every single [[tavern keeper]] in the bar and drink them all, causing them to die of acute alcohol [[poison]]ing.
+* Tavern keepers will now refuse orders for drinks if the one ordering it is sufficiently [[drunk]] (if their personality allows.)
+* Dwarves will exercise self-control and not order alcohol from tavern-keepers when drunk (if their personality allows.)
+* [[Save]]s can be sorted by most recently played now.
+* Ordered potential [[memorial]] [[slab]] [[engraving]] [[job]]s by urgency and added some coloration.
+* [[Visitor]]s should no longer steal fortress [[library]] [[book]]s (or other fortress items.)
+* Disabled "be with family" [[need]] until isolated residents have ways to visit, be visited by, or contact distant family.
+* Added confirmation for changing or clearing [[hotkey]] recenter locations.
+* Added various missing attacks to the extinct creature people.
+* Changed growth rates for various [[extinct]] creatures.
+* Changed [[egg]] [[size]] and clutch size for various extinct creatures.
+* Stopped [[caravan]] from bringing [[food]] when it wasn't needed due to seed and drink overcounting{{bug|13530}}.
+* Strengthened effect of unconditional surrender.
+* Stopped player [[messenger]]s from being given conflicting [[diplomacy]] goals (such as declaring war and making an alliance.)
+* Stopped dwarves from being trapped in [[guildhall]] skill [[demonstration]]s when they have unmet social needs.
+* [[Strange mood]] dwarves will no longer make equipment types from outside of their civilization.
+* Fixed broken xml export for historical negotiation events{{bug|13512}}.
+* [[Wilderness]] creature type number further depends on the size of each [[region]].
+* Click the bottom [[stockpile]] button now goes directly to adding a new stockpile.
+* Gave recenter information to building destruction and toppling [[announcement]]s.
+* Stopped [[tantrum]]ing dwarves and others from targeting [[farm plot]]s for destruction.
+* Announcement and report recenter buttons should properly close their menus again.
+* Added description to top of [[burrow]] menu.
+
+=== Graphics updates ===
+* Procedural weapons and armor images appear, and procedural weapons appear when held (worn armor will have to come later.)
+* Stone short sword should now appear as held item properly.
+* Made skill blocks of administrator candidates easier to parse.
+* Improved display of game load/worldgen errors.
+* Quern and millstone cursors appear properly when placing them.
+* Displayed cauldrons properly in [[night troll]] [[lair]]s.
+
+== New artwork ==
+We'd like to reveal [https://clan.fastly.steamstatic.com/images//34693670/f0bf58f49ab4ae225311fe9d7d57b71ffd434c80.png breathtaking new artwork] by Thea Kent for the Myth & Magic update featuring a dwarven wizard, a bunch of wild looking creatures and the God of Blood Armok himself.
+
+== New Song: Myth & Magic ==
+Inspired by the Myth & Magic update, Dabu and Simon Swewer have just released one of two new Dwarf Fortress songs for this year. [https://www.youtube.com/watch?v=0RxKWfkWC74 A song] about a dwarven wizard experimenting with the amazing, destructive powers of magic...
+
+== 20th Anniversary Show ==
+We're celebrating the 20th anniversary of classic Dwarf Fortress with a special show. Join Tarn and Zach as they play the first ever build of the game from 2006 and reminisce about the olden days. It’s been a while since they’ve played the build and it’s very unstable so who knows what will happen? They are also hosting the [[Beyond Quality Awards]], recognizing the devs and community members who have contributed throughout the years.
+
+The show starts today at 11am PT/ 2pm ET/ 7pm BT on the [https://www.twitch.tv/kitfoxgames Kitfox Twitch channel] ([https://www.twitch.tv/videos/2838060900 Twitch VOD]; [https://youtu.be/-X8KEqHdekE YouTube VOD]).
+
+== On Sale now! ==
+Dwarf Fortress is part of the [https://store.steampowered.com/sale/kitfoxfestival2026?snr=1_2108_9__2107 Kitfox Publisher sale] which is running all week. All our games are on sale so now is a great time to get a friend into Dwarf Fortress.
+
+== Updated Beginner Tutorial ==
+And if you're new to Dwarf Fortress, we just collabed with BlindiRL to create a [https://www.youtube.com/watch?v=aRTwK8XR6kE new updated version of the beginner tutorial guide]. It's a great place to start your learning journey.
+
+== File changes ==
+* data\init\[[announcements.txt]]
+** Added BARTENDER_SLACKING
+* data\vanilla\vanilla_creatures\objects\[[Creature_variation_token|c_variation_default.txt]]
+** Added CLAW_SCRATCH_ATTACK_STANCE, HORN_ATTACK, PROBOSCIS_BITE_ATTACK, and TOOTH_WHORL_BITE_ATTACK
+* data\vanilla\vanilla_creatures\objects\creature_standard.txt
+** Changed SEA_MONSTER PINCER attack token to match verb
+* multiple data\vanilla\vanilla_creatures_extinct\objects\ files
+** Added many missing attacks
+* data\vanilla\vanilla_procedural\scripts\generators\entities.lua
+** Added many PROCEDURAL_ITEM_GRAPHICS

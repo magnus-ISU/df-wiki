@@ -1,0 +1,25 @@
+{{release notes}}
+52.01 was the initial release of [[Lua scripting]].
+:This version introduces lua scripting. Right now, this affects procedural object generation, like the forgotten beasts, divine curses (vampires and werebeasts), divine items, necromancers and their lieutenants and experiments, evil weather, and so forth. For the last fifteen years or so, all of these things have been hard-coded in Dwarf Fortress, inaccessible to modders. Now the algorithms and data are available for modding. Scripting will come to encompass more hard-coded features of the game as we proceed.
+:The relevant scripts establishing the vanilla procedural objects are in data/vanilla/vanilla_procedural. These scripts are structured in the same way as a mod, like the rest of the data/vanilla content, so you can use it as an example for your mods. The mod should have an init.lua file, but whether or not you organize further scripts and folders is up to you (the vanilla 'mod' has a generators folder with several scripts and a few subfolders).
+:&mdash;[[Toady One]], July 21, 2025
+:Hey Urists,
+:Modders rejoice, the Lua update is now available! Putnam has been steadily making improvements and it’s been running smoothly enough that we’re ready to put it on the main branch. This is an essential update that will pave the way for more advanced systems like procedural magic. It also gives the community the chance to dig deeper into the code and make even cooler mods. Thanks to everyone who helped us on the beta branch and if you run into any issues, please report them on the bug tracker.
+:Want to make Dwarf Fortress mods with Lua but don’t know where to start? We collaborated with DPh Kraken to make two video tutorials. The [https://youtu.be/QMxgsUogIIk first video] will teach you how to create a Dwarf Fortress mod that uses the Lua procedural generation API. The [https://youtu.be/DEBTWMlUQzA second] is focused on creating a custom creature.
+:And if you’d prefer to use a text guide, DPh Kraken has also written an entry on the Dwarf Fortress wiki about [[Lua_scripting|lua modding]].
+:&mdash;[[Alexandra]], July 21, 2025
+* [https://www.bay12forums.com/smf/index.php?topic=183356.0 Bay 12 Forum thread]
+* [https://www.bay12games.com/dwarves/index.html#2025-07-21 Release notes on Bay 12 Games]
+* [https://store.steampowered.com/news/app/975370/view/547867141501617961 Release notes on Steam]
+* [https://kitfoxgames.itch.io/dwarf-fortress/devlog/991390/patch-5201 Patch notes on itch.io]
+
+== General updates ==
+* Added [[Lua scripting]] for procedural objects.
+* Fixed a crash related to personality testing of soulless creatures during conversation. [https://github.com/DFHack/dfhack/issues/5506]
+* Made the [[legends mode]] creature list searchable by [[creature|species]] and [[Syndrome#SYN_NAME|interaction name]].
+* Repaired the <> buttons for Z switching after some strange behavior.
+
+== Changes from beta ==
+These changes were tested on the experimental branch starting with [[Release information/51.06|51.06]].
+* Filesystem changes: New path to [[game folders and files]] in AppData, [[Saved game folder|saves]] are stored here though portable mode can be turned back on.
+* {{token|FORTRESS_MODE_ENABLED|r}} and {{token|WORLDGEN_ENABLED|r}} tokens for modded reaction compatibility.

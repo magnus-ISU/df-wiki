@@ -1,0 +1,108 @@
+{{release notes}}
+
+The first version in this release cycle, '''DF 50.01''', was released on '''December 6, 2022'''. It was introduced with the Dwarf Fortress [[Premium version|Premium]] launch on the Steam and itch.io platforms. The classic version update was not finished at the time.
+
+The release did not include an official changelog. An incomplete and unedited changelog was released on the publisher's site [https://kitfoxgames.notion.site/Dwarf-Fortress-Premium-Launch-Changelog-2300676dec054a518cc2f16e9401afed]:
+
+== UI-related features ==
+* tutorial/guides/tooltips
+* all menus improved and have mouse support
+* wasd support
+* mouse wheel to change elevation, click mouse wheel and drag to recenter
+* view multiple elevations at once
+* info readout where mouse is
+* ui/play area can be scaled/zoomed separately
+* can now interact with more menus while unpaused
+* right click to leave any menu
+* easy to find buttons
+* minimap clickable, higher resolution
+* population shown by emotion
+* food/drink amounts shown at all times
+* date/moon/weather shown
+* new information hub centralizing a lot of data
+* character sheets with tons of accessible info including thoughts and memories
+* ability to use closest material when building, and to keep building after placement
+* faster zone/stockpile/burrow/track placement
+* zones and locations easier to manage, zones and rooms unified into zones
+* stockpiles much easier to manage/link/customize
+* burrows now easier to manage, burrows can be paused
+* minecart hauling system much easier to use
+* hospital now a location instead of a zone, so it can span multiple areas, be named, and have associated occupations
+* more search filters on lists, more alphabetization, collapsing categories
+* new alert and report system
+* flow of diplomacy changed, no longer interrupts you, incorporated into alert system
+* more feedback on trade screen
+* labor settings replaced with work details
+* children do chores like hauling
+* can now place constructions over existing constructions
+* military screen and unit orders combined in easy to use squad menu
+* work orders much easier to use, suggested trigger conditions relieve most of the need to build your own
+* new button to recenter on locations, easier recentering generally
+* surface and depth buttons
+* hospital screen and character sheet replace health tab
+* standing orders easier to understand and use in info tab
+* faster worldgen, now has a history readout as you go
+* embarking much easier, more of the map is shown, biome information much easier to find
+* site finder faster, shows specific metals, can be stopped
+* easier to access difficulty settings and triggers
+* legend mode hyperlinks
+
+== Other features ==
+
+* new goal to become mountainhome
+* multi-timeline save system
+* mod system revamped, load order
+* stress system improved
+* jewels easier to find and cutting gems made easier
+* easier to find iron ore, with hematite and magnetite now found in all 4 layers instead of 2 and 1, respectively. (limonite is still only found in 1 layer.)
+* can choose noble symbols of power
+* multiple leather items per skin based on size
+* new underground features
+* new agitation system in savage areas, elves more demanding
+* return of underground invasions
+* farm output depends on soil location (caverns better)
+* caravan economy tightened considerably, wagons now require baron
+* appraisal skill matters in degrees
+* new prefs folder to separate out changes you made in settings from the defaults
+
+== Fixes ==
+
+* bins bug - no longer such a need for quantum stockpiles
+* civil war bugs
+* megabeast religions now work properly
+* many many many more
+
+== Changes to raws ==
+* dwarven, human, elven, goblin, kobold, gremlin, giant, cyclops, ettin, minotaur, fairy, pixie, and merperson children all become adults at 18 instead of 12
+* elves and kobold get more hairstyles, and kobold get 3 new hair colors (all brown like their original)
+* elephants and unicorn are now pack animals
+* greatly reduced the ATTACK_TRIGGER requirements for a dragon, bronze colossus, giant, cyclops, ettin, minotaur, hydra, and roc attacks
+* each cavern layer now has a unique moss (cave grass) with floor fungi now limited to the first layer, cave moss limited to the second layer, and a new underlichen added to be unique to the third layer.
+* moved the giant cave spider from the top two cavern layers to the bottom two.
+* architect positions removed from dwarven, human, and goblin civs
+* messenger position added to dwarven civs
+* loincloths and braies added to dwarven civ
+* LAND_HOLDER_TRIGGER tags for becoming a barony, etc, removed
+* hospital names added for dwarves, humans, and goblins
+* added a new BLUE-GRAY color descriptor and changed steel from gray to blue-gray
+* changed the color of cave wheat to white from brown
+* many giant and man variants of creatures received creature variation tags
+* STATE_COLOR tags added to many stones and plants
+* two-headed variations of some antlered creatures received antler tags
+* eagle chicks are now called eaglets 
+* name of rice wine changed from "saki" to "sake"
+* BABY TOES SUCCULENT, PEBBLE PLANTS, MEADOWSWEET, RUSH, MARSH THISTLE, COTTONGRASS, and CLOUDBERRY received GROWTH_PRINT times on their buds
+* MARSH THISTLE, COTTONGRASS, MOUNTAIN AVENS, and CLOUDBERRY received GROWTH_TIMING on their flowers
+* MOUNTAIN AVENS have buds now
+* all three instances of BOX changed to BAG in the reactions 
+* all /data/speech/ files and /raw/objects/text/ files had filenames prefixed with "text_" and moved to /data/vanilla/vanilla_text/objects/. they also each had a couple new tags added to them.
+* heavy branches removed from larch trees
+* whiskers of all creatures now said to be attached to cheeks instead of heads
+
+== Missing Features ==
+
+{{Main|Missing features}}
+
+Many features which were present in 0.47 were missing in 50.01, including the medical screen, the ability to add notes, and civilian alerts.
+
+[[Category:Release information]]

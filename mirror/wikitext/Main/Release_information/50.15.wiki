@@ -1,0 +1,32 @@
+{{release notes}}
+
+:We have a Fortress Mode patch this week, with a bunch of fixes and tweaks and most notably with the new container graphics. See exactly what's inside your barrels and boxes for easy sorting
+
+:We are still working on [[Adventurer mode|Adventure Mode]] things but won't have a patch for a few weeks which means this will be our last update before the holidays. But not to worry, it will be coming VERY SOON! When Adventure Mode leaves beta, it will unify both branches so a lot of upgrades in Adventure Mode will be making their way to [[Dwarf fortress mode|Fort Mode]] as well. We hope you have a relaxing and restful holiday!
+
+&mdash; Kitfox and Bay 12 Games, December 12, 2024
+*[https://kitfoxgames.itch.io/dwarf-fortress/devlog/849612/fortress-mode-update-5015 Patch notes on Itch.io]
+*[https://store.steampowered.com/news/app/975370/view/591757425095213080 Patch notes on Steam]
+
+== Graphics additions/changes ==
+* Expanded graphics for [[Storage|containers]]
+* Added ability to view worn [[clothing]] by [[dye]] or by [[profession]]
+* [[Shield]]s in right arms displayed in correct order
+
+== Major bug fixes ==
+* Fixed crash in Linux related to object pools
+
+== Other bug fixes/tweaks ==
+* Added some safeguards to ages of generated [[migrant]] children
+* Made tutorial close button behave consistently when tutorial is minimized
+* Made the agitation decay setting work properly
+* Removed case sensitivity on unit filters
+* Fixed some issues with list sorting
+* Fixed crash related to possible null [[building]] in sheets
+* Fixed a crash with [[Creature variation token|creature variation]] mods
+* Fixed some threading issues in unit loops
+* Fixed problem with [[mod]] version compatibility setting
+* Fixed command line [[world generation]]
+* Made game respect [[caste]] population ratio in more places
+* Fixed some possible null pointer references
+* Added more information to crash log headers
