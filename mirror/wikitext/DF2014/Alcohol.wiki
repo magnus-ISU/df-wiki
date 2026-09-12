@@ -1,0 +1,219 @@
+{{Quality|Masterwork|18:10, 27 April 2018 (UTC)}}
+{{av}}
+[[File:dwarf_alcohol_preview.png|170px|right]]
+'''Alcohol''' is the favored drink of the [[dwarf|dwarves]]; a dwarf will drink booze an average of five times per [[calendar|season]] to satisfy their [[thirst]], and although they can subsist on [[water]], without booze, they will work increasingly slowly. Dwarves like to have some variety in what they drink, and will garner a bad thought if they are forced to drink the same variety of drink repeatedly ("has been tired of drinking the same old booze lately"). Every dwarf likewise has [[preferences]] for various types of drinks. Thus alcohol is important both for maintaining your fortress (at a minimum) and (with some investment in variety) for keeping your dwarves happy.
+
+== Acquisition ==
+[[File:Thirsty Dwarves.gif|thumb|right|A booze [[stockpile]] at work]]Most [[crop]]s and [[fruit]] [[tree]]s in the game can have their produce turned into drink, and, thus, most drink is sourced from dwarven [[farming]], both indoors and out. Most of the plants [[plant gathering|gathered]] from the wild can also be used for brewing, but the reduced yields relative to farming makes it a less ideal solution, though the added variety of drinks can make it worthwhile. Drinks can be sourced at [[embark#supplies|embarkation]], and taking at least a few barrels with you is recommended to hold your initial dwarves over until you can build a [[still]]. [[Caravan]]s always bring some drinks along as well, although not enough to support a reasonably large fortress. Finally, [[honey]] acquired through [[beekeeping industry|beekeeping]] can be brewed into alcoholic [[mead]], the only form of drink that is not derived from plants or fruit.
+
+The most direct way to acquire the booze itself is through a [[still]]; large fortresses will usually have one or more dedicated [[brewer]]s keeping the dwarven drinks cellar well-stocked. To brew a drink, a dwarf will need an empty watertight container of some kind (either a [[barrel]] or [[large pot]]) and a [[stack]] of brewables. Each brewing job produces five units of alcohol per brewable item and deposits the alcohol in the container, recovering any plant [[seed]]s in the process. The size of a stack does not affect how long it takes to brew it, which is based entirely on the brewer's [[skill]], making brewing jobs performed on large stacks much more efficient than those done on individual consumables. Stacks of alcohol do not have quality levels, and the strength of a happy thought obtained by drinking alcohol is based entirely on the value of the drink (including the stack size) and the dwarf's personal preferences.
+
+== Mechanics ==
+[[File:alcohol_preview.jpg|thumb|250px|right|Secret ingredient: happiness]]Dwarven thirst is constrained by the important {{token|ALCOHOL_DEPENDENT|c}} [[creature token]], which causes them to suffer severe performance penalties when deprived of alcohol. "Dry" dwarves increasingly lose [[gait|walking speed]] and [[Combat#Attack_Speed|attack speed]]. Alcohol withdrawal appears in the dwarf's thoughts and preferences as "starting to work slowly due to its scarcity" after 3 months, "really wants a drink" after 6 months, "has gone without a drink for far, far too long" after 9 months, and finally "can't even remember the last time he/she had some" after an entire year. Precisely how much dwarves trudge their feet due to alcohol withdrawal is unknown.
+
+Prior to version 0.44.06, creatures of ''any'' race (even including animals, due to a bug) who were exposed to enough combat to become fully hardened ("doesn't really care about anything anymore") would also become alcoholics.
+
+All creatures can theoretically survive drinking nothing but alcohol for their entire lives, though they may be subject to [[#Alcohol poisoning|alcohol poisoning]] due to not having the same tolerance level as dwarves. Neither dwarves nor any race of creature will accept an alcohol ration if resting in a [[hospital]], and must instead be given fresh water until they recover. Water may also be given to busy dwarves that become thirsty.{{bug|2448}}
+
+[[Vampire]] dwarves are just as alcohol-dependent as the mortal kind. Despite this, in [[fortress mode]], they will only ever drink [[blood]], ensuring they eventually suffer withdrawal even if your pantry is stocked to the brim with every beverage imaginable. This does not stop tavern keepers from giving them drink, if such is available inside the tavern.
+
+Setting booze on [[fire]] will not cause it to explode, but exposing it to high [[temperature]]s ''will'' cause it to boil away. If the container is flammable, it (and, subsequently, the booze) will be consumed by fire; [[magma-safe]] containers would never be destroyed by [[magma]], but any booze inside will likely quickly perish due to heat transfer (unless the container is made of [[nether-cap]]).
+
+Alcohol, like all other liquids, does not have a quality modifier. The level of happy [[thought]] generated by drinking a [[preferences|preferred]] alcohol is dependent upon the value of the entire stack of alcohol.{{cite forum|120870.msg3901346#msg3901346}})
+
+Dwarves prefer drinking alcohol out of a [[Finished goods#Goblets|mug, cup, or goblet]] and will receive an unhappy [[thought]] for drinking alcohol without one of these three vessel types. These may be placed in [[coffer]]s in designated [[tavern]]s.  Visitors will drink alcohol too.{{version|0.42.01}}
+
+=== Alcohol poisoning ===
+
+{{new in v0.42}}
+
+Over-consumption of alcohol can lead to harmful syndromes, progressing to inebriation, unconsciousness, and death. Each individual has their own tolerance level based on their size (with dwarves having 1.5× the resistance for their size) and each individual will consume more or less according to their [[need]] to drink. Mysterious deaths from suffocation in your taverns are most likely cases of acute alcohol poisoning. Note that the lethal effects of alcohol poisoning are caused by impairing the function of a creature's lungs, making creatures that lack lungs, or the need to breathe, immune to death from alcohol poisoning.
+
+== List of alcohol ==
+
+{| class="wikitable sortable"
+|-
+! Ingredient
+! Beverage produced
+! Beverage value
+! Type
+! Source
+|-
+| [[Plump helmet]] || data-sort-value="wine Dwarven"| Dwarven wine || 2 || rowspan="44" style="background-color:#cfc"| Plant-based || style="background-color:#c1c1c1" | Indoors
+|-
+| [[Pig tail]] || data-sort-value="ale Dwarven"| Dwarven ale || 2 || style="background-color:#c1c1c1" | Indoors
+|-
+| [[Cave wheat]] || data-sort-value="beer Dwarven"| Dwarven beer || 2 || style="background-color:#c1c1c1" | Indoors
+|-
+| [[Sweet pod]] || data-sort-value="rum Dwarven"| Dwarven rum || 2 || style="background-color:#c1c1c1" | Indoors
+|-
+| [[Muck root]] || data-sort-value="whiskey Swamp"| Swamp whiskey || 1 || Outdoors
+|-
+| [[Bloated tuber]] || data-sort-value="beer Tuber"| Tuber beer || 2 || Outdoors
+|-
+| [[Prickle berry]] || data-sort-value="wine Prickle"| Prickle berry wine || 1 || Outdoors
+|-
+| [[Longland grass]] || data-sort-value="beer Longland"| Longland beer || 2 || Outdoors
+|-
+| [[Rat weed]] || data-sort-value="brew Sewer"| Sewer brew || 1 || Outdoors
+|-
+| [[Fisher berry]] || data-sort-value="wine Fisher"| Fisher berry wine || 2 || Outdoors
+|-
+| [[Rope reed]] || data-sort-value="spirits River"| River spirits || 2 || Outdoors
+|-
+| [[Sliver barb]] || data-sort-value="cruor Gutter"| Gutter cruor || 1 || Outdoors
+|-
+| [[Sun berry]] || Sunshine || 5 || Outdoors
+|-
+| [[Whip vine]] || data-sort-value="wine Whip"| Whip wine || 3 || Outdoors
+|-
+| [[Beet]] || data-sort-value="wine Beetroot"| Beetroot wine || 2 || Outdoors
+|-
+| [[Wild carrot]] || data-sort-value="wine Carrot"| Carrot wine || 2 || Outdoors
+|-
+| [[Cassava]] || data-sort-value="beer Cassava"| Cassava beer || 2 || Outdoors
+|-
+| [[Parsnip]] || data-sort-value="wine Parsnip"| Parsnip wine || 2 || Outdoors
+|-
+| [[Potato]] || data-sort-value="wine Potato"| Potato wine || 2 || Outdoors
+|-
+| [[Radish]] || data-sort-value="wine Radish"| Radish wine || 2 || Outdoors
+|-
+| [[Sweet potato]] || data-sort-value="wine Sweet"| Sweet potato wine || 2 || Outdoors
+|-
+| [[Turnip]] || data-sort-value="wine Turnip"| Turnip wine || 2 || Outdoors
+|-
+| [[Single-grain wheat]] || data-sort-value="beer Single-grain"| Single-grain wheat beer || 2 || Outdoors
+|-
+| [[Two-grain wheat]] || data-sort-value="beer Two-grain"| Two-grain wheat beer || 2 || Outdoors
+|-
+| [[Soft wheat]] || data-sort-value="beer Soft"| Soft wheat beer || 2 || Outdoors
+|-
+| [[Hard wheat]] || data-sort-value="beer Hard"| Hard wheat beer || 2 || Outdoors
+|-
+| [[Spelt]] || data-sort-value="beer Spelt"| Spelt beer || 2 || Outdoors
+|-
+| [[Barley]] || data-sort-value="wine Barley"| Barley wine || 2 || Outdoors
+|-
+| [[Buckwheat]] || data-sort-value="beer Buckwheat"| Buckwheat beer || 2 || Outdoors
+|-
+| [[Rye]] || data-sort-value="beer Rye"| Rye beer || 2 || Outdoors
+|-
+| [[Sorghum]] || data-sort-value="beer Sorghum"| Sorghum beer || 2 || Outdoors
+|-
+| [[Rice]] || data-sort-value="beer Rice"| Rice beer || 2 || Outdoors
+|-
+| [[Maize]] || data-sort-value="beer Maize"| Maize beer || 2 || Outdoors
+|-
+| [[Quinoa]] || data-sort-value="beer Quinoa"| Quinoa beer || 2 || Outdoors
+|-
+| [[Kaniwa]] || data-sort-value="beer Kaniwa"| Kaniwa beer || 2 || Outdoors
+|-
+| [[Pendant amaranth]] || data-sort-value="amaranth Pendant"| Pendant amaranth beer || 2 || Outdoors
+|-
+| [[Blood amaranth]] || data-sort-value="amaranth Blood"| Blood amaranth beer || 2 || Outdoors
+|-
+| [[Purple amaranth]] || data-sort-value="amaranth Purple"| Purple amaranth beer || 2 || Outdoors
+|-
+| [[Pearl millet]] || data-sort-value="beer Pearl"| Pearl millet beer || 2 || Outdoors
+|-
+| [[White millet]] || data-sort-value="beer White"| White millet beer || 2 || Outdoors
+|-
+| [[Finger millet]] || data-sort-value="beer Finger"| Finger millet beer || 2 || Outdoors
+|-
+| [[Foxtail millet]] || data-sort-value="beer Foxtail"| Foxtail millet beer || 2 || Outdoors
+|-
+| [[Fonio]] || data-sort-value="beer Fonio"| Fonio beer || 2 || Outdoors
+|-
+| [[Teff]] || data-sort-value="beer Teff"| Teff beer || 2 || Outdoors
+|-
+| [[Apple]] || data-sort-value="cider Apple"| Apple cider || 2 || rowspan="32" style="background-color: #fcc"| Fruit-based
+| Outdoors
+|-
+| [[Apricot]] || data-sort-value="wine Apricot"| Apricot wine || 2 || Outdoors
+|-
+| [[Banana]] || data-sort-value="beer Banana"| Banana beer || 2 || Outdoors
+|-
+| [[Bayberry]] || data-sort-value="wine Bayberry"| Bayberry wine || 2 || Outdoors
+|-
+| [[Carambola]] || data-sort-value="wine Carambola"| Carambola wine || 2 || Outdoors
+|-
+| [[Cherry]] || data-sort-value="wine Cherry"| Cherry wine || 2 || Outdoors
+|-
+| [[Custard-apple]] || data-sort-value="cider Custard-apple"| Custard-apple cider || 2 || Outdoors
+|-
+| [[Date]] || data-sort-value="wine Date"| Date wine || 2 || Outdoors
+|-
+| [[Durian]] || data-sort-value="wine Durian"| Durian wine || 2 || Outdoors
+|-
+| [[Guava]] || data-sort-value="wine Guava"| Guava wine || 2 || Outdoors
+|-
+| [[Lychee]] || data-sort-value="wine Lychee"| Lychee wine || 2 || Outdoors
+|-
+| [[Mango]] || data-sort-value="wine Mango"| Mango wine || 2 || Outdoors
+|-
+| [[Papaya]] || data-sort-value="wine Papaya"| Papaya wine || 2 || Outdoors
+|-
+| [[Peach]] || data-sort-value="cider Peach"| Peach cider || 2 || Outdoors
+|-
+| [[Pear]] || Perry || 2 || Outdoors
+|-
+| [[Persimmon]] || data-sort-value="wine Persimmon"| Persimmon wine || 2 || Outdoors
+|-
+| [[Plum]] || data-sort-value="wine Plum"| Plum wine || 2 || Outdoors
+|-
+| [[Pomegranate]] || data-sort-value="wine Pomegranate"| Pomegranate wine || 2 || Outdoors
+|-
+| [[Rambutan]] || data-sort-value="wine Rambutan"| Rambutan wine || 2 || Outdoors
+|-
+| [[Sand pear]] || data-sort-value="cider Sand"| Sand pear cider || 2 || Outdoors
+|-
+| [[Artichoke]] || data-sort-value="wine Artichoke"| Artichoke wine || 2 || Outdoors
+|-
+| [[Tomato]] || data-sort-value="wine Tomato"| Tomato wine || 2 || Outdoors
+|-
+| [[Tomatillo]] || data-sort-value="wine Tomatillo"| Tomatillo wine || 2 || Outdoors
+|-
+| [[Passion fruit]] || data-sort-value="wine Passion"| Passion fruit wine || 2 || Outdoors
+|-
+| [[Grape]] || Wine || 2 || Outdoors
+|-
+| [[Cranberry]] || data-sort-value="wine Cranberry"| Cranberry wine || 2 || Outdoors
+|-
+| [[Bilberry]] || data-sort-value="wine Bilberry"| Bilberry wine || 2 || Outdoors
+|-
+| [[Blueberry]] || data-sort-value="wine Blueberry"| Blueberry wine || 2 || Outdoors
+|-
+| [[Blackberry]] || data-sort-value="wine Blackberry"| Blackberry wine || 2 || Outdoors
+|-
+| [[Raspberry]] || data-sort-value="wine Raspberry"| Raspberry wine || 2 || Outdoors
+|-
+| [[Pineapple]] || data-sort-value="wine Pineapple"| Pineapple wine || 2 || Outdoors
+|-
+| [[Strawberry]] || data-sort-value="wine Strawberry"| Strawberry wine || 2 || Outdoors
+|-
+| [[Honey]] || Mead || 1 || style="background-color: #ddd"| Animal-based || Outdoors
+|}
+
+== Modding ==
+
+{{mod}}
+
+Any item of type [[Item_token#DRINK|DRINK]]:NONE is considered to be an alcoholic beverage as far as the game is concerned, regardless of the material used. Thus, if you were to make a [[reaction]] which produces drinks of, say, [[elf]] blood, your dwarves would happily chug them down, sating their alcohol dependency in the process. Note that DRINK items don't cause inebriation symptoms by themselves; these are dependent on a [[syndrome]] associated with the consumed substance (see the PLANT_ALCOHOL_TEMPLATE raws below for an example). However, you could always add this syndrome, or another one of your own design, to the material you want to use.
+
+== See also ==
+
+* [[Alcohol plant stockpile]] — Brewery input stockpile helper page
+* [[Brewer]]
+* [[Beekeeping industry]]
+* [[Crop]]
+* [[Thirst]]
+
+{{Gamedata|{{raw|DF2014:material_template_default.txt|MATERIAL_TEMPLATE|PLANT_ALCOHOL_TEMPLATE}}}}
+
+{{Industry}}
+{{materials}}
+
+{{category|Dwarves}}
+{{category|Food}}
+[[ru:Alcohol]]

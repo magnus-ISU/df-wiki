@@ -1,0 +1,45 @@
+{{Quality|Exceptional|20:57, 9 June 2010 (UTC)}}
+{{Building|name=Archery target|key=A
+|construction=
+* [[Building material]] (non-[[economic]])
+|construction_job=
+* [[Architecture]]
+1 of
+* [[Masonry]]
+* [[Carpentry]]
+* [[Metalcrafting]]
+|purpose=
+* Make Archery range
+}}{{av}}
+
+'''Archery targets''' are used to create archery ranges, which are used to train [[marksdwarves]]. They can be built from [[wood]], which requires [[carpentry]]; [[stone]] or [[glass]], which requires [[masonry]]; or [[metal]], which requires [[metalcrafting]]. They can also be built from [[block]]s made from the above materials.
+
+==Making an archery range==
+
+To make an archery range, 
+#{{k|b}}uild one or more {{k|A}}rchery targets in a room/area
+#{{k|q}}uery over each and every constructed archery target and make a {{k|r}}oom
+#Set the size with {{k|+}}/{{k|-}} to determine how far from the target your archers will stand
+#Specify the shooting direction with {{k|w}}{{k|a}}{{k|s}}{{k|d}}
+#Assign the range to the desired [[squads]]. Squads can then be set to {{k|s}}leep or {{k|t}}rain there, as well as store their {{K|i}}ndividual or s{{k|q}}uad equipment, much like a [[barracks]]. 
+
+[[File:archery_range_room.png|thumb|150px|left|An archery range room.]] The [[room]] can then be used by military dwarves who have '''''no order''''' (i.e. they're set to inactive or set to only active/training){{Bug|6070}} in their [[schedule]] that month, in order to train ranged [[weapon]] [[skills]]. Since [[bolts]] are being used up by this training, it may be a good idea to [[equipment|set]] the dwarves to only use [[bone]] or [[wood|wooden]] bolts when training.
+
+Unlike other [[room]]s, archery ranges only include the archery target from which they were defined - if you have multiple targets in one area, '''each one''' must be designated as its own archery range, even if this causes them to overlap.
+
+It is also advisable for the archery target rooms to be included in the area of the barracks where your marksdwarves train. Both the barracks and the archery targets need to be assigned to squads individually.
+
+[[File:archery_target_preview.png|thumb|170px|right|Bullseye!]]
+
+==Notes==
+*The size of the range must be large enough so that the marksdwarf is able to stand at least 1 tile away from the target (Dwarves will '''not''' train if the size of the range means they have to stand adjacent to the target).
+*It is advisable to channel out the area behind the targets and connect a room underneath the range to save on bolts (falling bolts to not break). Note that floor grates do '''not''' work for this. Note that the channel has to be dug '''behind''' the target; if it is dug in front, the dwarves will be unable to fire, as they need a clear walking path in order to fire the bolts.
+*Experience is granted per shot, not per target hit.
+*Only one soldier can use an archery target at a time. This means that if you have multiple targets next to each other, you '''must''' designate a training grounds for each of them or only one will be used at a time.
+*Marksdwarves will only practice at an archery range if their [[quiver]]s contain ammunition which is permitted for training. There was a bug that caused marksdwarves to not switch their ammo when they switch between active duty and training, but this has been fixed as of 42.03.
+*Marksdwarves do not spend all of their free time performing archery practice - during downtime, they will complain that they "cannot follow orders". Assigning marksdwarves to a [[barracks]] will allow them to use this spare time to perform combat drills, though said drills can potentially cut into archery practice.
+
+==Bugs==
+*The flag for active/inactive seems to get mixed up, so marksdwarves will only use archery targets when they're inactive.{{Bug|6070}}
+
+{{buildings}}

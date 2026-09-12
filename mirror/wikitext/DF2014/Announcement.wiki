@@ -1,0 +1,70 @@
+{{av}}
+{{Quality|Exceptional|07:53, 3 July 2011 (UTC)}}
+
+[[File:announcings_preview.png|thumb|250px|right|List of announcements.]]An '''announcement''' is a message displayed at the bottom of the game screen used to indicate something important. Major announcements will pause gameplay and center the camera on the event in question, and game-changing ones will both do that and provide a framed message box presenting the event in question. The announcements list ({{k|a}}) lists all game announcements in dated order; some (but not all) can be {{k|z}}oomed to. Announcements are not to be confused with [[reports|{{k|r}}eports]], which detail combat results.
+
+== Controlling which announcements pause and recenter ==
+{{main|announcements.txt}}
+
+You can control which types of announcements do and don't pause and/or recenter the game by editing the <code>announcements.txt</code> file, found at <code>Dwarf Fortress/data/init/announcements.txt</code>.  An announcement type containing '''P''' will pause when that announcement type is made, and one containing '''R''' will re-center when that announcement type is made.  For example,
+
+:<tt>[MIGRANT_ARRIVAL:A_D:D_D:P:R]</tt>
+
+means that the game will pause and recenter upon the announcement of migrants arriving.  You could change it to
+
+:<tt>[MIGRANT_ARRIVAL:A_D:D_D:R]</tt>
+
+to cause the game to recenter on the arriving migrants, but to not pause the game.
+
+== Minor announcements ==
+These are the simplest and most common announcements, and will flicker through the announcements window very quickly.  This is typically used for things that happen a lot in a well-developed fortress, including:
+
+* Job cancellation with a stated reason (building site submerged, item blocking site, dangerous terrain, needs rough picture jaspers, etc.), followed by a [[suspend|suspension]] notice if the job is [[furniture]] placement or building a [[construction]].  The [[standing orders]] menu ({{key|o}}) allows you to filter job cancellation spam, between none, some, most, and all (default is some).
+
+* ''Normal'' changes in [[weather]]: "It has started raining," "The weather has cleared," or "A snow storm has arrived."
+* Changes in [[season]]. In certain tropical biomes, a "wet/dry" message will be displayed in addition to a "spring/fall/etc." message.
+* Freakish rain in [[Surroundings|evil biomes.]]
+* [[Creatures]] and [[dwarves]] (and apparently [[ghost]]s as well) [[age|growing up]] and progressing from baby to child to adult. Animals jump straight from babies to adults.
+* The creation of [[quality|masterpieces]]. Can get quite annoying in mature fortresses, when the announcements will stack up the products of legendary dwarves.
+* Striking new types of [[stone]]s, [[gem]]s, or [[ore]]s when [[mining]] (you don't want to dig through a [[vein]] of [[gold]] and fail to notice, do you?)
+* Changes in [[profession]], for both civilian and [[military]] dwarves. The start of every month is usually marked by rotations within your militia and thus a bevy of messages of this type.
+* When an animal is [[butcher's shop|slaughtered]] or a tame animal or dwarf struck down within view of other dwarves.
+* Animals giving birth.
+* Dwarves getting spooked by hostile creatures and cancelling their jobs. Interruptions by [[crow]]s are bothersome, interruptions by goblin crossbowmen extremely dangerous (and seldom survivable).
+* The promotion of your humble abode to a [[baron]]y/[[count]]y/[[duke|duchy]].
+* The raising of a [[ghost]].
+* Putting a dwarf (and an associated ghost) to rest with a memorial [[slab]] or a [[coffin]].
+* The announcement of the missing (after one week) or dead (after a dwarf sees their corpse) status of a dwarf or tame creature.
+* Dwarves growing [[Attachment|attached]] to their weapons or armor.
+
+==Major announcements==
+These announcements are more important than minor announcements, and in addition to playing their message will pause the screen and zoom to the place of the event.  This is used for things that happen rarely but aren't the ''most'' important, including:
+
+* A [[animal training|trained]] creature going semi-wild (feral), the last stage before becoming wild again. Time to train your [[dragon]] again.
+* The arrival of a [[caravan]]. Best to get ready for [[thief|thieves]] and [[ambush]]es as well.
+* The arrival of the [[outpost liaison]], although this always happens at the same time as the arrival of the dwarven caravan.
+* The arrival of [[migrants]].
+* Uncovering of a [[thief]]. Quick, kill it!
+* Uncovering an [[ambush]] - very nasty if the dwarf in question is, for instance, just a poor old [[wood cutter]] out doing their job.
+* Discovering a [[gremlin]].
+* A dwarf entering a [[strange mood]], claiming a workshop, setting to work, and either completing a [[legendary artifact]] or going [[insanity|insane]] in the attempt.  (Each step gets its own announcement.)
+* The birth of a dwarven baby, closely followed by "Urist McMom cancels Everything: seeking Infant."
+* The arrival of the [[king]] or queen.
+* The arrival of a [[semi-megabeast]].
+* The appearance of a [[Weather#Evil weather|creeping cloud]] in [[Surroundings|evil biomes]].
+
+==Game-changing announcements==
+
+{{minorspoiler}}
+{{spoil small|[[File:Eerie cavern.png|center|500px]]|An example of a game-changing announcement}}
+These announcements pause the game, zoom to the location, ''and'' present a message box detailing the occurrence, in addition to repeating the message contained therein in the main feed after you close the box, for good measure.  These are reserved for incredibly rare, and potentially once-in-a-playthrough events, including:
+
+* The creation of an [[artifact]], whether from a [[strange mood]] or from a [[soldier]] bestowing a name upon his/her equipment
+* The arrival of a big bad: be it a [[Siege]], [[megabeast]], [[titan]], [[forgotten beast]], transformed [[werebeast]], or the [[undead]]. The announcement will give their [[profile|description]].
+* Discovering a [[cavern]] layer or the [[magma sea]]
+* Discovering a [[deep pit]], [[magma pool]], or downward passage in a cavern.
+* Discovering a pillar of [[candy]] - praise the miners!
+* Discovering [[HFS]], and another message a frame later when its [[demon|inhabitants]] come up to meet you.  This is referred to as the "endgame" in the announcement file.
+
+{{Category|Interface}}
+[[ru:Announcement]]

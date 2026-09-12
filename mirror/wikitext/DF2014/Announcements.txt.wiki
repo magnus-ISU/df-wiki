@@ -1,0 +1,1344 @@
+{{Quality|Superior|21:21, 20 September 2016 (UTC)}}
+{{av}}
+{{old|Missing several announcements added in 0.40.xx}}
+{{File|DF/data/init/announcements.txt}}
+The '''announcements.txt''' file can be used to control the types of [[announcement]]s displayed in ''Dwarf Fortress'', and how they are displayed in various modes, which can often be useful to stop recentering on birth announcements, for example.
+
+== Syntax ==
+ ['''ANNOUNCEMENT NAME''''':option:option''...]
+=== Available options ===
+{| class="wikitable"
+|-
+! Option
+! Description
+! Notes
+|-
+| {{text anchor|D_D}} or {{text anchor|D_DISPLAY}}
+| Causes the announcement to be displayed at the bottom of the screen in [[fortress mode]] (and be viewable in the {{k|a}}nnouncements list).
+| The default for [[Announcement#Minor announcements|minor announcements]] including profession changes, [[weather]], job cancellations, and striking new minerals while [[mining]].
+|-
+| {{text anchor|A_D}} or {{text anchor|A_DISPLAY}}
+| Causes the announcement to be displayed at the bottom of the screen in [[adventure mode]] (and be viewable in the {{k|a}}nnouncements list).
+|
+|-
+| {{text anchor|P}} or {{text anchor|PAUSE}}
+| Pauses the game when the announcement occurs.
+|
+|-
+| {{text anchor|R}} or {{text anchor|RECENTER}}
+| Recenters the game to the location of the announcement when the announcement occurs.
+| Commonly used for [[baby|births]], [[caravan]] arrivals, and [[ambush]]es. Use of this without the [[#PAUSE|pause]] option is not recommended, since your screen will recenter without warning.
+|-
+| {{text anchor|BOX}} or {{text anchor|DO_MEGA}}
+| Causes a box to appear in the middle of the screen, requiring {{k|Enter}} to close it.
+| This is often used with [[Announcement#Game-changing announcements|game-changing announcements]].
+|-
+| {{text anchor|UCR}} or {{text anchor|UNIT_COMBAT_REPORT}}
+| Causes the announcement to appear in all [[reports]]. A new report will be created if none are active.
+| Commonly used for adventure mode combat moves.
+|-
+| {{text anchor|UCR_A}} or {{text anchor|UNIT_COMBAT_REPORT_ALL_ACTIVE}}
+| Nearly identical to [[#UCR|UNIT_COMBAT_REPORT]], but does not create a new report if none are active.
+|
+|-
+| {{text anchor|NONE}}
+| Specified announcements won't be displayed.
+| Useful when you want to get rid of unwanted messages.
+|}
+
+== List of announcements ==
+{| class="wikitable sortable"
+|-
+! Announcement
+! Example
+! Description/Notes
+|-
+| {{text anchor|REACHED_PEAK}}
+|
+| rowspan=2 | See [[calendar]]
+|-
+| {{text anchor|ERA_CHANGE}}
+| {{DFtext|The world has passed into The Dwarven Age.|7:1}}
+|-
+| {{text anchor|ENDGAME_EVENT_1}}
+|
+| rowspan=2 | Discovery of the [[HFS]]
+|-
+| {{text anchor|ENDGAME_EVENT_2}}
+|
+|-
+| {{text anchor|FEATURE_DISCOVERY}}
+| {{DFtext|You have discovered an expansive cavern deep underground.|7:1}}
+| Discovery of [[cavern]]s and their various features
+|-
+| {{text anchor|STRUCK_DEEP_METAL}}
+| {{DFtext|Raw adamantine! Praise the miners!|3:1}}
+| Striking [[adamantine]]
+|-
+| {{text anchor|STRUCK_MINERAL}}
+| {{DFtext|You have struck mica!|6:1}}
+| rowspan=2 | Striking a mineral while [[mining]]
+|-
+| {{text anchor|STRUCK_ECONOMIC_MINERAL}}
+| {{DFtext|You have struck hematite!|6:1}}
+|-
+| {{text anchor|COMBAT_TWIST_WEAPON}}
+|
+| rowspan=43 | Used in [[combat]], most often in [[adventure mode]] (also in the [[object testing arena|arena]])
+|-
+| {{text anchor|COMBAT_LET_ITEM_DROP}}
+|
+|-
+| {{text anchor|COMBAT_START_CHARGE}}
+| {{DFtext|The Swordsdwarf charges at The Wolf!|6:1}}
+|-
+| {{text anchor|COMBAT_SURPRISE_CHARGE}}
+| {{DFtext|The Wolf looks suprised by the ferocity of The Swordsdwarf's onslaught!|5:1}}
+|-
+| {{text anchor|COMBAT_JUMP_DODGE_PROJ}}
+| {{DFtext|The Wolf jumps away from the flying +bronze bolt+!|3:1}}
+|-
+| {{text anchor|COMBAT_JUMP_DODGE_STRIKE}}
+|
+|-
+| {{text anchor|COMBAT_DODGE}}
+|
+|-
+| {{text anchor|COMBAT_COUNTERSTRIKE}}
+|
+|-
+| {{text anchor|COMBAT_BLOCK}}
+|
+|-
+| {{text anchor|COMBAT_PARRY}}
+| 
+|-
+| {{text anchor|COMBAT_CHARGE_COLLISION}}
+| {{DFtext|The Swordsdwarf collides with The Wolf!|6:1}}
+|-
+| {{text anchor|COMBAT_CHARGE_DEFENDER_TUMBLES}}
+| {{DFtext|The Wolf is knocked over and tumbles backwards!|6:1}}
+|-
+| {{text anchor|COMBAT_CHARGE_DEFENDER_KNOCKED_OVER}}
+| {{DFtext|The Wolf is knocked over!|6:1}}
+|-
+| {{text anchor|COMBAT_CHARGE_ATTACKER_TUMBLES}}
+| 
+|-
+| {{text anchor|COMBAT_CHARGE_ATTACKER_BOUNCE_BACK}}
+| {{DFtext|The Swordsdwarf bounces backwards!|6:1}}
+|-
+| {{text anchor|COMBAT_CHARGE_TANGLE_TOGETHER}}
+|
+|-
+| {{text anchor|COMBAT_CHARGE_TANGLE_TUMBLE}}
+| {{DFtext|They tangle together and tumble forward!|6:1}}
+|-
+| {{text anchor|COMBAT_CHARGE_RUSH_BY}}
+|
+|-
+| {{text anchor|COMBAT_CHARGE_MANAGE_STOP}}
+|
+|-
+| {{text anchor|COMBAT_CHARGE_OBSTACLE_SLAM}}
+|
+|-
+| {{text anchor|COMBAT_WRESTLE_LOCK}}
+|
+|-
+| {{text anchor|COMBAT_WRESTLE_CHOKEHOLD}}
+|
+|-
+| {{text anchor|COMBAT_WRESTLE_TAKEDOWN}}
+| {{DFtext|The Swordsdwarf takes The Wolf down by the neck with The Swordsdwarf's right lower arm!|5:1}}
+|-
+| {{text anchor|COMBAT_WRESTLE_THROW}}
+| {{DFtext|The Swordsdwarf throws The Wolf by the neck with The Swordsdwarf's right lower arm!|5:1}}
+|-
+| {{text anchor|COMBAT_WRESTLE_RELEASE_LOCK}}
+|
+|-
+| {{text anchor|COMBAT_WRESTLE_RELEASE_CHOKE}}
+|
+|-
+| {{text anchor|COMBAT_WRESTLE_RELEASE_GRIP}}
+|
+|-
+| {{text anchor|COMBAT_WRESTLE_STRUGGLE}}
+|
+|-
+| {{text anchor|COMBAT_WRESTLE_RELEASE_LATCH}}
+|
+|-
+| {{text anchor|COMBAT_WRESTLE_STRANGLE_KO}}
+|
+|-
+| {{text anchor|COMBAT_WRESTLE_ADJUST_GRIP}}
+|
+|-
+| {{text anchor|COMBAT_GRAB_TEAR}}
+|
+|-
+| {{text anchor|COMBAT_STRIKE_DETAILS}}
+|
+|-
+| {{text anchor|COMBAT_STRIKE_DETAILS_2}}
+|
+|-
+| {{text anchor|COMBAT_EVENT_ENRAGED}}
+| {{DFtext|The Wolf has become enraged!|4:1}}
+|-
+| {{text anchor|COMBAT_EVENT_STUCKIN}}
+| {{DFtext|The *bronze spear* has lodged firmly in the wound!|5:1}}
+|-
+| {{text anchor|COMBAT_EVENT_LATCH_BP}}
+|
+|-
+| {{text anchor|COMBAT_EVENT_LATCH_GENERAL}}
+| {{DFtext|The Wolf latches on firmly!|5:1}}
+|-
+| {{text anchor|COMBAT_EVENT_PROPELLED_AWAY}}
+| {{DFtext|The Wolf is propelled away by the force of the blow!|6:1}}
+|-
+| {{text anchor|COMBAT_EVENT_KNOCKED_OUT}}
+| {{DFtext|The Wolf has been knocked unconscious!|7:1}}
+|-
+| {{text anchor|COMBAT_EVENT_STUNNED}}
+| {{DFtext|The Wolf has been stunned!|3:1}}
+|-
+| {{text anchor|COMBAT_EVENT_WINDED}}
+| {{DFtext|The Wolf is having trouble breathing!|7:0}}
+|-
+| {{text anchor|COMBAT_EVENT_NAUSEATED}}
+| {{DFtext|The Wolf looks sick!|2:1}}
+|-
+| {{text anchor|MIGRANT_ARRIVAL_NAMED}}
+|
+| 
+|-
+| {{text anchor|MIGRANT_ARRIVAL}}
+| 
+| The arrival of [[migrants]]
+|-
+| {{text anchor|DIG_CANCEL_WARM}}
+| {{DFtext|Digging designation cancelled: warm stone located.|6:1}}
+| rowspan=2 | The [[Main:Digging designation canceled|cancellation]] of a mining task due to potentially dangerous stone.
+|-
+| {{text anchor|DIG_CANCEL_DAMP}}
+| {{DFtext|Digging designation cancelled: damp stone located.|6:1}}
+|-
+| {{text anchor|AMBUSH_DEFENDER}}
+|
+| rowspan=14 | Discovering an [[ambush]]
+|-
+| {{text anchor|AMBUSH_RESIDENT}}
+|
+|-
+| {{text anchor|AMBUSH_THIEF}}
+| {{DFtext|Thief! Protect the hoard from skulking filth!|4:1}}
+|-
+| {{text anchor|AMBUSH_THIEF_SUPPORT_SKULKING}}
+|
+|-
+| {{text anchor|AMBUSH_THIEF_SUPPORT_NATURE}}
+|
+|-
+| {{text anchor|AMBUSH_THIEF_SUPPORT}}
+|
+|-
+| {{text anchor|AMBUSH_MISCHIEVOUS}}
+| {{DFtext|A gremlin! Drive it away!|4:1}}
+|-
+| {{text anchor|AMBUSH_SNATCHER}}
+| {{DFtext|Snatcher! Protect the children!|4:1}}
+|-
+| {{text anchor|AMBUSH_SNATCHER_SUPPORT}}
+|
+|-
+| {{text anchor|AMBUSH_AMBUSHER_NATURE}}
+|
+|-
+| {{text anchor|AMBUSH_AMBUSHER}}
+|
+|-
+| {{text anchor|AMBUSH_INJURED}}
+|
+|-
+| {{text anchor|AMBUSH_OTHER}}
+|
+|-
+| {{text anchor|AMBUSH_INCAPACITATED}}
+|
+|-
+| {{text anchor|CARAVAN_ARRIVAL}}
+| {{DFtext|A caravan from Sarvesh Langgud has arrived.|1:1}}
+| Arrival of a [[caravan]]
+|-
+| {{text anchor|NOBLE_ARRIVAL}}
+|
+| Arrival of a [[noble]]
+|-
+| {{text anchor|D_MIGRANTS_ARRIVAL}}
+| {{DFtext|Some migrants have arrived.|7:0}}
+| rowspan=3| Arrival of a [[migrant]] wave
+|-
+| {{text anchor|D_MIGRANT_ARRIVAL}}
+| {{DFtext|A migrant has arrived.|7:0}}
+|-
+| {{text anchor|D_MIGRANT_ARRIVAL_DISCOURAGED}}
+| {{DFtext|Some migrants have arrived, despite the danger.|7:0}}
+|-
+| {{text anchor|D_NO_MIGRANT_ARRIVAL}}
+| {{DFtext|The fortress attracted no migrants this season.|6:0}}
+| The failure of [[migrants]] to show up in Fortress mode
+|-
+| {{text anchor|ANIMAL_TRAP_CATCH}}
+|
+| A [[vermin]] was caught in an [[animal trap]]
+|-
+| {{text anchor|ANIMAL_TRAP_ROBBED}}
+|
+| Failure to catch a [[vermin]]
+|-
+| {{text anchor|MISCHIEF_LEVER}}
+|
+| rowspan=4| Fun caused by a [[gremlin|certain mischievous creature]]
+|-
+| {{text anchor|MISCHIEF_PLATE}}
+|
+|-
+| {{text anchor|MISCHIEF_CAGE}}
+| {{DFtext|Something has emptied in a cage!|5:1}}
+|-
+| {{text anchor|MISCHIEF_CHAIN}}
+|
+|-
+| {{text anchor|DIPLOMAT_ARRIVAL}}
+|
+| Arrival of a [[diplomat]]
+|-
+| {{text anchor|LIAISON_ARRIVAL}}
+| {{DFtext|The outpost liaison Tun Unnostobul from Sarvesh Langgud has arrived.|7:1}}
+| Arrival of an [[outpost liaison]]
+|-
+| {{text anchor|TRADE_DIPLOMAT_ARRIVAL}}
+|
+| 
+|-
+| {{text anchor|CAVE_COLLAPSE}}
+| {{DFtext|A section of the cavern has collapsed!|4:1}}
+| Also handles surface collapse announcements.
+|-
+| {{text anchor|BIRTH_CITIZEN}}
+| {{DFtext|Fath Ikudäs, Miner has given birth to a girl.|2:1}}
+| 
+|-
+| {{text anchor|BIRTH_ANIMAL}}
+| {{DFtext|Stray Dog (Tame) has given birth to puppies.|2:1}}
+| 
+|-
+| {{text anchor|STRANGE_MOOD}}
+| {{DFtext|Zon Urabasub, Metalcrafter is taken by a fey mood!|7:1}}
+| 
+|-
+| {{text anchor|MADE_ARTIFACT}}
+| {{DFtext|Zon Urabasub, Metalcrafter has created Lonsust Stato, a platinum amulet!|6:1}}
+| 
+|-
+| {{text anchor|NAMED_ARTIFACT}}
+| {{DFtext|Urdim Arbanerib, Mace Lord has bestowed the name Ostar Kinem upon a iron buckler!|3:1}}
+| A soldier named their equipment.
+|-
+| {{text anchor|ITEM_ATTACHMENT}}
+| {{DFtext|Kirkrost Inethnosig, mayor has grown attached to a steel crossbow!|3:0}}
+| 
+|-
+| {{text anchor|VERMIN_CAGE_ESCAPE}}
+|
+| A [[vermin]] escapes from a [[cage]]/[[animal trap]]
+|-
+| {{text anchor|TRIGGER_WEB}}
+|
+| 
+|-
+| {{text anchor|MOOD_BUILDING_CLAIMED}}
+| {{DFtext|Zon Urabasub, Metalcrafter has claimed a Metalsmith's Forge.|0:1}}
+| A [[strange mood|moody]] dwarf has claimed a workshop
+|-
+| {{text anchor|ARTIFACT_BEGUN}}
+| {{DFtext|Zon Urabasub, Metalcrafter has begun a mysterious construction!|7:1}}
+| A dwarf has begun construction of an [[artifact]]
+|-
+| {{text anchor|MEGABEAST_ARRIVAL}}
+| {{DFtext|The Forgotten Beast Smespu has come! An enormous hairy ceratopsoid. It has an enormous shell and it is slavering. Its sea green hair is patchy. Beware its deadly dust!|4:1}}
+| Arrival of a [[megabeast]]
+|-
+| {{text anchor|BERSERK_CITIZEN}}
+| {{DFtext|Lòr Eralamug, Weaponsmith has gone berserk!|4:1}}
+| A citizen has gone [[berserk]]
+|-
+| {{text anchor|MAGMA_DEFACES_ENGRAVING}}
+|
+| rowspan=2| An [[engraving]] has melted in magma
+|-
+| {{text anchor|ENGRAVING_MELTS}}
+|
+|-
+| {{text anchor|MASTERPIECE_ARCHITECTURE}}
+|
+| rowspan=2| Construction of a [[masterwork|masterpiece]] [[building]]
+|-
+| {{text anchor|MASTERPIECE_CONSTRUCTION}}
+|
+|-
+| {{text anchor|MASTER_ARCHITECTURE_LOST}}
+|
+| A [[masterwork|masterpiece]] [[building]] has been destroyed
+|-
+| {{text anchor|MASTER_CONSTRUCTION_LOST}}
+|
+|-
+| {{text anchor|ADV_AWAKEN}}
+|
+| 
+|-
+| {{text anchor|ADV_SLEEP_INTERRUPTED}}
+|
+| 
+|-
+| {{text anchor|ADV_REACTION_PRODUCTS}}
+|
+| 
+|-
+| {{text anchor|CANCEL_JOB}}
+| {{DFtext|Sibrek ùshrireshon, Mechanic cancels Load Cage Trap: Needs empty cage.|4:1}}
+| 
+|-
+| {{text anchor|ADV_CREATURE_DEATH}}
+| {{DFtext|The Wolf has been struck down.|5:1}}
+| 
+|-
+| {{text anchor|CITIZEN_DEATH}}
+| {{DFtext|Lòr Eralamug, Weaponsmith has been found dead.|5:1}}
+| Death of a citizen in [[fortress mode]]
+|-
+| {{text anchor|PET_DEATH}}
+|
+| The death of a [[pet]], causing a negative [[thought]] for its owner
+|-
+| {{text anchor|FALL_OVER}}
+| {{DFtext|The Wolf falls over.|6:0}}
+| 
+|-
+| {{text anchor|CAUGHT_IN_FLAMES}}
+| {{DFtext|The Swordsdwarf is caught in a burst of forgotten beast flames!|4:1}}
+| Also used when a creature is caught in poison gas/vapors or cave-in dust.
+|-
+| {{text anchor|CAUGHT_IN_WEB}}
+| {{DFtext|The Wolf is caught up in a web!|4:1}}
+| 
+|-
+| {{text anchor|UNIT_PROJECTILE_SLAM_BLOW_APART}}
+| {{DFtext|The Wolf slams into an obstacle and blows apart!|5:1}}
+| 
+|-
+| {{text anchor|UNIT_PROJECTILE_SLAM}}
+| {{DFtext|The Wolf slams into an obstacle!|6:0}}
+| 
+|-
+| {{text anchor|UNIT_PROJECTILE_SLAM_INTO_UNIT}}
+| {{DFtext|The Wolf slams into the Wolf!|1:1}}
+| 
+|-
+| {{text anchor|VOMIT}}
+| {{DFtext|The Wolf vomits.|2:0}}
+| 
+|-
+| {{text anchor|LOSE_HOLD_OF_ITEM}}
+| {{DFtext|The Goblin Bowman loses the hold of the (bismuth bronze bow).|6:0}}
+| 
+|-
+| {{text anchor|REGAIN_CONSCIOUSNESS}}
+| {{DFtext|The Wolf regains consciousness.|7:0}}
+| 
+|-
+| {{text anchor|FREE_FROM_WEB}}
+| {{DFtext|The Wolf is partially free from the web.|7:0}}
+| 
+|-
+| {{text anchor|PARALYZED}}
+| {{DFtext|The Wolf is completely paralyzed!|3:1}}
+|
+|-
+| {{text anchor|OVERCOME_PARALYSIS}}
+|
+| A creature is no longer [[syndrome|paralyzed]]
+|-
+| {{text anchor|NOT_STUNNED}}
+| {{DFtext|The Wolf is no longer stunned.|3:1}}
+| A creature is no longer [[stun]]ned
+|-
+| {{text anchor|EXHAUSTION}}
+|
+| [[Exhaustion]]
+|-
+| {{text anchor|PAIN_KO}}
+| {{DFtext|The Wolf gives in to pain.|6:0}}
+|
+|-
+| {{text anchor|BREAK_GRIP}}
+| {{DFtext|The Swordsdwarf breaks the grip of the Wolf's teeth on the Swordsdwarf's left upper arm.|5:1}}
+|
+|-
+| {{text anchor|NO_BREAK_GRIP}}
+| {{DFtext|The Swordsdwarf struggles in vain against the grip of the Wolf's teeth on the Swordsdwarf's left upper arm.|5:1}}
+|
+|-
+| {{text anchor|BLOCK_FIRE}}
+|
+| Blocking a [[fire]] attack
+|-
+| {{text anchor|BREATHE_FIRE}}
+| {{DFtext|The Fire Imp breathes fire!|4:1}}
+| A creature breathes [[fire]]
+|-
+| {{text anchor|SHOOT_WEB}}
+| {{DFtext|The Giant Cave Spider shoots out thick strands of webbing!|4:1}}
+|
+|-
+| {{text anchor|PULL_OUT_DROP}}
+|
+| 
+|-
+| {{text anchor|STAND_UP}}
+| {{DFtext|The Wolf stands up.|7:0}}
+| 
+|-
+| {{text anchor|MARTIAL_TRANCE}}
+| {{DFtext|Mörul Bardumoslan, Hammerdwarf has entered a martial trance!|2:1}}
+| 
+|-
+| {{text anchor|MAT_BREATH}}
+| {{DFtext|The Forgotten Beast breathes a cloud of Mirgur Sealhorse the Infinite Shadows's forgotten beast extract!|4:1}}
+| 
+|-
+| {{text anchor|NIGHT_ATTACK_STARTS}}
+| {{DFtext|You are surrounded by incessant cackling.|5:1}}
+| rowspan=3| [[Bogeymen]] attack
+|-
+| {{text anchor|NIGHT_ATTACK_ENDS}}
+| {{DFtext|The cackling fades away.|5:1}}
+|-
+| {{text anchor|NIGHT_ATTACK_TRAVEL}}
+| {{DFtext|You are still surrounded by cackling.|5:1}}
+|-
+| {{text anchor|GHOST_ATTACK}}
+| {{DFtext|Lòr Eralamug, Ghostly Weaponsmith has arisen and is haunting the fortress!|4:1}}
+| 
+|-
+| {{text anchor|LAIR_HUNTER}}
+|
+| 
+|-
+| {{text anchor|TRAVEL_SITE_DISCOVERY}}
+| {{DFtext|You have discovered a lair.|6:1}}
+| 
+|-
+| {{text anchor|TRAVEL_SITE_BUMP}}
+| {{DFtext|You cannot travel through the Lair.|6:1}}
+| 
+|-
+| {{text anchor|ADVENTURE_INTRO}}
+| {{DFtext|You've finally got your equipment together, such as it is. Now it's time for action and adventure! In the rush of excitement, you've forgotten where you're going to go. Perhaps some of your friends might have ideas.|7:1}}
+| Beginning [[adventure mode]]
+|-
+| {{text anchor|CREATURE_SOUND}}
+| {{DFtext|The capybara barks.|3:1}}
+| 
+|-
+| {{text anchor|CREATURE_STEALS_OBJECT}}
+| {{DFtext|A gray langur has stolen a -giant bat bone amulet-!|6:1}}
+| 
+|-
+| {{text anchor|FOUND_TRAP}}
+|
+| Discovery of a [[trap]] in [[adventure mode]]
+|-
+| {{text anchor|BODY_TRANSFORMATION}}
+| {{DFtext|Iden Ustuthod, Fisherdwarf has transformed into a wereskink!|3:1}}
+| 
+|-
+| {{text anchor|INTERACTION_ACTOR}}
+|
+| See [[Interaction token#VERB]]
+|-
+| {{text anchor|INTERACTION_TARGET}}
+|
+| See [[Interaction token#TARGET_VERB]]
+|-
+| {{text anchor|UNDEAD_ATTACK}}
+| {{DFtext|The dead walk. Hide while you still can!|5:1}}
+| Arrival of a horde of [[undead]].
+|-
+| {{text anchor|CITIZEN_MISSING}}
+| {{DFtext|Lòr Eralamug, Weaponsmith has been missing for a week.|5:1}}
+| 
+|-
+| {{text anchor|PET_MISSING}}
+| 
+| A pet has gone missing
+|-
+| {{text anchor|MARKET_CHATTER}}
+|
+| 
+|-
+| {{text anchor|STRANGE_RAIN_SNOW}}
+| {{DFtext|It is raining rotten sludge!|4:1}}
+| rowspan=2 | The appearance of unusual [[weather]]
+|-
+| {{text anchor|STRANGE_CLOUD}}
+| {{DFtext|A cloud of haunting fog has drifted nearby!|4:1}}
+|-
+| {{text anchor|SIMPLE_ANIMAL_ACTION}}
+|
+| 
+|-
+| {{text anchor|FLOUNDER_IN_LIQUID}}
+| {{DFtext|You flounder in the water!|6:1}}
+| 
+|-
+| {{text anchor|TRAINING_DOWN_TO_SEMI_WILD}}
+| {{DFtext|The Stray war Cave Dragon (Semi-Wild) has forgotten its training!|6:1}}
+| A trained animal has reverted to a semi-wild state (Fortress mode). If the animal is not [[animal trainer|trained]] properly, it will become wild and possibly attack your dwarves.
+|-
+| {{text anchor|TRAINING_FULL_REVERSION}}
+| {{DFtext|The war Cave Dragon has reverted to a wild state!|4:1}}
+| An animal has reverted to a wild state (follows the previous announcement)
+|-
+| {{text anchor|ANIMAL_TRAINING_KNOWLEDGE}}
+| {{DFtext|The dwarves of the Monastery of Tin are now quite knowledgable cave dragon trainers.|3:1}}
+| See [[Animal trainer#Taming|Animal trainer]]
+|-
+| {{text anchor|SKIP_ON_LIQUID}}
+|
+| 
+|-
+| {{text anchor|DODGE_FLYING_OBJECT}}
+|
+| Dodging a shot [[arrow]]
+|-
+| {{text anchor|REGULAR_CONVERSATION}}
+| {{DFtext|Caspa Linkon, Human Swordsman: I must pray to Uspram Boldyell the Contest of Stability. I'm uneasy.|3:1}}
+| 
+|-
+| {{text anchor|CONFLICT_CONVERSATION}}
+| {{DFtext|Caspa Linkon, Human Swordsman: This is my fight too. I will take revenge!|3:1}}
+| 
+|-
+| {{text anchor|FLAME_HIT}}
+|
+| 
+|-
+| {{text anchor|EMBRACE}}
+|
+| 
+|-
+| {{text anchor|BANDIT_EMPTY_CONTAINER}}
+|
+| 
+|-
+| {{text anchor|BANDIT_GRAB_ITEM}}
+|
+| 
+|-
+| {{text anchor|COMBAT_EVENT_ATTACK_INTERRUPTED}}
+| {{DFtext|The Wolf's attack is interrupted!|4:1}}
+| [[Wrestling]] interrupts opponent's attack
+|-
+| {{text anchor|COMBAT_WRESTLE_CATCH_ATTACK}}
+|
+| 
+|-
+| {{text anchor|FAIL_TO_GRAB_SURFACE}}
+|
+| Failing to grab a tile
+|-
+| {{text anchor|LOSE_HOLD_OF_SURFACE}}
+|
+| Losing hold of a surface while [[climb]]ing
+|-
+| {{text anchor|TRAVEL_COMPLAINT}}
+|
+| 
+|-
+| {{text anchor|LOSE_EMOTION}}
+|
+| 
+|-
+| {{text anchor|REORGANIZE_POSSESSIONS}}
+| {{DFtext|The Human Pikeman reorganizes his possessions.|6:0}}
+| 
+|-
+| {{text anchor|PUSH_ITEM}}
+|
+| 
+|-
+| {{text anchor|DRAW_ITEM}}
+| 
+|
+|-
+| {{text anchor|STRAP_ITEM}}
+|
+| 
+|-
+| {{text anchor|GAIN_SITE_CONTROL}}
+| {{DFtext|You are now in control of Tanfield, ruling The Ignition of Churches from The Holy Saturninity.|3:1}}
+| 
+|-
+| {{text anchor|FORT_POSITION_SUCCESSION}}
+|
+| 
+|-
+| {{text anchor|STRESSED_CITIZEN}}
+| {{DFtext|Lòr Eralamug, Weaponsmith is stumbling obliviously!|3:0}}
+| 
+|-
+| {{text anchor|CITIZEN_LOST_TO_STRESS}}
+| {{DFtext|Lòr Eralamug, Weaponsmith has gone stark raving mad!|3:1}}
+| 
+|-
+| {{text anchor|CITIZEN_TANTRUM}}
+| {{DFtext|Lòr Eralamug, Weaponsmith is throwing a tantrum!|6:1}}
+|
+|-
+| {{text anchor|MOVED_OUT_OF_RANGE}}
+| {{DFtext|The Wolf has moved out of range!|7:1}}
+| An [[attack]]ed creature has moved out of range
+|-
+| {{text anchor|CANNOT_JUMP}}
+| {{DFtext|You cannot jump while prone.|6:0}}
+| 
+|-
+| {{text anchor|NO_TRACKS}}
+|
+| 
+|-
+| {{text anchor|ALREADY_SEARCHED_AREA}}
+| {{DFtext|You've already searched this area recently.|6:0}}
+| 
+|-
+| {{text anchor|SEARCH_FOUND_SOMETHING}}
+|
+| 
+|-
+| {{text anchor|SEARCH_FOUND_NOTHING}}
+| {{DFtext|Your intense search turns up nothing.|6:0}}
+| 
+|-
+| {{text anchor|NOTHING_TO_INTERACT}}
+| {{DFtext|You have nothing with which to interact.|6:0}}
+| 
+|-
+| {{text anchor|NOTHING_TO_EXAMINE}}
+| {{DFtext|You have nothing to examine.|6:0}}
+| 
+|-
+| {{text anchor|YOU_YIELDED}}
+| {{DFtext|You assume a submissive posture.|6:1}}
+| rowspan=2| [[Yield]]ing in adventure mode
+|-
+| {{text anchor|YOU_UNYIELDED}}
+| {{DFtext|You no longer assume a submissive posture.|6:1}}
+|-
+| {{text anchor|YOU_STRAP_ITEM}}
+| {{DFtext|You strap the steel short sword to your Upper body.|6:1}}
+|
+|-
+| {{text anchor|YOU_DRAW_ITEM}}
+| {{DFtext|You draw the steel short sword with your Right hand.|6:1}}
+| 
+|-
+| {{text anchor|NO_GRASP_TO_DRAW_ITEM}}
+| {{DFtext|You do not have a free grasp for the steel short sword.|6:0}}
+| 
+|-
+| {{text anchor|NO_ITEM_TO_STRAP}}
+| {{DFtext|You have nothing left to draw or put away.|6:0}}
+| 
+|-
+| {{text anchor|NO_INV_TO_REMOVE}}
+| {{DFtext|You have nothing left to remove.|6:0}}
+| 
+|-
+| {{text anchor|NO_INV_TO_WEAR}}
+| {{DFtext|You have nothing left to wear.|6:0}}
+| 
+|-
+| {{text anchor|NO_INV_TO_EAT}}
+| {{DFtext|You have nothing left to eat or drink.|6:0}}
+| 
+|-
+| {{text anchor|NO_INV_TO_CONTAIN}}
+| {{DFtext|You have nothing to put inside a container.|6:0}}
+|
+|-
+| {{text anchor|NO_INV_TO_DROP}}
+| {{DFtext|You have nothing left to drop.|6:0}}
+| 
+|-
+| {{text anchor|NOTHING_TO_PICK_UP}}
+| {{DFtext|There is nothing to pick up here.|6:0}}
+| 
+|-
+| {{text anchor|NO_INV_TO_THROW}}
+| {{DFtext|You have nothing left to throw.|6:0}}
+| 
+|-
+| {{text anchor|NO_INV_TO_FIRE}}
+| {{DFtext|You have nothing left to fire.|6:0}}
+| 
+|-
+| {{text anchor|CURRENT_SMELL}}
+|
+| [[Smell]]ing in [[adventure mode]]
+|-
+| {{text anchor|CURRENT_WEATHER}}
+| {{DFtext|The sky is clear above you.|7:1}}
+| Checking [[weather]] in [[adventure mode]]
+|-
+| {{text anchor|CURRENT_TEMPERATURE}}
+|
+| Checking [[temperature]] in [[adventure mode]]
+|-
+| {{text anchor|CURRENT_DATE}}
+| {{DFtext|It is the 14th of Granite, 250.|7:1}}
+| Checking [[time]] in [[adventure mode]]
+|-
+| {{text anchor|NO_GRASP_FOR_PICKUP}}
+| {{DFtext|You do not have a free grasp.|6:0}}
+|
+|-
+| {{text anchor|TRAVEL_ADVISORY}}
+|
+| 
+|-
+| {{text anchor|CANNOT_CLIMB}}
+|
+| You are unable to [[climb]]
+|-
+| {{text anchor|CANNOT_STAND}}
+|
+| You are unable to stand up
+|-
+| {{text anchor|MUST_UNRETRACT_FIRST}}
+| {{DFtext|You must unroll.|6:1}}
+| 
+|-
+| {{text anchor|CANNOT_REST}}
+|
+| 
+|-
+| {{text anchor|CANNOT_MAKE_CAMPFIRE}}
+|
+| 
+|-
+| {{text anchor|MADE_CAMPFIRE}}
+|
+| You make a [[campfire]]
+|-
+| {{text anchor|CANNOT_SET_FIRE}}
+|
+| 
+|-
+| {{text anchor|SET_FIRE}}
+|
+| You set a [[fire]]
+|-
+| {{text anchor|DAWN_BREAKS}}
+| {{DFtext|The dawn is breaking.|6:1}}
+| rowspan=3| Change of the time of day
+|-
+| {{text anchor|NOON}}
+|
+|-
+| {{text anchor|NIGHTFALL}}
+| {{DFtext|The night is falling.|1:1}}
+|-
+| {{text anchor|NO_INV_INTERACTION}}
+| 
+| 
+|-
+| {{text anchor|EMPTY_CONTAINER}}
+| {{DFtext|You empty your giant moon snail leather backpack.|6:0}}
+| Emptying a container in [[adventure mode]]
+|-
+| {{text anchor|TAKE_OUT_OF_CONTAINER}}
+|
+| Taking an item out of container in [[adventure mode]]
+|-
+| {{text anchor|NO_CONTAINER_FOR_ITEM}}
+| {{DFtext|You don't have a suitable container.|6:0}}
+| 
+|-
+| {{text anchor|PUT_INTO_CONTAINER}}
+|
+| 
+|-
+| {{text anchor|EAT_ITEM}}
+|
+| You eat an item
+|-
+| {{text anchor|DRINK_ITEM}}
+|
+| You drink an item
+|-
+| {{text anchor|CONSUME_FAILURE}}
+|
+| You lick an item
+|-
+| {{text anchor|DROP_ITEM}}
+|
+| You drop an item
+|-
+| {{text anchor|PICK_UP_ITEM}}
+|
+| You pick up an item
+|-
+| {{text anchor|YOU_BUILDING_INTERACTION}}
+|
+| Interaction with a [[building]] in [[adventure mode]]
+|-
+| {{text anchor|YOU_ITEM_INTERACTION}}
+|
+| Interaction with an [[item]] in [[adventure mode]]
+|-
+| {{text anchor|YOU_TEMPERATURE_EFFECTS}}
+| {{DFtext|You are melting!|4:1}}
+| 
+|-
+| {{text anchor|RESOLVE_SHARED_ITEMS}}
+|
+| 
+|-
+| {{text anchor|COUGH_BLOOD}}
+|
+| [[Syndrome|Coughing blood]]
+|-
+| {{text anchor|VOMIT_BLOOD}}
+|
+| [[Syndrome|Vomiting blood]]
+|-
+| {{text anchor|POWER_LEARNED}}
+|
+| Learning a new power
+|-
+| {{text anchor|YOU_FEED_ON_SUCKEE}}
+|
+| [[Vampire|Sucking blood]]
+|-
+| {{text anchor|PROFESSION_CHANGES}}
+|
+| Changing a profession
+|-
+| {{text anchor|RECRUIT_PROMOTED}}
+|
+| 
+|-
+| {{text anchor|SOLDIER_BECOMES_MASTER}}
+|
+| A [[soldier]] has mastered a weapon [[skill]]
+|-
+| {{text anchor|MERCHANTS_UNLOADING}}
+| {{DFtext|The merchants from Sarvesh Langgud have arrived and are unloading their goods.|6:1}}
+| 
+|-
+| {{text anchor|MERCHANTS_NEED_DEPOT}}
+| {{DFtext|The merchants need a trade depot to unload their goods.|6:1}}
+| 
+|-
+| {{text anchor|MERCHANT_WAGONS_BYPASSED}}
+|
+| The [[merchants]]' wagons have bypassed the site
+|-
+| {{text anchor|MERCHANTS_LEAVING_SOON}}
+| {{DFtext|The merchants from Sarvesh Langgud will be leaving soon.|6:1}}
+|
+|-
+| {{text anchor|MERCHANTS_EMBARKED}}
+| {{DFtext|The merchants from Sarvesh Langgud have embarked on their journey.|6:1}}
+|
+|-
+| {{text anchor|PET_LOSES_DEAD_OWNER}}
+|
+| 
+|-
+| {{text anchor|PET_ADOPTS_OWNER}}
+|
+| 
+|-
+| {{text anchor|VERMIN_BITE}}
+| {{DFtext|The Stray Cow (Tame) has been stung by a honey bee!|6:1}}
+| A [[vermin]] bites/stings a creature
+|-
+| {{text anchor|UNABLE_TO_COMPLETE_BUILDING}}
+| {{DFtext|The dwarves were unable to complete the Wall.|6:1}}
+| 
+|-
+| {{text anchor|JOBS_REMOVED_FROM_UNPOWERED_BUILDING}}
+|
+| 
+|-
+| {{text anchor|CITIZEN_SNATCHED}}
+| {{DFtext|A kidnapper has made off with the Dwarven child Ustuth Therlethendok!|5:1}}
+|
+|-
+| {{text anchor|VERMIN_DISTURBED}}
+|
+| 
+|-
+| {{text anchor|LAND_GAINS_STATUS}}
+|
+| 
+|-
+| {{text anchor|LAND_ELEVATED_STATUS}}
+|
+| 
+|-
+| {{text anchor|MASTERPIECE_CRAFTED}}
+| {{DFtext|Fikod Razulban has created a masterpiece ☼Juwog Minedscratch's forgotten beast silk cloth☼|3:1}}
+| 
+|-
+| {{text anchor|ARTWORK_DEFACED}}
+| {{DFtext|A foolish builder defaced a Edëm Stinzas!|4:0}}
+| A [[masterwork]] was destroyed
+|-
+| {{text anchor|ANIMAL_TRAINED}}
+| {{DFtext|An animal has become a Stray war Dog.|2:1}}
+| 
+|-
+| {{text anchor|DYED_MASTERPIECE}}
+|
+| An item has been [[masterwork|masterfully]] [[dyer|dyed]]
+|-
+| {{text anchor|COOKED_MASTERPIECE}}
+| {{DFtext|Atír Sigunzlir has cooked a masterful meal!|3:1}}
+| Cooking a [[masterwork|masterful]] [[prepared meal|meal]]
+|-
+| {{text anchor|MANDATE_ENDS}}
+|
+| A [[noble]] ended a [[mandate]]
+|-
+| {{text anchor|SLOWDOWN_ENDS}}
+|
+| 
+|-
+| {{text anchor|FAREWELL_HELPER}}
+|
+| 
+|-
+| {{text anchor|ELECTION_RESULTS}}
+|
+| 
+|-
+| {{text anchor|SITE_PRESENT}}
+|
+| 
+|-
+| {{text anchor|CONSTRUCTION_SUSPENDED}}
+|
+| Construction of a [[building]] was suspended
+|-
+| {{text anchor|LINKAGE_SUSPENDED}}
+|
+| 
+|-
+| {{text anchor|QUOTA_FILLED}}
+|
+| A [[manager|work order]] was completed
+|-
+| {{text anchor|JOB_OVERWRITTEN}}
+|
+| 
+|-
+| {{text anchor|NOTHING_TO_CATCH_IN_WATER}}
+| {{DFtext|There is nothing to catch in the river.|6:0}}
+| 
+|-
+| {{text anchor|DEMAND_FORGOTTEN}}
+|
+| 
+|-
+| {{text anchor|NEW_DEMAND}}
+|
+| 
+|-
+| {{text anchor|NEW_MANDATE}}
+|
+| 
+|-
+| {{text anchor|PRICES_ALTERED}}
+|
+| 
+|-
+| {{text anchor|NAMED_RESIDENT_CREATURE}}
+|
+| 
+|-
+| {{text anchor|SOMEBODY_GROWS_UP}}
+|
+| Somebody has grown up
+|-
+| {{text anchor|GUILD_REQUEST_TAKEN}}
+|
+| 
+|-
+| {{text anchor|GUILD_WAGES_CHANGED}}
+|
+| 
+|-
+| {{text anchor|NEW_WORK_MANDATE}}
+|
+| 
+|-
+| {{text anchor|CITIZEN_BECOMES_SOLDIER}}
+|
+| 
+|-
+| {{text anchor|CITIZEN_BECOMES_NONSOLDIER}}
+|
+| 
+|-
+| {{text anchor|PARTY_ORGANIZED}}
+|
+| 
+|-
+| {{text anchor|POSSESSED_TANTRUM}}
+|
+| A dwarf possessed by a [[ghost]] is throwing a [[tantrum]]
+|-
+| {{text anchor|BUILDING_TOPPLED_BY_GHOST}}
+|
+| A building was toppled by a [[ghost]]
+|-
+| {{text anchor|MASTERFUL_IMPROVEMENT}}
+|
+| An item has been [[masterwork|masterfully]] decorated
+|-
+| {{text anchor|MASTERPIECE_ENGRAVING}}
+|
+| A [[masterwork|masterpiece]] [[engraving]] was created
+|-
+| {{text anchor|MARRIAGE}}
+|
+| 
+|-
+| {{text anchor|NO_MARRIAGE_CELEBRATION}}
+|
+| 
+|-
+| {{text anchor|CURIOUS_GUZZLER}}
+|
+| An animal drank stockpiled [[booze]]
+|-
+| {{text anchor|WEATHER_BECOMES_CLEAR}}
+| {{DFtext|The weather has cleared.|7:0}}
+|
+|-
+| {{text anchor|WEATHER_BECOMES_SNOW}}
+| {{DFtext|A snow storm has come.|7:1}}
+|
+|-
+| {{text anchor|WEATHER_BECOMES_RAIN}}
+| {{DFtext|It has started raining.|1:1}}
+|
+|-
+| {{text anchor|SEASON_WET}}
+|
+| 
+|-
+| {{text anchor|SEASON_DRY}}
+|
+| 
+|-
+| {{text anchor|SEASON_SPRING}}
+| {{DFtext|Spring has arrived!|2:1}}
+| rowspan=4| Change of a season
+|-
+| {{text anchor|SEASON_SUMMER}}
+| {{DFtext|It is now summer.|6:1}}
+|-
+| {{text anchor|SEASON_AUTUMN}}
+| {{DFtext|Autumn has come.|4:1}}
+|-
+| {{text anchor|SEASON_WINTER}}
+| {{DFtext|Winter is here.|7:1}}
+|-
+| {{text anchor|GUEST_ARRIVAL}}
+| {{DFtext|Vusdom Ilerane, Human Spearman is visiting.|2:1}}
+| Arrival of visitors, and also squads returning from missions.
+|-
+| {{text anchor|CANNOT_SPEAK}}
+| {{DFtext|A troglodyte cannot speak.|6:0}}
+| When playing adventure mode as a creature that doesn't speak.
+|-
+| {{text anchor|RESEARCH_BREAKTHROUGH}}
+|
+|
+|-
+| {{text anchor|SERVICE_ORDER_DELIVERY}}
+|
+|
+|-
+| {{text anchor|PERFORMANCE_START_FAILURE}}
+|
+|
+|-
+| {{text anchor|BEGIN_ACTIVITY}}
+|
+|
+|-
+| {{text anchor|MIDDLE_OF_ACTIVITY}}
+|
+|
+|-
+| {{text anchor|ACTIVITY_SECTION_CHANGE}}
+|
+|
+|-
+| {{text anchor|CONCLUDE_ACTIVITY}}
+|
+|
+|-
+| {{text anchor|LEARNED_WRITTEN_CONTENT}}
+|
+|
+|-
+| {{text anchor|LEARNED_ART_FORM}}
+|
+|
+|-
+| {{text anchor|PERFORMER_UPDATE}}
+|
+|
+|-
+| {{text anchor|BUILDING_DESTROYED_OR_TOPPLED}}
+|
+| A [[creature]] destroyed a [[building]]
+|-
+| {{text anchor|DEITY_CURSE}}
+|
+| Being cursed by a [[deity]]
+|-
+| {{text anchor|COMPOSITION_COMPLETE}}
+|
+|
+|-
+| {{text anchor|COMPOSITION_FAILED}}
+|
+|
+|-
+| {{text anchor|NEW_APPRENTICESHIP}}
+|
+|
+|-
+| {{text anchor|PETITION_IGNORED}}
+| {{DFtext|The petition of Vusdom Ilerane, Human Spearman has been ignored.|4:1}}
+|
+|-
+| {{text anchor|CANNOT_CHOP_TREE}}
+| {{DFtext|You cannot fell trees in the arena.|6:1}}
+| 
+|-
+| {{text anchor|CHOP_TREE}}
+|
+| Chopping [[tree]]s in [[adventure mode]]
+|-
+| {{text anchor|CANNOT_CONSTRUCT}}
+| {{DFtext|You cannot construct at this site.|6:1}}
+|
+|-
+| {{text anchor|RUMOR_SPREAD}}
+| 
+|
+|-
+| {{text anchor|SERVICE_ORDER_RUMOR_RECEIVED}}
+| 
+|
+|-
+| {{text anchor|RETURNING_RUMOR_RECEIVED}}
+| 
+|
+|-
+| {{text anchor|NEW_HOLDING}}
+| 
+|
+|-
+| {{text anchor|NEW_MARKET_LINK}}
+| 
+|
+|-
+| {{text anchor|EMERGENCY_TACTICAL_CONTROL}}
+| 
+|
+|-
+| {{text anchor|AGREEMENT_SATISFIED}}
+| 
+|
+|-
+| {{text anchor|AGREEMENT_WARNING}}
+| 
+|
+|-
+| {{text anchor|AGREEMENT_ABANDONED}}
+| 
+|
+|-
+| {{text anchor|NEW_GUILD}}
+| 
+|
+|-
+| {{text anchor|CRIME_WITNESS_HANDOFF}}
+| 
+|
+|-
+| {{text anchor|CRIME_WITNESS_STOLEN}}
+| 
+|
+|-
+| {{text anchor|CRIME_WITNESS_ITEM_MOVED}}
+| 
+|
+|-
+| {{text anchor|CRIME_WITNESS_ITEM_MISSING}}
+| 
+|
+|-
+| {{text anchor|MOUNT}}
+| 
+|
+|-
+| {{text anchor|CANNOT_MOUNT}}
+| 
+|
+|-
+| {{text anchor|FAILED_MOUNT}}
+| 
+|
+|-
+| {{text anchor|DISMOUNT}}
+| 
+|
+|-
+| {{text anchor|FAILED_DISMOUNT}}
+| 
+|
+|}
+
+;Notes
+* GUEST_ARRIVAL - PETITION_IGNORED added in {{version|0.42.01}} 
+* CANNOT_CHOP_TREE - CANNOT_CONSTRUCT added in {{version|0.43.01}} 
+* RUMOR_SPREAD - FAILED_DISMOUNT new 
+
+{{gamedata}}
+{{files}}
+[[ru:Announcements.txt]]
