@@ -1,0 +1,135 @@
+{{Quality|Superior|17:10, 3 May 2015 (UTC)}}
+{{av}}
+[[File:Health screen.png|thumb|In-game screenshot]]
+
+The '''Health Screen''' appears as a tab under the {{k|z}} [[status|status menu]], and becomes available when a dwarf is appointed to the [[Chief medical dwarf]] position; it is used to monitor the health (or lack thereof) of friendly dwarves and livestock. 
+A subject's status effects and injuries are cataloged in the health menu by [[Healthcare|hospital staff]] upon diagnosis. Some basic needs are automatically shown in the menu whenever a patient becomes hungry, thirsty, or tired. Doctors will begin treating injured or otherwise unhealthy patients only after diagnosis and when proper equipment is available.
+
+<sub>Note: The screen is entirely mouse enabled.</sub>
+
+Listed below are all of the conditions displayed in the z-health screen. If you can't remember all the symbols, don't worry: The screen itself will list them again.
+
+===First Key Column===
+This is the column that lists requests and requirements of the subject.
+{{HealthStatus table head}}
+{{HealthStatus table row|symbol=D|color=2:0:1|desc='''Diagnosis request''' - [[Diagnostician]] needed to diagnose the subject}}
+{{HealthStatus table row|symbol=≈|color=3:0:1|desc='''Cleaning request''' - [[Wound dresser]] needed to bathe off contaminants, preferably using [[soap]] and fresh, clean water }}
+{{HealthStatus table row|symbol=S|color=4:0:1|desc='''Surgery required''' - [[Surgeon]] needed to excise necrotic tissue or repair organ damage}} 
+{{HealthStatus table row|symbol=R|color=5:0:1|desc='''Inoperable Rot''' - [[Surgeon]] needed to amputate a necrotic limb}}
+{{HealthStatus table row|symbol=<small>Ø</small>|color=7:0:1|desc='''Suture request''' - [[Suturer]] needed to repair cuts, wounds and nerve damage (!!) using thread}}
+{{HealthStatus table row|symbol=B|color=6:0:1|desc='''Setting request''' - [[Bone doctor]] needed to set the subject's fractured bones}}
+{{HealthStatus table row|symbol=<s>°</s>|color=7:0:1|desc='''Dressing request''' - [[Wound dresser]] needed to top off the medical procedure using cloth bandages}}
+{{HealthStatus table row|symbol=T|color=6:0:1|desc='''Traction request''' - [[Traction bench]] needed to immobilize subject with overlapping fractures}}
+{{HealthStatus table row|symbol=I|color=6:0:1|desc='''Immobilization request''' - [[Gypsum plaster|Cast]] (wound dresser) or [[splint]] (bone doctor) needed to stabilize a repaired fracture}}
+{{HealthStatus table row|symbol=C|color=6:0:1|desc='''Crutch required''' - [[Crutch]] needed for the subject to walk}}
+|}
+
+===Second Key Column===
+This column shows different degrees of bleeding, blood loss, numbness, and paralysis.
+{{HealthStatus table head}}
+{{HealthStatus table row|symbol=B!+|color=4:0:1|desc='''Heavy bleeding''' - Subject is quickly losing blood through many wounds or torn arteries. This is an emergency.}}
+{{HealthStatus table row|symbol=B!<sup>~</sup>|color=4:0:0|desc='''Bleeding''' - Subject is losing blood through a wound. Typically harmless due to dwarves' fast natural healing rate.}}
+{{HealthStatus table row|symbol=Pal|color=5:0:1|desc='''Pale''' - Subject is Pale. Caused by massive blood loss, typically from a severed limb. This also occurs when the dwarf survives a vampire feeding. This is an emergency.}}
+{{HealthStatus table row|symbol=Fnt|color=5:0:1|desc='''Faint''' - Subject is Faint. Caused by moderate blood loss from wounds or necrosis.}}
+{{HealthStatus table row|symbol=Pz+|color=3:0:1|desc='''Paralyzed''' - Subject is completely paralyzed. Common effect of upper spinal injury. Death by suffocation is imminent}}
+{{HealthStatus table row|symbol=Pz<sup>~</sup>|color=3:0:1|desc='''Partially paralyzed''' - One or more limbs unusable due to severed nerves}}
+{{HealthStatus table row|symbol=Slg|color=3:0:1|desc='''Sluggish''' - Characteristic of weak or lessening paralysis}}
+{{HealthStatus table row|symbol=Nm+|color=3:0:1|desc='''Completely numb''' - Symptom of syndromes or sensory nerve damage. Eliminates pain sensation in affected areas and severely hampers motor ability. Protracted syndrome effects may cause permanent damage.}}
+{{HealthStatus table row|symbol=Nm<sup>~</sup>|color=3:0:1|desc='''Partially numb''' - Symptom of syndromes or sensory nerve damage. Further reduces pain in affected areas and hampers fine motor ability.}}
+{{HealthStatus table row|symbol=Nm-|color=3:0:1|desc='''Slightly numb''' - Symptom of syndromes or sensory nerve damage. Reduces pain in affected areas.}}
+|}
+
+===Third Key Column===
+This column shows different degrees of pain, exhaustion and fever and also shows dizziness and whether the subject is stunned.
+{{HealthStatus table head}}
+{{HealthStatus table row|symbol=F!|color=4:0:1|desc='''Serious fever''' - Reduces focus stat, may stun. Typical warning sign of more dangerous syndromes.}}
+{{HealthStatus table row|symbol=F+|color=4:0:1|desc='''Moderate fever''' - Reduces focus stat. Typical warning sign of more dangerous syndromes.}}
+{{HealthStatus table row|symbol=F<sup>~</sup>|color=4:0:1|desc='''Slight fever''' - Reduces focus stat. Relatively harmless.}}
+{{HealthStatus table row|symbol=Dz|color=3:0:1|desc='''Dizzy''' - Common symptom of snake bites. Chance for subject to stumble in a random direction instead of performing an action, depending on severity.}}
+{{HealthStatus table row|symbol=Pn!|color=6:0:1|desc='''Extreme pain''' - Bone fracture or a staggering number of surface wounds. Subject can't take any more and falls unconscious, giving into pain. Thresholds depend on subject's willpower stat.}}
+{{HealthStatus table row|symbol=Pn+|color=6:0:1|desc='''Moderate pain''' - Serious, recent damage to muscle and/or fat. Interferes with actions?}}
+{{HealthStatus table row|symbol=Pn<sup>~</sup>|color=6:0:1|desc='''Slight pain''' - Subject has suffered minor cuts or bruises.}}
+{{HealthStatus table row|symbol=St|color=3:0:1|desc='''Stunned''' - The wind has been knocked out of the subject by an unexpected fall, impact, cave-in or takedown. Cuts speed by half until it wears off (usually in about 100 frames).}}
+{{HealthStatus table row|symbol=Ovx|color=6:0:1|desc='''Over-exerted''' - Last stage of tiredness, caused by drawn-out combat, usually only seen in wrestlers or when creatures are resistant to weapon used. Reduces speed, will cause unconsciousness if exertion continues.}} 
+{{HealthStatus table row|symbol=Exh|color=6:0:1|desc='''Exhausted''' - Second stage of tiredness. Reduces speed.}}
+{{HealthStatus table row|symbol=Tir|color=6:0:1|desc='''Tired''' - Caused by executing many combat actions in short time or operating a [[screw pump]]. Reduces speed.}}
+|}
+
+===Fourth Key Column===
+This column shows breathing problems and various needs (including extreme like starvation and dehydration).
+{{HealthStatus table head}}
+{{HealthStatus table row|symbol=Dr|color=1:0:1|desc='''Drowning''' - Cannot breathe due to being stuck underwater. This is an emergency.}}
+{{HealthStatus table row|symbol=Wd|color=7:0:0|desc='''Winded''' - Typical of punctured lungs. Comparison against breathing trouble needed.}}
+{{HealthStatus table row|symbol=Br|color=4:0:1|desc='''Cannot breathe''' - Usually indicates severe lung injury or asphyxiation.  Death is imminent unless one lung was injured a long time ago and will finish healing to the point of being able to breathe before subject dies.}}
+{{HealthStatus table row|symbol=Br|color=7:0:0|desc='''Trouble breathing''' - Usually indicates lung injury or extreme exertion}}
+{{HealthStatus table row|symbol=T!|color=4:0:1|desc='''Dehydrated''' - If the subject doesn't receive booze (or [[water]], if hospitalized) they will die.  This is an emergency.}}
+{{HealthStatus table row|symbol=T<sup>~</sup>|color=1:0:1|desc='''Thirsty'''}}
+{{HealthStatus table row|symbol=H!|color=4:0:1|desc='''Starving''' - If the subject doesn't receive food they will die.  This is an emergency.}}
+{{HealthStatus table row|symbol=H<sup>~</sup>|color=6:0:0|desc='''Hungry'''}}
+{{HealthStatus table row|symbol=Dw|color=4:0:1|desc='''Very drowsy''' - If the subject doesn't get sleep soon they will go [[insane]]. This is an emergency.}}
+{{HealthStatus table row|symbol=Dw|color=1:0:1|desc='''Drowsy''' - Subject is tired enough to go to bed, but hasn't done so yet. Also caused by syndromes.}}
+{{HealthStatus table row|symbol=Na|color=2:0:1|desc='''Nauseous''' - Symptom of cave adaptation or injury to the guts. The subject may stop and [[vomit]] instead of making an action. Excessive vomiting can cause dehydration.}}
+|}
+
+===Fifth Key Column===
+This column shows vision and grasping impairment, problems with nerves, and being unable to stand or fly.
+{{HealthStatus table head}}
+{{HealthStatus table row|symbol=V|color=4:0:1|desc='''Vision lost''' - Subject will have a very hard time completing normal tasks}}
+{{HealthStatus table row|symbol=V|color=6:0:1|desc='''Vision impaired''' - Subject will have a hard time completing normal tasks}}
+{{HealthStatus table row|symbol=V|color=7:0:0|desc='''Vision somewhat impaired''' - Subject will have a slightly hard time completing normal tasks. Caused naturally by old age (110+ with dwarves).}}
+{{HealthStatus table row|symbol=P|color=2:0:1|desc='''Spilled (Popped out)''' - Subject's intestines have popped out.  Death is imminent.}}<!-- Its weird because this one is green, suggesting its minor, but the subject will die in moments when this happens -->
+{{HealthStatus table row|symbol=Sx|color=6:0:1|desc='''Cannot stand''' - All [STANCE] bodyparts have been compromised. Subject can only crawl, taking a massive speed penalty.}}
+{{HealthStatus table row|symbol=S<sup>~</sup>|color=6:0:1|desc='''Stand impaired''' - At least one [STANCE] bodypart has been rendered inoperable or lost. In case of a lost limb, a crutch may still restore patient functioning.}}
+{{HealthStatus table row|symbol=Gx|color=6:0:1|desc='''Cannot grasp''' - All [GRASP] bodyparts have been compromised. Subject cannot manipulate objects or carry things. Nearly complete helplessness.}}
+{{HealthStatus table row|symbol=G<sup>~</sup>|color=6:0:1|desc='''Grasp impaired''' - At least one [GRASP] bodypart has been rendered inoperable or lost. Subject can still perform actions and carry things, but lost hands cannot be replaced. }}
+{{HealthStatus table row|symbol=Fx|color=6:0:1|desc='''Cannot fly''' - All [FLIER] bodyparts have been compromised. Airborne victims will fall like stones.}}
+{{HealthStatus table row|symbol=F<sup>~</sup>|color=6:0:1|desc='''Flight impaired''' - At least one [FLIER] bodypart has been rendered inoperable or lost. Affects flight capability {{verify}}}}
+{{HealthStatus table row|symbol=Mn|color=3:0:1|desc='''Motor nerve severed''' - A motor nerve in the limb's muscle tissue has been permanently severed. Everything from the bodypart down is paralyzed and useless.}}
+{{HealthStatus table row|symbol=Sn|color=3:0:1|desc='''Sensory nerve severed''' - A sensory nerve in the limb's muscle tissue has been permanently severed. Everything from the bodypart down is rendered numb, reducing pain sensation and hurting performance with the affected limb.}}
+|}
+
+===Sixth Key Column===
+This column shows torn arteries, tendons and ligaments along with fractures and bruising.
+{{HealthStatus table head}}
+{{HealthStatus table row|symbol=A!|color=4:0:1|desc='''Major artery torn''' - Heart injury or torn throat. This is invariably fatal.}}
+{{HealthStatus table row|symbol=A+|color=4:0:1|desc='''Artery torn''' - Subject will probably suffer bleeding of some type.  This can be an emergency.}}
+{{HealthStatus table row|symbol=Of|color=4:0:1|desc='''Overlapping fracture''' - A widely displaced limb fracture in real life, only seems to represent extreme damage ingame. Cannot be set without a traction bench.}}
+{{HealthStatus table row|symbol=Cf|color=4:0:1|desc='''Compound fracture''' - A fracture that has also broken a tissue directly subordinate to the bone, such as fingernails or spinal nerves. Tissues torn by bone fragments jammed through them also count.}}
+{{HealthStatus table row|symbol=Tn|color=4:0:1|desc='''Torn tendon''' -  Sinew damage. Limb is disabled. Cannot be set, heals on its own.}}
+{{HealthStatus table row|symbol=Tn|color=6:0:1|desc='''Tendon strain''' -  Sinew damage. Rarely this slight.}}
+{{HealthStatus table row|symbol=Tn|color=6:0:0|desc='''Tendon bruise''' - Sinew damage. Rarely this slight.}}
+{{HealthStatus table row|symbol=Lg|color=4:0:1|desc='''Torn ligament''' - Sinew damage. Limb is disabled. Cannot be set, heals on its own.}}
+{{HealthStatus table row|symbol=Lg|color=6:0:1|desc='''Ligament strain''' - Sinew damage. Rarely this slight.}}
+{{HealthStatus table row|symbol=Lg|color=6:0:0|desc='''Ligament bruise''' - Sinew damage. Rarely this slight.}}
+{{HealthStatus table row|symbol=Ns|color=6:0:1|desc='''Need setting''' - The fractures cannot heal without attention from a [[bone doctor]].}}
+|}
+
+===Seventh Key Column===
+This column shows broken tissue, different degrees of pain, damage and swelling, and whether the subject has an infection.
+{{HealthStatus table head}}
+{{HealthStatus table row|symbol=X!|color=4:0:1|desc='''Broken tissue'''}}
+{{HealthStatus table row|symbol=D!|color=4:0:1|desc='''Heavy damage''' - Typical amount of bruising sustained in combat. Also caused by syndromes.}}
+{{HealthStatus table row|symbol=D+|color=6:0:1|desc='''Moderate damage''' - Varying degrees of bruising. Typically caused by syndromes.}}
+{{HealthStatus table row|symbol=D<sup>~</sup>|color=6:0:0|desc='''Light damage''' - Varying degrees of bruising. Typically caused by syndromes.}}
+{{HealthStatus table row|symbol=X<sup>~</sup>|color=6:0:1|desc='''Partially broken tissue''' - The subject's skin or muscle is cut or torn open. Not necessarily an emergency.}}
+{{HealthStatus table row|symbol=Pb!|color=6:0:1|desc='''Extreme pain''' - Not caused by injuries. Syndrome symptom?}}
+{{HealthStatus table row|symbol=Pb+|color=6:0:1|desc='''Moderate pain''' - Not caused by injuries. Syndrome symptom?}}
+{{HealthStatus table row|symbol=Pb<sup>~</sup>|color=6:0:1|desc='''Minor pain''' - Not caused by injuries. Syndrome symptom?}}
+{{HealthStatus table row|symbol=Sw!|color=6:0:1|desc='''Extreme swelling''' - Typically caused by syndromes. Further impedes use of affected limbs and matures into necrosis. Swelling of the throat can cause suffocation.}}
+{{HealthStatus table row|symbol=Sw+|color=6:0:1|desc='''Medium swelling''' - Typically caused by syndromes. Impedes use of affected limbs.}}
+{{HealthStatus table row|symbol=Sw<sup>~</sup>|color=6:0:1|desc='''Minor swelling''' - Typically caused by syndromes. Slightly impedes use of affected limbs.}}
+{{HealthStatus table row|symbol=In|color=5:0:1|desc='''Infection''' - Appears in open wounds either exposed to contaminated water or left untreated for too long. Cannot be treated. Subject's health attributes may affect survival rate?{{verify}}}}
+|}
+
+=== Mouse controls ===
+
+This screen is (usually) controllable with a mouse (if it doesn't work in windowed mode, try resizing the window).
+
+* To select a patient, click on their name or row in the chart
+* To select a key page, click on the key numbers (below the chart on the left side) to move to the left, or right-click to move to the right
+* The options at the bottom of the screen are also clickable, although {{k|r}}ecentering requires the keyboard to return to the health screen
+* A patient's individual health screen ({{k|Enter}}) is also mouse-enabled (even the tabs, although clicking the green {{DFtext|46|2:1}} uses right/left-clicking to cycle through the tabs
+* In order to scroll vertically, right-click on the list.
+{{Category|Healthcare}}
+{{Category|Interface}}
+[[ru:Health screen]]
