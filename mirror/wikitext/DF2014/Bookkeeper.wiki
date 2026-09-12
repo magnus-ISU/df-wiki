@@ -1,0 +1,35 @@
+{{Quality|Superior|00:12, 19 April 2013 (UTC)}}{{av}}
+
+{{Noble
+|noble=Bookkeeper
+|office=Meager Office
+|arrival=Appointed on the [[nobles screen]].
+|function=
+* Accurate accounting of [[stocks]] and [[wealth]].
+}}
+
+The '''bookkeeper''' is an appointed [[noble]] who updates the [[stocks]] and [[wealth|created wealth]] screens with more accurate information. The bookkeeper needs to work in an [[office]] to do this job. The bookkeeper uses the [[record keeper]] skill, which grants the [[clerk]] profession.
+
+The desired level of accuracy can be set in the {{key|s}}ettings menu from the {{key|n}}obles screen (when the bookkeeper is highlighted). To increase above the lowest level of accuracy, the bookkeeper needs a [[office|meager office]]. They must work not only to attain an accuracy level, but also to maintain it. When first assigned, a bookkeeper spends a long time creating a full list of the stocks, but once done, it takes only a bit of time to maintain this level of detail (even at maximum quality), so most of Urist McBookkeeper's time can eventually be assigned somewhere else.
+
+* Note: If your designated bookkeeper refuses to use his assigned chair/office and simply will not do his job, double check that you have raised the "precision" level under {{key|n}}obles/bookkeeper/{{key|s}}ettings. 
+
+Curiously, a bookkeeper does not require writing materials such as [[paper]] or [[scroll]]s to perform their job. Bookkeepers will be unable to do their jobs if they cannot grasp, though.
+{{Translation| dwarven = thîkut-zuden | elvish = soya-sinu | goblin = zosto-ol | human = thothil-nushrat}}
+[[File:Bookkeeper-sarasti.jpg|thumb|center|300px|Artist rendering of a bookkeeper by Mechlin ([http://www.bay12forums.com/smf/index.php?topic=169691.msg7701761#msg7701761 post])]]
+
+{{gamedata|[POSITION:BOOKKEEPER]
+	[NAME:bookkeeper:bookkeepers]
+	[SITE]
+	[NUMBER:1]
+	[RESPONSIBILITY:ACCOUNTING]
+	[APPOINTED_BY:EXPEDITION_LEADER]
+	[APPOINTED_BY:MAYOR]
+	[PRECEDENCE:180]
+	[DO_NOT_CULL]
+	[COLOR:5:0:0]
+	[DUTY_BOUND]
+	[REQUIRED_OFFICE:1]}}
+
+{{Nobles}}
+{{Category|Appointed Nobles}}

@@ -1,0 +1,197 @@
+{{Quality|Superior|21:42, 20 September 2016 (UTC)}}
+{{av}}
+{{Modding}}
+
+'''Building tokens''' control the functionality of custom buildings.
+
+All custom buildings are defined as objects of type BUILDING_WORKSHOP or BUILDING_FURNACE; workshops show up in the {{K|b}}-{{K|w}} menu, while furnaces show up in the {{K|b}}-{{K|e}} menu.
+
+You also must add any new custom buildings to the [[Entity token|civilization]] that you want to use it.
+
+Additionally, furnaces must be designed by an [[architect]] before being constructed (and will gain [[quality]] accordingly), though they will always use the labor(s) specified in the building definition, rather than ones based on the materials being used.
+{{clear}}
+
+{| {{prettytable}}
+|- bgcolor="#ddd"
+! Token
+! Arguments
+! Description
+
+|-
+| {{text anchor|NAME}}
+| name
+| The name of the custom building.
+
+|-
+| {{text anchor|NAME_COLOR}}
+| [[Color#Modding_color|fg:bg:bright]]
+| The [[color]] of the building's name when {{K|q}}uerying it. Seemingly ignored for furnaces, which are hardcoded to 4:0:1.
+
+|-
+| {{text anchor|DIM}}
+| width:height
+| The size of the custom building, in number of tiles. Defaults to 3:3. Maximum possible size is 31x31.
+
+|-
+| {{text anchor|WORK_LOCATION}}
+| x:y
+| The tile (1:1 for upper-left) in which dwarves will stand when they are performing tasks. Defaults to 3:3 (bottom-right).
+
+|-
+| {{text anchor|BUILD_LABOR}}
+| [[labor token]]
+| The labor required to construct the custom building. If multiple BUILD_LABOR tokens are specified, then any of the indicated labors can be used to construct the building; if none are specified, then no labors are required.<br />For furnaces, this labor does not come into play until after the workshop has been designed by an [[architect]].
+
+|-
+| {{text anchor|BUILD_KEY}}
+| [[Interface.txt#Key_bindings|key bind]]
+| The shortcut key used in the Build menu for selecting the custom building. For example: "CUSTOM_SHIFT_S"
+
+|-
+| {{text anchor|BLOCK}}
+|
+* row
+* tiles...
+| Specifies whether or not each workshop tile blocks movement. The first parameter is the row (1 = top), and each subsequent parameter is a 0 (nonblocking) or 1 (blocking) for each column, left to right.
+
+|-
+| {{text anchor|TILE}}
+|
+* stage
+* row
+* tiles...
+| Specifies the characters used to represent the custom building. The first parameter is the building stage, varying from 0 (awaiting construction) to N (completed) where N is between 1 and 3, the 2nd parameter is the row number, and each subsequent parameter is a character number (or literal character enclosed in 'quotes').
+
+|-
+| {{text anchor|COLOR}}
+|
+* stage
+* row
+* colors...
+| Specifies the [[Color|colors]] in which the custom building's tiles will be displayed. The first parameter is the building stage, the 2nd parameter is the row number, and subsequent parameters are either sets of 3 numbers (foreground:background:brightness), or the token "MAT" to use the color of the primary building material, for each tile in the row. MAT may not be available on BUILDING_FURNACEs.{{verify}} However a color settings of 4:0:1 will translate into MAT for furnaces instead.
+
+|-
+| {{text anchor|BUILD_ITEM}}
+|
+* quantity
+* [[item token]]
+* [[material token]]
+| Specifies one of the objects necessary to construct the custom building. Each BUILD_ITEM can be followed by zero or more modifiers.
+
+|-
+| {{text anchor|NEEDS_MAGMA}}
+|
+| Specifies that one of the building's tiles (other than the WORK_LOCATION) must be hanging over [[magma]] in order for the building to function. Buildings with this token also ignore the [FUEL] token in their reactions.
+|}
+
+==Item Modifiers==
+Building items have many of the same modifiers as [[Reactions#Modifiers|reagents]] in custom reactions.
+
+{| {{prettytable}}
+|- bgcolor="#dddddd"
+! Token
+! Meaning
+|-
+| [{{text anchor|ANY_BONE_MATERIAL}}]
+| Item material must have the [BONE] token.
+|-
+| [{{text anchor|ANY_HORN_MATERIAL}}]
+| Item material must have the [HORN] token.
+|-
+| [{{text anchor|ANY_LEATHER_MATERIAL}}]
+| Item material must have the [LEATHER] token.
+|-
+| [{{text anchor|ANY_PEARL_MATERIAL}}]
+| Item material must have the [PEARL] token.
+|-
+| [{{text anchor|ANY_PLANT_MATERIAL}}] 
+| Item material must be subordinate to a PLANT object.
+|-
+| [{{text anchor|ANY_SHELL_MATERIAL}}]
+| Item material must have the [SHELL] token.
+|-
+| [{{text anchor|ANY_SILK_MATERIAL}}] 
+| Item material must have the [SILK] token.
+|-
+| [{{text anchor|ANY_SOAP_MATERIAL}}]
+| Item material must have the [SOAP] token.
+|-
+| [{{text anchor|ANY_STRAND_TISSUE}}]
+| Item is made of a tissue having [TISSUE_SHAPE:STRANDS], intended for matching hair and wool. Must be used with [USE_BODY_COMPONENT].
+|-
+| [{{text anchor|ANY_TOOTH_MATERIAL}}]
+| Item material must have the [TOOTH] token.
+|-
+| [{{text anchor|ANY_YARN_MATERIAL}}] 
+| Item material must have the [YARN] token.
+|-
+| [{{text anchor|BAG}}]
+| Item must be a bag - that is, a BOX made of plant fiber, silk, yarn, or leather.
+|-
+| [{{text anchor|BUILDMAT}}]
+| Item must be a general [[building material]] - BAR, BLOCKS, BOULDER, or WOOD.
+|-
+| [{{text anchor|CAN_USE_ARTIFACT}}]
+| Item can be an Artifact.
+|-
+| [{{text anchor|CONTAINS_LYE}}]
+| Item must be a BARREL or TOOL which contains at least one item of type LIQUID_MISC made of LYE.
+|-
+| [{{text anchor|EMPTY}}]
+| If the item is a container, it must be empty.
+|-
+| [{{text anchor|FIRE_BUILD_SAFE}}]
+| Item material must be stable at temperatures below 11000. Only works with items of type BAR, BLOCKS, BOULDER, WOOD, and ANVIL - all others are considered unsafe.
+|-
+| [{{text anchor|GLASS_MATERIAL}}] 
+| Item material must have the [IS_GLASS] token. All 3 types of [[glass]] have this token hardcoded.
+|-
+| [{{text anchor|HAS_MATERIAL_REACTION_PRODUCT}}:X]
+| Item's material has a [MATERIAL_REACTION_PRODUCT] token with the appropriate ID.
+|-
+| [{{text anchor|HAS_TOOL_USE}}:X]
+| Item must be a [[tool]] with the specific TOOL_USE value. The item type must be TOOL:NONE for this to make any sense.
+|-
+| [{{text anchor|MAGMA_BUILD_SAFE}}]
+| Item material must be stable at temperatures below 12000. Only works with items of type BAR, BLOCKS, BOULDER, WOOD, and ANVIL - all others are considered unsafe.
+|-
+| [{{text anchor|METAL_ORE}}:X]
+| Item material must be an ore of the specified metal.
+|-
+| [{{text anchor|MIN_DIMENSION}}:X]
+| Item's dimension must be at least this large. The item type must be BAR, POWDER_MISC, LIQUID_MISC, DRINK, THREAD, or CLOTH for this to work.
+|-
+| [{{text anchor|NO_EDGE_ALLOWED}}]
+| Item must not have an edge, so must be blunt. Sharp stones (produced using knapping) and most types of weapon/ammo can not be used with this token.
+|-
+| [{{text anchor|NOT_CONTAIN_BARREL_ITEM}}]
+| If the item is a container, it must not contain [[lye]] or [[milk]]. Not necessary if specifying [EMPTY].
+|-
+| [{{text anchor|NOT_ENGRAVED}}]
+| Item can not be engraved. For example, a memorial slab can not be engraved.
+|-
+| [{{text anchor|NOT_WEB}}]
+| Item must be collected (to distinguish silk thread from webs). Only makes sense for items of type THREAD.
+|-
+| [{{text anchor|POTASHABLE}}] (Deprecated)
+| Alias for [CONTAINS_LYE].
+|-
+| [{{text anchor|REACTION_CLASS}}:X]
+| Item's material has a [REACTION_CLASS] token with the appropriate ID.
+|-
+| [{{text anchor|UNROTTEN}}]
+| Item must not be rotten, mainly for organic materials.
+|-
+| [{{text anchor|USE_BODY_COMPONENT}}]
+| Item must be a body part (CORPSE or CORPSEPIECE).
+|-
+| [{{text anchor|WEB_ONLY}}]
+| Item must be undisturbed (to distinguish silk thread from webs). Only makes sense for items of type THREAD.
+|-
+| [{{text anchor|WORTHLESS_STONE_ONLY}}]
+| Item material must be non-[[economic]].
+|}
+
+{{Category|Modding}}
+{{Category|Tokens}}
+[[ru:Building token]]
