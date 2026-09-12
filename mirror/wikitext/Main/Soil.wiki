@@ -1,0 +1,90 @@
+{{Quality|Fine}}
+{{av}}
+[[File:soil_preview.png|thumb|270px|right|Probably not enough for 80 dwarves.]]'''Soil''' is the name for the various kinds of ground that can be [[farming|planted]] on (both above and below ground) without [[irrigation]] using [[water]].  In ''Dwarf Fortress'', the category of "Soil" includes all types of [[sand]], [[clay]], ooze, and any "non-stone" layer equally, even if you or I generally don't associate the substance with "growing plants".
+
+==Mechanics==
+During embark, the currently selected region will display the amount of soil present (ranging from "Little" to "Some" to "Deep" to "Very deep" to "Extremely deep"), as well as whether any [[sand]] or [[clay]] are available for use.
+
+Digging into soil does not generate any byproduct materials, unlike digging in [[stone|rock]], and also is a much faster process which makes it much easier to create storerooms and other large areas of empty space, and to train [[miner]]s.
+
+Soil cannot be [[Smoothing|smooth]]ed, which makes it more difficult to make high-value rooms or pierce [[aquifer]]s, and impossible to carve [[fortification]]s, [[track]]s, or [[engraving]]s.
+
+Building a [[farm plot]] or [[road]] or removing a [[construction]] on top of soil will cause it to become "furrowed", making it appear with the {{Tile|≈|6:0}} and {{Tile|~|6:0}} tiles. Furrowed soil — including furrowed subterranean soil — will gradually smooth itself out, at which point grass and other vegetation will begin to grow. Sand always appears as {{Tile|≈|6:0}} and {{Tile|~|6:0}} and cannot become furrowed - as such, sand roads do not last as long as those made on ordinary soil.
+
+===Trees and Shrubs===
+Once you discover any [[cavern]] layer, all subterranean [[grass]], [[shrub]]s, and [[tree]]s growing within that cavern will begin to grow on any subterranean soil. Any kind of vegetation implicitly has some soil under it, even if it grew on [[mud]]dy stone; clearing the growth (such as by building a [[road]]) will thus create a soil floor, even in a stone [[layer]].  It will typically correspond to the lowest soil layer in the local [[biome]]; if that happens to be useful clay or sand, an enterprising player can use [[irrigation]] and some patience to move their sand/clay collection [[zone]]s closer to the [[magma]].
+
+==Types of soil==
+{| class="wikitable" cellspacing="0" border="1" cellpadding="5"
+! Topsoil
+! Tile
+|-
+|[[Loam]]||{{Raw Tile|░|6:7:0}}{{Raw Tile|.|6:0}} {{Raw Tile|≈|3:1:1}}
+|-
+|[[Loamy sand]]||{{Raw Tile|▒|6:6:1}}{{Raw Tile|.|6:1}} {{Raw Tile|≈|3:1:1}}
+|-
+|[[Peat]]||{{Raw Tile|░|0:6:1}}{{Raw Tile|.|0:1}} {{Raw Tile|≈|3:1:1}}
+|-
+|[[Sandy clay loam]]||{{Raw Tile|░|4:6:0}}{{Raw Tile|.|4:0}} {{Raw Tile|≈|3:1:1}}
+|-
+|[[Sandy loam]]||{{Raw Tile|░|6:6:1}}{{Raw Tile|.|6:1}} {{Raw Tile|≈|3:1:1}}
+|-
+|[[Silt]]||{{Raw Tile|▓|6:7:0}}{{Raw Tile|.|6:0}} {{Raw Tile|≈|3:1:1}}
+|-
+|[[Silty clay loam]]||{{Raw Tile|░|4:7:0}}{{Raw Tile|.|4:0}} {{Raw Tile|≈|3:1:1}}
+|-
+|[[Silt loam]]||{{Raw Tile|▒|6:7:0}}{{Raw Tile|.|6:0}} {{Raw Tile|≈|3:1:1}}
+|-
+! Ocean Floor
+! Tile
+|-
+|[[Pelagic clay]]||{{Raw Tile|░|4:6:0}}{{Raw Tile|.|4:0}} {{Raw Tile|≈|3:1:1}}
+|-
+|[[Siliceous ooze]]||{{Raw Tile|▒|4:7:0}}{{Raw Tile|.|4:0}} {{Raw Tile|≈|3:1:1}}
+|-
+|[[Calcareous ooze]]||{{Raw Tile|▒|4:7:0}}{{Raw Tile|.|4:0}} {{Raw Tile|≈|3:1:1}}
+|-
+! [[Sand]]
+! Tile
+|-
+|[[Sand (tan)]]||{{Raw Tile|░|6:4:1}}{{Raw Tile|≈|6:1}} {{Raw Tile|≈|3:1:1}}
+|-
+|[[Black sand]]||{{Raw Tile|▓|0:6:1}}{{Raw Tile|≈|0:1}} {{Raw Tile|≈|3:1:1}}
+|-
+|[[Red sand]]||{{Raw Tile|░|4:4:1}}{{Raw Tile|≈|4:1}} {{Raw Tile|≈|3:1:1}}
+|-
+|[[White sand]]||{{Raw Tile|▓|7:6:1}}{{Raw Tile|≈|7:1}} {{Raw Tile|≈|3:1:1}}
+|-
+|[[Yellow sand]]||{{Raw Tile|▓|6:6:1}}{{Raw Tile|≈|6:1}} {{Raw Tile|≈|3:1:1}}
+|-
+! [[Clay]]
+! Tile
+|-
+|[[Clay]]||{{Raw Tile|▓|4:6:0}}{{Raw Tile|.|4:0}}
+|-
+|[[Clay loam]]||{{Raw Tile|▒|4:7:0}}{{Raw Tile|.|4:0}}
+|-
+|[[Sandy clay]]||{{Raw Tile|▒|4:6:0}}{{Raw Tile|.|4:0}}
+|-
+|[[Silty clay]]||{{Raw Tile|▓|4:7:0}}{{Raw Tile|.|4:0}}
+|-
+|[[Fire clay]]||{{Raw Tile|▓|4:6:0}}{{Raw Tile|.|4:0}}
+|}
+'''Notes:'''
+* The "topsoil" types "Loamy sand", "Sandy clay loam", and "Sandy loam" do '''not''' count as [[sand]] for [[glass]]making, even if their names include the word "sand" - only those in the "Sand" section are usable for this purpose.
+* The 3 "ocean floor" layers are only found under deep [[ocean]] tiles, usually far out from any embarkable site. Thus, they can rarely, if ever be encountered, in either [[fortress mode]] or [[adventurer mode]].
+* Soil layers marked with {{Raw Tile|≈|3:1:1}} are capable of supporting an [[aquifer]].
+* The [[clay]] types listed at the bottom can be used for making ceramic items. Fire clay produces [[stoneware]], while the other types produce [[earthenware]].
+
+{{Translation
+| dwarven = adur
+| elvish  = avi
+| goblin  = snustrok
+| human   = ocul
+}}
+
+{{materials}}
+{{soil}}
+
+{{Category|Soil Layers|*}}
+[[Ru:Soil]]

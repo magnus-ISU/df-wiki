@@ -1,0 +1,51 @@
+{{Quality|Exceptional|10:23 11/01/2023(GMT)}}
+{{av}}
+[[File:soap_sprite_preview.png|right]]'''Soap''' is a particularly useful type of [[bar]] used for [[clean self|personal cleaning]], which increases happiness ("recently took a soapy bath") and lowers the chances of an [[Health care|infection]] in case of [[wound|injury]], and for cleaning [[wound]]s in [[hospital]]s, preventing infections from developing. It is thus a vital commodity in dwarven [[health care]], and one not traded in [[caravan]]s: you're going to have to make soap yourself.
+
+Soap is stored in Bar/Block [[stockpiles]] with the "soap" option enabled.
+
+Unlike most other items, bars of soap have a "durability" level which allows jobs to partially consume them – each bar starts with 150 units, and cleaning jobs consume varying quantities of soap before ultimately using it up.
+
+== Manufacture ==
+Soap is made of two components, <u>[[lye]]</u> plus ''either'' <u>[[tallow]]</u> from butchering ''or'' <u>[[oil]]</u> from [[Oil#Oil-producing_crops|oil producing plants]], and requires a dedicated workshop, the [[soap maker's workshop]]. Manufacturing these ingredients from scratch results in a somewhat complicated production process:
+
+* for <u>Lye</u>: [[Woodcutting|Cut down]] a tree to produce [[wood]] logs; turn one log into [[ash]] at a [[wood furnace]], then turn that ash into <u>[[lye]]</u> at an [[ashery]]. 
+* <u>Tallow</u> ''or'' <u>Oil</u>: You have 2 options, and either works the same; you can either... 
+** a) for <u>Tallow</u>: Kill an [[creature|animal]], either [[Meat industry|domestic animal]] or from [[hunting]], and [[butcher]] it at a [[butcher's shop]]. Then, render the [[fat]] from the butchering into <u>[[tallow]]</u> at a [[kitchen]].
+*: ...''OR''...
+** b) for <u>Oil</u>: Collect some [[Oil#Oil-producing_crops|oil producing plants]], either via either [[plant gathering|gathering]] or [[farming|growing]] [[crop]]s, respectively, and then process them for their [[seed]]s* at a [[farmer's workshop]]; these are then [[pressing|pressed]] at a [[screw press]], producing <u>oil</u>.
+**: ''(* [[Rock nut]]s are "seeds" from [[quarry bush]]es, just with a different, specific name. [[Olive]]s can be pressed for oil; this works as well.)''
+* Combine one unit of lye plus one unit of either tallow or oil at a [[soap maker's workshop]], creating a single bar of finished <u>soap</u>.
+*: ''(Note: There are a number of by-products produced in either path for tallow or oil; these can be useful to a fortress, but are not relevant to soap making.)''
+
+After it's produced, a bar of soap is given a name based on the animal or plant it was derived from; thus you can have a bar of "rattlesnake tallow soap" or "olive oil soap", etc.; this has no effective difference in game play.
+
+{{/flowchart}}
+{{clear}}
+
+=== Work Orders ===
+
+Setting up [[work orders]] for soap can be tricky, as two of the recommended conditions are wrong:
+* The recommended condition for lye is "lye-containing items", but this is incorrect, as a barrel containing 10 items of lye will only count as a single lye-''containing'' item. Instead, for "Type" select "Liquid" and for "Mat" select "Lye", resulting in a condition on simply "lye".
+** This is further complicated by the fact that a dwarf can take a barrel of lye and a stack of tallow and produce up to 10 bars of soap at once, which complicates planning work orders that are intended to produce a set number of items.
+* The recommended condition for the output is simply "bars", which is rather unhelpful. To make a condition for just soap bars, for "Type" select "Bars", and then go into "Adj" and check "Soap items". While many soap materials are listed under "Mat", make sure none of these are selected, as these will check only for that specific kind of soap.
+* There is also a complication with seed oil soap automation, where both seed paste (pressed for oil) and seed press cake (food byproduct of oil pressing) use the non-specific "Glob" type classification in work order conditions. This means that seed paste will not be triggered for production in a mill/quern until seed press cake stock is also consumed.
+
+== Hygiene ==
+Dwarves do not require soap to clean [[contaminant]]s such as mud and blood from themselves – if necessary, they will use [[murky pool]]s, artificial pools of water, brooks, or a [[well]]. However, using soap will often generate the happy [[thought]] "recently took a soapy bath". It is possible to construct bath-houses (rooms containing pools of water, a soap stockpile, and perhaps a few nice statues) so dwarves living deep underground need not venture to dangerous cave pools or surface brooks to clean off a little mud or some bloodstains. For cleaning wounds and preventing infection after [[surgery]], however, [[hospital]]s should be kept stocked with a small amount of soap. Soap will get used up as dwarves wash themselves, and dirtier dwarves consume soap more quickly.
+
+Dwarves have an internal "dirtiness" level, which slowly builds up over time, gets lowered when they have a bath, and lowered further when they have a soapy bath.  This "dirtiness" value is connected to the chance of getting an infection if the dwarf is injured, making soap useful as a preventative as well as treatment.  
+
+{{Translation
+| dwarven = uben
+| elvish  = dathe
+| goblin  = snubez
+| human   = kamven}}
+
+
+{{gamedata}}
+{{materials}}
+{{Industry}}
+{{Category|Healthcare}}
+{{Category|Materials}}
+[[ru:Soap]]

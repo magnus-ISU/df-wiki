@@ -1,0 +1,669 @@
+{{migrated article}}
+{{Quality|Unrated}}
+{{av}}
+
+:''You may be looking for size of [[clothing]], [[armor]], the dimensions of a [[tile]], or the [[List_of_creatures_by_adult_size|list of creatures by size.]]''
+
+'''Size''' is a measure of how big a [[creature]] or [[item]] is, as volume in cubic centimeters{{cite forum|30026.msg831163#msg831163}}, and called {{token|BODY_SIZE|c}} or <code>[[Item_definition_token|[SIZE]]]</code> in the [[raw file]]s.
+
+Size has many important effects on the game, many through its direct effect on item [[weight]], one of the many [[material science|material properties]] in Dwarf Fortress. Size directly affects such things as [[Weapon#Size|which weapons]] your dwarves can equip, [[butcher]]ing returns, [[storage]] limits, and [[combat]] effectiveness for both creatures and weapons.
+
+As far as in-game location and movement, size does ''not'' matter; one item or creature always is located in just one tile, regardless of size. If a [[path]] is open to a dwarf, it's open to every other creature in the game, no matter how large.  A thousand full grown [[dragon]]s can occupy a single square (so long as [http://www.bay12games.com/media/b12_call_1_transcript.html 999 of them are lying down]), and a common [[rabbit]] blocks a [[door]] or fills a [[cage]] as completely as a gigantic [[bronze colossus]].
+
+__TOC__
+== Game mechanics ==
+Size is used to calculate an item's weight, along with the [[density]] of the underlying material(s):
+:Weight (in Γ) = Density (in kg/m<sup>3</sup>) * Size (in cm<sup>3</sup>) / 1,000,000 (cm<sup>3</sup> in a m<sup>3</sup>). Through weight, the size of an item has further ramifications in the game, such as [[hauling]] speed, [[pressure plate]] activation, impact momentum, weight restrictions, and so forth. 
+
+Internally, all custom size numbers are rounded down to the nearest multiple of 10 - thus, if you define an item with <code>[SIZE:15]</code>, it will actually behave as if you had specified <code>[SIZE:10]</code>.{{cite forum|169696.msg8300987#msg8300987}}
+
+The weight of [[creature]]s is calculated from the densities and sizes of the layers of their body parts, which currently results in corpse weights that are about 1/3 heavier than expected. 
+
+== Buildings ==
+The {{token|DIM|building}} [[building token]] defines the size of a [[workshop]] or [[building]] in [[tile]]s. This differs from creatures and items in that a building doesn't have a weight, and it's not in cm³, of course.
+
+== Creatures ==
+When it comes to creatures, size is a rough stand-in for [[weight]] since standard flesh weighs about one gram per cubic centimeter. However, in the typical complexity of ''Dwarf Fortress'', there are a number of ''other'' [[material]]s animals can include ([[ivory]], [[hair]], [[horn]], [[shell]], etc.) which have their own densities, shifting a creature's actual weight relative to its size, sometimes significantly (elephant tusks weigh a ''lot''). Creature size is determined by {{token|BODY_SIZE|c}} tokens, often with multiple tokens to set their base size at certain ages. 
+
+Bodysize determines several things:
+* Average [[butcher]]ing yields.
+* How much [[damage]] they can absorb (along with morphology).
+* How much damage they can inflict in melee (along with morphology and attack definition [[creature token|token]]s).
+* For creatures that can wear equipment ({{token|EQUIPS|c}}).
+:* What size of equipment a creature can wear; clothing and armor are sized for a specific species and only creatures with a species base size near that size can wear them, an individual creature's actual size does not matter for this.
+:* Weapons have a minimum size that a creature must be to wield them ({{token|MINIMUM_SIZE|wp}} and {{token|TWO_HANDED|wp}}), tissue layer thickness not included, see below.
+
+The actual size of an individual creature is the result of different effects:
+* The base BODY_SIZE for the species of creature.
+* The [[age]] of the creature; most creatures are born at minimum size and grow to a maximum.
+:* Some, like dragons and most species of snake, grow throughout their entire lifetime and may not live long enough to reach the maximum.
+* Inheritance; many creatures have {{token|BODY_APPEARANCE_MODIFIER|c}}) tokens that allow them to vary in height, width, or length, which they can maybe [[Genetics|pass on]] to children.
+The following add to size, but are not included when determining how weapons are wielded.
+* Muscle mass, determined by its [[strength]] attribute (a thin dwarf with ~44210 size will be ~64210 once they become unbelievably strong), due to muscle having {{token|THICKENS_ON_STRENGTH|tissue}}.
+* Fat mass, due to {{token|THICKENS_ON_ENERGY_STORAGE|tissue}}.{{verify|untested, seems like it should, and a bug if it doesn't}}
+
+Creature sizes range from 1 (small insect [[vermin]]) to 200,000,000 ([[giant sperm whale]]s, the largest creature in the game). See [[List of creatures by adult size]] for details.
+
+=== Sample list of creature sizes in cm<sup>3</sup> ===
+{| {{prettytable}} width=100% class="sortable" style="text-align:right" 
+|- bgcolor="#aaaaaa"
+! style="text-align:center" | Name
+! style="text-align:center" | Size at birth
+! style="text-align:center" | Size at maturity
+! style="text-align:left" | Notes
+|-
+| style="text-align:left" | [[Adder]]
+| 15
+| 150
+| style="text-align:left" | Smallest (non-vermin) creature
+|-
+| style="text-align:left" | [[Rabbit]]
+| 50
+| 500
+| style="text-align:left" | Smallest domestic animal
+|-
+| style="text-align:left" | [[Cat]]
+| 500
+| 5,000
+|-
+| style="text-align:left" | [[Kobold]]
+| 1,000
+| 20,000
+|-
+| style="text-align:left" | [[Dog]]
+| 1,000
+| 30,000
+|-
+| style="text-align:left" | [[Dwarf]]
+| 3,000
+| 60,000
+|-
+| style="text-align:left" | [[Giant peregrine falcon|Giant tiercel peregrine]]
+| 8,308
+| 113,292
+| style="text-align:left" | Smallest [[giant animal]]
+|-
+| style="text-align:left" | [[Water buffalo]]
+| 100,000
+| 1,000,000
+| style="text-align:left" | Largest domestic creature
+|-
+| style="text-align:left" | [[Elephant]]
+| 500,000
+| 5,000,000
+| style="text-align:left" | Largest natural land-based creature
+|-
+| style="text-align:left" | [[Cave dragon]]
+| 6,000
+| 15,000,000
+| style="text-align:left" | Largest cavernous creature
+|-
+| style="text-align:left" | [[Sperm whale]]
+| 500,000
+| 25,000,000 
+| style="text-align:left" | Largest natural creature
+|-
+| style="text-align:left" | [[Dragon]]
+| 6,000
+| 25,000,000
+| style="text-align:left" | Largest [[megabeast]]
+|-
+| style="text-align:left" | [[Giant elephant]]
+| 4,000,000
+| 40,000,000
+| style="text-align:left" | Largest land-based creature
+|-
+| style="text-align:left" | [[Giant sperm whale]]
+| 4,000,000
+| 200,000,000
+| style="text-align:left" | Largest creature, period
+|}
+
+== Items ==
+Most items defined in the [[raws]] require a <code>[SIZE]</code> token, each class of item has its own: for instance, {{token|SIZE|ammo}} for [[ammo]], {{token|SIZE|wp}} for [[weapon]]s, {{token|SIZE|tool}} for [[tool token|tool]]s, and so on.
+
+Item types not defined in the raws also have a size which can be determined from their weight and material density, using DFHack, or code debugging. Some assorted item type sizes, and their [[storage]] capacity when applicable:
+
+{| {{prettytable}} class="sortable" style=text-align:right
+|- bgcolor="#999999"
+! style=text-align:center | Item Type
+! style=text-align:center | Volume
+! style=text-align:center | Capacity
+! style=text-align:left | Notes
+
+|-
+| style=text-align:left | [[Bar]]s
+| 6000
+|
+|
+
+|-
+| style=text-align:left | Cut [[gem]]s
+| 200
+|
+|
+
+|-
+| style=text-align:left | [[Block]]s
+| 6000
+|
+|
+
+|-
+| style=text-align:left | Rough [[gem]]s
+| 2500
+|
+|
+
+|-
+| style=text-align:left | Mined [[stone]]
+| 100000
+|
+|
+
+|-
+| style=text-align:left | Wood [[log]]s
+| 50000
+|
+|
+
+|-
+| style=text-align:left | [[Door]]
+| 30000
+|
+|
+|-
+| style=text-align:left | [[Floodgate]]
+| 30000
+|
+|
+
+|-
+| style=text-align:left | [[Bed]]
+| 30000
+|
+|
+
+|-
+| style=text-align:left | [[Chair]]
+| 30000
+|
+|
+
+|-
+| style=text-align:left | [[Chain]]
+| 5000
+|
+|
+
+|-
+| style=text-align:left | [[Flask]]
+| 1000
+| 1800
+| 
+
+|-
+| style=text-align:left | [[Finished_goods#Goblets|Goblet]]
+| 1000
+| 1800
+| 
+
+|-
+| style=text-align:left | [[Instrument]]
+| 4000
+|
+|
+
+|-
+| style=text-align:left | [[Finished_goods#Toys|Toy]]
+| 1000
+|
+|
+
+|-
+| style=text-align:left | [[Window]]
+| 20000
+|
+|
+
+|-
+| style=text-align:left | [[Cage]]
+| 30000
+| 60000
+| 
+
+|-
+| style=text-align:left | [[Barrel]]
+| 20000
+| 60000
+| 
+
+|-
+| style=text-align:left | [[Bucket]]
+| 3000
+| 6000
+| 
+
+|-
+| style=text-align:left | [[Animal trap]]
+| 3000
+| 30000
+| 
+
+|-
+| style=text-align:left | [[Table]]
+| 30000
+|
+|
+
+|-
+| style=text-align:left | [[Coffin]]
+| 30000
+| 60000
+|
+
+|-
+| style=text-align:left | [[Statue]]
+| 60000
+|
+|
+
+|-
+| style=text-align:left | [[Corpse]]
+| Special
+|
+| style=text-align:left | Based on the size of the corpse and what it's made of.
+
+|-
+| style=text-align:left | [[Weapon]]
+| SIZE<sup>1</sup>
+|
+|
+
+|-
+| style=text-align:left | [[Armor]]
+| Special
+|
+| style=text-align:left | Depends on armor type and the race it was crafted for.  See [[Material science#Contact Area|here]] for some examples.
+
+|-
+| style=text-align:left | [[Shield]]s
+| Special
+|
+| style=text-align:left | Based on UPSTEP and the race that crafted it.
+
+|-
+| style=text-align:left | [[Box]]
+| 20000
+| 60000
+| 
+
+|-
+| style=text-align:left | [[Bag]]
+| 1000
+| 60000
+| 
+
+|-
+| style=text-align:left | [[Bin]]
+| 15000
+| 60000
+|
+
+|-
+| style=text-align:left | [[Armor stand]]
+| 10000
+| 60000
+|
+
+|-
+| style=text-align:left | [[Weapon rack]]
+| 10000
+| 60000
+|
+
+|-
+| style=text-align:left | [[Cabinet]]
+| 30000
+| 60000
+|
+
+|-
+| style=text-align:left | [[Figurine]]
+| 1000
+|
+|
+
+|-
+| style=text-align:left | [[Jewelry|Amulet]]
+| 500
+|
+|
+
+|-
+| style=text-align:left | [[Finished_goods#Crafts|Scepter]]
+| 3000
+|
+|
+
+|-
+| style=text-align:left | [[Ammo]]
+| SIZE<sup>1</sup>
+|
+|
+
+|-
+| style=text-align:left | [[Jewelry|Crown]]
+| 1000
+|
+|
+
+|-
+| style=text-align:left | [[Jewelry|Ring]]
+| 50
+|
+|
+
+|-
+| style=text-align:left | [[Jewelry|Earring]]
+| 30
+|
+|
+
+|-
+| style=text-align:left | [[Jewelry|Bracelet]]
+| 200
+|
+|
+
+|-
+| style=text-align:left | [[Gem#Large_gems_and_crafts|Large gem]]
+| 50
+|
+|
+
+|-
+| style=text-align:left | [[Anvil]]
+| 10000
+|
+|
+
+|-
+| style=text-align:left | [[Body part]]
+| Special
+|
+| style=text-align:left | Based on the size of the body part and what it's made of.
+
+|-
+| style=text-align:left | [[Remains]]
+| 2000
+|
+|
+
+|-
+| style=text-align:left | [[Meat]]
+| 2000
+|
+|
+
+|-
+| style=text-align:left | [[Fish]]
+| 2000
+|
+|
+
+|-
+| style=text-align:left | Unprepared [[fish]]
+| 2000
+|
+|
+
+|-
+| style=text-align:left | Live [[vermin]]
+| Special
+|
+| style=text-align:left | Based on creature's adult size.
+
+|-
+| style=text-align:left | Tame [[vermin]]
+| Special
+|
+| style=text-align:left | Based on creature's adult size.
+
+|-
+| style=text-align:left | [[Seed]]s
+| 100
+|
+|
+
+|-
+| style=text-align:left | [[Plant]]
+| 1000
+|
+|
+
+|-
+| style=text-align:left | [[Leather]]
+| 5000
+|
+|
+
+|-
+| style=text-align:left | [[Plant]] growths
+| 50
+|
+|
+
+|-
+| style=text-align:left | [[Thread]]
+| ceil(Dimension/50)<sup>1</sup>
+|
+| style=text-align:left | Freshly gathered/produced thread has a dimension of 15000 and thus has a volume of 300
+
+|-
+| style=text-align:left | [[Cloth]]
+| ceil(Dimension/50)<sup>1</sup>
+|
+| style=text-align:left | Freshly woven cloth has a dimension of 10000 and thus has a volume of 200
+
+|-
+| style=text-align:left | [[Finished_goods#Totems|Totem]]
+| 5000
+|
+|
+
+|-
+| style=text-align:left | [[Backpack]]
+| 5000
+| 30000
+|
+
+|-
+| style=text-align:left | [[Quiver]]
+| 3000
+| 12000
+|
+
+|-
+| style=text-align:left | [[Catapult part]]s
+| 20000
+|
+|
+
+|-
+| style=text-align:left | [[Ballista part]]s
+| 20000
+|
+|
+
+|-
+| style=text-align:left | [[Ballista_arrow|Siege ammo]]
+| 30000
+|
+|
+
+|-
+| style=text-align:left | [[Ballista arrow]] head
+| 10000
+|
+|
+
+|-
+| style=text-align:left | [[Mechanism]]s
+| 20000
+|
+|
+
+|-
+| style=text-align:left | [[Trap component]]
+| SIZE<sup>1</sup>
+|
+|
+
+|-
+| style=text-align:left | [[Alcohol|Drink]]
+| 600
+|
+|
+
+|-
+| style=text-align:left | [[Mill|Powder]]
+| 600
+|
+|
+
+|-
+| style=text-align:left | [[Cheese]]
+| 1000
+|
+|
+
+|-
+| style=text-align:left | [[Prepared meal]]
+| 1000
+|
+|
+
+|-
+| style=text-align:left | [[Extract|Misc. liquid]]
+| 600
+|
+|
+
+|-
+| style=text-align:left | [[Coin]]
+| 10/16<sup>1</sup>
+|
+| style=text-align:left | The size of a stack is 0.625 per coin, then subject to the rounding; so a single coin is 10 cm³ but a stack of 500 is 310 cm³.
+
+|-
+| style=text-align:left | [[Glob]]
+| 600
+|
+|
+
+|-
+| style=text-align:left | Small [[rock]]
+| 2000
+|
+| style=text-align:left | As [[Thrower|thrown]] by adventurers.
+
+|-
+| style=text-align:left | [[Pipe section]]
+| 30000
+|
+|
+
+|-
+| style=text-align:left | [[Hatch cover]]
+| 10000
+|
+|
+
+|-
+| style=text-align:left | [[Grate]]
+| 10000
+|
+|
+
+|-
+| style=text-align:left | [[Quern]]
+| 30000
+|
+|
+
+|-
+| style=text-align:left | [[Millstone]]
+| 30000
+|
+|
+
+|-
+| style=text-align:left | [[Splint]]
+| 2000
+|
+|
+
+|-
+| style=text-align:left | [[Crutch]]
+| 2000
+|
+|
+
+|-
+| style=text-align:left | [[Traction bench]]
+| 30000
+|
+|
+
+|-
+| style=text-align:left | Orthopedic [[cast]]
+| 2000
+|
+|
+
+|-
+| style=text-align:left | [[Tool]]
+| SIZE<sup>1</sup>
+| CAPACITY<sup>1</sup>
+| style=text-align:left | Includes items such as [[nest box]]es, [[jug]]s, [[large pot]]s, [[hive]]s, [[minecart]]s, [[wheelbarrow]]s, [[stepladder]]s, [[pedestal]]s, and [[display case]]s
+
+|-
+| style=text-align:left | [[Slab]]
+| 60000
+|
+|
+
+|-
+| style=text-align:left | [[Egg]]
+| Special
+|
+| style=text-align:left | Presumably the caste's EGG_SIZE.
+
+|-
+| style=text-align:left | [[Book]]
+| 1000
+|
+|
+
+|-
+| style=text-align:left | [[Sheet]]
+| ceil(Dimension/50)<sup>1</sup>
+|
+| style=text-align:left | A fresh sheet has a dimension of 10000 and thus has a volume of 200
+
+|-
+| style=text-align:left | [[Branch]]
+| 5000
+|
+| style=text-align:left | An adventurer mode item
+
+|}
+:<sup>1</sup> - As noted above, all values are rounded ''down'' to the nearest multiple of 10, with a minimum value of 10.
+
+==See also==
+* [[Density]]
+* [[Weight]]
+
+{{Category|Modding}}
+[[ru:Size]]

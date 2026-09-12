@@ -1,0 +1,985 @@
+<div class="mw-parser-output"><table class="metadata plainlinks ambox ambox-content" style="background-color:#fc9;" role="presentation">
+<tbody><tr><td class="mbox-image"><div style="width: 52px;"><a href="/index.php/File:Announce_migrant_icon.png" class="image"><img alt="Announce migrant icon.png" src="/images/5/5f/Announce_migrant_icon.png" decoding="async" width="32" height="32" /></a></div></td><td class="mbox-text" style=""><span class="mbox-text-span">This article was migrated from <a href="/index.php/DF2014:Size" title="DF2014:Size">DF2014:Size</a> and may be inaccurate for the current version of DF (v53.16). See <a href="/index.php/Dwarf_Fortress_Wiki:Version_migration" title="Dwarf Fortress Wiki:Version migration">this page</a> for more information.<span class="hide-when-compact">  </span><span class="hide-when-compact"> </span></span></td></tr></tbody></table><div id="page-quality-rating" style="text-align: right;margin: 0.8em 0;font-size:75%">
+<a href="/index.php/Dwarf_Fortress_Wiki:Quality#Unknown" title="Dwarf Fortress Wiki:Quality"><span id="unknown-quality" style="padding:.2em; border:1px solid #f00; border-radius: 2px; -webkit-border-radius: 2px; -moz-border-radius: 2px; -o-border-radius: 2px; -ms-border-radius: 2px; background:#ffccaa;text-decoration:none; color:#ff0000">!!UNKNOWN!!</span></a> <span style="font-weight:bold;" class="dot">&#160;·</span> <a href="/index.php/Dwarf_Fortress_Wiki:Quality#Tattered" title="Dwarf Fortress Wiki:Quality"><span id="stub-quality" style="text-decoration:none; color:#333333">xTATTEREDx</span></a> <span style="font-weight:bold;" class="dot">&#160;·</span> <a href="/index.php/Dwarf_Fortress_Wiki:Quality#Fine" title="Dwarf Fortress Wiki:Quality"><span id="fine-quality" style="text-decoration:none; color:#CA7A02;">+FINE+</span></a> <span style="font-weight:bold;" class="dot">&#160;·</span> <a href="/index.php/Dwarf_Fortress_Wiki:Quality#Superior" title="Dwarf Fortress Wiki:Quality"><span id="superior-quality" style="text-decoration:none; color:#8800cc;">*SUPERIOR*</span></a> <span style="font-weight:bold;" class="dot">&#160;·</span> <a href="/index.php/Dwarf_Fortress_Wiki:Quality#Exceptional" title="Dwarf Fortress Wiki:Quality"><span id="exceptional-quality" style="text-decoration:none; color:#0088CC;">≡EXCEPTIONAL≡</span></a> <span style="font-weight:bold;" class="dot">&#160;·</span> <a href="/index.php/Dwarf_Fortress_Wiki:Quality#Masterwork" title="Dwarf Fortress Wiki:Quality"><span id="masterwork-quality" style="text-decoration:none; color:#72A329;">☼MASTERWORK☼</span></a></div>
+<table class="version-table" style="text-align: center; margin: 3px auto 5px; padding: 0.25em; border-radius: 3px; -webkit-border-radius: 3px; -moz-border-radius: 3px; -o-border-radius: 3px; -ms-border-radius: 3px;; border: 2px solid #bbdd88; background: #f5ffee; min-width:27em"><tbody><tr><td style="padding: 0.3em 0.3em; width: 100%;"><div style="margin-bottom:6px;" class="version-links-r1"><span style="font-size:100%"><span class="version-link"><span style="text-decoration: none; color: #72A329; background-color: #E2FDCE; border-radius: 2px; -webkit-border-radius: 2px; -moz-border-radius: 2px; -o-border-radius: 2px; -ms-border-radius: 2px; border: 1px solid #bbdd88; padding: 0.2em;"><b>v53.16</b></span></span><span style="font-weight:bold;" class="dot">&#160;·</span> <span class="version-link"><a href="/index.php/DF2014:Size" title="DF2014:Size"><span style="text-decoration: none; color: #72A329;">v0.47.05</span></a></span></span></div><span>This article is about the current version of DF.<br />Note that some content may still need to be updated.</span><br />
+<div style="float: right; font-size:75%; padding-right:2px; margin-top:-2px; margin-bottom:-7px;"><span class="version-link"><a href="/index.php/Dwarf_Fortress_Wiki:V" class="mw-redirect" title="Dwarf Fortress Wiki:V"><span style="text-decoration: none; color: #72A329;">More Info</span></a></span><span style="font-weight:bold;" class="dot">&#160;·</span> <span class="version-link"><a href="/index.php/Template:Av" class="mw-redirect" title="Template:Av"><span style="text-decoration: none; color: #72A329;">V</span></a></span></div></td></tr>
+</tbody></table>
+<dl><dd><i>You may be looking for size of <a href="/index.php/Clothing" title="Clothing">clothing</a>, <a href="/index.php/Armor" title="Armor">armor</a>, the dimensions of a <a href="/index.php/Tile" title="Tile">tile</a>, or the <a href="/index.php/List_of_creatures_by_adult_size" title="List of creatures by adult size">list of creatures by size.</a></i></dd></dl>
+<p><b>Size</b> is a measure of how big a <a href="/index.php/Creature" title="Creature">creature</a> or <a href="/index.php/Item" title="Item">item</a> is, as volume in cubic centimeters<sup class="plainlinks" style="line-height: 0; position: relative; vertical-align: baseline; top: -0.5em;"><a rel="nofollow" class="external text" href="http://www.bay12forums.com/smf/index.php?topic=30026.msg831163#msg831163">&#91;1&#93;</a></sup>, and called <code><a href="/index.php/Creature_token#BODY_SIZE" title="Creature token">[BODY_SIZE]</a></code> or <code><a href="/index.php/Item_definition_token" title="Item definition token">[SIZE]</a></code> in the <a href="/index.php/Raw_file" title="Raw file">raw files</a>.
+</p><p>Size has many important effects on the game, many through its direct effect on item <a href="/index.php/Weight" title="Weight">weight</a>, one of the many <a href="/index.php/Material_science" title="Material science">material properties</a> in Dwarf Fortress. Size directly affects such things as <a href="/index.php/Weapon#Size" title="Weapon">which weapons</a> your dwarves can equip, <a href="/index.php/Butcher" title="Butcher">butchering</a> returns, <a href="/index.php/Storage" title="Storage">storage</a> limits, and <a href="/index.php/Combat" title="Combat">combat</a> effectiveness for both creatures and weapons.
+</p><p>As far as in-game location and movement, size does <i>not</i> matter; one item or creature always is located in just one tile, regardless of size. If a <a href="/index.php/Path" title="Path">path</a> is open to a dwarf, it's open to every other creature in the game, no matter how large.  A thousand full grown <a href="/index.php/Dragon" title="Dragon">dragons</a> can occupy a single square (so long as <a rel="nofollow" class="external text" href="http://www.bay12games.com/media/b12_call_1_transcript.html">999 of them are lying down</a>), and a common <a href="/index.php/Rabbit" title="Rabbit">rabbit</a> blocks a <a href="/index.php/Door" title="Door">door</a> or fills a <a href="/index.php/Cage" title="Cage">cage</a> as completely as a gigantic <a href="/index.php/Bronze_colossus" title="Bronze colossus">bronze colossus</a>.
+</p>
+
+<h2><span class="mw-headline" id="Game_mechanics">Game mechanics</span></h2>
+<p>Size is used to calculate an item's weight, along with the <a href="/index.php/Density" title="Density">density</a> of the underlying material(s):
+</p>
+<dl><dd>Weight (in Γ) = Density (in kg/m<sup>3</sup>) * Size (in cm<sup>3</sup>) / 1,000,000 (cm<sup>3</sup> in a m<sup>3</sup>). Through weight, the size of an item has further ramifications in the game, such as <a href="/index.php/Hauling" title="Hauling">hauling</a> speed, <a href="/index.php/Pressure_plate" title="Pressure plate">pressure plate</a> activation, impact momentum, weight restrictions, and so forth.</dd></dl>
+<p>Internally, all custom size numbers are rounded down to the nearest multiple of 10 - thus, if you define an item with <code>[SIZE:15]</code>, it will actually behave as if you had specified <code>[SIZE:10]</code>.<sup class="plainlinks" style="line-height: 0; position: relative; vertical-align: baseline; top: -0.5em;"><a rel="nofollow" class="external text" href="http://www.bay12forums.com/smf/index.php?topic=169696.msg8300987#msg8300987">&#91;2&#93;</a></sup>
+</p><p>The weight of <a href="/index.php/Creature" title="Creature">creatures</a> is calculated from the densities and sizes of the layers of their body parts, which currently results in corpse weights that are about 1/3 heavier than expected. 
+</p>
+<h2><span class="mw-headline" id="Buildings">Buildings</span></h2>
+<p>The <code><a href="/index.php/Building_token#DIM" title="Building token">[DIM]</a></code> <a href="/index.php/Building_token" title="Building token">building token</a> defines the size of a <a href="/index.php/Workshop" title="Workshop">workshop</a> or <a href="/index.php/Building" title="Building">building</a> in <a href="/index.php/Tile" title="Tile">tiles</a>. This differs from creatures and items in that a building doesn't have a weight, and it's not in cm³, of course.
+</p>
+<h2><span class="mw-headline" id="Creatures">Creatures</span></h2>
+<p>When it comes to creatures, size is a rough stand-in for <a href="/index.php/Weight" title="Weight">weight</a> since standard flesh weighs about one gram per cubic centimeter. However, in the typical complexity of <i>Dwarf Fortress</i>, there are a number of <i>other</i> <a href="/index.php/Material" title="Material">materials</a> animals can include (<a href="/index.php/Ivory" title="Ivory">ivory</a>, <a href="/index.php/Hair" title="Hair">hair</a>, <a href="/index.php/Horn" title="Horn">horn</a>, <a href="/index.php/Shell" title="Shell">shell</a>, etc.) which have their own densities, shifting a creature's actual weight relative to its size, sometimes significantly (elephant tusks weigh a <i>lot</i>). Creature size is determined by <code><a href="/index.php/Creature_token#BODY_SIZE" title="Creature token">[BODY_SIZE]</a></code> tokens, often with multiple tokens to set their base size at certain ages. 
+</p><p>Bodysize determines several things:
+</p>
+<ul><li>Average <a href="/index.php/Butcher" title="Butcher">butchering</a> yields.</li>
+<li>How much <a href="/index.php/Damage" class="mw-redirect" title="Damage">damage</a> they can absorb (along with morphology).</li>
+<li>How much damage they can inflict in melee (along with morphology and attack definition <a href="/index.php/Creature_token" title="Creature token">tokens</a>).</li>
+<li>For creatures that can wear equipment (<code><a href="/index.php/Creature_token#EQUIPS" title="Creature token">[EQUIPS]</a></code>).</li></ul>
+<dl><dd><ul><li>What size of equipment a creature can wear; clothing and armor are sized for a specific species and only creatures with a species base size near that size can wear them, an individual creature's actual size does not matter for this.</li>
+<li>Weapons have a minimum size that a creature must be to wield them (<code><a href="/index.php/Weapon_token#MINIMUM_SIZE" title="Weapon token">[MINIMUM_SIZE]</a></code> and <code><a href="/index.php/Weapon_token#TWO_HANDED" title="Weapon token">[TWO_HANDED]</a></code>), tissue layer thickness not included, see below.</li></ul></dd></dl>
+<p>The actual size of an individual creature is the result of different effects:
+</p>
+<ul><li>The base BODY_SIZE for the species of creature.</li>
+<li>The <a href="/index.php/Age" title="Age">age</a> of the creature; most creatures are born at minimum size and grow to a maximum.</li></ul>
+<dl><dd><ul><li>Some, like dragons and most species of snake, grow throughout their entire lifetime and may not live long enough to reach the maximum.</li></ul></dd></dl>
+<ul><li>Inheritance; many creatures have <code><a href="/index.php/Creature_token#BODY_APPEARANCE_MODIFIER" title="Creature token">[BODY_APPEARANCE_MODIFIER]</a></code>) tokens that allow them to vary in height, width, or length, which they can maybe <a href="/index.php/Genetics" title="Genetics">pass on</a> to children.</li></ul>
+<p>The following add to size, but are not included when determining how weapons are wielded.
+</p>
+<ul><li>Muscle mass, determined by its <a href="/index.php/Strength" class="mw-redirect" title="Strength">strength</a> attribute (a thin dwarf with ~44210 size will be ~64210 once they become unbelievably strong), due to muscle having <code><a href="/index.php/Tissue_definition_token#THICKENS_ON_STRENGTH" title="Tissue definition token">[THICKENS_ON_STRENGTH]</a></code>.</li>
+<li>Fat mass, due to <code><a href="/index.php/Tissue_definition_token#THICKENS_ON_ENERGY_STORAGE" title="Tissue definition token">[THICKENS_ON_ENERGY_STORAGE]</a></code>.<sup style="font-size: 80%;">&#91;<a href="/index.php?title=Talk:Size&amp;action=edit&amp;redlink=1" class="new" title="Talk:Size (page does not exist)"><span title="untested, seems like it should, and a bug if it doesn&#39;t">Verify</span></a>&#93;</sup></li></ul>
+<p>Creature sizes range from 1 (small insect <a href="/index.php/Vermin" title="Vermin">vermin</a>) to 200,000,000 (<a href="/index.php/Giant_sperm_whale" title="Giant sperm whale">giant sperm whales</a>, the largest creature in the game). See <a href="/index.php/List_of_creatures_by_adult_size" title="List of creatures by adult size">List of creatures by adult size</a> for details.
+</p>
+<h3><span class="mw-headline" id="Sample_list_of_creature_sizes_in_cm3">Sample list of creature sizes in cm<sup>3</sup></span></h3>
+<table class="sortable" border="1" cellpadding="4" cellspacing="0" style="text-align:right" width="100%">
+
+<tbody><tr bgcolor="#aaaaaa">
+<th style="text-align:center">Name
+</th>
+<th style="text-align:center">Size at birth
+</th>
+<th style="text-align:center">Size at maturity
+</th>
+<th style="text-align:left">Notes
+</th></tr>
+<tr>
+<td style="text-align:left"><a href="/index.php/Adder" title="Adder">Adder</a>
+</td>
+<td>15
+</td>
+<td>150
+</td>
+<td style="text-align:left">Smallest (non-vermin) creature
+</td></tr>
+<tr>
+<td style="text-align:left"><a href="/index.php/Rabbit" title="Rabbit">Rabbit</a>
+</td>
+<td>50
+</td>
+<td>500
+</td>
+<td style="text-align:left">Smallest domestic animal
+</td></tr>
+<tr>
+<td style="text-align:left"><a href="/index.php/Cat" title="Cat">Cat</a>
+</td>
+<td>500
+</td>
+<td>5,000
+</td></tr>
+<tr>
+<td style="text-align:left"><a href="/index.php/Kobold" title="Kobold">Kobold</a>
+</td>
+<td>1,000
+</td>
+<td>20,000
+</td></tr>
+<tr>
+<td style="text-align:left"><a href="/index.php/Dog" title="Dog">Dog</a>
+</td>
+<td>1,000
+</td>
+<td>30,000
+</td></tr>
+<tr>
+<td style="text-align:left"><a href="/index.php/Dwarf" title="Dwarf">Dwarf</a>
+</td>
+<td>3,000
+</td>
+<td>60,000
+</td></tr>
+<tr>
+<td style="text-align:left"><a href="/index.php/Giant_peregrine_falcon" title="Giant peregrine falcon">Giant tiercel peregrine</a>
+</td>
+<td>8,308
+</td>
+<td>113,292
+</td>
+<td style="text-align:left">Smallest <a href="/index.php/Giant_animal" title="Giant animal">giant animal</a>
+</td></tr>
+<tr>
+<td style="text-align:left"><a href="/index.php/Water_buffalo" title="Water buffalo">Water buffalo</a>
+</td>
+<td>100,000
+</td>
+<td>1,000,000
+</td>
+<td style="text-align:left">Largest domestic creature
+</td></tr>
+<tr>
+<td style="text-align:left"><a href="/index.php/Elephant" title="Elephant">Elephant</a>
+</td>
+<td>500,000
+</td>
+<td>5,000,000
+</td>
+<td style="text-align:left">Largest natural land-based creature
+</td></tr>
+<tr>
+<td style="text-align:left"><a href="/index.php/Cave_dragon" title="Cave dragon">Cave dragon</a>
+</td>
+<td>6,000
+</td>
+<td>15,000,000
+</td>
+<td style="text-align:left">Largest cavernous creature
+</td></tr>
+<tr>
+<td style="text-align:left"><a href="/index.php/Sperm_whale" title="Sperm whale">Sperm whale</a>
+</td>
+<td>500,000
+</td>
+<td>25,000,000
+</td>
+<td style="text-align:left">Largest natural creature
+</td></tr>
+<tr>
+<td style="text-align:left"><a href="/index.php/Dragon" title="Dragon">Dragon</a>
+</td>
+<td>6,000
+</td>
+<td>25,000,000
+</td>
+<td style="text-align:left">Largest <a href="/index.php/Megabeast" title="Megabeast">megabeast</a>
+</td></tr>
+<tr>
+<td style="text-align:left"><a href="/index.php/Giant_elephant" title="Giant elephant">Giant elephant</a>
+</td>
+<td>4,000,000
+</td>
+<td>40,000,000
+</td>
+<td style="text-align:left">Largest land-based creature
+</td></tr>
+<tr>
+<td style="text-align:left"><a href="/index.php/Giant_sperm_whale" title="Giant sperm whale">Giant sperm whale</a>
+</td>
+<td>4,000,000
+</td>
+<td>200,000,000
+</td>
+<td style="text-align:left">Largest creature, period
+</td></tr></tbody></table>
+<h2><span class="mw-headline" id="Items">Items</span></h2>
+<p>Most items defined in the <a href="/index.php/Raws" class="mw-redirect" title="Raws">raws</a> require a <code>[SIZE]</code> token, each class of item has its own: for instance, <code><a href="/index.php/Ammo_token#SIZE" title="Ammo token">[SIZE]</a></code> for <a href="/index.php/Ammo" class="mw-redirect" title="Ammo">ammo</a>, <code><a href="/index.php/Weapon_token#SIZE" title="Weapon token">[SIZE]</a></code> for <a href="/index.php/Weapon" title="Weapon">weapons</a>, <code><a href="/index.php/Tool_token#SIZE" title="Tool token">[SIZE]</a></code> for <a href="/index.php/Tool_token" title="Tool token">tools</a>, and so on.
+</p><p>Item types not defined in the raws also have a size which can be determined from their weight and material density, using DFHack, or code debugging. Some assorted item type sizes, and their <a href="/index.php/Storage" title="Storage">storage</a> capacity when applicable:
+</p>
+<table class="sortable" border="1" cellpadding="4" cellspacing="0" style="text-align:right">
+
+<tbody><tr bgcolor="#999999">
+<th style="text-align:center">Item Type
+</th>
+<th style="text-align:center">Volume
+</th>
+<th style="text-align:center">Capacity
+</th>
+<th style="text-align:left">Notes
+</th></tr>
+<tr>
+<td style="text-align:left"><a href="/index.php/Bar" title="Bar">Bars</a>
+</td>
+<td>6000
+</td>
+<td>
+</td>
+<td>
+</td></tr>
+<tr>
+<td style="text-align:left">Cut <a href="/index.php/Gem" title="Gem">gems</a>
+</td>
+<td>200
+</td>
+<td>
+</td>
+<td>
+</td></tr>
+<tr>
+<td style="text-align:left"><a href="/index.php/Block" title="Block">Blocks</a>
+</td>
+<td>6000
+</td>
+<td>
+</td>
+<td>
+</td></tr>
+<tr>
+<td style="text-align:left">Rough <a href="/index.php/Gem" title="Gem">gems</a>
+</td>
+<td>2500
+</td>
+<td>
+</td>
+<td>
+</td></tr>
+<tr>
+<td style="text-align:left">Mined <a href="/index.php/Stone" title="Stone">stone</a>
+</td>
+<td>100000
+</td>
+<td>
+</td>
+<td>
+</td></tr>
+<tr>
+<td style="text-align:left">Wood <a href="/index.php/Log" class="mw-redirect" title="Log">logs</a>
+</td>
+<td>50000
+</td>
+<td>
+</td>
+<td>
+</td></tr>
+<tr>
+<td style="text-align:left"><a href="/index.php/Door" title="Door">Door</a>
+</td>
+<td>30000
+</td>
+<td>
+</td>
+<td>
+</td></tr>
+<tr>
+<td style="text-align:left"><a href="/index.php/Floodgate" title="Floodgate">Floodgate</a>
+</td>
+<td>30000
+</td>
+<td>
+</td>
+<td>
+</td></tr>
+<tr>
+<td style="text-align:left"><a href="/index.php/Bed" title="Bed">Bed</a>
+</td>
+<td>30000
+</td>
+<td>
+</td>
+<td>
+</td></tr>
+<tr>
+<td style="text-align:left"><a href="/index.php/Chair" class="mw-redirect" title="Chair">Chair</a>
+</td>
+<td>30000
+</td>
+<td>
+</td>
+<td>
+</td></tr>
+<tr>
+<td style="text-align:left"><a href="/index.php/Chain" title="Chain">Chain</a>
+</td>
+<td>5000
+</td>
+<td>
+</td>
+<td>
+</td></tr>
+<tr>
+<td style="text-align:left"><a href="/index.php/Flask" title="Flask">Flask</a>
+</td>
+<td>1000
+</td>
+<td>1800
+</td>
+<td>
+</td></tr>
+<tr>
+<td style="text-align:left"><a href="/index.php/Finished_goods#Goblets" title="Finished goods">Goblet</a>
+</td>
+<td>1000
+</td>
+<td>1800
+</td>
+<td>
+</td></tr>
+<tr>
+<td style="text-align:left"><a href="/index.php/Instrument" title="Instrument">Instrument</a>
+</td>
+<td>4000
+</td>
+<td>
+</td>
+<td>
+</td></tr>
+<tr>
+<td style="text-align:left"><a href="/index.php/Finished_goods#Toys" title="Finished goods">Toy</a>
+</td>
+<td>1000
+</td>
+<td>
+</td>
+<td>
+</td></tr>
+<tr>
+<td style="text-align:left"><a href="/index.php/Window" title="Window">Window</a>
+</td>
+<td>20000
+</td>
+<td>
+</td>
+<td>
+</td></tr>
+<tr>
+<td style="text-align:left"><a href="/index.php/Cage" title="Cage">Cage</a>
+</td>
+<td>30000
+</td>
+<td>60000
+</td>
+<td>
+</td></tr>
+<tr>
+<td style="text-align:left"><a href="/index.php/Barrel" title="Barrel">Barrel</a>
+</td>
+<td>20000
+</td>
+<td>60000
+</td>
+<td>
+</td></tr>
+<tr>
+<td style="text-align:left"><a href="/index.php/Bucket" title="Bucket">Bucket</a>
+</td>
+<td>3000
+</td>
+<td>6000
+</td>
+<td>
+</td></tr>
+<tr>
+<td style="text-align:left"><a href="/index.php/Animal_trap" title="Animal trap">Animal trap</a>
+</td>
+<td>3000
+</td>
+<td>30000
+</td>
+<td>
+</td></tr>
+<tr>
+<td style="text-align:left"><a href="/index.php/Table" title="Table">Table</a>
+</td>
+<td>30000
+</td>
+<td>
+</td>
+<td>
+</td></tr>
+<tr>
+<td style="text-align:left"><a href="/index.php/Coffin" title="Coffin">Coffin</a>
+</td>
+<td>30000
+</td>
+<td>60000
+</td>
+<td>
+</td></tr>
+<tr>
+<td style="text-align:left"><a href="/index.php/Statue" title="Statue">Statue</a>
+</td>
+<td>60000
+</td>
+<td>
+</td>
+<td>
+</td></tr>
+<tr>
+<td style="text-align:left"><a href="/index.php/Corpse" title="Corpse">Corpse</a>
+</td>
+<td>Special
+</td>
+<td>
+</td>
+<td style="text-align:left">Based on the size of the corpse and what it's made of.
+</td></tr>
+<tr>
+<td style="text-align:left"><a href="/index.php/Weapon" title="Weapon">Weapon</a>
+</td>
+<td>SIZE<sup>1</sup>
+</td>
+<td>
+</td>
+<td>
+</td></tr>
+<tr>
+<td style="text-align:left"><a href="/index.php/Armor" title="Armor">Armor</a>
+</td>
+<td>Special
+</td>
+<td>
+</td>
+<td style="text-align:left">Depends on armor type and the race it was crafted for.  See <a href="/index.php/Material_science#Contact_Area" title="Material science">here</a> for some examples.
+</td></tr>
+<tr>
+<td style="text-align:left"><a href="/index.php/Shield" class="mw-redirect" title="Shield">Shields</a>
+</td>
+<td>Special
+</td>
+<td>
+</td>
+<td style="text-align:left">Based on UPSTEP and the race that crafted it.
+</td></tr>
+<tr>
+<td style="text-align:left"><a href="/index.php/Box" class="mw-redirect" title="Box">Box</a>
+</td>
+<td>20000
+</td>
+<td>60000
+</td>
+<td>
+</td></tr>
+<tr>
+<td style="text-align:left"><a href="/index.php/Bag" title="Bag">Bag</a>
+</td>
+<td>1000
+</td>
+<td>60000
+</td>
+<td>
+</td></tr>
+<tr>
+<td style="text-align:left"><a href="/index.php/Bin" title="Bin">Bin</a>
+</td>
+<td>15000
+</td>
+<td>60000
+</td>
+<td>
+</td></tr>
+<tr>
+<td style="text-align:left"><a href="/index.php/Armor_stand" title="Armor stand">Armor stand</a>
+</td>
+<td>10000
+</td>
+<td>60000
+</td>
+<td>
+</td></tr>
+<tr>
+<td style="text-align:left"><a href="/index.php/Weapon_rack" title="Weapon rack">Weapon rack</a>
+</td>
+<td>10000
+</td>
+<td>60000
+</td>
+<td>
+</td></tr>
+<tr>
+<td style="text-align:left"><a href="/index.php/Cabinet" title="Cabinet">Cabinet</a>
+</td>
+<td>30000
+</td>
+<td>60000
+</td>
+<td>
+</td></tr>
+<tr>
+<td style="text-align:left"><a href="/index.php/Figurine" title="Figurine">Figurine</a>
+</td>
+<td>1000
+</td>
+<td>
+</td>
+<td>
+</td></tr>
+<tr>
+<td style="text-align:left"><a href="/index.php/Jewelry" title="Jewelry">Amulet</a>
+</td>
+<td>500
+</td>
+<td>
+</td>
+<td>
+</td></tr>
+<tr>
+<td style="text-align:left"><a href="/index.php/Finished_goods#Crafts" title="Finished goods">Scepter</a>
+</td>
+<td>3000
+</td>
+<td>
+</td>
+<td>
+</td></tr>
+<tr>
+<td style="text-align:left"><a href="/index.php/Ammo" class="mw-redirect" title="Ammo">Ammo</a>
+</td>
+<td>SIZE<sup>1</sup>
+</td>
+<td>
+</td>
+<td>
+</td></tr>
+<tr>
+<td style="text-align:left"><a href="/index.php/Jewelry" title="Jewelry">Crown</a>
+</td>
+<td>1000
+</td>
+<td>
+</td>
+<td>
+</td></tr>
+<tr>
+<td style="text-align:left"><a href="/index.php/Jewelry" title="Jewelry">Ring</a>
+</td>
+<td>50
+</td>
+<td>
+</td>
+<td>
+</td></tr>
+<tr>
+<td style="text-align:left"><a href="/index.php/Jewelry" title="Jewelry">Earring</a>
+</td>
+<td>30
+</td>
+<td>
+</td>
+<td>
+</td></tr>
+<tr>
+<td style="text-align:left"><a href="/index.php/Jewelry" title="Jewelry">Bracelet</a>
+</td>
+<td>200
+</td>
+<td>
+</td>
+<td>
+</td></tr>
+<tr>
+<td style="text-align:left"><a href="/index.php/Gem#Large_gems_and_crafts" title="Gem">Large gem</a>
+</td>
+<td>50
+</td>
+<td>
+</td>
+<td>
+</td></tr>
+<tr>
+<td style="text-align:left"><a href="/index.php/Anvil" title="Anvil">Anvil</a>
+</td>
+<td>10000
+</td>
+<td>
+</td>
+<td>
+</td></tr>
+<tr>
+<td style="text-align:left"><a href="/index.php/Body_part" class="mw-redirect" title="Body part">Body part</a>
+</td>
+<td>Special
+</td>
+<td>
+</td>
+<td style="text-align:left">Based on the size of the body part and what it's made of.
+</td></tr>
+<tr>
+<td style="text-align:left"><a href="/index.php/Remains" title="Remains">Remains</a>
+</td>
+<td>2000
+</td>
+<td>
+</td>
+<td>
+</td></tr>
+<tr>
+<td style="text-align:left"><a href="/index.php/Meat" title="Meat">Meat</a>
+</td>
+<td>2000
+</td>
+<td>
+</td>
+<td>
+</td></tr>
+<tr>
+<td style="text-align:left"><a href="/index.php/Fish" title="Fish">Fish</a>
+</td>
+<td>2000
+</td>
+<td>
+</td>
+<td>
+</td></tr>
+<tr>
+<td style="text-align:left">Unprepared <a href="/index.php/Fish" title="Fish">fish</a>
+</td>
+<td>2000
+</td>
+<td>
+</td>
+<td>
+</td></tr>
+<tr>
+<td style="text-align:left">Live <a href="/index.php/Vermin" title="Vermin">vermin</a>
+</td>
+<td>Special
+</td>
+<td>
+</td>
+<td style="text-align:left">Based on creature's adult size.
+</td></tr>
+<tr>
+<td style="text-align:left">Tame <a href="/index.php/Vermin" title="Vermin">vermin</a>
+</td>
+<td>Special
+</td>
+<td>
+</td>
+<td style="text-align:left">Based on creature's adult size.
+</td></tr>
+<tr>
+<td style="text-align:left"><a href="/index.php/Seed" title="Seed">Seeds</a>
+</td>
+<td>100
+</td>
+<td>
+</td>
+<td>
+</td></tr>
+<tr>
+<td style="text-align:left"><a href="/index.php/Plant" title="Plant">Plant</a>
+</td>
+<td>1000
+</td>
+<td>
+</td>
+<td>
+</td></tr>
+<tr>
+<td style="text-align:left"><a href="/index.php/Leather" title="Leather">Leather</a>
+</td>
+<td>5000
+</td>
+<td>
+</td>
+<td>
+</td></tr>
+<tr>
+<td style="text-align:left"><a href="/index.php/Plant" title="Plant">Plant</a> growths
+</td>
+<td>50
+</td>
+<td>
+</td>
+<td>
+</td></tr>
+<tr>
+<td style="text-align:left"><a href="/index.php/Thread" title="Thread">Thread</a>
+</td>
+<td>ceil(Dimension/50)<sup>1</sup>
+</td>
+<td>
+</td>
+<td style="text-align:left">Freshly gathered/produced thread has a dimension of 15000 and thus has a volume of 300
+</td></tr>
+<tr>
+<td style="text-align:left"><a href="/index.php/Cloth" title="Cloth">Cloth</a>
+</td>
+<td>ceil(Dimension/50)<sup>1</sup>
+</td>
+<td>
+</td>
+<td style="text-align:left">Freshly woven cloth has a dimension of 10000 and thus has a volume of 200
+</td></tr>
+<tr>
+<td style="text-align:left"><a href="/index.php/Finished_goods#Totems" title="Finished goods">Totem</a>
+</td>
+<td>5000
+</td>
+<td>
+</td>
+<td>
+</td></tr>
+<tr>
+<td style="text-align:left"><a href="/index.php/Backpack" class="mw-redirect" title="Backpack">Backpack</a>
+</td>
+<td>5000
+</td>
+<td>30000
+</td>
+<td>
+</td></tr>
+<tr>
+<td style="text-align:left"><a href="/index.php/Quiver" class="mw-redirect" title="Quiver">Quiver</a>
+</td>
+<td>3000
+</td>
+<td>12000
+</td>
+<td>
+</td></tr>
+<tr>
+<td style="text-align:left"><a href="/index.php/Catapult_part" class="mw-redirect" title="Catapult part">Catapult parts</a>
+</td>
+<td>20000
+</td>
+<td>
+</td>
+<td>
+</td></tr>
+<tr>
+<td style="text-align:left"><a href="/index.php/Ballista_part" class="mw-redirect" title="Ballista part">Ballista parts</a>
+</td>
+<td>20000
+</td>
+<td>
+</td>
+<td>
+</td></tr>
+<tr>
+<td style="text-align:left"><a href="/index.php/Ballista_arrow" title="Ballista arrow">Siege ammo</a>
+</td>
+<td>30000
+</td>
+<td>
+</td>
+<td>
+</td></tr>
+<tr>
+<td style="text-align:left"><a href="/index.php/Ballista_arrow" title="Ballista arrow">Ballista arrow</a> head
+</td>
+<td>10000
+</td>
+<td>
+</td>
+<td>
+</td></tr>
+<tr>
+<td style="text-align:left"><a href="/index.php/Mechanism" title="Mechanism">Mechanisms</a>
+</td>
+<td>20000
+</td>
+<td>
+</td>
+<td>
+</td></tr>
+<tr>
+<td style="text-align:left"><a href="/index.php/Trap_component" title="Trap component">Trap component</a>
+</td>
+<td>SIZE<sup>1</sup>
+</td>
+<td>
+</td>
+<td>
+</td></tr>
+<tr>
+<td style="text-align:left"><a href="/index.php/Alcohol" title="Alcohol">Drink</a>
+</td>
+<td>600
+</td>
+<td>
+</td>
+<td>
+</td></tr>
+<tr>
+<td style="text-align:left"><a href="/index.php/Mill" class="mw-redirect" title="Mill">Powder</a>
+</td>
+<td>600
+</td>
+<td>
+</td>
+<td>
+</td></tr>
+<tr>
+<td style="text-align:left"><a href="/index.php/Cheese" title="Cheese">Cheese</a>
+</td>
+<td>1000
+</td>
+<td>
+</td>
+<td>
+</td></tr>
+<tr>
+<td style="text-align:left"><a href="/index.php/Prepared_meal" class="mw-redirect" title="Prepared meal">Prepared meal</a>
+</td>
+<td>1000
+</td>
+<td>
+</td>
+<td>
+</td></tr>
+<tr>
+<td style="text-align:left"><a href="/index.php/Extract" class="mw-redirect" title="Extract">Misc. liquid</a>
+</td>
+<td>600
+</td>
+<td>
+</td>
+<td>
+</td></tr>
+<tr>
+<td style="text-align:left"><a href="/index.php/Coin" class="mw-redirect" title="Coin">Coin</a>
+</td>
+<td>10/16<sup>1</sup>
+</td>
+<td>
+</td>
+<td style="text-align:left">The size of a stack is 0.625 per coin, then subject to the rounding; so a single coin is 10 cm³ but a stack of 500 is 310 cm³.
+</td></tr>
+<tr>
+<td style="text-align:left"><a href="/index.php/Glob" title="Glob">Glob</a>
+</td>
+<td>600
+</td>
+<td>
+</td>
+<td>
+</td></tr>
+<tr>
+<td style="text-align:left">Small <a href="/index.php/Rock" class="mw-redirect" title="Rock">rock</a>
+</td>
+<td>2000
+</td>
+<td>
+</td>
+<td style="text-align:left">As <a href="/index.php/Thrower" title="Thrower">thrown</a> by adventurers.
+</td></tr>
+<tr>
+<td style="text-align:left"><a href="/index.php/Pipe_section" title="Pipe section">Pipe section</a>
+</td>
+<td>30000
+</td>
+<td>
+</td>
+<td>
+</td></tr>
+<tr>
+<td style="text-align:left"><a href="/index.php/Hatch_cover" title="Hatch cover">Hatch cover</a>
+</td>
+<td>10000
+</td>
+<td>
+</td>
+<td>
+</td></tr>
+<tr>
+<td style="text-align:left"><a href="/index.php/Grate" title="Grate">Grate</a>
+</td>
+<td>10000
+</td>
+<td>
+</td>
+<td>
+</td></tr>
+<tr>
+<td style="text-align:left"><a href="/index.php/Quern" title="Quern">Quern</a>
+</td>
+<td>30000
+</td>
+<td>
+</td>
+<td>
+</td></tr>
+<tr>
+<td style="text-align:left"><a href="/index.php/Millstone" title="Millstone">Millstone</a>
+</td>
+<td>30000
+</td>
+<td>
+</td>
+<td>
+</td></tr>
+<tr>
+<td style="text-align:left"><a href="/index.php/Splint" class="mw-redirect" title="Splint">Splint</a>
+</td>
+<td>2000
+</td>
+<td>
+</td>
+<td>
+</td></tr>
+<tr>
+<td style="text-align:left"><a href="/index.php/Crutch" title="Crutch">Crutch</a>
+</td>
+<td>2000
+</td>
+<td>
+</td>
+<td>
+</td></tr>
+<tr>
+<td style="text-align:left"><a href="/index.php/Traction_bench" class="mw-redirect" title="Traction bench">Traction bench</a>
+</td>
+<td>30000
+</td>
+<td>
+</td>
+<td>
+</td></tr>
+<tr>
+<td style="text-align:left">Orthopedic <a href="/index.php/Cast" class="mw-redirect" title="Cast">cast</a>
+</td>
+<td>2000
+</td>
+<td>
+</td>
+<td>
+</td></tr>
+<tr>
+<td style="text-align:left"><a href="/index.php/Tool" title="Tool">Tool</a>
+</td>
+<td>SIZE<sup>1</sup>
+</td>
+<td>CAPACITY<sup>1</sup>
+</td>
+<td style="text-align:left">Includes items such as <a href="/index.php/Nest_box" title="Nest box">nest boxes</a>, <a href="/index.php/Jug" title="Jug">jugs</a>, <a href="/index.php/Large_pot" title="Large pot">large pots</a>, <a href="/index.php/Hive" title="Hive">hives</a>, <a href="/index.php/Minecart" title="Minecart">minecarts</a>, <a href="/index.php/Wheelbarrow" title="Wheelbarrow">wheelbarrows</a>, <a href="/index.php/Stepladder" title="Stepladder">stepladders</a>, <a href="/index.php/Pedestal" class="mw-redirect" title="Pedestal">pedestals</a>, and <a href="/index.php/Display_case" class="mw-redirect" title="Display case">display cases</a>
+</td></tr>
+<tr>
+<td style="text-align:left"><a href="/index.php/Slab" title="Slab">Slab</a>
+</td>
+<td>60000
+</td>
+<td>
+</td>
+<td>
+</td></tr>
+<tr>
+<td style="text-align:left"><a href="/index.php/Egg" title="Egg">Egg</a>
+</td>
+<td>Special
+</td>
+<td>
+</td>
+<td style="text-align:left">Presumably the caste's EGG_SIZE.
+</td></tr>
+<tr>
+<td style="text-align:left"><a href="/index.php/Book" title="Book">Book</a>
+</td>
+<td>1000
+</td>
+<td>
+</td>
+<td>
+</td></tr>
+<tr>
+<td style="text-align:left"><a href="/index.php/Sheet" title="Sheet">Sheet</a>
+</td>
+<td>ceil(Dimension/50)<sup>1</sup>
+</td>
+<td>
+</td>
+<td style="text-align:left">A fresh sheet has a dimension of 10000 and thus has a volume of 200
+</td></tr>
+<tr>
+<td style="text-align:left"><a href="/index.php?title=Branch&amp;action=edit&amp;redlink=1" class="new" title="Branch (page does not exist)">Branch</a>
+</td>
+<td>5000
+</td>
+<td>
+</td>
+<td style="text-align:left">An adventurer mode item
+</td></tr></tbody></table>
+<dl><dd><sup>1</sup> - As noted above, all values are rounded <i>down</i> to the nearest multiple of 10, with a minimum value of 10.</dd></dl>
+<h2><span class="mw-headline" id="See_also">See also</span></h2>
+<ul><li><a href="/index.php/Density" title="Density">Density</a></li>
+<li><a href="/index.php/Weight" title="Weight">Weight</a></li></ul></div>

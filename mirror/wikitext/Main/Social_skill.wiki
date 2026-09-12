@@ -1,0 +1,144 @@
+{{Quality|Exceptional}}
+{{av}}
+[[File:speech_preview.png|right]]'''Social skills''' are primarily important when used by [[expedition leader]]s, [[mayor]]s, and [[broker]]s in interactions between the [[dwarves]] and other tenants of your fortress and when talking with visiting [[liaison]]s, [[diplomat]]s, and [[merchant]]s. They're also used by [[messenger]]s to establish relations between your settlement and a settlement they are sent to. They can be trained at [[embark]], while performing various administrative tasks, while socializing in a [[tavern]], during conversations between two or more idle dwarves, when [[trading]], and during [[meeting]]s with nobles or visitors.
+
+At the start of a new fortress, the dwarf with the most [[social skill]]s will almost always become the [[expedition leader]]. The holder of this position automatically becomes [[mayor]] when conditions are met, so it is recommended when giving social skills to your starting dwarves during [[embark]] to consider which ones have [[preferences]] that will lead to obnoxious [[mandate]]s when they become mayor — however, the expedition leader position can also be reassigned freely under normal circumstances.
+
+== List of Social Skills ==
+
+{{Skill Box|Social|5:0|5:0|
+* [[Conversationalist]]
+* [[Comedian]]
+* [[Flatterer]]
+* [[Judge of intent]]
+* [[Liar]]
+* Intimidator
+* [[Persuader]]
+* Negotiator
+* [[Consoler]]
+* Pacifier
+}}
+
+== Conversations ==
+
+There are 7 different types of conversations, each with their own skill sets. Creatures will use whichever skills are available to them (based on their [[personality facet]]s), and if ''no'' skills are available they will default to Negotiation. Skills which are especially relevant to a given context have their skill rolls multiplied (by the number of checkmarks shown in the table below), and ones which are less relevant (marked with 'x') are halved.
+
+{| class="wikitable" style="text-align: center;"
+! Task !! Converse !! Comedy !! Flatter !! Judge<br>intent !! Lie !! Intimidate !! Persuade !! Negotiate !! Console !! Pacify
+|-
+| Calm Venter || √ || √ || √ || √ || √ || √ || √ || √ ||  || √√√
+|-
+| Vent ||  ||  ||  ||  ||  || √√ || √ || ||  || 
+|-
+| Discuss Request ||  ||  || x || √√ || √ || x || √ || √√√ ||  || 
+|-
+| Haggle ||  || √ || √ || √√√ || √ || √ || √√√ || √√ ||  || 
+|-
+| Cover for Gaffe ||  || √√ || √ ||  || √ || √ || x ||  ||  || √√
+|-
+| Console || x || √ || x ||  || √ ||  || √ || √ || √√√ || 
+|-
+| Chat || √ || √ || √ || √ || √ || √ || √ || √ || √ || √
+|}
+
+== Skills by Noble Position ==
+
+The following list is based on the skills listed in the {{menu icon|n}} nobles screen while replacing a [[noble]].
+
+===Broker skills===
+[[Broker]]s use (and train) the "haggle" conversation skills to increase the chances of a deal being accepted and to influence the details of a merchants' proposed counteroffers. The Judge of intent skill also allows a broker to read a merchant's current mood. Note that the [[Appraiser]] skill, which is not a social skill, is also very important during the trading process because it is required to see the numerical value of sellable items and decides how accurately (with what number of significant figures) their prices are displayed to you.
+
+The "cover for gaffe" skills come into play whenever you <s>screw up</s> offer the Elves an [[Trading#Unacceptable_items|unacceptable item]] — the higher your broker's skills, the less angry they will become and so the greater your chances are to be able to continue trading with them during that season.
+
+===Diplomat skills===
+The "discuss request" skills are used when negotiating trade agreements to increase the price markup on items they request from you and to decrease the markup on items you request from them. They are also used when negotiating tree-cutting allowances with [[Diplomat#Elven_diplomats|elven diplomats]], allowing you to cut down more trees without angering them.
+
+===Mayor skills===
+While all of the conversational skills are important for a mayoral dwarf seeking reelection (since they will almost certainly repeatedly engage in every kind of conversation during their tenure), dwarves with the Consoler and Pacifier skills tend to be especially valuable as they can reduce the likelihood of tantrums by being complained at or cried on (which creates a happy thought for the other dwarf).
+
+== Conditions For Usage ==
+
+The social skills a creature can employ in an interaction depends on both their [[beliefs]] and [[facets]]. ''All'' facets must ''always'' meet their requirements in order to permit the usage of a skill. ''All'' beliefs must meet their requirements as well, but this requirement is waived if ''any'' facet meets a skill's "override" condition. Any [[syndrome]] effects that temporarily modify personality facets (such as inebriation) influence the final value of these checks and can allow or block a skill's usage (i.e. a bashful dwarf can use and train Conversationalist while under the influence of alcohol).
+
+A typical dwarf meets all of the non-override requirements except potentially for low TRUTH, meaning (disregarding any overrides) the average dwarf is able to use all social skills except possibly Liar and Flatterer.
+
+Beliefs range from -50 to 50. Facets range from 0 to 100.
+
+{| class="wikitable"
+! Skill
+! Belief
+! Facet
+! Override
+|-
+|Persuader
+|ELOQUENCE ≥ -25
+|ASSERTIVENESS ≥ 25
+|ASSERTIVENESS > 75
+|-
+|Negotiator
+|(none)
+|(none)
+|N/A
+|-
+|Judge of Intent
+|(none)
+|(none)
+|N/A
+|-
+|Liar
+|TRUTH ≤ 10
+|(none)
+|N/A
+|-
+|Intimidator
+|POWER ≥ -25 <br> TRANQUILITY ≤ 25 <br> HARMONY ≤ 25
+|DISCORD ≥ 25 <br> ASSERTIVENESS ≥ 25
+|DISCORD > 75 <br> ASSERTIVENESS > 75
+|-
+|Conversationalist
+|ELOQUENCE ≥ 25 <br> HARMONY ≥ 25 <br> LEISURE_TIME ≥ -25 <br> COOPERATION ≥ -25
+|GREGARIOUSNESS ≥ 25 <br> BASHFUL ≤ 75
+|GREGARIOUSNESS > 75 <br> BASHFUL < 25
+|-
+|Comedian
+|MERRIMENT ≥ -25
+|HUMOR ≥ 25
+|HUMOR > 75
+|-
+|Flatterer
+|TRUTH ≤ 25
+|FRIENDLINESS ≥ 40
+|FRIENDLINESS > 75
+|-
+|Consoler
+|STOICISM ≤ 25
+|DISCORD ≤ 75 <br> CRUELTY ≤ 75 <br> SWAYED_BY_EMOTIONS ≥ 25
+|DISCORD < 25 <br> CRUELTY < 25 <br> SWAYED_BY_EMOTIONS > 75
+|-
+|Pacifier
+|PEACE ≥ -25
+|DISCORD ≤ 75
+|DISCORD < 25
+|}
+
+== Training ==
+===[[Fortress Mode]]===
+
+Dwarves train their social skills when idling in meeting areas and they are standing near another dwarf. When trained in this manner, skills are trained at the same rate (usually 1 exp. per social one-on-one interaction) except possibly Conversationalist depending on personality.
+
+Dwarves also train certain social skills — and at a much faster rate — when attending or conducting [[meeting]]s, but only social skills related to the nature of the meeting are trained based on the type of conversation it is (i.e. when a dwarf is complaining, the attendee gains experiencing in the Intimidator and Persuader skills while the conductor gains experience in the Intimidator, Persuader, Consoler, and Pacifier skills, meaning neither dwarf gains experience in the Conversationalist, Negotiator, Judge of intent, or Comedian skills). Social skills trained in this way are not necessarily raised at the same rate with each other.
+
+Furthermore, applicable skills can be trained by a dwarf when [[trading]] at a [[trade depot]]. Specifically, this applies to every "broker" skill except for the conversationalist skill.
+
+===[[Adventure Mode]]===
+
+Adventure mode characters can train some social skills by having conversations. (Oddly, Conversationalist is not one of them.{{bug|10874}}) It is currently unknown if [[personality facet]]s have any effect.
+
+Judge of Intent and Persuader are trained whenever you argue a value (even if it is not your value) or press the argument. Responding with flattery trains Flatterer, responding with dismissal trains Intimidator, and responding passively trains Pacifier. The flatter, calm, and joke options train Flatterer, Pacifier, and Comedian, respectively. The interrogation menu options can train Persuader or Intimidator.
+
+Social skills are important in Adventure mode as they can let you persuade pretty much anyone into doing anything when high enough. This includes changing NPCs' values, persuading position holders to give up their title, enlisting you into the army, and so on.
+
+{{skills}}
+
+{{Category|Skills}}
+[[ru:Social skill]]
