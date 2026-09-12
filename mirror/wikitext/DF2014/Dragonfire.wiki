@@ -1,0 +1,123 @@
+{{Quality|Superior|21:12, 20 April 2014 (UTC)}}
+{{av}}
+[[File:dragonfire_preview.png|thumb|315px|right|Spoiler alert: The horses weren't fast enough.]]
+[[File:dragonfire1.png|thumb|right|315px|Dragonfire. The [[goblin]] survived nearly a year before finally failing a shield block; the [[tin]] goblet, however, remained undamaged.]]
+
+'''Dragonfire''' is a very powerful form of [[fire]] that is produced by [[dragon]]s. Dragonfire forms a rough cone shape, with a range of approximately 20 tiles and a spread of 10 tiles{{cite talk|DF2012:fire#Dragonfire}}. Notably, dragonfire does not spread vertically through additional [[z-level]]s (although dragons will target visible creatures on other z-levels). Despite its powerfully destructive nature, dragonfire can effectively be blocked by a simple [[shield]] better than 99% of the time. 
+
+Legends claim that dragonfire can reach temperatures up to {{ct|50000}}. At that temperature, almost all materials should be destroyed (the dragon's own body and its butchering products are exceptions). However, research has shown that dragonfire is quite particular about which objects it affects. When in a tile with dragonfire, organic materials will ignite, even including [[nether-cap]] wood with its fixed temperature. Non-flammable common [[stone]], [[glass]], and [[ceramic]] items will melt and boil away. In previous versions, such as v0.43.03 and earlier, metal objects and buildings were immune to dragonfire, even non-fire-safe metals like [[tin]].{{bug|6517}} Dragonfire is similarly ineffective against [[water]], producing no [[steam]] or evaporation. [[Building]]s (but not [[construction]]s) are affected by dragonfire on their tile, making non-dragonfire-safe doors immune as long as they remain closed. Objects and buildings (and creatures) made out of [[slade]] are also immune to dragonfire, since the raws do not define a specific heat for slade. 
+ 
+Objects ignited by dragonfire drop to and continue to burn at their standard combustion temperature, however, repeated blasts of dragonfire can sustain much higher combustion temperatures, sufficient even to eventually melt nearby [[adamantine]].
+
+Dragonfire is powerful enough to burn and kill [[creature]]s who are immune to conventional fire, like [[fire imp]]s or [[magma crab]]s. The only creatures immune to dragonfire are dragons themselves, as well as their subterranean [[cave dragon]] cousins, despite the latter not being able to breathe dragonfire. All [[Hidden Fun Stuff]] creatures are also immune to it.
+
+==Dragonfire-safe materials==
+There are very few materials which can withstand the immense heat of dragonfire. Here is the full list:
+
+{| {{prettytable}}
+|- bgcolor="#ddd"
+! width="8%" | Type
+! width="15%" | Material
+! width="5%" | Appearance
+! width="10%" | [[Melting point]]
+! width="10%" | [[Solid density]]
+! width="10%" | [[Specific heat]]
+! width="8%" | [[Value multiplier]]
+! width="34%" | Notes
+
+|-
+| Stone
+| [[Slade]]
+| {{Raw Tile|░|0:0:1}} {{Raw Tile|*|0:1}}
+| None
+| 200000
+| Unknown
+| 1
+| Intended to be undiggable
+
+|-
+| Metal
+| [[Divine metal]]
+| Varies
+| None
+| 1000
+| 7500
+| 300
+| Found only in [[vault]]s
+
+|-
+| Leather
+| [[Fire imp]] leather
+| {{Raw Tile|ß|6:0:0}}
+| None
+| 500
+| 420
+| 3
+|
+
+|-
+| Bone
+| [[Fire imp]] bone
+| {{Raw Tile|²|7:0:1}}
+| None
+| 500
+| 1000
+| 3
+|
+
+|-
+| Bone
+| [[Dragon]] bone
+| {{Raw Tile|²|7:0:1}}
+| None
+| 500
+| 30000
+| 15
+|
+
+|-
+| Soap
+| [[Dragon]] soap
+| {{Raw Tile|≡|7:0:1}}
+| {{ct|55000}}
+| 500
+| 30000
+| 15
+|
+
+|-
+| Ash
+| [[Ash]]
+| {{Raw Tile|≡|7:0:0}}
+| None
+| 1200
+| 800
+| 1
+|
+
+|-
+| Ash
+| [[Potash]]
+| {{Raw Tile|≡|7:0:1}}
+| None
+| 1200
+| 800
+| 3
+|
+
+|-
+| Ash
+| [[Pearlash]]
+| {{Raw Tile|≡|7:0:1}}
+| None
+| 1200
+| 800
+| 4
+|
+
+|}
+
+{{Translation| dwarven = måmgoz-ziril | elvish = vutheni-inira | goblin = kusnath-zedan | human = tamun-usmok}}
+
+{{Category|Creature attributes}}
+[[Ru:Dragonfire]]

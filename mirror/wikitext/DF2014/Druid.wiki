@@ -1,0 +1,44 @@
+{{Quality|Superior|20:18, 28 February 2015 (UTC)}}
+{{Skill
+| color      = 3:0
+| skill      = Druid
+| profession = Unknown
+| job name   = None
+| tasks      = None
+| attributes =
+* Unknown
+}}
+{{av}}
+
+Druid refers to both an unused skill, and a noble position.
+
+== Skill ==
+
+'''Druid''' is a [[skill]] that does not appear in ''Dwarf Fortress'' and only exists in the raws. As such, it is sometimes used as an extra skill by [[Modding|modders]].  However, since it cannot be switched off, it is less useful for modded reactions than the [[Alchemy]] skill.
+
+== Noble ==
+
+'''Druids''' are also a position of nobility among the [[elf|elves]], responsible for religion. However, these druids are not related to and do not possess the Druid skill. Because they are only present in elves, druids will not visit and cannot be appointed in an unmodded game of [[Fortress mode]].
+
+Druids have the highest precedence in the elven civilization, the same as the dwarven [[monarch]]. Interestingly, they also have a queen and princess position with lower rank. They are succeeded by the [[acolyte]] position, which they appoint, the effect of which is that druids choose their intended successor.
+
+{{gamedata|	[POSITION:DRUID]
+		[NAME:druid:druids]
+		[NUMBER:1]
+		[RESPONSIBILITY:RELIGION]
+		[SUCCESSION:BY_POSITION:ACOLYTE]
+		[MENIAL_WORK_EXEMPTION]
+		[PUNISHMENT_EXEMPTION]
+		[ELECTED]
+		[DETERMINES_COIN_DESIGN]
+		[PRECEDENCE:1]
+		[FLASHES]
+		[BRAG_ON_KILL]
+		[CHAT_WORTHY]
+		[DO_NOT_CULL]
+		[KILL_QUEST]
+		[EXPORTED_IN_LEGENDS]
+		[COLOR:2:0:1]
+		[DUTY_BOUND]}}
+{{Skills}}
+{{nobles}}

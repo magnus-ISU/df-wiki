@@ -1,0 +1,397 @@
+<div class="mw-parser-output"><table class="version-table" style="text-align: center; margin: 3px auto 5px; padding: 0.25em; border-radius: 3px; -webkit-border-radius: 3px; -moz-border-radius: 3px; -o-border-radius: 3px; -ms-border-radius: 3px;; border: 2px solid #ddbb88; background: #fff5ee; min-width:27em"><tbody><tr><td style="padding: 0.3em 0.3em; width: 100%;"><div style="margin-bottom:6px;" class="version-links-r1"><span style="font-size:100%"><span class="version-link"><a href="/index.php/Dipscript" title="Dipscript"><span style="text-decoration: none; color: #CA7A02;">v53.16</span></a></span><span style="font-weight:bold;" class="dot">&#160;·</span> <span class="version-link"><span style="text-decoration: none; color: #CA7A02; background-color: #FFE0CC; border-radius: 2px; -webkit-border-radius: 2px; -moz-border-radius: 2px; -o-border-radius: 2px; -ms-border-radius: 2px; border: 1px solid #ddbb88; padding: 0.2em;"><b>v0.47.05</b></span></span><span style="font-weight:bold;" class="dot">&#160;·</span> <span class="version-link"><a href="/index.php/v0.34:Dipscript" title="v0.34:Dipscript"><span style="text-decoration: none; color: #CA7A02;">v0.34</span></a></span><span style="font-weight:bold;" class="dot">&#160;·</span> <span class="version-link"><a href="/index.php/v0.31:Dipscript" title="v0.31:Dipscript"><span style="text-decoration: none; color: #CA7A02;">v0.31</span></a></span><span style="font-weight:bold;" class="dot">&#160;·</span> <span class="version-link"><a href="/index.php/40d:Dipscript" title="40d:Dipscript"><span style="text-decoration: none; color: #CA7A02;">v0.28</span></a></span><span style="font-weight:bold;" class="dot">&#160;·</span> <span class="version-link"><a href="/index.php/23a:Dipscript" title="23a:Dipscript"><span style="text-decoration: none; color: #CA7A02;">v0.23</span></a></span></span></div><span>This article is about an <b>older version</b> of DF.</span><br />
+<div style="float: right; font-size:75%; padding-right:2px; margin-top:-2px; margin-bottom:-7px;"><span class="version-link"><a href="/index.php/Dwarf_Fortress_Wiki:V" class="mw-redirect" title="Dwarf Fortress Wiki:V"><span style="text-decoration: none; color: #CA7A02;">More Info</span></a></span><span style="font-weight:bold;" class="dot">&#160;·</span> <span class="version-link"><a href="/index.php/Template:Av" class="mw-redirect" title="Template:Av"><span style="text-decoration: none; color: #CA7A02;">V</span></a></span></div></td></tr>
+</tbody></table>
+<p>A <b>dipscript</b>, or "diplomat script", is what controls the behavior of visiting <a href="/index.php/DF2014:Diplomat" title="DF2014:Diplomat">diplomats</a> when they meet with your <a href="/index.php/DF2014:Noble" title="DF2014:Noble">nobles</a>. Dipscripts were originally used to trigger special events at specific points in the lifetime of one's fortress (such as undead invasions), but much of this was stripped out by the time the first version of <i>Dwarf Fortress</i> was actually released.
+</p><p>Only 5 different dipscripts are ever executed during gameplay, and they are defined in records 13-17 of the game's "index" file: ELVES_FIRSTCONTACT, HUMAN_STANDARD, DWARF_LIAISON, HUMAN_TRADE, and ELVES_STANDARD. The dipscript files themselves are compressed - with the <a rel="nofollow" class="external text" href="http://dffd.wimbli.com/file.php?id=4175">proper tools</a>, editing them is fairly straightforward.
+</p>
+
+<h2><span class="mw-headline" id="Script_Tokens">Script Tokens</span></h2>
+<table class="prettytable anchortable" border="1" cellpadding="4" cellspacing="0" style="margin: 1em 1em 1em 0; background: #f9f9f9; border: 1px #aaa solid; border-collapse: collapse;">
+
+<tbody><tr bgcolor="#ddd">
+<th>Token
+</th>
+<th>Meaning
+</th></tr>
+<tr>
+<td>INITIAL_LOAD
+</td>
+<td>Presumably indicates that the dipscript should be loaded on game startup instead of on-demand. All of the default dipscripts specify this, as the game does not appear to contain logic for dynamic loading.
+</td></tr>
+<tr>
+<td>DIPSCRIPT:name
+</td>
+<td>Specifies the script's name. Must be one of the names defined above if you want the game to ever execute it.
+</td></tr>
+<tr>
+<td>VAR:type:name
+</td>
+<td>Declares a variable. Type can either be UNIT or LONG.
+</td></tr>
+<tr>
+<td>SETVAR:dest_class:dest_name:src_class:src_name
+</td>
+<td>Sets one variable to another. See below for more information.
+</td></tr>
+<tr>
+<td>IF:class1:name1:comparison:class2:name2
+</td>
+<td>Compares the two specified variables and performs the following script steps if the condition is true.
+</td></tr>
+<tr>
+<td>ELSE
+</td>
+<td>Performs the following script steps if the above IF condition was false.
+</td></tr>
+<tr>
+<td>ENDIF
+</td>
+<td>Ends the above IF statement
+</td></tr>
+<tr>
+<td>TEXTVIEWER:filename:varname
+</td>
+<td>Opens a <a href="/index.php/DF2014:Text_viewer" title="DF2014:Text viewer">text viewer</a> using the specified filename (located within data/dipscripts/text). Second parameter is optional - if specified, indicates a LONG script variable which will be set based on the hyperlink selected.
+</td></tr>
+<tr>
+<td>CONSTRUCTTOPICLIST
+</td>
+<td>Builds a list of appropriate discussion topics (discuss current agreement, request peace treaty, propose tree quota, establish land holder, promote land holder, establish export agreement, establish import agreement, make small talk, or report recent world events), based on the type of civilization the diplomat came from.
+</td></tr>
+<tr>
+<td>TOPICDISCUSSION
+</td>
+<td>Discuss all topics selected via CONSTRUCTTOPICLIST.
+</td></tr>
+<tr>
+<td>DISCUSS:length
+</td>
+<td>Inserts a delay into the meeting. Valid lengths are SHORT (500-1000 <a href="/index.php/DF2014:FPS" class="mw-redirect" title="DF2014:FPS">steps</a>, about a half a day) and LONG (2-4 days).
+</td></tr>
+<tr>
+<td>HISTORY_DIPEV:type
+</td>
+<td>Records a historical event once the diplomat leaves your fortress. The only valid event type is FIRSTCONTACT, used by the Elves to control whether or not they will send their diplomat to propose logging quotas.
+</td></tr>
+<tr>
+<td>ACTION:type:subtype
+</td>
+<td>Has no effect. In previous versions, DREAM:UNDEAD_ARMY would cause one of your dwarves to have "<a href="/index.php/DF2014:Thought" title="DF2014:Thought">a terrifying nightmare about an army of the dead</a>".
+</td></tr>
+<tr>
+<td>DIPEVENT:unit_class:unit_name:dipscript:outcome_class:outcome_name
+</td>
+<td>Has no effect. Most likely, pre-release versions used this to perform special actions.
+</td></tr>
+<tr>
+<td>INVASION:type
+</td>
+<td>Has no effect. Most likely, pre-release versions used this to trigger invasions of specific types.
+</td></tr></tbody></table>
+<h2><span class="mw-headline" id="Variables">Variables</span></h2>
+<p>Dipscripts (and their text screens) can make use of any number of special variables. Each variable has a class, name, and type.
+</p>
+<h3><span class="mw-headline" id="Readable_variables">Readable variables</span></h3>
+<table class="prettytable anchortable" border="1" cellpadding="4" cellspacing="0" style="margin: 1em 1em 1em 0; background: #f9f9f9; border: 1px #aaa solid; border-collapse: collapse;">
+
+<tbody><tr bgcolor="#ddd">
+<th>Class
+</th>
+<th>Name
+</th>
+<th>Type
+</th>
+<th>Description
+</th></tr>
+<tr>
+<td>GLOBAL
+</td>
+<td>DIPLOMACYFLAG_SUCCESS
+</td>
+<td>Integer
+</td>
+<td>Value 4, to be used with DIPEV:ADD_FLAG and DIPEV:REMOVE_FLAG.
+</td></tr>
+<tr>
+<td>GLOBAL
+</td>
+<td>DIPLOMACYFLAG_FAILURE
+</td>
+<td>Integer
+</td>
+<td>Value 2, to be used with DIPEV:ADD_FLAG and DIPEV:REMOVE_FLAG.
+</td></tr>
+<tr>
+<td>GLOBAL
+</td>
+<td>YOURCIV
+</td>
+<td>Entity
+</td>
+<td>Your fortress's parent civilization.
+</td></tr>
+<tr>
+<td>GLOBAL
+</td>
+<td>YOURFORT
+</td>
+<td>Plot Info
+</td>
+<td>Your fortress itself.
+</td></tr>
+<tr>
+<td>GLOBAL
+</td>
+<td>TREESREMOVED
+</td>
+<td>Integer
+</td>
+<td>The number of <a href="/index.php/DF2014:Tree" title="DF2014:Tree">trees</a> that have been destroyed at your fortress, whether by cutting them down or by smashing them with <a href="/index.php/DF2014:Ballista" class="mw-redirect" title="DF2014:Ballista">ballista</a> bolts.
+</td></tr>
+<tr>
+<td>GLOBAL
+</td>
+<td>NULL
+</td>
+<td>Null
+</td>
+<td>A null pointer. Used during comparisons to detect unset variables.
+</td></tr>
+<tr>
+<td>GLOBAL
+</td>
+<td>LOCAL_LARGE_PREDATOR
+</td>
+<td>Creature Definition
+</td>
+<td>A random large predator that can be found near your fortress.
+</td></tr>
+<tr>
+<td>GLOBAL
+</td>
+<td>RANGE.min.max
+</td>
+<td>Integer
+</td>
+<td>A random number between 'min' and 'max'.
+</td></tr>
+<tr>
+<td>GLOBAL
+</td>
+<td>number
+</td>
+<td>Integer
+</td>
+<td>An explicit integer value.
+</td></tr>
+<tr>
+<td>DIPEV
+</td>
+<td>DIPLOMAT
+</td>
+<td>Unit
+</td>
+<td>The diplomat who is meeting with your noble.
+</td></tr>
+<tr>
+<td>DIPEV
+</td>
+<td>ASSOCIATE
+</td>
+<td>Unit
+</td>
+<td>The diplomat's associate. By default, this is null.
+</td></tr>
+<tr>
+<td>MEETING
+</td>
+<td>ACTOR
+</td>
+<td>Unit
+</td>
+<td>The diplomat who is meeting with your noble.
+</td></tr>
+<tr>
+<td>MEETING
+</td>
+<td>NOBLE
+</td>
+<td>Unit
+</td>
+<td>Your noble who is meeting with the diplomat.
+</td></tr>
+<tr>
+<td>DIPSCRIPT
+</td>
+<td>varname
+</td>
+<td>Integer or Unit
+</td>
+<td>A variable you have declared using the VAR command above.
+</td></tr></tbody></table>
+<h3><span class="mw-headline" id="Writable_variables">Writable variables</span></h3>
+<table class="prettytable anchortable" border="1" cellpadding="4" cellspacing="0" style="margin: 1em 1em 1em 0; background: #f9f9f9; border: 1px #aaa solid; border-collapse: collapse;">
+
+<tbody><tr bgcolor="#ddd">
+<th>Class
+</th>
+<th>Name
+</th>
+<th>Type
+</th>
+<th>Description
+</th></tr>
+<tr>
+<td>GLOBAL
+</td>
+<td>TREESREMOVED
+</td>
+<td>Integer
+</td>
+<td>The number of <a href="/index.php/DF2014:Tree" title="DF2014:Tree">trees</a> that have been destroyed at your fortress.
+</td></tr>
+<tr>
+<td>DIPEV
+</td>
+<td>ADD_FLAG
+</td>
+<td>Integer
+</td>
+<td>A specific flag to set in the diplomacy event. Valid values are GLOBAL:DIPLOMACYFLAG_SUCCESS (4) and GLOBAL:DIPLOMACYFLAG_FAILURE (2).
+</td></tr>
+<tr>
+<td>DIPEV
+</td>
+<td>REMOVE_FLAG
+</td>
+<td>Integer
+</td>
+<td>A specific flag to set in the diplomacy event. Valid values are GLOBAL:DIPLOMACYFLAG_SUCCESS (4) and GLOBAL:DIPLOMACYFLAG_FAILURE (2).
+</td></tr>
+<tr>
+<td>DIPEV
+</td>
+<td>DIPLOMAT
+</td>
+<td>Unit
+</td>
+<td>The diplomat who is meeting with your noble. Changing this may have unexpected effects.
+</td></tr>
+<tr>
+<td>DIPEV
+</td>
+<td>ASSOCIATE
+</td>
+<td>Unit
+</td>
+<td>The diplomat's associate. If you set this to a unit in your fortress, then that unit will bid you farewell and depart from your fortress with the diplomat.
+</td></tr>
+<tr>
+<td>MEETING
+</td>
+<td>ACTOR
+</td>
+<td>Unit
+</td>
+<td>The diplomat who is meeting with your noble. Changing this may have unexpected effects.
+</td></tr>
+<tr>
+<td>MEETING
+</td>
+<td>NOBLE
+</td>
+<td>Unit
+</td>
+<td>Your noble who is meeting with the diplomat. Changing this may have unexpected effects.
+</td></tr>
+<tr>
+<td>DIPSCRIPT
+</td>
+<td>varname
+</td>
+<td>Integer or Unit
+</td>
+<td>A variable you have declared using the VAR command above.
+</td></tr></tbody></table>
+<h3><span class="mw-headline" id="Displayable_variables">Displayable variables</span></h3>
+<p>Some of the above variables can be displayed in custom screens opened by the TEXTVIEWER command using the syntax [C:VAR:class:name] (to set the text color) and [VAR:format:class:name] to output the value in a particular format. Certain formats are only valid with specific types - trying to use it on the wrong type will likely result in a blank string.
+</p>
+<table class="prettytable anchortable" border="1" cellpadding="4" cellspacing="0" style="margin: 1em 1em 1em 0; background: #f9f9f9; border: 1px #aaa solid; border-collapse: collapse;">
+
+<tbody><tr bgcolor="#ddd">
+<th>Format
+</th>
+<th>Type
+</th>
+<th>Description
+</th></tr>
+<tr>
+<td>TITLENAME
+</td>
+<td>Unit
+</td>
+<td>Displays the unit's profession. Noble professions will be prefixed with "the ".
+</td></tr>
+<tr>
+<td>HISTNAME
+</td>
+<td>Historical Figure
+</td>
+<td>Displays the historical figure's name and race.
+</td></tr>
+<tr>
+<td>NAME_PLURAL
+</td>
+<td>Creature Definition
+</td>
+<td>Displays the plural name for the creature selected.
+</td></tr>
+<tr>
+<td>NATIVENAME
+</td>
+<td>Unit
+</td>
+<td>Displays the unit's name in its native language.
+</td></tr>
+<tr>
+<td>NATIVENAME
+</td>
+<td>Entity
+</td>
+<td>Displays the civilization's name in its native language.
+</td></tr>
+<tr>
+<td>NATIVENAME
+</td>
+<td>Plot Info
+</td>
+<td>Displays your fortress's name in its native language.
+</td></tr>
+<tr>
+<td>TRANSLATEDNAME
+</td>
+<td>Unit
+</td>
+<td>Displays the unit's name, translated into English.
+</td></tr>
+<tr>
+<td>TRANSLATEDNAME
+</td>
+<td>Entity
+</td>
+<td>Displays the civilization's name, translated into English.
+</td></tr>
+<tr>
+<td>TRANSLATEDNAME
+</td>
+<td>Plot Info
+</td>
+<td>Displays your fortress's name, translated into English.
+</td></tr>
+<tr>
+<td>[anything]
+</td>
+<td>Integer
+</td>
+<td>Displays the number in decimal form.
+</td></tr></tbody></table></div>

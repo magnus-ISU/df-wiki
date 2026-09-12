@@ -1,0 +1,293 @@
+{{Quality|Exceptional|22:40, 20 September 2016 (UTC)}}
+{{av}}
+{{spoiler}}
+{{Metal|name=Divine metal|color=0:0:1
+|ore=
+* N/A
+|properties=
+* [[Material value]] 300
+{{firemagmasafe|yes|yes}}
+* [[Melting point]] None
+* [[Boiling point]] None
+* [[Ignition point]] None
+* [[Solid density]] 1000
+* Liquid [[density]] 1000
+* Molar mass 20000
+* [[Specific heat]] 7500
+|uses=
+* [[Weapon|Melee Weapons]]
+* [[Crossbow]]s
+* [[Bolt]]s
+* [[Pick]]s
+* [[Armor]]
+* [[Anvil]]s
+* [[Metalsmith's forge|Metal crafting]]
+|wiki=List of fictional elements, materials, isotopes and atomic particles}}
+'''Divine metals''' are special, procedurally generated [[metal]]s that can be found in [[vault]]s. Divine metals are used as material for items, [[weapon]]s and [[armor]] used by [[angel]]s, who ruthlessly protect the vault's priceless treasures. (Similar [[divine fabric]]s are used by vault guardians for clothing and soft items.)
+
+== Traits ==
+
+Divine metals appear to have identical [[Material definition token|material properties]] and lists of items craftable from them; the only differences between them are the names, colors, and [[deity]] associations.  All divine metals have high yield values of 1000000 and fracture values of 2000000, and perfect strain-at-yield values of 0.  They are extremely light, at a solid density of only 1000, and have a superior max edge of 12000.  They are granted [[sphere]]s matching the associated [[deity]] that created the metal (and the guardians who wield it), and a descriptive name with the formula of "(adjective) metal" — examples of such are "multicoloured metal", "pale metal", and "twisting metal".
+
+Overall, their material properties are much better than the corresponding values of [[steel]] and mostly worse than those of [[adamantine]].  They are terrifyingly potent when used for edged weapons, due to their ultra-sharpness, but despite their light weight, even blunt weapons tend to be highly effective (unlike adamantine, which is worthless for blunt weapons). As armor, they are the only form of metal that is immune to [[dragonfire]], as it cannot melt or boil. 
+
+Loading a generated world in the [[object testing arena]] allows one to test weapons and armour made of divine metals.
+[[File:Divine_metal_preview.png|thumb|260px|center|You can smell the gods on this sphere.]]
+{{Translation
+| dwarven = Nabaskel 	 	 	
+| elvish  = Mecalalethi
+| goblin  = Ngungdubsnusm
+| human   = Nirnorigu
+}}
+<!--to make sure this page comes up when searching for a specific divine metal-->
+
+== Types ==
+{| class="wikitable" style="text-align: left;"
+|+ <!-- caption -->
+|-
+! Sphere    !! Name              !! Color*
+|-
+| Blight    || rusted metal      || style="background: {{fgcolor|4:0}}; color: #fff;"|Rust
+|-
+| Chaos     || twisting metal    || style="background: {{fgcolor|4:1}}; color: #fff;"|Red
+|-
+| Darkness  || dark metal         || style="background: {{fgcolor|0:1}}; color: #fff;"|Black
+|-
+| Dawn     || glowing metal    || style="background: {{fgcolor|6:1}};"|Yellow
+|-
+| Day      || bright metal || style="background: {{fgcolor|7:1}};"|White
+|-
+| Death    || pale metal   || style="background: {{fgcolor|3:1}};"|Pale blue
+|-
+| Deformity || pock-marked metal || style="background: {{fgcolor|0:1}}; color: #fff;"|Black
+|-
+| Disease  || blistered metal || style="background: {{fgcolor|0:1}}; color: #fff;"|Black
+|-
+| Earth     || ruddy metal        || style="background: {{fgcolor|6:0}}; color: #fff;"|Burnt sienna
+|-
+| Fire      || flickering metal   || style="background: {{fgcolor|6:1}};"|Yellow
+|-
+| Jewels   || faceted metal    || style="background: {{fgcolor|2:1}};"|Green
+|-
+| Light    || shining metal || style="background: {{fgcolor|7:1}};"|White
+|-
+| Lightning || flashing metal    || style="background: {{fgcolor|6:1}};"|Yellow
+|-
+| Moon      || translucent metal || style="background: {{fgcolor|3:1}};"|Clear
+|-
+| Mountains || frosty metal      || style="background: {{fgcolor|7:1}};"|White
+|-
+| Muck      || slick metal        || style="background: {{fgcolor|6:0}}; color: #fff;"|Brown
+|-
+| Music     || singing metal     || style="background: {{fgcolor|7:1}};"|White
+|-
+| Night    || black metal      || style="background: {{fgcolor|0:1}}; color: #fff;"|Black
+|-
+| Rainbows  || multicolored metal || style="background: {{fgcolor|2:1}};"|Clear
+|-
+| Sky      || clear blue metal || style="background: {{fgcolor|3:1}};"|Sky blue
+|-
+| Stars     || twinkling metal   || style="background: {{fgcolor|7:1}};"|White
+|-
+| Storms   || crashing metal  || style="background: {{fgcolor|7:0}};"|Gray
+|-
+| Sun       || blazing metal     || style="background: {{fgcolor|7:1}};"|White
+|-
+| Thunder   || booming metal      || style="background: {{fgcolor|7:0}};"|Gray
+|-
+| Torture   || searing metal      || style="background: {{fgcolor|0:1}}; color: #fff;"|Black
+|-
+| Volcanos  || flowing metal     || style="background: {{fgcolor|4:1}}; color: #fff;"|Red
+|}
+*The color text represents their internal color token, while the background is the actual color they appear as in-game. See [[color]].
+
+{{gamedata|title=Example raws (as extracted from world.dat in version 0.47.05)|
+[INORGANIC:DIVINE_1]
+	[GENERATED]
+	[DIVINE]
+	[DISPLAY_COLOR:7:0:1]
+	[BUILD_COLOR:7:0:1]
+	[STATE_COLOR:ALL_SOLID:WHITE]
+	[USE_MATERIAL_TEMPLATE:METAL_TEMPLATE]
+	[STATE_NAME_ADJ:ALL_SOLID:blazing metal]
+	[MATERIAL_VALUE:300]
+	[SPEC_HEAT:7500]
+	[MELTING_POINT:NONE]
+	[BOILING_POINT:NONE]
+	[ITEMS_WEAPON]
+	[ITEMS_WEAPON_RANGED]
+	[ITEMS_AMMO]
+	[ITEMS_DIGGER]
+	[ITEMS_ARMOR]
+	[ITEMS_ANVIL]
+	[ITEMS_HARD]
+	[ITEMS_METAL]
+	[ITEMS_BARRED]
+	[ITEMS_SCALED]
+	[SOLID_DENSITY:1000]
+	[LIQUID_DENSITY:1000]
+	[MOLAR_MASS:20000]
+	[IMPACT_YIELD:1000000]
+	[IMPACT_FRACTURE:2000000]
+	[IMPACT_STRAIN_AT_YIELD:0]
+	[COMPRESSIVE_YIELD:1000000]
+	[COMPRESSIVE_FRACTURE:2000000]
+	[COMPRESSIVE_STRAIN_AT_YIELD:0]
+	[TENSILE_YIELD:1000000]
+	[TENSILE_FRACTURE:2000000]
+	[TENSILE_STRAIN_AT_YIELD:0]
+	[TORSION_YIELD:1000000]
+	[TORSION_FRACTURE:2000000]
+	[TORSION_STRAIN_AT_YIELD:0]
+	[SHEAR_YIELD:1000000]
+	[SHEAR_FRACTURE:2000000]
+	[SHEAR_STRAIN_AT_YIELD:0]
+	[BENDING_YIELD:1000000]
+	[BENDING_FRACTURE:2000000]
+	[BENDING_STRAIN_AT_YIELD:0]
+	[MAX_EDGE:12000]
+	[SPHERE:SUN]
+
+[INORGANIC:DIVINE_3]
+	[GENERATED]
+	[DIVINE]
+	[DISPLAY_COLOR:7:0:1]
+	[BUILD_COLOR:7:0:1]
+	[STATE_COLOR:ALL_SOLID:WHITE]
+	[USE_MATERIAL_TEMPLATE:METAL_TEMPLATE]
+	[STATE_NAME_ADJ:ALL_SOLID:twinkling metal]
+	[MATERIAL_VALUE:300]
+	[SPEC_HEAT:7500]
+	[MELTING_POINT:NONE]
+	[BOILING_POINT:NONE]
+	[ITEMS_WEAPON]
+	[ITEMS_WEAPON_RANGED]
+	[ITEMS_AMMO]
+	[ITEMS_DIGGER]
+	[ITEMS_ARMOR]
+	[ITEMS_ANVIL]
+	[ITEMS_HARD]
+	[ITEMS_METAL]
+	[ITEMS_BARRED]
+	[ITEMS_SCALED]
+	[SOLID_DENSITY:1000]
+	[LIQUID_DENSITY:1000]
+	[MOLAR_MASS:20000]
+	[IMPACT_YIELD:1000000]
+	[IMPACT_FRACTURE:2000000]
+	[IMPACT_STRAIN_AT_YIELD:0]
+	[COMPRESSIVE_YIELD:1000000]
+	[COMPRESSIVE_FRACTURE:2000000]
+	[COMPRESSIVE_STRAIN_AT_YIELD:0]
+	[TENSILE_YIELD:1000000]
+	[TENSILE_FRACTURE:2000000]
+	[TENSILE_STRAIN_AT_YIELD:0]
+	[TORSION_YIELD:1000000]
+	[TORSION_FRACTURE:2000000]
+	[TORSION_STRAIN_AT_YIELD:0]
+	[SHEAR_YIELD:1000000]
+	[SHEAR_FRACTURE:2000000]
+	[SHEAR_STRAIN_AT_YIELD:0]
+	[BENDING_YIELD:1000000]
+	[BENDING_FRACTURE:2000000]
+	[BENDING_STRAIN_AT_YIELD:0]
+	[MAX_EDGE:12000]
+	[SPHERE:STARS]
+
+[INORGANIC:DIVINE_5]
+	[GENERATED]
+	[DIVINE]
+	[DISPLAY_COLOR:6:0:1]
+	[BUILD_COLOR:6:0:1]
+	[STATE_COLOR:ALL_SOLID:YELLOW]
+	[USE_MATERIAL_TEMPLATE:METAL_TEMPLATE]
+	[STATE_NAME_ADJ:ALL_SOLID:flashing metal]
+	[MATERIAL_VALUE:300]
+	[SPEC_HEAT:7500]
+	[MELTING_POINT:NONE]
+	[BOILING_POINT:NONE]
+	[ITEMS_WEAPON]
+	[ITEMS_WEAPON_RANGED]
+	[ITEMS_AMMO]
+	[ITEMS_DIGGER]
+	[ITEMS_ARMOR]
+	[ITEMS_ANVIL]
+	[ITEMS_HARD]
+	[ITEMS_METAL]
+	[ITEMS_BARRED]
+	[ITEMS_SCALED]
+	[SOLID_DENSITY:1000]
+	[LIQUID_DENSITY:1000]
+	[MOLAR_MASS:20000]
+	[IMPACT_YIELD:1000000]
+	[IMPACT_FRACTURE:2000000]
+	[IMPACT_STRAIN_AT_YIELD:0]
+	[COMPRESSIVE_YIELD:1000000]
+	[COMPRESSIVE_FRACTURE:2000000]
+	[COMPRESSIVE_STRAIN_AT_YIELD:0]
+	[TENSILE_YIELD:1000000]
+	[TENSILE_FRACTURE:2000000]
+	[TENSILE_STRAIN_AT_YIELD:0]
+	[TORSION_YIELD:1000000]
+	[TORSION_FRACTURE:2000000]
+	[TORSION_STRAIN_AT_YIELD:0]
+	[SHEAR_YIELD:1000000]
+	[SHEAR_FRACTURE:2000000]
+	[SHEAR_STRAIN_AT_YIELD:0]
+	[BENDING_YIELD:1000000]
+	[BENDING_FRACTURE:2000000]
+	[BENDING_STRAIN_AT_YIELD:0]
+	[MAX_EDGE:12000]
+	[SPHERE:LIGHTNING]
+
+[INORGANIC:DIVINE_7]
+	[GENERATED]
+	[DIVINE]
+	[DISPLAY_COLOR:4:0:0]
+	[BUILD_COLOR:4:0:0]
+	[STATE_COLOR:ALL_SOLID:RUST]
+	[USE_MATERIAL_TEMPLATE:METAL_TEMPLATE]
+	[STATE_NAME_ADJ:ALL_SOLID:rusted metal]
+	[MATERIAL_VALUE:300]
+	[SPEC_HEAT:7500]
+	[MELTING_POINT:NONE]
+	[BOILING_POINT:NONE]
+	[ITEMS_WEAPON]
+	[ITEMS_WEAPON_RANGED]
+	[ITEMS_AMMO]
+	[ITEMS_DIGGER]
+	[ITEMS_ARMOR]
+	[ITEMS_ANVIL]
+	[ITEMS_HARD]
+	[ITEMS_METAL]
+	[ITEMS_BARRED]
+	[ITEMS_SCALED]
+	[SOLID_DENSITY:1000]
+	[LIQUID_DENSITY:1000]
+	[MOLAR_MASS:20000]
+	[IMPACT_YIELD:1000000]
+	[IMPACT_FRACTURE:2000000]
+	[IMPACT_STRAIN_AT_YIELD:0]
+	[COMPRESSIVE_YIELD:1000000]
+	[COMPRESSIVE_FRACTURE:2000000]
+	[COMPRESSIVE_STRAIN_AT_YIELD:0]
+	[TENSILE_YIELD:1000000]
+	[TENSILE_FRACTURE:2000000]
+	[TENSILE_STRAIN_AT_YIELD:0]
+	[TORSION_YIELD:1000000]
+	[TORSION_FRACTURE:2000000]
+	[TORSION_STRAIN_AT_YIELD:0]
+	[SHEAR_YIELD:1000000]
+	[SHEAR_FRACTURE:2000000]
+	[SHEAR_STRAIN_AT_YIELD:0]
+	[BENDING_YIELD:1000000]
+	[BENDING_FRACTURE:2000000]
+	[BENDING_STRAIN_AT_YIELD:0]
+	[MAX_EDGE:12000]
+	[SPHERE:BLIGHT]
+}}
+
+{{metals}}
+
+{{Category|Metals}}{{Category|Materials}}
+[[ru:Divine metal]]

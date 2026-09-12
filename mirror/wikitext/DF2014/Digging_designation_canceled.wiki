@@ -1,0 +1,41 @@
+{{Quality|Exceptional|9:41, 28 July 2019 (UTC)}}
+{{av}}
+
+{{Dftext|Digging designation cancelled: damp stone located.|6:1}}
+
+This error message pauses the game and zooms to the location where the warm or damp stone was located.
+
+[[File:Damp Stone Butcher.png|thumb|right|In this case, digging the room around the butcher was cancelled due to the last, bottom right tile being below the pool floor. The pool is known since it is on the surface. Note that it was possible to dig below the upper level's damp tiles of clay.]]
+
+Warm or damp stone is very dangerous, as it indicates the presence of nearby [[magma]] or [[water]], respectively. However, the stone could be warm/damp because the magma/water is beside the tile, directly above the tile, or directly below the tile - and, most of the time, ''you don't know which''. You will only know if you are near the surface and find the damp stone below a known [[murky pool]]:
+
+The safest thing to do is back off several tiles, mine up a [[z-level]] then approach the location again. Rinse and repeat until you emerge above the surface of the magma/water. Note that you will not receive warnings when digging staircases upward. If you plan on digging a staircase to a higher z-level, make sure there are no heavy [[aquifer]]s or [[magma]] in your way!
+
+ Side Profile: 
+ 
+    Below tile   Beside tile  Above tile            Key
+ 
+      #######     #######      #######          # Unmined stone
+  ↑   __o<font color="blue"><b>#</b></font><font color="red">#</font>##     ###<font color="red">##</font>##      ###<font color="red">##</font>##          <font color="red">#</font> Warm stone
+  z   ##<font color="red">#~~#</font>#     _o<font color="blue"><b>#</b></font><font color="red">~~#</font>#      ##<font color="red">#~~#</font>#          <font color="blue"><b>#</b></font> Square that was just canceled
+ axis ##<font color="red">#~~#</font>#     ##<font color="red">#~~#</font>#      ##<font color="red">#~~#</font>#          <font color="red">~</font> Magma
+  ↓   ###<font color="red">##</font>##     ###<font color="red">##</font>##      __o<font color="blue"><b>#</b></font><font color="red">#</font>##          _ Floor of the tunnel
+      #######     #######      #######          o Miner
+
+Only in the middle case would it be unsafe to mine out the square that had just been canceled: In the first and last cases, there would be a floor between your miner and the fluid.
+
+If the damp stone is due to a light aquifer, the tiles around the damp stone will eventually (but slowly) get filled with water.
+
+The obnoxious recentering and pausing can be stopped by editing [[announcements.txt]] and removing <code>:P:R</code> from the lines concerning the announcement, so they read:
+ [DIG_CANCEL_WARM:A_D:D_D]
+ [DIG_CANCEL_DAMP:A_D:D_D]
+
+The job cancellations can be disabled with the utility on http://www.bay12forums.com/smf/index.php?topic=21892.0 . Note that this can be [[fun]]. (This utility no longer works in recent versions, as the addresses it relies on have changed.)
+
+Alternatively, there is [http://www.bay12forums.com/smf/index.php?topic=168607.0 a DFhack script to reveal designated tiles] which will prevent those designations from being cancelled (since the tiles will already be revealed). This may reduce [[fun]] if it reveals water or magma that you actually didn't know was there, so please use responsibly.
+
+{{Errors FAQ}}
+{{Water FAQ}}
+{{Magma FAQ}}
+{{Category|Errors}}{{Category|Designations}}
+[[ru:Digging designation canceled]]

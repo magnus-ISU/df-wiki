@@ -1,0 +1,51 @@
+{{Quality|Exceptional|20:03, 25 January 2014 (UTC)}}
+{{av}}
+{{Minorspoiler}}
+''This page is a list of hidden or unexpected aspects of the game, once known as HFS, or Hidden Fun Stuff. Though technically 'HFS' is used in the [[Main:dev logs|dev logs]] to refer to anything Toady doesn't want us to know about until we find it ourselves, players have appropriated the name to only refer to... well, [[HFS|we won't spoil it for you]].''
+
+=== Fluctuating Subtitle ===
+When [[Main:Your first fortress|starting up the game]], on the title screen where the player first chooses what to do, the top reads:
+ Slaves to Armok: God of Blood
+ Chapter 2: Dwarf Fortress
+ Histories of ...
+'...' will be generated each time the game is opened. Some combinations include "Histories of Avarice and Resourcefulness" and "Histories of Jealousy and Tenacity." Generally, the words will include a synonym each of "greed" and "stubbornness", which as we all know fit the hairy little blighters like a [[Cave spider|cave spider silk]] [[Clothing#Articles|glove]].
+
+=== Dwarven Daydreams ===
+ 
+Some dwarves like Toads for their beauty, an obvious inside reference to [[Main:Toady One|Toady One]].
+
+=== So What If I'm Dead? ===
+
+Checking the [[weather]], temperature, odor, or [[Calendar|date]] in [[adventurer mode]] after dying will instead return a snarky message reminding you of your current medical state.
+
+=== Bey@nd Quality?! ===
+
+For about one frame, the word "Beyond" in the Bay 12 Games Beyond Quality intro turns into "Bey@nd". Nobody knows why.
+
+=== Oink! ===
+
+In the Bay 12 Games Beyond Quality intro, a pig sound is played. When the program is saying "Quality", grab the title bar and drag it around a bit. Release, and when the lines appear, you'll hear it on its own.  This sound is stored in <code>data/sound/bayend.ogg</code>.
+
+=== Help Screen ===
+
+If you press the ? key 4 times, you will be sent to a screen that appears to be the deepest part of the help menu, seeing as pressing ? from there will not do anything interesting.
+
+=== Intro Movie ===
+Not quite an easter egg, but the sequence seen during the intro reflects the layout of a typical fortress from the old 2D versions, proceeding past the [[23a:cave river|cave river]] and [[23a:chasm|chasm]] and concluding with a miner breaching the [[23a:magma flow|magma river]] and causing a lethal flood. Nowadays, the ending scene of the intro serves as a teaser of [[Hidden Fun Stuff]], given the stone's [[raw adamantine|cyan]] color.
+
+=== Toads as the default creature ===
+Toads are the first creature entry to be parsed in the [[raw file]]s, being the first creature listed in the first file ("creature_amphibians"). Hence, many incidences where the game attempts to pick a creature type and fails, will result in "toads" being picked as a default.
+
+When a creature is named (not for killing a dwarf), you get a message like: "The dwarves named a resident Cave Swallowman Urist McSwallowman". If you are in adventure mode and all the dwarves/humans/elves/goblins are dead, you get the message: "The ''toads'' named a resident Cave Swallowman Urist McSwallowman".
+
+=== Moss ===
+[[File:Goblin agreements.png|thumb|right|Trading is a serious business.]]
+A small egg, mostly because few have seen it. An old fort that's around 50 years old or so will grow [[moss]] on its stone block constructions. Not much is known about moss, except that it can only occur in certain [[biome]]s. {{verify}}<sup> for v0.34.11</sup>
+
+=== Trade agreements with Goblins and Kobolds ===
+If you view a goblin civilization in the {{k|c}}ivilizations menu (provided that there is one) and navigate to the trade agreements tab, it will say that you have an agreement with them that they provide you with terror and you give them vengeance in return. Similarly, viewing kobolds will reveal an "agreement" in which they export petty annoyance and you export death.
+
+=== Cats as Legendary Climbers ===
+All [[cat]]s are legendary [[climber]]s by default. That's impressive, given that cats can't gain even Novice in any other skill, and especially given how difficult it is to reach Legendary Climber as an adventurer.
+
+It's worth noting that [[giant cave spider]]s and [[giant_lizard|many]] [[large_roach|other]] [[hungry_head|creatures]] also have the same default climbing skill.
