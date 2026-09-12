@@ -1,0 +1,36 @@
+{{Quality|Superior|16:57, 11 May 2013 (UTC)}}
+{{av}}
+{{buggy}}
+A '''civilian alert''' is a [[military]] alert that confines all civilians to a specific set of [[burrow]]s. Dwarves outside of the burrows will immediately [[Dwarf cancels task: Forbidden area|cancel their current task]] and retreat to the burrow. Often activating a civilian alert is the easiest way to prevent your dwarves from charging onto a battlefield to haul items, reset traps, or just to enjoy the scenery. Setting up a civilian burrow is an essential skill.
+
+==== Create the burrow ====
+* Hit {{k|w}} to go to the burrow menu and {{k|a}} to add a new burrow. 
+* Then hit {{k|Enter}} to define it. 
+* Hit {{k|n}} to name it, I'd call it "Inside". 
+* Then hit {{k|Enter}} to start a rectangle and enter again to finish it, just like designating areas to dig. And just like with other designations you can start on one level and end on another and it includes that rectangle on all of the levels, inclusive. Handy. Make as many rectangles as you need. Note that the burrow symbol will only show in areas that you've dug out, but the burrow will actually extend into the unrevealed rocks, so you can still dig in those areas. 
+* Then hit {{k|ESC}} a couple of times to get out of the burrow menus.
+
+==== Create the alert ====
+* Hit {{k|m}} to bring up the military menus, and {{k|a}} for alerts. 
+* Now {{k|c}} to add an alert and {{k|N}} to give it a catchy name.
+* Now move the cursor to the far right column, which should have the burrow you just created, and hit {{k|Enter}} to associate that burrow with your new alert. You'll see a green A next to the burrow when you have that alert selected.
+* Then hit {{k|ESC}} a couple of times to get out of the military menus.
+
+==== Activate the alert when invaders arrive. ====
+* Hit {{k|m}} to bring up the military menus, and {{k|a}} for alerts.
+* Now move the cursor back to your new alert and hit {{k|Enter}}, and you should see a green [CIV] move next to it.
+
+==== Congratulations, your civilians are now confined to your burrow. ====
+* Watch any civilians who were outside drop what they were doing and come running back inside. Yay.
+* When the fight is over, come back to the military menus {{k|m}} {{k|a}} and select "Inactive" and hit {{k|Enter}} to cancel the alert and let your civilians back out of the burrow.
+
+That's all there is to it.
+
+*Note: dwarves will not leave the burrow for [[food]] or [[drink]], so your safe room may become a death sentence.
+
+== Bugs ==
+*Grazing animals outside of the civilian alert burrow will not eat, leading to eventual starvation.{{bug|6240}}
+*War animals are restricted to the civilian burrow.{{bug|1058}}
+*Civilians will still take hauling jobs for items outside the burrow, which they immediately cancel with "Item inaccessible", resulting in constant report log spam.{{bug|600}}
+*Dwarves can become accident prone when a civilian alert is activated.{{bug|8886}}
+[[ru:Civilian alert]]

@@ -1,0 +1,102 @@
+{{Quality|Masterwork|21:52, 20 September 2016 (UTC)}}
+{{av}}
+{{buggy}}
+:{{DFtext|A section of the cavern has collapsed!|4:0:1}}
+
+[[File:Cave-in (indust).jpg|thumb|250px|right|Cave-in during the Industrial Age.<br><small>''Drawn by Albert Sidney Bolles''</small>]]A '''cave-in''' is when walls, floors, and other terrain plummet downwards to lower [[Z-axis|Z-levels]] under the influence of [[gravity]]. A cave-in will occur if constructions or ground tiles are detached from all support ([[bridge]]s and [[hatch]]es do not provide support). Since it is only a placeholder, the system is highly unrealistic&mdash;you can hold up a giant megafortress by a slender pillar of soap. [[Main:Toady One|Toady One]] has stated he intends to implement more realistic cave-ins in future versions. 
+
+Cave-ins can be disabled in the [[d_init.txt]] file by changing [CAVEINS:YES] to [CAVEINS:NO].
+
+== How cave-ins work ==
+
+Any ''disconnected'' [[construction]] or section of [[rock]] or [[soil]] will cave in. The game checks for connections along the X, Y, and Z axes (that's left/right, up/down, and above/below). Any construction, even [[stairs]] (natural or constructed), and [[support]]s (naturally) provide support/connections. [[Tree]] trunks provide support on all axes. [[Stairs|Up stairs]] will provide support for the z-level above even if there is no downstairs above, acting as an invisible floor. '''Diagonal connections and [[bridge]]s do not provide support.''' Ramps will not provide support to the tile above them, but will act as a connection for the adjacent tiles on the same level.
+
+Note that supports and fortifications, but '''not''' [[statue]]s, create an invisible floor on the level above them.  No dwarf can enter the invisible floor, but it will hold an area attached to the floor tiles in four directions alongside it or the constructed/natural wall above it.
+
+== Results of a cave-in ==
+
+===Falling terrain===
+* Any unsupported terrain crashes down through multiple [[floor]]s and [[ramp]]s, and stops only upon reaching a wall, up or up/down stair, a fortification, a multi-tile tree, or a support. 
+* Falling tiles do not stay connected in one mass; each falling column will fall as far as it can as described above.
+* Falling natural [[floor]]s, [[stair]]s and [[ramp]]s will be destroyed, leaving behind a natural floor of the highest such terrain; natural stone walls pile up; and constructions deconstruct, leaving behind their building materials.
+* [[Tree]]s, [[shrub]]s and saplings that fall are obliterated. Falling [[grass]] of all types (including [[cave moss]] and [[floor fungus]]) gets turned into undifferentiated green "Grass".
+* Anything falling into a fluid sinks to the bottom. Therefore, it is not a good idea to punch a skylight into your meeting area if you forgot that e.g. your [[gem]] pile was directly below and you had a [[magma]] tube three Z levels afterwards... you get the idea.
+* Falling soil will change into the soil type at the layer it falls to, or the lowest type on the map if it falls into the stone layers.
+* Aquifer tiles will continue producing water, and other tile properties will remain the same in the fallen terrain.
+
+=== Below the cave-in===
+* Any [[creature]] caught directly underneath (on the same tile underneath) a cave-in is killed, the only exception being [[Ghost]]s. To clarify, it will kill all non-ghost creatures between the tile below the initial tile caving in to its final resting point.
+* Most [[plant]]s under a cave-in are obliterated, but not multi-tile [[tree]]s.
+* Any item caught under a cave-in is destroyed completely, unless the item is a stone [[boulder]] (i.e. not including [[ice]]), a rough [[gem]], a [[corpse]] (but not a severed body part), or an [[artifact]].
+* All [[building]]s and most [[construction]]s under the falling area are destroyed, as are natural ramps and unsupported floors. Only walls, supports, up and up/down stairs, and fortifications (both mined and constructed) remain intact.
+* Supported natural terrain will remain intact during the cave-in (terrain unsupported from below will collapse). 
+* Any fluid displaced by falling natural walls is not destroyed, but transported to directly on top of the fallen walls. This principle can be used to construct [[magma piston]]s. 
+* Any mined minerals or stone in the area directly under the cave-in will be forced out from under the cave-in (or even up a few z-levels too, if the cave-in falls a long distance).
+* Dropping rock layers on top of a cavern-soil floor will remove the soil; [[irrigation]] will be required to resume [[tree farm]]ing.
+
+=== Above the cave-in===
+* Buildings above the cave-in will deconstruct if they are no longer supported.
+* Anything standing on the area that caves in falls and may get away with being stunned. The fall victim has a chance of being unable to walk away, somewhat proportional to the distance fallen but not set in stone. <s>No</s> Pun intended.
+=== Other effects===
+* A large amount of dust is generated. Any creature caught by the dust from the collapse is knocked [[unconscious]] and can be thrown a few tiles even up z-levels, which may cause them to fall off, say, a narrow bridge fifty z-levels above the ground, or can mash them into a fine paste against the wall. Dwarves will receive an unhappy thought from choking on dust clouds (which won't matter if they're dead).
+* [[Magma mist]] will be generated in all tiles of magma that were in the path of the cave-in.
+* Any terrain that is rendered unsupported by the cave-in will cause a subsequent cave-in.
+
+== Avoiding cave-ins ==
+
+Do not make unconnected sections of rock.
+
+Actually, you're quite unlikely to cause cave-ins unless you are actively trying to cause them. In which case, you'd be wondering how to avoid cave-ins that ''cause damage'' to your folks. That's simple: Add a [[support]] under the stone mass, and link it to a distant [[lever]]. When you're done, hide everyone, pull the lever and watch the fireworks.  If you're feeling lazier, use [[statue]]s to keep dwarves off the wrong squares.  Provided they move directly away from the cave-in area, the dust may not catch them - and they don't blunder off edges and die unless the dust catches them.
+
+One of the more common accidental cave-ins results when you're taking out the floor in a checker-pattern (dwarves [[channel]]ing may sometimes tend to make this mistake) and the area below isn't supported, resulting in a situation like the diagram below:
+
+ Floor -1
+ ▒▒▒▒▒▒
+ ▒    ▒
+ ▒ X +▒ <-- The X is a floor tile. It's not attached, so it will fall down.
+ ▒  +>▒
+ ▒    ▒
+ ▒▒▒▒▒▒
+ 
+ Floor -2
+ ▒▒▒▒▒▒
+ ▒....▒
+ ▒...▒▒ <-- Causing this area to receive a cave-in flow and knocking out any dwarves in its reach.
+ ▒...<▒
+ ▒....▒
+ ▒▒▒▒▒▒
+
+Another thing to watch out for is if you want to dig away a hill above ground, to make room for your fancy overground fort. You may dig away the hill on one level, and then have a huge platform of "floor" on the z-level above that falls on your [[miner]] if they get disconnected from the ground. Easy thing to miss the first time you do it. To avoid this, channel ''from the surface downwards'', which doesn't remove anything that isn't supported - though you might still mine out something that was supporting a floor you ''weren't'' mining, so be careful. Miners also don't check that there's nobody standing on the floor that will shortly cease to exist - meaning that several miners channelling floors in the same area are a danger to each other. So you should allow only one dwarf to mine out floors in an area at a time.
+
+== Using cave-ins ==
+Intentional cave-ins serve several purposes:
+* '''Defense'''
+*: Use cave-ins to block off water approaches to underground cavern levels.  Combined with walls higher up, a cavern can (with great effort) be rendered completely safe from all intruding vermin.<sup>1</sup>
+* '''Death'''
+*: Since a cave-in kills all [[creatures]] instantly, it can provide a [[Unfortunate accident|convenient]] or amusing way to off a group of creatures.  This is also one of the most effective ways of dealing with [[titan]]s and [[forgotten beast]]s with dangerous [[syndrome]]s, especially airborne contaminants (deadly dust/vapors) and poisonous blood. For certain randomly generated creatures, they may be so indestructible that a cave-in is the ''only'' way to kill them. Also, it's a great way to 'spare' an [[Wound|'injured']] dwarf who likes 'laying' in a bed all to [[Noble|himself.]]
+* '''Removal of floor tiles'''
+*: Causing a cave-in will destroy non-reinforced (no wall or support underneath) floor tiles directly underneath the falling terrain - this is a good way to hollow out a large area. All that's left to do is a little bit of cleanup on the edges, but look at all the channeling you saved yourself!
+* '''Breaking through multiple aquifer levels'''
+*: Showcase with two levels: [[User:Rhenaya/HowtoDualAquifer]]
+* '''Trapping [TRAPAVOID] creatures:'''
+*: Since the dust from a cave-in can knock creatures [[unconscious]], and any unconscious creature triggers a trap (including your dwarves and other friendly creatures), combine a cave-in with nearby cage traps for the capture. Note that this is only useful for [[kobold]]s and [[gremlin]]s, as all other creatures which avoid traps are also immune to being knocked unconscious.
+* '''Moving Water / Magma faster than [[Screw_pump#Pump_stack|Pump Stack]]s'''
+*: Main article: [[Magma piston]]
+* '''Cavern Control'''
+*: Suppose that a cavern has a [[lake]] that extends to the edge of the screen. You can use a cave-in to drop a wall of rock into the water to cut that lake off from the edge of the screen. This helps you secure that cavern edge from spawning creatures. You could then empty the water and grow trees on the muddy lake bottom.
+
+=== Caving-in the toplevel/terrain from inside ===
+
+You can cause terrain above you to cave in without going outside by first mining up stairs below the "borderline" you want to channel, channel the tiles above them, and removing the stairs afterwards.
+The tiles above the up stairs can be mined from below while standing on the stair, so you don't have to go outside. Ramps would also work for that alone, but the ramps would allow enemies to enter, whereas the up-stairs alone do not allow passage to above as there is no corresponding down-stair above them.
+
+<sup>1</sup>Not literal [[vermin]], those won't be blocked.
+
+== Bugs ==
+*Layer-material can change when collapsing soil layers.{{bug|1206}}
+*Forest fires cause constant collapses.{{bug|6829}} 
+*Rarely, a cave-in may happen right at the start of the game. This can have several effects depending on where it happens, including releasing underground tree spores.
+*Cave-ins can occur randomly if you dig out an area of surface containing trees, creating lots of [[fun]].{{bug|9479}}
+
+{{Category|Physics}}
+[[ru:Cave-in]]

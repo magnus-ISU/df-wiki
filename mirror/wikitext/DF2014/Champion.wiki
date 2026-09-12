@@ -1,0 +1,45 @@
+{{Quality|Superior|09:57, 18 May 2015 (UTC)}}
+{{Noble
+| noble=Champion
+| demands=1
+| function=
+*Builds morale
+| arrival=
+*After [[Baron]] is appointed
+}}{{av}}
+
+A '''champion''' is an appointed [[noble]] position which becomes available after a fortress becomes a [[baron]]y. They have no [[room]] requirements.
+
+Other dwarves who talk to the Champion will get a special [[thought]] about "talking to a pillar of society", with the happiness bonus or penalty depending on the dwarf's [[Personality value#TRADITION|viewpoint on tradition]], and they will also satisfy their [[need]] to "uphold tradition".
+
+[[File:champ_dwarf.jpg|thumb|320px|center|''Art by Shabazik'']]
+
+{{Translation
+| dwarven = akur
+| elvish  = atafo
+| goblin  = umal
+| human   = zilar
+}}
+
+{{gamedata|	[POSITION:CHAMPION]
+		[NAME:champion:champions]
+		[SITE]
+		[REQUIRES_MARKET]
+		[NUMBER:1]
+		[RESPONSIBILITY:BUILD_MORALE]
+		[APPOINTED_BY:DUKE]
+		[APPOINTED_BY:COUNT]
+		[APPOINTED_BY:BARON]
+		[PRECEDENCE:65]
+		[MENIAL_WORK_EXEMPTION]
+		[PUNISHMENT_EXEMPTION]
+		[DO_NOT_CULL]
+		[COLOR:7:0:1]
+		[ACCOUNT_EXEMPT]
+		[DUTY_BOUND]
+		[DEMAND_MAX:1]}}
+{{Nobles}}
+{{Military}}
+
+{{Category|Appointed Nobles}}
+{{Category|Military Ranks}}
