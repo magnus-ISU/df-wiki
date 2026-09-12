@@ -1,0 +1,1813 @@
+<div class="mw-parser-output"><div id="page-quality-rating" style="text-align: right;margin: 0.8em 0;font-size:75%">
+ <a href="/index.php/Dwarf_Fortress_Wiki:Quality#Tattered" title="Dwarf Fortress Wiki:Quality"><span id="stub-quality" style="text-decoration:none; color:#333333">xTATTEREDx</span></a> <span style="font-weight:bold;" class="dot">&#160;·</span> <a href="/index.php/Dwarf_Fortress_Wiki:Quality#Fine" title="Dwarf Fortress Wiki:Quality"><span id="fine-quality" style="text-decoration:none; color:#CA7A02;">+FINE+</span></a> <span style="font-weight:bold;" class="dot">&#160;·</span> <a href="/index.php/Dwarf_Fortress_Wiki:Quality#Superior" title="Dwarf Fortress Wiki:Quality"><span id="superior-quality" style="text-decoration:none; color:#8800cc;">*SUPERIOR*</span></a> <span style="font-weight:bold;" class="dot">&#160;·</span> <a href="/index.php/Dwarf_Fortress_Wiki:Quality#Exceptional" title="Dwarf Fortress Wiki:Quality"><span id="exceptional-quality" style="padding:0.2em; border:1px solid #9df; border-radius: 2px; -webkit-border-radius: 2px; -moz-border-radius: 2px; -o-border-radius: 2px; -ms-border-radius: 2px; background:#cce4ff; color:#0088CC;">≡EXCEPTIONAL≡</span></a> <span style="font-weight:bold;" class="dot">&#160;·</span> <a href="/index.php/Dwarf_Fortress_Wiki:Quality#Masterwork" title="Dwarf Fortress Wiki:Quality"><span id="masterwork-quality" style="text-decoration:none; color:#72A329;">☼MASTERWORK☼</span></a></div>
+<table class="version-table" style="text-align: center; margin: 3px auto 5px; padding: 0.25em; border-radius: 3px; -webkit-border-radius: 3px; -moz-border-radius: 3px; -o-border-radius: 3px; -ms-border-radius: 3px;; border: 2px solid #ddbb88; background: #fff5ee; min-width:27em"><tbody><tr><td style="padding: 0.3em 0.3em; width: 100%;"><div style="margin-bottom:6px;" class="version-links-r1"><span style="font-size:100%"><span class="version-link"><a href="/index.php/Advanced_world_generation" title="Advanced world generation"><span style="text-decoration: none; color: #CA7A02;">v53.16</span></a></span><span style="font-weight:bold;" class="dot">&#160;·</span> <span class="version-link"><span style="text-decoration: none; color: #CA7A02; background-color: #FFE0CC; border-radius: 2px; -webkit-border-radius: 2px; -moz-border-radius: 2px; -o-border-radius: 2px; -ms-border-radius: 2px; border: 1px solid #ddbb88; padding: 0.2em;"><b>v0.47.05</b></span></span><span style="font-weight:bold;" class="dot">&#160;·</span> <span class="version-link"><a href="/index.php/v0.34:Advanced_world_generation" title="v0.34:Advanced world generation"><span style="text-decoration: none; color: #CA7A02;">v0.34</span></a></span><span style="font-weight:bold;" class="dot">&#160;·</span> <span class="version-link"><a href="/index.php/v0.31:Advanced_world_generation" title="v0.31:Advanced world generation"><span style="text-decoration: none; color: #CA7A02;">v0.31</span></a></span><span style="font-weight:bold;" class="dot">&#160;·</span> <span class="version-link"><a href="/index.php/40d:Advanced_world_generation" title="40d:Advanced world generation"><span style="text-decoration: none; color: #CA7A02;">v0.28</span></a></span><span style="font-weight:bold;" class="dot">&#160;·</span> <span class="version-link"><a href="/index.php?title=23a:Advanced_world_generation&amp;action=edit&amp;redlink=1" class="new" title="23a:Advanced world generation (page does not exist)"><span style="text-decoration: none; color: #888;">v0.23</span></a></span></span></div><span>This article is about an <b>older version</b> of DF.</span><br />
+<div style="float: right; font-size:75%; padding-right:2px; margin-top:-2px; margin-bottom:-7px;"><span class="version-link"><a href="/index.php/Dwarf_Fortress_Wiki:V" class="mw-redirect" title="Dwarf Fortress Wiki:V"><span style="text-decoration: none; color: #CA7A02;">More Info</span></a></span><span style="font-weight:bold;" class="dot">&#160;·</span> <span class="version-link"><a href="/index.php/Template:Av" class="mw-redirect" title="Template:Av"><span style="text-decoration: none; color: #CA7A02;">V</span></a></span></div></td></tr>
+</tbody></table>
+<dl><dd><i>This article contains information on advanced world generation. For information on basic world generation, see <a href="/index.php/DF2014:World_generation" title="DF2014:World generation">World generation</a>.</i></dd>
+<dd><i>See <a href="/index.php/DF2014:World_token" title="DF2014:World token">World token</a> to more easily find information by the names used in the world_gen.txt file, <a href="/index.php/DF2014:World_rejection" title="DF2014:World rejection">World rejection</a> for information on solving problems related to worlds always being rejected, and <a href="/index.php/DF2014:Worldgen_examples" title="DF2014:Worldgen examples">Worldgen examples</a> for example worlds.</i></dd></dl>
+<p>When you want more control of what your world looks like, it's time for <b>advanced world generation</b>: A detailed reference with advice is provided below. 
+</p><p>(This article assumes that you are already familiar with <a href="/index.php/DF2014:World_generation" title="DF2014:World generation"><b>basic world generation</b></a>; if you are not, then please read about that first - the very high amount of extra options for a generated world can provide the player with a much more customized experience.)
+</p><p>Once you select <span style="color: #C0C0C0; font-size: 12.5px; font-family: &#39;fixedsys&#39;, &#39;IBM Plex Mono Medium&#39;, &#39;Consolas&#39;, monospace; background: #000000">Design New World With Advanced Parameters</span> from the main menu, a screen that looks something like this will appear:
+</p><p><a href="/index.php/File:AdvancedWorldGen.png" class="image"><img alt="AdvancedWorldGen.png" src="/images/1/1a/AdvancedWorldGen.png" decoding="async" width="640" height="300" /></a>
+</p><p>This screen is relatively intuitive, but some parts could use explanation.
+</p>
+
+<h2><span class="mw-headline" id="Parameter_sets">Parameter sets</span></h2>
+<p>The list of already-defined parameter sets is in the upper-right corner. You can select the current set that you want to work with using the up and down directional keys.
+</p><p>Hitting <span style="white-space: nowrap;"><span class="keyboard-key nowrap" style="border: 1px solid #aaa; border-radius: 0.2em; -webkit-border-radius: 0.2em; -moz-border-radius: 0.2em; -o-border-radius: 0.2em; -ms-border-radius: 0.2em; -moz-box-shadow: 0.1em 0.2em 0.2em #ddd; -webkit-box-shadow: 0.1em 0.2em 0.2em #ddd; box-shadow: 0.1em 0.2em 0.2em #ddd; background-color: #f9f9f9; background-image: -moz-linear-gradient(top, #eee, #f9f9f9, #eee); background-image: -o-linear-gradient(top, #eee, #f9f9f9, #eee); background-image: -webkit-linear-gradient(top, #eee, #f9f9f9, #eee); background-image: linear-gradient(to bottom, #eee, #f9f9f9, #eee); padding: 0.1em 0.3em; font-family: inherit; font-size: 0.9em;" title="">a</span></span> will add a new set to the end of the list. You can also <span style="white-space: nowrap;"><span class="keyboard-key nowrap" style="border: 1px solid #aaa; border-radius: 0.2em; -webkit-border-radius: 0.2em; -moz-border-radius: 0.2em; -o-border-radius: 0.2em; -ms-border-radius: 0.2em; -moz-box-shadow: 0.1em 0.2em 0.2em #ddd; -webkit-box-shadow: 0.1em 0.2em 0.2em #ddd; box-shadow: 0.1em 0.2em 0.2em #ddd; background-color: #f9f9f9; background-image: -moz-linear-gradient(top, #eee, #f9f9f9, #eee); background-image: -o-linear-gradient(top, #eee, #f9f9f9, #eee); background-image: -webkit-linear-gradient(top, #eee, #f9f9f9, #eee); background-image: linear-gradient(to bottom, #eee, #f9f9f9, #eee); padding: 0.1em 0.3em; font-family: inherit; font-size: 0.9em;" title="">c</span></span>opy an existing set to a new one, allowing you to base a new set on an existing one. Using <span style="white-space: nowrap;"><span class="keyboard-key nowrap" style="border: 1px solid #aaa; border-radius: 0.2em; -webkit-border-radius: 0.2em; -moz-border-radius: 0.2em; -o-border-radius: 0.2em; -ms-border-radius: 0.2em; -moz-box-shadow: 0.1em 0.2em 0.2em #ddd; -webkit-box-shadow: 0.1em 0.2em 0.2em #ddd; box-shadow: 0.1em 0.2em 0.2em #ddd; background-color: #f9f9f9; background-image: -moz-linear-gradient(top, #eee, #f9f9f9, #eee); background-image: -o-linear-gradient(top, #eee, #f9f9f9, #eee); background-image: -webkit-linear-gradient(top, #eee, #f9f9f9, #eee); background-image: linear-gradient(to bottom, #eee, #f9f9f9, #eee); padding: 0.1em 0.3em; font-family: inherit; font-size: 0.9em;" title="">t</span></span> you can change the name of the parameter set, but note that this will not affect the name of the world that is generated.
+</p><p>Parameter sets are stored in the <tt>data/init/world_gen.txt</tt> file in the main DF directory. The <span style="white-space: nowrap;"><span class="keyboard-key nowrap" style="border: 1px solid #aaa; border-radius: 0.2em; -webkit-border-radius: 0.2em; -moz-border-radius: 0.2em; -o-border-radius: 0.2em; -ms-border-radius: 0.2em; -moz-box-shadow: 0.1em 0.2em 0.2em #ddd; -webkit-box-shadow: 0.1em 0.2em 0.2em #ddd; box-shadow: 0.1em 0.2em 0.2em #ddd; background-color: #f9f9f9; background-image: -moz-linear-gradient(top, #eee, #f9f9f9, #eee); background-image: -o-linear-gradient(top, #eee, #f9f9f9, #eee); background-image: -webkit-linear-gradient(top, #eee, #f9f9f9, #eee); background-image: linear-gradient(to bottom, #eee, #f9f9f9, #eee); padding: 0.1em 0.3em; font-family: inherit; font-size: 0.9em;" title="">F1</span></span> and <span style="white-space: nowrap;"><span class="keyboard-key nowrap" style="border: 1px solid #aaa; border-radius: 0.2em; -webkit-border-radius: 0.2em; -moz-border-radius: 0.2em; -o-border-radius: 0.2em; -ms-border-radius: 0.2em; -moz-box-shadow: 0.1em 0.2em 0.2em #ddd; -webkit-box-shadow: 0.1em 0.2em 0.2em #ddd; box-shadow: 0.1em 0.2em 0.2em #ddd; background-color: #f9f9f9; background-image: -moz-linear-gradient(top, #eee, #f9f9f9, #eee); background-image: -o-linear-gradient(top, #eee, #f9f9f9, #eee); background-image: -webkit-linear-gradient(top, #eee, #f9f9f9, #eee); background-image: linear-gradient(to bottom, #eee, #f9f9f9, #eee); padding: 0.1em 0.3em; font-family: inherit; font-size: 0.9em;" title="">F6</span></span> keys will load and save <b>all</b> of the parameter sets to this file. You will need to save the world gen parameters to this file, before you hit <span style="white-space: nowrap;"><span class="keyboard-key nowrap" style="border: 1px solid #aaa; border-radius: 0.2em; -webkit-border-radius: 0.2em; -moz-border-radius: 0.2em; -o-border-radius: 0.2em; -ms-border-radius: 0.2em; -moz-box-shadow: 0.1em 0.2em 0.2em #ddd; -webkit-box-shadow: 0.1em 0.2em 0.2em #ddd; box-shadow: 0.1em 0.2em 0.2em #ddd; background-color: #f9f9f9; background-image: -moz-linear-gradient(top, #eee, #f9f9f9, #eee); background-image: -o-linear-gradient(top, #eee, #f9f9f9, #eee); background-image: -webkit-linear-gradient(top, #eee, #f9f9f9, #eee); background-image: linear-gradient(to bottom, #eee, #f9f9f9, #eee); padding: 0.1em 0.3em; font-family: inherit; font-size: 0.9em;" title="">Enter</span></span> to generate the world. The <tt>world_gen.txt</tt> file can also be edited with a text editor. This is particularly useful because people will often post their parameter sets on the forum or wiki in text form. (See below for more info.) The <span style="white-space: nowrap;"><span class="keyboard-key nowrap" style="border: 1px solid #aaa; border-radius: 0.2em; -webkit-border-radius: 0.2em; -moz-border-radius: 0.2em; -o-border-radius: 0.2em; -ms-border-radius: 0.2em; -moz-box-shadow: 0.1em 0.2em 0.2em #ddd; -webkit-box-shadow: 0.1em 0.2em 0.2em #ddd; box-shadow: 0.1em 0.2em 0.2em #ddd; background-color: #f9f9f9; background-image: -moz-linear-gradient(top, #eee, #f9f9f9, #eee); background-image: -o-linear-gradient(top, #eee, #f9f9f9, #eee); background-image: -webkit-linear-gradient(top, #eee, #f9f9f9, #eee); background-image: linear-gradient(to bottom, #eee, #f9f9f9, #eee); padding: 0.1em 0.3em; font-family: inherit; font-size: 0.9em;" title="">F1</span></span> key comes in handy when editing this file while the game is still running.
+</p><p>To get the parameters used to generate a world you are already playing, press <span style="white-space: nowrap;"><span class="keyboard-key nowrap" style="border: 1px solid #aaa; border-radius: 0.2em; -webkit-border-radius: 0.2em; -moz-border-radius: 0.2em; -o-border-radius: 0.2em; -ms-border-radius: 0.2em; -moz-box-shadow: 0.1em 0.2em 0.2em #ddd; -webkit-box-shadow: 0.1em 0.2em 0.2em #ddd; box-shadow: 0.1em 0.2em 0.2em #ddd; background-color: #f9f9f9; background-image: -moz-linear-gradient(top, #eee, #f9f9f9, #eee); background-image: -o-linear-gradient(top, #eee, #f9f9f9, #eee); background-image: -webkit-linear-gradient(top, #eee, #f9f9f9, #eee); background-image: linear-gradient(to bottom, #eee, #f9f9f9, #eee); padding: 0.1em 0.3em; font-family: inherit; font-size: 0.9em;" title="">ESC</span></span> then choose export images; exporting any image will also create the world generation parameter file, for more information see this <a rel="nofollow" class="external text" href="http://www.bay12forums.com/smf/index.php?topic=101280.msg4512541#msg4512541">post</a>. 
+</p><p>The tokens used in <tt>world_gen.txt</tt> are at the bottom of each parameter description. Here's the one for the title.
+</p>
+<table class="prettytable anchortable" border="1" cellpadding="4" cellspacing="0" style="margin: 1em 1em 1em 0; background: #f9f9f9; border: 1px #aaa solid; border-collapse: collapse;">
+
+<tbody><tr bgcolor="#dddddd">
+<th>Token
+</th>
+<th>Example
+</th>
+<th>Notes
+</th></tr>
+<tr>
+<td><tt>[TITLE: &lt;name&gt;]</tt>
+</td>
+<td><tt>[TITLE:MEDIUM ISLAND]</tt>
+</td>
+<td>Required
+</td></tr></tbody></table>
+<h2><span class="mw-headline" id="World_name">World name</span></h2>
+<p>As previously mentioned, the title of the parameter set doesn't affect the name of the world. You can force a particular name for your world using <span style="white-space: nowrap;"><span class="keyboard-key nowrap" style="border: 1px solid #aaa; border-radius: 0.2em; -webkit-border-radius: 0.2em; -moz-border-radius: 0.2em; -o-border-radius: 0.2em; -ms-border-radius: 0.2em; -moz-box-shadow: 0.1em 0.2em 0.2em #ddd; -webkit-box-shadow: 0.1em 0.2em 0.2em #ddd; box-shadow: 0.1em 0.2em 0.2em #ddd; background-color: #f9f9f9; background-image: -moz-linear-gradient(top, #eee, #f9f9f9, #eee); background-image: -o-linear-gradient(top, #eee, #f9f9f9, #eee); background-image: -webkit-linear-gradient(top, #eee, #f9f9f9, #eee); background-image: linear-gradient(to bottom, #eee, #f9f9f9, #eee); padding: 0.1em 0.3em; font-family: inherit; font-size: 0.9em;" title="">n</span></span> or set it back to the default random setting using <span style="white-space: nowrap;"><span class="keyboard-key nowrap" style="border: 1px solid #aaa; border-radius: 0.2em; -webkit-border-radius: 0.2em; -moz-border-radius: 0.2em; -o-border-radius: 0.2em; -ms-border-radius: 0.2em; -moz-box-shadow: 0.1em 0.2em 0.2em #ddd; -webkit-box-shadow: 0.1em 0.2em 0.2em #ddd; box-shadow: 0.1em 0.2em 0.2em #ddd; background-color: #f9f9f9; background-image: -moz-linear-gradient(top, #eee, #f9f9f9, #eee); background-image: -o-linear-gradient(top, #eee, #f9f9f9, #eee); background-image: -webkit-linear-gradient(top, #eee, #f9f9f9, #eee); background-image: linear-gradient(to bottom, #eee, #f9f9f9, #eee); padding: 0.1em 0.3em; font-family: inherit; font-size: 0.9em;" title="Shift-n">N</span></span>.
+</p>
+<table class="prettytable anchortable" border="1" cellpadding="4" cellspacing="0" style="margin: 1em 1em 1em 0; background: #f9f9f9; border: 1px #aaa solid; border-collapse: collapse;">
+
+<tbody><tr bgcolor="#dddddd">
+<th>Token
+</th>
+<th>Example
+</th>
+<th>Notes
+</th></tr>
+<tr>
+<td><tt>[CUSTOM_NAME: &lt;name&gt;]</tt>
+</td>
+<td><tt>[CUSTOM_NAME:Realm of Cheese Engravings]</tt>
+</td>
+<td>For a random name, simply don't use this token.
+</td></tr></tbody></table>
+<h2><span class="mw-headline" id="World_dimensions">World dimensions</span></h2>
+<p>The size of the map to be generated can be selected with <span style="white-space: nowrap;"><span class="keyboard-key nowrap" style="border: 1px solid #aaa; border-radius: 0.2em; -webkit-border-radius: 0.2em; -moz-border-radius: 0.2em; -o-border-radius: 0.2em; -ms-border-radius: 0.2em; -moz-box-shadow: 0.1em 0.2em 0.2em #ddd; -webkit-box-shadow: 0.1em 0.2em 0.2em #ddd; box-shadow: 0.1em 0.2em 0.2em #ddd; background-color: #f9f9f9; background-image: -moz-linear-gradient(top, #eee, #f9f9f9, #eee); background-image: -o-linear-gradient(top, #eee, #f9f9f9, #eee); background-image: -webkit-linear-gradient(top, #eee, #f9f9f9, #eee); background-image: linear-gradient(to bottom, #eee, #f9f9f9, #eee); padding: 0.1em 0.3em; font-family: inherit; font-size: 0.9em;" title="">u</span></span> <span style="white-space: nowrap;"><span class="keyboard-key nowrap" style="border: 1px solid #aaa; border-radius: 0.2em; -webkit-border-radius: 0.2em; -moz-border-radius: 0.2em; -o-border-radius: 0.2em; -ms-border-radius: 0.2em; -moz-box-shadow: 0.1em 0.2em 0.2em #ddd; -webkit-box-shadow: 0.1em 0.2em 0.2em #ddd; box-shadow: 0.1em 0.2em 0.2em #ddd; background-color: #f9f9f9; background-image: -moz-linear-gradient(top, #eee, #f9f9f9, #eee); background-image: -o-linear-gradient(top, #eee, #f9f9f9, #eee); background-image: -webkit-linear-gradient(top, #eee, #f9f9f9, #eee); background-image: linear-gradient(to bottom, #eee, #f9f9f9, #eee); padding: 0.1em 0.3em; font-family: inherit; font-size: 0.9em;" title="">i</span></span> <span style="white-space: nowrap;"><span class="keyboard-key nowrap" style="border: 1px solid #aaa; border-radius: 0.2em; -webkit-border-radius: 0.2em; -moz-border-radius: 0.2em; -o-border-radius: 0.2em; -ms-border-radius: 0.2em; -moz-box-shadow: 0.1em 0.2em 0.2em #ddd; -webkit-box-shadow: 0.1em 0.2em 0.2em #ddd; box-shadow: 0.1em 0.2em 0.2em #ddd; background-color: #f9f9f9; background-image: -moz-linear-gradient(top, #eee, #f9f9f9, #eee); background-image: -o-linear-gradient(top, #eee, #f9f9f9, #eee); background-image: -webkit-linear-gradient(top, #eee, #f9f9f9, #eee); background-image: linear-gradient(to bottom, #eee, #f9f9f9, #eee); padding: 0.1em 0.3em; font-family: inherit; font-size: 0.9em;" title="">o</span></span> <span style="white-space: nowrap;"><span class="keyboard-key nowrap" style="border: 1px solid #aaa; border-radius: 0.2em; -webkit-border-radius: 0.2em; -moz-border-radius: 0.2em; -o-border-radius: 0.2em; -ms-border-radius: 0.2em; -moz-box-shadow: 0.1em 0.2em 0.2em #ddd; -webkit-box-shadow: 0.1em 0.2em 0.2em #ddd; box-shadow: 0.1em 0.2em 0.2em #ddd; background-color: #f9f9f9; background-image: -moz-linear-gradient(top, #eee, #f9f9f9, #eee); background-image: -o-linear-gradient(top, #eee, #f9f9f9, #eee); background-image: -webkit-linear-gradient(top, #eee, #f9f9f9, #eee); background-image: linear-gradient(to bottom, #eee, #f9f9f9, #eee); padding: 0.1em 0.3em; font-family: inherit; font-size: 0.9em;" title="">p</span></span>. Larger maps take longer to generate and may limit <a href="/index.php/DF2014:Frames_per_second" title="DF2014:Frames per second">FPS</a> in-game.
+</p><p>Changing the dimensions of the world will reset the parameters, because many of them have different defaults depending on the surface area available. Creating larger worlds does not necessarily mean longer world generation time - the essential factor for the gen duration is the history. If you restrict the number of historical events, you can significantly speed up the process.
+</p>
+<table class="prettytable anchortable" border="1" cellpadding="4" cellspacing="0" style="margin: 1em 1em 1em 0; background: #f9f9f9; border: 1px #aaa solid; border-collapse: collapse;">
+
+<tbody><tr bgcolor="#dddddd">
+<th>Token
+</th>
+<th>Example
+</th>
+<th>Notes
+</th></tr>
+<tr>
+<td><tt>[DIM:&lt;width&gt;:&lt;height&gt;]</tt>
+</td>
+<td><tt>[DIM:129:129]</tt>
+</td>
+<td>Valid values are 17, 33, 65, 129, and 257. Others may not work. Non-square maps may result in crashes<span class=""><sup><a href="#Bugs">Bug</a>:<a rel="nofollow" class="external text" href="https://dwarffortressbugtracker.com/view.php?id=2928">2928</a></sup></span>.
+</td></tr></tbody></table>
+<h2><span class="mw-headline" id="Seed_values">Seed values</span></h2>
+<p>The world generation process uses a PRNG (Pseudo Random Number Generator) algorithm. A PRNG will produce a sequence of numbers that "looks" random, even though the actual sequence of numbers will always be the same if the PRNG is started with the same seed value. Basically this means that if you run world generation with a certain seed value on your computer, and someone else runs world generation with the same seed value on their computer, the same sequence of random numbers will be generated on both computers. The practical impact of this is that someone else can generate exactly the same world that you generated by entering the same seed value that you used.
+</p><p>In older versions, the same seed value(s) produced identical worlds on every computer at any time (if other parameters were identical, too). In the current version, the seed values for the world itself and the names seem to produce the same result, but you will get changes in events which will result in a very different world history. It seems like the history is partly random and not completely connected to the seed. Keep this in mind if you want to regenerate a particular world.
+</p><p>A specific seed value can be entered with <span style="white-space: nowrap;"><span class="keyboard-key nowrap" style="border: 1px solid #aaa; border-radius: 0.2em; -webkit-border-radius: 0.2em; -moz-border-radius: 0.2em; -o-border-radius: 0.2em; -ms-border-radius: 0.2em; -moz-box-shadow: 0.1em 0.2em 0.2em #ddd; -webkit-box-shadow: 0.1em 0.2em 0.2em #ddd; box-shadow: 0.1em 0.2em 0.2em #ddd; background-color: #f9f9f9; background-image: -moz-linear-gradient(top, #eee, #f9f9f9, #eee); background-image: -o-linear-gradient(top, #eee, #f9f9f9, #eee); background-image: -webkit-linear-gradient(top, #eee, #f9f9f9, #eee); background-image: linear-gradient(to bottom, #eee, #f9f9f9, #eee); padding: 0.1em 0.3em; font-family: inherit; font-size: 0.9em;" title="">s</span></span>. This will change <b>all</b> of the seed values to the value you enter. If you need to enter different seed values for each type of seed, use <span style="white-space: nowrap;"><span class="keyboard-key nowrap" style="border: 1px solid #aaa; border-radius: 0.2em; -webkit-border-radius: 0.2em; -moz-border-radius: 0.2em; -o-border-radius: 0.2em; -ms-border-radius: 0.2em; -moz-box-shadow: 0.1em 0.2em 0.2em #ddd; -webkit-box-shadow: 0.1em 0.2em 0.2em #ddd; box-shadow: 0.1em 0.2em 0.2em #ddd; background-color: #f9f9f9; background-image: -moz-linear-gradient(top, #eee, #f9f9f9, #eee); background-image: -o-linear-gradient(top, #eee, #f9f9f9, #eee); background-image: -webkit-linear-gradient(top, #eee, #f9f9f9, #eee); background-image: linear-gradient(to bottom, #eee, #f9f9f9, #eee); padding: 0.1em 0.3em; font-family: inherit; font-size: 0.9em;" title="">e</span></span>. In order to find out what seed values were used for the last world you generated, you can look at this screen. If you want to be able to tell someone else how to generate exactly the same world that you just generated, they will need all of the seed values listed under Last Param Set.
+</p><p>When generating a world using a seed, the way that the world is generated is also based at least in part on certain world tokens. As such, you cannot for example, change the minimum and maximum rainfall and get 'the same world but drier or wetter', instead, a different world is generated. That said, it would also seem that certain small changes to these world tokens can occasionally generate a very similar world, however, other tokens are more sensitive. For more information see the forum thread <a rel="nofollow" class="external text" href="http://www.bay12forums.com/smf/index.php?topic=112132.msg3404199#msg3404199">here</a>.
+</p><p>The following are tokens which appear to be involved in the implementation of the seed, and are not safe to change:
+</p>
+<ul><li>[DIM:X:X]</li>
+<li>[ELEVATION:X:X:X:X]</li>
+<li>[RAINFALL:X:X:X:X]</li>
+<li>[TEMPERATURE:X:X:X:X]</li>
+<li>[DRAINAGE:X:X:X:X]</li>
+<li>[VOLCANISM:X:X:X:X]</li>
+<li>[SAVAGERY:X:X:X:X]</li>
+<li>[ELEVATION_FREQUENCY:X:X:X:X:X:X]</li>
+<li>[RAIN_FREQUENCY:X:X:X:X:X:X]</li>
+<li>[DRAINAGE_FREQUENCY:X:X:X:X:X:X]</li>
+<li>[TEMPERATURE_FREQUENCY:X:X:X:X:X:X]</li>
+<li>[SAVAGERY_FREQUENCY:X:X:X:X:X:X]</li>
+<li>[VOLCANISM_FREQUENCY:X:X:X:X:X:X]</li>
+<li>[PARTIAL_OCEAN_EDGE_MIN:X]</li>
+<li>[COMPLETE_OCEAN_EDGE_MIN:X]</li>
+<li>[HAVE_BOTTOM_LAYER_1:X]</li>
+<li>[MINERAL_SCARCITY:X] <sup class="plainlinks" style="line-height: 0; position: relative; vertical-align: baseline; top: -0.5em;"><a href="/index.php/DF2014_Talk:Advanced_world_generation#Mineral_scarcity" title="DF2014 Talk:Advanced world generation">&#91;1&#93;</a></sup></li></ul>
+<p>Many other world parameters, such as end year and embark points, can, however, be changed without it having any effect on the geography of the world generated from the seed values.
+</p><p>Normally, you don't enter these seed values - the world generation process comes up with seed values based on some sort of "true" random information from things like random values in uninitialized memory, the current date/time, etc. If you have entered a seed value you can revert to all seeds being random using <span style="white-space: nowrap;"><span class="keyboard-key nowrap" style="border: 1px solid #aaa; border-radius: 0.2em; -webkit-border-radius: 0.2em; -moz-border-radius: 0.2em; -o-border-radius: 0.2em; -ms-border-radius: 0.2em; -moz-box-shadow: 0.1em 0.2em 0.2em #ddd; -webkit-box-shadow: 0.1em 0.2em 0.2em #ddd; box-shadow: 0.1em 0.2em 0.2em #ddd; background-color: #f9f9f9; background-image: -moz-linear-gradient(top, #eee, #f9f9f9, #eee); background-image: -o-linear-gradient(top, #eee, #f9f9f9, #eee); background-image: -webkit-linear-gradient(top, #eee, #f9f9f9, #eee); background-image: linear-gradient(to bottom, #eee, #f9f9f9, #eee); padding: 0.1em 0.3em; font-family: inherit; font-size: 0.9em;" title="Shift-s">S</span></span>.
+</p>
+<h2><span class="mw-headline" id="Generating_a_world">Generating a world</span></h2>
+<p>Unless you're using an already-defined parameter set, you will probably want to <span style="white-space: nowrap;"><span class="keyboard-key nowrap" style="border: 1px solid #aaa; border-radius: 0.2em; -webkit-border-radius: 0.2em; -moz-border-radius: 0.2em; -o-border-radius: 0.2em; -ms-border-radius: 0.2em; -moz-box-shadow: 0.1em 0.2em 0.2em #ddd; -webkit-box-shadow: 0.1em 0.2em 0.2em #ddd; box-shadow: 0.1em 0.2em 0.2em #ddd; background-color: #f9f9f9; background-image: -moz-linear-gradient(top, #eee, #f9f9f9, #eee); background-image: -o-linear-gradient(top, #eee, #f9f9f9, #eee); background-image: -webkit-linear-gradient(top, #eee, #f9f9f9, #eee); background-image: linear-gradient(to bottom, #eee, #f9f9f9, #eee); padding: 0.1em 0.3em; font-family: inherit; font-size: 0.9em;" title="">e</span></span>dit the parameters. Select the set you want to edit using the up/down directional keys and press <span style="white-space: nowrap;"><span class="keyboard-key nowrap" style="border: 1px solid #aaa; border-radius: 0.2em; -webkit-border-radius: 0.2em; -moz-border-radius: 0.2em; -o-border-radius: 0.2em; -ms-border-radius: 0.2em; -moz-box-shadow: 0.1em 0.2em 0.2em #ddd; -webkit-box-shadow: 0.1em 0.2em 0.2em #ddd; box-shadow: 0.1em 0.2em 0.2em #ddd; background-color: #f9f9f9; background-image: -moz-linear-gradient(top, #eee, #f9f9f9, #eee); background-image: -o-linear-gradient(top, #eee, #f9f9f9, #eee); background-image: -webkit-linear-gradient(top, #eee, #f9f9f9, #eee); background-image: linear-gradient(to bottom, #eee, #f9f9f9, #eee); padding: 0.1em 0.3em; font-family: inherit; font-size: 0.9em;" title="">e</span></span>. Information about each parameter is documented below.
+</p><p>Once you are happy with the parameters you have set, hit <span style="white-space: nowrap;"><span class="keyboard-key nowrap" style="border: 1px solid #aaa; border-radius: 0.2em; -webkit-border-radius: 0.2em; -moz-border-radius: 0.2em; -o-border-radius: 0.2em; -ms-border-radius: 0.2em; -moz-box-shadow: 0.1em 0.2em 0.2em #ddd; -webkit-box-shadow: 0.1em 0.2em 0.2em #ddd; box-shadow: 0.1em 0.2em 0.2em #ddd; background-color: #f9f9f9; background-image: -moz-linear-gradient(top, #eee, #f9f9f9, #eee); background-image: -o-linear-gradient(top, #eee, #f9f9f9, #eee); background-image: -webkit-linear-gradient(top, #eee, #f9f9f9, #eee); background-image: linear-gradient(to bottom, #eee, #f9f9f9, #eee); padding: 0.1em 0.3em; font-family: inherit; font-size: 0.9em;" title="">Esc</span></span> to get back to this screen, hit <span style="white-space: nowrap;"><span class="keyboard-key nowrap" style="border: 1px solid #aaa; border-radius: 0.2em; -webkit-border-radius: 0.2em; -moz-border-radius: 0.2em; -o-border-radius: 0.2em; -ms-border-radius: 0.2em; -moz-box-shadow: 0.1em 0.2em 0.2em #ddd; -webkit-box-shadow: 0.1em 0.2em 0.2em #ddd; box-shadow: 0.1em 0.2em 0.2em #ddd; background-color: #f9f9f9; background-image: -moz-linear-gradient(top, #eee, #f9f9f9, #eee); background-image: -o-linear-gradient(top, #eee, #f9f9f9, #eee); background-image: -webkit-linear-gradient(top, #eee, #f9f9f9, #eee); background-image: linear-gradient(to bottom, #eee, #f9f9f9, #eee); padding: 0.1em 0.3em; font-family: inherit; font-size: 0.9em;" title="">F6</span></span> to save the values you just edited, and hit <span style="white-space: nowrap;"><span class="keyboard-key nowrap" style="border: 1px solid #aaa; border-radius: 0.2em; -webkit-border-radius: 0.2em; -moz-border-radius: 0.2em; -o-border-radius: 0.2em; -ms-border-radius: 0.2em; -moz-box-shadow: 0.1em 0.2em 0.2em #ddd; -webkit-box-shadow: 0.1em 0.2em 0.2em #ddd; box-shadow: 0.1em 0.2em 0.2em #ddd; background-color: #f9f9f9; background-image: -moz-linear-gradient(top, #eee, #f9f9f9, #eee); background-image: -o-linear-gradient(top, #eee, #f9f9f9, #eee); background-image: -webkit-linear-gradient(top, #eee, #f9f9f9, #eee); background-image: linear-gradient(to bottom, #eee, #f9f9f9, #eee); padding: 0.1em 0.3em; font-family: inherit; font-size: 0.9em;" title="">Enter</span></span> to start. The rest of the process is the same as basic <a href="/index.php/DF2014:World_generation" title="DF2014:World generation">world generation</a>.
+</p><p>The phases of the world generation process are (this order is not completely correct):
+</p>
+<ul><li>Preparing elevation...</li>
+<li>Setting temperature...</li>
+<li>Running rivers...</li>
+<li>Forming lakes and minerals...</li>
+<li>Growing vegetation...</li>
+<li>Verifying terrain...</li>
+<li>Importing wildlife...</li>
+<li>Recounting legends...</li>
+<li>Placing civilizations...</li>
+<li>Making cave civilizations...</li>
+<li>Making cave pops...</li>
+<li>Placing other beasts...</li>
+<li>Placing megabeasts...</li>
+<li>Placing good/evil...</li>
+<li>Placing caves...</li>
+<li>Prehistory generation</li>
+<li>Finalizing civ mats...</li>
+<li>Finalizing art...</li>
+<li>Finalizing uniforms...</li>
+<li>Finalizing sites...</li></ul>
+<h2><span class="mw-headline" id="World_painter">World painter</span></h2>
+<dl><dd><i>Main article: <a href="/index.php/DF2014:World_painter" title="DF2014:World painter">World painter</a></i></dd></dl>
+<p>The <b>world painter</b> tool allows you to paint features onto a map that is then used when generating a world.  It is very difficult to use properly, and tends to result in endless rejected worlds, unless you loosen or remove the restrictions placed on biomes and civilizations in the advanced settings.  That being said it is also a very powerful tool, and allows you to generate worlds more to your liking.
+</p><p>To access the world painter, hit <span style="white-space: nowrap;"><span class="keyboard-key nowrap" style="border: 1px solid #aaa; border-radius: 0.2em; -webkit-border-radius: 0.2em; -moz-border-radius: 0.2em; -o-border-radius: 0.2em; -ms-border-radius: 0.2em; -moz-box-shadow: 0.1em 0.2em 0.2em #ddd; -webkit-box-shadow: 0.1em 0.2em 0.2em #ddd; box-shadow: 0.1em 0.2em 0.2em #ddd; background-color: #f9f9f9; background-image: -moz-linear-gradient(top, #eee, #f9f9f9, #eee); background-image: -o-linear-gradient(top, #eee, #f9f9f9, #eee); background-image: -webkit-linear-gradient(top, #eee, #f9f9f9, #eee); background-image: linear-gradient(to bottom, #eee, #f9f9f9, #eee); padding: 0.1em 0.3em; font-family: inherit; font-size: 0.9em;" title="">e</span></span> to start editing the advanced parameters and finally hit <span style="white-space: nowrap;"><span class="keyboard-key nowrap" style="border: 1px solid #aaa; border-radius: 0.2em; -webkit-border-radius: 0.2em; -moz-border-radius: 0.2em; -o-border-radius: 0.2em; -ms-border-radius: 0.2em; -moz-box-shadow: 0.1em 0.2em 0.2em #ddd; -webkit-box-shadow: 0.1em 0.2em 0.2em #ddd; box-shadow: 0.1em 0.2em 0.2em #ddd; background-color: #f9f9f9; background-image: -moz-linear-gradient(top, #eee, #f9f9f9, #eee); background-image: -o-linear-gradient(top, #eee, #f9f9f9, #eee); background-image: -webkit-linear-gradient(top, #eee, #f9f9f9, #eee); background-image: linear-gradient(to bottom, #eee, #f9f9f9, #eee); padding: 0.1em 0.3em; font-family: inherit; font-size: 0.9em;" title="">p</span></span> to open world painter. How to use the world painter is not entirely obvious so please check out the <a href="/index.php/DF2014:World_painter" title="DF2014:World painter">World painter</a> documentation to avoid frustration. (Losing may be fun, but frustration is not.)
+</p>
+<h2><span class="mw-headline" id="Editing_the_parameters_init_file">Editing the parameters init file</span></h2>
+<p>Parameter sets are stored in the <i>data/init/<a href="/index.php/DF2014:World_gen.txt" title="DF2014:World gen.txt">world_gen.txt</a></i> file, using <a href="/index.php/DF2014:World_token" title="DF2014:World token">world tokens</a>. You can copy and paste other players' sets of parameters into your <i>world_gen.txt</i> to use their parameter sets, and some are provided at <a href="/index.php?title=Pregenerated_worlds&amp;action=edit&amp;redlink=1" class="new" title="Pregenerated worlds (page does not exist)">Pregenerated worlds</a>. Another place to find parameter sets is the <a rel="nofollow" class="external text" href="http://www.bay12forums.com/smf/index.php?topic=101280.0">Worldgen cookbook</a> thread on the official forums.
+</p>
+<h2><span class="mw-headline" id="Advanced_parameters">Advanced parameters</span></h2>
+<p>To access advanced parameters, press <span style="white-space: nowrap;"><span class="keyboard-key nowrap" style="border: 1px solid #aaa; border-radius: 0.2em; -webkit-border-radius: 0.2em; -moz-border-radius: 0.2em; -o-border-radius: 0.2em; -ms-border-radius: 0.2em; -moz-box-shadow: 0.1em 0.2em 0.2em #ddd; -webkit-box-shadow: 0.1em 0.2em 0.2em #ddd; box-shadow: 0.1em 0.2em 0.2em #ddd; background-color: #f9f9f9; background-image: -moz-linear-gradient(top, #eee, #f9f9f9, #eee); background-image: -o-linear-gradient(top, #eee, #f9f9f9, #eee); background-image: -webkit-linear-gradient(top, #eee, #f9f9f9, #eee); background-image: linear-gradient(to bottom, #eee, #f9f9f9, #eee); padding: 0.1em 0.3em; font-family: inherit; font-size: 0.9em;" title="">e</span></span> when at the "Design New Worlds with Advanced Parameters" screen. This will bring you to an editable list of various guidelines that the world-gen process will use when creating your new world. The parameters are described below in the order that they appear in the list in the UI, not necessarily the order they appear in the configuration file. 
+</p><p>See <a href="/index.php/DF2014:World_token" title="DF2014:World token">world token</a> for an index that will help you look things up by token name.
+</p><p>There are essentially 4 types of controls for the generation of the surface map;
+</p><p><b>Terrain Parameters</b>: as described below, these 5 variables define the basic background world, how hot or cold it is, how much rainfall, how high the mountains are. The world automatically goes through the temperature range along the Y axis, although sometimes it will be hotter in the north, other times in the south. Minimum, maximum and X,Y variance can drastically alter the world. 
+</p><p><b>Weighted Meshes</b>: these are a way to fine-tune the amount of the 5 basic variables on the map. It can be used to set the specific distribution of different elevations or rainfall areas for example. 
+</p><p><b>Rejection Parameters</b>: <i>Dwarf Fortress</i> has a 'belt-and-braces' approach to world generation. The above controls allow you to shape the world, then the rejection parameters throw it out if it isn't right! There are a number of rejection parameters for the number and degree of the 5 basic variables, for biome types etc. If the world does not meet the requirements of any one rejection parameter the world is rejected and re-randomised. Also see <a rel="nofollow" class="external text" href="http://dwarffortresswiki.org/index.php/DF2012:World_rejection">World Rejection</a>
+</p><p>There are also the feature-placing options such as rivers, mountain peaks, volcanoes and oceans, which can cause rejections if the terrain parameters don't allow enough suitable locations for the features to be placed. 
+</p><p>If you are experimenting with world design, one method would be to disable the rejection parameters and use the first two control types. Otherwise, any significant change will likely result in endless rejections.
+</p><p><br />
+</p>
+<h3><span class="mw-headline" id="Seed_values_2">Seed values</span></h3>
+<p>Here, you can enter specific seed values for different parts of the world generation process - different sequences of pseudorandom numbers are used for different parts, so you can use this to reproduce only the particular part of world generation from some previously generated world, if you want. Normally, you'll want to leave all of these set to Random, unless you're specifically trying to reproduce the results of another world generation run.
+</p><p><br />
+</p>
+<table class="prettytable anchortable" border="1" cellpadding="4" cellspacing="0" style="margin: 1em 1em 1em 0; background: #f9f9f9; border: 1px #aaa solid; border-collapse: collapse;">
+
+<tbody><tr bgcolor="#dddddd">
+<th>Token
+</th>
+<th>Example
+</th>
+<th>Notes
+</th></tr>
+<tr>
+<td><tt>[SEED:&lt;number&gt;]</tt>
+</td>
+<td><tt>[SEED:31337]</tt>
+</td>
+<td rowspan="4">
+<p>For each of these not in the config file, a random seed will be used.
+</p>
+</td></tr>
+<tr>
+<td><tt>[HISTORY_SEED:&lt;number&gt;]</tt>
+</td>
+<td><tt>[HISTORY_SEED:31337]</tt>
+</td></tr>
+<tr>
+<td><tt>[NAME_SEED:&lt;number&gt;]</tt>
+</td>
+<td><tt>[NAME_SEED:31337]</tt>
+</td></tr>
+<tr>
+<td><tt>[CREATURE_SEED:&lt;number&gt;]</tt>
+</td>
+<td><tt>[CREATURE_SEED:31337]</tt>
+</td></tr></tbody></table>
+<h3><span class="mw-headline" id="Embark_Points">Embark Points</span></h3>
+<p>This controls the number of points that you have for skills and equipment when you embark in fortress mode. Turning this value up will allow games started in this world to start with more skilled dwarves with better equipment. Normally, you can do just fine by leaving this value set to default, but you might want to turn it up for experimental/testing purposes or to help dwarves survive in a particularly evil world, or turn it down for certain <a href="/index.php/DF2014:Challenges" class="mw-redirect" title="DF2014:Challenges">challenges</a>. The highest amount this value can be set to is 10,000.
+</p>
+<table class="prettytable anchortable" border="1" cellpadding="4" cellspacing="0" style="margin: 1em 1em 1em 0; background: #f9f9f9; border: 1px #aaa solid; border-collapse: collapse;">
+
+<tbody><tr bgcolor="#dddddd">
+<th>Token
+</th>
+<th>Example
+</th>
+<th>Notes
+</th></tr>
+<tr>
+<td><tt>[EMBARK_POINTS:&lt;number&gt;]</tt>
+</td>
+<td><tt>[EMBARK_POINTS:1504]</tt>
+</td>
+<td>Required
+</td></tr></tbody></table>
+<h3><span class="mw-headline" id="End_year">End year</span></h3>
+<p>This is how many years of history are generated for the world; basically the same as the History parameter in basic world gen, except that you can enter an exact value for the number of years. See <a href="/index.php/DF2014:World_generation#History" title="DF2014:World generation">History</a> for more info.
+</p><p>History is divided into "ages" which are determined by the <i>percentage</i> of megabeasts and semi-megabeasts killed at various points. One can attempt to make a world go through the ages more quickly by pumping up the ratio of semimegabeast to megabeast caves, the former of which are usually more killable than the regular megabeasts. This will net you more "Age of Legends", "Age of Heroes", etc.
+</p><p>For more information on the history aspect of the game, see <a href="/index.php/DF2014:Legends" title="DF2014:Legends">Legends</a> and <a href="/index.php/DF2014:Calendar#Ages" title="DF2014:Calendar">Ages</a>.
+</p>
+<table class="prettytable anchortable" border="1" cellpadding="4" cellspacing="0" style="margin: 1em 1em 1em 0; background: #f9f9f9; border: 1px #aaa solid; border-collapse: collapse;">
+
+<tbody><tr bgcolor="#dddddd">
+<th>Token
+</th>
+<th>Example
+</th>
+<th>Notes
+</th></tr>
+<tr>
+<td><tt>[END_YEAR:&lt;number&gt;]</tt>
+</td>
+<td><tt>[END_YEAR:1050]</tt>
+</td>
+<td>Required
+</td></tr></tbody></table>
+<h3><span class="mw-headline" id="Population_cap_after_civ_creation">Population cap after civ creation</span></h3>
+<p>This determines the maximum possible population of civilization member <a href="/index.php/DF2014:Historical_figure" title="DF2014:Historical figure">historical figures</a> alive at a given time during worldgen. Not all members of a civilization are historical figures. This tag does not directly influence the total population of civilized beings as it once did when populations were all historical figures, so the description is a bit confusing. You can enter -1 to make the historical population unlimited.
+</p><p>Each race may have up to 100 civilizations each, and each civilization a maximum population of 10,000. Civilizations, known as <i>entities</i> in the <a href="/index.php/DF2014:Raw_file" title="DF2014:Raw file">raw files</a>, have 3 or 4 basic variables that will greatly affect their final placement on the world map. See <a href="/index.php/DF2014:Entity_token#Population" title="DF2014:Entity token">Population (Entity Token)</a> for more information on interpreting/editing the raws if you need more precise control of civilization placement and total population numbers.
+</p><p>Huge historical figure populations can cause the size of history data to explode, cause history generation to take forever, lower FPS, and generally slow down the game.
+</p>
+<table class="prettytable anchortable" border="1" cellpadding="4" cellspacing="0" style="margin: 1em 1em 1em 0; background: #f9f9f9; border: 1px #aaa solid; border-collapse: collapse;">
+
+<tbody><tr bgcolor="#dddddd">
+<th>Token
+</th>
+<th>Example
+</th>
+<th>Notes
+</th></tr>
+<tr>
+<td><tt>[TOTAL_CIV_POPULATION:&lt;number&gt;]</tt>
+</td>
+<td><tt>[TOTAL_CIV_POPULATION:15000]</tt>
+</td>
+<td>Required
+</td></tr></tbody></table>
+<h3><span class="mw-headline" id="Site_cap_after_civ_creation">Site cap after civ creation</span></h3>
+<p>This controls the maximum number of towns and similar sites on the entire map. Raising the number will allow for more towns, etc. though the number of sites will ultimately still be limited by things like space, terrain, and population cap.  Note that this parameter controls only <b>"civilization" sites</b> like <a href="/index.php/DF2014:Town" title="DF2014:Town">towns</a> - other sites, such as <a href="/index.php/DF2014:Lair" title="DF2014:Lair">lairs</a>, will be added onto this maximum.  
+</p><p>After civilizations reach this cap, they will not spread out any more to place new cities. By default, the raws limit each civilization site to a population of 120, regardless of the race of the civilization - therefore, without editing the raws, the total population on the map can't go above site cap x 120.
+</p><p>Beware; increasing this too high can slow worldgen down by a lot. Another effect can be goblins (or <a href="/index.php/DF2014:Elf" title="DF2014:Elf">other civs</a>) sometimes overwhelming all other civs and/or flooding the world with their homes, leaving no good places to build your fortress, be it human or dwarven. If you choose a low cap to hasten world generation, the cap will likely be reached within years, stopping expansion of all civs. If you want a good, long history, you will have to adjust site/population cap and the number of civs many times to find one fulfilling your needs.
+</p>
+<table class="prettytable anchortable" border="1" cellpadding="4" cellspacing="0" style="margin: 1em 1em 1em 0; background: #f9f9f9; border: 1px #aaa solid; border-collapse: collapse;">
+
+<tbody><tr bgcolor="#dddddd">
+<th>Token
+</th>
+<th>Example
+</th>
+<th>Notes
+</th></tr>
+<tr>
+<td><tt>[SITE_CAP:&lt;number&gt;]</tt>
+</td>
+<td><tt>[SITE_CAP:1040]</tt>
+</td>
+<td>Required
+</td></tr></tbody></table>
+<h3><span class="mw-headline" id="Beast_control">Beast control</span></h3>
+<p>These parameters don't usually matter too much, but may matter for small numbers of beasts.
+</p>
+<h4><span class="mw-headline" id="Percentage_of_Megabeasts_and_Titans_Dead_for_Stoppage">Percentage of Megabeasts and Titans Dead for Stoppage</span></h4>
+<p>The world starts out with a certain number of powerful megabeast and titan entities in existence. If a percentage of the megabeast and titan population dies out during history generation, then history generation will stop early. For example, if the elimination value is 80%, and the generated history starts with 200 entities and 160 of those 200 entities are eliminated by historical events before the End Year is reached, history generation will stop immediately.
+</p><p>If you want to end the creation of your world at the beginning of a certain age, choose the following values:
+</p>
+<ul><li>Age of Legends: ~34%</li>
+<li>Age of Heroes: ~67%</li></ul>
+<p>If there are three or fewer titans or megabeasts in your world, the age will be given a special name reflecting the remaining megabeasts/titans, instead.
+</p>
+<h4><span class="mw-headline" id="Year_to_Begin_Checking_Megabeast_Percentage">Year to Begin Checking Megabeast Percentage</span></h4>
+<p>The percentage of dead <a href="/index.php/DF2014:Megabeast" title="DF2014:Megabeast">megabeasts</a> and <a href="/index.php/DF2014:Titan" title="DF2014:Titan">titans</a> for stoppage will not be checked until this year is reached in history generation. This can be used to ensure that a world reaches a certain year even if all of the megabeasts in the world are slain earlier.
+</p><p>If the number of living <a href="/index.php/DF2014:Megabeast" title="DF2014:Megabeast">megabeasts</a> and <a href="/index.php/DF2014:Titan" title="DF2014:Titan">titans</a> starts at or drops to less than four, then world generation will always stop if the current year is equal to or greater than the Year to Begin Checking Megabeast Percentage <i>regardless</i> of how many <a href="/index.php/DF2014:Megabeast" title="DF2014:Megabeast">megabeasts</a> and <a href="/index.php/DF2014:Titan" title="DF2014:Titan">titans</a> are dead — Percentage of Megabeasts and Titans Dead for Stoppage is ignored. The number of megabeasts and titans at the start of the world is set by the sum of the <a href="/index.php/DF2014:Advanced_world_generation#Max_Megabeasts_Caves" title="DF2014:Advanced world generation">Max Megabeasts Caves</a> and <a href="/index.php/DF2014:Advanced_world_generation#Titan_Parameters" title="DF2014:Advanced world generation">Titan Number</a> parameters.
+</p>
+<table class="prettytable anchortable" border="1" cellpadding="4" cellspacing="0" style="margin: 1em 1em 1em 0; background: #f9f9f9; border: 1px #aaa solid; border-collapse: collapse;">
+
+<tbody><tr bgcolor="#dddddd">
+<th>Token
+</th>
+<th>Example
+</th>
+<th>Notes
+</th></tr>
+<tr>
+<td><tt>[BEAST_END_YEAR:&lt;year&gt;:&lt;percentage or -1&gt;]</tt>
+</td>
+<td><tt>[BEAST_END_YEAR:200:80]</tt>
+</td>
+<td>Use -1 as percentage to disable. Year must still be at least 2.
+</td></tr></tbody></table>
+<h3><span class="mw-headline" id="Cull_Unimportant_Historical_Figures">Cull Unimportant Historical Figures</span></h3>
+<p>Whether or not the game ignores unimportant figures in history generation. The culling is many CPU-intensive steps in history generation but it saves memory and will speed up loading/saving games a bit. This does mean that the "unimportant" figures will not appear in Legends mode or in things like dwarf engravings, but they might not appear in engravings anyway.
+</p><p>Unimportant figures are creatures who suffer early deaths, never having offspring or killing anything named during history generation. For example, residents of goblin towers may get murdered by demons at a young age. After culling unimportant figures, Legends mode would say something like the demon has killed "an unknown creature at Eviltower in the year 102."
+</p>
+<table class="prettytable anchortable" border="1" cellpadding="4" cellspacing="0" style="margin: 1em 1em 1em 0; background: #f9f9f9; border: 1px #aaa solid; border-collapse: collapse;">
+
+<tbody><tr bgcolor="#dddddd">
+<th>Token
+</th>
+<th>Example
+</th>
+<th>Notes
+</th></tr>
+<tr>
+<td><tt>[CULL_HISTORICAL_FIGURES:&lt;0 or 1&gt;]</tt>
+</td>
+<td><tt>[CULL_HISTORICAL_FIGURES:0]</tt>
+</td>
+<td>0 = No, 1 = Yes
+</td></tr></tbody></table>
+<h3><span class="mw-headline" id="Reveal_All_Historical_Events">Reveal All Historical Events</span></h3>
+<p>Setting this to Yes will allow access to most information about the history of the world in <a href="/index.php/DF2014:Legends_mode" class="mw-redirect" title="DF2014:Legends mode">Legends mode</a>. All events will be revealed, but some <a href="/index.php/DF2014:Historical_figure" title="DF2014:Historical figure">Historical figures</a>, <a href="/index.php/DF2014:Site" title="DF2014:Site">Sites</a>, <a href="/index.php/DF2014:Region" title="DF2014:Region">Regions</a>, and <a href="/index.php/DF2014:Civilization" title="DF2014:Civilization">Civilizations</a> and other entities may not be, possibly because they are not known to any civilization. If set to No, then you will have to discover historical information in <a href="/index.php/DF2014:Adventure_mode" class="mw-redirect" title="DF2014:Adventure mode">adventure mode</a> or by instructing dwarves to make engravings.<sup style="font-size: 80%;">&#91;<a href="/index.php/DF2014_Talk:Advanced_world_generation" title="DF2014 Talk:Advanced world generation"><span title="The material near this tag is possibly inaccurate or nonfactual.">Verify</span></a>&#93;</sup>
+</p>
+<table class="prettytable anchortable" border="1" cellpadding="4" cellspacing="0" style="margin: 1em 1em 1em 0; background: #f9f9f9; border: 1px #aaa solid; border-collapse: collapse;">
+
+<tbody><tr bgcolor="#dddddd">
+<th>Token
+</th>
+<th>Example
+</th>
+<th>Notes
+</th></tr>
+<tr>
+<td><tt>[REVEAL_ALL_HISTORY:&lt;0 or 1&gt;]</tt>
+</td>
+<td><tt>[REVEAL_ALL_HISTORY::1]</tt>
+</td>
+<td>0 = No, 1 = Yes
+</td></tr></tbody></table>
+<h3><span class="mw-headline" id="Terrain_Parameters">Terrain Parameters</span></h3>
+<p>These determine how random values for terrain elevation, rainfall, temperature, drainage, volcanism, and savagery are generated. What biomes exist are then determined by how these factors overlap with each other.
+</p>
+<h4><span class="mw-headline" id="Minima_and_Maxima">Minima and Maxima</span></h4>
+<p>These are the absolute minimum and maximum values that can ever be generated for a particular map square characteristic. Changing these can cause the occurrence of certain <a href="/index.php/DF2014:Biome" title="DF2014:Biome">biomes</a> to become impossible, so modify these with care. Because of this problem, you may want to use <a href="#Weighted_Ranges">Weighted Ranges</a> instead.  By <i>subtly</i> tweaking the min and max values, vastly different maps can be made.
+</p>
+<h4><span class="mw-headline" id="X_and_Y_Variance">X and Y Variance</span></h4>
+<p>These control how wildly things like elevation and rainfall can vary between adjacent map squares. For example, if these values are set to the maximum of 3,200 for elevation then you will end up with more very low areas right next to very high areas. The number for X determines the east-west variance and the number for Y determines the north-south variance. By setting only one of these to a high value you can, for example, create horizontal or vertical bands of areas which are more similar to each other.
+</p><p>Generally speaking, raising both of these values will create a more random "patchwork" of many small biomes while setting both x and y values to 0 will cause every square on the map to use a single random value for the given characteristic.
+</p><p>For "patchwork" worlds to avoid being rejected, <a href="#Maximum_Number_of_Subregions">Maximum Number of Subregions</a> will probably need to be increased from the default.
+</p>
+<h4><span class="mw-headline" id="Elevation">Elevation</span></h4>
+<p>This controls the range of terrain elevations that can occur in the world.
+</p><p>Usually you just want to leave the min/max values alone. Raising the minimum elevation can, for example, make it impossible for oceans to exist. This does <b>not</b> directly control the number of available Z-levels at a particular site, though high maximum values may contribute to peaks which can raise the number of above ground Z-levels. In other words, a maximum elevation of 400 and minimum of 1 does not mean you get 400 Z-levels but it might increase the number of Z-levels somewhat in some regions compared to others.
+</p><p>Raising the variance will result in a more bumpy, uneven landscape.
+</p><p>Some biomes/features that are impacted by elevation:
+</p>
+<ul><li>A high minimum (above 99) means no oceans as they need elevations below 100.</li>
+<li>A low maximum (below 300) means no mountains as mountains need elevations above 300.</li>
+<li>Rivers will be placed when the elevation maximum is 104 or higher. Therefore, keeping both values above 100 and below 104 will prevent all water tiles from appearing.</li>
+<li>Mountain peaks can only form in squares with an elevation of 400.</li></ul>
+<h4><span class="mw-headline" id="Rainfall">Rainfall</span></h4>
+<p>Controls the amount of rainfall in each map square/area. Setting the minimum too high or the maximum too low can make the formation of certain biomes impossible. Rainfall causes it to <a href="/index.php/DF2014:Rain" class="mw-redirect" title="DF2014:Rain">rain</a> more in a given area, which can have various effects. Also makes more rivers appear on the world map.
+</p><p>Note that if <a href="#Do_Orographic_Precipitation_and_Rain_Shadows">orographic precipitation and rain shadows</a> is on, then mountains will cause additional variance in rainfall, so (for example) rainfall below the specified minimum can occur in the shadow of a mountain.  If you want the minimum and maximum for this parameter to be absolutely respected, you must turn off the orographic precipitation option.
+</p><p>Additionally, with Orthographic Precipitation turned on, orthographic precipitation and rain shadows will only occur in regions with greater than or equal to 50 drainage. <a rel="nofollow" class="external text" href="http://www.bay12forums.com/smf/index.php?topic=139916.0">[Report, reproduced 2022</a>]
+</p>
+<h4><span class="mw-headline" id="Temperature">Temperature</span></h4>
+<p>These parameters control how hot or cold various areas will be. If you lower the minimum and maximum values, the world will be colder overall, for example. As with the others, changing these values too much could make it impossible for certain biomes to exist. See <a href="/index.php/DF2014:Climate" title="DF2014:Climate">Climate</a> for more info.
+</p><p>These parameters form the "base" temperature for an area, and describe peak summer temperature in a scale that isn't used elsewhere in the game. This number also does not correspond 1:1 with the final climate. <a href="/index.php/DF2014:Temperature" title="DF2014:Temperature">Temperature</a> is always influenced by a number of variables, including elevation, time of year, thick forestation, and if <a href="/index.php/DF2014:Advanced_world_generation#Poles" title="DF2014:Advanced world generation">Poles</a> are enabled, latitude. These other variables are factored in after the temperature mesh is applied, and frequently bring temperatures above and below their set minimum and maximum values. <i>The inclusion of Poles is particularly strong in this regard, as it allows latitude to raise and/or lower temperatures by more than 75 degrees Celsius! That said, the temperatures aren't raised or lowered by more than about 65 degrees past the set minimum and maximum. Furthermore, for typical ranges the temperature will never be raised more than about 25 degrees past the maximum (but will still drop up to about 65 degrees Celsius below the minimum).</i> (unsure about exact values, research needed)
+</p><p>With a maximum temperature of 9 degrees, elf (elven) civilizations won't spawn.
+Humans need at least 0 degrees.
+</p>
+<h4><span class="mw-headline" id="Drainage">Drainage</span></h4>
+<p>Changing drainage parameters will change the way water-affected biomes are formed. Low drainage will contribute to the formation of <a href="/index.php/DF2014:Lake" title="DF2014:Lake">lakes</a>, <a href="/index.php/DF2014:River" title="DF2014:River">rivers</a>, and <a href="/index.php/DF2014:Swamp" class="mw-redirect" title="DF2014:Swamp">swamps</a>. High drainage will cause water to sink into the ground rather than sit on the surface, which is important for forming hills.
+</p><p>Lower drainage values have been reported to contribute to the formation of thicker soil layers, though it is currently unknown exactly how other factors (such as elevation or perhaps rain) impact soil formation.
+</p>
+<h4><span class="mw-headline" id="Volcanism">Volcanism</span></h4>
+<p>Volcanism controls the occurrence of igneous <a href="/index.php/DF2014:Layer" class="mw-redirect" title="DF2014:Layer">Layers</a>, and the formation of volcanoes. For a volcano to form, a square must have a volcanism value of 100 so reducing the maximum from 100 will make volcanoes impossible. Raising the minimum will increase the rarity of non-igneous layers.
+</p><p>Setting the minimum to a high value is not a good way to produce multiple volcanoes, as you are likely to get a "Volcanism not evenly distributed" rejection. Instead use the Minimum Number of Volcanoes parameter and possibly adjust the weighted ranges for volcanism as described below.
+</p>
+<h4><span class="mw-headline" id="Savagery">Savagery</span></h4>
+<p>These parameters control the level of <a href="/index.php/DF2014:Surroundings#Savage" title="DF2014:Surroundings">savagery</a> on the map. Raising the minimum savagery too high may make it impossible for certain races to exist, and similarly lowering the maximum too far can make it impossible for certain creatures to exist. The largest chance of having unusable maps comes from too high of a savagery value.
+</p>
+<h4><span class="mw-headline" id="Configuration_Tokens">Configuration Tokens</span></h4>
+<table class="prettytable anchortable" border="1" cellpadding="4" cellspacing="0" style="margin: 1em 1em 1em 0; background: #f9f9f9; border: 1px #aaa solid; border-collapse: collapse;">
+
+<tbody><tr bgcolor="#dddddd">
+<th>Token
+</th>
+<th>Example
+</th>
+<th>Notes
+</th></tr>
+<tr>
+<td><tt>[ELEVATION:&lt;min&gt;:&lt;max&gt;:&lt;x variance&gt;:&lt;y variance&gt;]</tt>
+</td>
+<td><tt>[ELEVATION:1:400:401:401]</tt>
+</td>
+<td>Range: 0 to 400<br />Maximum of 400 required for mountain peaks.<br />Variance range: 0-3200
+</td></tr>
+<tr>
+<td><tt>[RAINFALL:&lt;min&gt;:&lt;max&gt;:&lt;x variance&gt;:&lt;y variance&gt;]</tt>
+</td>
+<td><tt>[RAINFALL:0:100:200:200]</tt>
+</td>
+<td>Range: 0 to 100 <br />Variance range: 0-3200
+</td></tr>
+<tr>
+<td><tt>[TEMPERATURE:&lt;min&gt;:&lt;max&gt;:&lt;x variance&gt;:&lt;y variance&gt;]</tt>
+</td>
+<td><tt>[TEMPERATURE:25:75:200:200]</tt>
+</td>
+<td>Range: -1000 to 1000 <br />Variance range: 0-3200
+</td></tr>
+<tr>
+<td><tt>[DRAINAGE:&lt;min&gt;:&lt;max&gt;:&lt;x variance&gt;:&lt;y variance&gt;]</tt>
+</td>
+<td><tt>[DRAINAGE:0:100:200:200]</tt>
+</td>
+<td>Range: 0 to 100 <br />Variance range: 0-3200
+</td></tr>
+<tr>
+<td><tt>[VOLCANISM:&lt;min&gt;:&lt;max&gt;:&lt;x variance&gt;:&lt;y variance&gt;]</tt>
+</td>
+<td><tt>[VOLCANISM:1:100:200:200]</tt>
+</td>
+<td>Range: 0 to 100<br />Maximum of 100 required for volcanoes. <br />Variance range: 0-3200
+</td></tr>
+<tr>
+<td><tt>[SAVAGERY:&lt;min&gt;:&lt;max&gt;:&lt;x variance&gt;:&lt;y variance&gt;]</tt>
+</td>
+<td><tt>[SAVAGERY:1:100:200:200]</tt>
+</td>
+<td>Range: 0 to 100 <br />Variance range: 0-3200
+</td></tr></tbody></table>
+<h3><span class="mw-headline" id="Terrain_Mesh_Sizes_and_Weights">Terrain Mesh Sizes and Weights</span></h3>
+<p>These parameters make it possible to influence the number of squares in a particular range, without making conditions outside of that range impossible. For example, you can make it possible for many more low-elevation squares to exist without making it impossible for high elevations to form. Changing these parameters is often preferable to simply changing the min/max values.
+</p><p>The basic steps of applying weighted ranges are as follows:
+</p>
+<ol><li>Create a grid with 2<sup><i>MeshSize</i> - 1</sup> tiles in both X and Y direction.</li>
+<li>Set the intersection points of the grid lines to a random value according to the weighted ranges.</li>
+<li>Smooth out the area between the intersection points.</li>
+<li>Add noise according to the variance parameters.</li></ol>
+<p>where <i>MeshSize</i> is the raw parameter value found in the world_gen.txt. See the image on the right for an example.
+</p>
+<div class="thumb tright"><div class="thumbinner" style="width:302px;"><a href="/index.php/File:World_map-large-32x32-elevation-mesh.png" class="image"><img alt="" src="/images/thumb/8/8a/World_map-large-32x32-elevation-mesh.png/300px-World_map-large-32x32-elevation-mesh.png" decoding="async" width="300" height="300" class="thumbimage" srcset="/images/thumb/8/8a/World_map-large-32x32-elevation-mesh.png/450px-World_map-large-32x32-elevation-mesh.png 1.5x, /images/thumb/8/8a/World_map-large-32x32-elevation-mesh.png/600px-World_map-large-32x32-elevation-mesh.png 2x" /></a>  <div class="thumbcaption"><div class="magnify"><a href="/index.php/File:World_map-large-32x32-elevation-mesh.png" class="internal" title="Enlarge"></a></div>A large world generated with an Elevation Mesh Size of 32×32 and range weights set to 1:0:0:0:1 (i.e., only extreme high and low elevations). Note how the grid intersections are either set very high or very low and the space between them is smoothed out.</div></div></div>
+<h4><span id="Mesh_Size/Weighted_Ranges"></span><span class="mw-headline" id="Mesh_Size.2FWeighted_Ranges">Mesh Size/Weighted Ranges</span></h4>
+<p>Mesh size determines how many grid tiles there will be. Setting this to Ignore will cause the weighted range settings to be ignored for that terrain characteristic. As an example, setting it to 2×2 means the grid will be 2 times 2 tiles large and there will be 3×3 for a total of 9 intersection points. On a pocket world, this means one grid tile will be 8×8 world tiles large, whereas on a large world, one grid tile will be 128×128 world tiles. Note that the highest possible value for a given world size will always make the grid tiles 8×8 world tiles large.
+</p><p><br />
+If mesh size is set to something other than Ignore, these weights will be applied at the granularity of the selected mesh size for purposes of generating random values in each range. This allows random number generation to be non-linear for the given terrain characteristic.
+</p><p>For example, if the Elevation Weighted Range parameters were set to (starting with the 0%-20% range) 60:10:10:10:10 (these values do not have to add up to any particular number) and elevation min and max are set to 1 and 400 respectively then about 60% of the grid line intersection points (on average) will be set to an elevation in the range of 1-80 (0% to 20%), and the other ranges (20%-40%, 40%-60%, etc.) will be represented by around 10% of the intersection points each. The exact distribution is still left up to chance though <i>on average</i> it will be close to this specification.
+</p><p>Weighted ranges do not make rejection checks, although they can be responsible for many rejections if you neglect to adjust or disable some of the <a href="#Minimum_Number_of_Mid.2FLow.2FHigh_Characteristic_Squares">Minimum Number of Mid/Low/High Characteristic Squares</a> for example.
+</p>
+<h4><span class="mw-headline" id="Interaction_between_Mesh_Size_and_Variance">Interaction between Mesh Size and Variance</span></h4>
+<p>The end result can vary greatly depending on how the corresponding <a href="#X_and_Y_Variance">X and Y Variance</a> parameters are set. First of all, if the variance is too large the noise it adds can completely negate the effect of the weighted ranges. For instance, with a 2×2 mesh, the default variance parameters are high enough that usually the mesh grid can hardly be recognized. How strong the variance's effect is, is also dependent on the mesh size. Having a larger mesh size (i.e. smaller grid tiles) means the variance also has to be higher for a visible effect. For instance, with a variance of 400, the effects are clearly visible with a 2×2 mesh and barely visible at all with a 8×8 mesh. Note that this effect is directly dependent on the mesh size and not, as one might expect, on the actual size of the grid tiles. This means, that a large world with a 2×2 mesh will look essentially the same as a pocket world with a 2×2 mesh, only stretched to 256 times the size.
+</p><p>Also see this <a rel="nofollow" class="external text" href="http://www.bay12forums.com/smf/index.php?topic=139916.0">forum post</a> for more details.
+</p>
+<h4><span class="mw-headline" id="Configuration_Tokens_2">Configuration Tokens</span></h4>
+<table class="prettytable anchortable" border="1" cellpadding="4" cellspacing="0" style="margin: 1em 1em 1em 0; background: #f9f9f9; border: 1px #aaa solid; border-collapse: collapse;">
+
+<tbody><tr bgcolor="#dddddd">
+<th>Token
+</th>
+<th>Example
+</th>
+<th>Notes
+</th></tr>
+<tr>
+<td><tt>[ELEVATION_FREQUENCY:&lt;mesh&gt;:&lt;0-20 weight&gt;:&lt;20-40 weight&gt;:&lt;40-60 weight&gt;:&lt;60-80 weight&gt;:&lt;80-100 weight&gt;]</tt>
+</td>
+<td><tt>[ELEVATION_FREQUENCY:2:1:2:3:4:5]</tt>
+</td>
+<td rowspan="6">Valid mesh values:
+<p>1 = Ignore
+</p><p>2 = 2x2
+</p><p>3 = 4x4
+</p><p>4 = 8x8
+</p><p>5 = 16x16
+</p><p>6 = 32x32
+</p><p>(limited by world size) 
+</p>
+</td></tr>
+<tr>
+<td><tt>[RAIN_FREQUENCY:&lt;mesh&gt;:&lt;0-20 weight&gt;:&lt;20-40 weight&gt;:&lt;40-60 weight&gt;:&lt;60-80 weight&gt;:&lt;80-100 weight&gt;]</tt>
+</td>
+<td><tt>[RAIN_FREQUENCY:3:1:2:3:4:5]</tt>
+</td></tr>
+<tr>
+<td><tt>[DRAINAGE_FREQUENCY:&lt;mesh&gt;:&lt;0-20 weight&gt;:&lt;20-40 weight&gt;:&lt;40-60 weight&gt;:&lt;60-80 weight&gt;:&lt;80-100 weight&gt;]</tt>
+</td>
+<td><tt>[DRAINAGE_FREQUENCY:4:1:2:3:4:5]</tt>
+</td></tr>
+<tr>
+<td><tt>[TEMPERATURE_FREQUENCY:&lt;mesh&gt;:&lt;0-20 weight&gt;:&lt;20-40 weight&gt;:&lt;40-60 weight&gt;:&lt;60-80 weight&gt;:&lt;80-100 weight&gt;]</tt>
+</td>
+<td><tt>[TEMPERATURE_FREQUENCY:1:1:1:1:1:1]</tt>
+</td></tr>
+<tr>
+<td><tt>[SAVAGERY_FREQUENCY:&lt;mesh&gt;:&lt;0-20 weight&gt;:&lt;20-40 weight&gt;:&lt;40-60 weight&gt;:&lt;60-80 weight&gt;:&lt;80-100 weight&gt;]</tt>
+</td>
+<td><tt>[SAVAGERY_FREQUENCY:5:1:2:3:4:5]</tt>
+</td></tr>
+<tr>
+<td><tt>[VOLCANISM_FREQUENCY:&lt;mesh&gt;:&lt;0-20 weight&gt;:&lt;20-40 weight&gt;:&lt;40-60 weight&gt;:&lt;60-80 weight&gt;:&lt;80-100 weight&gt;]</tt>
+</td>
+<td><tt>[VOLCANISM_FREQUENCY:1:1:1:1:1:1]</tt>
+</td></tr></tbody></table>
+<h3><span class="mw-headline" id="Poles">Poles</span></h3>
+<p>With this, you can influence how polar regions are added. The poles can be on the north or south edge, and the equator will be on the opposite edge, or in the middle if there are two poles. If poles are set to NONE, then there will be no seasonal changes in the weather (e.g. no winter snow in temperate biomes).
+</p>
+<table class="prettytable anchortable" border="1" cellpadding="4" cellspacing="0" style="margin: 1em 1em 1em 0; background: #f9f9f9; border: 1px #aaa solid; border-collapse: collapse;">
+
+<tbody><tr bgcolor="#dddddd">
+<th>Token
+</th>
+<th>Example
+</th>
+<th>Notes
+</th></tr>
+<tr>
+<td><tt>[POLE:&lt;placement&gt;]</tt>
+</td>
+<td><tt>[POLE:NORTH]</tt>
+</td>
+<td>Viable options: NONE, NORTH_OR_SOUTH, NORTH_AND_OR_SOUTH, NORTH, SOUTH, NORTH_AND_SOUTH
+</td></tr></tbody></table>
+<h3><span class="mw-headline" id="Minimum_Mountain_Peak_Number">Minimum Mountain Peak Number</span></h3>
+<p>This will cause the world to be rejected if fewer than this many peaks (based on elevation) are present on the map. EG: elevations of 400 must be possible for mountain peaks to occur. If set to zero, then worlds will not be rejected based on number of peaks.
+</p><p>You may need to adjust elevation parameters, such as the highest weighted range, in order to get the desired number of elevation-400 squares needed for larger numbers of peaks. Like volcanoes, mountain peaks can make embark zones more interesting, but other than that, they don't appear to "do" anything special. Reportedly, they do increase the highest Z-level above ground in all embark zones in the same region, even if the selected embark zone does not include the peak.
+</p>
+<table class="prettytable anchortable" border="1" cellpadding="4" cellspacing="0" style="margin: 1em 1em 1em 0; background: #f9f9f9; border: 1px #aaa solid; border-collapse: collapse;">
+
+<tbody><tr bgcolor="#dddddd">
+<th>Token
+</th>
+<th>Example
+</th>
+<th>Notes
+</th></tr>
+<tr>
+<td><tt>[PEAK_NUMBER_MIN:&lt;number&gt;]</tt>
+</td>
+<td><tt>[PEAK_NUMBER_MIN:20]</tt>
+</td>
+<td>Elevations of 400 must occur for peaks to form.
+</td></tr></tbody></table>
+<h3><span class="mw-headline" id="Minimum_Partial_Edge_Oceans">Minimum Partial Edge Oceans</span></h3>
+<p>This will cause a world to be rejected unless there are at least this many oceans touching an edge of the map. If set to zero then worlds will not be rejected based on this criterion. Setting both this parameter and Minimum Complete Edge Oceans to values that total more than 4 when added together may cause all worlds to be rejected as you can't have both a partial and complete edge ocean on a given edge.
+</p>
+<table class="prettytable anchortable" border="1" cellpadding="4" cellspacing="0" style="margin: 1em 1em 1em 0; background: #f9f9f9; border: 1px #aaa solid; border-collapse: collapse;">
+
+<tbody><tr bgcolor="#dddddd">
+<th>Token
+</th>
+<th>Example
+</th>
+<th>Notes
+</th></tr>
+<tr>
+<td><tt>[PARTIAL_OCEAN_EDGE_MIN:&lt;number&gt;]</tt>
+</td>
+<td><tt>[PARTIAL_OCEAN_EDGE_MIN:2]</tt>
+</td>
+<td>Maximum of 4
+</td></tr></tbody></table>
+<h3><span class="mw-headline" id="Minimum_Complete_Edge_Oceans">Minimum Complete Edge Oceans</span></h3>
+<p>This will cause a world to be rejected unless there are at least this many oceans which completely cover an edge of the map. Since a square map only has 4 edges, the maximum value possible is 4. If set to zero then worlds will not be rejected based on this criterion but still might end up with complete edge oceans by chance.
+</p><p>Note that the ability for this many edge oceans to exist will be limited by elevation. Therefore, to actually create large oceans you will probably need to change things like the Elevation Mesh Size and Weighted Ranges to increase the number and distribution of very low elevation squares on the map. In addition, if Complete Edge Oceans is set to any value <i>other</i> than 0 or 4, you may need to lower elevation variance for at least one of the axes: if set too high, such as a variation of 1600 for both X and Y axes (the default for Large Island and Medium Island parameter sets), the game may generate worlds very slowly or even hang.<span class=""><sup><a href="#Bugs">Bug</a>:<a rel="nofollow" class="external text" href="https://dwarffortressbugtracker.com/view.php?id=565">565</a></sup></span>
+</p><p>Given appropriate weight, range, and variance values for things like elevation, a setting of:
+</p>
+<ul><li>1 results in a world that seems like a chunk of coastline. One edge of the map will be completely underwater and there will be ocean taking up much of the map on that side (think the east or west coast of the United States, the north coast of Canada, or southern Europe).  If your edge ocean happens to pick your world's frozen side, most of it will be glacier.</li>
+<li>2 results in another coastline along with the first one.  The map could end up looking something like Panama if the oceans pick opposite sides of the map.</li>
+<li>3 results in a peninsula, like Florida in the US.  There will be oceans surrounding 3 sides of the map, and land touching only one side of the map.</li>
+<li>4 results in one or more island(s) depending on things like elevation variance and weights. Regardless of whether you get one island or multiple islands, the entire map will be surrounded by water.</li></ul>
+<p>Unfortunately there's no easy way to control which oceans end up on which edges, except perhaps setting X and Y variance to different values.
+</p><p>Edge oceans will take up part of the other edges too.  For example, a full edge ocean on the east side will have part of the north and south sides underwater, but that does <i>not</i> add to the <i>partial</i> edge oceans count.
+</p>
+<table class="prettytable anchortable" border="1" cellpadding="4" cellspacing="0" style="margin: 1em 1em 1em 0; background: #f9f9f9; border: 1px #aaa solid; border-collapse: collapse;">
+
+<tbody><tr bgcolor="#dddddd">
+<th>Token
+</th>
+<th>Example
+</th>
+<th>Notes
+</th></tr>
+<tr>
+<td><tt>[COMPLETE_OCEAN_EDGE_MIN:&lt;number&gt;]</tt>
+</td>
+<td><tt>[COMPLETE_OCEAN_EDGE_MIN:0]</tt>
+</td>
+<td>Maximum of 4
+</td></tr></tbody></table>
+<h3><span class="mw-headline" id="Minimum_Volcano_Number">Minimum Volcano Number</span></h3>
+<p>Worlds with less than this number of volcanoes will be rejected. Note that this will not just create this many volcanoes at random; there must be at least this many squares with a Volcanism of 100. Therefore, adjusting Weighted Range for 80-100 to some higher value is recommended if you want to facilitate a large number of volcanoes. In addition, Maximum Volcanism must be set to 100 or squares with volcanism of 100 will be impossible, making volcanoes impossible.
+</p>
+<table class="prettytable anchortable" border="1" cellpadding="4" cellspacing="0" style="margin: 1em 1em 1em 0; background: #f9f9f9; border: 1px #aaa solid; border-collapse: collapse;">
+
+<tbody><tr bgcolor="#dddddd">
+<th>Token
+</th>
+<th>Example
+</th>
+<th>Notes
+</th></tr>
+<tr>
+<td><tt>[VOLCANO_MIN:&lt;number&gt;]</tt>
+</td>
+<td><tt>[VOLCANO_MIN:15]</tt>
+</td>
+<td>Volcanoes require a volcanism of 100 to occur.
+</td></tr></tbody></table>
+<h3><span class="mw-headline" id="Mineral_Scarcity">Mineral Scarcity</span></h3>
+<p>Controls the frequency at which minerals occur - setting this value lower will increase the amount and number of different types of ore present on a map, and the number/types of gems. The default value will result in a maximum of 2-4 metal ores per map (assuming you choose a good embark location) which may be limiting until the economy is fully implemented and desired metals can be traded for.
+</p><p>The options "Very Rare", "Rare", "Sparse", "Frequent", and "Everywhere" in the <a href="/index.php/DF2014:World_generation#Basic_World_Generation_Menu" title="DF2014:World generation">basic world generation menu</a> use the values 50000, 10000, 2500, 500 and 100 respectively.
+</p><p>According to <a rel="nofollow" class="external text" href="http://www.bay12forums.com/smf/index.php?topic=79018.msg2063804#msg2063804">research</a> by Shandra in v0.31.25, this is the relationship between the value of this setting and the approximate number of gems and ore:
+</p><p><a href="/index.php/File:MineralSetting_v25_limit10k.png" class="image"><img alt="MineralSetting v25 limit10k.png" src="/images/0/06/MineralSetting_v25_limit10k.png" decoding="async" width="759" height="570" /></a>
+</p><p>This is for the same 8x8 embark region in a world which is otherwise the same, except for the mineral scarcity parameter (although most of the detailed information comes from experiments with previous versions).
+</p>
+<table class="prettytable anchortable" border="1" cellpadding="4" cellspacing="0" style="margin: 1em 1em 1em 0; background: #f9f9f9; border: 1px #aaa solid; border-collapse: collapse;">
+
+<tbody><tr bgcolor="#dddddd">
+<th>Token
+</th>
+<th>Example
+</th>
+<th>Notes
+</th></tr>
+<tr>
+<td><tt>[MINERAL_SCARCITY:&lt;number&gt;]</tt>
+</td>
+<td><tt>[MINERAL_SCARCITY:2500]</tt>
+</td>
+<td>Range: 100 to 100,000
+</td></tr></tbody></table>
+<p><b>Note:</b> as of v0.34, low mineral scarcity settings do not cause rejections.
+</p>
+<h3><span class="mw-headline" id="Max_Megabeast_Caves">Max Megabeast Caves</span></h3>
+<p>This is the number of <a href="/index.php/DF2014:Megabeast" title="DF2014:Megabeast">megabeasts</a> placed at the beginning of history. Megabeasts are <a href="/index.php/DF2014:Hydra" title="DF2014:Hydra">hydras</a>, <a href="/index.php/DF2014:Bronze_colossus" title="DF2014:Bronze colossus">bronze colossuses</a>, <a href="/index.php/DF2014:Roc" title="DF2014:Roc">rocs</a>, and <a href="/index.php/DF2014:Dragon" title="DF2014:Dragon">dragons</a>, which are all placed in equal proportions <a rel="nofollow" class="external text" href="http://www.bay12forums.com/smf/index.php?topic=112465.msg3415177#msg3415177"><sup>data</sup></a>. 
+</p><p>Increasing this value can lead to early extinction of civilizations.
+</p>
+<table class="prettytable anchortable" border="1" cellpadding="4" cellspacing="0" style="margin: 1em 1em 1em 0; background: #f9f9f9; border: 1px #aaa solid; border-collapse: collapse;">
+
+<tbody><tr bgcolor="#dddddd">
+<th>Token
+</th>
+<th>Example
+</th>
+<th>Notes
+</th></tr>
+<tr>
+<td><tt>[MEGABEAST_CAP:&lt;number&gt;]</tt>
+</td>
+<td><tt>[MEGABEAST_CAP:75]</tt>
+</td>
+<td>Megabeasts count towards BEAST_END_YEAR calculation.
+</td></tr></tbody></table>
+<h3><span class="mw-headline" id="Max_Semi-Megabeast_Caves">Max Semi-Megabeast Caves</span></h3>
+<p>This is the number of <a href="/index.php/DF2014:Semi-megabeast" title="DF2014:Semi-megabeast">semi-megabeasts</a> placed at the beginning of history. Semimegabeasts are <a href="/index.php/DF2014:Giant" title="DF2014:Giant">giants</a>, <a href="/index.php/DF2014:Ettin" title="DF2014:Ettin">ettins</a>, <a href="/index.php/DF2014:Minotaur" title="DF2014:Minotaur">minotaurs</a>, and <a href="/index.php/DF2014:Cyclops" title="DF2014:Cyclops">cyclops</a>, which are placed in equal proportions <a rel="nofollow" class="external text" href="http://www.bay12forums.com/smf/index.php?topic=112465.msg3415188#msg3415188"><sup>data</sup></a>.
+</p>
+<table class="prettytable anchortable" border="1" cellpadding="4" cellspacing="0" style="margin: 1em 1em 1em 0; background: #f9f9f9; border: 1px #aaa solid; border-collapse: collapse;">
+
+<tbody><tr bgcolor="#dddddd">
+<th>Token
+</th>
+<th>Example
+</th>
+<th>Notes
+</th></tr>
+<tr>
+<td><tt>[SEMIMEGABEAST_CAP:&lt;number&gt;]</tt>
+</td>
+<td><tt>[SEMIMEGABEAST_CAP:150]</tt>
+</td>
+<td>Semimegabeasts do not count towards the BEAST_END_YEAR calculation.
+</td></tr></tbody></table>
+<h3><span class="mw-headline" id="Titan_Parameters">Titan Parameters</span></h3>
+<h4><span class="mw-headline" id="Number">Number</span></h4>
+<p>This controls the number of <a href="/index.php/DF2014:Titan" title="DF2014:Titan">titans</a> that exist at the beginning of history<a rel="nofollow" class="external text" href="http://www.bay12forums.com/smf/index.php?topic=112465.msg3415203#msg3415203"><sup>data</sup></a>. The number of forgotten beasts is unaffected by this parameter <a rel="nofollow" class="external text" href="http://www.bay12forums.com/smf/index.php?topic=112465.msg3415155#msg3415155"><sup>data</sup></a>.
+</p>
+<table class="prettytable anchortable" border="1" cellpadding="4" cellspacing="0" style="margin: 1em 1em 1em 0; background: #f9f9f9; border: 1px #aaa solid; border-collapse: collapse;">
+
+<tbody><tr bgcolor="#dddddd">
+<th>Token
+</th>
+<th>Example
+</th>
+<th>Notes
+</th></tr>
+<tr>
+<td><tt>[TITAN_NUMBER:&lt;number&gt;]</tt>
+</td>
+<td><tt>[TITAN_NUMBER:33]</tt>
+</td>
+<td>Titans count towards BEAST_END_YEAR calculation.
+</td></tr></tbody></table>
+<h4><span class="mw-headline" id="Attack_Population_Requirement">Attack Population Requirement</span></h4>
+<p><a href="/index.php/DF2014:Titan" title="DF2014:Titan">Titans</a> will begin to attack your fort once at least this many dwarves inhabit it, regardless of whether any other attack criteria have been met. This number defaults to 80, which isn't usually too difficult to deal with.
+</p>
+<h4><span class="mw-headline" id="Exported_Wealth_Requirement">Exported Wealth Requirement</span></h4>
+<p>Titans will begin to attack your fort once you have exported at least this many <a href="/index.php/DF2014:Currency" title="DF2014:Currency">dwarfbucks</a>-worth of goods, regardless of whether or not any other criteria have been met. This parameter defaults to None (disabled).
+</p>
+<h4><span class="mw-headline" id="Created_Wealth_Requirement">Created Wealth Requirement</span></h4>
+<p>Titans will begin to attack your fort once the fort's total wealth has reached this many <a href="/index.php/DF2014:Currency" title="DF2014:Currency">dwarfbucks</a> in value. This happens regardless of whether any of the other criteria, such as population, have been met; therefore, even with 1 dwarf, a fort could be attacked if the fort were worth at least this value.
+</p>
+<table class="prettytable anchortable" border="1" cellpadding="4" cellspacing="0" style="margin: 1em 1em 1em 0; background: #f9f9f9; border: 1px #aaa solid; border-collapse: collapse;">
+
+<tbody><tr bgcolor="#dddddd">
+<th>Token
+</th>
+<th>Example
+</th>
+<th>Notes
+</th></tr>
+<tr>
+<td><tt>[TITAN_ATTACK_TRIGGER:&lt;population&gt;:&lt;exp wealth&gt;:&lt;created wealth&gt;]</tt>
+</td>
+<td><tt>[TITAN_ATTACK_TRIGGER:80:0:100000]</tt>
+</td>
+<td>0 = None (disabled). Only one requirement must be met for an attack.
+</td></tr></tbody></table>
+<h3><span class="mw-headline" id="Number_of_Demon_Types">Number of Demon Types</span></h3>
+<p><a href="/index.php/DF2014:Demon" title="DF2014:Demon">Demons</a> are similar to <a href="/index.php/DF2014:Titan" title="DF2014:Titan">titans</a> and <a href="/index.php/DF2014:Forgotten_beast" title="DF2014:Forgotten beast">forgotten beasts</a>, in that they are procedurally generated, but unlike titans, they are not unique. Thus, many different types of demons will exist in the world, but there will be many members of each type. Setting this to zero means no demons will exist, limiting the amount of <a href="/index.php/DF2014:Fun" class="mw-redirect" title="DF2014:Fun">fun</a> you can have. Thanks to <a href="/index.php/DF2014:Underworld_spire" title="DF2014:Underworld spire">certain fun things</a>, fewer demon types also means fewer goblin civilizations<a rel="nofollow" class="external autonumber" href="http://www.bay12forums.com/smf/index.php?PHPSESSID=7348f68f41a9659443c05b2acf534e6c&amp;topic=112465.15">[1]</a>.You need at least 2 demon types, or goblin civilizations won't exist.
+</p>
+<table class="prettytable anchortable" border="1" cellpadding="4" cellspacing="0" style="margin: 1em 1em 1em 0; background: #f9f9f9; border: 1px #aaa solid; border-collapse: collapse;">
+
+<tbody><tr bgcolor="#dddddd">
+<th>Token
+</th>
+<th>Example
+</th>
+<th>Notes
+</th></tr>
+<tr>
+<td><tt>[DEMON_NUMBER:&lt;number&gt;]</tt>
+</td>
+<td><tt>[DEMON_NUMBER:52]</tt>
+</td>
+<td>0 to 1000
+</td></tr></tbody></table>
+<h3><span class="mw-headline" id="Number_of_Night_Troll_Types">Number of Night Troll Types</span></h3>
+<p>The number of different <a href="/index.php/DF2014:Night_troll" title="DF2014:Night troll">night trolls</a>, also procedurally generated, that will exist in the world. Setting this to zero means that the world will have no night trolls, custom or otherwise 
+</p>
+<table class="prettytable anchortable" border="1" cellpadding="4" cellspacing="0" style="margin: 1em 1em 1em 0; background: #f9f9f9; border: 1px #aaa solid; border-collapse: collapse;">
+
+<tbody><tr bgcolor="#dddddd">
+<th>Token
+</th>
+<th>Example
+</th>
+<th>Notes
+</th></tr>
+<tr>
+<td><tt>[NIGHT_TROLL_NUMBER:&lt;number&gt;]</tt>
+</td>
+<td><tt>[NIGHT_TROLL_NUMBER:77]</tt>
+</td>
+<td>0 to 1000
+</td></tr></tbody></table>
+<h3><span class="mw-headline" id="Number_of_Bogeyman_Types">Number of Bogeyman Types</span></h3>
+<p>The number of different <a href="/index.php/DF2014:Bogeyman" title="DF2014:Bogeyman">bogeyman</a> forms that will exist in the world. Bogeymen are procedurally generated, though their forms do not vary by much. Setting this to zero means that the world will have no bogeymen, custom or otherwise.
+</p>
+<table class="prettytable anchortable" border="1" cellpadding="4" cellspacing="0" style="margin: 1em 1em 1em 0; background: #f9f9f9; border: 1px #aaa solid; border-collapse: collapse;">
+
+<tbody><tr bgcolor="#dddddd">
+<th>Token
+</th>
+<th>Example
+</th>
+<th>Notes
+</th></tr>
+<tr>
+<td><tt>[BOGEYMAN_NUMBER:&lt;number&gt;]</tt>
+</td>
+<td><tt>[BOGEYMAN_NUMBER:27]</tt>
+</td>
+<td>0 to 1000
+</td></tr></tbody></table>
+<h3><span class="mw-headline" id="Number_of_Nightmare_Types">Number of Nightmare Types</span></h3>
+<p>The number of different <a href="/index.php/DF2014:Nightmare" title="DF2014:Nightmare">nightmare</a> forms that will exist in the world. Nightmares are procedurally generated. Setting this to zero means that the world will have no nightmares, custom or otherwise.
+</p>
+<table class="prettytable anchortable" border="1" cellpadding="4" cellspacing="0" style="margin: 1em 1em 1em 0; background: #f9f9f9; border: 1px #aaa solid; border-collapse: collapse;">
+
+<tbody><tr bgcolor="#dddddd">
+<th>Token
+</th>
+<th>Example
+</th>
+<th>Notes
+</th></tr>
+<tr>
+<td><tt>[NIGHTMARE_NUMBER:&lt;number&gt;]</tt>
+</td>
+<td><tt>[NIGHTMARE_NUMBER:27]</tt>
+</td>
+<td>0 to 1000
+</td></tr></tbody></table>
+<h3><span class="mw-headline" id="Number_of_Vampire_Curse_Types">Number of Vampire Curse Types</span></h3>
+<p>The number of different types of <a href="/index.php/DF2014:Vampire" title="DF2014:Vampire">vampires</a> that will exist in the world. Although they are generated at the start of a new world, they aren't different from each other. Setting this to zero means no vampires will exist.
+</p>
+<table class="prettytable anchortable" border="1" cellpadding="4" cellspacing="0" style="margin: 1em 1em 1em 0; background: #f9f9f9; border: 1px #aaa solid; border-collapse: collapse;">
+
+<tbody><tr bgcolor="#dddddd">
+<th>Token
+</th>
+<th>Example
+</th>
+<th>Notes
+</th></tr>
+<tr>
+<td><tt>[VAMPIRE_NUMBER:&lt;number&gt;]</tt>
+</td>
+<td><tt>[VAMPIRE_NUMBER:72]</tt>
+</td>
+<td>0 to 1000
+</td></tr></tbody></table>
+<h3><span class="mw-headline" id="Werebeast_Parameters">Werebeast Parameters</span></h3>
+<h4><span class="mw-headline" id="Number_of_Werebeast_Curse_Types">Number of Werebeast Curse Types</span></h4>
+<p>The number of different types of <a href="/index.php/DF2014:Werebeast" title="DF2014:Werebeast">werebeasts</a> that can exist in the world. It is common for werebeasts, unlike vampires, to assume many different forms and variations, the most well-known of these amount to different species of animals, from lizards, to wolves, to even bears. Setting this to zero means no werebeasts will exist, and will also remove a large amount of <a href="/index.php/DF2014:Fun" class="mw-redirect" title="DF2014:Fun">fun</a> from the game.
+</p>
+<table class="prettytable anchortable" border="1" cellpadding="4" cellspacing="0" style="margin: 1em 1em 1em 0; background: #f9f9f9; border: 1px #aaa solid; border-collapse: collapse;">
+
+<tbody><tr bgcolor="#dddddd">
+<th>Token
+</th>
+<th>Example
+</th>
+<th>Notes
+</th></tr>
+<tr>
+<td><tt>[WEREBEAST_NUMBER:&lt;number&gt;]</tt>
+</td>
+<td><tt>[WEREBEAST_NUMBER:58]</tt>
+</td>
+<td>0 to 1000
+</td></tr></tbody></table>
+<h4><span class="mw-headline" id="Attack_Population_Requirement_2">Attack Population Requirement</span></h4>
+<p>Werebeasts will begin to attack your fort once at least this many dwarves inhabit it, regardless of whether any other attack criteria have been met. This number defaults to 50 which will often be reached in the second year of the fort.
+</p>
+<h4><span class="mw-headline" id="Exported_Wealth_Requirement_2">Exported Wealth Requirement</span></h4>
+<p>Werebeasts will begin to attack your fort once you have exported at least this many <a href="/index.php/DF2014:Currency" title="DF2014:Currency">dwarfbucks</a>-worth of goods, regardless of whether or not any other criteria have been met. This parameter defaults to 5000.
+</p>
+<h4><span class="mw-headline" id="Created_Wealth_Requirement_2">Created Wealth Requirement</span></h4>
+<p>Werebeasts will begin to attack your fort once the fort's total wealth has reached this many <a href="/index.php/DF2014:Currency" title="DF2014:Currency">dwarfbucks</a> in value. This happens regardless of whether any of the other criteria, such as population, have been met; therefore, even with 1 dwarf, a fort could be attacked if the fort were worth at least this value.
+</p>
+<table class="prettytable anchortable" border="1" cellpadding="4" cellspacing="0" style="margin: 1em 1em 1em 0; background: #f9f9f9; border: 1px #aaa solid; border-collapse: collapse;">
+
+<tbody><tr bgcolor="#dddddd">
+<th>Token
+</th>
+<th>Example
+</th>
+<th>Notes
+</th></tr>
+<tr>
+<td><tt>[WEREBEAST_ATTACK_TRIGGER:&lt;population&gt;:&lt;exp wealth&gt;:&lt;created wealth&gt;]</tt>
+</td>
+<td><tt>[WEREBEAST_ATTACK_TRIGGER:50:5000:50000]</tt>
+</td>
+<td>0 = None (disabled). Only one requirement must be met for an attack.
+</td></tr></tbody></table>
+<h3><span class="mw-headline" id="Number_of_Secret_Types">Number of Secret Types</span></h3>
+<p>The number of secrets that exist in the world. Currently, all secrets are secrets of life and death, and the ones holding these secrets are <a href="/index.php/DF2014:Necromancer" title="DF2014:Necromancer">necromancers</a>, thus, setting this to zero means that no necromancers will appear.
+Non-necromancer towers can still appear (extremely rarely) with zero secrets, constructed by independent undead groups.
+The primary difference between having 1 or 1000 secrets is the chance of your world having any necromancer towers at all. With 1, this chance is low. With the default number, it's seemingly guaranteed.
+Even with 1 secret, if you have any necromancer towers at all, it is likely a great number will quickly appear in world generation (though this isn't guaranteed).
+</p>
+<table class="prettytable anchortable" border="1" cellpadding="4" cellspacing="0" style="margin: 1em 1em 1em 0; background: #f9f9f9; border: 1px #aaa solid; border-collapse: collapse;">
+
+<tbody><tr bgcolor="#dddddd">
+<th>Token
+</th>
+<th>Example
+</th>
+<th>Notes
+</th></tr>
+<tr>
+<td><tt>[SECRET_NUMBER:&lt;number&gt;]</tt>
+</td>
+<td><tt>[SECRET_NUMBER:52]</tt>
+</td>
+<td>0 to 1000
+</td></tr></tbody></table>
+<h3><span class="mw-headline" id="Number_of_Regional_Interaction_Types">Number of Regional Interaction Types</span></h3>
+<p>The number of interactions that can be caused in regions, which may incorporate evil rain and cloud types. Currently, only evil region interactions are generated this way.
+</p>
+<table class="prettytable anchortable" border="1" cellpadding="4" cellspacing="0" style="margin: 1em 1em 1em 0; background: #f9f9f9; border: 1px #aaa solid; border-collapse: collapse;">
+
+<tbody><tr bgcolor="#dddddd">
+<th>Token
+</th>
+<th>Example
+</th>
+<th>Notes
+</th></tr>
+<tr>
+<td><tt>[REGIONAL_INTERACTION_NUMBER:&lt;number&gt;]</tt>
+</td>
+<td><tt>[REGIONAL_INTERACTION_NUMBER:20]</tt>
+</td>
+<td>0 to 1000
+</td></tr></tbody></table>
+<h3><span class="mw-headline" id="Number_of_Disturbance_Interaction_Types">Number of Disturbance Interaction Types</span></h3>
+<p>The number of different <a href="/index.php/DF2014:Mummy" title="DF2014:Mummy">disturbed dead</a> <sup style="font-size: 80%;">&#91;<a href="/index.php/DF2014_Talk:Advanced_world_generation" title="DF2014 Talk:Advanced world generation"><span title="The material near this tag is possibly inaccurate or nonfactual.">Verify</span></a>&#93;</sup> that can exist in the world. Setting this to zero, while being pointless as is, (since you're never forced to enter a tomb anyway), will most likely prevent any toilet roll spooks from appearing, but it may or may not also prevent the existence of the pyramids which house them too.
+</p>
+<table class="prettytable anchortable" border="1" cellpadding="4" cellspacing="0" style="margin: 1em 1em 1em 0; background: #f9f9f9; border: 1px #aaa solid; border-collapse: collapse;">
+
+<tbody><tr bgcolor="#dddddd">
+<th>Token
+</th>
+<th>Example
+</th>
+<th>Notes
+</th></tr>
+<tr>
+<td><tt>[DISTURBANCE_INTERACTION_NUMBER:&lt;number&gt;]</tt>
+</td>
+<td><tt>[DISTURBANCE_INTERACTION_NUMBER:10]</tt>
+</td>
+<td>0 to 1000
+</td></tr></tbody></table>
+<h3><span id="Number_of_Evil_Cloud_/_Evil_Rain_Types"></span><span class="mw-headline" id="Number_of_Evil_Cloud_.2F_Evil_Rain_Types">Number of Evil Cloud / Evil Rain Types</span></h3>
+<p>This number specifies <a href="/index.php/DF2014:Weather#Evil_weather" title="DF2014:Weather">the total amount of various face-melting, eye-boiling, and zombifyingly-fun</a> clouds of pure evil may appear in your world. Setting this to zero means you no longer will ever have to deal with encroaching dust walls of doom in that world. I'd keep this value low...
+</p>
+<table class="prettytable anchortable" border="1" cellpadding="4" cellspacing="0" style="margin: 1em 1em 1em 0; background: #f9f9f9; border: 1px #aaa solid; border-collapse: collapse;">
+
+<tbody><tr bgcolor="#dddddd">
+<th>Token
+</th>
+<th>Example
+</th>
+<th>Notes
+</th></tr>
+<tr>
+<td><tt>[EVIL_CLOUD_NUMBER:&lt;number&gt;]</tt>
+</td>
+<td><tt>[EVIL_CLOUD_NUMBER:45]</tt>
+</td>
+<td>0 to 1000
+</td></tr></tbody></table>
+<p>The latter number states how many different types of green-ooze drenchers, disconcerting blood-showers, and sickly yellow slime-baths can occur in your world. Compared to evil clouds though, this one hardly is worth stressing out about, usually.... Setting this to zero means the only semi-solid to fully-liquid fluids to fall from the sky will be pure H2O. 
+</p>
+<table class="prettytable anchortable" border="1" cellpadding="4" cellspacing="0" style="margin: 1em 1em 1em 0; background: #f9f9f9; border: 1px #aaa solid; border-collapse: collapse;">
+
+<tbody><tr bgcolor="#dddddd">
+<th>Token
+</th>
+<th>Example
+</th>
+<th>Notes
+</th></tr>
+<tr>
+<td><tt>[EVIL_RAIN_NUMBER:&lt;number&gt;]</tt>
+</td>
+<td><tt>[EVIL_RAIN_NUMBER:352]</tt>
+</td>
+<td>0 to 1000
+</td></tr></tbody></table>
+<h3><span class="mw-headline" id="Generate_Divine_Materials">Generate Divine Materials</span></h3>
+<p>This turns the generation of <a href="/index.php/DF2014:Divine_metal" title="DF2014:Divine metal">divine metals</a> on or off. It does not influence the creation of <a href="/index.php/DF2014:Vault" title="DF2014:Vault">vaults</a>. Probably determines whenever or not using divination dice spawns weapons.
+</p>
+<table class="prettytable anchortable" border="1" cellpadding="4" cellspacing="0" style="margin: 1em 1em 1em 0; background: #f9f9f9; border: 1px #aaa solid; border-collapse: collapse;">
+
+<tbody><tr bgcolor="#dddddd">
+<th>Token
+</th>
+<th>Example
+</th>
+<th>Notes
+</th></tr>
+<tr>
+<td><tt>[GENERATE_DIVINE_MATERIALS:&lt;1 or 0&gt;]</tt>
+</td>
+<td><tt>[GENERATE_DIVINE_MATERIALS:1]</tt>
+</td>
+<td>1/0 = Yes/No
+</td></tr></tbody></table>
+<h3><span id="Allow_Divination,_Experiments,_and_Necromancy_types"></span><span class="mw-headline" id="Allow_Divination.2C_Experiments.2C_and_Necromancy_types">Allow Divination, Experiments, and Necromancy types</span></h3>
+<p>These allow or disallow <a href="/index.php/DF2014:Die" title="DF2014:Die">divination</a>, demon or necromancer <a href="/index.php/DF2014:Experiment" title="DF2014:Experiment">experiments</a>, and the more advanced <a href="/index.php/DF2014:Necromancer" title="DF2014:Necromancer">necromancer</a> abilities.
+</p>
+<table class="prettytable anchortable" border="1" cellpadding="4" cellspacing="0" style="margin: 1em 1em 1em 0; background: #f9f9f9; border: 1px #aaa solid; border-collapse: collapse;">
+
+<tbody><tr bgcolor="#dddddd">
+<th>Token
+</th>
+<th>Example
+</th>
+<th>Notes
+</th></tr>
+<tr>
+<td><tt>[ALLOW_DIVINATION:&lt;1 or 0&gt;]</tt>
+</td>
+<td><tt>[ALLOW_DIVINATION:1]</tt>
+</td>
+<td>1/0 = Yes/No
+</td></tr>
+<tr>
+<td><tt>[ALLOW_DEMONIC_EXPERIMENTS:&lt;1 or 0&gt;]</tt>
+</td>
+<td><tt>[ALLOW_DEMONIC_EXPERIMENTS:1]</tt>
+</td>
+<td>1/0 = Yes/No
+</td></tr>
+<tr>
+<td><tt>[ALLOW_NECROMANCER_EXPERIMENTS:&lt;1 or 0&gt;]</tt>
+</td>
+<td><tt>[ALLOW_NECROMANCER_EXPERIMENTS:1]</tt>
+</td>
+<td>1/0 = Yes/No
+</td></tr>
+<tr>
+<td><tt>[ALLOW_NECROMANCER_LIEUTENANTS:&lt;1 or 0&gt;]</tt>
+</td>
+<td><tt>[ALLOW_NECROMANCER_LIEUTENANTS:1]</tt>
+</td>
+<td>1/0 = Yes/No
+</td></tr>
+<tr>
+<td><tt>[ALLOW_NECROMANCER_GHOULS:&lt;1 or 0&gt;]</tt>
+</td>
+<td><tt>[ALLOW_NECROMANCER_GHOULS:1]</tt>
+</td>
+<td>1/0 = Yes/No
+</td></tr>
+<tr>
+<td><tt>[ALLOW_NECROMANCER_SUMMONS:&lt;1 or 0&gt;]</tt>
+</td>
+<td><tt>[ALLOW_NECROMANCER_SUMMONS:1]</tt>
+</td>
+<td>1/0 = Yes/No
+</td></tr></tbody></table>
+<h3><span id="Desired_Good/Evil_Square_Counts"></span><span class="mw-headline" id="Desired_Good.2FEvil_Square_Counts">Desired Good/Evil Square Counts</span></h3>
+<p>These values change the amount of <a href="/index.php/DF2014:Surroundings#Good" title="DF2014:Surroundings">good or evil</a> tiles on the map, depending on the size of the region they are being considered for. The counts are for all tiles in all subregions of a given size considered together, <i>not</i> counts for each subregion considered separately (all tiles in the same subregion share the same <a href="/index.php/DF2014:Surroundings" title="DF2014:Surroundings">surroundings</a> values).
+</p><p>As used here, a "subregion" is a named world area.  Subregion names and locations for a generated world are viewable in legends mode under "Regions".  Subregions are classified by size the same way for all map sizes: 1-24 tiles is Small, 25-99 tiles is Medium, and 100+ tiles is Large.
+</p><p>The counts used here will always be restricted to regions of the given size, no matter how large the count. Also, the count is more of a goal than a minimum or maximum. As a result, you can end up with many more or many fewer than the requested number of squares in some situations.  In particular, if you have something like a case where only 3 large regions exist in a world, and you request "1 evil square" in large regions, you will end up with one of the large regions being <i>entirely evil</i>.  So any non-zero value in one of these settings essentially means "force at least one region of this size to be all good/evil."
+</p><p>Note that the "evilness" of evil biomes is also impacted by savagery.  Certain civilizations cannot exist in good and/or evil squares, so too many of one or the other may limit the size of certain types of civilizations - dwarves, for example, need non-aligned biomes.  Creating too many evil biomes seems to lead to the danger of many civilizations' early extinction.
+</p>
+<table class="prettytable anchortable" border="1" cellpadding="4" cellspacing="0" style="margin: 1em 1em 1em 0; background: #f9f9f9; border: 1px #aaa solid; border-collapse: collapse;">
+
+<tbody><tr bgcolor="#dddddd">
+<th>Token
+</th>
+<th>Example
+</th>
+<th>Notes
+</th></tr>
+<tr>
+<td><tt>[GOOD_SQ_COUNTS:&lt;small region&gt;:&lt;med region&gt;:&lt;lg region&gt;]</tt>
+</td>
+<td><tt>[GOOD_SQ_COUNTS:100:1000:2000]</tt>
+</td>
+<td rowspan="2">Set count to zero to disable for that region size.
+</td></tr>
+<tr>
+<td><tt>[EVIL_SQ_COUNTS:&lt;small region&gt;:&lt;med region&gt;:&lt;lg region&gt;]</tt>
+</td>
+<td><tt>[EVIL_SQ_COUNTS:100:1000:2000]</tt>
+</td></tr></tbody></table>
+<h3><span class="mw-headline" id="Minimum_Biome_Square_Counts">Minimum Biome Square Counts</span></h3>
+<p>These numbers control whether or not a world will be rejected based on a lack of different <a href="/index.php/DF2014:Biome" title="DF2014:Biome">biomes</a>. Raising these numbers will <b>not</b> automatically generate the given number of squares of the given biome! For a biome to exist, certain conditions like elevation and rainfall must exist.
+</p><p>These parameters simply filter out worlds that (for example) randomly fail to have enough high elevation squares to support a given number of mountains, etc. Some settings may cause worlds to always be rejected. For example, if for some reason the maximum elevation parameter is set to a value below what will support mountain biomes, it will be impossible to satisfy a non-zero requirement for mountain squares. The same principle goes for other conditions and biomes such as low elevations and oceans, etc.
+</p><p>Certain civilizations require different biomes to exist (such as dwarves and mountains), so eliminating certain biomes will make it impossible for certain civilizations to form.
+</p><p>These parameters often result in infinite world rejection problems. See <a href="/index.php/DF2014:World_rejection" title="DF2014:World rejection">World rejection</a> for information on solving problems related to worlds always being rejected due to one or more of these parameters.
+</p><p>0 means no minimum for rejection - setting it to 0 does not guarantee 0 squares of that biome.
+</p>
+<h4><span class="mw-headline" id="Biome_Type_Requirement_Table">Biome Type Requirement Table</span></h4>
+<p>Terrain requirements for various biomes are described below.<sup style="font-size: 80%;">&#91;<a href="/index.php/DF2014_Talk:Advanced_world_generation" title="DF2014 Talk:Advanced world generation"><span title="The material near this tag is possibly inaccurate or nonfactual.">Verify</span></a>&#93;</sup> Note that some of the exact ranges are unknown.
+</p>
+<table class="prettytable anchortable" border="1" cellpadding="4" cellspacing="0" style="margin: 1em 1em 1em 0; background: #f9f9f9; border: 1px #aaa solid; border-collapse: collapse;">
+
+<tbody><tr bgcolor="#dddddd">
+<th rowspan="2">Biome
+</th>
+<th colspan="4">Terrain Requirement
+</th></tr>
+<tr>
+<th>Elevation
+</th>
+<th>Rainfall
+</th>
+<th>Temperature
+</th>
+<th>Drainage
+</th></tr>
+<tr>
+<td>Swamp/Marsh
+</td>
+<td>100-299
+</td>
+<td>33-100
+</td>
+<td>Non-Freezing
+</td>
+<td>0-32
+</td></tr>
+<tr>
+<td>Desert/Badland
+</td>
+<td>100-299
+</td>
+<td>0-9
+</td>
+<td>non-freezing
+</td>
+<td>note<sup>1</sup>
+</td></tr>
+<tr>
+<td>Forest
+</td>
+<td>100-299
+</td>
+<td>66-100
+</td>
+<td>non-freezing
+</td>
+<td>66-100
+</td></tr>
+<tr>
+<td>Mountains
+</td>
+<td>300-400
+</td>
+<td>N/A
+</td>
+<td>N/A
+</td>
+<td>N/A
+</td></tr>
+<tr>
+<td>Ocean
+</td>
+<td>0-99
+</td>
+<td>N/A
+</td>
+<td>N/A
+</td>
+<td>N/A
+</td></tr>
+<tr>
+<td>Glacier
+</td>
+<td>100-299
+</td>
+<td>N/A
+</td>
+<td>Freezing
+</td>
+<td>80(?)-100
+</td></tr>
+<tr>
+<td>Tundra
+</td>
+<td>100-299
+</td>
+<td>N/A
+</td>
+<td>Freezing
+</td>
+<td>0-66
+</td></tr>
+<tr>
+<td>Grassland
+</td>
+<td>100-299
+</td>
+<td>0-66
+</td>
+<td>Non-Freezing
+</td>
+<td>0-66
+</td></tr>
+<tr>
+<td>Hills
+</td>
+<td>100-299
+</td>
+<td>0-66
+</td>
+<td>Non-Freezing
+</td>
+<td>66-100
+</td></tr></tbody></table>
+<p>note<sup>1</sup> drainage: 00-32 sand desert, 33-49 rocky wasteland, 50-65 rocky wasteland but different characters/appearance, 66-100 badlands
+</p>
+<h4><span class="mw-headline" id="Minimum_Initial_Square_Count">Minimum Initial Square Count</span></h4>
+<p><b>Note:  The exclusive purpose of these parameters is to cause world rejection.</b>
+</p><p>This is the minimum number of squares of the given biome that must exist before things like erosion take place.  One thing to keep in mind is the maximum number of squares on a map of a given size - if the total number of squares on a map is lower than the sum of all square count parameters, then you will get infinite world rejection.
+</p><p>To determine the number of squares on a map, just multiply the dimensions. In practice these parameters will need to sum to lower than the maximum because some space is needed for "slack".
+</p>
+<table class="prettytable anchortable" border="1" cellpadding="4" cellspacing="0" style="margin: 1em 1em 1em 0; background: #f9f9f9; border: 1px #aaa solid; border-collapse: collapse;">
+
+<tbody><tr bgcolor="#dddddd">
+<th>Map Size
+</th>
+<th>Number of Squares
+</th></tr>
+<tr>
+<td>17×17
+</td>
+<td>289
+</td></tr>
+<tr>
+<td>33×33
+</td>
+<td>1089
+</td></tr>
+<tr>
+<td>65×65
+</td>
+<td>4225
+</td></tr>
+<tr>
+<td>129×129
+</td>
+<td>16614
+</td></tr>
+<tr>
+<td>257×257
+</td>
+<td>66049
+</td></tr></tbody></table>
+<h4><span class="mw-headline" id="Minimum_Initial_Region_Count">Minimum Initial Region Count</span></h4>
+<p>This is the minimum number of regions of contiguous biome squares that must exist before other processes such as erosion take place.
+</p>
+<h4><span class="mw-headline" id="Minimum_Final_Region_Count">Minimum Final Region Count</span></h4>
+<p>This many regions of the given biome must exist after erosion and similar phases of generation have been completed.
+</p>
+<table class="prettytable anchortable" border="1" cellpadding="4" cellspacing="0" style="margin: 1em 1em 1em 0; background: #f9f9f9; border: 1px #aaa solid; border-collapse: collapse;">
+
+<tbody><tr bgcolor="#dddddd">
+<th>Token
+</th>
+<th>Example
+</th></tr>
+<tr>
+<td><tt>[REGION_COUNTS:SWAMP:&lt;init sq&gt;:&lt;init rg&gt;:&lt;final rg&gt;]</tt>
+</td>
+<td><tt>[REGION_COUNTS:SWAMP:1032:7:6]</tt>
+</td></tr>
+<tr>
+<td><tt>[REGION_COUNTS:DESERT:&lt;init sq&gt;:&lt;init rg&gt;:&lt;final rg&gt;]</tt>
+</td>
+<td><tt>[REGION_COUNTS:DESERT:1032:7:6]</tt>
+</td></tr>
+<tr>
+<td><tt>[REGION_COUNTS:FOREST:&lt;init sq&gt;:&lt;init rg&gt;:&lt;final rg&gt;]</tt>
+</td>
+<td><tt>[REGION_COUNTS:FOREST:4128:13:12]</tt>
+</td></tr>
+<tr>
+<td><tt>[REGION_COUNTS:MOUNTAINS:&lt;init sq&gt;:&lt;init rg&gt;:&lt;final rg&gt;]</tt>
+</td>
+<td><tt>[REGION_COUNTS:MOUNTAINS:8256:9:9]</tt>
+</td></tr>
+<tr>
+<td><tt>[REGION_COUNTS:OCEAN:&lt;init sq&gt;:&lt;init rg&gt;:&lt;final rg&gt;]</tt>
+</td>
+<td><tt>[REGION_COUNTS:OCEAN:8256:7:6]</tt>
+</td></tr>
+<tr>
+<td><tt>[REGION_COUNTS:GLACIER:&lt;init sq&gt;:&lt;init rg&gt;:&lt;final rg&gt;]</tt>
+</td>
+<td><tt>[REGION_COUNTS:GLACIER:0:0:0]</tt>
+</td></tr>
+<tr>
+<td><tt>[REGION_COUNTS:TUNDRA:&lt;init sq&gt;:&lt;init rg&gt;:&lt;final rg&gt;]</tt>
+</td>
+<td><tt>[REGION_COUNTS:TUNDRA:0:0:0]</tt>
+</td></tr>
+<tr>
+<td><tt>[REGION_COUNTS:GRASSLAND:&lt;init sq&gt;:&lt;init rg&gt;:&lt;final rg&gt;]</tt>
+</td>
+<td><tt>[REGION_COUNTS:GRASSLAND:8256:13:12]</tt>
+</td></tr>
+<tr>
+<td><tt>[REGION_COUNTS:HILLS:&lt;init sq&gt;:&lt;init rg&gt;:&lt;final rg&gt;]</tt>
+</td>
+<td><tt>[REGION_COUNTS:HILLS:8256:13:12]</tt>
+</td></tr></tbody></table>
+<h3><span class="mw-headline" id="Erosion_Cycle_Count">Erosion Cycle Count</span></h3>
+<p>Tells the world generator how long the world has to erode its tall peaks down to mountainsides during the 'running rivers...' stage of world creation. The higher this number, the less jagged the world will be, and the more wide the major rivers will be. If you use the maximum number, your mountains will dissolve before your eyes into plains which can lead to rejections if there aren't enough mountains to use for river start points and dwarven civilization origin points. 
+</p>
+<table class="prettytable anchortable" border="1" cellpadding="4" cellspacing="0" style="margin: 1em 1em 1em 0; background: #f9f9f9; border: 1px #aaa solid; border-collapse: collapse;">
+
+<tbody><tr bgcolor="#dddddd">
+<th>Token
+</th>
+<th>Example
+</th>
+<th>Notes
+</th></tr>
+<tr>
+<td><tt>[EROSION_CYCLE_COUNT:&lt;number&gt;]</tt>
+</td>
+<td><tt>[EROSION_CYCLE_COUNT:250]</tt>
+</td>
+<td>Range: 0 to 1000
+</td></tr></tbody></table>
+<h3><span id="Minimum/Desired_River_Start_Locations"></span><span class="mw-headline" id="Minimum.2FDesired_River_Start_Locations">Minimum/Desired River Start Locations</span></h3>
+<p>This is the minimum number of riverheads that must exist before and after erosion takes place. Worlds will be rejected if they fail to meet these numbers. As with minimum biome counts, raising this number doesn't automatically create this many riverheads. Other conditions like terrain and rainfall must exist for rivers to form.
+</p><p>Extremely high pre-erosion values speed erosion greatly, while low post erosion values are useful for limiting rejects due to lack of river origin points. One can try the 800 value to get more lakes.
+</p>
+<table class="prettytable anchortable" border="1" cellpadding="4" cellspacing="0" style="margin: 1em 1em 1em 0; background: #f9f9f9; border: 1px #aaa solid; border-collapse: collapse;">
+
+<tbody><tr bgcolor="#dddddd">
+<th>Token
+</th>
+<th>Example
+</th>
+<th>Notes
+</th></tr>
+<tr>
+<td><tt>[RIVER_MINS:&lt;min pre-erosion&gt;:&lt;des post-erosion&gt;]</tt>
+</td>
+<td><tt>[RIVER_MINS:200:400]</tt>
+</td>
+<td>Range: 0 to 800
+</td></tr></tbody></table>
+<h3><span class="mw-headline" id="Periodically_Erode_Extreme_Cliffs">Periodically Erode Extreme Cliffs</span></h3>
+<p>If enabled, makes every impassable rock wall into a series of ramps. Some prefer to pump up erosion to about 250, and turn the "Desired pre-erosion river count" to 0 for good erosion and no extra canyons.
+</p><p>Normally this is set to Yes (1).
+</p>
+<table class="prettytable anchortable" border="1" cellpadding="4" cellspacing="0" style="margin: 1em 1em 1em 0; background: #f9f9f9; border: 1px #aaa solid; border-collapse: collapse;">
+
+<tbody><tr bgcolor="#dddddd">
+<th>Token
+</th>
+<th>Example
+</th>
+<th>Notes
+</th></tr>
+<tr>
+<td><tt>[PERIODICALLY_ERODE_EXTREMES:&lt;1 or 0&gt;]</tt>
+</td>
+<td><tt>[PERIODICALLY_ERODE_EXTREMES:1]</tt>
+</td>
+<td>1/0 = Yes/No
+</td></tr></tbody></table>
+<h3><span class="mw-headline" id="Do_Orographic_Precipitation_and_Rain_Shadows">Do Orographic Precipitation and Rain Shadows</span></h3>
+<p>Toggle that allows terrain height to affect rainfall. For example, moist air coming from the ocean blows over the land. As the terrain gets higher, it forces the moist air up, causing it to rain on the seaward side of a mountain. Eventually, all the rain has fallen if the mountain is tall enough. So, when the breeze goes over the top, there's no moisture left to fall on the other side, creating a rain-shadow. In the current version, regions where drainage is above 50 will also create rain shadows, regardless of the underlying biome and elevation.<sup class="plainlinks" style="line-height: 0; position: relative; vertical-align: baseline; top: -0.5em;"><a rel="nofollow" class="external text" href="http://www.bay12forums.com/smf/index.php?topic=140685.msg5484064#msg5484064">&#91;2&#93;</a></sup>
+</p><p>Turning this on should create a tendency for more extreme rainfall in regions, creating more forests, deserts, marshlands, and grasslands. Also note that it can create rainfall outside of min-max rainfall settings, so even in a world with a 0 max rainfall you may get rainfall biomes. Turning it off should result in more controllable, less complex rainfall conditions based on rainfall parameters as it adds a random element which can distort or otherwise mess up the climates on a pregenerated map.
+</p><p>This should be disabled if you're importing a map or using a preset map file that has weather. 
+</p>
+<table class="prettytable anchortable" border="1" cellpadding="4" cellspacing="0" style="margin: 1em 1em 1em 0; background: #f9f9f9; border: 1px #aaa solid; border-collapse: collapse;">
+
+<tbody><tr bgcolor="#dddddd">
+<th>Token
+</th>
+<th>Example
+</th>
+<th>Notes
+</th></tr>
+<tr>
+<td><tt>[OROGRAPHIC_PRECIPITATION:&lt;1 or 0&gt;]</tt>
+</td>
+<td><tt>[OROGRAPHIC_PRECIPITATION:1]</tt>
+</td>
+<td>1/0 = Yes/No
+</td></tr></tbody></table>
+<h3><span class="mw-headline" id="Maximum_Number_of_Subregions">Maximum Number of Subregions</span></h3>
+<p>This is the number of separate biomes (the flashing regions you see on embark when you hit F1, F2, etc. when there's more than one biome on the embark location) that are allowed to exist on the entire map.
+</p><p>Setting this to very low values will result in numerous rejections depending on <a href="#X_and_Y_Variance">variance parameters</a>. If variance values are set to high numbers, many small biomes will be created causing rejection if this parameter value is not increased beyond the default.
+</p><p>Increasing the value of this tag is often a must when generating "patchwork" worlds with lots of biome variance, but simply increasing it without increasing variance parameters will not guarantee more biomes.
+</p><p>It is also interesting to note that the maximum subregions is 5000 which is more than the total number of squares for a pocket or small map. However, for a medium or large map (16641 or 66049 squares) it quickly becomes a mere fraction of the total number of possible subregions. In fact it would be quite easy on a large map to end up with far too many subregions and get endless rejections of this type.
+</p>
+<table class="prettytable anchortable" border="1" cellpadding="4" cellspacing="0" style="margin: 1em 1em 1em 0; background: #f9f9f9; border: 1px #aaa solid; border-collapse: collapse;">
+
+<tbody><tr bgcolor="#dddddd">
+<th>Token
+</th>
+<th>Example
+</th>
+<th>Notes
+</th></tr>
+<tr>
+<td><tt>[SUBREGION_MAX:&lt;number&gt;]</tt>
+</td>
+<td><tt>[SUBREGION_MAX:2750]</tt>
+</td>
+<td>Range: 1 to 5000
+</td></tr></tbody></table>
+<h3><span class="mw-headline" id="Cavern_Parameters">Cavern Parameters</span></h3>
+<p><a href="/index.php/DF2014:Caverns" class="mw-redirect" title="DF2014:Caverns">Caverns</a> are the hollow areas underground, which dwarves tend to encounter when they're digging around. The <b>Cavern Layer Number</b> parameter determines how many cavern systems will be generated, not including the magma layer or the Bottom layer.  Defaults to three. Setting it to lower values could help FPS.
+</p><p><br />
+</p><p>Setting it to 2 will merge cavern 3 species into the 2nd cavern, and setting it to 1 will merge all into one cavern. However, disabling them entirely by setting it to 0 will make it impossible to grow any underground plants, as none will exist for your civilization to cultivate, nor will they be available on embark.
+</p>
+<ul><li>Setting caverns to a sub-3 number (Spoiler, highlight to view) <span style="color:#f8f8f8;">erases about one-third of HFS spires<span class=""><sup><a href="#Bugs">Bug</a>:<a rel="nofollow" class="external text" href="https://dwarffortressbugtracker.com/view.php?id=10267">10267</a></sup></span> and prevents dig deep disasters.</span> Additionally, random plant or animal species can be more frequently absent.</li></ul>
+<table class="prettytable anchortable" border="1" cellpadding="4" cellspacing="0" style="margin: 1em 1em 1em 0; background: #f9f9f9; border: 1px #aaa solid; border-collapse: collapse;">
+
+<tbody><tr bgcolor="#dddddd">
+<th>Token
+</th>
+<th>Example
+</th>
+<th>Notes
+</th></tr>
+<tr>
+<td><tt>[CAVERN_LAYER_COUNT:&lt;number&gt;]</tt>
+</td>
+<td><tt>[CAVERN_LAYER_COUNT:3]</tt>
+</td>
+<td>Range: 0 to 3
+</td></tr></tbody></table>
+<h4><span class="mw-headline" id="Cavern_Layout_Parameters">Cavern Layout Parameters</span></h4>
+<p>Open caverns and dense passageways are not mutually exclusive. When both are raised, bizarre results can occur, such as layers showing a combination of open caverns, a cluster of network passages, and natural walls sprinkling the inside of an otherwise open cavern. <a rel="nofollow" class="external text" href="http://www.bay12forums.com/smf/index.php?topic=76355.msg1936859#msg1936859">Reference</a>
+</p><p>If you want the largest open spaces possible, then decrease the density and increase the openness. If you want a labyrinth of passageways, lower the openness and raise the passage density.
+</p><p>Another interesting note about the cavern layers is that the seed and number of demon types affect the layout of the caverns.
+</p>
+<ul class="gallery mw-gallery-traditional" style="max-width: 486px;">
+		<li class="gallerybox" style="width: 235px"><div style="width: 235px">
+			<div class="thumb" style="width: 230px;"><div style="margin:15px auto;"><a href="/index.php/File:Open00Density100.jpg" class="image"><img alt="" src="/images/thumb/6/6b/Open00Density100.jpg/195px-Open00Density100.jpg" decoding="async" width="195" height="200" srcset="/images/thumb/6/6b/Open00Density100.jpg/293px-Open00Density100.jpg 1.5x, /images/thumb/6/6b/Open00Density100.jpg/390px-Open00Density100.jpg 2x" /></a></div></div>
+			<div class="gallerytext">
+<p>Cavern slice with Openness of 0 and Density of 100
+</p>
+			</div>
+		</div></li>
+		<li class="gallerybox" style="width: 235px"><div style="width: 235px">
+			<div class="thumb" style="width: 230px;"><div style="margin:15px auto;"><a href="/index.php/File:Open100Density00.jpg" class="image"><img alt="" src="/images/thumb/5/58/Open100Density00.jpg/195px-Open100Density00.jpg" decoding="async" width="195" height="200" srcset="/images/thumb/5/58/Open100Density00.jpg/293px-Open100Density00.jpg 1.5x, /images/thumb/5/58/Open100Density00.jpg/391px-Open100Density00.jpg 2x" /></a></div></div>
+			<div class="gallerytext">
+<p>Cavern slice with Openness of 100 and Density of 0
+</p>
+			</div>
+		</div></li>
+		<li class="gallerybox" style="width: 235px"><div style="width: 235px">
+			<div class="thumb" style="width: 230px;"><div style="margin:15px auto;"><a href="/index.php/File:Open100Density100.jpg" class="image"><img alt="" src="/images/thumb/8/84/Open100Density100.jpg/195px-Open100Density100.jpg" decoding="async" width="195" height="200" srcset="/images/thumb/8/84/Open100Density100.jpg/293px-Open100Density100.jpg 1.5x, /images/thumb/8/84/Open100Density100.jpg/391px-Open100Density100.jpg 2x" /></a></div></div>
+			<div class="gallerytext">
+<p>Cavern slice with Openness of 100 and Density of 100
+</p>
+			</div>
+		</div></li>
+		<li class="gallerybox" style="width: 235px"><div style="width: 235px">
+			<div class="thumb" style="width: 230px;"><div style="margin:15px auto;"><a href="/index.php/File:Open50Density50.jpg" class="image"><img alt="" src="/images/thumb/6/6b/Open50Density50.jpg/195px-Open50Density50.jpg" decoding="async" width="195" height="200" srcset="/images/thumb/6/6b/Open50Density50.jpg/293px-Open50Density50.jpg 1.5x, /images/thumb/6/6b/Open50Density50.jpg/390px-Open50Density50.jpg 2x" /></a></div></div>
+			<div class="gallerytext">
+<p>Cavern slice with Openness of 50 and Density of 50
+</p>
+			</div>
+		</div></li>
+</ul>
+<h5><span id="Layer_Openness_Min/Max"></span><span class="mw-headline" id="Layer_Openness_Min.2FMax">Layer Openness Min/Max</span></h5>
+<p>Dictates the size of cavern passages. When Passage Density (see below) is set to minimum (0), caverns will be open expanses. Raising the maximum will increase the size of the caverns.
+</p>
+<table class="prettytable anchortable" border="1" cellpadding="4" cellspacing="0" style="margin: 1em 1em 1em 0; background: #f9f9f9; border: 1px #aaa solid; border-collapse: collapse;">
+
+<tbody><tr bgcolor="#dddddd">
+<th>Token
+</th>
+<th>Example
+</th>
+<th>Notes
+</th></tr>
+<tr>
+<td><tt>[CAVERN_LAYER_OPENNESS_MIN:&lt;number&gt;]</tt>
+</td>
+<td><tt>[CAVERN_LAYER_OPENNESS_MIN:0]</tt>
+</td>
+<td rowspan="2">Range: 0 to 100
+</td></tr>
+<tr>
+<td><tt>[CAVERN_LAYER_OPENNESS_MAX:&lt;number&gt;]</tt>
+</td>
+<td><tt>[CAVERN_LAYER_OPENNESS_MAX:100]</tt>
+</td></tr></tbody></table>
+<h5><span id="Layer_Passage_Density_Min/Max"></span><span class="mw-headline" id="Layer_Passage_Density_Min.2FMax">Layer Passage Density Min/Max</span></h5>
+<p>This determines how many passages form the cavern. If openness (see above) is set to minimum and density increased, then you will get a maze-like network of small criss-crossing passages. Raising the values further increases the number of the maze-like passages.
+</p><p>Caverns will be large, open spaces at 0, and comprised of many small vertical shafts of rock at 100. Setting both values to be the same results in a uniform look for the caverns.<sup style="font-size: 80%;">&#91;<a href="/index.php/DF2014_Talk:Advanced_world_generation" title="DF2014 Talk:Advanced world generation"><span title="The material near this tag is possibly inaccurate or nonfactual.">Verify</span></a>&#93;</sup>
+</p>
+<table class="prettytable anchortable" border="1" cellpadding="4" cellspacing="0" style="margin: 1em 1em 1em 0; background: #f9f9f9; border: 1px #aaa solid; border-collapse: collapse;">
+
+<tbody><tr bgcolor="#dddddd">
+<th>Token
+</th>
+<th>Example
+</th>
+<th>Notes
+</th></tr>
+<tr>
+<td><tt>[CAVERN_LAYER_PASSAGE_DENSITY_MIN:&lt;number&gt;]</tt>
+</td>
+<td><tt>[CAVERN_LAYER_PASSAGE_DENSITY_MIN:0]</tt>
+</td>
+<td rowspan="2">Range: 0 to 100
+</td></tr>
+<tr>
+<td><tt>[CAVERN_LAYER_PASSAGE_DENSITY_MAX:&lt;number&gt;]</tt>
+</td>
+<td><tt>[CAVERN_LAYER_PASSAGE_DENSITY_MAX:100]</tt>
+</td></tr></tbody></table>
+<h5><span id="Layer_Water_min\max"></span><span class="mw-headline" id="Layer_Water_min.5Cmax">Layer Water min\max</span></h5>
+<p>Determines how many caverns (out of a max. 3) will have water at the bottom.  Note that, even at 100, there will be some amount of ground in caverns, but each cavern 'bubble' will contain some amount of water.
+</p><p>At 0, there will be no water in your caverns.  This may impact future underground plant growth, although maps will still start with underground flora.<sup style="font-size: 80%;">&#91;<a href="/index.php/DF2014_Talk:Advanced_world_generation" title="DF2014 Talk:Advanced world generation"><span title="The material near this tag is possibly inaccurate or nonfactual.">Verify</span></a>&#93;</sup>
+</p>
+<table class="prettytable anchortable" border="1" cellpadding="4" cellspacing="0" style="margin: 1em 1em 1em 0; background: #f9f9f9; border: 1px #aaa solid; border-collapse: collapse;">
+
+<tbody><tr bgcolor="#dddddd">
+<th>Token
+</th>
+<th>Example
+</th>
+<th>Notes
+</th></tr>
+<tr>
+<td><tt>[CAVERN_LAYER_WATER_MIN:&lt;number&gt;]</tt>
+</td>
+<td><tt>[CAVERN_LAYER_WATER_MIN:0]</tt>
+</td>
+<td rowspan="2">Range: 0 to 100
+</td></tr>
+<tr>
+<td><tt>[CAVERN_LAYER_WATER_MAX:&lt;number&gt;]</tt>
+</td>
+<td><tt>[CAVERN_LAYER_WATER_MAX:100]</tt>
+</td></tr></tbody></table>
+<h4><span class="mw-headline" id="Magma_Layer">Magma Layer</span></h4>
+<p>This parameter controls whether the <a href="/index.php/DF2014:Magma_sea" title="DF2014:Magma sea">magma sea</a> exists.
+</p><p>Setting 1/Yes causes the magma layer to exist, value 0/No prevents it. Appears not to have any impact on volcanoes nor volcanism, so even if 0/No, there will still be embark locations with magma. If a <a href="/index.php/DF2014:Volcano" title="DF2014:Volcano">volcano</a> exists, it appears to always tap the magma sea, but the magma sea will not be revealed by revealing the volcano.
+</p>
+<table class="prettytable anchortable" border="1" cellpadding="4" cellspacing="0" style="margin: 1em 1em 1em 0; background: #f9f9f9; border: 1px #aaa solid; border-collapse: collapse;">
+
+<tbody><tr bgcolor="#dddddd">
+<th>Token
+</th>
+<th>Example
+</th></tr>
+<tr>
+<td><tt>[HAVE_BOTTOM_LAYER_1:&lt;1 or 0&gt;]</tt>
+</td>
+<td><tt>[HAVE_BOTTOM_LAYER_1:1]</tt>
+</td></tr></tbody></table>
+<h4><span class="mw-headline" id="Bottom_Layer">Bottom Layer</span></h4>
+<p>Determines if the space below the magma sea exists. If Yes the "HFS" layer is always present. Normally you want to leave this set to Yes for maximum fun.
+</p><p>If enabled, this will force the magma layer above it.
+</p>
+<table class="prettytable anchortable" border="1" cellpadding="4" cellspacing="0" style="margin: 1em 1em 1em 0; background: #f9f9f9; border: 1px #aaa solid; border-collapse: collapse;">
+
+<tbody><tr bgcolor="#dddddd">
+<th>Token
+</th>
+<th>Example
+</th></tr>
+<tr>
+<td><tt>[HAVE_BOTTOM_LAYER_2:&lt;1 or 0&gt;]</tt>
+</td>
+<td><tt>[HAVE_BOTTOM_LAYER_2:1]</tt>
+</td></tr></tbody></table>
+<h3><span id="Z_Levels_(Depth)_Settings"></span><span class="mw-headline" id="Z_Levels_.28Depth.29_Settings">Z Levels (Depth) Settings</span></h3>
+<p>These parameters control the "thickness" of various "layers" on the map. Note that a "layer" in this case does not refer to one Z-level, but refers to a number of related Z-levels such as "levels above ground".
+</p><p>The following table assumes that you have 3 cavern layers. (out of a minimum of 0-3)  The Levels Above Layer settings control how many Z-Levels are above each layer.  A layer may itself consist of multiple Z-Levels (and almost always does).
+</p>
+<table style="margin:1em 1em 1em 0;background:#F9F9F9;border:1px #AAA solid;border-collapse:collapse;" class="wikitable">
+
+<tbody><tr style="background:#F2F2F2;text-align:center;">
+<th style="border:1px #AAA solid;padding:0.2em;" width="120">Setting Name
+</th>
+<th style="border:1px #AAA solid;padding:0.2em;" width="200">Token
+</th>
+<th style="border:1px #AAA solid;padding:0.2em;">Description
+</th></tr>
+<tr>
+<td style="border:1px #AAA solid;padding:0.2em;">Above Ground
+</td>
+<td style="border:1px #AAA solid;padding:0.2em;">[LEVELS_ABOVE_GROUND:&lt;number&gt;]
+</td>
+<td style="border:1px #AAA solid;padding:0.2em;">The number of Z-levels of air above the highest surface level.<br />Has no impact on how many Z-levels deep the surface layer is.
+</td></tr>
+<tr>
+<td style="border:1px #AAA solid;padding:0.2em;">Above layer 1
+</td>
+<td style="border:1px #AAA solid;padding:0.2em;">[LEVELS_ABOVE_LAYER_1:&lt;number&gt;]
+</td>
+<td style="border:1px #AAA solid;padding:0.2em;">Z-levels of stone above the first cavern layer.  Making this higher will guarantee <i>at least</i> this many levels to build your fortress, but will have no impact on how many z-levels thick the surface layer is.  Also, the top of a cavern may be higher than the rest of a cavern, so in practice there will be more "solid" levels than this above the cavern.
+<p>As of version 0.31.25 this setting is inaccurate. The actual number of z-levels may vary in a range of approx. ±5, which may result in non-existence of any solid z-levels between a surface layer and first cavern layer.
+</p>
+</td></tr>
+<tr>
+<td style="border:1px #AAA solid;padding:0.2em;">Above Layer 2
+</td>
+<td style="border:1px #AAA solid;padding:0.2em;">[LEVELS_ABOVE_LAYER_2:&lt;number&gt;]
+</td>
+<td style="border:1px #AAA solid;padding:0.2em;">Z-levels of earth between the very top of the second cavern and the very bottom of the first cavern.
+</td></tr>
+<tr>
+<td style="border:1px #AAA solid;padding:0.2em;">Above Layer 3
+</td>
+<td style="border:1px #AAA solid;padding:0.2em;">[LEVELS_ABOVE_LAYER_3:&lt;number&gt;]
+</td>
+<td style="border:1px #AAA solid;padding:0.2em;">Z-levels of earth between the very top of the third cavern and the very bottom of the second cavern.
+</td></tr>
+<tr>
+<td style="border:1px #AAA solid;padding:0.2em;">Above Layer 4
+</td>
+<td style="border:1px #AAA solid;padding:0.2em;">[LEVELS_ABOVE_LAYER_4:&lt;number&gt;]
+</td>
+<td style="border:1px #AAA solid;padding:0.2em;">Z-levels of earth between the very highest magma and the very bottom of the third cavern.<br />Spoiler Hidden (select invisible text to read): <span style="color:#eee;">Making this high will give a large area for HFS veins, so that it never touches caverns, giving more to mine <b>if</b> it was impacting the cavern previously.</span>
+</td></tr>
+<tr>
+<td style="border:1px #AAA solid;padding:0.2em;">Above Layer 5
+</td>
+<td style="border:1px #AAA solid;padding:0.2em;">[LEVELS_ABOVE_LAYER_5:&lt;number&gt;]
+</td>
+<td style="border:1px #AAA solid;padding:0.2em;">Uncertain.  May control the number of levels of "Semi Molten Rock" between HFS and Magma, may control number of levels of magma, may impact both.<br />In experimentation, the overall depth of all magma sea and semi-molten rock levels appears to increase, but not consistent enough to say for certain.<br />Only valid if Magma Layer present.<br />Spoiler Hidden:<span style="color:#eee;">Often the HFS vein will only extend as high as the highest magma, making this the only guaranteed way to increase amount of HFS to mine, but unfortunately also creating enormous useless semi-molten z-levels</span>
+</td></tr>
+<tr>
+<td style="border:1px #AAA solid;padding:0.2em;">At Bottom
+</td>
+<td style="border:1px #AAA solid;padding:0.2em;">[LEVELS_AT_BOTTOM:&lt;number&gt;]
+</td>
+<td style="border:1px #AAA solid;padding:0.2em;">Appears to be number of levels of HFS chamber. Only valid if Bottom Layer present, often having no impact. Values larger than default result in strange things.
+</td></tr></tbody></table>
+<p>Some implications:
+</p>
+<ul><li>The number of surface layers (e.g. soil), at this time, cannot be controlled.  For example, on a map with 1 layer of peat, then a layer of silt, then a layer of obsidian, there is no control to let you increase either one to be, say, 20 z-levels. (though you may get lucky with the obsidian).</li>
+<li>There can be multiple stone layers between the cavern and the surface, so, increasing Levels Above Layer 1 may give you more conglomerate or more granite, and you have no control over which stone layer spans those Z-levels.</li>
+<li>The layers shown on embark span across the cavern layers in an unknown and inconsistent way.  Sometimes those 10 different layers of stone are evenly distributed over your 400 z-level deep map, sometimes the first 9 get 1 z-level each and the last gets the other 391 levels.  No way to control found yet.</li>
+<li>The HFS chamber, if present, will always extend into the rock layers, and appears to always make contact with the bottom cave.  Large values for levels above layer 5 and layer 4 can result in enormous chambers, but the number of levels at the top (the part with undead) appears to be unaffected.</li>
+<li>Unconfirmed whether number of levels between caverns has any impact on cavern height.  There will be connecting ramps and/or shafts between cavern layers no matter how many levels are between them.</li>
+<li><b>Very Important</b>: These values appear to apply across a whole 16x16 region, not just embark areas.  That means that if a 16x16 region is completely flat, but has one tall mountain in one far corner, even if you set Levels Above Ground low (e.g. 2 z-levels) you still have all the empty air of the highest mountain in every embark tile (e.g. 200 z-levels).  Also can happen to the semi-molten layer, and can lead to unexpected behavior.</li>
+<li>Very large or small values can cause strange things to happen.</li></ul>
+<h3><span class="mw-headline" id="Cave_Parameters">Cave Parameters</span></h3>
+<p>Caves are somewhat like caverns, except that they have a passage to the surface, and are generally much smaller – caves can connect to caverns if they are sufficiently deep.
+</p>
+<h4><span id="Minimum/Maximum_Natural_Cave_Size"></span><span class="mw-headline" id="Minimum.2FMaximum_Natural_Cave_Size">Minimum/Maximum Natural Cave Size</span></h4>
+<p>These parameters appear to control the length and depth of caves.
+</p>
+<table class="prettytable anchortable" border="1" cellpadding="4" cellspacing="0" style="margin: 1em 1em 1em 0; background: #f9f9f9; border: 1px #aaa solid; border-collapse: collapse;">
+
+<tbody><tr bgcolor="#dddddd">
+<th>Token
+</th>
+<th>Example
+</th>
+<th>Notes
+</th></tr>
+<tr>
+<td><tt>[CAVE_MIN_SIZE:&lt;number&gt;]</tt>
+</td>
+<td><tt>[CAVE_MIN_SIZE:5]</tt>
+</td>
+<td rowspan="2">Range: 1 to 500
+</td></tr>
+<tr>
+<td><tt>[CAVE_MAX_SIZE:&lt;number&gt;]</tt>
+</td>
+<td><tt>[CAVE_MAX_SIZE:25]</tt>
+</td></tr></tbody></table>
+<h4><span class="mw-headline" id="Number_of_Non-Mountain_Caves">Number of Non-Mountain Caves</span></h4>
+<p>The number of non-mountainous caves that will be generated. Lurking <a href="/index.php/DF2014:Kobold" title="DF2014:Kobold">kobolds</a> set up shop in caves, and store their stolen items there - a setting of 0 in both will stop kobold civilizations from appearing.  Special note: a cave is not a <a href="/index.php/DF2014:Lair" title="DF2014:Lair">lair</a>.  
+</p>
+<table class="prettytable anchortable" border="1" cellpadding="4" cellspacing="0" style="margin: 1em 1em 1em 0; background: #f9f9f9; border: 1px #aaa solid; border-collapse: collapse;">
+
+<tbody><tr bgcolor="#dddddd">
+<th>Token
+</th>
+<th>Example
+</th>
+<th>Notes
+</th></tr>
+<tr>
+<td><tt>[MOUNTAIN_CAVE_MIN:&lt;number&gt;]</tt>
+</td>
+<td><tt>[MOUNTAIN_CAVE_MIN:100]</tt>
+</td>
+<td rowspan="2">Range: 0 to 800
+</td></tr>
+<tr>
+<td><tt>[NON_MOUNTAIN_CAVE_MIN:&lt;number&gt;]</tt>
+</td>
+<td><tt>[NON_MOUNTAIN_CAVE_MIN:200]</tt>
+</td></tr></tbody></table>
+<h4><span class="mw-headline" id="Make_Caves_Visible">Make Caves Visible</span></h4>
+<p>If set to no (default) then the location of caves will not be marked on the map. If set to yes, caves will appear on the map as <span style="color: #808080; background: #00DD00; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; padding: 0; line-height: 1;">•</span> symbols so that they may be sought out or avoided as desired.
+</p>
+<table class="prettytable anchortable" border="1" cellpadding="4" cellspacing="0" style="margin: 1em 1em 1em 0; background: #f9f9f9; border: 1px #aaa solid; border-collapse: collapse;">
+
+<tbody><tr bgcolor="#dddddd">
+<th>Token
+</th>
+<th>Example
+</th>
+<th>Notes
+</th></tr>
+<tr>
+<td><tt>[ALL_CAVES_VISIBLE:&lt;1 or 0&gt;]</tt>
+</td>
+<td><tt>[ALL_CAVES_VISIBLE:0]</tt>
+</td>
+<td>1/0 = Yes/No
+</td></tr></tbody></table>
+<h3><span class="mw-headline" id="Allow_Init_Options_to_Show_Tunnels">Allow Init Options to Show Tunnels</span></h3>
+<p>This parameter doesn't do anything.
+</p>
+<table class="prettytable anchortable" border="1" cellpadding="4" cellspacing="0" style="margin: 1em 1em 1em 0; background: #f9f9f9; border: 1px #aaa solid; border-collapse: collapse;">
+
+<tbody><tr bgcolor="#dddddd">
+<th>Token
+</th>
+<th>Example
+</th>
+<th>Notes
+</th></tr>
+<tr>
+<td><tt>[SHOW_EMBARK_TUNNEL:&lt;0-2&gt;]</tt>
+</td>
+<td><tt>[SHOW_EMBARK_TUNNEL:2]</tt>
+</td>
+<td>0 = No<br />1 = Only in Finder<br />2 = Always
+</td></tr></tbody></table>
+<h3><span class="mw-headline" id="Number_of_Civilizations">Number of Civilizations</span></h3>
+<p>This number of <a href="/index.php/DF2014:Civilization" title="DF2014:Civilization">civilizations</a> will be placed on the map before history generation begins. These civilizations may later die out due to historical events. It is noteworthy that the chance for any given civilization to be destroyed through megabeasts decreases with a higher total number of civilizations present<a rel="nofollow" class="external text" href="http://www.bay12forums.com/smf/index.php?PHPSESSID=7348f68f41a9659443c05b2acf534e6c&amp;topic=112465.15"><sup>data</sup></a>. The five races are dwarf, elf, human, goblin, and kobold; they will generally be placed in equal numbers until the quota has been reached. If there are not enough biomes or other worldgen prerequisites for an even distribution, certain civs will be much more or less frequent than others<a rel="nofollow" class="external text" href="http://www.bay12forums.com/smf/index.php?PHPSESSID=7348f68f41a9659443c05b2acf534e6c&amp;topic=112465.15"><sup>data</sup></a>. If there is an odd number of civs (not divisible by 5), then the remainder is distributed randomly. Kobold civs require caves to be placed; if no caves exist, then kobolds are skipped and will not appear. This does not cause rejections <a rel="nofollow" class="external text" href="http://www.bay12forums.com/smf/index.php?topic=112465.msg3415125#msg3415125"><sup>data</sup></a>.
+</p><p>Note that a high value here can cause lots of map rejections, particularly on smaller maps as there simply isn't enough room or regions to put them all in.
+</p>
+<table class="prettytable anchortable" border="1" cellpadding="4" cellspacing="0" style="margin: 1em 1em 1em 0; background: #f9f9f9; border: 1px #aaa solid; border-collapse: collapse;">
+
+<tbody><tr bgcolor="#dddddd">
+<th>Token
+</th>
+<th>Example
+</th>
+<th>Notes
+</th></tr>
+<tr>
+<td><tt>[TOTAL_CIV_NUMBER:&lt;number&gt;]</tt>
+</td>
+<td><tt>[TOTAL_CIV_NUMBER:40]</tt>
+</td>
+<td>Range: 0 to 300
+</td></tr></tbody></table>
+<h3><span class="mw-headline" id="Playable_Civilization_Required">Playable Civilization Required</span></h3>
+<p>If this is set to yes (default) then worlds will be rejected if no civilization with <a href="/index.php/DF2014:Entity_token" title="DF2014:Entity token">CIV_CONTROLLABLE</a> can be placed. In an unmodded game, only the dwarves have this token.
+</p><p>If set to no, the result may be a world that cannot be played in Fortress Mode.
+</p>
+<table class="prettytable anchortable" border="1" cellpadding="4" cellspacing="0" style="margin: 1em 1em 1em 0; background: #f9f9f9; border: 1px #aaa solid; border-collapse: collapse;">
+
+<tbody><tr bgcolor="#dddddd">
+<th>Token
+</th>
+<th>Example
+</th>
+<th>Notes
+</th></tr>
+<tr>
+<td><tt>[PLAYABLE_CIVILIZATION_REQUIRED:&lt;1 or 0&gt;]</tt>
+</td>
+<td><tt>[PLAYABLE_CIVILIZATION_REQUIRED:1]</tt>
+</td>
+<td>1/0 = Yes/No
+</td></tr></tbody></table>
+<h3><span id="Minimum_Number_of_Mid/Low/High_Characteristic_Squares"></span><span class="mw-headline" id="Minimum_Number_of_Mid.2FLow.2FHigh_Characteristic_Squares">Minimum Number of Mid/Low/High Characteristic Squares</span></h3>
+<p>Sets the minimum possible number of squares of certain ranges of each of the region qualities, such as elevation, rain, drainage, volcanism, savagery, and temperature. These need to be changed to reflect your regional meshes and weights, and are responsible for a HUGE number of map rejections. These values can all be set to 0 for much fewer map rejections, particularly in the case of more wacky, non-standard maps. 
+</p><p>These values will cause worlds to be rejected unless at least the given number of squares of the given type are randomly generated. Setting these values too high could result in worlds always being rejected if other parameters such as the maximum/minimums for elevation, etc., don't allow enough of those squares to get generated.
+</p>
+<table class="prettytable anchortable" border="1" cellpadding="4" cellspacing="0" style="margin: 1em 1em 1em 0; background: #f9f9f9; border: 1px #aaa solid; border-collapse: collapse;">
+
+<tbody><tr bgcolor="#dddddd">
+<th>Token
+</th>
+<th>Example
+</th>
+<th>Notes
+</th></tr>
+<tr>
+<td><tt>[ELEVATION_RANGES:&lt;low sq&gt;:&lt;mid sq&gt;:&lt;high sq&gt;]</tt>
+</td>
+<td><tt>[ELEVATION_RANGES:8256:16512:8256]</tt>
+</td>
+<td rowspan="5">Minimum number of squares that must have low, medium, and high amounts of the given attribute.<br />
+<p>0 = No minimum
+</p>
+</td></tr>
+<tr>
+<td><tt>[RAIN_RANGES:&lt;low sq&gt;:&lt;mid sq&gt;:&lt;high sq&gt;]</tt>
+</td>
+<td><tt>[RAIN_RANGES:8256:16512:8256]</tt>
+</td></tr>
+<tr>
+<td><tt>[DRAINAGE_RANGES:&lt;low sq&gt;:&lt;mid sq&gt;:&lt;high sq&gt;]</tt>
+</td>
+<td><tt>[DRAINAGE_RANGES:8256:16512:8256]</tt>
+</td></tr>
+<tr>
+<td><tt>[SAVAGERY_RANGES:&lt;low sq&gt;:&lt;mid sq&gt;:&lt;high sq&gt;]</tt>
+</td>
+<td><tt>[SAVAGERY_RANGES:8256:16512:8256]</tt>
+</td></tr>
+<tr>
+<td><tt>[VOLCANISM_RANGES:&lt;low sq&gt;:&lt;mid sq&gt;:&lt;high sq&gt;]</tt>
+</td>
+<td><tt>[VOLCANISM_RANGES:8256:16512:8256]</tt>
+</td></tr></tbody></table>
+<h2><span class="mw-headline" id="World_rejection">World rejection</span></h2>
+<dl><dd><i>Main article <a href="/index.php/DF2014:World_rejection" title="DF2014:World rejection">World rejection</a></i></dd></dl>
+<p>If you are having the common problem of the generated worlds always being rejected by the world generator, see <a href="/index.php/v0.31:World_rejection" title="v0.31:World rejection">Solving World Rejection Problems (v0.31 page)</a> as it contains many detailed suggestions on how to troubleshoot and solve these issues.
+</p>
+<h2><span class="mw-headline" id="Default_Worldgen_Parameters">Default Worldgen Parameters</span></h2>
+<p>There is no single default for each parameter. Several advanced world generation profiles come with the game by default. See <a href="/index.php/DF2014:World_gen.txt" title="DF2014:World gen.txt">Default world_gen.txt</a> to take a look at this file.
+</p>
+<h2><span class="mw-headline" id="Parameter_Set_Examples">Parameter Set Examples</span></h2>
+<p>If you're trying to do something specific, then the <a href="/index.php/DF2014:Worldgen_examples" title="DF2014:Worldgen examples">Worldgen examples</a> - complete parameter sets that can be copied directly into your <i>world_gen.txt</i> file and customized as desired - might be helpful.  
+If none of the examples suit your needs, <a href="/index.php/DF2014:Worldgen_tricks" title="DF2014:Worldgen tricks">Worldgen tricks</a> has strategies and tips on making a world just right for you.
+</p><p>For many, many more examples see:
+</p>
+<ul><li><a rel="nofollow" class="external text" href="http://www.bay12forums.com/smf/index.php?topic=101280">DF2012 (v0.34) WorldGen "Cookbook" Thread</a></li>
+<li><a rel="nofollow" class="external text" href="http://www.bay12forums.com/smf/index.php?topic=140180">DF2014 (v0.40) WorldGen "Cookbook" Thread</a></li>
+<li><a rel="nofollow" class="external text" href="http://www.bay12forums.com/smf/index.php?topic=168543.0">DF2014 (v0.44.02+) WorldGen "Cookbook" Thread</a></li>
+<li><a rel="nofollow" class="external text" href="http://www.bay12forums.com/smf/index.php?topic=175538">DF2014 (v0.47.01+) WorldGen "Cookbook" Thread</a></li></ul>
+<table class="collapsible autocollapse infobox" style="background: #fdfdfd; border: 1px solid #aaa; font-size: 88%; margin: 0 auto -1px; vertical-align: middle; width: 100%; max-width: 100em;"><tbody><tr style="line-height: 1.5em;"><th scope="col" colspan="2" style="background: #ccf; padding: 0.25em 1em; text-align: center; background-color: #b0eac9;;"><div class="plainlinks" style="float: left; padding-left: 0.4em; font-size: 70%; font-weight: normal; white-space: nowrap;"><a href="/index.php/Template:DF2014_world" title="Template:DF2014 world"><span title="View this template">V</span></a><span style="font-weight: bold; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;">&#160;·&#160;</span><a href="/index.php/Template_talk:DF2014_world" title="Template talk:DF2014 world"><span title="Discuss this template">T</span></a><span style="font-weight: bold; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;">&#160;·&#160;</span><a rel="nofollow" class="external text" href="https://dwarffortresswiki.org/index.php?title=Template:DF2014_world&amp;action=edit"><span title="Edit this template">E</span></a></div><div style="font-size: 114%; margin: 0 6em;">
+Worlds</div></th></tr><tr style="line-height: 1.5em;"><th scope="row" style="background: #ddf; padding: 0.25em 1em; text-align: right; white-space: nowrap; width: 1%; background-color: #b0eac9;;&#32;;">General</th><td style="background: transparent; padding: 0; text-align: left;&#32;;"><div style="padding: 0em 0.25em">
+<a href="/index.php/DF2014:World_generation" title="DF2014:World generation">World generation</a> (<a class="mw-selflink selflink">Advanced</a><span style="font-weight: bold; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;">&#160;&#183;&#32;</span> <a href="/index.php/DF2014:World_rejection" title="DF2014:World rejection">Rejection</a>)<span style="font-weight: bold; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;">&#160;&#183;&#32;</span> <a href="/index.php/DF2014:World_activities" title="DF2014:World activities">World activities</a><span style="font-weight: bold; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;">&#160;&#183;&#32;</span> <a href="/index.php/DF2014:Calendar" title="DF2014:Calendar">Calendar</a></div></td></tr><tr style="line-height: 1.5em;"><th scope="row" style="background: #ddf; padding: 0.25em 1em; text-align: right; white-space: nowrap; width: 1%; background-color: #b0eac9;;&#32;;">Map</th><td style="background: transparent; padding: 0; text-align: left;&#32;;"><div style="padding: 0em 0.25em">
+</div><table class="infobox" style="background: transparent; border: none; border-spacing: 0; color: inherit; width: 100%;"><tbody><tr style="line-height: 1.5em;"><td colspan="2" style="background: transparent; border-top: none; border-left: none; padding: 0; text-align: left;&#32;;"><div style="padding: 0em 0.25em">
+<a href="/index.php/DF2014:Climate" title="DF2014:Climate">Climate</a><span style="font-weight: bold; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;">&#160;&#183;&#32;</span> <a href="/index.php/DF2014:Map_legend" title="DF2014:Map legend">Map legend</a><span style="font-weight: bold; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;">&#160;&#183;&#32;</span> <a href="/index.php/DF2014:Region" title="DF2014:Region">Region</a><span style="font-weight: bold; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;">&#160;&#183;&#32;</span> <a href="/index.php/DF2014:Surroundings" title="DF2014:Surroundings">Surroundings</a></div></td></tr><tr style="line-height: 1.5em;"><th scope="row" style="background: #e6e6ff; border-top: 2px solid #fdfdfd; padding: 0.25em 1em; text-align: right; white-space: nowrap; width: 1%; background-color: #c3ead4;;&#32;;"><a href="/index.php/DF2014:Biome" title="DF2014:Biome">Biomes</a></th><td style="background: transparent; border-top: 2px solid #fdfdfd; border-left: 2px solid #fdfdfd; padding: 0; text-align: left;&#32;;"><div style="padding: 0em 0.25em">
+<a href="/index.php/DF2014:Chasm" title="DF2014:Chasm">Chasm</a><span style="font-weight: bold; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;">&#160;&#183;&#32;</span> <a href="/index.php/DF2014:Desert" title="DF2014:Desert">Desert</a><span style="font-weight: bold; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;">&#160;&#183;&#32;</span> <a href="/index.php/DF2014:Forest" title="DF2014:Forest">Forest</a><span style="font-weight: bold; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;">&#160;&#183;&#32;</span> <a href="/index.php/DF2014:Glacier" title="DF2014:Glacier">Glacier</a><span style="font-weight: bold; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;">&#160;&#183;&#32;</span> <a href="/index.php/DF2014:Grassland" title="DF2014:Grassland">Grassland</a><span style="font-weight: bold; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;">&#160;&#183;&#32;</span> <a href="/index.php/DF2014:Lake" title="DF2014:Lake">Lake</a><span style="font-weight: bold; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;">&#160;&#183;&#32;</span> <a href="/index.php/DF2014:Mountain" title="DF2014:Mountain">Mountain</a><span style="font-weight: bold; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;">&#160;&#183;&#32;</span> <a href="/index.php/DF2014:Murky_pool" title="DF2014:Murky pool">Murky pool</a><span style="font-weight: bold; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;">&#160;&#183;&#32;</span> <a href="/index.php/DF2014:Ocean" title="DF2014:Ocean">Ocean</a><span style="font-weight: bold; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;">&#160;&#183;&#32;</span> <a href="/index.php/DF2014:River" title="DF2014:River">River</a><span style="font-weight: bold; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;">&#160;&#183;&#32;</span> <a href="/index.php/DF2014:Savanna" title="DF2014:Savanna">Savanna</a><span style="font-weight: bold; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;">&#160;&#183;&#32;</span> <a href="/index.php/DF2014:Shrubland" title="DF2014:Shrubland">Shrubland</a><span style="font-weight: bold; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;">&#160;&#183;&#32;</span> <a href="/index.php/DF2014:Tundra" title="DF2014:Tundra">Tundra</a><span style="font-weight: bold; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;">&#160;&#183;&#32;</span> <a href="/index.php/DF2014:Wetland" title="DF2014:Wetland">Wetland</a></div></td></tr><tr style="line-height: 1.5em;"><th scope="row" style="background: #e6e6ff; border-top: 2px solid #fdfdfd; padding: 0.25em 1em; text-align: right; white-space: nowrap; width: 1%; background-color: #c3ead4;;&#32;;">Features</th><td style="background: transparent; border-top: 2px solid #fdfdfd; border-left: 2px solid #fdfdfd; padding: 0; text-align: left;&#32;;"><div style="padding: 0em 0.25em">
+<a href="/index.php/DF2014:Aquifer" title="DF2014:Aquifer">Aquifer</a><span style="font-weight: bold; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;">&#160;&#183;&#32;</span> <a href="/index.php/DF2014:Brook" title="DF2014:Brook">Brook</a><span style="font-weight: bold; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;">&#160;&#183;&#32;</span> <a href="/index.php/DF2014:Deep_pit" title="DF2014:Deep pit">Deep pit</a><span style="font-weight: bold; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;">&#160;&#183;&#32;</span> <a href="/index.php/DF2014:Island" title="DF2014:Island">Island</a><span style="font-weight: bold; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;">&#160;&#183;&#32;</span> <a href="/index.php/DF2014:Magma_pool" title="DF2014:Magma pool">Magma pool</a><span style="font-weight: bold; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;">&#160;&#183;&#32;</span> <a href="/index.php/DF2014:Passage" title="DF2014:Passage">Passage</a><span style="font-weight: bold; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;">&#160;&#183;&#32;</span> <a href="/index.php/DF2014:Road" title="DF2014:Road">Road</a><span style="font-weight: bold; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;">&#160;&#183;&#32;</span> <a href="/index.php/DF2014:Tunnel" title="DF2014:Tunnel">Tunnel</a><span style="font-weight: bold; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;">&#160;&#183;&#32;</span> <a href="/index.php/DF2014:Volcano" title="DF2014:Volcano">Volcano</a><span style="font-weight: bold; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;">&#160;&#183;&#32;</span> <a href="/index.php/DF2014:Waterfall" title="DF2014:Waterfall">Waterfall</a></div></td></tr><tr style="line-height: 1.5em;"><th scope="row" style="background: #e6e6ff; border-top: 2px solid #fdfdfd; padding: 0.25em 1em; text-align: right; white-space: nowrap; width: 1%; background-color: #c3ead4;;&#32;;">Underground</th><td style="background: transparent; border-top: 2px solid #fdfdfd; border-left: 2px solid #fdfdfd; padding: 0; text-align: left;&#32;;"><div style="padding: 0em 0.25em">
+<a href="/index.php/DF2014:Cavern" title="DF2014:Cavern">Cavern</a><span style="font-weight: bold; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;">&#160;&#183;&#32;</span> <a href="/index.php/DF2014:Magma_sea" title="DF2014:Magma sea">Magma sea</a><span style="font-weight: bold; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;">&#160;&#183;&#32;</span> <a href="/index.php/DF2014:Underworld" title="DF2014:Underworld">Underworld</a></div></td></tr></tbody></table><div></div></td></tr><tr style="line-height: 1.5em;"><th scope="row" style="background: #ddf; padding: 0.25em 1em; text-align: right; white-space: nowrap; width: 1%; background-color: #b0eac9;;&#32;;"><a href="/index.php/DF2014:Civilization" title="DF2014:Civilization">Civilization</a></th><td style="background: transparent; padding: 0; text-align: left;&#32;;"><div style="padding: 0em 0.25em">
+</div><table class="infobox" style="background: transparent; border: none; border-spacing: 0; color: inherit; width: 100%;"><tbody><tr style="line-height: 1.5em;"><th scope="row" style="background: #e6e6ff; border-top: none; padding: 0.25em 1em; text-align: right; white-space: nowrap; width: 1%; background-color: #c3ead4;;&#32;;"><a href="/index.php/DF2014:Site" title="DF2014:Site">Sites</a></th><td style="background: transparent; border-top: none; border-left: 2px solid #fdfdfd; padding: 0; text-align: left;&#32;;"><div style="padding: 0em 0.25em">
+<a href="/index.php/DF2014:Camp" title="DF2014:Camp">Camp</a><span style="font-weight: bold; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;">&#160;&#183;&#32;</span> <a href="/index.php/DF2014:Castle" title="DF2014:Castle">Castle</a><span style="font-weight: bold; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;">&#160;&#183;&#32;</span> <a href="/index.php/DF2014:Cave" title="DF2014:Cave">Cave</a><span style="font-weight: bold; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;">&#160;&#183;&#32;</span> <a href="/index.php/DF2014:Dark_fortress" title="DF2014:Dark fortress">Dark fortress</a><span style="font-weight: bold; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;">&#160;&#183;&#32;</span> <a href="/index.php/DF2014:Dark_pits" title="DF2014:Dark pits">Dark pits</a><span style="font-weight: bold; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;">&#160;&#183;&#32;</span> <a href="/index.php/DF2014:Forest_retreat" title="DF2014:Forest retreat">Forest retreat</a><span style="font-weight: bold; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;">&#160;&#183;&#32;</span> <a href="/index.php/DF2014:Fort" title="DF2014:Fort">Fort</a><span style="font-weight: bold; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;">&#160;&#183;&#32;</span> <a href="/index.php/DF2014:Fortress" title="DF2014:Fortress">Fortress</a><span style="font-weight: bold; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;">&#160;&#183;&#32;</span> <a href="/index.php/DF2014:Hamlet" title="DF2014:Hamlet">Hamlet</a><span style="font-weight: bold; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;">&#160;&#183;&#32;</span> <a href="/index.php/DF2014:Hillocks" title="DF2014:Hillocks">Hillocks</a><span style="font-weight: bold; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;">&#160;&#183;&#32;</span> <a href="/index.php/DF2014:Labyrinth" title="DF2014:Labyrinth">Labyrinth</a><span style="font-weight: bold; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;">&#160;&#183;&#32;</span> <a href="/index.php/DF2014:Lair" title="DF2014:Lair">Lair</a><span style="font-weight: bold; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;">&#160;&#183;&#32;</span> <a href="/index.php/DF2014:Monastery" title="DF2014:Monastery">Monastery</a><span style="font-weight: bold; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;">&#160;&#183;&#32;</span> <a href="/index.php/DF2014:Mountain_halls" title="DF2014:Mountain halls">Mountain halls</a><span style="font-weight: bold; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;">&#160;&#183;&#32;</span> <a href="/index.php/DF2014:Ruin" title="DF2014:Ruin">Ruins</a><span style="font-weight: bold; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;">&#160;&#183;&#32;</span> <a href="/index.php/DF2014:Shrine_(megabeast)" title="DF2014:Shrine (megabeast)">Shrine</a><span style="font-weight: bold; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;">&#160;&#183;&#32;</span> <a href="/index.php/DF2014:Tomb" title="DF2014:Tomb">Tomb</a><span style="font-weight: bold; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;">&#160;&#183;&#32;</span> <a href="/index.php/DF2014:Tower_(necromancy)" title="DF2014:Tower (necromancy)">Tower</a><span style="font-weight: bold; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;">&#160;&#183;&#32;</span> <a href="/index.php/DF2014:Town" title="DF2014:Town">Town</a><span style="font-weight: bold; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;">&#160;&#183;&#32;</span> <a href="/index.php/DF2014:Vault" title="DF2014:Vault">Vault</a></div></td></tr><tr style="line-height: 1.5em;"><th scope="row" style="background: #e6e6ff; border-top: 2px solid #fdfdfd; padding: 0.25em 1em; text-align: right; white-space: nowrap; width: 1%; background-color: #c3ead4;;&#32;;"><a href="/index.php/DF2014:Structure" title="DF2014:Structure">Structures</a></th><td style="background: transparent; border-top: 2px solid #fdfdfd; border-left: 2px solid #fdfdfd; padding: 0; text-align: left;&#32;;"><div style="padding: 0em 0.25em">
+<a href="/index.php/DF2014:Counting_house" title="DF2014:Counting house">Counting house</a><span style="font-weight: bold; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;">&#160;&#183;&#32;</span> <a href="/index.php/DF2014:Catacombs" title="DF2014:Catacombs">Catacombs</a><span style="font-weight: bold; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;">&#160;&#183;&#32;</span> <a href="/index.php/DF2014:Dungeon" title="DF2014:Dungeon">Dungeon</a><span style="font-weight: bold; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;">&#160;&#183;&#32;</span> <a href="/index.php/DF2014:Guildhall" title="DF2014:Guildhall">Guildhall</a><span style="font-weight: bold; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;">&#160;&#183;&#32;</span> <a href="/index.php/DF2014:Keep" class="mw-redirect" title="DF2014:Keep">Keep</a><span style="font-weight: bold; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;">&#160;&#183;&#32;</span> <a href="/index.php/DF2014:Library" title="DF2014:Library">Library</a><span style="font-weight: bold; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;">&#160;&#183;&#32;</span> <a href="/index.php/DF2014:Market" class="mw-redirect" title="DF2014:Market">Market</a><span style="font-weight: bold; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;">&#160;&#183;&#32;</span> <a href="/index.php/DF2014:Mead_hall" title="DF2014:Mead hall">Mead hall</a><span style="font-weight: bold; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;">&#160;&#183;&#32;</span> <a href="/index.php/DF2014:Sewers" title="DF2014:Sewers">Sewers</a><span style="font-weight: bold; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;">&#160;&#183;&#32;</span> <a href="/index.php/DF2014:Tavern" title="DF2014:Tavern">Tavern</a><span style="font-weight: bold; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;">&#160;&#183;&#32;</span> <a href="/index.php/DF2014:Temple" title="DF2014:Temple">Temple</a><span style="font-weight: bold; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;">&#160;&#183;&#32;</span> <a href="/index.php/DF2014:Tomb" title="DF2014:Tomb">Tomb</a><span style="font-weight: bold; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;">&#160;&#183;&#32;</span> <a href="/index.php/DF2014:Tower_(structure)" title="DF2014:Tower (structure)">Tower</a><span style="font-weight: bold; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;">&#160;&#183;&#32;</span> <a href="/index.php/DF2014:Treasure_room" title="DF2014:Treasure room">Treasure room</a><span style="font-weight: bold; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;">&#160;&#183;&#32;</span> <a href="/index.php/DF2014:Underworld_spire" title="DF2014:Underworld spire">Underworld spire</a></div></td></tr><tr style="line-height: 1.5em;"><th scope="row" style="background: #e6e6ff; border-top: 2px solid #fdfdfd; padding: 0.25em 1em; text-align: right; white-space: nowrap; width: 1%; background-color: #c3ead4;;&#32;;">Other</th><td style="background: transparent; border-top: 2px solid #fdfdfd; border-left: 2px solid #fdfdfd; padding: 0; text-align: left;&#32;;"><div style="padding: 0em 0.25em">
+<a href="/index.php/DF2014:Holding" title="DF2014:Holding">Holding</a></div></td></tr></tbody></table><div></div></td></tr></tbody></table></div>

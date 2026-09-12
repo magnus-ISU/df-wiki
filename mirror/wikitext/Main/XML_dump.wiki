@@ -1,0 +1,210 @@
+{{migrated article}}
+{{Quality|Tattered}}
+{{av}}
+
+{{old|v=50.01}}
+
+An '''XML dump''' of a world's history can be generated from [[Legends]] mode by pressing {{k|x}}, and will be placed in the ''Dwarf Fortress'' root folder. The dump consists of many internals ''Dwarf Fortress'' tracks about the world in [[wikipedia:XML|XML format]].  Be warned that the generated XML file can be quite large, even a gigabyte or more, especially for long-lived worlds with many [[historical figure]]s.  The dump is currently incomplete and is missing a lot of data about the world.  The third-party utility [[Utility:DFHack|DFHack]] can output a more thorough legends_plus.xml dump that supplements at least some of the missing information. 
+
+== Format ==
+
+A non-exhaustive breakdown of ''Dwarf Fortress'' XML export tags is available [http://pastebin.com/wb2zLvRh here].
+
+The [[v0.31:XML_dump|v0.31 xml dump page]] contains a lot of detail about the dumped information, and a lot of it is still accurate for this version.
+
+=== seconds72 ===
+
+These values specify when during the year an event occurred.  For example, the ''birth_seconds72'' and ''death_seconds72'' subelements of ''historical_figure'' elements have values of this type. 
+
+There are 12 months in a ''Dwarf Fortress'' [[Calendar|year]], exactly 28 days in each month, 24 hours in each day, 60 minutes in each hour, and 60 seconds in each minute.  Divide seconds by 72 to get the seconds72 value.  There are 1,200 seconds72 in a day.  There are 403,200 seconds72 in a ''Dwarf Fortress'' year.
+
+== Troubleshooting ==
+
+If you have played a fortress and then exported legends, you may get an error about unreadable HEX characters.  This is caused by older versions of [[utility:DFHack|DFHack]], where plugins (such as "workflow") saved their settings as unreadable historical figures.  There are several ways to fix this:
+* Clear the settings for the various plugins in fortress mode before exporting legends
+* Edit the xml by hand, [http://www.bay12forums.com/smf/index.php?topic=72702.msg4629392#msg4629392 as described here] (any platform)
+* Use the [http://www.bay12forums.com/smf/index.php?topic=131307 Legends Processing script] (windows only), which fixes the xml and also creates a compressed folder as described above
+
+Versions of DFHack made for Dwarf Fortress 0.47.01 and later should not suffer from this problem.
+
+== Contents of the vanilla legends.XML file ==
+
+* The file is encoded in [https://en.wikipedia.org/wiki/Code_page_437 CP437], and therefore will not be decode-able directly to UTF8.
+* The top-level node is ``df_world`` node. This contains 14 child nodes, each of which acts as a collection of identically formed child nodes. The nodes are as follows:
+{| class="wikitable"
+|+ df_world format
+|-
+! Parent node !! Individual node name !! Description
+|-
+| regions || region || A named region of the world map.
+|-
+| underground_regions || underground_region || An unnamed underground region of the world map.
+|-
+| sites || site || A site on the map with structures present in the site.
+|-
+| artifacts || artifact || Artifacts with their associated written content, location, or holder (if relevant).
+|-
+| world_constructions || world_construction || This section appears to be blank in legends.xml (the vanilla export).
+|-
+| historical_figures || historical_figure || Historical figures with entities associated to them.
+|-
+| entity_populations || entity_population || Each entity_population node contains an id and no further information.
+|-
+| entities || entity || A civilisation, group, unit, or other organised collection of creatures. In the case of non-sentient civilisations, entries will consist of only an id.
+|-
+| historical_events || historical_event || An event with a timestamp, type, and location. Some events contain links to involved entities and figures.
+|-
+| historical_event_collections || historical_event_collection || A collection of historical events that are related to each other (for example, wars).
+|-
+| historical_eras || historical_era || The timeframe of each historical era.
+|- written_contents || written_content || A piece of written content with its author, title, and length.
+|-
+| poetic_forms || poetic_form || Description of a poetic form.
+|-
+| musical_forms || musical_form || Description of a musical form.
+|-
+| dance_forms || dance_form || Description of a dance form.
+|}
+
+== Contents of the DFhack legends_plus.XML file ==
+
+* Encoded in UTF-8, rather than in CP437.  
+* Also has a top-level ``df_world`` node.  
+* Contains some new nodes as well as some additional information of node types present in the vanilla ``legends.xml``.
+{| class="wikitable"
+|-
+! Parent node !! Individual node name !! Relation to vanilla ``legends.XML`` content !! Description  
+|-
+| name ||  || only present here || The name of the world, untranslated. String.
+|- 
+| altname || || only present here || The name of the world, translated. String.
+|-
+| landmasses || landmass || only present here || 
+|-
+| mountain_peaks || mountain_peak || only present here || 
+|-
+| regions || region || additional information || 
+|-
+| underground_regions || underground_region || additional information ||
+|-
+| rivers || river || only present here || 
+|-
+| creature_raw || creature || only present here ||
+|-
+| sites || site || additional information ||
+|-
+| world_constructions || world_construction || additional information ||
+|-
+| artifacts || artifact || additional information ||
+|-
+| historical_figures || historical_figure || additional information, some duplication ||
+|- 
+| identities || identity || only present here ||
+|-
+| entity_populations || entity_population || only present (with information) here ||
+|-
+| entities || entity || only present (with information) here ||
+|-
+| historical_events || historical_event || additional information ||
+|-
+| historical_event_relationships || historical_event_relationship || only present here ||
+|-
+| historical_event_relationship_supplements || historical_event_relationship_supplement || only present here ||
+|-
+| historical_event_collections || || additional information (?) || appears to be empty.
+|-
+| historical_eras || || additional information (?) || appears to be empty.
+|-
+| written_contents || written_content || additional information ||
+|- 
+| poetic_forms || poetic_form || duplicated information (name) ||
+|- 
+| musical_forms || musical_form || duplicated information (name) ||
+|- 
+| dance_forms || dance_form || duplicated information (name) ||
+|}
+
+== Formatting ==
+The contents of each node item can be:   
+
+* (optionally signed) integer literal
+* string
+* a specific set of enum values (either string or integer)
+* a list of items delimited by pipes; ``|`` (e.g. ``4,5|4,6``)
+* a coordinate pair ``integer,integer`` (e.g. ``4,5``)
+
+Nodes can either be:
+
+* Quantity 1 - this node is always present and unique per item.  
+* Quantity 0-1 - this node is not always present but is unique if present.
+* Quantity 1+ - this node is always present but can have duplicates.
+* Quantity 0+ - this node is not always present but can have duplicates.
+
+== Geography == 
+
+=== <region> - legends.xml ===
+
+{| class="wikitable sortable"
+|+ <region> - legends.xml
+|-
+! Node name !! Quantity !! Type !! Contents
+|-
+| id || 1 || integer || Region ID.
+|-
+| type || 1 || string enum || One of: hills, forest, grassland, desert, lake, mountains, wetland, glacier, tundra, ocean
+|-
+| name || 1 || string || The translated name of the region.
+|}
+
+
+=== <region> - legends_plus.xml ===
+
+{| class="wikitable sortable"
+|+ <region> - legends_plus.xml
+|-
+! Node name !! Quantity !! Type !! Contents
+|-
+| id || 1 || integer || Region ID.
+|-
+| coords || 1 || list of coords || A list of squares in the world that are in this region. Sorted in increasing order of x and then y.
+|-
+| evilness || 1 || string enum || One of: good, neutral, evil.
+|-
+| force_id || 0-1 || integer || <info needed>
+|}
+
+=== <underground_region> - legends.xml ===
+
+{| class="wikitable sortable"
+|+ <underground_region> - legends.xml
+|-
+! Node name !! Quantity !! Type !! Contents
+|-
+| id || 1 || integer || Underground region ID.
+|-
+| type || 1 || string enum || One of: cavern, underworld, magma
+|-
+| depth || 1 || integer || <info needed>
+|}
+
+=== <underground_region> - legends_plus.xml ===
+
+{| class="wikitable sortable"
+|+ <underground_region> - legends_plus.xml
+|-
+! Node name !! Quantity !! Type !! Contents
+|-
+| id || 1 || integer || Underground region ID.
+|-
+| coords || 1 || list of coords || A list of squares in the world that are in this region. Sorted in increasing order of x and then y.
+|}
+
+== See also ==
+* [[Legends|Legends Mode]]
+* [[Utilities#Legends_Viewer|Legends Viewer (utility)]]
+* [[Utilities#Legends_tools|Legends Utilities]]
+* [[World History file]]
+* [[World Sites file]]
+
+{{Category|Files}}
+[[ru:XML dump]]

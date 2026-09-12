@@ -1,0 +1,13 @@
+{{Quality|Exceptional}}
+{{av}}
+:''See also: [[Tile]]''
+[[File:elevation_hud_anim.gif|thumb|200px|right|The elevation indicator, with both standard and ASCII graphics.]]'''Z-Level''', also known as '''elevation''', describes vertical space (depth or altitude) within ''Dwarf Fortress'', analogous to the [[Z-axis]] in geometry which extends out of the page towards the viewer. Each layer of view is a discrete z-level with a value relative to the bottom of the map space, indicated in the lower right corner of the screen. There is another Z-level display in the upper right corner of the main view which displays the player's z-level viewpoint relative to the surface z-level. The player moves their view from one z-level to another by moving the mouse wheel up or down. Alternatively, the player can press {{k|e}} to move up and {{k|c}} to move down.
+
+The default settings produce levels with around 50 z-levels of land (for an embark with average elevation changes) with an additional 15 z-levels of empty sky space above the highest point of land; mountainous regions can end up with well over a hundred z-levels of caverns. 0 corresponds to sea level.
+
+Numerous factors available in [[World_generation|world generation]] impact the available z-levels, and can alter the depth of the map to a minimum of 6 and a maximum well in excess of 600. (Worldgen has 400 z-levels; maybe one can force 200 levels of sky.)
+
+Reducing the number of z-levels, especially cavern levels, can reduce processor demand and boost [[framerate]]. Notably, a common reason players get 100+ Z-level embarks is because "Generate New World" makes ISLAND worlds, and the resulting terrain causes caverns to be a lot taller than usual.
+
+Things affected by [[gravity]] will descend z-levels as they would in the real world, while gaseous substances such as [[miasma]] or [[steam]] are lighter than air, and will ascend z-levels.
+[[ru:Z-level]]
