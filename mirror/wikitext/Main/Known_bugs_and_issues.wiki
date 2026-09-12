@@ -1,0 +1,43 @@
+{{Quality|Superior}}
+{{av}}
+:''"Bugs" redirects here. For insects, see [[Vermin]] and [[Creature]].''
+
+[[File:bugs_preview.png|right]]''Dwarf Fortress'' is a constant work-in-progress, and is thus full of '''bugs'''. An official compilation of all bugs, and their development status, can be found on the [https://dwarffortressbugtracker.com Dwarf Fortress Bug Tracker]. The search results in the bug tracker sometimes have an unintuitive sort order, so make sure to scroll to the bottom of the first page of results when searching for bugs. To comment on any bug, you can "Login anonymously" and add a note.
+
+== Reporting new bugs ==
+Please do '''not''' report new bugs here; to report a new bug, follow the [https://kitfoxgames.notion.site/How-to-Report-Bugs-in-Dwarf-Fortress-b5e2ca19dabe408897d1c2669599b7a2 How to Report Bugs in Dwarf Fortress] instructions. For any other discussion of new or existing bugs, visit the <code>#bug-discussion</code> channel on the [https://discord.com/invite/kitfoxgames Official Kitfox Discord].
+
+When reporting a bug:
+* Make a note of any mods you're using.  If you made the mod yourself, include the raws for any relevant objects.
+* If the game is crashing or refusing to open, include any error message that appears, along with your computer specifications and operating system.
+* If you have a save that reliably reproduces the bug, it may be helpful to upload the save to the [https://dffd.bay12games.com/category.php?id=20 DF File Depot - Bugged Saves] or another file hosting site.
+
+== Major bugs with workarounds ==
+{{catbox|Bugs}} This is a list of major bugs with workarounds that would be useful for most players to know. Bugs added to this list should: 1) impact most players in a significant way in the current version, and 2) have some workaround that is useful to share. Please link the source of any posted workarounds.
+
+* {{bugl|0012008}}: Dwarves will not equip [[Ammunition|ammunition]]. When a squad is created, it takes note of the amount of ammunition in the fortress but never updates this figure.
+**Workaround: Set up a [[Squad#Equipping_soldiers|uniform]] which includes a ranged weapon. Form a new squad using this uniform, which updates the squad's knowledge of how much ammunition is available. Assign the desired dwarves to that squad. Set them to train with a schedule of your choice. The dwarves should equip ammunition. (Note: [[Ambusher|Hunter]] dwarves "reserve" roughly 100 to 200 bolts each. Your ammo stockpile must include more bolts than 200 x number of hunters. This extra ammo will be used by your marksdwarves. Alternatively, remove these extra bolts in the Labor menu if you have no hunters.) ([https://www.reddit.com/r/dwarffortress/comments/10mwqtw/dwarves_not_equipping_boltsarrows_learn_from_my/ Source])
+* {{bugl|11985}} ('''Healthcare labors bug''')<span id="healthcare-labors-bug"/>: Dwarves assigned to doctoring occupations not performing doctor labors.
+**Workaround: Make any change on the work details page, such as adding and removing a dwarf from a work detail. This will cause labors to be properly updated based on occupations. ([https://www.youtube.com/watch?v=79J3X8ulER0&t=1765s source])
+* {{bugl|349}}: [[Animal care]] labor does nothing.
+**Workaround: Use DFHack's [https://docs.dfhack.org/en/0.47.04-r2/docs/Plugins.html#dwarfvet dwarfvet plugin]].
+* {{bugl|1451}}: The equipment required for [[miner]]s, [[hunter]]s, and [[woodcutter]]s to do their job conflicts with military uniforms.
+**Workaround: never assign these three labors to military dwarves.
+* {{bugl|9653}}: Tavern keeper/performers repeatedly serve alcohol until patrons drink themselves to death
+**Workaround: do not assign tavern keepers or performers, or do not place any alcohol within the tavern zone
+* {{bugl|9004}}: Items in containers are "unavailable" while a dwarf is hauling another item to store in the container
+** Workaround: storage path cost [[Settings#Pathing_costs|settings]] can tweak the behavior.
+** Workaround: clever [[stockpile design]]s can reduce the impact
+** Workaround: avoid using containers (use [[exploit|quantum stockpiles]], [[minecart]] stockpiles, or no stockpiles instead)
+* : Game always starts in Graphics Mode.
+** Workaround: change PRINT_MODE to 2D or SOFTWARE in [[init.txt]].
+* {{bugl|2712}}: Physics for whips is broken, making them the most powerful weapons in the game. They easily slice through steel.
+**Workaround: Change the stats in the file "/data/vanilla/vanilla_items/objects/item_weapon.txt". Search for "WEAPON_WHIP" to find the proper section. Suggested changes are in bold:
+::<code>[SIZE:'''100''']</code>
+::<code>[ATTACK:BLUNT:'''10''':10:lash:lashes:NO_SUB:5000]</code>
+::Unarmored opponents will still be killed by a whip before long. Armored ones will only suffer bruises and the occasional broken bone.
+
+
+{{Category|Bugs| }}
+[[Category:Game development]]
+[[ru:Known bugs and issues]]

@@ -1,0 +1,258 @@
+{{distinguish|l1 = the terrible programming language|wikipedia: COBOL}}
+
+The '''Kobold language''' is one of the [[language]]s the player will come across. This language is used in-game for the names, groups, and civilizations of [[kobold]]s.
+
+Kobold is governed by rules different from the other main languages. Kobolds have the {{token|UTTERANCES}} creature token, which means their language has no pre-defined vocabulary. Instead, the language consists entirely of proper names built by hard-coded rules, which are detailed below.
+
+Kobold-language words do not actually have a proper English translation (''due to not quite being based on any particular language - see [[#Inspiration|Inspiration]]'') ; however, Kobold-language objects and individual kobolds will maintain the same name over time.
+
+==Alphabet and Graphemics==
+The letters of the Kobold alphabet are:
+<center>
+{|class="wikitable" style="border-collapse:collapse;"
+|-
+|width=2% align="center"|1||width=2% align="center"|2
+|width=2% align="center"|3||width=2% align="center"|4
+|width=2% align="center"|5||width=2% align="center"|6
+|width=2% align="center"|7||width=2% align="center"|8
+|width=2% align="center"|9||width=2% align="center"|10
+|width=2% align="center"|11||width=2% align="center"|12
+|width=2% align="center"|13||width=2% align="center"|14
+|width=2% align="center"|15||width=2% align="center"|16
+|width=2% align="center"|17||width=2% align="center"|18
+|width=2% align="center"|19||width=2% align="center"|20
+|width=2% align="center"|21
+|-
+|bgcolor="#EFEFEF" align="center" colspan="34" | '''Majuscule forms''' (also called '''uppercase''' or '''capital letters''')
+|-
+|width=2% align="center"|A||width=2% align="center"|B||width=2% align="center"|C||width=2% align="center"|D||width=2% align="center"|E||width=2% align="center"|F||width=2% align="center"|G||width=2% align="center"|H||width=2% align="center"|I||width=2% align="center"|J||width=2% align="center"|K||width=2% align="center"|L||width=2% align="center"|M||width=2% align="center"|N||width=2% align="center"|O||width=2% align="center"|P||width=2% align="center"|R||width=2% align="center"|S||width=2% align="center"|T||width=2% align="center"|U||width=2% align="center"|Y
+|- 	
+|bgcolor="#EFEFEF" align="center" colspan="34" | '''Minuscule forms''' (also called '''lowercase''' or '''small letters''')
+|-
+|align="center"|a||align="center"|b||align="center"|c||align="center"|d||align="center"|e||align="center"|f||align="center"|g||align="center"|h||align="center"|i||align="center"|j||align="center"|k||align="center"|l||align="center"|m||align="center"|n||align="center"|o||align="center"|p||align="center"|r||align="center"|s||align="center"|t||align="center"|u||align="center"|y
+|}
+</center>
+
+Of these 21 letters, six (A, E, I, O, U, and Y) represent vowels, while the other fifteen represent consonants.
+
+Peculiarities:
+*The letter ''h'' only appears in the digraphs ''sh'', ''th'', and ''ch''.
+*The letter ''n'' only appears in the digraphs ''ng'', ''nk'', and ''in'', and the trigraph ''rsn''.
+*The letter ''y'' only appears in the digraph ''ay''.
+
+The letters Q, V, W, X, and Z of the [[wikipedia:ISO basic Latin alphabet|ISO basic Latin alphabet]] do not occur in the Kobold alphabet.
+
+===Letter Frequency===
+Based on a sample of one million kobold names, the letter frequencies can be established:
+
+{| class="wikitable"
+! style="text-align: center; font-weight: bold;" | Letter
+! Frequency
+|-
+| style="text-align: center; font-weight: bold;" | a
+| 6.11%
+|-
+| style="text-align: center; font-weight: bold;" | b
+| 4.48%
+|-
+| style="text-align: center; font-weight: bold;" | c
+| 1.28%
+|-
+| style="text-align: center; font-weight: bold;" | d
+| 3.17%
+|-
+| style="text-align: center; font-weight: bold;" | e
+| 5.23%
+|-
+| style="text-align: center; font-weight: bold;" | f
+| 1.86%
+|-
+| style="text-align: center; font-weight: bold;" | g
+| 3.82%
+|-
+| style="text-align: center; font-weight: bold;" | h
+| 3.83%
+|-
+| style="text-align: center; font-weight: bold;" | i
+| 9.60%
+|-
+| style="text-align: center; font-weight: bold;" | j
+| 1.28%
+|-
+| style="text-align: center; font-weight: bold;" | k
+| 3.17%
+|-
+| style="text-align: center; font-weight: bold;" | l
+| 10.25%
+|-
+| style="text-align: center; font-weight: bold;" | m
+| 1.96%
+|-
+| style="text-align: center; font-weight: bold;" | n
+| 3.72%
+|-
+| style="text-align: center; font-weight: bold;" | o
+| 4.37%
+|-
+| style="text-align: center; font-weight: bold;" | p
+| 1.28%
+|-
+| style="text-align: center; font-weight: bold;" | r
+| 9.67%
+|-
+| style="text-align: center; font-weight: bold;" | s
+| 11.47%
+|-
+| style="text-align: center; font-weight: bold;" | t
+| 3.84%
+|-
+| style="text-align: center; font-weight: bold;" | u
+| 7.86%
+|-
+| style="text-align: center; font-weight: bold;" | y
+| 1.75%
+|}
+
+==Phonotactics==
+
+The Kobold language has 16 distinguishable consonant phonemes, forming the phonological consonant inventory:
+<center>
+{| class="wikitable"
+! style="text-align: center;" | 
+! style="text-align: center; font-weight: bold;" | Labial
+! style="text-align: center; font-weight: bold;" | Dental
+! style="text-align: center; font-weight: bold;" | Alveolar
+! style="text-align: center; font-weight: bold;" | Post-alveolar
+! style="text-align: center; font-weight: bold;" | Velar
+|-
+| style="text-align: center; font-weight: bold;" | Nasal
+| style="text-align: center;" | ''m'' [m]
+| style="text-align: center;" | 
+| style="text-align: center;" | ''n'' [n*]
+| style="text-align: center;" | 
+| style="text-align: center;" | 
+|-
+| style="text-align: center; font-weight: bold;" | Plosive
+| style="text-align: center;" | ''p'' [p], ''b'' [b]
+| style="text-align: center;" | 
+| style="text-align: center;" | ''t'' [t], ''d'' [d]
+| style="text-align: center;" | 
+| style="text-align: center;" | ''k'' [k], ''g'' [g]
+|-
+| style="text-align: center; font-weight: bold;" | Affricate
+| style="text-align: center;" | 
+| style="text-align: center;" | 
+| style="text-align: center;" | 
+| style="text-align: center;" | ''ch'' [t͡ʃ], ''j'' [d͡ʒ]
+| style="text-align: center;" | 
+|-
+| style="text-align: center; font-weight: bold;" | Fricative
+| style="text-align: center;" | ''f'' [f]
+| style="text-align: center;" | ''th'' [θ]
+| style="text-align: center;" | ''s'' [s]
+| style="text-align: center;" | ''sh'' [ʃ]
+| style="text-align: center;" | 
+|-
+| style="text-align: center; font-weight: bold;" | Approximant
+| style="text-align: center;" | 
+| style="text-align: center;" | 
+| style="text-align: center;" | ''r'' [r]
+| style="text-align: center;" | 
+| style="text-align: center;" | 
+|-
+| style="text-align: center; font-weight: bold;" | Lateral
+| style="text-align: center;" | 
+| style="text-align: center;" | 
+| style="text-align: center;" | ''l'' [l]
+| style="text-align: center;" | 
+| style="text-align: center;" | 
+|}
+</center>
+
+<nowiki>*</nowiki>The phoneme represented by ''n'' likely has the [[wikipedia: Allophone|allophone]] [ŋ] before ''g'' and ''k.''
+
+===Syllables===
+
+Kobold has three kinds of syllables, ''primary,'' ''secondary,'' and ''final.'' Every word is composed of one or two primary syllables, zero to two secondary syllables, and one final syllable. Words must begin with a primary syllable, end with a final syllable, the penultimate syllable must be a primary syllable, and all others must be secondary syllables. Therefore, the following structures are allowed:
+<center>
+{| class="wikitable"
+! No. of syllables
+! Structure
+|-
+| 2 syllables
+| 1-F
+|-
+| 3 syllables
+| 1-1-F
+|-
+| 4 syllables
+| 1-2-1-F
+|-
+| 5 syllables
+| 1-2-2-1-F
+|}
+</center>
+
+====Primary Syllables====
+Every primary syllable is of the [[wikipedia: Syllable#Components|syllable structure]] C<sub>1</sub>(C<sub>2</sub>)V. C<sub>1</sub> is mandatory, and can be one of many consonants; C<sub>2</sub> is an optional [[wikipedia: Approximant consonant|approximant]], which can be either ''r'' or ''l''; and V is a vowel.
+*The allowed consonants for C<sub>1</sub> are: ''b'', ''d'', ''st'', ''sh'', ''s'', ''t'', ''th'', ''ch'', ''l'', ''f'', ''g'', ''k'', ''p'', and ''j''.
+*The allowed consonants for C<sub>2</sub> are: ''r'', ''l'', or nothing.
+**'''Exception''': The consonant cluster ''ll'' is forbidden.
+*The allowed vowels for V are: ''a'', ''o'', ''u'', ''ay'', ''ee'', and ''i''.
+**'''Exception''': The digraph vowels ''ay'' and ''ee'' can only be present in the penultimate syllable of a word (if this is also the initial syllable, it is still allowed).
+
+====Secondary Syllables====
+Every secondary syllable is of the simple form CV. C is one of a handful of consonants, and V is a vowel.
+*The allowed consonants for C are: ''b'', ''d'', ''l'', ''f'', ''g'', and ''k''.
+*The allowed vowels for V are: ''a'', ''i'', ''o'', and ''u''.
+**'''Note''': All secondary syllables use the same vowel as the first syllable.
+
+====Final Syllables====
+Every final syllable is of the structure CR. C is one of several consonants or consonant clusters, while R is a [[wikipedia: Syllable#Rime|rime]] that is limited to one of the four endings ''-is'', ''-us'', ''-er'', or ''-in''.
+*The allowed consonants for C are: ''m'', ''r'', ''ng'', ''b'', ''rb'', ''mb'', ''g'', ''lg'', ''l'', ''lb'', ''lm'', ''k'', ''nk'', ''ld'', ''d'', and ''rsn''.
+*The allowed rimes for R are: ''is'', ''us'', ''er'', and ''in''.
+**'''Exception:''' The rimes ''er'' and ''in'' are not allowed if the penultimate syllable's vowel is ''ee'' or ''i''.
+
+Note that the consonant C is likely not meant to actually begin the final syllable, but rather to be appended to the penultimate syllable. For example, the kobold name ''Krudulugrilgus'' would be enunciated as ''Kru-du-lu-'''gril'''-gus'', not ''Kru-du-lu-gri-'''lgus.'''''
+
+==Vocabulary==
+The only actual concrete words in the Kobold language are "AUGIS", "STORKIS", and "STRANGUS" - when encountering Kobolds in [[Adventurer mode]] who have slain a notable creature, they speak one of these 3 words in order to brag about their conquests before attacking you.
+
+Aside from this, the Kobold language has no set vocabulary, being formed entirely of procedurally generated proper names. The shortest possible words would be 5 letters and 2 syllables, like ''[[:File:Sober.jpg|Sober]]'', and the longest possible words would be 18 letters and 5 syllables, such as ''Stribikistreersnis''.
+
+You can generate Kobold names outside of ''Dwarf Fortress'', that follow ''most'' of the rules above ("all secondary syllables use the same vowel as the first syllable" is not enforced), with the online program [http://web.archive.org/web/20230712185300/https://collinbrennan.github.io/GenGo/index.html GenGo].  After clicking the link, copy the following into the appropriate boxes (overwriting any default already there), and click generate.
+
+{|class="wikitable"
+!Characters
+!Rewrites
+|-
+| 
+C: b d st sh s t th ch l f g k p j,<br />
+L: r l,<br />
+V: a o u i,<br />
+D: b d l f g k,<br />
+W: a o u i ay ee,<br />
+F: m r ng b rb mb g lg l lb lm k nk ld d rsn,<br />
+R: is us er in
+| ll: l
+|-
+| '''Patterns'''
+| [C(L)V(DV(DV))(C(L)W)FR C(L)WFR]
+|-
+| '''Filters'''
+|
+|-
+| '''Syllable Min'''
+| 1
+|-
+| '''Syllable Max'''
+| 1
+|}
+
+==Inspiration==
+Toady has said in an interview that the kobold language was created in imitation of his and Threetoe's childhood language developed to speak to cats. (BlindIRL interview, 2020/06/11, [https://www.youtube.com/watch?v=9xsv9JQ3X5w] )
+
+{{Language}}
+
+{{Category|Language}}
+[[ru:Kobold language]]

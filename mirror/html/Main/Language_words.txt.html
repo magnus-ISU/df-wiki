@@ -1,0 +1,87 @@
+<div class="mw-parser-output"><div id="page-quality-rating" style="text-align: right;margin: 0.8em 0;font-size:75%">
+ <a href="/index.php/Dwarf_Fortress_Wiki:Quality#Tattered" title="Dwarf Fortress Wiki:Quality"><span id="stub-quality" style="text-decoration:none; color:#333333">xTATTEREDx</span></a> <span style="font-weight:bold;" class="dot">&#160;·</span> <a href="/index.php/Dwarf_Fortress_Wiki:Quality#Fine" title="Dwarf Fortress Wiki:Quality"><span id="fine-quality" style="padding:0.2em; border:1px solid #db8; border-radius: 2px; -webkit-border-radius: 2px; -moz-border-radius: 2px; -o-border-radius: 2px; -ms-border-radius: 2px; background:#FFE0CC; color:#CA7A02;">+FINE+</span></a> <span style="font-weight:bold;" class="dot">&#160;·</span> <a href="/index.php/Dwarf_Fortress_Wiki:Quality#Superior" title="Dwarf Fortress Wiki:Quality"><span id="superior-quality" style="text-decoration:none; color:#8800cc;">*SUPERIOR*</span></a> <span style="font-weight:bold;" class="dot">&#160;·</span> <a href="/index.php/Dwarf_Fortress_Wiki:Quality#Exceptional" title="Dwarf Fortress Wiki:Quality"><span id="exceptional-quality" style="text-decoration:none; color:#0088CC;">≡EXCEPTIONAL≡</span></a> <span style="font-weight:bold;" class="dot">&#160;·</span> <a href="/index.php/Dwarf_Fortress_Wiki:Quality#Masterwork" title="Dwarf Fortress Wiki:Quality"><span id="masterwork-quality" style="text-decoration:none; color:#72A329;">☼MASTERWORK☼</span></a></div>
+<div style="float:right; min-width:12em;"><table style="width:100%; background-color:#f3f3f3; border: 1px solid #cccccc">
+<tbody><tr><th><a href="/index.php/Category:Files" title="Category:Files">File</a></th></tr>
+<tr><td style="padding-left:0px;">
+<p><a href="/index.php/File:Folder-orange.svg" class="image"><img alt="Folder-orange.svg" src="https://thumb.wikimedia.org/wikipedia/commons/thumb/0/09/Folder-orange.svg/20px-Folder-orange.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=imageinfo&amp;utm_content=thumbnail" decoding="async" width="18" height="18" srcset="https://thumb.wikimedia.org/wikipedia/commons/thumb/0/09/Folder-orange.svg/40px-Folder-orange.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=imageinfo&amp;utm_content=thumbnail 1.5x" /></a> Dwarf Fortress
+</p>
+</td></tr>
+<tr><td style="padding-left:8px;">
+<p><a href="/index.php/File:Folder.svg" class="image"><img alt="Folder.svg" src="https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f3/Folder.svg/20px-Folder.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=imageinfo&amp;utm_content=thumbnail" decoding="async" width="18" height="18" srcset="https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f3/Folder.svg/40px-Folder.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=imageinfo&amp;utm_content=thumbnail 1.5x" /></a> raw
+</p>
+</td></tr>
+<tr><td style="padding-left:16px;">
+<p><a href="/index.php/File:Folder.svg" class="image"><img alt="Folder.svg" src="https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f3/Folder.svg/20px-Folder.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=imageinfo&amp;utm_content=thumbnail" decoding="async" width="18" height="18" srcset="https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f3/Folder.svg/40px-Folder.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=imageinfo&amp;utm_content=thumbnail 1.5x" /></a> objects
+</p>
+</td></tr>
+<tr><td style="padding-left:24px;">
+<p><a href="/index.php/File:Text-x-generic.svg" class="image"><img alt="Text-x-generic.svg" src="https://thumb.wikimedia.org/wikipedia/commons/thumb/2/20/Text-x-generic.svg/20px-Text-x-generic.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=imageinfo&amp;utm_content=thumbnail" decoding="async" width="18" height="18" srcset="https://thumb.wikimedia.org/wikipedia/commons/thumb/2/20/Text-x-generic.svg/40px-Text-x-generic.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=imageinfo&amp;utm_content=thumbnail 1.5x" /></a> language_words.txt
+</p>
+</td></tr>
+
+</tbody></table></div>
+
+<h2><span class="mw-headline" id="Description">Description</span></h2>
+<p><b>[SYMBOL]</b> defines a category of words, which works with the [SELECT_SYMBOL] and [CULL_SYMBOL] arguments in the corresponding <a href="/index.php/Entity_token" title="Entity token">entity file</a> to create a list of words which your civilization will prefer to use and those it will never use. For instance, dwarves by default have [SELECT_SYMBOL:ALL:ARTIFICE] and [CULL_SYMBOL:ALL:FLOWERY]. This means that dwarven surnames, placenames and group names will tend to use words in the [SYMBOL:ARTIFICE] list (such as <i>cloister</i>, <i>hammer</i> and <i>steel</i>) and will never use words from the [SYMBOL:FLOWERY] list (such as <i>butterfly</i>, <i>meadow</i> and <i>velvet</i>). Under each [SYMBOL] heading, all possible words are listed in the form [S_WORD:word].
+</p><p><b>language_SYM.txt</b> lists the various language items (ie words) in English and their token attributes.
+</p><p>Note that this file doesn't include translations to the in-game languages. It adds a word and defines the parts of speech for it. The parts of speech tokens indicate how an individual word can function as more than one part of speech when used in different circumstances.
+</p><p>Words tend to be grouped into categories called symbols. These are defined in <a href="/index.php/Language_SYM.txt" title="Language SYM.txt">language_SYM.txt</a>.
+</p>
+<h2><span class="mw-headline" id="Examples">Examples</span></h2>
+<h3><span class="mw-headline" id="MOUNTAIN">MOUNTAIN</span></h3>
+<p>In this file, all words that the game uses for naming are listed, defined by part of speech, and then the exact form for the part of speech given (including plurals for nouns). Example:
+</p><p><br /> 
+</p>
+<pre>[WORD:MOUNTAIN]
+	[NOUN:mountain:mountains]
+		[FRONT_COMPOUND_NOUN_SING]
+		[REAR_COMPOUND_NOUN_SING]
+		[THE_COMPOUND_NOUN_SING]
+		[THE_NOUN_SING]
+		[REAR_COMPOUND_NOUN_PLUR]
+		[OF_NOUN_PLUR]
+	[ADJ:mountainous]
+		[ADJ_DIST:2]
+</pre>
+<p>In this case, the word can be used in noun or adjective form. The noun form can be used 
+</p>
+<ul><li>at the beginning of a compound noun ("Mountain-Axe")</li>
+<li>at the end of a compound noun ("Axe-Mountain")</li>
+<li>as part of a compound noun directly following <i>The</i> ("The Mountain-Axe")</li>
+<li>on its own after <i>The</i> ("The Mountain")</li>
+<li>at the end of a compound noun, in plural form ("Axe-Mountains")</li>
+<li>after <i>Of</i>, in plural form ("Of Mountains")</li></ul>
+<p><br />[ADJ_DIST] specifies the order that multiple adjectives in the same name appear in. Lower ADJ_DISTs will cause the word to be displayed earlier in a name; it is unknown what happens when two adjectives with equal ADJ_DISTs clash.
+<br />
+</p><p><br />
+</p>
+<h3><span class="mw-headline" id="CAVERN">CAVERN</span></h3>
+<p>The section for the word CAVERN is below. The first line <code>[WORD:CAVERN]</code> is the key for the word and the value of that key follows. The key could remain as is, and the value definition [NOUN:cavern:caverns] modified to read <i>[NOUN:grotto:grottoes].</i> This would replace in game English instances of "cavern" with the word "grotto" instead. The fantasy languages translations would remain as is.
+</p><p>[WORD:CAVERN] is added to the DARKNESS symbol group via language_SYM.txt. You can see that here: <a href="/index.php/Language_SYM.txt/Darkness/raw" title="Language SYM.txt/Darkness/raw">Language_SYM.txt/Darkness/raw</a>
+</p>
+<pre>[WORD:CAVERN]
+	[NOUN:cavern:caverns]
+		[FRONT_COMPOUND_NOUN_SING]
+		[REAR_COMPOUND_NOUN_SING]
+		[THE_NOUN_SING]
+		[REAR_COMPOUND_NOUN_PLUR]
+		[OF_NOUN_PLUR]
+	[ADJ:cavernous]
+		[ADJ_DIST:2]</pre>
+<h2><span class="mw-headline" id="DF2014">DF2014</span></h2>
+<p>See <a href="/index.php/DF2014:Language_words.txt" title="DF2014:Language words.txt">DF2014:Language_words.txt</a> for outdated symbol listing.
+</p>
+<h2><span class="mw-headline" id="See_Also">See Also</span></h2>
+<ul><li><a href="/index.php/Language_SYM.txt" title="Language SYM.txt">language_SYM.txt</a></li>
+<li>raw on github: <a rel="nofollow" class="external free" href="https://github.com/DF-Wiki/DFRawFunctions/blob/master/raws/v50/language_words.txt">https://github.com/DF-Wiki/DFRawFunctions/blob/master/raws/v50/language_words.txt</a></li></ul>
+<table class="collapsible autocollapse infobox" style="background: #fdfdfd; border: 1px solid #aaa; font-size: 88%; margin: 0 auto -1px; vertical-align: middle; width: 100%; max-width: 100em;"><tbody><tr style="line-height: 1.5em;"><th scope="col" colspan="2" style="background: #ccf; padding: 0.25em 1em; text-align: center; background-color: #ead7ce;;"><div class="plainlinks" style="float: left; padding-left: 0.4em; font-size: 70%; font-weight: normal; white-space: nowrap;"><a href="/index.php/Template:Language" title="Template:Language"><span title="View this template">V</span></a><span style="font-weight: bold; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;">&#160;·&#160;</span><a href="/index.php?title=Template_talk:Language&amp;action=edit&amp;redlink=1" class="new" title="Template talk:Language (page does not exist)"><span title="Discuss this template">T</span></a><span style="font-weight: bold; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;">&#160;·&#160;</span><a rel="nofollow" class="external text" href="https://dwarffortresswiki.org/index.php?title=Template:Language&amp;action=edit"><span title="Edit this template">E</span></a></div><div style="font-size: 114%; margin: 0 6em;">
+<a href="/index.php/Language" title="Language">Languages</a></div></th></tr><tr style="line-height: 1.5em;"><th scope="row" style="background: #ddf; padding: 0.25em 1em; text-align: right; white-space: nowrap; width: 1%; background-color: #ead7ce;;&#32;;"><a href="/index.php/Category:Races" title="Category:Races">Races</a></th><td style="background: transparent; padding: 0; text-align: left;&#32;;"><div style="padding: 0em 0.25em">
+<a href="/index.php/Divine_language" title="Divine language">Divine</a><span style="font-weight: bold; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;">&#160;&#183;&#32;</span> <a href="/index.php/Dwarven_language" title="Dwarven language">Dwarven</a><span style="font-weight: bold; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;">&#160;&#183;&#32;</span> <a href="/index.php/Elvish_language" class="mw-redirect" title="Elvish language">Elvish</a><span style="font-weight: bold; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;">&#160;&#183;&#32;</span> <a href="/index.php/Goblin_language" title="Goblin language">Goblin</a><span style="font-weight: bold; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;">&#160;&#183;&#32;</span> <a href="/index.php/Human_language" title="Human language">Human</a><span style="font-weight: bold; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;">&#160;&#183;&#32;</span> <a href="/index.php/Kobold_language" title="Kobold language">Kobold</a></div></td></tr><tr style="line-height: 1.5em;"><th scope="row" style="background: #ddf; padding: 0.25em 1em; text-align: right; white-space: nowrap; width: 1%; background-color: #ead7ce;;&#32;;">Modding</th><td style="background: transparent; padding: 0; text-align: left;&#32;;"><div style="padding: 0em 0.25em">
+<a class="mw-selflink selflink">language_words.txt</a><span style="font-weight: bold; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;">&#160;&#183;&#32;</span> <a href="/index.php/Language_SYM.txt" title="Language SYM.txt">language_SYM.txt</a><span style="font-weight: bold; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;">&#160;&#183;&#32;</span> <a href="/index.php/Language_token" title="Language token">Language token</a></div></td></tr><tr style="line-height: 1.5em;"><th scope="row" style="background: #ddf; padding: 0.25em 1em; text-align: right; white-space: nowrap; width: 1%; background-color: #ead7ce;;&#32;;">Text Sets</th><td style="background: transparent; padding: 0; text-align: left;&#32;;"><div style="padding: 0em 0.25em">
+<a href="/index.php/Text_book_instruction.txt" title="Text book instruction.txt">text_book_instruction.txt</a><span style="font-weight: bold; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;">&#160;&#183;&#32;</span> <a href="/index.php/Text_dwarf.txt" title="Text dwarf.txt">Text dwarf.txt</a><span style="font-weight: bold; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;">&#160;&#183;&#32;</span> <a href="/index.php/Text_curse.txt" title="Text curse.txt">text_curse.txt</a><span style="font-weight: bold; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;">&#160;&#183;&#32;</span> <a href="/index.php/Text_general.txt" title="Text general.txt">text_general.txt</a></div></td></tr></tbody></table>
+<table class="collapsible autocollapse infobox" style="background: #fdfdfd; border: 1px solid #aaa; font-size: 88%; margin: 0 auto -1px; vertical-align: middle; width: 100%; max-width: 100em;"><tbody><tr style="line-height: 1.5em;"><th scope="col" colspan="2" style="background: #ccf; padding: 0.25em 1em; text-align: center; background-color: #f0eaff;;"><div class="plainlinks" style="float: left; padding-left: 0.4em; font-size: 70%; font-weight: normal; white-space: nowrap;"><a href="/index.php/Template:V50_files" title="Template:V50 files"><span title="View this template">V</span></a><span style="font-weight: bold; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;">&#160;·&#160;</span><a href="/index.php?title=Template_talk:V50_files&amp;action=edit&amp;redlink=1" class="new" title="Template talk:V50 files (page does not exist)"><span title="Discuss this template">T</span></a><span style="font-weight: bold; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;">&#160;·&#160;</span><a rel="nofollow" class="external text" href="https://dwarffortresswiki.org/index.php?title=Template:V50_files&amp;action=edit"><span title="Edit this template">E</span></a></div><div style="font-size: 114%; margin: 0 6em;">
+<a href="/index.php/Category:Files" title="Category:Files">Files</a></div></th></tr><tr style="line-height: 1.5em;"><th scope="row" style="background: #ddf; padding: 0.25em 1em; text-align: right; white-space: nowrap; width: 1%; background-color: #f0eaff;;&#32;;">Settings</th><td style="background: transparent; padding: 0; text-align: left;&#32;;"><div style="padding: 0em 0.25em">
+<a href="/index.php/Colors.txt" title="Colors.txt">colors.txt</a> • <a href="/index.php/Init.txt" title="Init.txt">init.txt</a> • <a href="/index.php/Interface.txt" title="Interface.txt">interface.txt</a></div></td></tr><tr style="line-height: 1.5em;"><th scope="row" style="background: #ddf; padding: 0.25em 1em; text-align: right; white-space: nowrap; width: 1%; background-color: #f0eaff;;&#32;;">Gameplay settings</th><td style="background: transparent; padding: 0; text-align: left;&#32;;"><div style="padding: 0em 0.25em">
+<a href="/index.php/Announcements.txt" title="Announcements.txt">announcements.txt</a> • <a href="/index.php/D_init.txt" title="D init.txt">d_init.txt</a></div></td></tr><tr style="line-height: 1.5em;"><th scope="row" style="background: #ddf; padding: 0.25em 1em; text-align: right; white-space: nowrap; width: 1%; background-color: #f0eaff;;&#32;;">Log files</th><td style="background: transparent; padding: 0; text-align: left;&#32;;"><div style="padding: 0em 0.25em">
+<a href="/index.php/Errorlog.txt" title="Errorlog.txt">errorlog.txt</a> • <a href="/index.php/Gamelog.txt" title="Gamelog.txt">gamelog.txt</a> • <a href="/index.php/Map_rejection_log.txt" class="mw-redirect" title="Map rejection log.txt">map_rejection_log.txt</a></div></td></tr><tr style="line-height: 1.5em;"><th scope="row" style="background: #ddf; padding: 0.25em 1em; text-align: right; white-space: nowrap; width: 1%; background-color: #f0eaff;;&#32;;">Other</th><td style="background: transparent; padding: 0; text-align: left;&#32;;"><div style="padding: 0em 0.25em">
+<a href="/index.php/Arena.txt" class="mw-redirect" title="Arena.txt">arena.txt</a> • <a href="/index.php/Embark_profiles.txt" title="Embark profiles.txt">embark_profiles.txt</a> • <a href="/index.php/World_gen.txt" title="World gen.txt">world_gen.txt</a></div></td></tr></tbody></table></div>

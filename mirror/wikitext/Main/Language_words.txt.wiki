@@ -1,0 +1,68 @@
+{{Quality|Fine}}
+{{file|DF/raw/objects/language_words.txt}}
+
+== Description ==
+
+'''[SYMBOL]''' defines a category of words, which works with the [SELECT_SYMBOL] and [CULL_SYMBOL] arguments in the corresponding [[Entity token|entity file]] to create a list of words which your civilization will prefer to use and those it will never use. For instance, dwarves by default have [SELECT_SYMBOL:ALL:ARTIFICE] and [CULL_SYMBOL:ALL:FLOWERY]. This means that dwarven surnames, placenames and group names will tend to use words in the [SYMBOL:ARTIFICE] list (such as ''cloister'', ''hammer'' and ''steel'') and will never use words from the [SYMBOL:FLOWERY] list (such as ''butterfly'', ''meadow'' and ''velvet''). Under each [SYMBOL] heading, all possible words are listed in the form [S_WORD:word].
+
+'''language_SYM.txt''' lists the various language items (ie words) in English and their token attributes.
+
+Note that this file doesn't include translations to the in-game languages. It adds a word and defines the parts of speech for it. The parts of speech tokens indicate how an individual word can function as more than one part of speech when used in different circumstances.
+
+Words tend to be grouped into categories called symbols. These are defined in [[language_SYM.txt]].
+
+==Examples==
+
+===MOUNTAIN===
+
+In this file, all words that the game uses for naming are listed, defined by part of speech, and then the exact form for the part of speech given (including plurals for nouns). Example:
+
+ 
+ [WORD:MOUNTAIN]
+ 	[NOUN:mountain:mountains]
+ 		[FRONT_COMPOUND_NOUN_SING]
+ 		[REAR_COMPOUND_NOUN_SING]
+ 		[THE_COMPOUND_NOUN_SING]
+ 		[THE_NOUN_SING]
+ 		[REAR_COMPOUND_NOUN_PLUR]
+ 		[OF_NOUN_PLUR]
+ 	[ADJ:mountainous]
+ 		[ADJ_DIST:2]
+
+In this case, the word can be used in noun or adjective form. The noun form can be used 
+*at the beginning of a compound noun ("Mountain-Axe")
+*at the end of a compound noun ("Axe-Mountain")
+*as part of a compound noun directly following ''The'' ("The Mountain-Axe")
+*on its own after ''The'' ("The Mountain")
+*at the end of a compound noun, in plural form ("Axe-Mountains")
+*after ''Of'', in plural form ("Of Mountains")
+
+<br>[ADJ_DIST] specifies the order that multiple adjectives in the same name appear in. Lower ADJ_DISTs will cause the word to be displayed earlier in a name; it is unknown what happens when two adjectives with equal ADJ_DISTs clash.
+<br>
+
+
+=== CAVERN ===
+
+The section for the word CAVERN is below. The first line <code>[WORD:CAVERN]</code> is the key for the word and the value of that key follows. The key could remain as is, and the value definition <nowiki>[NOUN:cavern:caverns]</nowiki> modified to read ''<nowiki>[NOUN:grotto:grottoes]</nowiki>.'' This would replace in game English instances of "cavern" with the word "grotto" instead. The fantasy languages translations would remain as is.
+
+[WORD:CAVERN] is added to the DARKNESS symbol group via language_SYM.txt. You can see that here: [[Language_SYM.txt/Darkness/raw]]
+
+<pre><nowiki>[WORD:CAVERN]
+	[NOUN:cavern:caverns]
+		[FRONT_COMPOUND_NOUN_SING]
+		[REAR_COMPOUND_NOUN_SING]
+		[THE_NOUN_SING]
+		[REAR_COMPOUND_NOUN_PLUR]
+		[OF_NOUN_PLUR]
+	[ADJ:cavernous]
+		[ADJ_DIST:2]</nowiki></pre>
+
+== DF2014 ==
+See [[DF2014:Language_words.txt]] for outdated symbol listing.
+
+== See Also ==
+* [[language_SYM.txt]]
+* raw on github: https://github.com/DF-Wiki/DFRawFunctions/blob/master/raws/v50/language_words.txt
+
+{{Language}}
+{{Files}}
