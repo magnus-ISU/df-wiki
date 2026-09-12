@@ -1,0 +1,37 @@
+{{Quality|Fine}}
+{{av}}
+[[File:Sieging mage.png|thumb|220px|right|A mage participating in a [[siege]]. From the 53.12 [https://store.steampowered.com/news/app/975370/view/514113986433651135 announcement page].]]'''Magic''' currently exists in limited form in ''Dwarf Fortress''. With [[Modding guide|modding]], it is also one of the many ways that [[Interaction token|interaction]]s can be manifested.
+{{Translation
+| dwarven = aroth
+| elvish  = isila
+| goblin  = slöl
+| human   = eri
+}}
+There seems to be some code present that has to do with magic, but there is nothing that uses that code or activates it. For example, the {{token|MAGICAL|c}} creature token being recognized as a valid token (i.e. the game does not give an error when it is found). A fully working and [[Lua scripting|procedurally-generated]] magic system is currently in the works according to [[Main:Toady One|Toady One]]'s development log, known as the "Myth and Magic" update, with [[Primordial remnant|recent changes]] to adventure mode as of v51 containing parts of the framework for it.
+
+==Known magic==
+===Night creatures===
+
+[[Necromancer]]s are spellcasters, who have the ability to raise the dead as various forms of [[undead]]; receiving their power from divine intervention, after worshiping a god of death and learning the secrets of life and death from them. The player can obtain this magic in [[adventurer mode]] by reading a [[book|slab]] or a [[book]] that contains the secrets of life and death, traditionally obtained via necromancer [[Tower (necromancy)|tower]]s ({{Tile|I|5:0}}). These towers are often packed tightly with undead and, usually, more than one necromancer, who will not hesitate to raise any fresh corpses you make, or even the limbs of their minions that you chop off. But of course, that great power can be yours, if you can overcome the danger involved.
+
+Some types of undead possess supernatural powers. [[Mummy|Mummies]] can curse those who intrude upon their [[tomb]]s or otherwise defy them, while [[intelligent undead]] sport a variety of magical powers, such as the likes of inflicting rot on their foes, vanishing from sight, or creating magical fog. [[Ghost]]s rise from the dead when a civilized creature is not given a proper burial, and, depending on their disposition, can do such things as suck the air out of someone, or outright kill them from fright.
+
+[[Bogeyman|Bogeymen]] and [[nightmare]]s can also be summoned with necromantic magic by those who have learned the appropriate secrets associated with their [[sphere]]s.
+
+===Divine intervention===
+Defiling the [[temple]] of one's patron by toppling one of its [[statue]]s will result in the patron deity cursing the perpetrator, and turning them into a [[werebeast]] or [[vampire]]. [[Dice]] can also be rolled in order to divine the will of the gods, and may lead to a variety of both positive and negative effects such as healing one's wounds, spawning a great item, causing streaks of bad luck, or transforming them into a harmless critter for a week.
+
+===Megabeasts===
+Some [[megabeast]]s (most specifically, the [[dragon]] and the [[bronze colossus]]) are explicitly described as magical. Beyond the dragon's [[Dragonfire|breath weapon]] and the colossus being a living statue, they currently do not possess overtly magical features.
+
+{{minorspoiler}}
+===Magical artifacts===
+Magical  [[trade good|jewelry]] and [[weapon]]s made from [[primordial remnant]]s can sometimes be found carried by [[dungeon guardian]]s, who reside in [[mysterious dungeon|mysterious dungeons and palaces]]. These [[legendary artifact|legendary]] [[item]]s will grant their wearer similar [[interaction|abilities]] to those possessed by [[intelligent undead]], and will often be of high [[item quality|quality]]. They can be distinguished from their mundane counterparts by the presence of special ◄[[item designations]]► around their names. {{version|51.01-beta26}}
+
+{{D for Dwarf}}
+<!--Reference:DAT WIZARD image appearing in Homestuck, and as Putnam's profile picture -->
+Dwarven mothers that have had too much to [[drink]] might [[Engraver|engrave]] an incredibly poor [[quality]] image of a [[wizard]]. This [[User:Putnam3145|mysterious figure]] is claimed to be assisting a [[giant toad]] with the construction of a [[Dwarf Fortress|great work]].
+
+[[File:elf_magic_preview.png|thumb|350px|center|A human wizard. Which kind of magic he is using here can only be speculated upon. Most likely it's Necromancy.]]
+[[ru:Magic]]
+{{Category|Game mechanics}}

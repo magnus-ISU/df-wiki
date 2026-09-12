@@ -1,0 +1,1023 @@
+{{Quality|Exceptional}}
+{{av}}
+[[File:map_legend_preview.png|right]]''Dwarf Fortress'' uses [[tileset]]s and [[Graphics|sprite graphics]] to draw the game, including maps. This '''map legend''' explains what the [[character table|characters]] and [[color]]s represent in the pre-start embark (or [[adventure mode|adventure]]) map. This article covers both ASCII tiles and graphic sprites.
+
+== Tile colors ==
+The colors of a map tile may give information about that region's predominant [[biome]] and [[surroundings]]; its temperature, alignment, and other handy things. Generally, cyan and blue means the area is "good" aligned. Purple, gray, brown, and red areas have "evil" alignment. Light grey, brown, and yellow areas usually are dry and have sparse vegetation. Green tiles have vegetation and are usually moist. White and cyan tiles indicate snow or ice. The color of trees that change season to season can tell about a tree's current [[tree#Growths|growth]].
+
+In ASCII mode, the characters and their colors offer slightly more information about a biome, such as the temperature mixed with the moral standing of the biome (good, neutral and evil) compared to the graphics of the premium version of the game. With the graphics, the presentation is more simplified, as each biome type is displayed with the following graphical information: neutral, evil, evil savage, good and good savage. Some graphics are displayed the same, regardless of what type of biome or moral surroundings they are part of.
+
+== Biome/Region key ==
+Tiles are listed by alignment, with normal tiles first, then good-aligned tiles, and then evil tiles. Snow and ice-covered tiles are included next to their respective alignments.
+
+=== Hills and mountains/Plains ===
+Yellow hills or plains indicate dry vegetation.
+
+==== ASCII ====
+{| class="wikitable"
+! Biome/Region
+! Normal
+! Snow/Ice
+! Good
+! Evil
+! Evil snow/ice
+|-
+| [[Grassland]]
+| {{Biome|.|ⁿ|2:1}} {{Biome|.|ⁿ|6:1}}
+| {{Biome|.|ⁿ|7:1}}
+| {{Biome|.|ⁿ|3:0|3:1}}
+| {{Biome|.|ⁿ|5:0|5:1}} {{Biome|.|ⁿ|0:1|4:0}}
+| {{Biome|.|ⁿ|7:0}}
+|-
+| [[Savanna]]
+| {{Biome|"|ⁿ|2:1}} {{Biome|"|ⁿ|6:1}}
+| {{Biome|"|ⁿ|7:1}}
+| {{Biome|"|ⁿ|3:0|3:1}}
+| {{Biome|"|ⁿ|5:0|5:1}} {{Biome|"|ⁿ|0:1|4:0}}
+| {{Biome|"|ⁿ|7:0}}
+|-
+| [[Shrubland]]
+| {{Biome|"|τ|2:1}} {{Biome|"|τ|6:1}}
+| {{Biome|"|τ|7:1}}
+| {{Biome|"|τ|3:0|3:1}}
+| {{Biome|"|τ|5:0|5:1}} {{Biome|"|τ|0:1|4:0}}
+| {{Biome|"|τ|7:0}}
+|}
+
+==== Graphics ====
+
+{| class="wikitable"
+! Biome/Region
+! Normal
+! Good
+! Good<br><div id="textbump" style="margin-top:-7px; font-size:12px;"><small>(Savage)</small></div>
+! Evil
+! Evil<br><div id="textbump" style="margin-top:-7px; font-size:12px;"><small>(Savage)</small></div>
+|-
+| [[Grassland]]
+| style="text-align:center;" | [[File:grassland_temp.png]]
+| style="text-align:center;" | [[File:grassland_temp_good.png]]
+| style="text-align:center;" | [[File:grassland_temp_goodsav.png]]
+| style="text-align:center;" | [[File:grassland_temp_evil.png]]
+| style="text-align:center;" | [[File:grassland_temp_evilsav.png]]
+|-
+| Grassland Tropical
+| style="text-align:center;" | [[File:grassland_trop.png]]
+| style="text-align:center;" | [[File:grassland_trop_good.png]]
+| style="text-align:center;" | [[File:grassland_trop_goodsav.png]]
+| style="text-align:center;" | [[File:grassland_trop_evil.png]]
+| style="text-align:center;" | [[File:grassland_trop_evilsav.png]]
+|-
+| [[Shrubland]]
+| style="text-align:center;" | [[File:shrubland.png]]
+| style="text-align:center;" | [[File:shrubland_good.png]]
+| style="text-align:center;" | [[File:shrubland_goodsav.png]]
+| style="text-align:center;" | [[File:shrubland_evil.png]]
+| style="text-align:center;" | [[File:shrubland_evilsav.png]]
+|}
+
+==== ASCII ====
+{| class="wikitable"
+! Biome/Region
+! Normal
+! Snow/Ice
+! Good
+! Evil
+! Evil snow/ice
+|-
+| [[Hills]]
+| {{Biome|n|∩|2:1}} {{Biome|n|∩|6:1}}
+| {{Biome|n|∩|7:1}}
+| {{Biome|n|∩|3:0|3:1}}
+| {{Biome|n|∩|5:0|5:1}} {{Biome|n|∩|0:1|4:0}}
+| {{Biome|n|∩|7:0}}
+|-
+| Low [[mountain]]s
+| {{Biome|⌂|⌂|7:0}}
+| {{Biome|⌂|⌂|7:1}}
+| {{Biome|⌂|⌂|6:1|6:1}}
+| {{Biome|⌂|⌂|5:0|5:1}}
+|
+|-
+| Medium mountains
+| {{Biome|▲|▲|0:1}}
+| {{Biome|▲|▲|7:1}}
+| {{Biome|▲|▲|6:1}}
+| {{Biome|▲|▲|5:0|5:1}}
+|
+|-
+| High mountains
+| {{Biome|▲|▲|7:0}}
+| {{Biome|▲|▲|3:1}}
+| {{Biome|▲|▲|6:1}}
+| {{Biome|▲|▲|5:0|5:1}}
+|
+|}
+
+==== Graphics ====
+{| class="wikitable"
+! Biome/Region
+! Normal
+! Good
+! Good<br><div id="textbump" style="margin-top:-7px; font-size:12px;"><small>(Savage)</small></div>
+! Evil
+! Evil<br><div id="textbump" style="margin-top:-7px; font-size:12px;"><small>(Savage)</small></div>
+|-
+| Grassland
+| style="text-align:center;" | [[File:hills_neutral.png]]
+| style="text-align:center;" | [[File:hills_good.png]]
+| style="text-align:center;" | [[File:hills_goodsav.png]]
+| style="text-align:center;" | [[File:hills_evil.png]]
+| style="text-align:center;" | [[File:hills_evilsav.png]]
+|-
+| Low mountains
+| style="text-align:center;" | [[File:mountain_low_neutral.png]]
+| style="text-align:center;" | [[File:mountain_low_good.png]]
+| style="text-align:center;" | [[File:mountain_low_goodsav.png]]
+| style="text-align:center;" | [[File:mountain_low_evil.png]]
+| style="text-align:center;" | [[File:mountain_low_evilsav.png]]
+|-
+| Medium mountains
+| style="text-align:center;" | [[File:mountain_mid_neutral.png]]
+| style="text-align:center;" | [[File:mountain_mid_good.png]]
+| style="text-align:center;" | [[File:mountain_mid_goodsav.png]]
+| style="text-align:center;" | [[File:mountain_mid_evil.png]]
+| style="text-align:center;" | [[File:mountain_mid_evilsav.png]]
+|-
+| High mountains
+| style="text-align:center;" | [[File:mountain_high_neutral.png]]
+| style="text-align:center;" | [[File:mountain_high_good.png]]
+| style="text-align:center;" | [[File:mountain_high_goodsav.png]]
+| style="text-align:center;" | [[File:mountain_high_evil.png]]
+| style="text-align:center;" | [[File:mountain_high_evilsav.png]]
+|-
+| Peak mountains
+| style="text-align:center;" | [[File:mountain_peak_neutral.png]]
+| style="text-align:center;" | [[File:mountain_peak_good.png]]
+| style="text-align:center;" | [[File:mountain_peak_goodsav.png]]
+| style="text-align:center;" | [[File:mountain_peak_evil.png]]
+| style="text-align:center;" | [[File:mountain_peak_evilsav.png]]
+|}
+
+=== Forests ===
+In normal [[forest]]s, the color changes with the seasons.
+==== ASCII ====
+{| class="wikitable"
+! Biome/Region
+! Normal
+! Snow/Ice
+! Good
+! Evil
+! Evil snow/ice
+|-
+| Temperate broadleaf forest
+| {{Biome|♠|♣|7:1|5:1|altc}} {{Biome|♠|♣|2:0}} {{Biome|♠|♣|6:1|4:1|altc}} {{Biome|╞|╞|6:0}}
+| {{Biome|♠|♣|7:1}} {{Biome|╞|╞|7:1}}
+| {{Biome|♠|♣|2:0|7:1|altc}}
+| {{Biome|♠|♣|5:0|5:1}} {{Biome|♠|┤|0:1|4:0}}
+| {{Biome|♠|♣|7:0}} {{Biome|♠|┤|7:0}}
+|-
+| Tropical broadleaf forest
+| {{Biome|Γ|♠|2:0}}
+|
+| {{Biome|Γ|♣|2:0|7:1|altc}}
+| {{Biome|Γ|♠|5:0|5:1}} {{Biome|Γ|┤|0:1|4:0}}
+|
+|-
+| Coniferous forest
+| {{Biome|↑|↨|2:0}}
+| {{Biome|↑|↨|7:1}}
+| {{Biome|↑|♣|2:0|7:1|altc}}
+| {{Biome|↑|↨|5:0|5:1}} {{Biome|↑|┤|0:1|4:0}}
+| {{Biome|↑|↨|7:0}} {{Biome|↑|┤|7:0}}
+|}
+
+==== Graphics ====
+{| class="wikitable"
+! Biome/Region
+! Normal
+! Good
+! Good<br><div id="textbump" style="margin-top:-7px; font-size:12px;"><small>(Savage)</small></div>
+! Evil
+! Evil<br><div id="textbump" style="margin-top:-7px; font-size:12px;"><small>(Savage)</small></div>
+|-
+| Temperate broadleaf forest
+| style="text-align:center;" | [[File:broadleaf_temp_neutral.png]]
+| style="text-align:center;" | [[File:broadleaf_temp_good.png]]
+| style="text-align:center;" | [[File:broadleaf_temp_goodsav.png]]
+| style="text-align:center;" | [[File:broadleaf_temp_evil.png]]
+| style="text-align:center;" | [[File:broadleaf_temp_evilsav.png]]
+|-
+| Tropical broadleaf forest
+| style="text-align:center;" | [[File:broadleaf_trop_neutral.png]]
+| style="text-align:center;" | [[File:broadleaf_trop_good.png]]
+| style="text-align:center;" | [[File:broadleaf_trop_goodsav.png]]
+| style="text-align:center;" | [[File:broadleaf_trop_evil.png]]
+| style="text-align:center;" | [[File:broadleaf_trop_evilsav.png]]
+|-
+| Tropical broadleaf forest (dry)
+| style="text-align:center;" | [[File:broadleaf_trop_dry_neutral.png]]
+| style="text-align:center;" | [[File:broadleaf_trop_dry_good.png]]
+| style="text-align:center;" | [[File:broadleaf_trop_dry_goodsav.png]]
+| style="text-align:center;" | [[File:broadleaf_trop_dry_evil.png]]
+| style="text-align:center;" | [[File:broadleaf_trop_dry_evilsav.png]]
+|-
+| Temperate coniferous forest
+| style="text-align:center;" | [[File:conifer_temp_neutral.png]]
+| style="text-align:center;" | [[File:conifer_temp_good.png]]
+| style="text-align:center;" | [[File:conifer_temp_goodsav.png]]
+| style="text-align:center;" | [[File:conifer_temp_evil.png]]
+| style="text-align:center;" | [[File:conifer_temp_evilsav.png]]
+|-
+| Tropical coniferous forest
+| style="text-align:center;" | [[File:conifer_trop_neutral.png]]
+| style="text-align:center;" | [[File:conifer_trop_good.png]]
+| style="text-align:center;" | [[File:conifer_trop_goodsav.png]]
+| style="text-align:center;" | [[File:conifer_trop_evil.png]]
+| style="text-align:center;" | [[File:conifer_trop_evilsav.png]]
+|-
+| Taiga forest
+| style="text-align:center;" | [[File:taiga_neutral.png]]
+| style="text-align:center;" | [[File:taiga_good.png]]
+| style="text-align:center;" | [[File:taiga_goodsav.png]]
+| style="text-align:center;" | [[File:taiga_evil.png]]
+| style="text-align:center;" | [[File:taiga_evilsav.png]]
+|}
+
+=== Deserts ===
+In normal sand [[desert]]s, the color depends on the type of [[sand]].
+==== ASCII ====
+{| class="wikitable"
+! Biome/Region
+! Normal
+! Snow/Ice
+! Good
+! Evil
+! Evil snow/ice
+|-
+| Sand desert
+| {{Biome|~|≈|6:1}} {{Biome|~|≈|0:1}} {{Biome|~|≈|4:1}} {{Biome|~|≈|7:1}}
+| {{Biome|~|≈|7:1}}
+| {{Biome|~|≈|3:0}}
+| {{Biome|~|≈|5:0|5:1}}
+| {{Biome|~|≈|7:0}}
+|-
+| Rocky wasteland
+| {{Biome|,|´|7:0|6:0|altc}} {{Biome|n|∩|7:0|6:0|altc}}
+| {{Biome|,|´|7:1}} {{Biome|n|∩|7:1}}
+| {{Biome|,|´|3:0|3:1}} {{Biome|n|∩|3:0|3:1}}
+| {{Biome|,|´|0:1|4:0}} {{Biome|n|∩|0:1|4:0}}
+| {{Biome|,|´|7:0}} {{Biome|n|∩|7:0}}
+|-
+| Badlands
+| {{Biome|V|√|6:0}}
+| {{Biome|V|√|7:1}}
+| {{Biome|V|√|3:0|3:1}}
+| {{Biome|V|√|0:1|4:0}}
+| {{Biome|V|√|7:0}}
+|}
+
+==== Graphics ====
+{| class="wikitable"
+! Biome/Region
+! Normal
+! Good
+! Good<br><div id="textbump" style="margin-top:-7px; font-size:12px;"><small>(Savage)</small></div>
+! Evil
+! Evil<br><div id="textbump" style="margin-top:-7px; font-size:12px;"><small>(Savage)</small></div>
+|-
+| Desert 
+| style="text-align:center;" | [[File:desert_neutral.png]] [[File:yellow_sand_world.png]] [[File:black_sand_world.png]] [[File:red_sand_world.png]] [[File:white_sand_world.png]] 
+| style="text-align:center;" | [[File:desert_good_goodsav.png]]
+| style="text-align:center;" | [[File:desert_good_goodsav.png]]
+| style="text-align:center;" | [[File:desert_evil_evilsav.png]]
+| style="text-align:center;" | [[File:desert_evil_evilsav.png]]
+|-
+| Rocky hills
+| style="text-align:;" | [[File:rocky_hills_neutral.png]]
+| style="text-align:center;" | [[File:rocky_hills_good.png]]
+| style="text-align:center;" | [[File:rocky_hills_goodsav.png]]
+| style="text-align:center;" | [[File:rocky_hills_evil.png]]
+| style="text-align:center;" | [[File:rocky_hills_evilsav.png]]
+|-
+| Rocky plains
+| style="text-align:;" | [[File:rocky_plains_neutral.png]]
+| style="text-align:center;" | [[File:rocky_plains_good.png]]
+| style="text-align:center;" | [[File:rocky_plains_goodsav.png]]
+| style="text-align:center;" | [[File:rocky_plains_evil.png]]
+| style="text-align:center;" | [[File:rocky_plains_evilsav.png]]
+|-
+| Badlands
+| style="text-align:;" | [[File:badlands_neutral.png]]
+| style="text-align:center;" | [[File:badlands_good.png]]
+| style="text-align:center;" | [[File:badlands_goodsav.png]]
+| style="text-align:center;" | [[File:badlands_evil.png]]
+| style="text-align:center;" | [[File:badlands_evilsav.png]]
+|-
+| Beach
+| style="text-align:;" | [[File:beach_neutral.png]]
+| style="text-align:center;" | [[File:beach_good_goodsav.png]]
+| style="text-align:center;" | [[File:beach_good_goodsav.png]]
+| style="text-align:center;" | [[File:beach_evil_evilsav.png]]
+| style="text-align:center;" | [[File:beach_evil_evilsav.png]]
+|}
+
+=== Wetlands ===
+==== ASCII ====
+{| class="wikitable"
+! Biome/Region
+! Normal
+! Snow/Ice
+! Good
+! Evil
+! Evil snow/ice
+|-
+| [[Swamp]]
+| {{Biome|"|⌠|2:0}}
+| {{Biome|"|⌠|7:1}}
+| {{Biome|"|⌠|1:0|1:1}}
+| {{Biome|"|⌠|5:0|5:1}} {{Biome|"|⌠|0:1|4:0}}
+| {{Biome|"|⌠|7:0}}
+|-
+| [[Marsh]]
+| {{Biome|"|ⁿ|2:0}}
+| {{Biome|"|ⁿ|7:1}}
+| {{Biome|"|ⁿ|1:0|1:1}}
+| {{Biome|"|ⁿ|5:0|5:1}} {{Biome|"|ⁿ|0:1|4:0}}
+| {{Biome|"|ⁿ|7:0}}
+|}
+
+==== Graphics ====
+{| class="wikitable"
+! Biome/Region
+! Normal
+! Good
+! Good<br><div id="textbump" style="margin-top:-7px; font-size:12px;"><small>(Savage)</small></div>
+! Evil
+! Evil<br><div id="textbump" style="margin-top:-7px; font-size:12px;"><small>(Savage)</small></div>
+|-
+| Swamp
+| style="text-align:center;" | [[File:swamp_neutral.png]]
+| style="text-align:center;" | [[File:swamp_good.png]]
+| style="text-align:center;" | [[File:swamp_goodsav.png]]
+| style="text-align:center;" | [[File:swamp_evil.png]]
+| style="text-align:center;" | [[File:swamp_evilsav.png]]
+|-
+| Marsh
+| style="text-align:center;" | [[File:marsh_neutral.png]]
+| style="text-align:center;" | [[File:marsh_good.png]]
+| style="text-align:center;" | [[File:marsh_goodsav.png]]
+| style="text-align:center;" | [[File:marsh_evil.png]]
+| style="text-align:center;" | [[File:marsh_evilsav.png]]
+|}
+
+=== Ice regions ===
+==== ASCII ====
+{| class="wikitable"
+! Biome/Region
+! Normal
+! Good
+! Evil
+|-
+| [[Tundra]]
+| {{Biome|∙|·|3:1}}
+| {{Biome|∙|·|3:0}}
+| {{Biome|∙|·|5:0|5:1}}
+|-
+| [[Glacier]]
+| {{Biome|▓|▒|3:1}}
+| {{Biome|▓|▒|3:0}}
+| {{Biome|▓|▒|5:0|5:1}}
+|}
+
+==== Graphics ====
+{| class="wikitable"
+! Biome/Region
+! Normal
+! Good
+! Good<br><div id="textbump" style="margin-top:-7px; font-size:12px;"><small>(Savage)</small></div>
+! Evil
+! Evil<br><div id="textbump" style="margin-top:-7px; font-size:12px;"><small>(Savage)</small></div>
+|-
+| Tundra
+| style="text-align:center;" | [[File:tundra_neutral.png]]
+| style="text-align:center;" | [[File:tundra_good_goodsav.png]]
+| style="text-align:center;" | [[File:tundra_good_goodsav.png]]
+| style="text-align:center;" | [[File:tundra_evil_evilsav.png]]
+| style="text-align:center;" | [[File:tundra_evil_evilsav.png]]
+|-
+| Glacier
+| style="text-align:center;" | [[File:glacier_neutral.png]]
+| style="text-align:center;" | [[File:glacier_good.png]]
+| style="text-align:center;" | [[File:glacier_goodsav.png]]
+| style="text-align:center;" | [[File:glacier_evil.png]]
+| style="text-align:center;" | [[File:glacier_evilsav.png]]
+|-
+| Frozen ocean
+| style="text-align:center;" | [[File:frozen_ocean_neutral.png]]
+| style="text-align:center;" | [[File:frozen_ocean_good.png]]
+| style="text-align:center;" | [[File:frozen_ocean_goodsav.png]]
+| style="text-align:center;" | [[File:frozen_ocean_evil.png]]
+| style="text-align:center;" | [[File:frozen_ocean_evilsav.png]]
+|}
+
+=== Bodies of water ===
+==== ASCII ====
+{| class="wikitable"
+! Biome/Region
+! Normal
+! Good
+! Evil
+|-
+| [[River]]
+| {{Raw Tile|•┬┴|3:1}} {{Raw Tile|┬┴|1:1}} {{Raw Tile|┬┴|1:0}} {{Raw Tile|╦╩◄|1:0}}
+| {{Raw Tile|•┬┴|3:1}} {{Raw Tile|┬┴|1:1}} {{Raw Tile|┬┴|1:0}} {{Raw Tile|╦╩◄|1:0}}
+| {{Raw Tile|•┬|6:0}}{{Raw Tile|┴|4:0}} {{Raw Tile|╦|6:0}}{{Raw Tile|╩◄|4:0}}
+|-
+| [[Ocean]]
+| {{Biome|≈|≈|1:0}} {{Biome|▒|░|3:1}}
+| {{Biome|≈|≈|3:1}} {{Biome|▒|░|3:1}}
+| {{Biome|≈|≈|6:0|4:0}} {{Biome|▒|░|6:0|4:0}}
+|-
+| [[Lake]]
+| {{Biome|~|~|1:1}}
+| {{Biome|~|~|3:1}}
+| {{Biome|~|~|6:0|4:0}}
+|}
+
+==== Graphics ====
+{| class="wikitable"
+! Biome/Region
+! Normal
+! Good
+! Good<br><div id="textbump" style="margin-top:-7px; font-size:12px;"><small>(Savage)</small></div>
+! Evil
+! Evil<br><div id="textbump" style="margin-top:-7px; font-size:12px;"><small>(Savage)</small></div>
+|-
+| Brook*
+| style="text-align:center;" | [[File:brook_world_map.png]]
+| style="text-align:center;" |
+| style="text-align:center;" |
+| style="text-align:center;" |
+| style="text-align:center;" |
+|-
+| River*
+| style="text-align:center;" | [[File:river_world_map.png]]
+| style="text-align:center;" |
+| style="text-align:center;" |
+| style="text-align:center;" |
+| style="text-align:center;" |
+|-
+| Major river*
+| style="text-align:center;" | [[File:river_major_world_map.png]]
+| style="text-align:center;" |
+| style="text-align:center;" |
+| style="text-align:center;" |
+| style="text-align:center;" |
+|-
+| Lake
+| style="text-align:center;" | [[File:lake_neutral.png]]
+| style="text-align:center;" | [[File:lake_good.png]]
+| style="text-align:center;" | [[File:lake_goodsav.png]]
+| style="text-align:center;" | [[File:lake_evil.png]]
+| style="text-align:center;" | [[File:lake_evilsav.png]]
+|-
+| Ocean
+| style="text-align:center;" | [[File:ocean_neutral.png]]
+| style="text-align:center;" | [[File:ocean_good.png]]
+| style="text-align:center;" | [[File:ocean_goodsav.png]]
+| style="text-align:center;" | [[File:ocean_evil.png]]
+| style="text-align:center;" | [[File:ocean_evilsav.png]]
+|-
+| Deep ocean
+| style="text-align:center;" | [[File:ocean_deep_neutral.png]]
+| style="text-align:center;" | [[File:ocean_deep_good.png]]
+| style="text-align:center;" | [[File:ocean_deep_goodsav.png]]
+| style="text-align:center;" | [[File:ocean_deep_evil.png]]
+| style="text-align:center;" | [[File:ocean_deep_evilsav.png]]
+|}
+:<small>*Unlike ASCII mode, brooks and rivers will appear the same in good, neutral and evil biomes.</small>
+
+== Terrain feature key ==
+==== ASCII ====
+{| class="wikitable"
+! Terrain feature
+! Normal
+! Snow/Ice
+! Good
+! Evil
+|-
+| [[Peak]]
+| {{Raw Tile|^|7:0}}
+| {{Raw Tile|^|3:1}}
+| {{Raw Tile|^|6:1}}
+| {{Raw Tile|^|5:0}} {{Raw Tile|^|5:1}}
+|-
+| [[Volcano]]
+| {{Raw Tile|^|4:1}}
+|
+|
+|
+|}
+
+==== Graphics ====
+{| class="wikitable"
+! Biome/Region
+! Normal
+! Good
+! Good<br><div id="textbump" style="margin-top:-7px; font-size:12px;"><small>(Savage)</small></div>
+! Evil
+! Evil<br><div id="textbump" style="margin-top:-7px; font-size:12px;"><small>(Savage)</small></div>
+|-
+| Volcano
+| style="text-align:center;" | [[File:volcano_neutral.png]]
+| style="text-align:center;" | [[File:volcano_good.png]]
+| style="text-align:center;" | [[File:volcano_goodsav.png]]
+| style="text-align:center;" | [[File:volcano_evil.png]]
+| style="text-align:center;" | [[File:volcano_evilsav.png]]
+|}
+
+== Construction key ==
+==== ASCII ====
+{| class="wikitable"
+! Construction
+! Normal
+|-
+| [[Road#World gen roads|Road]]
+| {{Raw Tile|•┬┴•|6:0}} {{Raw Tile|•┬┴•|0:1}} {{Raw Tile|•┬┴•|7:0}} {{Raw Tile|•┬┴•|7:1}}
+|}
+
+==== Graphics ====
+{| class="wikitable"
+! Name
+! Graphic
+|-
+| Tunnel
+| style="text-align:center;" | [[File:tunnel_world_map.png]]
+|-
+| Paved road
+| style="text-align:center;" | [[File:paved_road_world_map.png]]
+|-
+| Dirt road
+| style="text-align:center;" | [[File:dirt_road_world_map.png]]
+|}
+
+<!--== Tree key ==
+
+Forests and swamps will use the map tiles of the [[tree]]s they contain. The tiles below are used to specify generic forests, even if no trees that use that tile exist in that forest. Whether the game uses the generic tiles or the tile of the actual tree they contain is randomized on a tile-by-tile basis.
+
+Tiles can vary significantly in forests due to the variety of trees that can be generated.
+
+{| class="wikitable"
+|-
+! Tile !! Terrain 
+|-
+| {{Raw Tile|⌠|2:0}} || Swamp
+|-
+| {{Raw Tile|↑|2:0}} || Conifer Forest 
+|-
+| {{Raw Tile|♠|2:0}} || Broadleaf Forest
+|-
+| {{Raw Tile|Γ|2:0}} || Tropical Forest
+|}-->
+== Site key (ASCII) ==
+Site tiles are organized by columns, from left-to-right: normal populated sites, [[ruin]]ed sites, and sites captured by [[necromancer]]s or their [[night creature]] armies.
+
+=== Dwarven sites ===
+{| class="wikitable"
+! Site
+! Normal
+! Ruins
+! Night creature
+|-
+| [[Mountain halls]]
+| {{Raw Tile|Ω|0:1}}
+| {{Raw Tile|μ|0:1}}
+| {{Raw Tile|μ|5:0}}
+|-
+| [[Hillocks]]
+| {{Raw Tile|Ω|7:0}}
+| {{Raw Tile|μ|7:0}}
+| {{Raw Tile|μ|5:0}}
+|-
+| [[Fortress]]
+| {{Raw Tile|Ω|7:1}}
+| {{Raw Tile|μ|7:1}}
+| {{Raw Tile|μ|5:1}}
+|}
+
+=== Elven sites ===
+
+Forest retreats marked as ({{Raw Tile|¶|6:1}}) are [[market town]]s.
+
+{| class="wikitable"
+! Site
+! Normal
+! Ruins
+! Night creature
+|-
+| [[Forest retreat]]
+| {{Raw Tile|î|6:1}} {{Raw Tile|¶|6:1}}
+| {{Raw Tile|μ|6:1}} {{Raw Tile|₧|6:1}}
+| {{Raw Tile|μ|5:0}} {{Raw Tile|₧|5:0}}
+|}
+
+=== Goblin sites ===
+
+A light magenta dark fortress ({{Raw Tile|Π|5:1}}) indicates the presence of an [[underworld spire]].
+
+{| class="wikitable"
+! Site
+! Normal
+! Ruins
+! Night creature
+|-
+| [[Dark fortress]]
+| {{Raw Tile|Π|0:1}} {{Raw Tile|Π|5:1}}
+| {{Raw Tile|μ|0:1}} {{Raw Tile|μ|5:1}}
+| {{Raw Tile|μ|5:1}}
+|-
+| [[Dark pits]]
+| {{Raw Tile|º|5:0}}
+| {{Raw Tile|ª|0:1}}
+| {{Raw Tile|ª|5:0}}
+|}
+
+=== Human sites ===
+
+For towns, the tiles indicate a town's current population (increases from left to right). Hamlet tiles represent the region the hamlet is in (hills, plains, rivers, etc.).
+
+{| class="wikitable"
+! Site
+! Normal
+! Ruins
+! Night creature
+|-
+| [[Town]]
+| {{Raw Tile|+|7:0}} {{Raw Tile|*|7:0}} {{Raw Tile|#|7:0}} {{Raw Tile|☼|7:1}}
+| {{Raw Tile|μ|7:0}}
+| {{Raw Tile|μ|5:1}}
+|-
+| [[Hamlet]]
+| {{Raw Tile|&#61;|2:0}} {{Raw Tile|≡|2:0}} {{Raw Tile|æ|2:0}} {{Raw Tile|Æ|2:0}}
+
+{{Raw Tile|&#61;|3:1}} {{Raw Tile|≡|3:1}} {{Raw Tile|æ|3:1}} {{Raw Tile|Æ|3:1}}
+
+{{Raw Tile|&#61;|1:1}} {{Raw Tile|≡|1:1}} {{Raw Tile|æ|1:1}} {{Raw Tile|Æ|1:1}}
+
+{{Raw Tile|&#61;|1:0}} {{Raw Tile|≡|1:0}} {{Raw Tile|æ|1:0}} {{Raw Tile|Æ|1:0}}
+| style="vertical-align: text-top;" | {{Raw Tile|&#61;|6:0}} {{Raw Tile|≡|6:0}} {{Raw Tile|æ|6:0}} {{Raw Tile|Æ|6:0}}
+| style="vertical-align: text-top;" | {{Raw Tile|&#61;|5:0}} {{Raw Tile|≡|5:0}} {{Raw Tile|æ|5:0}} {{Raw Tile|Æ|5:0}}
+|-
+| [[Castle]]
+| {{Raw Tile|○|7:1}}
+|
+| {{Raw Tile|○|5:1}}
+|}
+
+=== Other sites ===
+
+{| class="wikitable"
+! Site
+! Normal
+! Night creature
+|-
+| [[Camp]]
+| {{Raw Tile|☼|6:1}}
+|
+|-
+| [[Cave]]
+| {{Raw Tile|•|0:1}}
+| {{Raw Tile|•|5:0}}
+|-
+| [[Fort]]
+| {{Raw Tile|◙|6:0}}
+| {{Raw Tile|◙|5:0}}
+|-
+| [[Labyrinth]]
+| {{Raw Tile|#|0:7:0}}
+|
+|-
+| [[Lair]]
+| {{Raw Tile|•|0:1}} {{Raw Tile|•|2:1}}
+|
+|-
+| [[Monastery]]
+| {{Raw Tile|○|7:0}}
+| {{Raw Tile|○|5:0}}
+|-
+| [[Shrine]]
+| {{Raw Tile|Å|7:0}}
+|
+|-
+| [[Tomb]]
+| {{Raw Tile|0|0:1}}
+|
+|-
+| [[Tower (necromancy)|Tower]]
+| {{Raw Tile|I|7:0}}
+| {{Raw Tile|I|5:0}}
+|-
+| [[Vault]]
+| {{Raw Tile|■|0:1}}
+|
+|-
+| [[Camp#Adventurer camp|Adventurer camp]]
+| {{Raw Tile|☼|6:0}}
+|
+|}
+
+== Site key (ASCII and graphics) ==
+{| style="margin:1em 1em 1em 0;background:#F9F9F9;border:1px #AAA solid;" class=wikitable class=sortable
+|- style="background:#CCC;text-align:center;"
+!|'''Tile'''
+!|'''Sprite'''
+!|'''Name'''
+!|'''Inhabitated by'''
+|-
+| {{Raw Tile|☼|6:0:1}} 
+| [[File:Icon site camp2.png]] [[File:Icon site camp.png]] [[File:Icon site camp3.png]]
+| [[Camp]]
+| Bandits
+|-
+| {{Raw Tile|•|0:0:1}} 
+| [[File:icon_site_cave2.png]] [[File:Icon site cave.png]]
+| [[Cave]]
+| Monsters
+|-
+| {{Raw Tile|Π|0:0:1}} {{Raw Tile|Π|5:0:1}}
+| [[File:Icon site dark fortress b.png]] [[File:Icon site dark fortress 1.png]] [[File:Icon_site_dark_fortress_3.png]]
+| [[Dark fortress]]
+| Goblins (and potentially a special creature)
+|-
+| {{Raw Tile|º|5:0:0}} 
+| [[File:Icon site dark fortress 2.png]]
+| [[Dark pits]]
+| Goblins and Humans
+|-
+| {{Raw Tile|î|6:0:1}} {{Raw Tile|¶|6:0:1}}
+|[[File:Icon site forest retreat 1.png]] [[File:Icon site forest retreat 2.png]] 
+| [[Forest retreat]]
+| Elves and Dwarves
+|-
+| {{Raw Tile|Ω|7:0:1}} 
+| [[File:Icon site mountainhome.png]]
+| [[Fortress]]
+| Dwarves
+|-
+| {{Raw Tile|○|7:0:1}} 
+| [[File:Icon site castle.png]]
+| [[Castle]]
+| Humans
+|-
+| {{Raw Tile|○|0:6:0}} 
+| [[File:icon_site_fort2.png]] [[File:Icon site fort.png]]
+| [[Fort]]
+| Bandits
+|-
+| {{Raw Tile|<nowiki>=</nowiki>|2:0:0}} {{Raw Tile|≡|2:0:0}} {{Raw Tile|æ|2:0:0}} {{Raw Tile|Æ|2:0:0}} 
+| [[File:Icon site village.png]]
+| [[Hamlet]]
+| Humans and Goblins
+|-
+| {{Raw Tile|Ω|7:0:0}} 
+| [[File:Icon site hillocks.png]]
+| [[Hillocks]]
+| Dwarves and Humans
+|-
+| {{Raw Tile|#|0:7:1}}
+| [[File:Icon site labyrinth.png]]
+| [[Labyrinth]]
+| Minotaur
+|-
+| {{Raw Tile|•|0:0:1}} {{Raw Tile|•|2:0:1}} 
+|[[File:Icon site lair burrow.png]]
+| [[Lair]]
+| Monsters
+|-
+| {{Raw Tile|○|7:0:0}} 
+|[[File:Icon site monastery.png]]
+| [[Monastery]]
+|
+|-
+| {{Raw Tile|Ω|0:0:1}} 
+| [[File:Icon site fortress.png]]
+| [[Mountain halls]]
+| Dwarves
+|-
+| {{Raw Tile|μ|7:0:1}} {{Raw Tile|μ|7:0:0}} {{Raw Tile|μ|0:0:1}} {{Raw Tile|μ|5:0:1}}
+| [[File:icon_site_ruin1.png]] [[File:icon_site_ruin2.png]] [[File:icon_site_ruin_dwarf.png]] [[File:icon_site_ruin_castle.png]] [[File:icon_site_ruin_castle2.png]] [[File:icon_site_ruin_castle3.png]] [[File:icon_site_ruin_u.png]] [[File:icon_site_ruin_small1.png]] [[File:icon_site_ruin_small2.png]]<br>[[File:icon_village_ruin1.png]] [[File:icon_village_ruin2.png]]
+| [[Ruin|Ruins]]
+|
+|-
+| {{Raw Tile|μ|6:0:1}} {{Raw Tile|₧|6:0:1}}
+| [[File:icon_site_ruin_forest_retreat1.png]] [[File:icon_site_ruin_forest_retreat2.png]]
+| Forest retreat ruins
+|
+|-
+| {{Raw Tile|Å|7:0:0}} 
+| [[File:Icon site shrine titan.png]] [[File:icon_site_fort2.png]]
+| [[Shrine (megabeast)|Shrine]]
+| Megabeast
+|-
+| {{Raw Tile|0|0:0:1}} 
+| [[File:Icon site tomb.png]]
+| [[Tomb]]
+| Undead
+|-
+| {{Raw Tile|I|5:0:0}} 
+| [[File:Icon site necrotower.png]]
+| [[Tower (necromancy)|Tower]]
+| Necromancer(s) and undead
+|-
+| {{Raw Tile|+|7:0:0}} {{Raw Tile|*|7:0:0}} {{Raw Tile|#|7:0:0}} {{Raw Tile|☼|7:0:1}} 
+| [[File:Icon site city 1.png]]  [[File:Icon site city 2.png]] [[File:Icon site city 3.png]] [[File:Icon site city 4.png]]
+| [[Town]]
+| Humans
+|-
+| {{Raw Tile|■|0:0:1}} 
+| [[File:Icon site vault.png]]
+| [[Vault]]
+| Special creatures
+|-
+| {{Raw Tile|■|0:0:1}} 
+| [[File:site mythical 1.png]] [[File:site mythical 2.png]] [[File:site mythical 3.png]]
+| [[Mysterious dungeon|Mythical site]]
+| [[Dungeon guardian]]s and goblins
+|}
+
+== Drawn site key (graphics) ==
+This is how sites and landscapes appear on the map when they are out of range and/or undiscovered.
+
+{| style="margin:1em 1em 1em 0;background:#261a11;border:1px #AAA solid;color:white" class=wikitable class=sortable
+|- style="background:#8c6344;text-align:center;"
+!|'''Sprite'''
+!|'''Name'''
+|-
+| [[File:icon_drawn_grassland.png]]
+| Grassland
+|-
+| [[File:icon_drawn_water.png]]
+| Water
+|-
+| [[File:icon_drawn_forest_conifer.png]]
+| Conifer Forest
+|-
+| [[File:icon_drawn_forest_broadleaf.png]]
+| Broadleaf Forest
+|-
+| [[File:icon_drawn_hills.png]]
+| Hills
+|-
+| [[File:icon_drawn_mountains.png]]
+| Mountains
+|-
+| [[File:icon_drawn_marsh.png]]
+| Marsh
+|-
+| [[File:icon_drawn_glacier.png]]
+| Glacier
+|-
+| [[File:icon_drawn_site.png]]
+| Site
+|-
+| [[File:icon_drawn_desert_rock.png]]
+| Desert Rock
+|-
+| [[File:icon_drawn_desert_badlands.png]]
+| Desert Badlands
+|-
+| [[File:icon_drawn_desert_sand.png]]
+| Desert Sand
+|-
+| [[File:icon_drawn_roads.png]]
+| Roads
+|-
+| [[File:icon_drawn_rivers.png]]
+| Rivers
+|-
+| [[File:icon_drawn_labyrinth.png]]
+| Labyrinth
+|-
+| [[File:icon_drawn_shrine.png]]
+| Shrine
+|-
+| [[File:icon_drawn_lair.png]]
+| Lair
+|-
+| [[File:icon_drawn_cave.png]]
+| Cave
+|-
+| [[File:icon_drawn_mountain_home.png]]
+| Mountain Home
+|-
+| [[File:icon_drawn_hillocks.png]]
+| Hillocks
+|-
+| [[File:icon_drawn_fortress.png]]
+| Fortress
+|-
+| [[File:icon_drawn_mountain_ruin.png]]
+| Mountain Ruin
+|-
+| [[File:icon_drawn_dark_fortress.png]]
+| Dark Fortress
+|-
+| [[File:icon_drawn_dark_pits.png]]
+| Dark Pits
+|-
+| [[File:icon_drawn_evil_ruin.png]]
+| Evil Ruin
+|-
+| [[File:icon_drawn_home_tree.png]]
+| Home Tree
+|-
+| [[File:icon_drawn_forest_retreat.png]]
+| Forest Retreat
+|-
+| [[File:icon_drawn_forest_ruin.png]]
+| Forest Ruin
+|-
+| [[File:icon_drawn_castle_ruin.png]]
+| Castle Ruin
+|-
+| [[File:icon_drawn_necrotower.png]]
+| Necromancer Tower
+|-
+| [[File:icon_drawn_fort.png]]
+| Fort
+|-
+| [[File:icon_drawn_monastery.png]]
+| Monastery
+|-
+| [[File:icon_drawn_castle.png]]
+| Castle
+|-
+| [[File:icon_drawn_vault.png]]
+| Vault
+|-
+| [[File:icon_drawn_tomb.png]]
+| Tomb
+|-
+| [[File:icon_drawn_city.png]]
+| City
+|-
+| [[File:icon_drawn_town.png]]
+| Town
+|-
+| [[File:icon_drawn_city_ruin.png]]
+| City Ruin
+|-
+| [[File:icon_drawn_village1.png]] [[File:icon_drawn_village2.png]] [[File:icon_drawn_village3.png]] [[File:icon_drawn_village4.png]]
+| Village
+|-
+| [[File:icon_drawn_village_ruin.png]]
+| Village Ruin
+|-
+| [[File:icon_drawn_mythical1.png]] [[File:icon_drawn_mythical2.png]] [[File:icon_drawn_mythical3.png]]
+| Mythical sites
+|}
+
+=== Embark assistant added sites ===
+Shown when the [[DFHack]] plugin is active, list is from the in game plugin {{k|i}}nformation, see there for details.
+
+{| class="wikitable"
+! Site
+! Symbol
+|-
+| Camp
+| {{Raw Tile|C|6:1}}
+|-
+| Cave
+| {{Raw Tile|c|6:1}}
+|-
+| Lair
+| {{Raw Tile|m|6:1}} {{Raw Tile|b|6:1}} {{Raw Tile|l|6:1}}
+|-
+| Labyrinth
+| {{Raw Tile|L|6:1}}
+|-
+| Monument
+| {{Raw Tile|M|6:1}}
+|-
+| Shrine
+| {{Raw Tile|S|6:1}}
+|-
+| Vault
+| {{Raw Tile|V|6:1}}
+|}
+
+== Fast travel key ==
+{{outdatedsection}}
+{| class="wikitable"
+! Description
+! Symbol
+|-
+| Adventurer(s)
+| {{Raw Tile|@|7:0}}
+|-
+| Other traveling individual or group
+| {{Raw Tile|*|7:0}}
+|}
+
+{{World}}

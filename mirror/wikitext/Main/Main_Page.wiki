@@ -1,0 +1,162 @@
+<!--
+***************************************************************************************************
+*****************DO THE FOLLOWING IF THE SHOWN VERSION OR RELEASE DATE IS WRONG********************
+***************************************************************************************************
+- Edit the part of [[Template:current/version]] before the noinclude tag to reflect the appropriate version
+- Edit the part of [[Template:current/lastupdate]] before the noinclude to show the release date for that version
+
+That will update the version info for every page on the wiki that uses these templates (including the main page)
+
+
+/-->
+<!--        BANNER ACROSS TOP OF PAGE        -->
+{| id="mp-topbanner" style="width:100%; background:#f9f9f9; margin:0; padding:0; border:1px solid #ddd; border-top-left-radius:8px; -moz-border-radius-topleft:8px; -webkit-border-top-left-radius:8px; border-top-right-radius:8px; -moz-border-radius-topright:8px; -webkit-border-top-right-radius:8px; margin-bottom: -2px; border-spacing: 0px;"
+| style="color:#000;" |
+<!--        "WELCOME TO DFWIKI" AND ARTICLE COUNT        -->
+{| style="width:280px; border:none; background:none; padding-top: 16px; padding-bottom: 16px;"
+| style="width:280px; text-align:left; white-space:nowrap; color:#000; padding-left: 12px;" |
+<div style="font-size:162%; border:none; margin:0; padding:.1em; padding-left: 0; color:#000;">The Dwarf Fortress Wiki</div>
+<div style="font-size:85%; padding-left:2px;">Sponsored by [https://www.kitfoxgames.com Kitfox Games]</div>
+<div id="articlecount" style="font-size:85%; padding-left:2px;">[[Special:Statistics|{{Template:Number of non-obsolete articles}}]] articles about '''v{{current/version}}'''<br />Previous versions: [[DF2014:Main Page|v0.47]] / [[v0.34:Main Page|v0.34]] / [[v0.31:Main Page|v0.31]] / [[40d:Main Page|40d]] / [[23a:Main Page|23a]]</div>
+|}
+| style="min-width:35%; padding-right: 10px;" |
+<div style="border: 1px solid #eee; padding: 8px;">{{:Main_Page/Quote}}<div><small>[[/Quote/list|More]]</small></div></div>
+<!--        ARTICLES ON RIGHT-HAND SIDE        -->
+| style="width:16%; font-size:12px; border-left: solid 1px #ddd; background: #eef5ff; border-top-right-radius:8px; -moz-border-radius-topright:8px; -webkit-border-top-right-radius:8px;" |
+{| style="width: 90%; margin: 0 auto;" |
+| style="width:100%; font-size:12px;" |
+<p>[[About]]</p>
+<p><b>[[Quickstart guide|<span style="color:#72A329 !important;">Tutorial</span>]]</b></p>
+<p>[[Installation|Downloads]]</p>
+|}
+|}
+<!--{{Main page progress bar}}-->
+{{Template:Migration progress}}
+{| style="border-spacing:0; margin-top: -2px; width:100%; border:1px solid #ddd; background:#f9f9f9; height: 128px;" |
+| style="width:84%;" |
+{| style="width:100%; height: 126px; padding-left:12px;"
+|<p style="margin: 0 auto 0em;">
+[[Welcome]] to the [[Dwarf Fortress Wiki]]. This is a collection of user-submitted guides, information and advice for [http://www.bay12games.com/dwarves/ ''Dwarf Fortress''].  ''[[Dwarf Fortress]]'' is a game for Windows, Linux and Mac, developed by [http://www.bay12games.com/ Bay 12 Games] featuring two modes of play ([[Dwarf fortress mode|Fortress]] and [[Adventurer mode|Adventurer]]), as well as distinct, randomly-generated worlds (complete with [[Biome|terrain]], [[creatures|wildlife]] and [[legend]]s), gruesome combat mechanics and ubiquitous [[Dwarf|dwarven]] [[alcohol]] dependency. 
+</p>
+{{quick download|premium=1|style=margin-left:-12px;|{{current/version/ns}}}}
+|}
+| style="width:16%; border-left: solid 1px #ddd; text-align: left; background: #eef5ff;" | 
+{| style="width: 90%; text-align: left; height: 126px; margin:0 auto; padding:0; margin-top: 1px;"
+|<p style="">'''v{{current/version}}'''<br/>'''{{current/lastupdate}}'''<br/>[[CV:Release information/{{current/version}}|Release Information]]</br>[https://store.steampowered.com/news/app/975370 News on Steam]<br/>[https://www.bay12games.com/dwarves/ News on Bay 12 Games]<br/></p>
+|}
+|}
+{| style="border-spacing:0; margin-top: -2px; width:100%; border:1px solid #ddd; background:#f9f9f9; line-height: 18px; height: 139px; padding: 1px;"
+| style="width: 20%; border: 1px solid #CA7A02; box-shadow:0px 0px 4px #CA7A02 inset;" |
+{| style="width:100%; height: 150px; padding: 0px 12px;"
+|<p style="margin: 0 auto 0em;">
+<span style="border-bottom:1px solid #ddd; white-space:nowrap;">'''<span style="color:#CA7A02 !important;">New to ''Dwarf Fortress''?</span>'''</span>
+
+[[Installation|Download & install]]
+
+[[Quickstart guide|Fortress mode tutorial]]
+
+[[Adventure mode quick start|Adventure mode tutorial]]
+
+[[Troubleshooting|How do I get more help?]]
+</p>
+|}
+| style="width:45%; border-left: solid 1px #ddd;" |
+{| style="width:100%; height: 150px; padding-left:12px; padding-top: 8px;"
+|colspan="3"|<span style="border-bottom:1px solid #ddd;">'''Reference Pages'''</span>
+|-
+|<p style="margin: 0 auto 0em;">
+
+[[Design strategies]]
+
+[[Adventurer mode]]
+
+[[Dwarf fortress mode|Fortress mode]]
+
+[[Material]]s
+
+[[Farming]]
+
+[[Trading]]
+</p>
+|style="padding-left:30px;"|<p style="margin: 0 auto 0em;">
+
+[[World generation]]
+
+[[Advanced world generation]]
+
+[[Industry]]
+
+[[Combat]]
+
+[[Military]]
+
+[[Fun]]
+</p>
+|style="padding-left:12px;"|<p style="margin: 0 auto 0em;">
+
+[[Creature]]s
+
+[[Weapon]]s
+
+[[Building]]s
+
+[[Dwarf|Dwarves]]
+
+[[Mining]]
+
+[[Skills]]
+</p>
+|}
+| style="width:50%; border-left: solid 1px #ddd;" rowspan=2 |
+{{random image|size=400x300px}}
+|-
+| style="border-top: solid 1px #ddd; padding-left: 12px; padding-top: 8px;" colspan=2 |
+{| style="width:100%"
+|-
+| <span style="border-bottom:1px solid #ddd;">'''Other / [[Mods]]'''</span>
+|-
+|| [[Bloodline games]] || [[Cheating]] || [[Known bugs and issues|Known bugs]] || [[Framerate]] || [[Modding guide]]
+|-
+|| [[Masterwork:Main Page|Masterwork DF]] || [[Graphics]] || [[Utilities]] || [[Technical tricks]] || [[Dwarf Fortress webcomics|DF webcomics]]
+|}
+
+|}
+<br>
+
+{| id="mp-topbanner" style="width:100%; background:#f9f9f9; margin:0; padding:12px; border:1px solid #ddd; margin-bottom: -2px; border-spacing: 0px;"
+| style="color:#000;" |
+{| style="width: 100%;"
+|- 
+! style="text-align: left; padding: 0.1em 0.5em" | Forums:
+| [http://www.bay12forums.com/smf/ Official Forums], [http://www.bay12forums.com/smf/index.php?board=22.0 Official Wiki Forum], [https://steamcommunity.com/app/975370/discussions/ Steam Discussions], [https://forums.somethingawful.com/showthread.php?threadid=3616403 SomethingAwful Thread], [http://www.reddit.com/r/dwarffortress/ Reddit], [https://knockout.chat/thread/44031/1 Knockout! Thread], [http://forum.canardpc.com/threads/68897-Dwarf-Fortress.-Le-topic-v2-pour-ceux-qui-ont-encore-des-yeux Canard PC Thread (Fr)], [https://tieba.baidu.com/f?kw=%E7%9F%AE%E4%BA%BA%E8%A6%81%E5%A1%9E Baidu Tieba (Zh)]
+|-
+! style="text-align: left; padding: 0.1em 0.5em" | Blogs:
+| [http://dfstories.com/ Dwarf Fortress Stories], [http://www.bravemule.com/ Bravemule]
+|-
+! style="text-align: left; padding: 0.1em 0.5em" | [[IRC|IRC Channels]]:
+| [irc://irc.esper.net/bay12games #bay12games] on irc.esper.net, [irc://irc.libera.chat/dwarffortress #dwarffortress] on Libera.Chat, [irc://irc.synirc.net/df #df] on synirc.net, [irc://irc.quakenet.org/DwarfFortress #DwarfFortress] on quakenet.org, [irc://irc.tellaerad.net/DF #DF] on tellaerad.net and [irc://irc.rizon.net/brofortress #brofortress] on rizon.net.
+|-
+! style="text-align: left; padding: 0.1em 0.5em" | Discord Server:
+| [https://discord.gg/kitfoxgames Official Kitfox Games Discord]
+|-
+! style="text-align: left; padding: 0.1em 0.5em" | DF Wikis in other languages:
+| [http://www.dwarffortress.fr/wiki Le Wiki Français], [http://wikiwiki.jp/dwarffort/ The Japanese (日本語) Wiki], [http://www.dfwk.ru The Russian Wiki], [http://pl.dwarffortress.wikia.com/ The Polish Wiki], [https://dfzh.huijiwiki.com 中文维基]
+|-
+! style="text-align: left; padding: 0.1em 0.5em" | Useful Links:
+| [http://mkv25.net/dfma/ Dwarf Fortress Map Archive], [http://dffd.bay12games.com/ Dwarf Fortress File Depot (DFFD)], [https://dwarffortressbugtracker.com/ Dwarf Fortress Bug Tracker], [https://store.steampowered.com/app/975370 Dwarf Fortress on Steam]/[https://kitfoxgames.itch.io/dwarf-fortress itch.io], [https://www.twitch.tv/directory/game/Slaves%20to%20Armok%20II%3A%20Dwarf%20Fortress Dwarf Fortress on Twitch]
+|-
+! style="text-align: left; padding: 0.1em 0.5em" | Archives:
+| [[23a:Main Page|v0.23.130.23a Wiki]]<!--<sup>[http://web.archive.org/web/20080221163738rn_1/archive.dwarffortresswiki.net/index.php/Main_Page (archive.org snapshot)]</sup>-->, [[40d:Main Page|v0.28.181.40d Wiki]], [[v0.31:Main Page|v0.31.25 Wiki]], [[v0.34:Main Page|v0.34.11 Wiki]]
+|}
+|}
+<!--[[Category:Wiki]]-->
+
+	
+[[fr:Accueil]]
+[[ja:]]
+[[pl:Dwarf_Fortress_Wiki]]
+[[ru:Заглавная_страница]]
+[[zh:首页]]
+
+<div id="norate"></div>
+<!-- discourage caching: --><span style="display:none">{{CURRENTHOUR}}</span>

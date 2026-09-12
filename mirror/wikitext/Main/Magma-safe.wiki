@@ -1,0 +1,144 @@
+{{Quality|Exceptional}}
+{{av}}
+[[File:magma_safe_anim.gif|right]]'''Magma-safe materials''' are materials which will not melt, burn, evaporate, or otherwise take damage when in close contact with [[magma]]. Most frequently, this comes into play when using [[floodgate]]s operated by [[mechanism]]s, or when operating a [[screw pump|magma pump]].
+
+For [[reaction]]s and custom buildings using the [MAGMA_BUILD_SAFE] token, only a material which is solid and stable at the temperature {{ct|12000}} (i.e. MELTING_POINT/BOILING_POINT/IGNITE_POINT/HEATDAM_POINT greater than 12000 and COLDDAM_POINT less than 12000) is considered magma-safe. 
+
+In order to construct mechanisms, blocks or other pump components from a magma-safe material, you have several choices:
+# You can specify a magma-safe rock for your [[mechanisms]] and other components at the workshops by clicking the detail ([[File:Mag glass icon.png]]) icon next to the order.
+# Build your mechanisms out of [[iron]] or [[steel]].
+# Build your pump components out of iron, steel, [[glass]], or [[nether-cap]].
+# Place a [[stockpile]] with the desired stones around your [[mechanic's workshop]] and set it to "Give To a Pile/Workshop".
+# Use a [[burrow]] that contains only the workshop and the desired materials.
+# Simply ensure that the desired materials are the closest available to your worker. This does not always work, but is usually good enough if you request several jobs, hoping that at least one uses the correct material.
+
+When linking a trigger to an object, the ''first'' mechanism selected is attached to the object, and the ''second'' is attached to the trigger.  Unless the trigger itself will be submerged in magma (as could be the case with a [[pressure plate]]), only the first mechanism (attached to the object that will be submerged) needs to be magma-safe. If you do not have any magma-safe stones available, you can also work around floodgate-based flow control by using [[screw pump]]s to pump the magma over [[wall]]-barriers, or using water to form [[obsidian]] to plug flows and channel through them to reopen them (necessity and invention and all that).
+
+This property is also relevant when choosing the appropriate method for disposing of unneeded items, which can impact [[FPS]] when in large numbers. Items made of non magma-safe materials can be simply dumped into magma, which is the easiest disposal method; however, magma-safe items will need more [[Dwarven atom smasher|drastic]] measures. For instance, wooden floodgate will hold back magma indefinitely if it stays closed (it'll only catch fire once it's opened), and a wooden drawbridge will only hold back magma if it's against its outer edge (e.g. if it raises to the right, then lava flowing from the left onto the "center" of the bridge will very quickly burn it up). 
+
+Constructions that resist magma are:
+{{Material properties}}
+* Constructions ([[Wall]], [[Floor]], [[Ramp]], and [[Stairs]]) of any material can never melt or burn - there is nothing wrong with a [[wood]]en magma reservoir.  Natural (i.e. non-constructed) [[ice]] walls/floors/ramps/stairs will melt if exposed to sufficient heat.
+* [[Fortification]]s will allow the passage of [[magma]]; however, if fortifications fill up to 7/7 depth, magma creatures will be able to swim freely through them.
+* If not submerged (that is, not opened to let magma flow over/past/around them), [[door]]s, [[floodgate]]s, and raised [[bridge]]s (provided that there is no magma on the space the bridge would occupy when lowered) of non-magma-safe stone or metal are safe. So long as they are just in contact with magma, only acting as a passive "wall", they are fine. If opened, they will melt.
+** Raised drawbridges have a notable exception, in that allowing magma to flow over the center of the area that the bridge would normally occupy when lowered ''will'' cause the bridge's components to heat up and potentially melt.
+* A [[pump]] made with magma-safe material for pipes, screws and blocks is fully magma-safe, and will not melt even when submerged in magma.  Pumps containing any item that is not magma safe will be destroyed after prolonged operation.
+
+== Game calculations ==
+In the game, magma's temperature is exactly {{ct|12000}}.
+
+The chance of striking a magma-safe stone is roughly around 32%, not including the natural abundance of certain stone. It is important to note whether or not your fortress may already have access to magma-safe resources before attempting to deliberately find some.
+
+==Magma-safe material==
+The following materials will not melt when submerged in magma. Although true for any item/construction, it's worth specifically mentioning that this includes [[door]]s, [[floor hatch]]es, [[floodgate]]s, [[bridge]]s, [[screw pump]]s, [[pipe section]]s, and [[mechanism]]s.
+
+<!--Editors: For your convenience, a BLANK ROW TEMPLATE:
+
+{{MS table row|Type= |Matl= |Appear= |Temp= |Where= |Notes= }}
+
+-->
+{{MS table head}}
+
+{{MS table row|Type=Stone|Matl=[[Alunite]]|Appear=[[File:alunite_sprite.png]] / {{Raw Tile|<nowiki>`</nowiki>|7:7:1}}  {{Raw Tile|•|7:1}}|Temp=13,690°U (3722°F/2051°C)|Where=All [[Igneous extrusive layer|Igneous extrusive]]'''(L)''', [[Kaolinite]]'''(L)'''}}
+
+{{MS table row|Type=Stone|Matl=[[Anhydrite]]|Appear=[[File:anhydrite_sprite.png]] / {{Raw Tile|v|7:7:1}}  {{Raw Tile|•|7:0}}|Temp=12,610°U (2642°F/1450°C)|Where=[[Gypsum]]'''(S)''', [[Satinspar]]'''(1)''', [[Alabaster]]'''(1)''', [[Selenite]]'''(1)'''}}
+
+{{MS table row|Type=Stone|Matl=[[Basalt]]|Appear=[[File:basalt_sprite.png]] / {{Raw Tile|#|0:7:1}} {{Raw Tile|•|0:1}}|Temp=12,160°U (2192°F/1200°C)|Where=[[Igneous extrusive layer|Igneous extrusive]] layer stone}}
+
+{{MS table row|Type=Stone|Matl=[[Bauxite]]|Appear=[[File:bauxite_sprite.png]] / {{Raw Tile|+|4:7:0}}  {{Raw Tile|•|4:0}}|Temp=13,600°U (3632°F/2000°C)|Where=All [[Sedimentary layer|Sedimentary]]'''(L)'''|Notes=dark red}}
+
+{{MS table row|Type=Stone|Matl=[[Calcite]]|Appear=[[File:calcite_sprite.png]] / {{Raw Tile|"|7:7:1}}  {{Raw Tile|•|7:1}}|Temp=12,902°U (2934°F/1613°C)|Where=[[Limestone]]'''(S)''', [[Marble]]'''(S)'''|Notes=[[flux]] stone}}
+
+{{MS table row|Type=Stone|Matl=[[Chert]]|Appear=[[File:chert_sprite.png]] / {{Raw Tile|&#61;|6:7:0}} {{Raw Tile|•|6:0}}|Temp=13,101°U (3133°F/1723°C)|Where=[[Sedimentary layer|Sedimentary]] layer stone}}
+
+{{MS table row|Type=Stone|Matl=[[Chromite]]|Appear=[[File:chromite_sprite.png]] / {{Raw Tile|&#61;|0:7:1}} {{Raw Tile|•|0:1}}|Temp=13,645°U (3677°F/2026°C)|Where=[[Olivine]]'''(V)'''}}
+
+{{MS table row|Type=Stone|Matl=[[Dolomite]]|Appear=[[File:dolomite_sprite.png]] / {{Raw Tile|`|7:7:1}} {{Raw Tile|•|7:1}}|Temp=16,507°U (6539°F/3619°C)|Where=[[Sedimentary layer|Sedimentary]] layer stone|Notes=[[Flux]], Highest melting point of any common stone.}}
+
+{{MS table row|Type=Stone|Matl=[[Gabbro]]|Appear=[[File:gabbro_sprite.png]] / {{Raw Tile|▒|0:7:1}} {{Raw Tile|•|0:1}}|Temp=12,160°U (2192°F/1200°C)|Where=[[Igneous intrusive layer|Igneous intrusive]] layer stone}}
+
+{{MS table row|Type=Stone|Matl=[[Ilmenite]]|Appear=[[File:ilmenite_sprite.png]] / {{Raw Tile|.|0:7:1}} {{Raw Tile|•|0:1}}|Temp=12,457°U (2489°F/1365°C)|Where=[[Gabbro]]'''(S)'''}}
+
+{{MS table row|Type=Stone|Matl=[[Kaolinite]]|Appear=[[File:kaolinite_sprite.png]] / {{Raw Tile|&#61;|4:7:0}} {{Raw Tile|•|4:0}}|Temp=13,150°U (3182°F/1751°C)|Where=All [[Sedimentary layer|Sedimentary]]'''(L)'''|Notes=dark red, [[porcelain]]}}
+
+{{MS table row|Type=Stone|Matl=[[Mica]]|Appear=[[File:mica_sprite.png]] / {{Raw Tile|v|0:7:1}} {{Raw Tile|•|0:1}}|Temp=12,295°U (2327°F/1275°C)|Where=All [[Metamorphic]]'''(L)''', [[Granite]]'''(L)'''}}
+
+{{MS table row|Type=Stone|Matl=[[Obsidian]]|Appear=[[File:obsidian_sprite.png]] / {{Raw Tile|▒|0:7:1}} {{Raw Tile|•|0:1}}|Temp=13,600°U (3632°F/2001°C)|Where=[[Igneous extrusive layer|Igneous extrusive]] layer stone|Notes=value 3, can be "[[obsidian farming|manufactured]]"}}
+
+{{MS table row|Type=Stone|Matl=[[Olivine]]|Appear=[[File:olivine_sprite.png]] / {{Raw Tile|%|2:7:0}} {{Raw Tile|•|2:0}}|Temp=13,168°U (3200°F/1761°C)|Where=[[Gabbro]]'''(L)'''|Notes=green}}
+
+{{MS table row|Type=Stone|Matl=[[Orthoclase]]|Appear=[[File:orthoclase_sprite.png]] / {{Raw Tile|%|6:7:1}} {{Raw Tile|•|6:1}}|Temp=12,250°U (2282°F/1250°C)|Where=All [[Igneous intrusive layer|Igneous intrusive]]'''(L)''', All [[Metamorphic]]'''(L)'''|Notes=yellow}}
+
+{{MS table row|Type=Stone|Matl=[[Periclase]]|Appear=[[File:periclase_sprite.png]] / {{Raw Tile|,|7:7:1}} {{Raw Tile|•|7:1}}|Temp=15,040°U (5072°F/2803°C)|Where=[[Marble]]'''(S)'''}}
+
+{{MS table row|Type=Stone|Matl=[[Petrified wood]]|Appear=[[File:petrified_wood_sprite.png]] / {{Raw Tile|%|4:7:1}} {{Raw Tile|•|4:1}}|Temp=12,970°U (3002°F/1650°C)|Where=All [[Sedimentary layer|Sedimentary]]'''(S)'''|Notes=bright red<br>density = 2200<sup>6</sup>}}
+
+{{MS table row|Type=Stone|Matl=[[Pitchblende]]|Appear=[[File:pitchblende_sprite.png]] / {{Raw Tile|*|5:7:0}} {{Raw Tile|•|5:0}}|Temp=12,070°U (2102°F/1149°C)|Where=[[Granite]]'''(S)'''|Notes=purple<br>density = 7600<sup>6</sup>}}
+
+{{MS table row|Type=Stone|Matl=[[Quartzite]]|Appear=[[File:quartzite_sprite.png]] / {{Raw Tile|-|7:7:1}} {{Raw Tile|•|7:1}}|Temp=12,970°U (3002°F/1650°C)|Where=[[Metamorphic]] layer stone}}
+
+{{MS table row|Type=Stone|Matl=[[Rutile]]|Appear=[[File:rutile_sprite.png]] / {{Raw Tile|`|5:7:0}} {{Raw Tile|•|5:0}}|Temp=13,285°U (3214°F/1826°C)|Where=All [[Metamorphic]]'''(S)''', [[Granite]]'''(S)'''|Notes=purple}}
+
+{{MS table row|Type=Stone|Matl=[[Sandstone]]|Appear=[[File:sandstone_sprite.png]] / {{Raw Tile|#|6:7:0}} {{Raw Tile|•|6:0}}|Temp=12,070°U (2102°F/1149°C)|Where=[[Sedimentary layer|Sedimentary]] layer stone}}
+
+{{MS table row|Type=Stone|Matl=[[Talc]]|Appear=[[File:talc_sprite.png]] / {{Raw Tile|&#124;|7:7:1}} {{Raw Tile|•|7:1}}|Temp=12,700°U (2732°F/1500°C)|Where=[[Dolomite]]'''(L)'''}}
+
+{{MS table row|Type=Metal|Matl=[[Adamantine]]|Appear=[[File:adamantine_bar_sprite.png]] / {{Raw Tile|X|3:3:1}} {{Raw Tile|≡|3:1}}|Temp=25,000°U (15,032°F/8333°C)|Notes=Highest value/utility material in game<br>density = 200<sup>6</sup>}}
+
+{{MS table row|Type=Metal|Matl=[[Iron]]|Appear=[[File:iron_bar_sprite.png]] / {{Raw Tile|X|0:7:1}} {{Raw Tile|≡|0:1}}|Temp=12,768°U (2800°F/1538°C)|Notes=Armor/weapons<br>density = 7850<sup>6</sup>}}
+
+{{MS table row|Type=Metal|Matl=[[Nickel]]|Appear=[[File:nickel_bar_sprite.png]] / {{Raw Tile|X|7:3:0}} {{Raw Tile|≡|7:0}}|Temp=12,619°U (2651°F/1455°C<br>density = 8800<sup>6</sup>)}}
+
+{{MS table row|Type=Metal|Matl=[[Pig iron]]|Appear=[[File:lead_bar_sprite.png]] / {{Raw Tile|X|0:7:1}} {{Raw Tile|≡|0:1}}|Temp=12,106°U (2138°F/1170°C)|Notes=used in steel making process<br>density = 7850<sup>6</sup>}}
+
+{{MS table row|Type=Metal|Matl=[[Platinum]]|Appear=[[File:platinum_bar_sprite.png]] / {{Raw Tile|X|7:7:1}} {{Raw Tile|≡|7:1}}|Temp=13,182°U (3214°F/1768°C)|Notes=High value metal<br>density = 21,400<sup>6</sup>}}
+
+{{MS table row|Type=Metal|Matl=[[Steel]]|Appear=[[File:generic_grey_bar_sprite.png]] / {{Raw Tile|X|0:7:1}} {{Raw Tile|≡|0:1}}|Temp=12,718°U (2750°F/1510°C)|Notes=Armor/weapons<br>density = 7850<sup>6</sup>}}
+
+{{MS table row|Type=Metal|Matl=[[Divine metal]]|Appear=[[File:generic_grey_bar_sprite.png]] / {{Raw Tile|X|7:0:0}} {{Raw Tile|≡|7:0}}|Temp=None|Notes=Found only in [[vault]]s and in geodes deep underground<br>density = 1000<sup>6</sup>}}
+
+{{MS table row|Type=Ore|Matl=[[Cassiterite]]|Appear=[[File:ore_silvery2_sprite.png]] / {{Raw Tile|£|6:7:0}} {{Raw Tile|*|6:0}}|Temp=12,025°U (2057°F/1124°C)|Where=[[Granite]]'''(V)'''|Notes=Ore of [[tin]]}}
+
+{{MS table row|Type=Ore|Matl=[[Galena]]|Appear=[[File:ore_silvery_sprite.png]] / {{Raw Tile|£|7:7:1}} {{Raw Tile|*|7:1}}|Temp=12,005°U (2037°F/1113°C)|Where=All [[Igneous extrusive layer|Igneous extrusive]]'''(V)''', All [[Metamorphic]]'''(V)''', [[Granite]]'''(V)''', [[Limestone]]'''(V)'''|Notes=Ore of [[lead]] and [[silver]]}}
+
+{{MS table row|Type=Ore|Matl=[[Hematite]]<sup>3</sup>|Appear=[[File:ore_red_sprite.png]] / {{Raw Tile|£|4:7:0}} {{Raw Tile|*|4:0}}|Temp=12,736°U (2768°F/1520°C)|Where=All [[Sedimentary layer|Sedimentary]]'''(V)''', All [[Igneous extrusive layer|Igneous extrusive]]'''(V)'''|Notes=Ore of [[iron]]<sup>3</sup>}}
+
+{{MS table row|Type=Ore|Matl=[[Magnetite]]<sup>3</sup>|Appear=[[File:ore_silvery2_sprite.png]] / {{Raw Tile|~|0:7:1}} {{Raw Tile|*|0:1}}|Temp=12,768°U (2800°F/1538°C)|Where=All [[Sedimentary layer|Sedimentary]]'''(L)'''|Notes=Ore of [[iron]]<sup>3</sup>}}
+
+{{MS table row|Type=Ore|Matl=[[Native platinum]]|Appear=[[File:ore_silvery_sprite.png]] / {{Raw Tile|£|7:7:1}} {{Raw Tile|*|7:1}}|Temp=13,182°U (3214°F/1768°C)|Where=[[Olivine]]'''(V)''', [[Magnetite]]'''(V)''', [[Chromite]]'''(S)'''|Notes=Ore of [[platinum]]}}
+
+{{MS table row|Type=Ore|Matl=''[[Sphalerite]]''<sup>4</sup>|Appear=[[File:ore_magenta_sprite.png]] / {{Raw Tile|£|0:7:1}} {{Raw Tile|*|0:1}}|Temp=''12,133°U (2165°F/1185°C)''|Where=All [[Metamorphic]]'''(V)'''|Notes=Ore of [[zinc]]<sup>4</sup>}}
+
+{{MS table row|Type=Wood|Matl=[[Nether-cap]]<sup>5</sup>|Appear=[[File:nether_cap_logs_sprite.png|17px]] / {{Raw Tile|♠|1:0:0}} {{Raw Tile|▬|1:0:0}}|Temp=N/A|Where=[[Cavern]] (depth 3)|Notes=Naturally cold<sup>5</sup>}}
+
+{{MS table row|Type=Special|Matl=[[Raw adamantine]]|Appear=[[File:Raw_adamantine_sprite.png]] / {{Raw Tile|£|3:7:1}} {{Raw Tile|*|3:1}}|Temp=25,000°U (15,032°F/8333°C)|Where=The depths|Notes=Ore of [[adamantine]]}}
+{{MS table row|Type=Special|Matl=[[Slade]]|Appear=[[File:slade_sprite.png]] / {{Raw Tile|░|0:0:1}} {{Raw Tile|*|0:1}}|Temp=None|Where=The depths|Notes=Intended to be unmineable}}
+
+{{MS table row|Type=Leather|Matl=[[Fire imp]]|Appear=[[File:leather_sprite.png]] / {{Raw Tile|ß|6:0:0}}|Temp=None|Notes=}}
+
+{{MS table row|Type=Bone|Matl=[[Fire imp]]|Appear=[[File:bone_sprite.png|12px]] / {{Raw Tile|²|7:1}}|Temp=None|Notes=}}
+{{MS table row|Type=Bone|Matl=[[Dragon]]|Appear=[[File:bone_sprite.png|12px]] / {{Raw Tile|²|7:1}}|Temp=None|Notes=}}
+
+{{MS table row|Type=Soap|Matl=[[Fire imp]]|Appear=[[File:soap_sprite.png]] / {{Raw Tile|≡|7:1}}|Temp=15,000°U (5032°F/2780°C)|Notes=}}
+{{MS table row|Type=Soap|Matl=[[Dragon]]|Appear=[[File:soap_sprite.png]] / {{Raw Tile|≡|7:1}}|Temp=55,000°U (45032°F/25,044°C)|Notes=}}
+
+{{MS table row|Type=Glass|Matl=[[Glass|Green glass]]|Appear=[[File:Green_glass_sprite.png]] / {{Raw Tile|X|2:2:1}} {{Raw Tile|■|2:0}}|Temp=13,600°U (3632°F/2001°C)|Notes=}}
+{{MS table row|Type=Glass|Matl=[[Glass|Clear glass]]|Appear=[[File:Clear_crystal_glass.png]] / {{Raw Tile|X|3:3:1}} {{Raw Tile|■|3:0}}|Temp=13,600°U (3632°F/2001°C)|Notes=}}
+{{MS table row|Type=Glass|Matl=[[Glass|Crystal glass]]|Appear=[[File:Clear_crystal_glass.png]] / {{Raw Tile|X|7:7:1}} {{Raw Tile|■|7:1}}|Temp=13,600°U (3632°F/2001°C)|Notes=}}
+
+{{MS table row|Type=Ash|Matl=[[Ash]]|Appear=[[File:generic_grey_bar_sprite.png]] / {{Raw Tile|X|7:7:1}} {{Raw Tile|≡|7:0:0}}|Temp=None|Notes=}}
+{{MS table row|Type=Ash|Matl=[[Potash]]|Appear=[[File:generic_grey_bar_sprite.png]] / {{Raw Tile|X|7:7:1}} {{Raw Tile|≡|7:0:1}}|Temp=None|Notes=}}
+{{MS table row|Type=Ash|Matl=[[Pearlash]]|Appear=[[File:generic_grey_bar_sprite.png]] / {{Raw Tile|X|7:7:1}} {{Raw Tile|≡|7:0:1}}|Temp=None|Notes=}}
+|}
+
+'''Notes:'''
+: 1) Each stone is one of 16 [[color scheme|colors]] in the game.  Different un-mined stone of the same color have a different symbol to distinguish between them.  Once mined, the individual stones themselves can sometimes look identical if the color is the same. Click to look at items or mouse over the terrain for specific information.
+: 2) '''°U''' = degrees in [[Main:Urist|Urist]], the measure of temperature within the ''Dwarf Fortress'' world. As far as is known, there is no functional difference between a material that melts at {{ct|12005}} or {{ct|55000}} &mdash; they are both equally "magma safe".
+: 3) There are three iron ores in the game (four if you count [[Goblinite]]). Of these, only [[hematite]] and [[magnetite]] are magma safe.
+: 4) Sphalerite has ''no'' melting point, but ''sublimates'' at {{ct|12133}}. This still qualifies as being magma-safe.
+: 5) [[Nether-cap]] logs have a fixed temperature of {{ct|10000}}, rendering them magma safe for use as components. However nether-cap products [[dump]]ed into magma and nether-cap minecarts filled with magma are destroyed.
+: 6) For when weight is a consideration, one way or the other. Petrified Wood and Pitchblende are notable as the least and most dense non-economic magma-safe stones, with all the others listed above weighing very close to 2650, the generic "stone density". See [[Density]] for full table and discussion. 
+
+{{Category|Physics}}
+{{Category|Magma safe materials| }}
+[[Ru:Magma-safe]]

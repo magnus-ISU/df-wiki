@@ -1,0 +1,706 @@
+<div class="mw-parser-output"><div id="page-quality-rating" style="text-align: right;margin: 0.8em 0;font-size:75%">
+ <a href="/index.php/Dwarf_Fortress_Wiki:Quality#Tattered" title="Dwarf Fortress Wiki:Quality"><span id="stub-quality" style="text-decoration:none; color:#333333">xTATTEREDx</span></a> <span style="font-weight:bold;" class="dot">&#160;·</span> <a href="/index.php/Dwarf_Fortress_Wiki:Quality#Fine" title="Dwarf Fortress Wiki:Quality"><span id="fine-quality" style="text-decoration:none; color:#CA7A02;">+FINE+</span></a> <span style="font-weight:bold;" class="dot">&#160;·</span> <a href="/index.php/Dwarf_Fortress_Wiki:Quality#Superior" title="Dwarf Fortress Wiki:Quality"><span id="superior-quality" style="text-decoration:none; color:#8800cc;">*SUPERIOR*</span></a> <span style="font-weight:bold;" class="dot">&#160;·</span> <a href="/index.php/Dwarf_Fortress_Wiki:Quality#Exceptional" title="Dwarf Fortress Wiki:Quality"><span id="exceptional-quality" style="padding:0.2em; border:1px solid #9df; border-radius: 2px; -webkit-border-radius: 2px; -moz-border-radius: 2px; -o-border-radius: 2px; -ms-border-radius: 2px; background:#cce4ff; color:#0088CC;">≡EXCEPTIONAL≡</span></a> <span style="font-weight:bold;" class="dot">&#160;·</span> <a href="/index.php/Dwarf_Fortress_Wiki:Quality#Masterwork" title="Dwarf Fortress Wiki:Quality"><span id="masterwork-quality" style="text-decoration:none; color:#72A329;">☼MASTERWORK☼</span></a></div>
+<table class="version-table" style="text-align: center; margin: 3px auto 5px; padding: 0.25em; border-radius: 3px; -webkit-border-radius: 3px; -moz-border-radius: 3px; -o-border-radius: 3px; -ms-border-radius: 3px;; border: 2px solid #bbdd88; background: #f5ffee; min-width:27em"><tbody><tr><td style="padding: 0.3em 0.3em; width: 100%;"><div style="margin-bottom:6px;" class="version-links-r1"><span style="font-size:100%"><span class="version-link"><span style="text-decoration: none; color: #72A329; background-color: #E2FDCE; border-radius: 2px; -webkit-border-radius: 2px; -moz-border-radius: 2px; -o-border-radius: 2px; -ms-border-radius: 2px; border: 1px solid #bbdd88; padding: 0.2em;"><b>v53.16</b></span></span><span style="font-weight:bold;" class="dot">&#160;·</span> <span class="version-link"><a href="/index.php/DF2014:Magma-safe" title="DF2014:Magma-safe"><span style="text-decoration: none; color: #72A329;">v0.47.05</span></a></span></span></div><span>This article is about the current version of DF.<br />Note that some content may still need to be updated.</span><br />
+<div style="float: right; font-size:75%; padding-right:2px; margin-top:-2px; margin-bottom:-7px;"><span class="version-link"><a href="/index.php/Dwarf_Fortress_Wiki:V" class="mw-redirect" title="Dwarf Fortress Wiki:V"><span style="text-decoration: none; color: #72A329;">More Info</span></a></span><span style="font-weight:bold;" class="dot">&#160;·</span> <span class="version-link"><a href="/index.php/Template:Av" class="mw-redirect" title="Template:Av"><span style="text-decoration: none; color: #72A329;">V</span></a></span></div></td></tr>
+</tbody></table>
+<div class="floatright"><a href="/index.php/File:Magma_safe_anim.gif" class="image"><img alt="Magma safe anim.gif" src="/images/3/31/Magma_safe_anim.gif" decoding="async" width="130" height="140" /></a></div><p><b>Magma-safe materials</b> are materials which will not melt, burn, evaporate, or otherwise take damage when in close contact with <a href="/index.php/Magma" title="Magma">magma</a>. Most frequently, this comes into play when using <a href="/index.php/Floodgate" title="Floodgate">floodgates</a> operated by <a href="/index.php/Mechanism" title="Mechanism">mechanisms</a>, or when operating a <a href="/index.php/Screw_pump" title="Screw pump">magma pump</a>.
+</p><p>For <a href="/index.php/Reaction" title="Reaction">reactions</a> and custom buildings using the [MAGMA_BUILD_SAFE] token, only a material which is solid and stable at the temperature <span style="border-bottom: 1px #0000CC dotted;cursor:help;" title="1111.1&#160;°C (2032&#160;°F)">12000&#160;°U</span><sup>    </sup> (i.e. MELTING_POINT/BOILING_POINT/IGNITE_POINT/HEATDAM_POINT greater than 12000 and COLDDAM_POINT less than 12000) is considered magma-safe. 
+</p><p>In order to construct mechanisms, blocks or other pump components from a magma-safe material, you have several choices:
+</p>
+<ol><li>You can specify a magma-safe rock for your <a href="/index.php/Mechanisms" class="mw-redirect" title="Mechanisms">mechanisms</a> and other components at the workshops by clicking the detail (<a href="/index.php/File:Mag_glass_icon.png" class="image"><img alt="Mag glass icon.png" src="/images/4/47/Mag_glass_icon.png" decoding="async" width="23" height="24" /></a>) icon next to the order.</li>
+<li>Build your mechanisms out of <a href="/index.php/Iron" title="Iron">iron</a> or <a href="/index.php/Steel" title="Steel">steel</a>.</li>
+<li>Build your pump components out of iron, steel, <a href="/index.php/Glass" title="Glass">glass</a>, or <a href="/index.php/Nether-cap" title="Nether-cap">nether-cap</a>.</li>
+<li>Place a <a href="/index.php/Stockpile" title="Stockpile">stockpile</a> with the desired stones around your <a href="/index.php/Mechanic%27s_workshop" title="Mechanic&#39;s workshop">mechanic's workshop</a> and set it to "Give To a Pile/Workshop".</li>
+<li>Use a <a href="/index.php/Burrow" title="Burrow">burrow</a> that contains only the workshop and the desired materials.</li>
+<li>Simply ensure that the desired materials are the closest available to your worker. This does not always work, but is usually good enough if you request several jobs, hoping that at least one uses the correct material.</li></ol>
+<p>When linking a trigger to an object, the <i>first</i> mechanism selected is attached to the object, and the <i>second</i> is attached to the trigger.  Unless the trigger itself will be submerged in magma (as could be the case with a <a href="/index.php/Pressure_plate" title="Pressure plate">pressure plate</a>), only the first mechanism (attached to the object that will be submerged) needs to be magma-safe. If you do not have any magma-safe stones available, you can also work around floodgate-based flow control by using <a href="/index.php/Screw_pump" title="Screw pump">screw pumps</a> to pump the magma over <a href="/index.php/Wall" title="Wall">wall</a>-barriers, or using water to form <a href="/index.php/Obsidian" title="Obsidian">obsidian</a> to plug flows and channel through them to reopen them (necessity and invention and all that).
+</p><p>This property is also relevant when choosing the appropriate method for disposing of unneeded items, which can impact <a href="/index.php/FPS" class="mw-redirect" title="FPS">FPS</a> when in large numbers. Items made of non magma-safe materials can be simply dumped into magma, which is the easiest disposal method; however, magma-safe items will need more <a href="/index.php/Dwarven_atom_smasher" title="Dwarven atom smasher">drastic</a> measures. For instance, wooden floodgate will hold back magma indefinitely if it stays closed (it'll only catch fire once it's opened), and a wooden drawbridge will only hold back magma if it's against its outer edge (e.g. if it raises to the right, then lava flowing from the left onto the "center" of the bridge will very quickly burn it up). 
+</p><p>Constructions that resist magma are:
+<span style="margin-top:5px">
+</span></p>
+<table class="vertical-navbox nowraplinks" cellspacing="5" cellpadding="0" style="float:right;clear:right;width:22.0em;margin:0 0 1.0em 1.0em;background:#f9f9f9;border:1px solid #aaa;padding:0.2em;border-spacing:0.4em 0;text-align:center;line-height:1.4em;font-size:88%;"><tbody><tr><td class="" style=";padding-top:0.4em;line-height:1.2em;"><big><b><a href="/index.php/Material_science" title="Material science">Material properties</a></b></big><br />
+<hr /></td>
+      </tr><tr>
+<td class="" style="padding:0 0.1em 0.4em;font-size:12px; padding-left:5px; text-align:center;;">
+<b>Defined</b>: <a href="/index.php/Item_value#Material_multipliers" title="Item value">Value</a> •  <a href="/index.php/Color#Material_By_Color" title="Color">Color</a> • <a href="/index.php/Density" title="Density">Density</a> • <a href="/index.php/Strain_at_yield" title="Strain at yield">Strain at yield</a> • <a href="/index.php/Temperature#Material_values" title="Temperature">Temperature values</a></td>
+</tr><tr>
+<td class="" style="padding:0 0.1em 0.4em;font-size:12px; padding-left:5px; text-align:center;;">
+<b>Derived</b>: <a class="mw-selflink selflink">Magma safety</a> • <a href="/index.php/Fire-safe" title="Fire-safe">Fire safety</a></td>
+</tr><tr>
+<td class="" style="padding:0 0.1em 0.4em;font-size:12px; padding-left:5px; text-align:center;;">
+<b>Fluids</b>: <a href="/index.php/Depth" class="mw-redirect" title="Depth">Depth</a> • <a href="/index.php/Flow" title="Flow">Flow</a> • <a href="/index.php/Pressure" title="Pressure">Pressure</a></td>
+</tr></tbody></table>
+<p class="mw-empty-elt">
+</p>
+<ul><li>Constructions (<a href="/index.php/Wall" title="Wall">Wall</a>, <a href="/index.php/Floor" title="Floor">Floor</a>, <a href="/index.php/Ramp" title="Ramp">Ramp</a>, and <a href="/index.php/Stairs" title="Stairs">Stairs</a>) of any material can never melt or burn - there is nothing wrong with a <a href="/index.php/Wood" title="Wood">wooden</a> magma reservoir.  Natural (i.e. non-constructed) <a href="/index.php/Ice" title="Ice">ice</a> walls/floors/ramps/stairs will melt if exposed to sufficient heat.</li>
+<li><a href="/index.php/Fortification" title="Fortification">Fortifications</a> will allow the passage of <a href="/index.php/Magma" title="Magma">magma</a>; however, if fortifications fill up to 7/7 depth, magma creatures will be able to swim freely through them.</li>
+<li>If not submerged (that is, not opened to let magma flow over/past/around them), <a href="/index.php/Door" title="Door">doors</a>, <a href="/index.php/Floodgate" title="Floodgate">floodgates</a>, and raised <a href="/index.php/Bridge" title="Bridge">bridges</a> (provided that there is no magma on the space the bridge would occupy when lowered) of non-magma-safe stone or metal are safe. So long as they are just in contact with magma, only acting as a passive "wall", they are fine. If opened, they will melt.
+<ul><li>Raised drawbridges have a notable exception, in that allowing magma to flow over the center of the area that the bridge would normally occupy when lowered <i>will</i> cause the bridge's components to heat up and potentially melt.</li></ul></li>
+<li>A <a href="/index.php/Pump" class="mw-redirect" title="Pump">pump</a> made with magma-safe material for pipes, screws and blocks is fully magma-safe, and will not melt even when submerged in magma.  Pumps containing any item that is not magma safe will be destroyed after prolonged operation.</li></ul>
+<h2><span class="mw-headline" id="Game_calculations">Game calculations</span></h2>
+<p>In the game, magma's temperature is exactly <span style="border-bottom: 1px #0000CC dotted;cursor:help;" title="1111.1&#160;°C (2032&#160;°F)">12000&#160;°U</span><sup>    </sup>.
+</p><p>The chance of striking a magma-safe stone is roughly around 32%, not including the natural abundance of certain stone. It is important to note whether or not your fortress may already have access to magma-safe resources before attempting to deliberately find some.
+</p>
+<h2><span class="mw-headline" id="Magma-safe_material">Magma-safe material</span></h2>
+<p>The following materials will not melt when submerged in magma. Although true for any item/construction, it's worth specifically mentioning that this includes <a href="/index.php/Door" title="Door">doors</a>, <a href="/index.php/Floor_hatch" class="mw-redirect" title="Floor hatch">floor hatches</a>, <a href="/index.php/Floodgate" title="Floodgate">floodgates</a>, <a href="/index.php/Bridge" title="Bridge">bridges</a>, <a href="/index.php/Screw_pump" title="Screw pump">screw pumps</a>, <a href="/index.php/Pipe_section" title="Pipe section">pipe sections</a>, and <a href="/index.php/Mechanism" title="Mechanism">mechanisms</a>.
+</p>
+<table style="margin:1em 1em 1em 0;background:#F9F9F9;border:1px #AAA solid;border-collapse:collapse;" class="wikitable sortable">
+
+<tbody><tr style="background:#F2F2F2;text-align:center;">
+<th style="border:1px #AAA solid;padding:0.2em;">Type
+</th>
+<th style="border:1px #AAA solid;padding:0.2em;">Material
+</th>
+<th style="border:1px #AAA solid;padding:0.2em;" class="unsortable">Appearance<sup>1</sup>
+</th>
+<th style="border:1px #AAA solid;padding:0.2em;">Melting Temperature °U (°F, °C)<sup>2</sup>
+</th>
+<th style="border:1px #AAA solid;padding:0.2em;" class="unsortable">Found in
+</th>
+<th style="border:1px #AAA solid;padding:0.2em;" class="unsortable">Uses / Notes
+</th></tr>
+<tr>
+<td style="border:1px #AAA solid;padding:0.2em;padding-left:0.5em;padding-right:0.5em">Stone
+</td>
+<td style="border:1px #AAA solid;padding:0.2em;"><a href="/index.php/Alunite" title="Alunite">Alunite</a>
+</td>
+<td style="border:1px #AAA solid;padding:0.2em;"><a href="/index.php/File:Alunite_sprite.png" class="image"><img alt="Alunite sprite.png" src="/images/7/73/Alunite_sprite.png" decoding="async" width="22" height="20" /></a> / <span style="color: #FFFFFF; background: #C0C0C0; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; padding: 0; line-height: 1;">`</span>  <span style="color: #FFFFFF; background: #000000; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; padding: 0; line-height: 1;">•</span>
+</td>
+<td style="border:1px #AAA solid;padding:0.2em;">13,690°U (3722°F/2051°C)
+</td>
+<td style="border:1px #AAA solid;padding:0.2em;">All <a href="/index.php/Igneous_extrusive_layer" title="Igneous extrusive layer">Igneous extrusive</a><b>(L)</b>, <a href="/index.php/Kaolinite" title="Kaolinite">Kaolinite</a><b>(L)</b>
+</td>
+<td style="border:1px #AAA solid;padding:0.2em;">
+</td></tr>
+<tr>
+<td style="border:1px #AAA solid;padding:0.2em;padding-left:0.5em;padding-right:0.5em">Stone
+</td>
+<td style="border:1px #AAA solid;padding:0.2em;"><a href="/index.php/Anhydrite" title="Anhydrite">Anhydrite</a>
+</td>
+<td style="border:1px #AAA solid;padding:0.2em;"><a href="/index.php/File:Anhydrite_sprite.png" class="image"><img alt="Anhydrite sprite.png" src="/images/6/6e/Anhydrite_sprite.png" decoding="async" width="22" height="20" /></a> / <span style="color: #FFFFFF; background: #C0C0C0; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; padding: 0; line-height: 1;">v</span>  <span style="color: #C0C0C0; background: #000000; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; padding: 0; line-height: 1;">•</span>
+</td>
+<td style="border:1px #AAA solid;padding:0.2em;">12,610°U (2642°F/1450°C)
+</td>
+<td style="border:1px #AAA solid;padding:0.2em;"><a href="/index.php/Gypsum" title="Gypsum">Gypsum</a><b>(S)</b>, <a href="/index.php/Satinspar" title="Satinspar">Satinspar</a><b>(1)</b>, <a href="/index.php/Alabaster" title="Alabaster">Alabaster</a><b>(1)</b>, <a href="/index.php/Selenite" title="Selenite">Selenite</a><b>(1)</b>
+</td>
+<td style="border:1px #AAA solid;padding:0.2em;">
+</td></tr>
+<tr>
+<td style="border:1px #AAA solid;padding:0.2em;padding-left:0.5em;padding-right:0.5em">Stone
+</td>
+<td style="border:1px #AAA solid;padding:0.2em;"><a href="/index.php/Basalt" title="Basalt">Basalt</a>
+</td>
+<td style="border:1px #AAA solid;padding:0.2em;"><a href="/index.php/File:Basalt_sprite.png" class="image"><img alt="Basalt sprite.png" src="/images/f/f1/Basalt_sprite.png" decoding="async" width="22" height="20" /></a> / <span style="color: #A0A0A0; background: #C0C0C0; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; padding: 0; line-height: 1;">#</span> <span style="color: #A0A0A0; background: #000000; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; padding: 0; line-height: 1;">•</span>
+</td>
+<td style="border:1px #AAA solid;padding:0.2em;">12,160°U (2192°F/1200°C)
+</td>
+<td style="border:1px #AAA solid;padding:0.2em;"><a href="/index.php/Igneous_extrusive_layer" title="Igneous extrusive layer">Igneous extrusive</a> layer stone
+</td>
+<td style="border:1px #AAA solid;padding:0.2em;">
+</td></tr>
+<tr>
+<td style="border:1px #AAA solid;padding:0.2em;padding-left:0.5em;padding-right:0.5em">Stone
+</td>
+<td style="border:1px #AAA solid;padding:0.2em;"><a href="/index.php/Bauxite" title="Bauxite">Bauxite</a>
+</td>
+<td style="border:1px #AAA solid;padding:0.2em;"><a href="/index.php/File:Bauxite_sprite.png" class="image"><img alt="Bauxite sprite.png" src="/images/a/a7/Bauxite_sprite.png" decoding="async" width="22" height="20" /></a> / <span style="color: #FF113A; background: #C0C0C0; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; padding: 0; line-height: 1;">+</span>  <span style="color: #FF113A; background: #000000; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; padding: 0; line-height: 1;">•</span>
+</td>
+<td style="border:1px #AAA solid;padding:0.2em;">13,600°U (3632°F/2000°C)
+</td>
+<td style="border:1px #AAA solid;padding:0.2em;">All <a href="/index.php/Sedimentary_layer" title="Sedimentary layer">Sedimentary</a><b>(L)</b>
+</td>
+<td style="border:1px #AAA solid;padding:0.2em;">dark red
+</td></tr>
+<tr>
+<td style="border:1px #AAA solid;padding:0.2em;padding-left:0.5em;padding-right:0.5em">Stone
+</td>
+<td style="border:1px #AAA solid;padding:0.2em;"><a href="/index.php/Calcite" title="Calcite">Calcite</a>
+</td>
+<td style="border:1px #AAA solid;padding:0.2em;"><a href="/index.php/File:Calcite_sprite.png" class="image"><img alt="Calcite sprite.png" src="/images/8/86/Calcite_sprite.png" decoding="async" width="20" height="20" /></a> / <span style="color: #FFFFFF; background: #C0C0C0; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; padding: 0; line-height: 1;">"</span>  <span style="color: #FFFFFF; background: #000000; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; padding: 0; line-height: 1;">•</span>
+</td>
+<td style="border:1px #AAA solid;padding:0.2em;">12,902°U (2934°F/1613°C)
+</td>
+<td style="border:1px #AAA solid;padding:0.2em;"><a href="/index.php/Limestone" title="Limestone">Limestone</a><b>(S)</b>, <a href="/index.php/Marble" title="Marble">Marble</a><b>(S)</b>
+</td>
+<td style="border:1px #AAA solid;padding:0.2em;"><a href="/index.php/Flux" title="Flux">flux</a> stone
+</td></tr>
+<tr>
+<td style="border:1px #AAA solid;padding:0.2em;padding-left:0.5em;padding-right:0.5em">Stone
+</td>
+<td style="border:1px #AAA solid;padding:0.2em;"><a href="/index.php/Chert" title="Chert">Chert</a>
+</td>
+<td style="border:1px #AAA solid;padding:0.2em;"><a href="/index.php/File:Chert_sprite.png" class="image"><img alt="Chert sprite.png" src="/images/2/26/Chert_sprite.png" decoding="async" width="22" height="20" /></a> / <span style="color: #D79B2D; background: #C0C0C0; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; padding: 0; line-height: 1;">&#61;</span> <span style="color: #D79B2D; background: #000000; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; padding: 0; line-height: 1;">•</span>
+</td>
+<td style="border:1px #AAA solid;padding:0.2em;">13,101°U (3133°F/1723°C)
+</td>
+<td style="border:1px #AAA solid;padding:0.2em;"><a href="/index.php/Sedimentary_layer" title="Sedimentary layer">Sedimentary</a> layer stone
+</td>
+<td style="border:1px #AAA solid;padding:0.2em;">
+</td></tr>
+<tr>
+<td style="border:1px #AAA solid;padding:0.2em;padding-left:0.5em;padding-right:0.5em">Stone
+</td>
+<td style="border:1px #AAA solid;padding:0.2em;"><a href="/index.php/Chromite" title="Chromite">Chromite</a>
+</td>
+<td style="border:1px #AAA solid;padding:0.2em;"><a href="/index.php/File:Chromite_sprite.png" class="image"><img alt="Chromite sprite.png" src="/images/8/86/Chromite_sprite.png" decoding="async" width="22" height="20" /></a> / <span style="color: #A0A0A0; background: #C0C0C0; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; padding: 0; line-height: 1;">&#61;</span> <span style="color: #A0A0A0; background: #000000; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; padding: 0; line-height: 1;">•</span>
+</td>
+<td style="border:1px #AAA solid;padding:0.2em;">13,645°U (3677°F/2026°C)
+</td>
+<td style="border:1px #AAA solid;padding:0.2em;"><a href="/index.php/Olivine" title="Olivine">Olivine</a><b>(V)</b>
+</td>
+<td style="border:1px #AAA solid;padding:0.2em;">
+</td></tr>
+<tr>
+<td style="border:1px #AAA solid;padding:0.2em;padding-left:0.5em;padding-right:0.5em">Stone
+</td>
+<td style="border:1px #AAA solid;padding:0.2em;"><a href="/index.php/Dolomite" title="Dolomite">Dolomite</a>
+</td>
+<td style="border:1px #AAA solid;padding:0.2em;"><a href="/index.php/File:Dolomite_sprite.png" class="image"><img alt="Dolomite sprite.png" src="/images/8/80/Dolomite_sprite.png" decoding="async" width="20" height="20" /></a> / <span style="color: #FFFFFF; background: #C0C0C0; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; padding: 0; line-height: 1;">`</span> <span style="color: #FFFFFF; background: #000000; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; padding: 0; line-height: 1;">•</span>
+</td>
+<td style="border:1px #AAA solid;padding:0.2em;">16,507°U (6539°F/3619°C)
+</td>
+<td style="border:1px #AAA solid;padding:0.2em;"><a href="/index.php/Sedimentary_layer" title="Sedimentary layer">Sedimentary</a> layer stone
+</td>
+<td style="border:1px #AAA solid;padding:0.2em;"><a href="/index.php/Flux" title="Flux">Flux</a>, Highest melting point of any common stone.
+</td></tr>
+<tr>
+<td style="border:1px #AAA solid;padding:0.2em;padding-left:0.5em;padding-right:0.5em">Stone
+</td>
+<td style="border:1px #AAA solid;padding:0.2em;"><a href="/index.php/Gabbro" title="Gabbro">Gabbro</a>
+</td>
+<td style="border:1px #AAA solid;padding:0.2em;"><a href="/index.php/File:Gabbro_sprite.png" class="image"><img alt="Gabbro sprite.png" src="/images/d/d6/Gabbro_sprite.png" decoding="async" width="22" height="20" /></a> / <span style="color: #A0A0A0; background: #C0C0C0; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; padding: 0; line-height: 1;">▒</span> <span style="color: #A0A0A0; background: #000000; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; padding: 0; line-height: 1;">•</span>
+</td>
+<td style="border:1px #AAA solid;padding:0.2em;">12,160°U (2192°F/1200°C)
+</td>
+<td style="border:1px #AAA solid;padding:0.2em;"><a href="/index.php/Igneous_intrusive_layer" title="Igneous intrusive layer">Igneous intrusive</a> layer stone
+</td>
+<td style="border:1px #AAA solid;padding:0.2em;">
+</td></tr>
+<tr>
+<td style="border:1px #AAA solid;padding:0.2em;padding-left:0.5em;padding-right:0.5em">Stone
+</td>
+<td style="border:1px #AAA solid;padding:0.2em;"><a href="/index.php/Ilmenite" title="Ilmenite">Ilmenite</a>
+</td>
+<td style="border:1px #AAA solid;padding:0.2em;"><a href="/index.php/File:Ilmenite_sprite.png" class="image"><img alt="Ilmenite sprite.png" src="/images/6/65/Ilmenite_sprite.png" decoding="async" width="22" height="20" /></a> / <span style="color: #A0A0A0; background: #C0C0C0; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; padding: 0; line-height: 1;">.</span> <span style="color: #A0A0A0; background: #000000; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; padding: 0; line-height: 1;">•</span>
+</td>
+<td style="border:1px #AAA solid;padding:0.2em;">12,457°U (2489°F/1365°C)
+</td>
+<td style="border:1px #AAA solid;padding:0.2em;"><a href="/index.php/Gabbro" title="Gabbro">Gabbro</a><b>(S)</b>
+</td>
+<td style="border:1px #AAA solid;padding:0.2em;">
+</td></tr>
+<tr>
+<td style="border:1px #AAA solid;padding:0.2em;padding-left:0.5em;padding-right:0.5em">Stone
+</td>
+<td style="border:1px #AAA solid;padding:0.2em;"><a href="/index.php/Kaolinite" title="Kaolinite">Kaolinite</a>
+</td>
+<td style="border:1px #AAA solid;padding:0.2em;"><a href="/index.php/File:Kaolinite_sprite.png" class="image"><img alt="Kaolinite sprite.png" src="/images/0/00/Kaolinite_sprite.png" decoding="async" width="24" height="16" /></a> / <span style="color: #FF113A; background: #C0C0C0; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; padding: 0; line-height: 1;">&#61;</span> <span style="color: #FF113A; background: #000000; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; padding: 0; line-height: 1;">•</span>
+</td>
+<td style="border:1px #AAA solid;padding:0.2em;">13,150°U (3182°F/1751°C)
+</td>
+<td style="border:1px #AAA solid;padding:0.2em;">All <a href="/index.php/Sedimentary_layer" title="Sedimentary layer">Sedimentary</a><b>(L)</b>
+</td>
+<td style="border:1px #AAA solid;padding:0.2em;">dark red, <a href="/index.php/Porcelain" title="Porcelain">porcelain</a>
+</td></tr>
+<tr>
+<td style="border:1px #AAA solid;padding:0.2em;padding-left:0.5em;padding-right:0.5em">Stone
+</td>
+<td style="border:1px #AAA solid;padding:0.2em;"><a href="/index.php/Mica" title="Mica">Mica</a>
+</td>
+<td style="border:1px #AAA solid;padding:0.2em;"><a href="/index.php/File:Mica_sprite.png" class="image"><img alt="Mica sprite.png" src="/images/5/57/Mica_sprite.png" decoding="async" width="22" height="20" /></a> / <span style="color: #A0A0A0; background: #C0C0C0; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; padding: 0; line-height: 1;">v</span> <span style="color: #A0A0A0; background: #000000; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; padding: 0; line-height: 1;">•</span>
+</td>
+<td style="border:1px #AAA solid;padding:0.2em;">12,295°U (2327°F/1275°C)
+</td>
+<td style="border:1px #AAA solid;padding:0.2em;">All <a href="/index.php/Metamorphic" class="mw-redirect" title="Metamorphic">Metamorphic</a><b>(L)</b>, <a href="/index.php/Granite" title="Granite">Granite</a><b>(L)</b>
+</td>
+<td style="border:1px #AAA solid;padding:0.2em;">
+</td></tr>
+<tr>
+<td style="border:1px #AAA solid;padding:0.2em;padding-left:0.5em;padding-right:0.5em">Stone
+</td>
+<td style="border:1px #AAA solid;padding:0.2em;"><a href="/index.php/Obsidian" title="Obsidian">Obsidian</a>
+</td>
+<td style="border:1px #AAA solid;padding:0.2em;"><a href="/index.php/File:Obsidian_sprite.png" class="image"><img alt="Obsidian sprite.png" src="/images/3/30/Obsidian_sprite.png" decoding="async" width="16" height="17" /></a> / <span style="color: #A0A0A0; background: #C0C0C0; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; padding: 0; line-height: 1;">▒</span> <span style="color: #A0A0A0; background: #000000; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; padding: 0; line-height: 1;">•</span>
+</td>
+<td style="border:1px #AAA solid;padding:0.2em;">13,600°U (3632°F/2001°C)
+</td>
+<td style="border:1px #AAA solid;padding:0.2em;"><a href="/index.php/Igneous_extrusive_layer" title="Igneous extrusive layer">Igneous extrusive</a> layer stone
+</td>
+<td style="border:1px #AAA solid;padding:0.2em;">value 3, can be "<a href="/index.php/Obsidian_farming" title="Obsidian farming">manufactured</a>"
+</td></tr>
+<tr>
+<td style="border:1px #AAA solid;padding:0.2em;padding-left:0.5em;padding-right:0.5em">Stone
+</td>
+<td style="border:1px #AAA solid;padding:0.2em;"><a href="/index.php/Olivine" title="Olivine">Olivine</a>
+</td>
+<td style="border:1px #AAA solid;padding:0.2em;"><a href="/index.php/File:Olivine_sprite.png" class="image"><img alt="Olivine sprite.png" src="/images/8/88/Olivine_sprite.png" decoding="async" width="22" height="20" /></a> / <span style="color: #A2DC34; background: #C0C0C0; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; padding: 0; line-height: 1;">%</span> <span style="color: #A2DC34; background: #000000; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; padding: 0; line-height: 1;">•</span>
+</td>
+<td style="border:1px #AAA solid;padding:0.2em;">13,168°U (3200°F/1761°C)
+</td>
+<td style="border:1px #AAA solid;padding:0.2em;"><a href="/index.php/Gabbro" title="Gabbro">Gabbro</a><b>(L)</b>
+</td>
+<td style="border:1px #AAA solid;padding:0.2em;">green
+</td></tr>
+<tr>
+<td style="border:1px #AAA solid;padding:0.2em;padding-left:0.5em;padding-right:0.5em">Stone
+</td>
+<td style="border:1px #AAA solid;padding:0.2em;"><a href="/index.php/Orthoclase" title="Orthoclase">Orthoclase</a>
+</td>
+<td style="border:1px #AAA solid;padding:0.2em;"><a href="/index.php/File:Orthoclase_sprite.png" class="image"><img alt="Orthoclase sprite.png" src="/images/6/63/Orthoclase_sprite.png" decoding="async" width="22" height="20" /></a> / <span style="color: #FFE111; background: #C0C0C0; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; padding: 0; line-height: 1;">%</span> <span style="color: #FFE111; background: #000000; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; padding: 0; line-height: 1;">•</span>
+</td>
+<td style="border:1px #AAA solid;padding:0.2em;">12,250°U (2282°F/1250°C)
+</td>
+<td style="border:1px #AAA solid;padding:0.2em;">All <a href="/index.php/Igneous_intrusive_layer" title="Igneous intrusive layer">Igneous intrusive</a><b>(L)</b>, All <a href="/index.php/Metamorphic" class="mw-redirect" title="Metamorphic">Metamorphic</a><b>(L)</b>
+</td>
+<td style="border:1px #AAA solid;padding:0.2em;">yellow
+</td></tr>
+<tr>
+<td style="border:1px #AAA solid;padding:0.2em;padding-left:0.5em;padding-right:0.5em">Stone
+</td>
+<td style="border:1px #AAA solid;padding:0.2em;"><a href="/index.php/Periclase" title="Periclase">Periclase</a>
+</td>
+<td style="border:1px #AAA solid;padding:0.2em;"><a href="/index.php/File:Periclase_sprite.png" class="image"><img alt="Periclase sprite.png" src="/images/7/7c/Periclase_sprite.png" decoding="async" width="22" height="20" /></a> / <span style="color: #FFFFFF; background: #C0C0C0; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; padding: 0; line-height: 1;">,</span> <span style="color: #FFFFFF; background: #000000; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; padding: 0; line-height: 1;">•</span>
+</td>
+<td style="border:1px #AAA solid;padding:0.2em;">15,040°U (5072°F/2803°C)
+</td>
+<td style="border:1px #AAA solid;padding:0.2em;"><a href="/index.php/Marble" title="Marble">Marble</a><b>(S)</b>
+</td>
+<td style="border:1px #AAA solid;padding:0.2em;">
+</td></tr>
+<tr>
+<td style="border:1px #AAA solid;padding:0.2em;padding-left:0.5em;padding-right:0.5em">Stone
+</td>
+<td style="border:1px #AAA solid;padding:0.2em;"><a href="/index.php/Petrified_wood" title="Petrified wood">Petrified wood</a>
+</td>
+<td style="border:1px #AAA solid;padding:0.2em;"><a href="/index.php/File:Petrified_wood_sprite.png" class="image"><img alt="Petrified wood sprite.png" src="/images/d/d9/Petrified_wood_sprite.png" decoding="async" width="22" height="20" /></a> / <span style="color: #FF7111; background: #C0C0C0; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; padding: 0; line-height: 1;">%</span> <span style="color: #FF7111; background: #000000; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; padding: 0; line-height: 1;">•</span>
+</td>
+<td style="border:1px #AAA solid;padding:0.2em;">12,970°U (3002°F/1650°C)
+</td>
+<td style="border:1px #AAA solid;padding:0.2em;">All <a href="/index.php/Sedimentary_layer" title="Sedimentary layer">Sedimentary</a><b>(S)</b>
+</td>
+<td style="border:1px #AAA solid;padding:0.2em;">bright red<br />density = 2200<sup>6</sup>
+</td></tr>
+<tr>
+<td style="border:1px #AAA solid;padding:0.2em;padding-left:0.5em;padding-right:0.5em">Stone
+</td>
+<td style="border:1px #AAA solid;padding:0.2em;"><a href="/index.php/Pitchblende" title="Pitchblende">Pitchblende</a>
+</td>
+<td style="border:1px #AAA solid;padding:0.2em;"><a href="/index.php/File:Pitchblende_sprite.png" class="image"><img alt="Pitchblende sprite.png" src="/images/3/31/Pitchblende_sprite.png" decoding="async" width="22" height="20" /></a> / <span style="color: #A73CD5; background: #C0C0C0; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; padding: 0; line-height: 1;">*</span> <span style="color: #A73CD5; background: #000000; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; padding: 0; line-height: 1;">•</span>
+</td>
+<td style="border:1px #AAA solid;padding:0.2em;">12,070°U (2102°F/1149°C)
+</td>
+<td style="border:1px #AAA solid;padding:0.2em;"><a href="/index.php/Granite" title="Granite">Granite</a><b>(S)</b>
+</td>
+<td style="border:1px #AAA solid;padding:0.2em;">purple<br />density = 7600<sup>6</sup>
+</td></tr>
+<tr>
+<td style="border:1px #AAA solid;padding:0.2em;padding-left:0.5em;padding-right:0.5em">Stone
+</td>
+<td style="border:1px #AAA solid;padding:0.2em;"><a href="/index.php/Quartzite" title="Quartzite">Quartzite</a>
+</td>
+<td style="border:1px #AAA solid;padding:0.2em;"><a href="/index.php/File:Quartzite_sprite.png" class="image"><img alt="Quartzite sprite.png" src="/images/2/2e/Quartzite_sprite.png" decoding="async" width="22" height="20" /></a> / <span style="color: #FFFFFF; background: #C0C0C0; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; padding: 0; line-height: 1;">-</span> <span style="color: #FFFFFF; background: #000000; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; padding: 0; line-height: 1;">•</span>
+</td>
+<td style="border:1px #AAA solid;padding:0.2em;">12,970°U (3002°F/1650°C)
+</td>
+<td style="border:1px #AAA solid;padding:0.2em;"><a href="/index.php/Metamorphic" class="mw-redirect" title="Metamorphic">Metamorphic</a> layer stone
+</td>
+<td style="border:1px #AAA solid;padding:0.2em;">
+</td></tr>
+<tr>
+<td style="border:1px #AAA solid;padding:0.2em;padding-left:0.5em;padding-right:0.5em">Stone
+</td>
+<td style="border:1px #AAA solid;padding:0.2em;"><a href="/index.php/Rutile" title="Rutile">Rutile</a>
+</td>
+<td style="border:1px #AAA solid;padding:0.2em;"><a href="/index.php/File:Rutile_sprite.png" class="image"><img alt="Rutile sprite.png" src="/images/7/73/Rutile_sprite.png" decoding="async" width="22" height="20" /></a> / <span style="color: #A73CD5; background: #C0C0C0; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; padding: 0; line-height: 1;">`</span> <span style="color: #A73CD5; background: #000000; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; padding: 0; line-height: 1;">•</span>
+</td>
+<td style="border:1px #AAA solid;padding:0.2em;">13,285°U (3214°F/1826°C)
+</td>
+<td style="border:1px #AAA solid;padding:0.2em;">All <a href="/index.php/Metamorphic" class="mw-redirect" title="Metamorphic">Metamorphic</a><b>(S)</b>, <a href="/index.php/Granite" title="Granite">Granite</a><b>(S)</b>
+</td>
+<td style="border:1px #AAA solid;padding:0.2em;">purple
+</td></tr>
+<tr>
+<td style="border:1px #AAA solid;padding:0.2em;padding-left:0.5em;padding-right:0.5em">Stone
+</td>
+<td style="border:1px #AAA solid;padding:0.2em;"><a href="/index.php/Sandstone" title="Sandstone">Sandstone</a>
+</td>
+<td style="border:1px #AAA solid;padding:0.2em;"><a href="/index.php/File:Sandstone_sprite.png" class="image"><img alt="Sandstone sprite.png" src="/images/0/06/Sandstone_sprite.png" decoding="async" width="22" height="20" /></a> / <span style="color: #D79B2D; background: #C0C0C0; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; padding: 0; line-height: 1;">#</span> <span style="color: #D79B2D; background: #000000; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; padding: 0; line-height: 1;">•</span>
+</td>
+<td style="border:1px #AAA solid;padding:0.2em;">12,070°U (2102°F/1149°C)
+</td>
+<td style="border:1px #AAA solid;padding:0.2em;"><a href="/index.php/Sedimentary_layer" title="Sedimentary layer">Sedimentary</a> layer stone
+</td>
+<td style="border:1px #AAA solid;padding:0.2em;">
+</td></tr>
+<tr>
+<td style="border:1px #AAA solid;padding:0.2em;padding-left:0.5em;padding-right:0.5em">Stone
+</td>
+<td style="border:1px #AAA solid;padding:0.2em;"><a href="/index.php/Talc" title="Talc">Talc</a>
+</td>
+<td style="border:1px #AAA solid;padding:0.2em;"><a href="/index.php/File:Talc_sprite.png" class="image"><img alt="Talc sprite.png" src="/images/3/35/Talc_sprite.png" decoding="async" width="22" height="20" /></a> / <span style="color: #FFFFFF; background: #C0C0C0; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; padding: 0; line-height: 1;">&#124;</span> <span style="color: #FFFFFF; background: #000000; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; padding: 0; line-height: 1;">•</span>
+</td>
+<td style="border:1px #AAA solid;padding:0.2em;">12,700°U (2732°F/1500°C)
+</td>
+<td style="border:1px #AAA solid;padding:0.2em;"><a href="/index.php/Dolomite" title="Dolomite">Dolomite</a><b>(L)</b>
+</td>
+<td style="border:1px #AAA solid;padding:0.2em;">
+</td></tr>
+<tr>
+<td style="border:1px #AAA solid;padding:0.2em;padding-left:0.5em;padding-right:0.5em">Metal
+</td>
+<td style="border:1px #AAA solid;padding:0.2em;"><a href="/index.php/Adamantine" title="Adamantine">Adamantine</a>
+</td>
+<td style="border:1px #AAA solid;padding:0.2em;"><a href="/index.php/File:Adamantine_bar_sprite.png" class="image"><img alt="Adamantine bar sprite.png" src="/images/c/c1/Adamantine_bar_sprite.png" decoding="async" width="30" height="23" /></a> / <span style="color: #12FECF; background: #71BBB0; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; padding: 0; line-height: 1;">X</span> <span style="color: #12FECF; background: #000000; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; padding: 0; line-height: 1;">≡</span>
+</td>
+<td style="border:1px #AAA solid;padding:0.2em;">25,000°U (15,032°F/8333°C)
+</td>
+<td style="border:1px #AAA solid;padding:0.2em;">
+</td>
+<td style="border:1px #AAA solid;padding:0.2em;">Highest value/utility material in game<br />density = 200<sup>6</sup>
+</td></tr>
+<tr>
+<td style="border:1px #AAA solid;padding:0.2em;padding-left:0.5em;padding-right:0.5em">Metal
+</td>
+<td style="border:1px #AAA solid;padding:0.2em;"><a href="/index.php/Iron" title="Iron">Iron</a>
+</td>
+<td style="border:1px #AAA solid;padding:0.2em;"><a href="/index.php/File:Iron_bar_sprite.png" class="image"><img alt="Iron bar sprite.png" src="/images/8/88/Iron_bar_sprite.png" decoding="async" width="30" height="23" /></a> / <span style="color: #A0A0A0; background: #C0C0C0; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; padding: 0; line-height: 1;">X</span> <span style="color: #A0A0A0; background: #000000; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; padding: 0; line-height: 1;">≡</span>
+</td>
+<td style="border:1px #AAA solid;padding:0.2em;">12,768°U (2800°F/1538°C)
+</td>
+<td style="border:1px #AAA solid;padding:0.2em;">
+</td>
+<td style="border:1px #AAA solid;padding:0.2em;">Armor/weapons<br />density = 7850<sup>6</sup>
+</td></tr>
+<tr>
+<td style="border:1px #AAA solid;padding:0.2em;padding-left:0.5em;padding-right:0.5em">Metal
+</td>
+<td style="border:1px #AAA solid;padding:0.2em;"><a href="/index.php/Nickel" title="Nickel">Nickel</a>
+</td>
+<td style="border:1px #AAA solid;padding:0.2em;"><a href="/index.php/File:Nickel_bar_sprite.png" class="image"><img alt="Nickel bar sprite.png" src="/images/9/9a/Nickel_bar_sprite.png" decoding="async" width="30" height="23" /></a> / <span style="color: #C0C0C0; background: #71BBB0; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; padding: 0; line-height: 1;">X</span> <span style="color: #C0C0C0; background: #000000; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; padding: 0; line-height: 1;">≡</span>
+</td>
+<td style="border:1px #AAA solid;padding:0.2em;">12,619°U (2651°F/1455°C<br />density = 8800<sup>6</sup>)
+</td>
+<td style="border:1px #AAA solid;padding:0.2em;">
+</td>
+<td style="border:1px #AAA solid;padding:0.2em;">
+</td></tr>
+<tr>
+<td style="border:1px #AAA solid;padding:0.2em;padding-left:0.5em;padding-right:0.5em">Metal
+</td>
+<td style="border:1px #AAA solid;padding:0.2em;"><a href="/index.php/Pig_iron" title="Pig iron">Pig iron</a>
+</td>
+<td style="border:1px #AAA solid;padding:0.2em;"><a href="/index.php/File:Lead_bar_sprite.png" class="image"><img alt="Lead bar sprite.png" src="/images/1/1c/Lead_bar_sprite.png" decoding="async" width="30" height="23" /></a> / <span style="color: #A0A0A0; background: #C0C0C0; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; padding: 0; line-height: 1;">X</span> <span style="color: #A0A0A0; background: #000000; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; padding: 0; line-height: 1;">≡</span>
+</td>
+<td style="border:1px #AAA solid;padding:0.2em;">12,106°U (2138°F/1170°C)
+</td>
+<td style="border:1px #AAA solid;padding:0.2em;">
+</td>
+<td style="border:1px #AAA solid;padding:0.2em;">used in steel making process<br />density = 7850<sup>6</sup>
+</td></tr>
+<tr>
+<td style="border:1px #AAA solid;padding:0.2em;padding-left:0.5em;padding-right:0.5em">Metal
+</td>
+<td style="border:1px #AAA solid;padding:0.2em;"><a href="/index.php/Platinum" title="Platinum">Platinum</a>
+</td>
+<td style="border:1px #AAA solid;padding:0.2em;"><a href="/index.php/File:Platinum_bar_sprite.png" class="image"><img alt="Platinum bar sprite.png" src="/images/d/de/Platinum_bar_sprite.png" decoding="async" width="30" height="23" /></a> / <span style="color: #FFFFFF; background: #C0C0C0; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; padding: 0; line-height: 1;">X</span> <span style="color: #FFFFFF; background: #000000; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; padding: 0; line-height: 1;">≡</span>
+</td>
+<td style="border:1px #AAA solid;padding:0.2em;">13,182°U (3214°F/1768°C)
+</td>
+<td style="border:1px #AAA solid;padding:0.2em;">
+</td>
+<td style="border:1px #AAA solid;padding:0.2em;">High value metal<br />density = 21,400<sup>6</sup>
+</td></tr>
+<tr>
+<td style="border:1px #AAA solid;padding:0.2em;padding-left:0.5em;padding-right:0.5em">Metal
+</td>
+<td style="border:1px #AAA solid;padding:0.2em;"><a href="/index.php/Steel" title="Steel">Steel</a>
+</td>
+<td style="border:1px #AAA solid;padding:0.2em;"><a href="/index.php/File:Generic_grey_bar_sprite.png" class="image"><img alt="Generic grey bar sprite.png" src="/images/0/08/Generic_grey_bar_sprite.png" decoding="async" width="30" height="23" /></a> / <span style="color: #A0A0A0; background: #C0C0C0; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; padding: 0; line-height: 1;">X</span> <span style="color: #A0A0A0; background: #000000; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; padding: 0; line-height: 1;">≡</span>
+</td>
+<td style="border:1px #AAA solid;padding:0.2em;">12,718°U (2750°F/1510°C)
+</td>
+<td style="border:1px #AAA solid;padding:0.2em;">
+</td>
+<td style="border:1px #AAA solid;padding:0.2em;">Armor/weapons<br />density = 7850<sup>6</sup>
+</td></tr>
+<tr>
+<td style="border:1px #AAA solid;padding:0.2em;padding-left:0.5em;padding-right:0.5em">Metal
+</td>
+<td style="border:1px #AAA solid;padding:0.2em;"><a href="/index.php/Divine_metal" title="Divine metal">Divine metal</a>
+</td>
+<td style="border:1px #AAA solid;padding:0.2em;"><a href="/index.php/File:Generic_grey_bar_sprite.png" class="image"><img alt="Generic grey bar sprite.png" src="/images/0/08/Generic_grey_bar_sprite.png" decoding="async" width="30" height="23" /></a> / <span style="color: #C0C0C0; background: #000000; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; padding: 0; line-height: 1;">X</span> <span style="color: #C0C0C0; background: #000000; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; padding: 0; line-height: 1;">≡</span>
+</td>
+<td style="border:1px #AAA solid;padding:0.2em;">None
+</td>
+<td style="border:1px #AAA solid;padding:0.2em;">
+</td>
+<td style="border:1px #AAA solid;padding:0.2em;">Found only in <a href="/index.php/Vault" title="Vault">vaults</a> and in geodes deep underground<br />density = 1000<sup>6</sup>
+</td></tr>
+<tr>
+<td style="border:1px #AAA solid;padding:0.2em;padding-left:0.5em;padding-right:0.5em">Ore
+</td>
+<td style="border:1px #AAA solid;padding:0.2em;"><a href="/index.php/Cassiterite" title="Cassiterite">Cassiterite</a>
+</td>
+<td style="border:1px #AAA solid;padding:0.2em;"><a href="/index.php/File:Ore_silvery2_sprite.png" class="image"><img alt="Ore silvery2 sprite.png" src="/images/c/c3/Ore_silvery2_sprite.png" decoding="async" width="16" height="16" /></a> / <span style="color: #D79B2D; background: #C0C0C0; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; padding: 0; line-height: 1;">£</span> <span style="color: #D79B2D; background: #000000; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; padding: 0; line-height: 1;">*</span>
+</td>
+<td style="border:1px #AAA solid;padding:0.2em;">12,025°U (2057°F/1124°C)
+</td>
+<td style="border:1px #AAA solid;padding:0.2em;"><a href="/index.php/Granite" title="Granite">Granite</a><b>(V)</b>
+</td>
+<td style="border:1px #AAA solid;padding:0.2em;">Ore of <a href="/index.php/Tin" title="Tin">tin</a>
+</td></tr>
+<tr>
+<td style="border:1px #AAA solid;padding:0.2em;padding-left:0.5em;padding-right:0.5em">Ore
+</td>
+<td style="border:1px #AAA solid;padding:0.2em;"><a href="/index.php/Galena" title="Galena">Galena</a>
+</td>
+<td style="border:1px #AAA solid;padding:0.2em;"><a href="/index.php/File:Ore_silvery_sprite.png" class="image"><img alt="Ore silvery sprite.png" src="/images/f/f1/Ore_silvery_sprite.png" decoding="async" width="16" height="16" /></a> / <span style="color: #FFFFFF; background: #C0C0C0; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; padding: 0; line-height: 1;">£</span> <span style="color: #FFFFFF; background: #000000; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; padding: 0; line-height: 1;">*</span>
+</td>
+<td style="border:1px #AAA solid;padding:0.2em;">12,005°U (2037°F/1113°C)
+</td>
+<td style="border:1px #AAA solid;padding:0.2em;">All <a href="/index.php/Igneous_extrusive_layer" title="Igneous extrusive layer">Igneous extrusive</a><b>(V)</b>, All <a href="/index.php/Metamorphic" class="mw-redirect" title="Metamorphic">Metamorphic</a><b>(V)</b>, <a href="/index.php/Granite" title="Granite">Granite</a><b>(V)</b>, <a href="/index.php/Limestone" title="Limestone">Limestone</a><b>(V)</b>
+</td>
+<td style="border:1px #AAA solid;padding:0.2em;">Ore of <a href="/index.php/Lead" title="Lead">lead</a> and <a href="/index.php/Silver" title="Silver">silver</a>
+</td></tr>
+<tr>
+<td style="border:1px #AAA solid;padding:0.2em;padding-left:0.5em;padding-right:0.5em">Ore
+</td>
+<td style="border:1px #AAA solid;padding:0.2em;"><a href="/index.php/Hematite" title="Hematite">Hematite</a><sup>3</sup>
+</td>
+<td style="border:1px #AAA solid;padding:0.2em;"><a href="/index.php/File:Ore_red_sprite.png" class="image"><img alt="Ore red sprite.png" src="/images/e/e6/Ore_red_sprite.png" decoding="async" width="16" height="16" /></a> / <span style="color: #FF113A; background: #C0C0C0; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; padding: 0; line-height: 1;">£</span> <span style="color: #FF113A; background: #000000; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; padding: 0; line-height: 1;">*</span>
+</td>
+<td style="border:1px #AAA solid;padding:0.2em;">12,736°U (2768°F/1520°C)
+</td>
+<td style="border:1px #AAA solid;padding:0.2em;">All <a href="/index.php/Sedimentary_layer" title="Sedimentary layer">Sedimentary</a><b>(V)</b>, All <a href="/index.php/Igneous_extrusive_layer" title="Igneous extrusive layer">Igneous extrusive</a><b>(V)</b>
+</td>
+<td style="border:1px #AAA solid;padding:0.2em;">Ore of <a href="/index.php/Iron" title="Iron">iron</a><sup>3</sup>
+</td></tr>
+<tr>
+<td style="border:1px #AAA solid;padding:0.2em;padding-left:0.5em;padding-right:0.5em">Ore
+</td>
+<td style="border:1px #AAA solid;padding:0.2em;"><a href="/index.php/Magnetite" title="Magnetite">Magnetite</a><sup>3</sup>
+</td>
+<td style="border:1px #AAA solid;padding:0.2em;"><a href="/index.php/File:Ore_silvery2_sprite.png" class="image"><img alt="Ore silvery2 sprite.png" src="/images/c/c3/Ore_silvery2_sprite.png" decoding="async" width="16" height="16" /></a> / <span style="color: #A0A0A0; background: #C0C0C0; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; padding: 0; line-height: 1;">~</span> <span style="color: #A0A0A0; background: #000000; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; padding: 0; line-height: 1;">*</span>
+</td>
+<td style="border:1px #AAA solid;padding:0.2em;">12,768°U (2800°F/1538°C)
+</td>
+<td style="border:1px #AAA solid;padding:0.2em;">All <a href="/index.php/Sedimentary_layer" title="Sedimentary layer">Sedimentary</a><b>(L)</b>
+</td>
+<td style="border:1px #AAA solid;padding:0.2em;">Ore of <a href="/index.php/Iron" title="Iron">iron</a><sup>3</sup>
+</td></tr>
+<tr>
+<td style="border:1px #AAA solid;padding:0.2em;padding-left:0.5em;padding-right:0.5em">Ore
+</td>
+<td style="border:1px #AAA solid;padding:0.2em;"><a href="/index.php/Native_platinum" title="Native platinum">Native platinum</a>
+</td>
+<td style="border:1px #AAA solid;padding:0.2em;"><a href="/index.php/File:Ore_silvery_sprite.png" class="image"><img alt="Ore silvery sprite.png" src="/images/f/f1/Ore_silvery_sprite.png" decoding="async" width="16" height="16" /></a> / <span style="color: #FFFFFF; background: #C0C0C0; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; padding: 0; line-height: 1;">£</span> <span style="color: #FFFFFF; background: #000000; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; padding: 0; line-height: 1;">*</span>
+</td>
+<td style="border:1px #AAA solid;padding:0.2em;">13,182°U (3214°F/1768°C)
+</td>
+<td style="border:1px #AAA solid;padding:0.2em;"><a href="/index.php/Olivine" title="Olivine">Olivine</a><b>(V)</b>, <a href="/index.php/Magnetite" title="Magnetite">Magnetite</a><b>(V)</b>, <a href="/index.php/Chromite" title="Chromite">Chromite</a><b>(S)</b>
+</td>
+<td style="border:1px #AAA solid;padding:0.2em;">Ore of <a href="/index.php/Platinum" title="Platinum">platinum</a>
+</td></tr>
+<tr>
+<td style="border:1px #AAA solid;padding:0.2em;padding-left:0.5em;padding-right:0.5em">Ore
+</td>
+<td style="border:1px #AAA solid;padding:0.2em;"><i><a href="/index.php/Sphalerite" title="Sphalerite">Sphalerite</a></i><sup>4</sup>
+</td>
+<td style="border:1px #AAA solid;padding:0.2em;"><a href="/index.php/File:Ore_magenta_sprite.png" class="image"><img alt="Ore magenta sprite.png" src="/images/b/ba/Ore_magenta_sprite.png" decoding="async" width="16" height="16" /></a> / <span style="color: #A0A0A0; background: #C0C0C0; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; padding: 0; line-height: 1;">£</span> <span style="color: #A0A0A0; background: #000000; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; padding: 0; line-height: 1;">*</span>
+</td>
+<td style="border:1px #AAA solid;padding:0.2em;"><i>12,133°U (2165°F/1185°C)</i>
+</td>
+<td style="border:1px #AAA solid;padding:0.2em;">All <a href="/index.php/Metamorphic" class="mw-redirect" title="Metamorphic">Metamorphic</a><b>(V)</b>
+</td>
+<td style="border:1px #AAA solid;padding:0.2em;">Ore of <a href="/index.php/Zinc" title="Zinc">zinc</a><sup>4</sup>
+</td></tr>
+<tr>
+<td style="border:1px #AAA solid;padding:0.2em;padding-left:0.5em;padding-right:0.5em">Wood
+</td>
+<td style="border:1px #AAA solid;padding:0.2em;"><a href="/index.php/Nether-cap" title="Nether-cap">Nether-cap</a><sup>5</sup>
+</td>
+<td style="border:1px #AAA solid;padding:0.2em;"><a href="/index.php/File:Nether_cap_logs_sprite.png" class="image"><img alt="Nether cap logs sprite.png" src="/images/thumb/b/b2/Nether_cap_logs_sprite.png/17px-Nether_cap_logs_sprite.png" decoding="async" width="17" height="21" srcset="/images/b/b2/Nether_cap_logs_sprite.png 1.5x" /></a> / <span style="color: #207DF1; background: #000000; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; padding: 0; line-height: 1;">♠</span> <span style="color: #207DF1; background: #000000; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; padding: 0; line-height: 1;">▬</span>
+</td>
+<td style="border:1px #AAA solid;padding:0.2em;">N/A
+</td>
+<td style="border:1px #AAA solid;padding:0.2em;"><a href="/index.php/Cavern" title="Cavern">Cavern</a> (depth 3)
+</td>
+<td style="border:1px #AAA solid;padding:0.2em;">Naturally cold<sup>5</sup>
+</td></tr>
+<tr>
+<td style="border:1px #AAA solid;padding:0.2em;padding-left:0.5em;padding-right:0.5em">Special
+</td>
+<td style="border:1px #AAA solid;padding:0.2em;"><a href="/index.php/Raw_adamantine" title="Raw adamantine">Raw adamantine</a>
+</td>
+<td style="border:1px #AAA solid;padding:0.2em;"><a href="/index.php/File:Raw_adamantine_sprite.png" class="image"><img alt="Raw adamantine sprite.png" src="/images/7/78/Raw_adamantine_sprite.png" decoding="async" width="16" height="18" /></a> / <span style="color: #12FECF; background: #C0C0C0; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; padding: 0; line-height: 1;">£</span> <span style="color: #12FECF; background: #000000; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; padding: 0; line-height: 1;">*</span>
+</td>
+<td style="border:1px #AAA solid;padding:0.2em;">25,000°U (15,032°F/8333°C)
+</td>
+<td style="border:1px #AAA solid;padding:0.2em;">The depths
+</td>
+<td style="border:1px #AAA solid;padding:0.2em;">Ore of <a href="/index.php/Adamantine" title="Adamantine">adamantine</a>
+</td></tr>
+<tr>
+<td style="border:1px #AAA solid;padding:0.2em;padding-left:0.5em;padding-right:0.5em">Special
+</td>
+<td style="border:1px #AAA solid;padding:0.2em;"><a href="/index.php/Slade" title="Slade">Slade</a>
+</td>
+<td style="border:1px #AAA solid;padding:0.2em;"><a href="/index.php/File:Slade_sprite.png" class="image"><img alt="Slade sprite.png" src="/images/7/72/Slade_sprite.png" decoding="async" width="22" height="20" /></a> / <span style="color: #A0A0A0; background: #000000; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; padding: 0; line-height: 1;">░</span> <span style="color: #A0A0A0; background: #000000; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; padding: 0; line-height: 1;">*</span>
+</td>
+<td style="border:1px #AAA solid;padding:0.2em;">None
+</td>
+<td style="border:1px #AAA solid;padding:0.2em;">The depths
+</td>
+<td style="border:1px #AAA solid;padding:0.2em;">Intended to be unmineable
+</td></tr>
+<tr>
+<td style="border:1px #AAA solid;padding:0.2em;padding-left:0.5em;padding-right:0.5em">Leather
+</td>
+<td style="border:1px #AAA solid;padding:0.2em;"><a href="/index.php/Fire_imp" title="Fire imp">Fire imp</a>
+</td>
+<td style="border:1px #AAA solid;padding:0.2em;"><a href="/index.php/File:Leather_sprite.png" class="image"><img alt="Leather sprite.png" src="/images/7/7b/Leather_sprite.png" decoding="async" width="22" height="19" /></a> / <span style="color: #D79B2D; background: #000000; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; padding: 0; line-height: 1;">ß</span>
+</td>
+<td style="border:1px #AAA solid;padding:0.2em;">None
+</td>
+<td style="border:1px #AAA solid;padding:0.2em;">
+</td>
+<td style="border:1px #AAA solid;padding:0.2em;">
+</td></tr>
+<tr>
+<td style="border:1px #AAA solid;padding:0.2em;padding-left:0.5em;padding-right:0.5em">Bone
+</td>
+<td style="border:1px #AAA solid;padding:0.2em;"><a href="/index.php/Fire_imp" title="Fire imp">Fire imp</a>
+</td>
+<td style="border:1px #AAA solid;padding:0.2em;"><a href="/index.php/File:Bone_sprite.png" class="image"><img alt="Bone sprite.png" src="/images/thumb/e/e8/Bone_sprite.png/12px-Bone_sprite.png" decoding="async" width="12" height="18" srcset="/images/e/e8/Bone_sprite.png 1.5x" /></a> / <span style="color: #FFFFFF; background: #000000; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; padding: 0; line-height: 1;">²</span>
+</td>
+<td style="border:1px #AAA solid;padding:0.2em;">None
+</td>
+<td style="border:1px #AAA solid;padding:0.2em;">
+</td>
+<td style="border:1px #AAA solid;padding:0.2em;">
+</td></tr>
+<tr>
+<td style="border:1px #AAA solid;padding:0.2em;padding-left:0.5em;padding-right:0.5em">Bone
+</td>
+<td style="border:1px #AAA solid;padding:0.2em;"><a href="/index.php/Dragon" title="Dragon">Dragon</a>
+</td>
+<td style="border:1px #AAA solid;padding:0.2em;"><a href="/index.php/File:Bone_sprite.png" class="image"><img alt="Bone sprite.png" src="/images/thumb/e/e8/Bone_sprite.png/12px-Bone_sprite.png" decoding="async" width="12" height="18" srcset="/images/e/e8/Bone_sprite.png 1.5x" /></a> / <span style="color: #FFFFFF; background: #000000; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; padding: 0; line-height: 1;">²</span>
+</td>
+<td style="border:1px #AAA solid;padding:0.2em;">None
+</td>
+<td style="border:1px #AAA solid;padding:0.2em;">
+</td>
+<td style="border:1px #AAA solid;padding:0.2em;">
+</td></tr>
+<tr>
+<td style="border:1px #AAA solid;padding:0.2em;padding-left:0.5em;padding-right:0.5em">Soap
+</td>
+<td style="border:1px #AAA solid;padding:0.2em;"><a href="/index.php/Fire_imp" title="Fire imp">Fire imp</a>
+</td>
+<td style="border:1px #AAA solid;padding:0.2em;"><a href="/index.php/File:Soap_sprite.png" class="image"><img alt="Soap sprite.png" src="/images/4/4c/Soap_sprite.png" decoding="async" width="17" height="12" /></a> / <span style="color: #FFFFFF; background: #000000; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; padding: 0; line-height: 1;">≡</span>
+</td>
+<td style="border:1px #AAA solid;padding:0.2em;">15,000°U (5032°F/2780°C)
+</td>
+<td style="border:1px #AAA solid;padding:0.2em;">
+</td>
+<td style="border:1px #AAA solid;padding:0.2em;">
+</td></tr>
+<tr>
+<td style="border:1px #AAA solid;padding:0.2em;padding-left:0.5em;padding-right:0.5em">Soap
+</td>
+<td style="border:1px #AAA solid;padding:0.2em;"><a href="/index.php/Dragon" title="Dragon">Dragon</a>
+</td>
+<td style="border:1px #AAA solid;padding:0.2em;"><a href="/index.php/File:Soap_sprite.png" class="image"><img alt="Soap sprite.png" src="/images/4/4c/Soap_sprite.png" decoding="async" width="17" height="12" /></a> / <span style="color: #FFFFFF; background: #000000; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; padding: 0; line-height: 1;">≡</span>
+</td>
+<td style="border:1px #AAA solid;padding:0.2em;">55,000°U (45032°F/25,044°C)
+</td>
+<td style="border:1px #AAA solid;padding:0.2em;">
+</td>
+<td style="border:1px #AAA solid;padding:0.2em;">
+</td></tr>
+<tr>
+<td style="border:1px #AAA solid;padding:0.2em;padding-left:0.5em;padding-right:0.5em">Glass
+</td>
+<td style="border:1px #AAA solid;padding:0.2em;"><a href="/index.php/Glass" title="Glass">Green glass</a>
+</td>
+<td style="border:1px #AAA solid;padding:0.2em;"><a href="/index.php/File:Green_glass_sprite.png" class="image"><img alt="Green glass sprite.png" src="/images/a/aa/Green_glass_sprite.png" decoding="async" width="21" height="19" /></a> / <span style="color: #13FD65; background: #A2DC34; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; padding: 0; line-height: 1;">X</span> <span style="color: #A2DC34; background: #000000; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; padding: 0; line-height: 1;">■</span>
+</td>
+<td style="border:1px #AAA solid;padding:0.2em;">13,600°U (3632°F/2001°C)
+</td>
+<td style="border:1px #AAA solid;padding:0.2em;">
+</td>
+<td style="border:1px #AAA solid;padding:0.2em;">
+</td></tr>
+<tr>
+<td style="border:1px #AAA solid;padding:0.2em;padding-left:0.5em;padding-right:0.5em">Glass
+</td>
+<td style="border:1px #AAA solid;padding:0.2em;"><a href="/index.php/Glass" title="Glass">Clear glass</a>
+</td>
+<td style="border:1px #AAA solid;padding:0.2em;"><a href="/index.php/File:Clear_crystal_glass.png" class="image"><img alt="Clear crystal glass.png" src="/images/6/62/Clear_crystal_glass.png" decoding="async" width="21" height="19" /></a> / <span style="color: #12FECF; background: #71BBB0; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; padding: 0; line-height: 1;">X</span> <span style="color: #71BBB0; background: #000000; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; padding: 0; line-height: 1;">■</span>
+</td>
+<td style="border:1px #AAA solid;padding:0.2em;">13,600°U (3632°F/2001°C)
+</td>
+<td style="border:1px #AAA solid;padding:0.2em;">
+</td>
+<td style="border:1px #AAA solid;padding:0.2em;">
+</td></tr>
+<tr>
+<td style="border:1px #AAA solid;padding:0.2em;padding-left:0.5em;padding-right:0.5em">Glass
+</td>
+<td style="border:1px #AAA solid;padding:0.2em;"><a href="/index.php/Glass" title="Glass">Crystal glass</a>
+</td>
+<td style="border:1px #AAA solid;padding:0.2em;"><a href="/index.php/File:Clear_crystal_glass.png" class="image"><img alt="Clear crystal glass.png" src="/images/6/62/Clear_crystal_glass.png" decoding="async" width="21" height="19" /></a> / <span style="color: #FFFFFF; background: #C0C0C0; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; padding: 0; line-height: 1;">X</span> <span style="color: #FFFFFF; background: #000000; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; padding: 0; line-height: 1;">■</span>
+</td>
+<td style="border:1px #AAA solid;padding:0.2em;">13,600°U (3632°F/2001°C)
+</td>
+<td style="border:1px #AAA solid;padding:0.2em;">
+</td>
+<td style="border:1px #AAA solid;padding:0.2em;">
+</td></tr>
+<tr>
+<td style="border:1px #AAA solid;padding:0.2em;padding-left:0.5em;padding-right:0.5em">Ash
+</td>
+<td style="border:1px #AAA solid;padding:0.2em;"><a href="/index.php/Ash" title="Ash">Ash</a>
+</td>
+<td style="border:1px #AAA solid;padding:0.2em;"><a href="/index.php/File:Generic_grey_bar_sprite.png" class="image"><img alt="Generic grey bar sprite.png" src="/images/0/08/Generic_grey_bar_sprite.png" decoding="async" width="30" height="23" /></a> / <span style="color: #FFFFFF; background: #C0C0C0; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; padding: 0; line-height: 1;">X</span> <span style="color: #C0C0C0; background: #000000; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; padding: 0; line-height: 1;">≡</span>
+</td>
+<td style="border:1px #AAA solid;padding:0.2em;">None
+</td>
+<td style="border:1px #AAA solid;padding:0.2em;">
+</td>
+<td style="border:1px #AAA solid;padding:0.2em;">
+</td></tr>
+<tr>
+<td style="border:1px #AAA solid;padding:0.2em;padding-left:0.5em;padding-right:0.5em">Ash
+</td>
+<td style="border:1px #AAA solid;padding:0.2em;"><a href="/index.php/Potash" title="Potash">Potash</a>
+</td>
+<td style="border:1px #AAA solid;padding:0.2em;"><a href="/index.php/File:Generic_grey_bar_sprite.png" class="image"><img alt="Generic grey bar sprite.png" src="/images/0/08/Generic_grey_bar_sprite.png" decoding="async" width="30" height="23" /></a> / <span style="color: #FFFFFF; background: #C0C0C0; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; padding: 0; line-height: 1;">X</span> <span style="color: #FFFFFF; background: #000000; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; padding: 0; line-height: 1;">≡</span>
+</td>
+<td style="border:1px #AAA solid;padding:0.2em;">None
+</td>
+<td style="border:1px #AAA solid;padding:0.2em;">
+</td>
+<td style="border:1px #AAA solid;padding:0.2em;">
+</td></tr>
+<tr>
+<td style="border:1px #AAA solid;padding:0.2em;padding-left:0.5em;padding-right:0.5em">Ash
+</td>
+<td style="border:1px #AAA solid;padding:0.2em;"><a href="/index.php/Pearlash" title="Pearlash">Pearlash</a>
+</td>
+<td style="border:1px #AAA solid;padding:0.2em;"><a href="/index.php/File:Generic_grey_bar_sprite.png" class="image"><img alt="Generic grey bar sprite.png" src="/images/0/08/Generic_grey_bar_sprite.png" decoding="async" width="30" height="23" /></a> / <span style="color: #FFFFFF; background: #C0C0C0; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; padding: 0; line-height: 1;">X</span> <span style="color: #FFFFFF; background: #000000; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; padding: 0; line-height: 1;">≡</span>
+</td>
+<td style="border:1px #AAA solid;padding:0.2em;">None
+</td>
+<td style="border:1px #AAA solid;padding:0.2em;">
+</td>
+<td style="border:1px #AAA solid;padding:0.2em;">
+</td></tr></tbody></table>
+<p><b>Notes:</b>
+</p>
+<dl><dd>1) Each stone is one of 16 <a href="/index.php/Color_scheme" title="Color scheme">colors</a> in the game.  Different un-mined stone of the same color have a different symbol to distinguish between them.  Once mined, the individual stones themselves can sometimes look identical if the color is the same. Click to look at items or mouse over the terrain for specific information.</dd>
+<dd>2) <b>°U</b> = degrees in <a href="/index.php/Urist" title="Urist">Urist</a>, the measure of temperature within the <i>Dwarf Fortress</i> world. As far as is known, there is no functional difference between a material that melts at <span style="border-bottom: 1px #0000CC dotted;cursor:help;" title="1113.9&#160;°C (2037&#160;°F)">12005&#160;°U</span><sup>    </sup> or <span style="border-bottom: 1px #0000CC dotted;cursor:help;" title="25000&#160;°C (45032&#160;°F)">55000&#160;°U</span><sup>    </sup> &#8212; they are both equally "magma safe".</dd>
+<dd>3) There are three iron ores in the game (four if you count <a href="/index.php/Goblinite" title="Goblinite">Goblinite</a>). Of these, only <a href="/index.php/Hematite" title="Hematite">hematite</a> and <a href="/index.php/Magnetite" title="Magnetite">magnetite</a> are magma safe.</dd>
+<dd>4) Sphalerite has <i>no</i> melting point, but <i>sublimates</i> at <span style="border-bottom: 1px #0000CC dotted;cursor:help;" title="1185&#160;°C (2165&#160;°F)">12133&#160;°U</span><sup>    </sup>. This still qualifies as being magma-safe.</dd>
+<dd>5) <a href="/index.php/Nether-cap" title="Nether-cap">Nether-cap</a> logs have a fixed temperature of <span style="border-bottom: 1px #0000CC dotted;cursor:help;" title="0&#160;°C (32&#160;°F)">10000&#160;°U</span><sup>    </sup>, rendering them magma safe for use as components. However nether-cap products <a href="/index.php/Dump" class="mw-redirect" title="Dump">dumped</a> into magma and nether-cap minecarts filled with magma are destroyed.</dd>
+<dd>6) For when weight is a consideration, one way or the other. Petrified Wood and Pitchblende are notable as the least and most dense non-economic magma-safe stones, with all the others listed above weighing very close to 2650, the generic "stone density". See <a href="/index.php/Density" title="Density">Density</a> for full table and discussion.</dd></dl></div>
