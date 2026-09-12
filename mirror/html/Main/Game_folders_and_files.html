@@ -1,0 +1,120 @@
+<div class="mw-parser-output"><table class="version-table" style="text-align: center; margin: 3px auto 5px; padding: 0.25em; border-radius: 3px; -webkit-border-radius: 3px; -moz-border-radius: 3px; -o-border-radius: 3px; -ms-border-radius: 3px;; border: 2px solid #bbdd88; background: #f5ffee; min-width:27em"><tbody><tr><td style="padding: 0.3em 0.3em; width: 100%;"><div style="margin-bottom:6px;" class="version-links-r1"><span style="font-size:100%"><span class="version-link"><span style="text-decoration: none; color: #72A329; background-color: #E2FDCE; border-radius: 2px; -webkit-border-radius: 2px; -moz-border-radius: 2px; -o-border-radius: 2px; -ms-border-radius: 2px; border: 1px solid #bbdd88; padding: 0.2em;"><b>v53.16</b></span></span><span style="font-weight:bold;" class="dot">&#160;·</span> <span class="version-link"><a href="/index.php?title=DF2014:Game_folders_and_files&amp;action=edit&amp;redlink=1" class="new" title="DF2014:Game folders and files (page does not exist)"><span style="text-decoration: none; color: #888;">v0.47.05</span></a></span></span></div><span>This article is about the current version of DF.<br />Note that some content may still need to be updated.</span><br />
+<div style="float: right; font-size:75%; padding-right:2px; margin-top:-2px; margin-bottom:-7px;"><span class="version-link"><a href="/index.php/Dwarf_Fortress_Wiki:V" class="mw-redirect" title="Dwarf Fortress Wiki:V"><span style="text-decoration: none; color: #72A329;">More Info</span></a></span><span style="font-weight:bold;" class="dot">&#160;·</span> <span class="version-link"><a href="/index.php/Template:Av" class="mw-redirect" title="Template:Av"><span style="text-decoration: none; color: #72A329;">V</span></a></span></div></td></tr>
+</tbody></table>
+<p>The location of Dwarf Fortress's <b>game folders</b> depends on the game version, preferences, and operating system. It is also possible for users to change the install drive or directory, like in Steam settings, thus these locations may vary.
+</p><p>Non-portable, user specific data folders were added in version 52.01, and allow different users to maintain their own settings and saves.
+</p>
+
+<h2><span class="mw-headline" id="Game_installation_folder">Game installation folder</span></h2>
+<p>The game's installation folder is where all the game's content is stored. You might want to go to this folder to browse <a href="/index.php/Raw_file" title="Raw file">raw files</a>, or to check logs. 
+</p>
+<ul><li><b>Dwarf Fortress Classic</b> is <a href="/index.php/Installation" title="Installation">distributed</a> in a zip archive. Depending on the operating system, the game folder is either <code>df_##_##_win</code> (with the version number, or the name chosen for the folder during extraction), <code>df_osx</code> or <code>df_linux</code> and will be located where you choose to <a href="/index.php/Installation" title="Installation">extract it</a>. This is where the game is run from. For example: <code>C:\Games\Dwarf Fortress\</code></li>
+<li><b>Steam</b>: The default locations are listed below. You can also find it through Steam by right-clicking "Dwarf Fortress" in your library and choosing Properties, then go to the Local files tab and click Browse local files. If you set a custom library location in Steam, it will end up there instead.
+<ul><li><b>Windows</b>: <code>C:\Program Files (x86)\Steam\steamapps\common\Dwarf Fortress\</code></li>
+<li><b>Linux</b>: <code>~/.local/share/Steam/steamapps/common/Dwarf Fortress/</code></li></ul></li>
+<li><b>Itch.io</b>: is also distributed as an archive file, so where you chose to extract it.</li></ul>
+<h2><span class="mw-headline" id="Game_user_data_folder">Game user data folder</span></h2>
+<p>The game's user data folder contains the saved games, preferences, and mods for the game. The location of this depends on the <a href="/index.php/Settings#Portable_mode" title="Settings">portable mode setting</a>, defaulting to a non-portable, user-specific folder<small><sup>v52.01</sup></small>. Changing it to YES creates the empty file <code>prefs\portable.txt</code>, changing back to NO removes it; manually creating or removing the file changes the setting. Changing the setting only changes where files will be written to, it does <b>not</b> immediately move all files; saves and mods in either location will always be available in the game regardless of the setting.
+</p><p>Benefits of portable mode include: allows the game to be installed on an external drive and run on different computers, or allows to have multiple versions of the game installed using different data (however, it always loads files from both locations with the portable mode setting changing the order, so data in either location will always be seen by the game). Benefits of user-specific mode include: multiple users can use the same install each with their own custom data, and having updating with the <a href="/index.php/Bay_12_Games" title="Bay 12 Games">Bay 12 Games</a> and itch.io downloads be simply extracting the archives to a new folder.
+</p>
+<ul><li><b>Non-Portable</b>:
+<ul><li>Windows: <code>C:\Users\(Your username)\AppData\Roaming\Bay 12 Games\Dwarf Fortress\</code></li>
+<li>Linux: <code>/home/(Your username)/.local/share/Bay 12 Games/Dwarf Fortress/</code></li></ul></li>
+<li><b>Portable</b>:
+<ul><li>All folders are located within the <i>Dwarf Fortress</i> game installation folder above</li></ul></li></ul>
+<p>Note: On Windows, <code>%APPDATA%</code> is an environment variable that points to <code>C:\Users\(Username)\AppData\Roaming</code>. You can use winkey+R and type '%appdata%' to quickly jump there.
+</p>
+<h3><span class="mw-headline" id="Saves_folder">Saves folder</span></h3>
+<dl><dd><div class="noprint relarticle mainarticle"><i>Main article: <a href="/index.php/Saved_game_folder" title="Saved game folder">Saved game folder</a></i></div></dd></dl>
+<p>Saves are stored in the <code>save</code> folder in the above user data folder, each folder in that folder is a save (except <code>current</code> which is used by the game and should be left alone). All the files in each folder are part of the save. The saves list for each world in game has a <span style="color: #FFFFFF; font-size: 12.5px; font-family: &#39;fixedsys&#39;, &#39;IBM Plex Mono Medium&#39;, &#39;Consolas&#39;, monospace; background: #000000">Files</span> button that opens a menu that allows you to delete the save or open the folder location.<small><sup>v52.03</sup></small>
+</p>
+<h3><span class="mw-headline" id="Mods_folders">Mods folders</span></h3>
+<dl><dd><i>Further information: <a href="/index.php/Modding" title="Modding">Modding</a></i></dd></dl>
+<p>There are two folders where mods are stored, both in the above user data folder.
+</p>
+<ul><li>Downloaded mods are stored in <code>mods</code></li>
+<li>Mods actually used in saves are stored in <code>data\installed_mods</code></li></ul>
+<p>When sharing modded saves, you probably want to include the installed mods folder.
+</p>
+<h3><span class="mw-headline" id="Settings_folder">Settings folder</span></h3>
+<dl><dd><div class="noprint relarticle mainarticle"><i>Main article: <a href="/index.php/Settings" title="Settings">Settings</a></i></div></dd></dl>
+<p>Called settings in game, user preferences are stored in the <code>prefs</code> folder in the above user data folder. Many of the defaults are stored in the <code>data\init</code> folder in the installation folder.
+</p>
+<h2><span class="mw-headline" id="Key">Key</span></h2>
+<table>
+<tbody><tr>
+<td><img alt="Folder-orange.svg" src="https://thumb.wikimedia.org/wikipedia/commons/thumb/0/09/Folder-orange.svg/20px-Folder-orange.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=imageinfo&amp;utm_content=thumbnail" decoding="async" width="20" height="20" srcset="https://thumb.wikimedia.org/wikipedia/commons/thumb/0/09/Folder-orange.svg/40px-Folder-orange.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=imageinfo&amp;utm_content=thumbnail 1.5x" /> Dwarf Fortress
+</td>
+<td>: Game folder
+</td></tr>
+<tr>
+<td>&#8195;&#x25cf; <img alt="Folder.svg" src="https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f3/Folder.svg/20px-Folder.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=imageinfo&amp;utm_content=thumbnail" decoding="async" width="20" height="20" srcset="https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f3/Folder.svg/40px-Folder.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=imageinfo&amp;utm_content=thumbnail 1.5x" /> crashlogs
+</td>
+<td>: Created by the game when needed, the files it places here can be uploaded to the <a rel="nofollow" class="external text" href="https://kitfoxgames.notion.site/How-to-Report-Bugs-in-Dwarf-Fortress-Updated-Nov-2023-b5e2ca19dabe408897d1c2669599b7a2">Dwarf Fortress Bug Tracker</a> or the <a href="/index.php/Kitfox_Games" title="Kitfox Games">Kitfox Games</a> discord.
+</td></tr>
+<tr>
+<td>&#8195;&#x25cf; <img alt="Folder.svg" src="https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f3/Folder.svg/20px-Folder.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=imageinfo&amp;utm_content=thumbnail" decoding="async" width="20" height="20" srcset="https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f3/Folder.svg/40px-Folder.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=imageinfo&amp;utm_content=thumbnail 1.5x" /> data
+</td>
+<td>: Contains game content.
+</td></tr>
+<tr>
+<td>&#8195;&#8195;&#8195;&#x25cf; <img alt="Folder.svg" src="https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f3/Folder.svg/20px-Folder.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=imageinfo&amp;utm_content=thumbnail" decoding="async" width="20" height="20" srcset="https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f3/Folder.svg/40px-Folder.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=imageinfo&amp;utm_content=thumbnail 1.5x" /> art
+</td>
+<td>: Any images not loaded from vanilla graphics modules, for the main menu and classic ASCII mode.
+</td></tr>
+<tr>
+<td>&#8195;&#8195;&#8195;&#x25cf; <img alt="Folder.svg" src="https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f3/Folder.svg/20px-Folder.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=imageinfo&amp;utm_content=thumbnail" decoding="async" width="20" height="20" srcset="https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f3/Folder.svg/40px-Folder.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=imageinfo&amp;utm_content=thumbnail 1.5x" /> init
+</td>
+<td>: Default game settings.
+</td></tr>
+<tr>
+<td>&#8195;&#8195;&#8195;&#x25cf; <img alt="Folder.svg" src="https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f3/Folder.svg/20px-Folder.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=imageinfo&amp;utm_content=thumbnail" decoding="async" width="20" height="20" srcset="https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f3/Folder.svg/40px-Folder.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=imageinfo&amp;utm_content=thumbnail 1.5x" /> installed_mods
+</td>
+<td>: Folder of mod copies used when loading a world, actual location used depends on above portable mode setting.
+</td></tr>
+<tr>
+<td>&#8195;&#8195;&#8195;&#x25cf; <img alt="Folder.svg" src="https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f3/Folder.svg/20px-Folder.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=imageinfo&amp;utm_content=thumbnail" decoding="async" width="20" height="20" srcset="https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f3/Folder.svg/40px-Folder.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=imageinfo&amp;utm_content=thumbnail 1.5x" /> sound
+</td>
+<td>: Contains all audio and music files used in the game.
+</td></tr>
+<tr>
+<td>&#8195;&#8195;&#8195;&#x25cf; <img alt="Folder.svg" src="https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f3/Folder.svg/20px-Folder.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=imageinfo&amp;utm_content=thumbnail" decoding="async" width="20" height="20" srcset="https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f3/Folder.svg/40px-Folder.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=imageinfo&amp;utm_content=thumbnail 1.5x" /> vanilla
+</td>
+<td>: Contains all the vanilla modules and raw files.
+</td></tr>
+<tr>
+<td>&#8195;&#x25cf; <img alt="Folder.svg" src="https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f3/Folder.svg/20px-Folder.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=imageinfo&amp;utm_content=thumbnail" decoding="async" width="20" height="20" srcset="https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f3/Folder.svg/40px-Folder.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=imageinfo&amp;utm_content=thumbnail 1.5x" /> licenses
+</td>
+<td>: Contains licenses for software libraries used in the game.
+</td></tr>
+<tr>
+<td>&#8195;&#x25cf; <img alt="Folder.svg" src="https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f3/Folder.svg/20px-Folder.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=imageinfo&amp;utm_content=thumbnail" decoding="async" width="20" height="20" srcset="https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f3/Folder.svg/40px-Folder.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=imageinfo&amp;utm_content=thumbnail 1.5x" /> mods
+</td>
+<td>: Folder for downloaded mods before being used.
+</td></tr>
+<tr>
+<td>&#8195;&#8195;&#8195;&#x25cf; <img alt="Folder.svg" src="https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f3/Folder.svg/20px-Folder.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=imageinfo&amp;utm_content=thumbnail" decoding="async" width="20" height="20" srcset="https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f3/Folder.svg/40px-Folder.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=imageinfo&amp;utm_content=thumbnail 1.5x" /> mod_upload
+</td>
+<td>: Folder for uploading mods to Steam.
+</td></tr>
+<tr>
+<td>&#8195;&#x25cf; <img alt="Folder.svg" src="https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f3/Folder.svg/20px-Folder.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=imageinfo&amp;utm_content=thumbnail" decoding="async" width="20" height="20" srcset="https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f3/Folder.svg/40px-Folder.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=imageinfo&amp;utm_content=thumbnail 1.5x" /> prefs
+</td>
+<td>: Contains current game settings files, actual location used depends on above portable mode setting.
+</td></tr>
+<tr>
+<td>&#8195;&#8195;&#8195;&#x25cf; <img alt="Folder.svg" src="https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f3/Folder.svg/20px-Folder.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=imageinfo&amp;utm_content=thumbnail" decoding="async" width="20" height="20" srcset="https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f3/Folder.svg/40px-Folder.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=imageinfo&amp;utm_content=thumbnail 1.5x" /> macros
+</td>
+<td>: Folder where macros are saved, actual location used depends on above portable mode setting.
+</td></tr>
+<tr>
+<td>&#8195;&#x25cf; <img alt="Folder.svg" src="https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f3/Folder.svg/20px-Folder.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=imageinfo&amp;utm_content=thumbnail" decoding="async" width="20" height="20" srcset="https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f3/Folder.svg/40px-Folder.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=imageinfo&amp;utm_content=thumbnail 1.5x" /> save
+</td>
+<td>: Contains all save game files.
+</td></tr></tbody></table>
+<table class="collapsible autocollapse infobox" style="background: #fdfdfd; border: 1px solid #aaa; font-size: 88%; margin: 0 auto -1px; vertical-align: middle; width: 100%; max-width: 100em;"><tbody><tr style="line-height: 1.5em;"><th scope="col" colspan="2" style="background: #ccf; padding: 0.25em 1em; text-align: center; background-color: #f0eaff;;"><div class="plainlinks" style="float: left; padding-left: 0.4em; font-size: 70%; font-weight: normal; white-space: nowrap;"><a href="/index.php/Template:V50_files" title="Template:V50 files"><span title="View this template">V</span></a><span style="font-weight: bold; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;">&#160;·&#160;</span><a href="/index.php?title=Template_talk:V50_files&amp;action=edit&amp;redlink=1" class="new" title="Template talk:V50 files (page does not exist)"><span title="Discuss this template">T</span></a><span style="font-weight: bold; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;">&#160;·&#160;</span><a rel="nofollow" class="external text" href="https://dwarffortresswiki.org/index.php?title=Template:V50_files&amp;action=edit"><span title="Edit this template">E</span></a></div><div style="font-size: 114%; margin: 0 6em;">
+<a href="/index.php/Category:Files" title="Category:Files">Files</a></div></th></tr><tr style="line-height: 1.5em;"><th scope="row" style="background: #ddf; padding: 0.25em 1em; text-align: right; white-space: nowrap; width: 1%; background-color: #f0eaff;;&#32;;">Settings</th><td style="background: transparent; padding: 0; text-align: left;&#32;;"><div style="padding: 0em 0.25em">
+<a href="/index.php/Colors.txt" title="Colors.txt">colors.txt</a> • <a href="/index.php/Init.txt" title="Init.txt">init.txt</a> • <a href="/index.php/Interface.txt" title="Interface.txt">interface.txt</a></div></td></tr><tr style="line-height: 1.5em;"><th scope="row" style="background: #ddf; padding: 0.25em 1em; text-align: right; white-space: nowrap; width: 1%; background-color: #f0eaff;;&#32;;">Gameplay settings</th><td style="background: transparent; padding: 0; text-align: left;&#32;;"><div style="padding: 0em 0.25em">
+<a href="/index.php/Announcements.txt" title="Announcements.txt">announcements.txt</a> • <a href="/index.php/D_init.txt" title="D init.txt">d_init.txt</a></div></td></tr><tr style="line-height: 1.5em;"><th scope="row" style="background: #ddf; padding: 0.25em 1em; text-align: right; white-space: nowrap; width: 1%; background-color: #f0eaff;;&#32;;">Log files</th><td style="background: transparent; padding: 0; text-align: left;&#32;;"><div style="padding: 0em 0.25em">
+<a href="/index.php/Errorlog.txt" title="Errorlog.txt">errorlog.txt</a> • <a href="/index.php/Gamelog.txt" title="Gamelog.txt">gamelog.txt</a> • <a href="/index.php/Map_rejection_log.txt" class="mw-redirect" title="Map rejection log.txt">map_rejection_log.txt</a></div></td></tr><tr style="line-height: 1.5em;"><th scope="row" style="background: #ddf; padding: 0.25em 1em; text-align: right; white-space: nowrap; width: 1%; background-color: #f0eaff;;&#32;;">Other</th><td style="background: transparent; padding: 0; text-align: left;&#32;;"><div style="padding: 0em 0.25em">
+<a href="/index.php/Arena.txt" class="mw-redirect" title="Arena.txt">arena.txt</a> • <a href="/index.php/Embark_profiles.txt" title="Embark profiles.txt">embark_profiles.txt</a> • <a href="/index.php/World_gen.txt" title="World gen.txt">world_gen.txt</a></div></td></tr></tbody></table></div>

@@ -1,0 +1,36 @@
+{{Quality|Superior}}
+{{v50_skill
+| color      = 6:0
+| graphic    = [[File:farmer_sprite_icon.png]]
+| graphicmargin = 106px
+| skill      = Gelder
+| profession = [[Farmer]]
+| job name   = [[Gelding]]
+| tasks      = 
+* Geld animal
+| workshop   = 
+* [[Farmer's workshop]]
+| attributes =
+* Strength
+* Agility
+* Endurance
+* Kinesthetic Sense
+}}
+{{av}}
+
+'''Gelder''' is the [[skill]] associated with the '''Gelding''' labor. Gelding allows the castration of [[Gender|male]] animals (or [[Gender|female]] animals [[Modding|modded]] to have a [[Body token#GELDABLE|geldable]] body part) so they cannot [[Breeding|produce offspring]]. This is useful to stop/prevent [[catsplosion]]s, as the tomcats can no longer breed. A dwarf more skilled in gelding is less likely to be injured performing the job.
+
+Animals can be flagged for gelding through the same menu used for [[butcher]]y:
+
+Go to the {{menu icon|u}} ([[Unit list|Creatures]]) screen, then the [[Unit_list#Pets.2FLivestock_Tab|Pets/Livestock tab]] and click on [[File:Df steam geld button.png|The geld button]] to flag (or un-flag) for gelding.
+
+A {{DFtext|Geld {name of the animal} (Tame)|3:1}} job will be queued to the next available [[farmer's workshop]]. If multiple creatures are flagged for gelding, only one geld job ''per workshop'' at a time will be created. A gelder will take this job and lead the animal to the workshop, at which point it is instantly castrated. A castrated male's gender will appear as {{DFtext|x{{char|11}}x}} rather than the usual {{DFtext|{{char|11}}}}. ("gelding" a modded female  shows {{DFtext|x{{char|12}}x}} rather than the usual {{DFtext|{{char|12}}}}).
+
+Geldable animals have {{token|SET_BP_GROUP|c|BY_TYPE|c|LOWERBODY}}{{token|BP_ADD_TYPE|c|GELDABLE}} under {{token|CASTE|c|MALE}} section of their RAWs.
+
+[[Egg]]-laying animals are not geldable.
+
+Incidentally, gelding can occur through combat as well-aimed attacks to the lower body, triggering the message "a gelding strike" or "the geldables have been torn away" for the same effect, though these occurrences do not contribute to the gelder skill.
+
+
+{{skills}}

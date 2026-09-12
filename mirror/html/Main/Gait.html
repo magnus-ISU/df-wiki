@@ -1,0 +1,469 @@
+<div class="mw-parser-output"><div id="page-quality-rating" style="text-align: right;margin: 0.8em 0;font-size:75%">
+ <a href="/index.php/Dwarf_Fortress_Wiki:Quality#Tattered" title="Dwarf Fortress Wiki:Quality"><span id="stub-quality" style="text-decoration:none; color:#333333">xTATTEREDx</span></a> <span style="font-weight:bold;" class="dot">&#160;·</span> <a href="/index.php/Dwarf_Fortress_Wiki:Quality#Fine" title="Dwarf Fortress Wiki:Quality"><span id="fine-quality" style="padding:0.2em; border:1px solid #db8; border-radius: 2px; -webkit-border-radius: 2px; -moz-border-radius: 2px; -o-border-radius: 2px; -ms-border-radius: 2px; background:#FFE0CC; color:#CA7A02;">+FINE+</span></a> <span style="font-weight:bold;" class="dot">&#160;·</span> <a href="/index.php/Dwarf_Fortress_Wiki:Quality#Superior" title="Dwarf Fortress Wiki:Quality"><span id="superior-quality" style="text-decoration:none; color:#8800cc;">*SUPERIOR*</span></a> <span style="font-weight:bold;" class="dot">&#160;·</span> <a href="/index.php/Dwarf_Fortress_Wiki:Quality#Exceptional" title="Dwarf Fortress Wiki:Quality"><span id="exceptional-quality" style="text-decoration:none; color:#0088CC;">≡EXCEPTIONAL≡</span></a> <span style="font-weight:bold;" class="dot">&#160;·</span> <a href="/index.php/Dwarf_Fortress_Wiki:Quality#Masterwork" title="Dwarf Fortress Wiki:Quality"><span id="masterwork-quality" style="text-decoration:none; color:#72A329;">☼MASTERWORK☼</span></a></div><table class="version-table" style="text-align: center; margin: 3px auto 5px; padding: 0.25em; border-radius: 3px; -webkit-border-radius: 3px; -moz-border-radius: 3px; -o-border-radius: 3px; -ms-border-radius: 3px;; border: 2px solid #bbdd88; background: #f5ffee; min-width:27em"><tbody><tr><td style="padding: 0.3em 0.3em; width: 100%;"><div style="margin-bottom:6px;" class="version-links-r1"><span style="font-size:100%"><span class="version-link"><span style="text-decoration: none; color: #72A329; background-color: #E2FDCE; border-radius: 2px; -webkit-border-radius: 2px; -moz-border-radius: 2px; -o-border-radius: 2px; -ms-border-radius: 2px; border: 1px solid #bbdd88; padding: 0.2em;"><b>v53.16</b></span></span><span style="font-weight:bold;" class="dot">&#160;·</span> <span class="version-link"><a href="/index.php/DF2014:Gait" title="DF2014:Gait"><span style="text-decoration: none; color: #72A329;">v0.47.05</span></a></span></span></div><span>This article is about the current version of DF.<br />Note that some content may still need to be updated.</span><br />
+<div style="float: right; font-size:75%; padding-right:2px; margin-top:-2px; margin-bottom:-7px;"><span class="version-link"><a href="/index.php/Dwarf_Fortress_Wiki:V" class="mw-redirect" title="Dwarf Fortress Wiki:V"><span style="text-decoration: none; color: #72A329;">More Info</span></a></span><span style="font-weight:bold;" class="dot">&#160;·</span> <span class="version-link"><a href="/index.php/Template:Av" class="mw-redirect" title="Template:Av"><span style="text-decoration: none; color: #72A329;">V</span></a></span></div></td></tr>
+</tbody></table>
+<p>A <b>gait</b> is a mode of movement which a creature can use. In real life, the word only applies to movement on land; but in <i>Dwarf Fortress</i>, the term describes any mode of movement by a creature, including <a href="/index.php/Swimming" class="mw-redirect" title="Swimming">swimming</a>, <a href="/index.php/Flying" title="Flying">flying</a>, and <a href="/index.php/Climbing" class="mw-redirect" title="Climbing">climbing</a>.
+</p><p>In <a href="/index.php/Adventurer_mode" title="Adventurer mode">Adventurer mode</a>, you can choose your preferred gait in the <span><span style="display: inline-flex;"><a href="/index.php/File:Adv_ui_m.png" class="image"><img alt="Adv ui m.png" src="/images/8/84/Adv_ui_m.png" decoding="async" width="32" height="36" /></a><span style="align-self: flex-end; margin-left: -3px; margin-bottom: 0px;"><span style="white-space: nowrap;"><span class="keyboard-key nowrap" style="border: 1px solid #aaa; border-radius: 0.2em; -webkit-border-radius: 0.2em; -moz-border-radius: 0.2em; -o-border-radius: 0.2em; -ms-border-radius: 0.2em; -moz-box-shadow: 0.1em 0.2em 0.2em #ddd; -webkit-box-shadow: 0.1em 0.2em 0.2em #ddd; box-shadow: 0.1em 0.2em 0.2em #ddd; background-color: #f9f9f9; background-image: -moz-linear-gradient(top, #eee, #f9f9f9, #eee); background-image: -o-linear-gradient(top, #eee, #f9f9f9, #eee); background-image: -webkit-linear-gradient(top, #eee, #f9f9f9, #eee); background-image: linear-gradient(to bottom, #eee, #f9f9f9, #eee); padding: 0.1em 0.3em; font-family: inherit; font-size: 0.9em;" title="">m</span></span></span></span></span> movement menu, determining your speed.
+</p>
+
+<h2><span class="mw-headline" id="Gait_Types">Gait Types</span></h2>
+<p>There are 5 different types of gaits: walking, crawling, climbing, swimming, and flying.
+</p>
+<ul><li>Walking gaits are land-based gaits which require the creature to be standing up, and have more than half of their <code><a href="/index.php/Body_token#STANCE" title="Body token">[STANCE]</a></code> body parts, e.g. legs, intact and working. They can be used to move across flat ground, and go up and down ramps and stairs.</li></ul>
+<ul><li>Crawling gaits are like walking gaits, except that they require neither standing up nor <code><a href="/index.php/Body_token#STANCE" title="Body token">[STANCE]</a></code> body parts. They are much slower than walking gaits. Please note that an uninjured, slithering snake is considered to be using a walking gait, not a crawling gait: its body is its <code><a href="/index.php/Body_token#STANCE" title="Body token">[STANCE]</a></code> body part. If a snake is injured in the body, it will revert to a crawling gait.</li></ul>
+<ul><li>Climbing gaits are used for moving up and down vertical surfaces, such as trees or walls, as well as for moving horizontally while supporting oneself against a vertical surface. In order to climb, a creature needs intact body parts to climb with: <code><a href="/index.php/Body_token#GRASP" title="Body token">[GRASP]</a></code> body parts by default, or [STANCE] body parts if the creature has the <code><a href="/index.php/Creature_token#STANCE_CLIMBER" title="Creature token">[STANCE_CLIMBER]</a></code> token. Stance climbers include cats and giant cave spiders.</li></ul>
+<ul><li>Swimming gaits are used for moving in the water. In order to swim, a creature needs either the <code><a href="/index.php/Creature_token#SWIMS_INNATE" title="Creature token">[SWIMS_INNATE]</a></code> tag, or <code><a href="/index.php/Creature_token#SWIMS_LEARNED" title="Creature token">[SWIMS_LEARNED]</a></code>, <code><a href="/index.php/Creature_token#CAN_LEARN" title="Creature token">[CAN_LEARN]</a></code> and skill in swimming.</li></ul>
+<ul><li>Flying gaits are used for moving in the air. In order to fly, a creature needs the <code><a href="/index.php/Creature_token#FLIER" title="Creature token">[FLIER]</a></code> tag, and for enough of its body parts tagged <code><a href="/index.php/Body_token#FLIER" title="Body token">[FLIER]</a></code> (e.g. wings) to be intact, if applicable. Flying does not require a minimum speed to stay airborne, and turning while flying is no more difficult than turning while walking.</li></ul>
+<h2><span class="mw-headline" id="Speed">Speed</span></h2>
+<p>Gait speeds are expressed in <a href="/index.php/Time" title="Time">ticks</a>/100 tiles. This means that "larger" speeds are <b>slower</b> than "smaller" speeds. Currently, the maximum allowed speed is 100 ticks/100 tiles, or 1 tick per tile.
+</p><p>The speeds of each gait are only a baseline for how fast a creature of that species will move. In practice, speed can also be affected by factors such as what a creature is wearing or carrying, as well as its <a href="/index.php/Skills" class="mw-redirect" title="Skills">skills</a>, <a href="/index.php/Attributes" class="mw-redirect" title="Attributes">attributes</a>, and even its <a href="/index.php/Personality" class="mw-redirect" title="Personality">personality</a><sup style="font-size: 80%;">&#91;<a href="/index.php?title=Talk:Gait&amp;action=edit&amp;redlink=1" class="new" title="Talk:Gait (page does not exist)"><span title="The material near this tag is possibly inaccurate or nonfactual.">Verify</span></a>&#93;</sup>.
+</p><p>Here are some speeds for reference.
+</p>
+<table class="wikitable sortable">
+
+<tbody><tr>
+<th>Gait Speed</th>
+<th>kph</th>
+<th>mph</th>
+<th>Example
+</th></tr>
+<tr>
+<td>8775</td>
+<td>1</td>
+<td>0.6</td>
+<td>average <a href="/index.php/Giant_earthworm" title="Giant earthworm">giant earthworm</a>'s top speed
+</td></tr>
+<tr>
+<td>6561</td>
+<td>1.3</td>
+<td>0.8</td>
+<td>normal <a href="/index.php/Human" title="Human">human</a>/<a href="/index.php/Goblin" title="Goblin">goblin</a> climbing speed
+</td></tr>
+<tr>
+<td>5951</td>
+<td>1.5</td>
+<td>0.9</td>
+<td>normal <a href="/index.php/Dwarf" title="Dwarf">dwarven</a> climbing speed
+</td></tr>
+<tr>
+<td>3512</td>
+<td>2.5</td>
+<td>1.5</td>
+<td>normal <a href="/index.php/Kobold" title="Kobold">kobold</a> climbing speed
+</td></tr>
+<tr>
+<td>2206</td>
+<td>4</td>
+<td>2.5</td>
+<td>normal <a href="/index.php/Elf" title="Elf">elven</a> climbing speed
+</td></tr>
+<tr>
+<td>1422</td>
+<td>6.2</td>
+<td>3.9</td>
+<td>normal <a href="/index.php/Ogre" title="Ogre">ogre</a> walking speed
+</td></tr>
+<tr>
+<td>900</td>
+<td>9.6</td>
+<td>6</td>
+<td>normal walking speed
+</td></tr>
+<tr>
+<td>488</td>
+<td>18</td>
+<td>11</td>
+<td>average ogre's top speed
+</td></tr>
+<tr>
+<td>439</td>
+<td>20</td>
+<td>12</td>
+<td>average <a href="/index.php/Troll" title="Troll">troll</a>'s top speed
+</td></tr>
+<tr>
+<td>351</td>
+<td>25</td>
+<td>16</td>
+<td>average <a href="/index.php/Dragon" title="Dragon">dragon</a>'s top speed
+</td></tr>
+<tr>
+<td>293</td>
+<td>30</td>
+<td>19</td>
+<td>average dwarf's top speed
+</td></tr>
+<tr>
+<td>293</td>
+<td>30</td>
+<td>19</td>
+<td>average <a href="/index.php/Giant_cave_spider" title="Giant cave spider">giant cave spider</a>'s top running <b>and climbing</b> speed
+</td></tr>
+<tr>
+<td>251</td>
+<td>35</td>
+<td>22</td>
+<td>average kobold's top speed
+</td></tr>
+<tr>
+<td>225</td>
+<td>39</td>
+<td>24</td>
+<td>average human's/goblin's top speed
+</td></tr>
+<tr>
+<td>219</td>
+<td>40</td>
+<td>25</td>
+<td>average <a href="/index.php/Bronze_colossus" title="Bronze colossus">bronze colossus</a>'s top speed
+</td></tr>
+<tr>
+<td>214</td>
+<td>41</td>
+<td>25</td>
+<td>average elf's top speed
+</td></tr>
+<tr>
+<td>195</td>
+<td>45</td>
+<td>28</td>
+<td>average <a href="/index.php/Beak_dog" title="Beak dog">beak dog</a>'s top speed
+</td></tr>
+<tr>
+<td>183</td>
+<td>48</td>
+<td>30</td>
+<td>average <a href="/index.php/Cat" title="Cat">cat</a>'s top speed
+</td></tr>
+<tr>
+<td>176</td>
+<td>50</td>
+<td>31</td>
+<td>average <a href="/index.php/Roc" title="Roc">roc</a>'s top speed
+</td></tr>
+<tr>
+<td>157</td>
+<td>56</td>
+<td>35</td>
+<td>average <a href="/index.php/Gibbon" title="Gibbon">gibbon</a>'s top climbing speed
+</td></tr>
+<tr>
+<td>149</td>
+<td>59</td>
+<td>37</td>
+<td>average <a href="/index.php/Dog" title="Dog">dog</a>'s top speed
+</td></tr>
+<tr>
+<td>125</td>
+<td>70</td>
+<td>43</td>
+<td>average <a href="/index.php/Horse" title="Horse">horse</a>'s top speed
+</td></tr>
+<tr>
+<td>109</td>
+<td>80</td>
+<td>50</td>
+<td>average <a href="/index.php/Gazelle" title="Gazelle">gazelle</a>'s top speed
+</td></tr>
+<tr>
+<td>100</td>
+<td>87</td>
+<td>54</td>
+<td>maximum allowed gait speed, average <a href="/index.php/Peregrine_falcon" title="Peregrine falcon">peregrine falcon</a>'s top speed
+</td></tr></tbody></table>
+<h2><span class="mw-headline" id="Standard_Gaits">Standard Gaits</span></h2>
+<p>The vast majority of standard DF creatures use predefined gait patterns. While their gaits vary in speed from type to type and from creature to creature, the gaits' relations to each other are mostly uniform.
+</p>
+<table class="wikitable">
+
+<tbody><tr>
+<th>Relative Gait</th>
+<th>Gait Names</th>
+<th>Gait Types</th>
+<th>Build-up</th>
+<th>Turning</th>
+<th>Speed Affected by Physique</th>
+<th>Slowed by Stealth</th>
+<th>Energy Drain
+</th></tr>
+<tr>
+<td>Fastest
+</td>
+<td>
+<p>Sprint
+</p><p>Gallop
+</p><p>Fastest&#160;Walk
+</p><p>Scramble
+</p><p>Maximum&#160;Swim&#160;Speed
+</p><p>Scramble
+</p><p>Maximum&#160;Flight&#160;Speed
+</p><p>Scramble 
+</p>
+</td>
+<td>
+<p>WALK&#160;(biped)
+</p><p>WALK&#160;(quadruped)
+</p><p>WALK&#160;(general)
+</p><p>CLIMB
+</p><p>SWIM
+</p><p>CRAWL
+</p><p>FLY
+</p><p>WALK&#160;(no&#160;legs) 
+</p>
+</td>
+<td>10, from a start speed of Fast</td>
+<td>No</td>
+<td>Yes</td>
+<td>50</td>
+<td>50
+</td></tr>
+<tr>
+<td>Faster</td>
+<td>
+<p>Run
+</p><p>Canter
+</p><p>Faster&#160;Walk
+</p><p>Faster&#160;Climb
+</p><p>Faster&#160;Swim
+</p><p>Faster&#160;Crawl
+</p><p>Faster&#160;Flight
+</p><p>Faster&#160;Crawl
+</p>
+</td>
+<td>
+<p>WALK&#160;(biped)
+</p><p>WALK&#160;(quadruped)
+</p><p>WALK&#160;(general)
+</p><p>CLIMB
+</p><p>SWIM
+</p><p>CRAWL
+</p><p>FLY
+</p><p>WALK&#160;(no&#160;legs) 
+</p>
+</td>
+<td>5, from a start speed of Fast</td>
+<td>No</td>
+<td>Yes</td>
+<td>20</td>
+<td>10
+</td></tr>
+<tr>
+<td>Fast</td>
+<td>
+<p>Jog
+</p><p>Trot
+</p><p>Fast&#160;Walk
+</p><p>Fast&#160;Climb
+</p><p>Fast&#160;Swim
+</p><p>Fast&#160;Crawl
+</p><p>Fast&#160;Flight
+</p><p>Fast&#160;Crawl
+</p>
+</td>
+<td>
+<p>WALK&#160;(biped)
+</p><p>WALK&#160;(quadruped)
+</p><p>WALK&#160;(general)
+</p><p>CLIMB
+</p><p>SWIM
+</p><p>CRAWL
+</p><p>FLY
+</p><p>WALK&#160;(no&#160;legs) 
+</p>
+</td>
+<td>No</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>10</td>
+<td>5
+</td></tr>
+<tr>
+<td>Normal
+</td>
+<td>
+<p>Walk
+</p><p>Walk
+</p><p>Walk
+</p><p>Climb
+</p><p>Swim
+</p><p>Crawl
+</p><p>Fly
+</p><p>Crawl
+</p>
+</td>
+<td>
+<p>WALK&#160;(biped)
+</p><p>WALK&#160;(quadruped)
+</p><p>WALK&#160;(general)
+</p><p>CLIMB
+</p><p>SWIM
+</p><p>CRAWL
+</p><p>FLY
+</p><p>WALK&#160;(no&#160;legs) 
+</p>
+</td>
+<td>No</td>
+<td>Yes</td>
+<td>No</td>
+<td>No</td>
+<td>0
+</td></tr>
+<tr>
+<td>Slow
+</td>
+<td>
+<p>Stroll
+</p><p>Stroll
+</p><p>Slow&#160;Walk
+</p><p>Slow&#160;Climb
+</p><p>Slow&#160;Swim
+</p><p>Slow&#160;Crawl
+</p><p>Slow&#160;Fly
+</p><p>Slow&#160;Crawl
+</p>
+</td>
+<td>
+<p>WALK&#160;(biped)
+</p><p>WALK&#160;(quadruped)
+</p><p>WALK&#160;(general)
+</p><p>CLIMB
+</p><p>SWIM
+</p><p>CRAWL
+</p><p>FLY
+</p><p>WALK&#160;(no&#160;legs) 
+</p>
+</td>
+<td>No</td>
+<td>Yes</td>
+<td>No</td>
+<td>No</td>
+<td>0
+</td></tr>
+<tr>
+<td>Slowest
+</td>
+<td>
+<p>Creep
+</p><p>Creep
+</p><p>Slowest&#160;Walk
+</p><p>Creep
+</p><p>Creeping&#160;Swim
+</p><p>Creep
+</p><p>Hover
+</p><p>Creep
+</p>
+</td>
+<td>
+<p>WALK&#160;(biped)
+</p><p>WALK&#160;(quadruped)
+</p><p>WALK&#160;(general)
+</p><p>CLIMB
+</p><p>SWIM
+</p><p>CRAWL
+</p><p>FLY
+</p><p>WALK&#160;(no&#160;legs) 
+</p>
+</td>
+<td>No</td>
+<td>Yes</td>
+<td>No</td>
+<td>No</td>
+<td>0
+</td></tr></tbody></table>
+<h2><span class="mw-headline" id="Gaits_and_Modding">Gaits and Modding</span></h2>
+<p>In the vanilla game, gait templates are specified as <a href="/index.php/Creature_variation_token" title="Creature variation token">creature variations</a> in  the c_variation_default.txt raw file. These standard templates, each pertaining to a specific <a href="#Gait_Types">gait type</a>, contain 6 individual gaits which detail the different movement speeds available for that gait type, and are shown below.
+</p><p>To specify one of these predefined gaits, the token <code><a href="/index.php/Creature_token#APPLY_CREATURE_VARIATION" title="Creature token">[APPLY_CREATURE_VARIATION]</a></code> should be used. Within this token, specify the desired gait template, and include maximum <a href="#speed">speed</a> values (which will be inserted into the template in place of its !ARG1, !ARG2, etc. tokens, where the first value specified replaces !ARG1) in this order:<br />
+normal:fast:faster:fastest:slow:slower
+</p><p>Example, taken from the dwarf: <code>[APPLY_CREATURE_VARIATION:STANDARD_BIPED_GAITS:900:711:521:293:1900:2900]</code> where the speeds are: "walk:jog:run:sprint:stroll:creep". Sprint and run start at jog's max speed and gradually build up to their own, whereas the rest start off at max immediately.
+</p><p>Of course, it's entirely possible to write your own custom gait templates. Note that it isn't necessary to strictly mimic the predefined gaits; your templates can contain any number and mixture of individual gaits (including those of different gait types), and you can place argument tags (!ARG1, !ARG2, etc.) wherever you want to. It's also possible to do away with templates altogether and build up gaits from scratch within an individual creature's raw definition, if you're so inclined. See <code><a href="/index.php/Creature_token#GAIT" title="Creature token">[GAIT]</a></code> for more information.
+</p>
+<div style="clear:both;"></div>
+<table class="collapsible collapsed infobox gamedata" style="background: #fdfdfd; border: 1px solid #aaa; font-size: 88%; margin: 0 auto -1px; vertical-align: middle; width: 100%; max-width: 100em; table-layout: fixed;">
+<tbody><tr style="line-height: 1.5em;"><th scope="col" style="background: #cce6b3; padding: 0.25em 1em; text-align: center; display: table-cell;&#32;;"><div style="font-size: 114%; margin: 0 9em;">Biped walking gaits raws</div></th></tr>
+<tr style="line-height: 1.5em; text-align: left; display: table-cell;"><td><div style="overflow: auto;"><span class="gamedata-content" style="font-family: monospace; font-size:1.25em; white-space:pre;">[CREATURE_VARIATION:STANDARD_BIPED_GAITS]
+	GAIT:type:name:full speed:build up time:turning max:start speed:energy use
+		use NO_BUILD_UP if you jump immediately to full speed
+		these optional flags go at the end:
+			LAYERS_SLOW - fat/muscle layers slow the movement (muscle-slowing counter-acted by strength bonus)
+			STRENGTH - strength attribute can speed/slow movement
+			AGILITY - agility attribute can speed/slow movement
+			STEALTH_SLOWS:&lt;n&gt; - n is percentage slowed
+			it would be interesting to allow quirky attributes (like mental stats), but they aren't supported yet
+	[CV_NEW_TAG:GAIT:WALK:Sprint:!ARG4:10:3:!ARG2:50:LAYERS_SLOW:STRENGTH:AGILITY:STEALTH_SLOWS:50]
+	[CV_NEW_TAG:GAIT:WALK:Run:!ARG3:5:3:!ARG2:10:LAYERS_SLOW:STRENGTH:AGILITY:STEALTH_SLOWS:20]
+	[CV_NEW_TAG:GAIT:WALK:Jog:!ARG2:NO_BUILD_UP:5:LAYERS_SLOW:STRENGTH:AGILITY:STEALTH_SLOWS:10]
+	[CV_NEW_TAG:GAIT:WALK:Walk:!ARG1:NO_BUILD_UP:0]
+	[CV_NEW_TAG:GAIT:WALK:Stroll:!ARG5:NO_BUILD_UP:0]
+	[CV_NEW_TAG:GAIT:WALK:Creep:!ARG6:NO_BUILD_UP:0]</span></div></td></tr></tbody></table>
+<div style="clear:both;"></div>
+<table class="collapsible collapsed infobox gamedata" style="background: #fdfdfd; border: 1px solid #aaa; font-size: 88%; margin: 0 auto -1px; vertical-align: middle; width: 100%; max-width: 100em; table-layout: fixed;">
+<tbody><tr style="line-height: 1.5em;"><th scope="col" style="background: #cce6b3; padding: 0.25em 1em; text-align: center; display: table-cell;&#32;;"><div style="font-size: 114%; margin: 0 9em;">Quadruped walking gaits raws</div></th></tr>
+<tr style="line-height: 1.5em; text-align: left; display: table-cell;"><td><div style="overflow: auto;"><span class="gamedata-content" style="font-family: monospace; font-size:1.25em; white-space:pre;">[CREATURE_VARIATION:STANDARD_QUADRUPED_GAITS]
+	[CV_NEW_TAG:GAIT:WALK:Gallop:!ARG4:10:3:!ARG2:5:LAYERS_SLOW:STRENGTH:AGILITY:STEALTH_SLOWS:50]
+	[CV_NEW_TAG:GAIT:WALK:Canter:!ARG3:5:3:!ARG2:3:LAYERS_SLOW:STRENGTH:AGILITY:STEALTH_SLOWS:20]
+	[CV_NEW_TAG:GAIT:WALK:Trot:!ARG2:NO_BUILD_UP:0:LAYERS_SLOW:STRENGTH:AGILITY:STEALTH_SLOWS:10]
+	[CV_NEW_TAG:GAIT:WALK:Walk:!ARG1:NO_BUILD_UP:0]
+	[CV_NEW_TAG:GAIT:WALK:Stroll:!ARG5:NO_BUILD_UP:0]
+	[CV_NEW_TAG:GAIT:WALK:Creep:!ARG6:NO_BUILD_UP:0]</span></div></td></tr></tbody></table>
+<div style="clear:both;"></div>
+<table class="collapsible collapsed infobox gamedata" style="background: #fdfdfd; border: 1px solid #aaa; font-size: 88%; margin: 0 auto -1px; vertical-align: middle; width: 100%; max-width: 100em; table-layout: fixed;">
+<tbody><tr style="line-height: 1.5em;"><th scope="col" style="background: #cce6b3; padding: 0.25em 1em; text-align: center; display: table-cell;&#32;;"><div style="font-size: 114%; margin: 0 9em;">Walking gaits raws</div></th></tr>
+<tr style="line-height: 1.5em; text-align: left; display: table-cell;"><td><div style="overflow: auto;"><span class="gamedata-content" style="font-family: monospace; font-size:1.25em; white-space:pre;">[CREATURE_VARIATION:STANDARD_WALKING_GAITS]
+	[CV_NEW_TAG:GAIT:WALK:Fastest Walk:!ARG4:10:3:!ARG2:50:LAYERS_SLOW:STRENGTH:AGILITY:STEALTH_SLOWS:50]
+	[CV_NEW_TAG:GAIT:WALK:Faster Walk:!ARG3:5:3:!ARG2:10:LAYERS_SLOW:STRENGTH:AGILITY:STEALTH_SLOWS:20]
+	[CV_NEW_TAG:GAIT:WALK:Fast Walk:!ARG2:NO_BUILD_UP:5:LAYERS_SLOW:STRENGTH:AGILITY:STEALTH_SLOWS:10]
+	[CV_NEW_TAG:GAIT:WALK:Walk:!ARG1:NO_BUILD_UP:0]
+	[CV_NEW_TAG:GAIT:WALK:Slow Walk:!ARG5:NO_BUILD_UP:0]
+	[CV_NEW_TAG:GAIT:WALK:Slowest Walk:!ARG6:NO_BUILD_UP:0]</span></div></td></tr></tbody></table>
+<div style="clear:both;"></div>
+<table class="collapsible collapsed infobox gamedata" style="background: #fdfdfd; border: 1px solid #aaa; font-size: 88%; margin: 0 auto -1px; vertical-align: middle; width: 100%; max-width: 100em; table-layout: fixed;">
+<tbody><tr style="line-height: 1.5em;"><th scope="col" style="background: #cce6b3; padding: 0.25em 1em; text-align: center; display: table-cell;&#32;;"><div style="font-size: 114%; margin: 0 9em;">Climbing gaits raws</div></th></tr>
+<tr style="line-height: 1.5em; text-align: left; display: table-cell;"><td><div style="overflow: auto;"><span class="gamedata-content" style="font-family: monospace; font-size:1.25em; white-space:pre;">[CREATURE_VARIATION:STANDARD_CLIMBING_GAITS]
+	[CV_NEW_TAG:GAIT:CLIMB:Scramble:!ARG4:10:3:!ARG2:50:LAYERS_SLOW:STRENGTH:AGILITY:STEALTH_SLOWS:50]
+	[CV_NEW_TAG:GAIT:CLIMB:Faster Climb:!ARG3:5:3:!ARG2:10:LAYERS_SLOW:STRENGTH:AGILITY:STEALTH_SLOWS:20]
+	[CV_NEW_TAG:GAIT:CLIMB:Fast Climb:!ARG2:NO_BUILD_UP:5:LAYERS_SLOW:STRENGTH:AGILITY:STEALTH_SLOWS:10]
+	[CV_NEW_TAG:GAIT:CLIMB:Climb:!ARG1:NO_BUILD_UP:0]
+	[CV_NEW_TAG:GAIT:CLIMB:Slow Climb:!ARG5:NO_BUILD_UP:0]
+	[CV_NEW_TAG:GAIT:CLIMB:Creep:!ARG6:NO_BUILD_UP:0]</span></div></td></tr></tbody></table>
+<div style="clear:both;"></div>
+<table class="collapsible collapsed infobox gamedata" style="background: #fdfdfd; border: 1px solid #aaa; font-size: 88%; margin: 0 auto -1px; vertical-align: middle; width: 100%; max-width: 100em; table-layout: fixed;">
+<tbody><tr style="line-height: 1.5em;"><th scope="col" style="background: #cce6b3; padding: 0.25em 1em; text-align: center; display: table-cell;&#32;;"><div style="font-size: 114%; margin: 0 9em;">Swimming gaits raws</div></th></tr>
+<tr style="line-height: 1.5em; text-align: left; display: table-cell;"><td><div style="overflow: auto;"><span class="gamedata-content" style="font-family: monospace; font-size:1.25em; white-space:pre;">[CREATURE_VARIATION:STANDARD_SWIMMING_GAITS]
+	[CV_NEW_TAG:GAIT:SWIM:Maximum Swim Speed:!ARG4:10:3:!ARG2:50:LAYERS_SLOW:STRENGTH:AGILITY:STEALTH_SLOWS:50]
+	[CV_NEW_TAG:GAIT:SWIM:Faster Swim:!ARG3:5:3:!ARG2:10:LAYERS_SLOW:STRENGTH:AGILITY:STEALTH_SLOWS:20]
+	[CV_NEW_TAG:GAIT:SWIM:Fast Swim:!ARG2:NO_BUILD_UP:5:LAYERS_SLOW:STRENGTH:AGILITY:STEALTH_SLOWS:10]
+	[CV_NEW_TAG:GAIT:SWIM:Swim:!ARG1:NO_BUILD_UP:0]
+	[CV_NEW_TAG:GAIT:SWIM:Slow Swim:!ARG5:NO_BUILD_UP:0]
+	[CV_NEW_TAG:GAIT:SWIM:Creeping Swim:!ARG6:NO_BUILD_UP:0]</span></div></td></tr></tbody></table>
+<div style="clear:both;"></div>
+<table class="collapsible collapsed infobox gamedata" style="background: #fdfdfd; border: 1px solid #aaa; font-size: 88%; margin: 0 auto -1px; vertical-align: middle; width: 100%; max-width: 100em; table-layout: fixed;">
+<tbody><tr style="line-height: 1.5em;"><th scope="col" style="background: #cce6b3; padding: 0.25em 1em; text-align: center; display: table-cell;&#32;;"><div style="font-size: 114%; margin: 0 9em;">Crawling gaits raws</div></th></tr>
+<tr style="line-height: 1.5em; text-align: left; display: table-cell;"><td><div style="overflow: auto;"><span class="gamedata-content" style="font-family: monospace; font-size:1.25em; white-space:pre;">[CREATURE_VARIATION:STANDARD_CRAWLING_GAITS]
+	[CV_NEW_TAG:GAIT:CRAWL:Scramble:!ARG4:10:3:!ARG2:50:LAYERS_SLOW:STRENGTH:AGILITY:STEALTH_SLOWS:50]
+	[CV_NEW_TAG:GAIT:CRAWL:Faster Crawl:!ARG3:5:3:!ARG2:10:LAYERS_SLOW:STRENGTH:AGILITY:STEALTH_SLOWS:20]
+	[CV_NEW_TAG:GAIT:CRAWL:Fast Crawl:!ARG2:NO_BUILD_UP:5:LAYERS_SLOW:STRENGTH:AGILITY:STEALTH_SLOWS:10]
+	[CV_NEW_TAG:GAIT:CRAWL:Crawl:!ARG1:NO_BUILD_UP:0]
+	[CV_NEW_TAG:GAIT:CRAWL:Slow Crawl:!ARG5:NO_BUILD_UP:0]
+	[CV_NEW_TAG:GAIT:CRAWL:Creep:!ARG6:NO_BUILD_UP:0]</span></div></td></tr></tbody></table>
+<div style="clear:both;"></div>
+<table class="collapsible collapsed infobox gamedata" style="background: #fdfdfd; border: 1px solid #aaa; font-size: 88%; margin: 0 auto -1px; vertical-align: middle; width: 100%; max-width: 100em; table-layout: fixed;">
+<tbody><tr style="line-height: 1.5em;"><th scope="col" style="background: #cce6b3; padding: 0.25em 1em; text-align: center; display: table-cell;&#32;;"><div style="font-size: 114%; margin: 0 9em;">Flying gaits raws</div></th></tr>
+<tr style="line-height: 1.5em; text-align: left; display: table-cell;"><td><div style="overflow: auto;"><span class="gamedata-content" style="font-family: monospace; font-size:1.25em; white-space:pre;">[CREATURE_VARIATION:STANDARD_FLYING_GAITS]
+	[CV_NEW_TAG:GAIT:FLY:Maximum Flight Speed:!ARG4:10:3:!ARG2:50:LAYERS_SLOW:STRENGTH:AGILITY:STEALTH_SLOWS:50]
+	[CV_NEW_TAG:GAIT:FLY:Faster Flight:!ARG3:5:3:!ARG2:10:LAYERS_SLOW:STRENGTH:AGILITY:STEALTH_SLOWS:20]
+	[CV_NEW_TAG:GAIT:FLY:Fast Flight:!ARG2:NO_BUILD_UP:5:LAYERS_SLOW:STRENGTH:AGILITY:STEALTH_SLOWS:10]
+	[CV_NEW_TAG:GAIT:FLY:Fly:!ARG1:NO_BUILD_UP:0]
+	[CV_NEW_TAG:GAIT:FLY:Slow Flight:!ARG5:NO_BUILD_UP:0]
+	[CV_NEW_TAG:GAIT:FLY:Hover:!ARG6:NO_BUILD_UP:0]</span></div></td></tr></tbody></table>
+<div style="clear:both;"></div>
+<table class="collapsible collapsed infobox gamedata" style="background: #fdfdfd; border: 1px solid #aaa; font-size: 88%; margin: 0 auto -1px; vertical-align: middle; width: 100%; max-width: 100em; table-layout: fixed;">
+<tbody><tr style="line-height: 1.5em;"><th scope="col" style="background: #cce6b3; padding: 0.25em 1em; text-align: center; display: table-cell;&#32;;"><div style="font-size: 114%; margin: 0 9em;">Walk Crawl gaits raws</div></th></tr>
+<tr style="line-height: 1.5em; text-align: left; display: table-cell;"><td><div style="overflow: auto;"><span class="gamedata-content" style="font-family: monospace; font-size:1.25em; white-space:pre;">[CREATURE_VARIATION:STANDARD_WALK_CRAWL_GAITS]
+	[CV_NEW_TAG:GAIT:WALK:Scramble:!ARG4:10:3:!ARG2:50:LAYERS_SLOW:STRENGTH:AGILITY:STEALTH_SLOWS:50]
+	[CV_NEW_TAG:GAIT:WALK:Faster Crawl:!ARG3:5:3:!ARG2:10:LAYERS_SLOW:STRENGTH:AGILITY:STEALTH_SLOWS:20]
+	[CV_NEW_TAG:GAIT:WALK:Fast Crawl:!ARG2:NO_BUILD_UP:5:LAYERS_SLOW:STRENGTH:AGILITY:STEALTH_SLOWS:10]
+	[CV_NEW_TAG:GAIT:WALK:Crawl:!ARG1:NO_BUILD_UP:0]
+	[CV_NEW_TAG:GAIT:WALK:Slow Crawl:!ARG5:NO_BUILD_UP:0]
+	[CV_NEW_TAG:GAIT:WALK:Creep:!ARG6:NO_BUILD_UP:0]</span></div></td></tr></tbody></table>
+<p>The "Walk Crawl" gait is used for various creatures including worms, slugs, snakes, lizards, etc, that normally crawl (or slither).
+</p></div>

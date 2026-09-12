@@ -1,0 +1,93 @@
+{{av}}
+The location of Dwarf Fortress's '''game folders''' depends on the game version, preferences, and operating system. It is also possible for users to change the install drive or directory, like in Steam settings, thus these locations may vary.
+
+Non-portable, user specific data folders were added in version 52.01, and allow different users to maintain their own settings and saves.
+<!--
+[[File:Windows logo - 2012.svg|18px|link=]] 
+[[File:Icons8 flat linux.svg|18px|link=]] 
+[[File:Apple logo dark grey.svg|18px|link=]] 
+-->
+==Game installation folder==
+The game's installation folder is where all the game's content is stored. You might want to go to this folder to browse [[raw file]]s, or to check logs. 
+
+* '''Dwarf Fortress Classic''' is [[Installation|distributed]] in a zip archive. Depending on the operating system, the game folder is either <code>df_##_##_win</code> (with the version number, or the name chosen for the folder during extraction), <code>df_osx</code> or <code>df_linux</code> and will be located where you choose to [[installation|extract it]]. This is where the game is run from. For example: <code>C:\Games\Dwarf Fortress\</code>
+* '''Steam''': The default locations are listed below. You can also find it through Steam by right-clicking "Dwarf Fortress" in your library and choosing Properties, then go to the Local files tab and click Browse local files. If you set a custom library location in Steam, it will end up there instead.
+** '''Windows''': <code>C:\Program Files (x86)\Steam\steamapps\common\Dwarf Fortress\</code>
+** '''Linux''': <code>~/.local/share/Steam/steamapps/common/Dwarf Fortress/</code>
+* '''Itch.io''': is also distributed as an archive file, so where you chose to extract it.
+
+== Game user data folder ==
+The game's user data folder contains the saved games, preferences, and mods for the game. The location of this depends on the [[Settings#Portable mode|portable mode setting]], defaulting to a non-portable, user-specific folder{{v|52.01}}. Changing it to YES creates the empty file ``prefs\portable.txt``, changing back to NO removes it; manually creating or removing the file changes the setting. Changing the setting only changes where files will be written to, it does '''not''' immediately move all files; saves and mods in either location will always be available in the game regardless of the setting.
+
+Benefits of portable mode include: allows the game to be installed on an external drive and run on different computers, or allows to have multiple versions of the game installed using different data (however, it always loads files from both locations with the portable mode setting changing the order, so data in either location will always be seen by the game). Benefits of user-specific mode include: multiple users can use the same install each with their own custom data, and having updating with the [[Bay 12 Games]] and itch.io downloads be simply extracting the archives to a new folder.
+
+* '''Non-Portable''':
+**Windows: ``C:\Users\(Your username)\AppData\Roaming\Bay 12 Games\Dwarf Fortress\``
+**Linux: ``/home/(Your username)/.local/share/Bay 12 Games/Dwarf Fortress/``
+* '''Portable''':
+**All folders are located within the ''Dwarf Fortress'' game installation folder above
+Note: On Windows, ``%APPDATA%`` is an environment variable that points to ``C:\Users\(Username)\AppData\Roaming``. You can use winkey+R and type '%appdata%' to quickly jump there.
+
+=== Saves folder ===
+{{main|Saved game folder}}
+Saves are stored in the ``save`` folder in the above user data folder, each folder in that folder is a save (except ``current`` which is used by the game and should be left alone). All the files in each folder are part of the save. The saves list for each world in game has a {{DFtext|Files|7:0:1}} button that opens a menu that allows you to delete the save or open the folder location.{{version|52.03}}
+
+=== Mods folders ===
+:''Further information: [[Modding]]''
+There are two folders where mods are stored, both in the above user data folder.
+
+* Downloaded mods are stored in ``mods``
+* Mods actually used in saves are stored in ``data\installed_mods``
+When sharing modded saves, you probably want to include the installed mods folder.
+
+=== Settings folder ===
+{{main|Settings}}
+Called settings in game, user preferences are stored in the ``prefs`` folder in the above user data folder. Many of the defaults are stored in the ``data\init`` folder in the installation folder.
+
+== Key ==
+{| 
+| [[File:Folder-orange.svg|20px|link=]] Dwarf Fortress 
+| : Game folder
+|-
+| &emsp;&#x25cf; [[File:Folder.svg|20px|link=]] crashlogs         
+| : Created by the game when needed, the files it places here can be uploaded to the [https://kitfoxgames.notion.site/How-to-Report-Bugs-in-Dwarf-Fortress-Updated-Nov-2023-b5e2ca19dabe408897d1c2669599b7a2 Dwarf Fortress Bug Tracker] or the [[Kitfox Games]] discord.
+|-
+| &emsp;&#x25cf; [[File:Folder.svg|20px|link=]] data         
+| : Contains game content.
+|-
+| &emsp;&emsp;&emsp;&#x25cf; [[File:Folder.svg|20px|link=]] art         
+| : Any images not loaded from vanilla graphics modules, for the main menu and classic ASCII mode.
+|-
+| &emsp;&emsp;&emsp;&#x25cf; [[File:Folder.svg|20px|link=]] init        
+| : Default game settings.
+|-
+| &emsp;&emsp;&emsp;&#x25cf; [[File:Folder.svg|20px|link=]] installed_mods 
+| : Folder of mod copies used when loading a world, actual location used depends on above portable mode setting.
+|-
+| &emsp;&emsp;&emsp;&#x25cf; [[File:Folder.svg|20px|link=]] sound       
+| : Contains all audio and music files used in the game.
+|-
+| &emsp;&emsp;&emsp;&#x25cf; [[File:Folder.svg|20px|link=]] vanilla     
+| : Contains all the vanilla modules and raw files.
+|-
+| &emsp;&#x25cf; [[File:Folder.svg|20px|link=]] licenses         
+| : Contains licenses for software libraries used in the game.
+|-
+| &emsp;&#x25cf; [[File:Folder.svg|20px|link=]] mods         
+| : Folder for downloaded mods before being used.
+|-
+| &emsp;&emsp;&emsp;&#x25cf; [[File:Folder.svg|20px|link=]] mod_upload  
+| : Folder for uploading mods to Steam.
+|-
+| &emsp;&#x25cf; [[File:Folder.svg|20px|link=]] prefs        
+| : Contains current game settings files, actual location used depends on above portable mode setting.
+|-
+| &emsp;&emsp;&emsp;&#x25cf; [[File:Folder.svg|20px|link=]] macros
+| : Folder where macros are saved, actual location used depends on above portable mode setting.
+|-
+| &emsp;&#x25cf; [[File:Folder.svg|20px|link=]] save         
+| : Contains all save game files.
+|}
+
+{{files}}
+[[ru:Game folders and files]]
