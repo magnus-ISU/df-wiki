@@ -1,0 +1,30 @@
+{{Quality|Fine}}
+{{av}}
+{{Merge|Item value}}
+
+A [[creature]]'s {{token|MULTIPLY_VALUE|md}} affects the [[item value|value]] of animal products such as [[meat]], raw hides, [[silk]] [[thread]], and anything made from these raw [[material]]s, including [[leather]] or silk [[clothing]]. While it's possible for {{token|MULTIPLY_VALUE|md}} to apply to only specific parts of a creature, all non-modded creatures use ``SELECT_MATERIAL:ALL``, so all [[Body parts|parts]] of the animal are multiplied.
+
+{| class="wikitable" border=1
+|-
+! multiply_value
+! Animal names
+|-
+|x15||[[Dragon]], [[Roc]]
+|-
+|x10||[[Hydra]]
+|-
+|x5||[[Elephant]], [[Sea serpent]], [[Sea monster]], [[Giraffe]], [[Rhinoceros]]
+|-
+|x4||[[Voracious cave crawler]], [[Jabberer]], [[Cave dragon]], [[Giant lion]], [[Giant leopard]], [[Giant jaguar]], [[Giant tiger]], [[Giant cheetah]], [[Giant desert scorpion]], [[Unicorn]], [[Cave crocodile]], [[Giant toad]], [[Giant olm]], [[Giant bat]], [[Giant cave spider]]
+|-
+|x3||[[Grizzly bear]], [[Alligator]], [[Lion]], [[Leopard]], [[Jaguar]], [[Tiger]], [[Cheetah]], [[Saltwater crocodile]], [[Polar bear]], [[Elk bird]], [[Green devourer]], [[Rutherer]], [[Draltha]], [[Blind cave bear]], [[Yeti]], [[Sasquatch]], [[Fire imp]], [[Gila monster]], [[Anaconda]], [[Lynx]]
+|-
+|x2||[[Black bear]], [[Cougar]], [[Wolf]], [[Muskox]], [[Elk]], [[Magma crab]], [[Helmet snake]], [[Giant earthworm]], [[Molemarian]], [[Ice wolf]], [[Beak dog]], [[Strangler]], [[Giant rat]], [[Giant mole]], [[Purring maggot]], [[Giant cave swallow]], [[Panda]], [[Capybara]], [[Coyote]], [[Adder]], [[Bobcat]], [[Rattlesnake]], [[Copperhead snake]], [[Dingo]], [[Hyena]], [[Monitor lizard]], [[King cobra]], [[Ocelot]], [[Jackal]], [[Black mamba]], [[Sloth bear]], [[Bushmaster]], [[Python]]
+|}
+
+The giant and [[animal person]] versions, if not listed, have the same {{token|MULTIPLY_VALUE|md}} as the base animal.
+[[Category:Body parts]]
+[[Category:Creature attributes]]
+[[Category:Material properties]]
+[[Category:Economy]]
+[[ru:Item_value#Коэффициенты ценности материалов]]

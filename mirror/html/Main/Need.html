@@ -1,0 +1,679 @@
+<div class="mw-parser-output"><table class="metadata plainlinks ambox ambox-content" style="background-color:#fc9;" role="presentation">
+<tbody><tr><td class="mbox-image"><div style="width: 52px;"><a href="/index.php/File:Announce_migrant_icon.png" class="image"><img alt="Announce migrant icon.png" src="/images/5/5f/Announce_migrant_icon.png" decoding="async" width="32" height="32" /></a></div></td><td class="mbox-text" style=""><span class="mbox-text-span">This article was migrated from <a href="/index.php/DF2014:Need" title="DF2014:Need">DF2014:Need</a> and may be inaccurate for the current version of DF (v53.16). See <a href="/index.php/Dwarf_Fortress_Wiki:Version_migration" title="Dwarf Fortress Wiki:Version migration">this page</a> for more information.<span class="hide-when-compact">  </span><span class="hide-when-compact"> </span></span></td></tr></tbody></table><div id="page-quality-rating" style="text-align: right;margin: 0.8em 0;font-size:75%">
+ <a href="/index.php/Dwarf_Fortress_Wiki:Quality#Tattered" title="Dwarf Fortress Wiki:Quality"><span id="stub-quality" style="text-decoration:none; color:#333333">xTATTEREDx</span></a> <span style="font-weight:bold;" class="dot">&#160;·</span> <a href="/index.php/Dwarf_Fortress_Wiki:Quality#Fine" title="Dwarf Fortress Wiki:Quality"><span id="fine-quality" style="text-decoration:none; color:#CA7A02;">+FINE+</span></a> <span style="font-weight:bold;" class="dot">&#160;·</span> <a href="/index.php/Dwarf_Fortress_Wiki:Quality#Superior" title="Dwarf Fortress Wiki:Quality"><span id="superior-quality" style="text-decoration:none; color:#8800cc;">*SUPERIOR*</span></a> <span style="font-weight:bold;" class="dot">&#160;·</span> <a href="/index.php/Dwarf_Fortress_Wiki:Quality#Exceptional" title="Dwarf Fortress Wiki:Quality"><span id="exceptional-quality" style="padding:0.2em; border:1px solid #9df; border-radius: 2px; -webkit-border-radius: 2px; -moz-border-radius: 2px; -o-border-radius: 2px; -ms-border-radius: 2px; background:#cce4ff; color:#0088CC;">≡EXCEPTIONAL≡</span></a> <span style="font-weight:bold;" class="dot">&#160;·</span> <a href="/index.php/Dwarf_Fortress_Wiki:Quality#Masterwork" title="Dwarf Fortress Wiki:Quality"><span id="masterwork-quality" style="text-decoration:none; color:#72A329;">☼MASTERWORK☼</span></a></div>
+<table class="version-table" style="text-align: center; margin: 3px auto 5px; padding: 0.25em; border-radius: 3px; -webkit-border-radius: 3px; -moz-border-radius: 3px; -o-border-radius: 3px; -ms-border-radius: 3px;; border: 2px solid #bbdd88; background: #f5ffee; min-width:27em"><tbody><tr><td style="padding: 0.3em 0.3em; width: 100%;"><div style="margin-bottom:6px;" class="version-links-r1"><span style="font-size:100%"><span class="version-link"><span style="text-decoration: none; color: #72A329; background-color: #E2FDCE; border-radius: 2px; -webkit-border-radius: 2px; -moz-border-radius: 2px; -o-border-radius: 2px; -ms-border-radius: 2px; border: 1px solid #bbdd88; padding: 0.2em;"><b>v53.16</b></span></span><span style="font-weight:bold;" class="dot">&#160;·</span> <span class="version-link"><a href="/index.php/DF2014:Need" title="DF2014:Need"><span style="text-decoration: none; color: #72A329;">v0.47.05</span></a></span></span></div><span>This article is about the current version of DF.<br />Note that some content may still need to be updated.</span><br />
+<div style="float: right; font-size:75%; padding-right:2px; margin-top:-2px; margin-bottom:-7px;"><span class="version-link"><a href="/index.php/Dwarf_Fortress_Wiki:V" class="mw-redirect" title="Dwarf Fortress Wiki:V"><span style="text-decoration: none; color: #72A329;">More Info</span></a></span><span style="font-weight:bold;" class="dot">&#160;·</span> <span class="version-link"><a href="/index.php/Template:Av" class="mw-redirect" title="Template:Av"><span style="text-decoration: none; color: #72A329;">V</span></a></span></div></td></tr>
+</tbody></table>
+<div class="thumb tright"><div class="thumbinner" style="width:264px;"><a href="/index.php/File:Needs_v50_preview.png" class="image"><img alt="" src="/images/thumb/a/af/Needs_v50_preview.png/262px-Needs_v50_preview.png" decoding="async" width="262" height="380" class="thumbimage" srcset="/images/thumb/a/af/Needs_v50_preview.png/393px-Needs_v50_preview.png 1.5x, /images/a/af/Needs_v50_preview.png 2x" /></a>  <div class="thumbcaption"><div class="magnify"><a href="/index.php/File:Needs_v50_preview.png" class="internal" title="Enlarge"></a></div>Status screen.</div></div></div>
+<p><b>Needs</b> affect a creature's focus - needs that are unmet for long enough will increasingly damage the creature's <b>focus</b>, while sufficiently well-satisfied needs will improve it. Better focus leads to better results from work--essentially, a boost to all skills. Distraction is the opposite--an unfocused dwarf may become sloppy in their work, making worse crafts or failing a block during combat.
+</p><p>The need system replaces the generalized <a href="/index.php/On_break" class="mw-redirect" title="On break">on break</a> feature of previous versions. Dwarves will sometimes perform jobs that satisfy their personal needs, instead of working for the betterment of the fortress. These personal-fulfillment jobs generally come in two varieties: low-priority (indicated by green text, e.g. <span style="color: #13FD65; font-size: 12.5px; font-family: &#39;fixedsys&#39;, &#39;IBM Plex Mono Medium&#39;, &#39;Consolas&#39;, monospace; background: #000000">Listen to Poetry</span>), or high-priority (magenta text with an exclamation point, e.g. <span style="color: #E811FF; font-size: 12.5px; font-family: &#39;fixedsys&#39;, &#39;IBM Plex Mono Medium&#39;, &#39;Consolas&#39;, monospace; background: #000000">Pray to Lorsïth!</span>).  Low-priority jobs may be cancelled to undertake a fortress job.  High-priority jobs will not be cancelled for fortress jobs.
+</p>
+
+<h2><span class="mw-headline" id="Focus">Focus</span></h2>
+<dl><dd><i>Overall, Urist is unfocused by unmet needs.</i></dd></dl>
+<p>Focus affects a dwarf's ability to perform. A dwarf with high focus will work faster and produce better results, while a distracted dwarf will take longer to do everything poorly. Focus is separate and independent of overall mood; a dwarf can be happy even with largely-unmet needs, or unhappy yet focused. However, prolonged insufficiency in meeting needs is a cause for both low focus and bad thoughts. Thus, focus can, with prudence, be used to predict future mood developments.
+</p><p>Focus represents the percentage of the combined totals of met over unmet need values. The ratio of 1:1 (100%) represents a neutral state.
+</p><p>Focus statuses:
+</p>
+<table class="wikitable sortable">
+
+<tbody><tr>
+<td><span style="color: #13FD65; font-size: 12.5px; font-family: &#39;fixedsys&#39;, &#39;IBM Plex Mono Medium&#39;, &#39;Consolas&#39;, monospace; background: #000000">Very focused</span></td>
+<td>140% and higher
+</td></tr>
+<tr>
+<td><span style="color: #A2DC34; font-size: 12.5px; font-family: &#39;fixedsys&#39;, &#39;IBM Plex Mono Medium&#39;, &#39;Consolas&#39;, monospace; background: #000000">Quite focused</span></td>
+<td>120-139%
+</td></tr>
+<tr>
+<td><span style="color: #FFFFFF; font-size: 12.5px; font-family: &#39;fixedsys&#39;, &#39;IBM Plex Mono Medium&#39;, &#39;Consolas&#39;, monospace; background: #000000">Focused</span></td>
+<td>101-119%
+</td></tr>
+<tr>
+<td><span style="color: #C0C0C0; font-size: 12.5px; font-family: &#39;fixedsys&#39;, &#39;IBM Plex Mono Medium&#39;, &#39;Consolas&#39;, monospace; background: #000000">Untroubled</span></td>
+<td>100%
+</td></tr>
+<tr>
+<td><span style="color: #D79B2D; font-size: 12.5px; font-family: &#39;fixedsys&#39;, &#39;IBM Plex Mono Medium&#39;, &#39;Consolas&#39;, monospace; background: #000000">Unfocused</span></td>
+<td>81-99%
+</td></tr>
+<tr>
+<td><span style="color: #FFE111; font-size: 12.5px; font-family: &#39;fixedsys&#39;, &#39;IBM Plex Mono Medium&#39;, &#39;Consolas&#39;, monospace; background: #000000">Distracted</span></td>
+<td>61-80%
+</td></tr>
+<tr>
+<td><span style="color: #FF7111; font-size: 12.5px; font-family: &#39;fixedsys&#39;, &#39;IBM Plex Mono Medium&#39;, &#39;Consolas&#39;, monospace; background: #000000">Badly distracted</span></td>
+<td>60% and lower
+</td></tr></tbody></table>
+<p>A highly-focused dwarf can receive an effective skill boost of up to 50%; a badly distracted dwarf can receive an effective skill penalty of up to 50%.<sup class="plainlinks" style="line-height: 0; position: relative; vertical-align: baseline; top: -0.5em;"><a rel="nofollow" class="external text" href="http://www.bay12games.com/dwarves/dev_2015.html#2015-04-12">&#91;1&#93;</a></sup>
+</p><p><br />
+</p>
+<h2><span class="mw-headline" id="Diversity">Diversity</span></h2>
+<dl><dd><i>She is unfocused by a lack of trouble-making.</i></dd></dl>
+<p>An individual creature's set of needs and their weights (levels) are affected by <a href="/index.php/Personality_facet" title="Personality facet">personality facets</a>. For instance, a dwarf that values romance will be unfocused "after being unable to make romance", while a dwarf that personally values nature will be unfettered "after seeing animals". Unreligious dwarves will have no need to pray or meditate; dubious and casual worshippers will have low or medium level needs to pray; committed believers will have high level need; and dwarves following multiple deities will have a separate prayer need, with separate level for each of their deities. Proposed weights per need level are 1, 2, 5, and 10.
+</p><p>As expected, high-level needs hold a much larger sway in a dwarf's overall focus than low-level needs. For example, "immoderation" controls the need for <a href="/index.php/Alcohol" title="Alcohol">alcohol</a>; dwarves, thus, are more likely to have a need for alcohol than humans (but most of the time won't have a very strong one). A small percentage have no need for alcohol at all, though they'll still slow down without it, due to dwarves' alcohol dependence.
+</p><p>Needs are shown in the "Needs" sub-tab of the "Personality" tab of a creature's character sheet, which can be accessed by clicking on the creature or from the <span><span style="display: inline-flex;"><a href="/index.php/File:Ui_u.png" class="image"><img alt="Ui u.png" src="/images/4/47/Ui_u.png" decoding="async" width="32" height="36" /></a><span style="align-self: flex-end; margin-left: -3px; margin-bottom: 0px;"><span style="white-space: nowrap;"><span class="keyboard-key nowrap" style="border: 1px solid #aaa; border-radius: 0.2em; -webkit-border-radius: 0.2em; -moz-border-radius: 0.2em; -o-border-radius: 0.2em; -ms-border-radius: 0.2em; -moz-box-shadow: 0.1em 0.2em 0.2em #ddd; -webkit-box-shadow: 0.1em 0.2em 0.2em #ddd; box-shadow: 0.1em 0.2em 0.2em #ddd; background-color: #f9f9f9; background-image: -moz-linear-gradient(top, #eee, #f9f9f9, #eee); background-image: -o-linear-gradient(top, #eee, #f9f9f9, #eee); background-image: -webkit-linear-gradient(top, #eee, #f9f9f9, #eee); background-image: linear-gradient(to bottom, #eee, #f9f9f9, #eee); padding: 0.1em 0.3em; font-family: inherit; font-size: 0.9em;" title="">u</span></span></span></span></span> creature tabs by clicking <a href="/index.php/File:Mag_glass_icon.png" class="image"><img alt="Mag glass icon.png" src="/images/4/47/Mag_glass_icon.png" decoding="async" width="23" height="24" /></a> next to the creature in one of the sub-tabs of the "creatures" tab..
+</p><p>Degree of fulfillment:
+</p>
+<table class="wikitable">
+<tbody><tr>
+<th>Descriptor
+</th>
+<th>Range
+</th></tr>
+<tr>
+<td><span style="color: #13FD65; font-size: 12.5px; font-family: &#39;fixedsys&#39;, &#39;IBM Plex Mono Medium&#39;, &#39;Consolas&#39;, monospace; background: #000000">Unfettered</span></td>
+<td>400 to 300
+</td></tr>
+<tr>
+<td><span style="color: #A2DC34; font-size: 12.5px; font-family: &#39;fixedsys&#39;, &#39;IBM Plex Mono Medium&#39;, &#39;Consolas&#39;, monospace; background: #000000">Level-headed</span></td>
+<td>299 to 200
+</td></tr>
+<tr>
+<td><span style="color: #FFFFFF; font-size: 12.5px; font-family: &#39;fixedsys&#39;, &#39;IBM Plex Mono Medium&#39;, &#39;Consolas&#39;, monospace; background: #000000">Untroubled</span></td>
+<td>199 to 100
+</td></tr>
+<tr>
+<td><span style="color: #C0C0C0; font-size: 12.5px; font-family: &#39;fixedsys&#39;, &#39;IBM Plex Mono Medium&#39;, &#39;Consolas&#39;, monospace; background: #000000">Not distracted</span></td>
+<td>99 to -999
+</td></tr>
+<tr>
+<td><span style="color: #D79B2D; font-size: 12.5px; font-family: &#39;fixedsys&#39;, &#39;IBM Plex Mono Medium&#39;, &#39;Consolas&#39;, monospace; background: #000000">Unfocused</span></td>
+<td>-1,000 to -9,999
+</td></tr>
+<tr>
+<td><span style="color: #FFE111; font-size: 12.5px; font-family: &#39;fixedsys&#39;, &#39;IBM Plex Mono Medium&#39;, &#39;Consolas&#39;, monospace; background: #000000">Distracted</span></td>
+<td>-10,000 to -99,999
+</td></tr>
+<tr>
+<td><span style="color: #FF7111; font-size: 12.5px; font-family: &#39;fixedsys&#39;, &#39;IBM Plex Mono Medium&#39;, &#39;Consolas&#39;, monospace; background: #000000">Badly distracted</span></td>
+<td>-100,000 and below
+</td></tr></tbody></table>
+<p>When a need is satisfied, its value is refreshed to maximum (400), regardless of previous value. There is no minimum to how <span style="color: #FF7111; font-size: 12.5px; font-family: &#39;fixedsys&#39;, &#39;IBM Plex Mono Medium&#39;, &#39;Consolas&#39;, monospace; background: #000000">Badly distracted</span> a need can get. A deeper negative value won't further reduce total focus, which is based on a ratio of all needs' focus rating.
+</p><p>The formula used to calculate needs’ distraction values is not precisely known, but as a rule of thumb, to prevent this value from falling below -10,000 (leading to the need being displayed in yellow in the overview screen), a dwarf ought to fulfill the need every two years if they have need level 1, every year if they have need level 2, every six months if they have need level 5, and every 3 months if they have need level 10, with the exception of alcohol. Units’ needs do not accumulate while they are on <a href="/index.php/Mission" title="Mission">missions</a>.
+</p><p>The resulting focus score is expressed as the ratio of:
+</p>
+<pre>[6     * number of Unfettered scores +
+ 5 1/3 * number of Level-headed scores +
+ 4 2/3 * number of Untroubled scores +
+ 4     * number of Not distracted scores +
+ 3 1/3 * number of Unfocused scores +
+ 2 2/3 * number of Distracted scores +
+ 2     * number of Badly distracted scores] / (4 * number of scores total)
+</pre>
+<p>where the numerator is rounded down to a whole number.
+</p>
+<h2><span class="mw-headline" id="Fortress_actions_per_need">Fortress actions per need</span></h2>
+<table class="wikitable sortable">
+<tbody><tr>
+<th>Positive
+</th>
+<th>Negative
+</th>
+<th>Related <a href="/index.php/Personality_value" title="Personality value">Value</a> or <a href="/index.php/Personality_facet" title="Personality facet">Facet</a>
+</th>
+<th>Job
+</th></tr>
+<tr>
+<td>spending time with people
+</td>
+<td>being away from people
+</td>
+<td>GREGARIOUSNESS
+</td>
+<td>Socialize
+</td></tr>
+<tr>
+<td>drinking
+</td>
+<td>being kept from alcohol
+</td>
+<td>IMMODERATION, SELF-CONTROL
+</td>
+<td>Drink alcohol
+</td></tr>
+<tr>
+<td>communing with [deity] / meditation
+</td>
+<td>being unable to pray (to [deity])
+</td>
+<td>
+</td>
+<td>Pray/meditate in a <a href="/index.php/Temple" title="Temple">temple</a>
+</td></tr>
+<tr>
+<td>staying occupied
+</td>
+<td>being unoccupied
+</td>
+<td>HARD_WORK, ACTIVITY_LEVEL
+</td>
+<td>(assumedly a sufficient amount of fortress tasks)
+</td></tr>
+<tr>
+<td>doing something creative
+</td>
+<td>doing nothing creative
+</td>
+<td>ART_INCLINED
+</td>
+<td>Create or perform any artistic work
+</td></tr>
+<tr>
+<td>doing something exciting
+</td>
+<td>leading an unexciting life
+</td>
+<td>EXCITEMENT_SEEKING
+</td>
+<td>Varied; including at least being in danger or catching a live vermin; can be satisfied by sparring
+</td></tr>
+<tr>
+<td>learning something
+</td>
+<td>not learning anything
+</td>
+<td>KNOWLEDGE, CURIOUS
+</td>
+<td>Gain a rank in any skill, learn a new subject from written content. Learn something from watching a guild demonstration.
+</td></tr>
+<tr>
+<td>being with family
+</td>
+<td>being away from family
+</td>
+<td>FAMILY
+</td>
+<td>Socialize with close family members. Note that this need <i>can</i> be assigned to dwarves without families.
+<p>Disabled since <a href="/index.php/Release_information/53.16" title="Release information/53.16">53.16</a>.
+</p>
+</td></tr>
+<tr>
+<td>being with friends
+</td>
+<td>being away from friends
+</td>
+<td>FRIENDSHIP
+</td>
+<td>Socialize with friends. Any social interaction (which involves talking, e.g., intellectual discussion, sharing personal insight or just talking, but not getting into an argument) between friends is enough as is making a new friend.
+</td></tr>
+<tr>
+<td>hearing eloquent speech
+</td>
+<td>being unable to hear eloquent speech
+</td>
+<td>ELOQUENCE
+</td>
+<td>Hear or recite poetry
+</td></tr>
+<tr>
+<td>upholding tradition
+</td>
+<td>being away from traditions
+</td>
+<td>TRADITION
+</td>
+<td>Talk with <a href="/index.php/Champion" title="Champion">champion</a> (Perform any improvisational form? Religious rites? Justice served?). Can be satisfied by partaking in some performances in a tavern.
+</td></tr>
+<tr>
+<td>self-examination
+</td>
+<td>a lack of introspection
+</td>
+<td>INTROSPECTION
+</td>
+<td>read anything, compose song or poetry (automatically self-indulgent), sharing a personal insight (random social activity, which can happen also outside a meeting area)
+</td></tr>
+<tr>
+<td>making merry
+</td>
+<td>being unable to make merry
+</td>
+<td>MERRIMENT, HUMOR
+</td>
+<td>Watching or partaking in any performance (dance, poetry, music)
+</td></tr>
+<tr>
+<td>practicing a craft
+</td>
+<td>being unable to practice a craft
+</td>
+<td>CRAFTMANSHIP
+</td>
+<td>Craft any item
+</td></tr>
+<tr>
+<td>practicing a martial art
+</td>
+<td>being unable to practice a martial art
+</td>
+<td>MARTIAL_PROWESS
+</td>
+<td>Gain a rank in any combat skill
+</td></tr>
+<tr>
+<td>practicing a skill
+</td>
+<td>being unable to practice a skill
+</td>
+<td>SKILL
+</td>
+<td>Use any skill (?); definitely satisfied by gaining a rank in any skill.
+</td></tr>
+<tr>
+<td>taking it easy
+</td>
+<td>being unable to take it easy
+</td>
+<td>LEISURE_TIME
+</td>
+<td>Watch performance, rest, or play make believe.
+</td></tr>
+<tr>
+<td>making romance
+</td>
+<td>being unable to make romance
+</td>
+<td>ROMANCE, LOVE PROPENSITY
+</td>
+<td><i>interacting</i> with spouse/partner/lover or getting caught up in a new romance (gaining new lover)
+</td></tr>
+<tr>
+<td>seeing animals
+</td>
+<td>being away from animals
+</td>
+<td>NATURE
+</td>
+<td>Animal in line of sight (must also see the dwarf?), viewing favorite animal in cage, or interacting with pet.
+</td></tr>
+<tr>
+<td>seeing a great beast
+</td>
+<td>being away from great beasts
+</td>
+<td>EXCITEMENT_SEEKING, NATURE, CURIOSITY
+</td>
+<td>Same as above, but animal must have LARGE_PREDATOR token, or must be larger than a human and lack CAN_LEARN.
+</td></tr>
+<tr>
+<td>acquiring something
+</td>
+<td>being unable to acquire something
+</td>
+<td>GREED, COMMERCE
+</td>
+<td>Acquire any trinket (happens automatically when performing a "Store item in stockpile", "Store item in bin" or "Bring item to depot" job on an eligible <a href="/index.php/Trade_good" class="mw-redirect" title="Trade good">trade good</a>, note that this includes clothing, but items claimed via pick-up equipment jobs do not satisfy this need), but some dwarfs are picky and might not want any of your normal trinkets (in that case check the dwarf preferences and get/make some of the dwarfs preferred items (finished goods), preferable with some of the dwarfs favored materials and then make sure, that that dwarf will haul it).
+</td></tr>
+<tr>
+<td>eating a good meal
+</td>
+<td>a lack of decent meals
+</td>
+<td>IMMODERATION
+</td>
+<td>Eating a preferred food (or a preferred alcohol <a href="/index.php/Cook" title="Cook">cooked</a> into a meal), or a meal worth over 20☼.
+</td></tr>
+<tr>
+<td>fighting
+</td>
+<td>being unable to fight
+</td>
+<td>VIOLENT
+</td>
+<td>Partake in a fight or any combat or any sparring session.
+</td></tr>
+<tr>
+<td>causing trouble
+</td>
+<td>a lack of trouble-making
+</td>
+<td>HARMONY, DISCORD
+</td>
+<td>Fight or Argue
+</td></tr>
+<tr>
+<td>arguing
+</td>
+<td>being unable to argue
+</td>
+<td>FRIENDLINESS
+</td>
+<td>Argue
+</td></tr>
+<tr>
+<td>being extravagant
+</td>
+<td>being unable to be extravagant
+</td>
+<td>IMMODESTY
+</td>
+<td>Wear any item with a quality modifier
+</td></tr>
+<tr>
+<td>wandering
+</td>
+<td>being unable to wander
+</td>
+<td>NATURE, ACTIVITY LEVEL
+</td>
+<td>Complete a Fish, Return kill (hunt) or Gather plants job; complete a <a href="/index.php/Mission" title="Mission">mission</a>
+</td></tr>
+<tr>
+<td>helping somebody
+</td>
+<td>being unable to help anybody
+</td>
+<td>ALTRUISM, SACRIFICE
+</td>
+<td>Bring water or food to patient/prisoner/animal; bring wounded units to rest; leading demonstration; being yelled at by unhappy citizens (for relevant nobles). Note: Give water tasks seem to be automatically created, if a dwarf gets thirsty, when already going to bed or on the way to get something to eat, or if a dwarf has already taken a job (e.g., mining job), where the dwarf needs a long time to complete the job (e.g., reach the digging destination and perform the digging job), and becomes thirsty on the way. And a give water task does not get deleted until completed (with the possible exceptions that the dwarf is no longer on-site or dead).
+</td></tr>
+<tr>
+<td>thinking abstractly
+</td>
+<td>a lack of abstract thinking
+</td>
+<td>ABSTRACT_INCLINED
+</td>
+<td>Read or write any written content, or compose music or a poem. Playing make-believe. Having an intellectual discussion (social activity). Watch a (guild) demonstration. (Using Architect skill does not satisfy this need.)
+</td></tr>
+<tr>
+<td>admiring art
+</td>
+<td>being unable to admire art
+</td>
+<td>ARTWORK
+</td>
+<td>Exposure to artful furniture, artistic crafts, or engravings. Watching certain performances.
+</td></tr></tbody></table>
+<dl><dd></dd></dl>
+<p>Satisfying any need will result in a good thought and a decrease in stress.
+</p>
+<h2><span class="mw-headline" id="Adventurer_actions_per_need">Adventurer actions per need</span></h2>
+<table class="wikitable sortable">
+<tbody><tr>
+<th>Positive
+</th>
+<th>Negative
+</th>
+<th>Related <a href="/index.php/Personality_value" title="Personality value">Value</a> or <a href="/index.php/Personality_facet" title="Personality facet">Facet</a>
+</th>
+<th>Adventurer activity
+</th></tr>
+<tr>
+<td>spending time with people
+</td>
+<td>being away from people
+</td>
+<td>GREGARIOUSNESS
+</td>
+<td><span><span style="display: inline-flex;"><a href="/index.php/File:Adv_ui_k.png" class="image"><img alt="Adv ui k.png" src="/images/7/70/Adv_ui_k.png" decoding="async" width="32" height="36" /></a><span style="align-self: flex-end; margin-left: -3px; margin-bottom: 0px;"><span style="white-space: nowrap;"><span class="keyboard-key nowrap" style="border: 1px solid #aaa; border-radius: 0.2em; -webkit-border-radius: 0.2em; -moz-border-radius: 0.2em; -o-border-radius: 0.2em; -ms-border-radius: 0.2em; -moz-box-shadow: 0.1em 0.2em 0.2em #ddd; -webkit-box-shadow: 0.1em 0.2em 0.2em #ddd; box-shadow: 0.1em 0.2em 0.2em #ddd; background-color: #f9f9f9; background-image: -moz-linear-gradient(top, #eee, #f9f9f9, #eee); background-image: -o-linear-gradient(top, #eee, #f9f9f9, #eee); background-image: -webkit-linear-gradient(top, #eee, #f9f9f9, #eee); background-image: linear-gradient(to bottom, #eee, #f9f9f9, #eee); padding: 0.1em 0.3em; font-family: inherit; font-size: 0.9em;" title="">k</span></span></span></span></span> Speak to anyone or reply to greeting. They don't have to be able to reply back.
+</td></tr>
+<tr>
+<td>drinking
+</td>
+<td>being kept from alcohol
+</td>
+<td>IMMODERATION, SELF-CONTROL
+</td>
+<td>Drink alcohol
+</td></tr>
+<tr>
+<td>communing with [deity] / meditation
+</td>
+<td>being unable to pray (to [deity])
+</td>
+<td>
+</td>
+<td><span><span style="display: inline-flex;"><a href="/index.php/File:Adv_ui_k.png" class="image"><img alt="Adv ui k.png" src="/images/7/70/Adv_ui_k.png" decoding="async" width="32" height="36" /></a><span style="align-self: flex-end; margin-left: -3px; margin-bottom: 0px;"><span style="white-space: nowrap;"><span class="keyboard-key nowrap" style="border: 1px solid #aaa; border-radius: 0.2em; -webkit-border-radius: 0.2em; -moz-border-radius: 0.2em; -o-border-radius: 0.2em; -ms-border-radius: 0.2em; -moz-box-shadow: 0.1em 0.2em 0.2em #ddd; -webkit-box-shadow: 0.1em 0.2em 0.2em #ddd; box-shadow: 0.1em 0.2em 0.2em #ddd; background-color: #f9f9f9; background-image: -moz-linear-gradient(top, #eee, #f9f9f9, #eee); background-image: -o-linear-gradient(top, #eee, #f9f9f9, #eee); background-image: -webkit-linear-gradient(top, #eee, #f9f9f9, #eee); background-image: linear-gradient(to bottom, #eee, #f9f9f9, #eee); padding: 0.1em 0.3em; font-family: inherit; font-size: 0.9em;" title="">k</span></span></span></span></span> Speak, Pray to &lt;Deity&gt; or Begin a performance, Give a sermon
+</td></tr>
+<tr>
+<td>staying occupied
+</td>
+<td>being unoccupied
+</td>
+<td>HARD_WORK, ACTIVITY_LEVEL
+</td>
+<td>Very wide variety of actions
+</td></tr>
+<tr>
+<td>doing something creative
+</td>
+<td>doing nothing creative
+</td>
+<td>ART_INCLINED
+</td>
+<td>Perform or compose any work
+</td></tr>
+<tr>
+<td>doing something exciting
+</td>
+<td>leading an unexciting life
+</td>
+<td>EXCITEMENT_SEEKING
+</td>
+<td>A wide variety of actions
+</td></tr>
+<tr>
+<td>learning something
+</td>
+<td>not learning anything
+</td>
+<td>KNOWLEDGE, CURIOUS
+</td>
+<td>Gain a rank in any skill, learn a new subject from written content.
+</td></tr>
+<tr>
+<td>being with family
+</td>
+<td>being away from family
+</td>
+<td>FAMILY
+</td>
+<td>Implemented, but inaccessible without modding. If your character has close family members, this need will be filled by spending time with them (seems to only apply to blood <a href="/index.php/Relationship" title="Relationship">relations</a>). However, there is currently no way to actually do this outside of mods.
+</td></tr>
+<tr>
+<td>being with friends
+</td>
+<td>being away from friends
+</td>
+<td>FRIENDSHIP
+</td>
+<td>Unimplemented
+</td></tr>
+<tr>
+<td>hearing eloquent speech
+</td>
+<td>being unable to hear eloquent speech
+</td>
+<td>ELOQUENCE
+</td>
+<td>Hear or recite poetry
+</td></tr>
+<tr>
+<td>upholding tradition
+</td>
+<td>being away from traditions
+</td>
+<td>TRADITION
+</td>
+<td>Perform any improvisational form
+</td></tr>
+<tr>
+<td>self-examination
+</td>
+<td>a lack of introspection
+</td>
+<td>INTROSPECTION
+</td>
+<td>read anything, compose song or poetry (automatically self-indulgent), craft a figurine of yourself
+</td></tr>
+<tr>
+<td>making merry
+</td>
+<td>being unable to make merry
+</td>
+<td>MERRIMENT, HUMOR
+</td>
+<td>Recite any poem
+</td></tr>
+<tr>
+<td>practicing a craft
+</td>
+<td>being unable to practice a craft
+</td>
+<td>CRAFTMANSHIP
+</td>
+<td>Craft an item (e.g., Knapping, Bone Carving)
+</td></tr>
+<tr>
+<td>practicing a martial art
+</td>
+<td>being unable to practice a martial art
+</td>
+<td>MARTIAL_PROWESS
+</td>
+<td>Gain a rank in any combat skill
+</td></tr>
+<tr>
+<td>practicing a skill
+</td>
+<td>being unable to practice a skill
+</td>
+<td>SKILL
+</td>
+<td>Gain a rank in any skill
+</td></tr>
+<tr>
+<td>taking it easy
+</td>
+<td>being unable to take it easy
+</td>
+<td>LEISURE_TIME
+</td>
+<td>Watch a performance.
+</td></tr>
+<tr>
+<td>making romance
+</td>
+<td>being unable to make romance
+</td>
+<td>ROMANCE, LOVE PROPENSITY
+</td>
+<td>Unimplemented
+</td></tr>
+<tr>
+<td>seeing animals
+</td>
+<td>being away from animals
+</td>
+<td>NATURE
+</td>
+<td>Animal in line of sight (must also see you?).
+</td></tr>
+<tr>
+<td>seeing a great beast
+</td>
+<td>being away from great beasts
+</td>
+<td>EXCITEMENT_SEEKING, NATURE, CURIOSITY
+</td>
+<td>Same as above, but has LARGE_PREDATOR token, or larger than human and lacks CAN_LEARN.
+</td></tr>
+<tr>
+<td>acquiring something
+</td>
+<td>being unable to acquire something
+</td>
+<td>GREED, COMMERCE
+</td>
+<td>Acquire any item by trade or demand
+</td></tr>
+<tr>
+<td>eating a good meal
+</td>
+<td>a lack of decent meals
+</td>
+<td>IMMODERATION
+</td>
+<td>Eating a sufficiently valuable meal. Foods with an <a href="/index.php/Item_value" title="Item value">item value</a> of at least 4☼ count.
+</td></tr>
+<tr>
+<td>fighting
+</td>
+<td>being unable to fight
+</td>
+<td>VIOLENT
+</td>
+<td>Engage in any combat of any lethality
+</td></tr>
+<tr>
+<td>causing trouble
+</td>
+<td>a lack of trouble-making
+</td>
+<td>HARMONY, DISCORD
+</td>
+<td>Fight or Argue
+</td></tr>
+<tr>
+<td>arguing
+</td>
+<td>being unable to argue
+</td>
+<td>FRIENDLINESS
+</td>
+<td>Get into any disagreement about values
+</td></tr>
+<tr>
+<td>being extravagant
+</td>
+<td>being unable to be extravagant
+</td>
+<td>IMMODESTY
+</td>
+<td>Wear any item with a quality modifier on a body part - a waterskin will not work, as it can only be worn <i>in</i> another item of clothing
+</td></tr>
+<tr>
+<td>wandering
+</td>
+<td>being unable to wander
+</td>
+<td>NATURE, ACTIVITY LEVEL
+</td>
+<td>Move to/from any site or region tile
+</td></tr>
+<tr>
+<td>helping somebody
+</td>
+<td>being unable to help anybody
+</td>
+<td>ALTRUISM, SACRIFICE
+</td>
+<td>Reunite family members
+</td></tr>
+<tr>
+<td>thinking abstractly
+</td>
+<td>a lack of abstract thinking
+</td>
+<td>ABSTRACT_INCLINED
+</td>
+<td>Read or write any written content, or compose music or a poem
+</td></tr>
+<tr>
+<td>admiring art
+</td>
+<td>being unable to admire art
+</td>
+<td>ARTWORK
+</td>
+<td>Exposure to artistic crafts, examining adornments and coins
+</td></tr></tbody></table>
+<p>Satisfying any need will usually result in a good thought and a mild decrease in stress. (If the dwarf has extremely low CHEER, they may "felt nothing after X").
+</p><p>Creatures with <code><a href="/index.php/Creature_token#NOEMOTION" title="Creature token">[NOEMOTION]</a></code> cannot satisfy any need and will inevitably become 'distracted'. In unmodded games, this concerns only <a href="/index.php/Intelligent_undead" title="Intelligent undead">Intelligent undead</a>.
+</p>
+<h2><span class="mw-headline" id="Adventure_mode_meta-strategy">Adventure mode meta-strategy</span></h2>
+<p>Upon creating your adventurer, you may want to avoid having any of the non-fulfillable needs: romance, family, friends. Otherwise, you will suffer never-ending <a href="/index.php/Focus" class="mw-redirect" title="Focus">focus</a> disadvantages. 
+Some precaution is necessary in sacrifice/altruism -&gt; helping capability is not available as long as you're quite weak (fighting; companions), and maybe in martial prowess if you're not constantly fighting, and so increasing your stats. To fulfill your booze needs, you'll have to visit human towns' taverns or other dwarven fortresses quite often (and fill your extra water storage containers with ale from the barrels for on the road).
+</p></div>

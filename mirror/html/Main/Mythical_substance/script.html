@@ -1,0 +1,96 @@
+<div class="mw-parser-output"><div class="mw-highlight mw-highlight-lang-lua mw-content-ltr" dir="ltr"><pre><span></span><span class="n">mythical_healing_adjectives</span><span class="o">=</span><span class="p">{</span>
+    <span class="s2">&quot;curious&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;weird&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;odd&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;strange&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;unusual&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;peculiar&quot;</span>
+<span class="p">}</span>
+
+<span class="n">mythical_healing_liquids</span><span class="o">=</span><span class="p">{</span>
+    <span class="s2">&quot;liquid&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;fluid&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;broth&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;juice&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;goo&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;liquor&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;solution&quot;</span>
+<span class="p">}</span>
+
+<span class="n">mythical_healing_alcohols</span><span class="o">=</span><span class="p">{</span>
+    <span class="n">liquor</span><span class="o">=</span><span class="kc">true</span>
+<span class="p">}</span>
+
+<span class="n">mythical_healing_globs</span><span class="o">=</span><span class="p">{</span>
+    <span class="s2">&quot;jelly&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;pulp&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;wax&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;jam&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;dough&quot;</span>
+<span class="p">}</span>
+
+<span class="n">materials</span><span class="p">.</span><span class="n">mythical_healing</span><span class="p">.</span><span class="n">default</span><span class="o">=</span><span class="kr">function</span><span class="p">()</span>
+    <span class="kd">local</span> <span class="n">name_str</span> <span class="o">=</span> <span class="n">pick_random</span><span class="p">(</span><span class="n">mythical_healing_adjectives</span><span class="p">)</span>
+    <span class="kd">local</span> <span class="n">noun</span><span class="o">=</span><span class="s2">&quot;&quot;</span>
+    <span class="kd">local</span> <span class="n">lines</span><span class="o">=</span><span class="p">{}</span>
+    <span class="kr">if</span> <span class="n">one_in</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span> <span class="kr">then</span>
+        <span class="n">noun</span><span class="o">=</span><span class="n">pick_random</span><span class="p">(</span><span class="n">mythical_healing_liquids</span><span class="p">)</span>
+        <span class="n">name_str</span><span class="o">=</span><span class="n">name_str</span><span class="o">..</span><span class="s2">&quot; &quot;</span><span class="o">..</span><span class="n">noun</span>
+        <span class="n">lines</span><span class="p">[</span><span class="o">#</span><span class="n">lines</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span><span class="o">=</span><span class="s2">&quot;[STATE_NAME_ADJ:LIQUID:&quot;</span><span class="o">..</span><span class="n">name_str</span><span class="o">..</span><span class="s2">&quot;]&quot;</span>
+        <span class="n">lines</span><span class="p">[</span><span class="o">#</span><span class="n">lines</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span><span class="o">=</span><span class="s2">&quot;[STATE_NAME_ADJ:ALL_SOLID:frozen ]&quot;</span><span class="o">..</span><span class="n">name_str</span><span class="o">..</span><span class="s2">&quot;]&quot;</span>
+        <span class="n">lines</span><span class="p">[</span><span class="o">#</span><span class="n">lines</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span><span class="o">=</span><span class="s2">&quot;[MELTING_POINT:9900]&quot;</span>
+    <span class="kr">else</span>
+        <span class="n">noun</span><span class="o">=</span><span class="n">pick_random</span><span class="p">(</span><span class="n">mythical_healing_globs</span><span class="p">)</span>
+        <span class="n">name_str</span><span class="o">=</span><span class="n">name_str</span><span class="o">..</span><span class="s2">&quot; &quot;</span><span class="o">..</span><span class="n">noun</span>
+        <span class="n">lines</span><span class="p">[</span><span class="o">#</span><span class="n">lines</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span><span class="o">=</span><span class="s2">&quot;[STATE_NAME_ADJ:LIQUID:molten &quot;</span><span class="o">..</span><span class="n">name_str</span><span class="o">..</span><span class="s2">&quot;]&quot;</span>
+        <span class="n">lines</span><span class="p">[</span><span class="o">#</span><span class="n">lines</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span><span class="o">=</span><span class="s2">&quot;[STATE_NAME_ADJ:ALL_SOLID:]&quot;</span><span class="o">..</span><span class="n">name_str</span><span class="o">..</span><span class="s2">&quot;]&quot;</span>
+        <span class="n">lines</span><span class="p">[</span><span class="o">#</span><span class="n">lines</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span><span class="o">=</span><span class="s2">&quot;[MELTING_POINT:10200]&quot;</span>
+    <span class="kr">end</span>
+    <span class="n">lines</span><span class="p">[</span><span class="o">#</span><span class="n">lines</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span><span class="o">=</span><span class="s2">&quot;[STATE_NAME_ADJ:GAS:boiling &quot;</span><span class="o">..</span><span class="n">name_str</span><span class="o">..</span><span class="s2">&quot;]&quot;</span>
+    <span class="n">lines</span><span class="p">[</span><span class="o">#</span><span class="n">lines</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span><span class="o">=</span><span class="s2">&quot;[BOILING_POINT:12000]&quot;</span>
+    <span class="n">populate_monotone_color_pattern</span><span class="p">()</span>
+    <span class="kd">local</span> <span class="n">col_pat</span><span class="o">=</span><span class="n">pick_random</span><span class="p">(</span><span class="n">monotone_color_pattern</span><span class="p">)</span>
+    <span class="kr">if</span> <span class="n">col_pat</span> <span class="kr">then</span>
+        <span class="kd">local</span> <span class="n">col</span> <span class="o">=</span> <span class="n">world</span><span class="p">.</span><span class="n">descriptor</span><span class="p">.</span><span class="n">color</span><span class="p">[</span><span class="n">col_pat</span><span class="p">.</span><span class="n">color</span><span class="p">]</span>
+        <span class="n">lines</span><span class="p">[</span><span class="o">#</span><span class="n">lines</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span><span class="o">=</span><span class="s2">&quot;[STATE_COLOR:ALL:&quot;</span><span class="o">..</span><span class="n">col</span><span class="p">.</span><span class="n">token</span><span class="o">..</span><span class="s2">&quot;]&quot;</span>
+        <span class="n">lines</span><span class="p">[</span><span class="o">#</span><span class="n">lines</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span><span class="o">=</span><span class="s2">&quot;[DISPLAY_COLOR:&quot;</span><span class="o">..</span><span class="n">col</span><span class="p">.</span><span class="n">col_f</span><span class="o">..</span><span class="s2">&quot;:0:&quot;</span><span class="o">..</span><span class="n">col</span><span class="p">.</span><span class="n">col_br</span>
+    <span class="kr">else</span>
+        <span class="n">lines</span><span class="p">[</span><span class="o">#</span><span class="n">lines</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span><span class="o">=</span><span class="s2">&quot;[DISPLAY_COLOR:1:0:1]&quot;</span>
+    <span class="kr">end</span>
+    <span class="n">lines</span><span class="p">[</span><span class="o">#</span><span class="n">lines</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span><span class="o">=</span><span class="s2">&quot;[MATERIAL_VALUE:1]&quot;</span>
+    <span class="n">lines</span><span class="p">[</span><span class="o">#</span><span class="n">lines</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span><span class="o">=</span><span class="s2">&quot;[SPEC_HEAT:4181]&quot;</span>
+    <span class="n">lines</span><span class="p">[</span><span class="o">#</span><span class="n">lines</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span><span class="o">=</span><span class="s2">&quot;[IGNITE_POINT:NONE]&quot;</span>
+    <span class="n">lines</span><span class="p">[</span><span class="o">#</span><span class="n">lines</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span><span class="o">=</span><span class="s2">&quot;[HEATDAM_POINT:NONE]&quot;</span>
+    <span class="n">lines</span><span class="p">[</span><span class="o">#</span><span class="n">lines</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span><span class="o">=</span><span class="s2">&quot;[COLDDAM_POINT:NONE]&quot;</span>
+    <span class="n">lines</span><span class="p">[</span><span class="o">#</span><span class="n">lines</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span><span class="o">=</span><span class="s2">&quot;[MAT_FIXED_TEMP:NONE]&quot;</span>
+    <span class="n">lines</span><span class="p">[</span><span class="o">#</span><span class="n">lines</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span><span class="o">=</span><span class="s2">&quot;[MOLAR_MASS:1]&quot;</span>
+    
+    <span class="n">lines</span><span class="p">[</span><span class="o">#</span><span class="n">lines</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span><span class="o">=</span><span class="s2">&quot;[EDIBLE_VERMIN]&quot;</span>
+    <span class="n">lines</span><span class="p">[</span><span class="o">#</span><span class="n">lines</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span><span class="o">=</span><span class="s2">&quot;[EDIBLE_RAW]&quot;</span>
+    <span class="n">lines</span><span class="p">[</span><span class="o">#</span><span class="n">lines</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span><span class="o">=</span><span class="s2">&quot;[EDIBLE_COOKED]&quot;</span>
+    <span class="n">lines</span><span class="p">[</span><span class="o">#</span><span class="n">lines</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span><span class="o">=</span><span class="s2">&quot;[DO_NOT_CLEAN_GLOB]&quot;</span>
+    <span class="kr">if</span> <span class="n">mythical_healing_alcohols</span><span class="p">[</span><span class="n">noun</span><span class="p">]</span> <span class="kr">then</span> <span class="c1">-- i&#39;m sure you can think of some alcoholic globs if you want</span>
+        <span class="n">lines</span><span class="p">[</span><span class="o">#</span><span class="n">lines</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span><span class="o">=</span><span class="s2">&quot;[ALCOHOL]&quot;</span>
+    <span class="kr">end</span>
+    <span class="n">lines</span><span class="p">[</span><span class="o">#</span><span class="n">lines</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span><span class="o">=</span><span class="s2">&quot;[ENTERS_BLOOD]&quot;</span>
+    <span class="n">lines</span><span class="p">[</span><span class="o">#</span><span class="n">lines</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span><span class="o">=</span><span class="s2">&quot;    [SYNDROME]&quot;</span>
+    <span class="n">lines</span><span class="p">[</span><span class="o">#</span><span class="n">lines</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span><span class="o">=</span><span class="s2">&quot;        [SYN_NAME:&quot;</span><span class="o">..</span><span class="n">name_str</span><span class="o">..</span><span class="s2">&quot; effect]&quot;</span>
+    <span class="n">lines</span><span class="p">[</span><span class="o">#</span><span class="n">lines</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span><span class="o">=</span><span class="s2">&quot;        [SYN_AFFECTED_CLASS:GENERAL_POISON]&quot;</span>
+    <span class="n">lines</span><span class="p">[</span><span class="o">#</span><span class="n">lines</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span><span class="o">=</span><span class="s2">&quot;        [SYN_INGESTED]&quot;</span>
+    <span class="cm">--[[ all of this was in a for loop with individual creature effects listed out but (I *think*) the design purpose for that is fulfilled</span>
+<span class="cm">         by having it all out in Lua anyway, so I&#39;m just going to hardcode it here and if users wanna mod it they can add their own function]]</span>
+    <span class="n">lines</span><span class="p">[</span><span class="o">#</span><span class="n">lines</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span><span class="o">=</span><span class="s2">&quot;        [CE_REGROW_PARTS:SEV:100:PROB:100:START:0:PEAK:0:END:12:ABRUPT:BP:BY_CATEGORY:ALL:ALL]&quot;</span>
+    <span class="n">lines</span><span class="p">[</span><span class="o">#</span><span class="n">lines</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span><span class="o">=</span><span class="s2">&quot;        [CE_CLOSE_OPEN_WOUNDS:SEV:100:PROB:100:START:0:PEAK:0:END:12:ABRUPT:BP:BY_CATEGORY:ALL:ALL]&quot;</span>
+    <span class="n">lines</span><span class="p">[</span><span class="o">#</span><span class="n">lines</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span><span class="o">=</span><span class="s2">&quot;        [CE_HEAL_TISSUES:SEV:100:PROB:100:START:0:PEAK:0:END:12:ABRUPT:BP:BY_CATEGORY:ALL:ALL]&quot;</span>
+    <span class="n">lines</span><span class="p">[</span><span class="o">#</span><span class="n">lines</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span><span class="o">=</span><span class="s2">&quot;        [CE_HEAL_NERVES:SEV:100:PROB:100:START:0:PEAK:0:END:12:ABRUPT:BP:BY_CATEGORY:ALL:ALL]&quot;</span>
+    <span class="n">lines</span><span class="p">[</span><span class="o">#</span><span class="n">lines</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span><span class="o">=</span><span class="s2">&quot;        [CE_STOP_BLEEDING:SEV:100:PROB:100:START:0:PEAK:0:END:12:ABRUPT:BP:BY_CATEGORY:ALL:ALL]&quot;</span>
+    <span class="n">lines</span><span class="p">[</span><span class="o">#</span><span class="n">lines</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span><span class="o">=</span><span class="s2">&quot;        [CE_REDUCE_PAIN:SEV:100:PROB:100:START:0:PEAK:0:END:12:ABRUPT:BP:BY_CATEGORY:ALL:ALL]&quot;</span>
+    <span class="n">lines</span><span class="p">[</span><span class="o">#</span><span class="n">lines</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span><span class="o">=</span><span class="s2">&quot;        [CE_REDUCE_DIZZINESS:SEV:100:PROB:100:START:0:PEAK:0:END:12:ABRUPT]&quot;</span>
+    <span class="n">lines</span><span class="p">[</span><span class="o">#</span><span class="n">lines</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span><span class="o">=</span><span class="s2">&quot;        [CE_REDUCE_NAUSEA:SEV:100:PROB:100:START:0:PEAK:0:END:12:ABRUPT]&quot;</span>
+    <span class="n">lines</span><span class="p">[</span><span class="o">#</span><span class="n">lines</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span><span class="o">=</span><span class="s2">&quot;        [CE_REDUCE_SWELLING:SEV:100:PROB:100:START:0:PEAK:0:END:12:ABRUPT:BP:BY_CATEGORY:ALL:ALL]&quot;</span>
+    <span class="n">lines</span><span class="p">[</span><span class="o">#</span><span class="n">lines</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span><span class="o">=</span><span class="s2">&quot;        [CE_CURE_INFECTION:SEV:100:PROB:100:START:0:PEAK:0:END:12:ABRUPT:BP:BY_CATEGORY:ALL:ALL]&quot;</span>
+    <span class="n">lines</span><span class="p">[</span><span class="o">#</span><span class="n">lines</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span><span class="o">=</span><span class="s2">&quot;        [CE_REDUCE_PARALYSIS:SEV:100:PROB:100:START:0:PEAK:0:END:12:ABRUPT:BP:BY_CATEGORY:ALL:ALL]&quot;</span>
+    <span class="n">lines</span><span class="p">[</span><span class="o">#</span><span class="n">lines</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span><span class="o">=</span><span class="s2">&quot;        [CE_REDUCE_FEVER:SEV:100:PROB:100:START:0:PEAK:0:END:12:ABRUPT]&quot;</span>
+    <span class="kr">return</span> <span class="p">{</span><span class="n">mat</span><span class="o">=</span><span class="n">lines</span><span class="p">,</span><span class="n">weight</span><span class="o">=</span><span class="mi">1</span><span class="p">}</span>
+<span class="kr">end</span>
+</pre></div></div>

@@ -1,0 +1,89 @@
+<div class="mw-parser-output"><div class="mw-highlight mw-highlight-lang-lua mw-content-ltr" dir="ltr"><pre><span></span><span class="n">creatures</span><span class="p">.</span><span class="n">night_creature</span><span class="p">.</span><span class="n">nightmare</span><span class="p">.</span><span class="n">default</span><span class="o">=</span><span class="kr">function</span><span class="p">(</span><span class="n">tok</span><span class="p">)</span>
+    <span class="kd">local</span> <span class="n">lines</span><span class="o">=</span><span class="p">{}</span>
+    <span class="kd">local</span> <span class="n">options</span><span class="o">=</span><span class="p">{</span>
+        <span class="n">spheres</span><span class="o">=</span><span class="p">{</span>
+            <span class="n">NIGHT</span><span class="o">=</span><span class="kc">true</span><span class="p">,</span>
+            <span class="n">NIGHTMARES</span><span class="o">=</span><span class="kc">true</span><span class="p">,</span>
+            <span class="n">MISERY</span><span class="o">=</span><span class="kc">true</span>
+        <span class="p">},</span>
+        <span class="n">forced_color</span><span class="o">=</span><span class="p">{</span>
+            <span class="n">f</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
+            <span class="n">b</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
+            <span class="n">br</span><span class="o">=</span><span class="mi">1</span>
+        <span class="p">},</span>
+        <span class="n">no_general_poison</span><span class="o">=</span><span class="kc">true</span><span class="p">,</span>
+        <span class="n">blood_color</span><span class="o">=</span><span class="kr">function</span><span class="p">(</span><span class="n">cl</span><span class="p">)</span>
+            <span class="c1">-- DARKER MAGENTA COLORS</span>
+            <span class="kr">return</span> <span class="n">cl</span><span class="p">.</span><span class="n">h</span><span class="o">&gt;=</span><span class="mi">260</span> <span class="ow">and</span> <span class="n">cl</span><span class="p">.</span><span class="n">h</span> <span class="o">&lt;=</span> <span class="mi">340</span> <span class="ow">and</span> <span class="n">cl</span><span class="p">.</span><span class="n">v</span> <span class="o">&lt;=</span> <span class="mf">0.5</span> <span class="ow">and</span> <span class="n">cl</span><span class="p">.</span><span class="n">v</span> <span class="o">&gt;=</span> <span class="mf">0.1</span>
+        <span class="kr">end</span><span class="p">,</span>
+        <span class="n">fallback_pref_str</span><span class="o">=</span><span class="s2">&quot;unfathomably horrifying nature&quot;</span><span class="p">,</span>
+        <span class="n">token</span><span class="o">=</span><span class="n">tok</span>
+    <span class="p">}</span>
+    <span class="n">night_creature_universals</span><span class="p">(</span><span class="n">lines</span><span class="p">,</span><span class="n">options</span><span class="p">)</span>
+    <span class="n">options</span><span class="p">.</span><span class="n">humanoid_only</span><span class="o">=</span><span class="kc">false</span>
+    <span class="n">options</span><span class="p">.</span><span class="n">cannot_have_antennae</span><span class="o">=</span><span class="kc">false</span>
+    <span class="kr">if</span> <span class="n">one_in</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span> <span class="kr">then</span> <span class="n">options</span><span class="p">.</span><span class="n">glowing_eyes</span><span class="o">=</span><span class="kc">true</span> <span class="kr">end</span>
+    <span class="n">lines</span><span class="p">[</span><span class="o">#</span><span class="n">lines</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span><span class="o">=</span><span class="s2">&quot;[NIGHT_CREATURE_NIGHTMARE]&quot;</span>
+
+    <span class="n">lines</span><span class="p">[</span><span class="o">#</span><span class="n">lines</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span><span class="o">=</span><span class="s2">&quot;[NATURAL_SKILL:WRESTLING:6]&quot;</span>
+    <span class="n">lines</span><span class="p">[</span><span class="o">#</span><span class="n">lines</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span><span class="o">=</span><span class="s2">&quot;[NATURAL_SKILL:BITE:6]&quot;</span>
+    <span class="n">lines</span><span class="p">[</span><span class="o">#</span><span class="n">lines</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span><span class="o">=</span><span class="s2">&quot;[NATURAL_SKILL:MELEE_COMBAT:6]&quot;</span>
+    <span class="n">lines</span><span class="p">[</span><span class="o">#</span><span class="n">lines</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span><span class="o">=</span><span class="s2">&quot;[NATURAL_SKILL:GRASP_STRIKE:6]&quot;</span>
+    <span class="n">lines</span><span class="p">[</span><span class="o">#</span><span class="n">lines</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span><span class="o">=</span><span class="s2">&quot;[NATURAL_SKILL:STANCE_STRIKE:6]&quot;</span>
+    <span class="n">lines</span><span class="p">[</span><span class="o">#</span><span class="n">lines</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span><span class="o">=</span><span class="s2">&quot;[NATURAL_SKILL:DODGING:6]&quot;</span>
+    <span class="n">lines</span><span class="p">[</span><span class="o">#</span><span class="n">lines</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span><span class="o">=</span><span class="s2">&quot;[NATURAL_SKILL:SITUATIONAL_AWARENESS:6]&quot;</span>
+
+    <span class="n">lines</span><span class="p">[</span><span class="o">#</span><span class="n">lines</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span><span class="o">=</span><span class="s2">&quot;[NO_GENDER]&quot;</span>
+    <span class="n">lines</span><span class="p">[</span><span class="o">#</span><span class="n">lines</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span><span class="o">=</span><span class="s2">&quot;[CLUSTER_NUMBER:1:1]&quot;</span>
+    <span class="cm">--[[******************************* BOGEY</span>
+<span class="cm">        --atts</span>
+<span class="cm">    lines[#lines+1]=&quot;[PHYS_ATT_RANGE:STRENGTH:450:1050:1150:1250:1350:1550:2250]&quot;</span>
+<span class="cm">    lines[#lines+1]=&quot;[PHYS_ATT_RANGE:TOUGHNESS:450:1050:1150:1250:1350:1550:2250]&quot;</span>
+<span class="cm">    lines[#lines+1]=&quot;[PHYS_ATT_RANGE:ENDURANCE:450:1050:1150:1250:1350:1550:2250]&quot;</span>
+<span class="cm">    lines[#lines+1]=&quot;[PHYS_ATT_RANGE:RECUPERATION:450:1050:1150:1250:1350:1550:2250]&quot;</span>
+<span class="cm">    lines[#lines+1]=&quot;[PHYS_ATT_RANGE:DISEASE_RESISTANCE:700:1300:1400:1500:1600:1800:2500]&quot;</span>
+<span class="cm">    lines[#lines+1]=&quot;[MENT_ATT_RANGE:ANALYTICAL_ABILITY:1250:1500:1750:2000:2500:3000:5000]&quot;</span>
+<span class="cm">    lines[#lines+1]=&quot;[MENT_ATT_RANGE:FOCUS:1250:1500:1750:2000:2500:3000:5000]&quot;</span>
+<span class="cm">    lines[#lines+1]=&quot;[MENT_ATT_RANGE:WILLPOWER:1250:1500:1750:2000:2500:3000:5000]&quot;</span>
+<span class="cm">    lines[#lines+1]=&quot;[MENT_ATT_RANGE:PATIENCE:0:333:666:1000:2333:3666:5000]&quot;</span>
+<span class="cm">    lines[#lines+1]=&quot;[MENT_ATT_RANGE:MEMORY:1250:1500:1750:2000:2500:3000:5000]&quot;</span>
+<span class="cm">    lines[#lines+1]=&quot;[MENT_ATT_RANGE:LINGUISTIC_ABILITY:450:1050:1150:1250:1350:1550:2250]&quot;</span>
+<span class="cm">    lines[#lines+1]=&quot;[MENT_ATT_RANGE:MUSICALITY:0:333:666:1000:2333:3666:5000]&quot;</span>
+<span class="cm">    lines[#lines+1]=&quot;[MENT_ATT_RANGE:SOCIAL_AWARENESS:700:1300:1400:1500:1600:1800:2500]&quot;</span>
+<span class="cm">MENTAL_ATTRIBUTE_CREATIVITY,</span>
+<span class="cm">MENTAL_ATTRIBUTE_INTUITION,</span>
+<span class="cm">MENTAL_ATTRIBUTE_SPATIAL_SENSE,</span>
+<span class="cm">MENTAL_ATTRIBUTE_KINESTHETIC_SENSE,</span>
+<span class="cm">MENTAL_ATTRIBUTE_EMPATHY,</span>
+<span class="cm">    ]]</span>
+    <span class="n">lines</span><span class="p">[</span><span class="o">#</span><span class="n">lines</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span><span class="o">=</span><span class="s2">&quot;[PERSONALITY:ANXIETY_PROPENSITY:0:0:0]&quot;</span>
+    <span class="n">lines</span><span class="p">[</span><span class="o">#</span><span class="n">lines</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span><span class="o">=</span><span class="s2">&quot;[PERSONALITY:DEPRESSION_PROPENSITY:0:0:0]&quot;</span>
+    <span class="n">lines</span><span class="p">[</span><span class="o">#</span><span class="n">lines</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span><span class="o">=</span><span class="s2">&quot;[PERSONALITY:BASHFUL:0:0:0]&quot;</span>
+    <span class="n">lines</span><span class="p">[</span><span class="o">#</span><span class="n">lines</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span><span class="o">=</span><span class="s2">&quot;[PERSONALITY:STRESS_VULNERABILITY:0:0:0]&quot;</span>
+    <span class="n">lines</span><span class="p">[</span><span class="o">#</span><span class="n">lines</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span><span class="o">=</span><span class="s2">&quot;[PERSONALITY:FRIENDLINESS:0:0:0]&quot;</span>
+    <span class="n">lines</span><span class="p">[</span><span class="o">#</span><span class="n">lines</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span><span class="o">=</span><span class="s2">&quot;[PERSONALITY:ASSERTIVENESS:100:100:100]&quot;</span>
+    <span class="n">lines</span><span class="p">[</span><span class="o">#</span><span class="n">lines</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span><span class="o">=</span><span class="s2">&quot;[PERSONALITY:DISDAIN_ADVICE:100:100:100]&quot;</span>
+    <span class="n">lines</span><span class="p">[</span><span class="o">#</span><span class="n">lines</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span><span class="o">=</span><span class="s2">&quot;[PERSONALITY:CHEER_PROPENSITY:0:0:0]&quot;</span>
+    <span class="n">lines</span><span class="p">[</span><span class="o">#</span><span class="n">lines</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span><span class="o">=</span><span class="s2">&quot;[PERSONALITY:GRATITUDE:0:0:0]&quot;</span>
+    <span class="n">lines</span><span class="p">[</span><span class="o">#</span><span class="n">lines</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span><span class="o">=</span><span class="s2">&quot;[PERSONALITY:TRUST:0:0:0]&quot;</span>
+    <span class="n">lines</span><span class="p">[</span><span class="o">#</span><span class="n">lines</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span><span class="o">=</span><span class="s2">&quot;[PERSONALITY:ALTRUISM:0:0:0]&quot;</span>
+    <span class="n">lines</span><span class="p">[</span><span class="o">#</span><span class="n">lines</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span><span class="o">=</span><span class="s2">&quot;[PERSONALITY:SWAYED_BY_EMOTIONS:0:0:0]&quot;</span>
+    <span class="n">lines</span><span class="p">[</span><span class="o">#</span><span class="n">lines</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span><span class="o">=</span><span class="s2">&quot;[PERSONALITY:CRUELTY:100:100:100]&quot;</span>
+    <span class="c1">--lines[#lines+1]=&quot;[PERSONALITY:PRIDE:100:100:100]&quot;</span>
+    <span class="n">lines</span><span class="p">[</span><span class="o">#</span><span class="n">lines</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span><span class="o">=</span><span class="s2">&quot;[PERSONALITY:HUMOR:100:100:100]&quot;</span>
+    <span class="n">add_regular_tokens</span><span class="p">(</span><span class="n">lines</span><span class="p">,</span><span class="n">options</span><span class="p">)</span>
+    <span class="n">populate_sphere_info</span><span class="p">(</span><span class="n">lines</span><span class="p">,</span><span class="n">options</span><span class="p">)</span>
+    <span class="kd">local</span> <span class="n">rcp</span><span class="o">=</span><span class="n">get_random_creature_profile</span><span class="p">(</span><span class="n">options</span><span class="p">)</span>
+    <span class="n">add_body_size</span><span class="p">(</span><span class="n">lines</span><span class="p">,</span><span class="nb">math.max</span><span class="p">(</span><span class="n">rcp</span><span class="p">.</span><span class="n">min_size</span><span class="p">,</span><span class="mi">100000</span><span class="o">+</span><span class="n">trandom</span><span class="p">(</span><span class="mi">11</span><span class="p">)</span><span class="o">*</span><span class="mi">100000</span><span class="p">),</span><span class="n">options</span><span class="p">)</span>
+    <span class="n">lines</span><span class="p">[</span><span class="o">#</span><span class="n">lines</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span><span class="o">=</span><span class="s2">&quot;[CREATURE_TILE:165]&quot;</span> <span class="c1">--Ñ</span>
+    <span class="n">options</span><span class="p">.</span><span class="n">custom_desc_func</span><span class="o">=</span><span class="kr">function</span><span class="p">(</span><span class="n">options</span><span class="p">)</span>
+        <span class="kr">return</span> <span class="s2">&quot;with singular purpose it seeks to destroy the living&quot;</span>
+    <span class="kr">end</span>
+    <span class="n">build_procgen_creature</span><span class="p">(</span><span class="n">rcp</span><span class="p">,</span><span class="n">lines</span><span class="p">,</span><span class="n">options</span><span class="p">)</span>
+    <span class="n">lines</span><span class="p">[</span><span class="o">#</span><span class="n">lines</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span><span class="o">=</span><span class="s2">&quot;[GO_TO_START]&quot;</span>
+    <span class="kd">local</span> <span class="n">name_str</span><span class="o">=</span><span class="s2">&quot;nightmare:nightmares:nightmare]&quot;</span>
+    <span class="n">lines</span><span class="p">[</span><span class="o">#</span><span class="n">lines</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span><span class="o">=</span><span class="s2">&quot;[NAME:&quot;</span><span class="o">..</span><span class="n">name_str</span>
+    <span class="n">lines</span><span class="p">[</span><span class="o">#</span><span class="n">lines</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span><span class="o">=</span><span class="s2">&quot;[CASTE_NAME:&quot;</span><span class="o">..</span><span class="n">name_str</span>
+    <span class="kr">return</span> <span class="p">{</span><span class="n">raws</span><span class="o">=</span><span class="n">lines</span><span class="p">,</span><span class="n">weight</span><span class="o">=</span><span class="mi">1</span><span class="p">}</span>
+<span class="kr">end</span>
+</pre></div></div>

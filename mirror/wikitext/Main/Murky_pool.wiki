@@ -1,0 +1,232 @@
+{{Quality|Superior}}
+{{av}}
+{{buggy}}
+[[File:murky_water.jpg|thumb|300px|right|Water that has seen better, clearer days.]]'''Murky pools''' are small bodies of [[water#Stagnant water|stagnant water]] on the surface. Murky pools form tiny [[biome]]s that are enclosed by much larger biomes, which is to say that the pool itself and tiles adjacent to the pool are counted as a biome. All kinds of [[vermin]] populate pools, including many edible and [[hateable]] vermin (and other creatures, see [[Murky_pool#Bugs|Bugs]]). Murky pools won't be shown on the [[embark|embark screen]], but they are a very common feature in any non-desert non-freezing biome, and will usually appear in high numbers - some pools can be found merged with [[river]]s.
+
+Murky pools contain a finite amount of water that can be drained and replenished over time - it can evaporate completely during [[calendar|summer]] in sufficiently hot [[climate]]s, and be slowly refilled by [[rain]]water, or be artificially drained or filled up.
+
+There are six types of pools, divided by climate and salinity of the water, listed in the following table:
+
+{| {{prettytable}}
+|- style="background:#dddddd"
+! style="background:#aaaaaa"|
+! '''Freshwater''' !! '''Brackish water''' !! '''Saltwater'''
+|-
+! style="background:#dddddd"| '''Temperate'''
+| Temperate freshwater pool || Temperate brackish pool || Temperate saltwater pool
+|-
+! style="background:#dddddd"| '''Tropical'''
+| Tropical freshwater pool || Tropical brackish pool || Tropical saltwater pool
+|}
+
+== Uses ==
+=== Fishing ===
+Dwarves with the [[fishing]] labor enabled will catch [[vermin]] fish from nearby murky pools. Fish populations will run out very quickly, and can be easily fished to local [[extinction]]. "Murky pool" tiles cannot be created artificially, but for the purpose of fishing, all tiles will yield "murky pool" fish (e.g. turtles) unless they were originally part of a specific map feature (e.g. a river, a lake/ocean biome, or an underground cavern) when you embarked.
+
+=== Water source ===
+A murky pool can be used as a water source, but this is not recommended – drinking stagnant water will give dwarves an unhappy [[thought]], and using it to wash [[wound]]s will lead to [[health care#Infection|infection]]. Building a [[well]] will not clean the water, but filtering the stagnant water through a [[screw pump]] will, which can then flow into a dwarf-made [[cistern]]. Dwarves generally won't use stagnant water from murky pools if [[alcohol]] or clean water is available.
+
+== Removal ==
+In order to remove a murky pool, you must first remove the water. There are several ways to achieve this:
+# Let the pool evaporate (only works in hot/scorching climates)
+# Dig into the pool from the side and let the water drain away to somewhere else
+# Drain the pool with [[screw pump]]s
+
+The bottom of a murky pool will keep its "murky pool" status, presumably to let the game know that water should collect there during rain storms. You can't build certain buildings, including [[farm plot]]s, on dry "murky pool" tiles. Murky pool tiles will also block [[trade depot]] access. To de-murk those tiles, simply build a [[paved road]] on top of them, and then remove it – the floor covered by the road will become standard soil once the road is removed. Be aware that once you do this, the tiles won't gather rainwater any more.
+
+== Dangers ==
+When murky pools thaw or freeze, they do so instantly. Any dwarf standing on the ice will plunge into the water, with a risk of drowning if they can not find a nearby ramp quickly enough. Unless they have adequate or better [[swimming]] skills, the fall will [[status icon|stun]] them, increasing the chance of death. If a dwarf is in a murky pool when winter comes (perhaps because the water is shallow enough to walk through) and the water freezes, the dwarf will be encased in the ice and immediately die. To reduce the chance of this happening, you can use [[traffic]] designations: mark the ice as restricted, and put a high traffic ring around the perimeter of the pool. Or, if you don't need to fish from it, you can construct a [[wall]] around it or a [[floor]] over it.
+
+== Wildlife ==
+=== Vermin ===
+{| class="wikitable"
+! rowspan="2"| Name
+! rowspan="2"| Graphic
+! colspan="3"| Temperate pool !! colspan="3"| Tropical pool
+|-
+! Freshwater !! Brackish !! Saltwater !! Freshwater !! Brackish !! Saltwater
+|-
+| {{Tile|∙|3:1}} [[Damselfly]]
+| style="text-align:center;"|[[File:damselfly_sprite.png]]
+| {{check}} || {{check}} || {{check}} || {{check}} || {{check}} || {{check}}
+|-
+| {{Tile|∙|3:1}} [[Dragonfly]]
+| style="text-align:center;"|[[File:dragonfly_sprite.png]]
+| {{check}} || {{check}} || {{check}} || {{check}} || {{check}} || {{check}}
+|-
+| {{Tile|·|0:1}} [[Fly]]
+| style="text-align:center;"|[[File:fly_sprite_anim.gif]]
+| {{check}} || {{check}} || {{check}} || {{check}} || {{check}} || {{check}}
+|-
+| {{Tile|∙|2:1}} [[Green tree frog]]
+| style="text-align:center;"|[[File:green_tree_frog_sprite.png]]
+| {{check}} ||   ||   ||   ||   || 
+|-
+| {{Tile|~|0:1}} [[Leech]]
+| style="text-align:center;"|[[File:leech_sprite.png]]
+| {{check}} || {{check}} || {{check}} || {{check}} || {{check}} || {{check}}
+|-
+| {{Tile|α|6:0}} [[Lungfish]]
+| style="text-align:center;"|[[File:lungfish_sprite.png]]
+|   ||   ||   || {{check}} || {{check}} || {{check}}
+|-
+| {{Tile|·|0:1}} [[Mosquito]]
+| style="text-align:center;"|[[File:mosquito_sprite_anim.gif]]
+| {{check}} || {{check}} || {{check}} || {{check}} || {{check}} || {{check}}
+|-
+| {{Tile|☼|2:0}} [[Pond turtle]]
+| style="text-align:center;"|[[File:pond_turtle_sprite.png]]
+| {{check}} || {{check}} || {{check}} || {{check}} || {{check}} || {{check}}
+|-
+| {{Tile|∙|2:0}} [[Toad]]
+| style="text-align:center;"|[[File:toad_sprite.png]]
+| {{check}} || {{check}} || {{check}} || {{check}} || {{check}} || {{check}}
+|}
+
+'''In savage pools:'''
+{| class="wikitable"
+! rowspan="2"| Name
+! rowspan="2"| Graphic
+! colspan="3"| Temperate pool !! colspan="3"| Tropical pool
+|-
+! Freshwater !! Brackish !! Saltwater !! Freshwater !! Brackish !! Saltwater
+|-
+| {{Tile|·|6:0}} [[Acorn fly]]
+| style="text-align:center;"|[[File:acorn_fly_sprite_anim.gif]]
+| {{check}} || {{check}} || {{check}} || {{check}} || {{check}} || {{check}}
+|-
+| {{Tile|∙|6:0}} [[Moghopper]]
+| style="text-align:center;"|[[File:moghopper_sprite.png]]
+| {{check}} || {{check}} || {{check}} || {{check}} || {{check}} || {{check}}
+|}
+
+'''In evil pools:'''
+{| class="wikitable"
+! rowspan="2"| Name
+! rowspan="2"| Graphic
+! colspan="3"| Temperate pool !! colspan="3"| Tropical pool
+|-
+! Freshwater !! Brackish !! Saltwater !! Freshwater !! Brackish !! Saltwater
+|-
+| {{Tile|·|4:1}} [[Blood gnat]]
+| style="text-align:center;"|[[File:blood_gnat_sprite_anim.gif]]
+| {{check}} || {{check}} || {{check}} || {{check}} || {{check}} || {{check}}
+|}
+
+== Bugs ==
+* Pond/pool populations do not replenish, gradually becoming extinct.{{bug|2780}}
+* Only vermin can spawn in murky pools, so creatures will never actually appear. Below are creatures that should be appearing in pools:
+
+{| class="wikitable"
+! rowspan="2"| Name
+! rowspan="2"| Graphic
+! colspan="3"| Temperate pool !! colspan="3"| Tropical pool
+|-
+! Freshwater !! Brackish !! Saltwater !! Freshwater !! Brackish !! Saltwater
+|-
+| {{Tile|T|2:0}} [[Alligator snapping turtle]]
+| style="text-align:center;"|[[File:alligator_snapping_turtle_sprite.png]]
+| {{check}} || {{check}} ||   ||   ||   ||  
+|-
+| {{Tile|t|2:0}} [[Common snapping turtle]]
+| style="text-align:center;"|[[File:snapping_turtle_sprite.png]]
+| {{check}} || {{check}} ||   ||   ||   ||  
+|-
+| {{Tile|o|6:0}} [[River otter]]
+| style="text-align:center;"|[[File:river_otter_sprite.png]]
+| {{check}} || {{check}} || {{check}} || {{check}} || {{check}} || {{check}}
+|}
+
+'''In savage pools:'''
+{| class="wikitable"
+! rowspan="2"| Name
+! rowspan="2"| Graphic
+! colspan="3"| Temperate pool !! colspan="3"| Tropical pool
+|-
+! Freshwater !! Brackish !! Saltwater !! Freshwater !! Brackish !! Saltwater
+|-
+| {{Tile|d|3:1}} [[Damselfly man]]
+| style="text-align:center;"|[[File:damselfly_man_sprite.png]]
+| {{check}} || {{check}} || {{check}} || {{check}} || {{check}} || {{check}}
+|-
+| {{Tile|d|3:1}} [[Dragonfly man]]
+| style="text-align:center;"|[[File:dragonfly_man_sprite.png]]
+| {{check}} || {{check}} || {{check}} || {{check}} || {{check}} || {{check}}
+|-
+| {{Tile|f|0:1}} [[Fly man]]
+| style="text-align:center;"|[[File:fly_man_sprite.png]]
+| {{check}} || {{check}} || {{check}} || {{check}} || {{check}} || {{check}}
+|-
+| {{Tile|D|3:1}} [[Giant damselfly]]
+| style="text-align:center;"|[[File:giant_damselfly_sprite.png]]
+| {{check}} || {{check}} || {{check}} || {{check}} || {{check}} || {{check}}
+|-
+| {{Tile|D|3:1}} [[Giant dragonfly]]
+| style="text-align:center;"|[[File:giant_dragonfly_sprite.png]]
+| {{check}} || {{check}} || {{check}} || {{check}} || {{check}} || {{check}}
+|-
+| {{Tile|F|0:1}} [[Giant fly]]
+| style="text-align:center;"|[[File:giant_fly_sprite.png]]
+| {{check}} || {{check}} || {{check}} || {{check}} || {{check}} || {{check}}
+|-
+| {{Tile|F|2:1}} [[Giant green tree frog]]
+| style="text-align:center;"|[[File:giant_green_tree_frog_sprite.png]]
+| {{check}} ||   ||   ||   ||   || 
+|-
+| {{Tile|L|0:1}} [[Giant leech]]
+| style="text-align:center;"|[[File:giant_leech_sprite.png]]
+| {{check}} || {{check}} || {{check}} || {{check}} || {{check}} || {{check}}
+|-
+| {{Tile|M|0:1}} [[Giant mosquito]]
+| style="text-align:center;"|[[File:giant_mosquito_sprite.png]]
+| {{check}} || {{check}} || {{check}} || {{check}} || {{check}} || {{check}}
+|-
+| {{Tile|O|6:0}} [[Giant otter]]
+| style="text-align:center;"|[[File:giant_otter_sprite.png]]
+| {{check}} || {{check}} || {{check}} || {{check}} || {{check}} || {{check}}
+|-
+| {{Tile|T|2:0}} [[Giant pond turtle]]
+| style="text-align:center;"|[[File:giant_pond_turtle_sprite.png]]
+| {{check}} || {{check}} || {{check}} || {{check}} || {{check}} || {{check}}
+|-
+| {{Tile|T|2:0}} [[Giant snapping turtle]]
+| style="text-align:center;"|[[File:giant_snapping_turtle_sprite.png]]
+| {{check}} || {{check}} ||   ||   ||   ||  
+|-
+| {{Tile|T|2:0}} [[Giant toad]]
+| style="text-align:center;"|[[File:giant_toad_sprite.png]]
+| {{check}} || {{check}} || {{check}} || {{check}} || {{check}} || {{check}}
+|-
+| {{Tile|f|2:1}} [[Green tree frog man]]
+| style="text-align:center;"|[[File:green_tree_frog_man_sprite.png]]
+| {{check}} ||   ||   ||   ||   || 
+|-
+| {{Tile|l|0:1}} [[Leech man]]
+| style="text-align:center;"|[[File:leech_man_sprite.png]]
+| {{check}} || {{check}} || {{check}} || {{check}} || {{check}} || {{check}}
+|-
+| {{Tile|m|0:1}} [[Mosquito man]]
+| style="text-align:center;"|[[File:mosquito_man_sprite.png]]
+| {{check}} || {{check}} || {{check}} || {{check}} || {{check}} || {{check}}
+|-
+| {{Tile|o|6:0}} [[Otter man]]
+| style="text-align:center;"|[[File:otter_man_sprite.png]]
+| {{check}} || {{check}} || {{check}} || {{check}} || {{check}} || {{check}}
+|-
+| {{Tile|t|2:0}} [[Pond turtle man]]
+| style="text-align:center;"|[[File:pond_turtle_man_sprite.png]]
+| {{check}} || {{check}} || {{check}} || {{check}} || {{check}} || {{check}}
+|-
+| {{Tile|t|2:0}} [[Snapping turtle man]]
+| style="text-align:center;"|[[File:snapping_turtle_man_sprite.png]]
+| {{check}} || {{check}} ||   ||   ||   ||  
+|-
+| {{Tile|t|2:0}} [[Toad man]]
+| style="text-align:center;"|[[File:toad_man_sprite.png]]
+| {{check}} || {{check}} || {{check}} || {{check}} || {{check}} || {{check}}
+|}
+
+{{Translation| dwarven = bothon agsal | elvish = meli pati | goblin = ebrå tostgud | human = sedme nique}}
+
+{{World|Biomes}}
+{{Category|Biomes}}
