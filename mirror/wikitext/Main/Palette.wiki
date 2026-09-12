@@ -1,0 +1,106 @@
+:{{for/see|more information about material state-color-based palette swapping|[[Graphics#Palettes]]}}
+:{{for/see|a list of all Descriptor Colors|[[Color]]}}
+
+'''Palette''' swapping is used to replace a set of colors from in a graphic tile with another set of colors. These sets of colors are called '''palettes'''. In the palette.png file, each row of colors is a palette. The top row of colors, by-default, is the palette-to-be-swapped used in the graphic files. The rows of color below are the palettes that it gets replaced with, defined-by-material in the palette_default.txt file. Each row, or palette, can have up to 18 colors.
+
+#These objects support palette swapping (not an exhaustive list):
+#; Buildings:
+#* [[Bridge]]s
+#* Constructed [[Floor]]s
+#* Constructed [[Stairs]] (not carved)
+#* Constructed [[Wall]]s
+#* [[Fortification]]s (both carved and constructed)
+#* [[Millstone]] (only once built)
+#* [[Windmill]]
+#* [[Quern]] (only once built)
+#* Workshop (floor only)
+#; [[Furniture]]:
+#* [[Bed]], base
+#* Bed, bedding (not pillow)
+#* [[Cabinet]]
+#* [[Cage]]
+#* [[Trap#Cage_trap|Cage Trap]]
+#* Chair/[[Throne]]
+#* [[Chest]]
+#* [[Coffin]]
+#* [[Door]]
+#* [[Grate]]
+#* [[Lever]]
+#* [[Nest box]]
+#* [[Table]]
+#; Materials:
+#* [[Block]]s
+#* Fuel ore ([[Bituminous coal]] or [[Lignite]])
+#* [[Gem]]s
+#* [[Log]]s
+#* Metal [[Bar]]s
+#* [[Ore]]s
+#* [[Glass|Raw glass]]
+#* [[Stone]]s
+#; Items:
+#* [[Amulet]]s
+#* [[Anvil]]s
+#* [[Armor]]
+#* [[Barrel]]s (unless it contains cheese)
+#* [[Bracelet]]s
+#* [[Chain]]s/Ropes
+#* [[Crown]]s
+#* [[Crutch]]
+#* [[Cup]]s/Mugs/Goblets
+#* [[Earring]]s
+#* [[Egg]]s
+#* [[Figurine]]s
+#* [[Mechanism]]s
+#* [[Instrument|Musical Instrument]]s
+#* [[Parchment]]
+#* [[Ring]]s
+#* [[Scepter]]s
+#* [[Shield]]s
+#* [[Splint]]
+#* [[Stepladder]]
+#* Terrain [[Boulder]]s
+#* [[Thread]]
+#* [[Toy]]s
+#* [[Trap component]]s
+#* [[Weapon]]s (not ammunition)
+#; Liquids:
+#* [[Beer]]
+#* [[Royal jelly]]
+#* [[Milk]]
+#; Powders:
+#* [[Flour]]
+#* [[Gypsum plaster]]
+#* [[Quicklime]]
+#* [[Sand]]
+#* [[Sugar]]
+#These objects DO NOT support palette swapping (not an exhaustive list):
+#; Buildings:
+#* Carved [[Stair]]s (not constructed stairs)
+#* Furniture in Workshop
+#* [[Hive]]s
+#; Furniture:
+#* [[Altar]] (bug)
+#* [[Millstone]] (only as item, works once built)
+#* Bed [[pillow]] (not the rest of the bed)
+#* [[Pedestal]] (bug)
+#* [[Quern]] (only as item, works once built)
+#* [[Traction Bench]] (bug)
+#; Items:
+#* [[Ammunition]] (bolts)
+#* [[Cheese]]
+#* Refined [[Fuel]] (Coke)
+#* [[Leather]]
+#* [[Tallow]]
+#; Liquids:
+#* [[Blood]]
+#* [[Magma]]
+#; Other:
+#* [[Designation]]s to construct stairs/floors/fortifications
+#* [[Driftwood]]
+#* [[Mist]]
+#* [[Farming|Field]] (both fallow and planted)
+#* [[Ramp]]s terrain
+#* Rough cavern floor
+#* [[Smoothing|Smoothed]] Floor
+#* [[Track]]s, Carved
+#* [[Stockpile]]

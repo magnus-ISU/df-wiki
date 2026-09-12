@@ -1,0 +1,79 @@
+{{Quality|Exceptional|10:19, 21 February 2023 (CST)}}
+{{av}}
+[[File:ore_sprite_preview.png|right]]'''Ores''' are left behind after [[mining]] certain varieties of [[stone]]. Ore can be [[smelter|smelted]] to create [[bar]]s of pure [[metal]] or combined to create [[alloy]]s. Many ores are quite valuable as mined without being refined, and a [[mason]] or [[stone crafter]] can work them the same as any stone.  However, ores fall into the [[economic stone]] category, and so must be designated for non-restricted use in the Stone use tab of the Labor menu {{menu icon|y}}. Others can be combined when initially smelted into alloys, while others must first be made into bars of pure metal and then ''those'' combined to create the desired alloy - see the [[alloy]] article for details.
+
+Most ores are [[fire-safe]] material; some are also [[magma-safe]].
+
+Each normal metal ore "stone" produces four bars of refined metal when [[smelter|smelted]]. Metal ores with two possible metals listed below always produce 4 bars of the first metal, and have a chance of creating 0-4 bars of the second metal as well. [[Adamantine]] ore cannot be smelted directly; it must be processed at a [[craftsdwarf's workshop]] first. Different rules apply to creating alloys.
+
+Note that, in some cases, ore [[value#material value|value]] (given below) and [[metal]] value are not the same (bismuth, iron ores). Alloys, too, often have a higher value than the ores/metals they are made of. In most cases, furniture made from the ore is as valuable as furniture made from a pure (non-alloy) metal, while requiring significantly less processing. However, furniture produced directly from ore cannot be [[melt|recycled]], and refining the ore will generally produce an additional metal bar.
+
+In ASCII mode, nearly all unmined ores are represented by the {{Raw Tile|£|7:1}} symbol.  Exceptions are native aluminum, bismuthinite, and magnetite (which appear as {{Raw Tile|^|7:1}}, {{Raw Tile|%|7:1}}, and {{Raw Tile|~|7:1}}, respectively), as well as [[cinnabar]] and [[cobaltite]] (which appear as {{Raw Tile|£|7:1}} but cannot be refined into mercury or cobalt as they would be in real life).
+
+{| class="wikitable sortable" cellspacing="0" border="1" cellpadding="5"
+|-
+! Appearance{{tooltip|*|The left shows the ore itself, the right shows the tile with the ore inside it.}}
+! Ore
+! Found in
+! Metal created
+! Value
+! Metal value
+|-
+|[[File:raw_adamantine_sprite.png]] / {{Raw Tile|£|3:7:1}}||[[Raw adamantine|Adamantine, raw]]<sup>1</sup>||The depths||[[Adamantine]]<sup>1</sup>||250||300
+|-
+|[[File:ore_dullgrey_sprite.png]] / {{Raw Tile|^|7:7:1}}||[[Native aluminum|Aluminum, native]]||All [[Igneous extrusive layer|Igneous Extrusive]]'''(S)'''||[[Aluminum]]||40||40
+|-
+|[[File:ore_darkbrown_sprite.png]] / {{Raw Tile|%|7:7:1}}||[[Bismuthinite]]||[[Granite]]'''(S)'''||[[Bismuth]]||1||2
+|-
+|[[File:ore_silvery2_sprite.png]] / {{Raw Tile|£|6:7:0}}||[[Cassiterite]]||All [[Alluvial layer|Alluvial]]'''(S)''', [[Granite]]'''(V)'''||[[Tin]]||2||2
+|-
+|[[File:ore_copper_sprite.png]] / {{Raw Tile|£|6:7:0}}||[[Native copper|Copper, native]]||All [[Igneous extrusive layer|Igneous Extrusive]]'''(V)''', [[Sandstone]]'''(V)'''||[[Copper]]||2||2
+|-
+|[[File:ore_silvery_sprite.png]] / {{Raw Tile|£|7:7:1}}||[[Galena]]||All [[Igneous extrusive layer|Igneous Extrusive]]'''(V)''', All [[Metamorphic layer|Metamorphic]]'''(V)''', [[Granite]]'''(V)''', [[Limestone]]'''(V)'''||[[Lead]], [[Silver|Silver (50%)]]||5||2 (10)
+|-
+|[[File:ore_bluish_sprite.png]] / {{Raw Tile|£|2:7:1}}||[[Garnierite]]||[[Gabbro]]'''(V)'''||[[Nickel]]||2||2
+|-
+|[[File:ore_gold_sprite.png]] / {{Raw Tile|£|6:7:1}}||[[Native gold|Gold, native]]||All [[Igneous extrusive layer|Igneous]]'''(V)''', All [[Alluvial layer|Alluvial]]'''(S)'''||[[Gold]]||30||30
+|-
+|[[File:ore_red_sprite.png]] / {{Raw Tile|£|4:7:0}}||[[Hematite]]||All [[Sedimentary layer|Sedimentary]]'''(V)''', All [[Igneous extrusive layer|Igneous Extrusive]]'''(V)''', All [[Metamorphic layer|Metamorphic]]'''(S)''', All [[Igneous intrusive layer|Igneous Intrusive]]'''(S)'''||[[Iron]]||8||10
+|-
+|[[File:ore_yellow2_sprite.png]] / {{Raw Tile|£|7:7:1}}||[[Horn silver]]||[[Native silver]]'''(S)'''||[[Silver]]||10||10
+|-
+|[[File:ore_yellow_sprite.png]] / {{Raw Tile|£|6:7:1}}||[[Limonite]]||All [[Sedimentary layer|Sedimentary]]'''(V)'''||[[Iron]]||8||10
+|-
+|[[File:ore_silvery2_sprite.png]] / {{Raw Tile|~|0:7:1}}||[[Magnetite]]||All [[Sedimentary layer|Sedimentary]]'''(L)''', All [[Metamorphic layer|Metamorphic]]'''(S)''', All [[Igneous layer|Igneous]]'''(S)'''||[[Iron]]||8||10
+|-
+|[[File:ore_cyan_sprite.png]] / {{Raw Tile|£|2:7:0}}||[[Malachite]]||[[Limestone]]'''(V)''', [[Marble]]'''(V)'''||[[Copper]]||2||2
+|-
+|[[File:ore_silvery_sprite.png]] / {{Raw Tile|£|7:7:1}}||[[Native platinum|Platinum, native]]||All [[Alluvial layer|Alluvial]]'''(S)''', [[Olivine]]'''(V)''', [[Magnetite]]'''(V)''', [[Chromite]]'''(S)'''||[[Platinum]]||40||40
+|-
+|[[File:ore_silvery_sprite.png]] / {{Raw Tile|£|7:7:1}}||[[Native silver|Silver, native]]||[[Granite]]'''(V)''', [[Gneiss]]'''(V)'''||[[Silver]]||10||10
+|-
+|[[File:ore_magenta_sprite.png]] / {{Raw Tile|£|0:7:1}}||[[Sphalerite]]||All [[Metamorphic layer|Metamorphic]]'''(V)'''||[[Zinc]]||2||2
+|-
+|[[File:ore_silvery_sprite.png]] / {{Raw Tile|£|0:7:1}}||[[Tetrahedrite]]||All [[Stone]]'''(V)'''||[[Copper]], [[Silver|Silver (20%)]]||3||2 (10)
+|}
+
+:'''(L)''' - occurs in large clusters
+:'''(V)''' - occurs in veins
+:'''(S)''' - occurs in small clusters
+
+:''1 - Note that [[raw adamantine]]/[[adamantine]] does not follow all the usual rules for an ore/metal in several respects - see article for full discussion.''
+
+===See Also:===
+
+:* [[Smelting]]
+:* [[Metal]]s
+:* [[Vein|Clusters and veins]]
+:* [[Exploratory mining]]
+:* [[The Non-Dwarf's Guide to Rock]]
+:* [[Stone]]s
+:* [[Gem]]s
+:* [https://yuml.me/edit/91f80d8e Diagram to digging, finding and alloying]
+
+{{materials}}
+{{stones}}
+
+{{Category|Ore| }}
+{{Category|Materials}}
+[[ru:Ore]]

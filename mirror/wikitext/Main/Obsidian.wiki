@@ -1,0 +1,68 @@
+{{Quality|Superior}}
+{{Stonelookup/0
+|graphic=obsidian_sprite.png
+|uses=
+* [[Short sword|Sharp blades]]
+|properties=
+* [[Igneous extrusive layer]]
+* [[Material value]] 3☼
+* [[Material science|Impact strength]] 1000 MPa
+* [[Material science|Shear strength]] 35 MPa&nbsp;{{Tooltip|×2|MAX_EDGE is 20,000, twice that of the default 10,000 for metals}}
+* {{firemagmasafe|yes|yes}}
+* [[Melting point]] {{ct|13600}}
+* [[Boiling point]] {{ct|16000}}
+* [[Ignition point]] none
+* [[Solid density]] 2650 kg/m³
+* [[Specific heat]] 800 J/kg·K
+* [[Color]] black}}
+{{av}}
+{{For/see|the month|[[Calendar]]}}
+
+'''Obsidian''' is one of the types of "[[stone]]" (technically volcanic [[glass]]) that forms entire [[Stone#Stones forming entire layers|layer]]s.  Obsidian is also found surrounding [[magma pool]]s and [[volcano]]es, exactly 1 tile thick, and has the distinction of being the only stone that can be [[obsidian farming|created during play]]. Obsidian is considered an [[Economic stones|economic stone]] by default; in order to allow general use at workshops, and in architecture, you must enable "obsidian" in the [[labor]] menu under 'stone use' => 'economic stone'.  It is notable in that it has the highest [[material value]] among non-ore stones, is higher in value than some low-value [[ore]]s like [[native copper]]. Additionally, its increased shear strength means your miners will take more than twice as long to dig it out, compared to other types of stone.
+
+The word "obsidian" is the name of the twelfth month of the dwarven [[calendar]], covering late Winter.
+
+==Rock short sword==
+Due to the defined [[Material definition token#MAX_EDGE|sharpness]] of obsidian, it is [[Weapon token#CAN_STONE|unique]] among [[stone]]s in that it can also be made into a [[weapon]], an obsidian [[short sword]]. This requires one obsidian stone plus one [[log]] at a [[craftsdwarf's workshop]], and uses the [[stone crafter]] labor. If you embark on an obsidian [[mountain]] or manage to reach [[magma]] before finding [[weapons-grade]] metallic ores, these are serviceable as early weapons to defend your fort from early animal and unarmed intruders. However, they are significantly weaker in comparison to any metal weaponry, being unable to defeat even basic copper armor, so keep that in mind once you start encountering metal-armored invaders. Also, stone swords can accrue [[wear]], as do metal weapons (if at different rates).
+
+:* Note that, as obsidian short swords use wood (used in the [[Decoration|handle]]), [[Elf|elves]] will be offended if you offer obsidian swords in [[trade]], will [[Trading#Unacceptable_items|refuse the trade and leave]].
+
+Previous versions lacked defined [[Material science|yield and shear]] values and used the defaults from the stone template; this rendered them very blunt and unable to cut skin. Since 40.05, obsidian features more proper yield and shear values, making these weapons much more viable. Obsidian now has [[glass]]-like yield and shear values, which allow rock short swords to slice through skin, leather armor, and wood armor used by [[Elf|elves]].
+
+Interestingly, obsidian short swords in the Premium version look completely different depending on who is using them, with [[dwarf|dwarves]] getting a less-[https://en.wikipedia.org/wiki/Macuahuitl Aztec-looking] sprite than everyone else; not that you'd notice in gameplay, unless a [[kobold]] gets particularly lucky.{{verify|This may have been fixed in 53.16.}}
+
+==Obsidian formation==
+Obsidian can be formed by mixing [[water]] and [[magma]]. Any tiles containing both [[water]] and [[magma]], except tiles also containing a [[magma flow]], will be replaced with unmined obsidian, generating abundant amounts of [[steam]]. Tiles on a [[magma flow]] will instead replace the [[water]] and [[magma]] with just [[steam]]. When dumping water via a pond zone onto magma, the water has to freefall for at least one z-level (i.e. the pond zone must be two or more z-levels above the magma); otherwise only steam will be produced. The formation of obsidian will not affect the light level.
+
+Most non-[[magma-safe]] objects that were in the [[magma]] prior to the formation of obsidian are completely destroyed, which can be an effective method of removing unwanted items or enemies, although long exposure times to magma are suggested to ensure destruction. All [[magma-safe]] items will be entombed in the tile, and can be regained by mining it along with any magma-unsafe items that happened to survive the casting process.  No instances of globs of molten metal surviving obsidian formation have been noted, though apparently [[fire|burning]] objects can remain on fire when cast in obsidian. The survival rate of magma-unsafe items is believed to depend on the exposure time to magma being short enough to not cause the item in question to melt or burn before obsidian formation occurs—fragile items placed in [[water]] that is then exposed to magma tend to survive casting unscathed. Creatures cast in obsidian die, even without significant exposure to magma. Creatures in cages will survive the casting process, though they may still die from exposure to the extreme temperature of magma.
+ 
+[[Obsidian farming]] can be used to produce large amounts of obsidian for masonry, crafting, or construction.
+
+==Suspicious Rock Formations==
+{{minorspoiler}}
+Recently, [[Unusual volcanic wall|strange formations]] of obsidian have been observed within the [[caverns]]. Shallow cavern layers will often feature 3x3 squares of ([[magma|warm]] or [[water|damp]]) obsidian, while deeper layers may sometimes feature large clusters of obsidian. In all cases these formations are composed solely of obsidian and studded with many high-value gems such as [[emerald]], diamond, star ruby, and [[star sapphire]]. Exploratory miners have reported many [[fun]] things contained within the gem-studded obsidian, such as magma, spontaneous explosions, [[divine metal|divine]] [[artifacts]], [[forgotten beast]]s, and [[demon|other]] [[angel|things]]. The full extent of new content is still being determined. Some [[scholars]] theorize that the precious gems were set as bait for careless dwarves who dig too greedily and too deeply.
+
+==Real life==
+A common misconception is that the dark color of obsidian indicates an inclusion of metals like iron. In fact, obsidian is almost entirely quartz, just at a microcrystalline level. As there has yet to be any known threat by dragon or animated frost wights, the historical use of obsidian was mostly decorative until several peoples discovered its use as a sharp tool and eventually weaponized. Localized variants like "snowflake obsidian" and "chocolate" obsidian (with brown inclusions) are typically attributed to inclusionary quartz crystals and mafic minerals, respectively.  
+
+The use of obsidian to create short swords in ''Dwarf Fortress'' is almost certainly inspired by the ''macuahuitl'', a sword-club used by the Aztecs and the other native peoples of Mesoamerica. The weapon was a short, strong wooden staff (normally one-handed, but two-handed versions existed), set with obsidian-flake blades that were literally more than razor-sharp. Flaked obsidian can have a monomolecular edge; today, it's used for extremely high-quality surgical scalpels, which have to be handled with extreme care – a little pressure is enough for such a scalpel to cut deep, and if you cut yourself with one, you won't feel it until you start to bleed. The main disadvantage, however (other than the expense incurred from the labor to hand-knap high-quality blades), is that obsidian is quite brittle compared to metal (and alternative materials like chert or flint) – this can be mitigated to a degree through quality craftsmanship and skillful use, but there remains the risk that an obsidian blade will leave tiny but incredibly sharp glass flakes behind in the surgical wound.
+
+Macuahuitls could penetrate flesh and leather with ease; Spanish conquistadors reported one case where a blow from a two-handed macuahuitl decapitated a horse. But the obsidian edges shattered when they struck metal armor, and macuahuitls didn't have a thrusting attack. The Spanish soon learned to put their armored soldiers forward, to fight in chokepoints – and to recruit the Aztecs' enemies, to field macuahuitl-wielders of their own (and let them do more of the dying in their place).
+
+<gallery>
+File:Lipari-Obsidienne (5).jpg|Obsidian
+File:ObsidianDomeCA.JPG|Obsidian rock face
+File:Teotihuacán - Obsidianklinge.jpg|Obsidian blade
+File:Snowflake_obsidian.jpg|Snowflake obsidian & an obsidian arrowhead
+</gallery>
+
+{{D for dwarf}}
+
+<!-- Reference: Minecraft (and the means of constructing a Nether Portal/Enchanting Table crafting recipe) -->
+Despite what other popular forms of media may perpetuate, obsidian – even when crafted into [[Block|blocks]] – will not provide any assistance in reaching the [[underworld]]. The only method of reaching the underworld known to dwarfkind is to physically dig down deep enough to get there.
+
+All claims that obsidian can be combined with [[blue diamond]]s to [[Magic|magically]] improve weapons and armor have been thoroughly debunked by extensive Dwarven science.
+
+{{gamedata}}
+{{stones}}
+{{Category|Economic Stone}}
