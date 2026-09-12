@@ -1,0 +1,275 @@
+{{Quality|Superior}}
+{{av}}
+{{distinguish|Creature token#DIFFICULTY|l1=the Difficulty creature token}}
+'''Difficulty''' is the level of challenge presented by the game in [[Fortress Mode]], largely customizable by the player. These [[settings]] will affect whether your fortress can be attacked by outside forces, how frequent said attacks are, how big invading armies are, [[noble]] neediness, etc. You can modify these settings before and at any time after embarking, the tab will only appear in the settings screen when a [[fortress]] is loaded. Since they are specific to each save, they are stored as part of the save and are not editable outside the game.
+
+== Default settings ==
+They are divided into two groups: enemies and economy; enemies can be disabled, both groups have normal and hard presets, and all of the individual settings can be adjusted in Custom settings. The values used in each preset can be seen by selecting the preset and then viewing them in Custom settings.
+
+'''Enemies''' has 3 options:
+* '''Off''' will disable [[Ambush|ambushes]], [[Siege|sieges]], [[Megabeast|uninvited]] [[Forgotten beast|guests]], [[Werebeast|werebeasts]], and agitated wildlife attacks, but not [[intrigue]], [[HFS]], or misbehaving dwarves, so it is still recommended to train a military.
+* '''Normal''' is the standard ''Dwarf Fortress'' experience.
+* '''Hard''' ensures a never-ending stream of [[Fun]], causing invaders to show up earlier, more often, and with more bodies to throw at the gates.
+----
+'''Economy''' has 2 options:
+* '''Normal''' is the standard ''Dwarf Fortress'' economy.
+* '''Hard''' requires you to produce more wealth in order to receive higher-ranking nobles, requires [[Temple|temples]] and [[Guildhall|guildhalls]] to be more valuable before satisfying petitions, and causes [[Noble|nobles]] to make more [[Mandate|mandates]] and [[Demand|demands]].
+
+== Enemy settings ==
+<!-- Last verified in 53.05 -->
+If you wish, you can also fine-tune individual settings - maybe you only want megabeasts to assault your fortress, and would prefer the elves to leave well enough alone. The following options are available for enemy settings:
+=== Individual enemy toggles ===
+{| class="wikitable"
+|-
+! Setting !! Possible values !! Description !! Default values (Off; Normal; Hard)
+|-
+| Civilizations can attack || Yes/No || Controls whether [[Ambush|ambushes]] and [[Siege|sieges]] can occur. || No; Yes; Yes
+|-
+| Megabeasts can attack || Yes/No || Controls whether [[Megabeast|megabeasts]] and [[Forgotten beast|forgotten beasts]] can attack. || No; Yes; Yes
+|-
+| Werebeasts can attack || Yes/No || Controls whether [[Werebeast|werebeasts]] can attack. || No; Yes; Yes
+|-
+| Curious wilderness creatures can come to cause trouble || Yes/No || Controls whether agitated animals can assault your fortress, and whether animals will spawn with the intent to steal items. || No; Yes; Yes
+|}
+=== Enemy/merchant triggers ===
+Used for creatures' {{token|ATTACK_TRIGGER|creature}} and civilizations [[Entity_token#PROGRESS_TRIGGER_POPULATION|trade and siege tokens]] (for sieges, all the default civilizations only use {{token|PROGRESS_TRIGGER_POP_SIEGE|entity}}, and it might be only the goblin/evil civilizations use that.)
+{| class="wikitable"
+|-
+! Setting !! Possible values !! Description !! Default values (Off; Normal; Hard)
+|-
+| Population triggers || 1 to 300 || Sets the population values for each level of {{token|ATTACK_TRIGGER|creature}} (first value), {{token|PROGRESS_TRIGGER_POPULATION|entity}}, and {{token|PROGRESS_TRIGGER_POP_SIEGE|entity}}; see those tokens for details of how a player fortress reaching this many population will affect them. || 0/0/0/0/0; 20/50/80/110/140; 15/30/40/55/70
+|-
+| Production triggers || 0 to 100,000,000 || Sets the created [[Status#Fortress_wealth|wealth]] values for each level of {{token|ATTACK_TRIGGER|creature}} (second value), {{token|PROGRESS_TRIGGER_PRODUCTION|entity}}, and {{token|PROGRESS_TRIGGER_PROD_SIEGE|entity}}; see those tokens for details of how a player fortress reaching this value of created wealth will affect them. || 0/0/0/0/0; 5,000/25,000/100,000/200,000/300,000; 2,500/12,500/50,000/100,000/150,000
+|-
+| Trade triggers || 0 to 100,000,000 || Sets the exported wealth values for each level of {{token|ATTACK_TRIGGER|creature}} (third value), {{token|PROGRESS_TRIGGER_TRADE|entity}}, and {{token|PROGRESS_TRIGGER_TRADE_SIEGE|entity}}; see those tokens for details of how a player fortress reaching this value of exported wealth will affect them. || 0/0/0/0/0; 500/2,500/10,000/20,000/30,000; 250/1,250/5,000/10,000/15,000
+|}
+
+=== Megabeasts ===
+{| class="wikitable"
+|-
+! Setting !! Possible values !! Description !! Default values (Off; Normal; Hard)
+|-
+| Megabeast attack period (seasons) || 0 to 100 || How many seasons must pass before a megabeast may attack your fortress.{{verify}} || 10; 10; 8
+|}
+=== Forgotten beasts ===
+{| class="wikitable"
+|-
+! Setting !! Possible values !! Description !! Default values (Off; Normal; Hard)
+|-
+| Forgotten beast sensitivity || 1 to 100,000 || Performing nature-disrupting actions within the caverns will agitate forgotten beasts and may cause them to attack. [[Noise]] will also increase agitation. A smaller value will require less actions before the maximum attack chance is reached. || 10,000; 10,000; 10,000
+|-
+| Forgotten beast irritation minimum || 1 to 100,000 || If the hidden agitation counter is at this value or below, no forgotten beasts will attack. || 5,000; 5,000; 2,000
+|-
+| Forgotten beast wealth divisor || 1 to 100,000 || Your current fortress wealth is divided by this number - the result is added to effective irritation to determine forgotten beast attacks. A smaller number will cause forgotten beasts to attack sooner. || 40; 40; 40
+|}
+=== Wilderness irritation ===
+These only apply to fortresses with an embark area that includes [[savage]]ry.
+{| class="wikitable"
+|-
+! Setting !! Possible values !! Description !! Default values (Off; Normal; Hard)
+|-
+| Wilderness sensitivity || 1 to 100,000 || Performing nature-disrupting actions such as cutting down trees will agitate wildlife and may cause them to attack. A smaller value will require less actions before the maximum attack chance is reached. || 10,000; 10,000; 10,000
+|-
+| Wilderness irritation minimum || 1 to 100,000 || If the hidden agitation counter is at this value or below, no agitated wildlife will spawn. || 2,000; 2,000; 0
+|-
+| Wilderness irritation decay || 0 to 100,000 || Causes wildlife to be less irritated after every year. A higher value will make them less irritated faster. || 500; 500; 100
+|}
+
+=== Werebeasts ===
+{| class="wikitable"
+|-
+! Setting !! Possible values !! Description !! Default values (Off; Normal; Hard)
+|-
+| Werebeast attack period (seasons) || 0 to 100 || How many seasons must pass before a werebeast may attack your fortress.{{verify}} || 10; 10; 8
+|}
+=== Vampires ===
+{| class="wikitable"
+|-
+! Setting !! Possible values !! Description !! Default values (Off; Normal; Hard)
+|-
+| Vampire migrant fraction || 1 to 1,000 || Affects what percentage of new migrants will be [[Vampire|vampires]]. A value of 0 will disable vampiric migrants. (Only on '''Off''' difficulty) || 0; 100; 75
+|}
+=== Invasion caps ===
+These were changed as part of the siege update.{{v|53.07}}
+{| class="wikitable"
+|-
+! Setting !! Possible values !! Description !! Default values (Off; Normal; Hard)
+|-
+| Invasion creature cap (excluding mounts) || 0 to 5,000 || The maximum amount of enemies that can be thrown at you when a civilization sieges you, not counting mounts. || 0; 140; 140
+|-
+| Invasion difficulties || 0 to 30,000 || Strength of the consecutive sieging forces {{verify|equipment materials, creature types?}}, each siege after the third increasing in difficulty by the fourth value.{{verify}} Tracked per civilization per fortress{{cite forum|183066/8606428}}. || 0/0/0/0; 50/300/1000/500; 100/600/1500/750
+|}
+
+=== Raids ===
+{| class="wikitable"
+|-
+! Setting !! Possible values !! Description !! Default values (Off; Normal; Hard)
+|-
+| Minimum raids before first siege (per civ) || 0 to 500 || Affects how many [[Ambush|ambushes]] must be performed before a civilization can try a proper siege for the first time. || 0; 2; 2
+|-
+| Minimum raids between sieges (per civ) || 0 to 500 || Affects how many ambushes must be performed before a civilization can try a proper siege from the second time onwards. || 0; 3; 1
+|-
+| Siege frequency (percentage, otherwise raid) || 0 to 100 || Percentage chance to receive a siege instead of an ambush. || 0; 25; 50
+|}
+=== Cavern dwellers ===
+{| class="wikitable"
+|-
+! Setting !! Possible values !! Description !! Default values (Off; Normal; Hard)
+|-
+| Cavern dweller scale (increase per attack) || 0 to 100 || Every time cavern-dwellers attack your fortress, the maximum number of attackers increases by this number. || 0; 10; 20
+|-
+| Cavern dweller maximum attackers || 0 to 500 || The maximum amount of enemies that can be thrown at you when cavern dwellers attack. || 0; 50; 75
+|}
+=== Tree quota ===
+{| class="wikitable"
+|-
+! Setting !! Possible values !! Description !! Default values (Off; Normal; Hard)
+|-
+| Diplomacy tree-fell count || 1 to 1000 || Affects the default amount of trees [[Elf|elven]] diplomats will request you limit your felling to. Your negotiator will still try and increase the tree limit. || 25; 25; 10
+|-
+| Diplomacy tree-fell count (untamed wilds) || 1 to 1000 || Affects the default amount of trees elven diplomats will request you limit your felling to if you've settled in a [[savage]] area instead. Your negotiator will still try and increase the tree limit. || 5; 5; 1
+|}
+=== Siege invaders ===
+These were all added with the [[release information/53.01|siege update]].{{version|53.01}} The aversion values are multipliers for pathing cost; for instance, an aversion to deconstruction of 20 means they would just as soon deconstruct 5 tiles as dig 2 natural tiles (as walk 100 steps), because each of those has the same cost (5×20 = 2×50 = 1×100). The material is not used in this calculation, only whether the tile must be deconstructed or dug through.{{cite forum|183066/8606428}}
+
+==== Invader ability toggles ====
+{| class="wikitable"
+|-
+! Setting !! Possible values !! Description !! Default values (Off; Normal; Hard)
+|-
+| Break constructed walls || Yes/No || Reinforced walls take longer to break. Speed and aversion can be adjusted, see below. || No; Yes; Yes
+|-
+| Dig natural walls || Yes/No || Trolls can now come with great picks. Delay, speed, and aversion can be adjusted, see below. || No; Yes; Yes
+|-
+| Build floors and stairs || Yes/No || Speed and aversion can be adjusted, see below. || No; Yes; Yes
+|-
+| Free creatures from cages || Yes/No || Is this only cage traps? Or does it include built cages and/or stockpiled cages? || No; Yes; Yes
+|}
+==== Invader deconstruction ====
+{| class="wikitable"
+|-
+! Setting !! Possible values !! Description !! Default values (Off; Normal; Hard)
+|-
+| Speed || 1 to 1000 || The base rate of deconstruction, smaller is slower, reinforced walls take even longer to break. || 10; 50; 100
+|-
+| Aversion || 1 to 1000 || How likely they are to try deconstruction, smaller is more likely to try. || 20; 20; 20
+|}
+==== Invader digging ====
+{| class="wikitable"
+|-
+! Setting !! Possible values !! Description !! Default values (Off; Normal; Hard)
+|-
+| Speed || 1 to 1000 || The base rate of digging, smaller is slower. || 10; 50; 100
+|-
+| Horizontal aversion || 1 to 1000 || How likely they are to try digging on the same z-level, smaller is more likely to try. || 50; 50; 50
+|-
+| Vertical aversion || 1 to 1000 || How likely they are to try digging to a different z-level, smaller is more likely to try. || 1,000; 1,000; 1,000
+|-
+| Days to delay vertical digging || 1 to 10,000 || Is this before the first try, or before each try? Does it reset each siege? || 84; 84; 84
+|}
+==== Invader construction ====
+{| class="wikitable"
+|-
+! Setting !! Possible values !! Description !! Default values (Off; Normal; Hard)
+|-
+| Speed || 1 to 1000 || The base rate of construction, smaller is slower, reinforced walls take even longer to break. || 10; 50; 100
+|-
+| Aversion || 1 to 1000 || How likely they are to try construction, smaller is more likely to try. || 5; 5; 5
+|}
+==== Invader death aversion ====
+{| class="wikitable"
+|-
+! Setting !! Possible values !! Description !! Default values (Off; Normal; Hard)
+|-
+| One death || 1 to 1000 || How strongly one death in a location will deter future activity there. || 0; 0; 0
+|-
+| Two deaths || 1 to 1000 || How strongly two deaths in a location will deter future activity there. || 0; 0; 0
+|-
+| Three deaths || 1 to 1000 || How strongly three deaths in a location will deter future activity there. || 0; 0; 0
+|-
+| Four deaths || 1 to 1000 || How strongly four deaths in a location will deter future activity there. || 0; 0; 0
+|-
+| Five deaths || 1 to 1000 || How strongly five deaths in a location will deter future activity there. || 5; 5; 5
+|-
+| Six deaths || 1 to 1000 || How strongly six deaths in a location will deter future activity there. || 6; 6; 6
+|-
+| Seven deaths || 1 to 1000 || How strongly seven deaths in a location will deter future activity there. || 8; 8; 8
+|-
+| Eight deaths || 1 to 1000 || How strongly eight deaths in a location will deter future activity there. || 10; 10; 10
+|-
+| Nine deaths || 1 to 1000 || How strongly nine deaths in a location will deter future activity there. || 20; 20; 20
+|-
+| Ten or more deaths || 1 to 1000 || How strongly more than 9 deaths in a location will deter future activity there. || 100; 100; 100
+|}
+
+== Economy settings ==
+<!-- Defaults last verified for 53.05 -->
+The following options are available for economy settings:
+=== Fortress rank ===
+{| class="wikitable"
+|-
+! Setting !! Possible values !! Description !! Default values (Normal; Hard)
+|-
+| Economy population triggers || 1 to 300 || Affects how many citizens you need to increase the rank of your fortress. Must meet population and one of production or trade. Triggers 1 through 5 correspond to Hamlet, Village, Town, City, and Metropolis. || 20/50/80/110/140; 20/50/80/110/140
+|-
+| Economy production triggers || 1 to 100,000,000 || Affects how much created wealth you need to increase the rank of your fortress. Must meet population and one of production or trade. Triggers 1 through 5 correspond to Hamlet, Village, Town, City, and Metropolis. Setting this trigger to 0 causes it to be met immediately. || 5,000/25,000/100,000/200,000/300,000; 25,000/125,000/500,000/1,000,000/1,500,000
+|-
+| Economy trade triggers || 1 to 100,000,000 || Affects how much exported wealth you need to increase the rank of your fortress. Must meet population and one of production or trade. Triggers 1 through 5 correspond to Hamlet, Village, Town, City, and Metropolis. Setting a trigger to 0 causes it to be met immediately. || 500/2,500/10,000/20,000/30,000; 2,500/12,500/50,000/100,000/150,000
+|}
+=== Land holder ===
+{| class="wikitable"
+|-
+! Setting !! Possible values !! Description !! Default values (Normal; Hard)
+|-
+| Land holder population triggers || 1 to 300 || Affects how [[Baron|barons]] and upwards are achieved. See [[Noble#Triggers|noble triggers]]. Values 4 through 10 are not used in the base game. || 20/20/20; 20/20/20
+|-
+| Land holder production triggers || 1 to 100,000,000 || Affects how barons and upwards are achieved. Values 4 through 10 are not used in the base game. || 100,000/200,000/300,000; 500,000/1,000,000/1,500,000
+|-
+| Land holder trade triggers || 1 to 100,000,000 || Affects how barons and upwards are achieved. Values 4 through 10 are not used in the base game. || 10,000/20,000/30,000; 50,000/100,000/150,000
+|}
+
+=== Temples ===
+{| class="wikitable"
+|-
+! Setting !! Possible values !! Description !! Default values (Normal; Hard)
+|-
+| Value of temple || 1 to 100,000,000 || Affects how valuable a designated [[temple]] zone must be before it satisfies a petition to create it. || 2,000; 6,000
+|-
+| Value of temple complex || 1 to 100,000,000 || Affects how valuable a designated temple zone must be before it satisfies a petition to upgrade it. || 10,000; 30,000
+|-
+| Priesthood unit count || 1 to 300 || Affects how many members of a religion must be citizens in your fortress before a petition for a temple is made. || 10; 10
+|-
+| High priesthood unit count || 1 to 300 || Affects how many members of a religion must be citizens in your fortress before a petition to upgrade an existing temple is made. || 25; 25
+|}
+=== Guilds ===
+{| class="wikitable"
+|-
+! Setting !! Possible values !! Description !! Default values (Normal; Hard)
+|-
+| Value of guildhall || 1 to 100,000,000 || Affects how valuable a designated [[guildhall]] zone must be before it satisfies a petition to create it. || 2,000; 6,000
+|-
+| Value of grand guildhall || 1 to 100,000,000 || Affects how valuable a designated guildhall zone must be before it satisfies a petition to upgrade it. || 10,000; 30,000
+|-
+| Guild unit count || 1 to 300 || Affects how many members of a profession must be citizens in your fortress before a petition for a guildhall is made. || 10; 10
+|-
+| Grand guild unit count || 1 to 300 || Affects how many members of a profession must be citizens in your fortress before a petition to upgrade an existing guildhall is made. || 25; 25
+|}
+=== Mandates and demands ===
+{| class="wikitable"
+|-
+! Setting !! Possible values !! Description !! Default values (Normal; Hard)
+|-
+| Mandate period (more = fewer) || 1 to 10,000 || Affects how long nobles must wait before making new mandates. A higher value forces them to wait longer before mandating something.|| 1,000; 500
+|-
+| Demand period (more = fewer) || 1 to 10,000 || Affects how long nobles must wait before making new demands. A higher value forces them to wait longer before making a demand.|| 500; 250
+|}
+
+=== Fortress dig speed ===
+{| class="wikitable"
+|-
+! Setting !! Possible values !! Description !! Default values (Normal; Hard)
+|-
+| Citizen/resident dig speed (more = faster) || 1 to 10,000 || Affects how quickly player fortress creatures can dig natural walls and remove constructions.|| 100; 100
+|}
+
+[[ru:Difficulty]]

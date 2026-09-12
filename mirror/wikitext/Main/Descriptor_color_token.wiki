@@ -1,0 +1,37 @@
+{{Quality|Fine}}
+{{av}}
+{{Modding}}
+
+Tokens used to define the [[Color#Color_tokens|descriptive colors]] used in the game, by dyes, materials and tissues. Not to be confused with the game's [[color scheme]] that defines what colors are graphically shown in-game.
+
+==Tokens==
+{| {{prettytable}}
+|- bgcolor="#999999"
+! Token
+! Arguments
+! Usage
+! Description
+
+|-
+| {{text anchor|NAME}}
+| string
+| {{tc|red|Required}}
+| What this color will be called in-game.
+
+|-
+| {{text anchor|WORD}}
+| tag
+| {{tc|red|Required}}
+| Associates the color with any number of [[Language token|words]]. Historical figures can be named after the color of their [[Creature token#TL_COLOR_MODIFIER|TL_COLOR_MODIFIER]]. Seems to be more notable if that description can only be a single color.
+
+|-
+| {{text anchor|RGB}}
+| red:green:blue
+| {{tc|red|Required}}
+| Decides the exact color value of the color using the additive RGB system. This color is not shown in-game, but when a [[forgotten beast|randomly]] [[titan|generated]] [[demon|beast]] uses this color, their tile color is defined by an approximation of this{{verify}}. Each value can range from 0-255.
+
+|}
+
+{{Category|Modding}}
+{{Category|Tokens}}
+[[ru:Descriptor color token]]

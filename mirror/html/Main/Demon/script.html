@@ -1,0 +1,261 @@
+<div class="mw-parser-output"><div class="mw-highlight mw-highlight-lang-lua mw-content-ltr" dir="ltr"><pre><span></span><span class="n">demon_names</span><span class="o">=</span><span class="p">{</span>
+    <span class="p">{</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;demon&quot;</span><span class="p">,</span><span class="n">names</span><span class="o">=</span><span class="s2">&quot;demons&quot;</span><span class="p">,</span><span class="n">name_adj</span><span class="o">=</span><span class="s2">&quot;demonic&quot;</span><span class="p">,</span><span class="n">cond</span><span class="o">=</span><span class="kr">function</span><span class="p">(</span><span class="n">options</span><span class="p">)</span> <span class="kr">return</span> <span class="kc">true</span> <span class="kr">end</span><span class="p">},</span>
+    <span class="p">{</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;devil&quot;</span><span class="p">,</span><span class="n">names</span><span class="o">=</span><span class="s2">&quot;devils&quot;</span><span class="p">,</span><span class="n">name_adj</span><span class="o">=</span><span class="s2">&quot;devilish&quot;</span><span class="p">,</span><span class="n">cond</span><span class="o">=</span><span class="kr">function</span><span class="p">(</span><span class="n">options</span><span class="p">)</span> <span class="kr">return</span> <span class="kc">true</span> <span class="kr">end</span><span class="p">},</span>
+    <span class="p">{</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;fiend&quot;</span><span class="p">,</span><span class="n">names</span><span class="o">=</span><span class="s2">&quot;fiends&quot;</span><span class="p">,</span><span class="n">name_adj</span><span class="o">=</span><span class="s2">&quot;fiendish&quot;</span><span class="p">,</span><span class="n">cond</span><span class="o">=</span><span class="kr">function</span><span class="p">(</span><span class="n">options</span><span class="p">)</span> <span class="kr">return</span> <span class="kc">true</span> <span class="kr">end</span><span class="p">},</span>
+    <span class="p">{</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;brute&quot;</span><span class="p">,</span><span class="n">names</span><span class="o">=</span><span class="s2">&quot;brutes&quot;</span><span class="p">,</span><span class="n">name_adj</span><span class="o">=</span><span class="s2">&quot;brutish&quot;</span><span class="p">,</span><span class="n">cond</span><span class="o">=</span><span class="kr">function</span><span class="p">(</span><span class="n">options</span><span class="p">)</span> <span class="kr">return</span> <span class="n">adj_exploitable_check</span><span class="p">(</span><span class="n">options</span><span class="p">.</span><span class="n">fadj</span><span class="p">)</span> <span class="kr">end</span><span class="p">},</span>
+    <span class="p">{</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;monster&quot;</span><span class="p">,</span><span class="n">names</span><span class="o">=</span><span class="s2">&quot;monsters&quot;</span><span class="p">,</span><span class="n">name_adj</span><span class="o">=</span><span class="s2">&quot;monster&quot;</span><span class="p">,</span><span class="n">cond</span><span class="o">=</span><span class="kr">function</span><span class="p">(</span><span class="n">options</span><span class="p">)</span> <span class="kr">return</span> <span class="kc">true</span> <span class="kr">end</span><span class="p">},</span>
+    <span class="p">{</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;spirit&quot;</span><span class="p">,</span><span class="n">names</span><span class="o">=</span><span class="s2">&quot;spirits&quot;</span><span class="p">,</span><span class="n">name_adj</span><span class="o">=</span><span class="s2">&quot;spirit&quot;</span><span class="p">,</span><span class="n">cond</span><span class="o">=</span><span class="kr">function</span><span class="p">(</span><span class="n">options</span><span class="p">)</span> <span class="kr">return</span> <span class="n">options</span><span class="p">.</span><span class="n">intangible</span> <span class="kr">end</span><span class="p">},</span>
+    <span class="p">{</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;ghost&quot;</span><span class="p">,</span><span class="n">names</span><span class="o">=</span><span class="s2">&quot;ghosts&quot;</span><span class="p">,</span><span class="n">name_adj</span><span class="o">=</span><span class="s2">&quot;ghost&quot;</span><span class="p">,</span><span class="n">cond</span><span class="o">=</span><span class="kr">function</span><span class="p">(</span><span class="n">options</span><span class="p">)</span> <span class="kr">return</span> <span class="n">options</span><span class="p">.</span><span class="n">intangible</span> <span class="kr">end</span><span class="p">},</span>
+    <span class="p">{</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;banshee&quot;</span><span class="p">,</span><span class="n">names</span><span class="o">=</span><span class="s2">&quot;banshees&quot;</span><span class="p">,</span><span class="n">name_adj</span><span class="o">=</span><span class="s2">&quot;banshee&quot;</span><span class="p">,</span><span class="n">cond</span><span class="o">=</span><span class="kr">function</span><span class="p">(</span><span class="n">options</span><span class="p">)</span> <span class="kr">return</span> <span class="n">options</span><span class="p">.</span><span class="n">intangible</span> <span class="kr">end</span><span class="p">},</span>
+    <span class="p">{</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;haunt&quot;</span><span class="p">,</span><span class="n">names</span><span class="o">=</span><span class="s2">&quot;haunts&quot;</span><span class="p">,</span><span class="n">name_adj</span><span class="o">=</span><span class="s2">&quot;haunt&quot;</span><span class="p">,</span><span class="n">cond</span><span class="o">=</span><span class="kr">function</span><span class="p">(</span><span class="n">options</span><span class="p">)</span> <span class="kr">return</span> <span class="n">options</span><span class="p">.</span><span class="n">intangible</span> <span class="kr">end</span><span class="p">},</span>
+    <span class="p">{</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;phantom&quot;</span><span class="p">,</span><span class="n">names</span><span class="o">=</span><span class="s2">&quot;phantoms&quot;</span><span class="p">,</span><span class="n">name_adj</span><span class="o">=</span><span class="s2">&quot;phantom&quot;</span><span class="p">,</span><span class="n">cond</span><span class="o">=</span><span class="kr">function</span><span class="p">(</span><span class="n">options</span><span class="p">)</span> <span class="kr">return</span> <span class="n">options</span><span class="p">.</span><span class="n">intangible</span> <span class="kr">end</span><span class="p">},</span>
+    <span class="p">{</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;specter&quot;</span><span class="p">,</span><span class="n">names</span><span class="o">=</span><span class="s2">&quot;specters&quot;</span><span class="p">,</span><span class="n">name_adj</span><span class="o">=</span><span class="s2">&quot;specter&quot;</span><span class="p">,</span><span class="n">cond</span><span class="o">=</span><span class="kr">function</span><span class="p">(</span><span class="n">options</span><span class="p">)</span> <span class="kr">return</span> <span class="n">options</span><span class="p">.</span><span class="n">intangible</span> <span class="kr">end</span><span class="p">},</span>
+    <span class="p">{</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;wraith&quot;</span><span class="p">,</span><span class="n">names</span><span class="o">=</span><span class="s2">&quot;wraiths&quot;</span><span class="p">,</span><span class="n">name_adj</span><span class="o">=</span><span class="s2">&quot;wraith&quot;</span><span class="p">,</span><span class="n">cond</span><span class="o">=</span><span class="kr">function</span><span class="p">(</span><span class="n">options</span><span class="p">)</span> <span class="kr">return</span> <span class="n">options</span><span class="p">.</span><span class="n">intangible</span> <span class="kr">end</span><span class="p">},</span>
+<span class="p">}</span>
+
+<span class="n">creatures</span><span class="p">.</span><span class="n">demon</span><span class="p">.</span><span class="n">default</span><span class="o">=</span><span class="kr">function</span><span class="p">(</span><span class="n">demon_type</span><span class="p">,</span><span class="n">difficulty</span><span class="p">,</span><span class="n">tok</span><span class="p">)</span>
+    <span class="kd">local</span> <span class="n">tbl</span><span class="o">=</span><span class="p">{}</span>
+    <span class="kd">local</span> <span class="n">l2</span><span class="o">=</span><span class="n">get_debug_logger</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+    <span class="n">l2</span><span class="p">(</span><span class="n">tok</span><span class="p">,</span><span class="n">demon_type</span><span class="p">,</span><span class="n">difficulty</span><span class="p">)</span>
+    <span class="kd">local</span> <span class="n">options</span><span class="o">=</span><span class="p">{</span>
+        <span class="n">is_evil</span><span class="o">=</span><span class="kc">true</span><span class="p">,</span>
+        <span class="n">pick_sphere_rcm</span><span class="o">=</span><span class="kc">true</span><span class="p">,</span>
+        <span class="n">strong_attack_tweak</span><span class="o">=</span><span class="kc">true</span><span class="p">,</span>
+        <span class="n">always_nobreathe</span><span class="o">=</span><span class="kc">true</span><span class="p">,</span>
+        <span class="n">force_goo</span><span class="o">=</span><span class="kc">true</span><span class="p">,</span>
+        <span class="n">intangible_flier</span><span class="o">=</span><span class="kc">true</span><span class="p">,</span>
+        <span class="n">fixed_temp</span><span class="o">=</span><span class="mi">10040</span><span class="p">,</span>
+        <span class="n">forced_odor_chance</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span>
+        <span class="n">forced_odor_string</span><span class="o">=</span><span class="s2">&quot;brimstone&quot;</span><span class="p">,</span>
+        <span class="n">forced_odor_level</span><span class="o">=</span><span class="mi">90</span><span class="p">,</span>
+        <span class="n">sickness_name</span><span class="o">=</span><span class="s2">&quot;demon sickness&quot;</span><span class="p">,</span>
+        <span class="n">feature_flavor_adj</span><span class="o">=</span><span class="kc">true</span><span class="p">,</span>
+        <span class="n">fire_immune</span><span class="o">=</span><span class="kc">true</span><span class="p">,</span>
+        <span class="n">token</span><span class="o">=</span><span class="n">tok</span>
+    <span class="p">}</span>
+    <span class="kr">if</span> <span class="n">demon_type</span><span class="o">==</span><span class="s2">&quot;unique&quot;</span> <span class="kr">then</span>
+        <span class="n">tbl</span><span class="o">=</span><span class="n">split_to_lines</span><span class="p">(</span><span class="n">tbl</span><span class="p">,</span><span class="s">[[</span>
+<span class="s">[UNIQUE_DEMON]</span>
+<span class="s">[SPREAD_EVIL_SPHERES_IF_RULER]</span>
+
+<span class="s">[NATURAL_SKILL:WRESTLING:14]</span>
+<span class="s">[NATURAL_SKILL:BITE:14]</span>
+<span class="s">[NATURAL_SKILL:GRASP_STRIKE:14]</span>
+<span class="s">[NATURAL_SKILL:STANCE_STRIKE:14]</span>
+<span class="s">[NATURAL_SKILL:MELEE_COMBAT:14]</span>
+<span class="s">[NATURAL_SKILL:RANGED_COMBAT:14]</span>
+<span class="s">[NATURAL_SKILL:DODGING:14]</span>
+<span class="s">[NATURAL_SKILL:SITUATIONAL_AWARENESS:14]</span>
+
+<span class="s">[CAN_LEARN][CAN_SPEAK][DIFFICULTY:10]</span>
+<span class="s">        ]]</span><span class="p">)</span>
+        <span class="n">options</span><span class="p">.</span><span class="n">humanoidable_only</span><span class="o">=</span><span class="kc">true</span>
+        <span class="n">options</span><span class="p">.</span><span class="n">can_learn</span><span class="o">=</span><span class="kc">true</span>
+    <span class="kr">else</span>
+        <span class="n">tbl</span><span class="o">=</span><span class="n">split_to_lines</span><span class="p">(</span><span class="n">tbl</span><span class="p">,</span><span class="s">[[</span>
+<span class="s">[DEMON]</span>
+
+<span class="s">[NATURAL_SKILL:WRESTLING:10]</span>
+<span class="s">[NATURAL_SKILL:BITE:10]</span>
+<span class="s">[NATURAL_SKILL:GRASP_STRIKE:10]</span>
+<span class="s">[NATURAL_SKILL:STANCE_STRIKE:10]</span>
+<span class="s">[NATURAL_SKILL:MELEE_COMBAT:10]</span>
+<span class="s">[NATURAL_SKILL:RANGED_COMBAT:10]</span>
+<span class="s">[NATURAL_SKILL:DODGING:10]</span>
+<span class="s">[NATURAL_SKILL:SITUATIONAL_AWARENESS:10]</span>
+<span class="s">        ]]</span><span class="p">)</span>
+        <span class="kr">if</span><span class="p">(</span><span class="n">demon_type</span><span class="o">==</span><span class="s2">&quot;humanoid_beast&quot;</span><span class="p">)</span> <span class="kr">then</span> <span class="n">options</span><span class="p">.</span><span class="n">humanoidable_only</span><span class="o">=</span><span class="kc">true</span> <span class="kr">end</span>
+        <span class="kr">if</span> <span class="n">one_in</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span> <span class="kr">then</span> 
+            <span class="n">tbl</span><span class="p">[</span><span class="o">#</span><span class="n">tbl</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span><span class="o">=</span><span class="s2">&quot;[CAN_LEARN][CAN_SPEAK]&quot;</span>
+            <span class="n">options</span><span class="p">.</span><span class="n">can_learn</span><span class="o">=</span><span class="kc">true</span>
+        <span class="kr">end</span>
+        <span class="n">tbl</span><span class="o">=</span><span class="n">split_to_lines</span><span class="p">(</span><span class="n">tbl</span><span class="p">,</span><span class="s">[[</span>
+<span class="s">[LARGE_ROAMING]</span>
+<span class="s">[LARGE_PREDATOR][DIFFICULTY:]]</span><span class="o">..</span><span class="nb">tostring</span><span class="p">(</span><span class="n">difficulty</span><span class="p">)</span><span class="o">..</span><span class="s">[[]</span>
+<span class="s">[BIOME:SUBTERRANEAN_CHASM]</span>
+<span class="s">[UNDERGROUND_DEPTH:5:5]</span>
+<span class="s">[POPULATION_NUMBER:5:10]</span>
+<span class="s">[CLUSTER_NUMBER:1:5]</span>
+<span class="s">]]</span><span class="p">)</span>
+        <span class="n">options</span><span class="p">.</span><span class="n">fallback_pref_str</span><span class="o">=</span><span class="s2">&quot;horrifying features&quot;</span>
+    <span class="kr">end</span>
+    <span class="n">pick_random</span><span class="p">({</span>
+        <span class="kr">function</span><span class="p">()</span>
+            <span class="n">tbl</span><span class="p">[</span><span class="o">#</span><span class="n">tbl</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span><span class="o">=</span><span class="s2">&quot;[CASTE:FEMALE]&quot;</span>
+            <span class="n">tbl</span><span class="p">[</span><span class="o">#</span><span class="n">tbl</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span><span class="o">=</span><span class="s2">&quot;[FEMALE]&quot;</span>
+            <span class="n">tbl</span><span class="p">[</span><span class="o">#</span><span class="n">tbl</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span><span class="o">=</span><span class="s2">&quot;[CASTE:MALE]&quot;</span>
+            <span class="n">tbl</span><span class="p">[</span><span class="o">#</span><span class="n">tbl</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span><span class="o">=</span><span class="s2">&quot;[MALE]&quot;</span>
+            <span class="n">tbl</span><span class="p">[</span><span class="o">#</span><span class="n">tbl</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span><span class="o">=</span><span class="s2">&quot;[SELECT_CASTE:ALL]&quot;</span>
+        <span class="kr">end</span><span class="p">,</span>
+        <span class="kr">function</span><span class="p">()</span>
+            <span class="n">tbl</span><span class="p">[</span><span class="o">#</span><span class="n">tbl</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span><span class="o">=</span><span class="s2">&quot;[MALE]&quot;</span>
+        <span class="kr">end</span><span class="p">,</span>
+        <span class="kr">function</span><span class="p">()</span>
+            <span class="n">tbl</span><span class="p">[</span><span class="o">#</span><span class="n">tbl</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span><span class="o">=</span><span class="s2">&quot;[FEMALE]&quot;</span>
+        <span class="kr">end</span><span class="p">,</span>
+        <span class="kr">function</span><span class="p">()</span>
+            <span class="n">tbl</span><span class="p">[</span><span class="o">#</span><span class="n">tbl</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span><span class="o">=</span><span class="s2">&quot;[NO_GENDER]&quot;</span>
+        <span class="kr">end</span>
+    <span class="p">})()</span>
+    <span class="n">tbl</span><span class="o">=</span><span class="n">split_to_lines</span><span class="p">(</span><span class="n">tbl</span><span class="p">,</span><span class="s">[[[PHYS_ATT_RANGE:STRENGTH:450:1050:1150:1250:1350:1550:2250]</span>
+<span class="s">[PHYS_ATT_RANGE:TOUGHNESS:450:1050:1150:1250:1350:1550:2250]</span>
+<span class="s">[PHYS_ATT_RANGE:ENDURANCE:450:1050:1150:1250:1350:1550:2250]</span>
+<span class="s">[PHYS_ATT_RANGE:RECUPERATION:450:1050:1150:1250:1350:1550:2250]</span>
+<span class="s">[PHYS_ATT_RANGE:DISEASE_RESISTANCE:700:1300:1400:1500:1600:1800:2500]</span>
+<span class="s">[MENT_ATT_RANGE:ANALYTICAL_ABILITY:1250:1500:1750:2000:2500:3000:5000]</span>
+<span class="s">[MENT_ATT_RANGE:FOCUS:1250:1500:1750:2000:2500:3000:5000]</span>
+<span class="s">[MENT_ATT_RANGE:WILLPOWER:1250:1500:1750:2000:2500:3000:5000]</span>
+<span class="s">[MENT_ATT_RANGE:PATIENCE:0:333:666:1000:2333:3666:5000]</span>
+<span class="s">[MENT_ATT_RANGE:MEMORY:1250:1500:1750:2000:2500:3000:5000]</span>
+<span class="s">[MENT_ATT_RANGE:LINGUISTIC_ABILITY:450:1050:1150:1250:1350:1550:2250]</span>
+<span class="s">[MENT_ATT_RANGE:MUSICALITY:0:333:666:1000:2333:3666:5000]</span>
+<span class="s">[MENT_ATT_RANGE:SOCIAL_AWARENESS:700:1300:1400:1500:1600:1800:2500]</span>
+<span class="s">[PERSONALITY:ANXIETY_PROPENSITY:0:0:0]</span>
+<span class="s">[PERSONALITY:DEPRESSION_PROPENSITY:0:0:0]</span>
+<span class="s">[PERSONALITY:BASHFUL:0:0:0]</span>
+<span class="s">[PERSONALITY:STRESS_VULNERABILITY:0:0:0]</span>
+<span class="s">[PERSONALITY:FRIENDLINESS:0:0:0]</span>
+<span class="s">[PERSONALITY:ASSERTIVENESS:100:100:100]</span>
+<span class="s">[PERSONALITY:DISDAIN_ADVICE:100:100:100]</span>
+<span class="s">[PERSONALITY:CHEER_PROPENSITY:0:0:0]</span>
+<span class="s">[PERSONALITY:GRATITUDE:0:0:0]</span>
+<span class="s">[PERSONALITY:TRUST:0:0:0]</span>
+<span class="s">[PERSONALITY:ALTRUISM:0:0:0]</span>
+<span class="s">[PERSONALITY:SWAYED_BY_EMOTIONS:0:0:0]</span>
+<span class="s">[PERSONALITY:CRUELTY:100:100:100]</span>
+<span class="s">[PERSONALITY:PRIDE:100:100:100]</span>
+<span class="s">[PERSONALITY:GREED:100:100:100]</span>
+<span class="s">[NO_DRINK][NO_EAT][NO_SLEEP]</span>
+<span class="s">[BODY_APPEARANCE_MODIFIER:HEIGHT:90:95:98:100:102:105:110]</span>
+<span class="s">[BODY_APPEARANCE_MODIFIER:BROADNESS:90:95:98:100:102:105:110]</span>
+<span class="s">[MAGMA_VISION]</span>
+<span class="s">[EVIL]</span>
+<span class="s">[FANCIFUL]</span>
+<span class="s">[SUPERNATURAL]</span>
+<span class="s">]]</span><span class="p">)</span>
+    <span class="n">add_regular_tokens</span><span class="p">(</span><span class="n">tbl</span><span class="p">,</span><span class="n">options</span><span class="p">)</span>
+    <span class="kd">local</span> <span class="n">available_sphere_cur</span><span class="o">=</span><span class="p">{}</span>
+    <span class="kd">local</span> <span class="n">available_sphere</span><span class="o">=</span><span class="p">{}</span>
+    <span class="n">options</span><span class="p">.</span><span class="n">spheres</span><span class="o">=</span><span class="p">{}</span>
+    <span class="n">l2</span><span class="p">(</span><span class="s2">&quot;Starting spheres&quot;</span><span class="p">)</span>
+    <span class="kr">for</span> <span class="n">k</span><span class="p">,</span><span class="n">v</span> <span class="kr">in</span> <span class="nb">pairs</span><span class="p">(</span><span class="n">world</span><span class="p">.</span><span class="n">spheres</span><span class="p">)</span> <span class="kr">do</span>
+        <span class="n">available_sphere_cur</span><span class="p">[</span><span class="n">k</span><span class="p">]</span><span class="o">=</span><span class="kc">true</span>
+        <span class="n">available_sphere</span><span class="p">[</span><span class="n">k</span><span class="p">]</span><span class="o">=</span><span class="kc">true</span>
+    <span class="kr">end</span>
+    <span class="c1">--ANY SPHERE COLLECTION + ONE EVIL + NO PURE GOOD/CIVIS/FLUFF STUFF</span>
+    <span class="n">available_sphere_cur</span><span class="p">.</span><span class="n">AGRICULTURE</span><span class="o">=</span><span class="kc">false</span><span class="p">;</span>
+    <span class="n">available_sphere_cur</span><span class="p">.</span><span class="n">BALANCE</span><span class="o">=</span><span class="kc">false</span><span class="p">;</span>
+    <span class="n">available_sphere_cur</span><span class="p">.</span><span class="n">CHARITY</span><span class="o">=</span><span class="kc">false</span><span class="p">;</span>
+    <span class="n">available_sphere_cur</span><span class="p">.</span><span class="n">CONSOLATION</span><span class="o">=</span><span class="kc">false</span><span class="p">;</span>
+    <span class="n">available_sphere_cur</span><span class="p">.</span><span class="n">COURAGE</span><span class="o">=</span><span class="kc">false</span><span class="p">;</span>
+    <span class="n">available_sphere_cur</span><span class="p">.</span><span class="n">DUTY</span><span class="o">=</span><span class="kc">false</span><span class="p">;</span>
+    <span class="n">available_sphere_cur</span><span class="p">.</span><span class="n">FAMILY</span><span class="o">=</span><span class="kc">false</span><span class="p">;</span>
+    <span class="n">available_sphere_cur</span><span class="p">.</span><span class="n">FERTILITY</span><span class="o">=</span><span class="kc">false</span><span class="p">;</span>
+    <span class="n">available_sphere_cur</span><span class="p">.</span><span class="n">FESTIVALS</span><span class="o">=</span><span class="kc">false</span><span class="p">;</span>
+    <span class="n">available_sphere_cur</span><span class="p">.</span><span class="n">FORGIVENESS</span><span class="o">=</span><span class="kc">false</span><span class="p">;</span>
+    <span class="n">available_sphere_cur</span><span class="p">.</span><span class="n">FREEDOM</span><span class="o">=</span><span class="kc">false</span><span class="p">;</span>
+    <span class="n">available_sphere_cur</span><span class="p">.</span><span class="n">GENEROSITY</span><span class="o">=</span><span class="kc">false</span><span class="p">;</span>
+    <span class="n">available_sphere_cur</span><span class="p">.</span><span class="n">HAPPINESS</span><span class="o">=</span><span class="kc">false</span><span class="p">;</span>
+    <span class="n">available_sphere_cur</span><span class="p">.</span><span class="n">HEALING</span><span class="o">=</span><span class="kc">false</span><span class="p">;</span>
+    <span class="n">available_sphere_cur</span><span class="p">.</span><span class="n">HOSPITALITY</span><span class="o">=</span><span class="kc">false</span><span class="p">;</span>
+    <span class="n">available_sphere_cur</span><span class="p">.</span><span class="n">JUSTICE</span><span class="o">=</span><span class="kc">false</span><span class="p">;</span>
+    <span class="n">available_sphere_cur</span><span class="p">.</span><span class="n">LABOR</span><span class="o">=</span><span class="kc">false</span><span class="p">;</span>
+    <span class="n">available_sphere_cur</span><span class="p">.</span><span class="n">LOVE</span><span class="o">=</span><span class="kc">false</span><span class="p">;</span>
+    <span class="n">available_sphere_cur</span><span class="p">.</span><span class="n">LOYALTY</span><span class="o">=</span><span class="kc">false</span><span class="p">;</span>
+    <span class="n">available_sphere_cur</span><span class="p">.</span><span class="n">MARRIAGE</span><span class="o">=</span><span class="kc">false</span><span class="p">;</span>
+    <span class="n">available_sphere_cur</span><span class="p">.</span><span class="n">MERCY</span><span class="o">=</span><span class="kc">false</span><span class="p">;</span>
+    <span class="n">available_sphere_cur</span><span class="p">.</span><span class="n">OATHS</span><span class="o">=</span><span class="kc">false</span><span class="p">;</span>
+    <span class="n">available_sphere_cur</span><span class="p">.</span><span class="n">PEACE</span><span class="o">=</span><span class="kc">false</span><span class="p">;</span>
+    <span class="n">available_sphere_cur</span><span class="p">.</span><span class="n">PREGNANCY</span><span class="o">=</span><span class="kc">false</span><span class="p">;</span>
+    <span class="n">available_sphere_cur</span><span class="p">.</span><span class="n">RAINBOWS</span><span class="o">=</span><span class="kc">false</span><span class="p">;</span>
+    <span class="n">available_sphere_cur</span><span class="p">.</span><span class="n">REVELRY</span><span class="o">=</span><span class="kc">false</span><span class="p">;</span>
+    <span class="n">available_sphere_cur</span><span class="p">.</span><span class="n">SACRIFICE</span><span class="o">=</span><span class="kc">false</span><span class="p">;</span>
+    <span class="n">available_sphere_cur</span><span class="p">.</span><span class="n">TRADE</span><span class="o">=</span><span class="kc">false</span><span class="p">;</span>
+    <span class="n">available_sphere_cur</span><span class="p">.</span><span class="n">TRAVELERS</span><span class="o">=</span><span class="kc">false</span><span class="p">;</span>
+    <span class="n">available_sphere_cur</span><span class="p">.</span><span class="n">TRUTH</span><span class="o">=</span><span class="kc">false</span><span class="p">;</span>
+    <span class="n">available_sphere_cur</span><span class="p">.</span><span class="n">VALOR</span><span class="o">=</span><span class="kc">false</span><span class="p">;</span>
+    <span class="n">available_sphere_cur</span><span class="p">.</span><span class="n">WISDOM</span><span class="o">=</span><span class="kc">false</span><span class="p">;</span>
+    <span class="kd">local</span> <span class="n">branch_number</span><span class="o">=</span><span class="n">trandom</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span><span class="o">+</span><span class="mi">1</span>
+    <span class="kr">while</span> <span class="n">branch_number</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="kr">do</span>
+        <span class="kd">local</span> <span class="n">candidates</span><span class="o">=</span><span class="p">{}</span>
+        <span class="c1">-- not cleverness, just paranoia</span>
+        <span class="kr">if</span> <span class="n">branch_number</span><span class="o">&lt;=</span><span class="mi">1</span> <span class="kr">then</span>
+            <span class="kr">for</span> <span class="n">k</span><span class="p">,</span><span class="n">v</span> <span class="kr">in</span> <span class="nb">ipairs</span><span class="p">(</span><span class="n">evil_spheres</span><span class="p">)</span> <span class="kr">do</span>
+                <span class="kr">if</span> <span class="n">available_sphere_cur</span><span class="p">[</span><span class="n">v</span><span class="p">]</span> <span class="kr">then</span> <span class="n">candidates</span><span class="p">[</span><span class="o">#</span><span class="n">candidates</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span><span class="o">=</span><span class="n">v</span> <span class="kr">end</span>
+            <span class="kr">end</span>
+        <span class="kr">end</span>
+        <span class="kr">if</span> <span class="o">#</span><span class="n">candidates</span><span class="o">==</span><span class="mi">0</span> <span class="kr">then</span>
+            <span class="kr">for</span> <span class="n">k</span><span class="p">,</span><span class="n">v</span> <span class="kr">in</span> <span class="n">pairsByKeys</span><span class="p">(</span><span class="n">available_sphere_cur</span><span class="p">)</span> <span class="kr">do</span>
+                <span class="kr">if</span> <span class="n">v</span> <span class="kr">then</span> <span class="n">candidates</span><span class="p">[</span><span class="o">#</span><span class="n">candidates</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span><span class="o">=</span><span class="n">k</span> <span class="kr">end</span>
+            <span class="kr">end</span>
+        <span class="kr">end</span>
+        <span class="kr">if</span> <span class="o">#</span><span class="n">candidates</span> <span class="kr">then</span>
+            <span class="kd">local</span> <span class="n">new_s</span> <span class="o">=</span> <span class="n">pick_random</span><span class="p">(</span><span class="n">candidates</span><span class="p">)</span>
+            <span class="n">add_sphere_mpp</span><span class="p">(</span><span class="n">options</span><span class="p">.</span><span class="n">spheres</span><span class="p">,</span><span class="n">new_s</span><span class="p">,</span><span class="n">available_sphere</span><span class="p">,</span><span class="n">available_sphere_cur</span><span class="p">)</span>
+            <span class="kr">while</span> <span class="n">one_in</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span> <span class="kr">do</span>
+                <span class="n">candidates</span><span class="o">=</span><span class="p">{}</span>
+                <span class="kr">for</span> <span class="n">k</span><span class="p">,</span><span class="n">v</span> <span class="kr">in</span> <span class="n">pairsByKeys</span><span class="p">(</span><span class="n">world</span><span class="p">.</span><span class="n">spheres</span><span class="p">[</span><span class="n">new_s</span><span class="p">].</span><span class="n">friends</span><span class="p">)</span> <span class="kr">do</span>
+                    <span class="kr">if</span> <span class="n">available_sphere_cur</span><span class="p">[</span><span class="n">k</span><span class="p">]</span> <span class="kr">then</span>
+                        <span class="n">candidates</span><span class="p">[</span><span class="o">#</span><span class="n">candidates</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span><span class="o">=</span><span class="n">k</span>
+                    <span class="kr">end</span>
+                <span class="kr">end</span>
+                <span class="n">new_s</span> <span class="o">=</span> <span class="n">pick_random</span><span class="p">(</span><span class="n">candidates</span><span class="p">)</span>
+                <span class="kr">if</span> <span class="n">new_s</span> <span class="kr">then</span>
+                    <span class="n">add_sphere_mpp</span><span class="p">(</span><span class="n">options</span><span class="p">.</span><span class="n">spheres</span><span class="p">,</span><span class="n">new_s</span><span class="p">,</span><span class="n">available_sphere</span><span class="p">,</span><span class="n">available_sphere_cur</span><span class="p">)</span>
+                <span class="kr">else</span>
+                    <span class="kr">break</span>
+                <span class="kr">end</span>
+            <span class="kr">end</span>
+        <span class="kr">end</span>
+        <span class="n">branch_number</span> <span class="o">=</span> <span class="n">branch_number</span><span class="o">-</span><span class="mi">1</span>
+    <span class="kr">end</span>
+    <span class="n">l2</span><span class="p">(</span><span class="s2">&quot;Done with spheres&quot;</span><span class="p">)</span>
+    <span class="n">options</span><span class="p">.</span><span class="n">beast_only</span><span class="o">=</span><span class="n">demon_type</span><span class="o">==</span><span class="s2">&quot;humanoid_beast&quot;</span> <span class="ow">or</span> <span class="n">demon_type</span><span class="o">==</span><span class="s2">&quot;beast&quot;</span>
+    <span class="kr">if</span> <span class="n">demon_type</span><span class="o">==</span><span class="s2">&quot;flying_spirit&quot;</span> <span class="kr">then</span>
+        <span class="n">options</span><span class="p">.</span><span class="n">always_insubstantial</span><span class="o">=</span><span class="kc">true</span>
+        <span class="n">options</span><span class="p">.</span><span class="n">always_make_uniform</span><span class="o">=</span><span class="kc">true</span>
+    <span class="kr">end</span>
+    <span class="n">populate_sphere_info</span><span class="p">(</span><span class="n">tbl</span><span class="p">,</span><span class="n">options</span><span class="p">)</span>
+    <span class="kd">local</span> <span class="n">rcp</span><span class="o">=</span><span class="n">get_random_creature_profile</span><span class="p">(</span><span class="n">options</span><span class="p">)</span>
+    <span class="kd">local</span> <span class="n">body_size</span> <span class="o">=</span> <span class="n">difficulty</span><span class="o">==</span><span class="mi">6</span> <span class="ow">and</span> <span class="p">(</span><span class="mi">400000</span><span class="o">+</span><span class="n">trandom</span><span class="p">(</span><span class="mi">9</span><span class="p">)</span><span class="o">*</span><span class="mi">10000</span> <span class="o">+</span> <span class="n">trandom</span><span class="p">(</span><span class="mi">11</span><span class="p">)</span><span class="o">*</span><span class="mi">1000</span><span class="p">)</span> <span class="ow">or</span> <span class="p">(</span><span class="mi">10000000</span><span class="p">)</span>
+    <span class="n">add_body_size</span><span class="p">(</span><span class="n">tbl</span><span class="p">,</span><span class="nb">math.max</span><span class="p">(</span><span class="n">body_size</span><span class="p">,</span> <span class="n">rcp</span><span class="p">.</span><span class="n">min_size</span><span class="p">),</span><span class="n">options</span><span class="p">)</span>
+    <span class="n">tbl</span><span class="p">[</span><span class="o">#</span><span class="n">tbl</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span><span class="o">=</span><span class="s2">&quot;[CREATURE_TILE:&#39;&amp;&#39;]&quot;</span>
+    <span class="n">build_procgen_creature</span><span class="p">(</span><span class="n">rcp</span><span class="p">,</span><span class="n">tbl</span><span class="p">,</span><span class="n">options</span><span class="p">)</span>
+    <span class="n">tbl</span><span class="p">[</span><span class="o">#</span><span class="n">tbl</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span><span class="o">=</span><span class="s2">&quot;[GO_TO_START]&quot;</span>
+    <span class="n">options</span><span class="p">.</span><span class="n">flavor_adj</span> <span class="o">=</span> <span class="n">options</span><span class="p">.</span><span class="n">flavor_adj</span> <span class="ow">or</span> <span class="p">{}</span>
+    <span class="n">options</span><span class="p">.</span><span class="n">potential_end_phrase</span> <span class="o">=</span> <span class="n">options</span><span class="p">.</span><span class="n">potential_end_phrase</span> <span class="ow">or</span> <span class="p">{}</span>
+    <span class="kd">local</span> <span class="n">name_str</span><span class="o">=</span><span class="s2">&quot;&quot;</span>
+    <span class="kr">if</span> <span class="p">(</span><span class="o">#</span><span class="n">options</span><span class="p">.</span><span class="n">flavor_adj</span><span class="o">&gt;</span><span class="mi">0</span> <span class="ow">or</span> <span class="o">#</span><span class="n">options</span><span class="p">.</span><span class="n">potential_end_phrase</span><span class="o">&gt;</span><span class="mi">0</span><span class="p">)</span> <span class="ow">and</span> <span class="n">one_in</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span> <span class="kr">then</span>
+        <span class="kr">if</span> <span class="n">trandom</span><span class="p">(</span><span class="o">#</span><span class="n">options</span><span class="p">.</span><span class="n">flavor_adj</span> <span class="o">+</span> <span class="o">#</span><span class="n">options</span><span class="p">.</span><span class="n">potential_end_phrase</span><span class="p">)</span> <span class="o">&gt;</span> <span class="o">#</span><span class="n">options</span><span class="p">.</span><span class="n">flavor_adj</span> <span class="kr">then</span>
+            <span class="n">options</span><span class="p">.</span><span class="n">eadj</span><span class="o">=</span><span class="n">pick_random</span><span class="p">(</span><span class="n">options</span><span class="p">.</span><span class="n">potential_end_phrase</span><span class="p">)</span>
+            <span class="kd">local</span> <span class="n">name</span><span class="o">=</span><span class="n">pick_random_conditional</span><span class="p">(</span><span class="n">demon_names</span><span class="p">,</span><span class="s2">&quot;cond&quot;</span><span class="p">,</span><span class="n">options</span><span class="p">)</span>
+            <span class="n">name_str</span><span class="o">=</span><span class="n">name</span><span class="p">.</span><span class="n">name</span><span class="o">..</span><span class="n">options</span><span class="p">.</span><span class="n">eadj</span><span class="o">..</span><span class="s2">&quot;:&quot;</span><span class="o">..</span><span class="n">name</span><span class="p">.</span><span class="n">names</span><span class="o">..</span><span class="n">options</span><span class="p">.</span><span class="n">eadj</span><span class="o">..</span><span class="s2">&quot;:&quot;</span><span class="o">..</span><span class="n">name</span><span class="p">.</span><span class="n">name_adj</span><span class="o">..</span><span class="n">options</span><span class="p">.</span><span class="n">eadj</span>
+        <span class="kr">else</span>
+            <span class="n">options</span><span class="p">.</span><span class="n">fadj</span><span class="o">=</span><span class="n">pick_random</span><span class="p">(</span><span class="n">options</span><span class="p">.</span><span class="n">flavor_adj</span><span class="p">)</span>
+            <span class="kd">local</span> <span class="n">name</span><span class="o">=</span><span class="n">pick_random_conditional</span><span class="p">(</span><span class="n">demon_names</span><span class="p">,</span><span class="s2">&quot;cond&quot;</span><span class="p">,</span><span class="n">options</span><span class="p">)</span>
+            <span class="n">name_str</span><span class="o">=</span><span class="n">options</span><span class="p">.</span><span class="n">fadj</span><span class="o">..</span><span class="s2">&quot; &quot;</span><span class="o">..</span><span class="n">name</span><span class="p">.</span><span class="n">name</span><span class="o">..</span><span class="s2">&quot;:&quot;</span><span class="o">..</span><span class="n">options</span><span class="p">.</span><span class="n">fadj</span><span class="o">..</span><span class="s2">&quot; &quot;</span><span class="o">..</span><span class="n">name</span><span class="p">.</span><span class="n">names</span><span class="o">..</span><span class="s2">&quot;:&quot;</span><span class="o">..</span><span class="n">name</span><span class="p">.</span><span class="n">name_adj</span>
+        <span class="kr">end</span>
+    <span class="kr">elseif</span> <span class="ow">not</span> <span class="n">options</span><span class="p">.</span><span class="n">name_mat</span> <span class="ow">or</span> <span class="o">#</span><span class="n">options</span><span class="p">.</span><span class="n">name_mat</span><span class="o">==</span><span class="mi">0</span> <span class="kr">then</span>
+        <span class="kd">local</span> <span class="n">name</span><span class="o">=</span><span class="n">pick_random_conditional</span><span class="p">(</span><span class="n">demon_names</span><span class="p">,</span><span class="s2">&quot;cond&quot;</span><span class="p">,</span><span class="n">options</span><span class="p">)</span>
+        <span class="n">name_str</span><span class="o">=</span><span class="n">rcp</span><span class="p">.</span><span class="n">name_string</span><span class="o">..</span><span class="s2">&quot; &quot;</span><span class="o">..</span><span class="n">name</span><span class="p">.</span><span class="n">name</span><span class="o">..</span><span class="s2">&quot;:&quot;</span><span class="o">..</span><span class="n">rcp</span><span class="p">.</span><span class="n">name_string</span><span class="o">..</span><span class="s2">&quot; &quot;</span><span class="o">..</span><span class="n">name</span><span class="p">.</span><span class="n">names</span><span class="o">..</span><span class="s2">&quot;:&quot;</span><span class="o">..</span><span class="n">rcp</span><span class="p">.</span><span class="n">name_string</span><span class="o">..</span><span class="s2">&quot; &quot;</span><span class="o">..</span><span class="n">name</span><span class="p">.</span><span class="n">name_adj</span>
+    <span class="kr">else</span>
+        <span class="kd">local</span> <span class="n">name</span><span class="o">=</span><span class="n">pick_random_conditional</span><span class="p">(</span><span class="n">demon_names</span><span class="p">,</span><span class="s2">&quot;cond&quot;</span><span class="p">,</span><span class="n">options</span><span class="p">)</span>
+        <span class="kd">local</span> <span class="n">nmm</span><span class="o">=</span><span class="n">pick_random</span><span class="p">(</span><span class="n">options</span><span class="p">.</span><span class="n">name_mat</span><span class="p">)</span>
+        <span class="kr">if</span> <span class="n">one_in</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span> <span class="kr">then</span>
+            <span class="n">name_str</span><span class="o">=</span><span class="n">name</span><span class="p">.</span><span class="n">name</span><span class="o">..</span><span class="s2">&quot; of &quot;</span><span class="o">..</span><span class="n">nmm</span><span class="o">..</span><span class="s2">&quot;:&quot;</span><span class="o">..</span><span class="n">name</span><span class="p">.</span><span class="n">names</span><span class="o">..</span><span class="s2">&quot; of &quot;</span><span class="o">..</span><span class="n">nmm</span><span class="o">..</span><span class="s2">&quot;:&quot;</span><span class="o">..</span><span class="n">name</span><span class="p">.</span><span class="n">name</span><span class="o">..</span><span class="s2">&quot; of &quot;</span><span class="o">..</span><span class="n">nmm</span>
+        <span class="kr">else</span>
+            <span class="n">name_str</span><span class="o">=</span><span class="n">nmm</span><span class="o">..</span><span class="s2">&quot; &quot;</span><span class="o">..</span><span class="n">name</span><span class="p">.</span><span class="n">name</span><span class="o">..</span><span class="s2">&quot;:&quot;</span><span class="o">..</span><span class="n">nmm</span><span class="o">..</span><span class="s2">&quot; &quot;</span><span class="o">..</span><span class="n">name</span><span class="p">.</span><span class="n">names</span><span class="o">..</span><span class="s2">&quot;:&quot;</span><span class="o">..</span><span class="n">nmm</span><span class="o">..</span><span class="s2">&quot;:&quot;</span><span class="o">..</span><span class="n">name</span><span class="p">.</span><span class="n">name_adj</span>
+        <span class="kr">end</span>
+    <span class="kr">end</span>
+    <span class="kr">if</span> <span class="n">name_str</span><span class="o">==</span><span class="s2">&quot;&quot;</span> <span class="kr">then</span>
+        <span class="kd">local</span> <span class="n">name</span><span class="o">=</span><span class="n">pick_random_conditional</span><span class="p">(</span><span class="n">demon_names</span><span class="p">,</span><span class="s2">&quot;cond&quot;</span><span class="p">,</span><span class="n">options</span><span class="p">)</span>
+        <span class="n">name_str</span><span class="o">=</span><span class="n">rcp</span><span class="p">.</span><span class="n">name_string</span><span class="o">..</span><span class="s2">&quot; &quot;</span><span class="o">..</span><span class="n">name</span><span class="p">.</span><span class="n">name</span><span class="o">..</span><span class="s2">&quot;:&quot;</span><span class="o">..</span><span class="n">rcp</span><span class="p">.</span><span class="n">name_string</span><span class="o">..</span><span class="s2">&quot; &quot;</span><span class="o">..</span><span class="n">name</span><span class="p">.</span><span class="n">names</span><span class="o">..</span><span class="s2">&quot;:&quot;</span><span class="o">..</span><span class="n">rcp</span><span class="p">.</span><span class="n">name_string</span><span class="o">..</span><span class="s2">&quot; &quot;</span><span class="o">..</span><span class="n">name</span><span class="p">.</span><span class="n">name_adj</span>
+    <span class="kr">end</span>
+    <span class="kr">if</span> <span class="n">name_str</span><span class="o">==</span><span class="s2">&quot;&quot;</span> <span class="kr">then</span>
+        <span class="n">name_str</span><span class="o">=</span><span class="s2">&quot;glitch demon:glitch demons:glitch demon&quot;</span>
+    <span class="kr">end</span>
+    <span class="n">tbl</span><span class="p">[</span><span class="o">#</span><span class="n">tbl</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span><span class="o">=</span><span class="s2">&quot;[NAME:&quot;</span><span class="o">..</span><span class="n">name_str</span><span class="o">..</span><span class="s2">&quot;]&quot;</span>
+    <span class="n">tbl</span><span class="p">[</span><span class="o">#</span><span class="n">tbl</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span><span class="o">=</span><span class="s2">&quot;[CASTE_NAME:&quot;</span><span class="o">..</span><span class="n">name_str</span><span class="o">..</span><span class="s2">&quot;]&quot;</span>
+    <span class="kr">return</span> <span class="p">{</span><span class="n">raws</span><span class="o">=</span><span class="n">tbl</span><span class="p">,</span><span class="n">weight</span><span class="o">=</span><span class="mi">1</span><span class="p">}</span>
+<span class="kr">end</span>
+</pre></div></div>

@@ -1,0 +1,36 @@
+{{Quality|Superior}}
+{{av}}
+{{Modding}}
+Tokens used to define descriptor patterns, that may be used instead of [[Color#Color_tokens|descriptor colors]]. As an example, the descriptor pattern STRIPES_ORANGE_BLACK is what gives tigers their stripes.
+{{clear}}
+
+==Tokens==
+{| {{prettytable}}
+|- bgcolor="#999999"
+! Token
+! Arguments
+! Usage
+! Description
+
+|-
+| {{text anchor|PATTERN}}
+| SPOTS, STRIPES, MOTTLED, IRIS_EYE or PUPIL_EYE
+| {{tc|red|Required}}
+| The type of pattern, deciding the description.
+* SPOTS: Causes a crash if no CP_COLOR is given{{bug|11806}}, otherwise takes any amount.
+* STRIPES: Takes any amount of CP_COLOR tokens.
+* MOTTLED: Takes any amount of CP_COLOR tokens.
+* IRIS_EYE: Only shows the third CP_COLOR given; technically takes any amount. Causes a crash if no CP_COLOR is given{{bug|11806}}. If only one or two CP_COLORs is given, the tissue is described as being "transparent".
+* PUPIL_EYE: Only shows the second CP_COLOR given; technically takes any amount. Causes a crash if no CP_COLOR is given{{bug|11806}}. If only one CP_COLORs is given, the tissue is described as being "transparent".
+An undefined pattern type causes the description to simply not show up. 
+
+|-
+| {{text anchor|CP_COLOR}}
+| [[Color#Color_tokens|color token]]
+| {{tc|red|Required (mostly)}}
+| A color to be used in the pattern. See [[Descriptor_pattern_token#PATTERN|PATTERN]] for how many CP_COLOR tokens are needed, and how they are used. [[descriptor color token|Modded color tokens]] may be used.
+|}
+
+{{Category|Modding}}
+{{Category|Tokens}}
+[[ru:Descriptor pattern token]]

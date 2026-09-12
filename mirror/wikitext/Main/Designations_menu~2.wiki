@@ -1,0 +1,75 @@
+{{Quality|Exceptional}}
+{{av}}
+[[File:designation_icons_preview.png|right]]The '''Designations menu''' can be accessed along the bottom center of the screen, and provides the means to mark tiles with various designations including [[mining]], [[wood cutting]], [[plant gathering]], [[smooth|stone detailing]] as well as [[removing]] constructions, controlling [[traffic]] and other miscellaneous designations.
+
+To designate an area ({{Menu icon|m|b|num=1}}), select the desired designation from the menu, place your cursor over the first tile, click once, then drag your cursor over to another tile - which will create a rectangle, then click again. You can also choose to "paint" an area ({{Menu icon|m|B|num=1}}), which lets you specifically designate tiles one by one. Depending on the designation, this also works across [[z-level]]s, allowing 3-dimensional designations in the shape of a cuboid.
+
+To cancel a designation, use Remove Designations ({{Menu icon|x}}).
+
+All designations can be prioritized, with 1 being the highest priority and 7 being the lowest. Note that if two different designations have the same priority, one type may still be favored over the other (allthough such obeserved behavior could just be a result of different distances - in the maximum norm - to the tiles in question). They also can be assigned as "Blueprint only", which is similar to the job being suspended, as it marks tiles in a blue-colored square. This is useful for planning out designations and rooms without dwarves suddenly moving in to do anything yet.
+
+Also note that for any and all designations (wood cutting, plant gathering, smoothing etc.) a dwarf currently doing such a job will when choosing the next job of that type always pick an accessible, designated tile (which has not been flagged as the current/next working tile of another dwarf) with the minimum distance (in the maximum norm) from the current position, regardless of how long the path to actually get there is. And when starting to do such a job the first tile is choosen by the same metric (minimum distance in the maximum norm). If more than one tile have the same distance then it is random which tile is picked first.
+
+== Designations Menu ==
+*[[File:designations_v50_preview.png|thumb|260px|right|Designations, both normal and marked (blue).]]Mine ({{Menu icon|m|m}}) - Mark tiles to be [[Mining|mined]] out.  Removing stone/soil walls and leaving stone/soil floors. May leave stone/ore/gems. (req. [[Mining]] labor)
+*Channel ({{Menu icon|m|u}}) - Mark tiles to be [[Channel|channeled]] out.  Removing the stone/soil wall on that tile, the floor, and replacing the stone/soil floor below with a ramp.  May leave stone/ore/gem. (req. [[Mining]] labor)
+*Remove Up Stairs/Ramps ({{Menu icon|m|x}}) - Mark tiles to remove natural ramps and dug ramps/stairs. (req. [[Mining]] labor)
+*Create Stairway ({{Menu icon|m|t}}) - Mark walls to be dug out and replaced with stairs going up or down.  (req. [[Mining]] labor)
+*Upward Ramp ({{Menu icon|m|r}}) - Mark walls to be dug out and replaced with upward ramps  (req. [[Mining]] labor)
+
+*Chop Down Trees ({{Menu icon|l}}) - Mark [[tree]]s to be chopped down. (req. [[Wood cutting]] labor)
+
+*Gather Plants ({{Menu icon|g}}) - Mark [[shrub]]s to be gathered. (req. [[Plant gathering]] labor)
+
+*Smooth Stone ({{Menu icon|v|m}}) - Mark stone walls to be smoothed.  (req. [[Stonecutting]] labor)
+*Engrave Stone ({{Menu icon|v|g}}) - Mark smoothed walls to be engraved.  (req. [[Stone engraving]] labor)
+*Carve Fortifications ({{Menu icon|v|f}}) - Mark walls to have [[fortification]]s carved.  (req. [[Stonecutting]] labor)
+*Carve Track ({{Menu icon|v|t}}) - Mark stone walls to be turned into track for [[minecart]]s. (req. [[Stonecutting]] labor)
+
+*Toggle Blueprint Mode ({{Menu icon|M}}) Toggle existing designations between blueprint mode and standard mode (see [[#Blueprint Mode|below]]).
+*Remove Designation ({{Menu icon|x}}) - Remove all designation markings.
+*Remove Construction ({{Menu icon|m|x}}) - Mark [[construction]]s to be removed
+*Bulk designation of items: ({{Menu icon|i}})
+**{{Menu icon|i|F|num=1}}:  Reclaim Items/Buildings - Mark area of objects to be [[Reclaim|claimed]].
+**{{Menu icon|i|f|num=1}}: Forbid Items/Buildings - Mark area of objects to be [[forbid]]den.
+**{{Menu icon|i|m|num=1}}: Melt Items - Mark area of objects to be [[melt]]ed.
+**{{Menu icon|i|M|num=1}}: Remove Melt - Remove [[melt]] marking from area.
+**{{Menu icon|i|p|num=1}}: Dump Items - Mark area of objects to be [[dump]]ed.
+**{{Menu icon|i|P|num=1}}: Remove Dump - Remove [[dump]] marking from area.
+**{{Menu icon|i|H|num=1}}: Unhide Items/Buildings - Remove [[Hide Items or Buildings|hide]] marking from area.
+**{{Menu icon|i|h|num=1}}: Hide Items/Buildings - Mark area of objects to be [[Hide Items or Buildings|hidden]].
+*Set [[Traffic|Traffic Areas]] ({{Menu icon|T}}) - Traffic area values determine where dwarves will travel.  Large values for cost mean that dwarves will avoid that area if at all possible; smaller costs mean they will prefer that path even if it is longer than “normal”.
+**{{Menu icon|T|h|num=1}}: High Traffic Area - Mark areas with the “cost” listed in “High Traffic Cost”
+**{{Menu icon|T|x|num=1}}: Normal Traffic Area - Mark areas with the “cost” listed in “Normal Traffic Cost”
+**{{Menu icon|T|l|num=1}}: Low Traffic Area - Mark areas with the “cost” listed in “Low Traffic Cost”
+**{{Menu icon|T|r|num=1}}: Restricted Traffic Area - Mark areas with the “cost” listed in “Restricted Traffic Cost”
+
+== Designations modification==
+Mining {{Menu icon|m|n}} can also be modified to change behavior:
+*{{Menu icon|m|v|num=1}}: Designate all - Standard behavior.
+*{{Menu icon|m|V|num=1}}: Automining Ore/Gems - Once this tile has been processed, all neighboring tiles will be marked for mining, if they contain the same ore or gems. Can only be designated on revealed ores/gems. Will appear green.
+*{{Menu icon|m|o|num=1}}: Designating Ores/Gems - What it says on the tin. Only works on revealed tiles.
+*{{Menu icon|m|g|num=1}}: Designating Gems - See above.
+
+== Priority ==
+[[File:priority_anim.gif|right]]Designations can be assigned a priority by clicking [[File:Designation priority 1.png|25px]]-[[File:Designation priority 7.png|25px]]. By default, all designations are made with a priority of [[File:Designation priority 4.png|25px]], but higher priority jobs can be marked by using priorities [[File:Designation priority 1.png|25px]]-[[File:Designation priority 3.png|25px]], and lower priority ones with [[File:Designation priority 5.png|25px]]-[[File:Designation priority 7.png|25px]]. Note that [[File:Designation priority 1.png|25px]] is the ''highest'' priority, and [[File:Designation priority 7.png|25px]] the ''lowest''.
+When a dwarf has several jobs of different priority to do, the ones with higher priority are executed first, regardless of how convenient they are for the dwarf in question; a job marked [[File:Designation priority 1.png|25px]] on the other side of the map will take precedence over a job marked [[File:Designation priority 2.png|25px]] right next to them.
+
+Care should be taken not to set important tasks on too low of a priority, as many other incoming and existing tasks will take precedent over those lowest priority tasks, meaning those tasks will never get done unless their priority is changed manually.
+
+== Blueprint mode ==
+Designations can be placed in the default standard mode&mdash;the jobs are eligible to begin as soon as the game is unpaused&mdash;or in blueprint mode. Switch the mode of new designations with {{Menu icon|M}}. Blueprint mode designations appear cyan instead of beige.
+
+Dwarves will not actually undertake blueprint mode designations. This can be used to plan future projects, and it offers a few advantages:
+* There is no need to designate the entire project at once. Doubtful portions can be deferred until nearby terrain is revealed, for example.
+* Blueprint designations will not disrupt jobs already underway.
+* The full range of priorities is available, as opposed to delaying the project by forcing low priorities. Thus the new project can take priority over existing designations when it's ready, without the need to remove the old designations.
+
+When it is time for your dwarves to begin a blueprint-mode project, designate a {{Menu icon|M|k|num=1}} standard toggle and choose an area that contains all the blueprint designations you wish, in all three dimensions. All blueprint-mode designations within will change to standard mode, and vice versa. The opposite ({{Menu icon|M|L|num=1}}) can be used to temporarily deactivate existing standard designations as well.
+
+==Notes==
+* With [[DFHack]] installed, there is also be a setting available in the mining menu {{Menu icon|m|Ctrl+d|num=1}} that allows to configure whether your miners will ignore [[Digging designation canceled|warm or damp stone]].
+{{V50 menus}}
+{{Category|Interface}}
+{{Category|Designations|*}}
+[[ru:Designations menu]]

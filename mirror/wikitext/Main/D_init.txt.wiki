@@ -1,0 +1,17 @@
+{{Quality|Fine}}
+{{av}}
+{{buggy}}
+:''These settings are covered in more detail in [[Settings]].''
+{{file|prefs/d_init.txt}}
+Most of these can be changed in the in game settings, with the current settings stored in the file ``prefs/d_init.txt``, and the default settings with an explanation of each at ``data/init/d_init_default.txt``; the location of the ``prefs`` [[Game folders and files|folder]] depends on the [[Settings#Portable mode|portable mode setting]] (there is also a ``data`` folder there, but if you put a ``data/init/d_init_default.txt`` there it will not be read). Changes made directly to these files take effect the next time ''Dwarf Fortress'' is run, and apply to all worlds. Files in both ``data/init/`` and ``prefs/`` are read when ''Dwarf Fortress'' starts, in that order, with the last value read for an option being used.
+
+The contents of the default '''d_init_default.txt''' file can be found below.
+
+==Default settings==
+{{gamedata|title=d_init_default.txt|whitespace=pre-wrap}}
+
+== Bugs ==
+* The text in the file says you need a population of 80 for a [[monarch]], but you actually need [[Difficulty#Fortress_rank|110]], and technically, that is for becoming a [[Fortress#Nomenclature|city]], which is what the monarch requires.
+
+{{files}}
+[[ru:d_init.txt]]

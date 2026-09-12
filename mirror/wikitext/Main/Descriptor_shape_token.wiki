@@ -1,0 +1,73 @@
+{{Quality|Fine}}
+{{av}}
+{{Modding}}
+These tokens are used to describe various [[shape]]s used in the game. All vanilla shapes are found in <code>descriptor_shape_standard.txt</code>.
+{{clear}}
+
+==Tokens==
+{| {{prettytable}}
+|- bgcolor="#999999"
+! Token
+! Arguments
+! Usage
+! Description
+
+|-
+| {{text anchor|ADJ}}
+| string
+|
+| An adjective to be paired with the name. Can be used multiple times, allowing for variants of the same shape e.g. "thin cross", "tall cross".
+
+|-
+| {{text anchor|CATEGORY}}
+| category name
+|
+| A category the shape belongs to, which can be used by the tool token [[Tool_token#SHAPE_CATEGORY|SHAPE_CATEGORY]]. Vanilla categories are SIMPLE, PLATONIC, and DICE, but any arbitrary category name is allowed.
+
+|-
+| {{text anchor|SIDES}}
+| number
+| dice
+| The amount of sides of the dice.
+
+|-
+| {{text anchor|GEMS_USE_ADJ}}
+|
+| gems
+| Makes gems in this shape use the syntax 'ADJ + material' e.g. "conglomerate gizzard stone". This, GEMS_USE_NOUN or GEMS_USE_ADJ_NOUN must be used for the name of a gem in this shape to show up.
+
+|-
+| {{text anchor|GEMS_USE_ADJ_NOUN}}
+|
+| gems
+| Makes gems in this shape use the syntax 'ADJ + material + NAME' e.g. "smooth conglomerate cabochon". This, GEMS_USE_ADJ or GEMS_USE_ADJ_NOUN must be used for the name of a gem in this shape to show up.
+
+|-
+| {{text anchor|GEMS_USE_NOUN}}
+|
+| gems
+| Makes gems in this shape use the syntax 'material + NAME' e.g. "point cut conglomerate". This, GEMS_USE_ADJ or GEMS_USE_ADJ_NOUN must be used for the name of a gem in this shape to show up.
+
+|-
+| {{text anchor|NAME}}
+| string:plural
+| {{tc|red|Required}}
+| The name of the shape. Is not always strictly used, see GEMS_USE_ADJ.
+
+|-
+| {{text anchor|TILE}}
+| 'character' or tile number
+| {{tc|red|Required}}
+| The tile the shape uses, as an engraving or as an item (gem, die).
+
+|-
+| {{text anchor|WORD}}
+| word
+| 
+| Effect unknown.
+
+|}
+
+{{Category|Modding}}
+{{Category|Tokens}}
+[[ru:Descriptor shape token]]
