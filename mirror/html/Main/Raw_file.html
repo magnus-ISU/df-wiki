@@ -1,0 +1,288 @@
+<div class="mw-parser-output"><div id="page-quality-rating" style="text-align: right;margin: 0.8em 0;font-size:75%">
+ <a href="/index.php/Dwarf_Fortress_Wiki:Quality#Tattered" title="Dwarf Fortress Wiki:Quality"><span id="stub-quality" style="text-decoration:none; color:#333333">xTATTEREDx</span></a> <span style="font-weight:bold;" class="dot">&#160;·</span> <a href="/index.php/Dwarf_Fortress_Wiki:Quality#Fine" title="Dwarf Fortress Wiki:Quality"><span id="fine-quality" style="padding:0.2em; border:1px solid #db8; border-radius: 2px; -webkit-border-radius: 2px; -moz-border-radius: 2px; -o-border-radius: 2px; -ms-border-radius: 2px; background:#FFE0CC; color:#CA7A02;">+FINE+</span></a> <span style="font-weight:bold;" class="dot">&#160;·</span> <a href="/index.php/Dwarf_Fortress_Wiki:Quality#Superior" title="Dwarf Fortress Wiki:Quality"><span id="superior-quality" style="text-decoration:none; color:#8800cc;">*SUPERIOR*</span></a> <span style="font-weight:bold;" class="dot">&#160;·</span> <a href="/index.php/Dwarf_Fortress_Wiki:Quality#Exceptional" title="Dwarf Fortress Wiki:Quality"><span id="exceptional-quality" style="text-decoration:none; color:#0088CC;">≡EXCEPTIONAL≡</span></a> <span style="font-weight:bold;" class="dot">&#160;·</span> <a href="/index.php/Dwarf_Fortress_Wiki:Quality#Masterwork" title="Dwarf Fortress Wiki:Quality"><span id="masterwork-quality" style="text-decoration:none; color:#72A329;">☼MASTERWORK☼</span></a></div>
+<table class="version-table" style="text-align: center; margin: 3px auto 5px; padding: 0.25em; border-radius: 3px; -webkit-border-radius: 3px; -moz-border-radius: 3px; -o-border-radius: 3px; -ms-border-radius: 3px;; border: 2px solid #bbdd88; background: #f5ffee; min-width:27em"><tbody><tr><td style="padding: 0.3em 0.3em; width: 100%;"><div style="margin-bottom:6px;" class="version-links-r1"><span style="font-size:100%"><span class="version-link"><span style="text-decoration: none; color: #72A329; background-color: #E2FDCE; border-radius: 2px; -webkit-border-radius: 2px; -moz-border-radius: 2px; -o-border-radius: 2px; -ms-border-radius: 2px; border: 1px solid #bbdd88; padding: 0.2em;"><b>v53.16</b></span></span><span style="font-weight:bold;" class="dot">&#160;·</span> <span class="version-link"><a href="/index.php/DF2014:Raw_file" title="DF2014:Raw file"><span style="text-decoration: none; color: #72A329;">v0.47.05</span></a></span></span></div><span>This article is about the current version of DF.<br />Note that some content may still need to be updated.</span><br />
+<div style="float: right; font-size:75%; padding-right:2px; margin-top:-2px; margin-bottom:-7px;"><span class="version-link"><a href="/index.php/Dwarf_Fortress_Wiki:V" class="mw-redirect" title="Dwarf Fortress Wiki:V"><span style="text-decoration: none; color: #72A329;">More Info</span></a></span><span style="font-weight:bold;" class="dot">&#160;·</span> <span class="version-link"><a href="/index.php/Template:Av" class="mw-redirect" title="Template:Av"><span style="text-decoration: none; color: #72A329;">V</span></a></span></div></td></tr>
+</tbody></table>
+<div class="floatright"><a href="/index.php/File:Raw_preview.png" class="image"><img alt="Raw preview.png" src="/images/1/1f/Raw_preview.png" decoding="async" width="240" height="228" /></a></div>
+<p><b>Raw files</b> are text files found in the <code><a href="/index.php/Game_folder" class="mw-redirect" title="Game folder">&lt;Dwarf Fortress&gt;</a>\data\vanilla\</code> subdirectory of <i>Dwarf Fortress</i> (used for <a href="/index.php/World_generation" title="World generation">world generation</a>), as well as inside the <a href="/index.php/Save" class="mw-redirect" title="Save">saved game</a> folder for already generated worlds. These files can be looked through to discover various specifics of game items, materials, and creatures, and can be changed to alter how the game behaves.  They are sometimes referred to by players as just "the raws".
+</p><p>The <code>data\vanilla\*_graphics</code> subfolders are used to store user-customizable <a href="/index.php/Graphics_set_repository" class="mw-redirect" title="Graphics set repository">graphics sets</a>. The <code>data\vanilla\<a href="/index.php/Interaction_examples" title="Interaction examples">interaction examples</a></code> folder contains examples useful for modding but completely ignored by <i>Dwarf Fortress</i>.
+</p><p><i>Dwarf Fortress</i> is not currently an open-source program, so most <a href="/index.php/Modding" title="Modding">modding</a> of the game is limited to altering the raws or <a href="/index.php/Memory_hacking" title="Memory hacking">memory hacking</a>.
+</p><p><a href="/index.php/Duplicated_raws" title="Duplicated raws">Duplicating the raw files</a> can cause strange, difficult-to-diagnose problems, and even crashes in some cases.
+</p>
+
+<h2><span class="mw-headline" id="Syntax_of_raw_files">Syntax of raw files</span></h2>
+<pre>filename
+
+[OBJECT:TYPE]
+
+[TYPE:ID] 
+&lt;...contents...&gt;
+</pre>
+<p><i>filename</i> is a copy of the raw file name, minus the .txt extension; every raw must begin with this. It must begin with a certain prefix depending on the TYPE (see below).
+</p><p><i>TYPE</i> is a keyword that instructs the game what sort of objects are being defined in the raw (see below).  An individual raw file can (and must) have only one OBJECT:TYPE.
+</p><p><i>ID</i> is a unique identificator for your type to use (i.e. [CREATURE:DOG], ID=DOG or [ITEM:ITEM_WEAPON_SWORD], ID=ITEM_WEAPON_SWORD).
+</p>
+<h3><span class="mw-headline" id="Types_of_content">Types of content</span></h3>
+<ul><li>BODY &#8212; body parts and structures; filename prefix <code>body_</code>.</li>
+<li>BODY_DETAIL_PLAN &#8212; similar to CREATURE_VARIATION, but used for defining tokens related to body parts (specifically materials, tissues, the assignment thereof, and body part positions, relative sizes, etc.); filename prefix <code>b_detail_plan_</code>.</li>
+<li>BUILDING &#8212; custom workshops and smelters; filename prefix <code>building_</code>.</li>
+<li>CREATURE &#8212; <a href="/index.php/Creature" title="Creature">creatures</a>; filename prefix <code>creature_</code>.</li>
+<li>CREATURE_VARIATION &#8212; variations that can be applied to creatures (e.g., making them giants, or anthropomorphic). Technically a series of tokens that are added to or removed from the creature (essentially a set of templated changes); filename prefix <code>c_variation_</code>.</li>
+<li>DESCRIPTOR_COLOR (tag is COLOR) &#8212; named colors for use with DESCRIPTOR_PATTERN objects (other purposes unknown); filename prefix <code>descriptor_color_</code>.</li>
+<li>DESCRIPTOR_PATTERN (tag is COLOR_PATTERN) &#8212; patterns with color combinations for use with creatures; filename prefix <code>descriptor_pattern_</code>.</li>
+<li>DESCRIPTOR_SHAPE (tag is SHAPE) &#8212; shapes with descriptions and variations, used for engravings; filename prefix <code>descriptor_shape_</code>.</li>
+<li>ENTITY &#8212; civilization types, with assigned race, language, culture, ethics, and social structure; filename prefix <code>entity_</code>.</li>
+<li>GRAPHICS &#8212; graphic tiles for creatures. These are not found inside the raw/objects folder; filename prefix <code>graphics_</code>.</li>
+<li>INTERACTION &#8212; interaction definitions; filename prefix <code>interaction_</code>.</li>
+<li>INORGANIC &#8212; inorganic material definitions; filename prefix <code>inorganic_</code>.</li>
+<li>ITEM &#8212; items ranging from ammunition to food types, has secondary types for the purposes of [TYPE:ID]; filename prefix <code>item_</code>.
+<ul><li>ITEM_AMMO &#8212; ammunition for ranged weapons.</li>
+<li>ITEM_ARMOR &#8212; body clothing, including armor.</li>
+<li>ITEM_FOOD &#8212; prepared food definitions.</li>
+<li>ITEM_GLOVES &#8212; hand clothing, including armor.</li>
+<li>ITEM_HELM &#8212; head clothing, including armor.</li>
+<li>ITEM_INSTRUMENT &#8212; instrument definitions.</li>
+<li>ITEM_PANTS &#8212; lower body clothing, including armor.</li>
+<li>ITEM_SHIELD &#8212; shields.</li>
+<li>ITEM_SHOES &#8212; foot clothing, including armor.</li>
+<li>ITEM_SIEGEAMMO &#8212; ammunition for siege weapons that <a href="/index.php/Ballista" class="mw-redirect" title="Ballista">ballistae</a> fire.</li>
+<li>ITEM_TOOL &#8212; multi-purpose items that can serve as a <a href="/index.php/Weapon" title="Weapon">weapon</a>, food storage container, etc.</li>
+<li>ITEM_TOY &#8212; toy definitions.</li>
+<li>ITEM_TRAPCOMP &#8212; components that can be used in weapon traps (two special tags define trapcomps that can be used in other constructions: IS_SCREW and IS_SPIKE).</li>
+<li>ITEM_WEAPON &#8212; weapons that are used by soldiers, as well as digging tools.</li></ul></li>
+<li>LANGUAGE &#8212; word definitions for the languages used by ENTITY objects; filename prefix <code>language_</code>.
+<ul><li>Entries beginning with [SYMBOL:ID] sort words into symbolic/poetic groups to be referenced by ENTITY preferences.</li>
+<li>Entries beginning with [WORD:ID] define words and their alternate forms (in English).</li></ul></li>
+<li>MATERIAL_TEMPLATE &#8212; definitions of information common to groups of materials (referenced all over the place); filename prefix <code>material_template_</code>.</li>
+<li>MUSIC &#8212; assigns music files to background and event music cues, modding currently very limited; filename prefix <code>music_</code>.</li>
+<li>PALETTE &#8212; defines a color palette and associates those colors to an image file containing color swatches; filename prefix <code>palette_</code>.</li>
+<li>PLANT &#8212; definitions of plants, their materials, and their derivatives; filename prefix <code>plant_</code>.</li>
+<li>REACTION &#8212; reactions/custom workshop jobs (turn items into other items through dwarven or adventurer effort); filename prefix <code>reaction_</code>.</li>
+<li>SOUND &#8212; associates sound files with in-game event cues; filename prefix <code>sound_</code>.</li>
+<li>TEXT_SET &#8212; conversation text, mostly used in Adventure mode;&#160;; filename prefix <code>text_</code>. Example: <a href="/index.php/Text_dwarf.txt" title="Text dwarf.txt">text_dwarf.txt</a></li>
+<li>TILE_PAGE &#8212; assigns IDs to image files and establishes their parameters for use in GRAPHICS raws; filename prefix <code>tile_page_</code>.</li>
+<li>TISSUE_TEMPLATE &#8212; defines templated tissues for use with BODY_DETAIL_PLAN objects or in creatures; filename prefix <code>tissue_template_</code>.</li></ul>
+<p>Usually empty lines are used to divide different types of structures like the file name and [OBJECT:] or different entries, however everything which is not a token besides the 1st string (which is the filename) is understood as comments and is not considered.
+</p><p>The tokens are enclosed in square brackets ([TOKEN:VALUES]).
+</p><p>A list of tokens can be seen at <a href="/index.php/Category:Tokens" title="Category:Tokens">Category:Tokens</a>.
+</p>
+<h2><span class="mw-headline" id="Parsing">Parsing</span></h2>
+<table class="metadata plainlinks ambox ambox-content" style="background-color:#fc9;" role="presentation">
+<tbody><tr><td class="mbox-image"><div style="width: 52px;"><a href="/index.php/File:Announce_migrant_icon.png" class="image"><img alt="Announce migrant icon.png" src="/images/5/5f/Announce_migrant_icon.png" decoding="async" width="32" height="32" /></a></div></td><td class="mbox-text" style=""><span class="mbox-text-span">This section was migrated from <a href="/index.php/DF2014:Raw_file" title="DF2014:Raw file">DF2014:Raw file</a> and may be inaccurate for the current version of DF (v53.16). See <a href="/index.php/Dwarf_Fortress_Wiki:Version_migration" title="Dwarf Fortress Wiki:Version migration">this page</a> for more information.<span class="hide-when-compact">  </span><span class="hide-when-compact"> </span></span></td></tr></tbody></table>
+<p>The order that <i>Dwarf Fortress</i> parses raw files in is determined by the first line of the raw file (<i>not</i> necessarily the filename). This parsing order is important for certain tags, such as [COPY_TAGS_FROM], but not for most other tags. 
+</p><p>The names of raw files are completely irrelevant - when you create a new creature, you can put it in any file you want (or even in a brand-new file) and the game won't behave any differently. You can even rename all of the existing raw files and the game still won't care (as long as you generate a new world first, of course). 
+</p>
+<h2><span class="mw-headline" id="Required_objects">Required objects</span></h2>
+<table class="metadata plainlinks ambox ambox-content" style="background-color:#fc9;" role="presentation">
+<tbody><tr><td class="mbox-image"><div style="width: 52px;"><a href="/index.php/File:Announce_migrant_icon.png" class="image"><img alt="Announce migrant icon.png" src="/images/5/5f/Announce_migrant_icon.png" decoding="async" width="32" height="32" /></a></div></td><td class="mbox-text" style=""><span class="mbox-text-span">This section was migrated from <a href="/index.php/DF2014:Raw_file" title="DF2014:Raw file">DF2014:Raw file</a> and may be inaccurate for the current version of DF (v53.16). See <a href="/index.php/Dwarf_Fortress_Wiki:Version_migration" title="Dwarf Fortress Wiki:Version migration">this page</a> for more information.<span class="hide-when-compact">  </span><span class="hide-when-compact"> </span></span></td></tr></tbody></table>
+<p>While most of the raw files are replaceable or removable, some contain raw objects that are used by procedurally generated creatures (such as <a href="/index.php/Forgotten_beast" title="Forgotten beast">FBs</a> and <a href="/index.php/Experiment" title="Experiment">experiments</a>). Raws with the following IDs must exist, to support those creatures. The file names are where said objects exist by default, but are not important on their own, as long as the objects exist somewhere in the raws the game may use them. This list was compiled by examining the code that emits the various "Cannot generate random creatures -- missing *" error messages.
+</p><p>material_template_default.txt:
+</p>
+<pre>SKIN_TEMPLATE
+FAT_TEMPLATE
+MUSCLE_TEMPLATE
+SINEW_TEMPLATE
+BONE_TEMPLATE
+CARTILAGE_TEMPLATE
+HAIR_TEMPLATE
+FEATHER_TEMPLATE
+SCALE_TEMPLATE
+NAIL_TEMPLATE
+TOOTH_TEMPLATE
+EYE_TEMPLATE
+NERVE_TEMPLATE
+BRAIN_TEMPLATE
+LUNG_TEMPLATE
+HEART_TEMPLATE
+LIVER_TEMPLATE
+GUT_TEMPLATE
+STOMACH_TEMPLATE
+PANCREAS_TEMPLATE
+SPLEEN_TEMPLATE
+KIDNEY_TEMPLATE
+LEATHER_TEMPLATE
+HORN_TEMPLATE
+PEARL_TEMPLATE
+SILK_TEMPLATE
+BLOOD_TEMPLATE
+ICHOR_TEMPLATE
+GOO_TEMPLATE
+SLIME_TEMPLATE
+SHELL_TEMPLATE
+SOAP_TEMPLATE
+TALLOW_TEMPLATE
+CHITIN_TEMPLATE
+MILK_TEMPLATE
+CREATURE_CHEESE_TEMPLATE
+STRUCTURAL_PLANT_TEMPLATE
+SEED_TEMPLATE
+LEAF_TEMPLATE
+THREAD_PLANT_TEMPLATE
+PLANT_ALCOHOL_TEMPLATE
+PLANT_POWDER_TEMPLATE
+PLANT_EXTRACT_TEMPLATE
+CREATURE_EXTRACT_TEMPLATE
+FLAME_TEMPLATE
+</pre>
+<p>tissue_template_default.txt:
+</p>
+<pre>SKIN_TEMPLATE
+FAT_TEMPLATE
+MUSCLE_TEMPLATE
+BONE_TEMPLATE
+SHELL_TEMPLATE
+HORN_TEMPLATE
+CARTILAGE_TEMPLATE
+HAIR_TEMPLATE
+CHEEK_WHISKERS_TEMPLATE
+CHIN_WHISKERS_TEMPLATE
+MOUSTACHE_TEMPLATE
+SIDEBURNS_TEMPLATE
+EYEBROW_TEMPLATE
+EYELASH_TEMPLATE
+FEATHER_TEMPLATE
+SCALE_TEMPLATE
+NAIL_TEMPLATE
+CLAW_TEMPLATE
+TALON_TEMPLATE
+TOOTH_TEMPLATE
+EYE_TEMPLATE
+NERVE_TEMPLATE
+BRAIN_TEMPLATE
+LUNG_TEMPLATE
+HEART_TEMPLATE
+LIVER_TEMPLATE
+GUT_TEMPLATE
+STOMACH_TEMPLATE
+PANCREAS_TEMPLATE
+SPLEEN_TEMPLATE
+KIDNEY_TEMPLATE
+FLAME_TEMPLATE
+</pre>
+<p>b_detail_plan_default.txt:
+</p>
+<pre>STANDARD_MATERIALS
+STANDARD_TISSUES
+CHITIN_MATERIALS
+CHITIN_TISSUES
+FACIAL_HAIR_TISSUES
+HEAD_HAIR_TISSUE_LAYERS
+FACIAL_HAIR_TISSUE_LAYERS
+BODY_HAIR_TISSUE_LAYERS
+BODY_FEATHER_TISSUE_LAYERS
+VERTEBRATE_TISSUE_LAYERS
+EXOSKELETON_TISSUE_LAYERS
+STANDARD_HEAD_POSITIONS
+HUMANOID_HEAD_POSITIONS
+HUMANOID_RIBCAGE_POSITIONS
+SHELL_POSITIONS
+HUMANOID_RELSIZES
+</pre>
+<p>c_variation_default.txt:
+</p>
+<pre>STANDARD_BIPED_GAITS
+STANDARD_QUADRUPED_GAITS
+STANDARD_WALKING_GAITS
+STANDARD_CLIMBING_GAITS
+STANDARD_SWIMMING_GAITS
+STANDARD_CRAWLING_GAITS
+STANDARD_FLYING_GAITS
+STANDARD_WALK_CRAWL_GAITS
+</pre>
+<p>body_rcp.txt:
+</p>
+<pre>RCP_BASIC_BODY
+RCP_BASIC_BODY_STANCE
+RCP_BASIC_BODY_STANCE_WITH_HEAD_FLAG
+RCP_UPPER_BODY
+RCP_LOWER_BODY
+RCP_THORAX
+RCP_ABDOMEN
+RCP_CEPHALOTHORAX
+RCP_HEAD
+RCP_NECK
+RCP_TWO_PART_ARMS
+RCP_PINCERS
+RCP_CLAW_ARMS
+RCP_FIRST_SIMPLE_LEGS
+RCP_FIRST_SIMPLE_LEGS_GRASP
+RCP_SECOND_SIMPLE_LEGS
+RCP_THIRD_SIMPLE_LEGS
+RCP_FOURTH_SIMPLE_LEGS
+RCP_FIFTH_SIMPLE_LEGS
+RCP_SIMPLE_FRONT_LEGS
+RCP_SIMPLE_FRONT_LEGS_GRASP
+RCP_SIMPLE_REAR_LEGS
+RCP_TWO_PART_LEGS
+RCP_FRONT_FLIPPER
+RCP_REAR_FLIPPER
+RCP_TWO_FLIGHTLESS_WINGS
+RCP_TWO_WINGS
+RCP_TAIL
+RCP_2_TAILS
+RCP_3_TAILS
+RCP_TAIL_STINGER
+RCP_LOWER_BODY_STINGER
+RCP_PROBOSCIS
+RCP_TRUNK
+RCP_SHELL
+RCP_ANTENNAE
+RCP_1_HEAD_HORN
+RCP_2_HEAD_HORNS
+RCP_3_HEAD_HORNS
+RCP_4_HEAD_HORNS
+RCP_LARGE_MANDIBLES
+RCP_5_FINGERS
+RCP_4_FINGERS
+RCP_3_FINGERS
+RCP_2_FINGERS
+RCP_5_TOES
+RCP_4_TOES
+RCP_3_TOES
+RCP_2_TOES
+RCP_5_FRONT_TOES
+RCP_4_FRONT_TOES
+RCP_3_FRONT_TOES
+RCP_2_FRONT_TOES
+RCP_5_REAR_TOES
+RCP_4_REAR_TOES
+RCP_3_REAR_TOES
+RCP_2_REAR_TOES
+RCP_1_EYE
+RCP_2_EYES
+RCP_3_EYES
+RCP_BEAK
+RCP_NOSE
+RCP_CHEEKS
+RCP_LUNGS
+RCP_HEART
+RCP_GUTS
+RCP_THROAT
+RCP_SPINE
+RCP_UPPER_SPINE
+RCP_BRAIN
+RCP_SKULL
+RCP_MOUTH
+RCP_TEETH
+RCP_RIBS
+RCP_RIBS_EXTERNAL
+RCP_LIPS
+RCP_1_EYELID
+RCP_2_EYELIDS
+RCP_3_EYELIDS
+RCP_GLOSS_HOOF
+RCP_GLOSS_PAW
+RCP_5_FRONT_FINGERS*
+RCP_4_FRONT_FINGERS*
+RCP_3_FRONT_FINGERS*
+RCP_2_FRONT_FINGERS*
+RCP_TONGUE*
+</pre>
+<dl><dd>* - The game does not confirm the presence of these objects, but it <i>will</i> still attempt to use them (and fail if they are missing)</dd></dl>
+<p>The objects RCP_FORKED_TONGUE, RCP_BILL, and RCP_2_HEAD_ANTLERS are currently <b>not</b> used by the game and can be safely removed.
+</p>
+<h2><span class="mw-headline" id="Examples">Examples</span></h2>
+<ul><li><a href="/index.php/Creature_examples" title="Creature examples">Creature examples</a></li>
+<li><a href="/index.php/Interaction_examples" title="Interaction examples">Interaction examples</a></li>
+<li><a href="/index.php/Reaction_examples" title="Reaction examples">Reaction examples</a></li>
+<li><a href="/index.php/Syndrome_examples" title="Syndrome examples">Syndrome examples</a></li></ul></div>

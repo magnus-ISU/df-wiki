@@ -1,0 +1,122 @@
+{{Infobox utility
+| image = File:Raynard1.png
+| misc = Current Version v2.3
+* [https://github.com/Lazy-Newb-Pack/Quickfort-Community-Blueprints GitHub Repository]
+* [https://github.com/Lazy-Newb-Pack/Quickfort-Community-Blueprints/zipball/master/ Download v2.3 in one zip]
+}}
+
+The '''Quickfort Community Blueprints''' pack is a collection of blueprints for use with Quickfort, drawn from all over the community.[https://github.com/Lazy-Newb-Pack/Quickfort-Community-Blueprints The most recent version of the pack is v2.3] comes with images to help visualize most designs. It is hosted on GitHub and can be downloaded as a [https://github.com/Lazy-Newb-Pack/Quickfort-Community-Blueprints/zipball/master/ single zip bundle from there]. Their use requires a basic understanding of Quickfort. 
+
+The Community Blueprints are organized in thematically sorted in modules. Providing a wide amount of solutions to common challenges. Reaching from simple one laxer digs to complex sequences of blueprints making full use of the more advanced Quickfort syntax. Due to their popularity the Blueprints stayed in use for over a decade up to now and have grown over the years while passed through the hands of many keepers.
+
+== How to use these blueprints? ==
+You can view the blueprints directly on the GitHub. Browsing either the images or by clicking on the .csv and .xlsx and read the files as tables. 
+
+To designate the Blueprints you require Quickfort which comes as a part of DFHack. You can find help on [[Utility:DFHack#Download_and_Install|installing it here]]. One installed follow the steps below to designate a blueprint: 
+# [https://github.com/Lazy-Newb-Pack/Quickfort-Community-Blueprints/zipball/master/ Download the Quickfort Community Blueprints].
+# Unzip the collection and choose what parts you want to move. Copy each selected module to ``dfhack-config/blueprints`` inside your Dwarf Fortress folder. 
+# Press {{K|Ctrl}}+{{K|Shift}}+{{K|Q}} to bring up gui/quickfort from DFHack
+# Start typing a modules name to filter for that library
+# Select the blueprint you want to designate and confirm
+# Position the blueprint and apply to designate
+
+To learn more about Quickfort read the [https://docs.dfhack.org/en/latest/docs/guides/quickfort-user-guide.html user guide] or [https://www.youtube.com/watch?v=fH1N0IO_Go4 check this video tutorial]. 
+== Compatibility with v50 ==
+Due to some changes in the way rooms are designated in v50 not all blueprints can be run out of the box. This issue effects less than 5% of the whole collection. Known compatibility issues are stated within every module's description below.  
+
+== Modules ==
+=== [https://github.com/Lazy-Newb-Pack/Quickfort-Community-Blueprints/tree/master/Artistic Artistic] ===
+Collects art focused designs. Mos notably a Jing Yang coming in two sizes and two variations of a [https://www.reddit.com/r/dwarffortress/comments/2ocv8n/two_cretan_labyrinths_for_quickfort_pastebin_csv/ Minoan Labyrinth made by clewara].
+
+==== Circle Pack ====
+The circle pack holds a blueprint creating a circle with a certain diameter. There is one .csv for each odd number from 11 to 27 for a circle with the corresponding diameter. They were contributed by Jurph. There are also a few file for larger circles up to 45 tiles diameter and a concentric circle design of the same size. Their origin is not mentioned in the readme.
+
+It is easier to use the [https://docs.dfhack.org/en/latest/docs/tools/dig.html#digtype 'digcircle' command] implemented as part of the dfhack dig module rather than these blueprints. As the command allows for custom diameters. 
+
+=== [https://github.com/Lazy-Newb-Pack/Quickfort-Community-Blueprints/tree/master/Bedrooms Bedrooms] ===
+Is a comprehensive collection of bedroom designs. Ranging from primarily space efficient to elaborate and visual pleasing designs and everything in between. All blueprints are named according to the same scheme: ``[number of rooms]-[median room area]-[Name]-[purpose].csv``. This allows for a quick comprehension of the bedrooms provided in total and individual size. Since v 2.3 [https://github.com/Lazy-Newb-Pack/Quickfort-Community-Blueprints/blob/master/Bedrooms/README.md there is a redame in that includes images of all designs].
+
+=== [https://github.com/Lazy-Newb-Pack/Quickfort-Community-Blueprints/tree/master/Examples Examples]===
+A collection of examples for the original Quickfort 2.0+ release demonstrating the capabilities of the syntax.  
+
+'''Compatibility Issue:''' some files us deprecated syntax. 
+
+==== Tests ====
+Function tests for the older Quickfort 2.0+ syntax. Some come as .xlsx files.
+
+'''Compatibility Issue:''' some files us deprecated syntax.
+
+==== templates ====
+Another attempt to create templates for a full fortress. It seems to stayed unfinished. Dig mode only.
+
+'''Compatibility Issue:''' ``GridFort.csv``carries a lot of "" that can't be interpreted by Quickfort
+
+=== [https://github.com/Lazy-Newb-Pack/Quickfort-Community-Blueprints/tree/master/Fractals Fractals] ===
+This holds a large collection of various patterned, not necessarily but often, fractal designs to dig out. Some blueprints are meant to be multi level, although not collected in one file. 
+
+=== [https://github.com/Lazy-Newb-Pack/Quickfort-Community-Blueprints/tree/master/Hallways Hallways] ===
+Blueprints for an either a 4 tile or 5 tile wide diagonal hallway covering a 3x3 embark corner to corner. The original designs were made by Jurph. The width stated relates to the first row of tiles. Due to the shift needed to achieve a diagonal design, the actual hallways come out wider.
+
+=== [https://github.com/Lazy-Newb-Pack/Quickfort-Community-Blueprints/tree/master/Hive Hive] ===
+A dual level hive design by Brandstone. The hive consists of individual hex shaped rooms interconnected by a giant staircase ''layer''. The module consists of a full hive design fitted for a 3x3 embark and a single cell blueprint to design bigger or smaller patterns from. To apply the 3x3 blueprint, set the cursor to the upper left corner of the map. See the readme for further info.
+
+=== [https://github.com/Lazy-Newb-Pack/Quickfort-Community-Blueprints/tree/master/Industry Industry] ===
+A collection of designs for your industry level. Some of these blueprints hold multiple designs while not being multi z-level.   
+
+=== [https://github.com/Lazy-Newb-Pack/Quickfort-Community-Blueprints/tree/master/Mining Mining] ===
+Implementations of various approaches from the [[Exploratory mining]] page. [https://docs.dfhack.org/en/latest/docs/guides/quickfort-library-guide.html#exploratory-mining An updated version of the blueprints in this module are distributed with the current version of Quickfort]. It's advised to use these, especially with v50.
+
+'''Compatibility Issue''' the ``exploratory-mining-50x50`` files us deprecated syntax. 
+
+=== [https://github.com/Lazy-Newb-Pack/Quickfort-Community-Blueprints/tree/master/Moria Moria] ===
+Moria is a huge implementation of the legendary dwarven stronghold from the Tolkien lore. The design is based on the original map of Moria. A full version requires a 12 x 7 embark. A cropped version for a 5 x 5 embark is included. 
+
+Various additional images help to explain and preview the blueprints. [https://github.com/Lazy-Newb-Pack/Quickfort-Community-Blueprints/tree/master/Moria An extensive read me covers the pack] in detail.
+
+==== Mini Moria ====
+This is a Community Pack specific distribution of Moria for a 4 x 4 embark. Not all files come bundled with the Community Blueprints. See the general Moria readme.txt for details.
+
+=== [https://github.com/Lazy-Newb-Pack/Quickfort-Community-Blueprints/tree/master/Patterned Patterned]===
+A collection of four intricate pattered designs for bedrooms, tombs, workshops etc. 
+
+=== [https://github.com/Lazy-Newb-Pack/Quickfort-Community-Blueprints/tree/master/PumpStacks PumpStacks]===
+Offers three different sets of pump stacks. A [https://docs.dfhack.org/en/latest/docs/guides/quickfort-library-guide.html#pump-stack well documented] implementation of pumpstacks comes with the Quickfort blueprint library.  
+
+'''Compatibility Issue''' One of the two meeker sets is currently distributed as ``.txt``
+
+=== [https://github.com/Lazy-Newb-Pack/Quickfort-Community-Blueprints/tree/master/Stairs Stairs] ===
+Various takes and implementations of spiral staircases as multi z-level blueprints.
+
+==== taodih ====
+A set of ramp staircases [http://www.bay12forums.com/smf/index.php?topic=35931.msg1843166#msg1843166 based on designs by a Bay12 forums user] of the same name. Intended to raise the FPS through being [Ramp#Ramps_versus_stairways slightly faster than stairs].  
+
+=== [https://github.com/Lazy-Newb-Pack/Quickfort-Community-Blueprints/tree/master/TheQuickFortress TheQuickFortress] ===
+Buketgeshud, The Quick Fortress, is a set of blueprints designed as a case study for Quickfort. The files assemble to a fort with a 30x20 tile footprint revolving around a central staircase. Blueprints can be repeated in any direction to connect in a modular fashion. The readme.txt gives detailed instructions how to set up Buketgeshud. 
+
+'''Compatibility Issue''' Due to using the deprecated ``query`` syntax, not all blueprints are compatible with v50
+
+The [https://docs.dfhack.org/en/latest/docs/guides/quickfort-library-guide.html#quickfort-blueprint-library well documented Dreamfort library] that comes with Quickfort is a more up-to-date take on this approach for v50.  
+
+=== [https://github.com/Lazy-Newb-Pack/Quickfort-Community-Blueprints/tree/master/Tombs Tombs] ===
+Holds a single blueprint that gives you a design to dig out with room for a stunning 500 tombs.  
+
+=== [https://github.com/Lazy-Newb-Pack/Quickfort-Community-Blueprints/tree/master/worldgen worldgen] ===
+This is the only part of the pack that is not a Quickfort blueprint. It contains a .txt file with worldgen settings. It was creadted for v40.24 and has not been tested with v50.  
+
+== History ==
+The first (?) ''known'' version of the Community Blueprints were collected by andrewx8 and distributed through mediafire in August 2012. They where prominently [http://www.bay12forums.com/smf/index.php?topic=35931.msg562077#msg562077 mentioned in the release notice to Quickfort 2.04] later the same month. In 2014 spfifle releasd a new and improved version of the Pack called v2. Duplicate entries got deleted and blueprints thematically sorted. The updated bundle further added blueprints in .png and .bmp format to support now obsolete image designators like [[v0.34:Utilities#ChromaFort|ChromaFort]] and [[v0.34:Utilities#Picturefort|Picturefort]]. The images further allow for a quick visualization of the blueprints.
+
+With Version 2.1 the pack became a part of became Linux LNP ([[Utility:Lazy Newb Pack|Lazy Newb Pack]]) now maintained by PeridexisErrant. In 2015 the Community Blueprints been uploaded to GitHub as part of the core LNP distribution. Modifying a few files in the process and creating Version 2.3. The only LNP Member contributing to the Blueprints in this era was BeauBouchard. The Community Blueprints stayed a part of the different incarnations of LNPs across all platforms. Up to the time of DF 47.05.
+
+===Previous Blueprint Repositories===
+[http://www.mediafire.com/download/2x40cv93i9gd1r0/Community_Quickfort_Blueprints_v2.2.zip (v2.2) collated pack on mediafire]
+
+[http://www.mediafire.com/download/5fp46epm3fe1z8b/Community_Quickfort_Blueprints_v2.1.zip (v2.1) collated pack on mediafire] an on [http://dffd.bay12games.com/file.php?id=8185 DFFD], maintained by PeridexisErrant
+
+[https://www.mediafire.com/folder/u38qsqr1bq6wu/Community_Quickfort_Blueprints_v2 (v2.0) collated pack, unzipped], and a [http://www.mediafire.com/download/n6im1ok6z02n8nc/Community_Quickfort_Blueprints_v2.zip zipped version of it], and
+[https://imgur.com/a/community-quickfort-blueprints-51Dm2 images only on imgur]
+[http://www.bay12forums.com/smf/index.php?topic=137513.msg5140970#msg5140970 the (utterly short) pack thread on the bay12 forums], 2014, maintained by spfifle.
+
+[http://www.mediafire.com/df_qfcommunity (v1.0) collated pack] 2012, maintained by andrewx8.
+
+[[Category:Utilities]]

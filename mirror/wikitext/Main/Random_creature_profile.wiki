@@ -1,0 +1,557 @@
+{{av}}
+{{Minorspoiler}}
+
+A '''random creature profile''' ('''rcp''') is a template used by procedurally-generated creatures. rcps typically use body parts from <code>body_rcp.txt</code> instead of <code>body_default.txt</code>.
+
+== Overview ==
+'''rcp''' stands for "[http://www.bay12forums.com/smf/index.php?topic=30026.msg831163#msg831163 random creature profile]". rcp is a [[Lua scripting|scripted]] [[raw]] template that defines the basic body, tissues and body attacks of a random creature before it receives [[Lua scripting#Tweaks|further randomness]] (three-eyed, wings of stretched skin, external ribs, uniform elemental composition, etc). Most amphibian, mammalian and reptilian rcps have humanoid variations of themselves, described as "in humanoid form" or "{{Tooltip|twisted into humanoid form|If evil.}}". There are 243 standard rcps and 81 humanoid variations, which brings the known total to 324.
+
+The rcp of a randomly generated creature can be identified by its description. Many rcps have identical names with normal [[creature]]s (e.g. [[albatross]]), although they are entirely unrelated; other rcps feature animals that don't exist anywhere else, such as zebras. Some rcps have inherent abilities like flight or [[web]]bing.
+
+[[Night troll]]s and [[bogeyman|bogeymen]] only use the generic "humanoid" rcp, and werebeasts use the humanoid animal forms. Primates, hexapods, octopods and decapods are unique to beast-like [[experiment]]s, while armless bipeds, wyrms, and the generic "snake" and "worm" rcps are unique to failed experiments.
+
+== Technical details ==
+{{main|Lua scripting}}
+
+Random creature profiles can be found in ``vanilla_procedural/scripts/``. By adding data to the corresponding tables, it is possible to [[mod]] in new random creature profiles.
+
+This [https://nm.reddit.com/r/dwarffortress/comments/kq86x5/i_made_some_calculations_towards_determining_the/gi2l7py/ explanation from Toady], shared by Meph, goes into more detail on how procedural creature generation works:
+
+<blockquote>
+The ``body_rcp.txt`` file has the definitions it expects for bodyparts. (rcp stands for "random creature profile") The main thing is that the base "animal" word is doing most of the heavy lifting in terms of making the descriptions evocative, so the rcp's don't end up mattering that much. There are little internal definitions for each animal word, about 230 of them. If we ignore that, then we're more just working with "feathered quadruped" and so forth.
+
+Example of a random creature profile (for the elephant type):
+
+<syntaxhighlight lang="lua">
+random_creature_types.MAMMAL_ELEPHANT={
+	name_string="elephant",
+	tile='E',
+	body_base="QUADRUPED",
+	c_class="MAMMAL",
+	must_have_tail=true,
+	must_have_elephant_trunk=true,
+	min_size=500000,
+	weight=14
+}
+</syntaxhighlight>
+
+So, hmm, perhaps the base and class lists are relevant here...
+
+* classes (``random_creature_class``): mammal, chitin exo, fleshy, amphibian, reptile, feathered reptile, avian, uniform (like 'composed of iron')
+
+* bases (``body_base_fun``): amorphous, insect, insect larva, spider, scorpion, ten legged, eight legged, worm, no limbs, quadruped, snake, humanoid, two legs + no arms, quadruped with front graspers (like a monkey)
+
+The [[Lua functions#rcp Parameters|flags]] just force certain rcp additions, and prevent others from happening. For instance, the "slug" profile has "cannot have shell" because a slug with a shell is confusing.
+
+Ah, here we go. The rcp are used via the "body tweak" system. A body can have a tweak from category one, a tweak from category two, and an attack tweak, respecting its profile flags.
+
+* Category one tweaks (``options.btc``): wings, flightless wings, tail, proboscis, trunk, shell, antennae, head horns, large mandibles, twisted into humanoid form, six legged, eight legged
+
+* Category two tweaks (``options.btc2``): hair, feathers, scales, exoskeleton, skin, skin/bones, no eyes, one eye, three eyes, beak missing, nose missing, external ribs, lidless eyes, skinless
+
+* Attack tweaks (``options.attack_tweak``): tail stinger, insect stinger, blood proboscis, fire, webs, breath (trailing flow), breath (glob), breath (undirected), secretion, poisonous blood, poisonous bite
+
+That material list (``random_creature_material``) looks almost right - here's the official list of variables: ash, mud, vomit, salt (powder), grime, snow, water, steam, flame, amber, coral, green glass, clear glass, crystal glass, charcoal, coke, salt (solid), ice, mineral (any), soil (any), gem (any), metal (any)
+
+The "any" materials can't be "[[Inorganic material definition token#SPECIAL|special]]", but there don't appear to be other restrictions.
+There are various other implicit flags on these things when it comes to werebeasts etc. "humanoidable" and "beast", for example. So all night creatures require "humanoidable" and werebeasts require "beast" on top of that. Which is why we don't have wereblobs or even wereserpents.
+</blockquote>
+
+== List ==
+In ASCII mode, nearly all rcps use specific uppercase or lowercase letters if the monster type does not use a fixed tile, such as '&' for demons. Lobsters uniquely use the '¥' sign instead. rcps with humanoid versions are '''bolded'''. Humanoid forms use the same tile as their standard counterparts.
+
+Capitalization denotes body size. In most cases, anything larger than a [[dwarf]] (60,000) uses an uppercase letter. Only uppercase letters are shown here.
+
+In-game, the tile color is determined by the creature's external color modifier. If it does not have a color modifier and is not skinless, it uses the outermost tissue layer's default material color. If it is skinless, it is displayed in dark red (4:0:0).
+
+{{columns-list|colwidth=15em|
+* {{Tile|A|7:0}} Albatross
+* {{Tile|A|7:0}} '''Alligator'''
+* {{Tile|A|7:0}} Anaconda
+* {{Tile|A|7:0}} Ankylosaurid
+* {{Tile|I|7:0}} Ant
+* {{Tile|A|7:0}} '''Anteater'''
+* {{Tile|A|7:0}} '''Antelope'''
+* {{Tile|I|7:0}} Antlion larva
+* {{Tile|A|7:0}} '''Ape'''
+* {{Tile|I|7:0}} Aphid
+* {{Tile|A|7:0}} '''Armadillo'''
+* {{Tile|B|7:0}} Armless biped
+* {{Tile|I|7:0}} Assassin bug
+* {{Tile|B|7:0}} '''Badger'''
+* {{Tile|B|7:0}} Bat
+* {{Tile|B|7:0}} '''Bear'''
+* {{Tile|B|7:0}} '''Beaver'''
+* {{Tile|I|7:0}} Bee
+* {{Tile|B|7:0}} '''Bison'''
+* {{Tile|B|7:0}} Blob
+* {{Tile|W|7:0}} Bristleworm
+* {{Tile|B|7:0}} '''Buffalo'''
+* {{Tile|B|7:0}} '''Bull'''
+* {{Tile|B|7:0}} Bunting
+* {{Tile|B|7:0}} Bushtit
+* {{Tile|I|7:0}} Butterfly
+* {{Tile|B|7:0}} Buzzard
+* {{Tile|I|7:0}} Caddisfly
+* {{Tile|C|7:0}} '''Camel'''
+* {{Tile|C|7:0}} '''Capybara'''
+* {{Tile|C|7:0}} Cardinal
+* {{Tile|C|7:0}} '''Cat'''
+* {{Tile|I|7:0}} Caterpillar
+* {{Tile|C|7:0}} '''Cavy'''
+* {{Tile|C|7:0}} Ceratopsid
+* {{Tile|C|7:0}} '''Chameleon'''
+* {{Tile|C|7:0}} Chickadee
+* {{Tile|C|7:0}} Chicken
+* {{Tile|C|7:0}} '''Chinchilla'''
+* {{Tile|I|7:0}} Cicada
+* {{Tile|C|7:0}} '''Civet'''
+* {{Tile|I|7:0}} Click beetle
+* {{Tile|C|7:0}} '''Coati'''
+* {{Tile|C|7:0}} Cobra
+* {{Tile|C|7:0}} Cockatoo
+* {{Tile|I|7:0}} Cockroach
+* {{Tile|C|7:0}} Condor
+* {{Tile|C|7:0}} '''Coyote'''
+* {{Tile|C|7:0}} Crab
+* {{Tile|C|7:0}} Crane
+* {{Tile|I|7:0}} Cricket
+* {{Tile|C|7:0}} '''Crocodile'''
+* {{Tile|C|7:0}} Crow
+* {{Tile|C|7:0}} Cuckoo
+* {{Tile|I|7:0}} Damselfly
+* {{Tile|I|7:0}} Darkling beetle
+* {{Tile|D|7:0}} Decapod
+* {{Tile|D|7:0}} '''Deer'''
+* {{Tile|D|7:0}} Dimetrodon
+* {{Tile|D|7:0}} '''Donkey'''
+* {{Tile|D|7:0}} Dove
+* {{Tile|I|7:0}} Dragonfly
+* {{Tile|D|7:0}} Duck
+* {{Tile|I|7:0}} Dung beetle
+* {{Tile|E|7:0}} Eagle
+* {{Tile|W|7:0}} Earthworm
+* {{Tile|I|7:0}} Earwig
+* {{Tile|E|7:0}} '''Elephant'''
+* {{Tile|E|7:0}} '''Elk'''
+* {{Tile|F|7:0}} Falcon
+* {{Tile|F|7:0}} Fantail
+* {{Tile|F|7:0}} Finch
+* {{Tile|I|7:0}} Firefly
+* {{Tile|F|7:0}} Flamingo
+* {{Tile|W|7:0}} Flat worm
+* {{Tile|I|7:0}} Flea
+* {{Tile|I|7:0}} Fly
+* {{Tile|F|7:0}} Flycatcher
+* {{Tile|F|7:0}} '''Fox'''
+* {{Tile|F|7:0}} '''Frog'''
+* {{Tile|F|7:0}} Fruit bat
+* {{Tile|G|7:0}} '''Gecko'''
+* {{Tile|G|7:0}} '''Gila monster'''
+* {{Tile|G|7:0}} '''Giraffe'''
+* {{Tile|G|7:0}} '''Goat'''
+* {{Tile|G|7:0}} Goose
+* {{Tile|G|7:0}} '''Gopher'''
+* {{Tile|I|7:0}} Grasshopper
+* {{Tile|G|7:0}} Grebe
+* {{Tile|G|7:0}} Grouse
+* {{Tile|G|7:0}} Gull
+* {{Tile|H|7:0}} Hadrosaurid
+* {{Tile|H|7:0}} '''Hare'''
+* {{Tile|H|7:0}} Harrier
+* {{Tile|H|7:0}} Hawk
+* {{Tile|H|7:0}} '''Hedgehog'''
+* {{Tile|H|7:0}} Hexapod
+* {{Tile|H|7:0}} '''Hippopotamus'''
+* {{Tile|H|7:0}} Honeyeater
+* {{Tile|H|7:0}} Hornbill
+* {{Tile|I|7:0}} Hornet
+* {{Tile|H|7:0}} '''Horse'''
+* {{Tile|H|7:0}} Humanoid
+* {{Tile|H|7:0}} Hummingbird
+* {{Tile|H|7:0}} '''Hyena'''
+* {{Tile|I|7:0}} '''Iguana'''
+* {{Tile|I|7:0}} Iguanodont
+* {{Tile|J|7:0}} '''Jackal'''
+* {{Tile|J|7:0}} Jay
+* {{Tile|K|7:0}} '''Kangaroo'''
+* {{Tile|K|7:0}} Kestrel
+* {{Tile|K|7:0}} Kingfisher
+* {{Tile|K|7:0}} Kinglet
+* {{Tile|K|7:0}} Kite
+* {{Tile|K|7:0}} '''Koala'''
+* {{Tile|I|7:0}} Lacewing
+* {{Tile|I|7:0}} Ladybug
+* {{Tile|L|7:0}} Lark
+* {{Tile|L|7:0}} Leech
+* {{Tile|L|7:0}} '''Lemur'''
+* {{Tile|L|7:0}} '''Lizard'''
+* {{Tile|L|7:0}} '''Llama'''
+* {{Tile|¥|7:0}} Lobster
+* {{Tile|L|7:0}} Loon
+* {{Tile|L|7:0}} '''Loris'''
+* {{Tile|I|7:0}} Louse
+* {{Tile|L|7:0}} Lyrebird
+* {{Tile|I|7:0}} Maggot
+* {{Tile|M|7:0}} Magpie
+* {{Tile|M|7:0}} '''Mammoth'''
+* {{Tile|I|7:0}} Mantis
+* {{Tile|M|7:0}} '''Marmot'''
+* {{Tile|M|7:0}} Martin
+* {{Tile|I|7:0}} Mayfly
+* {{Tile|M|7:0}} Mite
+* {{Tile|M|7:0}} Mockingbird
+* {{Tile|M|7:0}} '''Mole'''
+* {{Tile|M|7:0}} '''Mongoose'''
+* {{Tile|M|7:0}} '''Monitor'''
+* {{Tile|M|7:0}} '''Monkey'''
+* {{Tile|M|7:0}} '''Moose'''
+* {{Tile|I|7:0}} Mosquito
+* {{Tile|I|7:0}} Moth
+* {{Tile|M|7:0}} '''Mouse'''
+* {{Tile|N|7:0}} Nematode
+* {{Tile|N|7:0}} '''Newt'''
+* {{Tile|N|7:0}} Nightjar
+* {{Tile|N|7:0}} Nuthatch
+* {{Tile|O|7:0}} Octopod
+* {{Tile|O|7:0}} '''Opossum'''
+* {{Tile|O|7:0}} Oriole
+* {{Tile|O|7:0}} Osprey
+* {{Tile|O|7:0}} '''Otter'''
+* {{Tile|O|7:0}} Owl
+* {{Tile|O|7:0}} Oxpecker
+* {{Tile|P|7:0}} '''Panda'''
+* {{Tile|P|7:0}} '''Pangolin'''
+* {{Tile|P|7:0}} '''Panther'''
+* {{Tile|P|7:0}} Parrot
+* {{Tile|P|7:0}} Pelican
+* {{Tile|P|7:0}} Penguin
+* {{Tile|P|7:0}} Petrel
+* {{Tile|P|7:0}} Pheasant
+* {{Tile|P|7:0}} '''Pig'''
+* {{Tile|P|7:0}} Pigeon
+* {{Tile|P|7:0}} '''Porcupine'''
+* {{Tile|P|7:0}} Primate
+* {{Tile|P|7:0}} Pterosaur
+* {{Tile|P|7:0}} Python
+* {{Tile|Q|7:0}} Quadruped
+* {{Tile|Q|7:0}} Quail
+* {{Tile|Q|7:0}} Quetzal
+* {{Tile|R|7:0}} '''Rabbit'''
+* {{Tile|R|7:0}} '''Raccoon'''
+* {{Tile|R|7:0}} '''Rat'''
+* {{Tile|R|7:0}} Rattlesnake
+* {{Tile|R|7:0}} Raven
+* {{Tile|R|7:0}} '''Rhinoceros'''
+* {{Tile|I|7:0}} Rhinoceros beetle
+* {{Tile|W|7:0}} Ribbon worm
+* {{Tile|I|7:0}} Rove beetle
+* {{Tile|S|7:0}} '''Salamander'''
+* {{Tile|S|7:0}} Sauropod
+* {{Tile|I|7:0}} Scarab beetle
+* {{Tile|S|7:0}} Scorpion
+* {{Tile|I|7:0}} Scorpionfly
+* {{Tile|S|7:0}} Serpent
+* {{Tile|S|7:0}} '''Sheep'''
+* {{Tile|S|7:0}} '''Shrew'''
+* {{Tile|S|7:0}} Shrike
+* {{Tile|S|7:0}} Shrimp
+* {{Tile|I|7:0}} Silverfish
+* {{Tile|S|7:0}} '''Skink'''
+* {{Tile|S|7:0}} '''Skunk'''
+* {{Tile|S|7:0}} '''Sloth'''
+* {{Tile|S|7:0}} Slug
+* {{Tile|S|7:0}} Snail
+* {{Tile|S|7:0}} Snake
+* {{Tile|I|7:0}} Snakefly
+* {{Tile|S|7:0}} Sparrow
+* {{Tile|S|7:0}} Spider
+* {{Tile|S|7:0}} '''Squirrel'''
+* {{Tile|I|7:0}} Stag beetle
+* {{Tile|S|7:0}} Starling
+* {{Tile|S|7:0}} Stegosaurid
+* {{Tile|I|7:0}} Stick insect
+* {{Tile|I|7:0}} Stonefly
+* {{Tile|S|7:0}} Stork
+* {{Tile|S|7:0}} Swallow
+* {{Tile|S|7:0}} Swan
+* {{Tile|S|7:0}} Swift
+* {{Tile|T|7:0}} Tanager
+* {{Tile|T|7:0}} '''Tapir'''
+* {{Tile|S|7:0}} Tarantula
+* {{Tile|I|7:0}} Termite
+* {{Tile|T|7:0}} Theropod
+* {{Tile|T|7:0}} Thornbill
+* {{Tile|I|7:0}} Thrips
+* {{Tile|T|7:0}} Thrush
+* {{Tile|T|7:0}} Tick
+* {{Tile|I|7:0}} Tiger beetle
+* {{Tile|T|7:0}} Titmouse
+* {{Tile|T|7:0}} '''Toad'''
+* {{Tile|T|7:0}} '''Tortoise'''
+* {{Tile|T|7:0}} Toucan
+* {{Tile|T|7:0}} Turkey
+* {{Tile|T|7:0}} '''Turtle'''
+* {{Tile|V|7:0}} Viper
+* {{Tile|V|7:0}} Vulture
+* {{Tile|W|7:0}} Walrus
+* {{Tile|W|7:0}} Warbler
+* {{Tile|W|7:0}} '''Warthog'''
+* {{Tile|I|7:0}} Wasp
+* {{Tile|W|7:0}} Waxwing
+* {{Tile|W|7:0}} '''Weasel'''
+* {{Tile|I|7:0}} Weevil
+* {{Tile|W|7:0}} '''Wolf'''
+* {{Tile|W|7:0}} '''Wombat'''
+* {{Tile|W|7:0}} Woodpecker
+* {{Tile|W|7:0}} Worm
+* {{Tile|W|7:0}} Wren
+* {{Tile|W|7:0}} Wyrm
+* {{Tile|Z|7:0}} '''Zebra'''
+}}
+
+== Graphics ==
+All random creatures except [[werebeast]]s use [[graphics|graphic]] sprites found in <code>beasts.png</code> and <code>beasts_small.png</code>. There are 19 primary body sprites (6 are alternate-legged variations) with additional sprite layers representing secondary body parts. Several rcps have one or more secondary sprite layers by default. A few rcps, like quadrupeds, have more than one body sprite to randomly select from.
+
+{| class="wikitable"<!--
+
+NOTE: rcps may look out of place. be sure to verify before changing. last updated 0.50.09
+
+to verify, create a world w/ compressed saves set to NO (in settings, game tab), go to its save folder and open 'world.dat' w/ a text editor that has a good find/search tool, e.g. Notepad++
+	recommend large worlds w/ min history, no civs, no vamps/secrets/interactions/weather, & max num of procgen beasts (titans, demons, night creatures, etc.)
+	for experiments, use basic options w/ small world, max hist, max civ, min beasts & min savage
+
+example to look for:
+
+	[PROCEDURAL_CREATURE_GRAPHICS:DEFAULT]
+	[PCG_LAYERING:BEAST_QUADRUPED_BULKY_TAIL_ONE]
+	[PCG_LAYERING:BEAST_QUADRUPED_BULKY]
+	[PCG_LAYERING:BEAST_QUADRUPED_BULKY_HORNS]
+	[PCG_LAYERING:BEAST_QUADRUPED_BULKY_EYE_TWO]
+
+	above: chinchilla with four broad horns (random body modifications are explicitly mentioned in the creature's description)
+	compare rcps and eliminate random tokens, and you're left w/ 'default' sprite tokens
+	
+when creating/editing images: first token is the bottommost layer, last token is topmost layer (eyes layered above body, etc.)
+note that elementals don't have eyes
+-->
+|+ rcp sprites, ignoring random body modifications, large sprites only
+! rcps
+! Sprite
+! Secondary graphic token(s)
+! Primary graphic token
+|-
+| albatross, armless biped, bat, blob, bunting, bushtit, buzzard, cardinal, chickadee, chicken, cockatoo, condor, crane, crow, cuckoo, dove, duck, eagle, falcon, fantail, finch, flamingo, flycatcher, fruit bat, goose, grebe, grouse, gull, harrier, hawk, honeyeater, hornbill, hummingbird, jay, kestrel, kingfisher, kinglet, kite, lark, loon, lyrebird, magpie, martin, mockingbird, nightjar, nuthatch, oriole, osprey, owl, oxpecker, parrot, pelican, penguin, petrel, pheasant, pigeon, pterosaur, quail, quetzal, raven, shrike, sparrow, starling, stork, swallow, swan, swift, tanager, thornbill, thrush, titmouse, toucan, turkey, vulture, warbler, waxwing, woodpecker, wren
+| [[File:Beast amorphous.png]]
+| ''none''
+| BEAST_AMORPHOUS
+|-
+| snake
+| [[File:Beast snake.png]]
+| ''none''
+| rowspan="2" | BEAST_SNAKE
+|-
+| anaconda, cobra, python, rattlesnake, serpent, viper
+| [[File:Beast snake, two eyes.png]]
+| BEAST_SNAKE_EYE_TWO
+|-
+| bristleworm, earthworm, flat worm, leech, nematode, ribbon worm, slug, worm
+| [[File:Beast worm long.png]]
+| ''none''
+| rowspan="2" | BEAST_WORM_LONG
+|-
+| snail
+| [[File:Beast worm long, shell.png]]
+| BEAST_WORM_LONG_SHELL_BACK
+|-
+| caterpillar, maggot
+| [[File:Beast worm short, two eyes.png]]
+| BEAST_WORM_SHORT_EYE_TWO
+| BEAST_WORM_SHORT
+|-
+| hexapod
+| [[File:Beast insect.png]]
+| ''none''
+| rowspan="8" | BEAST_INSECT
+|-
+| antlion larva, flea, louse
+| [[File:Beast insect, two eyes.png]]
+| BEAST_INSECT_EYE_TWO
+|-
+| ant, aphid, assassin bug, click beetle, cockroach, cricket, darkling beetle, dung beetle, earwig, grasshopper, ladybug, mantis, rove beetle, scarab beetle, silverfish, stick insect, stonefly, termite, thrips, tiger beetle, weevil
+| [[File:Beast insect, two eyes, antennae.png]]
+| BEAST_INSECT_EYE_TWO, BEAST_INSECT_ANTENNAE
+|-
+| stag beetle
+| [[File:Beast insect, mandibles, two eyes, antennae.png]]
+| BEAST_INSECT_MANDIBLES, BEAST_INSECT_EYE_TWO, BEAST_INSECT_ANTENNAE
+|-
+| rhinoceros beetle
+| [[File:Beast insect, horns, two eyes, antennae.png]]
+| BEAST_INSECT_HORNS, BEAST_INSECT_EYE_TWO, BEAST_INSECT_ANTENNAE
+|-
+| cicada, damselfly, dragonfly, fly
+| [[File:Beast insect, lacy wings, two eyes.png]]
+| BEAST_INSECT_WINGS_LACY_BACK, BEAST_INSECT_EYE_TWO
+|-
+| bee, butterfly, caddisfly, firefly, hornet, lacewing, mayfly, moth, scorpionfly, snakefly, wasp
+| [[File:Beast insect, lacy wings, two eyes, antennae.png]]
+| BEAST_INSECT_WINGS_LACY_BACK, BEAST_INSECT_EYE_TWO, BEAST_INSECT_ANTENNAE
+|-
+| mosquito
+| [[File:Beast insect, lacy wings, two eyes, proboscis, antennae.png]]
+| BEAST_INSECT_WINGS_LACY_BACK, BEAST_INSECT_EYE_TWO, BEAST_INSECT_PROBOSCIS, BEAST_INSECT_ANTENNAE
+|-
+| decapod, octopod
+| [[File:Beast spider.png]]
+| ''none''
+| rowspan="3" | BEAST_SPIDER
+|-
+| crab, lobster, mite, spider, tarantula, tick
+| [[File:Beast spider, two eyes.png]]
+| BEAST_SPIDER_EYE_TWO
+|-
+| shrimp
+| [[File:Beast spider, two eyes, antennae.png]]
+| BEAST_SPIDER_EYE_TWO, BEAST_SPIDER_EYE_ANTENNAE
+|-
+| scorpion
+| [[File:Beast scorpion, two eyes, one tail.png]]
+| BEAST_SCORPION_EYE_TWO, BEAST_SCORPION_TAIL_ONE
+| BEAST_SCORPION
+|-
+| wyrm
+| [[File:Beast bipedal dinosaur.png]]
+| ''none''
+| BEAST_BIPEDAL_DINOSAUR
+|-
+| humanoid*
+| [[File:Beast humanoid.png]]
+| ''none''
+| rowspan="5" | BEAST_HUMANOID
+|-
+| humanoid*
+
+''(humanoid forms)'': ape, capybara, cavy, frog, koala, toad, wombat
+| [[File:Beast humanoid, two eyes.png]]
+| BEAST_HUMANOID_EYE_TWO
+|-
+| iguanodont, theropod
+
+''(humanoid forms)'': alligator, anteater, antelope, armadillo, badger, bear, beaver, bison, buffalo, bull, camel, cat, chameleon, chinchilla, civet, coati, coyote, crocodile, deer, donkey, elk, fox, gecko, gila monster, giraffe, goat, gopher, hare, hedgehog, hippopotamus, horse, hyena, iguana, jackal, kangaroo, lemur, lizard, llama, loris, marmot, mole, mongoose, monitor, monkey, moose, mouse, newt, opossum, otter, panda, pangolin, panther, pig, porcupine, rabbit, raccoon, rat, rhinoceros, salamander, sheep, shrew, skink, skunk, sloth, squirrel, tapir, warthog, weasel, wolf, zebra
+| [[File:Beast humanoid, two eyes, one tail.png]]
+| BEAST_HUMANOID_EYE_TWO, BEAST_HUMANOID_TAIL_ONE
+|-
+| ''(humanoid forms)'': elephant, mammoth
+| [[File:Beast humanoid, two eyes, one tail, trunk.png]]
+| BEAST_HUMANOID_EYE_TWO, BEAST_HUMANOID_TAIL_ONE, BEAST_HUMANOID_TRUNK
+|-
+| ''(humanoid forms)'': tortoise, turtle
+| [[File:Beast humanoid, two eyes, shell.png]]
+| BEAST_HUMANOID_EYE_TWO, BEAST_HUMANOID_SHELL_BACK
+|-
+| ape
+| [[File:Beast front grasp, two eyes.png]]
+| BEAST_FRONT_GRASP_EYE_TWO
+| rowspan="2" | BEAST_FRONT_GRASP
+|-
+| monkey
+| [[File:Beast front grasp, two eyes, one tail.png]]
+| BEAST_FRONT_GRASP_EYE_TWO, BEAST_FRONT_GRASP_TAIL_ONE
+|-
+| primate, quadruped
+| [[File:Beast quadruped bulky.png]]
+| ''none''
+| rowspan="5" | BEAST_QUADRUPED_BULKY
+|-
+| capybara, cavy, koala, toad, wombat
+| [[File:Beast quadruped bulky, two eyes.png]]
+| BEAST_QUADRUPED_BULKY_EYE_TWO
+|-
+| ankylosaurid, armadillo, bear, beaver, bison, buffalo, bull, camel, ceratopsid, chinchilla, goat, gopher, hadrosaurid, hedgehog, hippopotamus, llama, loris, marmot, mole, panda, pig, porcupine, rhinoceros, sauropod, sheep, sloth, stegosaurid, tapir, warthog
+| [[File:Beast quadruped bulky, two eyes, one tail.png]]
+| BEAST_QUADRUPED_BULKY_EYE_TWO, BEAST_QUADRUPED_BULKY_TAIL_ONE
+|-
+| elephant, mammoth
+| [[File:Beast quadruped bulky, two eyes, one tail, trunk.png]]
+| BEAST_QUADRUPED_BULKY_EYE_TWO, BEAST_QUADRUPED_BULKY_TAIL_ONE, BEAST_QUADRUPED_BULKY_TRUNK
+|-
+| tortoise, turtle
+| [[File:Beast quadruped bulky, two eyes, shell.png]]
+| BEAST_QUADRUPED_BULKY_EYE_TWO, BEAST_QUADRUPED_BULKY_SHELL_FRONT
+|-
+| primate, quadruped
+| [[File:Beast quadruped slinky.png]]
+| ''none''
+| rowspan="3" | BEAST_QUADRUPED_SLINKY
+|-
+| frog
+| [[File:Beast quadruped slinky, two eyes.png]]
+| BEAST_QUADRUPED_SLINKY_EYE_TWO
+|-
+| alligator, anteater, antelope, badger, cat, chameleon, civet, coati, coyote, crocodile, deer, dimetrodon, donkey, elk, fox, gecko, gila monster, giraffe, hare, horse, hyena, iguana, jackal, kangaroo, lemur, lizard, mongoose, monitor, moose, mouse, newt, opossum, otter, pangolin, panther, rabbit, raccoon, rat, salamander, shrew, skink, skunk, squirrel, weasel, wolf, zebra
+| [[File:Beast quadruped slinky, two eyes, one tail.png]]
+| BEAST_QUADRUPED_SLINKY_EYE_TWO, BEAST_QUADRUPED_SLINKY_TAIL_ONE
+|-
+| walrus
+| [[File:Beast walrus, two eyes.png]]
+| BEAST_WALRUS_EYE_TWO
+| BEAST_WALRUS
+|}
+:'''*''' The (generic) humanoid rcp has two or no eyes (by default) depending on the type of beast/monster:
+::2 eyes: bogeymen, experiments (intelligent humanoids), night trolls
+::0 eyes: experiments (amalgamations), nightmares, everything else (which are elementals)
+
+== Gallery ==
+<gallery caption="Large sprites" heights="64px">
+Beast amorphous.png|Amorphous sprite
+Beast snake.png|Snake sprite
+Beast worm long.png|Long worm sprite
+Beast worm short.png|Short worm sprite
+Beast insect.png|Insect sprite
+Beast spider.png|Spider sprite
+Beast scorpion.png|Scorpion sprite
+Beast scorpion, one tail.png|Scorpion sprite (with one tail)
+Beast bipedal dinosaur.png|Bipedal dinosaur sprite
+Beast humanoid.png|Humanoid sprite
+Beast front grasp.png|Front grasp sprite
+Beast front grasp hex.png|Front grasp sprite (six-legged)
+Beast front grasp oct.png|Front grasp sprite (eight-legged)
+Beast quadruped bulky.png|Bulky quadruped sprite
+Beast quadruped bulky hex.png|Bulky quadruped sprite (six-legged)
+Beast quadruped bulky oct.png|Bulky quadruped sprite (eight-legged)
+Beast quadruped slinky.png|Slinky quadruped sprite
+Beast quadruped slinky hex.png|Slinky quadruped sprite (six-legged)
+Beast quadruped slinky oct.png|Slinky quadruped sprite (eight-legged)
+Beast walrus.png|Walrus sprite
+</gallery>
+
+<gallery caption="Small sprites" heights="32px">
+Beast small amorphous.png|Small amorphous sprite
+Beast small snake.png|Small snake sprite
+Beast small worm long.png|Small long worm sprite
+Beast small worm short.png|Small short worm sprite
+Beast small insect.png|Small insect sprite
+Beast small spider.png|Small spider sprite
+Beast small scorpion.png|Small scorpion sprite
+Beast small scorpion, one tail.png|Small scorpion sprite (with one tail)
+Beast small bipedal dinosaur.png|Small bipedal dinosaur sprite
+Beast small humanoid.png|Small humanoid sprite
+Beast small front grasp.png|Small front grasp sprite
+Beast small front grasp hex.png|Small front grasp sprite (six-legged)
+Beast small front grasp oct.png|Small front grasp sprite (eight-legged)
+Beast small quadruped bulky.png|Small bulky quadruped sprite
+Beast small quadruped bulky hex.png|Small bulky quadruped sprite (six-legged)
+Beast small quadruped bulky oct.png|Small bulky quadruped sprite (eight-legged)
+Beast small quadruped slinky.png|Small slinky quadruped sprite
+Beast small quadruped slinky hex.png|Small slinky quadruped sprite (six-legged)
+Beast small quadruped slinky oct.png|Small slinky quadruped sprite (eight-legged)
+Beast small walrus.png|Small walrus sprite
+</gallery>
+
+
+{{Creatures}}
+
+[[Category:Creatures]]
+[[Category:Lua]]
+[[ru:Random creature profile]]
