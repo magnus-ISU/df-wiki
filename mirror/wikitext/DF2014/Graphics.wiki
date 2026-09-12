@@ -1,0 +1,53 @@
+{{Quality|Superior}}{{av}}
+:{{for/see|a list of all tile characters used in DF|[[Tilesets]]}}
+:{{for/see|a chart with the default ASCII characters|[[Main:Character table|Character table]]}}
+:{{for/see|user-created creature tilesets|[[Main:Tileset repository|Tileset repository]]}}
+:{{for/see|information about Graphic sets|[[Graphic set|Graphic set]]}}
+:{{for/see|information on how tilesets get colored|[[color]]}}
+----
+
+Although commonly referred to as text or "ASCII"-graphics, DF uses a bitmap [[tilesets|tileset]]* with characters from the [[Main:Character table|IBM Code Page 437]], displayed with a foreground and background color picked from 16 predefined [[Color scheme|colors]]. Text files (and often hardcoded values) define the tile, and colors of all objects.
+Both color scheme and tileset can be changed (see below), and definitions that are in text files can be modified. In addition, interface text can be displayed with a TrueType font and [[creatures]] (which normally are displayed as [[tilesets#list of creatures...|letters]]) can be assigned to separate tilesets called [[graphic set]]s. The main tileset is sometimes called "character tileset", while the graphic sets are also referred to as "object tilesets".
+
+<small>*except when using [[Technical_tricks#Video_Card_Options|PRINT_MODE:TEXT]]</small>
+==General Information==
+===Tileset===
+{{Main|Tilesets}}
+The main tileset (also called 'character set' or just 'tileset') is an image in BMP or PNG format that contains the 256 different tiles, corresponding to the [[Main:character table|IBM Code Page 437]], which are used to display all objects, creatures, and UI elements in game. The tiles are always arranged in a 16x16 grid, but its dimensions can be varied. You can have both square and non-square tiles, with 16x16 pixels being the most common size. Creatures are displayed as [[Tilesets#Main_creature_tiles|colored letters]] (a white 'B' is a [[polar bear]], a brown 'd' a [[dog]], and a grey 'c' is a [[cat]]).
+
+As the tileset is limited to only 256 tiles, some objects share the same tile. Most notably, even with upper and lower case letters and 16 colors, a lot of creatures still look identical (goblin, goat, various gibbons, gremlin, goose, etc). The tile for bins, up/down stairs and the cursor are the same; bags use the same tile as the symbol for "male"; and the "female" symbol shares a graphic with amulets. Roads and large rivers on the world map, minecart tracks and walls all share the same tiles as well.
+
+Some of those can be changed in the raws and init files, and creatures can have separate graphics, but in most cases they are hardcoded.
+
+That also can be used to categorize custom tilesets: Those that are made for and come bundled with modified raws/init files, and those that are made for and work with the default raws. Usually, the latter are more symbolic, or 'ASCII-like', while the former are often more pictographic, detailed or "pixel-arty". These sometimes are also bundled with their own creature graphics.
+Tilesets that are made for default raws have the advantage that you can use them immediately without any work for any new version that is released. With modified raws, you need to manually edit the new raws again, or wait for the maintainer to do that.
+
+===Graphic set===
+{{Main|Graphic set}}
+Graphic sets are additional tilesets used to give objects different graphics. As opposed to the main tileset, any number of tiles can be arranged in any grid configuration. Currently, DF only supports graphic sets for creatures. Every graphic set needs a corresponding text file that assigns a tile to a creature.
+
+=== Color ===
+{{Main|Color}}
+In general, a tileset has white tiles with a transparent background. White pixels show the foreground color, transparent pixels (magenta pixels for .bmp) the background color. Black pixels remain black. Shades of grey, partial transparency and even colored tiles can be used for various effects. Additionally, creature graphics can be set to be displayed in the colors they're drawn in.
+
+Otherwise, the game selects from 16 colors (the [[color scheme]]) to decide the color: which of the 16 colors the game uses depends on the [[Color#Color_values|color value]] or [[Color#Color_tokens|color token]] of the material/item.
+
+
+==Installation==
+{{further information|Tilesets|Graphic set|Color scheme}}
+===Repositories===
+The wiki has repositories for [[Main:Tileset_repository|tilesets]], [[Graphics_set_repository|graphic sets]], and [[color scheme]]s. You will find more in the [http://www.bay12forums.com/smf/index.php?board=28.0 bay 12 graphics subforum] and on [http://dffd.wimbli.com/ DFFD]. Some graphic sets and tilesets are additionally maintained on [https://github.com/DFgraphics github].
+Often, tileset creators offer preinstalled downloads or folders you just have to drop into your DF folder and overwrite files when prompted. They usually come with installation instructions either in a readme file or in their respective forum thread. In addition, there are various [[Utilities#Launchers|launcher]] applications that let you install and change graphics automatically.
+
+For manual installation of the various components, see here:
+
+===Tileset===
+Put the tileset you want to use into the data/art/ folder. Open up [[init.txt]] (in data/init/) with a text editor and change the entries FONT, FULLFONT, GRAPHICS_FONT, and GRAPHICS_FULLFONT to the filename of your new tileset.
+===Creature Graphics===
+Put the graphic set ''into a subfolder'' in raw/graphics and the corresponding text file directly in raw/graphics. If you have an active save you will have to put them into the raw folder of your save as well (data/save/<your region>/raw/graphics). Finally, set GRAPHICS to YES in data/init/[[init.txt]]
+
+===Color Scheme===
+Replace colors.txt in data/init with your new colors.
+===True Type Font===
+Replace font.ttf in data/art with your new font.
+{{Category| Interface}}
