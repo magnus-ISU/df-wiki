@@ -1,0 +1,1681 @@
+{{Quality|Exceptional|15:26, 17 May 2015 (UTC)}}
+{{av}}
+: {{for/see|an overview of graphics in Dwarf Fortress|[[Graphics]]}}
+: {{for/see|user-compiled colors|[[color scheme]]}}
+: {{for/see|lists of the colors of materials, professions, creatures, etc.|[[Color#Color lists|the "Color Lists" at the bottom of this page]]}}
+
+''Dwarf Fortress'' can use 16 '''colors''' to give every tile a foreground and background color. These 16 colors make up the [[color scheme]]. Which of these colors are assigned to a given tile is often decided by values in its raw file. Whether a pixel shows  foreground, background, black or anything in between is influenced by its brightness and opacity. The 16 colors are shown below:<br />
+
+[[File:color_scheme_default_lrg.png|190px]]
+
+Color is used to express various information, from a dwarf's [[profession]], to the natural color of a terrain feature, to the material an item is made of.
+
+== Overview ==
+=== The tileset influences color display ===
+[[File:Tileset-color-processing.png|300px|thumb|right]]
+In the simplest case, a pixel on a tileset is either white (foreground) or transparent* (background). However, black, and anything in between is possible as well (even color):
+* a white pixel will show the foreground color
+* a transparent* pixel will show the background color
+* a black pixel will stay black	
+The darker a white pixel is (i.e. a shade of gray), the darker the foreground color will be displayed. Similarly, a black pixel with lower opacity will result in a darker background color. 
+A partially transparent, non-black pixel shows both the background and foreground color.{{verify}}
+
+<small>*magenta for .bmp files.</small>
+
+=== Colors are assigned based on material and other raw values ===
+To decide which colors to use, DF looks at raw values for that object (color value or color token) and selects a foreground and background color from the 16 colors in the [[color scheme]]. When a color value is defined, it directly picks it from the 16. When instead a color token is defined, the game compares the color token definition to all 16 colors in the color scheme and picks the closest match.
+
+<!-- TODO
+clearly define somewhere when and how the article refers to background/foreground one one hand and pixels on the tileset on the other hand.
+== How the tileset influences color display ==
+TODO: look through commented out section of tileset page, correct it, update it, etc.
+adapt as section here.
+
+go into more detail about color in tilesets.
+
+=== tricks === (<- keep short, focus on tools/facts, not applications; those go into future "custom tileset" page)
+-tiles that are used for several things, one of which uses a black background others that don't can display different things:
+-mention walls/engravings as example.: smoothed walls use foreground color of material and black background. Engraved walls use foreground color and dark foreground color as background (actually, verify that. Isn't info on that in the old section right below?). So all black pixels (on the tileset) will be "invisible" on smooth walls (because the background is also black), but with engraved walls having a background color, you can see a pattern.
+-Other ("advanced") example with transparency: 50%opacity white pixels next to 100%opacity 50% gray pixels
+-other tricks I'm forgetting? check through old tileset threads on bay12
+insert images showing the examples
+
+-->
+
+== How colors are assigned ==
+Colors of [[Status icon]]s, [[profession]]s, text and the [[interface]] in general are hardcoded. [[Item]]s, [[furniture]], [[construction]]s, and geographic features get the color of their [[material]]. Dyes and material contaminants use color tokens.
+===Wall and floor color===
+[[image:Towercaps-sandy.jpg|thumb|[[Phyllite]] (to the left) has DISPLAY_COLOR:0:7:1 and BASIC_COLOR:7:0.  The [[white sand]] present has DISPLAY_COLOR:7:6:1 and so the actual floor color is 7:1 (white).]]
+
+While the foreground, background and brightness shown in the [[Material definition token|RAW]] files will be applied to [[wall]]s, the [[stone|mineral]]'s "secondary" color will end up different.  Here is how it works:
+* If the BASIC_COLOR tag is specified, it will use that color.  Note that the BASIC_COLOR tag only has foreground and brightness as arguments.
+* If BASIC_COLOR is left out:
+** The background color is forced to 0 (effectively stripping it).
+** If the foreground color is 0, the game will display it as dark gray, color 8 (in other words, color 0 with brightness 1).
+This is effective for [[stairs]], [[floor]]s, [[ramp]]s, and [[construction]]s (in the case of stone).  When stone is [[engraving|engraved]], it uses the material's TILE_COLOR (which is the same as the DISPLAY_COLOR unless overridden).
+
+=== Color values ===
+
+Colors are primarily defined using the [COLOR:x:y:z] or [DISPLAY_COLOR:x:y:z] tokens. The three arguments are:
+
+# Foreground color [0-7]
+# Background color [0-7]
+# Brightness of the foreground color [0 or 1]
+
+The brightness of the background color is always 0.
+
+By default*, the following 8 pairs of colors are displayed.  These are bright and dark shades of the primary colors, as well as black, white, and two grays:
+
+{| style="margin: 0 auto; border-spacing: 0"
+|-
+| style="vertical-align: top; padding: 0" | 
+{| style="text-align: center; border-spacing: 0 1px; margin: 0 auto; background: black; border-left: 1px solid black; border-right: 1px solid black"
+|- style="background: #fff"
+! style="padding: 0.15em 0.4em; width: 3em" | Col.
+! style="padding: 0.15em 0.4em; width: 3em" | Bri.
+! style="padding: 0.15em 0.4em; width: 9em; text-align: left" | Name
+|- style="color: white; background: {{fgcolor|0:0}}"
+| style="padding: 0.15em 0.4em" | 0
+| style="padding: 0.15em 0.4em" | 0
+| style="padding: 0.15em 0.4em; text-align: left" | BLACK
+|- style="color: white; background: {{fgcolor|1:0}}"
+| style="padding: 0.15em 0.4em" | 1
+| style="padding: 0.15em 0.4em" | 0
+| style="padding: 0.15em 0.4em; text-align: left" | BLUE
+|- style="color: white; background: {{fgcolor|2:0}}"
+| style="padding: 0.15em 0.4em" | 2
+| style="padding: 0.15em 0.4em" | 0
+| style="padding: 0.15em 0.4em; text-align: left" | GREEN
+|- style="color: white; background: {{fgcolor|3:0}}"
+| style="padding: 0.15em 0.4em" | 3
+| style="padding: 0.15em 0.4em" | 0
+| style="padding: 0.15em 0.4em; text-align: left" | CYAN
+|- style="color: white; background: {{fgcolor|4:0}}"
+| style="padding: 0.15em 0.4em" | 4
+| style="padding: 0.15em 0.4em" | 0
+| style="padding: 0.15em 0.4em; text-align: left" | RED
+|- style="color: white; background: {{fgcolor|5:0}}"
+| style="padding: 0.15em 0.4em" | 5
+| style="padding: 0.15em 0.4em" | 0
+| style="padding: 0.15em 0.4em; text-align: left" | MAGENTA
+|- style="color: white; background: {{fgcolor|6:0}}"
+| style="padding: 0.15em 0.4em" | 6
+| style="padding: 0.15em 0.4em" | 0
+| style="padding: 0.15em 0.4em; text-align: left" | BROWN
+|- style="color: black; background: {{fgcolor|7:0}}"
+| style="padding: 0.15em 0.4em" | 7
+| style="padding: 0.15em 0.4em" | 0
+| style="padding: 0.15em 0.4em; text-align: left" | LGRAY
+|}
+| style="vertical-align: top; padding: 0" | 
+{| style="text-align: center; border-spacing: 0 1px; margin: 0 auto; background: black; border-left: 1px solid black; border-right: 1px solid black"
+|- style="background: #fff"
+! style="padding: 0.15em 0.4em; width: 3em" | Col.
+! style="padding: 0.15em 0.4em; width: 3em" | Bri.
+! style="padding: 0.15em 0.4em; width: 9em; text-align: left" | Name
+! style="padding: 0.15em 0.4em; width: 3em" | Alt.
+|- style="color: white; background: {{fgcolor|0:1}}"
+| style="padding: 0.15em 0.4em" | 0
+| style="padding: 0.15em 0.4em" | 1
+| style="padding: 0.15em 0.4em; text-align: left" | DGRAY
+| style="padding: 0.15em 0.4em" | 8
+|- style="color: white; background: {{fgcolor|1:1}}"
+| style="padding: 0.15em 0.4em" | 1
+| style="padding: 0.15em 0.4em" | 1
+| style="padding: 0.15em 0.4em; text-align: left" | LBLUE
+| style="padding: 0.15em 0.4em" | 9
+|- style="color: black; background: {{fgcolor|2:1}}"
+| style="padding: 0.15em 0.4em" | 2
+| style="padding: 0.15em 0.4em" | 1
+| style="padding: 0.15em 0.4em; text-align: left" | LGREEN
+| style="padding: 0.15em 0.4em" | 10
+|- style="color: black; background: {{fgcolor|3:1}}"
+| style="padding: 0.15em 0.4em" | 3
+| style="padding: 0.15em 0.4em" | 1
+| style="padding: 0.15em 0.4em; text-align: left" | LCYAN
+| style="padding: 0.15em 0.4em" | 11
+|- style="color: white; background: {{fgcolor|4:1}}"
+| style="padding: 0.15em 0.4em" | 4
+| style="padding: 0.15em 0.4em" | 1
+| style="padding: 0.15em 0.4em; text-align: left" | LRED
+| style="padding: 0.15em 0.4em" | 12
+|- style="color: black; background: {{fgcolor|5:1}}"
+| style="padding: 0.15em 0.4em" | 5
+| style="padding: 0.15em 0.4em" | 1
+| style="padding: 0.15em 0.4em; text-align: left" | LMAGENTA
+| style="padding: 0.15em 0.4em" | 13
+|- style="color: black; background: {{fgcolor|6:1}}"
+| style="padding: 0.15em 0.4em" | 6
+| style="padding: 0.15em 0.4em" | 1
+| style="padding: 0.15em 0.4em; text-align: left" | YELLOW
+| style="padding: 0.15em 0.4em" | 14
+|- style="color: black; background: {{fgcolor|7:1}}"
+| style="padding: 0.15em 0.4em" | 7
+| style="padding: 0.15em 0.4em" | 1
+| style="padding: 0.15em 0.4em; text-align: left" | WHITE
+| style="padding: 0.15em 0.4em" | 15
+|}
+|}
+::::''(* See [[color scheme]] for information about how to change the actual various colors as displayed.)''
+
+Sometimes the color numbers are part of another token, e.g. <code>[LEAVES:quarry bush leaf:quarry bush leaves:6:7:0:0:0:0:1:LOCAL_PLANT_MAT:LEAF]</code> specifies the colors "7:0:0" for quarry bush leaves and "0:0:1" for wilted quarry bush leaves.
+
+====Values 8-15====
+
+If the brightness value is 1 or another nonzero number, it adds 8 to the foreground color. If the final value of the foreground or background is 8-15, it appears as a "bright" color. 
+
+As these values can be manually typed in instead of using the brightness value, you can also give the background a bright color with this method. For example, for a white background color, add 8 to 7 = 15. For a light green background color, you add 8 to 2 = 10.
+
+=== Color tokens ===
+
+Material contaminants and [[dye]]s do not use color flags. Instead, they reference [[Descriptor color token|color tokens]] defined in descriptor_color_standard.txt. Color tokens are referenced by their token name, e.g. <code>[STATE_COLOR:SOLID:DARK_GREEN]</code> or <code>[POWDER_DYE:EMERALD]</code>. The defined RGB values are not displayed in-game; one of the 16 display colors is used instead, choosing the one with the closest RGB values.
+
+The following colors are grouped according to their corresponding display color. Hexadecimal color values are not used in the raws, but correspond to the RGB values that are. For further information, see the Wikipedia article on [[wikipedia:Web colors|web colors]].
+
+{| style="margin: 1em auto; border-spacing: 0;"
+|- style="vertical-align: top; padding: 0 1em"
+|
+{| style="text-align: right; border-spacing: 0 1px; margin: 0 auto; background: black; border-left: 1px solid black; border-right: 1px solid black; width: 100%"
+|+ '''DGRAY colors'''
+|- style="background: {{fgcolor|0:1}}; color: white"
+! style="text-align: center; padding: 0.15em 0.4em" | Token
+! style="text-align: center; padding: 0.15em 0.4em" colspan="3" | RGB
+! style="text-align: center; padding: 0.15em 0.4em" | Hex
+|- style="color: white; background: rgb(0, 0, 0)"
+| style="padding: 0.15em 0.4em; text-align: left" | BLACK
+| style="padding: 0.15em 0.4em" | 0
+| style="padding: 0.15em 0.4em" | 0
+| style="padding: 0.15em 0.4em" | 0
+| style="padding: 0.15em 0.4em" | #000000
+|- style="color: white; background: rgb(128, 128, 128)"
+| style="padding: 0.15em 0.4em; text-align: left" | CLEAR
+| style="padding: 0.15em 0.4em" | 128
+| style="padding: 0.15em 0.4em" | 128
+| style="padding: 0.15em 0.4em" | 128
+| style="padding: 0.15em 0.4em" | #808080
+|- style="color: white; background: rgb(128, 128, 128)"
+| style="padding: 0.15em 0.4em; text-align: left" | GRAY
+| style="padding: 0.15em 0.4em" | 128
+| style="padding: 0.15em 0.4em" | 128
+| style="padding: 0.15em 0.4em" | 128
+| style="padding: 0.15em 0.4em" | #808080
+|- style="color: white; background: rgb(72, 60, 50)"
+| style="padding: 0.15em 0.4em; text-align: left" | TAUPE_DARK
+| style="padding: 0.15em 0.4em" | 72
+| style="padding: 0.15em 0.4em" | 60
+| style="padding: 0.15em 0.4em" | 50
+| style="padding: 0.15em 0.4em" | #483C32
+|- style="color: white; background: rgb(54, 69, 79)"
+| style="padding: 0.15em 0.4em; text-align: left" | CHARCOAL
+| style="padding: 0.15em 0.4em" | 54
+| style="padding: 0.15em 0.4em" | 69
+| style="padding: 0.15em 0.4em" | 79
+| style="padding: 0.15em 0.4em" | #36454F
+|- style="color: white; background: rgb(80, 64, 77)"
+| style="padding: 0.15em 0.4em; text-align: left" | TAUPE_PURPLE
+| style="padding: 0.15em 0.4em" | 80
+| style="padding: 0.15em 0.4em" | 64
+| style="padding: 0.15em 0.4em" | 77
+| style="padding: 0.15em 0.4em" | #50404D
+|- style="color: black; background: rgb(139, 133, 137)"
+| style="padding: 0.15em 0.4em; text-align: left" | TAUPE_GRAY
+| style="padding: 0.15em 0.4em" | 139
+| style="padding: 0.15em 0.4em" | 133
+| style="padding: 0.15em 0.4em" | 137
+| style="padding: 0.15em 0.4em" | #8B8589
+|}
+{| style="text-align: right; border-spacing: 0 1px; margin: 1em auto 0; background: black; border-left: 1px solid black; border-right: 1px solid black; width: 100%"
+|+ '''LGRAY colors'''
+|- style="background: {{fgcolor|7:0}}"
+! style="text-align: center; padding: 0.15em 0.4em" | Token
+! style="text-align: center; padding: 0.15em 0.4em" colspan="3" | RGB
+! style="text-align: center; padding: 0.15em 0.4em" | Hex
+|- style="color: black; background: rgb(192, 192, 192)"
+| style="padding: 0.15em 0.4em; text-align: left" | SILVER
+| style="padding: 0.15em 0.4em" | 192
+| style="padding: 0.15em 0.4em" | 192
+| style="padding: 0.15em 0.4em" | 192
+| style="padding: 0.15em 0.4em" | #C0C0C0
+|- style="color: black; background: rgb(178, 190, 181)"
+| style="padding: 0.15em 0.4em; text-align: left" | ASH_GRAY
+| style="padding: 0.15em 0.4em" | 178
+| style="padding: 0.15em 0.4em" | 190
+| style="padding: 0.15em 0.4em" | 181
+| style="padding: 0.15em 0.4em" | #B2BEB5
+|}
+{| style="text-align: right; border-spacing: 0 1px; margin: 1em auto 0; background: black; border-left: 1px solid black; border-right: 1px solid black; width: 100%"
+|+ '''WHITE colors'''
+|- style="background: {{fgcolor|7:1}}"
+! style="text-align: center; padding: 0.15em 0.4em" | Token
+! style="text-align: center; padding: 0.15em 0.4em" colspan="3" | RGB
+! style="text-align: center; padding: 0.15em 0.4em" | Hex
+|- style="color: black; background: rgb(255, 255, 255)"
+| style="padding: 0.15em 0.4em; text-align: left" | WHITE
+| style="padding: 0.15em 0.4em" | 255
+| style="padding: 0.15em 0.4em" | 255
+| style="padding: 0.15em 0.4em" | 255
+| style="padding: 0.15em 0.4em" | #FFFFFF
+|- style="color: black; background: rgb(245, 245, 220)"
+| style="padding: 0.15em 0.4em; text-align: left" | BEIGE
+| style="padding: 0.15em 0.4em" | 245
+| style="padding: 0.15em 0.4em" | 245
+| style="padding: 0.15em 0.4em" | 220
+| style="padding: 0.15em 0.4em" | #F5F5DC
+|- style="color: black; background: rgb(255, 255, 240)"
+| style="padding: 0.15em 0.4em; text-align: left" | IVORY
+| style="padding: 0.15em 0.4em" | 255
+| style="padding: 0.15em 0.4em" | 255
+| style="padding: 0.15em 0.4em" | 240
+| style="padding: 0.15em 0.4em" | #FFFFF0
+|- style="color: black; background: rgb(230, 230, 250)"
+| style="padding: 0.15em 0.4em; text-align: left" | LAVENDER
+| style="padding: 0.15em 0.4em" | 230
+| style="padding: 0.15em 0.4em" | 230
+| style="padding: 0.15em 0.4em" | 250
+| style="padding: 0.15em 0.4em" | #E6E6FA
+|- style="color: black; background: rgb(255, 240, 245)"
+| style="padding: 0.15em 0.4em; text-align: left" | LAVENDER_BLUSH
+| style="padding: 0.15em 0.4em" | 255
+| style="padding: 0.15em 0.4em" | 240
+| style="padding: 0.15em 0.4em" | 245
+| style="padding: 0.15em 0.4em" | #FFF0F5
+|}
+{| style="text-align: right; border-spacing: 0 1px; margin: 1em auto 0; background: black; border-left: 1px solid black; border-right: 1px solid black; width: 100%"
+|+ '''RED colors'''
+|- style="background: {{fgcolor|4:0}}; color: white"
+! style="text-align: center; padding: 0.15em 0.4em" | Token
+! style="text-align: center; padding: 0.15em 0.4em" colspan="3" | RGB
+! style="text-align: center; padding: 0.15em 0.4em" | Hex
+|- style="color: white; background: rgb(144, 93, 93)"
+| style="padding: 0.15em 0.4em; text-align: left" | TAUPE_ROSE
+| style="padding: 0.15em 0.4em" | 144
+| style="padding: 0.15em 0.4em" | 93
+| style="padding: 0.15em 0.4em" | 93
+| style="padding: 0.15em 0.4em" | #905D5D
+|- style="color: white; background: rgb(128, 0, 0)"
+| style="padding: 0.15em 0.4em; text-align: left" | MAROON
+| style="padding: 0.15em 0.4em" | 128
+| style="padding: 0.15em 0.4em" | 0
+| style="padding: 0.15em 0.4em" | 0
+| style="padding: 0.15em 0.4em" | #800000
+|- style="color: black; background: rgb(184, 115, 51)"
+| style="padding: 0.15em 0.4em; text-align: left" | COPPER
+| style="padding: 0.15em 0.4em" | 184
+| style="padding: 0.15em 0.4em" | 115
+| style="padding: 0.15em 0.4em" | 51
+| style="padding: 0.15em 0.4em" | #B87333
+|- style="color: white; background: rgb(152, 105, 96)"
+| style="padding: 0.15em 0.4em; text-align: left" | DARK_CHESTNUT
+| style="padding: 0.15em 0.4em" | 152
+| style="padding: 0.15em 0.4em" | 105
+| style="padding: 0.15em 0.4em" | 96
+| style="padding: 0.15em 0.4em" | #986960
+|- style="color: white; background: rgb(183, 65, 14)"
+| style="padding: 0.15em 0.4em; text-align: left" | RUST
+| style="padding: 0.15em 0.4em" | 183
+| style="padding: 0.15em 0.4em" | 65
+| style="padding: 0.15em 0.4em" | 14
+| style="padding: 0.15em 0.4em" | #B7410E
+|- style="color: white; background: rgb(152, 118, 84)"
+| style="padding: 0.15em 0.4em; text-align: left" | PALE_BROWN
+| style="padding: 0.15em 0.4em" | 152
+| style="padding: 0.15em 0.4em" | 118
+| style="padding: 0.15em 0.4em" | 84
+| style="padding: 0.15em 0.4em" | #987654
+|- style="color: white; background: rgb(150, 113, 23)"
+| style="padding: 0.15em 0.4em; text-align: left" | TAUPE_SANDY
+| style="padding: 0.15em 0.4em" | 150
+| style="padding: 0.15em 0.4em" | 113
+| style="padding: 0.15em 0.4em" | 23
+| style="padding: 0.15em 0.4em" | #967117
+|- style="color: black; background: rgb(145, 129, 81)"
+| style="padding: 0.15em 0.4em; text-align: left" | DARK_TAN
+| style="padding: 0.15em 0.4em" | 145
+| style="padding: 0.15em 0.4em" | 129
+| style="padding: 0.15em 0.4em" | 81
+| style="padding: 0.15em 0.4em" | #918151
+|- style="color: white; background: rgb(153, 51, 102)"
+| style="padding: 0.15em 0.4em; text-align: left" | MAUVE
+| style="padding: 0.15em 0.4em" | 153
+| style="padding: 0.15em 0.4em" | 51
+| style="padding: 0.15em 0.4em" | 102
+| style="padding: 0.15em 0.4em" | #993366
+|- style="color: white; background: rgb(178, 0, 75)"
+| style="padding: 0.15em 0.4em; text-align: left" | RED_PURPLE
+| style="padding: 0.15em 0.4em" | 178
+| style="padding: 0.15em 0.4em" | 0
+| style="padding: 0.15em 0.4em" | 75
+| style="padding: 0.15em 0.4em" | #B2004B
+|- style="color: white; background: rgb(145, 95, 109)"
+| style="padding: 0.15em 0.4em; text-align: left" | MAUVE_TAUPE
+| style="padding: 0.15em 0.4em" | 145
+| style="padding: 0.15em 0.4em" | 95
+| style="padding: 0.15em 0.4em" | 109
+| style="padding: 0.15em 0.4em" | #915F6D
+|- style="color: white; background: rgb(86, 3, 25)"
+| style="padding: 0.15em 0.4em; text-align: left" | DARK_SCARLET
+| style="padding: 0.15em 0.4em" | 86
+| style="padding: 0.15em 0.4em" | 3
+| style="padding: 0.15em 0.4em" | 25
+| style="padding: 0.15em 0.4em" | #560319
+|- style="color: white; background: rgb(150, 0, 24)"
+| style="padding: 0.15em 0.4em; text-align: left" | CARMINE
+| style="padding: 0.15em 0.4em" | 150
+| style="padding: 0.15em 0.4em" | 0
+| style="padding: 0.15em 0.4em" | 24
+| style="padding: 0.15em 0.4em" | #960018
+|}
+{| style="text-align: right; border-spacing: 0 1px; margin: 1em auto 0; background: black; border-left: 1px solid black; border-right: 1px solid black; width: 100%"
+|+ '''LRED colors'''
+|- style="background: {{fgcolor|4:1}}; color: white"
+! style="text-align: center; padding: 0.15em 0.4em" | Token
+! style="text-align: center; padding: 0.15em 0.4em" colspan="3" | RGB
+! style="text-align: center; padding: 0.15em 0.4em" | Hex
+|- style="color: white; background: rgb(205, 92, 92)"
+| style="padding: 0.15em 0.4em; text-align: left" | CHESTNUT
+| style="padding: 0.15em 0.4em" | 205
+| style="padding: 0.15em 0.4em" | 92
+| style="padding: 0.15em 0.4em" | 92
+| style="padding: 0.15em 0.4em" | #CD5C5C
+|- style="color: black; background: rgb(244, 194, 194)"
+| style="padding: 0.15em 0.4em; text-align: left" | ROSE
+| style="padding: 0.15em 0.4em" | 244
+| style="padding: 0.15em 0.4em" | 194
+| style="padding: 0.15em 0.4em" | 194
+| style="padding: 0.15em 0.4em" | #F4C2C2
+|- style="color: white; background: rgb(255, 0, 0)"
+| style="padding: 0.15em 0.4em; text-align: left" | RED
+| style="padding: 0.15em 0.4em" | 255
+| style="padding: 0.15em 0.4em" | 0
+| style="padding: 0.15em 0.4em" | 0
+| style="padding: 0.15em 0.4em" | #FF0000
+|- style="color: white; background: rgb(227, 66, 52)"
+| style="padding: 0.15em 0.4em; text-align: left" | VERMILION
+| style="padding: 0.15em 0.4em" | 227
+| style="padding: 0.15em 0.4em" | 66
+| style="padding: 0.15em 0.4em" | 52
+| style="padding: 0.15em 0.4em" | #E34234
+|- style="color: black; background: rgb(233, 116, 81)"
+| style="padding: 0.15em 0.4em; text-align: left" | BURNT_SIENNA
+| style="padding: 0.15em 0.4em" | 233
+| style="padding: 0.15em 0.4em" | 116
+| style="padding: 0.15em 0.4em" | 81
+| style="padding: 0.15em 0.4em" | #E97451
+|- style="color: white; background: rgb(192, 64, 0)"
+| style="padding: 0.15em 0.4em; text-align: left" | MAHOGANY
+| style="padding: 0.15em 0.4em" | 192
+| style="padding: 0.15em 0.4em" | 64
+| style="padding: 0.15em 0.4em" | 0
+| style="padding: 0.15em 0.4em" | #C04000
+|- style="color: white; background: rgb(210, 105, 30)"
+| style="padding: 0.15em 0.4em; text-align: left" | CHOCOLATE
+| style="padding: 0.15em 0.4em" | 210
+| style="padding: 0.15em 0.4em" | 105
+| style="padding: 0.15em 0.4em" | 30
+| style="padding: 0.15em 0.4em" | #DC691E
+|- style="color: black; background: rgb(255, 117, 24)"
+| style="padding: 0.15em 0.4em; text-align: left" | PUMPKIN
+| style="padding: 0.15em 0.4em" | 255
+| style="padding: 0.15em 0.4em" | 117
+| style="padding: 0.15em 0.4em" | 24
+| style="padding: 0.15em 0.4em" | #FF7518
+|- style="color: black; background: rgb(205, 133, 63)"
+| style="padding: 0.15em 0.4em; text-align: left" | LIGHT_BROWN
+| style="padding: 0.15em 0.4em" | 205
+| style="padding: 0.15em 0.4em" | 133
+| style="padding: 0.15em 0.4em" | 63
+| style="padding: 0.15em 0.4em" | #CD853F
+|- style="color: black; background: rgb(205, 127, 50)"
+| style="padding: 0.15em 0.4em; text-align: left" | BRONZE
+| style="padding: 0.15em 0.4em" | 205
+| style="padding: 0.15em 0.4em" | 127
+| style="padding: 0.15em 0.4em" | 50
+| style="padding: 0.15em 0.4em" | #CD7F32
+|- style="color: black; background: rgb(204, 119, 34)"
+| style="padding: 0.15em 0.4em; text-align: left" | OCHRE
+| style="padding: 0.15em 0.4em" | 204
+| style="padding: 0.15em 0.4em" | 119
+| style="padding: 0.15em 0.4em" | 34
+| style="padding: 0.15em 0.4em" | #CC7722
+|- style="color: black; background: rgb(231, 84, 128)"
+| style="padding: 0.15em 0.4em; text-align: left" | DARK_PINK
+| style="padding: 0.15em 0.4em" | 231
+| style="padding: 0.15em 0.4em" | 84
+| style="padding: 0.15em 0.4em" | 128
+| style="padding: 0.15em 0.4em" | #E75480
+|- style="color: white; background: rgb(220, 20, 60)"
+| style="padding: 0.15em 0.4em; text-align: left" | CRIMSON
+| style="padding: 0.15em 0.4em" | 220
+| style="padding: 0.15em 0.4em" | 20
+| style="padding: 0.15em 0.4em" | 60
+| style="padding: 0.15em 0.4em" | #DC143C
+|- style="color: white; background: rgb(196, 30, 58)"
+| style="padding: 0.15em 0.4em; text-align: left" | CARDINAL
+| style="padding: 0.15em 0.4em" | 196
+| style="padding: 0.15em 0.4em" | 30
+| style="padding: 0.15em 0.4em" | 58
+| style="padding: 0.15em 0.4em" | #C41E3A
+|- style="color: white; background: rgb(255, 36, 0)"
+| style="padding: 0.15em 0.4em; text-align: left" | SCARLET
+| style="padding: 0.15em 0.4em" | 255
+| style="padding: 0.15em 0.4em" | 36
+| style="padding: 0.15em 0.4em" | 0
+| style="padding: 0.15em 0.4em" | #FF0024
+|}
+|
+{| style="text-align: right; border-spacing: 0 1px; margin: 0 auto; background: black; border-left: 1px solid black; border-right: 1px solid black; width: 100%"
+|+ '''BROWN colors'''
+|- style="background: {{fgcolor|6:0}}; color: white"
+! style="text-align: center; padding: 0.15em 0.4em" | Token
+! style="text-align: center; padding: 0.15em 0.4em" colspan="3" | RGB
+! style="text-align: center; padding: 0.15em 0.4em" | Hex
+|- style="color: white; background: rgb(117, 90, 87)"
+| style="padding: 0.15em 0.4em; text-align: left" | RUSSET
+| style="padding: 0.15em 0.4em" | 117
+| style="padding: 0.15em 0.4em" | 90
+| style="padding: 0.15em 0.4em" | 87
+| style="padding: 0.15em 0.4em" | #755A57
+|- style="color: white; background: rgb(103, 76, 71)"
+| style="padding: 0.15em 0.4em; text-align: left" | TAUPE_MEDIUM
+| style="padding: 0.15em 0.4em" | 103
+| style="padding: 0.15em 0.4em" | 76
+| style="padding: 0.15em 0.4em" | 71
+| style="padding: 0.15em 0.4em" | #674C47
+|- style="color: white; background: rgb(138, 51, 36)"
+| style="padding: 0.15em 0.4em; text-align: left" | BURNT_UMBER
+| style="padding: 0.15em 0.4em" | 138
+| style="padding: 0.15em 0.4em" | 51
+| style="padding: 0.15em 0.4em" | 36
+| style="padding: 0.15em 0.4em" | #8A3324
+|- style="color: white; background: rgb(111, 53, 26)"
+| style="padding: 0.15em 0.4em; text-align: left" | AUBURN
+| style="padding: 0.15em 0.4em" | 111
+| style="padding: 0.15em 0.4em" | 53
+| style="padding: 0.15em 0.4em" | 26
+| style="padding: 0.15em 0.4em" | #6F351A
+|- style="color: black; background: rgb(188, 152, 126)"
+| style="padding: 0.15em 0.4em; text-align: left" | TAUPE_PALE
+| style="padding: 0.15em 0.4em" | 188
+| style="padding: 0.15em 0.4em" | 152
+| style="padding: 0.15em 0.4em" | 126
+| style="padding: 0.15em 0.4em" | #BC987E
+|- style="color: white; background: rgb(101, 67, 33)"
+| style="padding: 0.15em 0.4em; text-align: left" | DARK_BROWN
+| style="padding: 0.15em 0.4em" | 101
+| style="padding: 0.15em 0.4em" | 67
+| style="padding: 0.15em 0.4em" | 33
+| style="padding: 0.15em 0.4em" | #654321
+|- style="color: white; background: rgb(112, 66, 20)"
+| style="padding: 0.15em 0.4em; text-align: left" | SEPIA
+| style="padding: 0.15em 0.4em" | 112
+| style="padding: 0.15em 0.4em" | 66
+| style="padding: 0.15em 0.4em" | 20
+| style="padding: 0.15em 0.4em" | #704214
+|- style="color: white; background: rgb(150, 75, 0)"
+| style="padding: 0.15em 0.4em; text-align: left" | BROWN
+| style="padding: 0.15em 0.4em" | 150
+| style="padding: 0.15em 0.4em" | 75
+| style="padding: 0.15em 0.4em" | 0
+| style="padding: 0.15em 0.4em" | #964B00
+|- style="color: white; background: rgb(123, 63, 0)"
+| style="padding: 0.15em 0.4em; text-align: left" | CINNAMON
+| style="padding: 0.15em 0.4em" | 123
+| style="padding: 0.15em 0.4em" | 63
+| style="padding: 0.15em 0.4em" | 0
+| style="padding: 0.15em 0.4em" | #7B3F00
+|- style="color: white; background: rgb(115, 74, 18)"
+| style="padding: 0.15em 0.4em; text-align: left" | RAW_UMBER
+| style="padding: 0.15em 0.4em" | 115
+| style="padding: 0.15em 0.4em" | 74
+| style="padding: 0.15em 0.4em" | 18
+| style="padding: 0.15em 0.4em" | #734A12
+|- style="color: black; background: rgb(181, 166, 66)"
+| style="padding: 0.15em 0.4em; text-align: left" | BRASS
+| style="padding: 0.15em 0.4em" | 181
+| style="padding: 0.15em 0.4em" | 166
+| style="padding: 0.15em 0.4em" | 66
+| style="padding: 0.15em 0.4em" | #B5A642
+|- style="color: white; background: rgb(128, 128, 0)"
+| style="padding: 0.15em 0.4em; text-align: left" | OLIVE
+| style="padding: 0.15em 0.4em" | 128
+| style="padding: 0.15em 0.4em" | 128
+| style="padding: 0.15em 0.4em" | 0
+| style="padding: 0.15em 0.4em" | #808000
+|- style="color: white; background: rgb(85, 104, 50)"
+| style="padding: 0.15em 0.4em; text-align: left" | DARK_OLIVE
+| style="padding: 0.15em 0.4em" | 85
+| style="padding: 0.15em 0.4em" | 104
+| style="padding: 0.15em 0.4em" | 50
+| style="padding: 0.15em 0.4em" | #556832
+|- style="color: white; background: rgb(79, 121, 66)"
+| style="padding: 0.15em 0.4em; text-align: left" | FERN_GREEN
+| style="padding: 0.15em 0.4em" | 79
+| style="padding: 0.15em 0.4em" | 121
+| style="padding: 0.15em 0.4em" | 66
+| style="padding: 0.15em 0.4em" | #4F7942
+|}
+{| style="text-align: right; border-spacing: 0 1px; margin: 1em auto 0; background: black; border-left: 1px solid black; border-right: 1px solid black; width: 100%"
+|+ '''YELLOW colors'''
+|- style="background: {{fgcolor|6:1}}"
+! style="text-align: center; padding: 0.15em 0.4em" | Token
+! style="text-align: center; padding: 0.15em 0.4em" colspan="3" | RGB
+! style="text-align: center; padding: 0.15em 0.4em" | Hex
+|- style="color: black; background: rgb(255, 218, 185)"
+| style="padding: 0.15em 0.4em; text-align: left" | DARK_PEACH
+| style="padding: 0.15em 0.4em" | 255
+| style="padding: 0.15em 0.4em" | 218
+| style="padding: 0.15em 0.4em" | 185
+| style="padding: 0.15em 0.4em" | #FFDAB9
+|- style="color: black; background: rgb(210, 180, 140)"
+| style="padding: 0.15em 0.4em; text-align: left" | TAN
+| style="padding: 0.15em 0.4em" | 210
+| style="padding: 0.15em 0.4em" | 180
+| style="padding: 0.15em 0.4em" | 140
+| style="padding: 0.15em 0.4em" | #D2B48C
+|- style="color: black; background: rgb(255, 165, 0)"
+| style="padding: 0.15em 0.4em; text-align: left" | ORANGE
+| style="padding: 0.15em 0.4em" | 255
+| style="padding: 0.15em 0.4em" | 165
+| style="padding: 0.15em 0.4em" | 0
+| style="padding: 0.15em 0.4em" | #FFA500
+|- style="color: black; background: rgb(255, 229, 180)"
+| style="padding: 0.15em 0.4em; text-align: left" | PEACH
+| style="padding: 0.15em 0.4em" | 255
+| style="padding: 0.15em 0.4em" | 229
+| style="padding: 0.15em 0.4em" | 180
+| style="padding: 0.15em 0.4em" | #FFE5B4
+|- style="color: black; background: rgb(218, 165, 32)"
+| style="padding: 0.15em 0.4em; text-align: left" | GOLDENROD
+| style="padding: 0.15em 0.4em" | 218
+| style="padding: 0.15em 0.4em" | 165
+| style="padding: 0.15em 0.4em" | 32
+| style="padding: 0.15em 0.4em" | #DAA520
+|- style="color: black; background: rgb(194, 178, 128)"
+| style="padding: 0.15em 0.4em; text-align: left" | ECRU
+| style="padding: 0.15em 0.4em" | 194
+| style="padding: 0.15em 0.4em" | 178
+| style="padding: 0.15em 0.4em" | 128
+| style="padding: 0.15em 0.4em" | #C2B280
+|- style="color: black; background: rgb(244, 196, 48)"
+| style="padding: 0.15em 0.4em; text-align: left" | SAFFRON
+| style="padding: 0.15em 0.4em" | 244
+| style="padding: 0.15em 0.4em" | 196
+| style="padding: 0.15em 0.4em" | 48
+| style="padding: 0.15em 0.4em" | #F4C430
+|- style="color: black; background: rgb(255, 191, 0)"
+| style="padding: 0.15em 0.4em; text-align: left" | AMBER
+| style="padding: 0.15em 0.4em" | 255
+| style="padding: 0.15em 0.4em" | 191
+| style="padding: 0.15em 0.4em" | 0
+| style="padding: 0.15em 0.4em" | #FFBF00
+|- style="color: black; background: rgb(212, 175, 55)"
+| style="padding: 0.15em 0.4em; text-align: left" | GOLD
+| style="padding: 0.15em 0.4em" | 212
+| style="padding: 0.15em 0.4em" | 175
+| style="padding: 0.15em 0.4em" | 55
+| style="padding: 0.15em 0.4em" | #D4AF37
+|- style="color: black; background: rgb(240, 234, 214)"
+| style="padding: 0.15em 0.4em; text-align: left" | PEARL
+| style="padding: 0.15em 0.4em" | 240
+| style="padding: 0.15em 0.4em" | 234
+| style="padding: 0.15em 0.4em" | 214
+| style="padding: 0.15em 0.4em" | #F0EBD6
+|- style="color: black; background: rgb(240, 220, 130)"
+| style="padding: 0.15em 0.4em; text-align: left" | BUFF
+| style="padding: 0.15em 0.4em" | 240
+| style="padding: 0.15em 0.4em" | 220
+| style="padding: 0.15em 0.4em" | 130
+| style="padding: 0.15em 0.4em" | #F0DC82
+|- style="color: black; background: rgb(238, 220, 130)"
+| style="padding: 0.15em 0.4em; text-align: left" | FLAX
+| style="padding: 0.15em 0.4em" | 238
+| style="padding: 0.15em 0.4em" | 220
+| style="padding: 0.15em 0.4em" | 130
+| style="padding: 0.15em 0.4em" | #EEDC82
+|- style="color: black; background: rgb(255, 223, 0)"
+| style="padding: 0.15em 0.4em; text-align: left" | GOLDEN_YELLOW
+| style="padding: 0.15em 0.4em" | 255
+| style="padding: 0.15em 0.4em" | 223
+| style="padding: 0.15em 0.4em" | 0
+| style="padding: 0.15em 0.4em" | #FFDF00
+|- style="color: black; background: rgb(253, 233, 16)"
+| style="padding: 0.15em 0.4em; text-align: left" | LEMON
+| style="padding: 0.15em 0.4em" | 253
+| style="padding: 0.15em 0.4em" | 233
+| style="padding: 0.15em 0.4em" | 16
+| style="padding: 0.15em 0.4em" | #FDE910
+|- style="color: black; background: rgb(255, 253, 208)"
+| style="padding: 0.15em 0.4em; text-align: left" | CREAM
+| style="padding: 0.15em 0.4em" | 255
+| style="padding: 0.15em 0.4em" | 253
+| style="padding: 0.15em 0.4em" | 208
+| style="padding: 0.15em 0.4em" | #FFFDD0
+|- style="color: black; background: rgb(255, 255, 0)"
+| style="padding: 0.15em 0.4em; text-align: left" | YELLOW
+| style="padding: 0.15em 0.4em" | 255
+| style="padding: 0.15em 0.4em" | 255
+| style="padding: 0.15em 0.4em" | 0
+| style="padding: 0.15em 0.4em" | #FFFF00
+|- style="color: black; background: rgb(204, 255, 0)"
+| style="padding: 0.15em 0.4em; text-align: left" | LIME
+| style="padding: 0.15em 0.4em" | 204
+| style="padding: 0.15em 0.4em" | 255
+| style="padding: 0.15em 0.4em" | 0
+| style="padding: 0.15em 0.4em" | #CCFF00
+|- style="color: black; background: rgb(154, 205, 50)"
+| style="padding: 0.15em 0.4em; text-align: left" | YELLOW_GREEN
+| style="padding: 0.15em 0.4em" | 154
+| style="padding: 0.15em 0.4em" | 205
+| style="padding: 0.15em 0.4em" | 50
+| style="padding: 0.15em 0.4em" | #9ACD32
+|- style="color: black; background: rgb(173, 255, 47)"
+| style="padding: 0.15em 0.4em; text-align: left" | GREEN-YELLOW
+| style="padding: 0.15em 0.4em" | 173
+| style="padding: 0.15em 0.4em" | 255
+| style="padding: 0.15em 0.4em" | 47
+| style="padding: 0.15em 0.4em" | #ADFF2F
+|}
+{| style="text-align: right; border-spacing: 0 1px; margin: 1em auto 0; background: black; border-left: 1px solid black; border-right: 1px solid black; width: 100%"
+|+ '''GREEN colors'''
+|- style="background: {{fgcolor|2:0}}; color: white"
+! style="text-align: center; padding: 0.15em 0.4em" | Token
+! style="text-align: center; padding: 0.15em 0.4em" colspan="3" | RGB
+! style="text-align: center; padding: 0.15em 0.4em" | Hex
+|- style="color: white; background: rgb(1, 50, 32)"
+| style="padding: 0.15em 0.4em; text-align: left" | DARK_GREEN
+| style="padding: 0.15em 0.4em" | 1
+| style="padding: 0.15em 0.4em" | 50
+| style="padding: 0.15em 0.4em" | 32
+| style="padding: 0.15em 0.4em" | #013220
+|- style="color: white; background: rgb(0, 168, 107)"
+| style="padding: 0.15em 0.4em; text-align: left" | JADE
+| style="padding: 0.15em 0.4em" | 0
+| style="padding: 0.15em 0.4em" | 168
+| style="padding: 0.15em 0.4em" | 107
+| style="padding: 0.15em 0.4em" | #00A86B
+|}
+{| style="text-align: right; border-spacing: 0 1px; margin: 1em auto 0; background: black; border-left: 1px solid black; border-right: 1px solid black; width: 100%"
+|+ '''LGREEN colors'''
+|- style="background: {{fgcolor|2:1}}"
+! style="text-align: center; padding: 0.15em 0.4em" | Token
+! style="text-align: center; padding: 0.15em 0.4em" colspan="3" | RGB
+! style="text-align: center; padding: 0.15em 0.4em" | Hex
+|- style="color: black; background: rgb(127, 255, 0)"
+| style="padding: 0.15em 0.4em; text-align: left" | CHARTREUSE
+| style="padding: 0.15em 0.4em" | 127
+| style="padding: 0.15em 0.4em" | 255
+| style="padding: 0.15em 0.4em" | 0
+| style="padding: 0.15em 0.4em" | #7BFF00
+|- style="color: black; background: rgb(0, 255, 0)"
+| style="padding: 0.15em 0.4em; text-align: left" | GREEN
+| style="padding: 0.15em 0.4em" | 0
+| style="padding: 0.15em 0.4em" | 255
+| style="padding: 0.15em 0.4em" | 0
+| style="padding: 0.15em 0.4em" | #00FF00
+|- style="color: black; background: rgb(80, 200, 120)"
+| style="padding: 0.15em 0.4em; text-align: left" | EMERALD
+| style="padding: 0.15em 0.4em" | 80
+| style="padding: 0.15em 0.4em" | 200
+| style="padding: 0.15em 0.4em" | 120
+| style="padding: 0.15em 0.4em" | #50C878
+|- style="color: black; background: rgb(0, 255, 127)"
+| style="padding: 0.15em 0.4em; text-align: left" | SPRING_GREEN
+| style="padding: 0.15em 0.4em" | 0
+| style="padding: 0.15em 0.4em" | 255
+| style="padding: 0.15em 0.4em" | 127
+| style="padding: 0.15em 0.4em" | #00FF7F
+|}
+|
+{| style="text-align: right; border-spacing: 0 1px; margin: 0 auto; background: black; border-left: 1px solid black; border-right: 1px solid black; width: 100%"
+|+ '''CYAN colors'''
+|- style="background: {{fgcolor|3:0}}; color: white"
+! style="text-align: center; padding: 0.15em 0.4em" | Token
+! style="text-align: center; padding: 0.15em 0.4em" colspan="3" | RGB
+! style="text-align: center; padding: 0.15em 0.4em" | Hex
+|- style="color: white; background: rgb(46, 139, 87)"
+| style="padding: 0.15em 0.4em; text-align: left" | SEA_GREEN
+| style="padding: 0.15em 0.4em" | 46
+| style="padding: 0.15em 0.4em" | 139
+| style="padding: 0.15em 0.4em" | 87
+| style="padding: 0.15em 0.4em" | #2E8B57
+|- style="color: white; background: rgb(1, 121, 111)"
+| style="padding: 0.15em 0.4em; text-align: left" | PINE_GREEN
+| style="padding: 0.15em 0.4em" | 1
+| style="padding: 0.15em 0.4em" | 121
+| style="padding: 0.15em 0.4em" | 111
+| style="padding: 0.15em 0.4em" | #01796F
+|- style="color: white; background: rgb(0, 128, 128)"
+| style="padding: 0.15em 0.4em; text-align: left" | TEAL
+| style="padding: 0.15em 0.4em" | 0
+| style="padding: 0.15em 0.4em" | 128
+| style="padding: 0.15em 0.4em" | 128
+| style="padding: 0.15em 0.4em" | #008080
+|- style="color: white; background: rgb(0, 123, 167)"
+| style="padding: 0.15em 0.4em; text-align: left" | CERULEAN
+| style="padding: 0.15em 0.4em" | 0
+| style="padding: 0.15em 0.4em" | 123
+| style="padding: 0.15em 0.4em" | 167
+| style="padding: 0.15em 0.4em" | #007BA7
+|- style="color: white; background: rgb(0, 51, 102)"
+| style="padding: 0.15em 0.4em; text-align: left" | MIDNIGHT_BLUE
+| style="padding: 0.15em 0.4em" | 0
+| style="padding: 0.15em 0.4em" | 51
+| style="padding: 0.15em 0.4em" | 102
+| style="padding: 0.15em 0.4em" | #003366
+|}
+{| style="text-align: right; border-spacing: 0 1px; margin: 1em auto 0; background: black; border-left: 1px solid black; border-right: 1px solid black; width: 100%"
+|+ '''LCYAN colors'''
+|- style="background: {{fgcolor|3:1}}"
+! style="text-align: center; padding: 0.15em 0.4em" | Token
+! style="text-align: center; padding: 0.15em 0.4em" colspan="3" | RGB
+! style="text-align: center; padding: 0.15em 0.4em" | Hex
+|- style="color: black; background: rgb(173, 223, 173)"
+| style="padding: 0.15em 0.4em; text-align: left" | MOSS_GREEN
+| style="padding: 0.15em 0.4em" | 173
+| style="padding: 0.15em 0.4em" | 223
+| style="padding: 0.15em 0.4em" | 173
+| style="padding: 0.15em 0.4em" | #ADDFAD
+|- style="color: black; background: rgb(152, 255, 152)"
+| style="padding: 0.15em 0.4em; text-align: left" | MINT_GREEN
+| style="padding: 0.15em 0.4em" | 152
+| style="padding: 0.15em 0.4em" | 255
+| style="padding: 0.15em 0.4em" | 152
+| style="padding: 0.15em 0.4em" | #98FF98
+|- style="color: black; background: rgb(127, 255, 212)"
+| style="padding: 0.15em 0.4em; text-align: left" | AQUAMARINE
+| style="padding: 0.15em 0.4em" | 127
+| style="padding: 0.15em 0.4em" | 255
+| style="padding: 0.15em 0.4em" | 212
+| style="padding: 0.15em 0.4em" | #7FFFD4
+|- style="color: black; background: rgb(48, 213, 200)"
+| style="padding: 0.15em 0.4em; text-align: left" | TURQUOISE
+| style="padding: 0.15em 0.4em" | 48
+| style="padding: 0.15em 0.4em" | 213
+| style="padding: 0.15em 0.4em" | 200
+| style="padding: 0.15em 0.4em" | #30D5C8
+|- style="color: black; background: rgb(175, 238, 238)"
+| style="padding: 0.15em 0.4em; text-align: left" | PALE_BLUE
+| style="padding: 0.15em 0.4em" | 175
+| style="padding: 0.15em 0.4em" | 238
+| style="padding: 0.15em 0.4em" | 238
+| style="padding: 0.15em 0.4em" | #AFEEEE
+|- style="color: black; background: rgb(0, 255, 255)"
+| style="padding: 0.15em 0.4em; text-align: left" | AQUA
+| style="padding: 0.15em 0.4em" | 0
+| style="padding: 0.15em 0.4em" | 255
+| style="padding: 0.15em 0.4em" | 255
+| style="padding: 0.15em 0.4em" | #00FFFF
+|- style="color: black; background: rgb(173, 216, 230)"
+| style="padding: 0.15em 0.4em; text-align: left" | LIGHT_BLUE
+| style="padding: 0.15em 0.4em" | 173
+| style="padding: 0.15em 0.4em" | 216
+| style="padding: 0.15em 0.4em" | 230
+| style="padding: 0.15em 0.4em" | #ADD8E6
+|- style="color: black; background: rgb(135, 206, 235)"
+| style="padding: 0.15em 0.4em; text-align: left" | SKY_BLUE
+| style="padding: 0.15em 0.4em" | 135
+| style="padding: 0.15em 0.4em" | 206
+| style="padding: 0.15em 0.4em" | 235
+| style="padding: 0.15em 0.4em" | #87CEEB
+|}
+{| style="text-align: right; border-spacing: 0 1px; margin: 1em auto 0; background: black; border-left: 1px solid black; border-right: 1px solid black; width: 100%"
+|+ '''BLUE colors'''
+|- style="background: {{fgcolor|1:0}}; color: white"
+! style="text-align: center; padding: 0.15em 0.4em" | Token
+! style="text-align: center; padding: 0.15em 0.4em" colspan="3" | RGB
+! style="text-align: center; padding: 0.15em 0.4em" | Hex
+|- style="color: white; background: rgb(112, 128, 144)"
+| style="padding: 0.15em 0.4em; text-align: left" | SLATE_GRAY
+| style="padding: 0.15em 0.4em" | 112
+| style="padding: 0.15em 0.4em" | 128
+| style="padding: 0.15em 0.4em" | 144
+| style="padding: 0.15em 0.4em" | #708090
+|- style="color: white; background: rgb(0, 71, 171)"
+| style="padding: 0.15em 0.4em; text-align: left" | COBALT
+| style="padding: 0.15em 0.4em" | 0
+| style="padding: 0.15em 0.4em" | 71
+| style="padding: 0.15em 0.4em" | 171
+| style="padding: 0.15em 0.4em" | #0047AB
+|- style="color: white; background: rgb(0, 0, 139)"
+| style="padding: 0.15em 0.4em; text-align: left" | DARK_BLUE
+| style="padding: 0.15em 0.4em" | 0
+| style="padding: 0.15em 0.4em" | 0
+| style="padding: 0.15em 0.4em" | 139
+| style="padding: 0.15em 0.4em" | #00008B
+|}
+{| style="text-align: right; border-spacing: 0 1px; margin: 1em auto 0; background: black; border-left: 1px solid black; border-right: 1px solid black; width: 100%"
+|+ '''LBLUE colors'''
+|- style="background: {{fgcolor|1:1}}; color: white"
+! style="text-align: center; padding: 0.15em 0.4em" | Token
+! style="text-align: center; padding: 0.15em 0.4em" colspan="3" | RGB
+! style="text-align: center; padding: 0.15em 0.4em" | Hex
+|- style="color: white; background: rgb(0, 127, 255)"
+| style="padding: 0.15em 0.4em; text-align: left" | AZURE
+| style="padding: 0.15em 0.4em" | 0
+| style="padding: 0.15em 0.4em" | 127
+| style="padding: 0.15em 0.4em" | 255
+| style="padding: 0.15em 0.4em" | #007FFF
+|- style="color: white; background: rgb(0, 0, 255)"
+| style="padding: 0.15em 0.4em; text-align: left" | BLUE
+| style="padding: 0.15em 0.4em" | 0
+| style="padding: 0.15em 0.4em" | 0
+| style="padding: 0.15em 0.4em" | 255
+| style="padding: 0.15em 0.4em" | #0000FF
+|- style="color: black; background: rgb(204, 204, 255)"
+| style="padding: 0.15em 0.4em; text-align: left" | PERIWINKLE
+| style="padding: 0.15em 0.4em" | 204
+| style="padding: 0.15em 0.4em" | 204
+| style="padding: 0.15em 0.4em" | 255
+| style="padding: 0.15em 0.4em" | #CCCCFF
+|}
+{| style="text-align: right; border-spacing: 0 1px; margin: 1em auto 0; background: black; border-left: 1px solid black; border-right: 1px solid black; width: 100%"
+|+ '''MAGENTA colors'''
+|- style="background: {{fgcolor|5:0}}; color: white"
+! style="text-align: center; padding: 0.15em 0.4em" | Token
+! style="text-align: center; padding: 0.15em 0.4em" colspan="3" | RGB
+! style="text-align: center; padding: 0.15em 0.4em" | Hex
+|- style="color: white; background: rgb(66, 49, 137)"
+| style="padding: 0.15em 0.4em; text-align: left" | DARK_VIOLET
+| style="padding: 0.15em 0.4em" | 66
+| style="padding: 0.15em 0.4em" | 49
+| style="padding: 0.15em 0.4em" | 137
+| style="padding: 0.15em 0.4em" | #423189
+|- style="color: white; background: rgb(49, 0, 98)"
+| style="padding: 0.15em 0.4em; text-align: left" | DARK_INDIGO
+| style="padding: 0.15em 0.4em" | 49
+| style="padding: 0.15em 0.4em" | 0
+| style="padding: 0.15em 0.4em" | 98
+| style="padding: 0.15em 0.4em" | #310062
+|- style="color: white; background: rgb(75, 0, 130)"
+| style="padding: 0.15em 0.4em; text-align: left" | INDIGO
+| style="padding: 0.15em 0.4em" | 75
+| style="padding: 0.15em 0.4em" | 0
+| style="padding: 0.15em 0.4em" | 130
+| style="padding: 0.15em 0.4em" | #4B0082
+|- style="color: white; background: rgb(102, 0, 153)"
+| style="padding: 0.15em 0.4em; text-align: left" | PURPLE
+| style="padding: 0.15em 0.4em" | 102
+| style="padding: 0.15em 0.4em" | 0
+| style="padding: 0.15em 0.4em" | 153
+| style="padding: 0.15em 0.4em" | #660099
+|- style="color: white; background: rgb(102, 0, 102)"
+| style="padding: 0.15em 0.4em; text-align: left" | PLUM
+| style="padding: 0.15em 0.4em" | 102
+| style="padding: 0.15em 0.4em" | 0
+| style="padding: 0.15em 0.4em" | 102
+| style="padding: 0.15em 0.4em" | #660066
+|- style="color: white; background: rgb(97, 64, 81)"
+| style="padding: 0.15em 0.4em; text-align: left" | EGGPLANT
+| style="padding: 0.15em 0.4em" | 97
+| style="padding: 0.15em 0.4em" | 64
+| style="padding: 0.15em 0.4em" | 81
+| style="padding: 0.15em 0.4em" | #614051
+|}
+{| style="text-align: right; border-spacing: 0 1px; margin: 1em auto 0; background: black; border-left: 1px solid black; border-right: 1px solid black; width: 100%"
+|+ '''LMAGENTA colors'''
+|- style="background: {{fgcolor|5:1}}"
+! style="text-align: center; padding: 0.15em 0.4em" | Token
+! style="text-align: center; padding: 0.15em 0.4em" colspan="3" | RGB
+! style="text-align: center; padding: 0.15em 0.4em" | Hex
+|- style="color: black; background: rgb(153, 102, 204)"
+| style="padding: 0.15em 0.4em; text-align: left" | AMETHYST
+| style="padding: 0.15em 0.4em" | 153
+| style="padding: 0.15em 0.4em" | 102
+| style="padding: 0.15em 0.4em" | 204
+| style="padding: 0.15em 0.4em" | #9966CC
+|- style="color: white; background: rgb(139, 0, 255)"
+| style="padding: 0.15em 0.4em; text-align: left" | VIOLET
+| style="padding: 0.15em 0.4em" | 139
+| style="padding: 0.15em 0.4em" | 0
+| style="padding: 0.15em 0.4em" | 255
+| style="padding: 0.15em 0.4em" | #8B00FF
+|- style="color: black; background: rgb(223, 115, 255)"
+| style="padding: 0.15em 0.4em; text-align: left" | HELIOTROPE
+| style="padding: 0.15em 0.4em" | 223
+| style="padding: 0.15em 0.4em" | 115
+| style="padding: 0.15em 0.4em" | 255
+| style="padding: 0.15em 0.4em" | #DF73FF
+|- style="color: black; background: rgb(200, 162, 200)"
+| style="padding: 0.15em 0.4em; text-align: left" | LILAC
+| style="padding: 0.15em 0.4em" | 200
+| style="padding: 0.15em 0.4em" | 162
+| style="padding: 0.15em 0.4em" | 200
+| style="padding: 0.15em 0.4em" | #C8A2C8
+|- style="color: white; background: rgb(244, 0, 161)"
+| style="padding: 0.15em 0.4em; text-align: left" | FUCHSIA
+| style="padding: 0.15em 0.4em" | 244
+| style="padding: 0.15em 0.4em" | 0
+| style="padding: 0.15em 0.4em" | 161
+| style="padding: 0.15em 0.4em" | #F400A1
+|- style="color: black; background: rgb(204, 136, 153)"
+| style="padding: 0.15em 0.4em; text-align: left" | PUCE
+| style="padding: 0.15em 0.4em" | 204
+| style="padding: 0.15em 0.4em" | 136
+| style="padding: 0.15em 0.4em" | 153
+| style="padding: 0.15em 0.4em" | #CC8899
+|- style="color: black; background: rgb(255, 192, 203)"
+| style="padding: 0.15em 0.4em; text-align: left" | PINK
+| style="padding: 0.15em 0.4em" | 255
+| style="padding: 0.15em 0.4em" | 192
+| style="padding: 0.15em 0.4em" | 203
+| style="padding: 0.15em 0.4em" | #FFC0CB
+|- style="color: black; background: rgb(250, 218, 221)"
+| style="padding: 0.15em 0.4em; text-align: left" | PALE_PINK
+| style="padding: 0.15em 0.4em" | 250
+| style="padding: 0.15em 0.4em" | 218
+| style="padding: 0.15em 0.4em" | 221
+| style="padding: 0.15em 0.4em" | #FADADD
+|- style="color: black; background: rgb(221, 173, 175)"
+| style="padding: 0.15em 0.4em; text-align: left" | PALE_CHESTNUT
+| style="padding: 0.15em 0.4em" | 221
+| style="padding: 0.15em 0.4em" | 173
+| style="padding: 0.15em 0.4em" | 175
+| style="padding: 0.15em 0.4em" | #DDADAF
+|}
+|}
+
+{{gamedata|[COLOR:AMBER]
+	[NAME:amber]
+	[WORD:AMBER]
+	[RGB:255:191:0]
+
+[COLOR:AMETHYST]
+	[NAME:amethyst]
+	[WORD:AMETHYST]
+	[RGB:153:102:204]
+
+[COLOR:AQUA]
+	[NAME:aqua]
+	[WORD:AQUA]
+	[RGB:0:255:255]
+
+[COLOR:AQUAMARINE]
+	[NAME:aquamarine]
+	[WORD:AQUAMARINE]
+	[RGB:127:255:212]
+
+[COLOR:ASH_GRAY]
+	[NAME:ash gray]
+	[WORD:GRAY]
+	[RGB:178:190:181]
+
+[COLOR:AUBURN]
+	[NAME:auburn]
+	[WORD:AUBURN]
+	[RGB:111:53:26]
+
+[COLOR:AZURE]
+	[NAME:azure]
+	[WORD:AZURE]
+	[RGB:0:127:255]
+
+[COLOR:BEIGE]
+	[NAME:beige]
+	[WORD:BEIGE]
+	[RGB:245:245:220]
+
+[COLOR:BLACK]
+	[NAME:black]
+	[WORD:BLACK]
+	[RGB:0:0:0]
+
+[COLOR:BLUE]
+	[NAME:blue]
+	[WORD:BLUE]
+	[RGB:0:0:255]
+
+[COLOR:BRASS]
+	[NAME:brass]
+	[WORD:BRASS]
+	[RGB:181:166:66]
+
+[COLOR:BRONZE]
+	[NAME:bronze]
+	[WORD:BRONZE]
+	[RGB:205:127:50]
+
+[COLOR:BROWN]
+	[NAME:brown]
+	[WORD:BROWN]
+	[RGB:150:75:0]
+
+[COLOR:BUFF]
+	[NAME:buff]
+	[WORD:BUFF]
+	[RGB:240:220:130]
+
+[COLOR:BURNT_SIENNA]
+	[NAME:burnt sienna]
+	[WORD:SIENNA]
+	[RGB:233:116:81]
+
+[COLOR:BURNT_UMBER]
+	[NAME:burnt umber]
+	[WORD:UMBER]
+	[RGB:138:51:36]
+
+[COLOR:CARDINAL]
+	[NAME:cardinal]
+	[WORD:CARDINAL_COLOR]
+	[RGB:196:30:58]
+
+[COLOR:CARMINE]
+	[NAME:carmine]
+	[WORD:CARMINE]
+	[RGB:150:0:24]
+
+[COLOR:CERULEAN]
+	[NAME:cerulean]
+	[WORD:CERULEAN]
+	[RGB:0:123:167]
+
+[COLOR:CHARCOAL]
+	[NAME:charcoal]
+	[WORD:CHARCOAL]
+	[RGB:54:69:79]
+
+[COLOR:CHARTREUSE]
+	[NAME:chartreuse]
+	[WORD:CHARTREUSE]
+	[RGB:127:255:0]
+
+[COLOR:CHESTNUT]
+	[NAME:chestnut]
+	[WORD:CHESTNUT]
+	[RGB:205:92:92]
+
+[COLOR:CHOCOLATE]
+	[NAME:chocolate]
+	[WORD:CHOCOLATE]
+	[RGB:210:105:30]
+
+[COLOR:CINNAMON]
+	[NAME:cinnamon]
+	[WORD:CINNAMON]
+	[RGB:123:63:0]
+
+[COLOR:CLEAR]
+	[NAME:clear]
+	[WORD:CLEAR]
+	[RGB:128:128:128]
+
+[COLOR:COBALT]
+	[NAME:cobalt]
+	[WORD:COBALT]
+	[RGB:0:71:171]
+
+[COLOR:COPPER]
+	[NAME:copper]
+	[WORD:COPPER]
+	[RGB:184:115:51]
+
+[COLOR:CREAM]
+	[NAME:cream]
+	[WORD:CREAM]
+	[RGB:255:253:208]
+
+[COLOR:CRIMSON]
+	[NAME:crimson]
+	[WORD:CRIMSON]
+	[RGB:220:20:60]
+
+[COLOR:DARK_BLUE]
+	[NAME:dark blue]
+	[WORD:BLUE]
+	[RGB:0:0:139]
+
+[COLOR:DARK_BROWN]
+	[NAME:dark brown]
+	[WORD:BROWN]
+	[RGB:101:67:33]
+
+[COLOR:DARK_CHESTNUT]
+	[NAME:dark chestnut]
+	[WORD:CHESTNUT]
+	[RGB:152:105:96]
+
+[COLOR:DARK_GREEN]
+	[NAME:dark green]
+	[WORD:GREEN]
+	[RGB:1:50:32]
+
+[COLOR:DARK_INDIGO]
+	[NAME:dark indigo]
+	[WORD:INDIGO]
+	[RGB:49:0:98]
+
+[COLOR:DARK_OLIVE]
+	[NAME:dark olive]
+	[WORD:OLIVE]
+	[RGB:85:104:50]
+
+[COLOR:DARK_PEACH]
+	[NAME:dark peach]
+	[WORD:PEACH]
+	[RGB:255:218:185]
+
+[COLOR:DARK_PINK]
+	[NAME:dark pink]
+	[WORD:PINK]
+	[RGB:231:84:128]
+
+[COLOR:DARK_SCARLET]
+	[NAME:dark scarlet]
+	[WORD:SCARLET]
+	[RGB:86:3:25]
+
+[COLOR:DARK_TAN]
+	[NAME:dark tan]
+	[WORD:TAN]
+	[RGB:145:129:81]
+
+[COLOR:DARK_VIOLET]
+	[NAME:dark violet]
+	[WORD:VIOLET]
+	[RGB:66:49:137]
+
+[COLOR:ECRU]
+	[NAME:ecru]
+	[WORD:ECRU]
+	[RGB:194:178:128]
+
+[COLOR:EGGPLANT]
+	[NAME:eggplant]
+	[RGB:97:64:81]
+
+[COLOR:EMERALD]
+	[NAME:emerald]
+	[WORD:EMERALD]
+	[RGB:80:200:120]
+
+[COLOR:FERN_GREEN]
+	[NAME:fern green]
+	[WORD:GREEN]
+	[RGB:79:121:66]
+
+[COLOR:FLAX]
+	[NAME:flax]
+	[WORD:FLAX]
+	[RGB:238:220:130]
+
+[COLOR:FUCHSIA]
+	[NAME:fuchsia]
+	[WORD:FUCHSIA]
+	[RGB:244:0:161]
+
+[COLOR:GOLD]
+	[NAME:gold]
+	[WORD:GOLD]
+	[RGB:212:175:55]
+
+[COLOR:GOLDEN_YELLOW]
+	[NAME:golden yellow]
+	[WORD:GOLD]
+	[WORD:YELLOW]
+	[RGB:255:223:0]
+
+[COLOR:GOLDENROD]
+	[NAME:goldenrod]
+	[WORD:GOLDENROD]
+	[RGB:218:165:32]
+
+[COLOR:GRAY]
+	[NAME:gray]
+	[WORD:GRAY]
+	[RGB:128:128:128]
+
+[COLOR:GREEN]
+	[NAME:green]
+	[WORD:GREEN]
+	[RGB:0:255:0]
+
+[COLOR:GREEN-YELLOW]
+	[NAME:green-yellow]
+	[WORD:GREEN]
+	[WORD:YELLOW]
+	[RGB:173:255:47]
+
+[COLOR:HELIOTROPE]
+	[NAME:heliotrope]
+	[WORD:HELIOTROPE]
+	[RGB:223:115:255]
+
+[COLOR:INDIGO]
+	[NAME:indigo]
+	[WORD:INDIGO]
+	[RGB:75:0:130]
+
+[COLOR:IVORY]
+	[NAME:ivory]
+	[WORD:IVORY]
+	[RGB:255:255:240]
+
+[COLOR:JADE]
+	[NAME:jade]
+	[WORD:JADE]
+	[RGB:0:168:107]
+
+[COLOR:LAVENDER]
+	[NAME:lavender]
+	[WORD:LAVENDER]
+	[RGB:230:230:250]
+
+[COLOR:LAVENDER_BLUSH]
+	[NAME:lavender blush]
+	[WORD:LAVENDER]
+	[RGB:255:240:245]
+
+[COLOR:LEMON]
+	[NAME:lemon]
+	[WORD:LEMON]
+	[RGB:253:233:16]
+
+[COLOR:LIGHT_BLUE]
+	[NAME:light blue]
+	[WORD:BLUE]
+	[RGB:173:216:230]
+
+[COLOR:LIGHT_BROWN]
+	[NAME:light brown]
+	[WORD:BROWN]
+	[RGB:205:133:63]
+
+[COLOR:LILAC]
+	[NAME:lilac]
+	[WORD:LILAC]
+	[RGB:200:162:200]
+
+[COLOR:LIME]
+	[NAME:lime]
+	[WORD:LIME]
+	[RGB:204:255:0]
+
+[COLOR:MAHOGANY]
+	[NAME:mahogany]
+	[WORD:MAHOGANY]
+	[RGB:192:64:0]
+
+[COLOR:MAROON]
+	[NAME:maroon]
+	[WORD:MAROON_COLOR]
+	[RGB:128:0:0]
+
+[COLOR:MAUVE]
+	[NAME:mauve]
+	[WORD:MAUVE]
+	[RGB:153:51:102]
+
+[COLOR:MAUVE_TAUPE]
+	[NAME:mauve taupe]
+	[WORD:MAUVE]
+	[WORD:TAUPE]
+	[RGB:145:95:109]
+
+[COLOR:MIDNIGHT_BLUE]
+	[NAME:midnight blue]
+	[WORD:BLUE]
+	[RGB:0:51:102]
+
+[COLOR:MINT_GREEN]
+	[NAME:mint green]
+	[WORD:GREEN]
+	[RGB:152:255:152]
+
+[COLOR:MOSS_GREEN]
+	[NAME:moss green]
+	[WORD:GREEN]
+	[RGB:173:223:173]
+
+[COLOR:OCHRE]
+	[NAME:ochre]
+	[WORD:OCHRE]
+	[RGB:204:119:34]
+
+[COLOR:OLIVE]
+	[NAME:olive]
+	[WORD:OLIVE]
+	[RGB:128:128:0]
+
+[COLOR:ORANGE]
+	[NAME:orange]
+	[WORD:ORANGE]
+	[RGB:255:165:0]
+
+[COLOR:PALE_BLUE]
+	[NAME:pale blue]
+	[WORD:BLUE]
+	[RGB:175:238:238]
+
+[COLOR:PALE_BROWN]
+	[NAME:pale brown]
+	[WORD:BROWN]
+	[RGB:152:118:84]
+
+[COLOR:PALE_CHESTNUT]
+	[NAME:pale chestnut]
+	[WORD:CHESTNUT]
+	[RGB:221:173:175]
+
+[COLOR:PALE_PINK]
+	[NAME:pale pink]
+	[WORD:PINK]
+	[RGB:250:218:221]
+
+[COLOR:PEACH]
+	[NAME:peach]
+	[WORD:PEACH]
+	[RGB:255:229:180]
+
+[COLOR:PEARL]
+	[NAME:pearl]
+	[WORD:PEARL]
+	[RGB:240:234:214]
+
+[COLOR:PERIWINKLE]
+	[NAME:periwinkle]
+	[WORD:PERIWINKLE]
+	[RGB:204:204:255]
+
+[COLOR:PINE_GREEN]
+	[NAME:pine green]
+	[WORD:GREEN]
+	[WORD:PINE]
+	[RGB:1:121:111]
+
+[COLOR:PINK]
+	[NAME:pink]
+	[WORD:PINK]
+	[RGB:255:192:203]
+
+[COLOR:PLUM]
+	[NAME:plum]
+	[WORD:PLUM]
+	[RGB:102:0:102]
+
+[COLOR:PUCE]
+	[NAME:puce]
+	[WORD:PUCE]
+	[RGB:204:136:153]
+
+[COLOR:PUMPKIN]
+	[NAME:pumpkin]
+	[WORD:PUMPKIN]
+	[RGB:255:117:24]
+
+[COLOR:PURPLE]
+	[NAME:purple]
+	[WORD:PURPLE]
+	[RGB:102:0:153]
+
+[COLOR:RAW_UMBER]
+	[NAME:raw umber]
+	[WORD:UMBER]
+	[RGB:115:74:18]
+
+[COLOR:RED]
+	[NAME:red]
+	[WORD:RED]
+	[RGB:255:0:0]
+
+[COLOR:RED_PURPLE]
+	[NAME:red-purple]
+	[WORD:RED]
+	[WORD:PURPLE]
+	[RGB:178:0:75]
+
+[COLOR:ROSE]
+	[NAME:rose]
+	[WORD:ROSE]
+	[RGB:244:194:194] went with tea rose
+
+[COLOR:RUSSET]
+	[NAME:russet]
+	[WORD:RUSSET]
+	[RGB:117:90:87]
+
+[COLOR:RUST]
+	[NAME:rust]
+	[WORD:RUST]
+	[RGB:183:65:14]
+
+[COLOR:SAFFRON]
+	[NAME:saffron]
+	[WORD:SAFFRON]
+	[RGB:244:196:48]
+
+[COLOR:SCARLET]
+	[NAME:scarlet]
+	[WORD:SCARLET]
+	[RGB:255:36:0]
+
+[COLOR:SEA_GREEN]
+	[NAME:sea green]
+	[WORD:GREEN]
+	[WORD:SEA]
+	[WORD:OCEAN]
+	[RGB:46:139:87]
+
+[COLOR:SEPIA]
+	[NAME:sepia]
+	[WORD:SEPIA]
+	[RGB:112:66:20]
+
+[COLOR:SILVER]
+	[NAME:silver]
+	[WORD:SILVER]
+	[RGB:192:192:192]
+
+[COLOR:SKY_BLUE]
+	[NAME:sky blue]
+	[WORD:BLUE]
+	[RGB:135:206:235]
+
+[COLOR:SLATE_GRAY]
+	[NAME:slate gray]
+	[WORD:GRAY]
+	[RGB:112:128:144]
+
+[COLOR:SPRING_GREEN]
+	[NAME:spring green]
+	[WORD:GREEN]
+	[RGB:0:255:127]
+
+[COLOR:TAN]
+	[NAME:tan]
+	[WORD:TAN]
+	[RGB:210:180:140]
+
+[COLOR:TAUPE_DARK]
+	[NAME:dark taupe]
+	[WORD:TAUPE]
+	[RGB:72:60:50]
+
+[COLOR:TAUPE_GRAY]
+	[NAME:taupe gray]
+	[WORD:TAUPE]
+	[WORD:GRAY]
+	[RGB:139:133:137]
+
+[COLOR:TAUPE_MEDIUM]
+	[NAME:taupe]
+	[WORD:TAUPE]
+	[RGB:103:76:71]
+
+[COLOR:TAUPE_PURPLE]
+	[NAME:purple taupe]
+	[WORD:PURPLE]
+	[WORD:TAUPE]
+	[RGB:80:64:77]
+
+[COLOR:TAUPE_PALE]
+	[NAME:pale taupe]
+	[WORD:TAUPE]
+	[RGB:188:152:126]
+
+[COLOR:TAUPE_ROSE]
+	[NAME:rose taupe]
+	[WORD:TAUPE]
+	[RGB:144:93:93]
+
+[COLOR:TAUPE_SANDY]
+	[NAME:sandy taupe]
+	[WORD:TAUPE]
+	[RGB:150:113:23]
+
+[COLOR:TEAL]
+	[NAME:teal]
+	[WORD:TEAL]
+	[RGB:0:128:128]
+
+[COLOR:TURQUOISE]
+	[NAME:turquoise]
+	[WORD:TURQUOISE]
+	[RGB:48:213:200]
+
+[COLOR:VERMILION]
+	[NAME:vermilion]
+	[WORD:VERMILION]
+	[RGB:227:66:52]
+
+[COLOR:VIOLET]
+	[NAME:violet]
+	[WORD:VIOLET]
+	[RGB:139:0:255]
+
+[COLOR:WHITE]
+	[NAME:white]
+	[WORD:WHITE]
+	[RGB:255:255:255]
+
+[COLOR:YELLOW]
+	[NAME:yellow]
+	[WORD:YELLOW]
+	[RGB:255:255:0]
+
+[COLOR:YELLOW_GREEN]
+	[NAME:yellow-green]
+	[WORD:GREEN]
+	[WORD:YELLOW]
+	[RGB:154:205:50]
+}}
+
+== Color lists ==
+:''For the different colors used to represent different professions, see [[Skill#Skill categories|Skill categories]].''
+:''For a list of the colors of items listed in the z-stocks menu, see [[Stocks#Color_Code|Stocks]].''
+:''For the colors of the various creatures, see [[creature]]''
+:''For the colors of status icons, see [[status icon]]''
+
+=== Material by color ===
+{{Material properties}}
+For those who want to know which materials display as which color, for [[lever]]s, aesthetic concerns, etc.
+
+Color names listed and the colors shown below match the colors from default init/color.txt. To change these from the default tones, see [[Color scheme]]. 
+{{clear}}
+{| border = 1 cellspacing="0" cellpadding="5"
+|-
+!width="90"| Color
+! Stones
+! Ores
+! Metals
+! Other
+|-valign="top"
+|{{Raw Tile|•|7:1}} WHITE
+|[[Alabaster]], [[Alunite]], [[Borax]], [[Calcite]], [[Chalk]], [[Cryolite]], [[Dolomite]], [[Limestone]], [[Marble]], [[Marcasite]], [[Periclase]], [[Quartzite]], [[Rock salt]], [[Satinspar]], [[Selenite]], [[Talc]]
+|[[Galena]], [[Horn silver]], [[Native aluminum]], [[Native platinum]], [[Native silver]]
+|[[Silver]], [[Platinum]], [[Aluminum]], [[Fine pewter]], [[Nickel silver]], [[Sterling silver]]
+|[[Crystal glass]], [[Feather tree]], [[Tower-cap]]
+|-valign="top"
+|{{Raw Tile|•|7:0}} LGRAY
+|[[Anhydrite]], [[Dacite]], [[Gneiss]], [[Granite]], [[Phyllite]], [[Stibnite]]
+|[[Bismuthinite]]
+|[[Nickel]], [[Tin]], [[Zinc]], [[Billon]], [[Trifle pewter]]
+|[[Stoneware]]
+|-valign="top"
+|{{Raw Tile|•|0:1}} DGRAY
+|[[Andesite]], [[Basalt]], [[Claystone]], [[Chromite]], [[Diorite]], [[Gabbro]], [[Graphite]], [[Hornblende]], [[Ilmenite]], [[Jet]], [[Mica]], [[Pyrolusite]], [[Rhyolite]], [[Shale]], [[Slate]], [[Obsidian]]
+|[[Bituminous coal]], [[Lignite]], [[Magnetite]], [[Sphalerite]], [[Tetrahedrite]]
+|[[Iron]], [[Steel]], [[Lead]], [[Pig iron]]
+|[[Black-cap]]
+|-valign="top"
+|{{Raw Tile|•|6:0}} BROWN
+|[[Chert]], [[Conglomerate]], [[Mudstone]], [[Puddingstone]], [[Sandstone]], [[Schist]], [[Siltstone]]
+|[[Cassiterite]], [[Native copper]]
+|[[Copper]], [[Bronze]]
+|[[Tree|All other aboveground trees]], [[Earthenware]]
+|-valign="top"
+|{{Raw Tile|•|6:1}} YELLOW
+|[[Brimstone]], [[Orpiment]], [[Orthoclase]], [[Saltpeter]], [[Sylvite]], [[Gypsum]]
+|[[Limonite]], [[Native gold]]
+|[[Gold]], [[Bismuth bronze]], [[Brass]], [[Electrum]]
+|[[Fungiwood]]
+|-valign="top"
+|{{Raw Tile|•|4:0}} RED
+|[[Bauxite]], [[Kaolinite]]
+|[[Hematite]]
+|
+|[[Blood thorn]]
+|-valign="top"
+|{{Raw Tile|•|4:1}} LRED
+|[[Cinnabar]], [[Petrified wood]], [[Realgar]]
+|
+|
+|[[Goblin-cap]]
+|-valign="top"
+|{{Raw Tile|•|2:0}} GREEN
+|[[Olivine]], [[Serpentine]]
+|[[Malachite]]
+|
+|[[Green glass]]
+|-valign="top"
+|{{Raw Tile|•|2:1}} LGREEN
+|
+|[[Garnierite]]
+|
+|
+|-valign="top"
+|{{Raw Tile|•|3:0}} CYAN
+|
+|
+|[[Lay pewter]]
+|[[Clear glass]], [[Spore tree]]
+|-valign="top"
+|{{Raw Tile|•|3:1}} LCYAN
+|[[Microcline]]
+|[[Raw adamantine]]
+|[[Adamantine]]
+|[[Ice]]
+|-valign="top"
+|{{Raw Tile|•|1:0}} BLUE
+|[[Kimberlite]]
+|
+|
+|[[Nether-cap]]
+|-valign="top"
+|{{Raw Tile|•|1:1}} LBLUE
+|[[Cobaltite]]
+|
+|
+|
+|-valign="top"
+|{{Raw Tile|•|5:0}} MAGENTA
+|[[Pitchblende]], [[Rutile]]
+|
+|[[Black bronze]]
+|[[Glumprong]]
+|-valign="top"
+|{{Raw Tile|•|5:1}} LMAGENTA
+|
+|
+|[[Bismuth]], [[Rose gold]]
+|[[Tunnel tube]]
+|}
+
+{{Translation
+| dwarven = dakas
+| elvish  = mima
+| goblin  = zon
+| human   = rusna
+}}
+
+{{Category|Modding}}
+{{Category|Interface}}

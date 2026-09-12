@@ -1,0 +1,56 @@
+{{Quality|Exceptional|18:03, 9 October 2014 (UTC)}}
+{{av}}
+
+{{furniture|name=Container
+|tile=Æ
+|wood=y
+|stone=y
+|metal=y
+|glass=y
+|cloth=y
+|leather=y
+|rooms=
+* [[Barracks]]
+* [[Library]]
+}}
+{{Translation| dwarven = etost | elvish = thale | goblin = ustêx | human = puti}}
+:''This article is about buildable containers, for all types of containers see: [[storage]]''.
+
+'''Containers''' is a general term used for various types of similar [[item]]s which are used for [[storage|storing]]. Containers are named differently depending on what they are made of (see table, below), but they all fill the same function. They are a common requirement for [[noble]]s, and they are also good for increasing the [[room value|value]] of a [[room]]. Each different type of container holds a varying number of items. Dwarves may walk through tiles with containers.
+
+Containers are listed under "tools" in some menus.
+
+If a dwarf does not own a container in his bedroom, he or she will leave any possessions on the floor. Containers are also used in [[barracks]] to store [[squad]] equipment, and needed in a [[library]] to store blank writing materials such as [[quire]]s. Note that a [[bookcase]] is needed for ''written'' [[book|materials]].
+;Different names for containers:
+{| class = "wikitable unsortable"
+! Name !! Material !! Required materials
+|-
+|'''Box'''
+|[[Glass]]
+| 1 bag of sand (+ pearlash if crafting clear glass), or 1 uncut rock crystal gem
+|-
+|'''Coffer'''
+|[[Stone]]
+| 1 rock
+|-
+|'''Chest'''
+|[[Wood]], [[Metal]]
+| 1 log or 3 bars of metal
+|-
+|'''Bag'''
+|[[Cloth]], [[Leather]]
+| 1 cloth or 1 leather
+|}
+Both bags and barrels (and all other containers) function exactly the same in-game - they report a container capacity (either hardcoded or derived from the item_tool raws), they have references to their contents, and their contents have references back to the container itself.
+
+Any behavioral differences between them are entirely due to the way jobs handle them and the way they (and their contents) are categorized for selection by jobs, and custom reactions don't necessarily follow all of those rules. Custom reactions can use seeds that are stored in bags without requesting the bags themselves, but plant growths might be treated differently, possibly an attempt to keep quarry bush leaves inside their bags (and similar scenarios). 
+
+Bags are a special type of box.  While they can be built as furniture, they are more commonly used by dwarves to store seeds, mill plants at a [[millstone]] or quern, or collect [[sand]].  Dwarves have a habit of filling bags with seeds whenever possible, so, typically, many of them need to be made if they are going to be used for other purposes.
+[[File:ML - Geldbeutel.jpg|thumb|300px|center|A coin bag from the ancient times.]]
+==See also==
+* [[Storage]]
+
+{{D for Dwarf}}
+Currently, bags are unable to reproduce due to being all-male. This may be a bug.
+
+{{buildings}}

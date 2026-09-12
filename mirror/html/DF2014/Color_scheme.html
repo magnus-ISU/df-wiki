@@ -1,0 +1,4311 @@
+<div class="mw-parser-output"><div id="page-quality-rating" style="text-align: right;margin: 0.8em 0;font-size:75%">
+ <a href="/index.php/Dwarf_Fortress_Wiki:Quality#Tattered" title="Dwarf Fortress Wiki:Quality"><span id="stub-quality" style="text-decoration:none; color:#333333">xTATTEREDx</span></a> <span style="font-weight:bold;" class="dot">&#160;·</span> <a href="/index.php/Dwarf_Fortress_Wiki:Quality#Fine" title="Dwarf Fortress Wiki:Quality"><span id="fine-quality" style="text-decoration:none; color:#CA7A02;">+FINE+</span></a> <span style="font-weight:bold;" class="dot">&#160;·</span> <a href="/index.php/Dwarf_Fortress_Wiki:Quality#Superior" title="Dwarf Fortress Wiki:Quality"><span id="superior-quality" style="text-decoration:none; color:#8800cc;">*SUPERIOR*</span></a> <span style="font-weight:bold;" class="dot">&#160;·</span> <a href="/index.php/Dwarf_Fortress_Wiki:Quality#Exceptional" title="Dwarf Fortress Wiki:Quality"><span id="exceptional-quality" style="padding:0.2em; border:1px solid #9df; border-radius: 2px; -webkit-border-radius: 2px; -moz-border-radius: 2px; -o-border-radius: 2px; -ms-border-radius: 2px; background:#cce4ff; color:#0088CC;">≡EXCEPTIONAL≡</span></a> <span style="font-weight:bold;" class="dot">&#160;·</span> <a href="/index.php/Dwarf_Fortress_Wiki:Quality#Masterwork" title="Dwarf Fortress Wiki:Quality"><span id="masterwork-quality" style="text-decoration:none; color:#72A329;">☼MASTERWORK☼</span></a></div><table class="version-table" style="text-align: center; margin: 3px auto 5px; padding: 0.25em; border-radius: 3px; -webkit-border-radius: 3px; -moz-border-radius: 3px; -o-border-radius: 3px; -ms-border-radius: 3px;; border: 2px solid #ddbb88; background: #fff5ee; min-width:27em"><tbody><tr><td style="padding: 0.3em 0.3em; width: 100%;"><div style="margin-bottom:6px;" class="version-links-r1"><span style="font-size:100%"><span class="version-link"><a href="/index.php/Color_scheme" title="Color scheme"><span style="text-decoration: none; color: #CA7A02;">v53.16</span></a></span><span style="font-weight:bold;" class="dot">&#160;·</span> <span class="version-link"><span style="text-decoration: none; color: #CA7A02; background-color: #FFE0CC; border-radius: 2px; -webkit-border-radius: 2px; -moz-border-radius: 2px; -o-border-radius: 2px; -ms-border-radius: 2px; border: 1px solid #ddbb88; padding: 0.2em;"><b>v0.47.05</b></span></span><span style="font-weight:bold;" class="dot">&#160;·</span> <span class="version-link"><a href="/index.php/v0.34:Color_scheme" title="v0.34:Color scheme"><span style="text-decoration: none; color: #CA7A02;">v0.34</span></a></span><span style="font-weight:bold;" class="dot">&#160;·</span> <span class="version-link"><a href="/index.php/v0.31:Color_scheme" title="v0.31:Color scheme"><span style="text-decoration: none; color: #CA7A02;">v0.31</span></a></span><span style="font-weight:bold;" class="dot">&#160;·</span> <span class="version-link"><a href="/index.php/40d:Color_scheme" title="40d:Color scheme"><span style="text-decoration: none; color: #CA7A02;">v0.28</span></a></span><span style="font-weight:bold;" class="dot">&#160;·</span> <span class="version-link"><a href="/index.php?title=23a:Color_scheme&amp;action=edit&amp;redlink=1" class="new" title="23a:Color scheme (page does not exist)"><span style="text-decoration: none; color: #888;">v0.23</span></a></span></span></div><span>This article is about an <b>older version</b> of DF.</span><br />
+<div style="float: right; font-size:75%; padding-right:2px; margin-top:-2px; margin-bottom:-7px;"><span class="version-link"><a href="/index.php/Dwarf_Fortress_Wiki:V" class="mw-redirect" title="Dwarf Fortress Wiki:V"><span style="text-decoration: none; color: #CA7A02;">More Info</span></a></span><span style="font-weight:bold;" class="dot">&#160;·</span> <span class="version-link"><a href="/index.php/Template:Av" class="mw-redirect" title="Template:Av"><span style="text-decoration: none; color: #CA7A02;">V</span></a></span></div></td></tr>
+</tbody></table>
+<p><i>(For a discussion of how DF displays different items, and decides which colors get altered and when, see <a href="/index.php/DF2014:Color" title="DF2014:Color">color</a>.)</i>
+</p><p><i>Dwarf Fortress</i> uses <b>color schemes</b> to determine how the game will be presented during play, whether a <a href="/index.php/DF2014:Ranger" title="DF2014:Ranger">ranger</a> will appear bright Spring green or dark forest green, or whether <a href="/index.php/DF2014:Microcline" title="DF2014:Microcline">microcline</a> will be "eye-blasting blue" or something more calm.  The default scheme is quite bold - other schemes are easily possible, even to better accommodate those of us with problems seeing standard color mixes, or just can't take "eye-blasting blue".  
+</p><p>A color scheme is broken down into 16 color labels:
+</p>
+<dl><dd>BLACK, DGRAY</dd>
+<dd>BLUE, LBLUE</dd>
+<dd>GREEN, LGREEN</dd>
+<dd>CYAN, LCYAN</dd>
+<dd>RED, LRED</dd>
+<dd>MAGENTA, LMAGENTA</dd>
+<dd>BROWN, YELLOW</dd>
+<dd>LGRAY, WHITE</dd></dl>
+<p>The color scheme data is located in the <a href="/index.php/DF2014:Colors.txt" title="DF2014:Colors.txt">colors.txt</a> file, found in the <i>Dwarf Fortress/data/init</i> folder.
+</p><p><a rel="nofollow" class="external text" href="https://manmademagic.github.io/DFColorGen/">DFColorgen</a> is a web tool to create and visualize color schemes.
+</p>
+
+<h2><span class="mw-headline" id="What_colors_show_up_where">What colors show up where</span></h2>
+<p>The easiest place to see all the colors next to each other is in the <span style="white-space: nowrap;"><span class="keyboard-key nowrap" style="border: 1px solid #aaa; border-radius: 0.2em; -webkit-border-radius: 0.2em; -moz-border-radius: 0.2em; -o-border-radius: 0.2em; -ms-border-radius: 0.2em; -moz-box-shadow: 0.1em 0.2em 0.2em #ddd; -webkit-box-shadow: 0.1em 0.2em 0.2em #ddd; box-shadow: 0.1em 0.2em 0.2em #ddd; background-color: #f9f9f9; background-image: -moz-linear-gradient(top, #eee, #f9f9f9, #eee); background-image: -o-linear-gradient(top, #eee, #f9f9f9, #eee); background-image: -webkit-linear-gradient(top, #eee, #f9f9f9, #eee); background-image: linear-gradient(to bottom, #eee, #f9f9f9, #eee); padding: 0.1em 0.3em; font-family: inherit; font-size: 0.9em;" title="">u</span></span>nits list, where the different <a href="/index.php/DF2014:Skill#Professions.2C_colors.2C_.26_skill_categories" title="DF2014:Skill">professional categories</a> all have their identifying colors.  In that order (and with the default color values), they are...
+</p><p><br />
+</p>
+<table style="margin: 0 auto">
+
+<tbody><tr>
+<td valign="top">
+<table style="border: 1px solid #000; background: #eee; width: 15em; border-spacing: 0; margin: 0.25em">
+
+<tbody><tr>
+<td style="background: #000; text-align: center; width: 1.25em"><span style="background: #000000; display: inline-block; line-height: 1px; image-rendering: pixelated;"><img alt="" src="/images/e/ed/Dwarf.png" decoding="async" width="20" height="26" /></span>
+</td>
+<td style="font-weight: bold; text-align: center; width: 13.75em">BLACK
+</td></tr>
+<tr>
+<td style="background: #000000; border-right: 1px solid #000">&#160;
+</td>
+<td style="padding: 0 0.5em">
+<p><i>background</i>
+</p>
+</td></tr></tbody></table>
+<table style="border: 1px solid #000; background: #eee; width: 15em; border-spacing: 0; margin: 0.25em">
+
+<tbody><tr>
+<td style="background: #000; text-align: center; width: 1.25em"><span style="background: #000000; display: inline-block; line-height: 1px; image-rendering: pixelated;"><img alt="" src="/images/e/ed/Dwarf.png" decoding="async" width="20" height="26" /></span>
+</td>
+<td style="font-weight: bold; text-align: center; width: 13.75em">LCYAN
+</td></tr>
+<tr>
+<td style="background: #00FFFF; border-right: 1px solid #000">&#160;
+</td>
+<td style="padding: 0 0.5em">
+<p><i>current job listing</i>
+</p>
+</td></tr></tbody></table>
+<table style="border: 1px solid #000; background: #eee; width: 15em; border-spacing: 0; margin: 0.25em">
+
+<tbody><tr>
+<td style="background: #000; text-align: center; width: 1.25em"><span style="background: #C0C0C0; display: inline-block; line-height: 1px; image-rendering: pixelated;"><img alt="" src="/images/e/ed/Dwarf.png" decoding="async" width="20" height="26" /></span>
+</td>
+<td style="font-weight: bold; text-align: center; width: 13.75em">LGRAY
+</td></tr>
+<tr>
+<td style="background: #C0C0C0; border-right: 1px solid #000">&#160;
+</td>
+<td style="padding: 0 0.5em">
+<p><a href="/index.php/DF2014:Miner" title="DF2014:Miner">Miners</a>
+</p>
+</td></tr></tbody></table>
+<table style="border: 1px solid #000; background: #eee; width: 15em; border-spacing: 0; margin: 0.25em">
+
+<tbody><tr>
+<td style="background: #000; text-align: center; width: 1.25em"><span style="background: #FFFF00; display: inline-block; line-height: 1px; image-rendering: pixelated;"><img alt="" src="/images/e/ed/Dwarf.png" decoding="async" width="20" height="26" /></span>
+</td>
+<td style="font-weight: bold; text-align: center; width: 13.75em">YELLOW
+</td></tr>
+<tr>
+<td style="background: #FFFF00; border-right: 1px solid #000">&#160;
+</td>
+<td style="padding: 0 0.5em">
+<p><a href="/index.php/DF2014:Woodworker" title="DF2014:Woodworker">Woodworkers</a>
+</p>
+</td></tr></tbody></table>
+</td>
+<td valign="top">
+<table style="border: 1px solid #000; background: #eee; width: 15em; border-spacing: 0; margin: 0.25em">
+
+<tbody><tr>
+<td style="background: #000; text-align: center; width: 1.25em"><span style="background: #FFFFFF; display: inline-block; line-height: 1px; image-rendering: pixelated;"><img alt="" src="/images/e/ed/Dwarf.png" decoding="async" width="20" height="26" /></span>
+</td>
+<td style="font-weight: bold; text-align: center; width: 13.75em">WHITE
+</td></tr>
+<tr>
+<td style="background: #FFFFFF; border-right: 1px solid #000">&#160;
+</td>
+<td style="padding: 0 0.5em">
+<p><a href="/index.php/DF2014:Stoneworker" title="DF2014:Stoneworker">Stoneworkers</a>
+</p>
+</td></tr></tbody></table>
+<table style="border: 1px solid #000; background: #eee; width: 15em; border-spacing: 0; margin: 0.25em">
+
+<tbody><tr>
+<td style="background: #000; text-align: center; width: 1.25em"><span style="background: #008000; display: inline-block; line-height: 1px; image-rendering: pixelated;"><img alt="" src="/images/e/ed/Dwarf.png" decoding="async" width="20" height="26" /></span>
+</td>
+<td style="font-weight: bold; text-align: center; width: 13.75em">GREEN
+</td></tr>
+<tr>
+<td style="background: #008000; border-right: 1px solid #000">&#160;
+</td>
+<td style="padding: 0 0.5em">
+<p><a href="/index.php/DF2014:Ranger" title="DF2014:Ranger">Rangers</a>
+</p>
+</td></tr></tbody></table>
+<table style="border: 1px solid #000; background: #eee; width: 15em; border-spacing: 0; margin: 0.25em">
+
+<tbody><tr>
+<td style="background: #000; text-align: center; width: 1.25em"><span style="background: #808080; display: inline-block; line-height: 1px; image-rendering: pixelated;"><img alt="" src="/images/e/ed/Dwarf.png" decoding="async" width="20" height="26" /></span>
+</td>
+<td style="font-weight: bold; text-align: center; width: 13.75em">DGRAY
+</td></tr>
+<tr>
+<td style="background: #808080; border-right: 1px solid #000">&#160;
+</td>
+<td style="padding: 0 0.5em">
+<p><a href="/index.php/DF2014:Metalsmith" title="DF2014:Metalsmith">Metalsmiths</a>
+</p>
+</td></tr></tbody></table>
+<table style="border: 1px solid #000; background: #eee; width: 15em; border-spacing: 0; margin: 0.25em">
+
+<tbody><tr>
+<td style="background: #000; text-align: center; width: 1.25em"><span style="background: #00FF00; display: inline-block; line-height: 1px; image-rendering: pixelated;"><img alt="" src="/images/e/ed/Dwarf.png" decoding="async" width="20" height="26" /></span>
+</td>
+<td style="font-weight: bold; text-align: center; width: 13.75em">LGREEN
+</td></tr>
+<tr>
+<td style="background: #00FF00; border-right: 1px solid #000">&#160;
+</td>
+<td style="padding: 0 0.5em">
+<p><a href="/index.php/DF2014:Jeweler" title="DF2014:Jeweler">Jewelers</a>
+</p>
+</td></tr></tbody></table>
+</td>
+<td valign="top">
+<table style="border: 1px solid #000; background: #eee; width: 15em; border-spacing: 0; margin: 0.25em">
+
+<tbody><tr>
+<td style="background: #000; text-align: center; width: 1.25em"><span style="background: #0000FF; display: inline-block; line-height: 1px; image-rendering: pixelated;"><img alt="" src="/images/e/ed/Dwarf.png" decoding="async" width="20" height="26" /></span>
+</td>
+<td style="font-weight: bold; text-align: center; width: 13.75em">LBLUE
+</td></tr>
+<tr>
+<td style="background: #0000FF; border-right: 1px solid #000">&#160;
+</td>
+<td style="padding: 0 0.5em">
+<p><a href="/index.php/DF2014:Craftsdwarf" title="DF2014:Craftsdwarf">Craftsdwarfs</a>
+</p>
+</td></tr></tbody></table>
+<table style="border: 1px solid #000; background: #eee; width: 15em; border-spacing: 0; margin: 0.25em">
+
+<tbody><tr>
+<td style="background: #000; text-align: center; width: 1.25em"><span style="background: #000080; display: inline-block; line-height: 1px; image-rendering: pixelated;"><img alt="" src="/images/e/ed/Dwarf.png" decoding="async" width="20" height="26" /></span>
+</td>
+<td style="font-weight: bold; text-align: center; width: 13.75em">BLUE
+</td></tr>
+<tr>
+<td style="background: #000080; border-right: 1px solid #000">&#160;
+</td>
+<td style="padding: 0 0.5em">
+<p><a href="/index.php/DF2014:Fishery_worker" title="DF2014:Fishery worker">Fishery worker</a>
+</p>
+</td></tr></tbody></table>
+<table style="border: 1px solid #000; background: #eee; width: 15em; border-spacing: 0; margin: 0.25em">
+
+<tbody><tr>
+<td style="background: #000; text-align: center; width: 1.25em"><span style="background: #808000; display: inline-block; line-height: 1px; image-rendering: pixelated;"><img alt="" src="/images/e/ed/Dwarf.png" decoding="async" width="20" height="26" /></span>
+</td>
+<td style="font-weight: bold; text-align: center; width: 13.75em">BROWN
+</td></tr>
+<tr>
+<td style="background: #808000; border-right: 1px solid #000">&#160;
+</td>
+<td style="padding: 0 0.5em">
+<p><a href="/index.php/DF2014:Farmer" title="DF2014:Farmer">Farmers</a>
+</p>
+</td></tr></tbody></table>
+<table style="border: 1px solid #000; background: #eee; width: 15em; border-spacing: 0; margin: 0.25em">
+
+<tbody><tr>
+<td style="background: #000; text-align: center; width: 1.25em"><span style="background: #FF0000; display: inline-block; line-height: 1px; image-rendering: pixelated;"><img alt="" src="/images/e/ed/Dwarf.png" decoding="async" width="20" height="26" /></span>
+</td>
+<td style="font-weight: bold; text-align: center; width: 13.75em">LRED
+</td></tr>
+<tr>
+<td style="background: #FF0000; border-right: 1px solid #000">&#160;
+</td>
+<td style="padding: 0 0.5em">
+<p><a href="/index.php/DF2014:Engineer" title="DF2014:Engineer">Engineers</a>
+</p>
+</td></tr></tbody></table>
+</td>
+<td valign="top">
+<table style="border: 1px solid #000; background: #eee; width: 15em; border-spacing: 0; margin: 0.25em">
+
+<tbody><tr>
+<td style="background: #000; text-align: center; width: 1.25em"><span style="background: #800080; display: inline-block; line-height: 1px; image-rendering: pixelated;"><img alt="" src="/images/e/ed/Dwarf.png" decoding="async" width="20" height="26" /></span>
+</td>
+<td style="font-weight: bold; text-align: center; width: 13.75em">MAGENTA
+</td></tr>
+<tr>
+<td style="background: #800080; border-right: 1px solid #000">&#160;
+</td>
+<td style="padding: 0 0.5em">
+<p><a href="/index.php/DF2014:Administrator" title="DF2014:Administrator">Administrators</a>
+</p>
+</td></tr></tbody></table>
+<table style="border: 1px solid #000; background: #eee; width: 15em; border-spacing: 0; margin: 0.25em">
+
+<tbody><tr>
+<td style="background: #000; text-align: center; width: 1.25em"><span style="background: #008080; display: inline-block; line-height: 1px; image-rendering: pixelated;"><img alt="" src="/images/e/ed/Dwarf.png" decoding="async" width="20" height="26" /></span>
+</td>
+<td style="font-weight: bold; text-align: center; width: 13.75em">CYAN
+</td></tr>
+<tr>
+<td style="background: #008080; border-right: 1px solid #000">&#160;
+</td>
+<td style="padding: 0 0.5em">
+<p><a href="/index.php/DF2014:Peasant" title="DF2014:Peasant">Peasants</a>
+</p>
+</td></tr></tbody></table>
+<table style="border: 1px solid #000; background: #eee; width: 15em; border-spacing: 0; margin: 0.25em">
+
+<tbody><tr>
+<td style="background: #000; text-align: center; width: 1.25em"><span style="background: #800000; display: inline-block; line-height: 1px; image-rendering: pixelated;"><img alt="" src="/images/e/ed/Dwarf.png" decoding="async" width="20" height="26" /></span>
+</td>
+<td style="font-weight: bold; text-align: center; width: 13.75em">RED
+</td></tr>
+<tr>
+<td style="background: #800000; border-right: 1px solid #000">&#160;
+</td>
+<td style="padding: 0 0.5em">
+<p><a href="/index.php/DF2014:Child" class="mw-redirect" title="DF2014:Child">Children</a>
+</p>
+</td></tr></tbody></table>
+<table style="border: 1px solid #000; background: #eee; width: 15em; border-spacing: 0; margin: 0.25em">
+
+<tbody><tr>
+<td style="background: #000; text-align: center; width: 1.25em"><span style="background: #000000; display: inline-block; line-height: 1px; image-rendering: pixelated;"><img alt="" src="/images/e/ed/Dwarf.png" decoding="async" width="20" height="26" /></span>
+</td>
+<td style="font-weight: bold; text-align: center; width: 13.75em">LMAGENTA
+</td></tr>
+<tr>
+<td style="background: #FF00FF; border-right: 1px solid #000">&#160;
+</td>
+<td style="padding: 0 0.5em">
+<p><a href="/index.php/DF2014:Monarch" title="DF2014:Monarch">Monarchs</a>,
+<i>deceased</i>
+</p>
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+<p>Some other color uses:
+</p>
+<ul><li><a href="/index.php/DF2014:Magma" title="DF2014:Magma">Magma</a> is LRED. (Magma 1 level lower than current view is RED.)</li>
+<li><a href="/index.php/DF2014:Water" title="DF2014:Water">Water</a> is LBLUE. (Water 1 level lower than current view is BLUE.)</li>
+<li><a href="/index.php/DF2014:Brook" title="DF2014:Brook">Brooks</a> are LCYAN on their surface (with water below).</li>
+<li>For aesthetic purposes, almost all colours can be represented in stones (with the exception of LMAGENTA, CYAN, and BLACK).
+<ul><li>BLACK: The background color, which should not be used by anything.</li>
+<li>DGRAY: A wide variety of stones are DGRAY, one example being <a href="/index.php/DF2014:Gabbro" title="DF2014:Gabbro">gabbro</a>.</li>
+<li>BLUE: <a href="/index.php/DF2014:Kimberlite" title="DF2014:Kimberlite">Kimberlite</a> is the only stone that is BLUE. <a href="/index.php/DF2014:Nether-cap" title="DF2014:Nether-cap">Nether-caps</a> also produce BLUE wood.</li>
+<li>LBLUE: <a href="/index.php/DF2014:Cobaltite" title="DF2014:Cobaltite">Cobaltite</a> is the only stone that is LBLUE.</li>
+<li>GREEN: <a href="/index.php/DF2014:Olivine" title="DF2014:Olivine">Olivine</a> is GREEN, as are malachite and <a href="/index.php/DF2014:Serpentine" title="DF2014:Serpentine">serpentine</a>.</li>
+<li>LGREEN: <a href="/index.php/DF2014:Garnierite" title="DF2014:Garnierite">Garnierite</a> is the only LGREEN stone.</li>
+<li>CYAN: While there are no stones, <a href="/index.php/DF2014:Spore_tree" title="DF2014:Spore tree">spore trees</a> are CYAN.</li>
+<li>LCYAN: <a href="/index.php/DF2014:Microcline" title="DF2014:Microcline">Microcline</a> is an LCYAN rock. <a href="/index.php/DF2014:Adamantine" title="DF2014:Adamantine">Adamantine</a> and its ore, <a href="/index.php/DF2014:Raw_adamantine" title="DF2014:Raw adamantine">raw adamantine</a>, also display in LCYAN.</li>
+<li>RED: <a href="/index.php/DF2014:Bauxite" title="DF2014:Bauxite">Bauxite</a> and <a href="/index.php/DF2014:Kaolinite" title="DF2014:Kaolinite">kaolinite</a> are RED, as is the <a href="/index.php/DF2014:Blood_thorn" title="DF2014:Blood thorn">blood thorn</a> tree.</li>
+<li>LRED: <a href="/index.php/DF2014:Realgar" title="DF2014:Realgar">Realgar</a>, <a href="/index.php/DF2014:Petrified_wood" title="DF2014:Petrified wood">petrified wood</a>, and <a href="/index.php/DF2014:Cinnabar" title="DF2014:Cinnabar">cinnabar</a> are LRED. <a href="/index.php/DF2014:Goblin-cap" title="DF2014:Goblin-cap">Goblin-caps</a> are also LRED.</li>
+<li>MAGENTA: <a href="/index.php/DF2014:Rutile" title="DF2014:Rutile">Rutile</a> and <a href="/index.php/DF2014:Pitchblende" title="DF2014:Pitchblende">pitchblende</a> are MAGENTA, and <a href="/index.php/DF2014:Glumprong" title="DF2014:Glumprong">glumprongs</a> are MAGENTA trees.</li>
+<li>LMAGENTA: No stones are LMAGENTA, but <a href="/index.php/DF2014:Tunnel_tube" title="DF2014:Tunnel tube">tunnel tubes</a> are.</li>
+<li>BROWN: A lot of stones are BROWN; <a href="/index.php/DF2014:Chert" title="DF2014:Chert">chert</a> is one example.</li>
+<li>YELLOW: <a href="/index.php/DF2014:Brimstone" title="DF2014:Brimstone">Brimstone</a>, <a href="/index.php/DF2014:Gypsum" title="DF2014:Gypsum">gypsum</a>, <a href="/index.php/DF2014:Orthoclase" title="DF2014:Orthoclase">orthoclase</a> and many other stones are YELLOW, as is the <a href="/index.php/DF2014:Fungiwood" title="DF2014:Fungiwood">fungiwood</a> tree.</li>
+<li>LGRAY: Lots of stones are LGRAY, such as <a href="/index.php/DF2014:Granite" title="DF2014:Granite">granite</a>.</li>
+<li>WHITE: Many stones are WHITE, such as <a href="/index.php/DF2014:Limestone" title="DF2014:Limestone">limestone</a>, or <a href="/index.php/DF2014:Rock_salt" title="DF2014:Rock salt">rock salt</a>. The <a href="/index.php/DF2014:Tower-cap" title="DF2014:Tower-cap">tower-cap</a> and <a href="/index.php/DF2014:Feather_tree" title="DF2014:Feather tree">feather tree</a> both produce WHITE wood.</li></ul></li></ul>
+<p>See <a href="/index.php/DF2014:Color#By_Color" title="DF2014:Color">color</a> for a more complete list.
+</p>
+<h1><span class="mw-headline" id="Default_Scheme">Default Scheme</span></h1>
+<p>The default <i>Dwarf Fortress</i> color scheme is based off the 16 standard HTML colors, as discussed <a rel="nofollow" class="external text" href="http://en.wikipedia.org/wiki/Web_colors#HTML_color_names">here</a>.  (Some have been renamed in DF, but the tones themselves are the same.)
+</p><p>These are broken up into 8 pairs, one darker, one lighter, as ordered below.  When a color is flashing or a displayed tile is "dark/bright" according to the game display, these colors are the two that work "together" to create that contrast.  Keep this in mind if creating a <a href="/index.php/DF2014:Color_scheme#Custom_color_schemes" title="DF2014:Color scheme">custom color scheme</a>, as described below.  (See <a href="/index.php/DF2014:Color" title="DF2014:Color">Color</a> for a more complete discussion.)
+</p><p>If you lose the default scheme and neglected to make a backup <i>(didn't we warn you to use "care and caution" when modding?)</i>, you can find the standard scheme below, without having to download DF again.
+</p><p>Open Dwarf Fortress/data/init/<a href="/index.php/DF2014:Colors.txt" title="DF2014:Colors.txt">colors.txt</a>, and copy the text as seen below over the values found at the very bottom of the file.  Save that file, restart <i>Dwarf Fortress</i>, and you're set.
+</p>
+<div style="width: auto; margin:0px 20%"><table style="width:100%">
+<tbody><tr>
+<td style="background-color: #000000" width="50%"> <span style="color: #ffffff">BLACK </span></td>
+<td style="background-color: #808080" width="50%"> <span style="color: #ffffff">DGRAY </span></td>
+</tr><tr>
+<td style="background-color: #000080" width="50%"> <span style="color: #ffffff">BLUE </span></td>
+<td style="background-color: #0000ff" width="50%"> <span style="color: #ffffff">LBLUE </span></td>
+</tr><tr>
+<td style="background-color: #008000" width="50%"> <span style="color: #ffffff">GREEN </span></td>
+<td style="background-color: #00ff00" width="50%"> <span style="color: #ffffff">LGREEN </span></td>
+</tr><tr>
+<td style="background-color: #008080" width="50%"> <span style="color: #ffffff">CYAN </span></td>
+<td style="background-color: #00ffff" width="50%"> <span style="color: #000000">LCYAN </span></td>
+</tr><tr>
+<td style="background-color: #800000" width="50%"> <span style="color: #ffffff">RED </span></td>
+<td style="background-color: #ff0000" width="50%"> <span style="color: #ffffff">LRED </span></td>
+</tr><tr>
+<td style="background-color: #800080" width="50%"> <span style="color: #ffffff">MAGENTA </span></td>
+<td style="background-color: #ff00ff" width="50%"> <span style="color: #ffffff">LMAGENTA </span></td>
+</tr><tr>
+<td style="background-color: #808000" width="50%"> <span style="color: #ffffff">BROWN </span></td>
+<td style="background-color: #ffff00" width="50%"> <span style="color: #000000">YELLOW </span></td>
+</tr><tr>
+<td style="background-color: #c0c0c0" width="50%"> <span style="color: #000000">LGRAY </span></td>
+<td style="background-color: #ffffff" width="50%"> <span style="color: #000000">WHITE </span></td>
+</tr>
+</tbody></table></div>
+<div style="clear:both;"></div>
+<table class="collapsible collapsed infobox gamedata" style="background: #fdfdfd; border: 1px solid #aaa; font-size: 88%; margin: 0 auto -1px; vertical-align: middle; width: 100%; max-width: 100em; table-layout: fixed;">
+<tbody><tr style="line-height: 1.5em;"><th scope="col" style="background: #cce6b3; padding: 0.25em 1em; text-align: center; display: table-cell;&#32;;"><div style="font-size: 114%; margin: 0 9em;">colors.txt</div></th></tr>
+<tr style="line-height: 1.5em; text-align: left; display: table-cell;"><td><div style="overflow: auto;"><span class="gamedata-content" style="font-family: monospace; font-size:1.25em; white-space:pre;">
+[BLACK_R:0]
+[BLACK_G:0]
+[BLACK_B:0]
+[BLUE_R:0]
+[BLUE_G:0]
+[BLUE_B:128]
+[GREEN_R:0]
+[GREEN_G:128]
+[GREEN_B:0]
+[CYAN_R:0]
+[CYAN_G:128]
+[CYAN_B:128]
+[RED_R:128]
+[RED_G:0]
+[RED_B:0]
+[MAGENTA_R:128]
+[MAGENTA_G:0]
+[MAGENTA_B:128]
+[BROWN_R:128]
+[BROWN_G:128]
+[BROWN_B:0]
+[LGRAY_R:192]
+[LGRAY_G:192]
+[LGRAY_B:192]
+[DGRAY_R:128]
+[DGRAY_G:128]
+[DGRAY_B:128]
+[LBLUE_R:0]
+[LBLUE_G:0]
+[LBLUE_B:255]
+[LGREEN_R:0]
+[LGREEN_G:255]
+[LGREEN_B:0]
+[LCYAN_R:0]
+[LCYAN_G:255]
+[LCYAN_B:255]
+[LRED_R:255]
+[LRED_G:0]
+[LRED_B:0]
+[LMAGENTA_R:255]
+[LMAGENTA_G:0]
+[LMAGENTA_B:255]
+[YELLOW_R:255]
+[YELLOW_G:255]
+[YELLOW_B:0]
+[WHITE_R:255]
+[WHITE_G:255]
+[WHITE_B:255]
+</span></div></td></tr></tbody></table>
+<p><br />
+</p>
+<h1><span class="mw-headline" id="Custom_color_schemes">Custom color schemes</span></h1>
+<table class="metadata plainlinks ambox ambox-notice" style="border-left: 10px solid #50b076;" role="presentation">
+<tbody><tr><td class="mbox-image"><div style="width: 52px; margin: 0 40px 0 20px;"><a href="/index.php/File:Mod_icon.png" class="image"><img alt="Mod" src="/images/thumb/1/1a/Mod_icon.png/48px-Mod_icon.png" decoding="async" width="48" height="48" srcset="/images/thumb/1/1a/Mod_icon.png/72px-Mod_icon.png 1.5x, /images/thumb/1/1a/Mod_icon.png/96px-Mod_icon.png 2x" /></a></div></td><td class="mbox-text" style=""><span class="mbox-text-span">This page includes <b><a href="/index.php/Category:Mods" title="Category:Mods">mods</a></b>.  The content is not part of normal DF as released.  Changing game files can sometimes cause unexpected results, and should always be done with care and caution.<span class="hide-when-compact">  </span><span class="hide-when-compact"> </span></span></td></tr></tbody></table>
+<p>Players who are not satisfied with the default color scheme can alter things to suit their aesthetic tastes. In order for any scheme changes to take effect, the "colors.txt" file must be altered and saved. This file can be found in the data/init/ directory of your <i>Dwarf Fortress</i> installation. The changes will not take effect until after you close and restart <i>Dwarf Fortress</i>.
+</p><p>The 16 colors are not fixed, except by their definitions in colors.txt.  If you wanted to change YELLOW to something slightly brighter or darker, or more orange, or into deep purple, you can by changing the values listed under the label "YELLOW".  Note that the color names are <i>case sensitive</i> - the color is "YELLOW", not "Yellow" or "yellow".
+</p><p>When designing a custom color, 3 "lights" of color are used: <b>R</b>ed, <b>G</b>reen, and <b>B</b>lue (RGB), on a scale of 0-255.  The more light (the higher the value), the brighter the color; the less light (the lower the value), the darker. Using "light" is not the same as using "pigment" <i>(the standard "paint mixing" formulae we learned in school, where Magenta, Yellow, and Cyan are the 3 basic ingredients)</i> - M+C does not give "blue" in this format.  
+</p><p>Since we're using Red, Green and Blue light, some form of those three colors is relatively easy to achieve - but look at examples of the other standard colors below to understand how they mix together and how to "shade" or "tint", or brighten or darken a color - or you can simply find a color below that you like and go from that, or use one of these <a href="/index.php/DF2014:Color#Color_tokens" title="DF2014:Color">standard RGB colors</a>.  Always use caution to avoid ending up with colors that are "too similar".
+</p><p>To change to a new color scheme, copy/paste a color list (or part of one or more) found below (or make your own up) over the existing scheme - don't worry, if you don't like it, the original, default scheme is listed above.
+</p><p><i>(Note also that when posting screenshots to this wiki (and the forum boards), custom color schemes (or <a href="/index.php/DF2014:Tilesets" title="DF2014:Tilesets">tilesets</a>) can cause confusion with players who do not use those specific mixes.  This wiki requests you use one of the default set-ups that come with the game to post screenshots here.)</i>
+</p><p><br />
+</p>
+<hr />
+<h3><span id="Lee's_Colour_scheme"></span><span class="mw-headline" id="Lee.27s_Colour_scheme">Lee's Colour scheme</span></h3>
+<p>A quest to provide the optimal set of colours: all colours very easily distinguishable and earthy/natural without being washed out or too bright and garish.
+</p>
+<div style="width: auto; margin:0px 20%"><table style="width:100%">
+<tbody><tr>
+<td style="background-color: #000000" width="50%"> <span style="color: #ffffff">BLACK </span></td>
+<td style="background-color: #646464" width="50%"> <span style="color: #ffffff">DGRAY </span></td>
+</tr><tr>
+<td style="background-color: #1e55a5" width="50%"> <span style="color: #ffffff">BLUE </span></td>
+<td style="background-color: #5a82d2" width="50%"> <span style="color: #ffffff">LBLUE </span></td>
+</tr><tr>
+<td style="background-color: #467d37" width="50%"> <span style="color: #ffffff">GREEN </span></td>
+<td style="background-color: #6eb437" width="50%"> <span style="color: #ffffff">LGREEN </span></td>
+</tr><tr>
+<td style="background-color: #2d9187" width="50%"> <span style="color: #ffffff">CYAN </span></td>
+<td style="background-color: #46d7c3" width="50%"> <span style="color: #000000">LCYAN </span></td>
+</tr><tr>
+<td style="background-color: #aa1400" width="50%"> <span style="color: #ffffff">RED </span></td>
+<td style="background-color: #d73c00" width="50%"> <span style="color: #ffffff">LRED </span></td>
+</tr><tr>
+<td style="background-color: #822873" width="50%"> <span style="color: #ffffff">MAGENTA </span></td>
+<td style="background-color: #d255be" width="50%"> <span style="color: #ffffff">LMAGENTA </span></td>
+</tr><tr>
+<td style="background-color: #785032" width="50%"> <span style="color: #ffffff">BROWN </span></td>
+<td style="background-color: #ebb400" width="50%"> <span style="color: #000000">YELLOW </span></td>
+</tr><tr>
+<td style="background-color: #a0a0a0" width="50%"> <span style="color: #ffffff">LGRAY </span></td>
+<td style="background-color: #fafafa" width="50%"> <span style="color: #000000">WHITE </span></td>
+</tr>
+</tbody></table></div>
+<div style="clear:both;"></div>
+<table class="collapsible collapsed infobox gamedata" style="background: #fdfdfd; border: 1px solid #aaa; font-size: 88%; margin: 0 auto -1px; vertical-align: middle; width: 100%; max-width: 100em; table-layout: fixed;">
+<tbody><tr style="line-height: 1.5em;"><th scope="col" style="background: #cce6b3; padding: 0.25em 1em; text-align: center; display: table-cell;&#32;;"><div style="font-size: 114%; margin: 0 9em;">colors.txt</div></th></tr>
+<tr style="line-height: 1.5em; text-align: left; display: table-cell;"><td><div style="overflow: auto;"><span class="gamedata-content" style="font-family: monospace; font-size:1.25em; white-space:pre;">
+[BLACK_R:0]
+[BLACK_G:0]
+[BLACK_B:0]
+[BLUE_R:30]
+[BLUE_G:85]
+[BLUE_B:165]
+[GREEN_R:70]
+[GREEN_G:125]
+[GREEN_B:55]
+[CYAN_R:45]
+[CYAN_G:145]
+[CYAN_B:135]
+[RED_R:170]
+[RED_G:20]
+[RED_B:0]
+[MAGENTA_R:130]
+[MAGENTA_G:40]
+[MAGENTA_B:115]
+[BROWN_R:120]
+[BROWN_G:80]
+[BROWN_B:50]
+[LGRAY_R:160]
+[LGRAY_G:160]
+[LGRAY_B:160]
+[DGRAY_R:100]
+[DGRAY_G:100]
+[DGRAY_B:100]
+[LBLUE_R:90]
+[LBLUE_G:130]
+[LBLUE_B:210]
+[LGREEN_R:110]
+[LGREEN_G:180]
+[LGREEN_B:55]
+[LCYAN_R:70]
+[LCYAN_G:215]
+[LCYAN_B:195]
+[LRED_R:215]
+[LRED_G:60]
+[LRED_B:0]
+[LMAGENTA_R:210]
+[LMAGENTA_G:85]
+[LMAGENTA_B:190]
+[YELLOW_R:235]
+[YELLOW_G:180]
+[YELLOW_B:0]
+[WHITE_R:250]
+[WHITE_G:250]
+[WHITE_B:250]
+</span></div></td></tr></tbody></table>
+<p><br />
+</p>
+<h4><span id="Lee's_Colour_Scheme_v2"></span><span class="mw-headline" id="Lee.27s_Colour_Scheme_v2">Lee's Colour Scheme v2</span></h4>
+<p>New and Improved! All colours have been altered slightly but most notably the brown is much better, the magentas are more of a grape/bubblegum mix, the greens are brighter and less depressing, and the whole thing feels more cohesive.
+</p>
+<div style="width: auto; margin:0px 20%"><table style="width:100%">
+<tbody><tr>
+<td style="background-color: #15130f" width="50%"> <span style="color: #ffffff">BLACK </span></td>
+<td style="background-color: #746e71" width="50%"> <span style="color: #ffffff">DGRAY </span></td>
+</tr><tr>
+<td style="background-color: #2d5aa0" width="50%"> <span style="color: #ffffff">BLUE </span></td>
+<td style="background-color: #6987e1" width="50%"> <span style="color: #ffffff">LBLUE </span></td>
+</tr><tr>
+<td style="background-color: #508714" width="50%"> <span style="color: #ffffff">GREEN </span></td>
+<td style="background-color: #7db937" width="50%"> <span style="color: #ffffff">LGREEN </span></td>
+</tr><tr>
+<td style="background-color: #198c8c" width="50%"> <span style="color: #ffffff">CYAN </span></td>
+<td style="background-color: #3ccdbe" width="50%"> <span style="color: #ffffff">LCYAN </span></td>
+</tr><tr>
+<td style="background-color: #a0140a" width="50%"> <span style="color: #ffffff">RED </span></td>
+<td style="background-color: #dc3214" width="50%"> <span style="color: #ffffff">LRED </span></td>
+</tr><tr>
+<td style="background-color: #873c82" width="50%"> <span style="color: #ffffff">MAGENTA </span></td>
+<td style="background-color: #be6eb9" width="50%"> <span style="color: #ffffff">LMAGENTA </span></td>
+</tr><tr>
+<td style="background-color: #964b37" width="50%"> <span style="color: #ffffff">BROWN </span></td>
+<td style="background-color: #e6aa1e" width="50%"> <span style="color: #000000">YELLOW </span></td>
+</tr><tr>
+<td style="background-color: #b2afac" width="50%"> <span style="color: #000000">LGRAY </span></td>
+<td style="background-color: #e8e3e8" width="50%"> <span style="color: #000000">WHITE </span></td>
+</tr>
+</tbody></table></div>
+<div style="clear:both;"></div>
+<table class="collapsible collapsed infobox gamedata" style="background: #fdfdfd; border: 1px solid #aaa; font-size: 88%; margin: 0 auto -1px; vertical-align: middle; width: 100%; max-width: 100em; table-layout: fixed;">
+<tbody><tr style="line-height: 1.5em;"><th scope="col" style="background: #cce6b3; padding: 0.25em 1em; text-align: center; display: table-cell;&#32;;"><div style="font-size: 114%; margin: 0 9em;">colors.txt</div></th></tr>
+<tr style="line-height: 1.5em; text-align: left; display: table-cell;"><td><div style="overflow: auto;"><span class="gamedata-content" style="font-family: monospace; font-size:1.25em; white-space:pre;">
+[BLACK_R:21]
+[BLACK_G:19]
+[BLACK_B:15]
+[BLUE_R:45]
+[BLUE_G:90]
+[BLUE_B:160]
+[GREEN_R:80]
+[GREEN_G:135]
+[GREEN_B:20]
+[CYAN_R:25]
+[CYAN_G:140]
+[CYAN_B:140]
+[RED_R:160]
+[RED_G:20]
+[RED_B:10]
+[MAGENTA_R:135]
+[MAGENTA_G:60]
+[MAGENTA_B:130]
+[BROWN_R:150]
+[BROWN_G:75]
+[BROWN_B:55]
+[LGRAY_R:178]
+[LGRAY_G:175]
+[LGRAY_B:172]
+[DGRAY_R:116]
+[DGRAY_G:110]
+[DGRAY_B:113]
+[LBLUE_R:105]
+[LBLUE_G:135]
+[LBLUE_B:225]
+[LGREEN_R:125]
+[LGREEN_G:185]
+[LGREEN_B:55]
+[LCYAN_R:60]
+[LCYAN_G:205]
+[LCYAN_B:190]
+[LRED_R:220]
+[LRED_G:50]
+[LRED_B:20]
+[LMAGENTA_R:190]
+[LMAGENTA_G:110]
+[LMAGENTA_B:185]
+[YELLOW_R:230]
+[YELLOW_G:170]
+[YELLOW_B:30]
+[WHITE_R:232]
+[WHITE_G:227]
+[WHITE_B:232]
+</span></div></td></tr></tbody></table>
+<p><br />
+</p>
+<hr />
+<h3><span id="&quot;Natural&quot;_scheme"></span><span class="mw-headline" id=".22Natural.22_scheme">"Natural" scheme</span></h3>
+<p>This mix softens the glaring colors of the original to earthtones.
+</p>
+<div style="width: auto; margin:0px 20%"><table style="width:100%">
+<tbody><tr>
+<td style="background-color: #000000" width="50%"> <span style="color: #ffffff">BLACK </span></td>
+<td style="background-color: #585356" width="50%"> <span style="color: #ffffff">DGRAY </span></td>
+</tr><tr>
+<td style="background-color: #0d67c4" width="50%"> <span style="color: #ffffff">BLUE </span></td>
+<td style="background-color: #91caff" width="50%"> <span style="color: #000000">LBLUE </span></td>
+</tr><tr>
+<td style="background-color: #449e35" width="50%"> <span style="color: #ffffff">GREEN </span></td>
+<td style="background-color: #83d452" width="50%"> <span style="color: #000000">LGREEN </span></td>
+</tr><tr>
+<td style="background-color: #56a3cd" width="50%"> <span style="color: #ffffff">CYAN </span></td>
+<td style="background-color: #b0dfd7" width="50%"> <span style="color: #000000">LCYAN </span></td>
+</tr><tr>
+<td style="background-color: #971a1a" width="50%"> <span style="color: #ffffff">RED </span></td>
+<td style="background-color: #ff2222" width="50%"> <span style="color: #ffffff">LRED </span></td>
+</tr><tr>
+<td style="background-color: #ff6ebb" width="50%"> <span style="color: #000000">MAGENTA </span></td>
+<td style="background-color: #ffa7f6" width="50%"> <span style="color: #000000">LMAGENTA </span></td>
+</tr><tr>
+<td style="background-color: #785e2f" width="50%"> <span style="color: #ffffff">BROWN </span></td>
+<td style="background-color: #ffda5a" width="50%"> <span style="color: #000000">YELLOW </span></td>
+</tr><tr>
+<td style="background-color: #b9c0a2" width="50%"> <span style="color: #000000">LGRAY </span></td>
+<td style="background-color: #ffffff" width="50%"> <span style="color: #000000">WHITE </span></td>
+</tr>
+</tbody></table></div>
+<div style="clear:both;"></div>
+<table class="collapsible collapsed infobox gamedata" style="background: #fdfdfd; border: 1px solid #aaa; font-size: 88%; margin: 0 auto -1px; vertical-align: middle; width: 100%; max-width: 100em; table-layout: fixed;">
+<tbody><tr style="line-height: 1.5em;"><th scope="col" style="background: #cce6b3; padding: 0.25em 1em; text-align: center; display: table-cell;&#32;;"><div style="font-size: 114%; margin: 0 9em;">colors.txt</div></th></tr>
+<tr style="line-height: 1.5em; text-align: left; display: table-cell;"><td><div style="overflow: auto;"><span class="gamedata-content" style="font-family: monospace; font-size:1.25em; white-space:pre;">
+[BLACK_R:0]
+[BLACK_G:0]
+[BLACK_B:0]
+[BLUE_R:13]
+[BLUE_G:103]
+[BLUE_B:196]
+[GREEN_R:68]
+[GREEN_G:158]
+[GREEN_B:53]
+[CYAN_R:86]
+[CYAN_G:163]
+[CYAN_B:205]
+[RED_R:151]
+[RED_G:26]
+[RED_B:26]
+[MAGENTA_R:255]
+[MAGENTA_G:110]
+[MAGENTA_B:187]
+[BROWN_R:120]
+[BROWN_G:94]
+[BROWN_B:47]
+[LGRAY_R:185]
+[LGRAY_G:192]
+[LGRAY_B:162]
+[DGRAY_R:88]
+[DGRAY_G:83]
+[DGRAY_B:86]
+[LBLUE_R:145]
+[LBLUE_G:202]
+[LBLUE_B:255]
+[LGREEN_R:131]
+[LGREEN_G:212]
+[LGREEN_B:82]
+[LCYAN_R:176]
+[LCYAN_G:223]
+[LCYAN_B:215]
+[LRED_R:255]
+[LRED_G:34]
+[LRED_B:34]
+[LMAGENTA_R:255]
+[LMAGENTA_G:167]
+[LMAGENTA_B:246]
+[YELLOW_R:255]
+[YELLOW_G:218]
+[YELLOW_B:90]
+[WHITE_R:255]
+[WHITE_G:255]
+[WHITE_B:255]
+</span></div></td></tr></tbody></table>
+<p><br />
+</p>
+<hr />
+<h3><span class="mw-headline" id="True_Brown">True Brown</span></h3>
+<p>Default scheme with BROWN actually being a shade of brown (rather than Olive Green). Created by <a href="/index.php/User:Met" class="mw-redirect" title="User:Met">Met</a>.
+</p>
+<div style="width: auto; margin:0px 20%"><table style="width:100%">
+<tbody><tr>
+<td style="background-color: #000000" width="50%"> <span style="color: #ffffff">BLACK </span></td>
+<td style="background-color: #505050" width="50%"> <span style="color: #ffffff">DGRAY </span></td>
+</tr><tr>
+<td style="background-color: #000080" width="50%"> <span style="color: #ffffff">BLUE </span></td>
+<td style="background-color: #0000ff" width="50%"> <span style="color: #ffffff">LBLUE </span></td>
+</tr><tr>
+<td style="background-color: #008000" width="50%"> <span style="color: #ffffff">GREEN </span></td>
+<td style="background-color: #00ff00" width="50%"> <span style="color: #ffffff">LGREEN </span></td>
+</tr><tr>
+<td style="background-color: #008080" width="50%"> <span style="color: #ffffff">CYAN </span></td>
+<td style="background-color: #00ffff" width="50%"> <span style="color: #000000">LCYAN </span></td>
+</tr><tr>
+<td style="background-color: #800000" width="50%"> <span style="color: #ffffff">RED </span></td>
+<td style="background-color: #ff0000" width="50%"> <span style="color: #ffffff">LRED </span></td>
+</tr><tr>
+<td style="background-color: #800080" width="50%"> <span style="color: #ffffff">MAGENTA </span></td>
+<td style="background-color: #ff00ff" width="50%"> <span style="color: #ffffff">LMAGENTA </span></td>
+</tr><tr>
+<td style="background-color: #785e30" width="50%"> <span style="color: #ffffff">BROWN </span></td>
+<td style="background-color: #ffff00" width="50%"> <span style="color: #000000">YELLOW </span></td>
+</tr><tr>
+<td style="background-color: #c0c0c0" width="50%"> <span style="color: #000000">LGRAY </span></td>
+<td style="background-color: #ffffff" width="50%"> <span style="color: #000000">WHITE </span></td>
+</tr>
+</tbody></table></div>
+<div style="clear:both;"></div>
+<table class="collapsible collapsed infobox gamedata" style="background: #fdfdfd; border: 1px solid #aaa; font-size: 88%; margin: 0 auto -1px; vertical-align: middle; width: 100%; max-width: 100em; table-layout: fixed;">
+<tbody><tr style="line-height: 1.5em;"><th scope="col" style="background: #cce6b3; padding: 0.25em 1em; text-align: center; display: table-cell;&#32;;"><div style="font-size: 114%; margin: 0 9em;">colors.txt</div></th></tr>
+<tr style="line-height: 1.5em; text-align: left; display: table-cell;"><td><div style="overflow: auto;"><span class="gamedata-content" style="font-family: monospace; font-size:1.25em; white-space:pre;">
+[BLACK_R:0]
+[BLACK_G:0]
+[BLACK_B:0]
+[BLUE_R:0]
+[BLUE_G:0]
+[BLUE_B:128]
+[GREEN_R:0]
+[GREEN_G:128]
+[GREEN_B:0]
+[CYAN_R:0]
+[CYAN_G:128]
+[CYAN_B:128]
+[RED_R:128]
+[RED_G:0]
+[RED_B:0]
+[MAGENTA_R:128]
+[MAGENTA_G:0]
+[MAGENTA_B:128]
+[BROWN_R:120]
+[BROWN_G:94]
+[BROWN_B:48]
+[LGRAY_R:192]
+[LGRAY_G:192]
+[LGRAY_B:192]
+[DGRAY_R:80]
+[DGRAY_G:80]
+[DGRAY_B:80]
+[LBLUE_R:0]
+[LBLUE_G:0]
+[LBLUE_B:255]
+[LGREEN_R:0]
+[LGREEN_G:255]
+[LGREEN_B:0]
+[LCYAN_R:0]
+[LCYAN_G:255]
+[LCYAN_B:255]
+[LRED_R:255]
+[LRED_G:0]
+[LRED_B:0]
+[LMAGENTA_R:255]
+[LMAGENTA_G:0]
+[LMAGENTA_B:255]
+[YELLOW_R:255]
+[YELLOW_G:255]
+[YELLOW_B:0]
+[WHITE_R:255]
+[WHITE_G:255]
+[WHITE_B:255]
+</span></div></td></tr></tbody></table>
+<p><br />
+</p>
+<hr />
+<h3><span class="mw-headline" id="Another_natural_scheme">Another natural scheme</span></h3>
+<div style="width: auto; margin:0px 20%"><table style="width:100%">
+<tbody><tr>
+<td style="background-color: #000000" width="50%"> <span style="color: #ffffff">BLACK </span></td>
+<td style="background-color: #505050" width="50%"> <span style="color: #ffffff">DGRAY </span></td>
+</tr><tr>
+<td style="background-color: #495f9d" width="50%"> <span style="color: #ffffff">BLUE </span></td>
+<td style="background-color: #6f8aa5" width="50%"> <span style="color: #ffffff">LBLUE </span></td>
+</tr><tr>
+<td style="background-color: #597537" width="50%"> <span style="color: #ffffff">GREEN </span></td>
+<td style="background-color: #a0c852" width="50%"> <span style="color: #000000">LGREEN </span></td>
+</tr><tr>
+<td style="background-color: #65909e" width="50%"> <span style="color: #ffffff">CYAN </span></td>
+<td style="background-color: #9fc4d2" width="50%"> <span style="color: #000000">LCYAN </span></td>
+</tr><tr>
+<td style="background-color: #920000" width="50%"> <span style="color: #ffffff">RED </span></td>
+<td style="background-color: #ce4901" width="50%"> <span style="color: #ffffff">LRED </span></td>
+</tr><tr>
+<td style="background-color: #a53665" width="50%"> <span style="color: #ffffff">MAGENTA </span></td>
+<td style="background-color: #ef96cf" width="50%"> <span style="color: #000000">LMAGENTA </span></td>
+</tr><tr>
+<td style="background-color: #8a693b" width="50%"> <span style="color: #ffffff">BROWN </span></td>
+<td style="background-color: #ffc600" width="50%"> <span style="color: #000000">YELLOW </span></td>
+</tr><tr>
+<td style="background-color: #808080" width="50%"> <span style="color: #ffffff">LGRAY </span></td>
+<td style="background-color: #ffffff" width="50%"> <span style="color: #000000">WHITE </span></td>
+</tr>
+</tbody></table></div>
+<div style="clear:both;"></div>
+<table class="collapsible collapsed infobox gamedata" style="background: #fdfdfd; border: 1px solid #aaa; font-size: 88%; margin: 0 auto -1px; vertical-align: middle; width: 100%; max-width: 100em; table-layout: fixed;">
+<tbody><tr style="line-height: 1.5em;"><th scope="col" style="background: #cce6b3; padding: 0.25em 1em; text-align: center; display: table-cell;&#32;;"><div style="font-size: 114%; margin: 0 9em;">colors.txt</div></th></tr>
+<tr style="line-height: 1.5em; text-align: left; display: table-cell;"><td><div style="overflow: auto;"><span class="gamedata-content" style="font-family: monospace; font-size:1.25em; white-space:pre;">
+[BLACK_R:0]
+[BLACK_G:0]
+[BLACK_B:0]
+[BLUE_R:73]
+[BLUE_G:95]
+[BLUE_B:157]
+[GREEN_R:89]
+[GREEN_G:117]
+[GREEN_B:55]
+[CYAN_R:101]
+[CYAN_G:144]
+[CYAN_B:158]
+[RED_R:146]
+[RED_G:0]
+[RED_B:0]
+[MAGENTA_R:165]
+[MAGENTA_G:54]
+[MAGENTA_B:101]
+[BROWN_R:138]
+[BROWN_G:105]
+[BROWN_B:59]
+[LGRAY_R:128]
+[LGRAY_G:128]
+[LGRAY_B:128]
+[DGRAY_R:80]
+[DGRAY_G:80]
+[DGRAY_B:80]
+[LBLUE_R:111]
+[LBLUE_G:138]
+[LBLUE_B:165]
+[LGREEN_R:160]
+[LGREEN_G:200]
+[LGREEN_B:82]
+[LCYAN_R:159]
+[LCYAN_G:196]
+[LCYAN_B:210]
+[LRED_R:206]
+[LRED_G:73]
+[LRED_B:1]
+[LMAGENTA_R:239]
+[LMAGENTA_G:150]
+[LMAGENTA_B:207]
+[YELLOW_R:255]
+[YELLOW_G:198]
+[YELLOW_B:0]
+[WHITE_R:255]
+[WHITE_G:255]
+[WHITE_B:255]
+</span></div></td></tr></tbody></table>
+<p><br />
+</p>
+<hr />
+<h3><span class="mw-headline" id="Higher-visibility_scheme">Higher-visibility scheme</span></h3>
+<p>Tired of trying to see your metalsmiths (dark grey) and fishery workers (navy blue) against a black background?  This scheme "brightens" most of the colors, while trying to stay true to the original tone when possible.  (Except BROWN, which is now actually "brown", not olive green.)
+</p>
+<div style="width: auto; margin:0px 20%"><table style="width:100%">
+<tbody><tr>
+<td style="background-color: #000000" width="50%"> <span style="color: #ffffff">BLACK *</span></td>
+<td style="background-color: #787878" width="50%"> <span style="color: #ffffff">DGRAY </span></td>
+</tr><tr>
+<td style="background-color: #2c88de" width="50%"> <span style="color: #ffffff">BLUE </span></td>
+<td style="background-color: #90caff" width="50%"> <span style="color: #000000">LBLUE </span></td>
+</tr><tr>
+<td style="background-color: #209020" width="50%"> <span style="color: #ffffff">GREEN </span></td>
+<td style="background-color: #42e828" width="50%"> <span style="color: #000000">LGREEN </span></td>
+</tr><tr>
+<td style="background-color: #008080" width="50%"> <span style="color: #ffffff">CYAN *</span></td>
+<td style="background-color: #80e0d8" width="50%"> <span style="color: #000000">LCYAN </span></td>
+</tr><tr>
+<td style="background-color: #b00808" width="50%"> <span style="color: #ffffff">RED </span></td>
+<td style="background-color: #ff0000" width="50%"> <span style="color: #ffffff">LRED *</span></td>
+</tr><tr>
+<td style="background-color: #b038a0" width="50%"> <span style="color: #ffffff">MAGENTA </span></td>
+<td style="background-color: #ff54ff" width="50%"> <span style="color: #ffffff">LMAGENTA </span></td>
+</tr><tr>
+<td style="background-color: #785e30" width="50%"> <span style="color: #ffffff">BROWN </span></td>
+<td style="background-color: #ffec30" width="50%"> <span style="color: #000000">YELLOW </span></td>
+</tr><tr>
+<td style="background-color: #b0b0b0" width="50%"> <span style="color: #000000">LGRAY </span></td>
+<td style="background-color: #ffffff" width="50%"> <span style="color: #000000">WHITE *</span></td>
+</tr>
+</tbody></table></div>
+<div style="clear:both;"></div>
+<table class="collapsible collapsed infobox gamedata" style="background: #fdfdfd; border: 1px solid #aaa; font-size: 88%; margin: 0 auto -1px; vertical-align: middle; width: 100%; max-width: 100em; table-layout: fixed;">
+<tbody><tr style="line-height: 1.5em;"><th scope="col" style="background: #cce6b3; padding: 0.25em 1em; text-align: center; display: table-cell;&#32;;"><div style="font-size: 114%; margin: 0 9em;">colors.txt</div></th></tr>
+<tr style="line-height: 1.5em; text-align: left; display: table-cell;"><td><div style="overflow: auto;"><span class="gamedata-content" style="font-family: monospace; font-size:1.25em; white-space:pre;">
+[BLACK_R:0]
+[BLACK_G:0]
+[BLACK_B:0]
+[BLUE_R:44]
+[BLUE_G:136]
+[BLUE_B:222]
+[GREEN_R:32]
+[GREEN_G:144]
+[GREEN_B:32]
+[CYAN_R:0]
+[CYAN_G:128]
+[CYAN_B:128]
+[RED_R:176]
+[RED_G:8]
+[RED_B:8]
+[MAGENTA_R:176]
+[MAGENTA_G:56]
+[MAGENTA_B:160]
+[BROWN_R:120]
+[BROWN_G:94]
+[BROWN_B:48]
+[LGRAY_R:176]
+[LGRAY_G:176]
+[LGRAY_B:176]
+[DGRAY_R:120]
+[DGRAY_G:120]
+[DGRAY_B:120]
+[LBLUE_R:144]
+[LBLUE_G:202]
+[LBLUE_B:255]
+[LGREEN_R:66]
+[LGREEN_G:232]
+[LGREEN_B:40]
+[LCYAN_R:128]
+[LCYAN_G:224]
+[LCYAN_B:216]
+[LRED_R:255]
+[LRED_G:0]
+[LRED_B:0]
+[LMAGENTA_R:255]
+[LMAGENTA_G:84]
+[LMAGENTA_B:255]
+[YELLOW_R:255]
+[YELLOW_G:236]
+[YELLOW_B:48]
+[WHITE_R:255]
+[WHITE_G:255]
+[WHITE_B:255]
+</span></div></td></tr></tbody></table>
+<dl><dd><i>(* unchanged</i>)</dd></dl>
+<p>Original on the left, this scheme on the right...
+</p>
+<table style="margin: 0 auto">
+
+<tbody><tr>
+<td valign="top">
+<table style="border: 1px solid #000; background: #eee; width: 15em; border-spacing: 0; margin: 0.25em">
+
+<tbody><tr>
+<td style="background: #000; text-align: center; width: 1.25em"><span style="background: #888; display: inline-block; line-height: 1px; image-rendering: pixelated;"><img alt="" src="/images/e/ed/Dwarf.png" decoding="async" width="20" height="26" /></span>
+</td>
+<td style="font-weight: bold; text-align: center; width: 13.75em">DGRAY
+</td></tr>
+<tr>
+<td style="background: #888; border-right: 1px solid #000">&#160;
+</td>
+<td style="padding: 0 0.5em">
+<p><a href="/index.php/DF2014:Metalsmith" title="DF2014:Metalsmith">Metalsmiths</a>
+</p>
+</td></tr></tbody></table>
+<table style="border: 1px solid #000; background: #eee; width: 15em; border-spacing: 0; margin: 0.25em">
+
+<tbody><tr>
+<td style="background: #000; text-align: center; width: 1.25em"><span style="background: #080; display: inline-block; line-height: 1px; image-rendering: pixelated;"><img alt="" src="/images/e/ed/Dwarf.png" decoding="async" width="20" height="26" /></span>
+</td>
+<td style="font-weight: bold; text-align: center; width: 13.75em">GREEN
+</td></tr>
+<tr>
+<td style="background: #080; border-right: 1px solid #000">&#160;
+</td>
+<td style="padding: 0 0.5em">
+<p><a href="/index.php/DF2014:Ranger" title="DF2014:Ranger">Rangers</a>
+</p>
+</td></tr></tbody></table>
+<table style="border: 1px solid #000; background: #eee; width: 15em; border-spacing: 0; margin: 0.25em">
+
+<tbody><tr>
+<td style="background: #000; text-align: center; width: 1.25em"><span style="background: rgb(00, 00, 80); display: inline-block; line-height: 1px; image-rendering: pixelated;"><img alt="" src="/images/e/ed/Dwarf.png" decoding="async" width="20" height="26" /></span>
+</td>
+<td style="font-weight: bold; text-align: center; width: 13.75em">BLUE
+</td></tr>
+<tr>
+<td style="background: rgb(00, 00, 80); border-right: 1px solid #000">&#160;
+</td>
+<td style="padding: 0 0.5em">
+<p><a href="/index.php/DF2014:Fishery_worker" title="DF2014:Fishery worker">Fishery worker</a>
+</p>
+</td></tr></tbody></table>
+<table style="border: 1px solid #000; background: #eee; width: 15em; border-spacing: 0; margin: 0.25em">
+
+<tbody><tr>
+<td style="background: #000; text-align: center; width: 1.25em"><span style="background: #00f; display: inline-block; line-height: 1px; image-rendering: pixelated;"><img alt="" src="/images/e/ed/Dwarf.png" decoding="async" width="20" height="26" /></span>
+</td>
+<td style="font-weight: bold; text-align: center; width: 13.75em">LBLUE
+</td></tr>
+<tr>
+<td style="background: #00f; border-right: 1px solid #000">&#160;
+</td>
+<td style="padding: 0 0.5em">
+<p><a href="/index.php/DF2014:Craftsdwarf" title="DF2014:Craftsdwarf">Craftsdwarfs</a>
+</p>
+</td></tr></tbody></table>
+<table style="border: 1px solid #000; background: #eee; width: 15em; border-spacing: 0; margin: 0.25em">
+
+<tbody><tr>
+<td style="background: #000; text-align: center; width: 1.25em"><span style="background: #880; display: inline-block; line-height: 1px; image-rendering: pixelated;"><img alt="" src="/images/e/ed/Dwarf.png" decoding="async" width="20" height="26" /></span>
+</td>
+<td style="font-weight: bold; text-align: center; width: 13.75em">BROWN
+</td></tr>
+<tr>
+<td style="background: #880; border-right: 1px solid #000">&#160;
+</td>
+<td style="padding: 0 0.5em">
+<p><a href="/index.php/DF2014:Farmer" title="DF2014:Farmer">Farmers</a>
+</p>
+</td></tr></tbody></table>
+<table style="border: 1px solid #000; background: #eee; width: 15em; border-spacing: 0; margin: 0.25em">
+
+<tbody><tr>
+<td style="background: #000; text-align: center; width: 1.25em"><span style="background: #808; display: inline-block; line-height: 1px; image-rendering: pixelated;"><img alt="" src="/images/e/ed/Dwarf.png" decoding="async" width="20" height="26" /></span>
+</td>
+<td style="font-weight: bold; text-align: center; width: 13.75em">MAGENTA
+</td></tr>
+<tr>
+<td style="background: #808; border-right: 1px solid #000">&#160;
+</td>
+<td style="padding: 0 0.5em">
+<p><a href="/index.php/DF2014:Administrator" title="DF2014:Administrator">Administrators</a>
+</p>
+</td></tr></tbody></table>
+<table style="border: 1px solid #000; background: #eee; width: 15em; border-spacing: 0; margin: 0.25em">
+
+<tbody><tr>
+<td style="background: #000; text-align: center; width: 1.25em"><span style="background: #800; display: inline-block; line-height: 1px; image-rendering: pixelated;"><img alt="" src="/images/e/ed/Dwarf.png" decoding="async" width="20" height="26" /></span>
+</td>
+<td style="font-weight: bold; text-align: center; width: 13.75em">RED
+</td></tr>
+<tr>
+<td style="background: #800; border-right: 1px solid #000">&#160;
+</td>
+<td style="padding: 0 0.5em">
+<p><a href="/index.php/DF2014:Child" class="mw-redirect" title="DF2014:Child">Children</a>
+</p>
+</td></tr></tbody></table>
+</td>
+<td valign="top">
+<table style="border: 1px solid #000; background: #eee; width: 15em; border-spacing: 0; margin: 0.25em">
+
+<tbody><tr>
+<td style="background: #000; text-align: center; width: 1.25em"><span style="background: rgb(176, 176, 176); display: inline-block; line-height: 1px; image-rendering: pixelated;"><img alt="" src="/images/e/ed/Dwarf.png" decoding="async" width="20" height="26" /></span>
+</td>
+<td style="font-weight: bold; text-align: center; width: 13.75em">DGRAY
+</td></tr>
+<tr>
+<td style="background: rgb(176, 176, 176); border-right: 1px solid #000">&#160;
+</td>
+<td style="padding: 0 0.5em">
+<p><a href="/index.php/DF2014:Metalsmith" title="DF2014:Metalsmith">Metalsmiths</a>
+</p>
+</td></tr></tbody></table>
+<table style="border: 1px solid #000; background: #eee; width: 15em; border-spacing: 0; margin: 0.25em">
+
+<tbody><tr>
+<td style="background: #000; text-align: center; width: 1.25em"><span style="background: rgb(32, 144, 32); display: inline-block; line-height: 1px; image-rendering: pixelated;"><img alt="" src="/images/e/ed/Dwarf.png" decoding="async" width="20" height="26" /></span>
+</td>
+<td style="font-weight: bold; text-align: center; width: 13.75em">GREEN
+</td></tr>
+<tr>
+<td style="background: rgb(32, 144, 32); border-right: 1px solid #000">&#160;
+</td>
+<td style="padding: 0 0.5em">
+<p><a href="/index.php/DF2014:Ranger" title="DF2014:Ranger">Rangers</a>
+</p>
+</td></tr></tbody></table>
+<table style="border: 1px solid #000; background: #eee; width: 15em; border-spacing: 0; margin: 0.25em">
+
+<tbody><tr>
+<td style="background: #000; text-align: center; width: 1.25em"><span style="background: rgb(44, 136, 222); display: inline-block; line-height: 1px; image-rendering: pixelated;"><img alt="" src="/images/e/ed/Dwarf.png" decoding="async" width="20" height="26" /></span>
+</td>
+<td style="font-weight: bold; text-align: center; width: 13.75em">BLUE
+</td></tr>
+<tr>
+<td style="background: rgb(44, 136, 222); border-right: 1px solid #000">&#160;
+</td>
+<td style="padding: 0 0.5em">
+<p><a href="/index.php/DF2014:Fishery_worker" title="DF2014:Fishery worker">Fishery worker</a>
+</p>
+</td></tr></tbody></table>
+<table style="border: 1px solid #000; background: #eee; width: 15em; border-spacing: 0; margin: 0.25em">
+
+<tbody><tr>
+<td style="background: #000; text-align: center; width: 1.25em"><span style="background: rgb(144, 202, 255); display: inline-block; line-height: 1px; image-rendering: pixelated;"><img alt="" src="/images/e/ed/Dwarf.png" decoding="async" width="20" height="26" /></span>
+</td>
+<td style="font-weight: bold; text-align: center; width: 13.75em">LBLUE
+</td></tr>
+<tr>
+<td style="background: rgb(144, 202, 255); border-right: 1px solid #000">&#160;
+</td>
+<td style="padding: 0 0.5em">
+<p><a href="/index.php/DF2014:Craftsdwarf" title="DF2014:Craftsdwarf">Craftsdwarfs</a>
+</p>
+</td></tr></tbody></table>
+<table style="border: 1px solid #000; background: #eee; width: 15em; border-spacing: 0; margin: 0.25em">
+
+<tbody><tr>
+<td style="background: #000; text-align: center; width: 1.25em"><span style="background: rgb(120, 94, 48); display: inline-block; line-height: 1px; image-rendering: pixelated;"><img alt="" src="/images/e/ed/Dwarf.png" decoding="async" width="20" height="26" /></span>
+</td>
+<td style="font-weight: bold; text-align: center; width: 13.75em">BROWN
+</td></tr>
+<tr>
+<td style="background: rgb(120, 94, 48); border-right: 1px solid #000">&#160;
+</td>
+<td style="padding: 0 0.5em">
+<p><a href="/index.php/DF2014:Farmer" title="DF2014:Farmer">Farmers</a>
+</p>
+</td></tr></tbody></table>
+<table style="border: 1px solid #000; background: #eee; width: 15em; border-spacing: 0; margin: 0.25em">
+
+<tbody><tr>
+<td style="background: #000; text-align: center; width: 1.25em"><span style="background: rgb(176, 56, 160); display: inline-block; line-height: 1px; image-rendering: pixelated;"><img alt="" src="/images/e/ed/Dwarf.png" decoding="async" width="20" height="26" /></span>
+</td>
+<td style="font-weight: bold; text-align: center; width: 13.75em">MAGENTA
+</td></tr>
+<tr>
+<td style="background: rgb(176, 56, 160); border-right: 1px solid #000">&#160;
+</td>
+<td style="padding: 0 0.5em">
+<p><a href="/index.php/DF2014:Administrator" title="DF2014:Administrator">Administrators</a>
+</p>
+</td></tr></tbody></table>
+<table style="border: 1px solid #000; background: #eee; width: 15em; border-spacing: 0; margin: 0.25em">
+
+<tbody><tr>
+<td style="background: #000; text-align: center; width: 1.25em"><span style="background: rgb(176, 8, 8); display: inline-block; line-height: 1px; image-rendering: pixelated;"><img alt="" src="/images/e/ed/Dwarf.png" decoding="async" width="20" height="26" /></span>
+</td>
+<td style="font-weight: bold; text-align: center; width: 13.75em">RED
+</td></tr>
+<tr>
+<td style="background: rgb(176, 8, 8); border-right: 1px solid #000">&#160;
+</td>
+<td style="padding: 0 0.5em">
+<p><a href="/index.php/DF2014:Child" class="mw-redirect" title="DF2014:Child">Children</a>
+</p>
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+<hr />
+<h3><span id="(Yet)_Another_scheme"></span><span class="mw-headline" id=".28Yet.29_Another_scheme">(Yet) Another scheme</span></h3>
+<div style="width: auto; margin:0px 20%"><table style="width:100%">
+<tbody><tr>
+<td style="background-color: #000000" width="50%"> <span style="color: #ffffff">BLACK </span></td>
+<td style="background-color: #707070" width="50%"> <span style="color: #ffffff">DGRAY </span></td>
+</tr><tr>
+<td style="background-color: #203090" width="50%"> <span style="color: #ffffff">BLUE </span></td>
+<td style="background-color: #2838ff" width="50%"> <span style="color: #ffffff">LBLUE </span></td>
+</tr><tr>
+<td style="background-color: #309020" width="50%"> <span style="color: #ffffff">GREEN </span></td>
+<td style="background-color: #30f020" width="50%"> <span style="color: #ffffff">LGREEN </span></td>
+</tr><tr>
+<td style="background-color: #208090" width="50%"> <span style="color: #ffffff">CYAN </span></td>
+<td style="background-color: #38d0ff" width="50%"> <span style="color: #000000">LCYAN </span></td>
+</tr><tr>
+<td style="background-color: #971a1a" width="50%"> <span style="color: #ffffff">RED </span></td>
+<td style="background-color: #ff3020" width="50%"> <span style="color: #ffffff">LRED </span></td>
+</tr><tr>
+<td style="background-color: #702090" width="50%"> <span style="color: #ffffff">MAGENTA </span></td>
+<td style="background-color: #d038ff" width="50%"> <span style="color: #ffffff">LMAGENTA </span></td>
+</tr><tr>
+<td style="background-color: #907030" width="50%"> <span style="color: #ffffff">BROWN </span></td>
+<td style="background-color: #ffe020" width="50%"> <span style="color: #000000">YELLOW </span></td>
+</tr><tr>
+<td style="background-color: #b0b0b0" width="50%"> <span style="color: #000000">LGRAY </span></td>
+<td style="background-color: #ffffff" width="50%"> <span style="color: #000000">WHITE </span></td>
+</tr>
+</tbody></table></div>
+<div style="clear:both;"></div>
+<table class="collapsible collapsed infobox gamedata" style="background: #fdfdfd; border: 1px solid #aaa; font-size: 88%; margin: 0 auto -1px; vertical-align: middle; width: 100%; max-width: 100em; table-layout: fixed;">
+<tbody><tr style="line-height: 1.5em;"><th scope="col" style="background: #cce6b3; padding: 0.25em 1em; text-align: center; display: table-cell;&#32;;"><div style="font-size: 114%; margin: 0 9em;">colors.txt</div></th></tr>
+<tr style="line-height: 1.5em; text-align: left; display: table-cell;"><td><div style="overflow: auto;"><span class="gamedata-content" style="font-family: monospace; font-size:1.25em; white-space:pre;">
+[BLACK_R:0]
+[BLACK_G:0]
+[BLACK_B:0]
+[BLUE_R:32]
+[BLUE_G:48]
+[BLUE_B:144]
+[GREEN_R:48]
+[GREEN_G:144]
+[GREEN_B:32]
+[CYAN_R:32]
+[CYAN_G:128]
+[CYAN_B:144]
+[RED_R:151]
+[RED_G:26]
+[RED_B:26]
+[MAGENTA_R:112]
+[MAGENTA_G:32]
+[MAGENTA_B:144]
+[BROWN_R:144]
+[BROWN_G:112]
+[BROWN_B:48]
+[LGRAY_R:176]
+[LGRAY_G:176]
+[LGRAY_B:176]
+[DGRAY_R:112]
+[DGRAY_G:112]
+[DGRAY_B:112]
+[LBLUE_R:40]
+[LBLUE_G:56]
+[LBLUE_B:255]
+[LGREEN_R:48]
+[LGREEN_G:240]
+[LGREEN_B:32]
+[LCYAN_R:56]
+[LCYAN_G:208]
+[LCYAN_B:255]
+[LRED_R:255]
+[LRED_G:48]
+[LRED_B:32]
+[LMAGENTA_R:208]
+[LMAGENTA_G:56]
+[LMAGENTA_B:255]
+[YELLOW_R:255]
+[YELLOW_G:224]
+[YELLOW_B:32]
+[WHITE_R:255]
+[WHITE_G:255]
+[WHITE_B:255]
+</span></div></td></tr></tbody></table>
+<p><br />
+</p>
+<hr />
+<h3><span class="mw-headline" id="True_CGA_Scheme">True CGA Scheme</span></h3>
+<p>This scheme uses the genuine <a rel="nofollow" class="external text" href="http://en.wikipedia.org/wiki/Color_Graphics_Adapter">CGA</a> palette, in case you're an old-school purist.  
+</p><p><i>(Note that the CGA "brown" can be difficult to distinguish from "red" unless it is immediately nearby.  For a slightly more readable version, you can "cheat" and replace the</i> [BROWN_G:85]
+<i>with  </i>[BROWN_G:170]. <i>)</i>
+</p><p><br />
+</p>
+<div style="width: auto; margin:0px 20%"><table style="width:100%">
+<tbody><tr>
+<td style="background-color: #000000" width="50%"> <span style="color: #ffffff">BLACK </span></td>
+<td style="background-color: #555555" width="50%"> <span style="color: #ffffff">DGRAY </span></td>
+</tr><tr>
+<td style="background-color: #0000aa" width="50%"> <span style="color: #ffffff">BLUE </span></td>
+<td style="background-color: #5555ff" width="50%"> <span style="color: #ffffff">LBLUE </span></td>
+</tr><tr>
+<td style="background-color: #00aa00" width="50%"> <span style="color: #ffffff">GREEN </span></td>
+<td style="background-color: #55ff55" width="50%"> <span style="color: #000000">LGREEN </span></td>
+</tr><tr>
+<td style="background-color: #00aaaa" width="50%"> <span style="color: #ffffff">CYAN </span></td>
+<td style="background-color: #55ffff" width="50%"> <span style="color: #000000">LCYAN </span></td>
+</tr><tr>
+<td style="background-color: #aa0000" width="50%"> <span style="color: #ffffff">RED </span></td>
+<td style="background-color: #ff5555" width="50%"> <span style="color: #ffffff">LRED </span></td>
+</tr><tr>
+<td style="background-color: #aa00aa" width="50%"> <span style="color: #ffffff">MAGENTA </span></td>
+<td style="background-color: #ff55ff" width="50%"> <span style="color: #ffffff">LMAGENTA </span></td>
+</tr><tr>
+<td style="background-color: #aa5500" width="50%"> <span style="color: #ffffff">BROWN </span></td>
+<td style="background-color: #ffff55" width="50%"> <span style="color: #000000">YELLOW </span></td>
+</tr><tr>
+<td style="background-color: #aaaaaa" width="50%"> <span style="color: #000000">LGRAY </span></td>
+<td style="background-color: #ffffff" width="50%"> <span style="color: #000000">WHITE </span></td>
+</tr>
+</tbody></table></div>
+<div style="clear:both;"></div>
+<table class="collapsible collapsed infobox gamedata" style="background: #fdfdfd; border: 1px solid #aaa; font-size: 88%; margin: 0 auto -1px; vertical-align: middle; width: 100%; max-width: 100em; table-layout: fixed;">
+<tbody><tr style="line-height: 1.5em;"><th scope="col" style="background: #cce6b3; padding: 0.25em 1em; text-align: center; display: table-cell;&#32;;"><div style="font-size: 114%; margin: 0 9em;">colors.txt</div></th></tr>
+<tr style="line-height: 1.5em; text-align: left; display: table-cell;"><td><div style="overflow: auto;"><span class="gamedata-content" style="font-family: monospace; font-size:1.25em; white-space:pre;">
+[BLACK_R:0]
+[BLACK_G:0]
+[BLACK_B:0]
+[BLUE_R:0]
+[BLUE_G:0]
+[BLUE_B:170]
+[GREEN_R:0]
+[GREEN_G:170]
+[GREEN_B:0]
+[CYAN_R:0]
+[CYAN_G:170]
+[CYAN_B:170]
+[RED_R:170]
+[RED_G:0]
+[RED_B:0]
+[MAGENTA_R:170]
+[MAGENTA_G:0]
+[MAGENTA_B:170]
+[BROWN_R:170]
+[BROWN_G:85]
+[BROWN_B:0]
+[LGRAY_R:170]
+[LGRAY_G:170]
+[LGRAY_B:170]
+[DGRAY_R:85]
+[DGRAY_G:85]
+[DGRAY_B:85]
+[LBLUE_R:85]
+[LBLUE_G:85]
+[LBLUE_B:255]
+[LGREEN_R:85]
+[LGREEN_G:255]
+[LGREEN_B:85]
+[LCYAN_R:85]
+[LCYAN_G:255]
+[LCYAN_B:255]
+[LRED_R:255]
+[LRED_G:85]
+[LRED_B:85]
+[LMAGENTA_R:255]
+[LMAGENTA_G:85]
+[LMAGENTA_B:255]
+[YELLOW_R:255]
+[YELLOW_G:255]
+[YELLOW_B:85]
+[WHITE_R:255]
+[WHITE_G:255]
+[WHITE_B:255]
+</span></div></td></tr></tbody></table>
+<p><br />
+</p>
+<hr />
+<h3><span class="mw-headline" id="For_the_Chromatically_Challenged">For the Chromatically Challenged</span></h3>
+<p>Colour blindness can result in colours being too similar, such as red and brown, so this scheme sacrifices true colour accuracy for a greater difference in hues. If you have normal colour vision, then this probably looks really weird.
+</p><p><br />
+</p>
+<div style="width: auto; margin:0px 20%"><table style="width:100%">
+<tbody><tr>
+<td style="background-color: #000000" width="50%"> <span style="color: #ffffff">BLACK </span></td>
+<td style="background-color: #808080" width="50%"> <span style="color: #ffffff">DGRAY </span></td>
+</tr><tr>
+<td style="background-color: #0000c0" width="50%"> <span style="color: #ffffff">BLUE </span></td>
+<td style="background-color: #3030ff" width="50%"> <span style="color: #ffffff">LBLUE </span></td>
+</tr><tr>
+<td style="background-color: #008000" width="50%"> <span style="color: #ffffff">GREEN </span></td>
+<td style="background-color: #00d000" width="50%"> <span style="color: #ffffff">LGREEN </span></td>
+</tr><tr>
+<td style="background-color: #007090" width="50%"> <span style="color: #ffffff">CYAN </span></td>
+<td style="background-color: #40d0ff" width="50%"> <span style="color: #000000">LCYAN </span></td>
+</tr><tr>
+<td style="background-color: #c00000" width="50%"> <span style="color: #ffffff">RED </span></td>
+<td style="background-color: #ff3030" width="50%"> <span style="color: #ffffff">LRED </span></td>
+</tr><tr>
+<td style="background-color: #a00080" width="50%"> <span style="color: #ffffff">MAGENTA </span></td>
+<td style="background-color: #ff40d0" width="50%"> <span style="color: #ffffff">LMAGENTA </span></td>
+</tr><tr>
+<td style="background-color: #606000" width="50%"> <span style="color: #ffffff">BROWN </span></td>
+<td style="background-color: #ffff40" width="50%"> <span style="color: #000000">YELLOW </span></td>
+</tr><tr>
+<td style="background-color: #c0c0c0" width="50%"> <span style="color: #000000">LGRAY </span></td>
+<td style="background-color: #ffffff" width="50%"> <span style="color: #000000">WHITE </span></td>
+</tr>
+</tbody></table></div>
+<div style="clear:both;"></div>
+<table class="collapsible collapsed infobox gamedata" style="background: #fdfdfd; border: 1px solid #aaa; font-size: 88%; margin: 0 auto -1px; vertical-align: middle; width: 100%; max-width: 100em; table-layout: fixed;">
+<tbody><tr style="line-height: 1.5em;"><th scope="col" style="background: #cce6b3; padding: 0.25em 1em; text-align: center; display: table-cell;&#32;;"><div style="font-size: 114%; margin: 0 9em;">colors.txt</div></th></tr>
+<tr style="line-height: 1.5em; text-align: left; display: table-cell;"><td><div style="overflow: auto;"><span class="gamedata-content" style="font-family: monospace; font-size:1.25em; white-space:pre;">
+[BLACK_R:0]
+[BLACK_G:0]
+[BLACK_B:0]
+[BLUE_R:0]
+[BLUE_G:0]
+[BLUE_B:192]
+[GREEN_R:0]
+[GREEN_G:128]
+[GREEN_B:0]
+[CYAN_R:0]
+[CYAN_G:112]
+[CYAN_B:144]
+[RED_R:192]
+[RED_G:0]
+[RED_B:0]
+[MAGENTA_R:160]
+[MAGENTA_G:0]
+[MAGENTA_B:128]
+[BROWN_R:96]
+[BROWN_G:96]
+[BROWN_B:0]
+[LGRAY_R:192]
+[LGRAY_G:192]
+[LGRAY_B:192]
+[DGRAY_R:128]
+[DGRAY_G:128]
+[DGRAY_B:128]
+[LBLUE_R:48]
+[LBLUE_G:48]
+[LBLUE_B:255]
+[LGREEN_R:0]
+[LGREEN_G:208]
+[LGREEN_B:0]
+[LCYAN_R:64]
+[LCYAN_G:208]
+[LCYAN_B:255]
+[LRED_R:255]
+[LRED_G:48]
+[LRED_B:48]
+[LMAGENTA_R:255]
+[LMAGENTA_G:64]
+[LMAGENTA_B:208]
+[YELLOW_R:255]
+[YELLOW_G:255]
+[YELLOW_B:64]
+[WHITE_R:255]
+[WHITE_G:255]
+[WHITE_B:255]
+</span></div></td></tr></tbody></table>
+<p><br />
+</p>
+<hr />
+<h3><span id="Red/Green_Colorblindness"></span><span class="mw-headline" id="Red.2FGreen_Colorblindness">Red/Green Colorblindness</span></h3>
+<p>A modification of the chromatically challenged color scheme above, made to the tastes of someone with Red/Green colorblindness.
+</p>
+<div style="width: auto; margin:0px 20%"><table style="width:100%">
+<tbody><tr>
+<td style="background-color: #000000" width="50%"> <span style="color: #ffffff">BLACK </span></td>
+<td style="background-color: #707070" width="50%"> <span style="color: #ffffff">DGRAY </span></td>
+</tr><tr>
+<td style="background-color: #0000f0" width="50%"> <span style="color: #ffffff">BLUE </span></td>
+<td style="background-color: #5050ff" width="50%"> <span style="color: #ffffff">LBLUE </span></td>
+</tr><tr>
+<td style="background-color: #008000" width="50%"> <span style="color: #ffffff">GREEN </span></td>
+<td style="background-color: #00d000" width="50%"> <span style="color: #ffffff">LGREEN </span></td>
+</tr><tr>
+<td style="background-color: #007090" width="50%"> <span style="color: #ffffff">CYAN </span></td>
+<td style="background-color: #40d0ff" width="50%"> <span style="color: #000000">LCYAN </span></td>
+</tr><tr>
+<td style="background-color: #f00000" width="50%"> <span style="color: #ffffff">RED </span></td>
+<td style="background-color: #ff5050" width="50%"> <span style="color: #ffffff">LRED </span></td>
+</tr><tr>
+<td style="background-color: #a00080" width="50%"> <span style="color: #ffffff">MAGENTA </span></td>
+<td style="background-color: #ff30f0" width="50%"> <span style="color: #ffffff">LMAGENTA </span></td>
+</tr><tr>
+<td style="background-color: #806000" width="50%"> <span style="color: #ffffff">BROWN </span></td>
+<td style="background-color: #ffff40" width="50%"> <span style="color: #000000">YELLOW </span></td>
+</tr><tr>
+<td style="background-color: #d0d0d0" width="50%"> <span style="color: #000000">LGRAY </span></td>
+<td style="background-color: #ffffff" width="50%"> <span style="color: #000000">WHITE </span></td>
+</tr>
+</tbody></table></div>
+<div style="clear:both;"></div>
+<table class="collapsible collapsed infobox gamedata" style="background: #fdfdfd; border: 1px solid #aaa; font-size: 88%; margin: 0 auto -1px; vertical-align: middle; width: 100%; max-width: 100em; table-layout: fixed;">
+<tbody><tr style="line-height: 1.5em;"><th scope="col" style="background: #cce6b3; padding: 0.25em 1em; text-align: center; display: table-cell;&#32;;"><div style="font-size: 114%; margin: 0 9em;">colors.txt</div></th></tr>
+<tr style="line-height: 1.5em; text-align: left; display: table-cell;"><td><div style="overflow: auto;"><span class="gamedata-content" style="font-family: monospace; font-size:1.25em; white-space:pre;">
+[BLACK_R:0]
+[BLACK_G:0]
+[BLACK_B:0]
+[BLUE_R:0]
+[BLUE_G:0]
+[BLUE_B:240]
+[GREEN_R:0]
+[GREEN_G:128]
+[GREEN_B:0]
+[CYAN_R:0]
+[CYAN_G:112]
+[CYAN_B:144]
+[RED_R:240]
+[RED_G:0]
+[RED_B:0]
+[MAGENTA_R:160]
+[MAGENTA_G:0]
+[MAGENTA_B:128]
+[BROWN_R:128]
+[BROWN_G:96]
+[BROWN_B:0]
+[LGRAY_R:208]
+[LGRAY_G:208]
+[LGRAY_B:208]
+[DGRAY_R:112]
+[DGRAY_G:112]
+[DGRAY_B:112]
+[LBLUE_R:80]
+[LBLUE_G:80]
+[LBLUE_B:255]
+[LGREEN_R:0]
+[LGREEN_G:208]
+[LGREEN_B:0]
+[LCYAN_R:64]
+[LCYAN_G:208]
+[LCYAN_B:255]
+[LRED_R:255]
+[LRED_G:80]
+[LRED_B:80]
+[LMAGENTA_R:255]
+[LMAGENTA_G:48]
+[LMAGENTA_B:240]
+[YELLOW_R:255]
+[YELLOW_G:255]
+[YELLOW_B:64]
+[WHITE_R:255]
+[WHITE_G:255]
+[WHITE_B:255]
+</span></div></td></tr></tbody></table>
+<p><br />
+</p>
+<hr />
+<h3><span class="mw-headline" id="Tango_Scheme">Tango Scheme</span></h3>
+<p>Color scheme to match <a rel="nofollow" class="external text" href="http://tango.freedesktop.org/Tango_Icon_Theme_Guidelines">Tango palette</a>. Cyan values were missing from palette, so blue/plum values are used instead.
+</p>
+<div style="width: auto; margin:0px 20%"><table style="width:100%">
+<tbody><tr>
+<td style="background-color: #2e3436" width="50%"> <span style="color: #ffffff">BLACK </span></td>
+<td style="background-color: #888a85" width="50%"> <span style="color: #ffffff">DGRAY </span></td>
+</tr><tr>
+<td style="background-color: #204a87" width="50%"> <span style="color: #ffffff">BLUE </span></td>
+<td style="background-color: #3465a4" width="50%"> <span style="color: #ffffff">LBLUE </span></td>
+</tr><tr>
+<td style="background-color: #4e9a06" width="50%"> <span style="color: #ffffff">GREEN </span></td>
+<td style="background-color: #8ae234" width="50%"> <span style="color: #000000">LGREEN </span></td>
+</tr><tr>
+<td style="background-color: #75507b" width="50%"> <span style="color: #ffffff">CYAN </span></td>
+<td style="background-color: #729fcf" width="50%"> <span style="color: #ffffff">LCYAN </span></td>
+</tr><tr>
+<td style="background-color: #a40000" width="50%"> <span style="color: #ffffff">RED </span></td>
+<td style="background-color: #ef2929" width="50%"> <span style="color: #ffffff">LRED </span></td>
+</tr><tr>
+<td style="background-color: #5c3566" width="50%"> <span style="color: #ffffff">MAGENTA </span></td>
+<td style="background-color: #ad7fa8" width="50%"> <span style="color: #ffffff">LMAGENTA </span></td>
+</tr><tr>
+<td style="background-color: #ce5c00" width="50%"> <span style="color: #ffffff">BROWN </span></td>
+<td style="background-color: #fce94f" width="50%"> <span style="color: #000000">YELLOW </span></td>
+</tr><tr>
+<td style="background-color: #babdb6" width="50%"> <span style="color: #000000">LGRAY </span></td>
+<td style="background-color: #eeeeec" width="50%"> <span style="color: #000000">WHITE </span></td>
+</tr>
+</tbody></table></div>
+<div style="clear:both;"></div>
+<table class="collapsible collapsed infobox gamedata" style="background: #fdfdfd; border: 1px solid #aaa; font-size: 88%; margin: 0 auto -1px; vertical-align: middle; width: 100%; max-width: 100em; table-layout: fixed;">
+<tbody><tr style="line-height: 1.5em;"><th scope="col" style="background: #cce6b3; padding: 0.25em 1em; text-align: center; display: table-cell;&#32;;"><div style="font-size: 114%; margin: 0 9em;">colors.txt</div></th></tr>
+<tr style="line-height: 1.5em; text-align: left; display: table-cell;"><td><div style="overflow: auto;"><span class="gamedata-content" style="font-family: monospace; font-size:1.25em; white-space:pre;">
+[BLACK_R:46]
+[BLACK_G:52]
+[BLACK_B:54]
+[BLUE_R:32]
+[BLUE_G:74]
+[BLUE_B:135]
+[GREEN_R:78]
+[GREEN_G:154]
+[GREEN_B:6]
+[CYAN_R:117]
+[CYAN_G:80]
+[CYAN_B:123]
+[RED_R:164]
+[RED_G:0]
+[RED_B:0]
+[MAGENTA_R:92]
+[MAGENTA_G:53]
+[MAGENTA_B:102]
+[BROWN_R:206]
+[BROWN_G:92]
+[BROWN_B:0]
+[LGRAY_R:186]
+[LGRAY_G:189]
+[LGRAY_B:182]
+[DGRAY_R:136]
+[DGRAY_G:138]
+[DGRAY_B:133]
+[LBLUE_R:52]
+[LBLUE_G:101]
+[LBLUE_B:164]
+[LGREEN_R:138]
+[LGREEN_G:226]
+[LGREEN_B:52]
+[LCYAN_R:114]
+[LCYAN_G:159]
+[LCYAN_B:207]
+[LRED_R:239]
+[LRED_G:41]
+[LRED_B:41]
+[LMAGENTA_R:173]
+[LMAGENTA_G:127]
+[LMAGENTA_B:168]
+[YELLOW_R:252]
+[YELLOW_G:233]
+[YELLOW_B:79]
+[WHITE_R:238]
+[WHITE_G:238]
+[WHITE_B:236]
+</span></div></td></tr></tbody></table>
+<p><br />
+</p>
+<hr />
+<h3><span id="AngleWyrm's_Colorset"></span><span class="mw-headline" id="AngleWyrm.27s_Colorset">AngleWyrm's Colorset</span></h3>
+<p>Blues greens and brown that are easy on the eyes.
+</p>
+<div style="width: auto; margin:0px 20%"><table style="width:100%">
+<tbody><tr>
+<td style="background-color: #000000" width="50%"> <span style="color: #ffffff">BLACK </span></td>
+<td style="background-color: #484848" width="50%"> <span style="color: #ffffff">DGRAY </span></td>
+</tr><tr>
+<td style="background-color: #303c78" width="50%"> <span style="color: #ffffff">BLUE </span></td>
+<td style="background-color: #5064b4" width="50%"> <span style="color: #ffffff">LBLUE </span></td>
+</tr><tr>
+<td style="background-color: #1e6428" width="50%"> <span style="color: #ffffff">GREEN </span></td>
+<td style="background-color: #289632" width="50%"> <span style="color: #ffffff">LGREEN </span></td>
+</tr><tr>
+<td style="background-color: #285a82" width="50%"> <span style="color: #ffffff">CYAN </span></td>
+<td style="background-color: #729fcf" width="50%"> <span style="color: #ffffff">LCYAN </span></td>
+</tr><tr>
+<td style="background-color: #a40000" width="50%"> <span style="color: #ffffff">RED </span></td>
+<td style="background-color: #ef2929" width="50%"> <span style="color: #ffffff">LRED </span></td>
+</tr><tr>
+<td style="background-color: #5c3566" width="50%"> <span style="color: #ffffff">MAGENTA </span></td>
+<td style="background-color: #ad7fa8" width="50%"> <span style="color: #ffffff">LMAGENTA </span></td>
+</tr><tr>
+<td style="background-color: #785032" width="50%"> <span style="color: #ffffff">BROWN </span></td>
+<td style="background-color: #b4aa3c" width="50%"> <span style="color: #000000">YELLOW </span></td>
+</tr><tr>
+<td style="background-color: #808080" width="50%"> <span style="color: #ffffff">LGRAY </span></td>
+<td style="background-color: #eeeeec" width="50%"> <span style="color: #000000">WHITE </span></td>
+</tr>
+</tbody></table></div>
+<div style="clear:both;"></div>
+<table class="collapsible collapsed infobox gamedata" style="background: #fdfdfd; border: 1px solid #aaa; font-size: 88%; margin: 0 auto -1px; vertical-align: middle; width: 100%; max-width: 100em; table-layout: fixed;">
+<tbody><tr style="line-height: 1.5em;"><th scope="col" style="background: #cce6b3; padding: 0.25em 1em; text-align: center; display: table-cell;&#32;;"><div style="font-size: 114%; margin: 0 9em;">colors.txt</div></th></tr>
+<tr style="line-height: 1.5em; text-align: left; display: table-cell;"><td><div style="overflow: auto;"><span class="gamedata-content" style="font-family: monospace; font-size:1.25em; white-space:pre;">
+[BLACK_R:0]
+[BLACK_G:0]
+[BLACK_B:0]
+[BLUE_R:48]
+[BLUE_G:60]
+[BLUE_B:120]
+[GREEN_R:30]
+[GREEN_G:100]
+[GREEN_B:40]
+[CYAN_R:40]
+[CYAN_G:90]
+[CYAN_B:130]
+[RED_R:164]
+[RED_G:0]
+[RED_B:0]
+[MAGENTA_R:92]
+[MAGENTA_G:53]
+[MAGENTA_B:102]
+[BROWN_R:120]
+[BROWN_G:80]
+[BROWN_B:50]
+[LGRAY_R:128]
+[LGRAY_G:128]
+[LGRAY_B:128]
+[DGRAY_R:72]
+[DGRAY_G:72]
+[DGRAY_B:72]
+[LBLUE_R:80]
+[LBLUE_G:100]
+[LBLUE_B:180]
+[LGREEN_R:40]
+[LGREEN_G:150]
+[LGREEN_B:50]
+[LCYAN_R:114]
+[LCYAN_G:159]
+[LCYAN_B:207]
+[LRED_R:239]
+[LRED_G:41]
+[LRED_B:41]
+[LMAGENTA_R:173]
+[LMAGENTA_G:127]
+[LMAGENTA_B:168]
+[YELLOW_R:180]
+[YELLOW_G:170]
+[YELLOW_B:60]
+[WHITE_R:238]
+[WHITE_G:238]
+[WHITE_B:236]
+</span></div></td></tr></tbody></table>
+<p><br />
+</p>
+<hr />
+<h3><span id="Putnam's_Fortbent_Color_Scheme"></span><span class="mw-headline" id="Putnam.27s_Fortbent_Color_Scheme">Putnam's Fortbent Color Scheme</span></h3>
+<p>A color scheme designed for closest accuracy to Homestuck's colors; no accuracy to actual in-game colors guaranteed. 
+</p>
+<div style="width: auto; margin:0px 20%"><table style="width:100%">
+<tbody><tr>
+<td style="background-color: #000000" width="50%"> <span style="color: #ffffff">BLACK </span></td>
+<td style="background-color: #626262" width="50%"> <span style="color: #ffffff">DGRAY (Caliborn gray tumut)</span></td>
+</tr><tr>
+<td style="background-color: #000056" width="50%"> <span style="color: #ffffff">BLUE (Equius B100)</span></td>
+<td style="background-color: #005682" width="50%"> <span style="color: #ffffff">LBLUE (Vriska Cerulean!!!!!!!!)</span></td>
+</tr><tr>
+<td style="background-color: #416600" width="50%"> <span style="color: #ffffff">GREEN (:33 &lt; *nepeta green*)</span></td>
+<td style="background-color: #00ff00" width="50%"> <span style="color: #ffffff">LGREEN (Calliope's blood)</span></td>
+</tr><tr>
+<td style="background-color: #008282" width="50%"> <span style="color: #ffffff">CYAN (T3R3Z1 T34L)</span></td>
+<td style="background-color: #00ffff" width="50%"> <span style="color: #000000">LCYAN </span></td>
+</tr><tr>
+<td style="background-color: #a10000" width="50%"> <span style="color: #ffffff">RED (aradia red)</span></td>
+<td style="background-color: #ff0000" width="50%"> <span style="color: #ffffff">LRED </span></td>
+</tr><tr>
+<td style="background-color: #6a006a" width="50%"> <span style="color: #ffffff">MAGENTA (eridan vviolet)</span></td>
+<td style="background-color: #77003c" width="50%"> <span style="color: #ffffff">LMAGENTA (meenah purple)</span></td>
+</tr><tr>
+<td style="background-color: #a15000" width="50%"> <span style="color: #ffffff">BROWN (uHH, tAVROS BROWN)</span></td>
+<td style="background-color: #a1a100" width="50%"> <span style="color: #ffffff">YELLOW (yucky mu2tard yellow)</span></td>
+</tr><tr>
+<td style="background-color: #929292" width="50%"> <span style="color: #ffffff">LGRAY (Calliope gray!)</span></td>
+<td style="background-color: #ffffff" width="50%"> <span style="color: #000000">WHITE </span></td>
+</tr>
+</tbody></table></div>
+<div style="clear:both;"></div>
+<table class="collapsible collapsed infobox gamedata" style="background: #fdfdfd; border: 1px solid #aaa; font-size: 88%; margin: 0 auto -1px; vertical-align: middle; width: 100%; max-width: 100em; table-layout: fixed;">
+<tbody><tr style="line-height: 1.5em;"><th scope="col" style="background: #cce6b3; padding: 0.25em 1em; text-align: center; display: table-cell;&#32;;"><div style="font-size: 114%; margin: 0 9em;">colors.txt</div></th></tr>
+<tr style="line-height: 1.5em; text-align: left; display: table-cell;"><td><div style="overflow: auto;"><span class="gamedata-content" style="font-family: monospace; font-size:1.25em; white-space:pre;">
+[BLACK_R:0]
+[BLACK_G:0]
+[BLACK_B:0]
+[BLUE_R:0]
+[BLUE_G:0]
+[BLUE_B:86]
+[GREEN_R:65]
+[GREEN_G:102]
+[GREEN_B:0]
+[CYAN_R:0]
+[CYAN_G:130]
+[CYAN_B:130]
+[RED_R:161]
+[RED_G:0]
+[RED_B:0]
+[MAGENTA_R:106]
+[MAGENTA_G:0]
+[MAGENTA_B:106]
+[BROWN_R:161]
+[BROWN_G:80]
+[BROWN_B:0]
+[LGRAY_R:146]
+[LGRAY_G:146]
+[LGRAY_B:146]
+[DGRAY_R:98]
+[DGRAY_G:98]
+[DGRAY_B:98]
+[LBLUE_R:0]
+[LBLUE_G:86]
+[LBLUE_B:130]
+[LGREEN_R:0]
+[LGREEN_G:255]
+[LGREEN_B:0]
+[LCYAN_R:0]
+[LCYAN_G:255]
+[LCYAN_B:255]
+[LRED_R:255]
+[LRED_G:0]
+[LRED_B:0]
+[LMAGENTA_R:119]
+[LMAGENTA_G:0]
+[LMAGENTA_B:60]
+[YELLOW_R:161]
+[YELLOW_G:161]
+[YELLOW_B:0]
+[WHITE_R:255]
+[WHITE_G:255]
+[WHITE_B:255]
+</span></div></td></tr></tbody></table>
+<p><br />
+</p>
+<hr />
+<h3><span id="Vherid's_Color_Schemes"></span><span class="mw-headline" id="Vherid.27s_Color_Schemes">Vherid's Color Schemes</span></h3>
+<h4><span id="Default_+"></span><span class="mw-headline" id="Default_.2B">Default +</span></h4>
+<div style="width: auto; margin:0px 20%"><table style="width:100%">
+<tbody><tr>
+<td style="background-color: #000000" width="50%"> <span style="color: #ffffff">BLACK </span></td>
+<td style="background-color: #505050" width="50%"> <span style="color: #ffffff">DGRAY </span></td>
+</tr><tr>
+<td style="background-color: #1233af" width="50%"> <span style="color: #ffffff">BLUE </span></td>
+<td style="background-color: #0072ff" width="50%"> <span style="color: #ffffff">LBLUE </span></td>
+</tr><tr>
+<td style="background-color: #008000" width="50%"> <span style="color: #ffffff">GREEN </span></td>
+<td style="background-color: #00ff00" width="50%"> <span style="color: #ffffff">LGREEN </span></td>
+</tr><tr>
+<td style="background-color: #00b2b2" width="50%"> <span style="color: #ffffff">CYAN </span></td>
+<td style="background-color: #00ffff" width="50%"> <span style="color: #000000">LCYAN </span></td>
+</tr><tr>
+<td style="background-color: #6b0000" width="50%"> <span style="color: #ffffff">RED </span></td>
+<td style="background-color: #ff0000" width="50%"> <span style="color: #ffffff">LRED </span></td>
+</tr><tr>
+<td style="background-color: #800080" width="50%"> <span style="color: #ffffff">MAGENTA </span></td>
+<td style="background-color: #d100ac" width="50%"> <span style="color: #ffffff">LMAGENTA </span></td>
+</tr><tr>
+<td style="background-color: #765e00" width="50%"> <span style="color: #ffffff">BROWN </span></td>
+<td style="background-color: #ffff00" width="50%"> <span style="color: #000000">YELLOW </span></td>
+</tr><tr>
+<td style="background-color: #c0c0c0" width="50%"> <span style="color: #000000">LGRAY </span></td>
+<td style="background-color: #ffffff" width="50%"> <span style="color: #000000">WHITE </span></td>
+</tr>
+</tbody></table></div>
+<div style="clear:both;"></div>
+<table class="collapsible collapsed infobox gamedata" style="background: #fdfdfd; border: 1px solid #aaa; font-size: 88%; margin: 0 auto -1px; vertical-align: middle; width: 100%; max-width: 100em; table-layout: fixed;">
+<tbody><tr style="line-height: 1.5em;"><th scope="col" style="background: #cce6b3; padding: 0.25em 1em; text-align: center; display: table-cell;&#32;;"><div style="font-size: 114%; margin: 0 9em;">colors.txt</div></th></tr>
+<tr style="line-height: 1.5em; text-align: left; display: table-cell;"><td><div style="overflow: auto;"><span class="gamedata-content" style="font-family: monospace; font-size:1.25em; white-space:pre;">
+[BLACK_R:0]
+[BLACK_G:0]
+[BLACK_B:0]
+[BLUE_R:18]
+[BLUE_G:51]
+[BLUE_B:175]
+[GREEN_R:0]
+[GREEN_G:128]
+[GREEN_B:0]
+[CYAN_R:0]
+[CYAN_G:178]
+[CYAN_B:178]
+[RED_R:107]
+[RED_G:0]
+[RED_B:0]
+[MAGENTA_R:128]
+[MAGENTA_G:0]
+[MAGENTA_B:128]
+[BROWN_R:118]
+[BROWN_G:94]
+[BROWN_B:0]
+[LGRAY_R:192]
+[LGRAY_G:192]
+[LGRAY_B:192]
+[DGRAY_R:80]
+[DGRAY_G:80]
+[DGRAY_B:80]
+[LBLUE_R:0]
+[LBLUE_G:114]
+[LBLUE_B:255]
+[LGREEN_R:0]
+[LGREEN_G:255]
+[LGREEN_B:0]
+[LCYAN_R:0]
+[LCYAN_G:255]
+[LCYAN_B:255]
+[LRED_R:255]
+[LRED_G:0]
+[LRED_B:0]
+[LMAGENTA_R:209]
+[LMAGENTA_G:0]
+[LMAGENTA_B:172]
+[YELLOW_R:255]
+[YELLOW_G:255]
+[YELLOW_B:0]
+[WHITE_R:255]
+[WHITE_G:255]
+[WHITE_B:255]
+</span></div></td></tr></tbody></table>
+<p><br />
+</p>
+<h4><span class="mw-headline" id="Natural">Natural</span></h4>
+<div style="width: auto; margin:0px 20%"><table style="width:100%">
+<tbody><tr>
+<td style="background-color: #1b1209" width="50%"> <span style="color: #ffffff">BLACK </span></td>
+<td style="background-color: #464132" width="50%"> <span style="color: #ffffff">DGRAY </span></td>
+</tr><tr>
+<td style="background-color: #203296" width="50%"> <span style="color: #ffffff">BLUE </span></td>
+<td style="background-color: #0078ff" width="50%"> <span style="color: #ffffff">LBLUE </span></td>
+</tr><tr>
+<td style="background-color: #1e6428" width="50%"> <span style="color: #ffffff">GREEN </span></td>
+<td style="background-color: #aaff00" width="50%"> <span style="color: #000000">LGREEN </span></td>
+</tr><tr>
+<td style="background-color: #107873" width="50%"> <span style="color: #ffffff">CYAN </span></td>
+<td style="background-color: #1bd2cd" width="50%"> <span style="color: #ffffff">LCYAN </span></td>
+</tr><tr>
+<td style="background-color: #6e1414" width="50%"> <span style="color: #ffffff">RED </span></td>
+<td style="background-color: #c02424" width="50%"> <span style="color: #ffffff">LRED </span></td>
+</tr><tr>
+<td style="background-color: #8511ab" width="50%"> <span style="color: #ffffff">MAGENTA </span></td>
+<td style="background-color: #e647aa" width="50%"> <span style="color: #ffffff">LMAGENTA </span></td>
+</tr><tr>
+<td style="background-color: #64402a" width="50%"> <span style="color: #ffffff">BROWN </span></td>
+<td style="background-color: #fab40a" width="50%"> <span style="color: #000000">YELLOW </span></td>
+</tr><tr>
+<td style="background-color: #746c54" width="50%"> <span style="color: #ffffff">LGRAY </span></td>
+<td style="background-color: #dcdcdc" width="50%"> <span style="color: #000000">WHITE </span></td>
+</tr>
+</tbody></table></div>
+<div style="clear:both;"></div>
+<table class="collapsible collapsed infobox gamedata" style="background: #fdfdfd; border: 1px solid #aaa; font-size: 88%; margin: 0 auto -1px; vertical-align: middle; width: 100%; max-width: 100em; table-layout: fixed;">
+<tbody><tr style="line-height: 1.5em;"><th scope="col" style="background: #cce6b3; padding: 0.25em 1em; text-align: center; display: table-cell;&#32;;"><div style="font-size: 114%; margin: 0 9em;">colors.txt</div></th></tr>
+<tr style="line-height: 1.5em; text-align: left; display: table-cell;"><td><div style="overflow: auto;"><span class="gamedata-content" style="font-family: monospace; font-size:1.25em; white-space:pre;">
+[BLACK_R:27]
+[BLACK_G:18]
+[BLACK_B:9]
+[BLUE_R:32]
+[BLUE_G:50]
+[BLUE_B:150]
+[GREEN_R:30]
+[GREEN_G:100]
+[GREEN_B:40]
+[CYAN_R:16]
+[CYAN_G:120]
+[CYAN_B:115]
+[RED_R:110]
+[RED_G:20]
+[RED_B:20]
+[MAGENTA_R:133]
+[MAGENTA_G:17]
+[MAGENTA_B:171]
+[BROWN_R:100]
+[BROWN_G:64]
+[BROWN_B:42]
+[LGRAY_R:116]
+[LGRAY_G:108]
+[LGRAY_B:84]
+[DGRAY_R:70]
+[DGRAY_G:65]
+[DGRAY_B:50]
+[LBLUE_R:0]
+[LBLUE_G:120]
+[LBLUE_B:255]
+[LGREEN_R:170]
+[LGREEN_G:255]
+[LGREEN_B:0]
+[LCYAN_R:27]
+[LCYAN_G:210]
+[LCYAN_B:205]
+[LRED_R:192]
+[LRED_G:36]
+[LRED_B:36]
+[LMAGENTA_R:230]
+[LMAGENTA_G:71]
+[LMAGENTA_B:170]
+[YELLOW_R:250]
+[YELLOW_G:180]
+[YELLOW_B:10]
+[WHITE_R:220]
+[WHITE_G:220]
+[WHITE_B:220]
+</span></div></td></tr></tbody></table>
+<p><br />
+</p>
+<h4><span class="mw-headline" id="Warm">Warm</span></h4>
+<div style="width: auto; margin:0px 20%"><table style="width:100%">
+<tbody><tr>
+<td style="background-color: #1b1209" width="50%"> <span style="color: #ffffff">BLACK </span></td>
+<td style="background-color: #3e352c" width="50%"> <span style="color: #ffffff">DGRAY </span></td>
+</tr><tr>
+<td style="background-color: #1a41a5" width="50%"> <span style="color: #ffffff">BLUE </span></td>
+<td style="background-color: #006cff" width="50%"> <span style="color: #ffffff">LBLUE </span></td>
+</tr><tr>
+<td style="background-color: #6e7b15" width="50%"> <span style="color: #ffffff">GREEN </span></td>
+<td style="background-color: #c4db26" width="50%"> <span style="color: #000000">LGREEN </span></td>
+</tr><tr>
+<td style="background-color: #007860" width="50%"> <span style="color: #ffffff">CYAN </span></td>
+<td style="background-color: #00ffcc" width="50%"> <span style="color: #000000">LCYAN </span></td>
+</tr><tr>
+<td style="background-color: #521900" width="50%"> <span style="color: #ffffff">RED </span></td>
+<td style="background-color: #c03d24" width="50%"> <span style="color: #ffffff">LRED </span></td>
+</tr><tr>
+<td style="background-color: #4c0037" width="50%"> <span style="color: #ffffff">MAGENTA </span></td>
+<td style="background-color: #ff208d" width="50%"> <span style="color: #ffffff">LMAGENTA </span></td>
+</tr><tr>
+<td style="background-color: #623d26" width="50%"> <span style="color: #ffffff">BROWN </span></td>
+<td style="background-color: #ffbf00" width="50%"> <span style="color: #000000">YELLOW </span></td>
+</tr><tr>
+<td style="background-color: #9a846d" width="50%"> <span style="color: #ffffff">LGRAY </span></td>
+<td style="background-color: #ffedda" width="50%"> <span style="color: #000000">WHITE </span></td>
+</tr>
+</tbody></table></div>
+<div style="clear:both;"></div>
+<table class="collapsible collapsed infobox gamedata" style="background: #fdfdfd; border: 1px solid #aaa; font-size: 88%; margin: 0 auto -1px; vertical-align: middle; width: 100%; max-width: 100em; table-layout: fixed;">
+<tbody><tr style="line-height: 1.5em;"><th scope="col" style="background: #cce6b3; padding: 0.25em 1em; text-align: center; display: table-cell;&#32;;"><div style="font-size: 114%; margin: 0 9em;">colors.txt</div></th></tr>
+<tr style="line-height: 1.5em; text-align: left; display: table-cell;"><td><div style="overflow: auto;"><span class="gamedata-content" style="font-family: monospace; font-size:1.25em; white-space:pre;">
+[BLACK_R:27]
+[BLACK_G:18]
+[BLACK_B:9]
+[BLUE_R:26]
+[BLUE_G:65]
+[BLUE_B:165]
+[GREEN_R:110]
+[GREEN_G:123]
+[GREEN_B:21]
+[CYAN_R:0]
+[CYAN_G:120]
+[CYAN_B:96]
+[RED_R:82]
+[RED_G:25]
+[RED_B:0]
+[MAGENTA_R:76]
+[MAGENTA_G:0]
+[MAGENTA_B:55]
+[BROWN_R:98]
+[BROWN_G:61]
+[BROWN_B:38]
+[LGRAY_R:154]
+[LGRAY_G:132]
+[LGRAY_B:109]
+[DGRAY_R:62]
+[DGRAY_G:53]
+[DGRAY_B:44]
+[LBLUE_R:0]
+[LBLUE_G:108]
+[LBLUE_B:255]
+[LGREEN_R:196]
+[LGREEN_G:219]
+[LGREEN_B:38]
+[LCYAN_R:0]
+[LCYAN_G:255]
+[LCYAN_B:204]
+[LRED_R:192]
+[LRED_G:61]
+[LRED_B:36]
+[LMAGENTA_R:255]
+[LMAGENTA_G:32]
+[LMAGENTA_B:141]
+[YELLOW_R:255]
+[YELLOW_G:191]
+[YELLOW_B:0]
+[WHITE_R:255]
+[WHITE_G:237]
+[WHITE_B:218]
+</span></div></td></tr></tbody></table>
+<p><br />
+</p>
+<h4><span class="mw-headline" id="Bone">Bone</span></h4>
+<div style="width: auto; margin:0px 20%"><table style="width:100%">
+<tbody><tr>
+<td style="background-color: #26170a" width="50%"> <span style="color: #ffffff">BLACK </span></td>
+<td style="background-color: #41352b" width="50%"> <span style="color: #ffffff">DGRAY </span></td>
+</tr><tr>
+<td style="background-color: #0f52ba" width="50%"> <span style="color: #ffffff">BLUE </span></td>
+<td style="background-color: #008aff" width="50%"> <span style="color: #ffffff">LBLUE </span></td>
+</tr><tr>
+<td style="background-color: #788617" width="50%"> <span style="color: #ffffff">GREEN </span></td>
+<td style="background-color: #c4db26" width="50%"> <span style="color: #000000">LGREEN </span></td>
+</tr><tr>
+<td style="background-color: #56b872" width="50%"> <span style="color: #ffffff">CYAN </span></td>
+<td style="background-color: #48ffb8" width="50%"> <span style="color: #000000">LCYAN </span></td>
+</tr><tr>
+<td style="background-color: #840000" width="50%"> <span style="color: #ffffff">RED </span></td>
+<td style="background-color: #c03d24" width="50%"> <span style="color: #ffffff">LRED </span></td>
+</tr><tr>
+<td style="background-color: #7c1a60" width="50%"> <span style="color: #ffffff">MAGENTA </span></td>
+<td style="background-color: #ff4282" width="50%"> <span style="color: #ffffff">LMAGENTA </span></td>
+</tr><tr>
+<td style="background-color: #684b3a" width="50%"> <span style="color: #ffffff">BROWN </span></td>
+<td style="background-color: #ffc322" width="50%"> <span style="color: #000000">YELLOW </span></td>
+</tr><tr>
+<td style="background-color: #9a846d" width="50%"> <span style="color: #ffffff">LGRAY </span></td>
+<td style="background-color: #fcfad0" width="50%"> <span style="color: #000000">WHITE </span></td>
+</tr>
+</tbody></table></div>
+<div style="clear:both;"></div>
+<table class="collapsible collapsed infobox gamedata" style="background: #fdfdfd; border: 1px solid #aaa; font-size: 88%; margin: 0 auto -1px; vertical-align: middle; width: 100%; max-width: 100em; table-layout: fixed;">
+<tbody><tr style="line-height: 1.5em;"><th scope="col" style="background: #cce6b3; padding: 0.25em 1em; text-align: center; display: table-cell;&#32;;"><div style="font-size: 114%; margin: 0 9em;">colors.txt</div></th></tr>
+<tr style="line-height: 1.5em; text-align: left; display: table-cell;"><td><div style="overflow: auto;"><span class="gamedata-content" style="font-family: monospace; font-size:1.25em; white-space:pre;">
+[BLACK_R:38]
+[BLACK_G:23]
+[BLACK_B:10]
+[BLUE_R:15]
+[BLUE_G:82]
+[BLUE_B:186]
+[GREEN_R:120]
+[GREEN_G:134]
+[GREEN_B:23]
+[CYAN_R:86]
+[CYAN_G:184]
+[CYAN_B:114]
+[RED_R:132]
+[RED_G:0]
+[RED_B:0]
+[MAGENTA_R:124]
+[MAGENTA_G:26]
+[MAGENTA_B:96]
+[BROWN_R:104]
+[BROWN_G:75]
+[BROWN_B:58]
+[LGRAY_R:154]
+[LGRAY_G:132]
+[LGRAY_B:109]
+[DGRAY_R:65]
+[DGRAY_G:53]
+[DGRAY_B:43]
+[LBLUE_R:0]
+[LBLUE_G:138]
+[LBLUE_B:255]
+[LGREEN_R:196]
+[LGREEN_G:219]
+[LGREEN_B:38]
+[LCYAN_R:72]
+[LCYAN_G:255]
+[LCYAN_B:184]
+[LRED_R:192]
+[LRED_G:61]
+[LRED_B:36]
+[LMAGENTA_R:255]
+[LMAGENTA_G:66]
+[LMAGENTA_B:130]
+[YELLOW_R:255]
+[YELLOW_G:195]
+[YELLOW_B:34]
+[WHITE_R:252]
+[WHITE_G:250]
+[WHITE_B:208]
+</span></div></td></tr></tbody></table>
+<p><br />
+</p>
+<h4><span class="mw-headline" id="Mishka">Mishka</span></h4>
+<div style="width: auto; margin:0px 20%"><table style="width:100%">
+<tbody><tr>
+<td style="background-color: #170f0d" width="50%"> <span style="color: #ffffff">BLACK </span></td>
+<td style="background-color: #4a342e" width="50%"> <span style="color: #ffffff">DGRAY </span></td>
+</tr><tr>
+<td style="background-color: #005fff" width="50%"> <span style="color: #ffffff">BLUE </span></td>
+<td style="background-color: #00b3ff" width="50%"> <span style="color: #ffffff">LBLUE </span></td>
+</tr><tr>
+<td style="background-color: #57a000" width="50%"> <span style="color: #ffffff">GREEN </span></td>
+<td style="background-color: #c0d600" width="50%"> <span style="color: #000000">LGREEN </span></td>
+</tr><tr>
+<td style="background-color: #00875f" width="50%"> <span style="color: #ffffff">CYAN </span></td>
+<td style="background-color: #00ffb4" width="50%"> <span style="color: #000000">LCYAN </span></td>
+</tr><tr>
+<td style="background-color: #ba5300" width="50%"> <span style="color: #ffffff">RED </span></td>
+<td style="background-color: #ea8400" width="50%"> <span style="color: #ffffff">LRED </span></td>
+</tr><tr>
+<td style="background-color: #a72400" width="50%"> <span style="color: #ffffff">MAGENTA </span></td>
+<td style="background-color: #ff4310" width="50%"> <span style="color: #ffffff">LMAGENTA </span></td>
+</tr><tr>
+<td style="background-color: #b08951" width="50%"> <span style="color: #ffffff">BROWN </span></td>
+<td style="background-color: #e4b31b" width="50%"> <span style="color: #000000">YELLOW </span></td>
+</tr><tr>
+<td style="background-color: #79644b" width="50%"> <span style="color: #ffffff">LGRAY </span></td>
+<td style="background-color: #f1e3b8" width="50%"> <span style="color: #000000">WHITE </span></td>
+</tr>
+</tbody></table></div>
+<div style="clear:both;"></div>
+<table class="collapsible collapsed infobox gamedata" style="background: #fdfdfd; border: 1px solid #aaa; font-size: 88%; margin: 0 auto -1px; vertical-align: middle; width: 100%; max-width: 100em; table-layout: fixed;">
+<tbody><tr style="line-height: 1.5em;"><th scope="col" style="background: #cce6b3; padding: 0.25em 1em; text-align: center; display: table-cell;&#32;;"><div style="font-size: 114%; margin: 0 9em;">colors.txt</div></th></tr>
+<tr style="line-height: 1.5em; text-align: left; display: table-cell;"><td><div style="overflow: auto;"><span class="gamedata-content" style="font-family: monospace; font-size:1.25em; white-space:pre;">
+[BLACK_R:23]
+[BLACK_G:15]
+[BLACK_B:13]
+[BLUE_R:0]
+[BLUE_G:95]
+[BLUE_B:255]
+[GREEN_R:87]
+[GREEN_G:160]
+[GREEN_B:0]
+[CYAN_R:0]
+[CYAN_G:135]
+[CYAN_B:95]
+[RED_R:186]
+[RED_G:83]
+[RED_B:0]
+[MAGENTA_R:167]
+[MAGENTA_G:36]
+[MAGENTA_B:0]
+[BROWN_R:176]
+[BROWN_G:137]
+[BROWN_B:81]
+[LGRAY_R:121]
+[LGRAY_G:100]
+[LGRAY_B:75]
+[DGRAY_R:74]
+[DGRAY_G:52]
+[DGRAY_B:46]
+[LBLUE_R:0]
+[LBLUE_G:179]
+[LBLUE_B:255]
+[LGREEN_R:192]
+[LGREEN_G:214]
+[LGREEN_B:0]
+[LCYAN_R:0]
+[LCYAN_G:255]
+[LCYAN_B:180]
+[LRED_R:234]
+[LRED_G:132]
+[LRED_B:0]
+[LMAGENTA_R:255]
+[LMAGENTA_G:67]
+[LMAGENTA_B:16]
+[YELLOW_R:228]
+[YELLOW_G:179]
+[YELLOW_B:27]
+[WHITE_R:241]
+[WHITE_G:227]
+[WHITE_B:184]
+</span></div></td></tr></tbody></table>
+<p><br />
+</p>
+<h4><span class="mw-headline" id="Dusk">Dusk</span></h4>
+<div style="width: auto; margin:0px 20%"><table style="width:100%">
+<tbody><tr>
+<td style="background-color: #0a0a0a" width="50%"> <span style="color: #ffffff">BLACK </span></td>
+<td style="background-color: #30262d" width="50%"> <span style="color: #ffffff">DGRAY </span></td>
+</tr><tr>
+<td style="background-color: #04518c" width="50%"> <span style="color: #ffffff">BLUE </span></td>
+<td style="background-color: #00b0ee" width="50%"> <span style="color: #ffffff">LBLUE </span></td>
+</tr><tr>
+<td style="background-color: #5d6d06" width="50%"> <span style="color: #ffffff">GREEN </span></td>
+<td style="background-color: #a6b000" width="50%"> <span style="color: #ffffff">LGREEN </span></td>
+</tr><tr>
+<td style="background-color: #0c4f4c" width="50%"> <span style="color: #ffffff">CYAN </span></td>
+<td style="background-color: #0cbba0" width="50%"> <span style="color: #ffffff">LCYAN </span></td>
+</tr><tr>
+<td style="background-color: #8e2800" width="50%"> <span style="color: #ffffff">RED </span></td>
+<td style="background-color: #ce4901" width="50%"> <span style="color: #ffffff">LRED </span></td>
+</tr><tr>
+<td style="background-color: #830034" width="50%"> <span style="color: #ffffff">MAGENTA </span></td>
+<td style="background-color: #a00307" width="50%"> <span style="color: #ffffff">LMAGENTA </span></td>
+</tr><tr>
+<td style="background-color: #eb8800" width="50%"> <span style="color: #ffffff">BROWN </span></td>
+<td style="background-color: #ffb74d" width="50%"> <span style="color: #000000">YELLOW </span></td>
+</tr><tr>
+<td style="background-color: #806d63" width="50%"> <span style="color: #ffffff">LGRAY </span></td>
+<td style="background-color: #f2f7e6" width="50%"> <span style="color: #000000">WHITE </span></td>
+</tr>
+</tbody></table></div>
+<div style="clear:both;"></div>
+<table class="collapsible collapsed infobox gamedata" style="background: #fdfdfd; border: 1px solid #aaa; font-size: 88%; margin: 0 auto -1px; vertical-align: middle; width: 100%; max-width: 100em; table-layout: fixed;">
+<tbody><tr style="line-height: 1.5em;"><th scope="col" style="background: #cce6b3; padding: 0.25em 1em; text-align: center; display: table-cell;&#32;;"><div style="font-size: 114%; margin: 0 9em;">colors.txt</div></th></tr>
+<tr style="line-height: 1.5em; text-align: left; display: table-cell;"><td><div style="overflow: auto;"><span class="gamedata-content" style="font-family: monospace; font-size:1.25em; white-space:pre;">
+[BLACK_R:10]
+[BLACK_G:10]
+[BLACK_B:10]
+[BLUE_R:4]
+[BLUE_G:81]
+[BLUE_B:140]
+[GREEN_R:93]
+[GREEN_G:109]
+[GREEN_B:6]
+[CYAN_R:12]
+[CYAN_G:79]
+[CYAN_B:76]
+[RED_R:142]
+[RED_G:40]
+[RED_B:0]
+[MAGENTA_R:131]
+[MAGENTA_G:0]
+[MAGENTA_B:52]
+[BROWN_R:235]
+[BROWN_G:136]
+[BROWN_B:0]
+[LGRAY_R:128]
+[LGRAY_G:109]
+[LGRAY_B:99]
+[DGRAY_R:48]
+[DGRAY_G:38]
+[DGRAY_B:45]
+[LBLUE_R:0]
+[LBLUE_G:176]
+[LBLUE_B:238]
+[LGREEN_R:166]
+[LGREEN_G:176]
+[LGREEN_B:0]
+[LCYAN_R:12]
+[LCYAN_G:187]
+[LCYAN_B:160]
+[LRED_R:206]
+[LRED_G:73]
+[LRED_B:1]
+[LMAGENTA_R:160]
+[LMAGENTA_G:3]
+[LMAGENTA_B:7]
+[YELLOW_R:255]
+[YELLOW_G:183]
+[YELLOW_B:77]
+[WHITE_R:242]
+[WHITE_G:247]
+[WHITE_B:230]
+</span></div></td></tr></tbody></table>
+<p><br />
+</p>
+<h4><span class="mw-headline" id="Sorrow">Sorrow</span></h4>
+<div style="width: auto; margin:0px 20%"><table style="width:100%">
+<tbody><tr>
+<td style="background-color: #050011" width="50%"> <span style="color: #ffffff">BLACK </span></td>
+<td style="background-color: #392a20" width="50%"> <span style="color: #ffffff">DGRAY </span></td>
+</tr><tr>
+<td style="background-color: #2e495e" width="50%"> <span style="color: #ffffff">BLUE </span></td>
+<td style="background-color: #4c889e" width="50%"> <span style="color: #ffffff">LBLUE </span></td>
+</tr><tr>
+<td style="background-color: #55532a" width="50%"> <span style="color: #ffffff">GREEN </span></td>
+<td style="background-color: #afb54b" width="50%"> <span style="color: #000000">LGREEN </span></td>
+</tr><tr>
+<td style="background-color: #437d42" width="50%"> <span style="color: #ffffff">CYAN </span></td>
+<td style="background-color: #79bd8f" width="50%"> <span style="color: #000000">LCYAN </span></td>
+</tr><tr>
+<td style="background-color: #8e2800" width="50%"> <span style="color: #ffffff">RED </span></td>
+<td style="background-color: #b64926" width="50%"> <span style="color: #ffffff">LRED </span></td>
+</tr><tr>
+<td style="background-color: #7b2636" width="50%"> <span style="color: #ffffff">MAGENTA </span></td>
+<td style="background-color: #a15642" width="50%"> <span style="color: #ffffff">LMAGENTA </span></td>
+</tr><tr>
+<td style="background-color: #816535" width="50%"> <span style="color: #ffffff">BROWN </span></td>
+<td style="background-color: #cb9a45" width="50%"> <span style="color: #ffffff">YELLOW </span></td>
+</tr><tr>
+<td style="background-color: #878e5d" width="50%"> <span style="color: #ffffff">LGRAY </span></td>
+<td style="background-color: #fff782" width="50%"> <span style="color: #000000">WHITE </span></td>
+</tr>
+</tbody></table></div>
+<div style="clear:both;"></div>
+<table class="collapsible collapsed infobox gamedata" style="background: #fdfdfd; border: 1px solid #aaa; font-size: 88%; margin: 0 auto -1px; vertical-align: middle; width: 100%; max-width: 100em; table-layout: fixed;">
+<tbody><tr style="line-height: 1.5em;"><th scope="col" style="background: #cce6b3; padding: 0.25em 1em; text-align: center; display: table-cell;&#32;;"><div style="font-size: 114%; margin: 0 9em;">colors.txt</div></th></tr>
+<tr style="line-height: 1.5em; text-align: left; display: table-cell;"><td><div style="overflow: auto;"><span class="gamedata-content" style="font-family: monospace; font-size:1.25em; white-space:pre;">
+[BLACK_R:5]
+[BLACK_G:0]
+[BLACK_B:17]
+[BLUE_R:46]
+[BLUE_G:73]
+[BLUE_B:94]
+[GREEN_R:85]
+[GREEN_G:83]
+[GREEN_B:42]
+[CYAN_R:67]
+[CYAN_G:125]
+[CYAN_B:66]
+[RED_R:142]
+[RED_G:40]
+[RED_B:0]
+[MAGENTA_R:123]
+[MAGENTA_G:38]
+[MAGENTA_B:54]
+[BROWN_R:129]
+[BROWN_G:101]
+[BROWN_B:53]
+[LGRAY_R:135]
+[LGRAY_G:142]
+[LGRAY_B:93]
+[DGRAY_R:57]
+[DGRAY_G:42]
+[DGRAY_B:32]
+[LBLUE_R:76]
+[LBLUE_G:136]
+[LBLUE_B:158]
+[LGREEN_R:175]
+[LGREEN_G:181]
+[LGREEN_B:75]
+[LCYAN_R:121]
+[LCYAN_G:189]
+[LCYAN_B:143]
+[LRED_R:182]
+[LRED_G:73]
+[LRED_B:38]
+[LMAGENTA_R:161]
+[LMAGENTA_G:86]
+[LMAGENTA_B:66]
+[YELLOW_R:203]
+[YELLOW_G:154]
+[YELLOW_B:69]
+[WHITE_R:255]
+[WHITE_G:247]
+[WHITE_B:130]
+</span></div></td></tr></tbody></table>
+<p><br />
+</p>
+<h4><span class="mw-headline" id="Jade">Jade</span></h4>
+<div style="width: auto; margin:0px 20%"><table style="width:100%">
+<tbody><tr>
+<td style="background-color: #110b09" width="50%"> <span style="color: #ffffff">BLACK </span></td>
+<td style="background-color: #2a1e1b" width="50%"> <span style="color: #ffffff">DGRAY </span></td>
+</tr><tr>
+<td style="background-color: #2e495e" width="50%"> <span style="color: #ffffff">BLUE </span></td>
+<td style="background-color: #4c889e" width="50%"> <span style="color: #ffffff">LBLUE </span></td>
+</tr><tr>
+<td style="background-color: #6c6b25" width="50%"> <span style="color: #ffffff">GREEN </span></td>
+<td style="background-color: #c3c13d" width="50%"> <span style="color: #000000">LGREEN </span></td>
+</tr><tr>
+<td style="background-color: #5c633a" width="50%"> <span style="color: #ffffff">CYAN </span></td>
+<td style="background-color: #70a16c" width="50%"> <span style="color: #ffffff">LCYAN </span></td>
+</tr><tr>
+<td style="background-color: #762a1b" width="50%"> <span style="color: #ffffff">RED </span></td>
+<td style="background-color: #af652f" width="50%"> <span style="color: #ffffff">LRED </span></td>
+</tr><tr>
+<td style="background-color: #ae2c3b" width="50%"> <span style="color: #ffffff">MAGENTA </span></td>
+<td style="background-color: #ab421e" width="50%"> <span style="color: #ffffff">LMAGENTA </span></td>
+</tr><tr>
+<td style="background-color: #725539" width="50%"> <span style="color: #ffffff">BROWN </span></td>
+<td style="background-color: #cb9a45" width="50%"> <span style="color: #ffffff">YELLOW </span></td>
+</tr><tr>
+<td style="background-color: #453c31" width="50%"> <span style="color: #ffffff">LGRAY </span></td>
+<td style="background-color: #dbd69c" width="50%"> <span style="color: #000000">WHITE </span></td>
+</tr>
+</tbody></table></div>
+<div style="clear:both;"></div>
+<table class="collapsible collapsed infobox gamedata" style="background: #fdfdfd; border: 1px solid #aaa; font-size: 88%; margin: 0 auto -1px; vertical-align: middle; width: 100%; max-width: 100em; table-layout: fixed;">
+<tbody><tr style="line-height: 1.5em;"><th scope="col" style="background: #cce6b3; padding: 0.25em 1em; text-align: center; display: table-cell;&#32;;"><div style="font-size: 114%; margin: 0 9em;">colors.txt</div></th></tr>
+<tr style="line-height: 1.5em; text-align: left; display: table-cell;"><td><div style="overflow: auto;"><span class="gamedata-content" style="font-family: monospace; font-size:1.25em; white-space:pre;">
+[BLACK_R:17]
+[BLACK_G:11]
+[BLACK_B:9]
+[BLUE_R:46]
+[BLUE_G:73]
+[BLUE_B:94]
+[GREEN_R:108]
+[GREEN_G:107]
+[GREEN_B:37]
+[CYAN_R:92]
+[CYAN_G:99]
+[CYAN_B:58]
+[RED_R:118]
+[RED_G:42]
+[RED_B:27]
+[MAGENTA_R:174]
+[MAGENTA_G:44]
+[MAGENTA_B:59]
+[BROWN_R:114]
+[BROWN_G:85]
+[BROWN_B:57]
+[LGRAY_R:69]
+[LGRAY_G:60]
+[LGRAY_B:49]
+[DGRAY_R:42]
+[DGRAY_G:30]
+[DGRAY_B:27]
+[LBLUE_R:76]
+[LBLUE_G:136]
+[LBLUE_B:158]
+[LGREEN_R:195]
+[LGREEN_G:193]
+[LGREEN_B:61]
+[LCYAN_R:112]
+[LCYAN_G:161]
+[LCYAN_B:108]
+[LRED_R:175]
+[LRED_G:101]
+[LRED_B:47]
+[LMAGENTA_R:171]
+[LMAGENTA_G:66]
+[LMAGENTA_B:30]
+[YELLOW_R:203]
+[YELLOW_G:154]
+[YELLOW_B:69]
+[WHITE_R:219]
+[WHITE_G:214]
+[WHITE_B:156]
+</span></div></td></tr></tbody></table>
+<p><br />
+</p>
+<h4><span class="mw-headline" id="Dark_Sand">Dark Sand</span></h4>
+<div style="width: auto; margin:0px 20%"><table style="width:100%">
+<tbody><tr>
+<td style="background-color: #020110" width="50%"> <span style="color: #ffffff">BLACK </span></td>
+<td style="background-color: #112334" width="50%"> <span style="color: #ffffff">DGRAY </span></td>
+</tr><tr>
+<td style="background-color: #04518c" width="50%"> <span style="color: #ffffff">BLUE </span></td>
+<td style="background-color: #00b0ee" width="50%"> <span style="color: #ffffff">LBLUE </span></td>
+</tr><tr>
+<td style="background-color: #5d6d06" width="50%"> <span style="color: #ffffff">GREEN </span></td>
+<td style="background-color: #a6b000" width="50%"> <span style="color: #ffffff">LGREEN </span></td>
+</tr><tr>
+<td style="background-color: #0c4f4c" width="50%"> <span style="color: #ffffff">CYAN </span></td>
+<td style="background-color: #0cbba0" width="50%"> <span style="color: #ffffff">LCYAN </span></td>
+</tr><tr>
+<td style="background-color: #8e2800" width="50%"> <span style="color: #ffffff">RED </span></td>
+<td style="background-color: #ce4901" width="50%"> <span style="color: #ffffff">LRED </span></td>
+</tr><tr>
+<td style="background-color: #830034" width="50%"> <span style="color: #ffffff">MAGENTA </span></td>
+<td style="background-color: #a00307" width="50%"> <span style="color: #ffffff">LMAGENTA </span></td>
+</tr><tr>
+<td style="background-color: #72593a" width="50%"> <span style="color: #ffffff">BROWN </span></td>
+<td style="background-color: #ffb74d" width="50%"> <span style="color: #000000">YELLOW </span></td>
+</tr><tr>
+<td style="background-color: #334555" width="50%"> <span style="color: #ffffff">LGRAY </span></td>
+<td style="background-color: #e6f5f7" width="50%"> <span style="color: #000000">WHITE </span></td>
+</tr>
+</tbody></table></div>
+<div style="clear:both;"></div>
+<table class="collapsible collapsed infobox gamedata" style="background: #fdfdfd; border: 1px solid #aaa; font-size: 88%; margin: 0 auto -1px; vertical-align: middle; width: 100%; max-width: 100em; table-layout: fixed;">
+<tbody><tr style="line-height: 1.5em;"><th scope="col" style="background: #cce6b3; padding: 0.25em 1em; text-align: center; display: table-cell;&#32;;"><div style="font-size: 114%; margin: 0 9em;">colors.txt</div></th></tr>
+<tr style="line-height: 1.5em; text-align: left; display: table-cell;"><td><div style="overflow: auto;"><span class="gamedata-content" style="font-family: monospace; font-size:1.25em; white-space:pre;">
+[BLACK_R:2]
+[BLACK_G:1]
+[BLACK_B:16]
+[BLUE_R:4]
+[BLUE_G:81]
+[BLUE_B:140]
+[GREEN_R:93]
+[GREEN_G:109]
+[GREEN_B:6]
+[CYAN_R:12]
+[CYAN_G:79]
+[CYAN_B:76]
+[RED_R:142]
+[RED_G:40]
+[RED_B:0]
+[MAGENTA_R:131]
+[MAGENTA_G:0]
+[MAGENTA_B:52]
+[BROWN_R:114]
+[BROWN_G:89]
+[BROWN_B:58]
+[LGRAY_R:51]
+[LGRAY_G:69]
+[LGRAY_B:85]
+[DGRAY_R:17]
+[DGRAY_G:35]
+[DGRAY_B:52]
+[LBLUE_R:0]
+[LBLUE_G:176]
+[LBLUE_B:238]
+[LGREEN_R:166]
+[LGREEN_G:176]
+[LGREEN_B:0]
+[LCYAN_R:12]
+[LCYAN_G:187]
+[LCYAN_B:160]
+[LRED_R:206]
+[LRED_G:73]
+[LRED_B:1]
+[LMAGENTA_R:160]
+[LMAGENTA_G:3]
+[LMAGENTA_B:7]
+[YELLOW_R:255]
+[YELLOW_G:183]
+[YELLOW_B:77]
+[WHITE_R:230]
+[WHITE_G:245]
+[WHITE_B:247]
+</span></div></td></tr></tbody></table>
+<p><br />
+</p>
+<h4><span class="mw-headline" id="Matrix">Matrix</span></h4>
+<div style="width: auto; margin:0px 20%"><table style="width:100%">
+<tbody><tr>
+<td style="background-color: #192007" width="50%"> <span style="color: #ffffff">BLACK </span></td>
+<td style="background-color: #383a26" width="50%"> <span style="color: #ffffff">DGRAY </span></td>
+</tr><tr>
+<td style="background-color: #18774f" width="50%"> <span style="color: #ffffff">BLUE </span></td>
+<td style="background-color: #0dbd75" width="50%"> <span style="color: #ffffff">LBLUE </span></td>
+</tr><tr>
+<td style="background-color: #4d7218" width="50%"> <span style="color: #ffffff">GREEN </span></td>
+<td style="background-color: #88be12" width="50%"> <span style="color: #ffffff">LGREEN </span></td>
+</tr><tr>
+<td style="background-color: #b38700" width="50%"> <span style="color: #ffffff">CYAN </span></td>
+<td style="background-color: #ffcc00" width="50%"> <span style="color: #000000">LCYAN </span></td>
+</tr><tr>
+<td style="background-color: #76440b" width="50%"> <span style="color: #ffffff">RED </span></td>
+<td style="background-color: #b96706" width="50%"> <span style="color: #ffffff">LRED </span></td>
+</tr><tr>
+<td style="background-color: #204631" width="50%"> <span style="color: #ffffff">MAGENTA </span></td>
+<td style="background-color: #527f39" width="50%"> <span style="color: #ffffff">LMAGENTA </span></td>
+</tr><tr>
+<td style="background-color: #4d5407" width="50%"> <span style="color: #ffffff">BROWN </span></td>
+<td style="background-color: #b9da1c" width="50%"> <span style="color: #000000">YELLOW </span></td>
+</tr><tr>
+<td style="background-color: #6b6f4b" width="50%"> <span style="color: #ffffff">LGRAY </span></td>
+<td style="background-color: #d7e894" width="50%"> <span style="color: #000000">WHITE </span></td>
+</tr>
+</tbody></table></div>
+<div style="clear:both;"></div>
+<table class="collapsible collapsed infobox gamedata" style="background: #fdfdfd; border: 1px solid #aaa; font-size: 88%; margin: 0 auto -1px; vertical-align: middle; width: 100%; max-width: 100em; table-layout: fixed;">
+<tbody><tr style="line-height: 1.5em;"><th scope="col" style="background: #cce6b3; padding: 0.25em 1em; text-align: center; display: table-cell;&#32;;"><div style="font-size: 114%; margin: 0 9em;">colors.txt</div></th></tr>
+<tr style="line-height: 1.5em; text-align: left; display: table-cell;"><td><div style="overflow: auto;"><span class="gamedata-content" style="font-family: monospace; font-size:1.25em; white-space:pre;">
+[BLACK_R:25]
+[BLACK_G:32]
+[BLACK_B:7]
+[BLUE_R:24]
+[BLUE_G:119]
+[BLUE_B:79]
+[GREEN_R:77]
+[GREEN_G:114]
+[GREEN_B:24]
+[CYAN_R:179]
+[CYAN_G:135]
+[CYAN_B:0]
+[RED_R:118]
+[RED_G:68]
+[RED_B:11]
+[MAGENTA_R:32]
+[MAGENTA_G:70]
+[MAGENTA_B:49]
+[BROWN_R:77]
+[BROWN_G:84]
+[BROWN_B:7]
+[LGRAY_R:107]
+[LGRAY_G:111]
+[LGRAY_B:75]
+[DGRAY_R:56]
+[DGRAY_G:58]
+[DGRAY_B:38]
+[LBLUE_R:13]
+[LBLUE_G:189]
+[LBLUE_B:117]
+[LGREEN_R:136]
+[LGREEN_G:190]
+[LGREEN_B:18]
+[LCYAN_R:255]
+[LCYAN_G:204]
+[LCYAN_B:0]
+[LRED_R:185]
+[LRED_G:103]
+[LRED_B:6]
+[LMAGENTA_R:82]
+[LMAGENTA_G:127]
+[LMAGENTA_B:57]
+[YELLOW_R:185]
+[YELLOW_G:218]
+[YELLOW_B:28]
+[WHITE_R:215]
+[WHITE_G:232]
+[WHITE_B:148]
+</span></div></td></tr></tbody></table>
+<p><br />
+</p>
+<h4><span class="mw-headline" id="Ash">Ash</span></h4>
+<div style="width: auto; margin:0px 20%"><table style="width:100%">
+<tbody><tr>
+<td style="background-color: #000000" width="50%"> <span style="color: #ffffff">BLACK </span></td>
+<td style="background-color: #343434" width="50%"> <span style="color: #ffffff">DGRAY </span></td>
+</tr><tr>
+<td style="background-color: #494949" width="50%"> <span style="color: #ffffff">BLUE </span></td>
+<td style="background-color: #818181" width="50%"> <span style="color: #ffffff">LBLUE </span></td>
+</tr><tr>
+<td style="background-color: #676767" width="50%"> <span style="color: #ffffff">GREEN </span></td>
+<td style="background-color: #dbdbdb" width="50%"> <span style="color: #000000">LGREEN </span></td>
+</tr><tr>
+<td style="background-color: #a5a5a5" width="50%"> <span style="color: #000000">CYAN </span></td>
+<td style="background-color: #f7f7f7" width="50%"> <span style="color: #000000">LCYAN </span></td>
+</tr><tr>
+<td style="background-color: #252525" width="50%"> <span style="color: #ffffff">RED </span></td>
+<td style="background-color: #505050" width="50%"> <span style="color: #ffffff">LRED </span></td>
+</tr><tr>
+<td style="background-color: #555555" width="50%"> <span style="color: #ffffff">MAGENTA </span></td>
+<td style="background-color: #777778" width="50%"> <span style="color: #ffffff">LMAGENTA </span></td>
+</tr><tr>
+<td style="background-color: #3c3c3c" width="50%"> <span style="color: #ffffff">BROWN </span></td>
+<td style="background-color: #b6b6b6" width="50%"> <span style="color: #000000">YELLOW </span></td>
+</tr><tr>
+<td style="background-color: #8e8e8e" width="50%"> <span style="color: #ffffff">LGRAY </span></td>
+<td style="background-color: #ffffff" width="50%"> <span style="color: #000000">WHITE </span></td>
+</tr>
+</tbody></table></div>
+<div style="clear:both;"></div>
+<table class="collapsible collapsed infobox gamedata" style="background: #fdfdfd; border: 1px solid #aaa; font-size: 88%; margin: 0 auto -1px; vertical-align: middle; width: 100%; max-width: 100em; table-layout: fixed;">
+<tbody><tr style="line-height: 1.5em;"><th scope="col" style="background: #cce6b3; padding: 0.25em 1em; text-align: center; display: table-cell;&#32;;"><div style="font-size: 114%; margin: 0 9em;">colors.txt</div></th></tr>
+<tr style="line-height: 1.5em; text-align: left; display: table-cell;"><td><div style="overflow: auto;"><span class="gamedata-content" style="font-family: monospace; font-size:1.25em; white-space:pre;">
+[BLACK_R:0]
+[BLACK_G:0]
+[BLACK_B:0]
+[BLUE_R:73]
+[BLUE_G:73]
+[BLUE_B:73]
+[GREEN_R:103]
+[GREEN_G:103]
+[GREEN_B:103]
+[CYAN_R:165]
+[CYAN_G:165]
+[CYAN_B:165]
+[RED_R:37]
+[RED_G:37]
+[RED_B:37]
+[MAGENTA_R:85]
+[MAGENTA_G:85]
+[MAGENTA_B:85]
+[BROWN_R:60]
+[BROWN_G:60]
+[BROWN_B:60]
+[LGRAY_R:142]
+[LGRAY_G:142]
+[LGRAY_B:142]
+[DGRAY_R:52]
+[DGRAY_G:52]
+[DGRAY_B:52]
+[LBLUE_R:129]
+[LBLUE_G:129]
+[LBLUE_B:129]
+[LGREEN_R:219]
+[LGREEN_G:219]
+[LGREEN_B:219]
+[LCYAN_R:247]
+[LCYAN_G:247]
+[LCYAN_B:247]
+[LRED_R:80]
+[LRED_G:80]
+[LRED_B:80]
+[LMAGENTA_R:119]
+[LMAGENTA_G:119]
+[LMAGENTA_B:120]
+[YELLOW_R:182]
+[YELLOW_G:182]
+[YELLOW_B:182]
+[WHITE_R:255]
+[WHITE_G:255]
+[WHITE_B:255]
+</span></div></td></tr></tbody></table>
+<p><br />
+</p>
+<h4><span class="mw-headline" id="Fields">Fields</span></h4>
+<div style="width: auto; margin:0px 20%"><table style="width:100%">
+<tbody><tr>
+<td style="background-color: #0c0811" width="50%"> <span style="color: #ffffff">BLACK </span></td>
+<td style="background-color: #342d28" width="50%"> <span style="color: #ffffff">DGRAY </span></td>
+</tr><tr>
+<td style="background-color: #27445c" width="50%"> <span style="color: #ffffff">BLUE </span></td>
+<td style="background-color: #2facc7" width="50%"> <span style="color: #ffffff">LBLUE </span></td>
+</tr><tr>
+<td style="background-color: #6b6819" width="50%"> <span style="color: #ffffff">GREEN </span></td>
+<td style="background-color: #bebc27" width="50%"> <span style="color: #000000">LGREEN </span></td>
+</tr><tr>
+<td style="background-color: #3e7466" width="50%"> <span style="color: #ffffff">CYAN </span></td>
+<td style="background-color: #9ddc85" width="50%"> <span style="color: #000000">LCYAN </span></td>
+</tr><tr>
+<td style="background-color: #5c2514" width="50%"> <span style="color: #ffffff">RED </span></td>
+<td style="background-color: #af3b14" width="50%"> <span style="color: #ffffff">LRED </span></td>
+</tr><tr>
+<td style="background-color: #621805" width="50%"> <span style="color: #ffffff">MAGENTA </span></td>
+<td style="background-color: #a42405" width="50%"> <span style="color: #ffffff">LMAGENTA </span></td>
+</tr><tr>
+<td style="background-color: #8d550b" width="50%"> <span style="color: #ffffff">BROWN </span></td>
+<td style="background-color: #e0a403" width="50%"> <span style="color: #000000">YELLOW </span></td>
+</tr><tr>
+<td style="background-color: #4f433a" width="50%"> <span style="color: #ffffff">LGRAY </span></td>
+<td style="background-color: #ebdec6" width="50%"> <span style="color: #000000">WHITE </span></td>
+</tr>
+</tbody></table></div>
+<div style="clear:both;"></div>
+<table class="collapsible collapsed infobox gamedata" style="background: #fdfdfd; border: 1px solid #aaa; font-size: 88%; margin: 0 auto -1px; vertical-align: middle; width: 100%; max-width: 100em; table-layout: fixed;">
+<tbody><tr style="line-height: 1.5em;"><th scope="col" style="background: #cce6b3; padding: 0.25em 1em; text-align: center; display: table-cell;&#32;;"><div style="font-size: 114%; margin: 0 9em;">colors.txt</div></th></tr>
+<tr style="line-height: 1.5em; text-align: left; display: table-cell;"><td><div style="overflow: auto;"><span class="gamedata-content" style="font-family: monospace; font-size:1.25em; white-space:pre;">
+[BLACK_R:12]
+[BLACK_G:8]
+[BLACK_B:17]
+[BLUE_R:39]
+[BLUE_G:68]
+[BLUE_B:92]
+[GREEN_R:107]
+[GREEN_G:104]
+[GREEN_B:25]
+[CYAN_R:62]
+[CYAN_G:116]
+[CYAN_B:102]
+[RED_R:92]
+[RED_G:37]
+[RED_B:20]
+[MAGENTA_R:98]
+[MAGENTA_G:24]
+[MAGENTA_B:5]
+[BROWN_R:141]
+[BROWN_G:85]
+[BROWN_B:11]
+[LGRAY_R:79]
+[LGRAY_G:67]
+[LGRAY_B:58]
+[DGRAY_R:52]
+[DGRAY_G:45]
+[DGRAY_B:40]
+[LBLUE_R:47]
+[LBLUE_G:172]
+[LBLUE_B:199]
+[LGREEN_R:190]
+[LGREEN_G:188]
+[LGREEN_B:39]
+[LCYAN_R:157]
+[LCYAN_G:220]
+[LCYAN_B:133]
+[LRED_R:175]
+[LRED_G:59]
+[LRED_B:20]
+[LMAGENTA_R:164]
+[LMAGENTA_G:36]
+[LMAGENTA_B:5]
+[YELLOW_R:224]
+[YELLOW_G:164]
+[YELLOW_B:3]
+[WHITE_R:235]
+[WHITE_G:222]
+[WHITE_B:198]
+</span></div></td></tr></tbody></table>
+<p><br />
+</p>
+<h4><span class="mw-headline" id="Heat">Heat</span></h4>
+<div style="width: auto; margin:0px 20%"><table style="width:100%">
+<tbody><tr>
+<td style="background-color: #170a0a" width="50%"> <span style="color: #ffffff">BLACK </span></td>
+<td style="background-color: #47341b" width="50%"> <span style="color: #ffffff">DGRAY </span></td>
+</tr><tr>
+<td style="background-color: #394b45" width="50%"> <span style="color: #ffffff">BLUE </span></td>
+<td style="background-color: #42b0b6" width="50%"> <span style="color: #ffffff">LBLUE </span></td>
+</tr><tr>
+<td style="background-color: #7d6f10" width="50%"> <span style="color: #ffffff">GREEN </span></td>
+<td style="background-color: #c7c01a" width="50%"> <span style="color: #000000">LGREEN </span></td>
+</tr><tr>
+<td style="background-color: #517a4e" width="50%"> <span style="color: #ffffff">CYAN </span></td>
+<td style="background-color: #aade6c" width="50%"> <span style="color: #000000">LCYAN </span></td>
+</tr><tr>
+<td style="background-color: #6e2c0c" width="50%"> <span style="color: #ffffff">RED </span></td>
+<td style="background-color: #ba420c" width="50%"> <span style="color: #ffffff">LRED </span></td>
+</tr><tr>
+<td style="background-color: #741e03" width="50%"> <span style="color: #ffffff">MAGENTA </span></td>
+<td style="background-color: #b02a03" width="50%"> <span style="color: #ffffff">LMAGENTA </span></td>
+</tr><tr>
+<td style="background-color: #9c5c07" width="50%"> <span style="color: #ffffff">BROWN </span></td>
+<td style="background-color: #e4a801" width="50%"> <span style="color: #000000">YELLOW </span></td>
+</tr><tr>
+<td style="background-color: #624a28" width="50%"> <span style="color: #ffffff">LGRAY </span></td>
+<td style="background-color: #eee0b5" width="50%"> <span style="color: #000000">WHITE </span></td>
+</tr>
+</tbody></table></div>
+<div style="clear:both;"></div>
+<table class="collapsible collapsed infobox gamedata" style="background: #fdfdfd; border: 1px solid #aaa; font-size: 88%; margin: 0 auto -1px; vertical-align: middle; width: 100%; max-width: 100em; table-layout: fixed;">
+<tbody><tr style="line-height: 1.5em;"><th scope="col" style="background: #cce6b3; padding: 0.25em 1em; text-align: center; display: table-cell;&#32;;"><div style="font-size: 114%; margin: 0 9em;">colors.txt</div></th></tr>
+<tr style="line-height: 1.5em; text-align: left; display: table-cell;"><td><div style="overflow: auto;"><span class="gamedata-content" style="font-family: monospace; font-size:1.25em; white-space:pre;">
+[BLACK_R:23]
+[BLACK_G:10]
+[BLACK_B:10]
+[BLUE_R:57]
+[BLUE_G:75]
+[BLUE_B:69]
+[GREEN_R:125]
+[GREEN_G:111]
+[GREEN_B:16]
+[CYAN_R:81]
+[CYAN_G:122]
+[CYAN_B:78]
+[RED_R:110]
+[RED_G:44]
+[RED_B:12]
+[MAGENTA_R:116]
+[MAGENTA_G:30]
+[MAGENTA_B:3]
+[BROWN_R:156]
+[BROWN_G:92]
+[BROWN_B:7]
+[LGRAY_R:98]
+[LGRAY_G:74]
+[LGRAY_B:40]
+[DGRAY_R:71]
+[DGRAY_G:52]
+[DGRAY_B:27]
+[LBLUE_R:66]
+[LBLUE_G:176]
+[LBLUE_B:182]
+[LGREEN_R:199]
+[LGREEN_G:192]
+[LGREEN_B:26]
+[LCYAN_R:170]
+[LCYAN_G:222]
+[LCYAN_B:108]
+[LRED_R:186]
+[LRED_G:66]
+[LRED_B:12]
+[LMAGENTA_R:176]
+[LMAGENTA_G:42]
+[LMAGENTA_B:3]
+[YELLOW_R:228]
+[YELLOW_G:168]
+[YELLOW_B:1]
+[WHITE_R:238]
+[WHITE_G:224]
+[WHITE_B:181]
+</span></div></td></tr></tbody></table>
+<p><br />
+</p>
+<h4><span class="mw-headline" id="Lazer">Lazer</span></h4>
+<div style="width: auto; margin:0px 20%"><table style="width:100%">
+<tbody><tr>
+<td style="background-color: #090900" width="50%"> <span style="color: #ffffff">BLACK </span></td>
+<td style="background-color: #292701" width="50%"> <span style="color: #ffffff">DGRAY </span></td>
+</tr><tr>
+<td style="background-color: #003321" width="50%"> <span style="color: #ffffff">BLUE </span></td>
+<td style="background-color: #287035" width="50%"> <span style="color: #ffffff">LBLUE </span></td>
+</tr><tr>
+<td style="background-color: #886d23" width="50%"> <span style="color: #ffffff">GREEN </span></td>
+<td style="background-color: #efc140" width="50%"> <span style="color: #000000">LGREEN </span></td>
+</tr><tr>
+<td style="background-color: #088313" width="50%"> <span style="color: #ffffff">CYAN </span></td>
+<td style="background-color: #23ca37" width="50%"> <span style="color: #ffffff">LCYAN </span></td>
+</tr><tr>
+<td style="background-color: #62200b" width="50%"> <span style="color: #ffffff">RED </span></td>
+<td style="background-color: #af3b14" width="50%"> <span style="color: #ffffff">LRED </span></td>
+</tr><tr>
+<td style="background-color: #4a0d02" width="50%"> <span style="color: #ffffff">MAGENTA </span></td>
+<td style="background-color: #a52102" width="50%"> <span style="color: #ffffff">LMAGENTA </span></td>
+</tr><tr>
+<td style="background-color: #844e06" width="50%"> <span style="color: #ffffff">BROWN </span></td>
+<td style="background-color: #e9ab03" width="50%"> <span style="color: #000000">YELLOW </span></td>
+</tr><tr>
+<td style="background-color: #384023" width="50%"> <span style="color: #ffffff">LGRAY </span></td>
+<td style="background-color: #ccef73" width="50%"> <span style="color: #000000">WHITE </span></td>
+</tr>
+</tbody></table></div>
+<div style="clear:both;"></div>
+<table class="collapsible collapsed infobox gamedata" style="background: #fdfdfd; border: 1px solid #aaa; font-size: 88%; margin: 0 auto -1px; vertical-align: middle; width: 100%; max-width: 100em; table-layout: fixed;">
+<tbody><tr style="line-height: 1.5em;"><th scope="col" style="background: #cce6b3; padding: 0.25em 1em; text-align: center; display: table-cell;&#32;;"><div style="font-size: 114%; margin: 0 9em;">colors.txt</div></th></tr>
+<tr style="line-height: 1.5em; text-align: left; display: table-cell;"><td><div style="overflow: auto;"><span class="gamedata-content" style="font-family: monospace; font-size:1.25em; white-space:pre;">
+[BLACK_R:9]
+[BLACK_G:9]
+[BLACK_B:0]
+[BLUE_R:0]
+[BLUE_G:51]
+[BLUE_B:33]
+[GREEN_R:136]
+[GREEN_G:109]
+[GREEN_B:35]
+[CYAN_R:8]
+[CYAN_G:131]
+[CYAN_B:19]
+[RED_R:98]
+[RED_G:32]
+[RED_B:11]
+[MAGENTA_R:74]
+[MAGENTA_G:13]
+[MAGENTA_B:2]
+[BROWN_R:132]
+[BROWN_G:78]
+[BROWN_B:6]
+[LGRAY_R:56]
+[LGRAY_G:64]
+[LGRAY_B:35]
+[DGRAY_R:41]
+[DGRAY_G:39]
+[DGRAY_B:1]
+[LBLUE_R:40]
+[LBLUE_G:112]
+[LBLUE_B:53]
+[LGREEN_R:239]
+[LGREEN_G:193]
+[LGREEN_B:64]
+[LCYAN_R:35]
+[LCYAN_G:202]
+[LCYAN_B:55]
+[LRED_R:175]
+[LRED_G:59]
+[LRED_B:20]
+[LMAGENTA_R:165]
+[LMAGENTA_G:33]
+[LMAGENTA_B:2]
+[YELLOW_R:233]
+[YELLOW_G:171]
+[YELLOW_B:3]
+[WHITE_R:204]
+[WHITE_G:239]
+[WHITE_B:115]
+</span></div></td></tr></tbody></table>
+<p><br />
+</p>
+<h4><span class="mw-headline" id="Mud">Mud</span></h4>
+<div style="width: auto; margin:0px 20%"><table style="width:100%">
+<tbody><tr>
+<td style="background-color: #201e15" width="50%"> <span style="color: #ffffff">BLACK </span></td>
+<td style="background-color: #323723" width="50%"> <span style="color: #ffffff">DGRAY </span></td>
+</tr><tr>
+<td style="background-color: #234353" width="50%"> <span style="color: #ffffff">BLUE </span></td>
+<td style="background-color: #30798f" width="50%"> <span style="color: #ffffff">LBLUE </span></td>
+</tr><tr>
+<td style="background-color: #777136" width="50%"> <span style="color: #ffffff">GREEN </span></td>
+<td style="background-color: #ada45e" width="50%"> <span style="color: #ffffff">LGREEN </span></td>
+</tr><tr>
+<td style="background-color: #445415" width="50%"> <span style="color: #ffffff">CYAN </span></td>
+<td style="background-color: #768b20" width="50%"> <span style="color: #ffffff">LCYAN </span></td>
+</tr><tr>
+<td style="background-color: #89360e" width="50%"> <span style="color: #ffffff">RED </span></td>
+<td style="background-color: #bc4a13" width="50%"> <span style="color: #ffffff">LRED </span></td>
+</tr><tr>
+<td style="background-color: #846722" width="50%"> <span style="color: #ffffff">MAGENTA </span></td>
+<td style="background-color: #cca036" width="50%"> <span style="color: #000000">LMAGENTA </span></td>
+</tr><tr>
+<td style="background-color: #5c4f28" width="50%"> <span style="color: #ffffff">BROWN </span></td>
+<td style="background-color: #fba612" width="50%"> <span style="color: #000000">YELLOW </span></td>
+</tr><tr>
+<td style="background-color: #4e5537" width="50%"> <span style="color: #ffffff">LGRAY </span></td>
+<td style="background-color: #fffce3" width="50%"> <span style="color: #000000">WHITE </span></td>
+</tr>
+</tbody></table></div>
+<div style="clear:both;"></div>
+<table class="collapsible collapsed infobox gamedata" style="background: #fdfdfd; border: 1px solid #aaa; font-size: 88%; margin: 0 auto -1px; vertical-align: middle; width: 100%; max-width: 100em; table-layout: fixed;">
+<tbody><tr style="line-height: 1.5em;"><th scope="col" style="background: #cce6b3; padding: 0.25em 1em; text-align: center; display: table-cell;&#32;;"><div style="font-size: 114%; margin: 0 9em;">colors.txt</div></th></tr>
+<tr style="line-height: 1.5em; text-align: left; display: table-cell;"><td><div style="overflow: auto;"><span class="gamedata-content" style="font-family: monospace; font-size:1.25em; white-space:pre;">
+[BLACK_R:32]
+[BLACK_G:30]
+[BLACK_B:21]
+[BLUE_R:35]
+[BLUE_G:67]
+[BLUE_B:83]
+[GREEN_R:119]
+[GREEN_G:113]
+[GREEN_B:54]
+[CYAN_R:68]
+[CYAN_G:84]
+[CYAN_B:21]
+[RED_R:137]
+[RED_G:54]
+[RED_B:14]
+[MAGENTA_R:132]
+[MAGENTA_G:103]
+[MAGENTA_B:34]
+[BROWN_R:92]
+[BROWN_G:79]
+[BROWN_B:40]
+[LGRAY_R:78]
+[LGRAY_G:85]
+[LGRAY_B:55]
+[DGRAY_R:50]
+[DGRAY_G:55]
+[DGRAY_B:35]
+[LBLUE_R:48]
+[LBLUE_G:121]
+[LBLUE_B:143]
+[LGREEN_R:173]
+[LGREEN_G:164]
+[LGREEN_B:94]
+[LCYAN_R:118]
+[LCYAN_G:139]
+[LCYAN_B:32]
+[LRED_R:188]
+[LRED_G:74]
+[LRED_B:19]
+[LMAGENTA_R:204]
+[LMAGENTA_G:160]
+[LMAGENTA_B:54]
+[YELLOW_R:251]
+[YELLOW_G:166]
+[YELLOW_B:18]
+[WHITE_R:255]
+[WHITE_G:252]
+[WHITE_B:227]
+</span></div></td></tr></tbody></table>
+<p><br />
+</p>
+<h4><span class="mw-headline" id="Fallen">Fallen</span></h4>
+<div style="width: auto; margin:0px 20%"><table style="width:100%">
+<tbody><tr>
+<td style="background-color: #201e15" width="50%"> <span style="color: #ffffff">BLACK </span></td>
+<td style="background-color: #323723" width="50%"> <span style="color: #ffffff">DGRAY </span></td>
+</tr><tr>
+<td style="background-color: #234353" width="50%"> <span style="color: #ffffff">BLUE </span></td>
+<td style="background-color: #30798f" width="50%"> <span style="color: #ffffff">LBLUE </span></td>
+</tr><tr>
+<td style="background-color: #777136" width="50%"> <span style="color: #ffffff">GREEN </span></td>
+<td style="background-color: #efc140" width="50%"> <span style="color: #000000">LGREEN </span></td>
+</tr><tr>
+<td style="background-color: #3f522b" width="50%"> <span style="color: #ffffff">CYAN </span></td>
+<td style="background-color: #737d26" width="50%"> <span style="color: #ffffff">LCYAN </span></td>
+</tr><tr>
+<td style="background-color: #6a2713" width="50%"> <span style="color: #ffffff">RED </span></td>
+<td style="background-color: #b24c15" width="50%"> <span style="color: #ffffff">LRED </span></td>
+</tr><tr>
+<td style="background-color: #681708" width="50%"> <span style="color: #ffffff">MAGENTA </span></td>
+<td style="background-color: #b52a0b" width="50%"> <span style="color: #ffffff">LMAGENTA </span></td>
+</tr><tr>
+<td style="background-color: #5c4f28" width="50%"> <span style="color: #ffffff">BROWN </span></td>
+<td style="background-color: #fba612" width="50%"> <span style="color: #000000">YELLOW </span></td>
+</tr><tr>
+<td style="background-color: #4e5537" width="50%"> <span style="color: #ffffff">LGRAY </span></td>
+<td style="background-color: #f4ffd0" width="50%"> <span style="color: #000000">WHITE </span></td>
+</tr>
+</tbody></table></div>
+<div style="clear:both;"></div>
+<table class="collapsible collapsed infobox gamedata" style="background: #fdfdfd; border: 1px solid #aaa; font-size: 88%; margin: 0 auto -1px; vertical-align: middle; width: 100%; max-width: 100em; table-layout: fixed;">
+<tbody><tr style="line-height: 1.5em;"><th scope="col" style="background: #cce6b3; padding: 0.25em 1em; text-align: center; display: table-cell;&#32;;"><div style="font-size: 114%; margin: 0 9em;">colors.txt</div></th></tr>
+<tr style="line-height: 1.5em; text-align: left; display: table-cell;"><td><div style="overflow: auto;"><span class="gamedata-content" style="font-family: monospace; font-size:1.25em; white-space:pre;">
+[BLACK_R:32]
+[BLACK_G:30]
+[BLACK_B:21]
+[BLUE_R:35]
+[BLUE_G:67]
+[BLUE_B:83]
+[GREEN_R:119]
+[GREEN_G:113]
+[GREEN_B:54]
+[CYAN_R:63]
+[CYAN_G:82]
+[CYAN_B:43]
+[RED_R:106]
+[RED_G:39]
+[RED_B:19]
+[MAGENTA_R:104]
+[MAGENTA_G:23]
+[MAGENTA_B:8]
+[BROWN_R:92]
+[BROWN_G:79]
+[BROWN_B:40]
+[LGRAY_R:78]
+[LGRAY_G:85]
+[LGRAY_B:55]
+[DGRAY_R:50]
+[DGRAY_G:55]
+[DGRAY_B:35]
+[LBLUE_R:48]
+[LBLUE_G:121]
+[LBLUE_B:143]
+[LGREEN_R:239]
+[LGREEN_G:193]
+[LGREEN_B:64]
+[LCYAN_R:115]
+[LCYAN_G:125]
+[LCYAN_B:38]
+[LRED_R:178]
+[LRED_G:76]
+[LRED_B:21]
+[LMAGENTA_R:181]
+[LMAGENTA_G:42]
+[LMAGENTA_B:11]
+[YELLOW_R:251]
+[YELLOW_G:166]
+[YELLOW_B:18]
+[WHITE_R:244]
+[WHITE_G:255]
+[WHITE_B:208]
+</span></div></td></tr></tbody></table>
+<p><br />
+</p>
+<hr />
+<h3><span class="mw-headline" id="Monokai">Monokai</span></h3>
+<div style="width: auto; margin:0px 20%"><table style="width:100%">
+<tbody><tr>
+<td style="background-color: #000000" width="50%"> <span style="color: #ffffff">BLACK </span></td>
+<td style="background-color: #555555" width="50%"> <span style="color: #ffffff">DGRAY </span></td>
+</tr><tr>
+<td style="background-color: #7accda" width="50%"> <span style="color: #000000">BLUE </span></td>
+<td style="background-color: #66d9f9" width="50%"> <span style="color: #000000">LBLUE </span></td>
+</tr><tr>
+<td style="background-color: #9dc54b" width="50%"> <span style="color: #000000">GREEN </span></td>
+<td style="background-color: #a6e22e" width="50%"> <span style="color: #000000">LGREEN </span></td>
+</tr><tr>
+<td style="background-color: #00d9d9" width="50%"> <span style="color: #ffffff">CYAN </span></td>
+<td style="background-color: #c8f0f0" width="50%"> <span style="color: #000000">LCYAN </span></td>
+</tr><tr>
+<td style="background-color: #d34278" width="50%"> <span style="color: #ffffff">RED </span></td>
+<td style="background-color: #f92672" width="50%"> <span style="color: #ffffff">LRED </span></td>
+</tr><tr>
+<td style="background-color: #ae81ff" width="50%"> <span style="color: #ffffff">MAGENTA </span></td>
+<td style="background-color: #b392ef" width="50%"> <span style="color: #000000">LMAGENTA </span></td>
+</tr><tr>
+<td style="background-color: #d1ca89" width="50%"> <span style="color: #000000">BROWN </span></td>
+<td style="background-color: #e6db74" width="50%"> <span style="color: #000000">YELLOW </span></td>
+</tr><tr>
+<td style="background-color: #f5deb3" width="50%"> <span style="color: #000000">LGRAY </span></td>
+<td style="background-color: #ffffff" width="50%"> <span style="color: #000000">WHITE </span></td>
+</tr>
+</tbody></table></div>
+<div style="clear:both;"></div>
+<table class="collapsible collapsed infobox gamedata" style="background: #fdfdfd; border: 1px solid #aaa; font-size: 88%; margin: 0 auto -1px; vertical-align: middle; width: 100%; max-width: 100em; table-layout: fixed;">
+<tbody><tr style="line-height: 1.5em;"><th scope="col" style="background: #cce6b3; padding: 0.25em 1em; text-align: center; display: table-cell;&#32;;"><div style="font-size: 114%; margin: 0 9em;">colors.txt</div></th></tr>
+<tr style="line-height: 1.5em; text-align: left; display: table-cell;"><td><div style="overflow: auto;"><span class="gamedata-content" style="font-family: monospace; font-size:1.25em; white-space:pre;">
+[BLACK_R:0]
+[BLACK_G:0]
+[BLACK_B:0]
+[BLUE_R:122]
+[BLUE_G:204]
+[BLUE_B:218]
+[GREEN_R:157]
+[GREEN_G:197]
+[GREEN_B:75]
+[CYAN_R:0]
+[CYAN_G:217]
+[CYAN_B:217]
+[RED_R:211]
+[RED_G:66]
+[RED_B:120]
+[MAGENTA_R:174]
+[MAGENTA_G:129]
+[MAGENTA_B:255]
+[BROWN_R:209]
+[BROWN_G:202]
+[BROWN_B:137]
+[LGRAY_R:245]
+[LGRAY_G:222]
+[LGRAY_B:179]
+[DGRAY_R:85]
+[DGRAY_G:85]
+[DGRAY_B:85]
+[LBLUE_R:102]
+[LBLUE_G:217]
+[LBLUE_B:249]
+[LGREEN_R:166]
+[LGREEN_G:226]
+[LGREEN_B:46]
+[LCYAN_R:200]
+[LCYAN_G:240]
+[LCYAN_B:240]
+[LRED_R:249]
+[LRED_G:38]
+[LRED_B:114]
+[LMAGENTA_R:179]
+[LMAGENTA_G:146]
+[LMAGENTA_B:239]
+[YELLOW_R:230]
+[YELLOW_G:219]
+[YELLOW_B:116]
+[WHITE_R:255]
+[WHITE_G:255]
+[WHITE_B:255]
+</span></div></td></tr></tbody></table>
+<p><br />
+</p>
+<hr />
+<h3><span class="mw-headline" id="Qud">Qud</span></h3>
+<p>A color scheme based on the game <a rel="nofollow" class="external text" href="https://www.cavesofqud.com/">Caves of Qud</a>. Original by Corporal_Klinger on the DF forums, modified for visibility by Mabelmabel on the CoQ discord.
+</p>
+<div style="width: auto; margin:0px 20%"><table style="width:100%">
+<tbody><tr>
+<td style="background-color: #0f3b3a" width="50%"> <span style="color: #ffffff">BLACK </span></td>
+<td style="background-color: #51797a" width="50%"> <span style="color: #ffffff">DGRAY </span></td>
+</tr><tr>
+<td style="background-color: #0048bd" width="50%"> <span style="color: #ffffff">BLUE </span></td>
+<td style="background-color: #0096ff" width="50%"> <span style="color: #ffffff">LBLUE </span></td>
+</tr><tr>
+<td style="background-color: #009403" width="50%"> <span style="color: #ffffff">GREEN </span></td>
+<td style="background-color: #009403" width="50%"> <span style="color: #ffffff">LGREEN </span></td>
+</tr><tr>
+<td style="background-color: #40a4b9" width="50%"> <span style="color: #ffffff">CYAN </span></td>
+<td style="background-color: #77bfcf" width="50%"> <span style="color: #000000">LCYAN </span></td>
+</tr><tr>
+<td style="background-color: #a64a2e" width="50%"> <span style="color: #ffffff">RED </span></td>
+<td style="background-color: #d74200" width="50%"> <span style="color: #ffffff">LRED </span></td>
+</tr><tr>
+<td style="background-color: #b154cf" width="50%"> <span style="color: #ffffff">MAGENTA </span></td>
+<td style="background-color: #da5bd6" width="50%"> <span style="color: #ffffff">LMAGENTA </span></td>
+</tr><tr>
+<td style="background-color: #98875f" width="50%"> <span style="color: #ffffff">BROWN </span></td>
+<td style="background-color: #cfc041" width="50%"> <span style="color: #000000">YELLOW </span></td>
+</tr><tr>
+<td style="background-color: #b1c9c3" width="50%"> <span style="color: #000000">LGRAY </span></td>
+<td style="background-color: #ffffff" width="50%"> <span style="color: #000000">WHITE </span></td>
+</tr>
+</tbody></table></div>
+<div style="clear:both;"></div>
+<table class="collapsible collapsed infobox gamedata" style="background: #fdfdfd; border: 1px solid #aaa; font-size: 88%; margin: 0 auto -1px; vertical-align: middle; width: 100%; max-width: 100em; table-layout: fixed;">
+<tbody><tr style="line-height: 1.5em;"><th scope="col" style="background: #cce6b3; padding: 0.25em 1em; text-align: center; display: table-cell;&#32;;"><div style="font-size: 114%; margin: 0 9em;">colors.txt</div></th></tr>
+<tr style="line-height: 1.5em; text-align: left; display: table-cell;"><td><div style="overflow: auto;"><span class="gamedata-content" style="font-family: monospace; font-size:1.25em; white-space:pre;">
+[BLACK_R:15]
+[BLACK_G:59]
+[BLACK_B:58]
+[BLUE_R:0]
+[BLUE_G:72]
+[BLUE_B:189]
+[GREEN_R:0]
+[GREEN_G:148]
+[GREEN_B:3]
+[CYAN_R:64]
+[CYAN_G:164]
+[CYAN_B:185]
+[RED_R:166]
+[RED_G:74]
+[RED_B:46]
+[MAGENTA_R:177]
+[MAGENTA_G:84]
+[MAGENTA_B:207]
+[BROWN_R:152]
+[BROWN_G:135]
+[BROWN_B:95]
+[LGRAY_R:177]
+[LGRAY_G:201]
+[LGRAY_B:195]
+[DGRAY_R:81]
+[DGRAY_G:121]
+[DGRAY_B:122]
+[LBLUE_R:0]
+[LBLUE_G:150]
+[LBLUE_B:255]
+[LGREEN_R:0]
+[LGREEN_G:148]
+[LGREEN_B:3]
+[LCYAN_R:119]
+[LCYAN_G:191]
+[LCYAN_B:207]
+[LRED_R:215]
+[LRED_G:66]
+[LRED_B:0]
+[LMAGENTA_R:218]
+[LMAGENTA_G:91]
+[LMAGENTA_B:214]
+[YELLOW_R:207]
+[YELLOW_G:192]
+[YELLOW_B:65]
+[WHITE_R:255]
+[WHITE_G:255]
+[WHITE_B:255]
+</span></div></td></tr></tbody></table>
+<p><br />
+</p>
+<hr />
+<h3><span class="mw-headline" id="Solarized">Solarized</span></h3>
+<p>Based on <a rel="nofollow" class="external text" href="http://ethanschoonover.com/solarized">Ethan Schoonover's syntax highlighting color scheme</a>. Designed to be easily distinguishable and visible colors that also reduce eye strain and fatigue.
+</p>
+<div style="width: auto; margin:0px 20%"><table style="width:100%">
+<tbody><tr>
+<td style="background-color: #002b36" width="50%"> <span style="color: #ffffff">BLACK </span></td>
+<td style="background-color: #586e75" width="50%"> <span style="color: #ffffff">DGRAY </span></td>
+</tr><tr>
+<td style="background-color: #268bd2" width="50%"> <span style="color: #ffffff">BLUE </span></td>
+<td style="background-color: #7baee6" width="50%"> <span style="color: #000000">LBLUE </span></td>
+</tr><tr>
+<td style="background-color: #859900" width="50%"> <span style="color: #ffffff">GREEN </span></td>
+<td style="background-color: #adcb67" width="50%"> <span style="color: #000000">LGREEN </span></td>
+</tr><tr>
+<td style="background-color: #2aa198" width="50%"> <span style="color: #ffffff">CYAN </span></td>
+<td style="background-color: #7fd7ca" width="50%"> <span style="color: #000000">LCYAN </span></td>
+</tr><tr>
+<td style="background-color: #dc322f" width="50%"> <span style="color: #ffffff">RED </span></td>
+<td style="background-color: #f76a6a" width="50%"> <span style="color: #ffffff">LRED </span></td>
+</tr><tr>
+<td style="background-color: #d33682" width="50%"> <span style="color: #ffffff">MAGENTA </span></td>
+<td style="background-color: #f186aa" width="50%"> <span style="color: #000000">LMAGENTA </span></td>
+</tr><tr>
+<td style="background-color: #b58a00" width="50%"> <span style="color: #ffffff">BROWN </span></td>
+<td style="background-color: #ecc853" width="50%"> <span style="color: #000000">YELLOW </span></td>
+</tr><tr>
+<td style="background-color: #93a1a1" width="50%"> <span style="color: #ffffff">LGRAY </span></td>
+<td style="background-color: #fdf6e3" width="50%"> <span style="color: #000000">WHITE </span></td>
+</tr>
+</tbody></table></div>
+<div style="clear:both;"></div>
+<table class="collapsible collapsed infobox gamedata" style="background: #fdfdfd; border: 1px solid #aaa; font-size: 88%; margin: 0 auto -1px; vertical-align: middle; width: 100%; max-width: 100em; table-layout: fixed;">
+<tbody><tr style="line-height: 1.5em;"><th scope="col" style="background: #cce6b3; padding: 0.25em 1em; text-align: center; display: table-cell;&#32;;"><div style="font-size: 114%; margin: 0 9em;">colors.txt</div></th></tr>
+<tr style="line-height: 1.5em; text-align: left; display: table-cell;"><td><div style="overflow: auto;"><span class="gamedata-content" style="font-family: monospace; font-size:1.25em; white-space:pre;">
+[BLACK_R:0]
+[BLACK_G:43]
+[BLACK_B:54]
+[BLUE_R:38]
+[BLUE_G:139]
+[BLUE_B:210]
+[GREEN_R:133]
+[GREEN_G:153]
+[GREEN_B:0]
+[CYAN_R:42]
+[CYAN_G:161]
+[CYAN_B:152]
+[RED_R:220]
+[RED_G:50]
+[RED_B:47]
+[MAGENTA_R:211]
+[MAGENTA_G:54]
+[MAGENTA_B:130]
+[BROWN_R:181]
+[BROWN_G:138]
+[BROWN_B:0]
+[LGRAY_R:147]
+[LGRAY_G:161]
+[LGRAY_B:161]
+[DGRAY_R:88]
+[DGRAY_G:110]
+[DGRAY_B:117]
+[LBLUE_R:123]
+[LBLUE_G:174]
+[LBLUE_B:230]
+[LGREEN_R:173]
+[LGREEN_G:203]
+[LGREEN_B:103]
+[LCYAN_R:127]
+[LCYAN_G:215]
+[LCYAN_B:202]
+[LRED_R:247]
+[LRED_G:106]
+[LRED_B:106]
+[LMAGENTA_R:241]
+[LMAGENTA_G:134]
+[LMAGENTA_B:170]
+[YELLOW_R:236]
+[YELLOW_G:200]
+[YELLOW_B:83]
+[WHITE_R:253]
+[WHITE_G:246]
+[WHITE_B:227]
+</span></div></td></tr></tbody></table>
+<p><br />
+</p>
+<hr />
+<h3><span class="mw-headline" id="elementary">elementary</span></h3>
+<div style="width: auto; margin:0px 20%"><table style="width:100%">
+<tbody><tr>
+<td style="background-color: #303030" width="50%"> <span style="color: #ffffff">BLACK </span></td>
+<td style="background-color: #5d5d5d" width="50%"> <span style="color: #ffffff">DGRAY </span></td>
+</tr><tr>
+<td style="background-color: #004f9e" width="50%"> <span style="color: #ffffff">BLUE </span></td>
+<td style="background-color: #0071ff" width="50%"> <span style="color: #ffffff">LBLUE </span></td>
+</tr><tr>
+<td style="background-color: #6ab017" width="50%"> <span style="color: #ffffff">GREEN </span></td>
+<td style="background-color: #7bc91f" width="50%"> <span style="color: #ffffff">LGREEN </span></td>
+</tr><tr>
+<td style="background-color: #2aa7e7" width="50%"> <span style="color: #ffffff">CYAN </span></td>
+<td style="background-color: #4bb8fd" width="50%"> <span style="color: #ffffff">LCYAN </span></td>
+</tr><tr>
+<td style="background-color: #e1321a" width="50%"> <span style="color: #ffffff">RED </span></td>
+<td style="background-color: #ff361e" width="50%"> <span style="color: #ffffff">LRED </span></td>
+</tr><tr>
+<td style="background-color: #ec0048" width="50%"> <span style="color: #ffffff">MAGENTA </span></td>
+<td style="background-color: #ff1d62" width="50%"> <span style="color: #ffffff">LMAGENTA </span></td>
+</tr><tr>
+<td style="background-color: #ffc005" width="50%"> <span style="color: #000000">BROWN </span></td>
+<td style="background-color: #ffd00a" width="50%"> <span style="color: #000000">YELLOW </span></td>
+</tr><tr>
+<td style="background-color: #999999" width="50%"> <span style="color: #ffffff">LGRAY </span></td>
+<td style="background-color: #f2f2f2" width="50%"> <span style="color: #000000">WHITE </span></td>
+</tr>
+</tbody></table></div>
+<div style="clear:both;"></div>
+<table class="collapsible collapsed infobox gamedata" style="background: #fdfdfd; border: 1px solid #aaa; font-size: 88%; margin: 0 auto -1px; vertical-align: middle; width: 100%; max-width: 100em; table-layout: fixed;">
+<tbody><tr style="line-height: 1.5em;"><th scope="col" style="background: #cce6b3; padding: 0.25em 1em; text-align: center; display: table-cell;&#32;;"><div style="font-size: 114%; margin: 0 9em;">colors.txt</div></th></tr>
+<tr style="line-height: 1.5em; text-align: left; display: table-cell;"><td><div style="overflow: auto;"><span class="gamedata-content" style="font-family: monospace; font-size:1.25em; white-space:pre;">
+[BLACK_R:48]
+[BLACK_G:48]
+[BLACK_B:48]
+[BLUE_R:0]
+[BLUE_G:79]
+[BLUE_B:158]
+[GREEN_R:106]
+[GREEN_G:176]
+[GREEN_B:23]
+[CYAN_R:42]
+[CYAN_G:167]
+[CYAN_B:231]
+[RED_R:225]
+[RED_G:50]
+[RED_B:26]
+[MAGENTA_R:236]
+[MAGENTA_G:0]
+[MAGENTA_B:72]
+[BROWN_R:255]
+[BROWN_G:192]
+[BROWN_B:5]
+[LGRAY_R:153]
+[LGRAY_G:153]
+[LGRAY_B:153]
+[DGRAY_R:93]
+[DGRAY_G:93]
+[DGRAY_B:93]
+[LBLUE_R:0]
+[LBLUE_G:113]
+[LBLUE_B:255]
+[LGREEN_R:123]
+[LGREEN_G:201]
+[LGREEN_B:31]
+[LCYAN_R:75]
+[LCYAN_G:184]
+[LCYAN_B:253]
+[LRED_R:255]
+[LRED_G:54]
+[LRED_B:30]
+[LMAGENTA_R:255]
+[LMAGENTA_G:29]
+[LMAGENTA_B:98]
+[YELLOW_R:255]
+[YELLOW_G:208]
+[YELLOW_B:10]
+[WHITE_R:242]
+[WHITE_G:242]
+[WHITE_B:242]
+</span></div></td></tr></tbody></table>
+<p><br />
+</p>
+<h3><span class="mw-headline" id="Pseudo_Naturalistic_Color_Scheme">Pseudo Naturalistic Color Scheme</span></h3>
+<p>Natural colours based on classic colours. Designed for <a rel="nofollow" class="external text" href="http://www.bay12forums.com/smf/index.php?topic=53180.4710">Ironhand tileset and DF2014 (see discussion)</a> but looks nice with ASCII too. Created by <a href="/index.php?title=User:Harmonica&amp;action=edit&amp;redlink=1" class="new" title="User:Harmonica (page does not exist)">Harmonica</a>.
+</p><p>This particularly works well with Ironhand due to the colour blending (nice minerals and plants), and also works nicely with the new trees.
+</p>
+<div style="width: auto; margin:0px 20%"><table style="width:100%">
+<tbody><tr>
+<td style="background-color: #000000" width="50%"> <span style="color: #ffffff">BLACK </span></td>
+<td style="background-color: #808080" width="50%"> <span style="color: #ffffff">DGRAY </span></td>
+</tr><tr>
+<td style="background-color: #3636ab" width="50%"> <span style="color: #ffffff">BLUE </span></td>
+<td style="background-color: #628aea" width="50%"> <span style="color: #ffffff">LBLUE </span></td>
+</tr><tr>
+<td style="background-color: #3daf3d" width="50%"> <span style="color: #ffffff">GREEN </span></td>
+<td style="background-color: #70de70" width="50%"> <span style="color: #000000">LGREEN </span></td>
+</tr><tr>
+<td style="background-color: #3aafc3" width="50%"> <span style="color: #ffffff">CYAN </span></td>
+<td style="background-color: #00ffff" width="50%"> <span style="color: #000000">LCYAN </span></td>
+</tr><tr>
+<td style="background-color: #ab2929" width="50%"> <span style="color: #ffffff">RED </span></td>
+<td style="background-color: #f3714b" width="50%"> <span style="color: #ffffff">LRED </span></td>
+</tr><tr>
+<td style="background-color: #ab33ab" width="50%"> <span style="color: #ffffff">MAGENTA </span></td>
+<td style="background-color: #e691e6" width="50%"> <span style="color: #000000">LMAGENTA </span></td>
+</tr><tr>
+<td style="background-color: #795c38" width="50%"> <span style="color: #ffffff">BROWN </span></td>
+<td style="background-color: #e6e600" width="50%"> <span style="color: #000000">YELLOW </span></td>
+</tr><tr>
+<td style="background-color: #c0c0c0" width="50%"> <span style="color: #000000">LGRAY </span></td>
+<td style="background-color: #ffffff" width="50%"> <span style="color: #000000">WHITE </span></td>
+</tr>
+</tbody></table></div>
+<div style="clear:both;"></div>
+<table class="collapsible collapsed infobox gamedata" style="background: #fdfdfd; border: 1px solid #aaa; font-size: 88%; margin: 0 auto -1px; vertical-align: middle; width: 100%; max-width: 100em; table-layout: fixed;">
+<tbody><tr style="line-height: 1.5em;"><th scope="col" style="background: #cce6b3; padding: 0.25em 1em; text-align: center; display: table-cell;&#32;;"><div style="font-size: 114%; margin: 0 9em;">colors.txt</div></th></tr>
+<tr style="line-height: 1.5em; text-align: left; display: table-cell;"><td><div style="overflow: auto;"><span class="gamedata-content" style="font-family: monospace; font-size:1.25em; white-space:pre;">
+[BLACK_R:0]
+[BLACK_G:0]
+[BLACK_B:0]
+[BLUE_R:54]
+[BLUE_G:54]
+[BLUE_B:171]
+[GREEN_R:61]
+[GREEN_G:175]
+[GREEN_B:61]
+[CYAN_R:58]
+[CYAN_G:175]
+[CYAN_B:195]
+[RED_R:171]
+[RED_G:41]
+[RED_B:41]
+[MAGENTA_R:171]
+[MAGENTA_G:51]
+[MAGENTA_B:171]
+[BROWN_R:121]
+[BROWN_G:92]
+[BROWN_B:56]
+[LGRAY_R:192]
+[LGRAY_G:192]
+[LGRAY_B:192]
+[DGRAY_R:128]
+[DGRAY_G:128]
+[DGRAY_B:128]
+[LBLUE_R:98]
+[LBLUE_G:138]
+[LBLUE_B:234]
+[LGREEN_R:112]
+[LGREEN_G:222]
+[LGREEN_B:112]
+[LCYAN_R:0]
+[LCYAN_G:255]
+[LCYAN_B:255]
+[LRED_R:243]
+[LRED_G:113]
+[LRED_B:75]
+[LMAGENTA_R:230]
+[LMAGENTA_G:145]
+[LMAGENTA_B:230]
+[YELLOW_R:230]
+[YELLOW_G:230]
+[YELLOW_B:0]
+[WHITE_R:255]
+[WHITE_G:255]
+[WHITE_B:255]
+</span></div></td></tr></tbody></table>
+<p><br />
+</p>
+<hr />
+<h3><span id="CowThing's_color_schemes"></span><span class="mw-headline" id="CowThing.27s_color_schemes">CowThing's color schemes</span></h3>
+<p>This color scheme is for a softer, happier game. Colors were chosen for easy visibility and to be easy on the eyes.
+</p>
+<div style="width: auto; margin:0px 20%"><table style="width:100%">
+<tbody><tr>
+<td style="background-color: #31313e" width="50%"> <span style="color: #ffffff">BLACK </span></td>
+<td style="background-color: #767681" width="50%"> <span style="color: #ffffff">DGRAY </span></td>
+</tr><tr>
+<td style="background-color: #4051da" width="50%"> <span style="color: #ffffff">BLUE </span></td>
+<td style="background-color: #6295ed" width="50%"> <span style="color: #ffffff">LBLUE </span></td>
+</tr><tr>
+<td style="background-color: #56b636" width="50%"> <span style="color: #ffffff">GREEN </span></td>
+<td style="background-color: #aff239" width="50%"> <span style="color: #000000">LGREEN </span></td>
+</tr><tr>
+<td style="background-color: #52b7c0" width="50%"> <span style="color: #ffffff">CYAN </span></td>
+<td style="background-color: #acebd9" width="50%"> <span style="color: #000000">LCYAN </span></td>
+</tr><tr>
+<td style="background-color: #ce3137" width="50%"> <span style="color: #ffffff">RED </span></td>
+<td style="background-color: #f8503e" width="50%"> <span style="color: #ffffff">LRED </span></td>
+</tr><tr>
+<td style="background-color: #8e3aba" width="50%"> <span style="color: #ffffff">MAGENTA </span></td>
+<td style="background-color: #dd62c5" width="50%"> <span style="color: #ffffff">LMAGENTA </span></td>
+</tr><tr>
+<td style="background-color: #f0a22a" width="50%"> <span style="color: #000000">BROWN </span></td>
+<td style="background-color: #fcef62" width="50%"> <span style="color: #000000">YELLOW </span></td>
+</tr><tr>
+<td style="background-color: #afb5b7" width="50%"> <span style="color: #000000">LGRAY </span></td>
+<td style="background-color: #ffffff" width="50%"> <span style="color: #000000">WHITE </span></td>
+</tr>
+</tbody></table></div>
+<div style="clear:both;"></div>
+<table class="collapsible collapsed infobox gamedata" style="background: #fdfdfd; border: 1px solid #aaa; font-size: 88%; margin: 0 auto -1px; vertical-align: middle; width: 100%; max-width: 100em; table-layout: fixed;">
+<tbody><tr style="line-height: 1.5em;"><th scope="col" style="background: #cce6b3; padding: 0.25em 1em; text-align: center; display: table-cell;&#32;;"><div style="font-size: 114%; margin: 0 9em;">colors.txt</div></th></tr>
+<tr style="line-height: 1.5em; text-align: left; display: table-cell;"><td><div style="overflow: auto;"><span class="gamedata-content" style="font-family: monospace; font-size:1.25em; white-space:pre;">
+[BLACK_R:49]
+[BLACK_G:49]
+[BLACK_B:62]
+[BLUE_R:64]
+[BLUE_G:81]
+[BLUE_B:218]
+[GREEN_R:86]
+[GREEN_G:182]
+[GREEN_B:54]
+[CYAN_R:82]
+[CYAN_G:183]
+[CYAN_B:192]
+[RED_R:206]
+[RED_G:49]
+[RED_B:55]
+[MAGENTA_R:142]
+[MAGENTA_G:58]
+[MAGENTA_B:186]
+[BROWN_R:240]
+[BROWN_G:162]
+[BROWN_B:42]
+[LGRAY_R:175]
+[LGRAY_G:181]
+[LGRAY_B:183]
+[DGRAY_R:118]
+[DGRAY_G:118]
+[DGRAY_B:129]
+[LBLUE_R:98]
+[LBLUE_G:149]
+[LBLUE_B:237]
+[LGREEN_R:175]
+[LGREEN_G:242]
+[LGREEN_B:57]
+[LCYAN_R:172]
+[LCYAN_G:235]
+[LCYAN_B:217]
+[LRED_R:248]
+[LRED_G:80]
+[LRED_B:62]
+[LMAGENTA_R:221]
+[LMAGENTA_G:98]
+[LMAGENTA_B:197]
+[YELLOW_R:252]
+[YELLOW_G:239]
+[YELLOW_B:98]
+[WHITE_R:255]
+[WHITE_G:255]
+[WHITE_B:255]
+</span></div></td></tr></tbody></table>
+<p><br />
+A darker version of the above color scheme.
+</p>
+<div style="width: auto; margin:0px 20%"><table style="width:100%">
+<tbody><tr>
+<td style="background-color: #1f1d26" width="50%"> <span style="color: #ffffff">BLACK </span></td>
+<td style="background-color: #544f53" width="50%"> <span style="color: #ffffff">DGRAY </span></td>
+</tr><tr>
+<td style="background-color: #334ca0" width="50%"> <span style="color: #ffffff">BLUE </span></td>
+<td style="background-color: #4b99d5" width="50%"> <span style="color: #ffffff">LBLUE </span></td>
+</tr><tr>
+<td style="background-color: #398f29" width="50%"> <span style="color: #ffffff">GREEN </span></td>
+<td style="background-color: #79d733" width="50%"> <span style="color: #000000">LGREEN </span></td>
+</tr><tr>
+<td style="background-color: #49948a" width="50%"> <span style="color: #ffffff">CYAN </span></td>
+<td style="background-color: #94daaf" width="50%"> <span style="color: #000000">LCYAN </span></td>
+</tr><tr>
+<td style="background-color: #9e2c24" width="50%"> <span style="color: #ffffff">RED </span></td>
+<td style="background-color: #d64d2c" width="50%"> <span style="color: #ffffff">LRED </span></td>
+</tr><tr>
+<td style="background-color: #6f2a71" width="50%"> <span style="color: #ffffff">MAGENTA </span></td>
+<td style="background-color: #c3498c" width="50%"> <span style="color: #ffffff">LMAGENTA </span></td>
+</tr><tr>
+<td style="background-color: #bd7e24" width="50%"> <span style="color: #ffffff">BROWN </span></td>
+<td style="background-color: #ebc942" width="50%"> <span style="color: #000000">YELLOW </span></td>
+</tr><tr>
+<td style="background-color: #84827c" width="50%"> <span style="color: #ffffff">LGRAY </span></td>
+<td style="background-color: #f5f0da" width="50%"> <span style="color: #000000">WHITE </span></td>
+</tr>
+</tbody></table></div>
+<div style="clear:both;"></div>
+<table class="collapsible collapsed infobox gamedata" style="background: #fdfdfd; border: 1px solid #aaa; font-size: 88%; margin: 0 auto -1px; vertical-align: middle; width: 100%; max-width: 100em; table-layout: fixed;">
+<tbody><tr style="line-height: 1.5em;"><th scope="col" style="background: #cce6b3; padding: 0.25em 1em; text-align: center; display: table-cell;&#32;;"><div style="font-size: 114%; margin: 0 9em;">colors.txt</div></th></tr>
+<tr style="line-height: 1.5em; text-align: left; display: table-cell;"><td><div style="overflow: auto;"><span class="gamedata-content" style="font-family: monospace; font-size:1.25em; white-space:pre;">
+[BLACK_R:31]
+[BLACK_G:29]
+[BLACK_B:38]
+[BLUE_R:51]
+[BLUE_G:76]
+[BLUE_B:160]
+[GREEN_R:57]
+[GREEN_G:143]
+[GREEN_B:41]
+[CYAN_R:73]
+[CYAN_G:148]
+[CYAN_B:138]
+[RED_R:158]
+[RED_G:44]
+[RED_B:36]
+[MAGENTA_R:111]
+[MAGENTA_G:42]
+[MAGENTA_B:113]
+[BROWN_R:189]
+[BROWN_G:126]
+[BROWN_B:36]
+[LGRAY_R:132]
+[LGRAY_G:130]
+[LGRAY_B:124]
+[DGRAY_R:84]
+[DGRAY_G:79]
+[DGRAY_B:83]
+[LBLUE_R:75]
+[LBLUE_G:153]
+[LBLUE_B:213]
+[LGREEN_R:121]
+[LGREEN_G:215]
+[LGREEN_B:51]
+[LCYAN_R:148]
+[LCYAN_G:218]
+[LCYAN_B:175]
+[LRED_R:214]
+[LRED_G:77]
+[LRED_B:44]
+[LMAGENTA_R:195]
+[LMAGENTA_G:73]
+[LMAGENTA_B:140]
+[YELLOW_R:235]
+[YELLOW_G:201]
+[YELLOW_B:66]
+[WHITE_R:245]
+[WHITE_G:240]
+[WHITE_B:218]
+</span></div></td></tr></tbody></table>
+<p><br />
+</p>
+<h2><span id="Snackfox's_color_scheme"></span><span class="mw-headline" id="Snackfox.27s_color_scheme">Snackfox's color scheme</span></h2>
+<p>This color scheme was designed to be light, pretty, and easy on the eyes, with an emphasis on purples and blues.
+</p>
+<div style="width: auto; margin:0px 20%"><table style="width:100%">
+<tbody><tr>
+<td style="background-color: #453c57" width="50%"> <span style="color: #ffffff">BLACK </span></td>
+<td style="background-color: #9e8db0" width="50%"> <span style="color: #ffffff">DGRAY </span></td>
+</tr><tr>
+<td style="background-color: #7062d6" width="50%"> <span style="color: #ffffff">BLUE </span></td>
+<td style="background-color: #a499fa" width="50%"> <span style="color: #000000">LBLUE </span></td>
+</tr><tr>
+<td style="background-color: #238a64" width="50%"> <span style="color: #ffffff">GREEN </span></td>
+<td style="background-color: #17eda6" width="50%"> <span style="color: #000000">LGREEN </span></td>
+</tr><tr>
+<td style="background-color: #0099ff" width="50%"> <span style="color: #ffffff">CYAN </span></td>
+<td style="background-color: #00ffff" width="50%"> <span style="color: #000000">LCYAN </span></td>
+</tr><tr>
+<td style="background-color: #b300b0" width="50%"> <span style="color: #ffffff">RED </span></td>
+<td style="background-color: #ff21a6" width="50%"> <span style="color: #ffffff">LRED </span></td>
+</tr><tr>
+<td style="background-color: #d92eff" width="50%"> <span style="color: #ffffff">MAGENTA </span></td>
+<td style="background-color: #ff8abf" width="50%"> <span style="color: #000000">LMAGENTA </span></td>
+</tr><tr>
+<td style="background-color: #b57438" width="50%"> <span style="color: #ffffff">BROWN </span></td>
+<td style="background-color: #fff652" width="50%"> <span style="color: #000000">YELLOW </span></td>
+</tr><tr>
+<td style="background-color: #cecef5" width="50%"> <span style="color: #000000">LGRAY </span></td>
+<td style="background-color: #fffbc8" width="50%"> <span style="color: #000000">WHITE </span></td>
+</tr>
+</tbody></table></div>
+<div style="clear:both;"></div>
+<table class="collapsible collapsed infobox gamedata" style="background: #fdfdfd; border: 1px solid #aaa; font-size: 88%; margin: 0 auto -1px; vertical-align: middle; width: 100%; max-width: 100em; table-layout: fixed;">
+<tbody><tr style="line-height: 1.5em;"><th scope="col" style="background: #cce6b3; padding: 0.25em 1em; text-align: center; display: table-cell;&#32;;"><div style="font-size: 114%; margin: 0 9em;">colors.txt</div></th></tr>
+<tr style="line-height: 1.5em; text-align: left; display: table-cell;"><td><div style="overflow: auto;"><span class="gamedata-content" style="font-family: monospace; font-size:1.25em; white-space:pre;">
+[BLACK_R:69]
+[BLACK_G:60]
+[BLACK_B:87]
+[BLUE_R:112]
+[BLUE_G:98]
+[BLUE_B:214]
+[GREEN_R:35]
+[GREEN_G:138]
+[GREEN_B:100]
+[CYAN_R:0]
+[CYAN_G:153]
+[CYAN_B:255]
+[RED_R:179]
+[RED_G:0]
+[RED_B:176]
+[MAGENTA_R:217]
+[MAGENTA_G:46]
+[MAGENTA_B:255]
+[BROWN_R:181]
+[BROWN_G:116]
+[BROWN_B:56]
+[LGRAY_R:206]
+[LGRAY_G:206]
+[LGRAY_B:245]
+[DGRAY_R:158]
+[DGRAY_G:141]
+[DGRAY_B:176]
+[LBLUE_R:164]
+[LBLUE_G:153]
+[LBLUE_B:250]
+[LGREEN_R:23]
+[LGREEN_G:237]
+[LGREEN_B:166]
+[LCYAN_R:0]
+[LCYAN_G:255]
+[LCYAN_B:255]
+[LRED_R:255]
+[LRED_G:33]
+[LRED_B:166]
+[LMAGENTA_R:255]
+[LMAGENTA_G:138]
+[LMAGENTA_B:191]
+[YELLOW_R:255]
+[YELLOW_G:246]
+[YELLOW_B:82]
+[WHITE_R:255]
+[WHITE_G:251]
+[WHITE_B:200]
+</span></div></td></tr></tbody></table>
+<p><br />
+</p>
+<hr />
+<h2><span class="mw-headline" id="Runeset_Mapmaker">Runeset Mapmaker</span></h2>
+<p>This color scheme was designed to work with Runeset to produce beautiful sepia toned fantasy maps.
+</p>
+<div style="width: auto; margin:0px 20%"><table style="width:100%">
+<tbody><tr>
+<td style="background-color: #a59b78" width="50%"> <span style="color: #ffffff">BLACK </span></td>
+<td style="background-color: #48453c" width="50%"> <span style="color: #ffffff">DGRAY </span></td>
+</tr><tr>
+<td style="background-color: #2d91dc" width="50%"> <span style="color: #ffffff">BLUE </span></td>
+<td style="background-color: #8796b9" width="50%"> <span style="color: #ffffff">LBLUE </span></td>
+</tr><tr>
+<td style="background-color: #2d6e32" width="50%"> <span style="color: #ffffff">GREEN </span></td>
+<td style="background-color: #82a569" width="50%"> <span style="color: #ffffff">LGREEN </span></td>
+</tr><tr>
+<td style="background-color: #788c96" width="50%"> <span style="color: #ffffff">CYAN </span></td>
+<td style="background-color: #aac0cd" width="50%"> <span style="color: #000000">LCYAN </span></td>
+</tr><tr>
+<td style="background-color: #640505" width="50%"> <span style="color: #ffffff">RED </span></td>
+<td style="background-color: #911e23" width="50%"> <span style="color: #ffffff">LRED </span></td>
+</tr><tr>
+<td style="background-color: #642369" width="50%"> <span style="color: #ffffff">MAGENTA </span></td>
+<td style="background-color: #8c14a0" width="50%"> <span style="color: #ffffff">LMAGENTA </span></td>
+</tr><tr>
+<td style="background-color: #73694b" width="50%"> <span style="color: #ffffff">BROWN </span></td>
+<td style="background-color: #c6c482" width="50%"> <span style="color: #000000">YELLOW </span></td>
+</tr><tr>
+<td style="background-color: #c8c8b4" width="50%"> <span style="color: #000000">LGRAY </span></td>
+<td style="background-color: #ffffff" width="50%"> <span style="color: #000000">WHITE </span></td>
+</tr>
+</tbody></table></div>
+<div style="clear:both;"></div>
+<table class="collapsible collapsed infobox gamedata" style="background: #fdfdfd; border: 1px solid #aaa; font-size: 88%; margin: 0 auto -1px; vertical-align: middle; width: 100%; max-width: 100em; table-layout: fixed;">
+<tbody><tr style="line-height: 1.5em;"><th scope="col" style="background: #cce6b3; padding: 0.25em 1em; text-align: center; display: table-cell;&#32;;"><div style="font-size: 114%; margin: 0 9em;">colors.txt</div></th></tr>
+<tr style="line-height: 1.5em; text-align: left; display: table-cell;"><td><div style="overflow: auto;"><span class="gamedata-content" style="font-family: monospace; font-size:1.25em; white-space:pre;">
+[BLACK_R:165]
+[BLACK_G:155]
+[BLACK_B:120]
+[BLUE_R:45]
+[BLUE_G:145]
+[BLUE_B:220]
+[GREEN_R:45]
+[GREEN_G:110]
+[GREEN_B:50]
+[CYAN_R:120]
+[CYAN_G:140]
+[CYAN_B:150]
+[RED_R:100]
+[RED_G:5]
+[RED_B:5]
+[MAGENTA_R:100]
+[MAGENTA_G:35]
+[MAGENTA_B:105]
+[BROWN_R:115]
+[BROWN_G:105]
+[BROWN_B:75]
+[LGRAY_R:200]
+[LGRAY_G:200]
+[LGRAY_B:180]
+[DGRAY_R:72]
+[DGRAY_G:69]
+[DGRAY_B:60]
+[LBLUE_R:135]
+[LBLUE_G:150]
+[LBLUE_B:185]
+[LGREEN_R:130]
+[LGREEN_G:165]
+[LGREEN_B:105]
+[LCYAN_R:170]
+[LCYAN_G:192]
+[LCYAN_B:205]
+[LRED_R:145]
+[LRED_G:30]
+[LRED_B:35]
+[LMAGENTA_R:140]
+[LMAGENTA_G:20]
+[LMAGENTA_B:160]
+[YELLOW_R:198]
+[YELLOW_G:196]
+[YELLOW_B:130]
+[WHITE_R:255]
+[WHITE_G:255]
+[WHITE_B:255]
+</span></div></td></tr></tbody></table>
+<p><br />
+</p>
+<h2><span class="mw-headline" id="Runeset">Runeset</span></h2>
+<p>A more playable version of Runeset Mapmaker that doesn't make every embark site look like the desert. It's a milder toned scheme with decent contrast.
+</p>
+<div style="width: auto; margin:0px 20%"><table style="width:100%">
+<tbody><tr>
+<td style="background-color: #000000" width="50%"> <span style="color: #ffffff">BLACK </span></td>
+<td style="background-color: #48453c" width="50%"> <span style="color: #ffffff">DGRAY </span></td>
+</tr><tr>
+<td style="background-color: #2d91dc" width="50%"> <span style="color: #ffffff">BLUE </span></td>
+<td style="background-color: #8796b9" width="50%"> <span style="color: #ffffff">LBLUE </span></td>
+</tr><tr>
+<td style="background-color: #2d6e32" width="50%"> <span style="color: #ffffff">GREEN </span></td>
+<td style="background-color: #82a569" width="50%"> <span style="color: #ffffff">LGREEN </span></td>
+</tr><tr>
+<td style="background-color: #788c96" width="50%"> <span style="color: #ffffff">CYAN </span></td>
+<td style="background-color: #aac0cd" width="50%"> <span style="color: #000000">LCYAN </span></td>
+</tr><tr>
+<td style="background-color: #640505" width="50%"> <span style="color: #ffffff">RED </span></td>
+<td style="background-color: #911e23" width="50%"> <span style="color: #ffffff">LRED </span></td>
+</tr><tr>
+<td style="background-color: #642369" width="50%"> <span style="color: #ffffff">MAGENTA </span></td>
+<td style="background-color: #8c14a0" width="50%"> <span style="color: #ffffff">LMAGENTA </span></td>
+</tr><tr>
+<td style="background-color: #5f4628" width="50%"> <span style="color: #ffffff">BROWN </span></td>
+<td style="background-color: #b4b473" width="50%"> <span style="color: #000000">YELLOW </span></td>
+</tr><tr>
+<td style="background-color: #a0a0a0" width="50%"> <span style="color: #ffffff">LGRAY </span></td>
+<td style="background-color: #ffffff" width="50%"> <span style="color: #000000">WHITE </span></td>
+</tr>
+</tbody></table></div>
+<div style="clear:both;"></div>
+<table class="collapsible collapsed infobox gamedata" style="background: #fdfdfd; border: 1px solid #aaa; font-size: 88%; margin: 0 auto -1px; vertical-align: middle; width: 100%; max-width: 100em; table-layout: fixed;">
+<tbody><tr style="line-height: 1.5em;"><th scope="col" style="background: #cce6b3; padding: 0.25em 1em; text-align: center; display: table-cell;&#32;;"><div style="font-size: 114%; margin: 0 9em;">colors.txt</div></th></tr>
+<tr style="line-height: 1.5em; text-align: left; display: table-cell;"><td><div style="overflow: auto;"><span class="gamedata-content" style="font-family: monospace; font-size:1.25em; white-space:pre;">
+[BLACK_R:0]
+[BLACK_G:0]
+[BLACK_B:0]
+[BLUE_R:45]
+[BLUE_G:145]
+[BLUE_B:220]
+[GREEN_R:45]
+[GREEN_G:110]
+[GREEN_B:50]
+[CYAN_R:120]
+[CYAN_G:140]
+[CYAN_B:150]
+[RED_R:100]
+[RED_G:5]
+[RED_B:5]
+[MAGENTA_R:100]
+[MAGENTA_G:35]
+[MAGENTA_B:105]
+[BROWN_R:95]
+[BROWN_G:70]
+[BROWN_B:40]
+[LGRAY_R:160]
+[LGRAY_G:160]
+[LGRAY_B:160]
+[DGRAY_R:72]
+[DGRAY_G:69]
+[DGRAY_B:60]
+[LBLUE_R:135]
+[LBLUE_G:150]
+[LBLUE_B:185]
+[LGREEN_R:130]
+[LGREEN_G:165]
+[LGREEN_B:105]
+[LCYAN_R:170]
+[LCYAN_G:192]
+[LCYAN_B:205]
+[LRED_R:145]
+[LRED_G:30]
+[LRED_B:35]
+[LMAGENTA_R:140]
+[LMAGENTA_G:20]
+[LMAGENTA_B:160]
+[YELLOW_R:180]
+[YELLOW_G:180]
+[YELLOW_B:115]
+[WHITE_R:255]
+[WHITE_G:255]
+[WHITE_B:255]
+</span></div></td></tr></tbody></table>
+<p><br />
+</p>
+<hr />
+<h2><span id="Kyzer's_Themes"></span><span class="mw-headline" id="Kyzer.27s_Themes">Kyzer's Themes</span></h2>
+<h3><span id="Kyzer's_Light_Scheme"></span><span class="mw-headline" id="Kyzer.27s_Light_Scheme">Kyzer's Light Scheme</span></h3>
+<p>A light color scheme meant to be easy on the eyes using yellows and relatively low contrast colors. <b>Note: cyan is now purple!</b>
+</p>
+<div style="width: auto; margin:0px 20%"><table style="width:100%">
+<tbody><tr>
+<td style="background-color: #d3c89c" width="50%"> <span style="color: #000000">BLACK </span></td>
+<td style="background-color: #474747" width="50%"> <span style="color: #ffffff">DGRAY </span></td>
+</tr><tr>
+<td style="background-color: #c4e6f2" width="50%"> <span style="color: #000000">BLUE </span></td>
+<td style="background-color: #6590f4" width="50%"> <span style="color: #ffffff">LBLUE </span></td>
+</tr><tr>
+<td style="background-color: #1c851e" width="50%"> <span style="color: #ffffff">GREEN </span></td>
+<td style="background-color: #0eb500" width="50%"> <span style="color: #ffffff">LGREEN </span></td>
+</tr><tr>
+<td style="background-color: #683d91" width="50%"> <span style="color: #ffffff">CYAN </span></td>
+<td style="background-color: #bd89fa" width="50%"> <span style="color: #000000">LCYAN </span></td>
+</tr><tr>
+<td style="background-color: #ad3636" width="50%"> <span style="color: #ffffff">RED </span></td>
+<td style="background-color: #e66060" width="50%"> <span style="color: #ffffff">LRED </span></td>
+</tr><tr>
+<td style="background-color: #c95eac" width="50%"> <span style="color: #ffffff">MAGENTA </span></td>
+<td style="background-color: #733663" width="50%"> <span style="color: #ffffff">LMAGENTA </span></td>
+</tr><tr>
+<td style="background-color: #a66624" width="50%"> <span style="color: #ffffff">BROWN </span></td>
+<td style="background-color: #9f9a17" width="50%"> <span style="color: #ffffff">YELLOW </span></td>
+</tr><tr>
+<td style="background-color: #737373" width="50%"> <span style="color: #ffffff">LGRAY </span></td>
+<td style="background-color: #141414" width="50%"> <span style="color: #ffffff">WHITE </span></td>
+</tr>
+</tbody></table></div>
+<div style="clear:both;"></div>
+<table class="collapsible collapsed infobox gamedata" style="background: #fdfdfd; border: 1px solid #aaa; font-size: 88%; margin: 0 auto -1px; vertical-align: middle; width: 100%; max-width: 100em; table-layout: fixed;">
+<tbody><tr style="line-height: 1.5em;"><th scope="col" style="background: #cce6b3; padding: 0.25em 1em; text-align: center; display: table-cell;&#32;;"><div style="font-size: 114%; margin: 0 9em;">colors.txt</div></th></tr>
+<tr style="line-height: 1.5em; text-align: left; display: table-cell;"><td><div style="overflow: auto;"><span class="gamedata-content" style="font-family: monospace; font-size:1.25em; white-space:pre;">
+[BLACK_R:211]
+[BLACK_G:200]
+[BLACK_B:156]
+[BLUE_R:196]
+[BLUE_G:230]
+[BLUE_B:242]
+[GREEN_R:28]
+[GREEN_G:133]
+[GREEN_B:30]
+[CYAN_R:104]
+[CYAN_G:61]
+[CYAN_B:145]
+[RED_R:173]
+[RED_G:54]
+[RED_B:54]
+[MAGENTA_R:201]
+[MAGENTA_G:94]
+[MAGENTA_B:172]
+[BROWN_R:166]
+[BROWN_G:102]
+[BROWN_B:36]
+[LGRAY_R:115]
+[LGRAY_G:115]
+[LGRAY_B:115]
+[DGRAY_R:71]
+[DGRAY_G:71]
+[DGRAY_B:71]
+[LBLUE_R:101]
+[LBLUE_G:144]
+[LBLUE_B:244]
+[LGREEN_R:14]
+[LGREEN_G:181]
+[LGREEN_B:0]
+[LCYAN_R:189]
+[LCYAN_G:137]
+[LCYAN_B:250]
+[LRED_R:230]
+[LRED_G:96]
+[LRED_B:96]
+[LMAGENTA_R:115]
+[LMAGENTA_G:54]
+[LMAGENTA_B:99]
+[YELLOW_R:159]
+[YELLOW_G:154]
+[YELLOW_B:23]
+[WHITE_R:20]
+[WHITE_G:20]
+[WHITE_B:20]
+</span></div></td></tr></tbody></table>
+<p><br />
+</p>
+<h3><span id="Kyzer's_'true_color'_Scheme"></span><span class="mw-headline" id="Kyzer.27s_.27true_color.27_Scheme">Kyzer's 'true color' Scheme</span></h3>
+<p>A high brightness color scheme with a lot of contrast, base colors (RED and BLUE, for example) are the most saturated and brightest they can be. Light colors are actually light versions of the previous colors now.
+</p>
+<div style="width: auto; margin:0px 20%"><table style="width:100%">
+<tbody><tr>
+<td style="background-color: #000000" width="50%"> <span style="color: #ffffff">BLACK </span></td>
+<td style="background-color: #595959" width="50%"> <span style="color: #ffffff">DGRAY </span></td>
+</tr><tr>
+<td style="background-color: #0000ff" width="50%"> <span style="color: #ffffff">BLUE </span></td>
+<td style="background-color: #7d89ff" width="50%"> <span style="color: #ffffff">LBLUE </span></td>
+</tr><tr>
+<td style="background-color: #00ff00" width="50%"> <span style="color: #ffffff">GREEN </span></td>
+<td style="background-color: #89ff7d" width="50%"> <span style="color: #000000">LGREEN </span></td>
+</tr><tr>
+<td style="background-color: #00ffff" width="50%"> <span style="color: #000000">CYAN </span></td>
+<td style="background-color: #9efdff" width="50%"> <span style="color: #000000">LCYAN </span></td>
+</tr><tr>
+<td style="background-color: #ff0000" width="50%"> <span style="color: #ffffff">RED </span></td>
+<td style="background-color: #ff8787" width="50%"> <span style="color: #000000">LRED </span></td>
+</tr><tr>
+<td style="background-color: #ff00ff" width="50%"> <span style="color: #ffffff">MAGENTA </span></td>
+<td style="background-color: #fe8cff" width="50%"> <span style="color: #000000">LMAGENTA </span></td>
+</tr><tr>
+<td style="background-color: #ffa33b" width="50%"> <span style="color: #000000">BROWN </span></td>
+<td style="background-color: #ffff85" width="50%"> <span style="color: #000000">YELLOW </span></td>
+</tr><tr>
+<td style="background-color: #bababa" width="50%"> <span style="color: #000000">LGRAY </span></td>
+<td style="background-color: #ffffff" width="50%"> <span style="color: #000000">WHITE </span></td>
+</tr>
+</tbody></table></div>
+<div style="clear:both;"></div>
+<table class="collapsible collapsed infobox gamedata" style="background: #fdfdfd; border: 1px solid #aaa; font-size: 88%; margin: 0 auto -1px; vertical-align: middle; width: 100%; max-width: 100em; table-layout: fixed;">
+<tbody><tr style="line-height: 1.5em;"><th scope="col" style="background: #cce6b3; padding: 0.25em 1em; text-align: center; display: table-cell;&#32;;"><div style="font-size: 114%; margin: 0 9em;">colors.txt</div></th></tr>
+<tr style="line-height: 1.5em; text-align: left; display: table-cell;"><td><div style="overflow: auto;"><span class="gamedata-content" style="font-family: monospace; font-size:1.25em; white-space:pre;">
+[BLACK_R:0]
+[BLACK_G:0]
+[BLACK_B:0]
+[BLUE_R:0]
+[BLUE_G:0]
+[BLUE_B:255]
+[GREEN_R:0]
+[GREEN_G:255]
+[GREEN_B:0]
+[CYAN_R:0]
+[CYAN_G:255]
+[CYAN_B:255]
+[RED_R:255]
+[RED_G:0]
+[RED_B:0]
+[MAGENTA_R:255]
+[MAGENTA_G:0]
+[MAGENTA_B:255]
+[BROWN_R:255]
+[BROWN_G:163]
+[BROWN_B:59]
+[LGRAY_R:186]
+[LGRAY_G:186]
+[LGRAY_B:186]
+[DGRAY_R:89]
+[DGRAY_G:89]
+[DGRAY_B:89]
+[LBLUE_R:125]
+[LBLUE_G:137]
+[LBLUE_B:255]
+[LGREEN_R:137]
+[LGREEN_G:255]
+[LGREEN_B:125]
+[LCYAN_R:158]
+[LCYAN_G:253]
+[LCYAN_B:255]
+[LRED_R:255]
+[LRED_G:135]
+[LRED_B:135]
+[LMAGENTA_R:254]
+[LMAGENTA_G:140]
+[LMAGENTA_B:255]
+[YELLOW_R:255]
+[YELLOW_G:255]
+[YELLOW_B:133]
+[WHITE_R:255]
+[WHITE_G:255]
+[WHITE_B:255]
+</span></div></td></tr></tbody></table>
+<p><br />
+</p>
+<h3><span id="Kyzer's_Low_Contrast_Scheme"></span><span class="mw-headline" id="Kyzer.27s_Low_Contrast_Scheme">Kyzer's Low Contrast Scheme</span></h3>
+<p>A low contrast, dark theme which prevents your eyes from having issues focusing because of overly bright tones. Basically, it has the same effect of turning your monitor down, without turning it down.
+</p>
+<div style="width: auto; margin:0px 20%"><table style="width:100%">
+<tbody><tr>
+<td style="background-color: #000000" width="50%"> <span style="color: #ffffff">BLACK </span></td>
+<td style="background-color: #292929" width="50%"> <span style="color: #ffffff">DGRAY </span></td>
+</tr><tr>
+<td style="background-color: #00285c" width="50%"> <span style="color: #ffffff">BLUE </span></td>
+<td style="background-color: #004399" width="50%"> <span style="color: #ffffff">LBLUE </span></td>
+</tr><tr>
+<td style="background-color: #005200" width="50%"> <span style="color: #ffffff">GREEN </span></td>
+<td style="background-color: #007a00" width="50%"> <span style="color: #ffffff">LGREEN </span></td>
+</tr><tr>
+<td style="background-color: #005252" width="50%"> <span style="color: #ffffff">CYAN </span></td>
+<td style="background-color: #008585" width="50%"> <span style="color: #ffffff">LCYAN </span></td>
+</tr><tr>
+<td style="background-color: #4f0000" width="50%"> <span style="color: #ffffff">RED </span></td>
+<td style="background-color: #7d0000" width="50%"> <span style="color: #ffffff">LRED </span></td>
+</tr><tr>
+<td style="background-color: #400063" width="50%"> <span style="color: #ffffff">MAGENTA </span></td>
+<td style="background-color: #540082" width="50%"> <span style="color: #ffffff">LMAGENTA </span></td>
+</tr><tr>
+<td style="background-color: #733300" width="50%"> <span style="color: #ffffff">BROWN </span></td>
+<td style="background-color: #877f00" width="50%"> <span style="color: #ffffff">YELLOW </span></td>
+</tr><tr>
+<td style="background-color: #595959" width="50%"> <span style="color: #ffffff">LGRAY </span></td>
+<td style="background-color: #828282" width="50%"> <span style="color: #ffffff">WHITE </span></td>
+</tr>
+</tbody></table></div>
+<div style="clear:both;"></div>
+<table class="collapsible collapsed infobox gamedata" style="background: #fdfdfd; border: 1px solid #aaa; font-size: 88%; margin: 0 auto -1px; vertical-align: middle; width: 100%; max-width: 100em; table-layout: fixed;">
+<tbody><tr style="line-height: 1.5em;"><th scope="col" style="background: #cce6b3; padding: 0.25em 1em; text-align: center; display: table-cell;&#32;;"><div style="font-size: 114%; margin: 0 9em;">colors.txt</div></th></tr>
+<tr style="line-height: 1.5em; text-align: left; display: table-cell;"><td><div style="overflow: auto;"><span class="gamedata-content" style="font-family: monospace; font-size:1.25em; white-space:pre;">
+[BLACK_R:0]
+[BLACK_G:0]
+[BLACK_B:0]
+[BLUE_R:0]
+[BLUE_G:40]
+[BLUE_B:92]
+[GREEN_R:0]
+[GREEN_G:82]
+[GREEN_B:0]
+[CYAN_R:0]
+[CYAN_G:82]
+[CYAN_B:82]
+[RED_R:79]
+[RED_G:0]
+[RED_B:0]
+[MAGENTA_R:64]
+[MAGENTA_G:0]
+[MAGENTA_B:99]
+[BROWN_R:115]
+[BROWN_G:51]
+[BROWN_B:0]
+[LGRAY_R:89]
+[LGRAY_G:89]
+[LGRAY_B:89]
+[DGRAY_R:41]
+[DGRAY_G:41]
+[DGRAY_B:41]
+[LBLUE_R:0]
+[LBLUE_G:67]
+[LBLUE_B:153]
+[LGREEN_R:0]
+[LGREEN_G:122]
+[LGREEN_B:0]
+[LCYAN_R:0]
+[LCYAN_G:133]
+[LCYAN_B:133]
+[LRED_R:125]
+[LRED_G:0]
+[LRED_B:0]
+[LMAGENTA_R:84]
+[LMAGENTA_G:0]
+[LMAGENTA_B:130]
+[YELLOW_R:135]
+[YELLOW_G:127]
+[YELLOW_B:0]
+[WHITE_R:130]
+[WHITE_G:130]
+[WHITE_B:130]
+</span></div></td></tr></tbody></table>
+<p><br />
+</p>
+<h2><span id="Zippy's_Themes"></span><span class="mw-headline" id="Zippy.27s_Themes">Zippy's Themes</span></h2>
+<h3><span id="Zippy's_Vibrant"></span><span class="mw-headline" id="Zippy.27s_Vibrant">Zippy's Vibrant</span></h3>
+<p>Colors here are designed to be much softer, richer and brighter than the game's default colors. Most colors are very slightly dimmed as to appear less over saturated than the original color scheme, but still manage to show as unique and vibrant colors.
+</p>
+<div style="width: auto; margin:0px 20%"><table style="width:100%">
+<tbody><tr>
+<td style="background-color: #111111" width="50%"> <span style="color: #ffffff">BLACK </span></td>
+<td style="background-color: #a1a1a1" width="50%"> <span style="color: #000000">DGRAY </span></td>
+</tr><tr>
+<td style="background-color: #406fec" width="50%"> <span style="color: #ffffff">BLUE </span></td>
+<td style="background-color: #43c6f7" width="50%"> <span style="color: #000000">LBLUE </span></td>
+</tr><tr>
+<td style="background-color: #539f47" width="50%"> <span style="color: #ffffff">GREEN </span></td>
+<td style="background-color: #5fe34d" width="50%"> <span style="color: #000000">LGREEN </span></td>
+</tr><tr>
+<td style="background-color: #4fc0d9" width="50%"> <span style="color: #000000">CYAN </span></td>
+<td style="background-color: #81edef" width="50%"> <span style="color: #000000">LCYAN </span></td>
+</tr><tr>
+<td style="background-color: #b81d1d" width="50%"> <span style="color: #ffffff">RED </span></td>
+<td style="background-color: #f13636" width="50%"> <span style="color: #ffffff">LRED </span></td>
+</tr><tr>
+<td style="background-color: #cb4096" width="50%"> <span style="color: #ffffff">MAGENTA </span></td>
+<td style="background-color: #f97ad9" width="50%"> <span style="color: #000000">LMAGENTA </span></td>
+</tr><tr>
+<td style="background-color: #ab7611" width="50%"> <span style="color: #ffffff">BROWN </span></td>
+<td style="background-color: #ffcc00" width="50%"> <span style="color: #000000">YELLOW </span></td>
+</tr><tr>
+<td style="background-color: #a19d9a" width="50%"> <span style="color: #ffffff">LGRAY </span></td>
+<td style="background-color: #fffaf5" width="50%"> <span style="color: #000000">WHITE </span></td>
+</tr>
+</tbody></table></div>
+<div style="clear:both;"></div>
+<table class="collapsible collapsed infobox gamedata" style="background: #fdfdfd; border: 1px solid #aaa; font-size: 88%; margin: 0 auto -1px; vertical-align: middle; width: 100%; max-width: 100em; table-layout: fixed;">
+<tbody><tr style="line-height: 1.5em;"><th scope="col" style="background: #cce6b3; padding: 0.25em 1em; text-align: center; display: table-cell;&#32;;"><div style="font-size: 114%; margin: 0 9em;">colors.txt</div></th></tr>
+<tr style="line-height: 1.5em; text-align: left; display: table-cell;"><td><div style="overflow: auto;"><span class="gamedata-content" style="font-family: monospace; font-size:1.25em; white-space:pre;">
+[BLACK_R:17]
+[BLACK_G:17]
+[BLACK_B:17]
+[BLUE_R:64]
+[BLUE_G:111]
+[BLUE_B:236]
+[GREEN_R:83]
+[GREEN_G:159]
+[GREEN_B:71]
+[CYAN_R:79]
+[CYAN_G:192]
+[CYAN_B:217]
+[RED_R:184]
+[RED_G:29]
+[RED_B:29]
+[MAGENTA_R:203]
+[MAGENTA_G:64]
+[MAGENTA_B:150]
+[BROWN_R:171]
+[BROWN_G:118]
+[BROWN_B:17]
+[LGRAY_R:161]
+[LGRAY_G:157]
+[LGRAY_B:154]
+[DGRAY_R:161]
+[DGRAY_G:161]
+[DGRAY_B:161]
+[LBLUE_R:67]
+[LBLUE_G:198]
+[LBLUE_B:247]
+[LGREEN_R:95]
+[LGREEN_G:227]
+[LGREEN_B:77]
+[LCYAN_R:129]
+[LCYAN_G:237]
+[LCYAN_B:239]
+[LRED_R:241]
+[LRED_G:54]
+[LRED_B:54]
+[LMAGENTA_R:249]
+[LMAGENTA_G:122]
+[LMAGENTA_B:217]
+[YELLOW_R:255]
+[YELLOW_G:204]
+[YELLOW_B:0]
+[WHITE_R:255]
+[WHITE_G:250]
+[WHITE_B:245]
+</span></div></td></tr></tbody></table>
+<p><br />
+</p>
+<h3><span id="Zippy's_Low_Contrast"></span><span class="mw-headline" id="Zippy.27s_Low_Contrast">Zippy's Low Contrast</span></h3>
+<p>An alternate color scheme where the colors - as the title would denote - have less contrast, as all the colors are much closer to their counterparts. This color scheme may be hard to see on a darker monitor.
+</p>
+<div style="width: auto; margin:0px 20%"><table style="width:100%">
+<tbody><tr>
+<td style="background-color: #111111" width="50%"> <span style="color: #ffffff">BLACK </span></td>
+<td style="background-color: #a1a1a1" width="50%"> <span style="color: #000000">DGRAY </span></td>
+</tr><tr>
+<td style="background-color: #3a65d7" width="50%"> <span style="color: #ffffff">BLUE </span></td>
+<td style="background-color: #33d4df" width="50%"> <span style="color: #000000">LBLUE </span></td>
+</tr><tr>
+<td style="background-color: #39912b" width="50%"> <span style="color: #ffffff">GREEN </span></td>
+<td style="background-color: #b2ffa7" width="50%"> <span style="color: #000000">LGREEN </span></td>
+</tr><tr>
+<td style="background-color: #4bc8b6" width="50%"> <span style="color: #000000">CYAN </span></td>
+<td style="background-color: #66fffa" width="50%"> <span style="color: #000000">LCYAN </span></td>
+</tr><tr>
+<td style="background-color: #d03a17" width="50%"> <span style="color: #ffffff">RED </span></td>
+<td style="background-color: #ff8c8c" width="50%"> <span style="color: #000000">LRED </span></td>
+</tr><tr>
+<td style="background-color: #a821a0" width="50%"> <span style="color: #ffffff">MAGENTA </span></td>
+<td style="background-color: #ffa6c8" width="50%"> <span style="color: #000000">LMAGENTA </span></td>
+</tr><tr>
+<td style="background-color: #b34109" width="50%"> <span style="color: #ffffff">BROWN </span></td>
+<td style="background-color: #ffbe7d" width="50%"> <span style="color: #000000">YELLOW </span></td>
+</tr><tr>
+<td style="background-color: #a19d9a" width="50%"> <span style="color: #ffffff">LGRAY </span></td>
+<td style="background-color: #ffffff" width="50%"> <span style="color: #000000">WHITE </span></td>
+</tr>
+</tbody></table></div>
+<div style="clear:both;"></div>
+<table class="collapsible collapsed infobox gamedata" style="background: #fdfdfd; border: 1px solid #aaa; font-size: 88%; margin: 0 auto -1px; vertical-align: middle; width: 100%; max-width: 100em; table-layout: fixed;">
+<tbody><tr style="line-height: 1.5em;"><th scope="col" style="background: #cce6b3; padding: 0.25em 1em; text-align: center; display: table-cell;&#32;;"><div style="font-size: 114%; margin: 0 9em;">colors.txt</div></th></tr>
+<tr style="line-height: 1.5em; text-align: left; display: table-cell;"><td><div style="overflow: auto;"><span class="gamedata-content" style="font-family: monospace; font-size:1.25em; white-space:pre;">
+[BLACK_R:17]
+[BLACK_G:17]
+[BLACK_B:17]
+[BLUE_R:58]
+[BLUE_G:101]
+[BLUE_B:215]
+[GREEN_R:57]
+[GREEN_G:145]
+[GREEN_B:43]
+[CYAN_R:75]
+[CYAN_G:200]
+[CYAN_B:182]
+[RED_R:208]
+[RED_G:58]
+[RED_B:23]
+[MAGENTA_R:168]
+[MAGENTA_G:33]
+[MAGENTA_B:160]
+[BROWN_R:179]
+[BROWN_G:65]
+[BROWN_B:9]
+[LGRAY_R:161]
+[LGRAY_G:157]
+[LGRAY_B:154]
+[DGRAY_R:161]
+[DGRAY_G:161]
+[DGRAY_B:161]
+[LBLUE_R:51]
+[LBLUE_G:212]
+[LBLUE_B:223]
+[LGREEN_R:178]
+[LGREEN_G:255]
+[LGREEN_B:167]
+[LCYAN_R:102]
+[LCYAN_G:255]
+[LCYAN_B:250]
+[LRED_R:255]
+[LRED_G:140]
+[LRED_B:140]
+[LMAGENTA_R:255]
+[LMAGENTA_G:166]
+[LMAGENTA_B:200]
+[YELLOW_R:255]
+[YELLOW_G:190]
+[YELLOW_B:125]
+[WHITE_R:255]
+[WHITE_G:255]
+[WHITE_B:255]
+</span></div></td></tr></tbody></table></div>

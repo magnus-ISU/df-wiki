@@ -1,0 +1,819 @@
+{{Quality|Exceptional|23:05, 8 April 2015 (UTC)}}
+{{av}}{{buggy}}
+:''(This article is about crop plants. If you want information about trees, see [[Tree]].)''
+[[File:crops.jpg|thumb|240px|right|Ripe for the harvest.]]'''Crops''' are [[plant]]s that can be [[farming|farmed]], traded for, or acquired by [[plant gathering]]. The farming of crops happens at [[farm plot]]s. There are two types of crops: [[aboveground]] and subterranean (underground). The [[seed]]s of subterranean crops may be brought from the starting embark screen or, with some small luck, purchased from dwarven caravans. Above ground crops and seeds may be purchased from human or elven caravans or gathered by dwarves with the plant gathering labor enabled. Seeds may also be collected by processing the plants or eating them (but not by cooking!).  There is a limit of 200 seeds per type (adjustable in [[d_init.txt]]), after which no additional seeds will be produced.
+
+A few of the plants listed below are not strictly crops, as they have no seeds and can't be planted (see note "4", below). "Wet" and "Dry" determine where plants are found in proximity to watercourses when gathering wild plants, and do not affect farm plots.
+
+Most plants can be brewed into [[alcohol]], each plant type producing a different variation, and dwarves do prefer ''some'' variety in their drink. Some plants may be eaten raw, others must be cooked first, others must be processed (by [[milling]] or [[thresher|plant processing]]) before they are edible, and still others are inedible, producing only non-food products (their seeds may be edible, though). Drinks may be cooked as ingredients in prepared meals, but at least one of the ingredients must be a non-liquid.
+{{catbox|DF2014:Plants}}
+All drinks require a spare [[barrel]] or [[large pot]] for storage, and some other products also require specific containers for storage. Plants can be stored in barrels or without a container; seeds are stored individually or in [[bag]]s which can then be put into barrels. It may be advisable to have a small stockpile that accepts only seeds next to your farm(s), since dwarves will happily carry entire pots of seeds across the map to pick up a single seed, leading to cancellation spam and irregular planting.
+
+== Standard plants ==
+These are the plants defined in the file plant_standard.txt. Standard plants have been changed very little from the previous version; tiles and colors have been upgraded, and brewing, pressing and processing plants to bags have been re-implemented as reactions, which means these options will be unavailable in the workshop if materials are missing.
+
+<!-- default template (see Template:Plant_table_row for more details)
+{{plant table row|name=|tile=|color=|seasons=|biome=(|biome2=|biome3=...)|dry=|align=|value=
+  |drink=|drinkv=|eat=|cook=
+  |p1=|pv1=
+  }}
+-->
+{{plant table head}}
+{{plant table row|name=Plump helmet|tile=♠|color=5:0|biome=Subterranean Water/Layers 1-3|dry=b|value=4
+  |drink=Dwarven wine|drinkv=10|eat=y|cook=y
+  |p1={{tile|·|4:1}} plump helmet spawn|pv1=1
+  }}
+{{plant table row|name=Pig tail|tile=τ|color=7:0|seasons={{seasons||1|1|}}|biome=Subterranean Water/Layers 1-3|dry=b|value=4
+  |drink=Dwarven ale|drinkv=10
+  |p1={{tile|·|0:1}} pig tail seed|pv1=1
+  |p2={{tile|φ|7:0}} pig tail thread (p)|pv2=12
+  |p3={{tile|≈|7:0}} pig tail slurry (h)|pv3=2
+  }}
+{{plant table row|name=Cave wheat|tile=τ|color=7:1|seasons={{seasons||1|1|}}|biome=Subterranean Water/Layers 1-3|dry=b|value=4
+  |drink=Dwarven beer|drinkv=10|cook=p
+  |p1={{tile|·|6:0}} cave wheat seed|pv1=1
+  |p2={{tile|·|7:1}} dwarven wheat flour (m)|pv2=20
+  }}
+{{plant table row|name=Sweet pod|tile=Φ|color=4:1|seasons={{seasons|1|1||}}|biome=Subterranean Water/Layers 1-3|dry=b|value=4
+  |drink=Dwarven rum|drinkv=10|cook=p
+  |p1={{tile|·|2:1}} sweet pod seed|pv1=1
+  |p2={{tile|·|6:0}} dwarven sugar (m)|pv2=20
+  |p3={{tile|≈|6:0}} dwarven syrup (l)|pv3=100<sup>1</sup>
+  }}
+{{plant table row|name=Quarry bush|tile=♣|color=7:0|seasons={{seasons|1|1|1|}}|biome=Subterranean Water/Layers 1-3|dry=b|value=4
+  |cook=p
+  |p1={{tile|♠|7:0}} quarry bush leaf (b)|pv1=50<sup>1</sup>
+  |p2={{tile|·|7:1}} rock nut|pv2=1
+  |p3={{tile|≈|6:0}} rock nut paste (m)|pv3=1
+  |p4={{tile|≈|6:0}} rock nut press cake (s)|pv4=1
+  |p5={{tile|≈|6:1}} rock nut oil (s)|pv5=5
+  }}
+{{plant table row|name=Dimple cup|tile=♥|color=1:1|biome=Subterranean Water/Layers 1-3|dry=b|value=4
+  |p1={{tile|·|5:1}} dimple cup spawn|pv1=1
+  |p2={{tile|·|1:1}} dimple dye (m)|pv2=20
+  }}
+{{plant table row|name=Muck root|tile=τ|color=0:1|biome=Any Wetland|dry=n|value=1
+  |drink=Swamp whiskey|drinkv=5|eat=y|cook=y
+  |p1={{tile|·|6:0}} muck root seed|pv1=1
+  }}
+{{plant table row|name=Bloated tuber|tile=Φ|color=6:0|biome=Any Wetland|dry=y|value=2
+  |drink=Tuber beer|drinkv=10|eat=y|cook=y
+  |p1={{tile|·|0:1}} bloated tuber seed|pv1=1
+  }}
+{{plant table row|name=Kobold bulb|super=4|tile=Φ|color=0:1|biome=Any Wetland|dry=n|value=5
+  |p1={{tile|≈|7:1}} [[gnomeblight]] (e)|pv1=500<sup>1</sup>
+  }}
+{{plant table row|name=Prickle berry|tile=:|color=2:0|biome=Not Freezing|dry=y|value=1
+  |drink=Prickle berry wine|drinkv=5|eat=y|cook=y
+  |p1={{tile|·|2:0}} prickle berry seed|pv1=1
+  }}
+{{plant table row|name=Strawberry|tile=:|color=4:0|biome=Not Freezing|dry=y|value=4
+  |drink=Strawberry wine|drinkv=10|eat=y|cook=y
+  |p1={{tile|%|4:1}} strawberry fruit|pv1=1
+  |p2={{tile|:|4:0}} strawberry plant|pv2=1
+  |p3={{tile|·|0:1}} strawberry seed|pv3=1
+  }}
+{{plant table row|name=Longland grass|tile=τ|color=6:1|biome=Not Freezing|dry=y|value=4
+  |drink=Longland beer|drinkv=10|cook=p
+  |p1={{tile|·|6:0}} longland grass seed|pv1=1
+  |p2={{tile|·|7:1}} longland flour (m)|pv2=20
+  }}
+{{plant table row|name=Valley herb|super=4|tile=ÿ|color=2:1|seasons={{seasons|1|||}}|biome=Temperate Grassland|dry=y|value=10
+  |cook=y
+  |p1={{tile|≈|6:1}} [[golden salve]] (v)|pv1=500<sup>1</sup>
+  }}
+{{plant table row|name=Rat weed|tile=τ|color=2:0|biome=Not Freezing|dry=n|value=1
+  |drink=Sewer brew|drinkv=5|eat=y|cook=y
+  |p1={{tile|·|0:1}} rat weed seed|pv1=1
+  }}
+{{plant table row|name=Fisher berry|tile=:|color=7:0|biome=Not Freezing|dry=n|value=4
+  |drink=Fisher berry wine|drinkv=10|eat=y|cook=y
+  |p1={{tile|·|0:1}} fisher berry seed|pv1=1
+  }}
+{{plant table row|name=Rope reed|tile=ƒ|color=2:0|biome=Not Freezing|dry=n|value=4
+  |drink=River spirits|drinkv=10
+  |p1={{tile|·|6:0}} rope reed seed|pv1=1
+  |p2={{tile|φ|7:0}} rope reed thread (p)|pv2=12
+  |p3={{tile|≈|7:0}} rope reed slurry (h)|pv3=2
+  }}
+{{plant table row|name=Blade weed|tile=τ|color=2:0|biome=Not Freezing|dry=y|value=4
+  |p1={{tile|·|0:1}} blade weed seed|pv1=1
+  |p2={{tile|·|2:0}} emerald dye (m)|pv2=20
+  }}
+{{plant table row|name=Hide root|tile=τ|color=6:0|biome=Not Freezing|dry=y|value=1
+  |p1={{tile|·|4:0}} hide root seed|pv1=1
+  |p2={{tile|·|6:0}} redroot dye (m)|pv2=10
+  }}
+{{plant table row|name=Sliver barb|tile=τ|color=0:1|biome=Not Freezing|dry=y|align=Evil|value=1
+  |drink=Gutter cruor|drinkv=5
+  |p1={{tile|·|4:1}} sliver barb seed|pv1=1
+  |p2={{tile|·|0:1}} sliver dye (m)|pv2=20
+  }}
+{{plant table row|name=Sun berry|tile=:|color=6:1|biome=Not Freezing|dry=n|align=Good|value=9
+  |drink=Sunshine|drinkv=25|eat=y|cook=y
+  |p1={{tile|·|4:1}} sun berry seed|pv1=1
+  }}
+{{plant table row|name=Whip vine|tile=§|color=3:1|biome=Not Freezing|dry=y|align=Savage|value=1
+  |drink=Whip wine|drinkv=15|cook=p
+  |p1={{tile|·|0:1}} whip vine seed|pv1=1
+  |p2={{tile|·|3:1}} whip vine flour (m)|pv2=25
+  }}
+|}
+
+'''Notes:'''
+:<sup>1</sup> This is the value for a stack of 5 units, which is the number rendered from a single plant.
+:<sup>2</sup> Anything that can be cooked is edible afterwards. Note that cooking leaves no seeds for re-planting.
+:<sup>3</sup> These plants cannot be eaten/cooked until they are further processed, either by milling or extracting; see "products" column for process product.
+:<sup>4</sup> These plants cannot be grown on a farm plot (in unmodded games) as they have no seeds. They can only be acquired through plant gathering (in season only) or trade.
+:<sup>5</sup> To get the products/extracts from the plants they have to be processed, in the following [[workshop]]s, using the following [[labor]]s:
+::*'''m''': mill ([[cave wheat]], [[sweet pod]], [[longland grass]], [[whip vine]], [[dimple cup]], [[blade weed]], [[hide root]], [[sliver barb]]): at [[quern]] or [[millstone]], using [[milling]].
+::*'''b''': process to bag ([[quarry bush]]): at [[farmer's workshop]], using [[plant processing]].
+::*'''s''': press paste into oil ([[quarry bush]]): at [[screw press]].
+::*'''l''': process to barrel ([[sweet pod]]): at farmer's workshop, using plant processing.
+::*'''p''': process plant ([[pig tail]], [[rope reed]]): at farmer's workshop, using plant processing.
+::*'''h''': mash plant ([[pig tail]], [[rope reed]]): at quern or millstone, using [[papermaking]].
+::*'''v''': process to vial ([[valley herb]]): at farmer's workshop, using plant processing.
+::*'''e''': extract plant essence ([[kobold bulb]]): at [[still]], using [[plant gathering]].
+:<sup>6</sup> 'Not Freezing' Biome refers to all land biomes except Mountains, Glaciers, and Tundras.
+
+== Garden plants ==
+All garden plants are above-ground, and can grow year-round. Garden plants are defined in a separate file from standard plants, named, somewhat predictably, plant_garden.txt.
+
+Unlike standard plants, garden plants will also produce growths - leaves, buds, flowers, pods and fruits.
+As a general rule, leaves can only be cooked, buds can be both cooked and brewed. 
+
+{{plant table head}}
+{{plant table row|name=Artichoke|tile=:|color=2:0|biome=Temperate Grassland|dry=y|value=2
+  |drink=Artichoke wine|drinkv=10|eat=y|cook=y
+  |p1={{tile|♠|2:0}} leaf|pv1=
+  |p2={{tile|%|4:1}} heart|pv2=2
+  |p3={{tile|♣|5:0}} flower|pv3=
+  |p4={{tile|·|0:1}} seed|pv4=1
+  }}
+{{plant table row|name=Asparagus|tile=:|color=2:0|biome=Any Temperate|dry=y|value=4
+  |eat=y|cook=y
+  |p1={{tile|♠|2:0}} leaf|pv1=
+  |p2={{tile|%|4:1}} fruit|pv2=
+  |p3={{tile|♣|6:1}} flower|pv3=
+  |p4={{tile|·|0:1}} seed|pv4=1
+  }}
+{{plant table row|name=Bambara groundnut|super=6|tile=:|color=2:0|biome=Tropical Dry Broadleaf Forest|biome2=Tropical Grassland|biome3=Tropical Savanna|biome4=Tropical Shrubland|dry=y|value=2
+  |eat=n|cook=Seed
+  |p1={{tile|♠|2:0}} leaf|pv1=
+  |p2={{tile|%|6:1}} fruit|pv2=
+  |p3={{tile|♣|6:1}} flower|pv3=
+  |p4={{tile|·|6:0}} seed|pv4=1
+  }}
+{{plant table row|name=String bean|super=6|tile=:|color=2:1|biome=Any Temperate|dry=y|value=2
+  |eat=n|cook=Seed
+  |p1={{tile|♠|2:0}} leaf|pv1=
+  |p2={{tile|%|2:1}} pod|pv2=
+  |p3={{tile|♣|7:1}} flower|pv3=
+  |p4={{tile|·|2:1}} seed|pv4=1
+  }}
+{{plant table row|name=Broad bean|super=6|tile=:|color=2:1|biome=Any Temperate|dry=y|value=2
+  |eat=n|cook=Seed
+  |p1={{tile|♠|2:0}} leaf|pv1=
+  |p2={{tile|%|2:1}} pod|pv2=
+  |p3={{tile|♣|7:1}} flower|pv3=
+  |p4={{tile|·|2:1}} seed|pv4=1
+  }}
+{{plant table row|name=Beet|tile=:|color=4:1|biome=Temperate Grassland|dry=y|value=4
+  |drink=Beetroot wine|drinkv=10|eat=y|cook=y
+  |p1={{tile|♠|2:0}} leaf|pv1=
+  |p2={{tile|♣|2:0}} flower|pv2=
+  |p3={{tile|·|0:1}} seed|pv3=1
+  }}
+{{plant table row|name=Bitter melon|super=6|tile=:|color=2:1|biome=Any Tropical|dry=y|value=2
+  |eat=y|cook=y
+  |p1={{tile|♠|2:0}} leaf|pv1=2
+  |p2={{tile|%|2:1}} fruit|pv2=2
+  |p3={{tile|♣|6:1}} flower|pv3=
+  |p4={{tile|·|0:1}} seed|pv4=1
+  }}
+{{plant table row|name=Cabbage|tile=:|color=2:1|biome=Any Temperate|dry=y|value=4
+  |eat=y|cook=y
+  |p1={{tile|♠|2:0}} leaf|pv1=
+  |p2={{tile|♣|6:1}} flower|pv2=
+  |p3={{tile|·|0:1}} seed|pv3=1
+  }}
+{{plant table row|name=Caper|tile=:|color=2:0|biome=Any Desert|biome2=Any Grassland|dry=y|value=2
+  |eat=y|cook=y
+  |p1={{tile|♠|2:0}} leaf|pv1=2
+  |p2={{tile|%|2:0}} fruit|pv2=2
+  |p3={{tile|♣|7:1}} flower|pv3=
+  |p4={{tile|%|2:0}} bud|pv4=2
+  |p5={{tile|·|0:1}} seed|pv5=1
+  }}
+{{plant table row|name=Wild carrot|tile=:|color=7:1|biome=Any Temperate|dry=y|value=4
+  |drink=Carrot wine|drinkv=10|eat=y|cook=y
+  |p1={{tile|♠|2:0}} leaf|pv1=
+  |p2={{tile|♣|7:1}} flower|pv2=
+  |p3={{tile|·|0:1}} seed|pv3=1
+  }}
+{{plant table row|name=Cassava|tile=:|color=2:0|biome=Any Tropical|dry=y|value=4
+  |drink=Cassava beer|drinkv=10|eat=n|cook=y
+  |p1={{tile|♠|2:0}} leaf|pv1=
+  |p2={{tile|♣|5:1}} flower|pv2=
+  |p3={{tile|·|7:1}} seed|pv3=1
+  }}
+{{plant table row|name=Celery|super=6|tile=:|color=2:0|biome=Any Temperate|dry=y|value=4
+  |eat=y|cook=y
+  |p1={{tile|♠|2:0}} leaf|pv1=
+  |p2={{tile|♣|7:0}} flower|pv2=
+  |p3={{tile|·|0:1}} seed|pv3=1
+  }}
+{{plant table row|name=Chickpea|super=6|tile=:|color=2:1|biome=Any Tropical|dry=y|value=2
+  |eat=n|cook=Seed
+  |p1={{tile|♠|2:0}} leaf|pv1=
+  |p2={{tile|%|2:1}} pod|pv2=
+  |p3={{tile|♣|7:1}} flower|pv3=
+  |p4={{tile|·|7:1}} seed|pv4=1
+  }}
+{{plant table row|name=Chicory|super=6|tile=:|color=2:1|biome=Any Temperate|dry=y|value=4
+  |eat=y|cook=y
+  |p1={{tile|♠|2:0}} leaf|pv1=
+  |p2={{tile|♣|1:1}} flower|pv2=
+  |p3={{tile|·|0:1}} seed|pv3=1
+  }}
+{{plant table row|name=Cowpea|super=6|tile=:|color=2:1|biome=Tropical Grassland|dry=y|value=2
+  |eat=n|cook=Seed
+  |p1={{tile|♠|2:0}} leaf|pv1=
+  |p2={{tile|%|2:1}} pod|pv2=
+  |p3={{tile|♣|5:1}} flower|pv3=
+  |p4={{tile|·|7:1}} seed|pv4=1
+  }}
+{{plant table row|name=Cucumber|tile=:|color=2:0|biome=Tropical Dry Broadleaf Forest|biome2=Tropical Grassland|biome3=Tropical Savanna|biome4=Tropical Shrubland|dry=y|value=2
+  |eat=y|cook=y
+  |p1={{tile|♠|2:0}} leaf|pv1=
+  |p2={{tile|%|2:0}} fruit|pv2=2
+  |p3={{tile|♣|6:1}} flower|pv3=
+  |p4={{tile|·|7:1}} seed|pv4=1
+  }}
+{{plant table row|name=Eggplant|tile=:|color=2:0|biome=Tropical Dry Broadleaf Forest|biome2=Tropical Grassland|biome3=Tropical Savanna|biome4=Tropical Shrubland|dry=y|value=2
+  |eat=y|cook=y
+  |p1={{tile|♠|2:0}} leaf|pv1=
+  |p2={{tile|%|5:0}} fruit|pv2=2
+  |p3={{tile|♣|5:0}} flower|pv3=
+  |p4={{tile|·|7:0}} seed|pv4=1
+  }}
+{{plant table row|name=Garden cress|super=6|tile=:|color=2:1|biome=Any Temperate|dry=y|value=4
+  |eat=y|cook=y
+  |p1={{tile|♠|2:0}} leaf|pv1=2
+  |p2={{tile|♣|7:1}} flower|pv2=
+  |p3={{tile|·|0:1}} seed|pv3=1
+  }}
+{{plant table row|name=Garlic|super=6|tile=:|color=2:0|biome=Any Temperate|dry=y|value=2
+  |eat=y|cook=y
+  |p1={{tile|♠|2:0}} leaf|pv1=
+  |p2={{tile|♣|2:0}} bulb|pv2=2
+  |p3={{tile|ü|5:1}} flower|pv3=
+  |p4={{tile|·|0:1}} seed|pv4=1
+  }}
+{{plant table row|name=Horned melon|tile=:|color=2:0|biome=Any Tropical|dry=y|value=2
+  |eat=y|cook=y
+  |p1={{tile|♠|2:0}} leaf|pv1=
+  |p2={{tile|*|6:1}} fruit|pv2=2
+  |p3={{tile|♣|6:1}} flower|pv3=
+  |p4={{tile|·|7:1}} seed|pv4=1
+  }}
+{{plant table row|name=Leek|super=6|tile=:|color=2:0|biome=Any Temperate|dry=y|value=4
+  |eat=y|cook=y
+  |p1={{tile|♠|2:0}} leaf|pv1=
+  |p2={{tile|♣|5:1}} flower|pv2=
+  |p3={{tile|·|0:1}} seed|pv3=1
+  }}
+{{plant table row|name=Lentil|super=6|tile=:|color=2:0|biome=Not Freezing|dry=y|value=2
+  |eat=n|cook=Seed
+  |p1={{tile|♠|2:0}} leaf|pv1=
+  |p2={{tile|%|2:1}} pod|pv2=
+  |p3={{tile|♣|7:1}} flower|pv3=
+  |p4={{tile|·|6:0}} seed|pv4=1
+  }}
+{{plant table row|name=Lettuce|super=6|tile=:|color=2:1|biome=Any Temperate|biome2=Tropical Dry Broadleaf Forest|biome3=Tropical Grassland|biome4=Tropical Savanna|biome5=Tropical Shrubland|dry=y|value=4
+  |eat=y|cook=y
+  |p1={{tile|♠|2:0}} leaf|pv1=2
+  |p2={{tile|♣|6:1}} flower|pv2=
+  |p3={{tile|·|0:1}} seed|pv3=1
+  }}
+{{plant table row|name=Mung bean|super=6|tile=:|color=2:1|biome=Any Tropical|dry=y|value=2
+  |eat=n|cook=Seed
+  |p1={{tile|♠|2:0}} leaf|pv1=
+  |p2={{tile|%|2:1}} pod|pv2=
+  |p3={{tile|♣|6:1}} flower|pv3=
+  |p4={{tile|·|2:1}} seed|pv4=1
+  }}
+{{plant table row|name=Muskmelon|tile=:|color=2:0|biome=Any Temperate|biome2=Tropical Dry Broadleaf Forest|biome3=Tropical Grassland|biome4=Tropical Savanna|biome5=Tropical Shrubland|dry=y|value=2
+  |eat=y|cook=y
+  |p1={{tile|♠|2:0}} leaf|pv1=
+  |p2={{tile|%|7:0}} fruit|pv2=2
+  |p3={{tile|♣|6:1}} flower|pv3=
+  |p4={{tile|·|7:1}} seed|pv4=1
+  }}
+{{plant table row|name=Onion|super=6|tile=:|color=2:0|biome=Any Temperate|dry=y|value=2
+  |eat=y|cook=y
+  |p1={{tile|♠|2:0}} leaf|pv1=
+  |p2={{tile|%|7:1}} bulb|pv2=2
+  |p3={{tile|♣|7:1}} flower|prv3=
+  |p4={{tile|·|0:1}} seed|pv4=1
+  }}
+{{plant table row|name=Parsnip|tile=:|color=7:1|biome=Any Temperate|dry=y|value=4
+  |drink=Parsnip wine|drinkv=10|eat=y|cook=y
+  |p1={{tile|♠|2:0}} leaf|pv1=
+  |p2={{tile|♣|6:1}} flower|pv2=
+  |p3={{tile|·|0:1}} seed|pv3=1
+  }}
+{{plant table row|name=Pea|super=6|tile=:|color=2:1|biome=Any Temperate|dry=y|value=2
+  |eat=n|cook=Seed
+  |p1={{tile|♠|2:0}} leaf|pv1=
+  |p2={{tile|%|2:1}} pod|pv2=
+  |p3={{tile|♣|5:1}} flower|pv3=
+  |p4={{tile|·|2:0}} seed|pv4=1
+  }}
+{{plant table row|name=Peanut|super=6|tile=:|color=2:0|biome=Tropical Dry Broadleaf Forest|biome2=Tropical Grassland|biome3=Tropical Savanna|biome4=Tropical Shrubland|dry=y|value=2
+  |eat=n|cook=Seed
+  |p1={{tile|♠|2:0}} leaf|pv1=
+  |p2={{tile|%|6:0}} fruit|pv2=
+  |p3={{tile|♣|6:1}} flower|pv3=
+  |p4={{tile|·|6:0}} seed|pv4=1
+  }}
+{{plant table row|name=Pepper|tile=:|color=2:0|biome=Any Tropical|dry=y|value=2
+  |eat=y|cook=y
+  |p1={{tile|♠|2:0}} leaf|pv1=
+  |p2={{tile|%|4:1}} fruit|pv2=2
+  |p3={{tile|♣|7:1}} flower|pv3=
+  |p4={{tile|·|7:0}} seed|pv4=1
+  }}
+{{plant table row|name=Potato|tile=:|color=6:0|biome=Not Freezing|dry=y|value=4
+  |drink=Potato wine|drinkv=10|eat=y|cook=y
+  |p1={{tile|♠|2:0}} leaf|pv1=
+  |p2={{tile|♣|5:1}} flower|pv2=
+  |p3={{tile|·|0:1}} seed|pv3=1
+  }}
+{{plant table row|name=Radish|tile=:|color=5:1|biome=Any Temperate|dry=y|value=4
+  |drink=Radish wine|drinkv=10|eat=y|cook=y
+  |p1={{tile|♠|2:0}} leaf|pv1=
+  |p2={{tile|♣|7:1}} flower|pv2=
+  |p3={{tile|·|0:1}} seed|pv3=1
+  }}
+{{plant table row|name=Red bean|super=6|tile=:|color=2:1|biome=Any Temperate|dry=y|value=2
+  |eat=n|cook=Seed
+  |p1={{tile|♠|2:0}} leaf|pv1=
+  |p2={{tile|%|2:1}} pod|pv2=
+  |p3={{tile|♣|5:1}} flower|pv3=
+  |p4={{tile|·|2:1}} seed|pv4=1
+  }}
+{{plant table row|name=Rhubarb|super=6|tile=:|color=2:0|biome=Any Temperate|dry=y|value=4
+  |eat=y|cook=y
+  |p1={{tile|♠|2:0}} leaf|pv1=
+  |p2={{tile|♣|4:1}} flower|pv2=
+  |p3={{tile|·|0:1}} seed|pv3=1
+  }}
+{{plant table row|name=Soybean|super=6|tile=:|color=2:1|biome=Any Temperate|dry=y|value=2
+  |eat=n|cook=Seed
+  |p1={{tile|♠|2:0}} leaf|pv1=
+  |p2={{tile|%|2:1}} pod|pv2=
+  |p3={{tile|♣|5:1}} flower|pv3=
+  |p4={{tile|·|7:0}} seed|pv4=1
+  }}
+{{plant table row|name=Spinach|super=6|tile=:|color=2:0|biome=Any Temperate|dry=y|value=2
+  |eat=y|cook=y
+  |p1={{tile|♠|2:0}} leaf|pv1=2
+  |p2={{tile|♣|6:1}} flower|pv2=
+  |p3={{tile|·|0:1}} seed|pv3=1
+  }}
+{{plant table row|name=Squash|tile=:|color=2:1|biome=Any Tropical|dry=y|value=2
+  |eat=y|cook=y
+  |p1={{tile|♠|2:0}} leaf|pv1=
+  |p2={{tile|%|6:1}} fruit|pv2=2
+  |p3={{tile|♣|6:1}} flower|pv3=
+  |p4={{tile|·|0:1}} seed|pv4=1
+  }}
+{{plant table row|name=Sweet potato|tile=:|color=6:0|biome=Any Tropical|dry=y|value=4
+  |drink=Sweet potato wine|drinkv=10|eat=y|cook=y
+  |p1={{tile|♠|2:0}} leaf|pv1=
+  |p2={{tile|♣|5:1}} flower|pv2=
+  |p3={{tile|·|0:1}} seed|pv3=1
+  }}
+{{plant table row|name=Taro|super=6|tile=:|color=6:0|biome=Any Tropical|dry=y|value=4
+  |eat=n|cook=y
+  |p1={{tile|♠|2:0}} leaf|pv1=
+  |p2={{tile|♣|7:1}} flower|pv2=
+  |p3={{tile|·|0:1}} seed|pv3=1
+  }}
+{{plant table row|name=Tomato|tile=:|color=2:0|biome=Tropical Dry Broadleaf Forest|dry=y|value=2
+  |drink=Tomato wine|drinkv=10|eat=y|cook=y
+  |p1={{tile|♠|2:0}} leaf|pv1=
+  |p2={{tile|%|4:1}} fruit|pv2=2
+  |p3={{tile|♣|6:1}} flower|pv3=
+  |p4={{tile|·|7:1}} seed|pv4=1
+  }}
+{{plant table row|name=Tomatillo|tile=:|color=2:0|biome=Tropical Dry Broadleaf Forest|biome2=Tropical Grassland|biome3=Tropical Savanna|biome4=Tropical Shrubland|dry=y|value=2
+  |drink=Tomatillo wine|drinkv=10|eat=y|cook=y
+  |p1={{tile|♠|2:0}} leaf|pv1=
+  |p2={{tile|%|2:1}} fruit|pv2=2
+  |p3={{tile|♣|6:1}} flower|pv3=
+  |p4={{tile|·|7:1}} seed|pv4=1
+  }}
+{{plant table row|name=Turnip|tile=:|color=5:1|biome=Any Temperate|dry=y|value=4
+  |drink=Turnip wine|drinkv=10|eat=y|cook=y
+  |p1={{tile|♠|2:0}} leaf|pv1=
+  |p2={{tile|♣|6:1}} flower|pv2=
+  |p3={{tile|·|0:1}} seed|pv3=1
+  }}
+{{plant table row|name=Urad bean|super=6|tile=:|color=2:1|biome=Any Tropical|dry=y|value=2
+  |eat=n|cook=Seed
+  |p1={{tile|♠|2:0}} leaf|pv1=
+  |p2={{tile|%|2:1}} pod|pv2=
+  |p3={{tile|♣|6:1}} flower|pv3=
+  |p4={{tile|·|2:1}} seed|pv4=1
+  }}
+{{plant table row|name=Watermelon|tile=:|color=2:0|biome=Any Tropical|dry=y|value=2
+  |eat=y|cook=y
+  |p1={{tile|♠|2:0}} leaf|pv1=
+  |p2={{tile|o|2:0}} fruit|pv2=2
+  |p3={{tile|♣|6:1}} flower|pv3=
+  |p4={{tile|·|0:1}} seed|pv4=1
+  }}
+{{plant table row|name=Winter melon|tile=:|color=2:0|biome=Any Tropical|dry=y|value=2
+  |eat=y|cook=y
+  |p1={{tile|♠|2:0}} leaf|pv1=
+  |p2={{tile|o|2:0}} fruit|pv2=2
+  |p3={{tile|♣|6:1}} flower|pv3=
+  |p4={{tile|·|0:1}} seed|pv4=1
+  }}
+{{plant table row|name=Lesser yam|super=6|tile=:|color=6:0|biome=Any Tropical|dry=y|value=4
+  |eat=n|cook=y
+  |p1={{tile|♠|2:0}} leaf|pv1=
+  |p2={{tile|♣|7:1}} flower|pv2=
+  |p3={{tile|·|0:1}} seed|pv3=1
+  }}
+{{plant table row|name=Long yam|super=6|tile=:|color=6:0|biome=Any Temperate|dry=y|value=4
+  |eat=y|cook=y
+  |p1={{tile|♠|2:0}} leaf|pv1=
+  |p2={{tile|♣|7:1}} flower|pv2=
+  |p3={{tile|·|0:1}} seed|pv3=1
+  }}
+{{plant table row|name=Purple yam|super=6|tile=:|color=5:0|biome=Any Tropical|dry=y|value=4
+  |eat=n|cook=y
+  |p1={{tile|♠|2:0}} leaf|pv1=
+  |p2={{tile|♣|7:1}} flower|pv2=
+  |p3={{tile|·|0:1}} seed|pv3=1
+  }}
+{{plant table row|name=White yam|super=6|tile=:|color=6:0|biome=Any Tropical|dry=y|value=4
+  |eat=n|cook=y
+  |p1={{tile|♠|2:0}} leaf|pv1=
+  |p2={{tile|♣|7:1}} flower|pv2=
+  |p3={{tile|·|0:1}} seed|pv3=1
+  }}
+{{plant table row|name=Passion fruit|tile=:|color=2:1|biome=Any Tropical|dry=y|value=2
+  |drink=Passion fruit wine|drinkv=10|eat=y|cook=y
+  |p1={{tile|♠|2:0}} leaf|pv1=
+  |p2={{tile|%|4:1}} fruit|pv2=2
+  |p3={{tile|♣|5:1}} flower|pv3=
+  |p4={{tile|·|0:1}} seed|pv4=1
+  }}
+{{plant table row|name=Grape|tile=:|color=2:1|biome=Any Temperate|dry=y|value=2
+  |drink=Wine|drinkv=10|eat=y|cook=y
+  |p1={{tile|♠|2:0}} leaf|pv1=
+  |p2={{tile|%|5:0}} fruit|pv2=2
+  |p3={{tile|♣|5:1}} flower|pv3=
+  |p4={{tile|·|0:1}} seed|pv4=1
+  }}
+{{plant table row|name=Cranberry|tile=:|color=2:1|biome=Any Temperate|biome2=Tundra|biome3=Taiga|dry=y|value=2
+  |drink=Cranberry wine|drinkv=10|eat=y|cook=y
+  |p1={{tile|♠|2:0}} leaf|pv1=
+  |p2={{tile|%|2:1}} fruit|pv2=2
+  |p3={{tile|♣|4:0}} flower|pv3=
+  |p4={{tile|·|0:1}} seed|pv4=1
+  }}
+{{plant table row|name=Bilberry|tile=:|color=2:1|biome=Any Temperate|biome2=Tundra|biome3=Taiga|dry=y|value=2
+  |drink=Bilberry wine|drinkv=10|eat=y|cook=y
+  |p1={{tile|♠|2:0}} leaf|pv1=
+  |p2={{tile|%|1:1}} fruit|pv2=2
+  |p3={{tile|♣|5:1}} flower|pv3=
+  |p4={{tile|·|0:1}} seed|pv4=1
+  }}
+{{plant table row|name=Blueberry|tile=:|color=2:1|biome=Any Temperate|biome2=Tundra|biome3=Taiga|dry=y|value=2
+  |drink=Blueberry wine|drinkv=10|eat=y|cook=y
+  |p1={{tile|♠|2:0}} leaf|pv1=
+  |p2={{tile|%|1:1}} fruit|pv2=2
+  |p3={{tile|♣|7:1}} flower|pv3=
+  |p4={{tile|·|0:1}} seed|pv4=1
+  }}
+{{plant table row|name=Blackberry|tile=:|color=2:1|biome=Any Temperate|dry=y|value=2
+  |drink=Blackberry wine|drinkv=10|eat=y|cook=y
+  |p1={{tile|♠|2:0}} leaf|pv1=
+  |p2={{tile|%|0:1}} fruit|pv2=2
+  |p3={{tile|♣|7:1}} flower|pv3=
+  |p4={{tile|·|0:1}} seed|pv4=1
+  }}
+{{plant table row|name=Raspberry|tile=:|color=2:1|biome=Any Temperate|dry=y|value=2
+  |drink=Raspberry wine|drinkv=10|eat=y|cook=y
+  |p1={{tile|♠|2:0}} leaf|pv1=
+  |p2={{tile|%|4:1}} fruit|pv2=2
+  |p3={{tile|♣|5:1}} flower|pv3=
+  |p4={{tile|·|0:1}} seed|pv4=1
+  }}
+{{plant table row|name=Pineapple|tile=:|color=2:1|biome=Any Tropical|dry=y|value=2
+  |drink=Pineapple wine|drinkv=10|eat=y|cook=y
+  |p1={{tile|♠|2:0}} leaf|pv1=
+  |p2={{tile|%|6:0}} fruit|pv2=2
+  |p3={{tile|♣|5:1}} flower|pv3=
+  |p4={{tile|·|0:1}} seed|pv4=1
+  }}
+|}
+
+'''Notes:'''
+:<sup>1</sup> This is the value for a stack of 5 units, which is the number rendered from a single plant.
+:<sup>2</sup> Anything that can be cooked is edible afterwards. Note that cooking leaves no seeds for re-planting.
+:<sup>3</sup> These plants cannot be eaten/cooked until they are further processed, either by milling or extracting; see "products" column for process product.
+:<sup>4</sup> These plants cannot be grown on a farm plot as they have no seeds. They can only be acquired through plant gathering (in season only) or trade.
+:<sup>5</sup> Some products may require processing; see plant page for details.
+:<sup>6</sup> These plants, when grown from seed on a farm plot, don't yield products that can be processed for seeds.
+
+== Crop plants ==
+These plants are defined in the file plant_crops.txt. They grow above ground, in any season.
+
+{{plant table head}}
+{{plant table row|name=Single-grain wheat|tile=τ|color=2:0|biome=Tropical Grassland|biome2=Tropical Savanna|dry=y|value=2
+  |drink=Single-grain wheat beer|drinkv=10|eat=n|cook=p
+  |p1={{tile|♠|2:0}} leaf|pv1=
+  |p2={{tile|·|0:1}} seed|pv2=1
+  |p3={{tile|·|7:1}} flour (m)|pv3=20
+  }}
+{{plant table row|name=Two-grain wheat|tile=τ|color=2:0|biome=Tropical Grassland|biome2=Tropical Savanna|dry=y|value=2
+  |drink=Two-grain wheat beer|drinkv=10|eat=n|cook=p
+  |p1={{tile|♠|2:0}} leaf|pv1=
+  |p2={{tile|·|0:1}} seed|pv2=1
+  |p3={{tile|·|7:1}} flour (m)|pv3=20
+  }}
+{{plant table row|name=Soft wheat|tile=τ|color=2:0|biome=Tropical Grassland|biome2=Tropical Savanna|dry=y|value=2
+  |drink=Soft wheat beer|drinkv=10|eat=n|cook=p
+  |p1={{tile|♠|2:0}} leaf|pv1=
+  |p2={{tile|·|0:1}} seed|pv2=1
+  |p3={{tile|·|7:1}} flour (m)|pv3=20
+  }}
+{{plant table row|name=Hard wheat|tile=τ|color=2:0|biome=Tropical Grassland|biome2=Tropical Savanna|dry=y|value=2
+  |drink=Hard wheat beer|drinkv=10|eat=n|cook=p
+  |p1={{tile|♠|2:0}} leaf|pv1=
+  |p2={{tile|·|0:1}} seed|pv2=1
+  |p3={{tile|·|7:1}} flour (m)|pv3=20
+  }}
+{{plant table row|name=Spelt|tile=τ|color=2:0|biome=Any Temperate|dry=y|value=2
+  |drink=Spelt beer|drinkv=10|eat=n|cook=p
+  |p1={{tile|♠|2:0}} leaf|pv1=
+  |p2={{tile|·|0:1}} seed|pv2=1
+  |p3={{tile|·|7:1}} flour (m)|pv3=20
+  }}
+{{plant table row|name=Barley|tile=τ|color=2:0|biome=Not Freezing|dry=y|value=2
+  |drink=Barley wine|drinkv=10|eat=n|cook=p
+  |p1={{tile|♠|2:0}} leaf|pv1=
+  |p2={{tile|·|0:1}} seed|pv2=1
+  |p3={{tile|·|7:1}} flour (m)|pv3=20
+  }}
+{{plant table row|name=Buckwheat|tile=τ|color=2:0|biome=Tropical Dry Broadleaf Forest|dry=y|value=2
+  |drink=Buckwheat beer|drinkv=10|eat=n|cook=p
+  |p1={{tile|♠|2:0}} leaf|pv1=
+  |p2={{tile|♣|7:1}} flower|pv2=
+  |p3={{tile|·|0:1}} seed|pv3=1
+  |p4={{tile|·|7:1}} flour (m)|pv4=20
+  }}
+{{plant table row|name=Oats|tile=τ|color=2:0|biome=Any Temperate|dry=y|value=2
+  |eat=n|cook=p
+  |p1={{tile|♠|2:0}} leaf|pv1=
+  |p2={{tile|·|0:1}} seed|pv2=1
+  |p3={{tile|·|7:1}} flour (m)|pv3=20
+  }}
+{{plant table row|name=Alfalfa|super=6|tile=τ|color=2:0|biome=Not Freezing|dry=y|value=4
+  |eat=y|cook=y
+  |p1={{tile|♠|2:0}} leaf|pv1=
+  |p2={{tile|♣|5:1}} flower|pv2=
+  |p3={{tile|·|0:1}} seed|pv3=1
+  }}
+{{plant table row|name=Rye|tile=τ|color=2:0|biome=Not Freezing|dry=y|value=2
+  |drink=Rye beer|drinkv=10|eat=n|cook=p
+  |p1={{tile|♠|2:0}} leaf|pv1=
+  |p2={{tile|·|0:1}} seed|pv2=1
+  |p3={{tile|·|7:1}} flour (m)|pv3=20
+  }}
+{{plant table row|name=Sorghum|tile=τ|color=2:0|biome=Tropical Grassland|biome2=Tropical Savanna|dry=y|value=2
+  |drink=Sorghum beer|drinkv=10|eat=n|cook=p
+  |p1={{tile|♠|2:0}} leaf|pv1=
+  |p2={{tile|♣|5:1}} flower|pv2=
+  |p3={{tile|·|0:1}} seed|pv3=1
+  |p4={{tile|·|7:1}} flour (m)|pv4=20
+  }}
+{{plant table row|name=Rice|tile=τ|color=2:0|biome=Any Tropical|dry=b|value=2
+  |drink=Rice beer|drinkv=10|eat=n|cook=p
+  |p1={{tile|♠|2:0}} leaf|pv1=
+  |p2={{tile|·|0:1}} seed|pv2=1
+  |p3={{tile|·|7:1}} flour (m)|pv3=20
+  }}
+{{plant table row|name=Maize|tile=τ|color=2:0|biome=Any Tropical|dry=y|value=2
+  |drink=Maize beer|drinkv=10|eat=n|cook=p
+  |p1={{tile|♠|2:0}} leaf|pv1=
+  |p2={{tile|·|0:1}} seed|pv2=1
+  |p3={{tile|·|7:1}} flour (m)|pv3=20
+  }}
+{{plant table row|name=Quinoa|tile=τ|color=2:0|biome=Any Temperate|dry=y|value=2
+  |drink=Quinoa beer|drinkv=10|eat=n|cook=p
+  |p1={{tile|♠|2:0}} leaf|pv1=
+  |p2={{tile|♣|2:1}} flower|pv2=
+  |p3={{tile|·|4:1}} seed|pv3=1
+  |p4={{tile|·|7:1}} flour (m)|pv4=20
+  }}
+{{plant table row|name=Kaniwa|tile=τ|color=2:0|biome=Any Temperate|dry=y|value=2
+  |drink=Kaniwa beer|drinkv=10|eat=n|cook=p
+  |p1={{tile|♠|2:0}} leaf|pv1=
+  |p2={{tile|♣|2:1}} flower|pv2=
+  |p3={{tile|·|4:1}} seed|pv3=1
+  |p4={{tile|·|7:1}} flour (m)|pv4=20
+  }}
+{{plant table row|name=Bitter vetch|super=6|tile=:|color=2:0|biome=Any Temperate|dry=y|value=2
+  |eat=y|cook=y
+  |p1={{tile|♠|2:0}} leaf|pv1=2
+  |p2={{tile|♣|7:1}} flower|pv2=
+  |p3={{tile|%|2:1}} pod|pv3=
+  |p4={{tile|·|6:0}} seed|pv4=1
+  }}
+{{plant table row|name=Pendant amaranth|tile=τ|color=2:0|biome=Any Tropical|dry=y|value=2
+  |drink=Pendant amaranth beer|drinkv=10|eat=n|cook=p
+  |p1={{tile|♠|2:0}} leaf|pv1=
+  |p2={{tile|♣|5:1}} flower|pv2=
+  |p3={{tile|·|0:1}} seed|pv3=1
+  |p4={{tile|·|7:1}} flour (m)|pv4=20
+  }}
+{{plant table row|name=Blood amaranth|tile=τ|color=2:0|biome=Any Tropical|dry=y|value=2
+  |drink=Blood amaranth beer|drinkv=10|eat=y|cook=y
+  |p1={{tile|♠|2:0}} leaf|pv1=2
+  |p2={{tile|♣|4:1}} flower|pv2=
+  |p3={{tile|·|0:1}} seed|pv3=1
+  |p4={{tile|·|7:1}} flour (m)|pv4=20
+  }}
+{{plant table row|name=Purple amaranth|tile=τ|color=2:0|biome=Any Temperate|dry=y|value=2
+  |drink=Purple amaranth beer|drinkv=10|eat=y|cook=y
+  |p1={{tile|♠|2:0}} leaf|pv1=2
+  |p2={{tile|♣|5:0}} flower|pv2=
+  |p3={{tile|·|0:1}} seed|pv3=1
+  |p4={{tile|·|7:1}} flour (m)|pv4=20
+  }}
+{{plant table row|name=Red spinach|super=6|tile=τ|color=2:0|biome=Not Freezing|dry=y|value=2
+  |eat=y|cook=y
+  |p1={{tile|♠|2:0}} leaf|pv1=2
+  |p2={{tile|♣|2:1}} flower|pv2=
+  |p3={{tile|·|0:1}} seed|pv3=1
+  }}
+{{plant table row|name=Elephant-head amaranth|super=6|tile=τ|color=2:0|biome=Any Tropical|dry=y|value=2
+  |eat=y|cook=y
+  |p1={{tile|♠|6:1}} leaf|pv1=2
+  |p2={{tile|♣|5:0}} flower|pv2=
+  |p3={{tile|·|0:1}} seed|pv3=1
+  }}
+{{plant table row|name=Pearl millet|tile=τ|color=2:0|biome=Any Tropical|dry=y|value=2
+  |drink=Pearl millet beer|drinkv=10|eat=n|cook=p
+  |p1={{tile|♠|2:0}} leaf|pv1=
+  |p2={{tile|·|7:0}} seed|pv2=1
+  |p3={{tile|·|7:1}} flour (m)|pv3=20
+  }}
+{{plant table row|name=White millet|tile=τ|color=2:0|biome=Any Temperate|dry=y|value=2
+  |drink=White millet beer|drinkv=10|eat=n|cook=p
+  |p1={{tile|♠|2:0}} leaf|pv1=
+  |p2={{tile|·|7:1}} seed|pv2=1
+  |p3={{tile|·|7:1}} flour (m)|pv3=20
+  }}
+{{plant table row|name=Finger millet|tile=τ|color=2:0|biome=Any Temperate|dry=y|value=2
+  |drink=Finger millet beer|drinkv=10|eat=n|cook=p
+  |p1={{tile|♠|2:0}} leaf|pv1=
+  |p2={{tile|·|6:0}} seed|pv2=1
+  |p3={{tile|·|7:1}} flour (m)|pv3=20
+  }}
+{{plant table row|name=Foxtail millet|tile=τ|color=2:0|biome=Any Temperate|dry=y|value=2
+  |drink=Foxtail millet beer|drinkv=10|eat=n|cook=p
+  |p1={{tile|♠|2:0}} leaf|pv1=
+  |p2={{tile|·|7:0}} seed|pv2=1
+  |p3={{tile|·|7:1}} flour (m)|pv3=20
+  }}
+{{plant table row|name=Fonio|tile=τ|color=2:0|biome=Tropical Savanna|dry=y|value=2
+  |drink=Fonio beer|drinkv=10|eat=n|cook=p
+  |p1={{tile|♠|2:0}} leaf|pv1=
+  |p2={{tile|·|6:0}} seed|pv2=1
+  |p3={{tile|·|7:1}} flour (m)|pv3=20
+  }}
+{{plant table row|name=Teff|tile=τ|color=2:0|biome=Tropical Grassland|dry=y|value=2
+  |drink=Teff beer|drinkv=10|eat=n|cook=p
+  |p1={{tile|♠|2:0}} leaf|pv1=
+  |p2={{tile|·|6:0}} seed|pv2=1
+  |p3={{tile|·|7:1}} flour (m)|pv3=20
+  }}
+{{plant table row|name=Flax|tile=τ|color=2:0|biome=Tropical Grassland|biome2=Tropical Savanna|dry=y|value=2
+  |eat=n|cook=p
+  |p1={{tile|♠|2:0}} leaf|pv1=
+  |p2={{tile|♣|1:1}} flower|pv2=
+  |p3={{tile|·|0:1}} seed|pv3=1
+  |p4={{tile|·|7:1}} flour|pv4=20
+  |p5={{tile|≈|6:0}} paste (m)|pv5=1
+  |p6={{tile|≈|6:0}} p. cake (s)|pv6=1
+  |p7={{tile|≈|6:1}} oil (s)|pv7=5
+  |p8={{tile|φ|7:0}} thread (p)|pv8=12
+  |p9={{tile|≈|7:0}} slurry (h)|pv9=2
+  }}
+{{plant table row|name=Jute|tile=τ|color=2:0|biome=Any Tropical|dry=y|value=2
+  |eat=n|cook=n
+  |p1={{tile|♠|2:0}} leaf|pv1=
+  |p2={{tile|♣|6:1}} flower|pv2=
+  |p3={{tile|·|0:1}} seed|pv3=1
+  |p4={{tile|φ|7:0}} thread (p)|pv4=12
+  |p5={{tile|≈|7:0}} slurry (h)|pv5=2
+  }}
+{{plant table row|name=Hemp|tile=τ|color=2:0|biome=Any Temperate|dry=y|value=2
+  |eat=n|cook=p
+  |p1={{tile|♠|2:0}} leaf|pv1=
+  |p2={{tile|·|0:1}} seed|pv2=1
+  |p3={{tile|·|7:1}} flour|pv3=20
+  |p4={{tile|≈|6:0}} paste (m)|pv4=1
+  |p5={{tile|≈|6:0}} p. cake (s)|pv5=1
+  |p6={{tile|≈|6:1}} oil (s)|pv6=5
+  |p7={{tile|φ|7:0}} thread (p)|pv7=12
+  |p8={{tile|≈|7:0}} slurry (h)|pv8=2
+  }}
+{{plant table row|name=Cotton|tile=τ|color=2:0|biome=Any Tropical|dry=y|value=2
+  |eat=n|cook=p
+  |p1={{tile|♠|2:0}} leaf|pv1=
+  |p2={{tile|♣|6:1}} flower|pv2=
+  |p3={{tile|·|7:1}} seed|pv3=1
+  |p4={{tile|≈|6:0}} paste (m)|pv4=1
+  |p5={{tile|≈|6:0}} p. cake (s)|pv5=1
+  |p6={{tile|≈|6:1}} oil (s)|pv6=5
+  |p7={{tile|φ|7:0}} thread (p)|pv7=12
+  |p8={{tile|≈|7:0}} slurry (h)|pv8=2
+  }}
+{{plant table row|name=Ramie|tile=τ|color=2:0|biome=Any Tropical|dry=y|value=2
+  |eat=n|cook=n
+  |p1={{tile|♠|2:0}} leaf|pv1=
+  |p2={{tile|·|0:1}} seed|pv2=1
+  |p3={{tile|φ|7:0}} thread (p)|pv3=12
+  |p4={{tile|≈|7:0}} slurry (h)|pv4=2
+  }}
+{{plant table row|name=Kenaf|tile=τ|color=2:0|biome=Any Tropical|dry=y|value=2
+  |eat=n|cook=p
+  |p1={{tile|♠|2:0}} leaf|pv1=
+  |p2={{tile|♣|7:1}} flower|pv2=
+  |p3={{tile|·|0:1}} seed|pv3=1
+  |p4={{tile|≈|6:0}} paste (m)|pv4=1
+  |p5={{tile|≈|6:0}} p. cake (s)|pv5=1
+  |p6={{tile|≈|6:1}} oil (s)|pv6=5
+  |p7={{tile|φ|7:0}} thread (p)|pv7=12
+  |p8={{tile|≈|7:0}} slurry (h)|pv8=2
+  }}
+{{plant table row|name=Papyrus sedge|tile=τ|color=2:0|biome=Any Tropical Wetland|dry=y|value=2
+  |eat=n|cook=n
+  |p1={{tile|♠|2:0}} leaf|pv1=
+  |p2={{tile|♣|6:0}} flower|pv2=
+  |p3={{tile|·|0:1}} seed|pv3=1
+  |p4={{tile|⌡|6:0}} papyrus|pv4=10
+  }}
+|}
+
+'''Notes:'''
+:<sup>1</sup> This is the value for a stack of 5 units, which is the number rendered from a single plant.
+:<sup>2</sup> Anything that can be cooked is edible afterwards. Note that cooking leaves no seeds for re-planting.
+:<sup>3</sup> These plants cannot be eaten/cooked until they are further processed, either by milling or extracting; see "products" column for process product.
+:<sup>4</sup> These plants cannot be grown on a farm plot as they have no seeds. They can only be acquired through plant gathering (in season only) or trade.
+:<sup>5</sup> Some products may require processing; see plant page for details.
+:<sup>6</sup> These plants, when grown from seed on a farm plot, don't yield products that can be processed for seeds.
+
+== Best crop to grow ==
+There is no "best" crop, but some are clearly superior to others, depending on your needs and available resources.
+
+===All-purpose===
+Many [[dwarf|dwarves]] prefer the humble [[plump helmet]], which can be [[farming|grown]] year-round, [[food|eaten raw]], [[cook|cooked]], or brewed into [[Alcohol|wine]], and many early fortresses rely on the plump helmet crop as a staple of their diet. All above-ground crops are all-seasons as well, the best of which are probably [[sun berry|sun berries]], [[hemp]], and [[whip vine]]s.  See the above table summarizing the [[crop]] products, limitations, and values. 
+
+Because of [[siege|occasional above-ground inconveniences]], having an underground [[plump helmet]] farm, or, at least, some [[plump helmet]] spawn, may be useful emergency preparation.
+
+===Booze===
+Four principal seeds available at the beginning of an expedition ([[cave wheat]], [[pig tail]], [[plump helmet]], [[sweet pod]]) all produce underground crops that can be made into [[booze]] worth 10☼. Above ground crops will require you to [[trade]] or [[gather plants|gather]] for [[seed]]s, but the best of them that can be [[farming|farmed]] are [[sun berry|sun berries]], which produce [[sunshine]] worth 25☼.
+
+Keep in mind that dwarves care more about the diversity of available booze than its [[value]].  
+
+For quantity, [[cave wheat]] and [[sweet pod]] mature in 42 days, versus 25 for the other crops, so they may yield less alcohol per farm plot. [[Plump helmet]]s mature in 25 days and grow year-round, which may be a good starting point for your [[alcohol]] [[industry]], but exclusive dependence on it will cause [[stress]].
+
+Rope reeds and pig tails can be made into booze, but you might prefer to use them to make thread.
+
+===Dye===
+There are four dye crops. Three 20☼ [[dye]] crops: [[blade weed]] and [[sliver barb]] (above ground) and [[dimple cup]]s (underground).  [[Hide root]] (above ground) is a 10☼ [[dye]].  Dyeing should be considered a low priority because all it does is change the color of cloth or thread and slightly increase its value.  You might not want a dedicated farm to grow dye crops; it can be enough to forage for them with [[plant gathering|herbalism]] or import them from caravans.
+
+===Food===
+In terms of sheer [[Currency|dwarfbuck]]s, [[sweet pod]]s produce the most valuable foodstuff: [[dwarven syrup]] (100☼). In terms of quantity and value, other good crops are [[quarry bush]]es (which yield 5 quarry bush leaves when processed) and [[whip vine]]s (which can be [[mill]]ed into [[flour|whip vine flour]]).  Diversity in meals is also important to dwarves.
+
+===Thread===
+All plant thread is equally valuable (at 2☼ per unit), so the main decision is between a seasonal underground crop ([[pig tail]]s) or one of the year-round [[Textile_industry#Crops|above-ground crops]] ([[cotton]], [[rope reed]]s, [[hemp]], [[flax]], [[jute]], [[ramie]], [[kenaf]]).  These plants are also equally useful for [[papermaking|making paper]].  [[Papyrus]] is slightly easier to process if you want to make a lot of paper, but papyrus can't be used for any other purpose and it is only available in some tropical wetlands.
+
+== Bugs ==
+* Plant handling/processing is incomplete for some crops.{{bug|6940}}  This results in plants that, when picked, are inedible because the wrong parts are picked, or where seeds are impossible to pull from the proper plant parts.  Large numbers of crops are therefore incapable of being farmed.
+
+== See also ==
+* [[Farming]]
+
+{{DF2014 plants}}
+[[ru:Crop]]
