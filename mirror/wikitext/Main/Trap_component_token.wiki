@@ -1,0 +1,75 @@
+{{Quality|Superior}}
+{{av}}
+{{Modding}}
+
+'''Trap component tokens''' are used on [[trap]] components.
+{{clear}}
+
+==Tokens==
+{| {{prettytable}}
+|- bgcolor="#ddd"
+! Token
+! Arguments
+! Description
+
+|-
+| {{text anchor|NAME}}
+| singular:plural
+| What this item will be called in-game.
+
+|-
+| {{text anchor|ADJECTIVE}}
+| adjective
+| Appears before the name of the weapon's material. E.g. "menacing steel spike"
+
+|-
+| {{text anchor|SIZE}} / {{text anchor|WEIGHT}}
+| value
+| How large the item is. Defaults to 100.
+
+|-
+| {{text anchor|HITS}}
+| value
+| Number of times it hits. Defaults to 1
+
+|-
+| {{text anchor|MATERIAL_SIZE}}
+| value
+| How much material is needed to make the item. Is most important with bars. The number of bars needed is the value divided by three. <font color="red">Required.</font>
+
+|- 
+| {{text anchor|IS_SCREW}}
+|
+| Weapon may be installed in a screw pump.
+
+|-
+| {{text anchor|IS_SPIKE}}
+|
+| Weapon may be installed in a spike trap.
+
+|-
+| {{text anchor|WOOD}}
+|
+| Weapon may be made out of wood.
+
+|-
+| {{text anchor|METAL}}
+|
+| Weapon may be made out of metal.
+
+|-
+| {{text anchor|ATTACK}}
+| 
+* attacktype:EDGE (or BLUNT?)
+* contact_area:value
+* penetration_size:value
+* verb2nd:string
+* verb3rd:string
+* noun:string
+* velocity_multiplier:value 
+| Sets the attack characteristics of the weapon
+|}
+
+{{Category|Modding}}
+{{Category|Tokens}}
+[[ru:Trap component token]]

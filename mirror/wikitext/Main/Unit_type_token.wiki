@@ -1,0 +1,337 @@
+{{Quality|Fine}}
+{{av}}
+{{Modding}}
+'''Unit type tokens''' define [[profession]] roles. They are used with various [[entity token]]s, as well as in graphical tilesets.
+
+{| class="prettytable anchortable sortable" border="1" style="margin: auto; background: #f9f9f9; border: 1px #aaa solid; border-collapse: collapse; text-indent:3px;"
+|- style='background-color:#ddd'
+! # !! Token !! Unit type !!
+|-
+| style="text-align:right; padding-right:3px;" | 0 || {{text anchor|MINER}} || [[Miner]] ||style="background:#000; text-indent:0;" data-sort-value="151" | {{Dwarf|7:0|20px}}
+|-
+| style="text-align:right; padding-right:3px;" | 1 || {{text anchor|WOODWORKER}} || [[Woodworker]] ||style="background:#000; text-indent:0;" data-sort-value="041"| {{Dwarf|6:1|20px}}
+|-
+| style="text-align:right; padding-right:3px;" | 2 || {{text anchor|CARPENTER}} || [[Carpenter]] ||style="background:#000; text-indent:0" data-sort-value="041"| {{Dwarf|6:1|20px}}
+|-
+| style="text-align:right; padding-right:3px;" | 3 || {{text anchor|BOWYER}} || [[Bowyer]] ||style="background:#000; text-indent:0" data-sort-value="041"| {{Dwarf|6:1|20px}}
+|-
+| style="text-align:right; padding-right:3px;" | 4 || {{text anchor|WOODCUTTER}} || [[Woodcutter]] ||style="background:#000; text-indent:0" data-sort-value="041"| {{Dwarf|6:1|20px}}
+|-
+| style="text-align:right; padding-right:3px;" | 5 || {{text anchor|STONEWORKER}} || [[Stoneworker]] ||style="background:#000; text-indent:0" data-sort-value="161"| {{Dwarf|7:1|20px}}
+|-
+| style="text-align:right; padding-right:3px;" | 6 || {{text anchor|STONECUTTER}} || [[Stonecutter]] ||style="background:#000; text-indent:0" data-sort-value="161"| {{Dwarf|7:1|20px}}
+|-
+| style="text-align:right; padding-right:3px;" | 7 || {{text anchor|STONECARVER}} || [[Stone carver]] ||style="background:#000; text-indent:0" data-sort-value="161"| {{Dwarf|7:1|20px}}
+|-
+| style="text-align:right; padding-right:3px;" | 8 || {{text anchor|ENGRAVER}} || [[Engraver]] ||style="background:#000; text-indent:0" data-sort-value="161"| {{Dwarf|7:1|20px}}
+|-
+| style="text-align:right; padding-right:3px;" | 9 || {{text anchor|MASON}} || [[Mason]] ||style="background:#000; text-indent:0" data-sort-value="161"| {{Dwarf|7:1|20px}}
+|-
+| style="text-align:right; padding-right:3px;" |10 || {{text anchor|RANGER}} || [[Ranger]] ||style="background:#000; text-indent:0" data-sort-value="051"| {{Dwarf|2:0|20px}}
+|-
+| style="text-align:right; padding-right:3px;" |11 || {{text anchor|ANIMAL_CARETAKER}} || [[Animal caretaker]] ||style="background:#000; text-indent:0" data-sort-value="051"| {{Dwarf|2:0|20px}}
+|-
+| style="text-align:right; padding-right:3px;" |12 || {{text anchor|ANIMAL_TRAINER}} || [[Animal trainer]] ||style="background:#000; text-indent:0" data-sort-value="051"| {{Dwarf|2:0|20px}}
+|-
+| style="text-align:right; padding-right:3px;" |13 || {{text anchor|HUNTER}} || [[Hunter]] ||style="background:#000; text-indent:0" data-sort-value="051"| {{Dwarf|2:0|20px}}
+|-
+| style="text-align:right; padding-right:3px;" |14 || {{text anchor|TRAPPER}} || [[Trapper]] ||style="background:#000; text-indent:0" data-sort-value="051"| {{Dwarf|2:0|20px}}
+|-
+| style="text-align:right; padding-right:3px;" |15 || {{text anchor|ANIMAL_DISSECTOR}} || [[Animal dissector]] ||style="background:#000; text-indent:0" data-sort-value="051"| {{Dwarf|2:0|20px}}
+|-
+| style="text-align:right; padding-right:3px;" |16 || {{text anchor|METALSMITH}} || [[Metalsmith]] ||style="background:#000; text-indent:0" data-sort-value="141"| {{Dwarf|0:1|20px}}
+|-
+| style="text-align:right; padding-right:3px;" |17 || {{text anchor|FURNACE_OPERATOR}} || [[Furnace operator]] ||style="background:#000; text-indent:0" data-sort-value="141"| {{Dwarf|0:1|20px}}
+|-
+| style="text-align:right; padding-right:3px;" |18 || {{text anchor|WEAPONSMITH}} || [[Weaponsmith]] ||style="background:#000; text-indent:0" data-sort-value="141"| {{Dwarf|0:1|20px}}
+|-
+| style="text-align:right; padding-right:3px;" |19 || {{text anchor|ARMORER}} || [[Armorsmith|Armorer]] ||style="background:#000; text-indent:0" data-sort-value="141"| {{Dwarf|0:1|20px}}
+|-
+| style="text-align:right; padding-right:3px;" |20 || {{text anchor|BLACKSMITH}} || [[Blacksmith]] ||style="background:#000; text-indent:0" data-sort-value="141"| {{Dwarf|0:1|20px}}
+|-
+| style="text-align:right; padding-right:3px;" |21 || {{text anchor|METALCRAFTER}} || [[Metalcrafter]] ||style="background:#000; text-indent:0" data-sort-value="141"| {{Dwarf|0:1|20px}}
+|-
+| style="text-align:right; padding-right:3px;" |22 || {{text anchor|JEWELER}} || [[Jeweler]] ||style="background:#000; text-indent:0" data-sort-value="061"| {{Dwarf|2:1|20px}}
+|-
+| style="text-align:right; padding-right:3px;" |23 || {{text anchor|GEM_CUTTER}} || [[Gem cutter]] ||style="background:#000; text-indent:0" data-sort-value="061"| {{Dwarf|2:1|20px}}
+|-
+| style="text-align:right; padding-right:3px;" |24 || {{text anchor|GEM_SETTER}} || [[Gem setter]] ||style="background:#000; text-indent:0" data-sort-value="061"| {{Dwarf|2:1|20px}}
+|-
+| style="text-align:right; padding-right:3px;" |25 || {{text anchor|CRAFTSMAN}} || [[Craftsdwarf|Craftsman]] ||style="background:#000; text-indent:0" data-sort-value="101"| {{Dwarf|1:1|20px}}
+|-
+| style="text-align:right; padding-right:3px;" |26 || {{text anchor|WOODCRAFTER}} || [[Woodcrafter]] ||style="background:#000; text-indent:0" data-sort-value="101"| {{Dwarf|1:1|20px}}
+|-
+| style="text-align:right; padding-right:3px;" |27 || {{text anchor|STONECRAFTER}} || [[Stonecrafter]] ||style="background:#000; text-indent:0" data-sort-value="101"| {{Dwarf|1:1|20px}}
+|-
+| style="text-align:right; padding-right:3px;" |28 || {{text anchor|LEATHERWORKER}} || [[Leatherworker]] ||style="background:#000; text-indent:0" data-sort-value="101"| {{Dwarf|1:1|20px}}
+|-
+| style="text-align:right; padding-right:3px;" |29 || {{text anchor|BONE_CARVER}} || [[Bone carver]] ||style="background:#000; text-indent:0" data-sort-value="101"| {{Dwarf|1:1|20px}}
+|-
+| style="text-align:right; padding-right:3px;" |30 || {{text anchor|WEAVER}} || [[Weaver]] ||style="background:#000; text-indent:0" data-sort-value="101"| {{Dwarf|1:1|20px}}
+|-
+| style="text-align:right; padding-right:3px;" |31 || {{text anchor|CLOTHIER}} || [[Clothier]] ||style="background:#000; text-indent:0" data-sort-value="101"| {{Dwarf|1:1|20px}}
+|-
+| style="text-align:right; padding-right:3px;" |32 || {{text anchor|GLASSMAKER}} || [[Glassmaker]] ||style="background:#000; text-indent:0" data-sort-value="101"| {{Dwarf|1:1|20px}}
+|-
+| style="text-align:right; padding-right:3px;" |33 || {{text anchor|POTTER}} || [[Potter]] ||style="background:#000; text-indent:0" data-sort-value="101"| {{Dwarf|1:1|20px}}
+|-
+| style="text-align:right; padding-right:3px;" |34 || {{text anchor|GLAZER}} || [[Glazer]] ||style="background:#000; text-indent:0" data-sort-value="101"| {{Dwarf|1:1|20px}}
+|-
+| style="text-align:right; padding-right:3px;" |35 || {{text anchor|WAX_WORKER}} || [[Wax worker]] ||style="background:#000; text-indent:0" data-sort-value="101"| {{Dwarf|1:1|20px}}
+|-
+| style="text-align:right; padding-right:3px;" |36 || {{text anchor|STRAND_EXTRACTOR}} || [[Strand extractor]] ||style="background:#000; text-indent:0" data-sort-value="101"| {{Dwarf|1:1|20px}}
+|-
+| style="text-align:right; padding-right:3px;" |37 || {{text anchor|FISHERY_WORKER}} || [[Fishery worker]] ||style="background:#000; text-indent:0" data-sort-value="091"| {{Dwarf|1:0|20px}}
+|-
+| style="text-align:right; padding-right:3px;" |38 || {{text anchor|FISHERMAN}} || [[Fisherdwarf|Fisherman]] ||style="background:#000; text-indent:0" data-sort-value="091"| {{Dwarf|1:0|20px}}
+|-
+| style="text-align:right; padding-right:3px;" |39 || {{text anchor|FISH_DISSECTOR}} || [[Fish dissector]] ||style="background:#000; text-indent:0" data-sort-value="091"| {{Dwarf|1:0|20px}}
+|-
+| style="text-align:right; padding-right:3px;" |40 || {{text anchor|FISH_CLEANER}} || [[Fish cleaner]] ||style="background:#000; text-indent:0" data-sort-value="091"| {{Dwarf|1:0|20px}}
+|-
+| style="text-align:right; padding-right:3px;" |41 || {{text anchor|FARMER}} || [[Farmer]] ||style="background:#000; text-indent:0" data-sort-value="031"| {{Dwarf|6:0|20px}}
+|-
+| style="text-align:right; padding-right:3px;" |42 || {{text anchor|CHEESE_MAKER}} || [[Cheese maker]] ||style="background:#000; text-indent:0" data-sort-value="031"| {{Dwarf|6:0|20px}}
+|-
+| style="text-align:right; padding-right:3px;" |43 || {{text anchor|MILKER}} || [[Milker]] ||style="background:#000; text-indent:0" data-sort-value="031"| {{Dwarf|6:0|20px}}
+|-
+| style="text-align:right; padding-right:3px;" |44 || {{text anchor|COOK}} || [[Cook]] ||style="background:#000; text-indent:0" data-sort-value="031"| {{Dwarf|6:0|20px}}
+|-
+| style="text-align:right; padding-right:3px;" |45 || {{text anchor|THRESHER}} || [[Thresher]] ||style="background:#000; text-indent:0" data-sort-value="031"| {{Dwarf|6:0|20px}}
+|-
+| style="text-align:right; padding-right:3px;" |46 || {{text anchor|MILLER}} || [[Miller]] ||style="background:#000; text-indent:0" data-sort-value="031"| {{Dwarf|6:0|20px}}
+|-
+| style="text-align:right; padding-right:3px;" |47 || {{text anchor|BUTCHER}} || [[Butcher]] ||style="background:#000; text-indent:0" data-sort-value="031"| {{Dwarf|6:0|20px}}
+|-
+| style="text-align:right; padding-right:3px;" |48 || {{text anchor|TANNER}} || [[Tanner]] ||style="background:#000; text-indent:0" data-sort-value="031"| {{Dwarf|6:0|20px}}
+|-
+| style="text-align:right; padding-right:3px;" |49 || {{text anchor|DYER}} || [[Dyer]] ||style="background:#000; text-indent:0" data-sort-value="031"| {{Dwarf|6:0|20px}}
+|-
+| style="text-align:right; padding-right:3px;" |50 || {{text anchor|PLANTER}} || [[Grower|Planter]] ||style="background:#000; text-indent:0" data-sort-value="031"| {{Dwarf|6:0|20px}}
+|-
+| style="text-align:right; padding-right:3px;" |51 || {{text anchor|HERBALIST}} || [[Herbalist]] ||style="background:#000; text-indent:0" data-sort-value="031"| {{Dwarf|6:0|20px}}
+|-
+| style="text-align:right; padding-right:3px;" |52 || {{text anchor|BREWER}} || [[Brewer]] ||style="background:#000; text-indent:0" data-sort-value="031"| {{Dwarf|6:0|20px}}
+|-
+| style="text-align:right; padding-right:3px;" |53 || {{text anchor|SOAP_MAKER}} || [[Soaper|Soap maker]] ||style="background:#000; text-indent:0" data-sort-value="031"| {{Dwarf|6:0|20px}}
+|-
+| style="text-align:right; padding-right:3px;" |54 || {{text anchor|POTASH_MAKER}} || [[Potash maker]] ||style="background:#000; text-indent:0" data-sort-value="031"| {{Dwarf|6:0|20px}}
+|-
+| style="text-align:right; padding-right:3px;" |55 || {{text anchor|LYE_MAKER}} || [[Lye maker]] ||style="background:#000; text-indent:0" data-sort-value="031"| {{Dwarf|6:0|20px}}
+|-
+| style="text-align:right; padding-right:3px;" |56 || {{text anchor|WOOD_BURNER}} || [[Wood burner]] ||style="background:#000; text-indent:0" data-sort-value="031"| {{Dwarf|6:0|20px}}
+|-
+| style="text-align:right; padding-right:3px;" |57 || {{text anchor|SHEARER}} || [[Shearer]] ||style="background:#000; text-indent:0" data-sort-value="031"| {{Dwarf|6:0|20px}}
+|-
+| style="text-align:right; padding-right:3px;" |58 || {{text anchor|SPINNER}} || [[Spinner]] ||style="background:#000; text-indent:0" data-sort-value="031"| {{Dwarf|6:0|20px}}
+|-
+| style="text-align:right; padding-right:3px;" |59 || {{text anchor|PRESSER}} || [[Presser]] ||style="background:#000; text-indent:0" data-sort-value="031"| {{Dwarf|6:0|20px}}
+|-
+| style="text-align:right; padding-right:3px;" |60 || {{text anchor|BEEKEEPER}} || [[Beekeeper]] ||style="background:#000; text-indent:0" data-sort-value="031"| {{Dwarf|6:0|20px}}
+|-
+| style="text-align:right; padding-right:3px;" |61 || {{text anchor|ENGINEER}} || [[Engineer]] ||style="background:#000; text-indent:0" data-sort-value="021"| {{Dwarf|4:1|20px}}
+|-
+| style="text-align:right; padding-right:3px;" |62 || {{text anchor|MECHANIC}} || [[Mechanic]] ||style="background:#000; text-indent:0" data-sort-value="021"| {{Dwarf|4:1|20px}}
+|-
+| style="text-align:right; padding-right:3px;" |63 || {{text anchor|SIEGE_ENGINEER}} || [[Siege engineer]] ||style="background:#000; text-indent:0" data-sort-value="021"| {{Dwarf|4:1|20px}}
+|-
+| style="text-align:right; padding-right:3px;" |64 || {{text anchor|SIEGE_OPERATOR}} || [[Siege operator]] ||style="background:#000; text-indent:0" data-sort-value="021"| {{Dwarf|4:1|20px}}
+|-
+| style="text-align:right; padding-right:3px;" |65 || {{text anchor|PUMP_OPERATOR}} || [[Pump operator]] ||style="background:#000; text-indent:0" data-sort-value="021"| {{Dwarf|4:1|20px}}
+|-
+| style="text-align:right; padding-right:3px;" |66 || {{text anchor|CLERK}} || [[Clerk]] ||style="background:#000; text-indent:0" data-sort-value="111"| {{Dwarf|5:0|20px}}
+|-
+| style="text-align:right; padding-right:3px;" |67 || {{text anchor|ADMINISTRATOR}} || [[Administrator]] ||style="background:#000; text-indent:0" data-sort-value="111"| {{Dwarf|5:0|20px}}
+|-
+| style="text-align:right; padding-right:3px;" |68 || {{text anchor|TRADER}} || [[Trader]] ||style="background:#000; text-indent:0" data-sort-value="111"| {{Dwarf|5:0|20px}}
+|-
+| style="text-align:right; padding-right:3px;" |69 || {{text anchor|DOCTOR}} || [[Doctor]] ||style="background:#000; text-indent:0" data-sort-value="111"| {{Dwarf|5:0|20px}}
+|-
+| style="text-align:right; padding-right:3px;" |70 || {{text anchor|DIAGNOSER}} || [[Diagnostician|Diagnoser]] ||style="background:#000; text-indent:0" data-sort-value="111"| {{Dwarf|5:0|20px}}
+|-
+| style="text-align:right; padding-right:3px;" |71 || {{text anchor|BONE_SETTER}} || [[Bone doctor]] ||style="background:#000; text-indent:0" data-sort-value="111"| {{Dwarf|5:0|20px}}
+|-
+| style="text-align:right; padding-right:3px;" |72 || {{text anchor|SUTURER}} || [[Suturer]] ||style="background:#000; text-indent:0" data-sort-value="111"| {{Dwarf|5:0|20px}}
+|-
+| style="text-align:right; padding-right:3px;" |73 || {{text anchor|SURGEON}} || [[Surgeon]] ||style="background:#000; text-indent:0" data-sort-value="111"| {{Dwarf|5:0|20px}}
+|-
+| style="text-align:right; padding-right:3px;" |74 || {{text anchor|MERCHANT}} || [[Merchant]] ||style="background:#000; text-indent:0" data-sort-value="153"| {{Dwarf|7:0|type=3|20px}}
+|-
+| style="text-align:right; padding-right:3px;" |75 || {{text anchor|HAMMERMAN}} || [[Hammerman]] ||style="background:#000; text-indent:0" data-sort-value="112"| {{Dwarf|5:0|type=m|20px}}
+|-
+| style="text-align:right; padding-right:3px;" |76 || {{text anchor|MASTER_HAMMERMAN}} || [[Hammer lord]] ||style="background:#000; text-indent:0" data-sort-value="122"| {{Dwarf|5:1|type=m|20px}}
+|-
+| style="text-align:right; padding-right:3px;" |77 || {{text anchor|SPEARMAN}} || [[Spearman]] ||style="background:#000; text-indent:0" data-sort-value="032"| {{Dwarf|6:0|type=m|20px}}
+|-
+| style="text-align:right; padding-right:3px;" |78 || {{text anchor|MASTER_SPEARMAN}} || [[Spearmaster]] ||style="background:#000; text-indent:0" data-sort-value="042"| {{Dwarf|6:1|type=m|20px}}
+|-
+| style="text-align:right; padding-right:3px;" |79 || {{text anchor|CROSSBOWMAN}} || [[Crossbowman]] ||style="background:#000; text-indent:0" data-sort-value="052"| {{Dwarf|2:0|type=m|20px}}
+|-
+| style="text-align:right; padding-right:3px;" |80 || {{text anchor|MASTER_CROSSBOWMAN}} || [[Elite crossbowman]] ||style="background:#000; text-indent:0" data-sort-value="062"| {{Dwarf|2:1|type=m|20px}}
+|-
+| style="text-align:right; padding-right:3px;" |81 || {{text anchor|WRESTLER}} || [[Wrestler]] ||style="background:#000; text-indent:0" data-sort-value="152"| {{Dwarf|7:0|type=m|20px}}
+|-
+| style="text-align:right; padding-right:3px;" |82 || {{text anchor|MASTER_WRESTLER}} || [[Elite wrestler]] ||style="background:#000; text-indent:0" data-sort-value="162"| {{Dwarf|7:1|type=m|20px}}
+|-
+| style="text-align:right; padding-right:3px;" |83 || {{text anchor|AXEMAN}} || [[Axeman]] ||style="background:#000; text-indent:0" data-sort-value="092"| {{Dwarf|1:0|type=m|20px}}
+|-
+| style="text-align:right; padding-right:3px;" |84 || {{text anchor|MASTER_AXEMAN}} || [[Axe lord]] ||style="background:#000; text-indent:0" data-sort-value="102"| {{Dwarf|1:1|type=m|20px}}
+|-
+| style="text-align:right; padding-right:3px;" |85 || {{text anchor|SWORDSMAN}} || [[Swordsman]] ||style="background:#000; text-indent:0" data-sort-value="072"| {{Dwarf|3:0|type=m|20px}}
+|-
+| style="text-align:right; padding-right:3px;" |86 || {{text anchor|MASTER_SWORDSMAN}} || [[Swordmaster]] ||style="background:#000; text-indent:0" data-sort-value="082"| {{Dwarf|3:1|type=m|20px}}
+|-
+| style="text-align:right; padding-right:3px;" |87 || {{text anchor|MACEMAN}} || [[Maceman]] ||style="background:#000; text-indent:0" data-sort-value="012"| {{Dwarf|4:0|type=m|20px}}
+|-
+| style="text-align:right; padding-right:3px;" |88 || {{text anchor|MASTER_MACEMAN}} || [[Mace lord]] ||style="background:#000; text-indent:0" data-sort-value="022"| {{Dwarf|4:1|type=m|20px}}
+|-
+| style="text-align:right; padding-right:3px;" |89 || {{text anchor|PIKEMAN}} || [[Pikeman]] ||style="background:#000; text-indent:0" data-sort-value="032"| {{Dwarf|6:0|type=m|20px}}
+|-
+| style="text-align:right; padding-right:3px;" |90 || {{text anchor|MASTER_PIKEMAN}} || [[Pikemaster]] ||style="background:#000; text-indent:0" data-sort-value="042"| {{Dwarf|6:1|type=m|20px}}
+|-
+| style="text-align:right; padding-right:3px;" |91 || {{text anchor|BOWMAN}} || [[Bowman]] ||style="background:#000; text-indent:0" data-sort-value="052"| {{Dwarf|2:0|type=m|20px}}
+|-
+| style="text-align:right; padding-right:3px;" |92 || {{text anchor|MASTER_BOWMAN}} || [[Elite bowman]] ||style="background:#000; text-indent:0" data-sort-value="062"| {{Dwarf|2:1|type=m|20px}}
+|-
+| style="text-align:right; padding-right:3px;" |93 || {{text anchor|BLOWGUNMAN}} || [[Blowgunner]] ||style="background:#000; text-indent:0" data-sort-value="142"| {{Dwarf|0:1|type=m|20px}}
+|-
+| style="text-align:right; padding-right:3px;" |94 || {{text anchor|MASTER_BLOWGUNMAN}} || [[Master blowgunner]] ||style="background:#000; text-indent:0" data-sort-value="142"| {{Dwarf|0:1|type=m|20px}}
+|-
+| style="text-align:right; padding-right:3px;" |95 || {{text anchor|LASHER}} || [[Lasher]] ||style="background:#000; text-indent:0" data-sort-value="142"| {{Dwarf|0:1|type=m|20px}}
+|-
+| style="text-align:right; padding-right:3px;" |96 || {{text anchor|MASTER_LASHER}} || [[Master lasher]] ||style="background:#000; text-indent:0" data-sort-value="142"| {{Dwarf|0:1|type=m|20px}}
+|-
+| style="text-align:right; padding-right:3px;" |97 || {{text anchor|RECRUIT}} || [[Recruit]] ||style="background:#000; text-indent:0" data-sort-value="142"| {{Dwarf|0:1|type=m|20px}}
+|-
+| style="text-align:right; padding-right:3px;" |98 || {{text anchor|TRAINED_HUNTER}} || [[Hunting animal]] ||style="background:#000; text-indent:0" data-sort-value="161"| {{Dwarf|7:1|20px}}
+|-
+| style="text-align:right; padding-right:3px;" |99 || {{text anchor|TRAINED_WAR}} || [[War animal]] ||style="background:#000; text-indent:0" data-sort-value="141"| {{Dwarf|0:1|20px}}
+|-
+| 100 || {{text anchor|MASTER_THIEF}} || [[Master thief]] ||style="background:#000; text-indent:0" data-sort-value="141"| {{Dwarf|0:1|20px}}
+|-
+| 101 || {{text anchor|THIEF}} || [[Thief]] ||style="background:#000; text-indent:0" data-sort-value="141"| {{Dwarf|0:1|20px}}
+|-
+| 102 || {{text anchor|STANDARD}} || [[Peasant]] ||style="background:#000; text-indent:0" data-sort-value="-1"<!--no defined color, uses creature color instead (cyan for dwarves)-->| {{Dwarf|3:0|20px}}
+|-
+| 103 || {{text anchor|CHILD}} || [[Child]] ||style="background:#000; text-indent:0" data-sort-value="011"| {{Dwarf|4:0|20px}}
+|-
+| 104 || {{text anchor|BABY}} || [[Baby]] ||style="background:#000; text-indent:0" data-sort-value="011"| {{Dwarf|4:0|20px}}
+|-
+| 105 || {{text anchor|DRUNK}} || [[Drunk]] ||style="background:#000; text-indent:0" data-sort-value="031"| {{Dwarf|6:0|20px}}
+|-
+| 106 || {{text anchor|MONSTER_SLAYER}} || [[Monster slayer]] ||style="background:#000; text-indent:0" data-sort-value="031"| {{Dwarf|6:0|20px}}
+|-
+| 107 || {{text anchor|SCOUT}} || [[Scout]] ||style="background:#000; text-indent:0" data-sort-value="031"| {{Dwarf|6:0|20px}}
+|-
+| 108 || {{text anchor|BEAST_HUNTER}} || [[Beast hunter]] ||style="background:#000; text-indent:0" data-sort-value="031"| {{Dwarf|6:0|20px}}
+|-
+| 109 || {{text anchor|SNATCHER}} || [[Snatcher]] ||style="background:#000; text-indent:0" data-sort-value="031"| {{Dwarf|6:0|20px}}
+|-
+| 110 || {{text anchor|MERCENARY}} || [[Mercenary]] || style="background:#000; text-indent:0" data-sort-value="031"| {{Dwarf|6:0|20px}}
+|-
+| 111 || {{text anchor|GELDER}} || [[Gelder]] ||style="background:#000; text-indent:0" data-sort-value="031"| {{Dwarf|6:0|20px}}
+|-
+| 112 || {{text anchor|PERFORMER}} || [[Performer]] ||style="background:#000; text-indent:0" data-sort-value="111"| {{Dwarf|5:0|20px}}
+|-
+| 113 || {{text anchor|POET}} || [[Poet]] ||style="background:#000; text-indent:0" data-sort-value="111"| {{Dwarf|5:0|20px}}
+|-
+| 114 || {{text anchor|BARD}} || [[Bard]] ||style="background:#000; text-indent:0" data-sort-value="111"| {{Dwarf|5:0|20px}}
+|-
+| 115 || {{text anchor|DANCER}} || [[Dancer]] ||style="background:#000; text-indent:0" data-sort-value="111"| {{Dwarf|5:0|20px}}
+|-
+| 116 || {{text anchor|SAGE}} || [[Sage]] ||style="background:#000; text-indent:0" data-sort-value="111"| {{Dwarf|5:0|20px}}
+|-
+| 117 || {{text anchor|SCHOLAR}} || [[Scholar]] ||style="background:#000; text-indent:0" data-sort-value="111"| {{Dwarf|5:0|20px}}
+|-
+| 118 || {{text anchor|PHILOSOPHER}} || [[Philosopher]] ||style="background:#000; text-indent:0" data-sort-value="111"| {{Dwarf|5:0|20px}}
+|-
+| 119 || {{text anchor|MATHEMATICIAN}} || [[Mathematician]] ||style="background:#000; text-indent:0" data-sort-value="111"| {{Dwarf|5:0|20px}}
+|-
+| 120 || {{text anchor|HISTORIAN}} || [[Historian]] ||style="background:#000; text-indent:0" data-sort-value="111"| {{Dwarf|5:0|20px}}
+|-
+| 121 || {{text anchor|ASTRONOMER}} || [[Astronomer]] ||style="background:#000; text-indent:0" data-sort-value="111"| {{Dwarf|5:0|20px}}
+|-
+| 122 || {{text anchor|NATURALIST}} || [[Naturalist]] ||style="background:#000; text-indent:0" data-sort-value="111"| {{Dwarf|5:0|20px}}
+|-
+| 123 || {{text anchor|CHEMIST}} || [[Chemist]] ||style="background:#000; text-indent:0" data-sort-value="111"| {{Dwarf|5:0|20px}}
+|-
+| 124 || {{text anchor|GEOGRAPHER}} || [[Geographer]] ||style="background:#000; text-indent:0" data-sort-value="111"| {{Dwarf|5:0|20px}}
+|-
+| 125 || {{text anchor|SCRIBE}} || [[Scribe]] ||style="background:#000; text-indent:0" data-sort-value="111"| {{Dwarf|5:0|20px}}
+|-
+| 126 || {{text anchor|PAPERMAKER}} || [[Papermaker]] ||style="background:#000; text-indent:0" data-sort-value="101"| {{Dwarf|1:1|20px}}
+|-
+| 127 || {{text anchor|BOOKBINDER}} || [[Bookbinder]] ||style="background:#000; text-indent:0" data-sort-value="101"| {{Dwarf|1:1|20px}}
+|-
+| 128 || {{text anchor|TAVERN_KEEPER}} || [[Tavern keeper]] ||style="background:#000; text-indent:0" data-sort-value="111"| {{Dwarf|5:0|20px}}
+|-
+| 129 || {{text anchor|CRIMINAL}} || [[Criminal]] ||style="background:#000; text-indent:0" data-sort-value="141"| {{Dwarf|0:1|20px}}
+|-
+| 130 || {{text anchor|PEDDLER}} || [[Peddler]] ||style="background:#000; text-indent:0" data-sort-value="151"| {{Dwarf|7:0|20px}}
+|-
+| 131 || {{text anchor|PROPHET}} || [[Prophet]] ||style="background:#000; text-indent:0" data-sort-value="161"| {{Dwarf|7:1|20px}}
+|-
+| 132 || {{text anchor|PILGRIM}} || [[Pilgrim]] ||style="background:#000; text-indent:0" data-sort-value="161"| {{Dwarf|7:1|20px}}
+|-
+| 133 || {{text anchor|MONK}} || [[Monk]] ||style="background:#000; text-indent:0" data-sort-value="161"| {{Dwarf|7:1|20px}}
+|-
+| 134 || {{text anchor|MESSENGER}} || [[Messenger]] ||style="background:#000; text-indent:0" data-sort-value="111"| {{Dwarf|5:0|20px}}
+|}
+
+
+The following tokens are also permitted in tilesets, but not in layered graphics:
+
+Entity link:
+*MEMBER (not useful)
+*FORMER_MEMBER (not useful)
+*FORMER_MERCENARY (not useful)
+*SLAVE {{Dwarf|7:0|17px}}
+*FORMER_SLAVE (not useful)
+*PRISONER {{Dwarf|7:0|17px}}
+*FORMER_PRISONER (not useful)
+*ENEMY (not useful)
+Worldgen positions: ({{forum link|175434.msg8082510#msg8082510|source}})
+*CUSTOM_OFFICIAL_0 (chancellor)
+*CUSTOM_OFFICIAL_1 (justiciar)
+*CUSTOM_OFFICIAL_2 (treasurer)
+*CUSTOM_OFFICIAL_3 (counselor)
+*CUSTOM_OFFICIAL_4 (chamberlain)
+*CUSTOM_OFFICIAL_5 (master of beasts)
+*CUSTOM_OFFICIAL_6 (butler)
+*CUSTOM_OFFICIAL_7 (doctor)
+*CUSTOM_OFFICIAL_8 (executioner)
+*CUSTOM_OFFICIAL_9 (chef)
+*CUSTOM_OFFICIAL_10 (housekeeper)
+*CUSTOM_MARKET_OFFICIAL_0 (sewer official)
+*CUSTOM_MARKET_OFFICIAL_1 (grain official)
+*CUSTOM_MARKET_OFFICIAL_2 (fire official)
+*CUSTOM_MARKET_OFFICIAL_3 (judge)
+*CUSTOM_MARKET_OFFICIAL_4 (building official)
+*CUSTOM_MARKET_OFFICIAL_5 (road official)
+More information on those: [[Variable positions]]
+
+{{Category|Modding}}
+{{Category|Tokens}}
+[[ru:Unit type token]]
+
+=== Profession Categories ===
+Layered graphics only use profession categories rather than individual professions. These are:
+
+* {{Dwarf|7:1|17px}} STONEWORKER
+* {{Dwarf|7:0|17px}} MINER
+* {{Dwarf|0:1|17px}} METALSMITH
+* {{Dwarf|4:1|17px}} ENGINEER
+* {{Dwarf|6:0|17px}} FARMER
+* {{Dwarf|6:1|17px}} WOODWORKER
+* {{Dwarf|2:1|17px}} JEWELER
+* {{Dwarf|2:0|17px}} RANGER
+* {{Dwarf|3:0|17px}} STANDARD (i.e. "Peasant". Also includes some invader & visitor professions.)
+* {{Dwarf|1:1|17px}} CRAFTSMAN
+* {{Dwarf|1:0|17px}} FISHERY_WORKER
+* {{Dwarf|7:0|17px}} MERCHANT
+* {{Dwarf|4:0|17px}} CHILD
+* {{Dwarf|5:0|17px}} NONE (applies to anything not included above - doctors, bards, military, etc. Note that this is distinct from having no profession condition; it will apply ONLY to NONE units.)
+
+Noble positions do not affect the categorization; a craftsdwarf appointed to mayor will still use the layers designated for <code>CRAFTSMAN</code>.
+
+{{V50 misc professions}}

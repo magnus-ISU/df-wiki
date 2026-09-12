@@ -1,0 +1,268 @@
+{{Quality|Unrated}}
+{{av}}
+[[File:utilities_icon.png|120px|right]]A collection of third-party '''Utilities''' that are useful for ''[[Dwarf Fortress]]'' players and [[modding|modders]] alike, of which this page serves as a list. ''Dwarf Fortress'' is a difficult game to play, and any help that can be had in the task is welcome help. 
+
+If you would like to add an article on a ''specific'' game utility to the wiki, please do so under the <span class="plainlinks">[http://dwarffortresswiki.org/index.php?title=Special%3AAllPages&from=&to=&namespace=102 Utility]</span> namespace. 
+Not included on this page: [[Main:Tileset repository|tileset repositories]] and [[Main:Graphics set repository|graphics set repositories]], due to having been given their own, separate pages. [[Modding|Mods]] have also been listed under their own <span class="plainlinks">[http://dwarffortresswiki.org/index.php?title=Special%3AAllPages&from=&to=&namespace=104 Modification] namespace. 
+
+To avoid namespace clutter, websites ''are'' considered utilities and have been included.
+
+A [http://www.bay12forums.com/smf/index.php?board=29.0 subsection of the Bay12 forums] is devoted to such third-party programs, and contains development threads for most of them.
+
+== Game manipulation tools ==
+=== DFHack ===
+{{main|Utility:DFHack}}
+[[File:dfhack_cmd.png|left|frameless|200px|]] 
+DFHack is an advanced ''Dwarf Fortress'' memory access library and a set of tools and scripts using this library, providing direct object-oriented access to Dwarf Fortress's internals as if it were compiled into the game itself. Runs on Windows, macOS, and Linux (natively if supported by DF, or through [https://www.winehq.org/ Wine]). The standard configuration enables a variety of included bugfixes and interface upgrades, and provides many useful tools such as "clean all". See [[Utility:DFHack|main page]] for a summary of features, common use, and more.
+* Links: {{F|164123|Bay12 Forum Thread}}, [https://docs.dfhack.org/en/stable/ Documentation], [https://github.com/DFHack/dfhack/releases Releases], [https://github.com/DFHack/dfhack GitHub Repository], [https://store.steampowered.com/app/2346660/DFHack Steam page]
+{{clear}}
+
+=== Dwarf Therapist ===
+{{main|Utility:Dwarf therapist}}
+[[File:dwarf_therapist.png|left|frameless|200px|]]
+Dwarf Therapist gives you an advanced GUI to manage and check dwarf job allocations, military assignments, statistics (such as attributes, personality traits and happiness), sort dwarves by various criteria (e.g. profession, migration wave, happiness, number of assigned jobs etc.) and generally manage the Dwarven Resources of your fortress in a very convenient way. Available for Windows, Mac and GNU + Linux.  
+* Links: {{F|168411|Bay12 Forum Thread}}, [https://github.com/Dwarf-Therapist/Dwarf-Therapist/releases Releases], [https://github.com/Dwarf-Therapist/Dwarf-Therapist/ GitHub Repository], [https://github.com/Dwarf-Therapist/Manual/releases Manual] (outdated)
+{{clear}}
+
+==Legends tools==
+=== LegendsViewer-Next ===
+[[File:LegendsViewerNext.png|border|200x200px|left]]
+A web-browser-based multi-platform tool to browse the information in an [[Legends#Exporting_World_information|exported legends file]]. It creates wiki style backlinks, searchable lists, interactive maps and family trees for historical figures. LegendsViewer-Next is a replacement for the classic [[Utility:Legends viewer|Legends Viewer]] fully compatible with v50+ premium and classic. Builds for Windows, Linux and macOS are provided.
+* Links: [http://www.bay12forums.com/smf/index.php?topic=154617.0 Bay12 Forum Thread], [https://github.com/Kromtec/LegendsViewer-Next Github Repository]
+
+=== Legends Browser ===
+[[File:LegendsBrowser2.png|border|200x200px|left]]
+Another web-browser-based multi-platform legends information viewer (including using legends_plus.xml generated via DFHack) fully compatible with v50+ premium and classic.
+
+* links: [https://www.bay12forums.com/smf/index.php?topic=179848.0 bay12forums]
+{{Clear}}
+
+=== [[Utility:DF Storyteller|DF Storyteller]] ===
+{{migrated section}}
+[[File:DF_Storyteller_Logo.svg|border|200x200px|left]]
+[[Utility:DF Storyteller|Dwarf Fortress Storyteller]] (DF Storyteller, DF ST) is an application that parses ''Dwarf Fortress'' legends files, stores them internally and makes them queryable using API's. (Cross platform: Windows, Linux, macOS) This utility can be used to easily create new visualizers to view the legends data. 
+
+* links: [https://dfstoryteller.com/ Website], [https://gitlab.com/df_storyteller/df-storyteller Gitlab project], list of visualizers can be found [https://gitlab.com/df_storyteller/df-storyteller/-/blob/master/docs/paintings.md here]. An example of a visualizer is [https://gitlab.com/df_storyteller/the-bard The Bard] created in DF ST.
+{{Clear}}
+
+== 3D Visualizers ==
+=== Stonesense ===
+[[File:stonesense_prev.jpg|left|frameless|200px|none]]
+Stonesense is a third party visualizer, implemented as a [[Utility:DFHack|DFHack]] plugin, that lets you view your fortress in a classic isometric perspective. It runs alongside ''Dwarf Fortress'', and can follow the main game's view, updating in real-time. It is included in DFHack, and can be opened by typing <code>stonesense</code> or <code>ssense</code> into the console window.
+
+* Links: [[Utility:Stonesense]]
+{{Clear}}
+
+=== Vox Uristi ===
+[[File:VoxUristi.png|left|frameless|200px|none]]
+A tool that exports fortresses to a 3D voxel format (.vox). Once exported, rendering software such as [https://ephtracy.github.io/index.html?page=mv_main MagicaVoxel (for Windows and Mac)] or alternatively [https://goxel.xyz/ Goxel (for Linux)] can make detailed 3D renders  of it. It requires DFHack, and is mostly tested with the Steam version, though previous versions should work too.
+
+* Links: [https://plule.github.io/vox-uristi Website], {{F|181728|Bay12 Forum Thread}}
+{{Clear}}
+
+== [http://dffd.wimbli.com/file.php?id=2354 Perfect World DF] ==
+A tool for creating custom world maps allowing highly customized world generation. Creates a [[world_gen.txt]] entry or file.
+
+* Links: [http://www.bay12forums.com/smf/index.php?topic=57428.0 forum thread]
+
+== Music and Sounds ==
+
+{{ambox|type=warn|text=Note that these tools all rely on [[gamelog.txt]], which is no longer populated by vanilla DF as of 50.07. This functionality can be restored with [[Utility:DFHack|DFHack]].}}
+
+=== SoundSense ===
+{{main|Utility:SoundSense}}
+[[File:soundsense_prev.png|left|frameless|100px]]
+SoundSense parses game logs and plays reacts to game events with sound effects, incidental music and dwarfy comments. Due to it being written in Java, Soundsense is portable to all platforms.
+
+Note that older Soundsense users may have different default seasonal soundtracks, which were removed and replaced in early 2011. These are available [http://www.krauselabs.net/dump/music.zip here].
+
+* Links: [http://df.zweistein.cz/soundsense/ Website], {{F|60287|Bay12 Forum Thread}}, [https://code.google.com/archive/p/df-soundsense/ Google Code Repository]
+{{Clear}}
+
+=== SoundCenSe ===
+[[File:soundCenSe_prev.png|left|frameless|100px|]]
+A C# port of SoundSense, it uses the existing sound pack files and XMLs present in SoundSense, but with some added enhancements. More information regarding what specific type of enhancements and how to install SoundCenSe can be gathered at the [http://www.bay12forums.com/smf/index.php?topic=159567.0 official forum thread]. If problems emerge while trying to get SoundSense to work with the latest versions of Java, this port may prove to be a useful alternative.
+
+* Links: {{F|159567|Bay12 Forum Thread}}, [https://github.com/Algorithman/SoundCenSe/releases Releases], [https://github.com/Algorithman/SoundCenSe GitHub Repository]
+{{Clear}}
+
+=== SoundSense-RS ===
+[[File:SoundSense-RS_prev.png|left|frameless|100px|]]
+A SoundSense alternative in Rust with a minimalistic GUI. Sound volumes can be adjusted realtime, based on channel. Events can be ignored with a custom list based on log patterns.
+
+* Links: {{F|174585|Bay12 Forum Thread}}, [https://github.com/prixt/soundsense-rs/releases Releases], [https://github.com/prixt/soundsense-rs GitHub Repository]
+{{clear}}
+
+== Modding tools ==
+
+=== [https://gitlab.com/df-modding-tools/df-raw-language-server DF RAW Language server] ===
+Modding support for DF RAW files in IDE/Code/Text editors.
+Checks syntax of files, detects errors and syntax highlighting.
+
+Current extensions:
+* [https://marketplace.visualstudio.com/items?itemName=df-modding-tools.dwarf-fortress-raw-vscode VS Code]
+* [https://gitlab.com/df-modding-tools/df-raw-language-server#supported-editors-and-ides (more are coming)]
+
+<gallery widths=200px>
+File:DF_RAW_Language_server_Logo.png|DF RAW Language server Logo
+File:DF_RAW_Language_server_VSCode_screenshot_1.png|DF RAW Language server in VSCode
+File:DF_RAW_Language_server_VSCode_screenshot_2.png|DF RAW Language server in VSCode
+</gallery>
+
+The [[wikipedia:Language_Server_Protocol|Language server]] is a shared component that can be used to easily add support for more IDE's.
+
+=== Notepad++ Highlighting ===
+language highlighting modes for the text editor Notepad++  [https://dffd.bay12games.com/file.php?id=16251 link]
+
+== Modding tools pre v50==
+{{migrated section}}
+===[http://www.bay12forums.com/smf/index.php?topic=140853.0 Rubble]===
+
+A useful plugin-based modding tool that generates raws and supports easy installation of reactions, tilesets, macros, modding fixes and DFHack scripts. It is a fork of the now abandoned [http://www.bay12forums.com/smf/index.php?topic=125997.0 Blast]. Binaries are available for Linux 32-bits, OS X 32-bits and Windows 64-bits, as well as the source (written in Go with building instructions). As of 4.0, a GUI is available for Windows.
+
+=== [http://www.bay12forums.com/smf/index.php?topic=150857.0 PyDwarf] ===
+
+For players, PyDwarf is an easy way to manage and configure preferred mods in a way that avoids almost entirely the problems of outdated mods or incompatible groups of mods. For modders, PyDwarf's mod manager exposes a powerful Python API for interacting with raws and other data files.
+
+=== [http://www.bay12forums.com/smf/index.php?topic=103360 Raw Explorer] ===
+A tree-based raw files browser, editor and manager.
+
+=== [http://www.bay12forums.com/smf/index.php?topic=174431.0 Dwarf_RAW] ===
+A GUI for editing raw files, updated 2019.
+
+=== [http://www.bay12forums.com/smf/index.php?topic=140645.0 Dwarf Fortress real-life material helper] ===
+A Python script that generates raws based on custom real-life material values.
+
+=== [http://www.bay12forums.com/smf/index.php?topic=140688.0 Roses' Random Creature Script] ===
+A Python script that generates random creature raws.
+
+=== [http://www.bay12forums.com/smf/index.php?topic=175695.0 DF Diagnosipack] ===
+A collection of modding tools, with a focus on diagnosing problems and getting statistics on what is found within the raws.
+It includes:
+* DF Duplisearch - checks your raws folder for duplicated objects, and counts the number of objects of each type (creature, entity, reaction, etc.).
+* DF Creatureclasser - tells you what [[cv:Creature_token#CREATURE_CLASS|creature classes]] are in your raws, and what they are used for.
+* DF CVunpack - unpacks creature variations, so you can see how the raws for e.g. wolf men really look (spoiler: they have 7 fingers).
+* DF Creaturescale - calculates creature weights, and the proportions of each body part and tissue.
+* DF Biomeviewer - shows what creature/plants can be found in which biomes.
+* DF Rawminer - extracts procedurally generated raws (of Forgotten Beasts etc.) from save files.
+
+== Remote playing tools ==
+{{migrated section}}
+
+=== [[Utility:Dfterm3|Dfterm3]]===
+
+[[Utility:Dfterm3|Dfterm3]] is a remote ''Dwarf Fortress''-playing software for multiple users through a web interface. DFterm3 enables play through a web interface, and games can also be viewed on mobile - or even played if a bluetooth keyboard is attached.  The web interface should work with Chrome or Firefox browsers, but there are known problems using Internet Explorer. DFTerm3 functions via a DFHack plugin, and is thus dependent on each version of DFHack.
+
+It is a successor to [[Utility:dfterm2|dfterm2]], which functions similarly using telnet instead of a web browser. This utility only works with version 0.34.11 or earlier.
+
+=== [http://www.bay12forums.com/smf/index.php?topic=139167.0 Webfort] ===
+[[File:webfortress.png|thumb|200px|none|Playable in Mac browser.]]
+A newer alternative to dfterm3 that functions similarly, but players must wait in a queue before assuming control for a given period of time. It also functions via a DFHack plugin. Binaries are available for Windows, as well as the source (written in C++).  ''(Note: [https://github.com/mifki/df-webfort main repo] unmaintained.  [https://github.com/Ankoku/df-webfort New repo] last updated 5/22/2015.)''
+
+=== [http://www.bay12forums.com/smf/index.php?topic=140892.0 DorfServer] ===
+[[File:dorfserver.png|thumb|200px|none|Like Twitch, without Twitch.]]
+A remote SSH-based ''Dwarf Fortress'' host software.  ([http://www.bay12forums.com/smf/index.php?topic=140892.0 repo])
+
+=== [http://www.bay12forums.com/smf/index.php?topic=139975.0 DFEverywhere] ===
+
+A utility that connects a locally-run ''Dwarf Fortress'' instance to a proprietary remote website, allowing remote browser-based play. ''(Note: Main website no longer available.  [https://github.com/tpainter/df_everywhere Client source here.])''
+
+=== [http://mifki.com/df Dwarf Fortress Remote] ===
+
+iOS app (paid) that allows one to play ''Dwarf Fortress'' remotely with native UI. A server can be set up at home, or on DigitalOcean, AWS or other hosting service.
+
+=== [http://www.bay12forums.com/smf/index.php?topic=176070.msg DFPlex ] ===
+
+DFPlex is a plugin for DFHack which introduces simultaneous, real-time online co-op to fortress mode: each player has their own independent view, cursor, menus, etc. so nobody has to wrestle for control. It's a fork of webfort, so players join just by connecting from their web browser.
+
+=== [https://github.com/ptitSeb/box64 Box64] ===
+
+Box64 allows ''Dwarf Fortress'' to be run locally on Android devices. A more detailed tutorial is available [https://www.reddit.com/r/dwarffortress/comments/r80m7y/dwarf_fortress_mobile_running_dwarf_fortress_on/ here].
+
+==Language tools==
+{{migrated section}}
+
+===[http://www.bay12forums.com/smf/index.php?topic=47332.0 DFLang]===
+A language creating tool.
+
+===[http://www.bay12forums.com/smf/index.php?topic=136098.0 Toadese Language Utility]===
+A language editing and translating tool.
+
+===[http://www.bay12forums.com/smf/index.php?topic=140432.0 DFlangOpt]===
+A little tool meant to prevent redundancy when importing or updating language files.
+
+===[http://dffd.wimbli.com/file.php?id=8288 Python language extraction and injection script]===
+This simple script will extract words from language files and put them a word per line, for easy automatic translation or treatment. It can also read that list and put the translated words back in their place.
+
+==Announcement tools==
+{{migrated section}}
+
+===[http://www.bay12forums.com/smf/index.php?topic=130590 DFMon] ===
+
+An announcement monitoring/filtering program, useful to hide some types of job cancellation spam or other more advanced filtering. Note that you can set the game to announce no job cancellations ''without'' any utilities or mods from the {{k|o}}rders menu, with {{k|x}}.
+
+===[http://www.bay12forums.com/smf/index.php?topic=130030 DF Announcement Filter]===
+
+An alternative to DFMon written in Java (and thus portable to Linux and OS X).
+
+===[http://www.bay12forums.com/smf/index.php?topic=153777 Announcement Window+]===
+
+Announcement Window+ is a Python application that interfaces with ''Dwarf Fortress'' to print announcements and combat reports to a separate window. It was written to fix some annoying bugs that are present in DF Announcement Filter, which is no longer being updated.
+
+[[File:announce+_prev.png|thumb|300px|none|One less game-pausing hotkey.]]
+
+==Filesharing websites==
+{{migrated section}}
+
+=== [http://dffd.wimbli.com/ Dwarf Fortress File Depot] ===
+The Dwarf Fortress File Upload Service - an excellent place to store mods, community games, tilesets and other files. Courtesy of [[User:Janus|Janus]]; for files related to ''Dwarf Fortress'' only.
+
+=== [http://mkv25.net/dfma/ Dwarf Fortress Map Archive] ===
+{{main|Utility:Dwarf Fortress Map Archive}}
+
+The Dwarf Fortress Map Archive is a large collection of user-submitted maps and videos and a nice flash viewer for perusing them. Maps are uploaded, stored, and downloaded in a special compressed format created by the DF Map Compressor; videos are stored in a compressed version of Toady One's own video-recording format.
+
+Read more about the [[User:Markavian/DF_Map_Archive|DF Map Archive]] on Markavian's User page.
+
+==Launchers==
+
+Historically, [[Starter pack|starter pack]]s were used to easily configure settings, keep the game up to date, and integrate third-party mods and bugfixes. With the release of [[Release information/50.01|v50]] on Steam, much of this can be done in-game and through the Steam workshop, making starter packs no longer necessary.
+
+=== PyLNP ===
+A cross-platform port of the [[Utility:Lazy Newb Pack|Lazy Newb Pack]], written in Python and providing some support for v50. See [[Utility:Lazy_Newb_Pack#PyLNP:_The_modern_cross_platform_launcher|PyLNP: The modern cross platform launcher]] for more information.
+* Links: {{F|140808|Bay12 Forum Thread}}, [https://github.com/Pidgeot/python-lnp/releases Releases] (for pack maintainers), [https://github.com/Pidgeot/python-lnp GitHub Repository], [http://pylnp.birdiesoft.dk/docs/dev/content.html Documentation]
+
+== Other/miscellaneous ==
+{{migrated section}}
+
+=== [http://shadowlord13.googlepages.com/dfmap-index.html DF Map Compressor] ===
+[[File:dfmapcomp.png|thumb|200px|none|Main program window.]]
+The DF Map Compressor encodes multiple bitmaps exported from ''Dwarf Fortress'' into a single, very compressed, .fdf-map file. The fdf-map file can then be shared with your friends by uploading to the DF Map Archive.
+
+=== [http://www.mindwerks.net/projects/exita/ Exita] ===
+Exita is a Python program that takes your DF world map exports and dump them into several different text outputs.
+
+===[http://www.bay12forums.com/smf/index.php?topic=132153.0 DwarfFamily]===
+A tool that lets you import your legends XML file and converts all dwarf entries to a .GED file, which you can use in Family Tree programs like MyHeritage to display a family tree for the dwarves.
+
+===[https://www.dropbox.com/s/dea50wrs557w283/kobold.py Kobold name generator]===
+A Python script that generates random names in the way of kobold utterances
+
+===[https://play.google.com/store/apps/details?id=dae.dfnews Dwarf Fortress News - Android App]===
+Watches the ''Dwarf Fortress'' devblog. Receives Push Notifications on new updates.
+
+===[https://github.com/eniteris/df2html DF2HTML]===
+Converts DF screenshots into formatted HTML.
+
+
+==Calculators==
+
+===[https://jose96xd.github.io/DF_Tools/index.html DFTools]===
+A set of web-based utilities for mods, including calculators for temperature, time, and weapon damage.
+
+===[https://smart-calculators.net/en-US/tools/dwarf-fortress-food-calculator Dwarf Fortress Food and Booze Calculator]===
+Web-based calculator for planning farm tiles, brewers, stills, and barrels needed to sustain a fortress by food type and population. Computes yields for all crops, brewing rates, and multi-year production scales.
+
+[[Category:Utilities|*]]
+{{Category|Modding}}
+[[ru:Utilities]]

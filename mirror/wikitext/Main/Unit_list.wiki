@@ -1,0 +1,154 @@
+{{Quality|Superior|20:34, 3 March 2023 (CST)}}
+{{av}}
+
+[[File:unit_list_v50_preview.png|thumb|270px|right|Preview of the unit list.]]This menu tab, labelled '''Creatures''' in game, is separated into four tabs: [[Citizenship|Citizens]], [[Pet]]s/[[Livestock]], [[Invader|Others]], and Dead/Missing. It can be opened with {{k|u}} or by clicking on the first icon on the bottom left of the main [[interface]].
+
+== Citizens tab ==
+Lists all residents of your fortress, including [[Visitor#Long-term residency|long-term residents]], but not [[visitor]]s.
+
+Each entry includes the following columns (from left to right):
+* An image of the resident.
+* The [[name]]* and [[profession]]* of the resident, color-coded by profession (where children and babies are also considered their own professions).
+* Buttons to go to the resident's location or view their sheet.
+* The task* they are currently performing, along with (where applicable) buttons to go to its location, view a detailed description, remove the current worker from the task, [[suspend]] the task, and cancel the task.
+* The resident's current [[stress]] level*.
+* The resident's assigned [[work detail]]s preceded by a button to toggle whether they are allowed to do unassigned [[labor]]s.
+
+''* The list is sortable by this column. Defaults to sorting by profession category''
+
+The list is sortable by name, profession category, profession, current performed task and stress level.
+
+When sorting by profession category, they are not by alphabetical order, instead being sorted by [[Labor#List of labors|labor category]], then specific profession within the category, again not necessarily in alphabetical order (and further they are ordered by the non-visible unit id, with lower ids listed before higher ids). Children and babies are listed last. All sorting may be reversed, meaning for example, sorting by [[name]] may go A-Z or can be reversed to be Z-A. 
+
+Sorting by profession, on the other hand, is in alphabetical order of the profession name, with Dwarven Baby listed after Cooks, but before Leatherworkers.
+
+== Pets/Livestock tab ==
+Lists all [[Creature#Animals|animals]] that are owned by the fortress or its residents, but does not include any wild animals, nor animals belonging to invaders or caravans.
+
+Each entry includes the following columns (from left to right):
+* An image of the creature.
+* The [[Name#Animal and megabeast names|name]]* of the creature. The word "[[stray]]" indicates that the animal is not any dwarf's [[pet]]. In the case of [[War animal|war]] or [[Hunting animal|hunting animals]], it means the animal has not been assigned to a dwarf. Named animals are usually a pet, often of an [[Immigration|immigrant]], named before joining your fortress, although animals that have made a significant kill by also get a name.
+* Buttons to go to the creature's location or view the creature's sheet.
+* The level of [[Animal trainer#Training|training]]* the creature has and its [[Animal trainer|Trainer]] status (see [[#Animal Training Level|below]] for options).
+* Buttons to assign a [[Animal trainer|trainer]], and to toggle if the creature should receive [[War animal|war training]] and/or [[Hunting animal|hunting training]].
+* A button to assign a work animal, which is a war or hunting trained animal, to a dwarf, if the animal currently is not assigned as a work animal nor is currently a pet of any dwarf. Note that via the button even dwarves with the child or baby profession can be assigned work animals. Removal of assigned work animals is only possible via the work animals sub-tab of the dwarf's character sheet currently assigned to a dwarf, but - as children and babies will have just displayed "Cannot assign work animals" - in these cases a work animal needs first to be reassigned to another dwarf as work animal (via the work animal sub tab of the character sheet of an adult dwarf, who is currently not the "owner" of the work animal) before it can be removed as work animal.
+* The creature's ownership status (see [[#Animal Ownership Status|below]] for options).
+* Buttons to toggle pet availability (for stray creatures, excluding all [[Cat|cats]]), mark for [[Butcher|slaughter]] (for stray creatures), or mark for [[Gelder|gelding]] (for ungelded male creatures).
+
+''* The list is sortable by this column. Defaults to sorting by [[profession]], which is likely a bug, as this appears not to do anything but apply a semi-random order for animals.''
+
+=== Animal training level ===
+The following are the options for the animal's [[Animal trainer|training]] level:
+*(none) - This animal is wild.{{Verify|Can this happen?}}
+*{{DFtext|W|6:1}}{{Verify|Premium version icons}} - This animal is semi-wild.
+*{{DFtext|T|7:1}}{{Verify|Premium version icons}} - This animal is trained.
+*{{DFtext|-|7:1}}{{Verify|Premium version icons}} - This animal is well-trained.
+*{{DFtext|+|7:1}}{{Verify|Premium version icons}} - This animal is skillfully trained.
+*{{DFtext|*|7:1}}{{Verify|Premium version icons}} - This animal is expertly trained.
+*{{DFtext|≡|7:1}}{{Verify|Premium version icons}} - This animal is exceptionally trained.
+*{{DFtext|☼|7:1}}{{Verify|Premium version icons}} - This animal is masterfully trained.
+*{{DFtext|Domesticated|2:1}} - This animal is domesticated.
+
+=== Animal ownership status ===
+The following are the options for the animal's ownership status:
+* {{DFtext|Available as a pet|3:1}} - This animal is available for adoption as a pet.
+* {{DFtext|Work Animal|7:0}} - This animal has been trained as either a hunting or war animal, and has not been assigned an owner, but this status is usually not displayed (in the pet/livestock tab of the unit list), but rather is overwritten by the pet status text (ie. {{DFtext|Available as a pet|3:1}} or <span style="font-family:IBM Plex Mono Medium, Consolas, monospace; font-size:12.5px; background-color:#000; color:#FF7A12;">Unavailable as a pet</span>) as even work animals can usually be pets. Only work animals, where the race/species is not defined as possible pets, can have this status displayed.
+* <span style="font-family:IBM Plex Mono Medium, Consolas, monospace; font-size:12.5px; background-color:#000; color:#FF7A12;">Unavailable as a pet</span> - This animal currently cannot be claimed as a pet.
+* {{DFtext|Uninterested in an owner|7:0}} - Cats, being superior to all other creatures, cannot be assigned as pets. Instead, they will adopt an owner at their whim.
+* {{DFtext|Owned|7:1}} with the owner's name below - This animal belongs to the listed dwarf. Pets can provide happiness to their owners.
+* {{DFtext|Ready for Slaughter|5:1}} - This animal will be butchered when a [[butcher]] becomes available.
+* {{DFtext|Not Tame|5:0}}{{Verify|Premium version representation}} - This animal is wild and requires taming.
+
+=== Overall training ===
+In the bottom right corner of the Pets/Livestock menu, there is a button to open a menu that shows civilization-wide animal training knowledge. Training wild animals contributes to this knowledge.
+
+{|class="wikitable" style="width:20%; align:center"
+! Training level
+|-
+| {{DFtext|A few facts|red}}
+|-
+| {{DFtext|General familiarity|yellow}}
+|-
+| {{DFtext|Knowledgeable|white}}
+|-
+| {{DFtext|Expert|cyan}}
+|-
+|{{DFtext|Domesticated|lime}}
+|}
+
+== Others tab ==
+Lists all visible living creatures that are not residents of, or owned by, your fortress. Creatures [[Captured creature|captured]] in a [[cage]] still remain in this tab and are not considered owned until [[Animal trainer|tamed]]. There may be unseen creatures underground or hiding that will not be listed.
+
+Each list entry includes the following columns (from left to right):
+* An image of the creature.
+* The [[name]]* and (if applicable) [[profession]]* of the creature.
+* Buttons to go to the creature's location or view the creature's sheet.
+* The status* of the creature (see [[#Status|below]] for options).
+* Button to assign a trainer to a [[Captured creature|captured]] wild [[Creature#Animals|animal]] (if applicable).
+
+''* The list is sortable by this column. Appears to initially be sorted by first arrival date{{Verify}}, though sorting by profession is initially selected, which is likely a bug, as actually sorting by profession requires switching to sort by [[name]] then back to profession.'' <!-- This should probably be moved to a bug report tag -->
+
+=== Status ===
+The following are the options for the creature's status:
+{| class=wikitable
+! Status
+! Description
+|-
+| {{DFtext|Wild animal|2:0}}
+| Wildlife.
+|-
+| {{DFtext|Merchant|7:0}}
+| [[Merchant]]s, as well as their pack animals and wagons.
+|-
+| {{DFtext|Diplomat|7:1}}
+| [[Diplomat]]s and [[outpost liaison]]s.
+|-
+| {{DFtext|Guest|2:1}}
+| Foreign [[visitor]]s.
+|-
+| {{DFtext|Friendly|2:1}}
+| All non-hostile creatures that do not fit into any of the categories above.
+|-
+| {{DFtext|Invader|4:0}}
+| [[Siege]]s and [[ambush]]es.
+|-
+| {{DFtext|Caged Prisoner|4:0}}
+| Caged invaders.
+|-
+| {{DFtext|Uninvited Guest|4:0}}
+| [[Megabeast]]s, [[semi-megabeast]]s, [[forgotten beast]]s and [[titan]]s.
+|-
+| {{DFtext|Caged Guest|4:0}}
+| Uninvited guests you managed to catch in a cage.
+|-
+| {{DFtext|Current Resident|4:0}}
+| All named beasts you encounter upon embark.
+|-
+| {{DFtext|Berserk|4:1}}
+| [[Werebeast]]s, [[Insanity|berserk]] dwarves and creatures with the [[Creature token|[CRAZED]]] token.
+|-
+| {{DFtext|Undead|0:1}}
+| Undead, such as [[zombie]]s and [[ghost]]s.
+|-
+| {{DFtext|Opposed to life|0:1}}
+| Creatures with the [[Creature token|[OPPOSED_TO_LIFE]]] token, hostile to all living creatures.
+|-
+| {{DFtext|Hostile|4:0}}
+| All other hostile creatures.
+|}
+
+This menu is important for keeping track of the local wildlife; regular looks may very well save you from a deadly [[giant lion]] attack.
+
+== Dead/Missing tab ==
+Lists all creatures that have died or gone missing in your settlement, regardless of which tab they would have been on when alive. This serves as record of your [[hunting]] returns, siege rebuffs, [[unfortunate accident|accident]] victims, and battle casualties
+
+Each list entry contains the following columns (from left to right):
+* An image of the creature.
+* The [[name]]* and (if applicable) [[profession]]* of the creature.
+* Whether the creature is {{DFtext|Deceased|5:1}} or {{DFtext|Missing|7:0}}*.
+
+''* The list is sortable by this column. Appears to initially be sorted by first arrival date{{Verify}}, though sorting by profession is initially selected, which is likely a bug, as actually sorting by profession requires switching to sort by [[name]] then back to profession.'' <!-- This should probably be moved to a bug report tag -->
+
+{{V50 menus}}
+{{Category|Interface}}
+[[ru:Unit list]]

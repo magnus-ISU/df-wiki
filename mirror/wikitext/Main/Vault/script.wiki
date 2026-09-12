@@ -1,0 +1,23 @@
+<syntaxhighlight lang="lua">
+entities.vault_guardian.default=function(idx,tok)
+    -- first, we have to generate their weird items
+    local item_token_prefix=random_object_parameters.token_prefix.."EI"..tostring(idx)
+    local item_info=generate_from_list(angel_item_gens,item_token_prefix)
+    raws.register_items(item_info.lines)
+    local lines={}
+    -- put the weird items into the entity
+    for k,v in pairs(item_info.tokens) do
+        for kk,vv in ipairs(v) do
+            lines[#lines+1]="["..k..":"..vv..(rarityless_items[k] and "" or ":COMMON").."]"
+        end
+    end
+    lines[#lines+1]="[DIVINE_MAT_WEAPONS]"
+    lines[#lines+1]="[DIVINE_MAT_ARMOR]"
+    lines[#lines+1]="[DIVINE_MAT_CRAFTS]"
+    lines[#lines+1]="[DIVINE_MAT_CLOTHING]"
+    lines[#lines+1]="[CLOTHING]"
+    lines[#lines+1]="[TRANSLATION:GEN_DIVINE]"
+    return {entity=lines,weight=1}
+end
+</syntaxhighlight>
+<noinclude>{{Category|Lua script pages}}{{Category|Entity raw pages}}</noinclude>

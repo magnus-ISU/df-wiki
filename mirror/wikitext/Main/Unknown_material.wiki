@@ -1,0 +1,53 @@
+{{Quality|Unrated}}
+{{av}}
+
+{{Merge|[[Unknown frozen creature substance]]<nowiki>]] and [[</nowiki>[[Unknown frozen plant substance]]}}
+
+:''Not to be confused with the [[unknown substance]].
+
+[[File:Metal door sprite.png|thumb|right]]
+
+'''Unknown materials''' can appear as a [[Hardcoded material|placeholder]] as the result of [[bug]]s - specifically, missing [[material token]]s. They have minimal material properties, typically appearing as a light gray solid unaffected by [[temperature]].
+
+==Generic==
+{{infostart|}}
+{{infoheader|Properties}}
+{{infocell|
+* [[Material value]] 1
+{{firemagmasafe|yes|yes}}
+* [[Melting point]] None
+* [[Boiling point]] None
+* [[Ignition point]] None
+* [[Solid density]] 2000{{verify}}
+* [[Specific heat]] None
+* [[Color]] gray
+}}
+{{infoend}}
+
+An "Unknown material", as it is listed in [[building]] descriptions, normally has no name. It has an internal [[material token|ID]] of -1 or {{token|NONE|mat}}, the same as used in tasks that require items of any or an unspecified material.
+
+[[Door]]s and [[hatch cover]]s in [[dark pits]]{{bug|6776}} and [[Civilization#Dead and struggling civilizations|dead civilizations]]{{bug|3478}} have been known to generate as unknown material.
+
+Since the material ID of -1 is used as a placeholder value for any material, items made of the unknown material cannot be specifically requested as an ingredient, even in [[modding|modded]] [[reaction]]s.
+
+==Organic substances==
+
+{{token|CREATURE_MAT|mat}} and {{token|PLANT_MAT|mat}} fall back to "unknown creature/plant substance" if they do not have a proper subtype. If solid, they will additionally be listed as "frozen".
+
+==Other forms==
+
+Other material categories have fallbacks in addition to their subtypes. Unlike unknown materials, they are functional when obtained.
+
+Inorganic materials without a subtype become [[magma]] ({{token|INORGANIC|mat|NONE}}), or generic "rock" if solid.
+
+The generic form of charcoal and coke ({{token|COAL|mat|NO_MATGLOSS}}) is known as [[refined coal]], which cannot be legitimately obtained.
+
+==See also==
+* [[Unknown]] ([[tile]])
+* [[Primordial remnant#List of remnants|Glitchstuff]]
+
+{{materials}}
+
+{{Category|Materials}}
+{{Category|Bugs}}
+[[ru:Unknown material]]

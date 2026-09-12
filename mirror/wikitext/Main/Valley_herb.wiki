@@ -1,0 +1,39 @@
+{{Quality|Fine}}
+{{plantlookup|uses=
+* [[Food]]
+* [[Golden salve]] production
+|seed=
+|graphic=valley_herb_shrub_sprite.png
+|seedimage=valley_herb_seeds_sprite.png
+|wiki=no}}
+{{av}}
+
+
+The '''valley herb''' is a somewhat hard-to-gather [[plant]], for it grows only in [[temperate]] [[grassland]]s in [[Calendar|spring]]. It is edible when [[cook]]ed, but its main use is in producing [[golden salve]]. It has no [[seed]]s (''in an unmodded/vanilla game, specifically - see the mod below''). This plant can be collected by [[plant gathering]]. Unlike most other gathered plants, only a single valley herb will be gathered from a shrub.
+
+[[Elf|Elven]] and [[human]] caravans may offer valley herbs for trade in stacks of 5, assuming their nations have access to the proper biome; this large stack size makes them ideal for processing into golden salve, as a single stack will yield a trade good worth 2,500☼ (plus vial value).
+
+* Plant value: 10
+* Extract value: 100
+* Seasons: Spring
+
+Some [[dwarves]] [[Preferences|like]] valley herbs for their ''tiny leaves'' and their ''soothing fragrance''.
+
+[[File:valley_herb.jpg|thumb|230px|center|Pieces of valley herb.]]
+
+
+
+==Seed mod==
+{{mod}}
+This is a simple mod to add valley herb seeds ('''originally produced for ASCII mode, as it were - premium graphics may cause it to not work as intended''') :
+<div style="height:200px; overflow:auto;"><pre>
+        [USE_MATERIAL_TEMPLATE:SEED:SEED_TEMPLATE]
+                [MATERIAL_VALUE:10]
+                [EDIBLE_COOKED]
+        [SEED:valley herb seed:valley herb seeds:2:4:1:LOCAL_PLANT_MAT:SEED]
+        [SELECT_MATERIAL:STRUCTURAL]
+                [MATERIAL_REACTION_PRODUCT:SEED_MAT:LOCAL_PLANT_MAT:SEED] 
+</pre></div>
+
+{{gamedata}}
+{{Plants}}

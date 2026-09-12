@@ -1,0 +1,784 @@
+{{Quality|Exceptional}}
+{{av}}
+
+{{buggy}}
+
+[[File:tree_z_levels_v50.gif|thumb|225px|right|Ascending z-levels of a [[pear|pear tree]].]]
+'''Trees''' are multi-[[tile]] [[plant]]s, that can be found aboveground on all but the most dry or mountainous of maps, and below ground in the [[cavern]]s. The types of trees that grow in a given location depend on that location's [[biome]], as different species prefer different conditions. For example, tropical areas often have palm trees, while colder areas feature pines. Underground trees such as [[nether-cap]]s are an exception, as they will grow anywhere underground. The species of a tree in turn determines its properties, including its structure, the color and density of its wood and what kind of growths it produces. Note also that "trees" in ''Dwarf Fortress'' also covers things that are not actually trees, such as cacti, large herbaceous plants (e.g. [[banana]]s), and large mushrooms (underground trees).
+{{Translation
+| dwarven = dák
+| elvish  = thelire
+| goblin  = tonspe
+| human   = akan
+}}
+Trees are used as a source of [[wood]], an essential resource in the game, irreplaceable (or hard to replace) for some applications. Thus, the amount of local trees greatly affects fortress development, as without a ready source of wood, the player will be forced to rely on [[trade]] to get it. Tree growth density on the [[embark]] site is determined by its [[biome]], so it is displayed with the rest of the biome properties (temperature, etc.) on the "Choose Fortress Location" screen at embark.
+
+Since [[Elf|elves]] are very strong environmentalists, they detest the cutting of trees, and offering them logs or wooden items in trade will deeply offend them. Cutting down trees is not allowed in the [[object testing arena]], as attempting to do so will produce the message {{DFtext|You cannot fell trees in the arena.|6:1}}
+
+== Structure ==
+[[File:Tree animated.gif|thumb|Animation of all z-levels of an [[apricot]] tree. ASCII mode.]]
+Trees consist of several types of tiles - '''roots''', '''trunk''' sections, '''thick branches''', '''branches''', and '''twigs''', that may be covered in a number of "growths" (leaves, needles, flowers, fruit, cones, etc.), depending on species and season. A single tree is a structure that can span multiple tiles of each type in both horizontal and vertical directions. For example, a typical deciduous tree will have a single tile-wide trunk at ground level supporting a multiple-level crown of intertwined trunk sections, branches and twigs covered with leaves. Not all species follow the same scheme, though - palms have a high, naked trunk that doesn't branch and just a tuft of leaves on top of it, and some species can have trunks that are thicker than a single tile at ground level. Trees also have an underground system of roots, but there is only one kind of root tile and the extent of the root system can vary with species.
+
+Graphically, vertical 1×1 trunk sections resemble wooden columns {{tile|O|6:0}}. The thicker trunks (2×2 and 3×3) are represented by rounded double-line structures. Above the first ground level the trunk may branch out, producing horizontal trunk sections that resemble wooden [[wall]]s {{tile|║|6:0}}. These can peter out into thick branches {{tile|│|6:0}} or end directly with branches {{tile|¼|2:0}}. The branches can extend further out, ending with twigs {{tile|;|2:0}}. A vertical trunk end, if not covered with a branch, is represented by a pointed cap {{tile|⌂|6:0}}.
+
+Root tiles ({{tile|¼|6:0}}) overlap a number of underground tiles below each tree. They can be designated for digging, but because they usually use the same brown colour as the mining designation rectangle, the designation is not evident (the only exceptions are trees with white roots). Some trees can have multiple tiles of roots, others just the one (such as palm trees).
+
+The dug-away roots of a tree can spawn twigs and fruits of the tree around them, if there is space and grass/cave moss there. This means you can, in principle, access fruit trees from below the tree, without putting a dwarf in danger or walling off the tree.  There are exceptions to the description above - [[Desert]] [[saguaro]]es don't have any leafy branches or twigs, just a trunk and thick branches. Nor do mushroom cap trees that grow in the caverns underground have branches - instead, they have a '''cap''' consisting of ramps that can be walked upon.
+
+Trees can be [[climb]]ed in both fortress and [[adventurer mode]]. In densely wooded areas, the overlapping tree crowns can form a continuous canopy that can be traversed by walking, climbing and/or jumping. Both thick and regular branches provide a floor-like support for walking - twigs are too frail to support the weight of a dwarf, but they can be climbed through and jumped over. All kinds of trunk tiles, except trunk tips, are treated as solid barriers that can be climbed through and jumped over like twigs.
+
+On ground level, tree trunks are obstacles that prevent [[channel]]ing, or the creation of [[wall]]s and other [[construction]]s on their tiles. This is problematic for caravan [[wagon]]s, which require a path at least three tiles wide, in order to access your fortress; on heavily forested maps it may be necessary to check [[trade depot|depot]] access ({{k|D}}, doesn't work in current version) every once in a while, as trees continue to grow, to make sure wagons can get through, and chop down ({{menu icon|l}}) the impeding forest if they can't. Later on this can actually become a blessing, as if there is only one or a few pathways to the fortress, it makes it easier to route incoming caravans down certain pre-selected well-defended pathways, instead of allowing them to choose their own way across the map, where they may fall foul of ambushers or worse. It also makes building above-ground constructions more challenging, as any trees in the way must be chopped down first.
+
+<gallery caption="Heights of a tree (ASCII mode)" widths="90px" heights="90px" perrow="5">
+File:Tree-1.png|1 level below ground: roots in a [[red sand]] wall on the side of a hill
+File:Tree0.png|Ground level: trunk
+File:Tree+1.png|1 level above ground, trunk, branches and twigs
+File:Tree+2.png|2 levels above ground
+File:Tree+3.png|3 levels above ground, includes some Open Space
+File:Tree+4.png|4 levels above ground
+File:Tree+5.png|5 levels above ground
+File:Tree+6.png|6 levels above ground
+File:Tree+7.png|7 levels above ground, only Open Space
+</gallery>
+
+=== Growths ===
+Growths are the things that grow ''on'' a tree, i.e: they are not an essential part of the tree's structure and can be shed or picked without destroying the tree. This includes leaves, needles, flowers, fruit, seed pods, catkins, cones, etc. Each tree species has at least one type of growth, the most common one, unsurprisingly, being leaves.
+
+The leaves of deciduous trees change color in the autumn, fall before the winter and grow back in the spring. Fallen leaves will color the tiles beneath their trees, turning the forest floor into a colorful patchwork.
+
+Trees of fruit-producing species usually grow flowers in spring and fruit later in the year. Flowers will fall in a cloud during the transition from flowers to fruit; the cloud is shown falling, and examining the ground after that will show "<tree> flowers" in addition to other tile contents. Both flowers and fruit appear and fall at set times through the year, so it is possible that a young tree that has never flowered will give fruit.
+
+Fruit can be picked from trees in Adventure mode. Fortress mode harvesting is done with a [[stepladder]] (as long as the fruit-bearing tree is within a plant gathering zone) or by collecting fallen fruits. Fruit can be brewed at a [[still]]. Cutting down a tree with fruit causes the fruit to vanish{{verify}}.
+
+Some growths can be used for [[dye]]ing, mostly the leaves (only 14 tree types out of 72 has such leaves), but also some fruits ([[banana]], [[coffee]], [[avocado]], [[pomegranate]], [[bayberry]], [[persimmon]]), nuts ([[almond]] and [[chestnut]]), and cones ([[alder]]).
+
+If a tree is set on fire in fortress mode and is described as 'dead' when examined, it will eventually rejuvenate itself and come back to life after a few years, starting from the trunk and leading out into the branches if left alone.
+
+== Chopping down trees ==
+{{main|Woodcutting}}
+
+Trees can be cut down by dwarves to produce [[wood]]. It is enough to [[designations menu|designate]] only one trunk tile for cutting to chop down the whole tree it belongs to - any trunk tile will do, even those that are above ground, or even a single tile of a multi-tile trunk. As a result, it's impossible to "prune" trees by chopping down only parts of them. The quality of the [[Battle axe|axe]] determines how fast trees can be cut down.
+
+Once a woodcutter is done with the first tile, the tree instantly converts to a number of free-floating logs that fall to the ground in a direction away from the cutter. Cutting a tree from a trunk section above ground level may result in the woodcutter losing their footing and crashing to the ground (similar to having a tile deconstructed under their feet).
+
+If you dug the tile below the trunk before cutting the tree, it will leave a hole to the surface, potentially allowing dangerous creatures to path into your underground fort. Avoid digging directly below one z-level in wooded areas before clearing out the trees, and make sure to check for open floor spaces {{Tile|·|0:1}} on the surface afterwards. If holes are present, construct [[floor]] tiles over the holes, which will prevent creatures from moving below. Constructing a wall below the open floor will work as well. Unexplained underground logs can alert you to the presence of these "guest entrances". Moving a building preview all around the surface ([[vermin catcher's shop]]s are good for their size) in ASCII mode and inspecting any non-ramp or tree invalid tiles can sweep large areas.
+
+If you had [[smoothing|smoothed]] the wall below the trunk and then cut down the tree, it will leave an open floor above the smoothed wall, unlike constructed walls (see this [[tile#Walls|diagram]] for a visual illustration). If there is an open space adjacent to the smoothed wall, creatures can diagonally move below the adjacent space (by swimming, flying, or climbing) from the open floor above. Such occurrences should be uncommon, as it requires the tile below the tree to be made of stone (so it can be smoothed), and occur mainly in [[mountain]] biomes and areas affected by erosion.
+
+=== Objects and tiles in trees ===
+
+Some trees have been found to have objects or tiles contained within the branches - cutting down these trees can be hazardous to your dwarves.  You can check all the z-levels of every tree you wish to cut, or just take the risk and experience occasional fun!
+
+== Products ==
+=== Wood ===
+{{main|Wood}}
+
+One of the variations between the different tree species is in the [[weight]] and [[color]] of their [[wood]]. Weight is often a minor concern but when using wood to create objects that will be moved, such as [[bin]]s or [[bucket]]s, choosing lighter wood is an advantage as it will be [[haul]]ed faster. Heavier wood will make [[Training weapon|wooden weapons]] and [[siege engine]] projectiles more effective, while lighter wooden [[shield]]s reduce penalties to speed while blocking just as well as heavier shields.
+
+All types of wood have the same (low) value (beyond the [[preference]]s of individual dwarves), although the [[color]] of the wood may matter for aesthetic purposes. Some types of wood can be [[Thresher|threshed]] for [[dye]]s.
+
+=== Fruit ===
+Various kinds of tree produce fruit.  In [[dwarf fortress mode]], they can be gathered with a [[stepladder]] in a designated [[zone#Gather/pick Fruit|plant gathering zone]], and elves will also bring fruit to [[trading|trade]].  Fruit can be eaten, producing [[seed]]s.  The following trees produce usable fruit in vanilla: apple, apricot, avocado, banana, bayberry, bitter orange, carambola, cashew, cherry, citron, coconut palm, coffee, custard-apple, date palm, desert lime, durian, finger lime, guava, kumquat, lime, lychee, mango, olive, orange, papaya, paradise nut, peach, pear, persimmon, plum, pomegranate, pomelo, rambutan, round lime, saguaro, and sand pear. Not all of these can be brewed; see [[alcohol]] for a list of brewable fruit.
+
+Instead of fruit, some trees will produce nuts, which are actually seeds - since tree seeds currently can't be planted, feel free to allow cooking of these. The nut-producing trees in vanilla are: [[almond]], [[candlenut]], [[chestnut]], [[hazel]], [[macadamia]], [[oak]], [[pecan]], and [[walnut]].
+
+== Growing trees ==
+[[File:sapling_preview.png|right]]Trees grow from '''saplings''', which start growing randomly on non-occupied tiles of a suitable biome; thus chopping down a forest may create a clearing, but within a couple of years a new forest will have grown. Saplings will not grow to maturity if their tile contains an item or building (including stockpile designations), though removing the item may cause the tree to spontaneously grow up. Saplings will block the construction of farm plots unless there is also a dusting or pile of mud beneath them.
+
+Saplings can be killed by heavy [[traffic|foot traffic]] and removed by building a road on them, but not by flooding &mdash; they can survive submergence for extended periods of time and will still grow to maturity once the water level drops to 4/7{{verify}} or lower. Dead saplings will remain for some seasons, and then disappear, more quickly if heavy traffic tramples them away. Many underground trees are called "young &lt;tree&gt;" instead of sapling, but the concept is the same. Paved [[road]]s and (even unbuilt) [[farm plot]]s periodically purge all terrain features below them, preventing trees (or shrubs) from growing in unwanted areas. Trees cannot grow on stairs or ramps, making it possible to keep trees out of your plumbing by using {{menu icon|m|t}} stairs instead of {{menu icon|m|m}} digging (this does not reveal the tile above). Above-ground trees will only grow in areas where there is sufficient soil one z-level beneath them (currently observed to be at least one unmined tile within a two-tile radius); underground trees not only ignore this restriction for dry subterranean soil but will also grow on muddy subterranean stone.
+
+Trees ''cannot'' be specifically "planted" [http://www.bay12games.com/dwarves/dev.html as of yet]; even if a map is stripped of all trees, new saplings will regrow, randomly and in their own time. (Sadly, the [[elf|elves]] do not seem to comprehend this.) It is possible to [[tree farming|farm]] trees by walling off or engineering a patch of soil and locking it away so your dwarves don't trample all over it, but it will take a long time for the farm to yield results. After you expose the caverns, subterranean flora (including trees) will begin to grow on any exposed, previously-bare soil within your fortress; this can be annoying when a copse of [[blood thorn]]s suddenly appears in your [[sand#Glass|sand collection]] area, but allows you to easily mine out large subterranean [[Tree farming|tree farms]] full of colorful subterranean trees.
+
+If a sapling grows into a tree, it can block off narrow areas, such as one-tile-wide hallways in a muddy cavern layer.  This can cause dwarves to take longer alternate routes to perform their jobs, or entrap them entirely.
+{{clear}}
+
+One can grow additional tree branches by digging away parts of tree roots and replacing them with grass or cave moss. Afterwards, when the tree grows, it may spread (fruit-bearing) branches there.
+
+== Growth rate & wood yield ==
+From the time a sapling appears, it takes about three and a half ''months'' for a tree to grow. Trees make a growth check once every year, and then grow randomly - it's possible for a tree to reach eight z-levels of height in a decade, not have gone past five in three, or avoid growing branches at all initially.
+
+Most tree raws currently specify exactly the same canopies. They'll yield more wood overall with sparser cutting, though the breakeven point is unknown presently. Each "tree trunk" tile will yield exactly one log, while light branches, twigs and (brown) heavy branches will give nothing. The size of aboveground trees at embark depends heavily on unknown factors beyond age and species; possibly temperature, latitude or biome?{{Verify}}
+
+For wood, branching trees with nonbranching trunks (Papayas, Ginkgos, Saguaros, Pines, Cedars, Fungiwoods, Alders, and Birches) should be cut down preferentially, as their branches will obscure saplings and their trunks grow slower. They will not yield any more wood past reaching their maximum trunk height (4-9 depending on species). Vice-versa, Glumprong trees are near-ideal for forestry, as they're all trunk, though their max height is limited to 8.
+
+Palm trees don't obscure other ones with their canopies, so should be cut when wood is needed, or when they reach their maximum height of 9.
+
+== Aboveground trees ==
+Most of them bear fruits and nuts, which can be [[Activity zone#Gather/Pick Fruit|harvested]] for food and drinks.
+
+<!-- default template (see Template:Multi-tile_tree_table_row for more details)
+{{multi-tile tree table row|name=|symbol=|color=|decid=|biome=(|biome2=|biome3=...)|dry=|align=|dense=
+  |tile1=
+  |drink=|drinkv=|eat=|cook=
+  |grow1=
+  }}
+-->
+{{multi-tile tree table head}}
+{{multi-tile tree table row|name=Abaca|super=3|symbol=Γ|color=2:0|decid=No|biome=Any Tropical|dry=y
+  |tile1={{tile|O|2:0}}{{tile|⌂|2:0}} trunk
+  |tile2={{tile|¼|6:0}} roots
+  |graphic=[[File:abaca_trunk_sprite.png]]
+  |sapling=[[File:Abaca_sapling.png]]
+  |eat=n|cook=n
+  |grow1={{tile|♠|2:0}} \ [[File:abaca_leaves.png|21px]] leaf
+  |grow2={{tile|♣|4:1}} \ [[File:abaca_flower.png]] flower
+  |grow3=[[File:abaca_seeds.png]] seeds
+  }}
+{{multi-tile tree table row|name=Acacia|symbol=♠|color=2:0|decid=No|biome=Tropical Dry Broadleaf Forest|biome2=Tropical Grassland|biome3=Tropical Savanna|biome4=Tropical Shrubland|dry=y|dense=0.600
+  |eat=n|cook=y
+  |graphic=[[File:pomegranate_trunk_sprite.png]]
+  |sapling=[[File:Acacia_sapling.png]]
+  |grow1={{tile|♠|2:0}} \ [[File:acacia_leaves.png]] leaf
+  |grow2={{tile|♣|7:1}} \ [[File:acacia_flower.png]] flower
+  |grow3={{tile|%|2:1}} \ [[File:acacia_pod.png]] seed pod
+  }}
+{{multi-tile tree table row|name=Avocado|symbol=Γ|color=2:0|decid=No|biome=Any Tropical|dry=y|dense=0.540
+  |eat=y|cook=y
+  |graphic=[[File:avocado_trunk_sprite.png]]
+  |sapling=[[File:Avocado_sapling.png]]
+  |grow1={{tile|♠|2:0}} \ [[File:avocado_leaves.png]] leaf
+  |grow2={{tile|♣|2:1}} \ [[File:avocado_flower.png]] flower
+  |grow3={{tile|%|2:0}} \ [[File:avocado_sprite.png]] fruit
+  |grow4=[[File:avocado_seeds_sprite.png]] seed
+  }}
+{{multi-tile tree table row|name=Banana|super=3|symbol=Γ|color=2:0|decid=No|biome=Any Tropical|dry=y
+  |tile1={{tile|O|2:0}}{{tile|⌂|2:0}} trunk
+  |tile2={{tile|¼|6:0}} roots
+  |graphic=[[File:banana_trunk_sprite.png]]
+  |sapling=[[File:Banana_sapling.png]]
+  |drink=Banana beer|drinkv=10|eat=y|cook=y
+  |grow1={{tile|♠|2:0}} \ [[File:banana_leaves.png|21px]] leaf
+  |grow2={{tile|♣|4:0}} \ [[File:banana_flower.png]] flower
+  |grow3={{tile|%|6:1}} \ [[File:banana_sprite.png]] fruit
+  |grow4=[[File:banana_seeds.png]] seed
+  }}
+{{multi-tile tree table row|name=Bitter orange|symbol=♠|color=2:0|decid=No|biome=Any Tropical|dry=y|dense=0.590
+  |eat=y|cook=y
+  |graphic=[[File:coffee_trunk_sprite.png]]
+  |sapling=[[File:Coffee_sapling.png]]
+  |grow1={{tile|♠|2:0}} \ [[File:bitter_orange_leaves.png|21px]] leaf
+  |grow2={{tile|♣|7:1}} \ [[File:bitter_orange_flower.png]] flower
+  |grow3={{tile|%|6:0}} \ [[File:bitter_orange_sprite.png]] fruit
+  |grow4=[[File:bitter_orange_seeds.png]] seed
+  }}
+{{multi-tile tree table row|name=Cacao tree|symbol=Γ|color=2:0|decid=No|biome=Tropical Moist Broadleaf Forest|dry=y|dense=0.430
+  |eat=n|cook=y
+  |graphic=[[File:apple_trunk_sprite.png]]
+  |sapling=[[File:Apple_sapling.png]]
+  |grow1={{tile|♠|2:0}} \ [[File:cacao_leaves.png]] leaf
+  |grow2={{tile|♣|7:1}} \ [[File:cacao_flower.png]] flower
+  |grow3={{tile|%|4:0}} \ [[File:cacao_sprite.png]] fruit
+  |grow4=[[File:cacao_seeds.png]] seed
+  }}
+{{multi-tile tree table row|name=Candlenut|symbol=Γ|color=2:0|decid=No|biome=Any Tropical Forest|dry=y|dense=0.140
+  |eat=n|cook=y
+  |graphic=[[File:candlenut_trunk_sprite.png]]
+  |sapling=[[File:Candlenut_sapling.png]]
+  |grow1={{tile|♠|2:0}} \ [[File:candlenut_leaves.png]] leaf
+  |grow2={{tile|♣|7:1}} \ [[File:candlenut_flower.png]] flower
+  |grow3={{tile|•|6:0}} \ [[File:candlenut_sprite.png]] nut
+  }}
+{{multi-tile tree table row|name=Carambola|symbol=Γ|color=2:0|decid=No|biome=Any Tropical|dry=y|dense=0.550
+  |drink=Carambola wine|drinkv=10|eat=y|cook=y
+  |graphic=[[File:carambola_trunk_sprite.png]]
+  |sapling=[[File:Carambola_sapling.png]]
+  |grow1={{tile|♠|2:0}} \ [[File:carambola_leaves.png]] leaf
+  |grow2={{tile|♣|3:1}} \ [[File:carambola_flower.png]] flower
+  |grow3={{tile|%|2:1}} \ [[File:carambola_sprite.png]] fruit
+  |grow4=[[File:carambola_seeds.png]] seed
+  }}
+{{multi-tile tree table row|name=Cashew|symbol=Γ|color=2:0|decid=No|biome=Any Tropical|dry=y|dense=0.450
+  |eat=y|cook=y
+  |graphic=[[File:cashew_trunk_sprite.png]]
+  |sapling=[[File:Cashew_sapling.png]]
+  |grow1={{tile|♠|2:0}} \ [[File:cashew_leaves.png]] leaf
+  |grow2={{tile|♣|5:1}} \ [[File:cashew_flower.png]] flower
+  |grow3={{tile|%|6:1}} \ [[File:cashew_sprite.png]] fruit
+  |grow4=[[File:cashew_seeds.png]] seed
+  }}
+{{multi-tile tree table row|name=Citron|symbol=♠|color=2:0|decid=No|biome=Any Tropical|dry=y|dense=0.700
+  |eat=y|cook=y
+  |graphic=[[File:pomelo_trunk_sprite.png]]
+  |sapling=[[File:Citron_sapling.png]]
+  |grow1={{tile|♠|2:0}} \ [[File:citron_leaves.png]] leaf
+  |grow2={{tile|♣|7:1}} \ [[File:citron_flower.png]] flower
+  |grow3={{tile|%|2:1}} \ [[File:citron_sprite.png]] fruit
+  |grow4=[[File:citron_seeds.png]] seed
+  }}
+{{multi-tile tree table row|name=Coconut palm|symbol=Γ|color=2:0|decid=No|biome=Any Tropical|dry=y|dense=0.680
+  |tile1={{tile|O|6:0}}{{tile|⌂|6:0}} trunk
+  |tile2={{tile|¼|6:0}} roots
+  |graphic=[[File:mangrove_trunk_sprite.png]]
+  |sapling=[[File:Palm_sapling.png]]
+  |eat=y|cook=y
+  |grow1={{tile|*|2:0}} \ [[File:coconut_palm_leaves.png|21px]] leaf
+  |grow2={{tile|♣|2:0}} \ [[File:coconut_palm_spathe.png]] spathe
+  |grow3={{tile|•|6:0}} \ [[File:palm_sprite.png]] fruit
+  }}
+{{multi-tile tree table row|name=Coffee|symbol=♠|color=2:0|decid=No|biome=Any Tropical|dry=y|dense=0.620
+  |eat=y|cook=y
+  |graphic=[[File:coffee_trunk_sprite.png]]
+  |sapling=[[File:Coffee_sapling.png]]
+  |grow1={{tile|♠|2:0}} \ [[File:coffee_leaves.png]] leaf
+  |grow2={{tile|♣|7:1}} \ [[File:coffee_flower.png]] flower
+  |grow3={{tile|%|4:1}} \ [[File:coffee_sprite.png]] fruit
+  |grow4=[[File:coffee_seeds.png]] seed
+  }}
+{{multi-tile tree table row|name=Custard-apple|symbol=♠|color=2:0|decid=No|biome=Any Tropical|dry=y|dense=0.360
+  |drink=Custard-apple cider|drinkv=10|eat=y|cook=y
+  |graphic=[[File:guava_trunk_sprite.png]]
+  |sapling=[[File:Custard_apple_sapling.png]]
+  |grow1={{tile|♠|2:0}} \ [[File:custard_apple_leaves.png]] leaf
+  |grow2={{tile|♣|2:1}} \ [[File:custard_apple_flower.png]] flower
+  |grow3={{tile|%|6:1}} \ [[File:custard_apple_sprite.png]] fruit
+  |grow4=[[File:custard_apple_seeds.png]] seed
+  }}
+{{multi-tile tree table row|name=Date palm|symbol=Γ|color=2:0|decid=No|biome=Any Tropical|dry=b|dense=0.820
+  |tile1={{tile|O|6:0}}{{tile|⌂|6:0}} trunk
+  |tile2={{tile|¼|6:0}} roots
+  |graphic=[[File:orange_trunk_sprite.png]]
+  |sapling=[[File:Date_palm_sapling.png]]
+  |drink=Date wine|drinkv=10|eat=y|cook=y
+  |grow1={{tile|*|2:0}} \ [[File:date_palm_leaves.png]] leaf
+  |grow2={{tile|♣|7:1}} \ [[File:date_palm_flower.png]] flower
+  |grow3={{tile|%|5:0}} \ [[File:date_palm_sprite.png]] fruit
+  |grow4=[[File:date_palm_seeds.png]] seed
+  }}
+{{multi-tile tree table row|name=Desert lime|symbol=♠|color=2:0|decid=No|biome=Tropical Grassland|biome2=Tropical Savanna|biome3=Tropical Shrubland|dry=y|dense=0.590
+  |eat=y|cook=y
+  |graphic=[[File:guava_trunk_sprite.png]]
+  |sapling=[[File:Desert_lime_sapling.png]]
+  |grow1={{tile|♠|2:0}} \ [[File:desert_lime_leaves.png]] leaf
+  |grow2={{tile|♣|7:1}} \ [[File:desert_lime_flower.png]] flower
+  |grow3={{tile|%|2:1}} \ [[File:desert_lime_sprite.png]] fruit
+  |grow4=[[File:desert_lime_seeds.png]] seed
+  }}
+{{multi-tile tree table row|name=Durian|symbol=Γ|color=2:0|decid=No|biome=Any Tropical|dry=y|dense=0.520
+  |drink=Durian wine|drinkv=10|eat=y|cook=y
+  |graphic=[[File:coffee_trunk_sprite.png]]
+  |sapling=[[File:Durian_sapling.png]]
+  |grow1={{tile|♠|2:0}} \ [[File:durian_leaves.png]] leaf
+  |grow2={{tile|♣|7:0}} \ [[File:durian_flower.png]] flower
+  |grow3={{tile|%|2:1}} \ [[File:durian_sprite.png]] fruit
+  |grow4=[[File:durian_seeds.png]] seed
+  }}
+{{multi-tile tree table row|name=Finger lime|symbol=♠|color=2:0|decid=No|biome=Any Tropical|dry=y|dense=0.590
+  |eat=y|cook=y
+  |graphic=[[File:guava_trunk_sprite.png]]
+  |sapling=[[File:Finger_lime_sapling.png]]
+  |grow1={{tile|♠|2:0}} \ [[File:finger_lime_leaves.png]] leaf
+  |grow2={{tile|♣|7:1}} \ [[File:finger_lime_flower.png]] flower
+  |grow3={{tile|%|2:1}} \ [[File:finger_lime_sprite.png]] fruit
+  |grow4=[[File:finger_lime_seeds.png]] seed
+  }}
+{{multi-tile tree table row|name=Guava|symbol=Γ|color=2:0|decid=No|biome=Any Tropical|dry=y|dense=0.610
+  |drink=Guava wine|drinkv=10|eat=y|cook=y
+  |graphic=[[File:guava_trunk_sprite.png]]
+  |sapling=[[File:Guava_sapling.png]]
+  |grow1={{tile|♠|2:0}} \ [[File:guava_leaves.png]] leaf
+  |grow2={{tile|♣|7:1}} \ [[File:guava_flower.png]] flower
+  |grow3={{tile|%|6:1}} \ [[File:guava_sprite.png]] fruit
+  |grow4=[[File:guava_seeds.png]] seed
+  }}
+{{multi-tile tree table row|name=Kapok|symbol=Γ|color=2:0|decid=No|biome=Tropical Moist Broadleaf Forest|dry=y|dense=0.260
+  |eat=n|cook=n
+  |graphic=[[File:guava_trunk_sprite.png]]
+  |sapling=[[File:Kapok_sapling.png]]
+  |grow1={{tile|♠|2:0}} \ [[File:kapok_leaves.png|21px]] leaf
+  |grow2={{tile|♣|7:1}} \ [[File:kapok_flower.png]] flower
+  |grow3={{tile|•|2:1}} \ [[File:kapok_sprite.png]] fruit
+  }}
+{{multi-tile tree table row|name=Kumquat|symbol=♠|color=2:0|decid=No|biome=Any Tropical|dry=y|dense=0.590
+  |eat=y|cook=y
+  |graphic=[[File:coffee_trunk_sprite.png]]
+  |sapling=[[File:Kumquat_sapling.png]]
+  |grow1={{tile|♠|2:0}} \ [[File:kumquat_leaves.png]] leaf
+  |grow2={{tile|♣|7:1}} \ [[File:kumquat_flower.png]] flower
+  |grow3={{tile|%|4:1}} \ [[File:kumquat_sprite.png]] fruit
+  |grow4=[[File:kumquat_seeds.png]] seed
+  }}
+{{multi-tile tree table row|name=Lime|symbol=♠|color=2:0|decid=No|biome=Any Tropical|dry=y|dense=0.590
+  |eat=y|cook=y
+  |graphic=[[File:guava_trunk_sprite.png]]
+  |sapling=[[File:Lime_sapling.png]]
+  |grow1={{tile|♠|2:0}} \ [[File:lime_leaves.png]] leaf
+  |grow2={{tile|♣|7:1}} \ [[File:lime_flower.png]] flower
+  |grow3={{tile|%|2:1}} \ [[File:lime_sprite.png]] fruit
+  |grow4=[[File:lime_seeds.png]] seed
+  }}
+{{multi-tile tree table row|name=Lychee|symbol=♠|color=2:0|decid=No|biome=Any Tropical|dry=y|dense=0.880
+  |drink=Lychee wine|drinkv=10|eat=y|cook=y
+  |graphic=[[File:lychee_trunk_sprite.png]]
+  |sapling=[[File:Lychee_sapling.png]]
+  |grow1={{tile|♠|2:0}} \ [[File:lychee_leaves.png]] leaf
+  |grow2={{tile|♣|5:1}} \ [[File:lychee_flower.png]] flower
+  |grow3={{tile|%|5:1}} \ [[File:lychee_sprite.png]] fruit
+  |grow4=[[File:lychee_seeds.png]] seed
+  }}
+{{multi-tile tree table row|name=Macadamia|symbol=♠|color=2:0|decid=No|biome=Any Tropical|dry=y|dense=0.705
+  |eat=Seed|super=4|cook=y
+  |graphic=[[File:macadamia_trunk_sprite.png]]
+  |sapling=[[File:Macadamia_sapling.png]]
+  |grow1={{tile|♠|2:0}} \ [[File:macadamia_leaves.png]] leaf
+  |grow2={{tile|♣|5:1}} \ [[File:macadamia_flower.png]] flower
+  |grow3={{tile|%|6:0}} \ [[File:macadamia_sprite.png]] nut
+  |grow4=[[File:macadamia_seeds.png]] seed
+  }}
+{{multi-tile tree table row|name=Mahogany|symbol=♠|color=2:0|decid=No|biome=Any Tropical Forest|dry=y|dense=0.600
+  |eat=n|cook=n
+  |graphic=[[File:mahogany_trunk_sprite.png]]
+  |sapling=[[File:Mahogany_sapling.png]]
+  |grow1={{tile|♠|2:0}} \ [[File:mahogany_leaves.png]] leaf
+  |grow2={{tile|♣|6:1}} \ [[File:mahogany_flower.png]] flower
+  |grow3={{tile|•|6:0}} \ [[File:mahogany_sprite.png]] fruit
+  }}
+{{multi-tile tree table row|name=Mango tree|symbol=Γ|color=2:0|decid=No|biome=Any Tropical Forest|dry=y|dense=0.520
+  |drink=Mango wine|drinkv=10|eat=y|cook=y
+  |graphic=[[File:coffee_trunk_sprite.png]]
+  |sapling=[[File:Mango_sapling.png]]
+  |grow1={{tile|♠|2:0}} \ [[File:mango_leaves.png]] leaf
+  |grow2={{tile|♣|4:1}} \ [[File:mango_flower.png]] flower
+  |grow3={{tile|•|6:1}} \ [[File:mango_sprite.png]] fruit
+  |grow4=[[File:mango_seeds.png]] seed
+  }}
+{{multi-tile tree table row|name=Olive|symbol=♠|color=2:0|decid=No|biome=Any Tropical|dry=y|dense=0.990
+  |eat=y|cook=y
+  |graphic=[[File:macadamia_trunk_sprite.png]]
+  |sapling=[[File:Olive_sapling.png]]
+  |grow1={{tile|♠|2:0}} \ [[File:olive_leaves.png]] leaf
+  |grow2={{tile|♣|7:1}} \ [[File:olive_flower.png]] flower
+  |grow3={{tile|%|0:1}} \ [[File:olive_sprite.png]] fruit
+  |grow4=[[File:olive_seeds.png]] seed
+  }}
+{{multi-tile tree table row|name=Orange|symbol=♠|color=2:0|decid=No|biome=Any Tropical|dry=y|dense=0.590
+  |eat=y|cook=y
+  |graphic=[[File:orange_trunk_sprite.png]]
+  |sapling=[[File:Orange_sapling.png]]
+  |grow1={{tile|♠|2:0}} \ [[File:orange_leaves.png]] leaf
+  |grow2={{tile|♣|7:1}} \ [[File:orange_leaves.png]] flower
+  |grow3={{tile|%|6:0}} \ [[File:orange_sprite.png]] fruit
+  |grow4=[[File:orange_seeds.png]] seed
+  }}
+{{multi-tile tree table row|name=Papaya|symbol=Γ|color=2:0|decid=No|biome=Any Tropical|dry=y|dense=0.130
+  |drink=Papaya wine|drinkv=10|eat=y|cook=y
+  |graphic=[[File:papaya_trunk_sprite.png]]
+  |sapling=[[File:Papaya_sapling.png]]
+  |grow1={{tile|♠|2:0}} \ [[File:papaya_leaves.png|21px]] leaf
+  |grow2={{tile|♣|7:1}} \ [[File:papaya_flower.png]] flower
+  |grow3={{tile|%|6:1}} \ [[File:papaya_sprite.png]] fruit
+  |grow4=[[File:papaya_seeds.png]] seed
+  }}
+{{multi-tile tree table row|name=Paradise nut|symbol=Γ|color=2:0|decid=No|biome=Any Tropical|dry=y|dense=0.820
+  |eat=y|cook=y
+  |graphic=[[File:paradise_nut_trunk_sprite.png]]
+  |sapling=[[File:Paradise_nut_sapling.png]]
+  |grow1={{tile|♠|2:0}} \ [[File:paradise_nut_leaves.png]] leaf
+  |grow2={{tile|♣|6:1}} \ [[File:paradise_nut_flower.png]] flower
+  |grow3={{tile|%|6:0}} \ [[File:paradise_nut_sprite.png]] fruit
+  |grow4=[[File:paradise_nut_seeds.png]] seed
+  }}
+{{multi-tile tree table row|name=Pomelo|symbol=♠|color=2:0|decid=No|biome=Any Tropical|dry=y|dense=0.590
+  |eat=y|cook=y
+  |graphic=[[File:pomelo_trunk_sprite.png]]
+  |sapling=[[File:Pomelo_sapling.png]]
+  |grow1={{tile|♠|2:0}} \ [[File:pomelo_leaves.png]] leaf
+  |grow2={{tile|♣|7:1}} \ [[File:pomelo_flower.png]] flower
+  |grow3={{tile|%|2:1}} \ [[File:pomelo_sprite.png]] fruit
+  |grow4=[[File:pomelo_seeds.png]] seed
+  }}
+{{multi-tile tree table row|name=Rambutan|symbol=Γ|color=2:0|decid=No|biome=Any Tropical|dry=y|dense=0.620
+  |drink=Rambutan wine|drinkv=10|eat=y|cook=y
+  |graphic=[[File:rambutan_trunk_sprite.png]]
+  |sapling=[[File:Rambutan_sapling.png]]
+  |grow1={{tile|♠|2:0}} \ [[File:rambutan_leaves.png]] leaf
+  |grow2={{tile|♣|2:1}} \ [[File:rambutan_flower.png]] flower
+  |grow3={{tile|%|4:1}} \ [[File:rambutan_sprite.png]] fruit
+  |grow4=[[File:rambutan_seeds.png]] seed
+  }}
+{{multi-tile tree table row|name=Round lime|symbol=♠|color=2:0|decid=No|biome=Any Tropical|dry=y|dense=0.590
+  |eat=y|cook=y
+  |graphic=[[File:guava_trunk_sprite.png]]
+  |sapling=[[File:Round_lime_sapling.png]]
+  |grow1={{tile|♠|2:0}} \ [[File:round_lime_leaves.png]] leaf
+  |grow2={{tile|♣|7:1}} \ [[File:round_lime_flowers.png]] flower
+  |grow3={{tile|%|2:1}} \ [[File:round_lime_sprite.png]] fruit
+  |grow4=[[File:round_lime_seeds.png]] seed
+  }}
+{{multi-tile tree table row|name=Rubber tree|symbol=Γ|color=2:0|decid=No|biome=Tropical Moist Broadleaf Forest|dry=y|dense=0.490
+  |eat=n|cook=n
+  |graphic=[[File:carambola_trunk_sprite.png]] 
+  |sapling=[[File:Rubber_sapling.png]]
+  |grow1={{tile|♠|2:0}} \ [[File:rubber_leaves.png]] leaf
+  }}
+{{multi-tile tree table row|name=Tea|symbol=♣|color=2:0|decid=No|biome=Any Tropical|dry=y|dense=0.560
+  |eat=n|cook=n
+  |graphic=[[File:coffee_trunk_sprite.png]]
+  |sapling=[[File:Tea_sapling.png]]
+  |grow1={{tile|♠|2:0}} \ [[File:tea_leaves.png]] leaf
+  |grow2={{tile|♣|7:1}} \ [[File:tea_flower.png]] flower
+  |grow3={{tile|%|6:0}} \ [[File:tea_sprite.png]] fruit
+  |grow4=[[File:tea_seeds.png]] seed
+  }}
+{{multi-tile tree table row|name=Pomegranate|symbol=Γ|color=2:0|decid=Yes|biome=Any Tropical|dry=y|dense=0.770
+  |drink=Pomegranate wine|drinkv=10|eat=y|cook=y
+  |graphic=[[File:pomegranate_trunk_sprite.png]]
+  |sapling=[[File:Pomegranate_sapling.png]]
+  |grow1={{tile|♠|2:0}}{{tile|♠|6:1}}{{tile|♠|4:1}}{{tile|♠|4:0}} \ [[File:pomegranate_leaves.png]] leaf
+  |grow2={{tile|♣|4:1}} \ [[File:pomegranate_flower.png]] flower
+  |grow3={{tile|%|4:1}} \ [[File:pomegranate_sprite.png]] fruit
+  |grow4=[[File:pomegranate_seeds2.png]] seed
+  }}
+{{multi-tile tree table row|name=Mangrove|symbol=♣|color=2:0|decid=No|biome=Mangrove Swamp|dry=n|dense=0.830
+  |eat=n|cook=n
+  |graphic=[[File:mangrove_trunk_sprite.png]]
+  |sapling=[[File:Mangrove_sapling.png]]
+  |grow1={{tile|♠|2:0}} \ [[File:mangrove_leaves.png]] leaf
+  |grow2={{tile|♣|7:1}} \ [[File:mangrove_flower.png]] flower
+  |grow3={{tile|•|4:1}} \ [[File:mangrove_sprite.png]] fruit
+  }}
+{{multi-tile tree table row|name=Cedar|symbol=↨|color=2:0|decid=No|biome=Temperate Coniferous Forest|biome2=Tropical Coniferous Forest|dry=y|dense=0.570
+  |tile1={{tile|O|6:0}}{{tile|⌂|6:0}} trunk
+  |tile2={{tile|¼|2:0}} branches
+  |tile3={{tile|;|2:0}} twigs
+  |tile4={{tile|¼|6:0}} roots
+  |graphic=[[File:pine_trunk_sprite.png]]
+  |sapling=[[File:Cedar_sapling.png]]
+  |eat=n|cook=n
+  |grow1={{tile|*|2:0}} \ [[File:cedar_leaves.png]] scale-leaf
+  |grow2={{tile|*|6:0}} \ [[File:cedar_seed_cone.png]] seed cone
+  |grow3={{tile|*|5:0}} \ [[File:cedar_pollen_cone.png]] pollen cone
+  }}
+{{multi-tile tree table row|name=Feather tree|symbol=♣|color=7:1|decid=No|biome=Not Freezing|dry=y|align=Good|dense=0.100
+  |tile1={{tile|O|7:1}}{{tile|═|7:1}}{{tile|⌂|7:1}} trunk
+  |tile2={{tile|─|7:1}} thick branches
+  |tile3={{tile|¼|7:1}} branches
+  |tile4={{tile|;|7:1}} twigs
+  |tile5={{tile|¼|7:1}} roots
+  |graphic=[[File:feather_trunk_sprite.png]]
+  |sapling=[[File:Feather_sapling.png]]
+  |eat=n|cook=y
+  |grow1={{tile|♠|7:1}} \ [[File:feathers_sprite.png]] down
+  |grow2={{tile|%|7:1}} \ [[File:feather_eggs_sprite.png]] egg
+  }}
+{{multi-tile tree table row|name=Glumprong|symbol=┤|color=5:0|decid=No|biome=Not Freezing|dry=y|align=Evil|dense=1.200
+  |tile1={{tile|O|5:0}}{{tile|═|5:0}}{{tile|⌂|5:0}} trunk
+  |tile2={{tile|¼|5:0}} roots
+  |graphic=[[File:glumprong_trunk_sprite.png]]
+  |sapling=[[File:Glumprong_sapling.png]]
+  |eat=n|cook=n
+  }}
+{{multi-tile tree table row|name=Highwood|symbol=¶|color=2:0|decid=No|biome=Not Freezing|dry=y|align=Savage|dense=0.500
+  |eat=n|cook=n
+  |grow1={{tile|♠|2:0}} \ [[File:highwood_leaves.png]] leaf
+  |grow2={{tile|♣|3:1}} \ [[File:highwood_flower.png]] flower
+  |graphic=[[File:highwood_trunk_sprite.png]]
+  |sapling=[[File:Highwood_sapling.png]]
+  }}
+{{multi-tile tree table row|name=Saguaro|symbol=╞|color=2:0|decid=No|biome=Any Desert|dry=y|dense=0.430
+  |tile1={{tile|O|2:0}}{{tile|⌂|2:0}} trunk
+  |tile2={{tile|─|2:0}} thick branches
+  |tile3={{tile|¼|2:0}} roots
+  |graphic=[[File:saguaro_trunk_sprite.png]]
+  |sapling=[[File:Saguaro_sapling.png]]
+  |eat=y|cook=y
+  |grow1={{tile|♣|7:1}} \ [[File:saguaro_flower.png]] flower
+  |grow2={{tile|•|4:1}} \ [[File:saguaro_sprite.png]] fruit
+  }}
+{{multi-tile tree table row|name=Willow|symbol=⌠|color=2:0|decid=No|biome=Any Temperate|biome2=Any Tropical Forest|biome3=Tropical Grassland|biome4=Tropical Savanna|biome5=Tropical Shrubland|biome6=Tropical Freshwater Swamp|biome7=Tropical Saltwater Swamp|biome8=Tropical Freshwater Marsh|biome9=Tropical Saltwater Marsh|dry=n|dense=0.390
+  |eat=n|cook=n
+  |grow1={{tile|♠|2:0}} \ [[File:willow_leaves.png]] leaf
+  |grow2={{tile|*|7:1}} \ [[File:willow_pollen_catkin.png]] pollen catkin
+  |grow3={{tile|*|7:1}} \ [[File:willow_seed_catkin.png]] seed catkin
+  |grow4={{tile|*|6:0}} \ [[File:willow_fruit.png]] fruit
+  |graphic=[[File:guava_trunk_sprite.png]]
+  |sapling=[[File:Willow_sapling.png]]
+  }}
+{{multi-tile tree table row|name=Alder|symbol=♣|color=2:0|decid=Yes|biome=Any Temperate Broadleaf|dry=y|dense=0.410
+  |tile1={{tile|O|6:0}}{{tile|⌂|6:0}} trunk
+  |tile2={{tile|¼|2:0}} branches
+  |tile3={{tile|;|2:0}} twigs
+  |tile4={{tile|¼|6:0}} roots
+  |graphic=[[File:guava_trunk_sprite.png]]
+  |sapling=[[File:Alder_sapling.png]]
+  |eat=n|cook=n
+  |grow1={{tile|♠|2:0}}{{tile|♠|6:1}}{{tile|♠|4:1}}{{tile|♠|4:0}}  \ [[File:alder_leaves.png]] leaf
+  |grow2={{tile|*|4:0}} \ [[File:alder_pollen_catkin.png]] pollen catkin
+  |grow3={{tile|*|6:0}} \ [[File:alder_seed_catkin.png]] seed catkin
+  |grow4={{tile|*|6:0}} \ [[File:alder_cone.png]] cone
+  }}
+{{multi-tile tree table row|name=Almond|symbol=♠|color=2:0|decid=Yes|biome=Any Temperate|dry=y|dense=0.795
+  |eat=Seed|super=4||cook=y
+  |grow1={{tile|♠|2:0}}{{tile|♠|6:1}}{{tile|♠|4:1}}{{tile|♠|4:0}} \ [[File:almond_leaves.png]] leaf
+  |grow2={{tile|♣|7:1}} \ [[File:almond_flower2.png]] flower
+  |grow3={{tile|%|6:0}} \ [[File:almond_sprite.png]] nut
+  |graphic=[[File:almond_trunk_sprite.png]]
+  |sapling=[[File:Almond_sapling.png]]
+  }}
+{{multi-tile tree table row|name=Apple|symbol=♣|color=2:0|decid=Yes|biome=Any Temperate|dry=y|dense=0.745
+  |drink=Apple cider|drinkv=10|eat=y|cook=y
+  |grow1={{tile|♠|2:0}}{{tile|♠|6:1}}{{tile|♠|4:1}}{{tile|♠|4:0}} \ [[File:apple_leaves.png]] leaf
+  |grow2={{tile|♣|5:1}} \ [[File:apple_flower.png]] flower
+  |grow3={{tile|%|4:0}} \ [[File:apple_sprite.png]] fruit
+  |grow4=[[File:apple_seeds.png]] seed
+  |graphic=[[File:apple_trunk_sprite.png]]
+  |sapling=[[File:Apple_sapling.png]]
+  }}
+{{multi-tile tree table row|name=Apricot|symbol=♣|color=2:0|decid=Yes|biome=Any Temperate|dry=y|dense=0.745
+  |drink=Apricot wine|drinkv=10|eat=y|cook=y
+  |grow1={{tile|♠|2:0}}{{tile|♠|6:1}}{{tile|♠|4:1}}{{tile|♠|4:0}} \ [[File:apricot_leaves.png]] leaf
+  |grow2={{tile|♣|5:1}} \ [[File:apricot_flower.png]] flower
+  |grow3={{tile|%|4:1}} \ [[File:apricot_sprite.png]] fruit
+  |grow4=[[File:apricot_seeds.png]] seed
+  |graphic=[[File:paradise_nut_trunk_sprite.png]]
+  |sapling=[[File:Apricot_sapling.png]]
+  }}
+{{multi-tile tree table row|name=Ash (tree)|alt=Ash|symbol=♠|color=2:0|decid=Yes|biome=Any Temperate Broadleaf|dry=y|dense=0.600
+  |eat=n|cook=n
+  |grow1={{tile|♠|2:0}}{{tile|♠|6:1}}{{tile|♠|4:1}}{{tile|♠|4:0}} \ [[File:ash_leaves.png]] leaf
+  |grow2={{tile|♣|7:1}} \ [[File:ash_flower.png]] flower
+  |grow3={{tile|%|6:0}} \ [[File:ash_sprite.png]] fruit
+  |graphic=[[File:macadamia_trunk_sprite.png]]
+  |sapling=[[File:Ash_sapling.png]]
+  }}
+{{multi-tile tree table row|name=Birch|symbol=♣|color=2:0|decid=Yes|biome=Any Temperate Broadleaf|dry=y|dense=0.650
+  |tile1={{tile|O|7:1}}{{tile|⌂|7:1}} trunk
+  |tile2={{tile|¼|2:0}} branches
+  |tile3={{tile|;|2:0}} twigs
+  |tile4={{tile|¼|7:1}} roots
+  |graphic=[[File:birch_trunk_sprite.png]]
+  |sapling=[[File:Birch_sapling.png]]
+  |eat=n|cook=n
+  |grow1={{tile|♠|2:0}}{{tile|♠|6:1}}{{tile|♠|4:1}}{{tile|♠|4:0}} \ [[File:birch_leaves.png]] leaf
+  |grow2={{tile|*|6:0}} \ [[File:birch_pollen_catkin.png]] pollen catkin
+  |grow3={{tile|*|6:0}} \ [[File:birch_seed_catkin.png]] seed catkin
+  |grow4=[[File:birch_seeds.png]] seed
+  }}
+{{multi-tile tree table row|name=Cherry|symbol=♣|color=2:0|decid=Yes|biome=Any Temperate|dry=y|dense=0.425
+  |drink=Cherry wine|drinkv=10|eat=y|cook=y
+  |grow1={{tile|♠|2:0}}{{tile|♠|6:1}}{{tile|♠|4:1}}{{tile|♠|4:0}} \ [[File:cherry_leaves.png]] leaf
+  |grow2={{tile|♣|7:1}} \ [[File:cherry_flower.png]] flower
+  |grow3={{tile|%|4:1}} \ [[File:cherry_sprite.png]] fruit
+  |grow4=[[File:cherry_seeds.png]] seed
+  |graphic=[[File:cherry_trunk_sprite.png]]
+  |sapling=[[File:Cherry_sapling.png]]
+  }}
+{{multi-tile tree table row|name=Chestnut|symbol=♠|color=2:0|decid=Yes|biome=Any Temperate Broadleaf|dry=y|dense=0.430
+  |eat=y|cook=y
+  |grow1={{tile|♠|2:0}}{{tile|♠|6:1}}{{tile|♠|4:1}}{{tile|♠|4:0}} \ [[File:chestnut_leaves.png]] leaf
+  |grow2={{tile|*|7:1}} \ [[File:chestnut_pollen_catkin.png]] pollen catkin
+  |grow3={{tile|*|7:1}} \ [[File:chestnut_seed_catkin.png]] seed catkin
+  |grow4={{tile|*|2:0}} \ [[File:chestnut_burr.png]] burr
+  |graphic=[[File:chestnut_trunk_sprite.png]]
+  |sapling=[[File:Chestnut_sapling.png]]
+  }}
+{{multi-tile tree table row|name=Ginkgo|symbol=↑|color=2:0|decid=Yes|biome=Any Temperate|dry=y|dense=0.450
+  |eat=y|cook=y
+  |grow1={{tile|♠|2:0}}{{tile|♠|6:1}} \ [[File:ginkgo_leaves.png]] leaf
+  |grow2={{tile|*|6:0}} \ [[File:ginkgo_pollen_catkin.png]] pollen catkin
+  |grow3={{tile|%|7:1}} \ [[File:ginkgo_seeds2.png]] seed
+  |graphic=[[File:pomegranate_trunk_sprite.png]]
+  |sapling=[[File:Ginkgo_sapling.png]]
+  }}
+{{multi-tile tree table row|name=Hazel|symbol=♠|color=2:0|decid=Yes|biome=Any Temperate|dry=y|dense=0.500
+  |eat=Seed|super=4|cook=y
+  |grow1={{tile|♠|2:0}}{{tile|♠|6:1}}{{tile|♠|4:1}}{{tile|♠|4:0}} \ [[File:hazel_leaves.png]] leaf
+  |grow2={{tile|*|6:1}} \ [[File:hazel_pollen_catkin.png]] pollen catkin
+  |grow3={{tile|%|6:0}} \ [[File:hazel_sprite.png]] nut
+  |graphic=[[File:coffee_trunk_sprite.png]]
+  |sapling=[[File:Hazel_sapling.png]]
+  }}
+{{multi-tile tree table row|name=Maple|symbol=♣|color=2:0|decid=Yes|biome=Temperate Broadleaf Forest|biome2=Temperate Grassland|biome3=Temperate Savanna|biome4=Temperate Shrubland|dry=y|dense=0.540
+  |eat=n|cook=n
+  |grow1={{tile|♠|2:0}}{{tile|♠|6:1}}{{tile|♠|4:1}}{{tile|♠|4:0}} \ [[File:maple_leaves.png]] leaf
+  |grow2={{tile|♣|2:1}} \ [[File:maple_flower.png]] flower
+  |grow3={{tile|%|6:0}} \ [[File:maple_fruit.png]] fruit
+  |graphic=[[File:maple_trunk_sprite.png]]
+  |sapling=[[File:Maple_sapling.png]]
+  }}
+{{multi-tile tree table row|name=Oak|symbol=♠|color=2:0|decid=Yes|biome=Any Temperate Broadleaf|dry=y|dense=0.700
+  |eat=y|cook=y
+  |grow1={{tile|♠|2:0}}{{tile|♠|6:1}}{{tile|♠|4:1}}{{tile|♠|4:0}} \ [[File:oak_leaves.png]] leaf
+  |grow2={{tile|♣|2:0}} \ [[File:oak_flower.png]] flower
+  |grow3={{tile|•|6:0}} \ [[File:oak_sprite.png]] acorn
+  |graphic=[[File:oak_trunk_sprite.png]]
+  |sapling=[[File:Oak_sapling.png]]
+  }}
+{{multi-tile tree table row|name=Peach|symbol=♣|color=2:0|decid=Yes|biome=Any Temperate|dry=y|dense=0.795
+  |drink=Peach cider|drinkv=10|eat=y|cook=y
+  |grow1={{tile|♠|2:0}}{{tile|♠|6:1}}{{tile|♠|4:1}}{{tile|♠|4:0}} \ [[File:peach_leaves.png]] leaf
+  |grow2={{tile|♣|5:1}} \ [[File:peach_flower.png]] flower
+  |grow3={{tile|%|4:1}} \ [[File:peach_sprite.png]] fruit
+  |grow4=[[File:peach_seeds.png]] seed
+  |graphic=[[File:peach_trunk_sprite.png]]
+  |sapling=[[File:Peach_sapling.png]]
+  }}
+{{multi-tile tree table row|name=Pear|symbol=♣|color=2:0|decid=Yes|biome=Any Temperate|dry=y|dense=0.600
+  |drink=Perry|drinkv=10|eat=y|cook=y
+  |grow1={{tile|♠|2:0}}{{tile|♠|6:1}}{{tile|♠|4:1}}{{tile|♠|4:0}} \ [[File:pear_leaves.png]] leaf
+  |grow2={{tile|♣|7:1}} \ [[File:pear_flower.png]] flower
+  |grow3={{tile|%|2:1}} \ [[File:pear_sprite.png]] fruit
+  |grow4=[[File:pear_seeds.png]] seed
+  |graphic=[[File:pear_trunk_sprite.png]]
+  |sapling=[[File:Pear_sapling.png]]
+  }}
+{{multi-tile tree table row|name=Pecan|symbol=♠|color=2:0|decid=Yes|biome=Any Temperate|dry=y|dense=0.735
+  |eat=Seed|super=4|cook=y
+  |grow1={{tile|♠|2:0}}{{tile|♠|6:1}}{{tile|♠|4:1}}{{tile|♠|4:0}} \ [[File:pecan_leaves.png]] leaf
+  |grow2={{tile|*|2:1}} \ [[File:pecan_pollen_catkin.png]] pollen catkin
+  |grow3={{tile|%|6:0}} \ [[File:pecan_sprite.png]] nut
+  |graphic=[[File:pomegranate_trunk_sprite.png]]
+  |sapling=[[File:Pecan_sapling.png]]
+  }}
+{{multi-tile tree table row|name=Persimmon|symbol=♠|color=2:0|decid=Yes|biome=Any Temperate|dry=y|dense=0.835
+  |drink=Persimmon wine|drinkv=10|eat=y|cook=y
+  |grow1={{tile|♠|2:0}}{{tile|♠|6:1}}{{tile|♠|4:1}}{{tile|♠|4:0}} \ [[File:persimmon_leaves.png]] leaf
+  |grow2={{tile|♣|7:1}} \ [[File:persimmon_flower.png]] flower
+  |grow3={{tile|%|4:1}} \ [[File:persimmon_sprite.png]] fruit
+  |grow4=[[File:persimmon_seeds.png]] seed
+  |graphic=[[File:guava_trunk_sprite.png]]
+  |sapling=[[File:Persimmon_sapling.png]]
+  }}
+{{multi-tile tree table row|name=Plum|symbol=♣|color=2:0|decid=Yes|biome=Any Temperate|dry=y|dense=0.795
+  |drink=Plum wine|drinkv=10|eat=y|cook=y
+  |grow1={{tile|♠|2:0}}{{tile|♠|6:1}}{{tile|♠|4:1}}{{tile|♠|4:0}} \ [[File:plum_leaves.png]] leaf
+  |grow2={{tile|♣|7:1}} \ [[File:plum_flower.png]] flower
+  |grow3={{tile|%|5:0}} \ [[File:plum_sprite.png]] fruit
+  |grow4=[[File:plum_seeds.png]] seed
+  |graphic=[[File:macadamia_trunk_sprite.png]]
+  |sapling=[[File:Plum_sapling.png]]
+  }}
+{{multi-tile tree table row|name=Sand pear|symbol=♣|color=2:0|decid=Yes|biome=Any Temperate|dry=y|dense=0.690
+  |drink=Sand pear cider|drinkv=10|eat=y|cook=y
+  |grow1={{tile|♠|2:0}}{{tile|♠|6:1}}{{tile|♠|4:1}}{{tile|♠|4:0}} \ [[File:sand_pear_leaves.png]] leaf
+  |grow2={{tile|♣|7:1}} \ [[File:sand_pear_flower.png]] flower
+  |grow3={{tile|%|6:0}} \ [[File:sand_pear_sprite.png]] fruit
+  |grow4=[[File:sand_pear_seeds.png]] seed
+  |graphic=[[File:pear_trunk_sprite.png]]
+  |sapling=[[File:Sand_pear_sapling.png]]
+  }}
+{{multi-tile tree table row|name=Walnut|symbol=♠|color=2:0|decid=Yes|biome=Any Temperate|dry=y|dense=0.562
+  |eat=Seed|super=4|cook=y
+  |grow1={{tile|♠|2:0}}{{tile|♠|6:1}}{{tile|♠|4:1}}{{tile|♠|4:0}} \ [[File:walnut_leaves.png]] leaf
+  |grow2={{tile|*|6:0}} \ [[File:walnut_pollen_catkin.png]] pollen catkin
+  |grow3={{tile|♣|2:1}} \ [[File:walnut_flower.png]] flower
+  |grow4={{tile|%|6:0}} \ [[File:walnut_sprite.png]] nut
+  |graphic=[[File:peach_trunk_sprite.png]]
+  |sapling=[[File:Walnut_sapling.png]]
+  }}
+{{multi-tile tree table row|name=Bayberry|symbol=♠|color=2:0|decid=No|biome=Any Temperate|biome2=Taiga|dry=y|dense=0.700
+  |drink=Bayberry wine|drinkv=10|eat=y|cook=y
+  |grow1={{tile|♠|2:0}} \ [[File:bayberry_leaves.png]] leaf
+  |grow2={{tile|*|6:0}} \ [[File:bayberry_both_catkin.png]] pollen catkin
+  |grow3={{tile|*|6:0}} \ [[File:bayberry_both_catkin.png]] seed catkin
+  |grow4={{tile|%|5:0}} \ [[File:bayberry_sprite.png]] fruit
+  |graphic=[[File:macadamia_trunk_sprite.png]]
+  |sapling=[[File:Bayberry_sapling.png]]
+  }}
+{{multi-tile tree table row|name=Larch|symbol=↑|color=2:0|decid=Yes|biome=Taiga|biome2=Temperate Coniferous Forest|dry=y|dense=0.590
+  |eat=n|cook=n
+  |grow1={{tile|*|2:0}}{{tile|*|6:1}} \ [[File:larch_needle.png]] needle
+  |grow2={{tile|*|6:0}} \ [[File:larch_seed_cone.png]] seed cone
+  |grow3={{tile|*|2:0}} \ [[File:larch_pollen_cone.png]] pollen cone
+  |graphic=[[File:larch_trunk_sprite.png]]
+  |sapling=[[File:Larch_sapling.png]]
+  }}
+{{multi-tile tree table row|name=Pine|symbol=↑|color=2:0|decid=No|biome=Taiga|biome2=Temperate Coniferous Forest|biome3=Tropical Coniferous Forest|dry=y|dense=0.510
+  |tile1={{tile|O|6:0}}{{tile|⌂|6:0}} trunk
+  |tile2={{tile|*|2:0}} branches
+  |tile3={{tile|*|2:0}} twigs
+  |tile4={{tile|¼|6:0}} roots
+  |eat=n|cook=n
+  |graphic=[[File:pine_trunk_sprite.png]]
+  |sapling=[[File:Pine_sapling.png]]
+  |grow1={{tile|*|2:0}} \ [[File:pine_leaves.png]] needle
+  |grow2={{tile|*|6:0}} \ [[File:pine_seed_cone.png]] seed cone
+  |grow3={{tile|*|4:0}} \ [[File:pine_pollen_catkin.png]] pollen cone
+  }}
+|}
+
+'''Notes:'''
+:<sup>1</sup> This is the value for a stack of 5 units, which is the number rendered from a single fruit.
+:<sup>2</sup> Anything that can be cooked is edible afterwards.
+:<sup>3</sup> These trees do not produce wood when cut.
+:<sup>4</sup> These trees' only edible raw product is seed, which dwarves will not currently eat raw despite the tag.
+
+== Underground trees ==
+
+These are the trees that can grow in subterranean caverns. None of them produce growths.
+
+{{multi-tile tree table head}}
+{{multi-tile tree table row|name=Fungiwood|symbol=♣|color=6:1|decid=No|biome=Subterranean Water/Layers 1-2|dry=b|dense=0.600
+  |tile1={{tile|O|6:1}}{{tile|⌂|6:1}} trunk
+  |tile2={{tile|¼|6:1}} branches
+  |tile3={{tile|;|6:1}} twigs
+  |graphic=[[File:fungiwood_trunk_sprite.png]]
+  |sapling=[[File:Fungiwood sapling.png]]
+  |eat=n|cook=n
+  }}
+{{multi-tile tree table row|name=Tower-cap|symbol=♠|color=7:1|decid=No|biome=Subterranean Water/Layers 1-2|dry=b|dense=0.600
+  |tile1={{tile|O|7:1}} trunk
+  |tile2={{tile|O|7:1}}{{tile|║|7:1}}{{tile|▲|7:1}}{{tile|∙|7:1}} cap
+  |eat=n|cook=n
+  |graphic=[[File:tower-cap_trunk_sprite.png]]
+  |sapling=[[File:Tower-cap sapling.png]]
+  }}
+{{multi-tile tree table row|name=Black-cap|symbol=♠|color=0:1|decid=No|biome=Subterranean Water/Layers 2-3|dry=b|dense=0.650
+  |tile1={{tile|O|0:1}} trunk
+  |tile2={{tile|O|0:1}}{{tile|║|0:1}}{{tile|▲|0:1}}{{tile|∙|0:1}} cap
+  |eat=n|cook=n
+  |graphic=[[File:black-cap_trunk_sprite.png]]
+  |sapling=[[File:Black-cap sapling.png]]
+  }}
+{{multi-tile tree table row|name=Goblin-cap|symbol=♠|color=4:1|decid=No|biome=Subterranean Water/Layers 2-3|dry=b|dense=0.600
+  |tile1={{tile|O|4:1}} trunk
+  |tile2={{tile|O|4:1}}{{tile|║|4:1}}{{tile|▲|4:1}}{{tile|∙|4:1}} cap
+  |eat=n|cook=n
+  |graphic=[[File:goblin-cap_trunk_sprite.png]]
+  |sapling=[[File:Goblin-cap sapling.png]]
+  }}
+{{multi-tile tree table row|name=Spore tree|symbol=♣|color=3:0|decid=No|biome=Subterranean Water/Layers 2-3|dry=b|dense=0.600
+  |tile1={{tile|O|3:0}}{{tile|═|3:0}}{{tile|⌂|3:0}} trunk
+  |tile2={{tile|─|3:0}} thick branches
+  |tile3={{tile|¼|3:0}} branches
+  |tile4={{tile|;|3:0}} twigs
+  |eat=n|cook=n
+  |graphic=[[File:spore_tree_trunk_sprite.png]]
+  |sapling=[[File:Spore tree sapling.png]]
+  }}
+{{multi-tile tree table row|name=Tunnel tube|symbol=│|color=5:1|decid=No|biome=Subterranean Water/Layers 2-3|dry=b|dense=0.500
+  |tile1={{tile|O|5:1}}{{tile|═|5:1}}{{tile|⌂|5:1}} trunk
+  |eat=n|cook=n
+  |graphic=[[File:tunnel_tube_trunk_sprite.png]]
+  |sapling=[[File:Tunnel tube sapling.png]]
+  }}
+{{multi-tile tree table row|name=Blood thorn|symbol=╡|color=4:0|decid=No|biome=Subterranean Water|biome2=Subterranean Chasm/Layer 3|dry=b|dense=1.250
+  |tile1={{tile|O|4:0}}{{tile|═|4:0}}{{tile|⌂|4:0}} trunk
+  |tile2={{tile|─|4:0}} thick branches
+  |tile3={{tile|¼|4:0}} branches
+  |tile4={{tile|;|4:0}} twigs
+  |graphic=[[File:blood_thorn_trunk_sprite.png]]
+  |sapling=[[File:Blood thorn sapling.png]]
+  |eat=n|cook=n
+  }}
+{{multi-tile tree table row|name=Nether-cap|symbol=♠|color=1:0|decid=No|biome=Subterranean Water/Layer 3|dry=b|dense=0.550
+  |tile1={{tile|O|1:0}} trunk
+  |tile2={{tile|O|1:0}}{{tile|║|1:0}}{{tile|▲|1:0}}{{tile|∙|1:0}} cap
+  |eat=n|cook=n
+  |graphic=[[File:nether-cap_trunk_sprite.png]]
+  |sapling=[[File:Nether-cap sapling.png]]
+  }}
+|}
+
+==Bugs==
+* Trees grow through bridges. {{bug|7872}}
+* Cutting down trees will leave a hole in the floor if the layer below has been mined (which has the potential for lots of fun, especially considering invaders). {{bug|8469}} 
+* Trees not yielding wood will not be generated. {{bug|10581}}
+* Some underground trees will only give one log.  {{bug|7313}}
+
+==Trivia==
+*It is possible for animals to be stuck up in trees at the moment of embarking. This will cause them to starve to death after a while as they have no means of getting down, so the player should check higher z-levels above the wagon once the playing area is generated, and immediately cut down any trees animals are stuck in.
+{{Plants|cat=nocat}}
+
+[[Category:Map tiles]]
+{{Category|Trees| }}
+[[ru:Tree]]
