@@ -1,0 +1,86 @@
+<div class="mw-parser-output"><div id="page-quality-rating" style="text-align: right;margin: 0.8em 0;font-size:75%">
+ <a href="/index.php/Dwarf_Fortress_Wiki:Quality#Tattered" title="Dwarf Fortress Wiki:Quality"><span id="stub-quality" style="text-decoration:none; color:#333333">xTATTEREDx</span></a> <span style="font-weight:bold;" class="dot">&#160;·</span> <a href="/index.php/Dwarf_Fortress_Wiki:Quality#Fine" title="Dwarf Fortress Wiki:Quality"><span id="fine-quality" style="text-decoration:none; color:#CA7A02;">+FINE+</span></a> <span style="font-weight:bold;" class="dot">&#160;·</span> <a href="/index.php/Dwarf_Fortress_Wiki:Quality#Superior" title="Dwarf Fortress Wiki:Quality"><span id="superior-quality" style="padding:0.2em; border:1px solid #b8f; border-radius: 2px; -webkit-border-radius: 2px; -moz-border-radius: 2px; -o-border-radius: 2px; -ms-border-radius: 2px; background:#e4ccff; color:#8800cc;">*SUPERIOR*</span></a> <span style="font-weight:bold;" class="dot">&#160;·</span> <a href="/index.php/Dwarf_Fortress_Wiki:Quality#Exceptional" title="Dwarf Fortress Wiki:Quality"><span id="exceptional-quality" style="text-decoration:none; color:#0088CC;">≡EXCEPTIONAL≡</span></a> <span style="font-weight:bold;" class="dot">&#160;·</span> <a href="/index.php/Dwarf_Fortress_Wiki:Quality#Masterwork" title="Dwarf Fortress Wiki:Quality"><span id="masterwork-quality" style="text-decoration:none; color:#72A329;">☼MASTERWORK☼</span></a></div>
+<table class="version-table" style="text-align: center; margin: 3px auto 5px; padding: 0.25em; border-radius: 3px; -webkit-border-radius: 3px; -moz-border-radius: 3px; -o-border-radius: 3px; -ms-border-radius: 3px;; border: 2px solid #bbdd88; background: #f5ffee; min-width:27em"><tbody><tr><td style="padding: 0.3em 0.3em; width: 100%;"><div style="margin-bottom:6px;" class="version-links-r1"><span style="font-size:100%"><span class="version-link"><span style="text-decoration: none; color: #72A329; background-color: #E2FDCE; border-radius: 2px; -webkit-border-radius: 2px; -moz-border-radius: 2px; -o-border-radius: 2px; -ms-border-radius: 2px; border: 1px solid #bbdd88; padding: 0.2em;"><b>v53.16</b></span></span><span style="font-weight:bold;" class="dot">&#160;·</span> <span class="version-link"><a href="/index.php/DF2014:Syndrome_examples" title="DF2014:Syndrome examples"><span style="text-decoration: none; color: #72A329;">v0.47.05</span></a></span></span></div><span>This article is about the current version of DF.<br />Note that some content may still need to be updated.</span><br />
+<div style="float: right; font-size:75%; padding-right:2px; margin-top:-2px; margin-bottom:-7px;"><span class="version-link"><a href="/index.php/Dwarf_Fortress_Wiki:V" class="mw-redirect" title="Dwarf Fortress Wiki:V"><span style="text-decoration: none; color: #72A329;">More Info</span></a></span><span style="font-weight:bold;" class="dot">&#160;·</span> <span class="version-link"><a href="/index.php/Template:Av" class="mw-redirect" title="Template:Av"><span style="text-decoration: none; color: #72A329;">V</span></a></span></div></td></tr>
+</tbody></table>
+<table class="metadata plainlinks ambox ambox-notice" style="border-left: 10px solid #50b076;" role="presentation">
+<tbody><tr><td class="mbox-image"><div style="width: 52px; margin: 0 40px 0 20px;"><a href="/index.php/File:Mod_icon.png" class="image"><img alt="Mod" src="/images/thumb/1/1a/Mod_icon.png/48px-Mod_icon.png" decoding="async" width="48" height="48" srcset="/images/thumb/1/1a/Mod_icon.png/72px-Mod_icon.png 1.5x, /images/thumb/1/1a/Mod_icon.png/96px-Mod_icon.png 2x" /></a></div></td><td class="mbox-text" style=""><span class="mbox-text-span">This page includes <b><a href="/index.php/Category:Mods" title="Category:Mods">mods</a></b>.  The content is not part of normal DF as released.  Changing game files can sometimes cause unexpected results, and should always be done with care and caution.<span class="hide-when-compact">  </span><span class="hide-when-compact"> </span></span></td></tr></tbody></table>
+<div class="floatright"><a href="/index.php/File:Syndrome_examples_preview.png" class="image"><img alt="Syndrome examples preview.png" src="/images/4/4e/Syndrome_examples_preview.png" decoding="async" width="143" height="125" /></a></div>
+<p>This page was created to aid those looking to create new <a href="/index.php/Syndrome" title="Syndrome">syndromes</a>. Those familiar with syndrome design (and <a href="/index.php/Syndrome#The_anatomy_of_a_syndrome" title="Syndrome">certain complexities in particular</a>) should feel free to add helpful/obscure information to the lists below to help less-experienced members of the community with their syndromes.
+</p><p>The syndromes on this page can be applied through <a href="/index.php/Interaction_examples" title="Interaction examples">interactions</a>, as creature actions, curses, blessings, or secrets, or through substances, including injected venoms, contact effects, or ingested foods.  Examples on this page should operate the same regardless of application method.
+</p>
+
+<h2><span class="mw-headline" id="General_Tips">General Tips</span></h2>
+<h3><span class="mw-headline" id="Synchronizing_Adventure_and_Fort_Mode_syndrome_timers">Synchronizing Adventure and Fort Mode syndrome timers</span></h3>
+<dl><dd><div class="noprint relarticle mainarticle"><i>Main article: <a href="/index.php/Time" title="Time">Time</a></i></div></dd></dl>
+<p>Fort mode runs 144 times faster than adventure mode - which means that a syndrome that lasts a single tick in Fort Mode will last 144 ticks in Adventure Mode.  For short-term syndromes, this will cause very different behaviors between the two modes.  In order to ensure that a syndrome operates the same way regardless of mode, add <code>DWF_STRETCH:144</code> to the end of the CE effect tag.
+</p><p>It is not possible to make a syndrome that lasts shorter than 144 ticks in Adventure Mode.
+</p>
+<h3><span class="mw-headline" id="Making_a_creature_with_a_syndrome_always_applied">Making a creature with a syndrome always applied</span></h3>
+<p>Some syndromes have effects that you can't add to a creature's basic RAW.  To fix this, you can make a material that applies the syndrome to the creature's <a href="/index.php/Syndrome#SYN_AFFECTED_CREATURE" title="Syndrome">own species</a> <a href="/index.php/Syndrome#SYN_CONTACT" title="Syndrome">on contact</a>, and make it continuously <a href="/index.php/Creature_token#SECRETION" title="Creature token">secreted</a> by one of the creature's internal organs. See <a href="/index.php/Syndrome_examples#Creatures_that_behave_differently_underground" title="Syndrome examples">below</a> for an example of this concept in action.
+</p><p>Note that syndromes applied in this manner will only be added to creatures when they are loaded in fortress or adventure mode, as secretions aren't currently simulated in world generation or the like. 
+</p><p>Of course, you can also add a <code><a href="/index.php/Syndrome#Creature_effect_tokens" title="Syndrome">PROB</a></code> value to the syndrome's various effects to determine how likely they are to actually manifest, which could be useful if you want a particular type of creature to only occasionally appear with a special ability/curse/disease/immunity/etc (as an alternative to messing around with extra <a href="/index.php/Creature_token#CASTE" title="Creature token">castes</a>). Make sure to add at least one guaranteed permanent syndrome effect - such as one of the dummy examples shown <a href="/index.php/Interaction_examples#Syndromes_with_no_effect" title="Interaction examples">here</a>, but with no <code>END</code> specified - to prevent the syndrome from being reapplied undesirably (which can occur when the secreted coating is removed and replaced by a new secretion), as this would give creatures who initially failed the <code>PROB</code> check another chance to pass it. Having a permanent effect in place prevents this from happening as reinfection cannot occur before a syndrome has ended fully.
+</p><p>Expanding on the above, this one-off opportunity to develop a certain syndrome effect can be turned into a recurring event by adding an <code>END</code> duration of your choice to the guaranteed dummy effect (henceforth referred to as the 'inhibitor'). For example, you might want to give a particular creature species the opportunity to evolve into another creature once every <a href="/index.php/Time" title="Time">month</a>, with a 1/100 chance of the <a href="/index.php/Syndrome#CE_BODY_TRANSFORMATION" title="Syndrome">transformation</a> manifesting: this could be implemented as a secretion-applied syndrome with a <code>PROB:1</code> transformation effect and an <code>END:33600</code> inhibitor.
+</p><p>This can also be used to impose delays between the active phase of particular syndrome effects. For example, say you want to give your creature an intermittently activating regenerative ability: you could give it a secretion-derived syndrome providing the requisite <a href="/index.php/Syndrome#Healing_Effects" title="Syndrome">healing effects</a> with their <code>END</code> set to X, alongside an 'inhibitor' effect with an <code>END</code> set to X+Y, where Y is the duration of the delay.
+</p>
+<h2><span class="mw-headline" id="Stat-modifying_syndromes">Stat-modifying syndromes</span></h2>
+<p>Syndromes that affect the creature's stats, particularly in combat.
+</p>
+<h3><span class="mw-headline" id="Size_Modification">Size Modification</span></h3>
+<p><code><a href="/index.php/Syndrome#CE_BODY_APPEARANCE_MODIFIER" title="Syndrome">CE_BODY_APPEARANCE_MODIFIER</a></code> not only changes the way a creature is described on the unit viewing screen - it also changes the combat effectiveness of the creature.  The square-cube law is respected, meaning that doubling a creature's length, height, and broadness will make them 8 times as massive - an extreme boost in combat effectiveness. This does not affect the clothing they can wear.
+</p>
+<div style="clear:both;"></div>
+<table class="collapsible collapsed infobox gamedata" style="background: #fdfdfd; border: 1px solid #aaa; font-size: 88%; margin: 0 auto -1px; vertical-align: middle; width: 100%; max-width: 100em; table-layout: fixed;">
+<tbody><tr style="line-height: 1.5em;"><th scope="col" style="background: #cce6b3; padding: 0.25em 1em; text-align: center; display: table-cell;&#32;;"><div style="font-size: 114%; margin: 0 9em;">Giant Growth</div></th></tr>
+<tr style="line-height: 1.5em; text-align: left; display: table-cell;"><td><div style="overflow: auto;"><span class="gamedata-content" style="font-family: monospace; font-size:1.25em; white-space:pre;">
+[SYNDROME]
+	[SYN_NAME:giant growth]
+	[CE_BODY_APPEARANCE_MODIFIER:APPEARANCE_MODIFIER:HEIGHT:200:APPEARANCE_MODIFIER:LENGTH:200:APPEARANCE_MODIFIER:BROADNESS:200:START:0]
+</span></div></td></tr></tbody></table>
+<p>Also, you can change the size <a href="/index.php/Syndrome#CE_BP_APPEARANCE_MODIFIER" title="Syndrome">of particular body parts</a>, with appropriate effects.  The following syndrome, for example, will make the creature's punches more powerful (but it will not make their scratches any stronger, because their fingers are still the same size).
+</p>
+<div style="clear:both;"></div>
+<table class="collapsible collapsed infobox gamedata" style="background: #fdfdfd; border: 1px solid #aaa; font-size: 88%; margin: 0 auto -1px; vertical-align: middle; width: 100%; max-width: 100em; table-layout: fixed;">
+<tbody><tr style="line-height: 1.5em;"><th scope="col" style="background: #cce6b3; padding: 0.25em 1em; text-align: center; display: table-cell;&#32;;"><div style="font-size: 114%; margin: 0 9em;">Hulk Hands</div></th></tr>
+<tr style="line-height: 1.5em; text-align: left; display: table-cell;"><td><div style="overflow: auto;"><span class="gamedata-content" style="font-family: monospace; font-size:1.25em; white-space:pre;">
+[SYNDROME]
+	[SYN_NAME:freakishly big hands]
+	[CE_BP_APPEARANCE_MODIFIER:BP:BY_CATEGORY:HAND:APPEARANCE_MODIFIER:HEIGHT:300:APPEARANCE_MODIFIER:LENGTH:300:APPEARANCE_MODIFIER:BROADNESS:300:START:0]
+</span></div></td></tr></tbody></table>
+<h2><span class="mw-headline" id="Counter_Trigger_examples">Counter Trigger examples</span></h2>
+<p><code><a href="/index.php/Syndrome#Counter_Triggers" title="Syndrome">CE_COUNTER_TRIGGER</a></code> is a fun token that lets you make syndromes with effects that activate under certain circumstances.  You can use these to undo a different syndrome effect, in order to make a syndrome operate differently in different circumstances.
+Each counter trigger only affects the tag directly above it.
+</p>
+<h3><span class="mw-headline" id="More_curse-like_vampires">More curse-like vampires</span></h3>
+<p>There's no real reason <i>not</i> to become a vampire in vanilla DF, you don't even really need to drink blood to survive.  Let's change that by making a syndrome that weakens you if you don't drink blood, but makes you even stronger than vanilla vampires if you do.
+</p>
+<div style="clear:both;"></div>
+<table class="collapsible collapsed infobox gamedata" style="background: #fdfdfd; border: 1px solid #aaa; font-size: 88%; margin: 0 auto -1px; vertical-align: middle; width: 100%; max-width: 100em; table-layout: fixed;">
+<tbody><tr style="line-height: 1.5em;"><th scope="col" style="background: #cce6b3; padding: 0.25em 1em; text-align: center; display: table-cell;&#32;;"><div style="font-size: 114%; margin: 0 9em;">Double-edged vampire curse</div></th></tr>
+<tr style="line-height: 1.5em; text-align: left; display: table-cell;"><td><div style="overflow: auto;"><span class="gamedata-content" style="font-family: monospace; font-size:1.25em; white-space:pre;">
+[SYNDROME]
+	[SYN_NAME:vampire curse]
+	[CE_PHYS_ATT_CHANGE:STRENGTH:50:0:TOUGHNESS:50:0:AGILITY:50:0:ENDURANCE:50:0:DISEASE_RESISTANCE:50:0:START:0] &lt;-- Weakens the target always
+	[CE_PHYS_ATT_CHANGE:STRENGTH:800:0:TOUGHNESS:800:0:AGILITY:800:0:ENDURANCE:800:0:DISEASE_RESISTANCE:800:0:START:0] &lt;-- Strengthens the target
+		[CE:COUNTER_TRIGGER:TIME_SINCE_SUCKED_BOOD:NONE:172799:REQUIRED] &lt;-- Prevents the above strengthening effect from working unless the target has recently sucked blood (vampires become Thirsty at 172800) 
+</span></div></td></tr></tbody></table>
+<h3><span class="mw-headline" id="Creatures_that_behave_differently_underground">Creatures that behave differently underground</span></h3>
+<p>This is nice if you want to make an above-ground fort mode race, but don't want to actually restrict them to the surface - instead, you can give them a mood penalty for staying underground for too long.
+Note that the creature must have the <code><a href="/index.php/Creature_token#CAVE_ADAPT" title="Creature token">[CAVE_ADAPT]</a></code> tag in order for the CAVE_ADAPT counter-trigger to work, and you will also need a constant secretion in order to ensure the syndrome is applied (see <a href="/index.php/Syndrome_examples#Making_a_creature_with_a_syndrome_always_applied" title="Syndrome examples">above</a>).
+</p>
+<div style="clear:both;"></div>
+<table class="collapsible collapsed infobox gamedata" style="background: #fdfdfd; border: 1px solid #aaa; font-size: 88%; margin: 0 auto -1px; vertical-align: middle; width: 100%; max-width: 100em; table-layout: fixed;">
+<tbody><tr style="line-height: 1.5em;"><th scope="col" style="background: #cce6b3; padding: 0.25em 1em; text-align: center; display: table-cell;&#32;;"><div style="font-size: 114%; margin: 0 9em;">Bad thoughts from spending more than a month underground example (Place this in creature raw)</div></th></tr>
+<tr style="line-height: 1.5em; text-align: left; display: table-cell;"><td><div style="overflow: auto;"><span class="gamedata-content" style="font-family: monospace; font-size:1.25em; white-space:pre;">
+[CAVE_ADAPT]
+[USE_MATERIAL_TEMPLATE:THOUGHTS:CREATURE_EXTRACT_TEMPLATE]
+	[SYNDROME]
+		[SYN_CONTACT]
+		[SYN_NAME:a lack of sunlight]
+		[SYN_AFFECTED_CREATURE:MY_CREATURE:ALL]
+		[CE_FEEL_EMOTION:EMOTION:GLUMNESS:SEV:50:START:0]
+			[CE:COUNTER_TRIGGER:CAVE_ADAPT:33600:NONE:REQUIRED]
+[SECRETION:LOCAL_CREATURE_MAT:THOUGHTS:LIQUID:BY_CATEGORY:BRAIN:ALL:CONTINUOUS]
+</span></div></td></tr></tbody></table>
+<p>You can do other things with this, like make a creature that gets extra abilities underground, or is stronger aboveground (by making the syndrome increase their strength normally, but reduce it using the counter-trigger, similar to the vampire example).
+</p></div>

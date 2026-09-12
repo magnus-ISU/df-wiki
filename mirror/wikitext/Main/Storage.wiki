@@ -1,0 +1,102 @@
+{{av}} {{buggy}}
+{{Quality|Exceptional}}
+
+[[File:storage_sprites_preview.png|right]]Types of items used for '''storage''' include [[Box|chests]], [[cabinet]]s, [[barrel]]s, [[large pot]]s, [[bag]]s, [[bin]]s, and [[bookcase]]s. All storage objects are used to hold items, from personal possessions to [[gem]]s, [[alcohol]], [[seed]]s, [[quarry bush]] leaves, and even living [[creature]]s. In [[Fortress mode]], each object has a specific use, so you cannot, for example, use your barrels for storing [[coin]]s. In [[Adventure mode]], any item can be stored with the {{Adv menu icon|p}} command if there's enough capacity for its [[size]].
+
+To examine a storage object's contents, select the object location with the mouse. If the storage object isn't selected (say, if there are multiple items or units on the same tile) it should be selectable as a tab on the upper right of the window.
+
+== Barrels, bins, bags, pots ==
+[[Barrel]]s are [[wood]]en or [[metal]] containers that are useful for storing items in a [[Stockpile#food|food stockpile]] and are used to store [[alcohol]], [[plant]]s, [[seed]] bags, [[meat]], [[Creature#Aquatic|fish]], [[dwarven syrup]], [[quarry bush]] leaf bags, [[flour]] bags and [[dye]] bags, cooked food, [[fat]] and [[tallow]], and all [[prepared organs]]. They are made at a [[Carpenter's workshop]] with 1 log or at a [[Forge]] with 3 bars of metal. Barrels can be disabled in a stockpile to prevent haulers from running off with everything else inside to pick up a stray seed.
+
+[[Pot]]s, an alternative for barrels, can be made of wood, stone, clay, glass, or metal. Pots can also be used to store alcohol and other related liquids, though clay pots (earthenware) must be [[glaze]]d to hold liquids. Pots hold the same amount as barrels (60 total units of food, or 30 units of alcohol) and weigh 1/4th as much as a barrel of equivalent material. Except for a few barrel-specific requirements, pots are generally a superior replacement.
+
+[[Bin]]s are containers, again made from wood or metal, used for most non-food items. They are sent to all the other stockpiles (with the exclusion of the [[refuse]], [[stone]] and [[graveyard]] piles) and will hold much larger stacks of items, making organizing those endless piles of +giant cave spider silk socks+ and trade goods much easier to manage. They are made at a [[Carpenter's workshop]] with 1 log or at a [[Forge]] with 3 bars of metal. Bars and blocks will stack into a bin, but not into any other container, so a stockpile with bar/block enabled will default to requesting bins.
+
+[[Bag]]s are used to store [[seed]]s, [[quarry bush]] leaves, [[mill]] products ([[flour]], [[sugar]], [[dye]]), [[gypsum plaster]], [[quicklime]] and [[sand]] ([[powder]]s). They are made from [[plant fiber]] (or [[silk]]) [[cloth]], [[leather]], or [[adamantine]]. Bags are used to gather and transport powder the same way [[bucket]]s are used to carry [[water]]. Bags can be placed inside some other storage-items, such as barrels. They are made at a [[Clothier's shop]] with 1 cloth or at a [[Leather works]] with 1 leather.
+
+Empty barrels, pots, bins and bags can all be stored in a [[furniture]] [[stockpile]].
+
+== [[Chest]]s and [[cabinet]]s ==
+Except in their specific workshop order menu, any in-game reference to a "box" or "chest" refers to ''any'' of a wood or metal chest, stone coffer or glass box, three different names for storage-items that are interchangeable for in-game purposes. Chests, coffers and boxes are listed under ''boxes'' in the [[stocks]] screen, and these can be built as "chests" from the {{key|b}}uilding menu, {{key|f}}urniture submenu to satisfy the "Needs: X Chests" requirement for [[noble]]s. Each other storage-item type has its own entry.
+
+Both cabinets and chest only work when placed as furniture. They must be built in bedrooms assigned to dwarves in order to fulfill the dwarves' room requirements. Cabinets are used to store clothing, and chests in bedrooms are used to store everything else.  
+
+Locations like [[tavern]]s, [[temple]]s, [[library|libraries]], and [[hospital]]s also need chests for their specific supply storage needs.
+
+Once built as furniture, their contents can be viewed by clicking on them with the mouse.
+
+== Quick reference ==
+{{storage table head}}
+{{storage table row|container=[[Animal trap]]|stockpile=Animals|furniture=y|solidcap=30000|liquidcap=|stores=Vermin, Bait|graphic=[[File:animal_trap_sprite.png]]|stone=n|wood=y|glass=n|metal=y|cloth=n|leather=n|ceramic=n
+}}
+{{storage table row|container=[[Armor stand]]|stockpile=Furniture > Type > Armor Stands|furniture=y|solidcap=60000|liquidcap=|stores=Armor|graphic=[[File:armor_stand_sprite.png]]|stone=y|wood=y|glass=y|metal=y|cloth=n|leather=n|ceramic=n
+}}
+{{storage table row|container=[[Equipment#Backpacks|Backpack]]|stockpile=Finished Goods > Type > Backpacks|furniture=n|solidcap=30000|liquidcap=|stores=Food|graphic=[[File:backpack_sprite.png]]|stone=n|wood=n|glass=n|metal=n|cloth=y|leather=y|ceramic=n|sup_cloth=3
+}}
+{{storage table row|container=[[Bag]]|stockpile=Furniture > Type > Bag|furniture=n|solidcap=60000|liquidcap=|stores=Seeds, Leaves, Powders|graphic=[[File:bag_sprite.png]]|stone=n|wood=n|glass=n|metal=n|cloth=y|leather=y|ceramic=n
+}}
+{{storage table row|container=[[Box]]<br/>Chest<br/>Coffer|stockpile=Furniture > Type > Boxes|furniture=y|solidcap=60000|liquidcap=|stores=Bags: Seeds, Leaves, Powders<br/>Others: Owned items|graphic=[[File:chest_sprite.png]]|stone=Coffer|wood=Chest|glass=Box|metal=Chest|cloth=n|leather=n|ceramic=n
+}}
+{{storage table row|container=[[Barrel]]|stockpile=Furniture > Type > Barrels|furniture=n|solidcap=60000|liquidcap=60000|stores=Food, Alcohol, Extracts, Milk, Lye, Bags|graphic=[[File:barrel_sprite.png]]|stone=n|wood=y|glass=n|metal=y|cloth=n|leather=n|ceramic=n
+}}
+{{storage table row|container=[[Bin]]|stockpile=Furniture > Type > Bins|furniture=n|solidcap=60000|liquidcap=|stores=Items, Jugs, Flasks|graphic=[[File:bin_sprite.png]]|stone=n|wood=y|glass=n|metal=y|cloth=n|leather=n|ceramic=n
+}}
+{{storage table row|container=[[Bucket]]|stockpile=Furniture > Type > Buckets|furniture=n|solidcap=|liquidcap=6000|stores=Milk, Lye, Water<sup>2</sup>|graphic=[[File:bucket_sprite.png]]|stone=n|wood=y|glass=n|metal=y|cloth=n|leather=n|ceramic=n
+}}
+{{storage table row|container=[[Cabinet]]|stockpile=Furniture > Type > Cabinets|furniture=y|solidcap=60000|liquidcap=|stores=Owned clothing|graphic=[[File:cabinet_sprite.png]]|stone=y|wood=y|glass=y|metal=y|cloth=n|leather=n|ceramic=n
+}}
+{{storage table row|container=[[Cage]]<br/>Aquarium<br/>Terrarium|stockpile=Animals|furniture=y|solidcap=60000|liquidcap=60000|stores=Creatures, Vermin<br/>Aquarium: Water|graphic=[[File:cage_sprite.png]]|stone=n|wood=Cage|glass=Terrarium<br/>Aquarium|metal=Cage|cloth=n|leather=n|ceramic=n
+}}
+{{storage table row|container=[[Coffin]]<br/>Casket<br/>Sarcophagus|stockpile=Furniture > Type > Coffins|furniture=y|solidcap=60000|liquidcap=|stores=Creature/Vermin Corpses/Remains|graphic=[[File:coffin_sprite.png]]|stone=Coffin|wood=Casket|glass=Coffin|metal=Sarcophagus|cloth=n|leather=n|ceramic=n
+}}
+{{storage table row|container=[[Flask]]<br/>Vial<br/>Waterskin|stockpile=Finished Goods > Type > Flasks|furniture=n|solidcap=|liquidcap=1800|stores=Alcohol, Water<br/>Vials: Extracts|graphic=[[File:flask_collection_sprite.png]]|stone=n|wood=n|glass=Vial|metal=Flask|cloth=n|leather=Waterskin|ceramic=n
+}}
+{{storage table row|container=[[Hive]]|stockpile=Finished Goods > Type > Tools|furniture=y|solidcap=5000|liquidcap=5000|stores=Honey Bees, Royal Jelly, Honeycomb|graphic=[[File:hive.png]]|stone=y|wood=y|glass=y|metal=y|cloth=n|leather=n|ceramic=y|sup_stonewood=4
+}}
+{{storage table row|container=[[Jug]]|stockpile=Finished Goods > Type > Tools|furniture=n|solidcap=|liquidcap=10000|stores=Royal Jelly, Honey, Rock Nut Oil|graphic=[[File:jug_sprite.png]]|stone=y|wood=y|glass=y|metal=y|cloth=n|leather=n|ceramic=y|sup_stonewood=4
+}}
+{{storage table row|container=[[Large pot]]|stockpile=Finished Goods > Type > Large pots/food storage|furniture=n|solidcap=60000|liquidcap=60000|stores=Food, Alcohol, Bags|graphic=[[File:large_pot_sprite.png]]|stone=y|wood=y|glass=y|metal=y|cloth=n|leather=n|ceramic=y|sup_stonewood=4
+}}
+{{storage table row|container=[[Minecart]]|stockpile=Furniture > Type > Minecarts|furniture=n|sup_furn=5|solidcap=500000|liquidcap=500000|stores=Hauled items;<br/>[[Minecart#Loading_liquids|scooped]], but not loaded: Water, Magma|graphic=[[File:minecart_sprite.png]]|stone=n|wood=y|glass=n|metal=y|cloth=n|leather=n|ceramic=n
+}}
+{{storage table row|container=[[Nest box]]|stockpile=Finished Goods > Type > Tools|furniture=y|solidcap=2000|liquidcap=|stores=Eggs|graphic=[[File:nest_box_sprite.png]]|stone=y|wood=y|glass=y|metal=y|cloth=n|leather=n|ceramic=n|sup_stonewood=4
+}}
+{{storage table row|container=Pouch|stockpile=Finished Goods > Type > Tools{{verify}}|furniture=n|solidcap=1000|liquidcap=|stores=Coins (in [[adventurer mode]])|graphic=[[File:pouch_sprite.png]]|stone=n|wood=n|glass=n|metal=n|cloth=y|leather=y|ceramic=n
+}}
+{{storage table row|container=[[Equipment#Quiver|Quiver]]|stockpile=Finished Goods > Type > Quivers|furniture=n|solidcap=12000|liquidcap=|stores=Ammunition|graphic=[[File:quiver_sprite.png]]|stone=n|wood=n|glass=n|metal=n|cloth=y|leather=y|ceramic=n|sup_cloth=3
+}}
+{{storage table row|container=[[Weapon rack]]|stockpile=Furniture > Type > Weapon Racks|furniture=y|solidcap=60000|liquidcap=|stores=Weapons|graphic=[[File:weapon_rack_sprite.png]]|stone=y|wood=y|glass=y|metal=y|cloth=n|leather=n|ceramic=n
+}}
+{{storage table row|container=[[Wheelbarrow]]|stockpile=Furniture > Type > Wheelbarrows|furniture=n|solidcap=100000|liquidcap=|stores=Hauled items|graphic=[[File:wheelbarrow_sprite.png]]|stone=n|wood=y|glass=n|metal=y|cloth=n|leather=n|ceramic=n
+}}
+|}
+:<sup>1</sup> - Large Pots can be made from any hard material, including wood and metal
+:<sup>2</sup> - Used to carry water, can store Milk and Lye but will be emptied into Barrels
+:<sup>3</sup> - Backpacks and quivers can only be made from Adamantine cloth, though ones made from other cloth can be purchased from caravans
+:<sup>4</sup> - Rock and Wood versions of these items are made in [[Craftsdwarf's workshop]] rather than [[Carpenter's workshop]] or [[Mason's workshop]] as usual.
+:<sup>5</sup> - A [[minecart]] can be placed where you need it and used for storage, but technically it's not built furniture
+
+*[[Tools]] have capacity set in units 10 times smaller; liquids have a capacity 60 per 1 unit, i.e. capacity 180 = 3 units of water, 50000 = 833 units, etc.
+*Large Pots are equivalent to Barrels, except for a few specific uses (e.g. [[Farmer's workshop#Menu|process plant to barrel]]).
+*Bins are requested by stockpiles like Barrels, but store different items.
+*Buckets are used for temporary storage of Milk, Lye, and Water.
+*Bags are used to stockpile powders, seeds, leaves, and other items. They can be stored inside Barrels and Large Pots if holding food items.
+*Jugs are liquid storage specifically for [[beekeeping]] and [[pressing]], and can be stored inside Bins.
+*[[Flask]]s (metal), waterskins (leather) and vials (glass) are different names for the same item, depending on the material.
+*Chests (wood or metal), coffers (stone) and boxes (glass) are different names for the same piece of furniture, depending on the material.
+*A terrarium can be designated as an Aquarium. A dwarf will use a bucket to fill it with water. If deconstructed it'll stay filled with Water[10] and can even be sold with the water inside. The water costs 1☼ each, so you get 10☼ for the water.
+*A [[hive]] won't be destroyed if you don't have a stockpile for its products. You could use {{key|t}} on the hive and dump the item to use it.
+
+== Spilling ==
+When a container is launched and collides with an obstacle, it spills its contents. If the obstacle permits (i.e. [[fortification]]), these continue to move in the same direction with some scattering, otherwise displaced 1 tile above and retain velocity. This was introduced for [[minecart]]s, but applies at least to [http://www.bay12forums.com/smf/index.php?topic=109460.msg3315406#msg3315406 other tools] and [http://www.bay12forums.com/smf/index.php?topic=109460.msg3340230#msg3340230 cages]. If the tile above also contains an obstacle and the spilled item is a storage-item, the process repeats on the next tick, until it runs out of either nested storage-items or wall height (see the first link above).
+
+[[Throwing]] a container does not cause it to collide and spill its contents.
+
+== Bugs ==
+* Hauling jobs can block access to <u>all</u> the items in the destination container until the hauling is complete. This often results in cancellation spam and work delays.{{bug|9004}} One workaround is creating a "feeder stockpile" with barrels and bins disabled.
+* Storage capacity is one-dimensional, resulting in unusually. Items only have "SIZE" determining the volume of their material and thus [[weight]], but ''no separate external volume''. For storage-items, CAPACITY is ''not'' added to it, i.e. they all are treated like soft bags: you can put 30 other bags inside a bag, and you can load a minecart with minecarts. At the same time, storage-items are assumed to ''not'' be soft bags - while weight of contents adds to the storage-item's weight, the ambiguous SIZE is constant. Together, these facts make storage-items nest-able ''indefinitely'', as long as CAPACITY>SIZE (which normally is the case) and potentially act like bags of holding - have the same stated volume whether empty or holding an arbitrary total amount of items via nested storage-items. The only nesting that normally happens in Fortress mode is minecart > barrel > bag, but this still makes a minor [[exploit]].
+* Stacks made by a single job tend to ignore capacity. For one, haulers picking up items may stuff a [[Exploit#Quantum_stockpiles|quantum stockpile]] worth of items into one bin.{{bug|6063}} The same applies to brewing and extracting.
+* Conversely, a freshly produced stack, no matter how small, will be put into a new container and not added into the old ones. This may be justified with ''brewing'', but also happens to production of many other items/substances without quality modifiers.
+
+{{Buildings}}
+{{Category|Items}}

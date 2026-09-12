@@ -1,0 +1,56 @@
+{{Quality|Fine}}
+{{av}}
+{{Material properties}}
+
+'''Strain at yield''' is a [[Material science|mechanical property]] that [[material]]s possess. As with [[Material science#Mechanical Performance Properties|yield and fracture]], there are six types of strain at yield, one for each of the six forces: impact, compressive, tensile, torsion, shear, and bending. Although in real life it represents the level of strain when forced by one of the forces, it is simplified greatly. Only impact strain at yield has been verified to have an effect.
+
+A higher number means more strain (more flexible). A lower number means less strain (more rigid).
+
+==Elastic Modulus==
+
+The formula used by the raws to calculate strain at yield from a real-world [[Wikipedia:Elastic modulus|elastic modulus]] value is the raw yield strength (in {{tooltip|KPa|As the unit used in the raws, no conversion is needed}}) divided by the elastic modulus (in GPa/10 or Pa&nbsp;×&nbsp;10<sup>8</sup>). As it represents [[Wikipedia:Strain (mechanics)|strain]], this value is a dimensionless quantity.
+
+For example, [[iron]] has an {{token|IMPACT_YIELD|md}} of 542,500 KPa and its bulk modulus is 170 GPa. ('''542500'''/[10&nbsp;×&nbsp;'''170''']) = 319.1…, thus its {{token|IMPACT_STRAIN_AT_YIELD|md}} is 319.
+
+An online material helper to simplify these calculations for [[modding]] can be found here: https://putnam3145.github.io/helper
+
+[[Wikipedia:Young's modulus|Young's modulus]] is used for tensile and bending elasticity, the [[Wikipedia:Shear modulus|shear modulus]] is used for shear and torsion elasticity, and the [[Wikipedia:Bulk modulus|bulk modulus]] is used for impact and compressive elasticity.
+
+==Strain at yield of materials==
+
+The strain at yield of materials is defined by the following tokens:
+
+* {{token|IMPACT_STRAIN_AT_YIELD|md}}
+* {{token|COMPRESSIVE_STRAIN_AT_YIELD|md}}
+* {{token|TENSILE_STRAIN_AT_YIELD|md}}
+* {{token|TORSION_STRAIN_AT_YIELD|md}}
+* {{token|SHEAR_STRAIN_AT_YIELD|md}}
+* {{token|BENDING_STRAIN_AT_YIELD|md}}
+
+As stated above, only {{token|IMPACT_STRAIN_AT_YIELD|md}} has been observed to affect the material. Lower strain at yield materials will shatter when hit by an [[attack]], even if the attack is with an edge weapon.
+
+{| class="wikitable"
+! Material
+! Strain at yield
+|-
+|[[Stone]], [[Bone]], [[Tooth]], [[Horn]], [[Hoof]], [[Pearl]], [[Shell]], [[Soap]], [[Tallow]], [[Chitin]], most frozen liquids
+|100
+|-
+|[[Metal]] template, [[Wood]] template, [[Plant]] template, [[Seed]] template, most [[Powder|powders]]
+|1000
+|-
+|[[Nail]]
+|5000
+|-
+|[[Cartilage]]
+|25000
+|-
+|[[Skin]], [[Fat]], Muscle, Sinew, Nerve, [[Organ]] template, [[Leather]], [[Cheese]], [[Quarry bush|Leaf]]<br>
+Minimum for [[Armor token#STRUCTURAL_ELASTICITY_CHAIN_METAL|structurally elastic]] [[armor]] ([[clothing]], mail)
+|50000
+|-
+|[[Hair]], Feather, [[Scale]], [[Silk]], [[Thread]]
+|100000
+|}
+
+{{Category|Materials|*}}

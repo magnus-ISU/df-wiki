@@ -1,0 +1,703 @@
+<div class="mw-parser-output"><table class="version-table" style="text-align: center; margin: 3px auto 5px; padding: 0.25em; border-radius: 3px; -webkit-border-radius: 3px; -moz-border-radius: 3px; -o-border-radius: 3px; -ms-border-radius: 3px;; border: 2px solid #bbdd88; background: #f5ffee; min-width:27em"><tbody><tr><td style="padding: 0.3em 0.3em; width: 100%;"><div style="margin-bottom:6px;" class="version-links-r1"><span style="font-size:100%"><span class="version-link"><span style="text-decoration: none; color: #72A329; background-color: #E2FDCE; border-radius: 2px; -webkit-border-radius: 2px; -moz-border-radius: 2px; -o-border-radius: 2px; -ms-border-radius: 2px; border: 1px solid #bbdd88; padding: 0.2em;"><b>v53.16</b></span></span><span style="font-weight:bold;" class="dot">&#160;·</span> <span class="version-link"><a href="/index.php/DF2014:Storage" title="DF2014:Storage"><span style="text-decoration: none; color: #72A329;">v0.47.05</span></a></span></span></div><span>This article is about the current version of DF.<br />Note that some content may still need to be updated.</span><br />
+<div style="float: right; font-size:75%; padding-right:2px; margin-top:-2px; margin-bottom:-7px;"><span class="version-link"><a href="/index.php/Dwarf_Fortress_Wiki:V" class="mw-redirect" title="Dwarf Fortress Wiki:V"><span style="text-decoration: none; color: #72A329;">More Info</span></a></span><span style="font-weight:bold;" class="dot">&#160;·</span> <span class="version-link"><a href="/index.php/Template:Av" class="mw-redirect" title="Template:Av"><span style="text-decoration: none; color: #72A329;">V</span></a></span></div></td></tr>
+</tbody></table> <table class="metadata plainlinks ambox ambox-speedy" style="background-color:#fcc;" role="presentation">
+<tbody><tr><td class="mbox-image"><div style="width: 52px;"><a href="/index.php/Category:Bugs" title="Category:Bugs"><img alt="Giant mosquito sprite.png" src="/images/1/16/Giant_mosquito_sprite.png" decoding="async" width="24" height="25" /></a></div></td><td class="mbox-text" style=""><span class="mbox-text-span">This feature has one or more outstanding <b>bugs</b>. Please view the <a href="#Bugs">Bugs</a> section for details.<span class="hide-when-compact">  </span><span class="hide-when-compact"> </span></span></td></tr></tbody></table><div id="page-quality-rating" style="text-align: right;margin: 0.8em 0;font-size:75%">
+ <a href="/index.php/Dwarf_Fortress_Wiki:Quality#Tattered" title="Dwarf Fortress Wiki:Quality"><span id="stub-quality" style="text-decoration:none; color:#333333">xTATTEREDx</span></a> <span style="font-weight:bold;" class="dot">&#160;·</span> <a href="/index.php/Dwarf_Fortress_Wiki:Quality#Fine" title="Dwarf Fortress Wiki:Quality"><span id="fine-quality" style="text-decoration:none; color:#CA7A02;">+FINE+</span></a> <span style="font-weight:bold;" class="dot">&#160;·</span> <a href="/index.php/Dwarf_Fortress_Wiki:Quality#Superior" title="Dwarf Fortress Wiki:Quality"><span id="superior-quality" style="text-decoration:none; color:#8800cc;">*SUPERIOR*</span></a> <span style="font-weight:bold;" class="dot">&#160;·</span> <a href="/index.php/Dwarf_Fortress_Wiki:Quality#Exceptional" title="Dwarf Fortress Wiki:Quality"><span id="exceptional-quality" style="padding:0.2em; border:1px solid #9df; border-radius: 2px; -webkit-border-radius: 2px; -moz-border-radius: 2px; -o-border-radius: 2px; -ms-border-radius: 2px; background:#cce4ff; color:#0088CC;">≡EXCEPTIONAL≡</span></a> <span style="font-weight:bold;" class="dot">&#160;·</span> <a href="/index.php/Dwarf_Fortress_Wiki:Quality#Masterwork" title="Dwarf Fortress Wiki:Quality"><span id="masterwork-quality" style="text-decoration:none; color:#72A329;">☼MASTERWORK☼</span></a></div>
+<div class="floatright"><a href="/index.php/File:Storage_sprites_preview.png" class="image"><img alt="Storage sprites preview.png" src="/images/9/96/Storage_sprites_preview.png" decoding="async" width="180" height="172" /></a></div><p>Types of items used for <b>storage</b> include <a href="/index.php/Box" class="mw-redirect" title="Box">chests</a>, <a href="/index.php/Cabinet" title="Cabinet">cabinets</a>, <a href="/index.php/Barrel" title="Barrel">barrels</a>, <a href="/index.php/Large_pot" title="Large pot">large pots</a>, <a href="/index.php/Bag" title="Bag">bags</a>, <a href="/index.php/Bin" title="Bin">bins</a>, and <a href="/index.php/Bookcase" title="Bookcase">bookcases</a>. All storage objects are used to hold items, from personal possessions to <a href="/index.php/Gem" title="Gem">gems</a>, <a href="/index.php/Alcohol" title="Alcohol">alcohol</a>, <a href="/index.php/Seed" title="Seed">seeds</a>, <a href="/index.php/Quarry_bush" title="Quarry bush">quarry bush</a> leaves, and even living <a href="/index.php/Creature" title="Creature">creatures</a>. In <a href="/index.php/Fortress_mode" class="mw-redirect" title="Fortress mode">Fortress mode</a>, each object has a specific use, so you cannot, for example, use your barrels for storing <a href="/index.php/Coin" class="mw-redirect" title="Coin">coins</a>. In <a href="/index.php/Adventure_mode" class="mw-redirect" title="Adventure mode">Adventure mode</a>, any item can be stored with the <span><span style="display: inline-flex;"><a href="/index.php/File:Adv_ui_p.png" class="image"><img alt="Adv ui p.png" src="/images/f/f9/Adv_ui_p.png" decoding="async" width="32" height="36" /></a><span style="align-self: flex-end; margin-left: -3px; margin-bottom: 0px;"><span style="white-space: nowrap;"><span class="keyboard-key nowrap" style="border: 1px solid #aaa; border-radius: 0.2em; -webkit-border-radius: 0.2em; -moz-border-radius: 0.2em; -o-border-radius: 0.2em; -ms-border-radius: 0.2em; -moz-box-shadow: 0.1em 0.2em 0.2em #ddd; -webkit-box-shadow: 0.1em 0.2em 0.2em #ddd; box-shadow: 0.1em 0.2em 0.2em #ddd; background-color: #f9f9f9; background-image: -moz-linear-gradient(top, #eee, #f9f9f9, #eee); background-image: -o-linear-gradient(top, #eee, #f9f9f9, #eee); background-image: -webkit-linear-gradient(top, #eee, #f9f9f9, #eee); background-image: linear-gradient(to bottom, #eee, #f9f9f9, #eee); padding: 0.1em 0.3em; font-family: inherit; font-size: 0.9em;" title="">p</span></span></span></span></span> command if there's enough capacity for its <a href="/index.php/Size" title="Size">size</a>.
+</p><p>To examine a storage object's contents, select the object location with the mouse. If the storage object isn't selected (say, if there are multiple items or units on the same tile) it should be selectable as a tab on the upper right of the window.
+</p>
+
+<h2><span id="Barrels,_bins,_bags,_pots"></span><span class="mw-headline" id="Barrels.2C_bins.2C_bags.2C_pots">Barrels, bins, bags, pots</span></h2>
+<p><a href="/index.php/Barrel" title="Barrel">Barrels</a> are <a href="/index.php/Wood" title="Wood">wooden</a> or <a href="/index.php/Metal" title="Metal">metal</a> containers that are useful for storing items in a <a href="/index.php/Stockpile#food" title="Stockpile">food stockpile</a> and are used to store <a href="/index.php/Alcohol" title="Alcohol">alcohol</a>, <a href="/index.php/Plant" title="Plant">plants</a>, <a href="/index.php/Seed" title="Seed">seed</a> bags, <a href="/index.php/Meat" title="Meat">meat</a>, <a href="/index.php/Creature#Aquatic" title="Creature">fish</a>, <a href="/index.php/Dwarven_syrup" title="Dwarven syrup">dwarven syrup</a>, <a href="/index.php/Quarry_bush" title="Quarry bush">quarry bush</a> leaf bags, <a href="/index.php/Flour" title="Flour">flour</a> bags and <a href="/index.php/Dye" title="Dye">dye</a> bags, cooked food, <a href="/index.php/Fat" title="Fat">fat</a> and <a href="/index.php/Tallow" title="Tallow">tallow</a>, and all <a href="/index.php/Prepared_organs" title="Prepared organs">prepared organs</a>. They are made at a <a href="/index.php/Carpenter%27s_workshop" title="Carpenter&#39;s workshop">Carpenter's workshop</a> with 1 log or at a <a href="/index.php/Forge" class="mw-redirect" title="Forge">Forge</a> with 3 bars of metal. Barrels can be disabled in a stockpile to prevent haulers from running off with everything else inside to pick up a stray seed.
+</p><p><a href="/index.php/Pot" class="mw-redirect" title="Pot">Pots</a>, an alternative for barrels, can be made of wood, stone, clay, glass, or metal. Pots can also be used to store alcohol and other related liquids, though clay pots (earthenware) must be <a href="/index.php/Glaze" title="Glaze">glazed</a> to hold liquids. Pots hold the same amount as barrels (60 total units of food, or 30 units of alcohol) and weigh 1/4th as much as a barrel of equivalent material. Except for a few barrel-specific requirements, pots are generally a superior replacement.
+</p><p><a href="/index.php/Bin" title="Bin">Bins</a> are containers, again made from wood or metal, used for most non-food items. They are sent to all the other stockpiles (with the exclusion of the <a href="/index.php/Refuse" title="Refuse">refuse</a>, <a href="/index.php/Stone" title="Stone">stone</a> and <a href="/index.php/Graveyard" class="mw-redirect" title="Graveyard">graveyard</a> piles) and will hold much larger stacks of items, making organizing those endless piles of +giant cave spider silk socks+ and trade goods much easier to manage. They are made at a <a href="/index.php/Carpenter%27s_workshop" title="Carpenter&#39;s workshop">Carpenter's workshop</a> with 1 log or at a <a href="/index.php/Forge" class="mw-redirect" title="Forge">Forge</a> with 3 bars of metal. Bars and blocks will stack into a bin, but not into any other container, so a stockpile with bar/block enabled will default to requesting bins.
+</p><p><a href="/index.php/Bag" title="Bag">Bags</a> are used to store <a href="/index.php/Seed" title="Seed">seeds</a>, <a href="/index.php/Quarry_bush" title="Quarry bush">quarry bush</a> leaves, <a href="/index.php/Mill" class="mw-redirect" title="Mill">mill</a> products (<a href="/index.php/Flour" title="Flour">flour</a>, <a href="/index.php/Sugar" class="mw-redirect" title="Sugar">sugar</a>, <a href="/index.php/Dye" title="Dye">dye</a>), <a href="/index.php/Gypsum_plaster" title="Gypsum plaster">gypsum plaster</a>, <a href="/index.php/Quicklime" title="Quicklime">quicklime</a> and <a href="/index.php/Sand" title="Sand">sand</a> (<a href="/index.php/Powder" title="Powder">powders</a>). They are made from <a href="/index.php/Plant_fiber" title="Plant fiber">plant fiber</a> (or <a href="/index.php/Silk" title="Silk">silk</a>) <a href="/index.php/Cloth" title="Cloth">cloth</a>, <a href="/index.php/Leather" title="Leather">leather</a>, or <a href="/index.php/Adamantine" title="Adamantine">adamantine</a>. Bags are used to gather and transport powder the same way <a href="/index.php/Bucket" title="Bucket">buckets</a> are used to carry <a href="/index.php/Water" title="Water">water</a>. Bags can be placed inside some other storage-items, such as barrels. They are made at a <a href="/index.php/Clothier%27s_shop" title="Clothier&#39;s shop">Clothier's shop</a> with 1 cloth or at a <a href="/index.php/Leather_works" title="Leather works">Leather works</a> with 1 leather.
+</p><p>Empty barrels, pots, bins and bags can all be stored in a <a href="/index.php/Furniture" title="Furniture">furniture</a> <a href="/index.php/Stockpile" title="Stockpile">stockpile</a>.
+</p>
+<h2><span class="mw-headline" id="Chests_and_cabinets"><a href="/index.php/Chest" class="mw-redirect" title="Chest">Chests</a> and <a href="/index.php/Cabinet" title="Cabinet">cabinets</a></span></h2>
+<p>Except in their specific workshop order menu, any in-game reference to a "box" or "chest" refers to <i>any</i> of a wood or metal chest, stone coffer or glass box, three different names for storage-items that are interchangeable for in-game purposes. Chests, coffers and boxes are listed under <i>boxes</i> in the <a href="/index.php/Stocks" title="Stocks">stocks</a> screen, and these can be built as "chests" from the <span style="white-space: nowrap;"><span class="keyboard-key nowrap" style="border: 1px solid #aaa; border-radius: 0.2em; -webkit-border-radius: 0.2em; -moz-border-radius: 0.2em; -o-border-radius: 0.2em; -ms-border-radius: 0.2em; -moz-box-shadow: 0.1em 0.2em 0.2em #ddd; -webkit-box-shadow: 0.1em 0.2em 0.2em #ddd; box-shadow: 0.1em 0.2em 0.2em #ddd; background-color: #f9f9f9; background-image: -moz-linear-gradient(top, #eee, #f9f9f9, #eee); background-image: -o-linear-gradient(top, #eee, #f9f9f9, #eee); background-image: -webkit-linear-gradient(top, #eee, #f9f9f9, #eee); background-image: linear-gradient(to bottom, #eee, #f9f9f9, #eee); padding: 0.1em 0.3em; font-family: inherit; font-size: 0.9em;" title="">b</span></span>uilding menu, <span style="white-space: nowrap;"><span class="keyboard-key nowrap" style="border: 1px solid #aaa; border-radius: 0.2em; -webkit-border-radius: 0.2em; -moz-border-radius: 0.2em; -o-border-radius: 0.2em; -ms-border-radius: 0.2em; -moz-box-shadow: 0.1em 0.2em 0.2em #ddd; -webkit-box-shadow: 0.1em 0.2em 0.2em #ddd; box-shadow: 0.1em 0.2em 0.2em #ddd; background-color: #f9f9f9; background-image: -moz-linear-gradient(top, #eee, #f9f9f9, #eee); background-image: -o-linear-gradient(top, #eee, #f9f9f9, #eee); background-image: -webkit-linear-gradient(top, #eee, #f9f9f9, #eee); background-image: linear-gradient(to bottom, #eee, #f9f9f9, #eee); padding: 0.1em 0.3em; font-family: inherit; font-size: 0.9em;" title="">f</span></span>urniture submenu to satisfy the "Needs: X Chests" requirement for <a href="/index.php/Noble" title="Noble">nobles</a>. Each other storage-item type has its own entry.
+</p><p>Both cabinets and chest only work when placed as furniture. They must be built in bedrooms assigned to dwarves in order to fulfill the dwarves' room requirements. Cabinets are used to store clothing, and chests in bedrooms are used to store everything else.  
+</p><p>Locations like <a href="/index.php/Tavern" title="Tavern">taverns</a>, <a href="/index.php/Temple" title="Temple">temples</a>, <a href="/index.php/Library" title="Library">libraries</a>, and <a href="/index.php/Hospital" class="mw-redirect" title="Hospital">hospitals</a> also need chests for their specific supply storage needs.
+</p><p>Once built as furniture, their contents can be viewed by clicking on them with the mouse.
+</p>
+<h2><span class="mw-headline" id="Quick_reference">Quick reference</span></h2>
+<table border="1" cellspacing="0" cellpadding="5" class="wikitable sortable">
+
+<tbody><tr>
+<th rowspan="2" class="unsortable">Container
+</th>
+<th rowspan="2" class="unsortable"><abbr title="Stockpile category used to store these items">Stockpile</abbr>
+</th>
+<th rowspan="2"><abbr title="Can be placed in the fortress using the &#39;&#39;&#39;B&#39;&#39;&#39;uild menu">Furniture</abbr>
+</th>
+<th rowspan="2">Solid<br />Capacity<br /><small>(in <a href="/index.php/Size" title="Size">cm<sup>3</sup></a>)</small>
+</th>
+<th rowspan="2">Liquid<br />Capacity
+</th>
+<th rowspan="2" class="unsortable">Can Store
+</th>
+<th rowspan="2" class="unsortable">Graphic
+</th>
+<th colspan="7">Made From
+</th></tr>
+<tr>
+<th>Stone
+</th>
+<th>Wood
+</th>
+<th>Glass
+</th>
+<th>Metal
+</th>
+<th>Cloth
+</th>
+<th>Leather
+</th>
+<th>Ceramic
+</th></tr>
+<tr>
+<td><a href="/index.php/Animal_trap" title="Animal trap">Animal trap</a>
+</td>
+<td>Animals
+</td>
+<td style="background:rgb(204, 255, 204)">Yes
+</td>
+<td>30000
+</td>
+<td>—
+</td>
+<td>Vermin, Bait
+</td>
+<td style="text-align:center;"><a href="/index.php/File:Animal_trap_sprite.png" class="image"><img alt="Animal trap sprite.png" src="/images/5/52/Animal_trap_sprite.png" decoding="async" width="27" height="20" /></a>
+</td>
+<td style="background:rgb(255, 204, 204)">No
+</td>
+<td style="background:rgb(204, 255, 204)">Yes
+</td>
+<td style="background:rgb(255, 204, 204)">No
+</td>
+<td style="background:rgb(204, 255, 204)">Yes
+</td>
+<td style="background:rgb(255, 204, 204)">No
+</td>
+<td style="background:rgb(255, 204, 204)">No
+</td>
+<td style="background:rgb(255, 204, 204)">No
+</td></tr>
+<tr>
+<td><a href="/index.php/Armor_stand" title="Armor stand">Armor stand</a>
+</td>
+<td>Furniture &gt; Type &gt; Armor Stands
+</td>
+<td style="background:rgb(204, 255, 204)">Yes
+</td>
+<td>60000
+</td>
+<td>—
+</td>
+<td>Armor
+</td>
+<td style="text-align:center;"><a href="/index.php/File:Armor_stand_sprite.png" class="image"><img alt="Armor stand sprite.png" src="/images/8/8c/Armor_stand_sprite.png" decoding="async" width="19" height="30" /></a>
+</td>
+<td style="background:rgb(204, 255, 204)">Yes
+</td>
+<td style="background:rgb(204, 255, 204)">Yes
+</td>
+<td style="background:rgb(204, 255, 204)">Yes
+</td>
+<td style="background:rgb(204, 255, 204)">Yes
+</td>
+<td style="background:rgb(255, 204, 204)">No
+</td>
+<td style="background:rgb(255, 204, 204)">No
+</td>
+<td style="background:rgb(255, 204, 204)">No
+</td></tr>
+<tr>
+<td><a href="/index.php/Equipment#Backpacks" title="Equipment">Backpack</a>
+</td>
+<td>Finished Goods &gt; Type &gt; Backpacks
+</td>
+<td style="background:rgb(255, 204, 204)">No
+</td>
+<td>30000
+</td>
+<td>—
+</td>
+<td>Food
+</td>
+<td style="text-align:center;"><a href="/index.php/File:Backpack_sprite.png" class="image"><img alt="Backpack sprite.png" src="/images/8/88/Backpack_sprite.png" decoding="async" width="20" height="19" /></a>
+</td>
+<td style="background:rgb(255, 204, 204)">No
+</td>
+<td style="background:rgb(255, 204, 204)">No
+</td>
+<td style="background:rgb(255, 204, 204)">No
+</td>
+<td style="background:rgb(255, 204, 204)">No
+</td>
+<td style="background:rgb(204, 255, 204)">Yes<sup>3</sup>
+</td>
+<td style="background:rgb(204, 255, 204)">Yes
+</td>
+<td style="background:rgb(255, 204, 204)">No
+</td></tr>
+<tr>
+<td><a href="/index.php/Bag" title="Bag">Bag</a>
+</td>
+<td>Furniture &gt; Type &gt; Bag
+</td>
+<td style="background:rgb(255, 204, 204)">No
+</td>
+<td>60000
+</td>
+<td>—
+</td>
+<td>Seeds, Leaves, Powders
+</td>
+<td style="text-align:center;"><a href="/index.php/File:Bag_sprite.png" class="image"><img alt="Bag sprite.png" src="/images/a/a2/Bag_sprite.png" decoding="async" width="30" height="29" /></a>
+</td>
+<td style="background:rgb(255, 204, 204)">No
+</td>
+<td style="background:rgb(255, 204, 204)">No
+</td>
+<td style="background:rgb(255, 204, 204)">No
+</td>
+<td style="background:rgb(255, 204, 204)">No
+</td>
+<td style="background:rgb(204, 255, 204)">Yes
+</td>
+<td style="background:rgb(204, 255, 204)">Yes
+</td>
+<td style="background:rgb(255, 204, 204)">No
+</td></tr>
+<tr>
+<td><a href="/index.php/Box" class="mw-redirect" title="Box">Box</a><br />Chest<br />Coffer
+</td>
+<td>Furniture &gt; Type &gt; Boxes
+</td>
+<td style="background:rgb(204, 255, 204)">Yes
+</td>
+<td>60000
+</td>
+<td>—
+</td>
+<td>Bags: Seeds, Leaves, Powders<br />Others: Owned items
+</td>
+<td style="text-align:center;"><a href="/index.php/File:Chest_sprite.png" class="image"><img alt="Chest sprite.png" src="/images/d/db/Chest_sprite.png" decoding="async" width="23" height="20" /></a>
+</td>
+<td style="background:rgb(255, 255, 170)">Coffer
+</td>
+<td style="background:rgb(255, 255, 170)">Chest
+</td>
+<td style="background:rgb(255, 255, 170)">Box
+</td>
+<td style="background:rgb(255, 255, 170)">Chest
+</td>
+<td style="background:rgb(255, 204, 204)">No
+</td>
+<td style="background:rgb(255, 204, 204)">No
+</td>
+<td style="background:rgb(255, 204, 204)">No
+</td></tr>
+<tr>
+<td><a href="/index.php/Barrel" title="Barrel">Barrel</a>
+</td>
+<td>Furniture &gt; Type &gt; Barrels
+</td>
+<td style="background:rgb(255, 204, 204)">No
+</td>
+<td>60000
+</td>
+<td>60000
+</td>
+<td>Food, Alcohol, Extracts, Milk, Lye, Bags
+</td>
+<td style="text-align:center;"><a href="/index.php/File:Barrel_sprite.png" class="image"><img alt="Barrel sprite.png" src="/images/3/3c/Barrel_sprite.png" decoding="async" width="26" height="31" /></a>
+</td>
+<td style="background:rgb(255, 204, 204)">No
+</td>
+<td style="background:rgb(204, 255, 204)">Yes
+</td>
+<td style="background:rgb(255, 204, 204)">No
+</td>
+<td style="background:rgb(204, 255, 204)">Yes
+</td>
+<td style="background:rgb(255, 204, 204)">No
+</td>
+<td style="background:rgb(255, 204, 204)">No
+</td>
+<td style="background:rgb(255, 204, 204)">No
+</td></tr>
+<tr>
+<td><a href="/index.php/Bin" title="Bin">Bin</a>
+</td>
+<td>Furniture &gt; Type &gt; Bins
+</td>
+<td style="background:rgb(255, 204, 204)">No
+</td>
+<td>60000
+</td>
+<td>—
+</td>
+<td>Items, Jugs, Flasks
+</td>
+<td style="text-align:center;"><a href="/index.php/File:Bin_sprite.png" class="image"><img alt="Bin sprite.png" src="/images/f/fa/Bin_sprite.png" decoding="async" width="32" height="32" /></a>
+</td>
+<td style="background:rgb(255, 204, 204)">No
+</td>
+<td style="background:rgb(204, 255, 204)">Yes
+</td>
+<td style="background:rgb(255, 204, 204)">No
+</td>
+<td style="background:rgb(204, 255, 204)">Yes
+</td>
+<td style="background:rgb(255, 204, 204)">No
+</td>
+<td style="background:rgb(255, 204, 204)">No
+</td>
+<td style="background:rgb(255, 204, 204)">No
+</td></tr>
+<tr>
+<td><a href="/index.php/Bucket" title="Bucket">Bucket</a>
+</td>
+<td>Furniture &gt; Type &gt; Buckets
+</td>
+<td style="background:rgb(255, 204, 204)">No
+</td>
+<td>—
+</td>
+<td>6000
+</td>
+<td>Milk, Lye, Water<sup>2</sup>
+</td>
+<td style="text-align:center;"><a href="/index.php/File:Bucket_sprite.png" class="image"><img alt="Bucket sprite.png" src="/images/f/f0/Bucket_sprite.png" decoding="async" width="19" height="23" /></a>
+</td>
+<td style="background:rgb(255, 204, 204)">No
+</td>
+<td style="background:rgb(204, 255, 204)">Yes
+</td>
+<td style="background:rgb(255, 204, 204)">No
+</td>
+<td style="background:rgb(204, 255, 204)">Yes
+</td>
+<td style="background:rgb(255, 204, 204)">No
+</td>
+<td style="background:rgb(255, 204, 204)">No
+</td>
+<td style="background:rgb(255, 204, 204)">No
+</td></tr>
+<tr>
+<td><a href="/index.php/Cabinet" title="Cabinet">Cabinet</a>
+</td>
+<td>Furniture &gt; Type &gt; Cabinets
+</td>
+<td style="background:rgb(204, 255, 204)">Yes
+</td>
+<td>60000
+</td>
+<td>—
+</td>
+<td>Owned clothing
+</td>
+<td style="text-align:center;"><a href="/index.php/File:Cabinet_sprite.png" class="image"><img alt="Cabinet sprite.png" src="/images/5/54/Cabinet_sprite.png" decoding="async" width="29" height="30" /></a>
+</td>
+<td style="background:rgb(204, 255, 204)">Yes
+</td>
+<td style="background:rgb(204, 255, 204)">Yes
+</td>
+<td style="background:rgb(204, 255, 204)">Yes
+</td>
+<td style="background:rgb(204, 255, 204)">Yes
+</td>
+<td style="background:rgb(255, 204, 204)">No
+</td>
+<td style="background:rgb(255, 204, 204)">No
+</td>
+<td style="background:rgb(255, 204, 204)">No
+</td></tr>
+<tr>
+<td><a href="/index.php/Cage" title="Cage">Cage</a><br />Aquarium<br />Terrarium
+</td>
+<td>Animals
+</td>
+<td style="background:rgb(204, 255, 204)">Yes
+</td>
+<td>60000
+</td>
+<td>60000
+</td>
+<td>Creatures, Vermin<br />Aquarium: Water
+</td>
+<td style="text-align:center;"><a href="/index.php/File:Cage_sprite.png" class="image"><img alt="Cage sprite.png" src="/images/5/56/Cage_sprite.png" decoding="async" width="31" height="32" /></a>
+</td>
+<td style="background:rgb(255, 204, 204)">No
+</td>
+<td style="background:rgb(255, 255, 170)">Cage
+</td>
+<td style="background:rgb(255, 255, 170)">Terrarium<br />Aquarium
+</td>
+<td style="background:rgb(255, 255, 170)">Cage
+</td>
+<td style="background:rgb(255, 204, 204)">No
+</td>
+<td style="background:rgb(255, 204, 204)">No
+</td>
+<td style="background:rgb(255, 204, 204)">No
+</td></tr>
+<tr>
+<td><a href="/index.php/Coffin" title="Coffin">Coffin</a><br />Casket<br />Sarcophagus
+</td>
+<td>Furniture &gt; Type &gt; Coffins
+</td>
+<td style="background:rgb(204, 255, 204)">Yes
+</td>
+<td>60000
+</td>
+<td>—
+</td>
+<td>Creature/Vermin Corpses/Remains
+</td>
+<td style="text-align:center;"><a href="/index.php/File:Coffin_sprite.png" class="image"><img alt="Coffin sprite.png" src="/images/9/94/Coffin_sprite.png" decoding="async" width="20" height="32" /></a>
+</td>
+<td style="background:rgb(255, 255, 170)">Coffin
+</td>
+<td style="background:rgb(255, 255, 170)">Casket
+</td>
+<td style="background:rgb(255, 255, 170)">Coffin
+</td>
+<td style="background:rgb(255, 255, 170)">Sarcophagus
+</td>
+<td style="background:rgb(255, 204, 204)">No
+</td>
+<td style="background:rgb(255, 204, 204)">No
+</td>
+<td style="background:rgb(255, 204, 204)">No
+</td></tr>
+<tr>
+<td><a href="/index.php/Flask" title="Flask">Flask</a><br />Vial<br />Waterskin
+</td>
+<td>Finished Goods &gt; Type &gt; Flasks
+</td>
+<td style="background:rgb(255, 204, 204)">No
+</td>
+<td>—
+</td>
+<td>1800
+</td>
+<td>Alcohol, Water<br />Vials: Extracts
+</td>
+<td style="text-align:center;"><a href="/index.php/File:Flask_collection_sprite.png" class="image"><img alt="Flask collection sprite.png" src="/images/e/ec/Flask_collection_sprite.png" decoding="async" width="21" height="25" /></a>
+</td>
+<td style="background:rgb(255, 204, 204)">No
+</td>
+<td style="background:rgb(255, 204, 204)">No
+</td>
+<td style="background:rgb(255, 255, 170)">Vial
+</td>
+<td style="background:rgb(255, 255, 170)">Flask
+</td>
+<td style="background:rgb(255, 204, 204)">No
+</td>
+<td style="background:rgb(255, 255, 170)">Waterskin
+</td>
+<td style="background:rgb(255, 204, 204)">No
+</td></tr>
+<tr>
+<td><a href="/index.php/Hive" title="Hive">Hive</a>
+</td>
+<td>Finished Goods &gt; Type &gt; Tools
+</td>
+<td style="background:rgb(204, 255, 204)">Yes
+</td>
+<td>5000
+</td>
+<td>5000
+</td>
+<td>Honey Bees, Royal Jelly, Honeycomb
+</td>
+<td style="text-align:center;"><a href="/index.php/File:Hive.png" class="image"><img alt="Hive.png" src="/images/c/c2/Hive.png" decoding="async" width="23" height="27" /></a>
+</td>
+<td style="background:rgb(204, 255, 204)">Yes<sup>4</sup>
+</td>
+<td style="background:rgb(204, 255, 204)">Yes<sup>4</sup>
+</td>
+<td style="background:rgb(204, 255, 204)">Yes
+</td>
+<td style="background:rgb(204, 255, 204)">Yes
+</td>
+<td style="background:rgb(255, 204, 204)">No
+</td>
+<td style="background:rgb(255, 204, 204)">No
+</td>
+<td style="background:rgb(204, 255, 204)">Yes
+</td></tr>
+<tr>
+<td><a href="/index.php/Jug" title="Jug">Jug</a>
+</td>
+<td>Finished Goods &gt; Type &gt; Tools
+</td>
+<td style="background:rgb(255, 204, 204)">No
+</td>
+<td>—
+</td>
+<td>10000
+</td>
+<td>Royal Jelly, Honey, Rock Nut Oil
+</td>
+<td style="text-align:center;"><a href="/index.php/File:Jug_sprite.png" class="image"><img alt="Jug sprite.png" src="/images/d/d8/Jug_sprite.png" decoding="async" width="20" height="28" /></a>
+</td>
+<td style="background:rgb(204, 255, 204)">Yes<sup>4</sup>
+</td>
+<td style="background:rgb(204, 255, 204)">Yes<sup>4</sup>
+</td>
+<td style="background:rgb(204, 255, 204)">Yes
+</td>
+<td style="background:rgb(204, 255, 204)">Yes
+</td>
+<td style="background:rgb(255, 204, 204)">No
+</td>
+<td style="background:rgb(255, 204, 204)">No
+</td>
+<td style="background:rgb(204, 255, 204)">Yes
+</td></tr>
+<tr>
+<td><a href="/index.php/Large_pot" title="Large pot">Large pot</a>
+</td>
+<td>Finished Goods &gt; Type &gt; Large pots/food storage
+</td>
+<td style="background:rgb(255, 204, 204)">No
+</td>
+<td>60000
+</td>
+<td>60000
+</td>
+<td>Food, Alcohol, Bags
+</td>
+<td style="text-align:center;"><a href="/index.php/File:Large_pot_sprite.png" class="image"><img alt="Large pot sprite.png" src="/images/2/20/Large_pot_sprite.png" decoding="async" width="26" height="27" /></a>
+</td>
+<td style="background:rgb(204, 255, 204)">Yes<sup>4</sup>
+</td>
+<td style="background:rgb(204, 255, 204)">Yes<sup>4</sup>
+</td>
+<td style="background:rgb(204, 255, 204)">Yes
+</td>
+<td style="background:rgb(204, 255, 204)">Yes
+</td>
+<td style="background:rgb(255, 204, 204)">No
+</td>
+<td style="background:rgb(255, 204, 204)">No
+</td>
+<td style="background:rgb(204, 255, 204)">Yes
+</td></tr>
+<tr>
+<td><a href="/index.php/Minecart" title="Minecart">Minecart</a>
+</td>
+<td>Furniture &gt; Type &gt; Minecarts
+</td>
+<td style="background:rgb(255, 204, 204)">No<sup>5</sup>
+</td>
+<td>500000
+</td>
+<td>500000
+</td>
+<td>Hauled items;<br /><a href="/index.php/Minecart#Loading_liquids" title="Minecart">scooped</a>, but not loaded: Water, Magma
+</td>
+<td style="text-align:center;"><a href="/index.php/File:Minecart_sprite.png" class="image"><img alt="Minecart sprite.png" src="/images/8/85/Minecart_sprite.png" decoding="async" width="32" height="28" /></a>
+</td>
+<td style="background:rgb(255, 204, 204)">No
+</td>
+<td style="background:rgb(204, 255, 204)">Yes
+</td>
+<td style="background:rgb(255, 204, 204)">No
+</td>
+<td style="background:rgb(204, 255, 204)">Yes
+</td>
+<td style="background:rgb(255, 204, 204)">No
+</td>
+<td style="background:rgb(255, 204, 204)">No
+</td>
+<td style="background:rgb(255, 204, 204)">No
+</td></tr>
+<tr>
+<td><a href="/index.php/Nest_box" title="Nest box">Nest box</a>
+</td>
+<td>Finished Goods &gt; Type &gt; Tools
+</td>
+<td style="background:rgb(204, 255, 204)">Yes
+</td>
+<td>2000
+</td>
+<td>—
+</td>
+<td>Eggs
+</td>
+<td style="text-align:center;"><a href="/index.php/File:Nest_box.png" class="image"><img alt="Nest box.png" src="/images/c/c3/Nest_box.png" decoding="async" width="30" height="21" /></a>
+</td>
+<td style="background:rgb(204, 255, 204)">Yes<sup>4</sup>
+</td>
+<td style="background:rgb(204, 255, 204)">Yes<sup>4</sup>
+</td>
+<td style="background:rgb(204, 255, 204)">Yes
+</td>
+<td style="background:rgb(204, 255, 204)">Yes
+</td>
+<td style="background:rgb(255, 204, 204)">No
+</td>
+<td style="background:rgb(255, 204, 204)">No
+</td>
+<td style="background:rgb(255, 204, 204)">No
+</td></tr>
+<tr>
+<td>Pouch
+</td>
+<td>Finished Goods &gt; Type &gt; Tools<sup style="font-size: 80%;">&#91;<a href="/index.php/Talk:Storage" title="Talk:Storage"><span title="The material near this tag is possibly inaccurate or nonfactual.">Verify</span></a>&#93;</sup>
+</td>
+<td style="background:rgb(255, 204, 204)">No
+</td>
+<td>1000
+</td>
+<td>—
+</td>
+<td>Coins (in <a href="/index.php/Adventurer_mode" title="Adventurer mode">adventurer mode</a>)
+</td>
+<td style="text-align:center;"><a href="/index.php/File:Pouch_sprite.png" class="image"><img alt="Pouch sprite.png" src="/images/f/f5/Pouch_sprite.png" decoding="async" width="16" height="14" /></a>
+</td>
+<td style="background:rgb(255, 204, 204)">No
+</td>
+<td style="background:rgb(255, 204, 204)">No
+</td>
+<td style="background:rgb(255, 204, 204)">No
+</td>
+<td style="background:rgb(255, 204, 204)">No
+</td>
+<td style="background:rgb(204, 255, 204)">Yes
+</td>
+<td style="background:rgb(204, 255, 204)">Yes
+</td>
+<td style="background:rgb(255, 204, 204)">No
+</td></tr>
+<tr>
+<td><a href="/index.php/Equipment#Quiver" title="Equipment">Quiver</a>
+</td>
+<td>Finished Goods &gt; Type &gt; Quivers
+</td>
+<td style="background:rgb(255, 204, 204)">No
+</td>
+<td>12000
+</td>
+<td>—
+</td>
+<td>Ammunition
+</td>
+<td style="text-align:center;"><a href="/index.php/File:Quiver_sprite.png" class="image"><img alt="Quiver sprite.png" src="/images/4/48/Quiver_sprite.png" decoding="async" width="23" height="24" /></a>
+</td>
+<td style="background:rgb(255, 204, 204)">No
+</td>
+<td style="background:rgb(255, 204, 204)">No
+</td>
+<td style="background:rgb(255, 204, 204)">No
+</td>
+<td style="background:rgb(255, 204, 204)">No
+</td>
+<td style="background:rgb(204, 255, 204)">Yes<sup>3</sup>
+</td>
+<td style="background:rgb(204, 255, 204)">Yes
+</td>
+<td style="background:rgb(255, 204, 204)">No
+</td></tr>
+<tr>
+<td><a href="/index.php/Weapon_rack" title="Weapon rack">Weapon rack</a>
+</td>
+<td>Furniture &gt; Type &gt; Weapon Racks
+</td>
+<td style="background:rgb(204, 255, 204)">Yes
+</td>
+<td>60000
+</td>
+<td>—
+</td>
+<td>Weapons
+</td>
+<td style="text-align:center;"><a href="/index.php/File:Weapon_rack_sprite.png" class="image"><img alt="Weapon rack sprite.png" src="/images/b/b1/Weapon_rack_sprite.png" decoding="async" width="32" height="32" /></a>
+</td>
+<td style="background:rgb(204, 255, 204)">Yes
+</td>
+<td style="background:rgb(204, 255, 204)">Yes
+</td>
+<td style="background:rgb(204, 255, 204)">Yes
+</td>
+<td style="background:rgb(204, 255, 204)">Yes
+</td>
+<td style="background:rgb(255, 204, 204)">No
+</td>
+<td style="background:rgb(255, 204, 204)">No
+</td>
+<td style="background:rgb(255, 204, 204)">No
+</td></tr>
+<tr>
+<td><a href="/index.php/Wheelbarrow" title="Wheelbarrow">Wheelbarrow</a>
+</td>
+<td>Furniture &gt; Type &gt; Wheelbarrows
+</td>
+<td style="background:rgb(255, 204, 204)">No
+</td>
+<td>100000
+</td>
+<td>—
+</td>
+<td>Hauled items
+</td>
+<td style="text-align:center;"><a href="/index.php/File:Wheelbarrow_sprite.png" class="image"><img alt="Wheelbarrow sprite.png" src="/images/7/7a/Wheelbarrow_sprite.png" decoding="async" width="27" height="20" /></a>
+</td>
+<td style="background:rgb(255, 204, 204)">No
+</td>
+<td style="background:rgb(204, 255, 204)">Yes
+</td>
+<td style="background:rgb(255, 204, 204)">No
+</td>
+<td style="background:rgb(204, 255, 204)">Yes
+</td>
+<td style="background:rgb(255, 204, 204)">No
+</td>
+<td style="background:rgb(255, 204, 204)">No
+</td>
+<td style="background:rgb(255, 204, 204)">No
+</td></tr></tbody></table>
+<dl><dd><sup>1</sup> - Large Pots can be made from any hard material, including wood and metal</dd>
+<dd><sup>2</sup> - Used to carry water, can store Milk and Lye but will be emptied into Barrels</dd>
+<dd><sup>3</sup> - Backpacks and quivers can only be made from Adamantine cloth, though ones made from other cloth can be purchased from caravans</dd>
+<dd><sup>4</sup> - Rock and Wood versions of these items are made in <a href="/index.php/Craftsdwarf%27s_workshop" title="Craftsdwarf&#39;s workshop">Craftsdwarf's workshop</a> rather than <a href="/index.php/Carpenter%27s_workshop" title="Carpenter&#39;s workshop">Carpenter's workshop</a> or <a href="/index.php/Mason%27s_workshop" class="mw-redirect" title="Mason&#39;s workshop">Mason's workshop</a> as usual.</dd>
+<dd><sup>5</sup> - A <a href="/index.php/Minecart" title="Minecart">minecart</a> can be placed where you need it and used for storage, but technically it's not built furniture</dd></dl>
+<ul><li><a href="/index.php/Tools" class="mw-redirect" title="Tools">Tools</a> have capacity set in units 10 times smaller; liquids have a capacity 60 per 1 unit, i.e. capacity 180 = 3 units of water, 50000 = 833 units, etc.</li>
+<li>Large Pots are equivalent to Barrels, except for a few specific uses (e.g. <a href="/index.php/Farmer%27s_workshop#Menu" title="Farmer&#39;s workshop">process plant to barrel</a>).</li>
+<li>Bins are requested by stockpiles like Barrels, but store different items.</li>
+<li>Buckets are used for temporary storage of Milk, Lye, and Water.</li>
+<li>Bags are used to stockpile powders, seeds, leaves, and other items. They can be stored inside Barrels and Large Pots if holding food items.</li>
+<li>Jugs are liquid storage specifically for <a href="/index.php/Beekeeping" class="mw-redirect" title="Beekeeping">beekeeping</a> and <a href="/index.php/Pressing" class="mw-redirect" title="Pressing">pressing</a>, and can be stored inside Bins.</li>
+<li><a href="/index.php/Flask" title="Flask">Flasks</a> (metal), waterskins (leather) and vials (glass) are different names for the same item, depending on the material.</li>
+<li>Chests (wood or metal), coffers (stone) and boxes (glass) are different names for the same piece of furniture, depending on the material.</li>
+<li>A terrarium can be designated as an Aquarium. A dwarf will use a bucket to fill it with water. If deconstructed it'll stay filled with Water[10] and can even be sold with the water inside. The water costs 1☼ each, so you get 10☼ for the water.</li>
+<li>A <a href="/index.php/Hive" title="Hive">hive</a> won't be destroyed if you don't have a stockpile for its products. You could use <span style="white-space: nowrap;"><span class="keyboard-key nowrap" style="border: 1px solid #aaa; border-radius: 0.2em; -webkit-border-radius: 0.2em; -moz-border-radius: 0.2em; -o-border-radius: 0.2em; -ms-border-radius: 0.2em; -moz-box-shadow: 0.1em 0.2em 0.2em #ddd; -webkit-box-shadow: 0.1em 0.2em 0.2em #ddd; box-shadow: 0.1em 0.2em 0.2em #ddd; background-color: #f9f9f9; background-image: -moz-linear-gradient(top, #eee, #f9f9f9, #eee); background-image: -o-linear-gradient(top, #eee, #f9f9f9, #eee); background-image: -webkit-linear-gradient(top, #eee, #f9f9f9, #eee); background-image: linear-gradient(to bottom, #eee, #f9f9f9, #eee); padding: 0.1em 0.3em; font-family: inherit; font-size: 0.9em;" title="">t</span></span> on the hive and dump the item to use it.</li></ul>
+<h2><span class="mw-headline" id="Spilling">Spilling</span></h2>
+<p>When a container is launched and collides with an obstacle, it spills its contents. If the obstacle permits (i.e. <a href="/index.php/Fortification" title="Fortification">fortification</a>), these continue to move in the same direction with some scattering, otherwise displaced 1 tile above and retain velocity. This was introduced for <a href="/index.php/Minecart" title="Minecart">minecarts</a>, but applies at least to <a rel="nofollow" class="external text" href="http://www.bay12forums.com/smf/index.php?topic=109460.msg3315406#msg3315406">other tools</a> and <a rel="nofollow" class="external text" href="http://www.bay12forums.com/smf/index.php?topic=109460.msg3340230#msg3340230">cages</a>. If the tile above also contains an obstacle and the spilled item is a storage-item, the process repeats on the next tick, until it runs out of either nested storage-items or wall height (see the first link above).
+</p><p><a href="/index.php/Throwing" class="mw-redirect" title="Throwing">Throwing</a> a container does not cause it to collide and spill its contents.
+</p>
+<h2><span class="mw-headline" id="Bugs">Bugs</span></h2>
+<ul><li>Hauling jobs can block access to <u>all</u> the items in the destination container until the hauling is complete. This often results in cancellation spam and work delays.<span class=""><sup><a href="#Bugs">Bug</a>:<a rel="nofollow" class="external text" href="https://dwarffortressbugtracker.com/view.php?id=9004">9004</a></sup></span> One workaround is creating a "feeder stockpile" with barrels and bins disabled.</li>
+<li>Storage capacity is one-dimensional, resulting in unusually. Items only have "SIZE" determining the volume of their material and thus <a href="/index.php/Weight" title="Weight">weight</a>, but <i>no separate external volume</i>. For storage-items, CAPACITY is <i>not</i> added to it, i.e. they all are treated like soft bags: you can put 30 other bags inside a bag, and you can load a minecart with minecarts. At the same time, storage-items are assumed to <i>not</i> be soft bags - while weight of contents adds to the storage-item's weight, the ambiguous SIZE is constant. Together, these facts make storage-items nest-able <i>indefinitely</i>, as long as CAPACITY&gt;SIZE (which normally is the case) and potentially act like bags of holding - have the same stated volume whether empty or holding an arbitrary total amount of items via nested storage-items. The only nesting that normally happens in Fortress mode is minecart &gt; barrel &gt; bag, but this still makes a minor <a href="/index.php/Exploit" title="Exploit">exploit</a>.</li>
+<li>Stacks made by a single job tend to ignore capacity. For one, haulers picking up items may stuff a <a href="/index.php/Exploit#Quantum_stockpiles" title="Exploit">quantum stockpile</a> worth of items into one bin.<span class=""><sup><a href="#Bugs">Bug</a>:<a rel="nofollow" class="external text" href="https://dwarffortressbugtracker.com/view.php?id=6063">6063</a></sup></span> The same applies to brewing and extracting.</li>
+<li>Conversely, a freshly produced stack, no matter how small, will be put into a new container and not added into the old ones. This may be justified with <i>brewing</i>, but also happens to production of many other items/substances without quality modifiers.</li></ul>
+<table class="collapsible autocollapse infobox" style="background: #fdfdfd; border: 1px solid #aaa; font-size: 88%; margin: 0 auto -1px; vertical-align: middle; width: 100%; max-width: 100em;"><tbody><tr style="line-height: 1.5em;"><th scope="col" colspan="2" style="background: #ccf; padding: 0.25em 1em; text-align: center; background-color: #b4bdc8;;"><div class="plainlinks" style="float: left; padding-left: 0.4em; font-size: 70%; font-weight: normal; white-space: nowrap;"><a href="/index.php/Template:V50_buildings" title="Template:V50 buildings"><span title="View this template">V</span></a><span style="font-weight: bold; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;">&#160;·&#160;</span><a href="/index.php?title=Template_talk:V50_buildings&amp;action=edit&amp;redlink=1" class="new" title="Template talk:V50 buildings (page does not exist)"><span title="Discuss this template">T</span></a><span style="font-weight: bold; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;">&#160;·&#160;</span><a rel="nofollow" class="external text" href="https://dwarffortresswiki.org/index.php?title=Template:V50_buildings&amp;action=edit"><span title="Edit this template">E</span></a></div><div style="font-size: 114%; margin: 0 6em;">
+<a href="/index.php/Building" title="Building">Buildings</a></div></th></tr><tr style="line-height: 1.5em;"><td colspan="2" style="background: transparent; padding: 0; text-align: center;&#32;;"><div style="padding: 0em 0.25em">
+<a href="/index.php/Workshop" title="Workshop">Workshops</a> • <a href="/index.php/Furnace" title="Furnace">Furnaces</a></div></td></tr><tr style="line-height: 1.5em;"><td colspan="2" style="background: transparent; padding: 0; text-align: center;&#32;;"><div style="padding: 0em 0.25em">
+<hr /></div></td></tr><tr style="line-height: 1.5em;"><th scope="row" style="background: #ddf; padding: 0.25em 1em; text-align: right; white-space: nowrap; width: 1%; background-color: #b4bdc8;;&#32;;"><a href="/index.php/Furniture" title="Furniture">Furniture</a></th><td style="background: transparent; padding: 0; text-align: left;&#32;;"><div style="padding: 0em 0.25em">
+<a href="/index.php/Animal_trap" title="Animal trap">Animal trap</a> • <a href="/index.php/Anvil" title="Anvil">Anvil</a> • <a href="/index.php/Armor_stand" title="Armor stand">Armor stand</a> • <a href="/index.php/Bed" title="Bed">Bed</a> • <a href="/index.php/Block" title="Block">Blocks</a> • <a href="/index.php/Box" class="mw-redirect" title="Box">Box</a> (chest • coffer) • <a href="/index.php/Bucket" title="Bucket">Bucket</a> • <a href="/index.php/Cabinet" title="Cabinet">Cabinet</a> • <a href="/index.php/Cage" title="Cage">Cage</a> (aquarium • terrarium) • <a href="/index.php/Coffin" title="Coffin">Coffin</a> (casket • sarcophagus) • <a href="/index.php/Restraint" title="Restraint">Restraint</a> • <a href="/index.php/Slab" title="Slab">Slab</a> • <a href="/index.php/Statue" title="Statue">Statue</a> • <a href="/index.php/Table" title="Table">Table</a> • <a href="/index.php/Throne" title="Throne">Throne</a> (chair) • <a href="/index.php/Weapon_rack" title="Weapon rack">Weapon rack</a></div></td></tr><tr style="line-height: 1.5em;"><th scope="row" style="background: #ddf; padding: 0.25em 1em; text-align: right; white-space: nowrap; width: 1%; background-color: #b4bdc8;;&#32;;"><a href="/index.php/Tool" title="Tool">Tools</a></th><td style="background: transparent; padding: 0; text-align: left;&#32;;"><div style="padding: 0em 0.25em">
+<a href="/index.php/Altar" title="Altar">Altar</a> • <a href="/index.php/Bookcase" title="Bookcase">Bookcase</a> • <a href="/index.php/Display_furniture" title="Display furniture">Display</a> (display case • pedestal) • <a href="/index.php/Hive" title="Hive">Hive</a> • <a href="/index.php/Nest_box" title="Nest box">Nest box</a></div></td></tr><tr style="line-height: 1.5em;"><td colspan="2" style="background: transparent; padding: 0; text-align: center;&#32;;"><div style="padding: 0em 0.25em">
+<hr /></div></td></tr><tr style="line-height: 1.5em;"><th scope="row" style="background: #ddf; padding: 0.25em 1em; text-align: right; white-space: nowrap; width: 1%; background-color: #b4bdc8;;&#32;;">Access</th><td style="background: transparent; padding: 0; text-align: left;&#32;;"><div style="padding: 0em 0.25em">
+<a href="/index.php/Bars" title="Bars">Bars</a> • <a href="/index.php/Bridge" title="Bridge">Bridge</a> • <a href="/index.php/Door" title="Door">Door</a> (portal) • <a href="/index.php/Floodgate" title="Floodgate">Floodgate</a> • <a href="/index.php/Grate" title="Grate">Grate</a> • <a href="/index.php/Hatch_cover" title="Hatch cover">Hatch</a> • <a href="/index.php/Road" title="Road">Road</a> • <a href="/index.php/Window" title="Window">Window</a></div></td></tr><tr style="line-height: 1.5em;"><th scope="row" style="background: #ddf; padding: 0.25em 1em; text-align: right; white-space: nowrap; width: 1%; background-color: #b4bdc8;;&#32;;"><a href="/index.php/Construction" title="Construction">Constructions</a></th><td style="background: transparent; padding: 0; text-align: left;&#32;;"><div style="padding: 0em 0.25em">
+<a href="/index.php/Floor" title="Floor">Floor</a> • <a href="/index.php/Fortification" title="Fortification">Fortification</a> • <a href="/index.php/Ramp" title="Ramp">Ramp</a> • <a href="/index.php/Stairs" title="Stairs">Stairs</a> • <a href="/index.php/Wall" title="Wall">Wall</a></div></td></tr><tr style="line-height: 1.5em;"><th scope="row" style="background: #ddf; padding: 0.25em 1em; text-align: right; white-space: nowrap; width: 1%; background-color: #b4bdc8;;&#32;;"><a href="/index.php/Machine" class="mw-redirect" title="Machine">Machine</a> and <a href="/index.php/Trap" title="Trap">trap parts</a></th><td style="background: transparent; padding: 0; text-align: left;&#32;;"><div style="padding: 0em 0.25em">
+<a href="/index.php/Axle" title="Axle">Axle</a> • <a href="/index.php/Gear_assembly" title="Gear assembly">Gear assembly</a> • <a href="/index.php/Lever" title="Lever">Lever</a> • <a href="/index.php/Mechanism" title="Mechanism">Mechanism</a> • <a href="/index.php/Millstone" title="Millstone">Millstone</a> • <a href="/index.php/Pipe_section" title="Pipe section">Pipe section</a> • <a href="/index.php/Pressure_plate" title="Pressure plate">Pressure plate</a> • <a href="/index.php/Roller" title="Roller">Roller</a> • <a href="/index.php/Screw_pump" title="Screw pump">Screw pump</a> • <a href="/index.php/Support" title="Support">Support</a> • <a href="/index.php/Trap" title="Trap">Trap</a> • <a href="/index.php/Water_wheel" title="Water wheel">Water wheel</a> • <a href="/index.php/Windmill" title="Windmill">Windmill</a></div></td></tr><tr style="line-height: 1.5em;"><th scope="row" style="background: #ddf; padding: 0.25em 1em; text-align: right; white-space: nowrap; width: 1%; background-color: #b4bdc8;;&#32;;">Other buildings</th><td style="background: transparent; padding: 0; text-align: left;&#32;;"><div style="padding: 0em 0.25em">
+<a href="/index.php/Archery_target" title="Archery target">Archery target</a> • <a href="/index.php/Vermin_catcher%27s_shop" title="Vermin catcher&#39;s shop">Vermin catcher's shop</a> • <a href="/index.php/Siege_engine" title="Siege engine">Siege engine</a> • <a href="/index.php/Trade_depot" title="Trade depot">Trade depot</a> • <a href="/index.php/Wagon_(embark)" title="Wagon (embark)">Wagon</a> • <a href="/index.php/Well" title="Well">Well</a> • <a href="/index.php/Nest" title="Nest">Nest</a></div></td></tr><tr style="line-height: 1.5em;"><td colspan="2" style="background: transparent; padding: 0; text-align: center;&#32;;"><div style="padding: 0em 0.25em">
+<hr /></div></td></tr><tr style="line-height: 1.5em;"><th scope="row" style="background: #ddf; padding: 0.25em 1em; text-align: right; white-space: nowrap; width: 1%; background-color: #b4bdc8;;&#32;;">Related articles</th><td style="background: transparent; padding: 0; text-align: left;&#32;;"><div style="padding: 0em 0.25em">
+<a href="/index.php/Design_strategies" title="Design strategies">Design strategies</a> • <a href="/index.php/Bedroom_design" title="Bedroom design">Bedroom design</a> • <a href="/index.php/Furniture_industry" title="Furniture industry">Furniture industry</a></div></td></tr></tbody></table></div>
