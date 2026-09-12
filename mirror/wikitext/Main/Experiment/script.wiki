@@ -1,0 +1,544 @@
+<syntaxhighlight lang="lua">
+function experiment_tokens(lines,options)
+    lines[#lines+1]="[NO_DRINK][NO_EAT][NO_SLEEP]"
+    lines[#lines+1]="[LARGE_PREDATOR]"
+    lines[#lines+1]="[NIGHT_CREATURE]"
+    lines[#lines+1]="[SUPERNATURAL]"
+    lines[#lines+1]="[FANCIFUL]"
+    if not one_in(4) and random_object_parameters.experimenter_creature then
+        if random_object_parameters.experimenter_creature.flags.MATES_TO_BREED then
+            lines[#lines+1]="[CASTE:FEMALE]"
+                lines[#lines+1]="[FEMALE]"
+            lines[#lines+1]="[CASTE:MALE]"
+                lines[#lines+1]="[MALE]"
+            lines[#lines+1]="[SELECT_CASTE:ALL]"
+        else
+            lines[#lines+1]="[NO_GENDER]"
+        end
+    else
+        lines[#lines+1]="[NO_GENDER]"
+    end
+    lines[#lines+1]="[BIOME:ANY_LAND]"
+    lines[#lines+1]="[PETVALUE:2000]"
+    lines[#lines+1]="[ALL_ACTIVE]"
+    lines[#lines+1]="[NOFEAR]"
+    lines[#lines+1]="[NO_FEVERS]"
+    options.spheres=options.spheres or {
+        NIGHT=true,
+        DEFORMITY=true
+    }
+    options.never_uniform=true
+    options.experiment_colors=true
+    options.forced_color={ -- overridden by humanoid, but that's fine
+            f=2,
+            b=0,
+            br=1
+        }
+    options.experiment_attack_tweak=true
+    options.sickness_name="night sickness"
+    options.pref_str=options.pref_str or {"unsettling origin"}
+--[[
+************************** EXPERIMENT OBJECT def - desc phys/affect
+	they expect the amalgamated giants to refer to all the pieces making them up -- do we do tissues differently though?  go all muscle?
+		but don't actually give them tissues
+]]
+    options.no_extra_description=true
+    options.cannot_swim=true
+end
+
+function experimenter_sphere_info(lines,options)
+    local ropar=random_object_parameters
+    if ropar.experimenter_creature then
+        if ropar.experimenter_creature.caste[ropar.experimenter_hf.caste].flags.UNIQUE_DEMON then
+            -- ?. would be pretty cool, alas
+            local spheres = ropar.experimenter_hf.profile and ropar.experimenter_hf.profile.mpp and ropar.experimenter_hf.profile.mpp.spheres
+            if spheres then
+                return spheres.CHAOS,spheres.DEFORMITY
+            end
+        end
+    end
+    return false,false
+end
+
+function experiment_description(lines,options)
+    local ropar=random_object_parameters
+    local end_str=""
+    local add_desc=function(str) end_str=end_str..str end
+    if ropar.experimenter_hf then
+        add_desc(" This night creature was first created ")
+        if options.failed_experiment then
+            add_desc("accidentally ")
+        end
+        add_desc("by the ")
+        local ip = ropar.experimenter_hf.profile and ropar.experimenter_hf.profile.interaction_profile
+        if ip and ip.uwss_display_name_sing~="" then
+            add_desc(ropar.experimenter_race_adj..ip.uwss_display_name_sing)
+        else
+            add_desc(ropar.experimenter_race_name)
+        end
+        add_desc(" ")
+        add_desc(ropar.experimenter_hf.name.translated)
+        if ropar.experimenter_capital_st then
+            add_desc(" of ")
+            add_desc(ropar.experimenter_capital_st.name.translated)
+        end
+        local chaos,deformity=experimenter_sphere_info(lines,options)
+        if deformity and chaos then
+            add_desc(" through the fiend's terrifying power")
+        elseif deformity then
+            add_desc(" through the fiend's twisted power")
+        elseif chaos then
+            add_desc(" through the fiend's chaotic power")
+        else
+            add_desc(" after horrible experiments")
+            if options.failed_experiment then
+                add_desc(" gone wrong")
+            end
+        end
+        if ropar.experimenter_source_hfid~=-1 or ropar.experimenter_source_race~=-1 then
+            if deformity or chaos then add_desc(" unleashed upon ")
+            else add_desc(" on ")
+            end
+            if options.amalgam_experiment then add_desc("multitudes")
+            elseif ropar.experimenter_source_hfid~=-1 then
+                add_desc("the ")
+                if ropar.experiment_hf then
+                    local ip = ropar.experiment_hf.profile and ropar.experiment_hf.profile.interaction_profile
+                    if ip then
+                        add_desc(ropar.experiment_source_race_adj.." "..ip.uwss_display_name_sing)
+                    else
+                        add_desc(ropar.experiment_source_race_name)
+                    end
+                    add_desc(" ")
+                    add_desc(ropar.experiment_hf.name.translated)
+                else add_desc("an unknown creature")
+                end
+            elseif ropar.experimenter_source_race~=-1 then
+                add_desc(ropar.experiment_source_race_name_plural)
+            end
+        end
+        if ropar.experimenter_create_st then
+            add_desc(" in "..ropar.experimenter_create_st.name.translated)
+        end
+        add_desc(" in the year "..tostring(world.year)..".")
+    end
+    return end_str
+end
+
+-- you can add more of your own, e.g. experiment_nouns.cyborg or whatever
+experiment_nouns={
+    humanoid={
+        {"hand","hands"},
+        {"demon","demons"},
+        {"warrior","warriors"},
+        {"soldier","soldiers"},
+        {"fist","fists"},
+        {"eye","eyes"},
+    },
+    humanoid_giant={
+        {"giant","giants"},
+        {"hulk","hulks"},
+        {"tower","towers"},
+        {"mountain","mountains"},
+    },
+    beast_small={
+        {"dog","dogs"},
+        {"hound","hounds"},
+        {"wolf","wolves"},
+    },
+    beast_large={
+        {"beast","beasts"},
+        {"monster","monsters"},
+        {"creature","creatures"},
+    },
+    failed_small={
+        {"mistake","mistakes"},
+        {"folly","follies"},
+        {"experiment","experiments"},
+    },
+    failed_large={
+        {"nightmare","nightmares"},
+        {"catastrophe","catastrophes"},
+        {"disaster","disasters"},
+    }
+}
+
+experiment_random_names={
+    --originally just a straight assignment, wanted to take the opportunity to let mods add variety
+    deformity_chaos={"horror"},
+    deformity={"misfortune"},
+    chaos={"chaos"},
+    night={"night"}
+}
+
+function experiment_name_token(lines,options)
+    lines[#lines+1]="[GO_TO_START]"
+    local ropar = random_object_parameters
+    local name_to_use=ropar.experimenter_hf and ropar.experimenter_hf.name
+    if one_in(4) then
+        if one_in(2) then name_to_use=ropar.experimenter_create_st and ropar.experimenter_create_st.name or name_to_use
+        else name_to_use=ropar.experimenter_capital_st and ropar.experimenter_capital_st.name or name_to_use
+        end
+    end
+    local experiment_name=nil
+    if name_to_use then
+        -- we preprocess these indices for lua--i know it's inconsistent, sorry
+        if string.len(name_to_use.firstname)>0 and ((not name_to_use.translated_epithet_the and not name_to_use.translated_epithet_compound) or one_in(2)) then
+            experiment_name=name_to_use.firstname
+            experiment_name=capitalize_string_words(experiment_name)
+        else
+            if name_to_use.translated_epithet_the and (one_in(2) or not name_to_use.translated_epithet_compound) then
+                -- "of The Murk"
+                if one_in(2) then experiment_name=translated_epithet_the
+                else experiment_name=native_epithet_the
+                end
+            elseif name_to_use.translated_epithet_compound then
+                -- "of Tireshadows"
+                if one_in(2) then experiment_name=translated_epithet_compound
+                else experiment=native_epithet_compound
+                end
+            end
+        end
+    end
+    if not experiment_name or one_in(10) then
+        local chaos,deformity=experimenter_sphere_info(lines,options)
+        if deformity and chaos then experiment_name=pick_random(experiment_random_names.deformity_chaos)
+        elseif deformity then experiment_name=pick_random(experiment_random_names.deformity)
+        elseif chaos then experiment_name=pick_random(experiment_random_names.chaos)
+        else experiment_name=pick_random(experiment_random_names.night)
+        end
+    end
+    options.experiment_name_type = options.experiment_name_type or ropar.making_experiment
+    local nmm,pnmm=table.unpack(pick_random(experiment_nouns[options.experiment_name_type]))
+    local full_name_str
+    if one_in(2) then
+        local possessive=experiment_name.."'s "
+        full_name_str=possessive..nmm..":"..possessive..pnmm..":"..possessive..nmm
+    else
+        local possessive=" of "..experiment_name
+        full_name_str=nmm..possessive..":"..pnmm..possessive..":"..nmm..possessive
+    end
+    lines[#lines+1]="[NAME:"..full_name_str.."]"
+    lines[#lines+1]="[CASTE_NAME:"..full_name_str.."]"
+end
+
+creatures.experiment.humanoid.default=function(tok)
+    local lines={}
+    local options={
+        token=tok,
+        normal_biological=true
+    }
+    if one_in(2) then
+        options.night_creature_strength_pref=true
+    else
+        options.night_creature_agile_pref=true
+    end
+    lines[#lines+1]="[CAN_LEARN]"
+    lines[#lines+1]="[LOCAL_POPS_CONTROLLABLE]"
+    lines[#lines+1]="[LOCAL_POPS_PRODUCE_HEROES]"
+--[[************************** EXPERIMENT OBJECT personality + desc
+        --do a few archetypes that'll be appended to the description
+    lines[#lines+1]="[PERSONALITY:ANXIETY_PROPENSITY:0:0:0]"
+    lines[#lines+1]="[PERSONALITY:DEPRESSION_PROPENSITY:0:0:0]"
+    lines[#lines+1]="[PERSONALITY:BASHFUL:0:0:0]"
+    lines[#lines+1]="[PERSONALITY:STRESS_VULNERABILITY:0:0:0]"
+    lines[#lines+1]="[PERSONALITY:FRIENDLINESS:0:0:0]"
+    lines[#lines+1]="[PERSONALITY:ASSERTIVENESS:100:100:100]"
+    lines[#lines+1]="[PERSONALITY:DISDAIN_ADVICE:100:100:100]"
+    lines[#lines+1]="[PERSONALITY:CHEER_PROPENSITY:0:0:0]"
+    lines[#lines+1]="[PERSONALITY:GRATITUDE:0:0:0]"
+    lines[#lines+1]="[PERSONALITY:TRUST:0:0:0]"
+    lines[#lines+1]="[PERSONALITY:ALTRUISM:0:0:0]"
+    lines[#lines+1]="[PERSONALITY:SWAYED_BY_EMOTIONS:0:0:0]"
+    lines[#lines+1]="[PERSONALITY:CRUELTY:100:100:100]"
+    lines[#lines+1]="[PERSONALITY:PRIDE:100:100:100]"
+    lines[#lines+1]="[PERSONALITY:GREED:100:100:100]"
+]]
+    lines[#lines+1]="[CAN_SPEAK]"
+    options.can_learn=true
+    lines[#lines+1]="[BODY_APPEARANCE_MODIFIER:HEIGHT:90:95:98:100:102:105:110]"
+    lines[#lines+1]="[BODY_APPEARANCE_MODIFIER:BROADNESS:90:95:98:100:102:105:110]"
+    if options.night_creature_strength_pref then
+        lines[#lines+1]="[PHYS_ATT_RANGE:STRENGTH:1000:1250:1500:2000:2250:2500:3000]"
+        lines[#lines+1]="[PHYS_ATT_RANGE:AGILITY:450:550:700:750:800:850:900]"
+        lines[#lines+1]="[PHYS_ATT_RANGE:TOUGHNESS:850:900:950:1000:1050:1100:1150]"
+        lines[#lines+1]="[PHYS_ATT_RANGE:ENDURANCE:850:900:950:1000:1050:1100:1150]"
+        options.special_walk_speed=1000;
+    elseif options.night_creature_agile_pref then
+        lines[#lines+1]="[PHYS_ATT_RANGE:STRENGTH:450:550:700:750:800:850:900]"
+        lines[#lines+1]="[PHYS_ATT_RANGE:AGILITY:1000:1250:1500:2000:2250:2500:3000]"
+        lines[#lines+1]="[PHYS_ATT_RANGE:TOUGHNESS:850:900:950:1000:1050:1100:1150]"
+        lines[#lines+1]="[PHYS_ATT_RANGE:ENDURANCE:850:900:950:1000:1050:1100:1150]"
+        options.special_walk_speed=800;
+    end
+    lines[#lines+1]="[PHYS_ATT_RANGE:RECUPERATION:450:1050:1150:1250:1350:1550:2250]"
+    lines[#lines+1]="[PHYS_ATT_RANGE:DISEASE_RESISTANCE:700:1300:1400:1500:1600:1800:2500]"
+    lines[#lines+1]="[MENT_ATT_RANGE:ANALYTICAL_ABILITY:1250:1500:1750:2000:2500:3000:5000]"
+    lines[#lines+1]="[MENT_ATT_RANGE:FOCUS:1250:1500:1750:2000:2500:3000:5000]"
+    lines[#lines+1]="[MENT_ATT_RANGE:WILLPOWER:1250:1500:1750:2000:2500:3000:5000]"
+    lines[#lines+1]="[MENT_ATT_RANGE:PATIENCE:0:333:666:1000:2333:3666:5000]"
+    lines[#lines+1]="[MENT_ATT_RANGE:MEMORY:1250:1500:1750:2000:2500:3000:5000]"
+    lines[#lines+1]="[MENT_ATT_RANGE:LINGUISTIC_ABILITY:450:1050:1150:1250:1350:1550:2250]"
+    lines[#lines+1]="[MENT_ATT_RANGE:MUSICALITY:0:333:666:1000:2333:3666:5000]"
+    lines[#lines+1]="[MENT_ATT_RANGE:SOCIAL_AWARENESS:700:1300:1400:1500:1600:1800:2500]"
+    experiment_tokens(lines,options)
+    populate_sphere_info(lines,options)
+    local rcp={
+        type="GENERAL_HUMANOID",
+		name_string="humanoid",
+		tile='H',
+		body_base="HUMANOID",
+        --FOR SKIN/ORGANS AND NO HAIR/FEATHERS AT FIRST
+		c_class="AMPHIBIAN",
+		min_size=1,
+        cannot_have_shell=true
+    }
+    add_body_size(lines,50000+trandom(4)*10000+trandom(11)*1000,options)
+    lines[#lines+1]="[CREATURE_TILE:72]"
+    options.forced_color={
+        f=4,
+        b=0,
+        br=1
+    }
+    options.end_phrase=experiment_description(lines,options)
+    options.experiment_layering=true
+    build_procgen_creature(rcp,lines,options)
+    experiment_name_token(lines,options)
+    return {raws=lines,weight=1}
+end
+
+creatures.experiment.humanoid_giant.default=function(tok)
+    local lines={}
+    local options={
+        amalgam_experiment=true,
+        token=tok,
+        normal_biological=true
+    }
+    if one_in(2) then
+        options.night_creature_strength_pref=true
+    else
+        options.night_creature_agile_pref=true
+    end
+    lines[#lines+1]="[BODY_APPEARANCE_MODIFIER:HEIGHT:90:95:98:100:102:105:110]";
+    lines[#lines+1]="[BODY_APPEARANCE_MODIFIER:BROADNESS:90:95:98:100:102:105:110]";
+    experiment_tokens(lines,options)
+    populate_sphere_info(lines,options)
+    local rcp={
+        type="GENERAL_HUMANOID",
+		name_string="humanoid",
+		tile='H',
+		body_base="HUMANOID",
+		c_class="FLESHY",
+		min_size=1,
+        cannot_have_shell=true
+    }
+    add_body_size(lines,5000000+trandom(4)*1000000+trandom(11)*100000,options)
+    lines[#lines+1]="[CREATURE_TILE:165]"
+    options.end_phrase=experiment_description(lines,options)
+    build_procgen_creature(rcp,lines,options)
+    experiment_name_token(lines,options)
+    return {raws=lines,weight=1}
+end
+
+beast_experiment_rcps={
+    {
+        name_string="quadruped",
+        tile='Q',
+        body_base="QUADRUPED",
+        maybe_slinky=true
+    },
+    {
+        name_string="hexapod",
+        tile='H',
+        body_base="INSECT"
+    },
+    {
+        name_string="spider",
+        tile='S',
+        body_base="SPIDER"
+    },
+    {
+        name_string="scorpion",
+        tile='S',
+        body_base="SPIDER",
+        must_have_pincers=true,
+        must_have_scorpion_tail=true
+    },
+    {
+        name_string="decapod",
+        tile='D',
+        body_base="TEN_LEGGED"
+    },
+    {
+        name_string="octopod",
+        tile='O',
+        body_base="EIGHT_LEGGED"
+    },
+    {
+        name_string="primate",
+        tile='P',
+        body_base="QUADRUPED_FRONT_GRASP"
+    },
+}
+
+function make_beast_rcp(lines,options)
+    local rcp={
+        type="GENERAL_QUADRUPED",
+        c_class="FLESHY",
+        min_size=1,
+        cannot_have_shell=true,
+        cannot_have_get_more_legs=true
+    }
+    map_merge(rcp,pick_random(beast_experiment_rcps))
+    if rcp.maybe_slinky then
+        rcp.maybe_slinky=nil
+        if one_in(2) then rcp.SLINKY_QUADRUPED=true end
+    end
+    return rcp
+end
+
+creatures.experiment.beast_small.default=function(tok)
+    local lines={}
+    local options={
+        token=tok,
+        normal_biological=true
+    }
+    if one_in(2) then
+        options.night_creature_strength_pref=true
+    else
+        options.night_creature_agile_pref=true
+    end
+    lines[#lines+1]="[BODY_APPEARANCE_MODIFIER:LENGTH:90:95:98:100:102:105:110]";
+    lines[#lines+1]="[BODY_APPEARANCE_MODIFIER:HEIGHT:90:95:98:100:102:105:110]";
+    lines[#lines+1]="[BODY_APPEARANCE_MODIFIER:BROADNESS:90:95:98:100:102:105:110]";
+    experiment_tokens(lines,options)
+    populate_sphere_info(lines,options)
+    local rcp=make_beast_rcp(lines,options)
+    add_body_size(lines,50000+trandom(4)*10000+trandom(11)*1000,options)
+    lines[#lines+1]="[CREATURE_TILE:"..rcp.tile.."]"
+    options.end_phrase=experiment_description(lines,options)
+    build_procgen_creature(rcp,lines,options)
+    experiment_name_token(lines,options)
+    return {raws=lines,weight=1}
+end
+
+creatures.experiment.beast_large.default=function(tok)
+    local lines={}
+    local options={
+        token=tok,
+        normal_biological=true
+
+    }
+    if one_in(2) then
+        options.night_creature_strength_pref=true
+    else
+        options.night_creature_agile_pref=true
+    end
+    lines[#lines+1]="[BODY_APPEARANCE_MODIFIER:LENGTH:90:95:98:100:102:105:110]";
+    lines[#lines+1]="[BODY_APPEARANCE_MODIFIER:HEIGHT:90:95:98:100:102:105:110]";
+    lines[#lines+1]="[BODY_APPEARANCE_MODIFIER:BROADNESS:90:95:98:100:102:105:110]";
+    experiment_tokens(lines,options)
+    populate_sphere_info(lines,options)
+    local rcp=make_beast_rcp(lines,options)
+    add_body_size(lines,500000+trandom(4)*100000+trandom(11)*10000,options)
+    lines[#lines+1]="[CREATURE_TILE:"..rcp.tile.."]"
+    options.end_phrase=experiment_description(lines,options)
+    build_procgen_creature(rcp,lines,options)
+    experiment_name_token(lines,options)
+    return {raws=lines,weight=1}
+end
+
+failed_experiment_rcps={
+    {
+        name_string="blob",
+        tile='b',
+        body_base="AMORPHOUS",
+    },
+    {
+        name_string="maggot",
+        tile='m',
+        body_base="INSECT_LARVA",
+    },
+    {
+        name_string="worm",
+        tile='w',
+        body_base="WORM",
+    },
+    {
+        name_string="wyrm",
+        tile='w',
+        body_base="NO_LIMB",
+    },
+    {
+        name_string="snake",
+        tile='s',
+        body_base="SNAKE",
+    },
+    {
+        name_string="armless biped",
+        tile='b',
+        body_base="TWO_LEGS_NO_ARMS_HUMANOID",
+        always_flightless=true
+    },
+}
+
+function make_failed_rcp(lines,options)
+    local rcp={
+        type="BLOB",
+        c_class="FLESHY",
+        min_size=1,
+        cannot_have_shell=true,
+    }
+    map_merge(rcp,pick_random(failed_experiment_rcps))
+    if options.is_large then rcp.tile=string.upper(rcp.tile) end
+    return rcp
+end
+
+creatures.experiment.failed_small.default=function(tok)
+    local lines={}
+    local options={
+        failed_experiment=true,
+        token=tok,
+        normal_biological=true
+    }
+    if one_in(2) then
+        options.night_creature_strength_pref=true
+    else
+        options.night_creature_agile_pref=true
+    end
+    experiment_tokens(lines,options)
+    populate_sphere_info(lines,options)
+    local rcp=make_beast_rcp(lines,options)
+    add_body_size(lines,50000+trandom(4)*10000+trandom(11)*1000,options)
+    lines[#lines+1]="[CREATURE_TILE:"..rcp.tile.."]"
+    options.end_phrase=experiment_description(lines,options)
+    build_procgen_creature(rcp,lines,options)
+    experiment_name_token(lines,options)
+    return {raws=lines,weight=1}
+end
+
+creatures.experiment.failed_large.default=function(tok)
+    local lines={}
+    local options={
+        is_large=true,
+        failed_experiment=true,
+        token=tok,
+        normal_biological=true
+    }
+    if one_in(2) then
+        options.night_creature_strength_pref=true
+    else
+        options.night_creature_agile_pref=true
+    end
+    experiment_tokens(lines,options)
+    populate_sphere_info(lines,options)
+    local rcp=make_beast_rcp(lines,options)
+    add_body_size(lines,500000+trandom(4)*100000+trandom(11)*10000,options)
+    lines[#lines+1]="[CREATURE_TILE:"..rcp.tile.."]"
+    options.end_phrase=experiment_description(lines,options)
+    build_procgen_creature(rcp,lines,options)
+    experiment_name_token(lines,options)
+    return {raws=lines,weight=1}
+end
+</syntaxhighlight>
+<noinclude>{{Category|Lua script pages}}{{Category|Creature raw pages}}</noinclude>

@@ -1,0 +1,626 @@
+<div class="mw-parser-output"><p>This page was created to aid those looking to create new civilizations. Those familiar with entity design should feel free to add helpful/obscure information to the lists below to help less-experienced members of the community with their entities.
+</p>
+<h2><span class="mw-headline" id="Example_Animal_Person_Civilization">Example Animal Person Civilization</span></h2>
+<p>The various <a href="/index.php/Animal_person#Savage_Animal_People" title="Animal person">Animal People</a> (with the exception of those based on creatures with the [AQUATIC] token) already have all the parts they need to join civilized society. They just need to be given an ENTITY that will allow them to create civilizations of their own. The following example creates water-themed <a href="/index.php/Otter_man" title="Otter man">otter people</a> civilizations based on the vanilla human civilizations.
+</p>
+<div class="code-raw mw-highlight mw-highlight-lang-bbcode mw-content-ltr" style="border-left: 6px solid #a4a4a4;" dir="ltr"><pre><span></span>entity_example
+													-- make sure the file name starts with &quot;entity_&quot; and matches the first line in the file --
+<span class="k">[OBJECT</span><span class="err">:ENTITY</span><span class="k">]</span>										-- make sure the file has an <span class="k">[OBJECT</span><span class="err">:ENTITY</span><span class="k">]</span> tag before the new ENTITY --
+
+<span class="k">[ENTITY</span><span class="err">:OTTER_PEOPLE</span><span class="k">]</span> 								-- pick any animal person based on a non-AQUATIC creature --		
+	<span class="k">[CREATURE</span><span class="err">:OTTER_MAN</span><span class="k">]</span>							note that OTTER_MAN is based on RIVER OTTER, not SEA OTTER so they&#39;ll prefer fresh water over salt water
+	
+													-- give them some appropriate starting biomes --
+	<span class="k">[START_BIOME</span><span class="err">:RIVER_TROPICAL_FRESHWATER</span><span class="k">]</span>			starts in temperate and tropical, fresh or brackish water biomes
+	<span class="k">[START_BIOME</span><span class="err">:RIVER_TEMPERATE_FRESHWATER</span><span class="k">]</span>		
+	<span class="k">[START_BIOME</span><span class="err">:RIVER_TROPICAL_BRACKISHWATER</span><span class="k">]</span>	
+	<span class="k">[START_BIOME</span><span class="err">:RIVER_TEMPERATE_BRACKISHWATER</span><span class="k">]</span>		
+	<span class="k">[START_BIOME</span><span class="err">:LAKE_TROPICAL_FRESHWATER</span><span class="k">]</span>		
+	<span class="k">[START_BIOME</span><span class="err">:LAKE_TEMPERATE_FRESHWATER</span><span class="k">]</span>			you can also use &quot;EXCLUSIVE_START_BIOME:X&quot; to create a biome that the entity can start from,
+	<span class="k">[START_BIOME</span><span class="err">:LAKE_TROPICAL_BRACKISHWATER</span><span class="k">]</span>			but not create any further settlements in (unless explicitly added as a &quot;SETTLEMENT_BIOME&quot;)
+	<span class="k">[START_BIOME</span><span class="err">:LAKE_TEMPERATE_BRACKISHWATER</span><span class="k">]</span>
+	<span class="k">[START_BIOME</span><span class="err">:POOL_TROPICAL_FRESHWATER</span><span class="k">]</span>
+	<span class="k">[START_BIOME</span><span class="err">:POOL_TEMPERATE_FRESHWATER</span><span class="k">]</span>
+	<span class="k">[START_BIOME</span><span class="err">:POOL_TROPICAL_BRACKISHWATER</span><span class="k">]</span>
+	<span class="k">[START_BIOME</span><span class="err">:POOL_TEMPERATE_BRACKISHWATER</span><span class="k">]</span>		note that entities CAN originate and build functioning settlements in the middle of the ocean
+	<span class="k">[START_BIOME</span><span class="err">:SWAMP_TROPICAL_FRESHWATER</span><span class="k">]</span>				they just need to be given ocean biomes (like &quot;ANY_OCEAN&quot;) for either their START_BIOMEs or SETTLEMENT_BIOMEs
+	<span class="k">[START_BIOME</span><span class="err">:SWAMP_TEMPERATE_FRESHWATER</span><span class="k">]</span>			!!ocean-based settlements appear to behave properly during world gen, but are likely buggy if visited in adventure mode!!
+	<span class="k">[START_BIOME</span><span class="err">:MARSH_TROPICAL_FRESHWATER</span><span class="k">]</span>
+	<span class="k">[START_BIOME</span><span class="err">:MARSH_TEMPERATE_FRESHWATER</span><span class="k">]</span>
+
+													-- list any additional biomes they can settle in --
+	<span class="k">[SETTLEMENT_BIOME</span><span class="err">:ANY_FOREST</span><span class="k">]</span>					can settle in all non-ocean water biomes (+ forests in case there aren&#39;t enough wet areas for them)
+	<span class="k">[SETTLEMENT_BIOME</span><span class="err">:ANY_LAKE</span><span class="k">]</span>
+	<span class="k">[SETTLEMENT_BIOME</span><span class="err">:ANY_RIVER</span><span class="k">]</span>
+	<span class="k">[SETTLEMENT_BIOME</span><span class="err">:ANY_POOL</span><span class="k">]</span>
+	<span class="k">[SETTLEMENT_BIOME</span><span class="err">:SWAMP_TROPICAL_SALTWATER</span><span class="k">]</span>
+	<span class="k">[SETTLEMENT_BIOME</span><span class="err">:SWAMP_TEMPERATE_SALTWATER</span><span class="k">]</span>
+	<span class="k">[SETTLEMENT_BIOME</span><span class="err">:MARSH_TROPICAL_SALTWATER</span><span class="k">]</span>
+	<span class="k">[SETTLEMENT_BIOME</span><span class="err">:MARSH_TEMPERATE_SALTWATER</span><span class="k">]</span>
+
+													-- list the biomes they can expand their borders through and the expansion rates --
+	<span class="k">[BIOME_SUPPORT</span><span class="err">:ANY_FOREST:1</span><span class="k">]</span> 				
+	<span class="k">[BIOME_SUPPORT</span><span class="err">:ANY_SHRUBLAND:1</span><span class="k">]</span>					can expand across shrubland and ocean, but cannot settle in them because they are neither START nor SETTLEMENT biomes
+	<span class="k">[BIOME_SUPPORT</span><span class="err">:OCEAN_TEMPERATE:3</span><span class="k">]</span>
+	<span class="k">[BIOME_SUPPORT</span><span class="err">:OCEAN_TROPICAL:3</span><span class="k">]</span>
+	<span class="k">[BIOME_SUPPORT</span><span class="err">:OCEAN_ARCTIC:1</span><span class="k">]</span>
+	<span class="k">[BIOME_SUPPORT</span><span class="err">:SWAMP_TROPICAL_SALTWATER:1</span><span class="k">]</span>		prefers fresh water, but can use salt water
+	<span class="k">[BIOME_SUPPORT</span><span class="err">:SWAMP_TEMPERATE_SALTWATER:1</span><span class="k">]</span>
+	<span class="k">[BIOME_SUPPORT</span><span class="err">:SWAMP_TROPICAL_FRESHWATER:5</span><span class="k">]</span>
+	<span class="k">[BIOME_SUPPORT</span><span class="err">:SWAMP_TEMPERATE_FRESHWATER:5</span><span class="k">]</span>
+	<span class="k">[BIOME_SUPPORT</span><span class="err">:MARSH_TROPICAL_SALTWATER:1</span><span class="k">]</span>
+	<span class="k">[BIOME_SUPPORT</span><span class="err">:MARSH_TEMPERATE_SALTWATER:1</span><span class="k">]</span>
+	<span class="k">[BIOME_SUPPORT</span><span class="err">:MARSH_TROPICAL_FRESHWATER:5</span><span class="k">]</span>
+	<span class="k">[BIOME_SUPPORT</span><span class="err">:MARSH_TEMPERATE_FRESHWATER:5</span><span class="k">]</span>
+	<span class="k">[BIOME_SUPPORT</span><span class="err">:RIVER_TROPICAL_SALTWATER:1</span><span class="k">]</span>
+	<span class="k">[BIOME_SUPPORT</span><span class="err">:RIVER_TEMPERATE_SALTWATER:1</span><span class="k">]</span>
+	<span class="k">[BIOME_SUPPORT</span><span class="err">:RIVER_TROPICAL_BRACKISHWATER:2</span><span class="k">]</span>
+	<span class="k">[BIOME_SUPPORT</span><span class="err">:RIVER_TEMPERATE_BRACKISHWATER:2</span><span class="k">]</span>
+	<span class="k">[BIOME_SUPPORT</span><span class="err">:RIVER_TROPICAL_FRESHWATER:5</span><span class="k">]</span>
+	<span class="k">[BIOME_SUPPORT</span><span class="err">:RIVER_TEMPERATE_FRESHWATER:5</span><span class="k">]</span>
+	<span class="k">[BIOME_SUPPORT</span><span class="err">:LAKE_TROPICAL_SALTWATER:1</span><span class="k">]</span>
+	<span class="k">[BIOME_SUPPORT</span><span class="err">:LAKE_TEMPERATE_SALTWATER:1</span><span class="k">]</span>
+	<span class="k">[BIOME_SUPPORT</span><span class="err">:LAKE_TROPICAL_BRACKISHWATER:2</span><span class="k">]</span>
+	<span class="k">[BIOME_SUPPORT</span><span class="err">:LAKE_TEMPERATE_BRACKISHWATER:2</span><span class="k">]</span>
+	<span class="k">[BIOME_SUPPORT</span><span class="err">:LAKE_TROPICAL_FRESHWATER:5</span><span class="k">]</span>
+	<span class="k">[BIOME_SUPPORT</span><span class="err">:LAKE_TEMPERATE_FRESHWATER:5</span><span class="k">]</span>
+	<span class="k">[BIOME_SUPPORT</span><span class="err">:POOL_TROPICAL_SALTWATER:1</span><span class="k">]</span>
+	<span class="k">[BIOME_SUPPORT</span><span class="err">:POOL_TEMPERATE_SALTWATER:1</span><span class="k">]</span>
+	<span class="k">[BIOME_SUPPORT</span><span class="err">:POOL_TROPICAL_BRACKISHWATER:2</span><span class="k">]</span>
+	<span class="k">[BIOME_SUPPORT</span><span class="err">:POOL_TEMPERATE_BRACKISHWATER:2</span><span class="k">]</span>
+	<span class="k">[BIOME_SUPPORT</span><span class="err">:POOL_TROPICAL_FRESHWATER:5</span><span class="k">]</span>
+	<span class="k">[BIOME_SUPPORT</span><span class="err">:POOL_TEMPERATE_FRESHWATER:5</span><span class="k">]</span>
+
+													-- set the civ settings --
+
+	<span class="k">[FRIENDLY_COLOR</span><span class="err">:7:0:1</span><span class="k">]</span>							color of civ (same as vanilla humans)
+
+	<span class="k">[MAX_STARTING_CIV_NUMBER</span><span class="err">:100</span><span class="k">]</span>					civ limits (same as vanilla humans)
+	<span class="k">[MAX_POP_NUMBER</span><span class="err">:10000</span><span class="k">]</span>
+	<span class="k">[MAX_SITE_POP_NUMBER</span><span class="err">:120</span><span class="k">]</span>
+
+	<span class="k">[ALL_MAIN_POPS_CONTROLLABLE]</span>					they are playable in adventure mode (same as vanilla humans)
+
+	<span class="k">[DEFAULT_SITE_TYPE</span><span class="err">:CITY</span><span class="k">]</span>						they will build and prefer cities, but can live in elven or dwarven settlements (same as vanilla humans)
+	<span class="k">[LIKES_SITE</span><span class="err">:CITY</span><span class="k">]</span>
+	<span class="k">[TOLERATES_SITE</span><span class="err">:CITY</span><span class="k">]</span>
+	<span class="k">[TOLERATES_SITE</span><span class="err">:TREE_CITY</span><span class="k">]</span>
+	<span class="k">[TOLERATES_SITE</span><span class="err">:CAVE_DETAILED</span><span class="k">]</span>				
+		
+	<span class="k">[BUILDS_OUTDOOR_FORTIFICATIONS]</span>					they will build castles and tombs (same as vanilla humans)
+	<span class="k">[BUILDS_OUTDOOR_TOMBS]</span>
+
+	<span class="k">[WORLD_CONSTRUCTION</span><span class="err">:WALL</span><span class="k">]</span>						they will build walls, bridges, and roads (same as vanilla humans)
+	<span class="k">[WORLD_CONSTRUCTION</span><span class="err">:BRIDGE</span><span class="k">]</span>
+	<span class="k">[WORLD_CONSTRUCTION</span><span class="err">:ROAD</span><span class="k">]</span>
+
+	<span class="k">[BANDITRY</span><span class="err">:10</span><span class="k">]</span>									they will have bandits (10% of population, same as vanilla humans)
+
+
+													-- set some religious biases --
+
+	<span class="k">[RELIGION</span><span class="err">:PANTHEON</span><span class="k">]</span>								they will use multiple gods (same as vanilla humans)
+	<span class="k">[RELIGION_SPHERE</span><span class="err">:WATER</span><span class="k">]</span>							they will use a water god (picking a sphere prevents them from using the opposing sphere(s), in this case FIRE)
+	<span class="k">[SPHERE_ALIGNMENT</span><span class="err">:LAKES:5120</span><span class="k">]</span>					they are 20x more likely to use gods from these particular spheres
+	<span class="k">[SPHERE_ALIGNMENT</span><span class="err">:RIVERS:5120</span><span class="k">]</span>					default value is 256, range is 0 to 25600
+	<span class="k">[SPHERE_ALIGNMENT</span><span class="err">:RAIN:5120</span><span class="k">]</span>			
+	<span class="k">[SPHERE_ALIGNMENT</span><span class="err">:FISH:5120</span><span class="k">]</span>
+	<span class="k">[SPHERE_ALIGNMENT</span><span class="err">:FISHING:5120</span><span class="k">]</span>
+	<span class="k">[SPHERE_ALIGNMENT</span><span class="err">:COASTS:5120</span><span class="k">]</span>	
+	<span class="k">[SPHERE_ALIGNMENT</span><span class="err">:SEASONS:5120</span><span class="k">]</span>	
+	<span class="k">[SPHERE_ALIGNMENT</span><span class="err">:CHAOS:5120</span><span class="k">]</span>
+	<span class="k">[SPHERE_ALIGNMENT</span><span class="err">:YOUTH:5120</span><span class="k">]</span>
+
+
+													-- set up their language --
+
+	<span class="k">[TRANSLATION</span><span class="err">:HUMAN</span><span class="k">]</span>								they will use the human language
+
+	<span class="k">[SELECT_SYMBOL</span><span class="err">:ALL:WILD</span><span class="k">]</span>						they will prefer using these word groups (symbols) when naming anything
+	<span class="k">[SELECT_SYMBOL</span><span class="err">:ALL:AQUATIC</span><span class="k">]</span>
+	<span class="k">[SELECT_SYMBOL</span><span class="err">:ALL:GAMES</span><span class="k">]</span>
+	<span class="k">[SELECT_SYMBOL</span><span class="err">:ALL:NATURE</span><span class="k">]</span>
+
+	<span class="k">[CULL_SYMBOL</span><span class="err">:ALL:EARTH</span><span class="k">]</span>							they will not use these word groups when naming anything
+	<span class="k">[CULL_SYMBOL</span><span class="err">:ALL:FIRE</span><span class="k">]</span>
+	<span class="k">[CULL_SYMBOL</span><span class="err">:ALL:SKY</span><span class="k">]</span>
+	<span class="k">[CULL_SYMBOL</span><span class="err">:ALL:RESTRAIN</span><span class="k">]</span>
+	<span class="k">[CULL_SYMBOL</span><span class="err">:ALL:SUBORDINATE</span><span class="k">]</span>
+	<span class="k">[CULL_SYMBOL</span><span class="err">:ALL:EVIL</span><span class="k">]</span>
+	<span class="k">[CULL_SYMBOL</span><span class="err">:ALL:NEGATIVE</span><span class="k">]</span>
+	<span class="k">[CULL_SYMBOL</span><span class="err">:ALL:UGLY</span><span class="k">]</span>
+	<span class="k">[CULL_SYMBOL</span><span class="err">:ALL:NEGATOR</span><span class="k">]</span>
+
+	<span class="k">[SELECT_SYMBOL</span><span class="err">:WAR:NAME_WAR</span><span class="k">]</span>					they will use these specific word groups for specific things (this section is unchanged from vanilla humans)
+		<span class="k">[SUBSELECT_SYMBOL</span><span class="err">:WAR:VIOLENT</span><span class="k">]</span>
+	<span class="k">[SELECT_SYMBOL</span><span class="err">:BATTLE:NAME_BATTLE</span><span class="k">]</span>
+		<span class="k">[SUBSELECT_SYMBOL</span><span class="err">:BATTLE:VIOLENT</span><span class="k">]</span>			SUBSELECT_SYMBOL chooses descriptors for the previous symbol (this SELECT/SUBSELECT pair will create battles named like &quot;Battle of Carnage&quot;)
+	<span class="k">[SELECT_SYMBOL</span><span class="err">:SIEGE:NAME_SIEGE</span><span class="k">]</span>
+		<span class="k">[SUBSELECT_SYMBOL</span><span class="err">:SIEGE:VIOLENT</span><span class="k">]</span>
+	<span class="k">[SELECT_SYMBOL</span><span class="err">:ROAD:NAME_ROAD</span><span class="k">]</span>
+	<span class="k">[SELECT_SYMBOL</span><span class="err">:TUNNEL:NAME_TUNNEL</span><span class="k">]</span>
+	<span class="k">[SELECT_SYMBOL</span><span class="err">:BRIDGE:NAME_BRIDGE</span><span class="k">]</span>
+	<span class="k">[SELECT_SYMBOL</span><span class="err">:WALL:NAME_WALL</span><span class="k">]</span>
+	<span class="k">[SELECT_SYMBOL</span><span class="err">:TEMPLE:NAME_BUILDING_TEMPLE</span><span class="k">]</span>
+	<span class="k">[SELECT_SYMBOL</span><span class="err">:LIBRARY:NAME_BUILDING_LIBRARY</span><span class="k">]</span>
+	<span class="k">[SELECT_SYMBOL</span><span class="err">:MERCHANT_COMPANY:NAME_ENTITY_MERCHANT_COMPANY</span><span class="k">]</span>
+	<span class="k">[SELECT_SYMBOL</span><span class="err">:CRAFT_GUILD:NAME_ENTITY_MERCHANT_COMPANY</span><span class="k">]</span>
+	<span class="k">[SELECT_SYMBOL</span><span class="err">:HOSPITAL:NAME_BUILDING_HOSPITAL</span><span class="k">]</span>
+	<span class="k">[SELECT_SYMBOL</span><span class="err">:CIV:NAME_ENTITY_KINGDOM</span><span class="k">]</span>
+	<span class="k">[SELECT_SYMBOL</span><span class="err">:SITE:NAME_ENTITY_TOWN_FOUNDER</span><span class="k">]</span>
+
+													-- set up their values --
+
+	<span class="k">[VARIABLE_VALUE</span><span class="err">:LAW:-40:40</span><span class="k">]</span>						they randomly choose from a diverse value range just like humans, but with a bit more wild variance
+	<span class="k">[VARIABLE_VALUE</span><span class="err">:LOYALTY:-40:40</span><span class="k">]</span>					(vanilla humans use -30 to +30 for all values)
+	<span class="k">[VARIABLE_VALUE</span><span class="err">:FAMILY:-40:40</span><span class="k">]</span>					the max possible range is -50 to +50
+	<span class="k">[VARIABLE_VALUE</span><span class="err">:FRIENDSHIP:-40:40</span><span class="k">]</span>
+	<span class="k">[VARIABLE_VALUE</span><span class="err">:POWER:-40:40</span><span class="k">]</span>				
+	<span class="k">[VARIABLE_VALUE</span><span class="err">:TRUTH:-40:40</span><span class="k">]</span>
+	<span class="k">[VARIABLE_VALUE</span><span class="err">:CUNNING:-40:40</span><span class="k">]</span>
+	<span class="k">[VARIABLE_VALUE</span><span class="err">:ELOQUENCE:-40:40</span><span class="k">]</span>				you could instead use the format &quot;VALUE:ELOQUENCE:X&quot; to make how much they value ELOQUENCE to be a constant
+	<span class="k">[VARIABLE_VALUE</span><span class="err">:FAIRNESS:-40:40</span><span class="k">]</span>					and you can also use &quot;ALL&quot; to target all values at once 
+	<span class="k">[VARIABLE_VALUE</span><span class="err">:DECORUM:-40:40</span><span class="k">]</span>						(vanilla humans shorten their entire values section to &quot;VARIABLE_VALUE:ALL:-30:30&quot;)
+	<span class="k">[VARIABLE_VALUE</span><span class="err">:TRADITION:-40:40</span><span class="k">]</span>
+	<span class="k">[VARIABLE_VALUE</span><span class="err">:ARTWORK:-40:40</span><span class="k">]</span>
+	<span class="k">[VARIABLE_VALUE</span><span class="err">:COOPERATION:15:40</span><span class="k">]</span>				!!a min of 15 COOPERATION (and CRAFTSMANSHIP) is needed for craft guilds to form!!
+	<span class="k">[VARIABLE_VALUE</span><span class="err">:INDEPENDENCE:-40:40</span><span class="k">]</span>
+	<span class="k">[VARIABLE_VALUE</span><span class="err">:INTROSPECTION:-40:40</span><span class="k">]</span>
+	<span class="k">[VARIABLE_VALUE</span><span class="err">:SELF_CONTROL:-40:40</span><span class="k">]</span>
+	<span class="k">[VARIABLE_VALUE</span><span class="err">:TRANQUILITY:-40:40</span><span class="k">]</span>
+	<span class="k">[VARIABLE_VALUE</span><span class="err">:HARMONY:-40:40</span><span class="k">]</span>
+	<span class="k">[VARIABLE_VALUE</span><span class="err">:MERRIMENT:-40:40</span><span class="k">]</span>
+	<span class="k">[VARIABLE_VALUE</span><span class="err">:CRAFTSMANSHIP:15:40</span><span class="k">]</span>			!!a min of 15 CRAFTSMANSHIP (and COOPERATION) is needed for craft guilds to form!!
+	<span class="k">[VARIABLE_VALUE</span><span class="err">:MARTIAL_PROWESS:-40:40</span><span class="k">]</span>
+	<span class="k">[VARIABLE_VALUE</span><span class="err">:SKILL:-40:40</span><span class="k">]</span>
+	<span class="k">[VARIABLE_VALUE</span><span class="err">:HARD_WORK:-40:40</span><span class="k">]</span>
+	<span class="k">[VARIABLE_VALUE</span><span class="err">:SACRIFICE:-40:40</span><span class="k">]</span>
+	<span class="k">[VARIABLE_VALUE</span><span class="err">:COMPETITION:-40:40</span><span class="k">]</span>
+	<span class="k">[VARIABLE_VALUE</span><span class="err">:PERSEVERANCE:-40:40</span><span class="k">]</span>
+	<span class="k">[VARIABLE_VALUE</span><span class="err">:LEISURE_TIME:20:40</span><span class="k">]</span>				they are playful (Urist likes otter people for their playfulness) and will always value LEISURE_TIME (+20 to +40)
+	<span class="k">[VARIABLE_VALUE</span><span class="err">:COMMERCE:-40:40</span><span class="k">]</span>
+	<span class="k">[VARIABLE_VALUE</span><span class="err">:ROMANCE:-40:40</span><span class="k">]</span>
+	<span class="k">[VARIABLE_VALUE</span><span class="err">:NATURE:20:50</span><span class="k">]</span>					they will always value NATURE (+20 to +50)
+	<span class="k">[VARIABLE_VALUE</span><span class="err">:PEACE:-40:40</span><span class="k">]</span>
+	<span class="k">[VARIABLE_VALUE</span><span class="err">:KNOWLEDGE:15:40</span><span class="k">]</span>				!!a min of 15 KNOWLEDGE is needed for libraries to form!!
+
+	<span class="k">[SET_SCHOLARS_ON_VALUES_AND_JOBS]</span>				scholar types will be based on the values picked and the jobs allowed (same as vanilla humans)
+	
+													-- set up their ethics --
+
+	<span class="k">[ETHIC</span><span class="err">:KILL_ENTITY_MEMBER:JUSTIFIED_IF_GOOD_REASON</span><span class="k">]</span>	same as vanilla humans
+	<span class="k">[ETHIC</span><span class="err">:KILL_NEUTRAL:JUSTIFIED_IF_NO_REPERCUSSIONS</span><span class="k">]</span>
+	<span class="k">[ETHIC</span><span class="err">:KILL_ENEMY:ACCEPTABLE</span><span class="k">]</span>
+	<span class="k">[ETHIC</span><span class="err">:KILL_ANIMAL:ACCEPTABLE</span><span class="k">]</span>
+	<span class="k">[ETHIC</span><span class="err">:KILL_PLANT:ACCEPTABLE</span><span class="k">]</span>
+	<span class="k">[ETHIC</span><span class="err">:TORTURE_AS_EXAMPLE:ACCEPTABLE</span><span class="k">]</span>
+	<span class="k">[ETHIC</span><span class="err">:TORTURE_FOR_INFORMATION:ACCEPTABLE</span><span class="k">]</span>
+	<span class="k">[ETHIC</span><span class="err">:TORTURE_FOR_FUN:APPALLING</span><span class="k">]</span>
+	<span class="k">[ETHIC</span><span class="err">:TORTURE_ANIMALS:SHUN</span><span class="k">]</span>
+	<span class="k">[ETHIC</span><span class="err">:TREASON:PUNISH_CAPITAL</span><span class="k">]</span>
+	<span class="k">[ETHIC</span><span class="err">:OATH_BREAKING:PUNISH_CAPITAL</span><span class="k">]</span>
+	<span class="k">[ETHIC</span><span class="err">:LYING:PERSONAL_MATTER</span><span class="k">]</span>
+	<span class="k">[ETHIC</span><span class="err">:VANDALISM:PUNISH_SERIOUS</span><span class="k">]</span>
+	<span class="k">[ETHIC</span><span class="err">:TRESPASSING:PUNISH_SERIOUS</span><span class="k">]</span>
+	<span class="k">[ETHIC</span><span class="err">:THEFT:PUNISH_SERIOUS</span><span class="k">]</span>
+	<span class="k">[ETHIC</span><span class="err">:ASSAULT:PUNISH_SERIOUS</span><span class="k">]</span>
+	<span class="k">[ETHIC</span><span class="err">:SLAVERY:ACCEPTABLE</span><span class="k">]</span>
+	<span class="k">[ETHIC</span><span class="err">:EAT_SAPIENT_OTHER:UNTHINKABLE</span><span class="k">]</span>
+	<span class="k">[ETHIC</span><span class="err">:EAT_SAPIENT_KILL:UNTHINKABLE</span><span class="k">]</span>
+	<span class="k">[ETHIC</span><span class="err">:MAKE_TROPHY_SAME_RACE:ACCEPTABLE</span><span class="k">]</span>
+	<span class="k">[ETHIC</span><span class="err">:MAKE_TROPHY_SAPIENT:ACCEPTABLE</span><span class="k">]</span>
+	<span class="k">[ETHIC</span><span class="err">:MAKE_TROPHY_ANIMAL:ACCEPTABLE</span><span class="k">]</span>
+	
+													-- set up their culture --
+
+	<span class="k">[GENERATE_STRINGED_INSTRUMENTS]</span>					same as vanilla humans
+	<span class="k">[GENERATE_WIND_INSTRUMENTS]</span>
+	<span class="k">[GENERATE_PERCUSSION_INSTRUMENTS]</span>
+	<span class="k">[GENERATE_POETIC_FORMS]</span>
+	<span class="k">[GENERATE_MUSICAL_FORMS]</span>
+	<span class="k">[GENERATE_DANCE_FORMS]</span>	
+
+	<span class="k">[POSITION</span><span class="err">:FLOW_READER</span><span class="k">]</span>							create some special noble positions for them (these are copies of the vanilla elf positions with some name changes)
+		<span class="k">[NAME</span><span class="err">:reader</span> <span class="err">of</span> <span class="err">the</span> <span class="err">flow:readers</span> <span class="err">of</span> <span class="err">the</span> <span class="err">flow</span><span class="k">]</span>		(same as elf druid)
+		<span class="k">[NUMBER</span><span class="err">:1</span><span class="k">]</span>
+		<span class="k">[RESPONSIBILITY</span><span class="err">:RELIGION</span><span class="k">]</span>
+		<span class="k">[SUCCESSION</span><span class="err">:BY_POSITION:WAVE_WATCHER</span><span class="k">]</span>
+		<span class="k">[MENIAL_WORK_EXEMPTION]</span>
+		<span class="k">[PUNISHMENT_EXEMPTION]</span>
+		<span class="k">[ELECTED]</span>
+		<span class="k">[DETERMINES_COIN_DESIGN]</span>
+		<span class="k">[PRECEDENCE</span><span class="err">:1</span><span class="k">]</span>
+		<span class="k">[FLASHES]</span>
+		<span class="k">[BRAG_ON_KILL]</span>
+		<span class="k">[CHAT_WORTHY]</span>
+		<span class="k">[DO_NOT_CULL]</span>
+		<span class="k">[KILL_QUEST]</span>
+		<span class="k">[EXPORTED_IN_LEGENDS]</span>
+		<span class="k">[COLOR</span><span class="err">:2:0:1</span><span class="k">]</span>
+		<span class="k">[DUTY_BOUND]</span>
+	<span class="k">[POSITION</span><span class="err">:WAVE_WATCHER</span><span class="k">]</span>
+		<span class="k">[NAME</span><span class="err">:watcher</span> <span class="err">of</span> <span class="err">the</span> <span class="err">waves:watchers</span> <span class="err">of</span> <span class="err">the</span> <span class="err">waves</span><span class="k">]</span>	(same as elf acolyte)
+		<span class="k">[NUMBER</span><span class="err">:1</span><span class="k">]</span>
+		<span class="k">[MENIAL_WORK_EXEMPTION]</span>
+		<span class="k">[PUNISHMENT_EXEMPTION]</span>
+		<span class="k">[APPOINTED_BY</span><span class="err">:FLOW_READER</span><span class="k">]</span>
+		<span class="k">[PRECEDENCE</span><span class="err">:100</span><span class="k">]</span>
+		<span class="k">[FLASHES]</span>
+		<span class="k">[BRAG_ON_KILL]</span>
+		<span class="k">[CHAT_WORTHY]</span>
+		<span class="k">[DO_NOT_CULL]</span>
+		<span class="k">[COLOR</span><span class="err">:2:0:0</span><span class="k">]</span>
+		<span class="k">[DUTY_BOUND]</span>
+	<span class="k">[POSITION</span><span class="err">:FAMILY_SUCCESSOR</span><span class="k">]</span>								(same as elf princess without the GENDER:FEMALE restriction)
+		<span class="k">[NAME</span><span class="err">:family</span> <span class="err">successor:family</span> <span class="err">successors</span><span class="k">]</span>	the collective noun for a group of otters is a &quot;family&quot; of otters
+		<span class="k">[NUMBER</span><span class="err">:1</span><span class="k">]</span>
+		<span class="k">[RESPONSIBILITY</span><span class="err">:MILITARY_GOALS</span><span class="k">]</span>
+		<span class="k">[RESPONSIBILITY</span><span class="err">:MILITARY_STRATEGY</span><span class="k">]</span>
+		<span class="k">[RESPONSIBILITY</span><span class="err">:ESPIONAGE</span><span class="k">]</span>
+		<span class="k">[COMMANDER</span><span class="err">:FAR_SWIMMER_CAPTAIN:ALL</span><span class="k">]</span>
+		<span class="k">[MENIAL_WORK_EXEMPTION]</span>
+		<span class="k">[PUNISHMENT_EXEMPTION]</span>
+		<span class="k">[APPOINTED_BY</span><span class="err">:FLOW_READER</span><span class="k">]</span>
+		<span class="k">[PRECEDENCE</span><span class="err">:3</span><span class="k">]</span>
+		<span class="k">[FLASHES]</span>
+		<span class="k">[BRAG_ON_KILL]</span>
+		<span class="k">[CHAT_WORTHY]</span>
+		<span class="k">[DO_NOT_CULL]</span>
+		<span class="k">[KILL_QUEST]</span>
+		<span class="k">[EXPORTED_IN_LEGENDS]</span>
+		<span class="k">[COLOR</span><span class="err">:3:0:1</span><span class="k">]</span>
+		<span class="k">[DUTY_BOUND]</span>
+	<span class="k">[POSITION</span><span class="err">:FAMILY_LEADER</span><span class="k">]</span>									(same as elf queen without the GENDER:FEMALE restriction)
+		<span class="k">[NAME</span><span class="err">:family</span> <span class="err">leader:family</span> <span class="err">leaders</span><span class="k">]</span>
+		<span class="k">[NUMBER</span><span class="err">:1</span><span class="k">]</span>
+		<span class="k">[RULES_FROM_LOCATION]</span>
+		<span class="k">[SUCCESSION</span><span class="err">:BY_POSITION:FAMILY_SUCCESSOR</span><span class="k">]</span>
+		<span class="k">[MENIAL_WORK_EXEMPTION]</span>
+		<span class="k">[PUNISHMENT_EXEMPTION]</span>
+		<span class="k">[APPOINTED_BY</span><span class="err">:FLOW_READER</span><span class="k">]</span>
+		<span class="k">[RESPONSIBILITY</span><span class="err">:LAW_MAKING</span><span class="k">]</span>
+		<span class="k">[RESPONSIBILITY</span><span class="err">:RECEIVE_DIPLOMATS</span><span class="k">]</span>
+		<span class="k">[RESPONSIBILITY</span><span class="err">:MILITARY_GOALS</span><span class="k">]</span>
+		<span class="k">[PRECEDENCE</span><span class="err">:2</span><span class="k">]</span>
+		<span class="k">[FLASHES]</span>
+		<span class="k">[BRAG_ON_KILL]</span>
+		<span class="k">[CHAT_WORTHY]</span>
+		<span class="k">[DO_NOT_CULL]</span>
+		<span class="k">[KILL_QUEST]</span>
+		<span class="k">[EXPORTED_IN_LEGENDS]</span>
+		<span class="k">[COLOR</span><span class="err">:7:0:1</span><span class="k">]</span>
+		<span class="k">[DUTY_BOUND]</span>
+	<span class="k">[POSITION</span><span class="err">:DIPLOMAT</span><span class="k">]</span>										(same as elf diplomat)
+		<span class="k">[NAME</span><span class="err">:diplomat:diplomats</span><span class="k">]</span>
+		<span class="k">[NUMBER</span><span class="err">:1</span><span class="k">]</span>
+		<span class="k">[RESPONSIBILITY</span><span class="err">:MAKE_INTRODUCTIONS</span><span class="k">]</span>
+		<span class="k">[RESPONSIBILITY</span><span class="err">:MAKE_PEACE_AGREEMENTS</span><span class="k">]</span>
+		<span class="k">[RESPONSIBILITY</span><span class="err">:MAKE_TOPIC_AGREEMENTS</span><span class="k">]</span>
+		<span class="k">[APPOINTED_BY</span><span class="err">:FAMILY_LEADER</span><span class="k">]</span>
+		<span class="k">[PRECEDENCE</span><span class="err">:70</span><span class="k">]</span>
+		<span class="k">[DO_NOT_CULL]</span>
+		<span class="k">[COLOR</span><span class="err">:7:0:1</span><span class="k">]</span>
+		<span class="k">[MENIAL_WORK_EXEMPTION]</span>
+		<span class="k">[SLEEP_PRETENSION]</span>
+		<span class="k">[PUNISHMENT_EXEMPTION]</span>
+		<span class="k">[ACCOUNT_EXEMPT]</span>
+		<span class="k">[DUTY_BOUND]</span>
+	<span class="k">[POSITION</span><span class="err">:FAR_SWIMMER_CAPTAIN</span><span class="k">]</span>							(same as elf ranger captain)
+		<span class="k">[NAME</span><span class="err">:far</span> <span class="err">swimmer</span> <span class="err">captain:far</span> <span class="err">swimmer</span> <span class="err">captains</span><span class="k">]</span>
+		<span class="k">[NUMBER</span><span class="err">:AS_NEEDED</span><span class="k">]</span>
+		<span class="k">[SQUAD</span><span class="err">:10:far</span> <span class="err">swimmer:far</span> <span class="err">swimmers</span><span class="k">]</span>
+		<span class="k">[RESPONSIBILITY</span><span class="err">:ATTACK_ENEMIES</span><span class="k">]</span>
+		<span class="k">[RESPONSIBILITY</span><span class="err">:PATROL_TERRITORY</span><span class="k">]</span>
+		<span class="k">[APPOINTED_BY</span><span class="err">:FAMILY_SUCCESSOR</span><span class="k">]</span>
+		<span class="k">[PRECEDENCE</span><span class="err">:200</span><span class="k">]</span>
+		<span class="k">[DO_NOT_CULL]</span>
+		<span class="k">[DUTY_BOUND]</span>
+
+
+	<span class="k">[VARIABLE_POSITIONS</span><span class="err">:ALL</span><span class="k">]</span>						dynamically generate other positions as needed (same as vanilla humans)
+	<span class="k">[SITE_VARIABLE_POSITIONS</span><span class="err">:ALL</span><span class="k">]</span>
+
+													-- set trade and quest behavior --
+
+	<span class="k">[RIVER_PRODUCTS]</span>								give them access to products from rivers and oceans (same as vanilla humans)
+	<span class="k">[OCEAN_PRODUCTS]</span>
+
+	<span class="k">[WANDERER]</span>										they will send out these types of adventurers (same as vanilla humans)
+	<span class="k">[BEAST_HUNTER]</span>
+	<span class="k">[SCOUT]</span>
+	<span class="k">[MERCENARY]</span>
+
+	<span class="k">[CLOTHING]</span>										they will make and wear clothing (same as vanilla humans)
+	
+	<span class="k">[MERCHANT_NOBILITY]</span>								they will have merchants
+	<span class="k">[MERCHANT_BODYGUARDS]</span>								and guards for their merchants
+	<span class="k">[DIPLOMAT_BODYGUARDS]</span>								and for their diplomats (all the same as vanilla humans)
+
+	<span class="k">[METAL_PREF]</span>									they use metal, gems, and stone (same as vanilla humans)
+	<span class="k">[GEM_PREF]</span>
+	<span class="k">[STONE_PREF]</span>
+
+	<span class="k">[OUTDOOR_WOOD]</span>									they use above-ground wood and plant products (same as vanilla humans)
+	<span class="k">[OUTDOOR_FARMING]</span>
+	<span class="k">[OUTDOOR_GARDENS]</span>	
+	<span class="k">[OUTDOOR_ORCHARDS]</span>								they can use fruits (vanilla humans do not have this)
+	
+	<span class="k">[USE_ANIMAL_PRODUCTS]</span>							they can use animal-based products (same as vanilla humans)
+	<span class="k">[USE_MISC_PROCESSED_WOOD_PRODUCTS]</span>				they can use lye, potash, charcoal (same as vanilla humans)
+	
+	<span class="k">[COMMON_DOMESTIC_PACK]</span>							they can tame and use domestic animals (same as vanilla humans)
+	<span class="k">[COMMON_DOMESTIC_PULL]</span>
+	<span class="k">[COMMON_DOMESTIC_MOUNT]</span>
+	<span class="k">[COMMON_DOMESTIC_PET]</span>
+	
+	<span class="k">[USE_NON_EXOTIC_PET_RACE]</span>						they can tame and use any local creatures (same as vanilla humans)
+	
+	<span class="k">[ACTIVE_SEASON</span><span class="err">:SUMMER</span><span class="k">]</span>							trade season and thresholds, siege thresholds (same as vanilla humans)
+	<span class="k">[PROGRESS_TRIGGER_TRADE</span><span class="err">:1</span><span class="k">]</span>	
+	<span class="k">[SIEGER]</span>	
+	<span class="k">[PROGRESS_TRIGGER_POP_SIEGE</span><span class="err">:3</span><span class="k">]</span>
+	<span class="k">[PROGRESS_TRIGGER_PROD_SIEGE</span><span class="err">:0</span><span class="k">]</span>
+	<span class="k">[PROGRESS_TRIGGER_TRADE_SIEGE</span><span class="err">:0</span><span class="k">]</span>
+
+	<span class="k">[WILL_ACCEPT_TRIBUTE]</span>							their traders will accept offered goods (same as vanilla humans)
+
+	<span class="k">[CURRENCY</span><span class="err">:COPPER:1</span><span class="k">]</span>								their currency metals and values (same as vanilla humans)
+	<span class="k">[CURRENCY</span><span class="err">:SILVER:5</span><span class="k">]</span>
+	<span class="k">[CURRENCY</span><span class="err">:GOLD:15</span><span class="k">]</span>
+	
+	<span class="k">[EQUIPMENT_IMPROVEMENTS]</span>						they can decorate items (same as vanilla humans)
+
+	<span class="k">[ART_FACET_MODIFIER</span><span class="err">:FANCIFUL:640</span><span class="k">]</span>				they prefer art of fanciful creatures or themselves (same as vanilla humans)
+	<span class="k">[ART_FACET_MODIFIER</span><span class="err">:OWN_RACE:512</span><span class="k">]</span>				default value is 256, range is 0 to 25600. types are OWN_RACE, FANCIFUL, EVIL, or GOOD
+	
+	<span class="k">[ART_IMAGE_ELEMENT_MODIFIER</span><span class="err">:CREATURE:512</span><span class="k">]</span>		they prefer art of creatures. default value is 256, range is 0 to 25600. types are CREATURE, PLANT, TREE, SHAPE, or ITEM
+	
+	<span class="k">[ITEM_IMPROVEMENT_MODIFIER</span><span class="err">:ART_IMAGE:512</span><span class="k">]</span>		they prefer adorning items with images
+	<span class="k">[ITEM_IMPROVEMENT_MODIFIER</span><span class="err">:SEWN_IMAGE:512</span><span class="k">]</span>		default value is 256, range is 0 to 25600. types are ART_IMAGE, COVERED, RINGS_HANGING, BANDS, SPIKES, ITEMSPECIFIC, THREAD, CLOTH, or SEWN_IMAGE
+
+	
+													-- finally, give them the same items, jobs, reactions, and buildings as vanilla humans (this continues to the end of the example) --
+	<span class="k">[DIGGER</span><span class="err">:ITEM_WEAPON_PICK</span><span class="k">]</span>
+	
+	<span class="k">[WEAPON</span><span class="err">:ITEM_WEAPON_WHIP</span><span class="k">]</span>
+	<span class="k">[WEAPON</span><span class="err">:ITEM_WEAPON_AXE_BATTLE</span><span class="k">]</span>
+	<span class="k">[WEAPON</span><span class="err">:ITEM_WEAPON_HAMMER_WAR</span><span class="k">]</span>
+	<span class="k">[WEAPON</span><span class="err">:ITEM_WEAPON_SWORD_SHORT</span><span class="k">]</span>
+	<span class="k">[WEAPON</span><span class="err">:ITEM_WEAPON_SPEAR</span><span class="k">]</span>
+	<span class="k">[WEAPON</span><span class="err">:ITEM_WEAPON_MACE</span><span class="k">]</span>
+	<span class="k">[WEAPON</span><span class="err">:ITEM_WEAPON_CROSSBOW</span><span class="k">]</span>
+		<span class="k">[AMMO</span><span class="err">:ITEM_AMMO_BOLTS</span><span class="k">]</span>
+	<span class="k">[WEAPON</span><span class="err">:ITEM_WEAPON_BOW</span><span class="k">]</span>
+		<span class="k">[AMMO</span><span class="err">:ITEM_AMMO_ARROWS</span><span class="k">]</span>
+	<span class="k">[WEAPON</span><span class="err">:ITEM_WEAPON_PIKE</span><span class="k">]</span>
+	<span class="k">[WEAPON</span><span class="err">:ITEM_WEAPON_HALBERD</span><span class="k">]</span>
+	<span class="k">[WEAPON</span><span class="err">:ITEM_WEAPON_SWORD_2H</span><span class="k">]</span>
+	<span class="k">[WEAPON</span><span class="err">:ITEM_WEAPON_SWORD_LONG</span><span class="k">]</span>
+	<span class="k">[WEAPON</span><span class="err">:ITEM_WEAPON_MAUL</span><span class="k">]</span>
+	<span class="k">[WEAPON</span><span class="err">:ITEM_WEAPON_AXE_GREAT</span><span class="k">]</span>
+	<span class="k">[WEAPON</span><span class="err">:ITEM_WEAPON_FLAIL</span><span class="k">]</span>
+	<span class="k">[WEAPON</span><span class="err">:ITEM_WEAPON_MORNINGSTAR</span><span class="k">]</span>
+	<span class="k">[WEAPON</span><span class="err">:ITEM_WEAPON_SCIMITAR</span><span class="k">]</span>
+	<span class="k">[WEAPON</span><span class="err">:ITEM_WEAPON_AXE_TRAINING</span><span class="k">]</span>
+	<span class="k">[WEAPON</span><span class="err">:ITEM_WEAPON_SWORD_SHORT_TRAINING</span><span class="k">]</span>
+	<span class="k">[WEAPON</span><span class="err">:ITEM_WEAPON_SPEAR_TRAINING</span><span class="k">]</span>
+	
+	<span class="k">[ARMOR</span><span class="err">:ITEM_ARMOR_BREASTPLATE:COMMON</span><span class="k">]</span>
+	<span class="k">[ARMOR</span><span class="err">:ITEM_ARMOR_MAIL_SHIRT:COMMON</span><span class="k">]</span>
+	<span class="k">[ARMOR</span><span class="err">:ITEM_ARMOR_LEATHER:COMMON</span><span class="k">]</span>
+	<span class="k">[ARMOR</span><span class="err">:ITEM_ARMOR_COAT:COMMON</span><span class="k">]</span>
+	<span class="k">[ARMOR</span><span class="err">:ITEM_ARMOR_SHIRT:COMMON</span><span class="k">]</span>
+	<span class="k">[ARMOR</span><span class="err">:ITEM_ARMOR_CLOAK:COMMON</span><span class="k">]</span>
+	<span class="k">[ARMOR</span><span class="err">:ITEM_ARMOR_TUNIC:COMMON</span><span class="k">]</span>
+	<span class="k">[ARMOR</span><span class="err">:ITEM_ARMOR_TOGA:UNCOMMON</span><span class="k">]</span>
+	<span class="k">[ARMOR</span><span class="err">:ITEM_ARMOR_CAPE:COMMON</span><span class="k">]</span>
+	<span class="k">[ARMOR</span><span class="err">:ITEM_ARMOR_VEST:COMMON</span><span class="k">]</span>
+	<span class="k">[ARMOR</span><span class="err">:ITEM_ARMOR_DRESS:COMMON</span><span class="k">]</span>
+	<span class="k">[ARMOR</span><span class="err">:ITEM_ARMOR_ROBE:COMMON</span><span class="k">]</span>
+	
+	<span class="k">[HELM</span><span class="err">:ITEM_HELM_HELM:COMMON</span><span class="k">]</span>
+	<span class="k">[HELM</span><span class="err">:ITEM_HELM_CAP:COMMON</span><span class="k">]</span>
+	<span class="k">[HELM</span><span class="err">:ITEM_HELM_HOOD:COMMON</span><span class="k">]</span>
+	<span class="k">[HELM</span><span class="err">:ITEM_HELM_TURBAN:UNCOMMON</span><span class="k">]</span>
+	<span class="k">[HELM</span><span class="err">:ITEM_HELM_MASK:RARE</span><span class="k">]</span>
+	<span class="k">[HELM</span><span class="err">:ITEM_HELM_VEIL_HEAD:UNCOMMON</span><span class="k">]</span>
+	<span class="k">[HELM</span><span class="err">:ITEM_HELM_VEIL_FACE:RARE</span><span class="k">]</span>
+	<span class="k">[HELM</span><span class="err">:ITEM_HELM_SCARF_HEAD:UNCOMMON</span><span class="k">]</span>
+	
+	<span class="k">[GLOVES</span><span class="err">:ITEM_GLOVES_GAUNTLETS:COMMON</span><span class="k">]</span>
+	<span class="k">[GLOVES</span><span class="err">:ITEM_GLOVES_GLOVES:COMMON</span><span class="k">]</span>
+	<span class="k">[GLOVES</span><span class="err">:ITEM_GLOVES_MITTENS:COMMON</span><span class="k">]</span>
+	
+	<span class="k">[SHOES</span><span class="err">:ITEM_SHOES_SHOES:COMMON</span><span class="k">]</span>
+	<span class="k">[SHOES</span><span class="err">:ITEM_SHOES_BOOTS:COMMON</span><span class="k">]</span>
+	<span class="k">[SHOES</span><span class="err">:ITEM_SHOES_BOOTS_LOW:COMMON</span><span class="k">]</span>
+	<span class="k">[SHOES</span><span class="err">:ITEM_SHOES_SANDAL:COMMON</span><span class="k">]</span>
+	<span class="k">[SHOES</span><span class="err">:ITEM_SHOES_CHAUSSE:UNCOMMON</span><span class="k">]</span>
+	<span class="k">[SHOES</span><span class="err">:ITEM_SHOES_SOCKS:COMMON</span><span class="k">]</span>
+	
+	<span class="k">[PANTS</span><span class="err">:ITEM_PANTS_PANTS:COMMON</span><span class="k">]</span>
+	<span class="k">[PANTS</span><span class="err">:ITEM_PANTS_GREAVES:COMMON</span><span class="k">]</span>
+	<span class="k">[PANTS</span><span class="err">:ITEM_PANTS_LEGGINGS:COMMON</span><span class="k">]</span>
+	<span class="k">[PANTS</span><span class="err">:ITEM_PANTS_LOINCLOTH:COMMON</span><span class="k">]</span>
+	<span class="k">[PANTS</span><span class="err">:ITEM_PANTS_THONG:UNCOMMON</span><span class="k">]</span>
+	<span class="k">[PANTS</span><span class="err">:ITEM_PANTS_SKIRT:COMMON</span><span class="k">]</span>
+	<span class="k">[PANTS</span><span class="err">:ITEM_PANTS_SKIRT_SHORT:COMMON</span><span class="k">]</span>
+	<span class="k">[PANTS</span><span class="err">:ITEM_PANTS_SKIRT_LONG:COMMON</span><span class="k">]</span>
+	<span class="k">[PANTS</span><span class="err">:ITEM_PANTS_BRAIES:UNCOMMON</span><span class="k">]</span>
+	
+	<span class="k">[SHIELD</span><span class="err">:ITEM_SHIELD_SHIELD</span><span class="k">]</span>
+	<span class="k">[SHIELD</span><span class="err">:ITEM_SHIELD_BUCKLER</span><span class="k">]</span>
+	
+	<span class="k">[SIEGEAMMO</span><span class="err">:ITEM_SIEGEAMMO_BALLISTA</span><span class="k">]</span>
+	
+	<span class="k">[TRAPCOMP</span><span class="err">:ITEM_TRAPCOMP_GIANTAXEBLADE</span><span class="k">]</span>
+	<span class="k">[TRAPCOMP</span><span class="err">:ITEM_TRAPCOMP_ENORMOUSCORKSCREW</span><span class="k">]</span>
+	<span class="k">[TRAPCOMP</span><span class="err">:ITEM_TRAPCOMP_SPIKEDBALL</span><span class="k">]</span>
+	<span class="k">[TRAPCOMP</span><span class="err">:ITEM_TRAPCOMP_LARGESERRATEDDISC</span><span class="k">]</span>
+	<span class="k">[TRAPCOMP</span><span class="err">:ITEM_TRAPCOMP_MENACINGSPIKE</span><span class="k">]</span>
+	
+	<span class="k">[TOY</span><span class="err">:ITEM_TOY_PUZZLEBOX</span><span class="k">]</span>
+	<span class="k">[TOY</span><span class="err">:ITEM_TOY_BOAT</span><span class="k">]</span>
+	<span class="k">[TOY</span><span class="err">:ITEM_TOY_HAMMER</span><span class="k">]</span>
+	<span class="k">[TOY</span><span class="err">:ITEM_TOY_AXE</span><span class="k">]</span>
+	
+	<span class="k">[TOOL</span><span class="err">:ITEM_TOOL_CAULDRON</span><span class="k">]</span>
+	<span class="k">[TOOL</span><span class="err">:ITEM_TOOL_LADLE</span><span class="k">]</span>
+	<span class="k">[TOOL</span><span class="err">:ITEM_TOOL_BOWL</span><span class="k">]</span>
+	<span class="k">[TOOL</span><span class="err">:ITEM_TOOL_MORTAR</span><span class="k">]</span>
+	<span class="k">[TOOL</span><span class="err">:ITEM_TOOL_PESTLE</span><span class="k">]</span>
+	<span class="k">[TOOL</span><span class="err">:ITEM_TOOL_KNIFE_CARVING</span><span class="k">]</span>
+	<span class="k">[TOOL</span><span class="err">:ITEM_TOOL_KNIFE_BONING</span><span class="k">]</span>
+	<span class="k">[TOOL</span><span class="err">:ITEM_TOOL_KNIFE_SLICING</span><span class="k">]</span>
+	<span class="k">[TOOL</span><span class="err">:ITEM_TOOL_KNIFE_MEAT_CLEAVER</span><span class="k">]</span>
+	<span class="k">[TOOL</span><span class="err">:ITEM_TOOL_FORK_CARVING</span><span class="k">]</span>
+	<span class="k">[TOOL</span><span class="err">:ITEM_TOOL_NEST_BOX</span><span class="k">]</span>
+	<span class="k">[TOOL</span><span class="err">:ITEM_TOOL_JUG</span><span class="k">]</span>
+	<span class="k">[TOOL</span><span class="err">:ITEM_TOOL_LARGE_POT</span><span class="k">]</span>
+	<span class="k">[TOOL</span><span class="err">:ITEM_TOOL_HIVE</span><span class="k">]</span>
+	<span class="k">[TOOL</span><span class="err">:ITEM_TOOL_POUCH</span><span class="k">]</span>
+	<span class="k">[TOOL</span><span class="err">:ITEM_TOOL_WHEELBARROW</span><span class="k">]</span>
+	<span class="k">[TOOL</span><span class="err">:ITEM_TOOL_SCROLL_ROLLERS</span><span class="k">]</span>
+	<span class="k">[TOOL</span><span class="err">:ITEM_TOOL_BOOK_BINDING</span><span class="k">]</span>
+	<span class="k">[TOOL</span><span class="err">:ITEM_TOOL_SCROLL</span><span class="k">]</span>
+	<span class="k">[TOOL</span><span class="err">:ITEM_TOOL_QUIRE</span><span class="k">]</span>
+	<span class="k">[TOOL</span><span class="err">:ITEM_TOOL_BOOKCASE</span><span class="k">]</span>
+	<span class="k">[TOOL</span><span class="err">:ITEM_TOOL_PEDESTAL</span><span class="k">]</span>
+	<span class="k">[TOOL</span><span class="err">:ITEM_TOOL_ALTAR</span><span class="k">]</span>
+	<span class="k">[TOOL</span><span class="err">:ITEM_TOOL_DIE</span><span class="k">]</span>
+	
+	<span class="k">[STONE_SHAPE</span><span class="err">:OVAL_CABOCHON</span><span class="k">]</span>
+	<span class="k">[STONE_SHAPE</span><span class="err">:ROUND_CABOCHON</span><span class="k">]</span>
+	<span class="k">[STONE_SHAPE</span><span class="err">:CUSHION_CABOCHON</span><span class="k">]</span>
+	<span class="k">[STONE_SHAPE</span><span class="err">:RECTANGULAR_CABOCHON</span><span class="k">]</span>
+	
+	<span class="k">[GEM_SHAPE</span><span class="err">:OVAL_CABOCHON</span><span class="k">]</span>
+	<span class="k">[GEM_SHAPE</span><span class="err">:ROUND_CABOCHON</span><span class="k">]</span>
+	<span class="k">[GEM_SHAPE</span><span class="err">:CUSHION_CABOCHON</span><span class="k">]</span>
+	<span class="k">[GEM_SHAPE</span><span class="err">:RECTANGULAR_CABOCHON</span><span class="k">]</span>
+	<span class="k">[GEM_SHAPE</span><span class="err">:POINT_CUT_GEM</span><span class="k">]</span>
+	<span class="k">[GEM_SHAPE</span><span class="err">:TABLE_CUT_GEM</span><span class="k">]</span>
+	<span class="k">[GEM_SHAPE</span><span class="err">:SINGLE_CUT_GEM</span><span class="k">]</span>
+	<span class="k">[GEM_SHAPE</span><span class="err">:ROSE_CUT_GEM</span><span class="k">]</span>
+	<span class="k">[GEM_SHAPE</span><span class="err">:BRIOLETTE_CUT_GEM</span><span class="k">]</span>
+	
+	<span class="k">[PERMITTED_JOB</span><span class="err">:MINER</span><span class="k">]</span>
+	<span class="k">[PERMITTED_JOB</span><span class="err">:CARPENTER</span><span class="k">]</span>
+	<span class="k">[PERMITTED_JOB</span><span class="err">:BOWYER</span><span class="k">]</span>
+	<span class="k">[PERMITTED_JOB</span><span class="err">:WOODCUTTER</span><span class="k">]</span>
+	<span class="k">[PERMITTED_JOB</span><span class="err">:ENGRAVER</span><span class="k">]</span>
+	<span class="k">[PERMITTED_JOB</span><span class="err">:MASON</span><span class="k">]</span>
+	<span class="k">[PERMITTED_JOB</span><span class="err">:ANIMAL_CARETAKER</span><span class="k">]</span>
+	<span class="k">[PERMITTED_JOB</span><span class="err">:ANIMAL_TRAINER</span><span class="k">]</span>
+	<span class="k">[PERMITTED_JOB</span><span class="err">:HUNTER</span><span class="k">]</span>
+	<span class="k">[PERMITTED_JOB</span><span class="err">:TRAPPER</span><span class="k">]</span>
+	<span class="k">[PERMITTED_JOB</span><span class="err">:ANIMAL_DISSECTOR</span><span class="k">]</span>
+	<span class="k">[PERMITTED_JOB</span><span class="err">:FURNACE_OPERATOR</span><span class="k">]</span>
+	<span class="k">[PERMITTED_JOB</span><span class="err">:WEAPONSMITH</span><span class="k">]</span>
+	<span class="k">[PERMITTED_JOB</span><span class="err">:ARMORER</span><span class="k">]</span>
+	<span class="k">[PERMITTED_JOB</span><span class="err">:BLACKSMITH</span><span class="k">]</span>
+	<span class="k">[PERMITTED_JOB</span><span class="err">:METALCRAFTER</span><span class="k">]</span>
+	<span class="k">[PERMITTED_JOB</span><span class="err">:GEM_CUTTER</span><span class="k">]</span>
+	<span class="k">[PERMITTED_JOB</span><span class="err">:GEM_SETTER</span><span class="k">]</span>
+	<span class="k">[PERMITTED_JOB</span><span class="err">:WOODCRAFTER</span><span class="k">]</span>
+	<span class="k">[PERMITTED_JOB</span><span class="err">:STONECRAFTER</span><span class="k">]</span>
+	<span class="k">[PERMITTED_JOB</span><span class="err">:LEATHERWORKER</span><span class="k">]</span>
+	<span class="k">[PERMITTED_JOB</span><span class="err">:BONE_CARVER</span><span class="k">]</span>
+	<span class="k">[PERMITTED_JOB</span><span class="err">:WEAVER</span><span class="k">]</span>
+	<span class="k">[PERMITTED_JOB</span><span class="err">:CLOTHIER</span><span class="k">]</span>
+	<span class="k">[PERMITTED_JOB</span><span class="err">:GLASSMAKER</span><span class="k">]</span>
+	<span class="k">[PERMITTED_JOB</span><span class="err">:FISHERMAN</span><span class="k">]</span>
+	<span class="k">[PERMITTED_JOB</span><span class="err">:FISH_DISSECTOR</span><span class="k">]</span>
+	<span class="k">[PERMITTED_JOB</span><span class="err">:FISH_CLEANER</span><span class="k">]</span>
+	<span class="k">[PERMITTED_JOB</span><span class="err">:CHEESE_MAKER</span><span class="k">]</span>
+	<span class="k">[PERMITTED_JOB</span><span class="err">:MILKER</span><span class="k">]</span>
+	<span class="k">[PERMITTED_JOB</span><span class="err">:SHEARER</span><span class="k">]</span>
+	<span class="k">[PERMITTED_JOB</span><span class="err">:SPINNER</span><span class="k">]</span>
+	<span class="k">[PERMITTED_JOB</span><span class="err">:GELDER</span><span class="k">]</span>
+	<span class="k">[PERMITTED_JOB</span><span class="err">:COOK</span><span class="k">]</span>
+	<span class="k">[PERMITTED_JOB</span><span class="err">:THRESHER</span><span class="k">]</span>
+	<span class="k">[PERMITTED_JOB</span><span class="err">:MILLER</span><span class="k">]</span>
+	<span class="k">[PERMITTED_JOB</span><span class="err">:BUTCHER</span><span class="k">]</span>
+	<span class="k">[PERMITTED_JOB</span><span class="err">:TANNER</span><span class="k">]</span>
+	<span class="k">[PERMITTED_JOB</span><span class="err">:DYER</span><span class="k">]</span>
+	<span class="k">[PERMITTED_JOB</span><span class="err">:PLANTER</span><span class="k">]</span>
+	<span class="k">[PERMITTED_JOB</span><span class="err">:HERBALIST</span><span class="k">]</span>
+	<span class="k">[PERMITTED_JOB</span><span class="err">:BREWER</span><span class="k">]</span>
+	<span class="k">[PERMITTED_JOB</span><span class="err">:SOAP_MAKER</span><span class="k">]</span>
+	<span class="k">[PERMITTED_JOB</span><span class="err">:POTASH_MAKER</span><span class="k">]</span>
+	<span class="k">[PERMITTED_JOB</span><span class="err">:LYE_MAKER</span><span class="k">]</span>
+	<span class="k">[PERMITTED_JOB</span><span class="err">:WOOD_BURNER</span><span class="k">]</span>
+	<span class="k">[PERMITTED_JOB</span><span class="err">:MECHANIC</span><span class="k">]</span>
+	<span class="k">[PERMITTED_JOB</span><span class="err">:SIEGE_ENGINEER</span><span class="k">]</span>
+	<span class="k">[PERMITTED_JOB</span><span class="err">:SIEGE_OPERATOR</span><span class="k">]</span>
+	<span class="k">[PERMITTED_JOB</span><span class="err">:PUMP_OPERATOR</span><span class="k">]</span>
+	<span class="k">[PERMITTED_JOB</span><span class="err">:CLERK</span><span class="k">]</span>
+	<span class="k">[PERMITTED_JOB</span><span class="err">:ADMINISTRATOR</span><span class="k">]</span>
+	<span class="k">[PERMITTED_JOB</span><span class="err">:TRADER</span><span class="k">]</span>
+	<span class="k">[PERMITTED_JOB</span><span class="err">:DIAGNOSER</span><span class="k">]</span>
+	<span class="k">[PERMITTED_JOB</span><span class="err">:BONE_SETTER</span><span class="k">]</span>
+	<span class="k">[PERMITTED_JOB</span><span class="err">:SUTURER</span><span class="k">]</span>
+	<span class="k">[PERMITTED_JOB</span><span class="err">:SURGEON</span><span class="k">]</span>
+	<span class="k">[PERMITTED_JOB</span><span class="err">:GLAZER</span><span class="k">]</span>
+	<span class="k">[PERMITTED_JOB</span><span class="err">:POTTER</span><span class="k">]</span>
+	<span class="k">[PERMITTED_JOB</span><span class="err">:PRESSER</span><span class="k">]</span>
+	<span class="k">[PERMITTED_JOB</span><span class="err">:BEEKEEPER</span><span class="k">]</span>
+	<span class="k">[PERMITTED_JOB</span><span class="err">:WAX_WORKER</span><span class="k">]</span>
+	<span class="k">[PERMITTED_JOB</span><span class="err">:PAPERMAKER</span><span class="k">]</span>
+	<span class="k">[PERMITTED_JOB</span><span class="err">:BOOKBINDER</span><span class="k">]</span>
+	
+	<span class="k">[PERMITTED_BUILDING</span><span class="err">:SOAP_MAKER</span><span class="k">]</span>
+	<span class="k">[PERMITTED_BUILDING</span><span class="err">:SCREW_PRESS</span><span class="k">]</span>
+	
+	<span class="k">[PERMITTED_REACTION</span><span class="err">:TAN_A_HIDE</span><span class="k">]</span>
+	<span class="k">[PERMITTED_REACTION</span><span class="err">:RENDER_FAT</span><span class="k">]</span>
+	<span class="k">[PERMITTED_REACTION</span><span class="err">:MAKE_SOAP_FROM_TALLOW</span><span class="k">]</span>
+	<span class="k">[PERMITTED_REACTION</span><span class="err">:MAKE_SOAP_FROM_OIL</span><span class="k">]</span>
+	<span class="k">[PERMITTED_REACTION</span><span class="err">:MILL_SEEDS_NUTS_TO_PASTE</span><span class="k">]</span>
+	<span class="k">[PERMITTED_REACTION</span><span class="err">:MAKE_CLAY_JUG</span><span class="k">]</span>
+	<span class="k">[PERMITTED_REACTION</span><span class="err">:MAKE_CLAY_BRICKS</span><span class="k">]</span>
+	<span class="k">[PERMITTED_REACTION</span><span class="err">:MAKE_CLAY_STATUE</span><span class="k">]</span>
+	<span class="k">[PERMITTED_REACTION</span><span class="err">:MAKE_LARGE_CLAY_POT</span><span class="k">]</span>
+	<span class="k">[PERMITTED_REACTION</span><span class="err">:MAKE_CLAY_CRAFTS</span><span class="k">]</span>
+	<span class="k">[PERMITTED_REACTION</span><span class="err">:MAKE_QUICKLIME</span><span class="k">]</span>
+	<span class="k">[PERMITTED_REACTION</span><span class="err">:MAKE_MILK_OF_LIME</span><span class="k">]</span>
+	<span class="k">[PERMITTED_REACTION</span><span class="err">:MAKE_PARCHMENT</span><span class="k">]</span>
+	<span class="k">[PERMITTED_REACTION</span><span class="err">:MAKE_SCROLL</span><span class="k">]</span>
+	<span class="k">[PERMITTED_REACTION</span><span class="err">:MAKE_QUIRE</span><span class="k">]</span>
+	<span class="k">[PERMITTED_REACTION</span><span class="err">:MAKE_SHEET_FROM_PLANT</span><span class="k">]</span>
+	<span class="k">[PERMITTED_REACTION</span><span class="err">:MAKE_SLURRY_FROM_PLANT</span><span class="k">]</span>
+	<span class="k">[PERMITTED_REACTION</span><span class="err">:PRESS_PLANT_PAPER</span><span class="k">]</span>
+	<span class="k">[PERMITTED_REACTION</span><span class="err">:BIND_BOOK</span><span class="k">]</span>
+	<span class="k">[PERMITTED_REACTION</span><span class="err">:GLAZE_JUG</span><span class="k">]</span>
+	<span class="k">[PERMITTED_REACTION</span><span class="err">:GLAZE_STATUE</span><span class="k">]</span>
+	<span class="k">[PERMITTED_REACTION</span><span class="err">:GLAZE_LARGE_POT</span><span class="k">]</span>
+	<span class="k">[PERMITTED_REACTION</span><span class="err">:GLAZE_CRAFT</span><span class="k">]</span>
+	<span class="k">[PERMITTED_REACTION</span><span class="err">:PRESS_OIL</span><span class="k">]</span>
+	<span class="k">[PERMITTED_REACTION</span><span class="err">:PRESS_OIL_FRUIT</span><span class="k">]</span>
+	<span class="k">[PERMITTED_REACTION</span><span class="err">:MAKE_CLAY_HIVE</span><span class="k">]</span>
+	<span class="k">[PERMITTED_REACTION</span><span class="err">:PRESS_HONEYCOMB</span><span class="k">]</span>
+	<span class="k">[PERMITTED_REACTION</span><span class="err">:MAKE_WAX_CRAFTS</span><span class="k">]</span>
+	<span class="k">[PERMITTED_REACTION</span><span class="err">:BREW_DRINK_FROM_PLANT</span><span class="k">]</span>
+	<span class="k">[PERMITTED_REACTION</span><span class="err">:BREW_DRINK_FROM_PLANT_GROWTH</span><span class="k">]</span>
+	<span class="k">[PERMITTED_REACTION</span><span class="err">:MAKE_MEAD</span><span class="k">]</span>
+	<span class="k">[PERMITTED_REACTION</span><span class="err">:PROCESS_PLANT_TO_BAG</span><span class="k">]</span>
+	<span class="k">[PERMITTED_REACTION</span><span class="err">:BRASS_MAKING</span><span class="k">]</span>
+	<span class="k">[PERMITTED_REACTION</span><span class="err">:BRASS_MAKING2</span><span class="k">]</span>
+	<span class="k">[PERMITTED_REACTION</span><span class="err">:BRONZE_MAKING</span><span class="k">]</span>
+	<span class="k">[PERMITTED_REACTION</span><span class="err">:BRONZE_MAKING2</span><span class="k">]</span>
+	<span class="k">[PERMITTED_REACTION</span><span class="err">:ELECTRUM_MAKING</span><span class="k">]</span>
+	<span class="k">[PERMITTED_REACTION</span><span class="err">:ELECTRUM_MAKING2</span><span class="k">]</span>
+	<span class="k">[PERMITTED_REACTION</span><span class="err">:BILLON_MAKING</span><span class="k">]</span>
+	<span class="k">[PERMITTED_REACTION</span><span class="err">:BILLON_MAKING2</span><span class="k">]</span>
+	<span class="k">[PERMITTED_REACTION</span><span class="err">:PEWTER_FINE_MAKING</span><span class="k">]</span>
+	<span class="k">[PERMITTED_REACTION</span><span class="err">:PEWTER_FINE_MAKING2</span><span class="k">]</span>
+	<span class="k">[PERMITTED_REACTION</span><span class="err">:PEWTER_TRIFLE_MAKING</span><span class="k">]</span>
+	<span class="k">[PERMITTED_REACTION</span><span class="err">:PEWTER_TRIFLE_MAKING2</span><span class="k">]</span>
+	<span class="k">[PERMITTED_REACTION</span><span class="err">:PEWTER_LAY_MAKING</span><span class="k">]</span>
+	<span class="k">[PERMITTED_REACTION</span><span class="err">:BLACK_BRONZE_MAKING</span><span class="k">]</span>
+	<span class="k">[PERMITTED_REACTION</span><span class="err">:STERLING_SILVER_MAKING</span><span class="k">]</span>
+	<span class="k">[PERMITTED_REACTION</span><span class="err">:ROSE_GOLD_MAKING</span><span class="k">]</span>
+</pre></div>
+<p>Now after this example you might be thinking "<i>Why not make a generic animal person civilization and stuff all 175+ existing [CREATURE:ANIMAL_MAN] tokens into it?</i>". This works, but the trick is it works far too well. The number of [CREATURE:X] tags changes the civ's spawn rate, so adding every [CREATURE:ANIMAL_MAN] to one entity will likely cause their civ to spawn so often that it blocks all the elves, humans, goblins, kobolds, and dwarves from spawning and will lead to world gen rejections. To balance the spawn rates for the vanilla civs you would need to add [SELECT_ENTITY:VANILLA_ENTITY_X] followed by the same number (175+) of duplicate [CREATURE:VANILLA_CREATURE_X] tokens for each vanilla civ. See <a href="/index.php/Entity_token#Placement" title="Entity token">entity placement</a> for more info on this.
+</p>
+<h2><span class="mw-headline" id="General_Tips">General Tips</span></h2></div>

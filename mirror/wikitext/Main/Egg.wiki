@@ -1,0 +1,42 @@
+{{Quality|Exceptional}}
+{{av}}
+<onlyinclude>
+[[File:egg_sprite_preview.png|right]]'''Eggs''' are laid by creatures with the {{token|LAYS_EGGS|c}} token, or grown by [[feather tree]]s.  This includes ordinary fowl and reptiles, and also some more exotic creatures such as [[giant eagle]]s, [[dragon]]s, [[kobold]]s, and many others.  Eggs can be used by dwarves as [[food]], or they can be hatched. Eggs can only be eaten raw if at least one of their component materials (yolk, white, or shell) is edible raw; otherwise, they have to be cooked into prepared meals first.
+
+Egg-laying animals will claim an empty [[nest box]] if one is available (but will only do so, if they are about to lay eggs).
+After egg-laying (in a claimed nest box) another batch of eggs can be laid by that animal exactly three months later (as the corresponding counter is reset at the moment the eggs are laid), but the new eggs will then only be laid after the animal did claim and move to a nestbox. Which means that about every three months a new batch of eggs can be laid.
+
+Males can also be [[mod]]ded to lay eggs, although these may not hatch.<sup>Needs clarification</sup>
+</onlyinclude>
+
+== Hatching Conditions ==
+{{catbox|Egglaying}}Hatching eggs requires that the dwarves are prevented from removing the fertilized eggs from the nest box, until the incubation period ends in exactly 3 months after they were laid. This can be done by placing the nest box behind a locked [[door]], or  [[forbid]]ding the eggs in the nest box. Forbidding eggs on the [[menu#Kitchen Screen|kitchen menu]] will ''not'' prevent dwarves from removing them from the nest box &mdash; it will only prevent them from being cooked. Similarly, modifying all [[stockpile]]s to disallow eggs will prevent hauling jobs, however the eggs remain available for [[cook]]ing and eating. Fertilized eggs left undisturbed in next boxes will still hatch, even if the mother was forcibly removed from the nest box. This may be a bug because it was implied that eggs that are unattended by their mother for a week are supposed to go bad[http://www.bay12forums.com/smf/index.php?topic=140544.msg5826258#msg5826258].
+
+Only gravid ("pregnant") females will lay fertilized eggs, though, as with creatures that give live birth, the pregnancy status of a creature is not normally visible. Whether eggs that were laid are fertilized or not is also not visible, though DFhack has a plugin that displays the fertilization status of the eggs, as well as allow players to view the mother's pregnancy status via a console. The females of a species will never become pregnant if the pet population cap has been exceeded, but those already pregnant before the cap was exceeded can still lay fertilized eggs. Culling or trading away excess animals will allow the females to become pregnant again. In order for eggs to be fertilized, a male of the species must be present (though this does not always ''guarantee'' fertilization). Unlike in previous versions of ''Dwarf Fortress'', the male must have spent time with the female to fertilize their seed pouch (the male need not be ''alive'' at the time of egglaying, however). One fertilization provides 'seed' for two egg-layings. How it works is that the female becomes pregnant for about 6 months (similar to the gestation period of non-sentient creatures giving live birth), during which any eggs laid will become fertilized. In practice, the first clutch tends to bring the species population over the pet cap, especially if the species can lay large clutches, so the second clutch can still be fertilized provided the female was still pregnant even after the population cap has been exceeded. Depending on the animal, fertilization chances seem to differ. {{verify}} If the creature is sapient (has any of the {{token|INTELLIGENT|c}}, {{token|CAN_LEARN|c}} or {{token|CAN_SPEAK|c}} tokens), then the egg-laying female must also be 'married' in order for her eggs to be fertilized, and she must also have spent time with her husband. (In short, egg fertilization has the same conditions as normal impregnation in the game.)
+
+== Egg Production ==
+{{main|Egg production}}
+Fortresses can set up [[egg production]] as a source of [[food]]. This requires at least one adult, tame, female egg-laying [[animal]], a built and unclaimed [[nest box]], [[food hauling]], and [[cooking]].
+
+== Egg Composition ==
+It appears from tests that the [[material]] an egg is made out of is actually the shell; this includes meals made from the eggs.
+
+{{D for Dwarf}}
+
+<!-- Reference: ??? -->
+No dwarf has ever seen a [[feather tree]] egg, but all are familiar with the yolk that fills up their [[trade depot]]s when elves come for [[trading]]. This can be traded back to the elves, with no consequence.
+
+[[File:eggs.png|thumb|290px|center|What's an egg's least favorite drug?<br>Crack.]]
+
+{{Translation
+| dwarven = acöb
+| elvish  = amira
+| goblin  = donsmok
+| human   = edi
+}}
+
+{{materials}}
+
+{{Category|Food}}
+{{Category|Creature attributes}}
+[[ru:Egg]]

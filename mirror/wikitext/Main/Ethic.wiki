@@ -1,0 +1,354 @@
+{{migrated article}}
+{{Quality|Unrated}}
+{{av}}
+{{Modding}}
+
+'''Ethic''' tags are used in the [[Entity token|entity raw files]] to determine how different civilizations feel about various issues. Relationships between civilizations are based on their ethic responses in relation to each other; similar ethics result in friendship, while conflicting ethics result in animosity. Strongly conflicting ethics often trigger [[war]]s during [[world generation]]. (In practice, this generally causes [[Elf|elves]] to declare war on everybody else over killing plants and making trophies, and everybody else to declare war on the elves over the devouring of [[Person|sapient beings]].)
+
+Some ethics also affect [[fortress mode]] features, such as [[justice]], or [[trading]]. In [[adventurer mode]], ethics can affect the [[level of conflict]] (lethal, or no quarter). During [[world generation]], ethics also affect how the entity treats its kills, such as devouring them or making trophies out of them.
+
+== Example ==
+In the [[raw file]]s for entities, ethics appear as follows:
+ [ETHIC:LYING:PERSONAL_MATTER]
+
+This means that the entity will treat lying as a personal matter - more technically, the value of its LYING ethic is set to PERSONAL_MATTER.
+
+== Ethic types ==
+{| {{prettytable}}
+|- bgcolor="#dddddd"
+!Token
+!Extra Information
+|-
+| {{text anchor|ASSAULT}}
+| The result of a tantrumming citizen attacking another in fortress mode. Other effects unknown.
+|-
+| {{text anchor|EAT_SAPIENT_KILL}}
+| This determines if members of the civilization will sometimes devour defeated enemy combatants.
+|-
+| {{text anchor|EAT_SAPIENT_OTHER}}
+| This includes whether or not a civilization is willing to [[butcher]] other sapients. Note that any sapient creature that dies on site will never be butchered by citizens in fortress mode, and if butchered in adventure mode the products are inedible and unusable. However, this works for offsite behaviors (caravans will deliver products made from sentients, etc.) Also note that if an item doesn't actually come from a sapient creature that died on site (i.e: it was generated as part of a caravan or site) it is usable and edible regardless of ethics.
+|-
+| {{text anchor|KILL_ANIMAL}}
+| A response of JUSTIFIED_IF_EXTREME_REASON, JUSTIFIED_IF_SELF_DEFENSE, or anything from MISGUIDED to UNTHINKABLE (see below) causes the entity to refuse animal products in trade &mdash; namely, [[material token|materials]] with [IMPLIES_ANIMAL_KILL]. Animal products sold by caravans will be marked as "grown", which means kosher for their ethics, for example grown leather.
+|-
+| {{text anchor|KILL_ENEMY}}
+| If REQUIRED, all lethal combat with an enemy who is an enemy of the whole entity will put the creature in [[no quarter]] mode.
+|-
+| {{text anchor|KILL_ENTITY_MEMBER}}
+| If REQUIRED, all lethal combat with an enemy in the same entity will put the creature in [[no quarter]] mode.  Determines whether and how often entity members will be murdered. 
+|-
+| {{text anchor|KILL_NEUTRAL}}
+| If REQUIRED, all lethal combat with an enemy who is neutral with the entity will put the creature in [[no quarter]] mode, and the creature will also demand that strangers identify themselves; it will also greatly increase war aggression in worldgen.
+|-
+| {{text anchor|KILL_PLANT}}
+| This includes a civilization's position towards wood &mdash; any response from MISGUIDED to UNTHINKABLE (see below) causes the entity to refuse wooden objects (except for "grown" wooden objects) in trade, and also prohibits them from bringing caravan [[wagon]]s. Caravans will sell grown wood objects (if the civ has WOOD_PREF) and even grown non-wood objects, that elves refuse to buy (if the civ uses misc processed wood products). 
+|-
+| {{text anchor|LYING}}
+| Giving false witness reports?{{verify}}
+|-
+| {{text anchor|MAKE_TROPHY_ANIMAL}}
+| This determines whether animal kills will lead to characters with trophies. [[Historical figure]]s can arrive at your fortress with leather, horn, ivory, tooth, hair, bone or nail jewellery from slain non-sapients, and fortress citizens may put on [[crafts]] made from their kills as well. 
+|-
+| {{text anchor|MAKE_TROPHY_SAME_RACE}}
+| This determines whether kills of one's own race will lead to characters with trophies. [[Historical figure]]s can arrive at your fortress with leather, tooth, hair, bone or nail jewellery from their race. Example: a goblin with a -goblin tooth ring-.
+|-
+| {{text anchor|MAKE_TROPHY_SAPIENT}}
+| This determines whether kills of other sapients will lead to characters with trophies - as previously, but regarding other races, including INTELLIGENT.
+|-
+| {{text anchor|OATH_BREAKING}}
+| The result of a citizen violating noble mandates in fortress mode. Other effects unknown.
+|-
+| {{text anchor|SLAVERY}}
+|Civilization will enslave defeated enemies and bring them back to their site. Also affects whether you may trade caged sapient beings to merchants. Aside from diplomacy, higher/lower values don't seem to affect anything beyond if a civilization is willing to take slaves at all. {{verify}}
+|-
+| {{text anchor|THEFT}}
+| This determines whether the civilization will try to steal goods, and how it will respond when stolen from.{{verify}}
+|-
+| {{text anchor|TORTURE_ANIMALS}}
+|Determines if the civilization will kill all animals of the conquered site, or preserve them for further use. 
+|-
+| {{text anchor|TORTURE_AS_EXAMPLE}}
+|Civilization will sometimes execute non-combatants after defeating enemy defenders.
+|-
+| {{text anchor|TORTURE_FOR_FUN}}
+|
+|-
+| {{text anchor|TORTURE_FOR_INFORMATION}}
+|
+|-
+| {{text anchor|TREASON}}
+| Protects position-holders from being murdered like everyone else – the reason that demon overlords of goblins manage to live for centuries, despite the goblins' regard of killing each other as being a personal matter.  
+|-
+| {{text anchor|TRESPASSING}}
+| Ignoring burrow restrictions {{verify}}
+|-
+| {{text anchor|VANDALISM}}
+| The result of a tantruming citizen breaking furniture in fortress mode. Other effects unknown.
+|}
+
+==Ethic values==
+As used internally (see below), roughly in order of acceptability:
+
+{| {{prettytable}}
+|- bgcolor="#dddddd"
+! Num !! Token !! Extra information
+|-
+| 0 || {{text anchor|NOT_APPLICABLE}} || Also used as a fallback if not set.
+|-
+| 1 || {{text anchor|ACCEPTABLE}} ||
+|-
+| 2 || {{text anchor|PERSONAL_MATTER}} ||
+|-
+| 3 || {{text anchor|JUSTIFIED_IF_NO_REPERCUSSIONS}} ||
+|-
+| 4 || {{text anchor|JUSTIFIED_IF_GOOD_REASON}} ||
+|-
+| 5 || {{text anchor|JUSTIFIED_IF_EXTREME_REASON}} ||
+|-
+| 6 || {{text anchor|JUSTIFIED_IF_SELF_DEFENSE}} ||
+|-
+| 7 || {{text anchor|ONLY_IF_SANCTIONED}} ||
+|-
+| 8 || {{text anchor|MISGUIDED}} ||
+|-
+| 9 || {{text anchor|SHUN}} ||
+|-
+| 10 || {{text anchor|APPALLING}} ||
+|-
+| 11 || {{text anchor|PUNISH_REPRIMAND}} ||
+|-
+| 12 || {{text anchor|PUNISH_SERIOUS}} || Will result in either a beating or a month in prison. See: [[Justice#Punishments]]
+|-
+| 13 || {{text anchor|PUNISH_EXILE}} || Mentioning in history: "...after being exiled following a criminal conviction." 
+|-
+| 14 || {{text anchor|PUNISH_CAPITAL}} || Will result in either 8 months in prison or 50 hammerstrikes. See: [[Justice#Punishments]]
+|-
+| 15 || {{text anchor|UNTHINKABLE}} ||
+|-
+| 16 || {{text anchor|REQUIRED}} ||
+|}
+
+==Ethic value numbers in relation to each other==
+The following table describes how entities respond to other cultures, with the observer on the vertical axis and their target on the horizontal axis.
+If an entity's accumulated animosity towards another passes a certain threshold (determined by the ruler's personality) then it will run a risk-assessment check. If passed, this will lead to a declaration of war.
+
+In general, entities react much more strongly to actions that violate ''their'' taboos than to the outlawing of their customs in other civilisations.
+For example, Civ A finds slavery Acceptable, but Civ B considers it a Capital Offence.
+* Civ A will consider Civ B most unreasonable (&minus;5) for executing people over such a non-issue.
+* Civ B will be shocked and disgusted (&minus;15) that Civ A engages in such a debased activity.
+* The end result is mutual negativity. However, Civ B is 3&times; ''more'' offended, and much more likely to go to war over the issue &mdash; assuming, of course, they think they have a chance of winning.
+
+{| {{prettytable}}
+|- bgcolor="#dddddd"
+! rowspan=2 colspan=2 | &nbsp;
+! colspan=16  | TARGET
+|- bgcolor="#dddddd"
+!width=6%| Accept. ||width=6%| Personal ||width=6%| Reperc. ||width=6%| Good ||width=6%| Extreme ||width=6%| Self-Def. ||width=6%| Sanct. ||width=6%| Misguid. ||width=6%| Shun ||width=6%| Appall. ||width=6%| Reprim. ||width=6%| Serious ||width=6%| Exile ||width=6%| Capital ||width=6%| Unthink. ||width=6%| Req.
+|-
+! rowspan=16 | {{rotate|OBSERVER}} &nbsp;&nbsp;&nbsp;&nbsp;
+! Acceptable || {{tc|blue|+1}} || {{tc|blue|+1}} || {{tc|blue|+1}} || 0 || 0 || 0 || 0 || {{tc|red|−1}} || {{tc|red|−2}} || {{tc|red|−2}} || {{tc|red|−2}} || {{tc|red|−3}} || {{tc|red|−5}} || {{tc|red|−5}} || {{tc|red|−2}} || {{tc|blue|+1}}
+|-
+! Personal || {{tc|blue|+1}} || {{tc|blue|+1}} || {{tc|blue|+1}} || 0 || 0 || 0 || 0 || {{tc|red|−1}} || {{tc|red|−2}} || {{tc|red|−2}} || {{tc|red|−2}} || {{tc|red|−3}} || {{tc|red|−5}} || {{tc|red|−5}} || {{tc|red|−2}} || {{tc|blue|+1}}
+|-
+! No Reperc. || {{tc|blue|+1}} || {{tc|blue|+1}} || {{tc|blue|+1}} || 0 || 0 || 0 || 0 || {{tc|red|−1}} || {{tc|red|−2}} || {{tc|red|−2}} || {{tc|red|−2}} || {{tc|red|−3}} || {{tc|red|−5}} || {{tc|red|−5}} || {{tc|red|−2}} || {{tc|blue|+1}}
+|-
+! Good Reas. || 0 || 0 || 0 || {{tc|blue|+2}} || {{tc|blue|+1}} || 0 || 0 || 0 || {{tc|red|−1}} || {{tc|red|−1}} || {{tc|red|−1}} || {{tc|red|−1}} || {{tc|red|−1}} || {{tc|red|−1}} || {{tc|red|−1}} || 0
+|-
+! Extreme Reas. || {{tc|red|−1}} || {{tc|red|−1}} || 0 || {{tc|blue|+1}} || {{tc|blue|+2}} || 0 || 0 || 0 || {{tc|red|−1}} || {{tc|red|−1}} || {{tc|red|−1}} || {{tc|red|−1}} || {{tc|red|−1}} || {{tc|red|−1}} || {{tc|red|−1}} || {{tc|red|−1}}
+|-
+! Self-Defence || {{tc|red|−2}} || {{tc|red|−2}} || {{tc|red|−1}} || 0 || {{tc|blue|+1}} || {{tc|blue|+2}} || 0 || 0 || 0 || {{tc|red|−1}} || {{tc|red|−1}} || {{tc|red|−1}} || {{tc|red|−1}} || {{tc|red|−1}} || {{tc|red|−1}} || {{tc|red|−2}}
+|-
+! Sanctioned || {{tc|red|−2}} || {{tc|red|−2}} || {{tc|red|−1}} || 0 || {{tc|blue|+1}} || 0 || {{tc|blue|+2}} || 0 || 0 || {{tc|red|−1}} || {{tc|red|−1}} || {{tc|red|−1}} || {{tc|red|−1}} || {{tc|red|−1}} || {{tc|red|−1}} || {{tc|red|−2}}
+|-
+! Misguided || {{tc|red|−1}} || {{tc|red|−1}} || 0 || 0 || 0 || 0 || 0 || {{tc|blue|+2}} || {{tc|blue|+1}} || {{tc|blue|+1}} || {{tc|blue|+1}} || 0 || 0 || {{tc|red|−1}} || {{tc|blue|+1}} || {{tc|red|−1}}
+|-
+! Shun || {{tc|red|−1}} || {{tc|red|−1}} || 0 || 0 || 0 || 0 || 0 || {{tc|blue|+1}} || {{tc|blue|+2}} || {{tc|blue|+1}} || {{tc|blue|+1}} || 0 || 0 || {{tc|red|−1}} || {{tc|blue|+1}} || {{tc|red|−1}}
+|-
+! Appalling || {{tc|red|−5}} || {{tc|red|−5}} || {{tc|red|−3}} || {{tc|red|−2}} || {{tc|red|−1}} || {{tc|red|−1}} || {{tc|red|−2}} || {{tc|blue|+1}} || {{tc|blue|+1}} || {{tc|blue|+2}} || {{tc|blue|+1}} || {{tc|blue|+1}} || {{tc|blue|+1}} || 0 || {{tc|blue|+1}} || {{tc|red|−5}}
+|-
+! Reprimand || {{tc|red|−5}} || {{tc|red|−5}} || {{tc|red|−3}} || {{tc|red|−2}} || {{tc|red|−1}} || {{tc|red|−1}} || {{tc|red|−2}} || {{tc|blue|+1}} || {{tc|blue|+1}} || {{tc|blue|+1}} || {{tc|blue|+2}} || {{tc|blue|+1}} || {{tc|blue|+1}} || 0 || {{tc|blue|+1}} || {{tc|red|−5}}
+|-
+! Serious || {{tc|red|−10}} || {{tc|red|−10}} || {{tc|red|−7}} || {{tc|red|−3}} || {{tc|red|−2}} || {{tc|red|−2}} || {{tc|red|−3}} || 0 || {{tc|blue|+1}} || {{tc|blue|+1}} || 0 || {{tc|blue|+2}} || {{tc|blue|+1}} || {{tc|blue|+1}} || {{tc|blue|+1}} || {{tc|red|−10}}
+|-
+! Exile || {{tc|red|−10}} || {{tc|red|−10}} || {{tc|red|−7}} || {{tc|red|−3}} || {{tc|red|−2}} || {{tc|red|−2}} || {{tc|red|−3}} || 0 || {{tc|blue|+1}} || {{tc|blue|+1}} || 0 || {{tc|blue|+1}} || {{tc|blue|+2}} || {{tc|blue|+1}} || {{tc|blue|+1}} || {{tc|red|−10}}
+|-
+! Capital || {{tc|red|−15}} || {{tc|red|−15}} || {{tc|red|−10}} || {{tc|red|−5}} || {{tc|red|−3}} || {{tc|red|−3}} || {{tc|red|−5}} || 0 || 0 || {{tc|blue|+1}} || 0 || {{tc|blue|+1}} || {{tc|blue|+1}} || {{tc|blue|+2}} || {{tc|blue|+1}} || {{tc|red|−15}}
+|-
+! Unthinkable || {{tc|red|−15}} || {{tc|red|−15}} || {{tc|red|−10}} || {{tc|red|−5}} || {{tc|red|−3}} || {{tc|red|−3}} || {{tc|red|−5}} || 0 || {{tc|blue|+1}} || {{tc|blue|+1}} || 0 || {{tc|blue|+1}} || {{tc|blue|+1}} || {{tc|blue|+1}} || {{tc|blue|+2}} || {{tc|red|−15}}
+|-
+! Required || {{tc|blue|+1}} || {{tc|blue|+1}} || {{tc|blue|+1}} || 0 || 0 || 0 || 0 || {{tc|red|−1}} || {{tc|red|−2}} || {{tc|red|−2}} || {{tc|red|−2}} || {{tc|red|−3}} || {{tc|red|−5}} || {{tc|red|−5}} || {{tc|red|−2}} || {{tc|blue|+1}}
+|}
+
+All above info was collected and interpreted from the data given by Toady himself at [http://www.bay12forums.com/smf/index.php?topic=22151.msg239689].
+
+== Ethics of vanilla civilizations ==
+[[Animal people]] currently have the same ethics as [[kobold]]s.
+
+{| {{prettytable}}
+|- bgcolor="#dddddd"
+! Issue
+! Mountain<br>(dwarf)
+! Forest<br>(elf)
+! Plains<br>(human)
+! Evil<br>(goblin)
+! Skulking<br>(kobold)
+|-
+| Killing member of the same entity
+| Capital punishment
+| Justified with extreme reason
+| Justified with good reason
+| Personal matter
+| Exile
+|-
+| Killing neutral sapient
+| Only if sanctioned
+| Acceptable
+| Justified if no repercussions
+| Required
+| Required
+|-
+| Killing enemy
+| Acceptable
+| Acceptable
+| Acceptable
+| Required
+| Required
+|-
+| Killing animal
+| Acceptable
+| Justified in self-defence
+| Acceptable
+| Acceptable
+| Acceptable
+|-
+| Killing plant
+| Acceptable
+| Unthinkable
+| Acceptable
+| Acceptable
+| Acceptable
+|-
+| Torture as example
+| Unthinkable
+| Acceptable
+| Acceptable
+| Acceptable
+| Unthinkable
+|-
+| Torture for information
+| Unthinkable
+| Misguided
+| Acceptable
+| Acceptable
+| N/A
+|-
+| Torture for fun
+| Unthinkable
+| Unthinkable
+| Appalling
+| Acceptable
+| Acceptable
+|-
+| Torture of animals
+| Unthinkable
+| Unthinkable
+| Shunned
+| Acceptable
+| Unthinkable
+|-
+| Treason
+| Capital punishment
+| Exile
+| Capital punishment
+| Capital punishment
+| Unthinkable
+|-
+| Oathbreaking
+| Capital punishment
+| Exile
+| Capital punishment
+| Personal matter
+| N/A
+|-
+| Lying
+| Personal matter
+| Exile
+| Personal matter
+| Personal matter
+| N/A
+|-
+| Vandalism
+| Serious punishment
+| Reprimand
+| Serious punishment
+| Personal matter
+| N/A
+|-
+| Trespassing
+| Serious punishment
+| Reprimand
+| Serious punishment
+| Personal matter
+| N/A
+|-
+| Theft
+| Serious punishment
+| Reprimand
+| Serious punishment
+| Personal matter
+| N/A
+|-
+| Assault
+| Serious punishment
+| Exile
+| Serious punishment
+| Personal matter
+| Personal matter
+|-
+| Slavery
+| Capital punishment
+| Exile
+| Acceptable
+| Personal matter
+| Unthinkable
+|-
+| Eating sapients
+| Unthinkable
+| Unthinkable
+| Unthinkable
+| Personal matter
+| Unthinkable
+|-
+| Eating sapients (that have been killed in battle)
+| Unthinkable
+| Acceptable
+| Unthinkable
+| Personal matter
+| Unthinkable
+|-
+| Making a trophy from a corpse of the same race
+| Appalling
+| Unthinkable
+| Acceptable
+| Acceptable
+| Unthinkable
+|-
+| Making a trophy from a corpse of another sapient race
+| Shunned
+| Unthinkable
+| Acceptable
+| Acceptable
+| Unthinkable
+|-
+| Making a trophy from the corpse of an animal
+| Acceptable
+| Unthinkable
+| Acceptable
+| Acceptable
+| Unthinkable
+|}
+
+{{Category|Modding}}
+{{Category|Tokens}}
+{{Template:V50 entities}}
+[[ru:Ethic]]
