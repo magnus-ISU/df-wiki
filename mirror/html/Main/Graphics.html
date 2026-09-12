@@ -1,0 +1,526 @@
+<div class="mw-parser-output"><div id="page-quality-rating" style="text-align: right;margin: 0.8em 0;font-size:75%">
+ <a href="/index.php/Dwarf_Fortress_Wiki:Quality#Tattered" title="Dwarf Fortress Wiki:Quality"><span id="stub-quality" style="text-decoration:none; color:#333333">xTATTEREDx</span></a> <span style="font-weight:bold;" class="dot">&#160;·</span> <a href="/index.php/Dwarf_Fortress_Wiki:Quality#Fine" title="Dwarf Fortress Wiki:Quality"><span id="fine-quality" style="text-decoration:none; color:#CA7A02;">+FINE+</span></a> <span style="font-weight:bold;" class="dot">&#160;·</span> <a href="/index.php/Dwarf_Fortress_Wiki:Quality#Superior" title="Dwarf Fortress Wiki:Quality"><span id="superior-quality" style="padding:0.2em; border:1px solid #b8f; border-radius: 2px; -webkit-border-radius: 2px; -moz-border-radius: 2px; -o-border-radius: 2px; -ms-border-radius: 2px; background:#e4ccff; color:#8800cc;">*SUPERIOR*</span></a> <span style="font-weight:bold;" class="dot">&#160;·</span> <a href="/index.php/Dwarf_Fortress_Wiki:Quality#Exceptional" title="Dwarf Fortress Wiki:Quality"><span id="exceptional-quality" style="text-decoration:none; color:#0088CC;">≡EXCEPTIONAL≡</span></a> <span style="font-weight:bold;" class="dot">&#160;·</span> <a href="/index.php/Dwarf_Fortress_Wiki:Quality#Masterwork" title="Dwarf Fortress Wiki:Quality"><span id="masterwork-quality" style="text-decoration:none; color:#72A329;">☼MASTERWORK☼</span></a></div>
+<table class="version-table" style="text-align: center; margin: 3px auto 5px; padding: 0.25em; border-radius: 3px; -webkit-border-radius: 3px; -moz-border-radius: 3px; -o-border-radius: 3px; -ms-border-radius: 3px;; border: 2px solid #bbdd88; background: #f5ffee; min-width:27em"><tbody><tr><td style="padding: 0.3em 0.3em; width: 100%;"><div style="margin-bottom:6px;" class="version-links-r1"><span style="font-size:100%"><span class="version-link"><span style="text-decoration: none; color: #72A329; background-color: #E2FDCE; border-radius: 2px; -webkit-border-radius: 2px; -moz-border-radius: 2px; -o-border-radius: 2px; -ms-border-radius: 2px; border: 1px solid #bbdd88; padding: 0.2em;"><b>v53.16</b></span></span><span style="font-weight:bold;" class="dot">&#160;·</span> <span class="version-link"><a href="/index.php/DF2014:Graphics" title="DF2014:Graphics"><span style="text-decoration: none; color: #72A329;">v0.47.05</span></a></span></span></div><span>This article is about the current version of DF.<br />Note that some content may still need to be updated.</span><br />
+<div style="float: right; font-size:75%; padding-right:2px; margin-top:-2px; margin-bottom:-7px;"><span class="version-link"><a href="/index.php/Dwarf_Fortress_Wiki:V" class="mw-redirect" title="Dwarf Fortress Wiki:V"><span style="text-decoration: none; color: #72A329;">More Info</span></a></span><span style="font-weight:bold;" class="dot">&#160;·</span> <span class="version-link"><a href="/index.php/Template:Av" class="mw-redirect" title="Template:Av"><span style="text-decoration: none; color: #72A329;">V</span></a></span></div></td></tr>
+</tbody></table>
+<div class="floatright"><a href="/index.php/File:Graphics_v50_preview.png" class="image"><img alt="Graphics v50 preview.png" src="/images/3/35/Graphics_v50_preview.png" decoding="async" width="211" height="172" /></a></div>
+<dl><dd></dd>
+<dd><i>For a list of all Premium graphics tokens and basic usage, see <a href="/index.php/Graphics_token" title="Graphics token">Graphics token</a>.</i></dd>
+<dd></dd>
+<dd><i>For a repository of all Classic tilesets used in DF, see <a href="/index.php/Tileset_repository" title="Tileset repository">Tileset repository</a>.</i></dd>
+<dd></dd>
+<dd><i>For details on creating Classic tilesets, see <a href="/index.php/Tileset_repository" title="Tileset repository">Tileset repository</a>.</i></dd></dl>
+<p>The <b>graphics</b> system in v50 is <a rel="nofollow" class="external text" href="https://github.com/Putnam3145/Dwarf-Fortress--libgraphics--">open-source</a>. It is a custom solution which appears to involve compositing graphics sets directly in C++ before texmapping them to SDL. This blitting approach is software rendered and so largely doesn't use hardware acceleration on graphics cards. This system means that despite graphics sets supporting rudimentary animation, there is no traditional sprite mapping, which places extensive limits on the types of graphics that are possible.  While the number of user editable graphics sets has increased significantly in v50, many game elements are still hard coded graphics sets, or using a tileset over the older style graphics from classic DF.
+</p>
+
+<h1><span class="mw-headline" id="Premium_Graphics">Premium Graphics</span></h1>
+<dl><dd></dd>
+<dd><i>For a list of all Premium graphics tokens and basic usage, see <a href="/index.php/Graphics_token" title="Graphics token">Graphics token</a>.</i></dd></dl>
+<p>The <code>[OBJECT:GRAPHICS]</code> object defines the use of various tile-based graphics in the game. As of version 50.01, graphics <a href="/index.php/Token" title="Token">tokens</a> have been greatly expanded to accommodate the release of the Steam &amp; Itch premium version. This section is a basic description of how to define various types of graphics.
+</p><p>Making custom graphics requires multiple interacting files to function:
+</p>
+<ol><li>An 8bit RGBA (sometimes called 32bit) "imagename.png" in the <code>\&lt;mod_id&gt;\graphics\images</code> folder</li>
+<li>A "tile_page_name.txt" in the <code>\&lt;mod_id&gt;\graphics</code> folder</li>
+<li>A "graphics_type_name.txt" in the <code>\&lt;mod_id&gt;\graphics</code> folder</li></ol>
+<p>Mods can reuse any graphics loaded ahead of them (including vanilla) by using the same tile page token.
+</p><p><br />
+</p>
+<h2><span class="mw-headline" id="Tile_Page">Tile Page</span></h2>
+<p>Tile pages link image files to a tile page token so they can be referenced by the graphics file. Just like all other <a href="/index.php/Raw_file" title="Raw file">Raw files</a>, Tile Pages must be defined from within a properly named "tile_page_&lt;name&gt;.txt" file and follow:
+</p>
+<pre>tile_page_&lt;name&gt;
+
+[OBJECT:TILE_PAGE]
+</pre>
+<p>After the object type is defined as above, any number of tile pages can be defined according to the format below.
+</p>
+<pre>  [TILE_PAGE:&lt;tile page identifier&gt;]
+     [FILE:images/imagename.png]
+     [TILE_DIM:&lt;tile x dim&gt;:&lt;tile y dim&gt;]
+     [PAGE_DIM_PIXELS:&lt;page x dim&gt;:&lt;page y dim&gt;]
+</pre>
+<ul><li><i>tile page identifier</i>: The Internal ID being created for the image.</li>
+<li><i>imagename.png</i>: The file name of the 8bit RGBA (sometimes called 32bit) in the <code>\graphics\images</code> folder of the mod.</li>
+<li><i>tile x dim</i>: The width of each tile in pixels (usually 32, 8 for many interface elements, 96 for portrait elements, 16 for most world map elements and small gems).</li>
+<li><i>tile y dim</i>: The height of each tile in pixels (usually 32, 12 for many interface elements, 96 for portrait elements, 16 for most world map elements and small gems).</li>
+<li><i>page x dim</i>: The width of the image file in pixels.</li>
+<li><i>page y dim</i>: The height of the image file in pixels.</li></ul>
+<p>For any of the other graphics tokens that refer to this defined identifier, and require position or width/height values, those values will be in multiples of these TILE_DIM values.
+</p><p>Known issues:
+</p>
+<ul><li>Currently it is only recommended to use <code>[TILE_DIM:32:32]</code> other than for the above exceptions, as the game will resize other resolutions into a 32×32 tile. Depending on your zoom and interpolation settings, rescaled tiles can be subject to <a href="http://en.wikipedia.org/wiki/Artifact_(error)" class="extiw" title="wikipedia:Artifact (error)">artefacting</a>.</li>
+<li>It is important that the <code>[PAGE_DIM_PIXELS:&lt;x dim&gt;:&lt;y dim&gt;]</code> matches the size of the referenced image exactly - as the game will stretch tile pages with a dimension larger than the actual image by inserting blank lines, and a tile page smaller than the image will cause a crash to desktop.</li></ul>
+<h2><span class="mw-headline" id="Creature_Graphics">Creature Graphics</span></h2>
+<dl><dd><i>For a list of all known creature graphics tokens, see <a href="/index.php/Graphics_token#Creature_Graphics" title="Graphics token">Graphics token#Creature Graphics</a>.</i>.</dd></dl>
+<p>Creature graphics are found within graphics_creature_x files (such as graphics_creature_domestic or graphics_creature_layered).  All graphics files must begin with the file name, followed by the <code>[OBJECT:GRAPHICS]</code> token that tells the game that the file contains graphics definitions.
+</p>
+<h3><span class="mw-headline" id="Basic_Graphics">Basic Graphics</span></h3>
+<div class="thumb tright"><div class="thumbinner" style="width:322px;"><a href="/index.php/File:Graphics_template_xy_positions.png" class="image"><img alt="" src="/images/8/84/Graphics_template_xy_positions.png" decoding="async" width="320" height="320" class="thumbimage" /></a>  <div class="thumbcaption"><div class="magnify"><a href="/index.php/File:Graphics_template_xy_positions.png" class="internal" title="Enlarge"></a></div>An example of how X and Y positions are read, starting from the top left.</div></div></div>
+<p>The most basic form of creature graphics is a single tile, defined below:
+</p>
+<pre>[CREATURE_GRAPHICS:&lt;creature id&gt;]
+   [&lt;condition&gt;:&lt;tile page identifier&gt;:&lt;x position&gt;:&lt;y position&gt;:&lt;color type&gt;:&lt;secondary condition&gt;]
+</pre>
+<ul><li><i><a href="/index.php/Graphics_token#Basic_Conditions" title="Graphics token">condition</a></i>: The condition the creature needs to be in for this image to be displayed. Use <code>DEFAULT</code> for generic graphics.</li>
+<li><i>creature id</i>: The <a href="/index.php/Creature_token" title="Creature token">Creature ID</a> of the creature the graphics represent.</li>
+<li><i><a href="#Tile_Page">tile page identifier</a></i>: The Internal ID of the image defined in the Tile Page.</li>
+<li><i>x position</i>: The x position of the graphic to be displayed in tiles counting from 0 (left→right).</li>
+<li><i>y position</i>: The y position of the graphic to be displayed in tiles counting from 0 (top→bottom).</li>
+<li><i>color type</i>: (optional) Uncertain function, frequently replaced with <code>AS_IS</code> in vanilla <a href="/index.php/Raw" class="mw-redirect" title="Raw">RAWs</a>. ColorTypeEnum<sup class="plainlinks" style="line-height: 0; position: relative; vertical-align: baseline; top: -0.5em;"><a rel="nofollow" class="external text" href="https://gitlab.com/df-modding-tools/df-raw-language-server/-/blob/dev/df_ls_structure/src/objects/graphics.rs">&#91;1&#93;</a></sup></li></ul>
+<ul><li><i><a href="/index.php/Graphics_token#Basic_Conditions" title="Graphics token">secondary condition</a></i>: (optional) An additional condition that must be satisfied for the image to be displayed.</li></ul>
+<p>When the condition <code><a href="/index.php/Graphics_token#DEFAULT" title="Graphics token">[DEFAULT]</a></code> is used, this graphic will be displayed for the creature in all conditions unless additional, more specific conditions are also defined.
+</p>
+<dl><dd><b>Basic Conditions</b></dd></dl>
+<p>Different graphics can be defined for the same creature based on some properties about it. Below is a list of the most common creature conditions tokens. 
+</p>
+<table class="prettytable anchortable" border="1" cellpadding="4" cellspacing="0" style="margin: 1em 1em 1em 0; background: #f9f9f9; border: 1px #aaa solid; border-collapse: collapse;">
+
+<tbody><tr bgcolor="#dddddd">
+<th>Condition
+</th>
+<th>Accepts<br />Secondary
+</th>
+<th>Description
+</th></tr>
+<tr>
+<td><code><a href="/index.php/Graphics_token#DEFAULT" title="Graphics token">[DEFAULT]</a></code></td>
+<td>No</td>
+<td>The default condition that will be displayed unless overwritten by a more specific one below.
+</td></tr>
+<tr>
+<td><code><a href="/index.php/Graphics_token#CHILD" title="Graphics token">[CHILD]</a></code></td>
+<td>Yes</td>
+<td>Will only be displayed if the creature is a <code><a href="/index.php/Creature_token#CHILD" title="Creature token">[CHILD]</a></code> or <code><a href="/index.php/Creature_token#BABY" title="Creature token">[BABY]</a></code> and is younger than one of those ages.
+</td></tr>
+<tr>
+<td><code><a href="/index.php/Graphics_token#ANIMATED" title="Graphics token">[ANIMATED]</a></code></td>
+<td>Yes</td>
+<td>Displayed if the creature is raised from the dead, although it is not known how this is decided. Raised status is not related to having a syndrome with the class from <code><a href="/index.php/Graphics_token#CONDITION_SYN_CLASS" title="Graphics token">[CONDITION_SYN_CLASS]</a></code> or from having <code><a href="/index.php/Creature_token#NOT_LIVING" title="Creature token">[NOT_LIVING]</a></code>/<code><a href="/index.php/Creature_token#OPPOSED_TO_LIFE" title="Creature token">[OPPOSED_TO_LIFE]</a></code>.
+</td></tr>
+<tr>
+<td><code><a href="/index.php/Graphics_token#CORPSE" title="Graphics token">[CORPSE]</a></code></td>
+<td>Yes</td>
+<td>Displayed as soon as the creature dies.
+</td></tr>
+<tr>
+<td><code><a href="/index.php/Graphics_token#LIST_ICON" title="Graphics token">[LIST_ICON]</a></code></td>
+<td>Yes</td>
+<td>Displayed in menus. Useful for large images that would extend beyond the menu boxes otherwise.
+</td></tr>
+<tr>
+<td><code><a href="/index.php/Graphics_token#CDI_LIST_ICON" title="Graphics token">[CDI_LIST_ICON]</a></code></td>
+<td>Yes</td>
+<td>Displayed in interaction menus in Adventure Mode, overrides LIST_ICON when specified in a creature <a href="/index.php/Creature_token#CAN_DO_INTERACTION" title="Creature token">CAN_DO_INTERACTION</a> using <a href="/index.php/Interaction_token#TOKEN" title="Interaction token">CDI:TOKEN</a>:<i>token_name</i>.  Accepts referenced <i>token_name</i> before standard secondaries<sup style="font-size: 80%;">&#91;<a href="/index.php/Talk:Graphics" title="Talk:Graphics"><span title="The material near this tag is possibly inaccurate or nonfactual.">Verify</span></a>&#93;</sup>.
+</td></tr></tbody></table>
+<h3><span class="mw-headline" id="Caste_Graphics">Caste Graphics</span></h3>
+<p>Creature caste graphics allow a simple alternative to <a href="#Layered_Graphics">Layered Graphics</a> to represent males and females (or other castes) of a creature with different images.
+</p>
+<pre>[CREATURE_CASTE_GRAPHICS:&lt;creature id&gt;:&lt;caste id&gt;]
+   [&lt;condition&gt;:&lt;tile page identifier&gt;:&lt;x position&gt;:&lt;y position&gt;:&lt;color type&gt;:&lt;secondary condition&gt;]
+</pre>
+<ul><li><i>caste id</i>: The <a href="/index.php/Caste" title="Caste">Caste ID</a> of the caste whose graphics are being defined.</li>
+<li>All other parameters are identical to <a href="#Basic_Graphics">basic graphics</a>.</li></ul>
+<h3><span class="mw-headline" id="Large_Graphics">Large Graphics</span></h3>
+<div class="thumb tright"><div class="thumbinner" style="width:98px;"><a href="/index.php/File:Graphics_template_large_3x2.png" class="image"><img alt="" src="/images/1/1b/Graphics_template_large_3x2.png" decoding="async" width="96" height="64" class="thumbimage" /></a>  <div class="thumbcaption"><div class="magnify"><a href="/index.php/File:Graphics_template_large_3x2.png" class="internal" title="Enlarge"></a></div>A 3×2 large image is rendered in the top center, with the central tile in red.</div></div></div>
+<div class="thumb tright"><div class="thumbinner" style="width:98px;"><a href="/index.php/File:Graphics_template_large_2x1.png" class="image"><img alt="" src="/images/f/fa/Graphics_template_large_2x1.png" decoding="async" width="96" height="64" class="thumbimage" /></a>  <div class="thumbcaption"><div class="magnify"><a href="/index.php/File:Graphics_template_large_2x1.png" class="internal" title="Enlarge"></a></div>A 2×1 large image is left-justified.</div></div></div>
+<p>The only difference between graphics for large creatures and small creatures is the addition of <code>LARGE_IMAGE</code> and additional coordinates to the line below:
+</p>
+<pre>   [&lt;condition&gt;:&lt;tile page identifier&gt;:LARGE_IMAGE:&lt;x1&gt;:&lt;y1&gt;:&lt;x2&gt;:&lt;y2&gt;:&lt;color type&gt;:&lt;secondary condition&gt;]
+</pre>
+<ul><li><i>LARGE_IMAGE</i>: This tag allows a rectangular image with multiple tiles to be defined by its upper left and lower right tiles. Valid for 1x1 - 3x2 tiles.</li>
+<li><i>x1</i>: The x position of the upper left tile counting from 0 from the left of the tile page.</li>
+<li><i>y1</i>: The y position of the upper left tile counting from 0 from the top of the tile page.</li>
+<li><i>x2</i>: The x position of the lower right tile.</li>
+<li><i>y2</i>: The y position of the lower right tile.</li>
+<li>All other parameters are identical to <a href="#Basic_Graphics">basic graphics</a>.</li></ul>
+<p>Large images and small images can be used within the same <code>CREATURE_GRAPHICS</code> or <code>CREATURE_CASTE_GRAPHICS</code> definition, and in fact it is often useful to include a single tile image to act as a <code><a href="/index.php/Graphics_token#LIST_ICON" title="Graphics token">[LIST_ICON]</a></code> for menus.
+</p>
+<h3><span class="mw-headline" id="Statue_Graphics">Statue Graphics</span></h3>
+<p>Statue graphics are the generic images placed on top of a pedestal whenever a creature is the primary subject of a statue. The image is implied to occupy multiple tiles, and all examples in vanilla are 1×2 vertical rectangles. Statue graphics are defined as below:
+</p>
+<pre>[STATUE_CREATURE_GRAPHICS:&lt;creature id&gt;]
+       [DEFAULT:&lt;tile page identifier&gt;:&lt;x1&gt;:&lt;y1&gt;:&lt;x2&gt;:&lt;y2&gt;]
+</pre>
+<pre>[STATUE_CREATURE_CASTE_GRAPHICS:&lt;creature id&gt;:&lt;caste id&gt;]
+       [DEFAULT:&lt;tile page identifier&gt;:&lt;x1&gt;:&lt;y1&gt;:&lt;x2&gt;:&lt;y2&gt;]
+</pre>
+<ul><li><i>creature id</i>: The <a href="/index.php/Creature_token" title="Creature token">Creature ID</a> the graphics represent.</li>
+<li><i>caste id</i>: The <a href="/index.php/Caste" title="Caste">Caste ID</a> of the caste whose graphics are being defined.</li>
+<li><i>x1</i>: The x position of the upper left tile counting from 0 from the left of the tile page.</li>
+<li><i>y1</i>: The y position of the upper left tile counting from 0 from the top of the tile page.</li>
+<li><i>x2</i>: The x position of the lower right tile.</li>
+<li><i>y2</i>: The y position of the lower right tile.</li></ul>
+<div class="thumb tright"><div class="thumbinner" style="width:34px;"><a href="/index.php/File:Graphics_template_statues.png" class="image"><img alt="Graphics template statues.png" src="/images/1/10/Graphics_template_statues.png" decoding="async" width="32" height="64" class="thumbimage" /></a>  <div class="thumbcaption"><div class="magnify"><a href="/index.php/File:Graphics_template_statues.png" class="internal" title="Enlarge"></a></div></div></div></div><p>The image (right) is an example of how a graphic would be aligned within the 1×2 grid. Vanilla statues customarily place the bottom row of pixels on the white line, with the gold box delineating where a 32px tall (exactly) sprite would fit. Statue graphics will be automatically recolored based on how their <a href="/index.php/Color#Color_tokens" title="Color">Color</a> would appear in the default <a href="/index.php/Graphics_token#Palettes" title="Graphics token">palette</a>, like an item.
+</p><h3><span class="mw-headline" id="Layered_Graphics">Layered Graphics</span></h3>
+<p>Layered graphics are a method for displaying overlapping body parts, equipment, clothing, professions, hairstyles.. etc. They allow much more freedom in conditions than normal <a href="#Basic_Graphics">basic graphics</a>, and they allow combinations of many graphical variations within the same creature to give your graphics more personality and display more information about the individuals. All layered graphics started as shown below:
+</p>
+<pre>[CREATURE_GRAPHICS:&lt;creature id&gt;]
+	[LAYER_SET:&lt;condition&gt;]
+</pre>
+<ul><li><i>creature id</i>: The <a href="/index.php/Creature_token" title="Creature token">Creature ID</a> of the creature the graphics represent.</li>
+<li><i><a href="/index.php/Graphics_token#LAYER_SET" title="Graphics token">condition</a></i>: The condition the creature needs to be in for this set of layers to be displayed.</li></ul>
+<p>Once you start defining a Layer Set, you can begin adding individual layers from the bottom up to create your final image. For example, if you want to draw a helmet being worn on a head, you would define the head layer first, then define the helmet layer. Layers are defined according to this format:
+</p>
+<pre>[LAYER:&lt;layer name&gt;:&lt;tile page id&gt;:&lt;x position&gt;:&lt;y position&gt;:&lt;color type&gt;]
+	[&lt;layer condition(s)&gt;]
+</pre>
+<ul><li><i>layer name</i>: The internal name of the layer. Does not need to be unique. No known function at this time, but using a descriptive label is recommended.</li>
+<li><i><a href="#Tile_Page">tile page identifier</a></i>: The Internal ID of the image defined in the Tile Page.</li>
+<li><i>x position</i>: The x position of the graphic to be displayed in tiles counting from 0 (left→right).</li>
+<li><i>y position</i>: The y position of the graphic to be displayed in tiles counting from 0 (top→bottom).</li>
+<li><i><a href="#Large_Graphics">LARGE_IMAGE</a>:x1:y1:x2:y2</i>: (optional) Allows a multiple tile image to be displayed. Replaces &lt;x position&gt;:&lt;y position&gt;.</li>
+<li><i>color type</i>: (optional) Uncertain function, frequently replaced with <code>AS_IS</code> in vanilla <a href="/index.php/Raw" class="mw-redirect" title="Raw">RAWs</a>. ColorTypeEnum<sup class="plainlinks" style="line-height: 0; position: relative; vertical-align: baseline; top: -0.5em;"><a rel="nofollow" class="external text" href="https://gitlab.com/df-modding-tools/df-raw-language-server/-/blob/dev/df_ls_structure/src/objects/graphics.rs">&#91;2&#93;</a></sup></li></ul>
+<ul><li><i><a href="/index.php/Graphics_token#Layered_Conditions" title="Graphics token">layer condition(s)</a></i>: One or more conditional tokens that define under what conditions the layer is displayed and how it interacts with other layers.</li></ul>
+<h4><span class="mw-headline" id="Portraits">Portraits</span></h4>
+<p>96×96 portraits<small><sup>v50.13</sup></small> are shown in <a href="/index.php/Adventure_mode" class="mw-redirect" title="Adventure mode">Adventure mode</a> and when viewing a creature's sheet. They use the same tokens as layered graphics to display a more detailed view of a creature.
+</p><p>A single-layer portrait can be added to a [CREATURE_GRAPHICS] entry with this format:
+</p>
+<pre> [LAYER_SET:PORTRAIT]
+    [LAYER_GROUP]
+    [LAYER:MAIN:&lt;tile page id&gt;:&lt;x position&gt;:&lt;y position&gt;]
+    [END_LAYER_GROUP]
+</pre>
+<p>See above for the explanation of each argument.
+</p>
+<h3><span class="mw-headline" id="Procedural_Creature_Graphics">Procedural Creature Graphics</span></h3>
+<p>Procedural graphics define layered graphics based on which body parts are present in each <a href="/index.php/Creature_token#GENERATED" title="Creature token">procedurally-generated</a> forgotten beast, titan, or otherwise.
+</p>
+<pre>   [TILE_GRAPHICS_RECTANGLE:&lt;tile page id&gt;:&lt;x&gt;:&lt;y&gt;:&lt;width&gt;:&lt;height&gt;:&lt;PCG layering token&gt;]
+</pre>
+<ul><li><i><a href="#Tile_Page">tile page identifier</a></i>: Internal ID of the image defined in Tile Page.</li>
+<li><i>x</i>: The x position of the upper left tile counting from 0 from the left of the tile page.</li>
+<li><i>y</i>: The y position of the upper left tile counting from 0 from the top of the tile page.</li>
+<li><i>width</i>: How many tiles right the graphic spans. Usually this is 3.</li>
+<li><i>height</i>: How many tiles down the graphic spans. Usually this is 2.</li>
+<li><i><a href="/index.php/Creature_token#PCG_LAYERING" title="Creature token">PCG layering token</a></i>: The internal ID of a <a href="/index.php/Procedural_graphics_layer" title="Procedural graphics layer">procedural graphics layer</a>, representing generated forgotten beast body types and body parts.</li></ul>
+<p>The <code>TILE_GRAPHICS_RECTANGLE</code> token displays a large image with the upper left corner being defined by &lt;x&gt;, &lt;y&gt; and the size defined by &lt;width&gt;, &lt;height&gt;. The PCG layering token is a conditional token that causes the graphics for each layer to be displayed only when the forgotten beast has that particular body type or part.
+</p><p>Humanoid <a href="/index.php/Experiment" title="Experiment">experiments</a> use <code>TILE_GRAPHICS</code> instead of <code>TILE_GRAPHICS_RECTANGLE</code>, which omits the &lt;width&gt; and &lt;height&gt; parameters.
+</p><p>The <code><a href="/index.php/Creature_token#PROCEDURAL_CREATURE_GRAPHICS" title="Creature token">[PROCEDURAL_CREATURE_GRAPHICS]</a></code> token allows a creature to use the generation system for a given <a href="/index.php/Graphics_token#Basic_creature_sprite_types" title="Graphics token">sprite type</a> (which can be caste-specific), and each <code><a href="/index.php/Creature_token#PCG_LAYERING" title="Creature token">[PCG_LAYERING]</a></code> entry will add that part to the assembled sprite.
+</p>
+<h2><span class="mw-headline" id="Item_Graphics">Item Graphics</span></h2>
+<p>Item graphics can also be defined, but are mostly hardcoded. This section of the wiki needs to be fleshed out.
+</p>
+<h2><span class="mw-headline" id="Workshop_Graphics">Workshop Graphics</span></h2>
+<p>Workshop graphics are displayed during each stage of construction and when it is completed. There are two layers, the base layer and an OVERLAY layer. The base layer shows the floor, tables, chairs and other basic features. The overlay shows various decorations that give the workshop its unique appearance.
+</p><p>base layer:
+</p>
+<pre>   [TILE_GRAPHICS:&lt;tile page identifier&gt;:&lt;graphic tile x position&gt;:&lt;graphic tile y position&gt;:WORKSHOP_CUSTOM:&lt;workshop id&gt;:&lt;building stage&gt;:&lt;workshop tile x position&gt;:&lt;workshop tile y position&gt;]
+</pre>
+<p>overlay layer:
+</p>
+<pre>   [TILE_GRAPHICS:&lt;tile page identifier&gt;:&lt;graphic tile x position&gt;:&lt;graphic tile y position&gt;:WORKSHOP_CUSTOM_OVERLAY:&lt;workshop id&gt;:&lt;building stage&gt;:&lt;workshop tile x position&gt;:&lt;workshop tile y position&gt;]
+</pre>
+<ul><li><i><a href="#Tile_Page">tile page identifier</a></i>: The Internal ID of the image defined in the Tile Page.</li>
+<li><i>graphic tile x position</i>: The x position of the graphic in tiles counting from 0 (left→right).</li>
+<li><i>graphic tile y position</i>: The y position of the graphic in tiles counting from 0 (top→bottom).</li>
+<li><i>WORKSHOP_CUSTOM</i> and <i>WORKSHOP_CUSTOM_OVERLAY</i>: These tokens define the graphics as belonging to a custom workshop. These tokens do not exist in vanilla workshops except for the Soap maker and Screw press, which are used as examples for custom workshops.</li>
+<li><i>workshop id</i>: The ID of the workshop defined in its raws.</li>
+<li><i>building stage</i>: What building stage this graphic is displayed during.</li>
+<li><i>workshop tile x position</i>: The x position of the workshop tile where the graphic is displayed counting from 0 (left→right).</li>
+<li><i>workshop tile y position</i>: The y position of the workshop tile where the graphic is displayed counting from 0(top→bottom).</li></ul>
+<p>Note that an extra Y row is defined above the workshop. This allows for graphics that extend into the tile above the workshop.
+</p><p>Also note that currently custom furnaces do not properly work with premium graphics. The WORKSHOP_CUSTOM and WORKSHOP_CUSTOM_OVERLAY tokens ONLY work with custom workshops. If used with a custom furnace they give an error and the graphics will not appear in game. Custom furnaces can still be made to use graphics if they are defined as workshops in their raws. 
+</p><p>These values can be validated by checking the RAW vanilla file <code>[DF Installion]\data\vanilla\vanilla_buildings_graphics\graphics\graphics_workshops.txt</code>
+</p><p><br />
+</p>
+<h2><span class="mw-headline" id="World_Map_Graphics">World Map Graphics</span></h2>
+<p>World map graphics come in two variations:
+</p>
+<pre>   [TILE_GRAPHICS:&lt;tile page identifier&gt;:&lt;x position&gt;:&lt;y position&gt;:&lt;graphic id&gt;]
+   [TILE_GRAPHICS:&lt;tile page identifier&gt;:&lt;x position&gt;:&lt;y position&gt;:&lt;graphic id&gt;:&lt;variation {1 - 5}&gt;]
+</pre>
+<ul><li><i><a href="#Tile_Page">tile page identifier</a></i>: The Internal ID of the image defined in the Tile Page.</li>
+<li><i>x position</i>: The x position of the graphic to be displayed in tiles counting from 0 (left→right).</li>
+<li><i>y position</i>: The y position of the graphic to be displayed in tiles counting from 0 (top→bottom).</li>
+<li><i>graphic id</i>: The <a href="/index.php/Graphics_token#World_Map_Graphics" title="Graphics token">Graphic Token</a> of the world map tile the graphics represent.</li>
+<li><i>variation {1 - 5}</i>: For Graphic IDs that allow variants.</li></ul>
+<p>These values can be validated by checking the RAW vanilla file <code>[DF Installion]\data\vanilla\vanilla_world_map\graphics\graphics_world_map.txt</code>
+</p>
+<h2><span class="mw-headline" id="Palettes">Palettes</span></h2>
+<div class="floatright"><a href="/index.php/File:Palettes_v50.png" class="image"><img alt="Palettes v50.png" src="/images/0/01/Palettes_v50.png" decoding="async" width="36" height="234" /></a></div>
+<p><a href="/index.php/Palette" title="Palette">Palettes</a> are used by <a class="mw-selflink selflink">graphics</a> to render colorized objects. This is usually based on <a href="/index.php/Material_definition_token#STATE_COLOR" title="Material definition token">material colors</a>, though arbitrary palettes<small><sup>v50.13</sup></small> can be created and applied with <code><a href="/index.php/Graphics_token#USE_PALETTE" title="Graphics token">[USE_PALETTE]</a></code>.
+</p>
+<pre>   [PALETTE:&lt;palette identifier&gt;]
+       [FILE:images/imagename.png]
+       [PALETTE_DEFAULT:&lt;row&gt;] this is the one used in the images themselves
+       [PALETTE_COLOR:&lt;color&gt;:&lt;row&gt;]
+</pre>
+<ul><li><i>name</i>: The Internal ID being created for the image. DEFAULT is used by most objects and requires a PALETTE_COLOR entry for each <a href="/index.php/Descriptor_color_token" title="Descriptor color token">raw-defined color</a> that exists.</li>
+<li><i>imagename.png</i>: The file name of the 8bit RGBA (sometimes called 32bit) in the <code>\graphics\images</code> folder of the mod.</li>
+<li><i>row</i>: The y position of the graphic to be displayed in pixels counting from 0 (top→bottom). It is customary to place the default palette at 0.</li>
+<li><i>color</i>: A <a href="/index.php/Color#Color_tokens" title="Color">color</a> token.</li></ul>
+<p>Each row of the vanilla palettes.png file is a palette. The PALETTE_DEFAULT row is the row of colors (aka palette) used to in the internal graphics (which are loaded by a tile page) and get replaced by the colors of one of the other rows as specified in the palette_default.txt file. It isn't shown in-game, but the exact RGB values are replaced by the row specified by <code>[PALETTE_COLOR]</code> or <code><a href="/index.php/Graphics_token#USE_PALETTE" title="Graphics token">[USE_PALETTE]</a></code>. Each palette supports up to 18 colors.
+</p><p>Below is a set of color ramps used for vanilla graphics. The colors in the <b>Metal</b> and <b>Wood</b> columns will be replaced by the palette corresponding to the object's <a href="/index.php/Material_definition_token#STATE_COLOR" title="Material definition token">material color</a>, and all other colors are off-palette and will not be colorized. <b>Fake Metal</b> is used for metallic details on non-metal objects, like the gray trim of a wooden buckler, and other ramps are used for workshop overlays. <b>Handle</b> is used throughout the game to represent brown materials, and wooden weapons are an example of how to convert it into the main palette.
+</p>
+<center><b>PALETTE_DEFAULT source colors</b></center>
+<table style="margin: 0 auto; border-spacing: 0">
+
+<tbody><tr>
+<td style="vertical-align: top; padding: 0">
+<table style="text-align: center; border-spacing: 0 1px; margin: 0 auto; background: black; border-left: 1px solid black; border-right: 0px solid black">
+
+<tbody><tr style="background: #fff">
+<td><b>Metal</b>
+</td></tr>
+<tr style="color: black; background: #ffffff">
+<td>#FFFFFF
+</td></tr>
+<tr style="color: black; background: #C7C4B4">
+<td>#C7C4B4
+</td></tr>
+<tr style="color: black; background: #A5A6A5">
+<td>#A5A6A5
+</td></tr>
+<tr style="color: black; background: #8A9091">
+<td>#8A9091
+</td></tr>
+<tr style="color: white; background: #6B7076">
+<td>#6B7076
+</td></tr>
+<tr style="color: white; background: #5A5E65">
+<td>#5A5E65
+</td></tr>
+<tr style="color: white; background: #494C54">
+<td>#494C54
+</td></tr>
+<tr style="color: white; background: #3C3E46">
+<td>#3C3E46
+</td></tr>
+<tr style="color: white; background: #2F3038">
+<td>#2F3038
+</td></tr></tbody></table>
+</td>
+<td style="vertical-align: top; padding: 0">
+<table style="text-align: center; border-spacing: 0 1px; margin: 0 auto; background: black; border-left: 1px solid black; border-right: 1px solid black">
+
+<tbody><tr style="background: #fff">
+<td><b>Wood</b>
+</td></tr>
+<tr style="color: black; background: #D7D3D2">
+<td>#D7D3D2
+</td></tr>
+<tr style="color: black; background: #B3A59E">
+<td>#B3A59E
+</td></tr>
+<tr style="color: black; background: #94877E">
+<td>#94877E
+</td></tr>
+<tr style="color: black; background: #746A63">
+<td>#746A63
+</td></tr>
+<tr style="color: white; background: #605852">
+<td>#605852
+</td></tr>
+<tr style="color: white; background: #564F49">
+<td>#564F49
+</td></tr>
+<tr style="color: white; background: #4E4743">
+<td>#4E4743
+</td></tr>
+<tr style="color: white; background: #463E3D">
+<td>#463E3D
+</td></tr>
+<tr style="color: white; background: #2F3038">
+<td>#2F3038
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+<center><b>Off-palette color ramps</b></center>
+<table style="margin: 0 auto; border-spacing: 0">
+
+<tbody><tr>
+<td style="vertical-align: top; padding: 0">
+<table style="text-align: center; border-spacing: 0 1px; margin: 0 auto; background: black; border-left: 1px solid black; border-right: 1px solid black">
+
+<tbody><tr style="background: #fff">
+<td><b>Fake Metal</b>
+</td></tr>
+<tr style="color: black; background: #FFFEFF">
+<td>#FFFEFF
+</td></tr>
+<tr style="color: black; background: #CECAB9">
+<td>#CECAB9
+</td></tr>
+<tr style="color: black; background: #A9AAA9">
+<td>#A9AAA9
+</td></tr>
+<tr style="color: black; background: #8B9293">
+<td>#8B9293
+</td></tr>
+<tr style="color: white; background: #696F75">
+<td>#696F75
+</td></tr>
+<tr style="color: white; background: #565B62">
+<td>#565B62
+</td></tr>
+<tr style="color: white; background: #464951">
+<td>#464951
+</td></tr>
+<tr style="color: white; background: #3F434C">
+<td>#3F434C
+</td></tr>
+<tr style="color: white; background: #393B44">
+<td>#393B44
+</td></tr></tbody></table>
+</td>
+<td style="vertical-align: top; padding: 0">
+<table style="text-align: center; border-spacing: 0 1px; margin: 0 auto; background: black; border-left: 0px solid black; border-right: 1px solid black">
+
+<tbody><tr style="background: #fff">
+<td><b>Fake Wood</b>
+</td></tr>
+<tr style="color: black; background: #D8B796">
+<td>#D8B796
+</td></tr>
+<tr style="color: black; background: #B7926C">
+<td>#B7926C
+</td></tr>
+<tr style="color: black; background: #A57D5E">
+<td>#A57D5E
+</td></tr>
+<tr style="color: black; background: #936850">
+<td>#936850
+</td></tr>
+<tr style="color: white; background: #815E50">
+<td>#815E50
+</td></tr>
+<tr style="color: white; background: #6F5450">
+<td>#6F5450
+</td></tr>
+<tr style="color: white; background: #5B4749">
+<td>#5B4749
+</td></tr>
+<tr style="color: white; background: #473941">
+<td>#473941
+</td></tr>
+<tr style="color: white; background: #2F3038">
+<td>#2F3038
+</td></tr></tbody></table>
+</td>
+<td style="vertical-align: top; padding: 0">
+<table style="text-align: center; border-spacing: 0 1px; margin: 0 auto; background: black; border-left: 0px solid black; border-right: 1px solid black">
+
+<tbody><tr style="background: #fff">
+<td><b>Handle</b>
+</td></tr>
+<tr style="color: black; background: #E1CEAF">
+<td>#E1CEAF
+</td></tr>
+<tr style="color: black; background: #CDAC85">
+<td>#CDAC85
+</td></tr>
+<tr style="color: black; background: #B98B5B">
+<td>#B98B5B
+</td></tr>
+<tr style="color: black; background: #9E674A">
+<td>#9E674A
+</td></tr>
+<tr style="color: white; background: #775653">
+<td>#775653
+</td></tr>
+<tr style="color: white; background: #60474B">
+<td>#60474B
+</td></tr>
+<tr style="color: black; background: white">
+<td>n/a
+</td></tr>
+<tr style="color: white; background: #483743">
+<td>#483743
+</td></tr>
+<tr style="color: white; background: #2E2A38">
+<td>#2E2A38
+</td></tr></tbody></table>
+</td>
+<td style="vertical-align: top; padding: 0">
+<table style="text-align: center; border-spacing: 0 1px; margin: 0 auto; background: black; border-left: 0px solid black; border-right: 1px solid black">
+
+<tbody><tr style="background: #fff">
+<td><b>Still</b>
+</td></tr>
+<tr style="color: black; background: #E5B076">
+<td>#E5B076
+</td></tr>
+<tr style="color: black; background: #D1894A">
+<td>#D1894A
+</td></tr>
+<tr style="color: black; background: #BF703C">
+<td>#BF703C
+</td></tr>
+<tr style="color: black; background: #A35D3A">
+<td>#A35D3A
+</td></tr>
+<tr style="color: white; background: #85534B">
+<td>#85534B
+</td></tr>
+<tr style="color: white; background: #644249">
+<td>#644249
+</td></tr>
+<tr style="color: white; background: #4B4047">
+<td>#4B4047
+</td></tr>
+<tr style="color: white; background: #293945">
+<td>#293945
+</td></tr>
+<tr style="color: white; background: #2F3038">
+<td>#2F3038
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+<h1><span class="mw-headline" id="Classic_Graphics">Classic Graphics</span></h1>
+<table class="metadata plainlinks ambox ambox-notice" style="border-left: 10px solid #1e90ff;" role="presentation">
+<tbody><tr><td class="mbox-image"><div style="width: 52px;"><a href="/index.php/File:Announce_research_icon.png" class="image"><img alt="Announce research icon.png" src="/images/7/7a/Announce_research_icon.png" decoding="async" width="32" height="32" /></a></div></td><td class="mbox-text" style=""><span class="mbox-text-span">This article or section may need to be updated due to recent changes.<br /><span class="hide-when-compact">  </span><span class="hide-when-compact"> </span></span></td></tr></tbody></table>
+<dl><dd></dd>
+<dd><i>For a list of all tile characters used in DF, see <a href="/index.php/Tilesets" title="Tilesets">Tilesets</a>.</i></dd>
+<dd></dd>
+<dd><i>For a chart with the default ASCII characters, see <a href="/index.php/Character_table" title="Character table">Character table</a>.</i></dd>
+<dd></dd>
+<dd><i>For user-created creature tilesets, see <a href="/index.php/Tileset_repository" title="Tileset repository">Tileset repository</a>.</i></dd>
+<dd></dd>
+<dd><i>For information about Graphic sets, see <a href="/index.php/Graphic_set" class="mw-redirect" title="Graphic set">Graphic set</a>.</i></dd>
+<dd></dd>
+<dd><i>For information on how tilesets get colored, see <a href="/index.php/Color" title="Color">color</a>.</i></dd></dl>
+<h3><span class="mw-headline" id="General_Information">General Information</span></h3>
+<p>Although commonly referred to as text or "ASCII"-graphics, classic DF uses a bitmap <a href="/index.php/Tilesets" title="Tilesets">tileset</a>* with characters from the <a href="/index.php/Character_table" title="Character table">IBM Code Page 437</a>, displayed with a foreground and background color picked from 16 predefined <a href="/index.php/Color_scheme" title="Color scheme">colors</a>. Text files (and often hardcoded values) define the tile, and colors of all objects.
+Both color scheme and tileset can be changed (see below), and definitions that are in text files can be modified. In addition, interface text can be displayed with a TrueType font and <a href="/index.php/Creatures" title="Creatures">creatures</a> (which normally are displayed as <a href="/index.php/Tilesets#list_of_creatures..." title="Tilesets">letters</a>) can be assigned to separate tilesets called <a href="/index.php/Graphic_set" class="mw-redirect" title="Graphic set">graphic sets</a>. The main tileset is sometimes called "character tileset", while the graphic sets are also referred to as "object tilesets".
+</p><p><small>*except when using <a href="/index.php/Technical_tricks#Video_Card_Options" title="Technical tricks">PRINT_MODE:TEXT</a></small>
+</p>
+<h4><span class="mw-headline" id="Tileset">Tileset</span></h4>
+<dl><dd><div class="noprint relarticle mainarticle"><i>Main article: <a href="/index.php/Tilesets" title="Tilesets">Tilesets</a></i></div></dd></dl>
+<p>The main tileset (also called 'character set' or just 'tileset') is an image in BMP or PNG format that contains the 256 different tiles, corresponding to the <a href="/index.php/Character_table" title="Character table">IBM Code Page 437</a>, which are used to display all objects, creatures, and UI elements in game. The tiles are always arranged in a 16x16 grid, but its dimensions can be varied. You can have both square and non-square tiles, with 16x16 pixels being the most common size. Creatures are displayed as <a href="/index.php/Tilesets#Main_creature_tiles" title="Tilesets">colored letters</a> (a white 'B' is a <a href="/index.php/Polar_bear" title="Polar bear">polar bear</a>, a brown 'd' a <a href="/index.php/Dog" title="Dog">dog</a>, and a grey 'c' is a <a href="/index.php/Cat" title="Cat">cat</a>).
+</p><p>As the tileset is limited to only 256 tiles, some objects share the same tile. Most notably, even with upper and lower case letters and 16 colors, a lot of creatures still look identical (goblin, goat, various gibbons, gremlin, goose, etc.). The tile for bins, up/down stairs and the cursor are the same; bags use the same tile as the symbol for "male"; and the "female" symbol shares a graphic with amulets. Roads and large rivers on the world map, minecart tracks and walls all share the same tiles as well.
+</p><p>Some of those can be changed in the raws and init files, and creatures can have separate graphics, but in most cases they are hardcoded.
+</p><p>That also can be used to categorize custom tilesets: Those that are made for and come bundled with modified raws/init files, and those that are made for and work with the default raws. Usually, the latter are more symbolic, or 'ASCII-like', while the former are often more pictographic, detailed or "pixel-arty". These sometimes are also bundled with their own creature graphics.
+Tilesets that are made for default raws have the advantage that you can use them immediately without any work for any new version that is released. With modified raws, you need to manually edit the new raws again, or wait for the maintainer to do that.
+</p>
+<h4><span class="mw-headline" id="Graphic_set">Graphic set</span></h4>
+<dl><dd><div class="noprint relarticle mainarticle"><i>Main article: <a href="/index.php/Graphic_set" class="mw-redirect" title="Graphic set">Graphic set</a></i></div></dd></dl>
+<p>Graphic sets are additional tilesets used to give objects different graphics. As opposed to the main tileset, any number of tiles can be arranged in any grid configuration. Currently, DF only supports graphic sets for creatures. Every graphic set needs a corresponding text file that assigns a tile to a creature.
+</p>
+<h4><span class="mw-headline" id="Color">Color</span></h4>
+<dl><dd><div class="noprint relarticle mainarticle"><i>Main article: <a href="/index.php/Color" title="Color">Color</a></i></div></dd></dl>
+<p>In general, a tileset has white tiles with a transparent background. White pixels show the foreground color, transparent pixels (magenta pixels for .bmp) the background color. Black pixels remain black. Shades of grey, partial transparency and even colored tiles can be used for various effects. Additionally, creature graphics can be set to be displayed in the colors they're drawn in.
+</p><p>Otherwise, the game selects from 16 colors (the <a href="/index.php/Color_scheme" title="Color scheme">color scheme</a>) to decide the color: which of the 16 colors the game uses depends on the <a href="/index.php/Color#Color_values" title="Color">color value</a> or <a href="/index.php/Color#Color_tokens" title="Color">color token</a> of the material/item.
+</p><p><br />
+</p>
+<h3><span class="mw-headline" id="Installation">Installation</span></h3>
+<dl><dd><div class="noprint relarticle mainarticle"><i>Further information: <a href="/index.php/Mod" title="Mod">Mod</a>,&#32;<a href="/index.php/Tilesets" title="Tilesets">Tilesets</a>,&#32;<a href="/index.php/Graphic_set" class="mw-redirect" title="Graphic set">Graphic set</a>,&#32;and&#32;<a href="/index.php/Color_scheme" title="Color scheme">Color scheme</a></i></div></dd></dl>
+<h4><span class="mw-headline" id="Repositories">Repositories</span></h4>
+<p>Users of the Steam version can subscribe to mods on Steam Workshop. The wiki has repositories for <a href="/index.php/Tileset_repository" title="Tileset repository">tilesets</a>, <a href="/index.php/Graphics_set_repository" class="mw-redirect" title="Graphics set repository">graphic sets</a>, and <a href="/index.php/Color_scheme" title="Color scheme">color schemes</a>. You will find more in the <a rel="nofollow" class="external text" href="http://www.bay12forums.com/smf/index.php?board=28.0">bay 12 graphics subforum</a> and on <a rel="nofollow" class="external text" href="http://dffd.wimbli.com/">DFFD</a>. Some graphic sets and tilesets are additionally maintained on <a rel="nofollow" class="external text" href="https://github.com/DFgraphics">github</a>.
+Often, tileset creators offer preinstalled downloads or folders you just have to drop into your DF folder and overwrite files when prompted. They usually come with installation instructions either in a readme file or in their respective forum thread. In addition, there are various <a href="/index.php/Utilities#Launchers" title="Utilities">launcher</a> applications that let you install and change graphics automatically.
+</p><p>For manual installation of the various components, see here:
+</p>
+<h4><span class="mw-headline" id="Tileset_2">Tileset</span></h4>
+<p>Put the tileset you want to use into the data/art/ folder. Open up <a href="/index.php/Init.txt" title="Init.txt">init.txt</a> (in data/init/) with a text editor and change the entries FONT, FULLFONT, GRAPHICS_FONT, and GRAPHICS_FULLFONT to the filename of your new tileset.
+</p>
+<h4><span class="mw-headline" id="Creature_Graphics_2">Creature Graphics</span></h4>
+<p>Put the graphic set <i>into a subfolder</i> in raw/graphics and the corresponding text file directly in raw/graphics. If you have an active save you will have to put them into the raw folder of your save as well (data/save/&lt;your region&gt;/raw/graphics). Finally, set GRAPHICS to YES in data/init/<a href="/index.php/Init.txt" title="Init.txt">init.txt</a>
+</p>
+<h4><span class="mw-headline" id="Color_Scheme">Color Scheme</span></h4>
+<p>Replace colors.txt in data/init with your new colors.
+</p>
+<h3><span class="mw-headline" id="True_Type_Font">True Type Font</span></h3>
+<p>Replace font.ttf in data/art with your new font.
+</p><p><br />
+</p>
+<h2><span class="mw-headline" id="See_Also">See Also</span></h2>
+<ul><li><a href="/index.php/Creature_token" title="Creature token">Creature token</a></li>
+<li><a href="/index.php/Syndrome" title="Syndrome">Syndrome</a></li>
+<li><a href="/index.php/Creature_examples" title="Creature examples">Creature examples</a></li></ul></div>

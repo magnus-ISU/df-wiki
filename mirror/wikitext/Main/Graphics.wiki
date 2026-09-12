@@ -1,0 +1,461 @@
+{{Quality|Superior}}
+{{av}}
+[[File:graphics_v50_preview.png|right]]
+:{{for/see|a list of all Premium graphics tokens and basic usage|[[Graphics token]]}}
+:{{for/see|a repository of all Classic tilesets used in DF|[[Tileset repository]]}}
+:{{for/see|details on creating Classic tilesets|[[Tileset repository]]}}
+
+The '''graphics''' system in v50 is [https://github.com/Putnam3145/Dwarf-Fortress--libgraphics-- open-source]. It is a custom solution which appears to involve compositing graphics sets directly in C++ before texmapping them to SDL. This blitting approach is software rendered and so largely doesn't use hardware acceleration on graphics cards. This system means that despite graphics sets supporting rudimentary animation, there is no traditional sprite mapping, which places extensive limits on the types of graphics that are possible.  While the number of user editable graphics sets has increased significantly in v50, many game elements are still hard coded graphics sets, or using a tileset over the older style graphics from classic DF.
+
+= Premium Graphics =
+:{{for/see|a list of all Premium graphics tokens and basic usage|[[Graphics token]]}}
+
+The <code>[OBJECT:GRAPHICS]</code> object defines the use of various tile-based graphics in the game. As of version 50.01, graphics [[token]]s have been greatly expanded to accommodate the release of the Steam & Itch premium version. This section is a basic description of how to define various types of graphics.
+
+Making custom graphics requires multiple interacting files to function:
+# An 8bit RGBA (sometimes called 32bit) "imagename.png" in the <code>\<mod_id>\graphics\images</code> folder
+# A "tile_page_name.txt" in the <code>\<mod_id>\graphics</code> folder
+# A "graphics_type_name.txt" in the <code>\<mod_id>\graphics</code> folder
+
+Mods can reuse any graphics loaded ahead of them (including vanilla) by using the same tile page token.
+
+
+== Tile Page ==
+Tile pages link image files to a tile page token so they can be referenced by the graphics file. Just like all other [[Raw file]]s, Tile Pages must be defined from within a properly named "tile_page_<name>.txt" file and follow:
+
+ tile_page_<name>
+ 
+ [OBJECT:TILE_PAGE]
+
+After the object type is defined as above, any number of tile pages can be defined according to the format below.
+
+   [TILE_PAGE:<tile page identifier>]
+      [FILE:images/imagename.png]
+      [TILE_DIM:<tile x dim>:<tile y dim>]
+      [PAGE_DIM_PIXELS:<page x dim>:<page y dim>]
+
+* ''tile page identifier'': The Internal ID being created for the image.
+* ''imagename.png'': The file name of the 8bit RGBA (sometimes called 32bit) in the <code>\graphics\images</code> folder of the mod.
+* ''tile x dim'': The width of each tile in pixels (usually 32, 8 for many interface elements, 96 for portrait elements, 16 for most world map elements and small gems).
+* ''tile y dim'': The height of each tile in pixels (usually 32, 12 for many interface elements, 96 for portrait elements, 16 for most world map elements and small gems).
+* ''page x dim'': The width of the image file in pixels.
+* ''page y dim'': The height of the image file in pixels.
+
+For any of the other graphics tokens that refer to this defined identifier, and require position or width/height values, those values will be in multiples of these TILE_DIM values.
+
+Known issues:
+* Currently it is only recommended to use <code>[TILE_DIM:32:32]</code> other than for the above exceptions, as the game will resize other resolutions into a 32×32 tile. Depending on your zoom and interpolation settings, rescaled tiles can be subject to [[Wikipedia:Artifact (error)|artefacting]].
+* It is important that the <code>[PAGE_DIM_PIXELS:<x dim>:<y dim>]</code> matches the size of the referenced image exactly - as the game will stretch tile pages with a dimension larger than the actual image by inserting blank lines, and a tile page smaller than the image will cause a crash to desktop.
+
+== Creature Graphics ==
+{{for/see|a list of all known creature graphics tokens|[[Graphics token#Creature Graphics]]}}.
+Creature graphics are found within graphics_creature_x files (such as graphics_creature_domestic or graphics_creature_layered).  All graphics files must begin with the file name, followed by the <code>[OBJECT:GRAPHICS]</code> token that tells the game that the file contains graphics definitions.
+
+=== Basic Graphics ===
+[[File:Graphics_template_xy_positions.png|thumb|320px|right|An example of how X and Y positions are read, starting from the top left.]]
+The most basic form of creature graphics is a single tile, defined below:
+ [CREATURE_GRAPHICS:<creature id>]
+    [<condition>:<tile page identifier>:<x position>:<y position>:<color type>:<secondary condition>]
+
+* ''[[Graphics_token#Basic_Conditions|condition]]'': The condition the creature needs to be in for this image to be displayed. Use <code>DEFAULT</code> for generic graphics.
+* ''creature id'': The [[Creature token|Creature ID]] of the creature the graphics represent.
+* ''[[#Tile Page|tile page identifier]]'': The Internal ID of the image defined in the Tile Page.
+* ''x position'': The x position of the graphic to be displayed in tiles counting from 0 (left→right).
+* ''y position'': The y position of the graphic to be displayed in tiles counting from 0 (top→bottom).
+* ''color type'': (optional) Uncertain function, frequently replaced with <code>AS_IS</code> in vanilla [[Raw|RAW]]s. ColorTypeEnum{{cite|DF language server|https://gitlab.com/df-modding-tools/df-raw-language-server/-/blob/dev/df_ls_structure/src/objects/graphics.rs}}
+* ''[[Graphics_token#Basic_Conditions|secondary condition]]'': (optional) An additional condition that must be satisfied for the image to be displayed.
+
+When the condition {{token|DEFAULT|g}} is used, this graphic will be displayed for the creature in all conditions unless additional, more specific conditions are also defined.
+
+:'''Basic Conditions'''
+Different graphics can be defined for the same creature based on some properties about it. Below is a list of the most common creature conditions tokens. 
+
+{| {{prettytable}}
+|- bgcolor="#dddddd"
+! Condition
+! Accepts<br>Secondary
+! Description
+|-
+| {{token|DEFAULT|g}} || No || The default condition that will be displayed unless overwritten by a more specific one below.
+
+|-
+| {{token|CHILD|g}} || Yes || Will only be displayed if the creature is a {{token|CHILD|c}} or {{token|BABY|c}} and is younger than one of those ages.
+
+|-
+| {{token|ANIMATED|g}} || Yes || Displayed if the creature is raised from the dead, although it is not known how this is decided. Raised status is not related to having a syndrome with the class from {{token|CONDITION_SYN_CLASS|g}} or from having {{token|NOT_LIVING|c}}/{{token|OPPOSED_TO_LIFE|c}}.
+
+|-
+| {{token|CORPSE|g}} || Yes || Displayed as soon as the creature dies.
+
+|-
+| {{token|LIST_ICON|g}} || Yes || Displayed in menus. Useful for large images that would extend beyond the menu boxes otherwise.
+
+|-
+| {{token|CDI_LIST_ICON|g}} || Yes || Displayed in interaction menus in Adventure Mode, overrides LIST_ICON when specified in a creature [[Creature token#CAN_DO_INTERACTION|CAN_DO_INTERACTION]] using [[Interaction token#TOKEN|CDI:TOKEN]]:''token_name''.  Accepts referenced ''token_name'' before standard secondaries{{verify}}.
+
+|}
+
+=== Caste Graphics ===
+Creature caste graphics allow a simple alternative to [[#Layered Graphics|Layered Graphics]] to represent males and females (or other castes) of a creature with different images.
+ [CREATURE_CASTE_GRAPHICS:<creature id>:<caste id>]
+    [<condition>:<tile page identifier>:<x position>:<y position>:<color type>:<secondary condition>]
+
+* ''caste id'': The [[Caste|Caste ID]] of the caste whose graphics are being defined.
+* All other parameters are identical to [[#Basic Graphics|basic graphics]].
+
+=== Large Graphics ===
+[[File:Graphics_template_large_3x2.png|right|thumb|A 3×2 large image is rendered in the top center, with the central tile in red.]]
+[[File:Graphics_template_large_2x1.png|right|thumb|A 2×1 large image is left-justified.]]
+The only difference between graphics for large creatures and small creatures is the addition of <code>LARGE_IMAGE</code> and additional coordinates to the line below:
+    [<condition>:<tile page identifier>:LARGE_IMAGE:<x1>:<y1>:<x2>:<y2>:<color type>:<secondary condition>]
+
+* ''LARGE_IMAGE'': This tag allows a rectangular image with multiple tiles to be defined by its upper left and lower right tiles. Valid for 1x1 - 3x2 tiles.
+* ''x1'': The x position of the upper left tile counting from 0 from the left of the tile page.
+* ''y1'': The y position of the upper left tile counting from 0 from the top of the tile page.
+* ''x2'': The x position of the lower right tile.
+* ''y2'': The y position of the lower right tile.
+* All other parameters are identical to [[#Basic Graphics|basic graphics]].
+
+Large images and small images can be used within the same <code>CREATURE_GRAPHICS</code> or <code>CREATURE_CASTE_GRAPHICS</code> definition, and in fact it is often useful to include a single tile image to act as a {{token|LIST_ICON|g}} for menus.
+
+=== Statue Graphics ===
+Statue graphics are the generic images placed on top of a pedestal whenever a creature is the primary subject of a statue. The image is implied to occupy multiple tiles, and all examples in vanilla are 1×2 vertical rectangles. Statue graphics are defined as below:
+ [STATUE_CREATURE_GRAPHICS:<creature id>]
+        [DEFAULT:<tile page identifier>:<x1>:<y1>:<x2>:<y2>]
+
+ [STATUE_CREATURE_CASTE_GRAPHICS:<creature id>:<caste id>]
+        [DEFAULT:<tile page identifier>:<x1>:<y1>:<x2>:<y2>]
+
+* ''creature id'': The [[Creature token|Creature ID]] the graphics represent.
+* ''caste id'': The [[Caste|Caste ID]] of the caste whose graphics are being defined.
+* ''x1'': The x position of the upper left tile counting from 0 from the left of the tile page.
+* ''y1'': The y position of the upper left tile counting from 0 from the top of the tile page.
+* ''x2'': The x position of the lower right tile.
+* ''y2'': The y position of the lower right tile.
+
+[[File:Graphics_template_statues.png|right|thumb]]The image (right) is an example of how a graphic would be aligned within the 1×2 grid. Vanilla statues customarily place the bottom row of pixels on the white line, with the gold box delineating where a 32px tall (exactly) sprite would fit. Statue graphics will be automatically recolored based on how their [[Color#Color tokens|Color]] would appear in the default [[Graphics token#Palettes|palette]], like an item.
+
+=== Layered Graphics ===
+Layered graphics are a method for displaying overlapping body parts, equipment, clothing, professions, hairstyles.. etc. They allow much more freedom in conditions than normal [[#Basic Graphics|basic graphics]], and they allow combinations of many graphical variations within the same creature to give your graphics more personality and display more information about the individuals. All layered graphics started as shown below:
+ [CREATURE_GRAPHICS:<creature id>]
+ 	[LAYER_SET:<condition>]
+
+* ''creature id'': The [[Creature token|Creature ID]] of the creature the graphics represent.
+* ''[[Graphics_token#LAYER_SET|condition]]'': The condition the creature needs to be in for this set of layers to be displayed.
+
+Once you start defining a Layer Set, you can begin adding individual layers from the bottom up to create your final image. For example, if you want to draw a helmet being worn on a head, you would define the head layer first, then define the helmet layer. Layers are defined according to this format:
+
+ [LAYER:<layer name>:<tile page id>:<x position>:<y position>:<color type>]
+ 	[<layer condition(s)>]
+
+* ''layer name'': The internal name of the layer. Does not need to be unique. No known function at this time, but using a descriptive label is recommended. 
+* ''[[#Tile Page|tile page identifier]]'': The Internal ID of the image defined in the Tile Page.
+* ''x position'': The x position of the graphic to be displayed in tiles counting from 0 (left→right).
+* ''y position'': The y position of the graphic to be displayed in tiles counting from 0 (top→bottom).
+* ''[[#Large Graphics|LARGE_IMAGE]]:x1:y1:x2:y2'': (optional) Allows a multiple tile image to be displayed. Replaces <x position>:<y position>.
+* ''color type'': (optional) Uncertain function, frequently replaced with <code>AS_IS</code> in vanilla [[Raw|RAW]]s. ColorTypeEnum{{cite|DF language server|https://gitlab.com/df-modding-tools/df-raw-language-server/-/blob/dev/df_ls_structure/src/objects/graphics.rs}}
+* ''[[Graphics_token#Layered_Conditions|layer condition(s)]]'': One or more conditional tokens that define under what conditions the layer is displayed and how it interacts with other layers.
+
+====Portraits====
+96×96 portraits{{version|50.13}} are shown in [[Adventure mode]] and when viewing a creature's sheet. They use the same tokens as layered graphics to display a more detailed view of a creature.
+
+A single-layer portrait can be added to a [CREATURE_GRAPHICS] entry with this format:
+
+  [LAYER_SET:PORTRAIT]
+     [LAYER_GROUP]
+     [LAYER:MAIN:<tile page id>:<x position>:<y position>]
+     [END_LAYER_GROUP]
+
+See above for the explanation of each argument.
+
+=== Procedural Creature Graphics ===
+Procedural graphics define layered graphics based on which body parts are present in each [[Creature token#GENERATED|procedurally-generated]] forgotten beast, titan, or otherwise.
+
+    [TILE_GRAPHICS_RECTANGLE:<tile page id>:<x>:<y>:<width>:<height>:<PCG layering token>]
+
+* ''[[#Tile Page|tile page identifier]]'': Internal ID of the image defined in Tile Page.
+* ''x'': The x position of the upper left tile counting from 0 from the left of the tile page.
+* ''y'': The y position of the upper left tile counting from 0 from the top of the tile page.
+* ''width'': How many tiles right the graphic spans. Usually this is 3.
+* ''height'': How many tiles down the graphic spans. Usually this is 2.
+* ''[[Creature token#PCG_LAYERING|PCG layering token]]'': The internal ID of a [[procedural graphics layer]], representing generated forgotten beast body types and body parts.
+
+The <code>TILE_GRAPHICS_RECTANGLE</code> token displays a large image with the upper left corner being defined by <x>, <y> and the size defined by <width>, <height>. The PCG layering token is a conditional token that causes the graphics for each layer to be displayed only when the forgotten beast has that particular body type or part.
+
+Humanoid [[experiment]]s use <code>TILE_GRAPHICS</code> instead of <code>TILE_GRAPHICS_RECTANGLE</code>, which omits the <width> and <height> parameters.
+
+The {{token|PROCEDURAL_CREATURE_GRAPHICS|c}} token allows a creature to use the generation system for a given [[Graphics token#Basic creature sprite types|sprite type]] (which can be caste-specific), and each {{token|PCG_LAYERING|c}} entry will add that part to the assembled sprite.
+
+== Item Graphics ==
+Item graphics can also be defined, but are mostly hardcoded. This section of the wiki needs to be fleshed out.
+
+== Workshop Graphics ==
+Workshop graphics are displayed during each stage of construction and when it is completed. There are two layers, the base layer and an OVERLAY layer. The base layer shows the floor, tables, chairs and other basic features. The overlay shows various decorations that give the workshop its unique appearance.
+
+base layer:
+    [TILE_GRAPHICS:<tile page identifier>:<graphic tile x position>:<graphic tile y position>:WORKSHOP_CUSTOM:<workshop id>:<building stage>:<workshop tile x position>:<workshop tile y position>]
+overlay layer:
+    [TILE_GRAPHICS:<tile page identifier>:<graphic tile x position>:<graphic tile y position>:WORKSHOP_CUSTOM_OVERLAY:<workshop id>:<building stage>:<workshop tile x position>:<workshop tile y position>]
+
+* ''[[#Tile Page|tile page identifier]]'': The Internal ID of the image defined in the Tile Page.
+* ''graphic tile x position'': The x position of the graphic in tiles counting from 0 (left→right).
+* ''graphic tile y position'': The y position of the graphic in tiles counting from 0 (top→bottom).
+* ''WORKSHOP_CUSTOM'' and ''WORKSHOP_CUSTOM_OVERLAY'': These tokens define the graphics as belonging to a custom workshop. These tokens do not exist in vanilla workshops except for the Soap maker and Screw press, which are used as examples for custom workshops.
+* ''workshop id'': The ID of the workshop defined in its raws.
+* ''building stage'': What building stage this graphic is displayed during.
+* ''workshop tile x position'': The x position of the workshop tile where the graphic is displayed counting from 0 (left→right).
+* ''workshop tile y position'': The y position of the workshop tile where the graphic is displayed counting from 0(top→bottom).
+
+Note that an extra Y row is defined above the workshop. This allows for graphics that extend into the tile above the workshop.
+
+Also note that currently custom furnaces do not properly work with premium graphics. The WORKSHOP_CUSTOM and WORKSHOP_CUSTOM_OVERLAY tokens ONLY work with custom workshops. If used with a custom furnace they give an error and the graphics will not appear in game. Custom furnaces can still be made to use graphics if they are defined as workshops in their raws. 
+
+These values can be validated by checking the RAW vanilla file <code>[DF Installion]\data\vanilla\vanilla_buildings_graphics\graphics\graphics_workshops.txt</code>
+
+
+== World Map Graphics ==
+World map graphics come in two variations:
+
+    [TILE_GRAPHICS:<tile page identifier>:<x position>:<y position>:<graphic id>]
+    [TILE_GRAPHICS:<tile page identifier>:<x position>:<y position>:<graphic id>:<variation {1 - 5}>]
+
+* ''[[#Tile Page|tile page identifier]]'': The Internal ID of the image defined in the Tile Page.
+* ''x position'': The x position of the graphic to be displayed in tiles counting from 0 (left→right).
+* ''y position'': The y position of the graphic to be displayed in tiles counting from 0 (top→bottom).
+* ''graphic id'': The [[Graphics_token#World_Map_Graphics|Graphic Token]] of the world map tile the graphics represent.
+* ''variation {1 - 5}'': For Graphic IDs that allow variants.
+
+These values can be validated by checking the RAW vanilla file <code>[DF Installion]\data\vanilla\vanilla_world_map\graphics\graphics_world_map.txt</code>
+
+== Palettes ==
+[[File:palettes_v50.png|right]]
+
+[[Palette]]s are used by [[graphics]] to render colorized objects. This is usually based on [[Material definition token#STATE_COLOR|material colors]], though arbitrary palettes{{version|50.13}} can be created and applied with {{token|USE_PALETTE|g}}.
+
+    [PALETTE:<palette identifier>]
+        [FILE:images/imagename.png]
+        [PALETTE_DEFAULT:<row>] this is the one used in the images themselves
+        [PALETTE_COLOR:<color>:<row>]
+
+* ''name'': The Internal ID being created for the image. DEFAULT is used by most objects and requires a PALETTE_COLOR entry for each [[Descriptor color token|raw-defined color]] that exists.
+* ''imagename.png'': The file name of the 8bit RGBA (sometimes called 32bit) in the <code>\graphics\images</code> folder of the mod.
+* ''row'': The y position of the graphic to be displayed in pixels counting from 0 (top→bottom). It is customary to place the default palette at 0.
+* ''color'': A [[Color#Color tokens|color]] token.
+
+Each row of the vanilla palettes.png file is a palette. The PALETTE_DEFAULT row is the row of colors (aka palette) used to in the internal graphics (which are loaded by a tile page) and get replaced by the colors of one of the other rows as specified in the palette_default.txt file. It isn't shown in-game, but the exact RGB values are replaced by the row specified by <code>[PALETTE_COLOR]</code> or {{token|USE_PALETTE|g}}. Each palette supports up to 18 colors.
+
+Below is a set of color ramps used for vanilla graphics. The colors in the '''Metal''' and '''Wood''' columns will be replaced by the palette corresponding to the object's [[Material definition token#STATE_COLOR|material color]], and all other colors are off-palette and will not be colorized. '''Fake Metal''' is used for metallic details on non-metal objects, like the gray trim of a wooden buckler, and other ramps are used for workshop overlays. '''Handle''' is used throughout the game to represent brown materials, and wooden weapons are an example of how to convert it into the main palette.
+
+<center>'''PALETTE_DEFAULT source colors'''</center>
+{| style="margin: 0 auto; border-spacing: 0"
+|-
+| style="vertical-align: top; padding: 0" |
+
+{| style="text-align: center; border-spacing: 0 1px; margin: 0 auto; background: black; border-left: 1px solid black; border-right: 0px solid black"
+|- style="background: #fff"
+| '''Metal'''
+|- style="color: black; background: #ffffff"
+| #FFFFFF
+|- style="color: black; background: #C7C4B4"
+| #C7C4B4
+|- style="color: black; background: #A5A6A5"
+| #A5A6A5
+|- style="color: black; background: #8A9091"
+| #8A9091
+|- style="color: white; background: #6B7076"
+| #6B7076
+|- style="color: white; background: #5A5E65"
+| #5A5E65
+|- style="color: white; background: #494C54"
+| #494C54
+|- style="color: white; background: #3C3E46"
+| #3C3E46
+|- style="color: white; background: #2F3038"
+| #2F3038
+|}
+| style="vertical-align: top; padding: 0" |
+{| style="text-align: center; border-spacing: 0 1px; margin: 0 auto; background: black; border-left: 1px solid black; border-right: 1px solid black"
+|- style="background: #fff"
+| '''Wood'''
+|- style="color: black; background: #D7D3D2"
+| #D7D3D2
+|- style="color: black; background: #B3A59E"
+| #B3A59E
+|- style="color: black; background: #94877E"
+| #94877E
+|- style="color: black; background: #746A63"
+| #746A63
+|- style="color: white; background: #605852"
+| #605852
+|- style="color: white; background: #564F49"
+| #564F49
+|- style="color: white; background: #4E4743"
+| #4E4743
+|- style="color: white; background: #463E3D"
+| #463E3D
+|- style="color: white; background: #2F3038"
+| #2F3038
+|}
+|}
+
+<center>'''Off-palette color ramps'''</center>
+{| style="margin: 0 auto; border-spacing: 0"
+|-
+| style="vertical-align: top; padding: 0" |
+{| style="text-align: center; border-spacing: 0 1px; margin: 0 auto; background: black; border-left: 1px solid black; border-right: 1px solid black"
+|- style="background: #fff"
+| '''Fake Metal'''
+|- style="color: black; background: #FFFEFF"
+| #FFFEFF
+|- style="color: black; background: #CECAB9"
+| #CECAB9
+|- style="color: black; background: #A9AAA9"
+| #A9AAA9
+|- style="color: black; background: #8B9293"
+| #8B9293
+|- style="color: white; background: #696F75"
+| #696F75
+|- style="color: white; background: #565B62"
+| #565B62
+|- style="color: white; background: #464951"
+| #464951
+|- style="color: white; background: #3F434C"
+| #3F434C
+|- style="color: white; background: #393B44"
+| #393B44
+|}
+| style="vertical-align: top; padding: 0" |
+{| style="text-align: center; border-spacing: 0 1px; margin: 0 auto; background: black; border-left: 0px solid black; border-right: 1px solid black"
+|- style="background: #fff"
+| '''Fake Wood'''
+|- style="color: black; background: #D8B796"
+| #D8B796
+|- style="color: black; background: #B7926C"
+| #B7926C
+|- style="color: black; background: #A57D5E"
+| #A57D5E
+|- style="color: black; background: #936850"
+| #936850
+|- style="color: white; background: #815E50"
+| #815E50
+|- style="color: white; background: #6F5450"
+| #6F5450
+|- style="color: white; background: #5B4749"
+| #5B4749
+|- style="color: white; background: #473941"
+| #473941
+|- style="color: white; background: #2F3038"
+| #2F3038
+|}
+| style="vertical-align: top; padding: 0" |
+{| style="text-align: center; border-spacing: 0 1px; margin: 0 auto; background: black; border-left: 0px solid black; border-right: 1px solid black"
+|- style="background: #fff"
+| '''Handle'''
+|- style="color: black; background: #E1CEAF"
+| #E1CEAF
+|- style="color: black; background: #CDAC85"
+| #CDAC85
+|- style="color: black; background: #B98B5B"
+| #B98B5B
+|- style="color: black; background: #9E674A"
+| #9E674A
+|- style="color: white; background: #775653"
+| #775653
+|- style="color: white; background: #60474B"
+| #60474B
+|- style="color: black; background: white"
+| n/a
+|- style="color: white; background: #483743"
+| #483743
+|- style="color: white; background: #2E2A38"
+| #2E2A38
+|}
+| style="vertical-align: top; padding: 0" |
+{| style="text-align: center; border-spacing: 0 1px; margin: 0 auto; background: black; border-left: 0px solid black; border-right: 1px solid black"
+|- style="background: #fff"
+| '''Still'''
+|- style="color: black; background: #E5B076"
+| #E5B076
+|- style="color: black; background: #D1894A"
+| #D1894A
+|- style="color: black; background: #BF703C"
+| #BF703C
+|- style="color: black; background: #A35D3A"
+| #A35D3A
+|- style="color: white; background: #85534B"
+| #85534B
+|- style="color: white; background: #644249"
+| #644249
+|- style="color: white; background: #4B4047"
+| #4B4047
+|- style="color: white; background: #293945"
+| #293945
+|- style="color: white; background: #2F3038"
+| #2F3038
+|}
+|}
+
+= Classic Graphics =
+{{old}}
+:{{for/see|a list of all tile characters used in DF|[[Tilesets]]}}
+:{{for/see|a chart with the default ASCII characters|[[Main:Character table|Character table]]}}
+:{{for/see|user-created creature tilesets|[[Main:Tileset repository|Tileset repository]]}}
+:{{for/see|information about Graphic sets|[[Graphic set|Graphic set]]}}
+:{{for/see|information on how tilesets get colored|[[color]]}}
+=== General Information ===
+Although commonly referred to as text or "ASCII"-graphics, classic DF uses a bitmap [[tilesets|tileset]]* with characters from the [[Main:Character table|IBM Code Page 437]], displayed with a foreground and background color picked from 16 predefined [[Color scheme|colors]]. Text files (and often hardcoded values) define the tile, and colors of all objects.
+Both color scheme and tileset can be changed (see below), and definitions that are in text files can be modified. In addition, interface text can be displayed with a TrueType font and [[creatures]] (which normally are displayed as [[tilesets#list of creatures...|letters]]) can be assigned to separate tilesets called [[graphic set]]s. The main tileset is sometimes called "character tileset", while the graphic sets are also referred to as "object tilesets".
+
+<small>*except when using [[Technical_tricks#Video_Card_Options|PRINT_MODE:TEXT]]</small>
+
+==== Tileset ====
+{{Main|Tilesets}}
+The main tileset (also called 'character set' or just 'tileset') is an image in BMP or PNG format that contains the 256 different tiles, corresponding to the [[Main:character table|IBM Code Page 437]], which are used to display all objects, creatures, and UI elements in game. The tiles are always arranged in a 16x16 grid, but its dimensions can be varied. You can have both square and non-square tiles, with 16x16 pixels being the most common size. Creatures are displayed as [[Tilesets#Main_creature_tiles|colored letters]] (a white 'B' is a [[polar bear]], a brown 'd' a [[dog]], and a grey 'c' is a [[cat]]).
+
+As the tileset is limited to only 256 tiles, some objects share the same tile. Most notably, even with upper and lower case letters and 16 colors, a lot of creatures still look identical (goblin, goat, various gibbons, gremlin, goose, etc.). The tile for bins, up/down stairs and the cursor are the same; bags use the same tile as the symbol for "male"; and the "female" symbol shares a graphic with amulets. Roads and large rivers on the world map, minecart tracks and walls all share the same tiles as well.
+
+Some of those can be changed in the raws and init files, and creatures can have separate graphics, but in most cases they are hardcoded.
+
+That also can be used to categorize custom tilesets: Those that are made for and come bundled with modified raws/init files, and those that are made for and work with the default raws. Usually, the latter are more symbolic, or 'ASCII-like', while the former are often more pictographic, detailed or "pixel-arty". These sometimes are also bundled with their own creature graphics.
+Tilesets that are made for default raws have the advantage that you can use them immediately without any work for any new version that is released. With modified raws, you need to manually edit the new raws again, or wait for the maintainer to do that.
+
+==== Graphic set ====
+{{Main|Graphic set}}
+Graphic sets are additional tilesets used to give objects different graphics. As opposed to the main tileset, any number of tiles can be arranged in any grid configuration. Currently, DF only supports graphic sets for creatures. Every graphic set needs a corresponding text file that assigns a tile to a creature.
+
+==== Color ====
+{{Main|Color}}
+In general, a tileset has white tiles with a transparent background. White pixels show the foreground color, transparent pixels (magenta pixels for .bmp) the background color. Black pixels remain black. Shades of grey, partial transparency and even colored tiles can be used for various effects. Additionally, creature graphics can be set to be displayed in the colors they're drawn in.
+
+Otherwise, the game selects from 16 colors (the [[color scheme]]) to decide the color: which of the 16 colors the game uses depends on the [[Color#Color_values|color value]] or [[Color#Color_tokens|color token]] of the material/item.
+
+
+===Installation===
+{{further information|Mod|Tilesets|Graphic set|Color scheme}}
+====Repositories====
+Users of the Steam version can subscribe to mods on Steam Workshop. The wiki has repositories for [[Main:Tileset_repository|tilesets]], [[Graphics_set_repository|graphic sets]], and [[color scheme]]s. You will find more in the [http://www.bay12forums.com/smf/index.php?board=28.0 bay 12 graphics subforum] and on [http://dffd.wimbli.com/ DFFD]. Some graphic sets and tilesets are additionally maintained on [https://github.com/DFgraphics github].
+Often, tileset creators offer preinstalled downloads or folders you just have to drop into your DF folder and overwrite files when prompted. They usually come with installation instructions either in a readme file or in their respective forum thread. In addition, there are various [[Utilities#Launchers|launcher]] applications that let you install and change graphics automatically.
+
+For manual installation of the various components, see here:
+
+====Tileset====
+Put the tileset you want to use into the data/art/ folder. Open up [[init.txt]] (in data/init/) with a text editor and change the entries FONT, FULLFONT, GRAPHICS_FONT, and GRAPHICS_FULLFONT to the filename of your new tileset.
+
+====Creature Graphics====
+Put the graphic set ''into a subfolder'' in raw/graphics and the corresponding text file directly in raw/graphics. If you have an active save you will have to put them into the raw folder of your save as well (data/save/<your region>/raw/graphics). Finally, set GRAPHICS to YES in data/init/[[init.txt]]
+
+====Color Scheme====
+Replace colors.txt in data/init with your new colors.
+
+===True Type Font===
+Replace font.ttf in data/art with your new font.
+
+
+==See Also==
+*[[Creature token]]
+*[[Syndrome]]
+*[[Creature examples]]
+
+{{Category|Modding}}
+{{Category|Tokens}}
+{{Category|Interface}}
