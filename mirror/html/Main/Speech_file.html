@@ -1,0 +1,877 @@
+<div class="mw-parser-output"><table class="version-table" style="text-align: center; margin: 3px auto 5px; padding: 0.25em; border-radius: 3px; -webkit-border-radius: 3px; -moz-border-radius: 3px; -o-border-radius: 3px; -ms-border-radius: 3px;; border: 2px solid #bbdd88; background: #f5ffee; min-width:27em"><tbody><tr><td style="padding: 0.3em 0.3em; width: 100%;"><div style="margin-bottom:6px;" class="version-links-r1"><span style="font-size:100%"><span class="version-link"><span style="text-decoration: none; color: #72A329; background-color: #E2FDCE; border-radius: 2px; -webkit-border-radius: 2px; -moz-border-radius: 2px; -o-border-radius: 2px; -ms-border-radius: 2px; border: 1px solid #bbdd88; padding: 0.2em;"><b>v53.16</b></span></span><span style="font-weight:bold;" class="dot">&#160;·</span> <span class="version-link"><a href="/index.php/DF2014:Speech_file" title="DF2014:Speech file"><span style="text-decoration: none; color: #72A329;">v0.47.05</span></a></span></span></div><span>This article is about the current version of DF.<br />Note that some content may still need to be updated.</span><br />
+<div style="float: right; font-size:75%; padding-right:2px; margin-top:-2px; margin-bottom:-7px;"><span class="version-link"><a href="/index.php/Dwarf_Fortress_Wiki:V" class="mw-redirect" title="Dwarf Fortress Wiki:V"><span style="text-decoration: none; color: #72A329;">More Info</span></a></span><span style="font-weight:bold;" class="dot">&#160;·</span> <span class="version-link"><a href="/index.php/Template:Av" class="mw-redirect" title="Template:Av"><span style="text-decoration: none; color: #72A329;">V</span></a></span></div></td></tr>
+</tbody></table>
+<p><span style="margin-top:5px">
+</span></p>
+<table class="vertical-navbox nowraplinks" cellspacing="5" cellpadding="0" style="float:right;clear:right;width:22.0em;margin:0 0 1.0em 1.0em;background:#f9f9f9;border:1px solid #aaa;padding:0.2em;border-spacing:0.4em 0;text-align:center;line-height:1.4em;font-size:88%;"><tbody><tr><th class="" style=";padding:0.2em 0.4em 0.2em;;font-size:145%;line-height:1.2em;"><a href="/index.php/Modding" title="Modding">Modding</a><hr /></th>
+      </tr><tr>
+<th class="" style="padding:0.1em;;;">
+<big><a href="/index.php/Token" title="Token">Tokens</a></big></th>
+</tr><tr>
+<td class="" style="padding:0 0.1em 0.4em;font-size: 12px; padding-left: 5px; text-align: center;;">
+<a href="/index.php/Audio" title="Audio">Audio</a><span style="font-weight: bold; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;">&#160;&#183;&#32;</span> <a href="/index.php/Biome_token" title="Biome token">Biome</a><span style="font-weight: bold; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;">&#160;&#183;&#32;</span> <a href="/index.php/Graphics_token" title="Graphics token">Graphics</a><span style="font-weight: bold; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;">&#160;&#183;&#32;</span> <a href="/index.php/Graphics#Tile_Page" title="Graphics">Tile page</a><span style="font-weight: bold; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;">&#160;&#183;&#32;</span> <a href="/index.php/Interaction_token" title="Interaction token">Interaction</a><span style="font-weight: bold; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;">&#160;&#183;&#32;</span> <a href="/index.php/Mod_info_token" title="Mod info token">Mod info</a><span style="font-weight: bold; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;">&#160;&#183;&#32;</span> <a href="/index.php/Plant_token" title="Plant token">Plant</a><span style="font-weight: bold; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;">&#160;&#183;&#32;</span> <a class="mw-selflink selflink">Speech</a><span style="font-weight: bold; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;">&#160;&#183;&#32;</span> <a href="/index.php/Sphere#Sphere_tokens" title="Sphere">Sphere</a><span style="font-weight: bold; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;">&#160;&#183;&#32;</span> <a href="/index.php/Syndrome#The_anatomy_of_a_syndrome" title="Syndrome">Syndrome</a><span style="font-weight: bold; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;">&#160;&#183;&#32;</span> <a href="/index.php/World_token" title="World token">World</a></td>
+</tr><tr>
+<th class="" style="padding:0.1em;;;">
+Body tokens</th>
+</tr><tr>
+<td class="" style="padding:0 0.1em 0.4em;font-size: 12px; padding-left: 5px; text-align: center;;">
+<a href="/index.php/Body_token" title="Body token">Body</a><span style="font-weight: bold; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;">&#160;&#183;&#32;</span> <a href="/index.php/Body_detail_plan_token" title="Body detail plan token">Body detail plan</a><span style="font-weight: bold; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;">&#160;&#183;&#32;</span> <a href="/index.php/Bodygloss" title="Bodygloss">Bodygloss</a><span style="font-weight: bold; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;">&#160;&#183;&#32;</span> <a href="/index.php/Tissue_definition_token" title="Tissue definition token">Tissue</a></td>
+</tr><tr>
+<th class="" style="padding:0.1em;;;">
+Creature tokens</th>
+</tr><tr>
+<td class="" style="padding:0 0.1em 0.4em;font-size: 12px; padding-left: 5px; text-align: center;;">
+<a href="/index.php/Creature_token" title="Creature token">Creature</a><span style="font-weight: bold; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;">&#160;&#183;&#32;</span> <a href="/index.php/Creature_mannerism_token" title="Creature mannerism token">Creature mannerism</a><span style="font-weight: bold; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;">&#160;&#183;&#32;</span>  <a href="/index.php/Personality_facet" title="Personality facet">Personality facet</a><span style="font-weight: bold; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;">&#160;&#183;&#32;</span> <a href="/index.php/Creature_variation_token" title="Creature variation token">Creature variation</a><span style="font-weight: bold; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;">&#160;&#183;&#32;</span> <a href="/index.php/Procedural_graphics_layer" title="Procedural graphics layer">Procedural graphics layer</a></td>
+</tr><tr>
+<th class="" style="padding:0.1em;;;">
+Descriptor tokens</th>
+</tr><tr>
+<td class="" style="padding:0 0.1em 0.4em;font-size: 12px; padding-left: 5px; text-align: center;;">
+<a href="/index.php/Descriptor_color_token" title="Descriptor color token">Descriptor color</a><span style="font-weight: bold; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;">&#160;&#183;&#32;</span> <a href="/index.php/Color" title="Color">Color</a><span style="font-weight: bold; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;">&#160;&#183;&#32;</span> <a href="/index.php/Descriptor_pattern_token" title="Descriptor pattern token">Descriptor pattern</a><span style="font-weight: bold; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;">&#160;&#183;&#32;</span> <a href="/index.php/Descriptor_shape_token" title="Descriptor shape token">Descriptor shape</a></td>
+</tr><tr>
+<th class="" style="padding:0.1em;;;">
+Entity tokens</th>
+</tr><tr>
+<td class="" style="padding:0 0.1em 0.4em;font-size: 12px; padding-left: 5px; text-align: center;;">
+<a href="/index.php/Entity_token" title="Entity token">Entity</a><span style="font-weight: bold; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;">&#160;&#183;&#32;</span> <a href="/index.php/Ethic" title="Ethic">Ethic</a><span style="font-weight: bold; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;">&#160;&#183;&#32;</span> <a href="/index.php/Language_token" title="Language token">Language</a><span style="font-weight: bold; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;">&#160;&#183;&#32;</span>  <a href="/index.php/Personality_value" title="Personality value">Value</a><span style="font-weight: bold; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;">&#160;&#183;&#32;</span> <a href="/index.php/Position_token" title="Position token">Position</a> (<a href="/index.php/Variable_positions" title="Variable positions">Variable positions</a>)</td>
+</tr><tr>
+<th class="" style="padding:0.1em;;;">
+Job tokens</th>
+</tr><tr>
+<td class="" style="padding:0 0.1em 0.4em;font-size: 12px; padding-left: 5px; text-align: center;;">
+<a href="/index.php/Building_token" title="Building token">Building</a><span style="font-weight: bold; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;">&#160;&#183;&#32;</span> <a href="/index.php/Labor_token" title="Labor token">Labor</a><span style="font-weight: bold; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;">&#160;&#183;&#32;</span> <a href="/index.php/Reaction" title="Reaction">Reaction</a><span style="font-weight: bold; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;">&#160;&#183;&#32;</span> <a href="/index.php/Skill_token" title="Skill token">Skill</a><span style="font-weight: bold; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;">&#160;&#183;&#32;</span> <a href="/index.php/Unit_type_token" title="Unit type token">Unit type</a></td>
+</tr><tr>
+<th class="" style="padding:0.1em;;;">
+Item tokens</th>
+</tr><tr>
+<td class="" style="padding:0 0.1em 0.4em;font-size: 12px; padding-left: 5px; text-align: center;;">
+<a href="/index.php/Item_token" title="Item token">Item type</a><span style="font-weight: bold; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;">&#160;&#183;&#32;</span> <a href="/index.php/Item_definition_token" title="Item definition token">Item definition</a><span style="font-weight: bold; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;">&#160;&#183;&#32;</span> <a href="/index.php/Ammo_token" title="Ammo token">Ammo</a><span style="font-weight: bold; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;">&#160;&#183;&#32;</span> <a href="/index.php/Armor_token" title="Armor token">Armor</a><span style="font-weight: bold; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;">&#160;&#183;&#32;</span> <a href="/index.php/Instrument_token" title="Instrument token">Instrument</a><span style="font-weight: bold; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;">&#160;&#183;&#32;</span> <a href="/index.php/Tool_token" title="Tool token">Tool</a><span style="font-weight: bold; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;">&#160;&#183;&#32;</span> <a href="/index.php/Trap_component_token" title="Trap component token">Trap component</a><span style="font-weight: bold; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;">&#160;&#183;&#32;</span> <a href="/index.php/Weapon_token" title="Weapon token">Weapon</a></td>
+</tr><tr>
+<th class="" style="padding:0.1em;;;">
+Material tokens</th>
+</tr><tr>
+<td class="" style="padding:0 0.1em 0.4em;font-size: 12px; padding-left: 5px; text-align: center;;">
+<a href="/index.php/Material_token" title="Material token">Material type</a><span style="font-weight: bold; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;">&#160;&#183;&#32;</span> <a href="/index.php/Material_definition_token" title="Material definition token">Material definition</a><span style="font-weight: bold; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;">&#160;&#183;&#32;</span> <a href="/index.php/Inorganic_material_definition_token" title="Inorganic material definition token">Inorganic material definition</a></td>
+</tr><tr>
+<th class="" style="padding:0.1em;;;">
+<hr /><big>Lua</big></th>
+</tr><tr>
+<td class="" style="padding:0 0.1em 0.4em;font-size: 12px; padding-left: 5px; text-align: center;;">
+<a href="/index.php/Lua_scripting" title="Lua scripting">Scripting</a><span style="font-weight: bold; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;">&#160;&#183;&#32;</span> <a href="/index.php/Lua_script_examples" title="Lua script examples">Examples</a><span style="font-weight: bold; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;">&#160;&#183;&#32;</span> <a href="/index.php/Lua_functions" title="Lua functions">Functions</a></td>
+</tr><tr><td style="text-align:right;font-size:115%;"><div class="noprint plainlinks hlist navbar mini" style="text-transform:uppercase; font-size:80%;"><div><span class="nv-view"><a href="/index.php/Template:V50_modding" title="Template:V50 modding"><span title="View this template" style="">v</span></a></span><span style="font-weight:bold;" class="dot">&#160;·</span> <span class="nv-talk"><a href="/index.php?title=Template_talk:V50_modding&amp;action=edit&amp;redlink=1" class="new" title="Template talk:V50 modding (page does not exist)"><span title="Discuss this template" style="">t</span></a></span><span style="font-weight:bold;" class="dot">&#160;·</span> <span class="nv-edit"><a rel="nofollow" class="external text" href="//dwarffortresswiki.org/index.php?title=Template:V50_modding&amp;action=edit"><span title="Edit this template" style="">e</span></a></span></div></div></td></tr>
+</tbody></table>
+<p><br />
+
+<b>Speech files</b>, also known as <b>text sets</b>, are text files that define sentences which can be spoken by people in <a href="/index.php/Adventure_mode" class="mw-redirect" title="Adventure mode">adventure mode</a> and phrases used to name <a href="/index.php/Books" class="mw-redirect" title="Books">books</a>. Most of them are found in the <code>data/vanilla/vanilla_text/objects</code> folder, though the creature specific files can be found in <code>data/vanilla/vanilla_creatures/objects</code>. Like other raw files, mods can replace or introduce new sentences.
+</p>
+
+<h2><span class="mw-headline" id="List_of_files">List of files</span></h2>
+<table class="wikitable">
+<tbody><tr>
+<th>Textset ID</th>
+<th>Uses</th>
+<th>Example
+</th></tr>
+<tr>
+<td><span id="AB_SPECIFIC_HF_SEEKER" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#AB_SPECIFIC_HF_SEEKER">AB_SPECIFIC_HF_SEEKER</a></span>
+</td>
+<td>
+</td>
+<td>seek out [CONTEXT:HIST_FIG:TRANS_NAME] at [CONTEXT:ABSTRACT_BUILDING:TRANS_NAME] over in [CONTEXT:SITE:TRANS_NAME]
+</td></tr>
+<tr>
+<td><span id="ANIMAL_SLAYER" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#ANIMAL_SLAYER">ANIMAL_SLAYER</a></span>
+</td>
+<td>
+</td>
+<td>I have taken down [CONTEXT:NUMBER] [CONTEXT:RACE:NUMBERED_NAME] while stalking [CONTEXT:PLACE:TRANS_NAME].
+</td></tr>
+<tr>
+<td><span id="ARCH_INFO_JUSTIFICATION" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#ARCH_INFO_JUSTIFICATION">ARCH_INFO_JUSTIFICATION</a></span>
+</td>
+<td>
+</td>
+<td>It is said that the [CONTEXT:ARCH_ELEMENT] of [CONTEXT:ABSTRACT_BUILDING:TRANS_NAME] [CONTEXT:JUSTIFICATION] [CONTEXT:DEF_SPHERE] for the glory of [CONTEXT:HIST_FIG:TRANS_NAME].
+</td></tr>
+<tr>
+<td><span id="BOOK_ART" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#BOOK_ART">BOOK_ART</a></span>
+</td>
+<td>Used when naming books.
+</td>
+<td>And [ANY_PRONOUN] Sang '[NAME]!'
+</td></tr>
+<tr>
+<td><span id="BOOK_INSTRUCTION" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#BOOK_INSTRUCTION">BOOK_INSTRUCTION</a></span>
+</td>
+<td>Used when naming books.
+</td>
+<td>A Course on [NAME]
+</td></tr>
+<tr>
+<td><span id="CHILD_AGE_PROCLAMATION" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#CHILD_AGE_PROCLAMATION">CHILD_AGE_PROCLAMATION</a></span>
+</td>
+<td>
+</td>
+<td>I'm [CONTEXT:NUMBER]!
+</td></tr>
+<tr>
+<td><span id="CURRENT_PROFESSION_NO_YEAR" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#CURRENT_PROFESSION_NO_YEAR">CURRENT_PROFESSION_NO_YEAR</a></span>
+</td>
+<td>
+</td>
+<td>I am a [CONTEXT:UNIT_NAME].
+</td></tr>
+<tr>
+<td><span id="CURRENT_PROFESSION_YEAR" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#CURRENT_PROFESSION_YEAR">CURRENT_PROFESSION_YEAR</a></span>
+</td>
+<td>
+</td>
+<td>This is my [CONTEXT:ORDINAL] year as a [CONTEXT:UNIT_NAME].
+</td></tr>
+<tr>
+<td><span id="CURSE" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#CURSE">CURSE</a></span>
+</td>
+<td>
+</td>
+<td>Who dares to enter my house?  I curse you!
+</td></tr>
+<tr>
+<td><span id="SLAIN_DWARF" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#SLAIN_DWARF">SLAIN_DWARF</a></span>
+</td>
+<td>Used when boasting about killing a <a href="/index.php/Dwarf" title="Dwarf">dwarf</a>. See also <a href="/index.php/Creature_token#SPEECH" title="Creature token">Creature token#SPEECH</a>.
+</td>
+<td>whose hammer shattered on the anvil of my power
+</td></tr>
+<tr>
+<td><span id="SLAIN_ELF" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#SLAIN_ELF">SLAIN_ELF</a></span>
+</td>
+<td>Used when boasting about killing an <a href="/index.php/Elf" title="Elf">elf</a>. See also <a href="/index.php/Creature_token#SPEECH" title="Creature token">Creature token#SPEECH</a>.
+</td>
+<td>whose fragile bones shattered before the power of my contempt
+</td></tr>
+<tr>
+<td><span id="FAMILY_RELATIONSHIP_ADDITIONAL" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#FAMILY_RELATIONSHIP_ADDITIONAL">FAMILY_RELATIONSHIP_ADDITIONAL</a></span>
+</td>
+<td>
+</td>
+<td>[CONTEXT:HIST_FIG:PRO_SUB] is also my [CONTEXT:FAMILY_RELATIONSHIP]
+</td></tr>
+<tr>
+<td><span id="FAMILY_RELATIONSHIP_ADDITIONAL_DEAD" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#FAMILY_RELATIONSHIP_ADDITIONAL_DEAD">FAMILY_RELATIONSHIP_ADDITIONAL_DEAD</a></span>
+</td>
+<td>
+</td>
+<td>[CONTEXT:HIST_FIG:PRO_SUB] was also my [CONTEXT:FAMILY_RELATIONSHIP]
+</td></tr>
+<tr>
+<td><span id="FAMILY_RELATIONSHIP_NO_SPEC" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#FAMILY_RELATIONSHIP_NO_SPEC">FAMILY_RELATIONSHIP_NO_SPEC</a></span>
+</td>
+<td>
+</td>
+<td>I have [CONTEXT:INDEF_FAMILY_RELATIONSHIP] named [CONTEXT:HIST_FIG:TRANS_NAME]
+</td></tr>
+<tr>
+<td><span id="FAMILY_RELATIONSHIP_NO_SPEC_DEAD" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#FAMILY_RELATIONSHIP_NO_SPEC_DEAD">FAMILY_RELATIONSHIP_NO_SPEC_DEAD</a></span>
+</td>
+<td>
+</td>
+<td>I had [CONTEXT:INDEF_FAMILY_RELATIONSHIP] named [CONTEXT:HIST_FIG:TRANS_NAME]
+</td></tr>
+<tr>
+<td><span id="FAMILY_RELATIONSHIP_SPEC" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#FAMILY_RELATIONSHIP_SPEC">FAMILY_RELATIONSHIP_SPEC</a></span>
+</td>
+<td>
+</td>
+<td>my [CONTEXT:FAMILY_RELATIONSHIP] is named [CONTEXT:HIST_FIG:TRANS_NAME]
+</td></tr>
+<tr>
+<td><span id="FAMILY_RELATIONSHIP_SPEC_DEAD" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#FAMILY_RELATIONSHIP_SPEC_DEAD">FAMILY_RELATIONSHIP_SPEC_DEAD</a></span>
+</td>
+<td>
+</td>
+<td>my [CONTEXT:FAMILY_RELATIONSHIP] was named [CONTEXT:HIST_FIG:TRANS_NAME]
+</td></tr>
+<tr>
+<td><span id="GENERAL" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#GENERAL">GENERAL</a></span>
+</td>
+<td>
+</td>
+<td>who lies dead, now only an embarrassing memory
+</td></tr>
+<tr>
+<td><span id="GOODBYE_WORSHIP_1" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#GOODBYE_WORSHIP_1">GOODBYE_WORSHIP_1</a></span>
+</td>
+<td>
+</td>
+<td>upon arising in the mornings,
+</td></tr>
+<tr>
+<td><span id="GOODBYE_WORSHIP_2" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#GOODBYE_WORSHIP_2">GOODBYE_WORSHIP_2</a></span>
+</td>
+<td>
+</td>
+<td>always remember to
+</td></tr>
+<tr>
+<td><span id="GOODBYE_WORSHIP_3" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#GOODBYE_WORSHIP_3">GOODBYE_WORSHIP_3</a></span>
+</td>
+<td>
+</td>
+<td>speak the praises of [SPEAKER:HF_LINK:DEITY:RANDOM_DEF_SPHERE]
+</td></tr>
+<tr>
+<td><span id="GREET" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#GREET">GREET</a></span>
+</td>
+<td>Used when greeting another person.
+</td>
+<td>Greetings. My name is [SPEAKER:TRANS_NAME].
+</td></tr>
+<tr>
+<td><span id="GREET_BABY" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#GREET_BABY">GREET_BABY</a></span>
+</td>
+<td>Used when greeting a <a href="/index.php/Baby" class="mw-redirect" title="Baby">baby</a>.
+</td>
+<td>A baby! How adorable!
+</td></tr>
+<tr>
+<td><span id="GREET_REPLY" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#GREET_REPLY">GREET_REPLY</a></span>
+</td>
+<td>Used when replying to another person's greeting.
+</td>
+<td>Ah, hello. I'm [SPEAKER:TRANS_NAME].
+</td></tr>
+<tr>
+<td><span id="GREET_REPLY_AFTER_HERO" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#GREET_REPLY_AFTER_HERO">GREET_REPLY_AFTER_HERO</a></span>
+</td>
+<td>Used by NPCs when replying to the player character's greeting after becoming a <a href="/index.php/Hero" class="mw-redirect" title="Hero">hero</a>.
+</td>
+<td>I am [SPEAKER:TRANS_NAME]. How can I be of service?
+</td></tr>
+<tr>
+<td><span id="GREET_REPLY_DIFF_LANGUAGE" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#GREET_REPLY_DIFF_LANGUAGE">GREET_REPLY_DIFF_LANGUAGE</a></span>
+</td>
+<td>Used when replying to the greeting of a person who is of another race.
+</td>
+<td>Hello, [AUDIENCE:RACE]. I am [SPEAKER:TRANS_NAME].
+</td></tr>
+<tr>
+<td><span id="GREET_REPLY_UNUSUAL_FIRST" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#GREET_REPLY_UNUSUAL_FIRST">GREET_REPLY_UNUSUAL_FIRST</a></span>
+</td>
+<td>Used when replying to the greeting of a person whose first name is unusual.<sup style="font-size: 80%;">&#91;<a href="/index.php/Talk:Speech_file" title="Talk:Speech file"><span title="June 2015">Verify</span></a>&#93;</sup>
+</td>
+<td>You know, you don't meet many people with the name [AUDIENCE:FIRST_NAME]
+</td></tr>
+<tr>
+<td><span id="GREET_WORSHIP" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#GREET_WORSHIP">GREET_WORSHIP</a></span>
+</td>
+<td>Used for greetings by <a href="/index.php/Priest" title="Priest">priests</a> and faithful people.<sup style="font-size: 80%;">&#91;<a href="/index.php/Talk:Speech_file" title="Talk:Speech file"><span title="June 2015">Verify</span></a>&#93;</sup>
+</td>
+<td>This servant of [SPEAKER:HF_LINK:DEITY:TRANS_NAME] greets you.
+</td></tr>
+<tr>
+<td><span id="GUARD_PROFESSION" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#GUARD_PROFESSION">GUARD_PROFESSION</a></span>
+</td>
+<td>Used by guards when you ask them about their profession. See also <a href="#soldier_profession">soldier_profession</a>.
+</td>
+<td>I am a guard.
+</td></tr>
+<tr>
+<td><span id="GUARD_WARNING" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#GUARD_WARNING">GUARD_WARNING</a></span>
+</td>
+<td>
+</td>
+<td>Don't start any trouble.
+</td></tr>
+<tr>
+<td><span id="HIST_FIG_SLAYER" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#HIST_FIG_SLAYER">HIST_FIG_SLAYER</a></span>
+</td>
+<td>
+</td>
+<td>It is I that felled [CONTEXT:HIST_FIG:TRANS_NAME] the [CONTEXT:HIST_FIG:RACE].
+</td></tr>
+<tr>
+<td><span id="HUNTING_PROFESSION" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#HUNTING_PROFESSION">HUNTING_PROFESSION</a></span>
+</td>
+<td>
+</td>
+<td>I hunt great beasts in [CONTEXT:PLACE:TRANS_NAME].
+</td></tr>
+<tr>
+<td><span id="HUNTING_PROFESSION_YEAR" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#HUNTING_PROFESSION_YEAR">HUNTING_PROFESSION_YEAR</a></span>
+</td>
+<td>
+</td>
+<td>I have hunted great beasts in [CONTEXT:PLACE:TRANS_NAME] for [CONTEXT:NUMBER] of my years.
+</td></tr>
+<tr>
+<td><span id="JUSTIFICATION_ANTITHETICAL" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#JUSTIFICATION_ANTITHETICAL">JUSTIFICATION_ANTITHETICAL</a></span>
+</td>
+<td>
+</td>
+<td>can be thought of as the antithesis of
+</td></tr>
+<tr>
+<td><span id="JUSTIFICATION_EXPERIENCE" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#JUSTIFICATION_EXPERIENCE">JUSTIFICATION_EXPERIENCE</a></span>
+</td>
+<td>
+</td>
+<td>can allow one to experience
+</td></tr>
+<tr>
+<td><span id="JUSTIFICATION_PROXIMITY" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#JUSTIFICATION_PROXIMITY">JUSTIFICATION_PROXIMITY</a></span>
+</td>
+<td>
+</td>
+<td>can bring one near to
+</td></tr>
+<tr>
+<td><span id="JUSTIFICATION_REMINDER" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#JUSTIFICATION_REMINDER">JUSTIFICATION_REMINDER</a></span>
+</td>
+<td>
+</td>
+<td>can remind one of
+</td></tr>
+<tr>
+<td><span id="JUSTIFICATION_REPRESENTATION" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#JUSTIFICATION_REPRESENTATION">JUSTIFICATION_REPRESENTATION</a></span>
+</td>
+<td>
+</td>
+<td>can be thought of as a representation of
+</td></tr>
+<tr>
+<td><span id="LAIR_HUNTER_MINOTAUR" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#LAIR_HUNTER_MINOTAUR">LAIR_HUNTER_MINOTAUR</a></span>
+</td>
+<td>Used by <a href="/index.php/Minotaur" title="Minotaur">minotaurs</a> while hunting adventures in their lairs. See also <a href="/index.php/Creature_token#LAIR_HUNTER_SPEECH" title="Creature token">Creature token#LAIR_HUNTER_SPEECH</a>.
+</td>
+<td>I'll eat you whole!
+</td></tr>
+<tr>
+<td><span id="MERCENARY_PROFESSION" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#MERCENARY_PROFESSION">MERCENARY_PROFESSION</a></span>
+</td>
+<td>
+</td>
+<td>I seek fortune and glory by offering my skill at arms in [CONTEXT:PLACE:TRANS_NAME].
+</td></tr>
+<tr>
+<td><span id="MERCENARY_PROFESSION_YEAR" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#MERCENARY_PROFESSION_YEAR">MERCENARY_PROFESSION_YEAR</a></span>
+</td>
+<td>
+</td>
+<td>I have sought fortune and glory by offering my skill at arms in [CONTEXT:PLACE:TRANS_NAME] for [CONTEXT:NUMBER] of my years.
+</td></tr>
+<tr>
+<td><span id="NO_FAMILY" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#NO_FAMILY">NO_FAMILY</a></span>
+</td>
+<td>Used by NPCs when you ask them about their <a href="/index.php?title=Family&amp;action=edit&amp;redlink=1" class="new" title="Family (page does not exist)">family</a>, but they don't have any.
+</td>
+<td>I have no family to speak of.
+</td></tr>
+<tr>
+<td><span id="PAST_HUNTING_PROFESSION" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#PAST_HUNTING_PROFESSION">PAST_HUNTING_PROFESSION</a></span>
+</td>
+<td>
+</td>
+<td>In the past, I hunted great beasts.
+</td></tr>
+<tr>
+<td><span id="PAST_MERCENARY_PROFESSION" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#PAST_MERCENARY_PROFESSION">PAST_MERCENARY_PROFESSION</a></span>
+</td>
+<td>
+</td>
+<td>In the past, I sought fortune and glory by offering my skill at arms.
+</td></tr>
+<tr>
+<td><span id="PAST_PROFESSION_NO_YEAR" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#PAST_PROFESSION_NO_YEAR">PAST_PROFESSION_NO_YEAR</a></span>
+</td>
+<td>
+</td>
+<td>I was once a [CONTEXT:UNIT_NAME].
+</td></tr>
+<tr>
+<td><span id="PAST_PROFESSION_YEAR" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#PAST_PROFESSION_YEAR">PAST_PROFESSION_YEAR</a></span>
+</td>
+<td>
+</td>
+<td>I was a [CONTEXT:UNIT_NAME] for [CONTEXT:NUMBER] of the years of my life.
+</td></tr>
+<tr>
+<td><span id="PAST_SNATCHER_PROFESSION" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#PAST_SNATCHER_PROFESSION">PAST_SNATCHER_PROFESSION</a></span>
+</td>
+<td>
+</td>
+<td>Once it was my calling to rescue lost children.
+</td></tr>
+<tr>
+<td><span id="PAST_THIEF_PROFESSION" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#PAST_THIEF_PROFESSION">PAST_THIEF_PROFESSION</a></span>
+</td>
+<td>
+</td>
+<td>I once sought great treasures.
+</td></tr>
+<tr>
+<td><span id="PAST_WANDERING_PROFESSION" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#PAST_WANDERING_PROFESSION">PAST_WANDERING_PROFESSION</a></span>
+</td>
+<td>
+</td>
+<td>I once wandered the wilds.
+</td></tr>
+<tr>
+<td><span id="POSITIVE" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#POSITIVE">POSITIVE</a></span>
+</td>
+<td>Used to express positive <a href="/index.php/Feeling" class="mw-redirect" title="Feeling">feelings</a>.
+</td>
+<td>wonderful!<br />fantastic!<br />very good
+</td></tr>
+<tr>
+<td><span id="SAME_SITE_AB_SPECIFIC_HF_SEEKER" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#SAME_SITE_AB_SPECIFIC_HF_SEEKER">SAME_SITE_AB_SPECIFIC_HF_SEEKER</a></span>
+</td>
+<td>
+</td>
+<td>seek out [CONTEXT:HIST_FIG:TRANS_NAME] here in [CONTEXT:SITE:TRANS_NAME] at [CONTEXT:ABSTRACT_BUILDING:TRANS_NAME]
+</td></tr>
+<tr>
+<td><span id="SAME_SITE_SPECIFIC_HF_SEEKER" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#SAME_SITE_SPECIFIC_HF_SEEKER">SAME_SITE_SPECIFIC_HF_SEEKER</a></span>
+</td>
+<td>
+</td>
+<td>seek out [CONTEXT:HIST_FIG:TRANS_NAME] here in [CONTEXT:SITE:TRANS_NAME]
+</td></tr>
+<tr>
+<td><span id="SITE_SPECIFIC_HF_SEEKER" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#SITE_SPECIFIC_HF_SEEKER">SITE_SPECIFIC_HF_SEEKER</a></span>
+</td>
+<td>
+</td>
+<td>seek out [CONTEXT:HIST_FIG:TRANS_NAME] over in [CONTEXT:SITE:TRANS_NAME]
+</td></tr>
+<tr>
+<td><span id="SLAYER" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#SLAYER">SLAYER</a></span>
+</td>
+<td>
+</td>
+<td>bane<br />death<br />nemesis<br />vanquisher
+</td></tr>
+<tr>
+<td><span id="SNATCHER_PROFESSION" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#SNATCHER_PROFESSION">SNATCHER_PROFESSION</a></span>
+</td>
+<td>
+</td>
+<td>I rescue lost children and bring them back to [CONTEXT:PLACE:TRANS_NAME].
+</td></tr>
+<tr>
+<td><span id="SNATCHER_PROFESSION_YEAR" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#SNATCHER_PROFESSION_YEAR">SNATCHER_PROFESSION_YEAR</a></span>
+</td>
+<td>
+</td>
+<td>For [CONTEXT:NUMBER] of my years, I have been rescuing lost children and bringing them back to [CONTEXT:PLACE:TRANS_NAME].
+</td></tr>
+<tr>
+<td><span id="SOLDIER_PROFESSION" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#SOLDIER_PROFESSION">SOLDIER_PROFESSION</a></span>
+</td>
+<td>Used by <a href="/index.php/Soldier" title="Soldier">soldiers</a> when you ask them about their profession. See also <a href="#guard_profession">guard_profession</a>.
+</td>
+<td>I am a soldier.
+</td></tr>
+<tr>
+<td><span id="TASK_RECOMMENDATION" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#TASK_RECOMMENDATION">TASK_RECOMMENDATION</a></span>
+</td>
+<td>
+</td>
+<td>[CONTEXT:ANY:TRANS_NAME] might have a task for you
+</td></tr>
+<tr>
+<td><span id="TEMPLE_ALREADY_MEMBER" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#TEMPLE_ALREADY_MEMBER">TEMPLE_ALREADY_MEMBER</a></span>
+</td>
+<td>
+</td>
+<td>your task is simple;<br />all you need is to
+</td></tr>
+<tr>
+<td><span id="TEMPLE_BECOME_MEMBER" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#TEMPLE_BECOME_MEMBER">TEMPLE_BECOME_MEMBER</a></span>
+</td>
+<td>
+</td>
+<td>Welcome to [CONTEXT:ENTITY:TRANS_NAME].  Praise be to [CONTEXT:ENTITY:WORSHIP_HF:TRANS_NAME]!<br />As a member of [CONTEXT:ENTITY:TRANS_NAME], you can now seek the higher mysteries of [CONTEXT:ENTITY:WORSHIP_HF:TRANS_NAME].
+</td></tr>
+<tr>
+<td><span id="THIEF_PROFESSION" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#THIEF_PROFESSION">THIEF_PROFESSION</a></span>
+</td>
+<td>
+</td>
+<td>I seek treasures and bring them back to [CONTEXT:PLACE:TRANS_NAME].
+</td></tr>
+<tr>
+<td><span id="THIEF_PROFESSION_YEAR" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#THIEF_PROFESSION_YEAR">THIEF_PROFESSION_YEAR</a></span>
+</td>
+<td>
+</td>
+<td>I seek treasures and bring them back to [CONTEXT:PLACE:TRANS_NAME] and have done so for [CONTEXT:NUMBER] of the years of my life.
+</td></tr>
+<tr>
+<td><span id="THREAT" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#THREAT">THREAT</a></span>
+</td>
+<td>Used by NPC <a href="/index.php/Bandit" class="mw-redirect" title="Bandit">bandits</a><sup style="font-size: 80%;">&#91;<a href="/index.php/Talk:Speech_file" title="Talk:Speech file"><span title="June 2015">Verify</span></a>&#93;</sup> before attacking you.
+</td>
+<td>Prepare to die!
+</td></tr>
+<tr>
+<td><span id="UNKNOWN_HF_SEEKER" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#UNKNOWN_HF_SEEKER">UNKNOWN_HF_SEEKER</a></span>
+</td>
+<td>
+</td>
+<td>seek out [CONTEXT:HIST_FIG:TRANS_NAME], wherever [CONTEXT:HIST_FIG:PRO_SUB] might be
+</td></tr>
+<tr>
+<td><span id="WANDERING_PROFESSION" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#WANDERING_PROFESSION">WANDERING_PROFESSION</a></span>
+</td>
+<td>
+</td>
+<td>I wander [CONTEXT:PLACE:TRANS_NAME].
+</td></tr>
+<tr>
+<td><span id="WANDERING_PROFESSION_YEAR" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#WANDERING_PROFESSION_YEAR">WANDERING_PROFESSION_YEAR</a></span>
+</td>
+<td>
+</td>
+<td>I have wandered [CONTEXT:PLACE:TRANS_NAME] for [CONTEXT:NUMBER] of my years.
+</td></tr></tbody></table>
+<h2><span class="mw-headline" id="Adding_custom_files">Adding custom files</span></h2>
+<p>New speech tokens can be added with mods. It is also possible to add new files and associate them with custom creatures.
+</p>
+<table class="wikitable">
+<caption><a href="/index.php/Creature_token" title="Creature token">Creature tokens</a>
+</caption>
+<tbody><tr>
+<th>Token</th>
+<th>Example uses
+</th></tr>
+<tr>
+<td><a href="/index.php/Creature_token#SLAIN_CASTE_SPEECH" title="Creature token">SLAIN_CASTE_SPEECH</a>
+</td>
+<td>Replaces <a href="/index.php/DF2014:Creature_token#CASTE_SPEECH" title="DF2014:Creature token">CASTE_SPEECH</a>, <a href="/index.php/DF2014:Creature_token#SPEECH_FEMALE" title="DF2014:Creature token">SPEECH_FEMALE</a>, and <a href="/index.php/DF2014:Creature_token#SPEECH_MALE" title="DF2014:Creature token">SPEECH_MALE</a> from older versions.
+</td></tr>
+<tr>
+<td><a href="/index.php/Creature_token#LAIR_HUNTER_SPEECH" title="Creature token">LAIR_HUNTER_SPEECH</a>
+</td>
+<td><a href="/index.php/Minotaur" title="Minotaur">Minotaur</a> (<a href="#lair_hunter_minotaur">lair_hunter_minotaur.txt</a>)
+</td></tr>
+<tr>
+<td><a href="/index.php/Creature_token#SPEECH" title="Creature token">SPEECH</a>
+</td>
+<td><a href="/index.php/Dwarf" title="Dwarf">Dwarf</a> (<a href="/index.php/Text_dwarf.txt" title="Text dwarf.txt">text_dwarf.txt</a>), <a href="/index.php/Elf" title="Elf">Elf</a> (text_elf.txt)
+</td></tr></tbody></table>
+<h2><span class="mw-headline" id="List_of_Tokens">List of Tokens</span></h2>
+<p>Speech files can contain tokens in square brackets (<code>[]</code>), which are replaced with context-specific strings before the speech is displayed.
+</p>
+<h3><span class="mw-headline" id="Book_title_tokens">Book title tokens</span></h3>
+<p>These tokens are used for <a href="/index.php/Book#Titles" title="Book">book titles</a> and specific examples of <a href="/index.php/Performer" title="Performer">performances</a> such as songs, poems, or dances. It is unknown if the generating tokens can be used in other text sets to generate random words.
+</p>
+<table class="wikitable">
+<tbody><tr>
+<th>Token</th>
+<th>Meaning</th>
+<th>Example
+</th></tr>
+<tr>
+<td><span id="NAME" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#NAME">NAME</a></span>
+</td>
+<td>Inserts a name relevant to the book's <a href="/index.php/Topic" title="Topic">topic</a>, or a random noun for art and star charts. Notably, these may or may not be plural and/or have an article.
+</td>
+<td>The <a href="/index.php/Tower_(necromancy)" title="Tower (necromancy)">Tower</a>, The <a href="/index.php/Forest_retreat" title="Forest retreat">Tree</a>, <a href="/index.php/v0.31:Stories/Bronzemurder" title="v0.31:Stories/Bronzemurder">Bronzemurder</a>, <a href="/index.php/Book#History" title="Book">Likot Ubendeb</a>, <a href="/index.php/Book#Nature" title="Book">Animal Behaviours</a>
+</td></tr>
+<tr>
+<td><span id="NO_ART_NAME" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#NO_ART_NAME">NO_ART_NAME</a></span>
+</td>
+<td>"No article name." As <a href="/index.php/Speech_file#NAME" title="Speech file">NAME</a>, but never has an article.
+</td>
+<td>Tower, Tree, Bronzemurder, Likot Ubendeb, Animal Behaviours
+</td></tr>
+<tr>
+<td><span id="NOUN" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#NOUN">NOUN</a></span>
+</td>
+<td>A random noun pulled from <a href="/index.php/Language_words.txt" title="Language words.txt">language_words.txt</a> or a hardcoded list. May or may not be plural.
+</td>
+<td>Despair, Roots, Scrolls, Wheel-and-axles
+</td></tr>
+<tr>
+<td><span id="ADJ" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#ADJ">ADJ</a></span>
+</td>
+<td>A random adjective from <a href="/index.php/Language_words.txt" title="Language words.txt">language_words.txt</a>.
+</td>
+<td>Boyish, Inky, Angry, Bronzed
+</td></tr>
+<tr>
+<td><span id="ANY_AGE" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#ANY_AGE">ANY_AGE</a></span>
+</td>
+<td>References an <a href="/index.php/Calendar#Ages" title="Calendar">age</a> that has occurred in the world's <a href="/index.php/Legends" title="Legends">history</a>.
+</td>
+<td>The Age Of Legends, The Age Of Hill Titan and Dragon
+</td></tr>
+<tr>
+<td><span id="ANY_PRONOUN" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#ANY_PRONOUN">ANY_PRONOUN</a></span>
+</td>
+<td>Chosen from among singular and plural subject pronouns (not "Us" or "Them").
+</td>
+<td>He, She, We, They
+</td></tr>
+<tr>
+<td><span id="PHRASE" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#PHRASE">PHRASE</a></span>
+</td>
+<td>A random phrase of a noun/pronoun, a verb, and some other words.
+</td>
+<td>The Fool Laughs, The Day Can Say It In The End, It Foretells Afterwards, The Day Mourns
+</td></tr></tbody></table>
+<h3><span class="mw-headline" id="Dialogue_tokens">Dialogue tokens</span></h3>
+<p>Character dialogue uses its own set of tokens to reference data.
+Scopes identify participants in a conversation and various forms of background information. They can be nested within each other in various cases. If the scopes refer to a historical object, it is expected [verify] that not using the TRANS_NAME argument will display the untranslated name.
+Strings are the arguments for scopes, outputting a specific word based on the conversation data. In certain files, they are used by themselves with an implied scope.
+</p>
+<table class="wikitable">
+<tbody><tr>
+<th>Token</th>
+<th>Type</th>
+<th>Meaning
+</th></tr>
+<tr>
+<td><span id="SPEAKER" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#SPEAKER">SPEAKER</a></span>
+</td>
+<td>base scope
+</td>
+<td>The person speaking the dialogue.
+</td></tr>
+<tr>
+<td><span id="AUDIENCE" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#AUDIENCE">AUDIENCE</a></span>
+</td>
+<td>base scope
+</td>
+<td>The person receiving the dialogue. Has buggy behavior without a defined audience, such as when shouting out to everyone.
+</td></tr>
+<tr>
+<td><span id="CONTEXT" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#CONTEXT">CONTEXT</a></span>
+</td>
+<td>base scope
+</td>
+<td>Holds additional information depending on the subject of conversation. Must use HIST_FIG as its argument to retrieve personal info from a creature that isn't present.
+</td></tr>
+<tr>
+<td><span id="HIST_FIG" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#HIST_FIG">HIST_FIG</a></span>
+</td>
+<td>scope
+</td>
+<td>Usually written as [CONTEXT:HIST_FIG], this refers to a historical figure referenced by the speaker.
+</td></tr>
+<tr>
+<td><span id="PLACE" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#PLACE">PLACE</a></span>
+</td>
+<td>scope
+</td>
+<td>A location, such as a biome.
+</td></tr>
+<tr>
+<td><span id="SITE" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#SITE">SITE</a></span>
+</td>
+<td>scope
+</td>
+<td>A site given by the context.
+</td></tr>
+<tr>
+<td><span id="HF_LINK" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#HF_LINK">HF_LINK</a></span>
+</td>
+<td>scope
+</td>
+<td>Looks for historical figures <a href="/index.php/Relationship" title="Relationship">associated</a> with the scope.
+</td></tr>
+<tr>
+<td><span id="DEITY" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#DEITY">DEITY</a></span>
+</td>
+<td>scope
+</td>
+<td>An argument for [HF_LINK], in this case referring to a (presumably, devoutly worshipped) <a href="/index.php/Deity" title="Deity">deity</a>.
+</td></tr>
+<tr>
+<td><span id="TRANS_NAME" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#TRANS_NAME">TRANS_NAME</a></span>
+</td>
+<td>string
+</td>
+<td>The full translated name of the referenced object.
+</td></tr>
+<tr>
+<td><span id="FIRST_NAME" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#FIRST_NAME">FIRST_NAME</a></span>
+</td>
+<td>string
+</td>
+<td>The first name of the referenced creature.
+</td></tr>
+<tr>
+<td><span id="PRO_SUB" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#PRO_SUB">PRO_SUB</a></span>
+</td>
+<td>string
+</td>
+<td>The referenced creature's subject pronoun (she, he, it).
+</td></tr>
+<tr>
+<td><span id="PRO_OBJ" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#PRO_OBJ">PRO_OBJ</a></span>
+</td>
+<td>string
+</td>
+<td>The referenced creature's object pronoun (her, him, it).
+</td></tr>
+<tr>
+<td><span id="PRO_POS" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#PRO_POS">PRO_POS</a></span>
+</td>
+<td>string
+</td>
+<td>The referenced creature's possessive pronoun (her, his, its).
+</td></tr>
+<tr>
+<td><span id="ABSTRACT_BUILDING" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#ABSTRACT_BUILDING">ABSTRACT_BUILDING</a></span>
+</td>
+<td>string
+</td>
+<td>The first name of the referenced creature.
+</td></tr>
+<tr>
+<td><span id="RACE" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#RACE">RACE</a></span>
+</td>
+<td>string
+</td>
+<td>The <a href="/index.php/Creature_token#NAME" title="Creature token">name</a> of the context's species.
+</td></tr>
+<tr>
+<td><span id="NUMBER" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#NUMBER">NUMBER</a></span>
+</td>
+<td>string
+</td>
+<td>A number (expressed as plain text rather than numerals?).
+</td></tr>
+<tr>
+<td><span id="ORDINAL" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#ORDINAL">ORDINAL</a></span>
+</td>
+<td>string
+</td>
+<td>An ordinal number, such as first or second.
+</td></tr>
+<tr>
+<td><span id="UNIT_NAME" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#UNIT_NAME">UNIT_NAME</a></span>
+</td>
+<td>string
+</td>
+<td>The <a href="/index.php/Unit_type_token" title="Unit type token">unit type</a> of the referenced creature.
+</td></tr>
+<tr>
+<td><span id="ARCH_ELEMENT" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#ARCH_ELEMENT">ARCH_ELEMENT</a></span>
+</td>
+<td>string
+</td>
+<td>An architectural element given by the context.
+</td></tr>
+<tr>
+<td><span id="ABSTRACT_BUILDING" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#ABSTRACT_BUILDING">ABSTRACT_BUILDING</a></span>
+</td>
+<td>string
+</td>
+<td>A named building given by the context.
+</td></tr>
+<tr>
+<td><span id="JUSTIFICATION" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#JUSTIFICATION">JUSTIFICATION</a></span>
+</td>
+<td>string
+</td>
+<td>A <a href="/index.php/Speech_file#JUSTIFICATION_ANTITHETICAL" title="Speech file">justification</a> chosen by the context.
+</td></tr>
+<tr>
+<td><span id="DEF_SPHERE" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#DEF_SPHERE">DEF_SPHERE</a></span>
+</td>
+<td>string
+</td>
+<td>A divine <a href="/index.php/Sphere" title="Sphere">sphere</a> chosen by the context.
+</td></tr>
+<tr>
+<td><span id="RANDOM_DEF_SPHERE" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#RANDOM_DEF_SPHERE">RANDOM_DEF_SPHERE</a></span>
+</td>
+<td>string
+</td>
+<td>A random <a href="/index.php/Sphere" title="Sphere">sphere</a> associated with the scope.
+</td></tr>
+<tr>
+<td><span id="FAMILY_RELATIONSHIP" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#FAMILY_RELATIONSHIP">FAMILY_RELATIONSHIP</a></span>
+</td>
+<td>string
+</td>
+<td>The <a href="/index.php/Relationship" title="Relationship">relationship</a> given by the context.
+</td></tr></tbody></table>
+<h3><span class="mw-headline" id="Context_tokens">Context tokens</span></h3>
+<p>These give special information about the background of the conversation.
+</p>
+<table class="wikitable">
+<tbody><tr>
+<th>Token</th>
+<th>Meaning</th>
+<th>Example
+</th></tr>
+<tr>
+<td>[CONTEXT:ABSTRACT_BUILDING]
+</td>
+<td>building
+</td>
+<td>
+<ul><li><a href="#ab_specific_hf_seeker">ab_specific_hf_seeker</a>: the building in which the historical figure that the speaker wants you to seek is</li></ul>
+</td></tr>
+<tr>
+<td>[CONTEXT:HIST_FIG]
+</td>
+<td>creature
+</td>
+<td>
+<ul><li><a href="#ab_specific_hf_seeker">ab_specific_hf_seeker</a>: the historical figure the speaker wants you to seek</li></ul>
+</td></tr>
+<tr>
+<td>[CONTEXT:NUMBER]
+</td>
+<td>number
+</td>
+<td>
+<ul><li><a href="#animal_slayer">animal_slayer</a>: number of animals slain</li>
+<li><a href="#child_age_proclamation">child_age_proclamation</a>: age in years of the child</li></ul>
+</td></tr>
+<tr>
+<td>[CONTEXT:ORDINAL]
+</td>
+<td>number
+</td>
+<td>
+<ul><li><a href="#current_profession_year">current_profession_year</a>: the number of years the speaker has had their profession</li></ul>
+</td></tr>
+<tr>
+<td>[CONTEXT:PLACE]
+</td>
+<td>site
+</td>
+<td>
+<ul><li><a href="#animal_slayer">animal_slayer</a>: the place where the speaker slew the animals</li></ul>
+</td></tr>
+<tr>
+<td>[CONTEXT:RACE]
+</td>
+<td>race
+</td>
+<td>
+<ul><li><a href="#animal_slayer">animal_slayer</a>: the race of the animals the speaker has slain</li></ul>
+</td></tr>
+<tr>
+<td>[CONTEXT:SITE]
+</td>
+<td>site
+</td>
+<td>
+<ul><li><a href="#ab_specific_hf_seeker">ab_specific_hf_seeker</a>: the site where the historical figure the speaker wants you to seek is</li></ul>
+</td></tr>
+<tr>
+<td>[CONTEXT:UNIT_NAME]
+</td>
+<td>text
+</td>
+<td>
+<ul><li><a href="#current_profession_no_year">current_profession_no_year</a>: the name of the speaker's profession</li></ul>
+</td></tr></tbody></table>
+<h2><span class="mw-headline" id="See_also">See also</span></h2>
+<ul><li><a href="/index.php/Speech_mods" title="Speech mods">Speech mods</a></li></ul></div>

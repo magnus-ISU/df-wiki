@@ -1,0 +1,230 @@
+{{Quality|Exceptional}}
+{{av}}
+The '''soundtrack''' for ''Dwarf Fortress'' [[premium version|Premium]] spans two albums, as well as a series of interludes.
+
+==Development==
+The Classic soundtrack for ''Dwarf Fortress'' was composed and played by the game's co-creator [[Toady One]]. The soundtrack consists of two flamenco-inspired[https://www.polygon.com/2014/7/24/5931277/download-the-dwarf-fortress-soundtrack-and-rock-out-in-ascii] compositions. Tabs for both compositions can be found in [[DF2014:Soundtrack]].
+
+In 2022, the first ''Dwarf Fortress'' Premium edition OST was released. The main [[Bay 12 Games#Audio|composers and performers]] are Omar Dabbous, Simon Swerwer, and Águeda Macias. Swerwer has previously released original ''Dwarf Fortress''-inspired albums for [[SoundSense]]. With the launch of [[Release information/51.01|51.01]] in 2024, a new [[Adventurer mode]]-centered album was released.
+
+A number of songs include lyrics in the [[Dwarven language]], such as Drink & Industry, Bruising The Fat ''(Shar Ikal)'', and Sisters of War, among others.
+
+== Fortress mode OST ==
+{{file|DF/data/vanilla/vanilla_music/objects/music_standard.txt}}
+
+The Premium OST is dynamic, and the songs that play during games will depend on game context.
+
+{| class="wikitable"
+|+ Dwarf Fortress Soundtrack
+|-
+! # !! Title !! Length !! Trigger condition
+|-
+| 1
+| Dwarf Fortress
+| 6:50
+| Plays when launching the game.
+|-
+| 2
+| First Year
+| 5:00
+| <tt> [CONTEXT:FIRST_YEAR] </tt>
+|-
+| 3
+| Craftsdwarfship
+| 3:46
+| <tt> [CONTEXT:ANY] </tt>
+|-
+| 4
+| Strike The Earth!
+| 4:05
+| <tt> [EVENT:JUST_EMBARKED]<br>
+[CONTEXT:MAIN]<br>
+[FREQUENCY:UNCOMMON]</tt>
+|-
+| 5
+| Strange Moods
+| 4:37
+| <tt>[CONTEXT:MAIN]</tt>
+|-
+| 6
+| Hill Dwarf
+| 4:11
+| <tt>[CONTEXT:MAIN]</tt>
+|-
+| 7
+| Vile Force of Darkness
+| 5:17
+| <tt>[EVENT:SIEGE]</tt>
+|-
+| 8
+| Expansive Cavern
+| 4:05
+| <tt>[EVENT:FIRST_CAVERN_OPENED]<br>
+[CONTEXT:CAVERNS_OPENED]</tt>
+|-
+| 9
+| Forgotten Beast
+| 3:53
+| <tt>[EVENT:MEGABEAST_ATTACK]<br>
+[EVENT:FORGOTTEN_BEAST_ATTACK]</tt>
+|-
+| 10
+| Drink & Industry
+| 2:10
+| <tt>[EVENT:TAVERN_MUSIC_PRESENT]<br>
+[EVENT:TAVERN_DANCE_PRESENT]</tt>
+|-
+| 11
+| Mountainhome
+| 5:27
+| <tt>[CONTEXT:ANY]</tt>
+|-
+| 12
+| Death Spiral
+| 5:20
+| <tt>[EVENT:DEATH_SPIRAL]</tt>
+|-
+| 13
+| Winter Entombs You
+| 5:22
+| <tt>[CONTEXT:WINTER]</tt>
+|-
+| 14
+| Another Year
+| 5:35
+| <tt>[CONTEXT:SECOND_YEAR_PLUS]</tt>
+|-
+| 15
+| [[Bloodline:Boatmurdered|Koganusan]]
+| 3:52
+| <tt>[EVENT:LOST_FORT]</tt>
+|-
+| 16
+| Espagnole (Bonus)
+| 2:49
+|-
+| 17
+| Haunted Lands (Bonus)
+| 2:41
+| style="border-top: 0px; border-bottom: 0px" | Interludes play intermittently.
+|-
+| 18
+| Cages & Chains (Bonus)
+| 1:54
+|}
+
+== Adventure mode OST ==
+
+The [[Adventure mode]] OST features dynamic mixing, with pads, vocals, percussion, and the lead guitar able to duck in and out depending on the situation. The soundtrack release (and thus, the versions of these tracks that play in [[fortress mode]]) features those layers [https://store.steampowered.com/news/app/975370/view/4186734162819864096 "baked" as the composers intended.]
+
+{| class="wikitable"
+|+ Dwarf Fortress Soundtrack
+|-
+! # !! Title !! Length !! Trigger condition
+|-
+| 1
+| Strike it Again
+| 4:51
+| <tt> [EVENT:JUST_EMBARKED]<br>
+[CONTEXT:MAIN]<br>
+[FREQUENCY:UNCOMMON]</tt>
+|-
+| 2
+| The Capital
+| 6:58
+| <tt> [CONTEXT:SECOND_YEAR_PLUS] </tt>
+|-
+| 3
+| Bruising The Fat ''(Shar Ikal)''
+| 4:44
+| <tt> [EVENT:SIEGE] </tt>
+|-
+| 4
+| Life of Adventure
+| 4:06
+| <tt> [CONTEXT:ANY] </tt>
+|-
+| 5
+| Beyond the Gates
+| 5:41
+| <tt> [EVENT:SIEGE]<br>
+[EVENT:MEGABEAST_ATTACK]<br>
+[EVENT:FORGOTTEN_BEAST_ATTACK] </tt>
+|-
+| 6
+| Hamlet Memoirs
+| 5:04
+| <tt> [EVENT:FORT_LEVEL] </tt>
+|-
+| 7
+| Night Creature
+| 5:59
+| <tt> [EVENT:FIRST_GHOST] </tt>
+|-
+| 8
+| Into The Pits (feat. rcab)
+| 5:39
+| <tt> [CONTEXT:ANY] </tt>
+|-
+| 9
+| Sisters of War
+| 4:23
+| <tt>[EVENT:TAVERN_MUSIC_PRESENT]<br>
+[EVENT:TAVERN_DANCE_PRESENT]</tt>
+|-
+| 10
+| Cannibal
+| 6:18
+| <tt>[EVENT:FIRST_CAVERN_OPENED]<br>
+[CONTEXT:CAVERNS_OPENED]</tt>
+|-
+| 11
+| Pony Rider
+| 4:25
+| <tt>[EVENT:MEGABEAST_ATTACK]<br>
+[EVENT:FORGOTTEN_BEAST_ATTACK]</tt>
+|-
+| 12
+| Two Coins
+| 5:54
+| <tt> [CONTEXT:ANY] </tt>
+|-
+| 13
+| Losing Is Fun
+| 4:34
+| <tt>[EVENT:DEATH_SPIRAL]</tt>
+|}
+
+== Singles ==
+
+The following tracks were added standalone as part of a patch.
+
+{| class="wikitable"
+|+ Dwarf Fortress Soundtrack
+|-
+! # !! Title !! Length !! Trigger condition
+|-
+| 1
+| Nabidas
+| 4:15
+| <tt> [CONTEXT:ANY] </tt>
+|}
+
+==External links==
+Volume 1
+* [https://store.steampowered.com/app/2232370/Dwarf_Fortress_Soundtrack/ ''Dwarf Fortress'' Soundtrack on Steam]
+* [https://dabuaudio.bandcamp.com/album/dwarf-fortress-official-steam-soundtrack ''Dwarf Fortress'' Soundtrack on Bandcamp]
+* [https://open.spotify.com/album/1IzWFdH2pfCbho7naePC9o ''Dwarf Fortress'' Soundtrack on Spotify]
+* [https://www.youtube.com/playlist?list=PLp1Y6qRhEmZyEeE3O1xz-qb62htJbPqIF ''Dwarf Fortress'' Soundtrack on YouTube]
+
+Volume 2
+* [https://store.steampowered.com/app/2937200/Dwarf_Fortress_Soundtrack_2_Adventure/ ''Dwarf Fortress'' Soundtrack 2 (Adventure) on Steam]
+* [https://dabuaudio.bandcamp.com/album/dwarf-fortress-adventure-mode-original-game-soundtrack ''Dwarf Fortress: Adventure Mode'' Soundtrack on Bandcamp]
+* [https://open.spotify.com/album/1pT1sYQtsoqQnfOgy91UlL?si=vn0wCAvoTmK9o0W8FF4ceg ''Dwarf Fortress: Adventure Mode'' Soundtrack on Spotify]
+* [https://www.youtube.com/playlist?list=PLp1Y6qRhEmZxrN4530OKxtSCWSKXqBjSR ''Dwarf Fortress: Adventure Mode'' Soundtrack on YouTube]
+Composers
+* [https://www.dabuaudio.com/ Omar Dabbous's Website]
+* [https://soundcloud.com/simonswerwer Simon Swerwer's Soundcloud]
+* [https://www.aguedamacias.com/english/projects Águeda Macias's Website] 
+[[Category:Game]]
+[[ru:soundtrack]]

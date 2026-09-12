@@ -1,0 +1,318 @@
+{{Quality|Superior|13:52, 26 February 2023 (CST)}}
+{{av}}
+
+[[File:Spheres_connection_graph.png|thumb|300px|right|A graph showing the connections between all the spheres. A thin line represents a friendship, a thick line a parent/child-relationship, and a red line preclusion.]]A '''sphere''', or '''cosmic principle''', is an aspect where a being has influence. [[Deity|Deities]], [[force]]s, [[angel]]s, [[demon]]s, [[megabeast]]s, [[semi-megabeast]]s, [[forgotten beast]]s and [[titan]]s may be associated with one or more spheres, and [[civilization]]s may prefer certain spheres when selecting creatures to worship. There are currently a total of 130 spheres in ''Dwarf Fortress''.
+
+When entering [[mysterious dungeon]]s, they will be inhabited by [[dungeon guardian]]s with the fabric of their existence, as well as their names, connected to a sphere. These guardians can have three tiers of ranks. For example, if they're connected to the "chaos" sphere, their names can be "servant of change", "chaos priest" and "chaos elder" based on their rank. Ancient artifacts known as [[primordial remnant]]s are connected to spheres, taking a unique form and granting powers depending on the sphere they're connected to.
+
+==Understanding spheres==
+A being such as a [[deity]], [[demon]] or [[megabeast]] may come to represent or epitomize certain things like emotions, qualities, terrain types, and items, which are called "spheres". As an example from real-world mythology, the Greek goddess [http://en.wikipedia.org/wiki/Athena Athena] is goddess in the "spheres" of wisdom, warfare, handicrafts and reason.
+
+Gods and adored megabeasts can grant secrets related to their spheres. In unmodded ''Dwarf Fortress'', this means that death gods can teach the secret of life and death to their worshipers, turning them into [[necromancer]]s. If those gods also happen to be associated with nightmares, they can grant the ability to summon [[bogeymen]] and [[nightmare]]s as well.
+
+Dwarves and other creatures will come to worship certain "powerful beings" and, as such, will follow the "religion", and have a relationship with its "deity".
+
+A [[historical figure]] with associated spheres that generates in the wild, or as a god, will be named after its spheres. So a death-aligned demon will be able to raise dead, and should they rule an entity, they will convert the surrounding regions into evil-aligned undead-raising biomes. Nightmare-aligned demons can summon bogeymen and nightmares. The [[Language#language_SYM.txt|symbols]] associated with the sphere will be used to generate first names, compound names, and titles. If an [[interaction]] from a deity creates an [[artifact]], then that artifact will be named using the spheres of the god who gave the blessing.
+
+==Creatures with pre-determined spheres==
+While many procedurally generated creatures in ''Dwarf Fortress'' are given random spheres upon creation, there are others who have static spheres, which remain constant across all save files:
+
+*[[Bogeyman]]: Misery, night, nightmares
+*[[Bronze colossus]]: Metals, strength, war
+*[[Cyclops]]: Light, longevity, minerals, strength, thunder
+*[[Dragon]]: Fire, wealth
+*[[Ettin]]: Speech, strength
+*[[Experiment]]: Deformity, night
+*[[Giant]]: Food, strength
+*[[Hydra]]: Muck, rebirth, strength
+*[[Minotaur]]: Caverns, chaos, darkness, deformity, strength
+*[[Nightmare]]: Misery, night, nightmares
+*[[Roc]]: Hunting, sky, wind
+*[[Werebeast]]: Animals, chaos, moon, night
+*[[Night troll]]: Death, Night
+
+==Sphere tokens==
+{{Modding}}
+According to Toady: "''Spheres have a parent/child list, a friend list, and a preclude list. A deity has either one or two base spheres, and then they pick friends of those spheres, while never choosing a precluded or parent/child sphere of any of the spheres they already have. I tried to be pretty lax with the preclude list so that interesting relationships could pop up.''"
+
+[[Creature token#SPHERE|Creatures]] and [[Inorganic material definition token#SPHERE|inorganic materials]] can be assigned spheres with the [SPHERE:] token.
+
+A [[Interaction token#IS_SPHERE|secret]] uses any number of [IS_SPHERE] tokens to determine what spheres it is available to.
+
+{{clear}}
+Available sphere tokens are:
+
+{| {{prettytable}}
+|- bgcolor="#999999"
+! <span style="color:white;">Sphere</span>
+! <span style="color:white;">Parent spheres</span>
+! <span style="color:white;">Child spheres</span>
+! <span style="color:white;">Friend spheres</span>
+! <span style="color:white;">Precluded spheres</span>
+! <span style="color:white;">Associated string and properties</span>
+! <span style="color:white;">Symbols</span>
+|-
+| AGRICULTURE || || || FOOD, FERTILITY, RAIN || || it looks constantly to the sky for rain || [[Language_SYM.txt/Food|FOOD]], [[Language_SYM.txt/Nature|NATURE]]
+|-
+| ANIMALS || NATURE || FISH || PLANTS || || it growls, buzzes, clicks and generally makes a varied racket || [[Language_SYM.txt/Nature|NATURE]], [[Language_SYM.txt/Primitive|PRIMITIVE]]
+|-
+| ART || || DANCE, MUSIC, PAINTING,<br/>POETRY, SONG || INSPIRATION, BEAUTY || || it is decorated with intricate patterns || [[Language_SYM.txt/Flowery|FLOWERY]], [[Language_SYM.txt/Thought|THOUGHT]]
+|-
+| BALANCE || || || || || it is perfectly symmetric  || [[Language_SYM.txt/Balance|BALANCE]]
+|-
+| BEAUTY || || || ART || BLIGHT, DEFORMITY, DISEASE, MUCK || it is strikingly beautiful || [[Language_SYM.txt/Flowery|FLOWERY]]
+|-
+| BIRTH || || || CHILDREN, CREATION, FAMILY, MARRIAGE,<br/>PREGNANCY, REBIRTH, YOUTH || || it is covered with a filmy sac || [[Language_SYM.txt/New|NEW]]
+|-
+| BLIGHT || || || DISEASE, DEATH || BEAUTY, FOOD, FERTILITY, HEALING || nearby vegetation seem(sic) to shrink away from it || [[Language_SYM.txt/Death|DEATH]], [[Language_SYM.txt/Ugly|UGLY]]
+|-
+| BOUNDARIES || || COASTS || || || the pieces of its body are carefully separated by markings || [[Language_SYM.txt/Boundary|BOUNDARY]]
+|-
+| CAVERNS || || || MOUNTAINS, EARTH || || its moans seem to echo no matter where it resides || NAME_CAVE
+|-
+| CHAOS || || || WAR || DISCIPLINE, ORDER, LAWS || it spins wildly, lurching and howling || [[Language_SYM.txt/Violent|VIOLENT]], [[Language_SYM.txt/Wild|WILD]]
+|-
+| CHARITY || || || GENEROSITY, SACRIFICE || JEALOUSY || it seems very pleasant|| [[Language_SYM.txt/Good|GOOD]]
+|-
+| CHILDREN || || || BIRTH, FAMILY, YOUTH, PREGNANCY || || it never misses an opportunity to jump in puddles || [[Language_SYM.txt/New|NEW]]
+|-
+| COASTS || BOUNDARIES || || LAKES, OCEANS || || it appears to be covered with rocky crags || [[Language_SYM.txt/Aquatic|AQUATIC]]
+|-
+| CONSOLATION || || || || MISERY || it radiates a sad kindness || [[Language_SYM.txt/Good|GOOD]], [[Language_SYM.txt/Peace|PEACE]]
+|-
+| COURAGE || || VALOR || || || it makes those around it feel brave || [[Language_SYM.txt/Assertive|ASSERTIVE]]
+|-
+| CRAFTS || || || CREATION, LABOR, METALS || || it appears constructed || [[Language_SYM.txt/Artifice|ARTIFICE]]
+|-
+| CREATION || || || CRAFTS, BIRTH, PREGNANCY, REBIRTH || || small objects seem to pop into existence around it || [[Language_SYM.txt/New|NEW]]
+|-
+| DANCE || ART || || FESTIVALS, MUSIC, REVELRY || || it whirls, skips and jumps whenever it moves || [[Language_SYM.txt/Dance|DANCE]], [[Language_SYM.txt/Flowery|FLOWERY]]
+|-
+| DARKNESS || || || NIGHT || DAWN, DAY, LIGHT, TWILIGHT, SUN || it is difficult to see clearly even in bright light || [[Language_SYM.txt/Darkness|DARKNESS]], [[Language_SYM.txt/Mystery|MYSTERY]]
+|-
+| DAWN || || || SUN, TWILIGHT || NIGHT, DAY, DARKNESS || it always turns to welcome the rise of the sun || [[Language_SYM.txt/New|NEW]], [[Language_SYM.txt/Color|COLOR]], [[Language_SYM.txt/Light|LIGHT]]
+|-
+| DAY || || || LIGHT, SUN || DARKNESS, NIGHT, DAWN, DUSK<br/>DREAMS, NIGHTMARES, TWILIGHT || it hums pleasantly when the sun is high in the sky || [[Language_SYM.txt/Light|LIGHT]]
+|-
+| DEATH || || || BLIGHT, DISEASE, MURDER,<br/>REBIRTH, SUICIDE, WAR || HEALING, LONGEVITY, YOUTH || it has a rattling exhale || [[Language_SYM.txt/Death|DEATH]]
+|-
+| DEFORMITY || || || DISEASE || BEAUTY || its body is bent and misshapen || [[Language_SYM.txt/Ugly|UGLY]]
+|-
+| DEPRAVITY || || || LUST || LAWS || it slavers uncontrollably || [[Language_SYM.txt/Evil|EVIL]], [[Language_SYM.txt/Wild|WILD]], [[Language_SYM.txt/Ugly|UGLY]]
+|-
+| DISCIPLINE || || || LAWS, ORDER || CHAOS || it moves with great focus || [[Language_SYM.txt/Leader|LEADER]], [[Language_SYM.txt/Order|ORDER]]
+|-
+| DISEASE || || || BLIGHT, DEATH, DEFORMITY || BEAUTY, HEALING || it bears malodorous pustules<br/>[ODOR_STRING:death][ODOR_LEVEL:100] || [[Language_SYM.txt/Death|DEATH]], [[Language_SYM.txt/Ugly|UGLY]]
+|-
+| DREAMS || || || NIGHT, NIGHTMARES || DAY || the details of its form are easily forgotten without deliberate concentration || [[Language_SYM.txt/Mystery|MYSTERY]]
+|-
+| DUSK || || || TWILIGHT || NIGHT, DAY || it never looks toward the sun || [[Language_SYM.txt/Darkness|DARKNESS]], [[Language_SYM.txt/Mystery|MYSTERY]]
+|-
+| DUTY || || || ORDER || || it is utterly still when not taking deliberate action || [[Language_SYM.txt/Leader|LEADER]]
+|-
+| EARTH || || METALS, MINERALS, SALT || CAVERNS, MOUNTAINS, VOLCANOS || || it looks very solid and stocky || [[Language_SYM.txt/Earth|EARTH]]
+|-
+| FAMILY || || || BIRTH, CHILDREN, MARRIAGE, PREGNANCY || || it appears to be closely related to every other of its kind || [[Language_SYM.txt/Domestic|DOMESTIC]], [[Language_SYM.txt/Family|FAMILY]]
+|-
+| FAME || || || RUMORS || SILENCE || Fanfare follows it wherever it goes || [[Language_SYM.txt/Assertive|ASSERTIVE]], [[Language_SYM.txt/Leader|LEADER]]
+|-
+| FATE || || || || LUCK || it never appears to be perturbed or surprised by any happening || [[Language_SYM.txt/Mystery|MYSTERY]], [[Language_SYM.txt/Mythic|MYTHIC]]
+|-
+| FERTILITY || || || AGRICULTURE, FOOD, RAIN || BLIGHT || it appears to be very healthy || [[Language_SYM.txt/New|NEW]]
+|-
+| FESTIVALS || || || DANCE, MUSIC, REVELRY, SONG || MISERY || it skips and twirls as it moves || [[Language_SYM.txt/Domestic|DOMESTIC]], [[Language_SYM.txt/Festival|FESTIVAL]]
+|-
+| FIRE || || || METALS, SUN, VOLCANOS || WATER, OCEANS, LAKES, RIVERS || a sheen around it always seems to rise upward || [[Language_SYM.txt/Fire|FIRE]]
+|-
+| FISH || ANIMALS || || OCEANS, LAKES, RIVERS, WATER, FISHING || || it only looks comfortable when it is in the water || [[Language_SYM.txt/Aquatic|AQUATIC]], [[Language_SYM.txt/Nature|NATURE]]
+|-
+| FISHING || || || FISH, HUNTING || || it always moves carefully around water || [[Language_SYM.txt/Aquatic|AQUATIC]], [[Language_SYM.txt/Nature|NATURE]]
+|-
+| FOOD || || || AGRICULTURE, FERTILITY || BLIGHT || it has the delicious smell of freshly-baked goods<br/>[ODOR_STRING:freshly-baked goods][ODOR_LEVEL:100] || [[Language_SYM.txt/Food|FOOD]]
+|-
+| FORGIVENESS || || || MERCY || REVENGE || it is impossible to hold a grudge near it || [[Language_SYM.txt/Good|GOOD]]
+|-
+| FORTRESSES || || || WAR || || it is very sturdy-looking || [[Language_SYM.txt/Protect|PROTECT]]
+|-
+| FREEDOM || || || || ORDER || it eagerly moves from place to place || [[Language_SYM.txt/Freedom|FREEDOM]]
+|-
+| GAMBLING || || || GAMES, LUCK || || it changes between two colors intermittently || [[Language_SYM.txt/Games|GAMES]], [[Language_SYM.txt/Luck|LUCK]], [[Language_SYM.txt/Wealth|WEALTH]]
+|-
+| GAMES || || || GAMBLING, LUCK || || it giggles at random || [[Language_SYM.txt/Games|GAMES]]
+|-
+| GENEROSITY || || || CHARITY, SACRIFICE || || it makes those around it want to give up their possessions || [[Language_SYM.txt/Good|GOOD]]
+|-
+| HAPPINESS || || || REVELRY || MISERY || it seems to smile constantly || [[Language_SYM.txt/Good|GOOD]]
+|-
+| HEALING || || || || DISEASE, BLIGHT, DEATH || it is surrounded by a gentle atmosphere || [[Language_SYM.txt/Good|GOOD]], [[Language_SYM.txt/Peace|PEACE]]
+|-
+| HOSPITALITY || || || || || it radiates an aura of welcoming || [[Language_SYM.txt/Domestic|DOMESTIC]], [[Language_SYM.txt/Good|GOOD]], [[Language_SYM.txt/Peace|PEACE]]
+|-
+| HUNTING || || || FISHING || || it inspects the ground intently as it moves || [[Language_SYM.txt/Nature|NATURE]], [[Language_SYM.txt/Primitive|PRIMITIVE]], [[Language_SYM.txt/Wild|WILD]]
+|-
+| INSPIRATION || || || ART, PAINTING, POETRY || || flashes of energy pulse across its surface intermittently || [[Language_SYM.txt/Thought|THOUGHT]]
+|-
+| JEALOUSY || || || || CHARITY || it appears to be a very bitter creature || [[Language_SYM.txt/Evil|EVIL]], [[Language_SYM.txt/Subordinate|SUBORDINATE]]
+|-
+| JEWELS || || || MINERALS, WEALTH || || its whole body appears to be faceted in a symmetric fashion || [[Language_SYM.txt/Color|COLOR]], [[Language_SYM.txt/Earth|EARTH]]
+|-
+| JUSTICE || || || LAWS || || it seems eager to pronounce judgment on others || [[Language_SYM.txt/Good|GOOD]], [[Language_SYM.txt/Protect|PROTECT]]
+|-
+| LABOR || || || CRAFTS || || it appears very deliberate in its actions || [[Language_SYM.txt/Artifice|ARTIFICE]], [[Language_SYM.txt/Domestic|DOMESTIC]]
+|-
+| LAKES || WATER || || COASTS, FISH, OCEANS, RIVERS || FIRE || it moves ponderously || [[Language_SYM.txt/Aquatic|AQUATIC]], NAME_LAKE
+|-
+| LAWS || || || DISCIPLINE, JUSTICE, OATHS, ORDER || CHAOS, DEPRAVITY, MURDER, THEFT || it has a very stark look about it || [[Language_SYM.txt/Order|ORDER]], [[Language_SYM.txt/Protect|PROTECT]], [[Language_SYM.txt/Restrain|RESTRAIN]]
+|-
+| LIES || || || TREACHERY, TRICKERY || TRUTH || it seems unerringly honest if one does not concentrate || [[Language_SYM.txt/Evil|EVIL]], [[Language_SYM.txt/Mystery|MYSTERY]]
+|-
+| LIGHT || || || DAY, RAINBOWS, SUN || DARKNESS, TWILIGHT || it returns surrounding light with a new vibrance and intensity || [[Language_SYM.txt/Color|COLOR]], [[Language_SYM.txt/Light|LIGHT]]
+|-
+| LIGHTNING || WEATHER || || RAIN, STORMS, THUNDER || || it crackles with energy || [[Language_SYM.txt/Assertive|ASSERTIVE]], [[Language_SYM.txt/Light|LIGHT]], [[Language_SYM.txt/Wild|WILD]]
+|-
+| LONGEVITY || || || YOUTH || DEATH || it always seems to be looking far into the distance || [[Language_SYM.txt/Old|OLD]]
+|-
+| LOVE || || || || || it stares longingly at those nearby || [[Language_SYM.txt/Flowery|FLOWERY]], [[Language_SYM.txt/Romantic|ROMANTIC]]
+|-
+| LOYALTY || || || OATHS || TREACHERY || it never abandons its companions || [[Language_SYM.txt/Good|GOOD]], [[Language_SYM.txt/Protect|PROTECT]]
+|-
+| LUCK || || || GAMBLING, GAMES || FATE || it changes direction suddenly at times || [[Language_SYM.txt/Luck|LUCK]]
+|-
+| LUST || || || DEPRAVITY || || it has an unnerving stare || [[Language_SYM.txt/Primitive|PRIMITIVE]], [[Language_SYM.txt/Romantic|ROMANTIC]]
+|-
+| MARRIAGE || || || BIRTH, FAMILY, OATHS, PREGNANCY || || it heckles those it meets that are not married || [[Language_SYM.txt/Flowery|FLOWERY]], [[Language_SYM.txt/Romantic|ROMANTIC]]
+|-
+| MERCY || || || FORGIVENESS || REVENGE || it always seems like it is on the verge of crying || [[Language_SYM.txt/Good|GOOD]], [[Language_SYM.txt/Protect|PROTECT]]
+|-
+| METALS || EARTH || || CRAFTS, FIRE, MINERALS || || it appears to have sharp shimmering edges on many parts of its body || [[Language_SYM.txt/Earth|EARTH]]
+|-
+| MINERALS || EARTH || || JEWELS, METALS || || it has an angular appearance || [[Language_SYM.txt/Earth|EARTH]]
+|-
+| MISERY || || || TORTURE || CONSOLATION, FESTIVALS, REVELRY, HAPPINESS || it has a distinctly depressing moan || [[Language_SYM.txt/Negative|NEGATIVE]]
+|-
+| MIST || || || || || it is difficult to see clearly || [[Language_SYM.txt/Mystery|MYSTERY]]
+|-
+| MOON || || || NIGHT, SKY || || it changes color with the phases of the moon || [[Language_SYM.txt/Darkness|DARKNESS]], [[Language_SYM.txt/Light|LIGHT]], [[Language_SYM.txt/Mystery|MYSTERY]]
+|-
+| MOUNTAINS || || || CAVERNS, EARTH, VOLCANOS || || it is very solidly built || [[Language_SYM.txt/Earth|EARTH]], NAME_MOUNTAINS
+|-
+| MUCK || || || || BEAUTY || there is a foul reek about it || [[Language_SYM.txt/Primitive|PRIMITIVE]], [[Language_SYM.txt/Ugly|UGLY]]
+|-
+| MURDER || || || DEATH || LAWS || it cannot abide anything that lives || [[Language_SYM.txt/Death|DEATH]], [[Language_SYM.txt/Evil|EVIL]]
+|-
+| MUSIC || ART || || DANCE, FESTIVALS, REVELRY, SONG || SILENCE || it sounds clear tones as its body moves in time || [[Language_SYM.txt/Flowery|FLOWERY]], [[Language_SYM.txt/Music|MUSIC]], '''not'' [[Language_SYM.txt/Silence|SILENCE]]
+|-
+| NATURE || || ANIMALS, PLANTS || RAIN, SUN, WATER, WEATHER || || it seems most at ease when it is outdoors || [[Language_SYM.txt/Nature|NATURE]]
+|-
+| NIGHT || || || DARKNESS, DREAMS, MOON, NIGHTMARES, STARS || DAY, DAWN, DUSK, TWILIGHT || it eerily reflects the light of the stars and moon || [[Language_SYM.txt/Darkness|DARKNESS]]
+|-
+| NIGHTMARES || || || DREAMS, NIGHT || DAY || it reminds those that look upon it of their most unpleasant memories || [[Language_SYM.txt/Darkness|DARKNESS]], [[Language_SYM.txt/Death|DEATH]], [[Language_SYM.txt/Evil|EVIL]], [[Language_SYM.txt/Mystery|MYSTERY]], [[Language_SYM.txt/Ugly|UGLY]], [[Language_SYM.txt/Violent|VIOLENT]]
+|-
+| OATHS || || || LAWS, LOYALTY, MARRIAGE || TREACHERY || it cannot look directly at somebody that has broken an oath || [[Language_SYM.txt/Order|ORDER]], [[Language_SYM.txt/Protect|PROTECT]]
+|-
+| OCEANS || WATER || || COASTS, FISH, LAKES, RIVERS, SALT || FIRE || it always raises a part of its body toward the moon || [[Language_SYM.txt/Aquatic|AQUATIC]], NAME_OCEAN
+|-
+| ORDER || || || DISCIPLINE, DUTY, LAWS || CHAOS, FREEDOM || it moves very stiffly || [[Language_SYM.txt/Order|ORDER]]
+|-
+| PAINTING || ART || || INSPIRATION || || its surface is always enlivened with a refreshing play of color || [[Language_SYM.txt/Color|COLOR]], [[Language_SYM.txt/Flowery|FLOWERY]]
+|-
+| PEACE || || || || || it has an incredibly calm demeanor || [[Language_SYM.txt/Peace|PEACE]]
+|-
+| PERSUASION || || || POETRY, SPEECH || || it rocks back and forth whenever somebody changes their mind in its presence || [[Language_SYM.txt/Assertive|ASSERTIVE]]
+|-
+| PLANTS || NATURE || TREES || ANIMALS, RAIN || || it always seems to point toward the sun when it is in the sky || [[Language_SYM.txt/Nature|NATURE]]
+|-
+| POETRY || ART || || INSPIRATION, PERSUASION, SONG, WRITING || || it recites verses in a strange language on occasion || [[Language_SYM.txt/Flowery|FLOWERY]], [[Language_SYM.txt/Thought|THOUGHT]]
+|-
+| PREGNANCY || || || BIRTH, CHILDREN, CREATION, FAMILY, MARRIAGE || || it appears to be expecting || [[Language_SYM.txt/New|NEW]], [[Language_SYM.txt/Romantic|ROMANTIC]]
+|-
+| RAIN || WATER, WEATHER || || AGRICULTURE, FERTILITY, LIGHTNING,<br/>NATURE, PLANTS, RAINBOWS,<br/>STORMS, THUNDER, TREES || || it leaves water wherever it goes || [[Language_SYM.txt/Aquatic|AQUATIC]], [[Language_SYM.txt/Sky|SKY]]
+|-
+| RAINBOWS || WEATHER || || LIGHT, RAIN, SKY || || it is strikingly colored || [[Language_SYM.txt/Color|COLOR]], [[Language_SYM.txt/Sky|SKY]]
+|-
+| REBIRTH || || || BIRTH, CREATION, DEATH || || it alternates from instant to instant between sluggishness and extreme vibrancy || [[Language_SYM.txt/New|NEW]]
+|-
+| REVELRY || || || DANCE, FESTIVALS, HAPPINESS, MUSIC, SONG || MISERY || it moves with a bouncing rhythm || [[Language_SYM.txt/Festival|FESTIVAL]], [[Language_SYM.txt/Good|GOOD]], [[Language_SYM.txt/Wild|WILD]]
+|-
+| REVENGE || || || || FORGIVENESS, MERCY || it has a fixed and unblinking gaze when interacting || [[Language_SYM.txt/Violent|VIOLENT]]
+|-
+| RIVERS || WATER || || FISH, LAKES, OCEANS || FIRE || its outer surface seems to flow about its body|| [[Language_SYM.txt/Aquatic|AQUATIC]]
+|-
+| RULERSHIP || || || || || it is hard to disobey || [[Language_SYM.txt/Leader|LEADER]]
+|-
+| RUMORS || || || FAME || || it always nods eagerly when somebody is speaking || [[Language_SYM.txt/Mystery|MYSTERY]]
+|-
+| SACRIFICE || || || CHARITY, GENEROSITY || WEALTH || it inspires those around it to acts of great sacrifice || [[Language_SYM.txt/Protect|PROTECT]]
+|-
+| SALT || EARTH || || OCEANS || || it makes nearby water undrinkable || NAME_OCEAN
+|-
+| SCHOLARSHIP || || || WISDOM, WRITING || || it always seems to be deep in thought || [[Language_SYM.txt/Thought|THOUGHT]]
+|-
+| SEASONS || || || || || its form is ever-changing || [[Language_SYM.txt/Nature|NATURE]]
+|-
+| SILENCE || || || || FAME, MUSIC || it makes absolutely no sound || [[Language_SYM.txt/Silence|SILENCE]], [[Language_SYM.txt/Peace|PEACE]], '''not''' [[Language_SYM.txt/Music|MUSIC]]
+|-
+| SKY || || || MOON, RAINBOWS, SUN, STARS, WEATHER, WIND || || it has a slowly shifting pattern on its surface || [[Language_SYM.txt/Sky|SKY]]
+|-
+| SONG || ART || || FESTIVALS, MUSIC, POETRY, REVELRY || || it sings beautiful songs endlessly || [[Language_SYM.txt/Flowery|FLOWERY]], [[Language_SYM.txt/Music|MUSIC]]
+|-
+| SPEECH || || || PERSUASION || || it pays attention carefully to anybody that is speaking || [[Language_SYM.txt/Flowery|FLOWERY]], [[Language_SYM.txt/Thought|THOUGHT]]
+|-
+| STARS || || || NIGHT, SKY || || it appears to sparkle after night falls || [[Language_SYM.txt/Sky|SKY]], [[Language_SYM.txt/Mystery|MYSTERY]]
+|-
+| STORMS || WEATHER || || LIGHTNING, RAIN, THUNDER || || its movement is the sound of wind and rain || [[Language_SYM.txt/Assertive|ASSERTIVE]], [[Language_SYM.txt/Sky|SKY]], [[Language_SYM.txt/Wild|WILD]]
+|-
+| STRENGTH || || || || || it looks solidly built || [[Language_SYM.txt/Assertive|ASSERTIVE]]
+|-
+| SUICIDE || || || DEATH || || it mutters to itself about death || [[Language_SYM.txt/Death|DEATH]]
+|-
+| SUN || || || DAWN, DAY, FIRE, LIGHT, NATURE, SKY || DARKNESS || it is difficult to look at directly || [[Language_SYM.txt/Assertive|ASSERTIVE]], [[Language_SYM.txt/Light|LIGHT]], [[Language_SYM.txt/Sky|SKY]]
+|-
+| THEFT || || || || LAWS, TRADE || it always seems to have its attention on the most valuable object in the area || [[Language_SYM.txt/Evil|EVIL]], [[Language_SYM.txt/Mystery|MYSTERY]]
+|-
+| THRALLDOM || || || || || its movements sound like the rattling of chains || [[Language_SYM.txt/Leader|LEADER]], [[Language_SYM.txt/Subordinate|SUBORDINATE]]
+|-
+| THUNDER || WEATHER || || LIGHTNING, RAIN, STORMS || || it is incredibly noisy || [[Language_SYM.txt/Assertive|ASSERTIVE]], [[Language_SYM.txt/Sky|SKY]], [[Language_SYM.txt/Wild|WILD]]
+|-
+| TORTURE || || || MISERY || || it appears to be covered with sharp hooks and barbs || [[Language_SYM.txt/Evil|EVIL]]
+|-
+| TRADE || || || WEALTH || THEFT || it seems most content when a fair wind is blowing || [[Language_SYM.txt/Trade|TRADE]], [[Language_SYM.txt/Travel|TRAVEL]]
+|-
+| TRAVELERS || || || || || it never stops moving completely || [[Language_SYM.txt/Trade|TRADE]], [[Language_SYM.txt/Travel|TRAVEL]]
+|-
+| TREACHERY || || || LIES, TRICKERY || LOYALTY, OATHS || it is unsettling to be around || [[Language_SYM.txt/Evil|EVIL]], [[Language_SYM.txt/Mystery|MYSTERY]]
+|-
+| TREES || PLANTS || || RAIN || || it is top-heavy || [[Language_SYM.txt/Nature|NATURE]], NAME_FOREST
+|-
+| TRICKERY || || || LIES, TREACHERY || TRUTH || it has a tendency to laugh quietly to itself every so often || [[Language_SYM.txt/Mystery|MYSTERY]]
+|-
+| TRUTH || || || || LIES, TRICKERY || it tenses up throughout its entire body whenever somebody tells a falsehood in its presence || [[Language_SYM.txt/Good|GOOD]], [[Language_SYM.txt/Truth|TRUTH]]
+|-
+| TWILIGHT || || || DAWN, DUSK || LIGHT, DARKNESS, DAY, NIGHT || it chitters briefly before sunrise and just after nightfall || [[Language_SYM.txt/Darkness|DARKNESS]], [[Language_SYM.txt/Mystery|MYSTERY]]
+|-
+| VALOR || COURAGE || || WAR || || it always tries to embolden any fighting in its presence with exhortations of bravery, even its foes || [[Language_SYM.txt/Assertive|ASSERTIVE]], [[Language_SYM.txt/Violent|VIOLENT]]
+|-
+| VICTORY || || || WAR || || it looks very proud of itself || [[Language_SYM.txt/Assertive|ASSERTIVE]], [[Language_SYM.txt/Leader|LEADER]]
+|-
+| VOLCANOS || || || EARTH, FIRE, MOUNTAINS || || it seems to glow brightly from within || [[Language_SYM.txt/Fire|FIRE]], NAME_VOLCANO
+|-
+| WAR || || || CHAOS, DEATH, FORTRESSES, VALOR, VICTORY || || it bellows and cheers without pause || [[Language_SYM.txt/Assertive|ASSERTIVE]], [[Language_SYM.txt/Leader|LEADER]], [[Language_SYM.txt/Violent|VIOLENT]]
+|-
+| WATER || || LAKES, OCEANS, RIVERS, RAIN || FISH, NATURE || FIRE || it seems to flow as it moves || [[Language_SYM.txt/Aquatic|AQUATIC]]
+|-
+| WEALTH || || || JEWELS, TRADE || SACRIFICE || it always seems to be counting something || [[Language_SYM.txt/Wealth|WEALTH]]
+|-
+| WEATHER || || LIGHTNING, RAIN, RAINBOWS,<br/>STORMS, THUNDER, WIND || NATURE, SKY || || it changes appearance based on the clouds and precipitation above || [[Language_SYM.txt/Sky|SKY]]
+|-
+| WIND || WEATHER || || SKY || || it is surrounded by an everpresent rush of wind || [[Language_SYM.txt/Assertive|ASSERTIVE]], [[Language_SYM.txt/Sky|SKY]], [[Language_SYM.txt/Wild|WILD]]
+|-
+| WISDOM || || || SCHOLARSHIP || || it acts with unwavering calm || [[Language_SYM.txt/Thought|THOUGHT]]
+|-
+| WRITING || || || POETRY, SCHOLARSHIP || || it is covered with divine writing || [[Language_SYM.txt/Thought|THOUGHT]]
+|-
+| YOUTH || || || BIRTH, CHILDREN, LONGEVITY || DEATH || it appears spry and vigorous || [[Language_SYM.txt/Assertive|ASSERTIVE]], [[Language_SYM.txt/New|NEW]]
+|}
+
+{{Category|World}}
+{{Category|Relationships}}
+[[ru:Sphere]]
