@@ -1,0 +1,37 @@
+{{Quality|Fine}}
+{{av}}
+
+'''Honey''' is a product [[screw_press|pressed]] from a [[honeycomb]]. Honey can be made into [[mead]] at a [[still]] (as a separate task) or used in [[cook]]ing [[prepared meal]]s. 
+
+Honeycombs are produced by [[honey bee]]s at a [[hive]], harvested as part of the [[beekeeping_industry|beekeeping industry]]. In order to press the honeycomb, you must have a dwarf with the [[presser|pressing]] labor active, a [[screw press]], and empty [[jug]]s. A [[wax]] cake is produced as a byproduct, and a [[wax worker]] can use it to create wax crafts in the [[Craftsdwarf's workshop]]. Honey is the only animal product that can be brewed, and it, along with [[royal jelly]], are the edible products of bees. Honey has the lowest value of 1, and is brewed into 5 mead, with a value of 2 each.
+
+Honey jugs will be stored either in a [[finished goods]] stockpile allowing the storage of "tools" or a food stockpile set to allow "animal extracts - honey bee honey". Turning it into mead works regardless, but if bins are allowed on a finished goods stockpile where honey is stored, [[hauling]] of the bins can make the honey temporarily unavailable and force the cooking or brewing jobs to cancel.
+
+[[File:honey.jpeg|thumb|300px|center|Delicious!]]
+
+{{Translation
+| dwarven = stetár
+| elvish  = arifè
+| goblin  = stoz
+| human   = someg
+}}
+
+{{gamedata
+|title=[[Honey bee/raw|Raws]]
+|[USE_MATERIAL_TEMPLATE:HONEY:CREATURE_EXTRACT_TEMPLATE]
+	[STATE_NAME_ADJ:ALL_SOLID:frozen honey bee honey]
+	[STATE_NAME_ADJ:LIQUID:honey bee honey]
+	[STATE_NAME_ADJ:GAS:boiling honey bee honey]
+	[STATE_COLOR:ALL:AMBER]
+	[DISPLAY_COLOR:6:0:0]
+	[PREFIX:NONE]
+	[EDIBLE_VERMIN]
+	[EDIBLE_COOKED]
+	[EDIBLE_RAW]
+	[MATERIAL_REACTION_PRODUCT:DRINK_MAT:LOCAL_CREATURE_MAT:MEAD]
+}}
+{{materials}}
+
+{{Category|Brewable}}
+{{Category|Food}}
+[[ru:Honey]]

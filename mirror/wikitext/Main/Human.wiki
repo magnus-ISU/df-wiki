@@ -1,0 +1,65 @@
+{{Quality|Exceptional|00:09, 17 February 2023 (UTC)}}
+{{Creaturelookup/0
+|image=Human_sprite.png
+|portrait=human_portrait_anim.gif
+|meat=27
+|bone=33
+|fat=15
+|skin=human skin
+|nervous tissue=1
+|kidney=2
+|spleen=1
+|sweetbread=1
+|tripe=1
+|liver=1
+|intestines=1
+|heart=1
+|lung=2
+|contrib=no
+|wiki=yes}}
+{{av}}
+{{creaturedesc}}
+'''Humans''' are intelligent {{Catlink|Humanoids|humanoid}} [[creatures]] that live in cities on the [[biome#Plains|plains]]. They are one of the main [[civilization]]s of the game, featured in [[fortress mode]] and playable in [[adventurer mode]]. Their buildings are made entirely of [[wood]] (or in the case of towers and castles, [[stone]] or metals like [[copper]]), and usually include several houses and [[shop]]s, and a [[tavern]]. Their metal-working technology specializes in [[bronze]], though they also make use of [[copper]], [[iron]], and [[silver]]. The typical lifespan of a human ranges between 60-120 years.
+
+In fortress mode, they are primarily interested in [[trade]], and generally send large [[caravan]]s in [[Calendar|summer]]. Humans usually bring overworld foodstuffs, [[cloth]], [[leather]], extra-large clothing and bronze items. Trading with them is the safest way to obtain exotic items such as [[two-handed sword]]s, [[whip]]s and [[bow]]s. If their caravans are continuously destroyed or if their [[diplomat]]s are killed, regardless of cause, they will eventually send a [[siege]] force to your fortress. In adventurer mode, their nobles can be found living in castles, and after earning sufficient fame, they can give out challenging quests.
+
+The language they speak is [[Main:Human language|human]]. Some [[Dwarf|dwarves]] [[Preferences|like]] humans for their ''stature''.
+
+==Ethics==
+In-game, humans have a system of [[ethic]]s similar to real-life humans of past times. Through world generation, humans will almost always become friendly with dwarves, most likely become enemies with [[goblin]]s and [[elf|elves]], and possibly become enemies with [[kobold]]s and [[animal people]]. 
+
+The devouring of sapient beings and of dead enemy combatants are the two most horrific crimes to humans, who see them as unthinkable acts; this puts them at odds with both elves and goblins, who are more lenient on such matters. Humans routinely use torture to extract information and to set an example, but find torture for sport appalling and shun the torture of animals. 
+
+In stark contrast to the ethics of elves, kobolds and animal people, humans find keeping trophies of animals, sapient beings and of other humans perfectly acceptable. Like dwarves, humans find killing animals, enemies and plants acceptable. However, humans can avoid punishment for killing other humans if the killing had been done for a good reason, unlike dwarves, who sentence murderers to death regardless of whether they can provide justification. Humans find the killing of neutral beings acceptable so long as there are no repercussions. 
+
+Human ethics regarding crime are the same as dwarven ethics (where assault, theft, trespassing and vandalism are seriously punished, while some crimes such as breaking oaths and treason are punishable by death) with the one exception being that slavery is considered acceptable. Human [[Personality value|values]], unlike other races', are randomized in every world generation, so as to fit with the common thought of humans being the most varied and flexible race.
+
+==Community outlook==
+[[File:Cleric-Knight-Workman.jpg|thumb|right|200px|Admired for their ''stature''.]]
+
+Out of the five main races in the game, humans tend to be mostly ignored by players, largely due to their friendly disposition meaning you rarely have a reason to fight them unless you go out of your way to provoke them. Because of this, humans are typically treated by the community as being the best friends of the dwarves in almost every scenario, always bringing actually useful trading goods and sharing a dislike for the goblins and elves' savage and unwashed ways.
+
+==Playing as Humans in fortress mode==
+===Human Mercenaries/Performers===
+If you have a [[tavern]] in your dwarven fortress and you live near a human civilization, humans may visit your fortress. You cannot assign them labours unless they become [[Citizenship|citizens]]. In time, some of them might petition for [[Long-term resident|long-term residency]], either as performers or as mercenaries. As performers, they will remain in your inn and perform music, tell stories and poetry, and provide social interaction for your dwarves. As [[mercenary|mercenaries]], they will have a weapon skill, and can be enlisted in your army and controlled as you would any dwarf. Because humans are larger than dwarves, they can wield weapons that your dwarves cannot, such as [[two-handed sword]]s, [[pike]]s, and [[maul]]s.  Unlike dwarves, humans do not suffer from [[cave adaptation]], so human mercenaries may be better suited to fighting outdoors. Turning a dwarven fortress into a human-only fort takes a very long time, because usually two years pass before they apply for citizenship.
+
+===Starting a Human Fortress===
+{{mod}}
+To start a "Human Town" (or, alternately, an Elven [[forest retreat]], Goblin [[Dark pit|pit]] or Kobold Cave) one need only add the tag [SITE_CONTROLLABLE] to the entity_default.txt file in the /raw/objects folder, under whichever race you wish to play. You should never do this after having already generated a world, as it will not work with an already-generated world. It's also advisable to only have one race playable at a time by removing the [SITE_CONTROLLABLE] tag from all but the race you wish to play, as having multiple playable races forces you to navigate the civilization selection UI in the embark screen (see the characters highlighted on the world map to know what creature the civilisation belongs to). The elves can carry with them many different pets upon embarking, and the races will start with appropriate food and plants (for example, humans have prickle berries instead of plump helmets by default). An important note, you will have NO nobles unless you copy-paste the 'positions' of the Dwarves (Monarch, Chief Medical Dwarf, etc.) to the same place in the entity_default.txt on whichever race you choose to play (Excluding Elves) You may edit the names of these professions/positions however you wish after placement.
+Another thing to note is that, when playing as humans in fortress mode, humans are unable to make adamantine wafers, steel or pig iron unless modded to do so. They can, however, work adamantine as cloth, and have access to weaponry too large for dwarves, such as pikes, halberds and long swords.
+
+{{D for Dwarf}}
+
+Fun fact: Though this may be difficult to believe, this article was most likely written by a ''human''.
+
+Some [[Dwarf|dwarves]] [[Preferences|like]] humans for their ''ability to play Dwarf Fortress''.
+
+<!-- Reference: "Particle Man" song, by They Might Be Giants -->
+Humans used to be called "person men" when first discovered before it was changed to human after both parties stated that they found it "degrading".
+
+[[File:humansprev.png|thumb|400px|center|''Conquest of Mexico: Hernando Cortés destroying his fleet at Vera Cruz, 1519'']]
+{{gamedata}}
+{{gamedata|title=Entity ([[civilization]]) Raws|{{raw|v50:entity_default.txt|ENTITY|PLAINS}}}}
+{{Creatures}}
+{{Category|Humanoids}}
+{{Category|Races}}
