@@ -1,0 +1,1727 @@
+<div class="mw-parser-output"><table class="version-table" style="text-align: center; margin: 3px auto 5px; padding: 0.25em; border-radius: 3px; -webkit-border-radius: 3px; -moz-border-radius: 3px; -o-border-radius: 3px; -ms-border-radius: 3px;; border: 2px solid #bbdd88; background: #f5ffee; min-width:27em"><tbody><tr><td style="padding: 0.3em 0.3em; width: 100%;"><div style="margin-bottom:6px;" class="version-links-r1"><span style="font-size:100%"><span class="version-link"><span style="text-decoration: none; color: #72A329; background-color: #E2FDCE; border-radius: 2px; -webkit-border-radius: 2px; -moz-border-radius: 2px; -o-border-radius: 2px; -ms-border-radius: 2px; border: 1px solid #bbdd88; padding: 0.2em;"><b>v53.16</b></span></span><span style="font-weight:bold;" class="dot">&#160;·</span> <span class="version-link"><a href="/index.php?title=DF2014:Lua_functions&amp;action=edit&amp;redlink=1" class="new" title="DF2014:Lua functions (page does not exist)"><span style="text-decoration: none; color: #888;">v0.47.05</span></a></span></span></div><span>This article is about the current version of DF.<br />Note that some content may still need to be updated.</span><br />
+<div style="float: right; font-size:75%; padding-right:2px; margin-top:-2px; margin-bottom:-7px;"><span class="version-link"><a href="/index.php/Dwarf_Fortress_Wiki:V" class="mw-redirect" title="Dwarf Fortress Wiki:V"><span style="text-decoration: none; color: #72A329;">More Info</span></a></span><span style="font-weight:bold;" class="dot">&#160;·</span> <span class="version-link"><a href="/index.php/Template:Av" class="mw-redirect" title="Template:Av"><span style="text-decoration: none; color: #72A329;">V</span></a></span></div></td></tr>
+</tbody></table>
+<p><span style="margin-top:5px">
+</span></p>
+<table class="vertical-navbox nowraplinks" cellspacing="5" cellpadding="0" style="float:right;clear:right;width:22.0em;margin:0 0 1.0em 1.0em;background:#f9f9f9;border:1px solid #aaa;padding:0.2em;border-spacing:0.4em 0;text-align:center;line-height:1.4em;font-size:88%;"><tbody><tr><th class="" style=";padding:0.2em 0.4em 0.2em;;font-size:145%;line-height:1.2em;"><a href="/index.php/Modding" title="Modding">Modding</a><hr /></th>
+      </tr><tr>
+<th class="" style="padding:0.1em;;;">
+<big><a href="/index.php/Token" title="Token">Tokens</a></big></th>
+</tr><tr>
+<td class="" style="padding:0 0.1em 0.4em;font-size: 12px; padding-left: 5px; text-align: center;;">
+<a href="/index.php/Audio" title="Audio">Audio</a><span style="font-weight: bold; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;">&#160;&#183;&#32;</span> <a href="/index.php/Biome_token" title="Biome token">Biome</a><span style="font-weight: bold; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;">&#160;&#183;&#32;</span> <a href="/index.php/Graphics_token" title="Graphics token">Graphics</a><span style="font-weight: bold; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;">&#160;&#183;&#32;</span> <a href="/index.php/Graphics#Tile_Page" title="Graphics">Tile page</a><span style="font-weight: bold; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;">&#160;&#183;&#32;</span> <a href="/index.php/Interaction_token" title="Interaction token">Interaction</a><span style="font-weight: bold; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;">&#160;&#183;&#32;</span> <a href="/index.php/Mod_info_token" title="Mod info token">Mod info</a><span style="font-weight: bold; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;">&#160;&#183;&#32;</span> <a href="/index.php/Plant_token" title="Plant token">Plant</a><span style="font-weight: bold; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;">&#160;&#183;&#32;</span> <a href="/index.php/Speech_file" title="Speech file">Speech</a><span style="font-weight: bold; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;">&#160;&#183;&#32;</span> <a href="/index.php/Sphere#Sphere_tokens" title="Sphere">Sphere</a><span style="font-weight: bold; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;">&#160;&#183;&#32;</span> <a href="/index.php/Syndrome#The_anatomy_of_a_syndrome" title="Syndrome">Syndrome</a><span style="font-weight: bold; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;">&#160;&#183;&#32;</span> <a href="/index.php/World_token" title="World token">World</a></td>
+</tr><tr>
+<th class="" style="padding:0.1em;;;">
+Body tokens</th>
+</tr><tr>
+<td class="" style="padding:0 0.1em 0.4em;font-size: 12px; padding-left: 5px; text-align: center;;">
+<a href="/index.php/Body_token" title="Body token">Body</a><span style="font-weight: bold; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;">&#160;&#183;&#32;</span> <a href="/index.php/Body_detail_plan_token" title="Body detail plan token">Body detail plan</a><span style="font-weight: bold; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;">&#160;&#183;&#32;</span> <a href="/index.php/Bodygloss" title="Bodygloss">Bodygloss</a><span style="font-weight: bold; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;">&#160;&#183;&#32;</span> <a href="/index.php/Tissue_definition_token" title="Tissue definition token">Tissue</a></td>
+</tr><tr>
+<th class="" style="padding:0.1em;;;">
+Creature tokens</th>
+</tr><tr>
+<td class="" style="padding:0 0.1em 0.4em;font-size: 12px; padding-left: 5px; text-align: center;;">
+<a href="/index.php/Creature_token" title="Creature token">Creature</a><span style="font-weight: bold; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;">&#160;&#183;&#32;</span> <a href="/index.php/Creature_mannerism_token" title="Creature mannerism token">Creature mannerism</a><span style="font-weight: bold; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;">&#160;&#183;&#32;</span>  <a href="/index.php/Personality_facet" title="Personality facet">Personality facet</a><span style="font-weight: bold; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;">&#160;&#183;&#32;</span> <a href="/index.php/Creature_variation_token" title="Creature variation token">Creature variation</a><span style="font-weight: bold; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;">&#160;&#183;&#32;</span> <a href="/index.php/Procedural_graphics_layer" title="Procedural graphics layer">Procedural graphics layer</a></td>
+</tr><tr>
+<th class="" style="padding:0.1em;;;">
+Descriptor tokens</th>
+</tr><tr>
+<td class="" style="padding:0 0.1em 0.4em;font-size: 12px; padding-left: 5px; text-align: center;;">
+<a href="/index.php/Descriptor_color_token" title="Descriptor color token">Descriptor color</a><span style="font-weight: bold; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;">&#160;&#183;&#32;</span> <a href="/index.php/Color" title="Color">Color</a><span style="font-weight: bold; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;">&#160;&#183;&#32;</span> <a href="/index.php/Descriptor_pattern_token" title="Descriptor pattern token">Descriptor pattern</a><span style="font-weight: bold; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;">&#160;&#183;&#32;</span> <a href="/index.php/Descriptor_shape_token" title="Descriptor shape token">Descriptor shape</a></td>
+</tr><tr>
+<th class="" style="padding:0.1em;;;">
+Entity tokens</th>
+</tr><tr>
+<td class="" style="padding:0 0.1em 0.4em;font-size: 12px; padding-left: 5px; text-align: center;;">
+<a href="/index.php/Entity_token" title="Entity token">Entity</a><span style="font-weight: bold; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;">&#160;&#183;&#32;</span> <a href="/index.php/Ethic" title="Ethic">Ethic</a><span style="font-weight: bold; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;">&#160;&#183;&#32;</span> <a href="/index.php/Language_token" title="Language token">Language</a><span style="font-weight: bold; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;">&#160;&#183;&#32;</span>  <a href="/index.php/Personality_value" title="Personality value">Value</a><span style="font-weight: bold; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;">&#160;&#183;&#32;</span> <a href="/index.php/Position_token" title="Position token">Position</a> (<a href="/index.php/Variable_positions" title="Variable positions">Variable positions</a>)</td>
+</tr><tr>
+<th class="" style="padding:0.1em;;;">
+Job tokens</th>
+</tr><tr>
+<td class="" style="padding:0 0.1em 0.4em;font-size: 12px; padding-left: 5px; text-align: center;;">
+<a href="/index.php/Building_token" title="Building token">Building</a><span style="font-weight: bold; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;">&#160;&#183;&#32;</span> <a href="/index.php/Labor_token" title="Labor token">Labor</a><span style="font-weight: bold; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;">&#160;&#183;&#32;</span> <a href="/index.php/Reaction" title="Reaction">Reaction</a><span style="font-weight: bold; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;">&#160;&#183;&#32;</span> <a href="/index.php/Skill_token" title="Skill token">Skill</a><span style="font-weight: bold; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;">&#160;&#183;&#32;</span> <a href="/index.php/Unit_type_token" title="Unit type token">Unit type</a></td>
+</tr><tr>
+<th class="" style="padding:0.1em;;;">
+Item tokens</th>
+</tr><tr>
+<td class="" style="padding:0 0.1em 0.4em;font-size: 12px; padding-left: 5px; text-align: center;;">
+<a href="/index.php/Item_token" title="Item token">Item type</a><span style="font-weight: bold; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;">&#160;&#183;&#32;</span> <a href="/index.php/Item_definition_token" title="Item definition token">Item definition</a><span style="font-weight: bold; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;">&#160;&#183;&#32;</span> <a href="/index.php/Ammo_token" title="Ammo token">Ammo</a><span style="font-weight: bold; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;">&#160;&#183;&#32;</span> <a href="/index.php/Armor_token" title="Armor token">Armor</a><span style="font-weight: bold; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;">&#160;&#183;&#32;</span> <a href="/index.php/Instrument_token" title="Instrument token">Instrument</a><span style="font-weight: bold; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;">&#160;&#183;&#32;</span> <a href="/index.php/Tool_token" title="Tool token">Tool</a><span style="font-weight: bold; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;">&#160;&#183;&#32;</span> <a href="/index.php/Trap_component_token" title="Trap component token">Trap component</a><span style="font-weight: bold; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;">&#160;&#183;&#32;</span> <a href="/index.php/Weapon_token" title="Weapon token">Weapon</a></td>
+</tr><tr>
+<th class="" style="padding:0.1em;;;">
+Material tokens</th>
+</tr><tr>
+<td class="" style="padding:0 0.1em 0.4em;font-size: 12px; padding-left: 5px; text-align: center;;">
+<a href="/index.php/Material_token" title="Material token">Material type</a><span style="font-weight: bold; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;">&#160;&#183;&#32;</span> <a href="/index.php/Material_definition_token" title="Material definition token">Material definition</a><span style="font-weight: bold; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;">&#160;&#183;&#32;</span> <a href="/index.php/Inorganic_material_definition_token" title="Inorganic material definition token">Inorganic material definition</a></td>
+</tr><tr>
+<th class="" style="padding:0.1em;;;">
+<hr /><big>Lua</big></th>
+</tr><tr>
+<td class="" style="padding:0 0.1em 0.4em;font-size: 12px; padding-left: 5px; text-align: center;;">
+<a href="/index.php/Lua_scripting" title="Lua scripting">Scripting</a><span style="font-weight: bold; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;">&#160;&#183;&#32;</span> <a href="/index.php/Lua_script_examples" title="Lua script examples">Examples</a><span style="font-weight: bold; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;">&#160;&#183;&#32;</span> <a class="mw-selflink selflink">Functions</a></td>
+</tr><tr><td style="text-align:right;font-size:115%;"><div class="noprint plainlinks hlist navbar mini" style="text-transform:uppercase; font-size:80%;"><div><span class="nv-view"><a href="/index.php/Template:V50_modding" title="Template:V50 modding"><span title="View this template" style="">v</span></a></span><span style="font-weight:bold;" class="dot">&#160;·</span> <span class="nv-talk"><a href="/index.php?title=Template_talk:V50_modding&amp;action=edit&amp;redlink=1" class="new" title="Template talk:V50 modding (page does not exist)"><span title="Discuss this template" style="">t</span></a></span><span style="font-weight:bold;" class="dot">&#160;·</span> <span class="nv-edit"><a rel="nofollow" class="external text" href="//dwarffortresswiki.org/index.php?title=Template:V50_modding&amp;action=edit"><span title="Edit this template" style="">e</span></a></span></div></div></td></tr>
+</tbody></table>
+<p><br />
+
+</p><p>Dwarf Fortress defines a number of functions in addition to those standard for <a rel="nofollow" class="external text" href="https://www.lua.org/manual/5.4/">Lua 5.4</a>.
+</p>
+
+<h2><span id="C++_function_calls"></span><span class="mw-headline" id="C.2B.2B_function_calls">C++ function calls</span></h2>
+<table class="prettytable anchortable" border="1" cellpadding="4" cellspacing="0" style="margin: 1em 1em 1em 0; background: #f9f9f9; border: 1px #aaa solid; border-collapse: collapse;">
+
+<tbody><tr style="background-color:#ddd">
+<th width="30%">Function
+</th>
+<th width="70%">Description
+</th></tr>
+<tr>
+<td><i>int</i> <span id="trandom" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#trandom">trandom</a></span>(<i>int</i> n)
+</td>
+<td>Returns a 32-bit integer from <span style="border-bottom: 1px dotted #00c; cursor:help;" title="Lua arrays start at 1, C++ arrays start at 0, hence the discrepancy.">0 to n-1</span>. Uses DF's internal RNG system instead of <code>math.random()</code>.
+</td></tr>
+<tr>
+<td><i>str</i> <span id="capitalize_string_words" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#capitalize_string_words">capitalize_string_words</a></span>(<i>str</i> s)
+</td>
+<td>Capitalizes every word in a string.
+</td></tr>
+<tr>
+<td><i>str</i> <span id="capitalize_string_first_word" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#capitalize_string_first_word">capitalize_string_first_word</a></span>(<i>str</i> s)
+</td>
+<td>Capitalizes the first word in a string.
+</td></tr>
+<tr>
+<td><i>str</i> <span id="utterance" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#utterance">utterance</a></span>()
+</td>
+<td>Returns a word from the <a href="/index.php/Kobold_language" title="Kobold language">kobold language</a>.
+</td></tr>
+<tr>
+<td><i>void</i> <span id="lua_log" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#lua_log">lua_log</a></span>(<i>str</i> s)
+</td>
+<td>Prints a string to <code>Dwarf Fortress/lualog.txt</code>. The <code>log()</code> function is more robust and should be used instead.
+</td></tr>
+<tr>
+<td>
+<p><i>void</i> <span id="raws.register_reactions" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#raws.register_reactions">raws.register_reactions</a></span>(<i>table</i> lines)<br />
+<i>void</i> <span id="raws.register_creatures" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#raws.register_creatures">raws.register_creatures</a></span>(<i>table</i> lines)<br />
+<i>void</i> <span id="raws.register_entities" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#raws.register_entities">raws.register_entities</a></span>(<i>table</i> lines)<br />
+<i>void</i> <span id="raws.register_items" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#raws.register_items">raws.register_items</a></span>(<i>table</i> lines)<br />
+<i>void</i> <span id="raws.register_inorganics" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#raws.register_inorganics">raws.register_inorganics</a></span>(<i>table</i> lines)<br />
+<i>void</i> <span id="raws.register_interactions" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#raws.register_interactions">raws.register_interactions</a></span>(<i>table</i> lines)<br />
+<i>void</i> <span id="raws.register_languages" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#raws.register_languages">raws.register_languages</a></span>(<i>table</i> lines)<br />
+<i>void</i> <span id="raws.register_plants" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#raws.register_plants">raws.register_plants</a></span>(<i>table</i> lines)
+</p>
+</td>
+<td>Takes a table of <a href="/index.php/Token" title="Token">tokens</a> and reads them as that type of <a href="/index.php/Raw_file" title="Raw file">raw file</a>. It is not necessary to add a header.
+</td></tr></tbody></table>
+<h2><span class="mw-headline" id="Globals">Globals</span></h2>
+<p>Helper functions are defined in <code>init/globals.lua</code>, and can be accessed by any script even if <code>vanilla_procedural</code> is not loaded.
+</p>
+<h3><span class="mw-headline" id="Generation">Generation</span></h3>
+<p>This function is defined in <code>init/generators.lua</code>.
+</p>
+<table class="prettytable anchortable" border="1" cellpadding="4" cellspacing="0" style="margin: 1em 1em 1em 0; background: #f9f9f9; border: 1px #aaa solid; border-collapse: collapse;">
+
+<tbody><tr style="background-color:#ddd">
+<th width="30%">Function
+</th>
+<th width="70%">Description
+</th></tr>
+<tr>
+<td><i>table</i> <span id="add_generated_info" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#add_generated_info">add_generated_info</a></span>(<i>table</i> tbl)
+</td>
+<td>Adds <code><a href="/index.php/Creature_token#GENERATED" title="Creature token">[GENERATED]</a></code> to the input table, and <code><a href="/index.php/Creature_token#SOURCE_HFID" title="Creature token">[SOURCE_HFID]</a></code>/<code><a href="/index.php/Creature_token#SOURCE_ENID" title="Creature token">[SOURCE_ENID]</a></code> if IDs are defined. Necessary for generated raws to be saved properly.
+</td></tr></tbody></table>
+<h3><span class="mw-headline" id="Randomization">Randomization</span></h3>
+<table class="prettytable anchortable" border="1" cellpadding="4" cellspacing="0" style="margin: 1em 1em 1em 0; background: #f9f9f9; border: 1px #aaa solid; border-collapse: collapse;">
+
+<tbody><tr style="background-color:#ddd">
+<th width="30%">Function
+</th>
+<th width="70%">Description
+</th></tr>
+<tr>
+<td><i>value</i> <span id="pick_random" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#pick_random">pick_random</a></span>(<i>table</i> t)
+</td>
+<td>Returns a random value from a table.
+</td></tr>
+<tr>
+<td><i>value</i> <span id="pick_random_no_replace" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#pick_random_no_replace">pick_random_no_replace</a></span>(<i>table</i> t)
+</td>
+<td>Returns a random value from a table, then removes it from the table.
+</td></tr>
+<tr>
+<td><i>value</i> <span id="pick_random_conditional" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#pick_random_conditional">pick_random_conditional</a></span>(<i>table</i> t, <i>function</i> cond,...)
+</td>
+<td>Returns a random value from a table that satisfies <code>cond(...)</code>.
+</td></tr>
+<tr>
+<td><i>bool</i> <span id="one_in" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#one_in">one_in</a></span>(<i>num</i> x)
+</td>
+<td>Returns true with a one in x chance.
+</td></tr>
+<tr>
+<td><i>value</i> <span id="pick_random_pairs" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#pick_random_pairs">pick_random_pairs</a></span>(<i>table</i> tbl)
+</td>
+<td>Returns a random key from a table. For example, <code>pick_random_pairs( {WATER = true} )</code> returns "WATER".
+</td></tr>
+<tr>
+<td><i>value</i> <span id="pick_weighted_from_table" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#pick_weighted_from_table">pick_weighted_from_table</a></span>(<i>table</i> tbl)
+</td>
+<td>Requires a table of tables with <code>weight</code> keys. Returns a weighted random value.
+<p>At debug level &gt;=4, logs the roll.
+</p>
+</td></tr>
+<tr>
+<td><i>value</i> <span id="generate_from_list" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#generate_from_list">generate_from_list</a></span>(<i>table</i> tbl,...)
+</td>
+<td>Requires a table of functions that return a <code>weight</code> key. Runs each function and returns a weighted random output. Used by <a href="/index.php/Werebeast" title="Werebeast">werebeasts</a> to generate an interaction and link to options from it.
+</td></tr></tbody></table>
+<h3><span class="mw-headline" id="Tables">Tables</span></h3>
+<table class="prettytable anchortable" border="1" cellpadding="4" cellspacing="0" style="margin: 1em 1em 1em 0; background: #f9f9f9; border: 1px #aaa solid; border-collapse: collapse;">
+
+<tbody><tr style="background-color:#ddd">
+<th width="30%">Function
+</th>
+<th width="70%">Description
+</th></tr>
+<tr>
+<td><i>table</i> <span id="split_to_lines" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#split_to_lines">split_to_lines</a></span>(<i>table</i> tbl,<i>string</i> str)
+</td>
+<td>Adds a string into a table, with each line being a separate key.
+</td></tr>
+<tr>
+<td><i>table</i> <span id="map_merge" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#map_merge">map_merge</a></span>(<i>table</i> tbl1, <i>table</i> tbl2)
+</td>
+<td>Combines two tables. If <code>tbl1</code> already has a value for a given key, it will not be overwritten. Used for sets such as <code>{ WATER = true }</code>.
+</td></tr>
+<tr>
+<td><i>table</i> <span id="table_merge" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#table_merge">table_merge</a></span>(<i>table</i> tbl1, <i>table</i> tbl2)
+</td>
+<td>Adds each value from <code>tbl2</code> onto the end of <code>tbl1</code>.
+</td></tr>
+<tr>
+<td><i>bool</i> <span id="find_in_array_part" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#find_in_array_part">find_in_array_part</a></span>(<i>table</i> tbl, <i>value</i> item)
+</td>
+<td>Returns true if <code>item</code> is a value in <code>tbl</code>.
+</td></tr>
+<tr>
+<td><i>void</i> <span id="convert_array_to_set" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#convert_array_to_set">convert_array_to_set</a></span>(<i>table</i> tbl)
+</td>
+<td>Makes a set from an array, e.g. takes {"a","b","c"} and makes it {a=true,b=true,c=true} so that it can be indexed.
+</td></tr>
+<tr>
+<td><i>void</i> <span id="add_unique" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#add_unique">add_unique</a></span>(<i>table</i> tbl, <i>value</i> item)
+</td>
+<td>Adds <code>item</code> to the end of <code>tbl</code> if not already present.
+</td></tr>
+<tr>
+<td><i>void</i> <span id="remove_item" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#remove_item">remove_item</a></span>(<i>table</i> tbl, <i>value</i> item)
+</td>
+<td>Removes all instances of <code>item</code> from <code>tbl</code>.
+</td></tr>
+<tr>
+<td><i>table</i> <span id="shallow_copy" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#shallow_copy">shallow_copy</a></span>(<i>table</i> tbl)
+</td>
+<td>Returns a table copied from all values in the input table.
+</td></tr>
+<tr>
+<td><i>table</i> <span id="deep_copy" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#deep_copy">deep_copy</a></span>(<i>table</i> tbl)
+</td>
+<td>Returns a table recursively copied from all values in the input table.
+</td></tr></tbody></table>
+<h3><span class="mw-headline" id="Debug">Debug</span></h3>
+<table class="prettytable anchortable" border="1" cellpadding="4" cellspacing="0" style="margin: 1em 1em 1em 0; background: #f9f9f9; border: 1px #aaa solid; border-collapse: collapse;">
+
+<tbody><tr style="background-color:#ddd">
+<th width="40%">Function
+</th>
+<th width="60%">Description
+</th></tr>
+<tr>
+<td><i>void</i> <span id="log" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#log">log</a></span>(...)
+</td>
+<td>Logs the input to <code>Dwarf Fortress/lualog.txt</code>. Used for most cases.
+</td></tr>
+<tr>
+<td><i>string</i> <span id="get_caller_loc_string" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#get_caller_loc_string">get_caller_loc_string</a></span>()
+</td>
+<td>Returns the debug source info and the current line.
+</td></tr>
+<tr>
+<td><i>string</i> <span id="get_debug_logger" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#get_debug_logger">get_debug_logger</a></span>(<i>num</i> level=1,...)
+</td>
+<td>Logs <code>get_caller_loc_string()</code> and any overloads if the <code>debug_level</code> is at least <code>level</code>. <code>debug_level</code> is a global variable that defaults to 0.
+</td></tr>
+<tr>
+<td><i>function</i> <span id="partial_function" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#partial_function">partial_function</a></span>(<i>function</i> f, arg,...)
+</td>
+<td>Returns <code>f(arg,...)</code>.
+</td></tr>
+<tr>
+<td><i>function</i> <span id="log_table" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#log_table">log_table</a></span>(<i>table</i>&#160;tbl, <i>num</i>&#160;debug_level=0, <i>num</i>&#160;nest_level=0, <i>num</i>&#160;added_debug_from_nest=0)
+</td>
+<td>Logs a table if the global <code>debug_level</code> is at least the input <code>debug_level</code>. <code>nest_level</code> starts at 0 and adds <code>added_debug_from_nest</code> for each nesting to the input debug level.
+</td></tr>
+<tr>
+<td><i>function</i> <span id="print_table" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#print_table">print_table</a></span>(<i>table</i> tbl, <i>num</i> nest_level=0)
+</td>
+<td>Logs a table, regardless of debug level.
+</td></tr></tbody></table>
+<h3><span class="mw-headline" id="Spheres">Spheres</span></h3>
+<table class="prettytable anchortable" border="1" cellpadding="4" cellspacing="0" style="margin: 1em 1em 1em 0; background: #f9f9f9; border: 1px #aaa solid; border-collapse: collapse;">
+
+<tbody><tr style="background-color:#ddd">
+<th width="45%">Function
+</th>
+<th width="55%">Description
+</th></tr>
+<tr>
+<td><i>string</i> <span id="get_random_sphere_adjective" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#get_random_sphere_adjective">get_random_sphere_adjective</a></span>(<i>string</i> <a href="/index.php/Sphere#Sphere_tokens" title="Sphere">sphere</a>)
+</td>
+<td>Returns a random string from global table <code>random_sphere_adjective[sph]</code>.
+</td></tr>
+<tr>
+<td><i>table</i> <span id="get_random_sphere_noun" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#get_random_sphere_noun">get_random_sphere_noun</a></span>(<i>string</i> <a href="/index.php/Sphere#Sphere_tokens" title="Sphere">sphere</a>)
+</td>
+<td>Returns a random table <code>tbl</code> from global table <code>random_sphere_nouns[sphere]</code>.
+<p><code>tbl</code> has two members: <code>tbl.str</code>, which is a string; and <code>tbl.flags</code>, which defaults to <code>{OF=true,PREPOS=true,PRE=true}</code>, for grammar.
+</p>
+</td></tr>
+<tr>
+<td><i>table</i> <span id="add_sphere_mpp" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#add_sphere_mpp">add_sphere_mpp</a></span>(<i>table</i>&#160;sphere_list, <i>string</i>&#160;<a href="/index.php/Sphere#Sphere_tokens" title="Sphere">new_s</a>, <i>table</i>&#160;available_sphere, <i>table</i>&#160;available_sphere_cur)
+</td>
+<td>Adds <code>new_s</code> to <code>sphere_list</code> and all parents and children. Sets the added spheres in <code>available_sphere</code> and <code>available_sphere_cur</code> to false, and sets all enemies in <code>available_sphere_cur</code> to false.
+<p>At debug level &gt;= 2, will be logged.
+</p>
+</td></tr></tbody></table>
+<h2><span class="mw-headline" id="Generation_tables">Generation tables</span></h2>
+<p>The <code>generate()</code> function is defined in <code>init/generators.lua</code>, and is called to generate objects.
+</p><p>Each type of random object is defined through a function that generates a table of raws. To generate objects for specific purposes, <code>generate()</code> can call functions from a table and provide inputs such as <code>tok</code> (unique token string).
+For example, <a href="/index.php/Forgotten_beast" title="Forgotten beast">forgotten beasts</a> are unique and generated for each cave region. If multiple functions are defined in <code>creatures.fb</code>, such as both <code>creatures.fb.default</code> and a modded forgotten beast, the game uses the <code>weight</code> output to influence which one will be randomly chosen.
+</p><p>By default, objects are generated in this order: unittests<span style="border-bottom: 1px dotted #00c; cursor:help;" title="if debug_level is at least 0">*</span>, preprocess, do_once, materials, items, languages, creatures, interactions, entities, and postprocess. Do note that you can register raws at any step. For example, each <a href="/index.php/Vault" title="Vault">vault</a> entity generates a set of <a href="/index.php/Divine_equipment" title="Divine equipment">divine equipment</a> during the entity step, and <a href="/index.php/Werebeast" title="Werebeast">werebeasts</a> generate a curse interaction during the creature step.
+</p>
+<h3><span class="mw-headline" id="Custom">Custom</span></h3>
+<dl><dd><div class="noprint relarticle mainarticle"><i>Main article: <a href="/index.php/Lua_scripting#Object_generation" title="Lua scripting">Lua scripting#Object generation</a></i></div></dd></dl>
+<p>When the game uses <code>generate()</code> to generate objects, all functions in the following tables are run in sequence.
+</p><p><code>random_object_parameters.pre_gen_randoms</code> and <code>random_object_parameters.main_world_randoms</code> are only ever true for one generation call each, at the start of world generation in that order.
+</p><p>You cannot predict when <code>generate()</code> is called. Raws registered through <code>preprocess</code> and <code>postprocess</code> should check for either variable so that further calls do not endlessly register raws.
+</p><p>Functions stored and called through these tables are not supplied with arguments.
+</p>
+<table class="prettytable anchortable" border="1" cellpadding="4" cellspacing="0" style="margin: 1em 1em 1em 0; background: #f9f9f9; border: 1px #aaa solid; border-collapse: collapse;">
+
+<tbody><tr style="background-color:#ddd">
+<th width="20%">Table
+</th>
+<th width="80%">Description
+</th></tr>
+<tr>
+<td>preprocess
+</td>
+<td>Run at the start of each <code>generate()</code> call, after unit testing.
+<p>Includes two functions by default:<br />
+<code>preprocess.demon()</code>, which populates the distribution of <code>demon_type</code> string inputs<br />
+<code>preprocess.bogeyman_polymorph()</code>, which generates the <a href="/index.php/Bogeyman" title="Bogeyman">bogeyman</a>'s polymorph <a href="/index.php/Interaction_token" title="Interaction token">interactions</a> if bogeymen exist<br />
+</p>
+</td></tr>
+<tr>
+<td>do_once_early
+</td>
+<td>As <code>do_once</code>, but only runs if <code>random_object_parameters.pre_gen_randoms == true</code> (before the map exists)
+<p>Recommended for generating custom objects that need to be placed in the map; ie: animal populations, <a href="/index.php/Stone_layers" title="Stone layers">minerals</a>.
+</p>
+</td></tr>
+<tr>
+<td>do_once
+</td>
+<td>Runs immediately after all functions in preprocess, and before all other generation steps. Only runs if <code>random_object_parameters.main_world_randoms == true</code> (in prehistory once the map is finalized)
+<p>Recommended for generating most custom objects.<br />
+Includes one function by default:<br />
+<code>do_once.rcp_mat_emission()</code>, adds the <code>RCP_MATERIAL_EMISSION</code> <a href="/index.php/Interaction_token" title="Interaction token">interaction</a>
+</p>
+</td></tr>
+<tr>
+<td>postprocess
+</td>
+<td>Runs after all other generation steps are finished.
+</td></tr>
+<tr>
+<td>unittests
+</td>
+<td>Runs before preprocess if the global <code>debug_level</code> is greater than 0. Expects a boolean output.
+</td></tr>
+<tr>
+<td>languages
+</td>
+<td>For each function in this table, registers a language. Expects table of key-value pairs where the key is the <a href="/index.php/Language_token#WORD" title="Language token">word token</a> and the value is the translated string. Initial generation call only.
+</td></tr></tbody></table>
+<h3><span class="mw-headline" id="Creatures">Creatures</span></h3>
+<table class="prettytable anchortable" border="1" cellpadding="4" cellspacing="0" style="margin: 1em 1em 1em 0; background: #f9f9f9; border: 1px #aaa solid; border-collapse: collapse;">
+
+<tbody><tr style="background-color:#ddd">
+<th width="40%">Table
+</th>
+<th width="40%">Inputs
+</th>
+<th width="60%">Article
+</th></tr>
+<tr>
+<td>
+<p>creatures.angel.great_beast<br />
+creatures.angel.humanoid_generic<br />
+creatures.angel.humanoid_warrior
+</p>
+</td>
+<td>function(tok)
+</td>
+<td><a href="/index.php/Angel" title="Angel">Angel</a> (see <a href="/index.php/Angel#Angel_types" title="Angel">types</a>)
+</td></tr>
+<tr>
+<td>creatures.demon
+</td>
+<td>function(demon_type, difficulty, tok)
+</td>
+<td><a href="/index.php/Demon" title="Demon">Demon</a>
+</td></tr>
+<tr>
+<td>
+<p>creatures.experiment.beast_large<br />
+creatures.experiment.beast_small<br />
+creatures.experiment.failed_large<br />
+creatures.experiment.failed_small<br />
+creatures.experiment.humanoid_giant<br />
+creatures.experiment.humanoid<br />
+</p>
+</td>
+<td>function(tok)
+</td>
+<td><a href="/index.php/Experiment" title="Experiment">Experiment</a>
+</td></tr>
+<tr>
+<td>creatures.fb
+</td>
+<td>function(layer_type, tok)
+</td>
+<td><a href="/index.php/Forgotten_beast" title="Forgotten beast">Forgotten beast</a>
+</td></tr>
+<tr>
+<td>creatures.night_creature.bogeyman
+</td>
+<td>function(tok)
+</td>
+<td><a href="/index.php/Bogeyman" title="Bogeyman">Bogeyman</a>
+</td></tr>
+<tr>
+<td>creatures.night_creature.nightmare
+</td>
+<td>function(tok)
+</td>
+<td><a href="/index.php/Nightmare" title="Nightmare">Nightmare</a>
+</td></tr>
+<tr>
+<td>creatures.night_creature.troll
+</td>
+<td>function(tok)
+</td>
+<td><a href="/index.php/Night_troll" title="Night troll">Night troll</a>
+</td></tr>
+<tr>
+<td>creatures.night_creature.werebeast
+<p>werebeast_origin_interactions<span style="border-bottom: 1px dotted #00c; cursor:help;" title="Called by vanilla_procedural, not by init/generators">*</span>
+</p>
+</td>
+<td>function(tok)
+<p>function(tok, name, options)
+</p>
+</td>
+<td><a href="/index.php/Werebeast" title="Werebeast">Werebeast</a>
+</td></tr>
+<tr>
+<td>creatures.titan
+</td>
+<td>function(subregion, tok)
+</td>
+<td><a href="/index.php/Titan" title="Titan">Titan</a>
+</td></tr></tbody></table>
+<h4><span class="mw-headline" id="Creature_patching">Creature patching</span></h4>
+<dl><dd><div class="noprint relarticle mainarticle"><i>Main article: <a href="/index.php/Lua_scripting#Tweaks" title="Lua scripting">Lua scripting#Tweaks</a></i></div></dd></dl>
+<p>While <code>SELECT_CREATURE</code> cannot target generated objects, there are global tables set up to append data when building a creature. These tables contain functions which have access to tokens, options, and local functions from <code>build_body_from_rcp()</code>. All functions in these tables are run at corresponding stages in the build function.
+</p><p><code>lines</code>, <code>options</code> and <code>rcp</code> are the creature's raw lines and data, which can be read or modified in these functions.
+</p>
+<table class="prettytable anchortable" border="1" cellpadding="4" cellspacing="0" style="margin: 1em 1em 1em 0; background: #f9f9f9; border: 1px #aaa solid; border-collapse: collapse;">
+
+<tbody><tr style="background-color:#ddd">
+<th width="10%">Table
+</th>
+<th width="30%">Inputs
+</th>
+<th width="50%">Timing
+</th></tr>
+<tr>
+<td>btc1_tweaks
+</td>
+<td>function(lines, options, add_to_body, add_to_body_unique, add_tweak_candidate)
+</td>
+<td>Before <code>options.btc</code> (the first tweak) is determined.
+</td></tr>
+<tr>
+<td>feature_tweaks
+</td>
+<td>function(rcp, options, add_to_body, add_to_body_unique, add_tweak_candidate)
+</td>
+<td>After <code>options.btc2</code> is set. <code>add_tweak_candidate()</code> is unused in vanilla at this stage.
+</td></tr>
+<tr>
+<td>post_attack_tweaks
+</td>
+<td>function(lines, options, is_in_body)
+</td>
+<td>After <code>options.attack_tweak</code> is set. By default, runs functions to add <code><a href="/index.php/Creature_token#ATTACK" title="Creature token">[ATTACK]</a></code>s for body parts.
+</td></tr>
+<tr>
+<td>post_gait_tweaks
+</td>
+<td>function(lines, options)
+</td>
+<td>This is the last operation in the build function.
+<p>Includes the <code>bogey_polymorph()</code> function by default, which checks <code>options.can_bogey_polymorph</code> to add the interaction.
+</p>
+</td></tr></tbody></table>
+<table class="prettytable anchortable" border="1" cellpadding="4" cellspacing="0" style="margin: 1em 1em 1em 0; background: #f9f9f9; border: 1px #aaa solid; border-collapse: collapse;">
+
+<tbody><tr style="background-color:#ddd">
+<th width="25%">Local Function
+</th>
+<th width="80%">Effect
+</th></tr>
+<tr>
+<td><i>void</i> add_to_body(str)
+</td>
+<td>Adds the input <a href="/index.php/Body_token" title="Body token">body token</a> to the <code>options.body_string</code> table.
+</td></tr>
+<tr>
+<td><i>void</i> add_to_body_unique(str)
+</td>
+<td>As <code>add_to_body()</code> and <code>add_unique()</code>, only adds if not already present.
+</td></tr>
+<tr>
+<td><i>void</i> add_tweak_candidate(str)
+</td>
+<td>Adds the input to <code>options.body_tweak_candidate</code>, pointing to a key in the <code>tweaks</code> table.
+</td></tr>
+<tr>
+<td><i>bool</i> is_in_body(str)
+</td>
+<td>Checks if the input <a href="/index.php/Body_token" title="Body token">body token</a> is in <code>options.body_string</code>.
+</td></tr></tbody></table>
+<h3><span class="mw-headline" id="Entities">Entities</span></h3>
+<p>Generated entities are supplied with the <code>idx</code> parameter, which is a number that starts at 1 and increments by 1 for each entity of that type. It can be used to give a unique ID to <a href="/index.php/Divine_equipment" title="Divine equipment">divine equipment</a>.
+</p>
+<table class="prettytable anchortable" border="1" cellpadding="4" cellspacing="0" style="margin: 1em 1em 1em 0; background: #f9f9f9; border: 1px #aaa solid; border-collapse: collapse;">
+
+<tbody><tr style="background-color:#ddd">
+<th width="40%">Table
+</th>
+<th width="20%">Inputs
+</th>
+<th width="60%">Articles
+</th></tr>
+<tr>
+<td>entities.vault_guardian
+</td>
+<td>function(idx,tok)
+</td>
+<td><a href="/index.php/Vault" title="Vault">Vault</a> (<a href="/index.php/Angel" title="Angel">angels</a>)
+</td></tr>
+<tr>
+<td>entities.mythical_guardian
+</td>
+<td>function(idx,tok)
+</td>
+<td><a href="/index.php/Mysterious_dungeon" title="Mysterious dungeon">Mysterious dungeon</a> (<a href="/index.php/Dungeon_guardian" title="Dungeon guardian">dungeon guardians</a>)
+</td></tr></tbody></table>
+<h3><span class="mw-headline" id="Interactions">Interactions</span></h3>
+<h4><span class="mw-headline" id="World">World</span></h4>
+<p>World interactions are generated in the <code>generate_random_interactions()</code> step of <code>generators.lua</code>.
+</p>
+<table class="prettytable anchortable" border="1" cellpadding="4" cellspacing="0" style="margin: 1em 1em 1em 0; background: #f9f9f9; border: 1px #aaa solid; border-collapse: collapse;">
+
+<tbody><tr style="background-color:#ddd">
+<th width="30%">Table
+</th>
+<th width="30%">Inputs
+</th>
+<th width="60%">Examples
+</th></tr>
+<tr>
+<td>
+<p>interactions.blessing.minor<br />
+interactions.blessing.medium
+</p>
+</td>
+<td>function(idx)
+</td>
+<td><a href="/index.php/Die" title="Die">Die</a> roll effects: luck, holy item, healing, etc
+</td></tr>
+<tr>
+<td>
+<p>interactions.curse.minor<br />
+interactions.curse.medium
+</p>
+</td>
+<td>function(idx)
+</td>
+<td><a href="/index.php/Die" title="Die">Die</a> roll effects: week of curse
+</td></tr>
+<tr>
+<td>interactions.curse.major
+</td>
+<td>function(idx,tok)
+</td>
+<td><a href="/index.php/Vampire" title="Vampire">Vampire</a>
+</td></tr>
+<tr>
+<td>interactions.disturbance
+</td>
+<td>function(idx)
+</td>
+<td><a href="/index.php/Mummy" title="Mummy">Mummy</a>
+</td></tr>
+<tr>
+<td>interactions.mythical
+</td>
+<td>function(idx,power_level,<a href="/index.php/Sphere" title="Sphere">sphere</a>)
+</td>
+<td><a href="/index.php/Dungeon_guardian" title="Dungeon guardian">Dungeon guardian</a>
+</td></tr>
+<tr>
+<td>interactions.mythical_item_power
+</td>
+<td>spheres={}, interaction=function()
+</td>
+<td><a href="/index.php/Primordial_remnant#List_of_powers" title="Primordial remnant">Primordial remnant#List of powers</a>
+</td></tr>
+<tr>
+<td>interactions.regional
+</td>
+<td>function(idx)
+</td>
+<td>Reanimating <a href="/index.php/Surroundings#Evil" title="Surroundings">evil biomes</a>
+</td></tr>
+<tr>
+<td>interactions.secrets
+</td>
+<td>function(idx,<a href="/index.php/Sphere" title="Sphere">sphere</a>)
+</td>
+<td><a href="/index.php/Necromancer" title="Necromancer">Necromancer</a>
+</td></tr></tbody></table>
+<h4><span class="mw-headline" id="Powers">Powers</span></h4>
+<p>Powers are stored in the <code>interactions.powers</code> table and can be generated by other interactions. The structure of each power entry contains several keys that determine how it can be added to an interaction's syndrome.
+</p>
+<table class="prettytable anchortable" border="1" cellpadding="4" cellspacing="0" style="margin: 1em 1em 1em 0; background: #f9f9f9; border: 1px #aaa solid; border-collapse: collapse;">
+
+<tbody><tr style="background-color:#ddd">
+<th width="15%">Key
+</th>
+<th width="30%">Inputs
+</th>
+<th width="60%">Notes
+</th></tr>
+<tr>
+<td>tags
+</td>
+<td><i>table</i>
+</td>
+<td>A table of user-defined values that can be checked by other functions.
+</td></tr>
+<tr>
+<td>tags.lieutenant
+</td>
+<td><i>bool</i>
+</td>
+<td>If true, available to <a href="/index.php/Intelligent_undead" title="Intelligent undead">intelligent undead</a>.
+</td></tr>
+<tr>
+<td>rarity
+</td>
+<td><i>number</i> n
+</td>
+<td>Higher is rarer. An <a href="/index.php/Intelligent_undead" title="Intelligent undead">intelligent undead</a> has a 1 in n chance to receive this power.
+</td></tr>
+<tr>
+<td>gen
+</td>
+<td><i>table</i> <code>tbl</code>, <i>table</i> <code>end_tbl</code> function(name)
+</td>
+<td>Generates and returns lines of raws.
+<ul><li><code>tbl</code> consists of <a href="/index.php/Syndrome" title="Syndrome">syndrome</a> lines comprising <code><a href="/index.php/Syndrome#CE_CAN_DO_INTERACTION" title="Syndrome">[CE_CAN_DO_INTERACTION]</a></code> and <code><a href="/index.php/Interaction_token#Usage" title="Interaction token">CDI</a></code>.</li>
+<li><code>end_tbl</code> consists of lines that define the <a href="/index.php/Interaction" class="mw-redirect" title="Interaction">interaction</a>.</li></ul>
+</td></tr></tbody></table>
+<h4><span class="mw-headline" id="Interaction_helpers">Interaction helpers</span></h4>
+<p>Interaction helpers are defined by <code>vanilla_procedural</code>.
+</p>
+<table class="prettytable anchortable" border="1" cellpadding="4" cellspacing="0" style="margin: 1em 1em 1em 0; background: #f9f9f9; border: 1px #aaa solid; border-collapse: collapse;">
+
+<tbody><tr style="background-color:#ddd">
+<th width="40%">Function
+</th>
+<th width="60%">Notes
+</th></tr>
+<tr>
+<td><i>table</i>&#160;<code>tbl</code>, <i>table</i>&#160;<code>end_tbl</code> basic_lieutenant(<i>string</i>&#160;name, <i>string</i>&#160;name_plural, <i>string</i>&#160;token)
+</td>
+<td>Generates an interaction that raises an <a href="/index.php/Intelligent_undead" title="Intelligent undead">intelligent undead</a> and calls <code>basic_lieutenant_powers(token)</code>.
+</td></tr>
+<tr>
+<td><i>table</i>&#160;<code>tbl</code>, <i>table</i>&#160;<code>end_tbl</code> basic_lieutenant_powers(<i>string</i>&#160;token)
+</td>
+<td>Adds any number of powers (chosen from among <code>interaction.powers</code>) and 0-5 sicken effects (from <code>add_curses()</code>) to the current definition.
+</td></tr>
+<tr>
+<td><i>table</i>&#160;<code>tbl</code>, <i>table</i>&#160;<code>end_tbl</code>, <i>int</i>&#160;<code>idx</code> add_curses(<i>table</i>&#160;tbl, <i>table</i>&#160;end_tbl, <i>string</i>&#160;token, <i>int</i>&#160;num, <i>int</i>&#160;start_idx, <i>int</i>&#160;sev, <i>table</i>&#160;good_effects)
+</td>
+<td>Adds <code>num</code> curses/afflictions to the current definition. <code>good_effects</code> lists the possible curses that can be chosen from <code>default_curse_effects</code>, and <code>sev</code> is the syndrome's severity. Basic lieutenants use a <code>sev</code> of 500.
+</td></tr>
+<tr>
+<td><i>string</i> get_abstract_gesture()
+</td>
+<td>Returns a random string from either <code>gestures</code> or <code>gestures_abstract</code>, used for <code><a href="/index.php/Interaction_token#VERB" title="Interaction token">[VERB]</a></code>.
+</td></tr>
+<tr>
+<td>populate_monotone_color_pattern()
+</td>
+<td>Writes all <a href="/index.php/Descriptor_color_token" title="Descriptor color token">MONOTONE color patterns</a> from <code>world.descriptor.color_pattern</code> to the global table <code>monotone_color_pattern</code>, if not already populated.
+<p>Not to be confused with <code>world.descriptor.color</code>, which has the same keys as a color rather than a pattern.
+</p>
+</td></tr>
+<tr>
+<td>add_base_poison_effects(mat, good_effects, sev, max_eff, min_start, max_start, min_peak, max_peak, min_end, max_end, terminal_chance, resist_chance, size_delay_chance, size_dilute_chance)
+</td>
+<td>Writes 1 to <code>max_eff</code> <a href="/index.php/Syndrome" title="Syndrome">syndrome</a> effects from <code>good_effects</code> to <code>mat</code>, a table of raw lines. Has a one in <code>terminal_chance</code> to not end. If the effect  <code><a href="/index.php/Creature_token#RESISTABLE" title="Creature token">[RESISTABLE]</a></code>
+</td></tr></tbody></table>
+<h3><span class="mw-headline" id="Items">Items</span></h3>
+<h4><span class="mw-headline" id="Instruments">Instruments</span></h4>
+<p>The default <a href="/index.php/Instrument" title="Instrument">instrument</a> system is not currently open to Lua, but <code>generators.lua</code> defines tables for each token.
+</p>
+<table class="prettytable anchortable" border="1" cellpadding="4" cellspacing="0" style="margin: 1em 1em 1em 0; background: #f9f9f9; border: 1px #aaa solid; border-collapse: collapse;">
+
+<tbody><tr style="background-color:#ddd">
+<th width="30%">Table
+</th>
+<th width="30%">Inputs
+</th>
+<th width="40%">Token
+</th></tr>
+<tr>
+<td>items.instruments.keyboard
+</td>
+<td>N/A
+</td>
+<td><code><a href="/index.php/Entity_token#GENERATE_KEYBOARD_INSTRUMENTS" title="Entity token">[GENERATE_KEYBOARD_INSTRUMENTS]</a></code>
+</td></tr>
+<tr>
+<td>items.instruments.stringed
+</td>
+<td>N/A
+</td>
+<td><code><a href="/index.php/Entity_token#GENERATE_STRINGED_INSTRUMENTS" title="Entity token">[GENERATE_STRINGED_INSTRUMENTS]</a></code>
+</td></tr>
+<tr>
+<td>items.instruments.wind
+</td>
+<td>N/A
+</td>
+<td><code><a href="/index.php/Entity_token#GENERATE_WIND_INSTRUMENTS" title="Entity token">[GENERATE_WIND_INSTRUMENTS]</a></code>
+</td></tr>
+<tr>
+<td>items.instruments.percussion
+</td>
+<td>N/A
+</td>
+<td><code><a href="/index.php/Entity_token#GENERATE_PERCUSSION_INSTRUMENTS" title="Entity token">[GENERATE_PERCUSSION_INSTRUMENTS]</a></code>
+</td></tr></tbody></table>
+<h4><span class="mw-headline" id="Divine_equipment">Divine equipment</span></h4>
+<dl><dd><div class="noprint relarticle mainarticle"><i>Main article: <a href="/index.php/Divine_equipment" title="Divine equipment">Divine equipment</a></i></div></dd></dl>
+<p><code>entities.vault_guardian.default</code> generates from the list <code>angel_item_gens</code>, the default function of which then calls functions from <code>angel_item_info</code>. Unless otherwise stated, the <b>Behavior</b> column refers to the behavior of how <code>angel_item_gens.default</code> generates from these lists.
+</p>
+<table class="prettytable anchortable" border="1" cellpadding="4" cellspacing="0" style="margin: 1em 1em 1em 0; background: #f9f9f9; border: 1px #aaa solid; border-collapse: collapse;">
+
+<tbody><tr style="background-color:#ddd">
+<th width="20%">Table
+</th>
+<th width="20%">Inputs
+</th>
+<th width="60%">Behavior
+</th></tr>
+<tr>
+<td>angel_item_gens
+</td>
+<td>function(prefix,tokens)
+</td>
+<td>Called by <code>entities.vault_guardian.default</code>, which supplies a unique <code>prefix</code> and doesn't provide <code>tokens</code>.
+</td></tr>
+<tr>
+<td>
+<p>angel_item_info.armor.pants.gen<br />
+angel_item_info.armor.armor.gen<br />
+angel_item_info.armor.helm.gen<br />
+angel_item_info.armor.gloves.gen<br />
+angel_item_info.armor.shoes.gen<br />
+angel_item_info.shield.gen
+</p>
+</td>
+<td>function(i,prefix)
+</td>
+<td>Generates 1 piece of <a href="/index.php/Armor" title="Armor">armor</a> for each slot and 1 <a href="/index.php/Shield" class="mw-redirect" title="Shield">shield</a>.
+</td></tr>
+<tr>
+<td>
+<p>angel_item_info.clothing.pants.gen<br />
+angel_item_info.clothing.armor.gen<br />
+angel_item_info.clothing.helm.gen<br />
+angel_item_info.clothing.gloves.gen<br />
+angel_item_info.clothing.shoes.gen
+</p>
+</td>
+<td>function(i,prefix)
+</td>
+<td>Generates 1 piece of <a href="/index.php/Clothing" title="Clothing">clothing</a> for each slot.
+</td></tr>
+<tr>
+<td>
+<p>angel_item_info.weapon.PIKE.gen<br />
+angel_item_info.weapon.WHIP.gen<br />
+angel_item_info.weapon.BOW.gen<br />
+angel_item_info.weapon.BLOWGUN.gen<br />
+angel_item_info.weapon.AXE.gen<br />
+angel_item_info.weapon.SWORD.gen<br />
+angel_item_info.weapon.DAGGER.gen<br />
+angel_item_info.weapon.MACE.gen<br />
+angel_item_info.weapon.HAMMER.gen<br />
+angel_item_info.weapon.SPEAR.gen<br />
+angel_item_info.weapon.CROSSBOW.gen
+</p>
+</td>
+<td>function(i,prefix)
+</td>
+<td>Generates 5 <a href="/index.php/Weapon" title="Weapon">weapons</a>. The tables correspond to <a href="/index.php/Combat_skill" title="Combat skill">combat skills</a>, and are not repeated. For example, a vault can't generate two types of swords.
+</td></tr>
+<tr>
+<td>
+<p>angel_item_info.ammo.ARROW<br />
+angel_item_info.ammo.BOLT<br />
+angel_item_info.ammo.BLOWDART
+</p>
+</td>
+<td>function()
+</td>
+<td>When a ranged weapon is generated, it will also generate a random subtype of the proper ammunition.
+</td></tr></tbody></table>
+<h3><span class="mw-headline" id="Materials">Materials</span></h3>
+<table class="prettytable anchortable" border="1" cellpadding="4" cellspacing="0" style="margin: 1em 1em 1em 0; background: #f9f9f9; border: 1px #aaa solid; border-collapse: collapse;">
+
+<tbody><tr style="background-color:#ddd">
+<th width="20%">Table
+</th>
+<th width="15%">Inputs
+</th>
+<th width="15%">Article
+</th>
+<th width="60%">Notes
+</th></tr>
+<tr>
+<td>materials.clouds
+<p>materials.rain
+</p>
+</td>
+<td>function()
+</td>
+<td><a href="/index.php/Evil_weather" class="mw-redirect" title="Evil weather">Evil weather</a>
+</td>
+<td>Associated regional <a href="/index.php/Interaction" class="mw-redirect" title="Interaction">interactions</a> are automatically written by <code>init/generators.lua</code>.
+</td></tr>
+<tr>
+<td>materials.divine.metal
+<p>materials.divine.silk
+</p>
+</td>
+<td>function(<a href="/index.php/Sphere" title="Sphere">sphere</a>)
+</td>
+<td><a href="/index.php/Divine_metal" title="Divine metal">Divine metal</a>
+<p><a href="/index.php/Divine_fabric" title="Divine fabric">Divine fabric</a>
+</p>
+</td>
+<td>The list of potential spheres is determined by the individual function. See <a href="/index.php/Lua_script_examples#New_divine_metal" title="Lua script examples">Lua script examples#New divine metal</a>.
+<p><code><a href="/index.php/Inorganic_material_definition_token#DIVINE" title="Inorganic material definition token">[DIVINE]</a></code> and <code><a href="/index.php/Inorganic_material_definition_token#SPHERE" title="Inorganic material definition token">[SPHERE]</a></code> are added by <code>generators.lua</code> rather than in the individual function.
+</p>
+</td></tr>
+<tr>
+<td>materials.mythical_remnant
+</td>
+<td>function(<a href="/index.php/Sphere" title="Sphere">sphere</a>)
+</td>
+<td><a href="/index.php/Primordial_remnant" title="Primordial remnant">Primordial remnant</a>
+</td>
+<td>Possible spheres are determined by <code>random_object_parameters.mythical_sphere</code>.
+</td></tr>
+<tr>
+<td>materials.mythical_healing
+</td>
+<td>function()
+</td>
+<td><a href="/index.php/Mythical_substance" title="Mythical substance">Mythical substance</a>
+</td>
+<td>
+</td></tr></tbody></table>
+<h2><span class="mw-headline" id="Random_creatures">Random creatures</span></h2>
+<p>Creatures generated by <code>vanilla_procedural</code> use a number of shared functions to determine their attributes. The local <code>options</code> table stores most of the data used by these steps.
+</p>
+<h3><span class="mw-headline" id="rcp_functions">rcp functions</span></h3>
+<p>The random creature profile determines the basic body of a generated creature, such as "humanoid" or "<a href="/index.php/Toad" title="Toad">toad</a>", and provides options and data to later build the proper creature definition.
+</p>
+<table class="prettytable anchortable" border="1" cellpadding="4" cellspacing="0" style="margin: 1em 1em 1em 0; background: #f9f9f9; border: 1px #aaa solid; border-collapse: collapse;">
+
+<tbody><tr style="background-color:#ddd">
+<th width="40%">Function
+</th>
+<th width="60%">Notes
+</th></tr>
+<tr>
+<td><i>table</i> get_random_creature_profile(options,blacklist)
+</td>
+<td>Makes a weighted random choice of options from <code>random_creature_types</code> that satisfy arguments set in <code>options</code> (<code>options.do_water</code>, etc) and <code>blacklist</code>. Falls back to <code>random_creature_types.GENERAL_BLOB</code>.
+<p>At debug_level &gt;= 3, will log failures. At debug_level &gt;= 4, will also log successes.
+</p>
+</td></tr>
+<tr>
+<td><i>bool</i> is_valid_random_creature(<i>string</i>&#160;creature, <i>bool</i>&#160;do_water, <i>bool</i>&#160;humanoidable_only, <i>bool</i>&#160;is_good, <i>bool</i>&#160;beast_only)
+</td>
+<td>Checks if <code>creature</code> is a valid key in certain tables depending on the arguments: aquatic (<code>do_water</code>), can be "twisted into humanoid form" (<code>humanoidable_only</code>), isn't an "evil" species (<code>is_good</code>), and is an animal species (<code>beast_only</code>)
+<p>At debug_level &gt;= 3, will be logged.
+</p>
+</td></tr>
+<tr>
+<td><i>void</i> finalize_random_creature_types()
+</td>
+<td>If <code>random_creature_types_finalized</code> is false: sets it to true and iterates over <code>random_creature_types</code> to sanitize certain inputs.
+</td></tr></tbody></table>
+<h3><span class="mw-headline" id="Shared_functions">Shared functions</span></h3>
+<p>Default creatures use <code>add_regular_tokens()</code>, <code>populate_sphere_info()</code>, <code>get_random_creature_profile()</code>, <code>add_body_size()</code> and <code>build_procgen_creature()</code> as the main steps in generating raws.
+</p>
+<table class="prettytable anchortable" border="1" cellpadding="4" cellspacing="0" style="margin: 1em 1em 1em 0; background: #f9f9f9; border: 1px #aaa solid; border-collapse: collapse;">
+
+<tbody><tr style="background-color:#ddd">
+<th width="40%">Function
+</th>
+<th width="60%">Notes
+</th></tr>
+<tr>
+<td>add_regular_tokens(tbl,options)
+</td>
+<td>Adds tokens to <code>tbl</code>. Sets <code><a href="/index.php/Creature_token#PETVALUE" title="Creature token">[PETVALUE]</a></code>, calculates material weaknesses (if <code>options.material_weakness</code>), and adds a few immunity tokens depending on <code>options.normal_biological</code>.
+</td></tr>
+<tr>
+<td>tile_string(arg)
+</td>
+<td>Returns a string usable for <code><a href="/index.php/Creature_token#CREATURE_TILE" title="Creature token">[CREATURE_TILE]</a></code>. Encloses number arguments in <code>'</code> characters.
+</td></tr>
+<tr>
+<td>add_body_size(tbl,size,options)
+</td>
+<td>Adds <code><a href="/index.php/Creature_token#BODY_SIZE" title="Creature token">[BODY_SIZE]</a></code> and sets <code>options.body_size</code>. Calls <code>body_size_properties()</code>.
+</td></tr>
+<tr>
+<td>body_size_properties(tbl,size,options)
+</td>
+<td>Adds <code><a href="/index.php/Creature_token#BUILDINGDESTROYER" title="Creature token">[BUILDINGDESTROYER]</a></code> if size &gt; 80,000; adds <code><a href="/index.php/Creature_token#GRASSTRAMPLE" title="Creature token">[GRASSTRAMPLE]</a></code> and <code><a href="/index.php/Creature_token#TRAPAVOID" title="Creature token">[TRAPAVOID]</a></code> if size &gt; 100,000.
+</td></tr>
+<tr>
+<td>populate_sphere_info(tbl,options)
+</td>
+<td>Adds <code><a href="/index.php/Creature_token#SPHERE" title="Creature token">[SPHERE]</a></code> tokens from <code>options.spheres</code>. If <code>options.do_sphere_rcm</code>, 1/2 chance to set <code>options.sphere_rcm</code>.
+</td></tr>
+<tr>
+<td>add_poison_bits(tbl,options)
+</td>
+<td>Generates a <a href="/index.php/Venom" title="Venom">poison material</a> based on <code>options.poison_state</code> and <code>options.sickness_name</code>.
+</td></tr>
+<tr>
+<td>build_procgen_creature(rcp,tbl,options)
+</td>
+<td>Calls <code>build_body_from_rcp()</code>, <code>build_description()</code>, and <code>build_pcg_graphics()</code>.
+</td></tr>
+<tr>
+<td>build_body_from_rcp(rcp,tbl,options)
+</td>
+<td>Generates based on <code>rcp</code> and <code>options</code>, assigns tweaks (mutations from the base body), tissues, organs, special attacks.
+</td></tr>
+<tr>
+<td>build_description(tbl,options)
+</td>
+<td>Writes the <code><a href="/index.php/Creature_token#DESCRIPTION" title="Creature token">[DESCRIPTION]</a></code> and any <code><a href="/index.php/Creature_token#PREFSTRING" title="Creature token">[PREFSTRING]</a></code>s.
+</td></tr>
+<tr>
+<td>build_pcg_graphics(tbl,options)
+</td>
+<td>Assigns <a href="/index.php/Procedural_graphics_layer" title="Procedural graphics layer">procedural graphics layers</a> based on <code>options.pcg_layering</code> keys set by <code>build_body_from_rcp()</code>.
+</td></tr></tbody></table>
+<h3><span class="mw-headline" id="Options">Options</span></h3>
+<table class="prettytable anchortable" border="1" cellpadding="4" cellspacing="0" style="margin: 1em 1em 1em 0; background: #f9f9f9; border: 1px #aaa solid; border-collapse: collapse;">
+
+<tbody><tr style="background-color:#ddd">
+<th width="15%">Key
+</th>
+<th width="20%">Usage
+</th>
+<th width="80%">Notes
+</th></tr>
+<tr>
+<td>token
+</td>
+<td>add_poison_bits()
+<p>build_body_from_rcp()
+</p>
+</td>
+<td>The creature's token.
+</td></tr>
+<tr>
+<td>do_water
+</td>
+<td>get_random_creature_profile()
+</td>
+<td>Use an aquatic rcp (<code>water_based_random_creature</code>)
+</td></tr>
+<tr>
+<td>humanoidable_only
+</td>
+<td>get_random_creature_profile()
+<p>build_body_from_rcp()
+</p>
+</td>
+<td>Use a rcp that can be turned into a humanoid form (<code>humanoidable_random_creature</code>), and automatically applies the <code>MAKE_HUMANOID</code> tweak. Will apply the tweak even if the body is already humanoid.
+</td></tr>
+<tr>
+<td>beast_only
+</td>
+<td>get_random_creature_profile()
+</td>
+<td>Forbids generic humanoid/blob/quadruped rcps (<code>not_beast_random_creature</code>).
+</td></tr>
+<tr>
+<td>normal_biological
+</td>
+<td>add_regular_tokens()
+</td>
+<td>If untrue, adds <code><a href="/index.php/Creature_token#AMPHIBIOUS" title="Creature token">[AMPHIBIOUS]</a></code>, <code><a href="/index.php/Creature_token#SWIMS_INNATE" title="Creature token">[SWIMS_INNATE]</a></code>, <code><a href="/index.php/Creature_token#NONAUSEA" title="Creature token">[NONAUSEA]</a></code>, <code><a href="/index.php/Creature_token#NOEXERT" title="Creature token">[NOEXERT]</a></code>, <code><a href="/index.php/Creature_token#NO_DIZZINESS" title="Creature token">[NO_DIZZINESS]</a></code>, <code><a href="/index.php/Creature_token#NOPAIN" title="Creature token">[NOPAIN]</a></code>, <code><a href="/index.php/Creature_token#NOSTUN" title="Creature token">[NOSTUN]</a></code>. Used by <a href="/index.php/Experiment" title="Experiment">experiments</a>.
+</td></tr>
+<tr>
+<td>always_nobreathe
+</td>
+<td>build_body_from_rcp()
+</td>
+<td>Adds <code><a href="/index.php/Creature_token#NOBREATHE" title="Creature token">[NOBREATHE]</a></code>, even if not uniform.
+</td></tr>
+<tr>
+<td>no_general_poison
+</td>
+<td>build_body_from_rcp()
+</td>
+<td>If untrue and the creature has blood or ichor, adds <code>[<a href="/index.php/Creature_token#CREATURE_CLASS" title="Creature token">CREATURE_CLASS</a>:GENERAL_POISON]</code>.
+</td></tr>
+<tr>
+<td>fire_immune
+</td>
+<td>build_body_from_rcp()
+</td>
+<td>Adds <code><a href="/index.php/Creature_token#FIREIMMUNE" title="Creature token">[FIREIMMUNE]</a></code>. Does not affect materials. Set if the creature has a fire interaction.
+</td></tr>
+<tr>
+<td>material_weakness
+</td>
+<td>add_regular_tokens()
+</td>
+<td>Will gain a 10x <code><a href="/index.php/Creature_token#MATERIAL_FORCE_MULTIPLIER" title="Creature token">[MATERIAL_FORCE_MULTIPLIER]</a></code> to a random weapon <a href="/index.php/Metal" title="Metal">metal</a> and a <code>[<a href="/index.php/Creature_token#GENERAL_MATERIAL_FORCE_MULTIPLIER" title="Creature token">GENERAL_MATERIAL_FORCE_MULTIPLIER</a>:1:2]</code>.
+</td></tr>
+<tr>
+<td>is_good
+</td>
+<td>
+<p>get_random_creature_profile()<br />
+build_body_from_rcp()<br />
+build_description()
+</p>
+</td>
+<td>Forbids "evil" rcps (<code>cannot_be_good_random_creature</code>).
+<p>Affects options for materials, tweaks, description. Cannot have attack tweaks unless the rcp forces it.
+</p>
+</td></tr>
+<tr>
+<td>is_evil
+</td>
+<td>build_body_from_rcp()
+<p>build_description()
+</p>
+</td>
+<td>Affects options for materials, tweaks, description.
+</td></tr>
+<tr>
+<td>spheres
+</td>
+<td>populate_sphere_info()
+<p>color_picker_functions<br />
+build_description()
+</p>
+</td>
+<td>A set of the creature's spheres.
+</td></tr>
+<tr>
+<td>do_sphere_rcm
+</td>
+<td>populate_sphere_info()
+</td>
+<td>Adds a 1/2 chance to set <code>options.sphere_rcm</code> to a material relevant to their spheres.
+</td></tr>
+<tr>
+<td>pick_sphere_rcm
+</td>
+<td>random_creature_class.UNIFORM.body_fun()
+</td>
+<td>If uniform, adds an additional 1/2 chance to use a material relevant to their spheres.
+</td></tr>
+<tr>
+<td>pos_sphere_rcm
+</td>
+<td>populate_sphere_info()
+</td>
+<td>Temporary data storage for possible sphere RCM during <code>populate_sphere_info()</code>.
+</td></tr>
+<tr>
+<td>sphere_rcm
+</td>
+<td>build_body_from_rcp()
+</td>
+<td>Forces the creature to be uniform and made of that <code>random_creature_material</code>.
+</td></tr>
+<tr>
+<td>always_insubstantial
+</td>
+<td>build_body_from_rcp()
+</td>
+<td>If uniform, will always choose an insubstantial material from <code>insubstantial_materials</code>.
+</td></tr>
+<tr>
+<td>never_uniform
+</td>
+<td>build_body_from_rcp()
+</td>
+<td>If <code>options.r_class</code> is UNIFORM, change it to FLESHY.
+</td></tr>
+<tr>
+<td>always_make_uniform
+</td>
+<td>build_body_from_rcp()
+</td>
+<td>Changes <code>options.r_class</code> to UNIFORM.
+</td></tr>
+<tr>
+<td>do_not_make_uniform
+</td>
+<td>build_body_from_rcp()
+</td>
+<td>Do not randomly change <code>options.r_class</code> to UNIFORM (normally there is a 1/20 chance), unless <code>options.sphere_rcm</code> is set.
+</td></tr>
+<tr>
+<td>walk_var
+</td>
+<td>build_body_from_rcp()
+</td>
+<td>A string for <code><a href="/index.php/Creature_token#APPLY_CREATURE_VARIATION" title="Creature token">[APPLY_CREATURE_VARIATION]</a></code>, ex: "STANDARD_WALKING_GAITS". Usually set by <code>rcp.body_base</code>.
+</td></tr>
+<tr>
+<td>walk_speed
+<p>special_walk_speed
+</p>
+</td>
+<td>build_body_from_rcp()
+</td>
+<td>The basic walking speed in a creature's <a href="/index.php/Gait" title="Gait">gait</a>. <code>options.special_walk_speed</code> will be used instead of <code>options.walk_speed</code> if both are present.
+<p>Crawling bodies use a <code>options.walk_speed</code> of 2900, walking bodies use 900.
+</p>
+</td></tr>
+<tr>
+<td>add_fly_gaits
+</td>
+<td>build_body_from_rcp()
+</td>
+<td>Creature has a flying gait even if wings aren't added. <code>local add_fly_gaits</code> is used for creatures with wings.
+</td></tr>
+<tr>
+<td>intangible_flier
+</td>
+<td>build_body_from_rcp()
+</td>
+<td>If <code>options.intangible</code> (set by certain uniform materials), sets <code>options.add_fly_gaits</code> and adds <code><a href="/index.php/Creature_token#FILER" title="Creature token">[FILER]</a></code>.
+</td></tr>
+<tr>
+<td>cannot_swim
+</td>
+<td>build_body_from_rcp()
+</td>
+<td>Will not add a <a href="/index.php/Swimming" class="mw-redirect" title="Swimming">swimming</a> gait.
+</td></tr>
+<tr>
+<td>no_tweak
+</td>
+<td>build_body_from_rcp()
+</td>
+<td>Will not add any random tweaks (such as body parts or attacks) to the basic creature that aren't specified by the rcp.
+</td></tr>
+<tr>
+<td>always_glowing_eyes
+</td>
+<td>build_body_from_rcp()
+</td>
+<td>Will always add glowing eyes if the creature has <code>options.eyes</code>.
+</td></tr>
+<tr>
+<td>
+<p>no_glowing_eyes<br />
+cannot_have_antennae<br />
+cannot_have_mandibles
+</p>
+</td>
+<td>build_body_from_rcp()
+</td>
+<td>Will not add the listed body tweaks.
+</td></tr>
+<tr>
+<td>no_random_attack_tweak
+</td>
+<td>build_body_from_rcp()
+</td>
+<td>Will not add attack tweaks (or body parts that grant them) that aren't specified by the rcp.
+</td></tr>
+<tr>
+<td>strong_attack_tweak
+</td>
+<td>build_body_from_rcp()
+</td>
+<td>Enables access to attack tweaks. Will always gain an attack tweak, unless the rcp already specifies it.
+</td></tr>
+<tr>
+<td>experiment_attack_tweak
+</td>
+<td>build_body_from_rcp()
+</td>
+<td>Enables access to a limited set of attack tweaks 1/4 of the time.
+</td></tr>
+<tr>
+<td>sickness_name
+</td>
+<td>add_poison_bits()
+</td>
+<td>Determines the name of <a href="/index.php/Syndrome" title="Syndrome">syndromes</a> caused by this creature.
+</td></tr>
+<tr>
+<td>poison_state
+</td>
+<td>add_poison_bits()
+<p>build_body_from_rcp()
+</p>
+</td>
+<td>Accepts "LIQUID" (default), "GAS", or "SOLID_POWDER". Determines the state of this creature's <a href="/index.php/Venom" title="Venom">venom</a>.
+</td></tr>
+<tr>
+<td>prioritize_bite
+</td>
+<td>post_attack_tweaks
+</td>
+<td>If true, non-bite attacks will have <code>[<a href="/index.php/Creature_token#PRIORITY" title="Creature token">PRIORITY</a>:SECOND]</code>. If untrue, non-bite attacks will have <code>[<a href="/index.php/Creature_token#PRIORITY" title="Creature token">PRIORITY</a>:MAIN]</code>.
+</td></tr>
+<tr>
+<td>bite_interaction
+</td>
+<td>post_attack_tweaks
+</td>
+<td>Adds <code><a href="/index.php/Creature_token#SPECIALATTACK_INTERACTION" title="Creature token">[SPECIALATTACK_INTERACTION]</a></code> to bite attacks.
+</td></tr>
+<tr>
+<td>can_bogey_polymorph
+</td>
+<td>post_gait_tweaks
+</td>
+<td>Allows the creature to use the <a href="/index.php/Bogeyman" title="Bogeyman">bogeyman</a> polymorph interaction.
+</td></tr>
+<tr>
+<td>rcp
+</td>
+<td>build_body_from_rcp()
+<p>build_description()
+</p>
+</td>
+<td>Set in <code>build_body_from_rcp()</code> from the <code>rcp</code> argument.
+<p>Usually derived from <code>random_creature_types</code>, passes information from the random creature profile.
+</p>
+</td></tr>
+<tr>
+<td>r_class
+</td>
+<td>build_body_from_rcp()
+</td>
+<td>Set to a table in <code>random_creature_class</code>. Describes the basic tissues/features a creature has, such as FLESHY, CHITIN_EXO, or UNIFORM.
+</td></tr>
+<tr>
+<td>surface
+</td>
+<td>build_body_from_rcp()
+</td>
+<td>The creature's exterior tissue. Set based on its <code>random_creature_class</code> and any tweaks.
+</td></tr>
+<tr>
+<td>rcm
+</td>
+<td>random_creature_class.UNIFORM.body_fun()
+</td>
+<td>Set by <code>random_creature_class.UNIFORM.body_fun()</code>.
+<p>If <code>options.sphere_rcm</code> is supplied, will use that, otherwise will be randomly chosen based on <code>options.is_evil</code>, <code>options.is_good</code>, <code>options.pick_sphere_rcm</code>, <code>options.rcp.requires_flexible_material</code>, and <code>options.always_insubstantial</code>.
+</p>
+</td></tr>
+<tr>
+<td>post_mat_adj
+</td>
+<td>build_description()
+</td>
+<td>A string that says "composed of X", etc. Normally supplied by <code>random_creature_material</code>.
+</td></tr>
+<tr>
+<td>matgloss
+</td>
+<td>random_creature_class.UNIFORM.body_fun()
+</td>
+<td>Temporary data storage when calling inorganic materials from <code>random_creature_material</code>.
+</td></tr>
+<tr>
+<td>tok1
+<p>tok2
+</p>
+</td>
+<td>random_creature_class.UNIFORM.body_fun()
+</td>
+<td>A uniform creature's <code>[<a href="/index.php/Tissue_definition_token#TISSUE_MATERIAL" title="Tissue definition token">TISSUE_MATERIAL</a>:options.tok1:options.tok2]</code>.
+<p>Must be supplied by <code>random_creature_material</code>.
+</p>
+</td></tr>
+<tr>
+<td>mat_temp1
+<p>mat_temp2
+</p>
+</td>
+<td>random_creature_class.UNIFORM.body_fun()
+</td>
+<td>A uniform creature's <code>[<a href="/index.php/Creature_token#USE_MATERIAL_TEMPLATE" title="Creature token">USE_MATERIAL_TEMPLATE</a>:options.tok1:options.tok2]</code>.
+<p>Can be supplied by <code>random_creature_material</code> to add an organic material.
+</p>
+</td></tr>
+<tr>
+<td>st_tok
+</td>
+<td>random_creature_class.UNIFORM.body_fun()
+</td>
+<td>A uniform creature's <code><a href="/index.php/Tissue_definition_token#TISSUE_MAT_STATE" title="Tissue definition token">[TISSUE_MAT_STATE]</a></code>. Must be supplied by <code>random_creature_material</code>.
+</td></tr>
+<tr>
+<td>fixed_temp
+</td>
+<td>random_creature_class.UNIFORM.body_fun()
+</td>
+<td>A uniform creature's <code><a href="/index.php/Creature_token#FIXED_TEMP" title="Creature token">[FIXED_TEMP]</a></code>.
+<p>Can be supplied by <code>random_creature_material</code>. If a material template is used, adds <code><a href="/index.php/Material_definition_token#MAT_FIXED_TEMP" title="Material definition token">[MAT_FIXED_TEMP]</a></code>.
+</p>
+</td></tr>
+<tr>
+<td>intangible
+</td>
+<td>build_body_from_rcp()
+</td>
+<td>Flag normally supplied by <code>random_creature_material</code>. Creature is non-solid, serves as the condition for <code>options.intangible_flier</code>. Limits access to attack tweak.
+</td></tr>
+<tr>
+<td>fire_mat
+</td>
+<td>build_body_from_rcp()
+</td>
+<td>Flag normally supplied by <code>random_creature_material</code>. Prevents a fire breath attack.
+</td></tr>
+<tr>
+<td>body_string
+</td>
+<td>build_body_from_rcp()
+</td>
+<td>An array of all <code><a href="/index.php/Creature_token#BODY" title="Creature token">[BODY]</a></code> tokens used.
+</td></tr>
+<tr>
+<td>body_size
+</td>
+<td>build_description()
+<p>build_pcg_graphics()
+</p>
+</td>
+<td>Set by <code>body_size_properties()</code>. Stores the creature's volume for later use.
+</td></tr>
+<tr>
+<td>body_tweak_candidate
+</td>
+<td>build_body_from_rcp()
+</td>
+<td>Temporary data storage for assigning tweaks.
+</td></tr>
+<tr>
+<td>tweak
+</td>
+<td><i>quadruped_function_curry()</i>
+</td>
+<td>Temporary data storage for quadruped leg tweaks.
+</td></tr>
+<tr>
+<td>
+<p>attack_tweak<br />
+btc<br />
+btc2<br />
+</p>
+</td>
+<td>build_body_from_rcp()
+<p>build_description()
+</p>
+</td>
+<td>Strings used as a key to retrieve information about the chosen tweaks. Set by <code>build_body_from_rcp()</code>
+</td></tr>
+<tr>
+<td>
+<p>eyes<br />
+beak<br />
+brain<br />
+cheeks<br />
+eyelids<br />
+guts<br />
+heart<br />
+lips<br />
+lungs<br />
+mouth<br />
+neck<br />
+nose<br />
+ribs<br />
+skull<br />
+spine<br />
+teeth<br />
+throat<br />
+tongue
+</p>
+</td>
+<td>build_body_from_rcp()
+</td>
+<td>Normally set by the creature's <code>random_creature_class</code> (MAMMAL, CHITIN_EXO, etc).
+<p>Adds the listed parts to the creature's body plan.
+</p>
+</td></tr>
+<tr>
+<td>
+<p>blood<br />
+ichor<br />
+goo
+</p>
+</td>
+<td>build_body_from_rcp()
+</td>
+<td>Normally set by the creature's <code>random_creature_class</code> (MAMMAL, CHITIN_EXO, etc).
+<p>Sets the creature's default <code><a href="/index.php/Creature_token#BLOOD" title="Creature token">[BLOOD]</a></code> type.
+</p>
+</td></tr>
+<tr>
+<td>force_goo
+<p>force_ichor
+</p>
+</td>
+<td>build_body_from_rcp()
+</td>
+<td>If the creature is not uniform, overwrites the creature's default <code><a href="/index.php/Creature_token#BLOOD" title="Creature token">[BLOOD]</a></code> type.
+</td></tr>
+<tr>
+<td>blood_color
+</td>
+<td>build_body_from_rcp()
+</td>
+<td>Expects a function that takes a color's HSV values and returns a boolean. Sets the creature's blood color to any color that returns true for this function.
+<p>Only works with standard <a href="/index.php/Blood" title="Blood">blood</a> from <code>options.blood</code>.
+</p>
+</td></tr>
+<tr>
+<td>
+<p>glowing_eyes<br />
+fingers<br />
+toes<br />
+finger_claws<br />
+toe_claws<br />
+finger_nails<br />
+toe_nails<br />
+finger_talons<br />
+toe_talons<br />
+bat_wings<br />
+lacy_wings<br />
+feathered_wings<br />
+has_proboscis<br />
+do_webs
+</p>
+</td>
+<td>build_procgen_creature()
+</td>
+<td>Set when building the body if the creature has those traits. Can be called by the description and when building graphics.
+<p><a href="/index.php/Nail" title="Nail">Nails</a>, claws, and talons are given attacks.
+</p>
+</td></tr>
+<tr>
+<td>eye_count
+</td>
+<td>build_procgen_creature()
+</td>
+<td>The number of eyes the creature has. Set when building the body.
+</td></tr>
+<tr>
+<td>tail_count
+</td>
+<td>build_procgen_creature()
+</td>
+<td>The number of tails the creature has. Can be set before building the body.
+</td></tr>
+<tr>
+<td>clp
+</td>
+<td>build_procgen_creature()
+</td>
+<td>The creature's body color. Chosen randomly or based on material unless <code>rcp.cannot_have_color</code> is true.
+</td></tr>
+<tr>
+<td>eye_clp
+</td>
+<td>build_procgen_creature()
+</td>
+<td>The creature's eye color. Set when building the body.
+</td></tr>
+<tr>
+<td>
+<p>color_f<br />
+color_b<br />
+color_br
+</p>
+</td>
+<td>build_body_from_rcp()
+</td>
+<td>Set based on <code>options.clp</code> unless <code>options.forced_color</code> is supplied. Adds <code>[<a href="/index.php/Creature_token#COLOR" title="Creature token">COLOR</a>:options.color_f:options.color_b:options.color_br]</code>.
+</td></tr>
+<tr>
+<td>forced_color
+</td>
+<td>build_body_from_rcp()
+</td>
+<td>Adds <code>[<a href="/index.php/Creature_token#COLOR" title="Creature token">COLOR</a>:options.forced_color.f:options.forced_color.b:options.forced_color.br]</code> and <code><a href="/index.php/Creature_token#NO_UNIT_TYPE_COLOR" title="Creature token">[NO_UNIT_TYPE_COLOR]</a></code>.
+</td></tr>
+<tr>
+<td>animal_coloring_allowed
+</td>
+<td>build_body_from_rcp()
+</td>
+<td>Color must be a shade of brown.
+</td></tr>
+<tr>
+<td>experiment_colors
+</td>
+<td>build_body_from_rcp()
+</td>
+<td>Uses the set of colors assigned to <a href="/index.php/Experiment" title="Experiment">experiments</a>.
+</td></tr>
+<tr>
+<td>exp_proc_surface_color
+</td>
+<td>build_pcg_graphics
+</td>
+<td>Stores the index of an experiment's color, for portraits.
+</td></tr>
+<tr>
+<td>
+<p>name_mat<br />
+flavor_adj<br />
+potential_end_phrase
+</p>
+</td>
+<td>Custom names
+</td>
+<td>An array of names for a creature's material. Can be supplied by <code>random_creature_material</code>.
+</td></tr>
+<tr>
+<td>feature_flavor_adj
+</td>
+<td>Custom names
+</td>
+<td>When <code>build_description()</code> is run, populates <code>options.flavor_adj</code> with strings based on the creature's tweaks and <a href="/index.php/Color" title="Color">color</a>.
+</td></tr>
+<tr>
+<td>can_learn
+</td>
+<td>build_description()
+</td>
+<td>Enables certain description strings, such as "it knows and intones the names of all it encounters". Used by default intelligent creatures.
+</td></tr>
+<tr>
+<td>no_extra_description
+</td>
+<td>build_description()
+</td>
+<td>Will not add strings from <code>default_desc_adds</code>/<code>good_desc_adds</code>/<code>evil_desc_adds</code> to the end of the description.
+</td></tr>
+<tr>
+<td>custom_desc_func
+</td>
+<td>build_description()
+</td>
+<td>Adds the output of a string instead of <code>default_desc_adds</code>/etc. Cannot have <code>options.no_extra_description.</code>
+</td></tr>
+<tr>
+<td>end_phrase
+</td>
+<td>build_description()
+</td>
+<td>Adds a phrase after all other generated description pieces, such as <a href="/index.php/Night_creature" title="Night creature">"Now you know why you fear the night."</a>
+</td></tr>
+<tr>
+<td>and_add
+</td>
+<td>build_description()
+</td>
+<td>Temporary storage for description grammar.
+</td></tr>
+<tr>
+<td>pref_str
+</td>
+<td>build_description()
+</td>
+<td>A table of possible <code><a href="/index.php/Creature_token#PREFSTRING" title="Creature token">[PREFSTRING]</a></code>s.
+</td></tr>
+<tr>
+<td>fallback_pref_str
+</td>
+<td>build_description()
+</td>
+<td>A string that is added to <code>options.pref_str</code> it is empty.
+</td></tr>
+<tr>
+<td>odor_string
+<p>odor_level
+</p>
+</td>
+<td>build_body_from_rcp()
+</td>
+<td>Sets <code><a href="/index.php/Creature_token#ODOR_STRING" title="Creature token">[ODOR_STRING]</a></code> and <code><a href="/index.php/Creature_token#ODOR_LEVEL" title="Creature token">[ODOR_LEVEL]</a></code> respectively. Can be supplied by <code>random_creature_material</code>.
+</td></tr>
+<tr>
+<td>forced_odor_string
+<p>forced_odor_level
+forced_odor_chance
+</p>
+</td>
+<td>build_body_from_rcp()
+</td>
+<td>Sets <code><a href="/index.php/Creature_token#ODOR_STRING" title="Creature token">[ODOR_STRING]</a></code> and <code><a href="/index.php/Creature_token#ODOR_LEVEL" title="Creature token">[ODOR_LEVEL]</a></code> (defaults to 90), 1 in <code>options.forced_odor_chance</code> of the time.
+</td></tr>
+<tr>
+<td>always_odor
+</td>
+<td>build_body_from_rcp()
+</td>
+<td>Can use the <code>options.forced_odor_string</code> even if creature is uniform.
+</td></tr>
+<tr>
+<td>pcg_layering
+</td>
+<td>build_pcg_graphics()
+</td>
+<td>A set of <a href="/index.php/Procedural_graphics_layer" title="Procedural graphics layer">procedural graphics layers</a>. Set by <code>build_pcg_graphics()</code>.
+</td></tr>
+<tr>
+<td>pcg_layering_base
+</td>
+<td>build_pcg_graphics()
+</td>
+<td>The basic PCG layer-set string, concatenated to form <code>options.pcg_layering</code> keys. Set by <code>build_body_from_rcp()</code>.
+</td></tr>
+<tr>
+<td>pcg_layering_modifier
+</td>
+<td>build_pcg_graphics()
+</td>
+<td>A set of extra info for PCG layering, such as experiment skin types. Set by <code>build_body_from_rcp()</code>.
+</td></tr>
+<tr>
+<td>use_werebeast_pcg
+</td>
+<td>build_pcg_graphics()
+</td>
+<td>If true, use the layers for <a href="/index.php/Werebeast" title="Werebeast">werebeasts</a>.
+</td></tr>
+<tr>
+<td>experiment_layering
+</td>
+<td>build_pcg_graphics()
+</td>
+<td>If true, use the layers for humanoid <a href="/index.php/Experiment" title="Experiment">experiments</a>. Expects <code>options.experiment_colors</code> to be true.
+</td></tr>
+<tr>
+<td>
+<p>is_male_version
+night_creature_strength_pref
+night_creature_agile_pref
+night_creature_strength_agile_pref
+</p>
+</td>
+<td>night_troll_names
+</td>
+<td>Flags used by <a href="/index.php/Night_troll" title="Night troll">Night trolls</a>.
+</td></tr>
+<tr>
+<td>no_default_werebeast_curse
+</td>
+<td>werebeast_origin_interactions.default()
+</td>
+<td>If this is true for a custom function in creatures.night_creature.werebeast, <code>generate_from_list(werebeast_origin_interactions,tok,rcp.name_string,options)</code> will not be able to use werebeast_origin_interactions.default. This allows <a href="/index.php/Mod" title="Mod">mods</a> to better control access to <a href="/index.php/Werebeast" title="Werebeast">werebeast</a> curses.
+</td></tr>
+<tr>
+<td>amalgam_experiment
+<p>failed_experiment
+</p>
+</td>
+<td><i>experiment_description()</i>
+</td>
+<td>Flags used for default <a href="/index.php/Experiment" title="Experiment">experiments</a>.
+<p><br />
+</p>
+</td></tr>
+<tr>
+<td>experiment_name_type
+</td>
+<td><i>experiment_name_token</i>
+</td>
+<td>Array of nouns used instead of <code>ropar.making_experiment</code> for naming <a href="/index.php/Experiment" title="Experiment">experiments</a>.
+</td></tr>
+<tr>
+<td>is_large
+</td>
+<td><i>make_failed_rcp()</i>
+</td>
+<td>Used for large failed <a href="/index.php/Experiment" title="Experiment">experiments</a>. Capitalizes the creature tile.
+</td></tr>
+<tr>
+<td>eadj
+<p>fadj
+</p>
+</td>
+<td>Custom names
+</td>
+<td>Temporary data storage for complex name generation.
+</td></tr></tbody></table>
+<h3><span class="mw-headline" id="rcp_parameters">rcp parameters</span></h3></div>

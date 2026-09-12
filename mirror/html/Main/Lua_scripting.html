@@ -1,0 +1,270 @@
+<div class="mw-parser-output"><table class="version-table" style="text-align: center; margin: 3px auto 5px; padding: 0.25em; border-radius: 3px; -webkit-border-radius: 3px; -moz-border-radius: 3px; -o-border-radius: 3px; -ms-border-radius: 3px;; border: 2px solid #bbdd88; background: #f5ffee; min-width:27em"><tbody><tr><td style="padding: 0.3em 0.3em; width: 100%;"><div style="margin-bottom:6px;" class="version-links-r1"><span style="font-size:100%"><span class="version-link"><span style="text-decoration: none; color: #72A329; background-color: #E2FDCE; border-radius: 2px; -webkit-border-radius: 2px; -moz-border-radius: 2px; -o-border-radius: 2px; -ms-border-radius: 2px; border: 1px solid #bbdd88; padding: 0.2em;"><b>v53.16</b></span></span><span style="font-weight:bold;" class="dot">&#160;·</span> <span class="version-link"><a href="/index.php?title=DF2014:Lua_scripting&amp;action=edit&amp;redlink=1" class="new" title="DF2014:Lua scripting (page does not exist)"><span style="text-decoration: none; color: #888;">v0.47.05</span></a></span></span></div><span>This article is about the current version of DF.<br />Note that some content may still need to be updated.</span><br />
+<div style="float: right; font-size:75%; padding-right:2px; margin-top:-2px; margin-bottom:-7px;"><span class="version-link"><a href="/index.php/Dwarf_Fortress_Wiki:V" class="mw-redirect" title="Dwarf Fortress Wiki:V"><span style="text-decoration: none; color: #72A329;">More Info</span></a></span><span style="font-weight:bold;" class="dot">&#160;·</span> <span class="version-link"><a href="/index.php/Template:Av" class="mw-redirect" title="Template:Av"><span style="text-decoration: none; color: #72A329;">V</span></a></span></div></td></tr>
+</tbody></table>
+<div class="floatright"><a href="/index.php/File:Lua-Logo.svg" class="image"><img alt="Lua-Logo.svg" src="https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cf/Lua-Logo.svg/120px-Lua-Logo.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=imageinfo&amp;utm_content=thumbnail" decoding="async" width="100" height="100" srcset="https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cf/Lua-Logo.svg/250px-Lua-Logo.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=imageinfo&amp;utm_content=thumbnail 1.5x" /></a></div>
+<p><span style="margin-top:5px">
+</span></p>
+<table class="vertical-navbox nowraplinks" cellspacing="5" cellpadding="0" style="float:right;clear:right;width:22.0em;margin:0 0 1.0em 1.0em;background:#f9f9f9;border:1px solid #aaa;padding:0.2em;border-spacing:0.4em 0;text-align:center;line-height:1.4em;font-size:88%;"><tbody><tr><th class="" style=";padding:0.2em 0.4em 0.2em;;font-size:145%;line-height:1.2em;"><a href="/index.php/Modding" title="Modding">Modding</a><hr /></th>
+      </tr><tr>
+<th class="" style="padding:0.1em;;;">
+<big><a href="/index.php/Token" title="Token">Tokens</a></big></th>
+</tr><tr>
+<td class="" style="padding:0 0.1em 0.4em;font-size: 12px; padding-left: 5px; text-align: center;;">
+<a href="/index.php/Audio" title="Audio">Audio</a><span style="font-weight: bold; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;">&#160;&#183;&#32;</span> <a href="/index.php/Biome_token" title="Biome token">Biome</a><span style="font-weight: bold; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;">&#160;&#183;&#32;</span> <a href="/index.php/Graphics_token" title="Graphics token">Graphics</a><span style="font-weight: bold; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;">&#160;&#183;&#32;</span> <a href="/index.php/Graphics#Tile_Page" title="Graphics">Tile page</a><span style="font-weight: bold; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;">&#160;&#183;&#32;</span> <a href="/index.php/Interaction_token" title="Interaction token">Interaction</a><span style="font-weight: bold; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;">&#160;&#183;&#32;</span> <a href="/index.php/Mod_info_token" title="Mod info token">Mod info</a><span style="font-weight: bold; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;">&#160;&#183;&#32;</span> <a href="/index.php/Plant_token" title="Plant token">Plant</a><span style="font-weight: bold; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;">&#160;&#183;&#32;</span> <a href="/index.php/Speech_file" title="Speech file">Speech</a><span style="font-weight: bold; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;">&#160;&#183;&#32;</span> <a href="/index.php/Sphere#Sphere_tokens" title="Sphere">Sphere</a><span style="font-weight: bold; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;">&#160;&#183;&#32;</span> <a href="/index.php/Syndrome#The_anatomy_of_a_syndrome" title="Syndrome">Syndrome</a><span style="font-weight: bold; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;">&#160;&#183;&#32;</span> <a href="/index.php/World_token" title="World token">World</a></td>
+</tr><tr>
+<th class="" style="padding:0.1em;;;">
+Body tokens</th>
+</tr><tr>
+<td class="" style="padding:0 0.1em 0.4em;font-size: 12px; padding-left: 5px; text-align: center;;">
+<a href="/index.php/Body_token" title="Body token">Body</a><span style="font-weight: bold; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;">&#160;&#183;&#32;</span> <a href="/index.php/Body_detail_plan_token" title="Body detail plan token">Body detail plan</a><span style="font-weight: bold; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;">&#160;&#183;&#32;</span> <a href="/index.php/Bodygloss" title="Bodygloss">Bodygloss</a><span style="font-weight: bold; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;">&#160;&#183;&#32;</span> <a href="/index.php/Tissue_definition_token" title="Tissue definition token">Tissue</a></td>
+</tr><tr>
+<th class="" style="padding:0.1em;;;">
+Creature tokens</th>
+</tr><tr>
+<td class="" style="padding:0 0.1em 0.4em;font-size: 12px; padding-left: 5px; text-align: center;;">
+<a href="/index.php/Creature_token" title="Creature token">Creature</a><span style="font-weight: bold; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;">&#160;&#183;&#32;</span> <a href="/index.php/Creature_mannerism_token" title="Creature mannerism token">Creature mannerism</a><span style="font-weight: bold; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;">&#160;&#183;&#32;</span>  <a href="/index.php/Personality_facet" title="Personality facet">Personality facet</a><span style="font-weight: bold; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;">&#160;&#183;&#32;</span> <a href="/index.php/Creature_variation_token" title="Creature variation token">Creature variation</a><span style="font-weight: bold; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;">&#160;&#183;&#32;</span> <a href="/index.php/Procedural_graphics_layer" title="Procedural graphics layer">Procedural graphics layer</a></td>
+</tr><tr>
+<th class="" style="padding:0.1em;;;">
+Descriptor tokens</th>
+</tr><tr>
+<td class="" style="padding:0 0.1em 0.4em;font-size: 12px; padding-left: 5px; text-align: center;;">
+<a href="/index.php/Descriptor_color_token" title="Descriptor color token">Descriptor color</a><span style="font-weight: bold; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;">&#160;&#183;&#32;</span> <a href="/index.php/Color" title="Color">Color</a><span style="font-weight: bold; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;">&#160;&#183;&#32;</span> <a href="/index.php/Descriptor_pattern_token" title="Descriptor pattern token">Descriptor pattern</a><span style="font-weight: bold; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;">&#160;&#183;&#32;</span> <a href="/index.php/Descriptor_shape_token" title="Descriptor shape token">Descriptor shape</a></td>
+</tr><tr>
+<th class="" style="padding:0.1em;;;">
+Entity tokens</th>
+</tr><tr>
+<td class="" style="padding:0 0.1em 0.4em;font-size: 12px; padding-left: 5px; text-align: center;;">
+<a href="/index.php/Entity_token" title="Entity token">Entity</a><span style="font-weight: bold; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;">&#160;&#183;&#32;</span> <a href="/index.php/Ethic" title="Ethic">Ethic</a><span style="font-weight: bold; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;">&#160;&#183;&#32;</span> <a href="/index.php/Language_token" title="Language token">Language</a><span style="font-weight: bold; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;">&#160;&#183;&#32;</span>  <a href="/index.php/Personality_value" title="Personality value">Value</a><span style="font-weight: bold; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;">&#160;&#183;&#32;</span> <a href="/index.php/Position_token" title="Position token">Position</a> (<a href="/index.php/Variable_positions" title="Variable positions">Variable positions</a>)</td>
+</tr><tr>
+<th class="" style="padding:0.1em;;;">
+Job tokens</th>
+</tr><tr>
+<td class="" style="padding:0 0.1em 0.4em;font-size: 12px; padding-left: 5px; text-align: center;;">
+<a href="/index.php/Building_token" title="Building token">Building</a><span style="font-weight: bold; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;">&#160;&#183;&#32;</span> <a href="/index.php/Labor_token" title="Labor token">Labor</a><span style="font-weight: bold; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;">&#160;&#183;&#32;</span> <a href="/index.php/Reaction" title="Reaction">Reaction</a><span style="font-weight: bold; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;">&#160;&#183;&#32;</span> <a href="/index.php/Skill_token" title="Skill token">Skill</a><span style="font-weight: bold; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;">&#160;&#183;&#32;</span> <a href="/index.php/Unit_type_token" title="Unit type token">Unit type</a></td>
+</tr><tr>
+<th class="" style="padding:0.1em;;;">
+Item tokens</th>
+</tr><tr>
+<td class="" style="padding:0 0.1em 0.4em;font-size: 12px; padding-left: 5px; text-align: center;;">
+<a href="/index.php/Item_token" title="Item token">Item type</a><span style="font-weight: bold; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;">&#160;&#183;&#32;</span> <a href="/index.php/Item_definition_token" title="Item definition token">Item definition</a><span style="font-weight: bold; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;">&#160;&#183;&#32;</span> <a href="/index.php/Ammo_token" title="Ammo token">Ammo</a><span style="font-weight: bold; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;">&#160;&#183;&#32;</span> <a href="/index.php/Armor_token" title="Armor token">Armor</a><span style="font-weight: bold; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;">&#160;&#183;&#32;</span> <a href="/index.php/Instrument_token" title="Instrument token">Instrument</a><span style="font-weight: bold; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;">&#160;&#183;&#32;</span> <a href="/index.php/Tool_token" title="Tool token">Tool</a><span style="font-weight: bold; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;">&#160;&#183;&#32;</span> <a href="/index.php/Trap_component_token" title="Trap component token">Trap component</a><span style="font-weight: bold; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;">&#160;&#183;&#32;</span> <a href="/index.php/Weapon_token" title="Weapon token">Weapon</a></td>
+</tr><tr>
+<th class="" style="padding:0.1em;;;">
+Material tokens</th>
+</tr><tr>
+<td class="" style="padding:0 0.1em 0.4em;font-size: 12px; padding-left: 5px; text-align: center;;">
+<a href="/index.php/Material_token" title="Material token">Material type</a><span style="font-weight: bold; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;">&#160;&#183;&#32;</span> <a href="/index.php/Material_definition_token" title="Material definition token">Material definition</a><span style="font-weight: bold; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;">&#160;&#183;&#32;</span> <a href="/index.php/Inorganic_material_definition_token" title="Inorganic material definition token">Inorganic material definition</a></td>
+</tr><tr>
+<th class="" style="padding:0.1em;;;">
+<hr /><big>Lua</big></th>
+</tr><tr>
+<td class="" style="padding:0 0.1em 0.4em;font-size: 12px; padding-left: 5px; text-align: center;;">
+<a class="mw-selflink selflink">Scripting</a><span style="font-weight: bold; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;">&#160;&#183;&#32;</span> <a href="/index.php/Lua_script_examples" title="Lua script examples">Examples</a><span style="font-weight: bold; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;">&#160;&#183;&#32;</span> <a href="/index.php/Lua_functions" title="Lua functions">Functions</a></td>
+</tr><tr><td style="text-align:right;font-size:115%;"><div class="noprint plainlinks hlist navbar mini" style="text-transform:uppercase; font-size:80%;"><div><span class="nv-view"><a href="/index.php/Template:V50_modding" title="Template:V50 modding"><span title="View this template" style="">v</span></a></span><span style="font-weight:bold;" class="dot">&#160;·</span> <span class="nv-talk"><a href="/index.php?title=Template_talk:V50_modding&amp;action=edit&amp;redlink=1" class="new" title="Template talk:V50 modding (page does not exist)"><span title="Discuss this template" style="">t</span></a></span><span style="font-weight:bold;" class="dot">&#160;·</span> <span class="nv-edit"><a rel="nofollow" class="external text" href="//dwarffortresswiki.org/index.php?title=Template:V50_modding&amp;action=edit"><span title="Edit this template" style="">e</span></a></span></div></div></td></tr>
+</tbody></table>
+<p><br />
+
+</p><p><i>This article is about procedural raw generation. Information on <a href="/index.php/Utility:DFHack" title="Utility:DFHack">Utility:DFHack</a> scripting can be found at <a rel="nofollow" class="external free" href="https://docs.dfhack.org/en/stable/">https://docs.dfhack.org/en/stable/</a>.</i>
+</p><p><b><a rel="nofollow" class="external text" href="https://www.lua.org/">Lua</a> scripting</b> is a feature of Dwarf Fortress's <a href="/index.php/Modding" title="Modding">modding</a> system. It is used to write definitions for procedurally-generated objects, with the stated goal of "supporting future <a href="/index.php/Magic" title="Magic">magical</a> endeavors." <a rel="nofollow" class="external autonumber" href="https://www.youtube.com/watch?v=Z9rzhFwgfUk">[1]</a>
+</p><p>It was added as an experimental feature in version 51.06 <a rel="nofollow" class="external autonumber" href="https://store.steampowered.com/news/app/975370/view/547854206358257941?l=english">[2]</a> and incorporated into the 52.01 release. <a rel="nofollow" class="external autonumber" href="https://www.bay12games.com/dwarves/index.html#2025-07-21">[3]</a><a rel="nofollow" class="external autonumber" href="https://store.steampowered.com/news/app/975370/view/547867141501617961">[4]</a>
+</p><p>Inorganic <a href="/index.php/Material_definition_token" title="Material definition token">materials</a>, <a href="/index.php/Language_token" title="Language token">languages</a>, <a href="/index.php/Creature_token" title="Creature token">creatures</a>, <a href="/index.php/Interaction_token" title="Interaction token">interactions</a>,  <a href="/index.php/Item_token" title="Item token">items</a> (currently excluding instruments), <a href="/index.php/Reaction" title="Reaction">reactions</a>, <a href="/index.php/Entity_token" title="Entity token">entities</a>, and <a href="/index.php/Plant_token" title="Plant token">plants</a> are open to this system.
+</p><p>Scripts are loaded from a mod's <code>scripts/init.lua</code> file, and can <code>require()</code> other files.
+</p>
+
+<h2><span class="mw-headline" id="Videos">Videos</span></h2>
+<p>Announcement video:
+</p>
+<ul><li><a rel="nofollow" class="external text" href="https://www.youtube.com/watch?v=Z9rzhFwgfUk">More powerful mods coming to Dwarf Fortress via Lua</a></li></ul>
+<p>Tutorials:
+</p>
+<ul><li><a rel="nofollow" class="external text" href="https://youtu.be/QMxgsUogIIk">Generating raws with Lua</a></li>
+<li><a rel="nofollow" class="external text" href="https://youtu.be/DEBTWMlUQzA">Random creatures with Lua</a></li></ul>
+<h2><span class="mw-headline" id="Structure">Structure</span></h2>
+<p>As of right now, Lua scripting is confined to generation of procedural objects. This is done by running the <code>generate()</code> function, a global function loaded in <code><b>data/init/generators.lua</b></code>. It runs unit tests, preprocess, do_once (or do_once_early), materials, items, languages, creatures, interactions, entities and postprocessing, in that order.
+</p><p>When random objects are first generated, the game populates two global tables, <code>world</code> and <code>random_object_parameters</code>.
+</p>
+<ul><li><code>world</code> contains info about the world currently being generated (or, in the future, played in). It contains <a href="/index.php/World_token" title="World token">worldgen parameters</a>, raw object definitions, and a few other fields.</li></ul>
+<ul><li><code>random_object_parameters</code> contains what the game expects to be generated in the current generation call.</li></ul>
+<p>You can print the contents of these tables to the log to see what data is available. The <a rel="nofollow" class="external text" href="https://steamcommunity.com/sharedfiles/filedetails/?id=3492961907">Runtime Dataminer</a> mod includes a script to read these tables.
+</p><p>DFHack also has a version of <a rel="nofollow" class="external text" href="https://github.com/DFHack/df-structures/blob/master/df.world.xml">df.world</a>, though these tables are not necessarily equivalent. Headers and paths may differ, even when referencing the same data.
+</p>
+<h3><span class="mw-headline" id="Debugging">Debugging</span></h3>
+<p>You can set the global <code>debug_level</code> variable to print some debug info. It's a number, but what numbers are there are completely arbitrary. If it's &gt;0, it'll run unit tests; if it's &gt;=0.5, it'll display what step of generation it's at, at every step. You can use <code>get_debug_logger(x)</code> to return a function that logs to <code>lualog.txt</code> if the debug level is at least <code>x</code>.
+</p><p>Unit tests are functions that return a table, containing <code>good</code>, which, if truthy, is considered passed, and <code>info</code>, which is a string that contains information on said pass or fail. These unit tests should have no side effects, i.e. they shouldn't muck with global state any. Here's an example unit test shipped with the generators:
+</p>
+<div style="clear:both;"></div>
+<table class="collapsible collapsed infobox gamedata" style="background: #fdfdfd; border: 1px solid #aaa; font-size: 88%; margin: 0 auto -1px; vertical-align: middle; width: 100%; max-width: 100em; table-layout: fixed;">
+<tbody><tr style="line-height: 1.5em;"><th scope="col" style="background: #cce6b3; padding: 0.25em 1em; text-align: center; display: table-cell;&#32;;"><div style="font-size: 114%; margin: 0 9em;">unittests.get_random_creature</div></th></tr>
+<tr style="line-height: 1.5em; text-align: left; display: table-cell;"><td><div style="overflow: auto;"><span class="gamedata-content" style="font-family: monospace; font-size:1.25em; white-space:pre;"><div class="mw-highlight mw-highlight-lang-lua mw-content-ltr" dir="ltr"><pre><span></span><span class="n">get_random_creature</span><span class="o">=</span><span class="kr">function</span><span class="p">()</span>
+        <span class="kd">local</span> <span class="n">cr</span><span class="o">=</span><span class="n">world</span><span class="p">.</span><span class="n">creature</span><span class="p">.</span><span class="n">get_random_creature</span><span class="p">()</span>
+        <span class="kd">local</span> <span class="n">res</span><span class="o">=</span><span class="p">{}</span>
+        <span class="n">res</span><span class="p">.</span><span class="n">good</span><span class="o">=</span><span class="nb">type</span><span class="p">(</span><span class="n">cr</span><span class="p">)</span><span class="o">==</span><span class="s1">&#39;table&#39;</span>
+        <span class="n">res</span><span class="p">.</span><span class="n">info</span><span class="o">=</span><span class="n">res</span><span class="p">.</span><span class="n">good</span> <span class="ow">and</span> <span class="p">(</span><span class="s2">&quot;Got a random creature: &quot;</span><span class="o">..</span><span class="n">cr</span><span class="p">.</span><span class="n">token</span><span class="p">)</span> <span class="ow">or</span> <span class="s2">&quot;No random creature could be gotten, even at most permissive!&quot;</span>
+        <span class="kr">return</span> <span class="n">res</span>
+    <span class="kr">end</span>
+</pre></div></span></div></td></tr></tbody></table>
+<h3><span class="mw-headline" id="Object_generation">Object generation</span></h3>
+<p>When <code>generate()</code> is called, it uses <code>random_object_parameters</code> to determine what is generated.
+</p><p>Before the world map is generated, <code>random_object_parameters.pre_gen_randoms</code> is true for one generation. Once the map is finalized, <code>random_object_parameters.main_world_randoms</code> is true for one generation when "generating prehistory"; most of the initial randomization takes place here. Further generation calls, such as for <a href="/index.php/Experiment" title="Experiment">experiments</a> being created, do not set these variables to true.
+</p><p>If you're registering an entirely new procedural object type, you can generate it during these steps. The game includes a number of tables which you can add functions to, the game runs each function in them when generating raws.
+</p>
+<ul><li><code>do_once</code> only runs in the "main world randoms" generation call and is the safest option for adding new objects.</li>
+<li><code>do_once_early</code> runs in the "pre-gen randoms" generation call, and can be used for objects that need to be placed in the map like minerals or surface animal populations.</li>
+<li><code>preprocess</code> runs before either of the former tables, but is run during every <code>generate()</code> call and you cannot predict when this happens.</li>
+<li><code>postprocess</code> runs at the end of each <code>generate()</code> call, after the other steps complete.</li></ul>
+<p>You can see examples of registering objects through these steps on the <a href="/index.php/Lua_script_examples" title="Lua script examples">Lua script examples</a> page.
+</p><p>If you want to use <code>preprocess</code> or <code>postprocess</code> to generate raws, you can check if it's the right generation step by reading the aforementioned <code>random_object_parameters</code>. The <a href="/index.php/Lua_script_examples#Adamantine_alloys" title="Lua script examples">"adamantine alloys" example</a> includes such a check.
+</p><p>You can also mess around with <code>random_object_parameters</code> in preprocessing. Vanilla demon types are assigned here, and you can change the proportions as an end user if you want.
+</p>
+<h4><span class="mw-headline" id="Generation_from_list">Generation from list</span></h4>
+<p>After <code>preprocess</code> and <code>do_once</code>, the game then generates all of the individual objects that the <code>random_object_parameters</code> expects. This is where the vanilla random object types are built, and by adding new functions to the <a href="/index.php/Lua_functions#Generation_tables" title="Lua functions">generation tables</a>, it is possible to add alternatives to objects in those categories. For example, a creature generated from <code>creatures.werebeast</code> will respect the "werebeast count" world generation setting.
+The general procedure for this is that the game calls the <code>generate_from_list()</code> function on a table of functions, which calls every function and picks one of the resulting values at random depending on their weights.
+</p><p>For example, the <code>interactions.secrets</code> table contains one entry, that for necromancers; it returns a table containing three entries: <code>{raws=tbl,weight=1,spheres=spheres}</code>.
+</p>
+<ul><li><code>raws</code> is the full raw text of the interaction.</li>
+<li><code>weight</code> is the random weight for the interaction, i.e. if you add another function which returns a table containing <code>weight=2</code>, that will be twice as likely as necromancers.</li>
+<li><code>spheres</code> is some extra data the generator might be able to use. It actually doesn't, at this point, but one could override <code>generate_random_interactions()</code> with their own version that takes into account <code>spheres</code> and, say, tries to evenly distribute generated secrets over available spheres. (This didn't end up in vanilla, primarily out of concerns of bug-like behavior cropping up).</li></ul>
+<h4><span class="mw-headline" id="Languages">Languages</span></h4>
+<p>Languages are special, though; as can be seen in the <a href="/index.php/Divine_language/script" title="Divine language/script">Divine language/script</a> or <a href="/index.php/Lua_script_examples#Identity_language" title="Lua script examples">identity language</a>. The <code>languages</code> table just expects to return table containing translations, e.g. <code>tbl["ABBEY"]="abbey"</code>. If you want to procedurally add words or symbols (and yes, these are both doable), you can do so with <code>raws.register_languages()</code> in another function table.
+</p>
+<h2><span class="mw-headline" id="Creatures">Creatures</span></h2>
+<p>Creatures have a lot more to them than other procedural objects. Forgotten beasts are, in a sense, the simplest of them:
+</p>
+<div style="clear:both;"></div>
+<table class="collapsible collapsed infobox gamedata" style="background: #fdfdfd; border: 1px solid #aaa; font-size: 88%; margin: 0 auto -1px; vertical-align: middle; width: 100%; max-width: 100em; table-layout: fixed;">
+<tbody><tr style="line-height: 1.5em;"><th scope="col" style="background: #cce6b3; padding: 0.25em 1em; text-align: center; display: table-cell;&#32;;"><div style="font-size: 114%; margin: 0 9em;">creatures.fb.default</div></th></tr>
+<tr style="line-height: 1.5em; text-align: left; display: table-cell;"><td><div style="overflow: auto;"><span class="gamedata-content" style="font-family: monospace; font-size:1.25em; white-space:pre;"><div class="mw-highlight mw-highlight-lang-lua mw-content-ltr" dir="ltr"><pre><span></span><span class="n">creatures</span><span class="p">.</span><span class="n">fb</span><span class="p">.</span><span class="n">default</span><span class="o">=</span><span class="kr">function</span><span class="p">(</span><span class="n">layer_type</span><span class="p">,</span><span class="n">tok</span><span class="p">)</span>
+    <span class="kd">local</span> <span class="n">tbl</span><span class="o">=</span><span class="p">{}</span>
+    <span class="kd">local</span> <span class="n">options</span><span class="o">=</span><span class="p">{</span>
+        <span class="n">strong_attack_tweak</span><span class="o">=</span><span class="kc">true</span><span class="p">,</span>
+        <span class="n">spheres</span><span class="o">=</span><span class="p">{</span><span class="n">CAVERNS</span><span class="o">=</span><span class="kc">true</span><span class="p">},</span>
+        <span class="n">is_evil</span><span class="o">=</span><span class="kc">true</span><span class="p">,</span>
+        <span class="n">sickness_name</span><span class="o">=</span><span class="s2">&quot;beast sickness&quot;</span><span class="p">,</span>
+        <span class="n">token</span><span class="o">=</span><span class="n">tok</span>
+    <span class="p">}</span>
+    <span class="n">tbl</span><span class="o">=</span><span class="n">split_to_lines</span><span class="p">(</span><span class="n">tbl</span><span class="p">,</span><span class="s">[[</span>
+<span class="s">    [FEATURE_BEAST]</span>
+<span class="s">    [ATTACK_TRIGGER:0:0:2]</span>
+<span class="s">    [NAME:forgotten beast:forgotten beasts:forgotten beast]</span>
+<span class="s">    [CASTE_NAME:forgotten beast:forgotten beasts:forgotten beast]</span>
+<span class="s">    [NO_GENDER]</span>
+<span class="s">    [CARNIVORE]</span>
+<span class="s">    [DIFFICULTY:10]</span>
+
+<span class="s">    [NATURAL_SKILL:WRESTLING:6]</span>
+<span class="s">    [NATURAL_SKILL:BITE:6]</span>
+<span class="s">    [NATURAL_SKILL:GRASP_STRIKE:6]</span>
+<span class="s">    [NATURAL_SKILL:STANCE_STRIKE:6]</span>
+<span class="s">    [NATURAL_SKILL:MELEE_COMBAT:6]</span>
+<span class="s">    [NATURAL_SKILL:DODGING:6]</span>
+<span class="s">    [NATURAL_SKILL:SITUATIONAL_AWARENESS:6]</span>
+<span class="s">    [LARGE_PREDATOR]</span>
+<span class="s">    ]]</span><span class="p">)</span>
+    <span class="n">add_regular_tokens</span><span class="p">(</span><span class="n">tbl</span><span class="p">,</span><span class="n">options</span><span class="p">)</span>
+    <span class="n">tbl</span><span class="p">[</span><span class="o">#</span><span class="n">tbl</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span><span class="o">=</span><span class="n">layer_type</span><span class="o">==</span><span class="mi">0</span> <span class="ow">and</span> <span class="s2">&quot;[BIOME:SUBTERRANEAN_WATER]&quot;</span> <span class="ow">or</span> <span class="s2">&quot;[BIOME:SUBTERRANEAN_CHASM]&quot;</span>
+    <span class="kr">if</span> <span class="n">layer_type</span><span class="o">==</span><span class="mi">0</span> <span class="kr">then</span> <span class="n">options</span><span class="p">.</span><span class="n">spheres</span><span class="p">.</span><span class="n">WATER</span><span class="o">=</span><span class="kc">true</span> <span class="kr">end</span>
+    <span class="n">options</span><span class="p">.</span><span class="n">spheres</span><span class="p">[</span><span class="n">pick_random</span><span class="p">(</span><span class="n">evil_spheres</span><span class="p">)]</span><span class="o">=</span><span class="kc">true</span>
+    <span class="n">options</span><span class="p">.</span><span class="n">do_water</span><span class="o">=</span><span class="n">layer_type</span><span class="o">==</span><span class="mi">0</span>
+    <span class="n">populate_sphere_info</span><span class="p">(</span><span class="n">tbl</span><span class="p">,</span><span class="n">options</span><span class="p">)</span>
+    <span class="kd">local</span> <span class="n">rcp</span><span class="o">=</span><span class="n">get_random_creature_profile</span><span class="p">(</span><span class="n">options</span><span class="p">)</span>
+    <span class="n">add_body_size</span><span class="p">(</span><span class="n">tbl</span><span class="p">,</span><span class="nb">math.max</span><span class="p">(</span><span class="mi">10000000</span><span class="p">,</span><span class="n">rcp</span><span class="p">.</span><span class="n">min_size</span><span class="p">),</span><span class="n">options</span><span class="p">)</span>
+    <span class="n">tbl</span><span class="p">[</span><span class="o">#</span><span class="n">tbl</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span><span class="o">=</span><span class="s2">&quot;[CREATURE_TILE:&quot;</span><span class="o">..</span><span class="n">tile_string</span><span class="p">(</span><span class="n">rcp</span><span class="p">.</span><span class="n">tile</span><span class="p">)</span><span class="o">..</span><span class="s2">&quot;]&quot;</span>
+    <span class="n">build_procgen_creature</span><span class="p">(</span><span class="n">rcp</span><span class="p">,</span><span class="n">tbl</span><span class="p">,</span><span class="n">options</span><span class="p">)</span>
+    <span class="kr">return</span> <span class="p">{</span><span class="n">creature</span><span class="o">=</span><span class="n">tbl</span><span class="p">,</span><span class="n">weight</span><span class="o">=</span><span class="mi">1</span><span class="p">}</span>
+<span class="kr">end</span>
+</pre></div></span></div></td></tr></tbody></table>
+<p>This is a lot of info! First, you build an <code>options</code> table; it's possible to make a full <a href="/index.php/Lua_functions#Options" title="Lua functions">list of options used in vanilla</a>, but other mods can also use arbitrary options. It then adds all the usual special-to-forgotten-beast tokens, in a big string, followed by calling <code>add_regular_tokens(tbl,options)</code>, which adds some stuff common to all (vanilla) procedural creatures, based on the options given.
+</p><p>It sets <code>do_water</code> and the WATER <a href="/index.php/Sphere" title="Sphere">sphere</a> if the FB is in a water <a href="/index.php/Cavern" title="Cavern">cavern</a>, an option which whitelists certain random creature profiles, as well as adding a random evil sphere.
+</p><p><code>populate_sphere_info()</code> is similar to <code>add_regular_tokens()</code>; it adds all of the spheres in <code>options.spheres</code> to the creature, using the <code><a href="/index.php/Creature_token#SPHERE" title="Creature token">[SPHERE]</a></code> token, then, if certain options are set, does more.
+</p><p>Then, it gets a random creature profile using <code>get_random_creature_profile()</code> and the options, uses <code>add_body_size()</code> to set the BODY_SIZE tokens and attendant things that come with it, sets the creature tile, and finally runs the Big Function, <code>build_procgen_creature()</code>, which creates the description, body, tissues, et cetera.
+</p>
+<h3><span class="mw-headline" id="Random_Creature_Profiles">Random Creature Profiles</span></h3>
+<dl><dd><div class="noprint relarticle mainarticle"><i>Main article: <a href="/index.php/Random_creature_profile" title="Random creature profile">Random creature profile</a></i></div></dd></dl>
+<p>A random creature profile is a type of "thing" a generated creature can be. For example:
+</p>
+<div style="clear:both;"></div>
+<table class="collapsible collapsed infobox gamedata" style="background: #fdfdfd; border: 1px solid #aaa; font-size: 88%; margin: 0 auto -1px; vertical-align: middle; width: 100%; max-width: 100em; table-layout: fixed;">
+<tbody><tr style="line-height: 1.5em;"><th scope="col" style="background: #cce6b3; padding: 0.25em 1em; text-align: center; display: table-cell;&#32;;"><div style="font-size: 114%; margin: 0 9em;">random_creature_types.GENERAL_QUADRUPED</div></th></tr>
+<tr style="line-height: 1.5em; text-align: left; display: table-cell;"><td><div style="overflow: auto;"><span class="gamedata-content" style="font-family: monospace; font-size:1.25em; white-space:pre;"><div class="mw-highlight mw-highlight-lang-lua mw-content-ltr" dir="ltr"><pre><span></span><span class="n">GENERAL_QUADRUPED</span><span class="o">=</span><span class="p">{</span>
+		<span class="n">name_string</span><span class="o">=</span><span class="s2">&quot;quadruped&quot;</span><span class="p">,</span>
+		<span class="n">tile</span><span class="o">=</span><span class="s1">&#39;Q&#39;</span><span class="p">,</span>
+		<span class="n">body_base</span><span class="o">=</span><span class="s2">&quot;QUADRUPED&quot;</span><span class="p">,</span>
+		<span class="n">c_class</span><span class="o">=</span><span class="s2">&quot;UNIFORM&quot;</span><span class="p">,</span>
+		<span class="n">cannot_have_get_more_legs</span><span class="o">=</span><span class="kc">true</span><span class="p">,</span>
+		<span class="n">min_size</span><span class="o">=</span><span class="mi">70000</span><span class="p">,</span>
+		<span class="n">weight</span><span class="o">=</span><span class="mi">1000</span>
+		<span class="p">},</span>
+</pre></div></span></div></td></tr></tbody></table>
+<p>Of these, only <code>cannot_have_get_more_legs</code> is optional. <code>build_procgen_creature()</code> has direct access to the rcp, as the first argument, and thus extra table entries can be used however you like.
+</p><p><code>body_base</code> points to a key in <code>body_base_fun</code>, which is used to set creature options (walking and <a href="/index.php/Procedural_graphics_layer" title="Procedural graphics layer">PCG layering</a> are set this way) and returns a list of <a href="/index.php/Body_token" title="Body token">body tokens</a>. Quadrupeds use a special function to vary the sprite, so here's the body base function for a humanoid.
+</p>
+<div style="clear:both;"></div>
+<table class="collapsible collapsed infobox gamedata" style="background: #fdfdfd; border: 1px solid #aaa; font-size: 88%; margin: 0 auto -1px; vertical-align: middle; width: 100%; max-width: 100em; table-layout: fixed;">
+<tbody><tr style="line-height: 1.5em;"><th scope="col" style="background: #cce6b3; padding: 0.25em 1em; text-align: center; display: table-cell;&#32;;"><div style="font-size: 114%; margin: 0 9em;">body_base_fun.HUMANOID</div></th></tr>
+<tr style="line-height: 1.5em; text-align: left; display: table-cell;"><td><div style="overflow: auto;"><span class="gamedata-content" style="font-family: monospace; font-size:1.25em; white-space:pre;"><div class="mw-highlight mw-highlight-lang-lua mw-content-ltr" dir="ltr"><pre><span></span><span class="n">HUMANOID</span><span class="o">=</span><span class="kr">function</span><span class="p">(</span><span class="n">rcp</span><span class="p">,</span><span class="n">options</span><span class="p">)</span>
+		<span class="n">options</span><span class="p">.</span><span class="n">pcg_layering_base</span><span class="o">=</span><span class="s2">&quot;BEAST_HUMANOID&quot;</span>
+		<span class="n">options</span><span class="p">.</span><span class="n">walk_var</span><span class="o">=</span><span class="s2">&quot;STANDARD_BIPED_GAITS&quot;</span>
+		<span class="n">options</span><span class="p">.</span><span class="n">walk_speed</span><span class="o">=</span><span class="mi">900</span>
+		<span class="kr">return</span> <span class="p">{</span><span class="s2">&quot;RCP_UPPER_BODY&quot;</span><span class="p">,</span><span class="s2">&quot;RCP_LOWER_BODY&quot;</span><span class="p">,</span><span class="s2">&quot;RCP_NECK&quot;</span><span class="p">,</span><span class="s2">&quot;RCP_HEAD&quot;</span><span class="p">,</span><span class="s2">&quot;RCP_TWO_PART_ARMS&quot;</span><span class="p">,</span><span class="s2">&quot;RCP_TWO_PART_LEGS&quot;</span><span class="p">}</span>
+	<span class="kr">end</span>
+</pre></div></span></div></td></tr></tbody></table>
+<p><code>c_class</code> also refers to another determines the kind of tissue layers the creature has. "FLESHY", "MAMMAL", "CHITIN_EXO", etc imply a biological creature with sinew, blood, different organs, nerves, and so on. "UNIFORM" describes a creature made of a single material, the choice influenced by its options. The <code>random_creature_class</code> and <code>random_creature_material</code> tables store the info for these traits.
+</p><p>Organic creatures can be tweaked to alter their surfaces, such as becoming skinless, hairy, or even uniform.
+</p>
+<h3><span class="mw-headline" id="Tweaks">Tweaks</span></h3>
+<p>In the broadest sense, a tweak is any deviation from the creature profile. The aforementioned surface changes, new body parts, and attack interactions are all examples of tweaks.
+</p><p>A number of <a href="/index.php/Lua_functions#Options" title="Lua functions">options</a> change the available tweaks or force one to happen, for example:
+</p>
+<ul><li><code>options.no_tweak</code> disables random tweaks.</li>
+<li><code>options.strong_attack_tweak</code> allows the creature to always pick from the <code>attack_tweaks</code> table; ie: "Beware its webs!"</li>
+<li><code>options.humanoidable_only</code> makes the creature "twisted into humanoid form" (if evil), or "a &lt;creature&gt; in humanoid form" (if otherwise).</li></ul>
+<p>One potential use of <code>btc1_tweaks</code> (see <a href="/index.php/Lua_functions#Creature_patching" title="Lua functions">Lua functions#Creature patching</a>) is to add custom tweak candidates, pointing to keys in <code>tweaks</code>.
+</p>
+<h3><span class="mw-headline" id="Color_pickers">Color pickers</span></h3>
+<p>Color picker functions can give more fitting <a href="/index.php/Color" title="Color">color</a> choices based on the options, instead of the default full spectrum. There are color pickers for certain malevolent <a href="/index.php/Sphere" title="Sphere">spheres</a>, giving them a dark appearance. <a href="/index.php/Werebeast" title="Werebeast">Werebeasts</a> use a flag to only have natural brown or black colors.
+</p><p>If the creature matches <code>cond</code> and a given <a href="/index.php/Descriptor_color_token" title="Descriptor color token">descriptor color</a> matches <code>color</code>, then it is added to the list of candidates. Colors have <span style="border-bottom: 1px dotted #00c; cursor:help;" title="Hue, saturation, value">h,s,v</span> and <span style="border-bottom: 1px dotted #00c; cursor:help;" title="Red, green, blue">r,g,b</span> values ranging from 0-1 (except hue, which ranges 0-360 degrees).
+</p>
+<div style="clear:both;"></div>
+<table class="collapsible collapsed infobox gamedata" style="background: #fdfdfd; border: 1px solid #aaa; font-size: 88%; margin: 0 auto -1px; vertical-align: middle; width: 100%; max-width: 100em; table-layout: fixed;">
+<tbody><tr style="line-height: 1.5em;"><th scope="col" style="background: #cce6b3; padding: 0.25em 1em; text-align: center; display: table-cell;&#32;;"><div style="font-size: 114%; margin: 0 9em;">color_picker_functions</div></th></tr>
+<tr style="line-height: 1.5em; text-align: left; display: table-cell;"><td><div style="overflow: auto;"><span class="gamedata-content" style="font-family: monospace; font-size:1.25em; white-space:pre;"><div class="mw-highlight mw-highlight-lang-lua mw-content-ltr" dir="ltr"><pre><span></span><span class="n">color_picker_functions</span><span class="o">=</span><span class="p">{</span>
+    <span class="n">death_misery</span><span class="o">=</span><span class="p">{</span>
+        <span class="n">cond</span><span class="o">=</span><span class="kr">function</span><span class="p">(</span><span class="n">options</span><span class="p">)</span>
+            <span class="kr">return</span> <span class="n">options</span><span class="p">.</span><span class="n">spheres</span><span class="p">.</span><span class="n">DEATH</span> <span class="ow">or</span> <span class="n">options</span><span class="p">.</span><span class="n">spheres</span><span class="p">.</span><span class="n">MISERY</span>
+        <span class="kr">end</span><span class="p">,</span>
+        <span class="n">color</span><span class="o">=</span><span class="kr">function</span><span class="p">(</span><span class="n">color</span><span class="p">)</span>
+            <span class="c1">-- GRAY TO BLACK/BLUEISH GREEN THAT ARE SOMEWHAT GRAYISH AND MORE BLUE</span>
+            <span class="kr">return</span> <span class="p">(</span><span class="n">color</span><span class="p">.</span><span class="n">v</span><span class="o">&lt;=</span><span class="mf">0.75</span> <span class="ow">and</span> <span class="n">color</span><span class="p">.</span><span class="n">s</span><span class="o">&lt;=</span><span class="mf">0.001</span><span class="p">)</span> <span class="ow">or</span> <span class="p">(</span><span class="n">color</span><span class="p">.</span><span class="n">v</span><span class="o">==</span><span class="n">color</span><span class="p">.</span><span class="n">b</span> <span class="ow">and</span> <span class="n">color</span><span class="p">.</span><span class="n">s</span><span class="o">&lt;=</span><span class="mf">0.25</span><span class="p">)</span>
+        <span class="kr">end</span>
+    <span class="p">},</span>
+    <span class="n">darkness_night</span><span class="o">=</span><span class="p">{</span>
+        <span class="n">cond</span><span class="o">=</span><span class="kr">function</span><span class="p">(</span><span class="n">options</span><span class="p">)</span>
+            <span class="kr">return</span> <span class="n">options</span><span class="p">.</span><span class="n">spheres</span><span class="p">.</span><span class="n">DARKNESS</span> <span class="ow">or</span> <span class="n">options</span><span class="p">.</span><span class="n">spheres</span><span class="p">.</span><span class="n">NIGHT</span>
+        <span class="kr">end</span><span class="p">,</span>
+        <span class="n">color</span><span class="o">=</span><span class="kr">function</span><span class="p">(</span><span class="n">color</span><span class="p">)</span>
+            <span class="c1">-- GRAY TO BLACK OR DARK BLUISH</span>
+            <span class="kr">return</span> <span class="n">color</span><span class="p">.</span><span class="n">v</span><span class="o">&lt;=</span><span class="mf">0.4</span> <span class="ow">and</span> <span class="p">(</span><span class="n">color</span><span class="p">.</span><span class="n">s</span> <span class="o">&lt;</span> <span class="mf">0.001</span> <span class="ow">or</span> <span class="p">(</span><span class="n">color</span><span class="p">.</span><span class="n">h</span><span class="o">&gt;</span><span class="mi">180</span> <span class="ow">and</span> <span class="n">color</span><span class="p">.</span><span class="n">h</span><span class="o">&lt;=</span><span class="mi">240</span><span class="p">))</span>
+        <span class="kr">end</span>
+    <span class="p">},</span>
+    <span class="n">werebeast</span><span class="o">=</span><span class="p">{</span>
+        <span class="n">cond</span><span class="o">=</span><span class="kr">function</span><span class="p">(</span><span class="n">options</span><span class="p">)</span>
+            <span class="c1">-- werebeasts only, in vanilla</span>
+            <span class="kr">return</span> <span class="n">options</span><span class="p">.</span><span class="n">animal_coloring_allowed</span>
+        <span class="kr">end</span><span class="p">,</span>
+        <span class="n">color</span><span class="o">=</span><span class="kr">function</span><span class="p">(</span><span class="n">color</span><span class="p">)</span>
+            <span class="c1">--BROWN OKAY TOO</span>
+            <span class="kr">return</span> <span class="n">color</span><span class="p">.</span><span class="n">h</span><span class="o">&gt;=</span><span class="mi">30</span> <span class="ow">and</span> <span class="n">color</span><span class="p">.</span><span class="n">h</span><span class="o">&lt;=</span><span class="mi">48</span> <span class="ow">and</span> <span class="n">color</span><span class="p">.</span><span class="n">b</span><span class="o">&lt;=</span><span class="mf">0.15</span> <span class="ow">and</span> <span class="n">color</span><span class="p">.</span><span class="n">v</span><span class="o">&lt;=</span><span class="mf">0.75</span> <span class="ow">and</span> <span class="n">color</span><span class="p">.</span><span class="n">v</span> <span class="o">&gt;</span> <span class="mi">0</span>
+        <span class="kr">end</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div></span></div></td></tr></tbody></table>
+<p><code>options.blood_color</code> works like a color picker function. If any colors match its function, then its <a href="/index.php/Blood" title="Blood">blood</a> will be colored like one of them. <a href="/index.php/Bogeymen" class="mw-redirect" title="Bogeymen">Bogeymen</a> and <a href="/index.php/Nightmare" title="Nightmare">nightmares</a> have a function that gives them magenta blood, for example, but you can create your own blood color functions.
+</p><p>Creatures with other blood types, such as ichor, are unaffected.
+</p>
+<div style="clear:both;"></div>
+<table class="collapsible collapsed infobox gamedata" style="background: #fdfdfd; border: 1px solid #aaa; font-size: 88%; margin: 0 auto -1px; vertical-align: middle; width: 100%; max-width: 100em; table-layout: fixed;">
+<tbody><tr style="line-height: 1.5em;"><th scope="col" style="background: #cce6b3; padding: 0.25em 1em; text-align: center; display: table-cell;&#32;;"><div style="font-size: 114%; margin: 0 9em;">options.blood_color (Bogeyman)</div></th></tr>
+<tr style="line-height: 1.5em; text-align: left; display: table-cell;"><td><div style="overflow: auto;"><span class="gamedata-content" style="font-family: monospace; font-size:1.25em; white-space:pre;"><div class="mw-highlight mw-highlight-lang-lua mw-content-ltr" dir="ltr"><pre><span></span><span class="n">blood_color</span><span class="o">=</span><span class="kr">function</span><span class="p">(</span><span class="n">cl</span><span class="p">)</span>
+            <span class="c1">-- DARKER MAGENTA COLORS</span>
+            <span class="kr">return</span> <span class="n">cl</span><span class="p">.</span><span class="n">h</span><span class="o">&gt;=</span><span class="mi">260</span> <span class="ow">and</span> <span class="n">cl</span><span class="p">.</span><span class="n">h</span> <span class="o">&lt;=</span> <span class="mi">340</span> <span class="ow">and</span> <span class="n">cl</span><span class="p">.</span><span class="n">v</span> <span class="o">&lt;=</span> <span class="mf">0.5</span> <span class="ow">and</span> <span class="n">cl</span><span class="p">.</span><span class="n">v</span> <span class="o">&gt;=</span> <span class="mf">0.1</span>
+        <span class="kr">end</span>
+</pre></div></span></div></td></tr></tbody></table></div>

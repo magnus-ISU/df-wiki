@@ -1,0 +1,1007 @@
+<div class="mw-parser-output"><table class="version-table" style="text-align: center; margin: 3px auto 5px; padding: 0.25em; border-radius: 3px; -webkit-border-radius: 3px; -moz-border-radius: 3px; -o-border-radius: 3px; -ms-border-radius: 3px;; border: 2px solid #bbdd88; background: #f5ffee; min-width:27em"><tbody><tr><td style="padding: 0.3em 0.3em; width: 100%;"><div style="margin-bottom:6px;" class="version-links-r1"><span style="font-size:100%"><span class="version-link"><span style="text-decoration: none; color: #72A329; background-color: #E2FDCE; border-radius: 2px; -webkit-border-radius: 2px; -moz-border-radius: 2px; -o-border-radius: 2px; -ms-border-radius: 2px; border: 1px solid #bbdd88; padding: 0.2em;"><b>v53.16</b></span></span><span style="font-weight:bold;" class="dot">&#160;·</span> <span class="version-link"><a href="/index.php?title=DF2014:Lua_script_examples&amp;action=edit&amp;redlink=1" class="new" title="DF2014:Lua script examples (page does not exist)"><span style="text-decoration: none; color: #888;">v0.47.05</span></a></span></span></div><span>This article is about the current version of DF.<br />Note that some content may still need to be updated.</span><br />
+<div style="float: right; font-size:75%; padding-right:2px; margin-top:-2px; margin-bottom:-7px;"><span class="version-link"><a href="/index.php/Dwarf_Fortress_Wiki:V" class="mw-redirect" title="Dwarf Fortress Wiki:V"><span style="text-decoration: none; color: #72A329;">More Info</span></a></span><span style="font-weight:bold;" class="dot">&#160;·</span> <span class="version-link"><a href="/index.php/Template:Av" class="mw-redirect" title="Template:Av"><span style="text-decoration: none; color: #72A329;">V</span></a></span></div></td></tr>
+</tbody></table>
+<p><span style="margin-top:5px">
+</span></p>
+<table class="vertical-navbox nowraplinks" cellspacing="5" cellpadding="0" style="float:right;clear:right;width:22.0em;margin:0 0 1.0em 1.0em;background:#f9f9f9;border:1px solid #aaa;padding:0.2em;border-spacing:0.4em 0;text-align:center;line-height:1.4em;font-size:88%;"><tbody><tr><th class="" style=";padding:0.2em 0.4em 0.2em;;font-size:145%;line-height:1.2em;"><a href="/index.php/Modding" title="Modding">Modding</a><hr /></th>
+      </tr><tr>
+<th class="" style="padding:0.1em;;;">
+<big><a href="/index.php/Token" title="Token">Tokens</a></big></th>
+</tr><tr>
+<td class="" style="padding:0 0.1em 0.4em;font-size: 12px; padding-left: 5px; text-align: center;;">
+<a href="/index.php/Audio" title="Audio">Audio</a><span style="font-weight: bold; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;">&#160;&#183;&#32;</span> <a href="/index.php/Biome_token" title="Biome token">Biome</a><span style="font-weight: bold; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;">&#160;&#183;&#32;</span> <a href="/index.php/Graphics_token" title="Graphics token">Graphics</a><span style="font-weight: bold; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;">&#160;&#183;&#32;</span> <a href="/index.php/Graphics#Tile_Page" title="Graphics">Tile page</a><span style="font-weight: bold; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;">&#160;&#183;&#32;</span> <a href="/index.php/Interaction_token" title="Interaction token">Interaction</a><span style="font-weight: bold; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;">&#160;&#183;&#32;</span> <a href="/index.php/Mod_info_token" title="Mod info token">Mod info</a><span style="font-weight: bold; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;">&#160;&#183;&#32;</span> <a href="/index.php/Plant_token" title="Plant token">Plant</a><span style="font-weight: bold; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;">&#160;&#183;&#32;</span> <a href="/index.php/Speech_file" title="Speech file">Speech</a><span style="font-weight: bold; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;">&#160;&#183;&#32;</span> <a href="/index.php/Sphere#Sphere_tokens" title="Sphere">Sphere</a><span style="font-weight: bold; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;">&#160;&#183;&#32;</span> <a href="/index.php/Syndrome#The_anatomy_of_a_syndrome" title="Syndrome">Syndrome</a><span style="font-weight: bold; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;">&#160;&#183;&#32;</span> <a href="/index.php/World_token" title="World token">World</a></td>
+</tr><tr>
+<th class="" style="padding:0.1em;;;">
+Body tokens</th>
+</tr><tr>
+<td class="" style="padding:0 0.1em 0.4em;font-size: 12px; padding-left: 5px; text-align: center;;">
+<a href="/index.php/Body_token" title="Body token">Body</a><span style="font-weight: bold; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;">&#160;&#183;&#32;</span> <a href="/index.php/Body_detail_plan_token" title="Body detail plan token">Body detail plan</a><span style="font-weight: bold; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;">&#160;&#183;&#32;</span> <a href="/index.php/Bodygloss" title="Bodygloss">Bodygloss</a><span style="font-weight: bold; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;">&#160;&#183;&#32;</span> <a href="/index.php/Tissue_definition_token" title="Tissue definition token">Tissue</a></td>
+</tr><tr>
+<th class="" style="padding:0.1em;;;">
+Creature tokens</th>
+</tr><tr>
+<td class="" style="padding:0 0.1em 0.4em;font-size: 12px; padding-left: 5px; text-align: center;;">
+<a href="/index.php/Creature_token" title="Creature token">Creature</a><span style="font-weight: bold; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;">&#160;&#183;&#32;</span> <a href="/index.php/Creature_mannerism_token" title="Creature mannerism token">Creature mannerism</a><span style="font-weight: bold; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;">&#160;&#183;&#32;</span>  <a href="/index.php/Personality_facet" title="Personality facet">Personality facet</a><span style="font-weight: bold; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;">&#160;&#183;&#32;</span> <a href="/index.php/Creature_variation_token" title="Creature variation token">Creature variation</a><span style="font-weight: bold; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;">&#160;&#183;&#32;</span> <a href="/index.php/Procedural_graphics_layer" title="Procedural graphics layer">Procedural graphics layer</a></td>
+</tr><tr>
+<th class="" style="padding:0.1em;;;">
+Descriptor tokens</th>
+</tr><tr>
+<td class="" style="padding:0 0.1em 0.4em;font-size: 12px; padding-left: 5px; text-align: center;;">
+<a href="/index.php/Descriptor_color_token" title="Descriptor color token">Descriptor color</a><span style="font-weight: bold; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;">&#160;&#183;&#32;</span> <a href="/index.php/Color" title="Color">Color</a><span style="font-weight: bold; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;">&#160;&#183;&#32;</span> <a href="/index.php/Descriptor_pattern_token" title="Descriptor pattern token">Descriptor pattern</a><span style="font-weight: bold; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;">&#160;&#183;&#32;</span> <a href="/index.php/Descriptor_shape_token" title="Descriptor shape token">Descriptor shape</a></td>
+</tr><tr>
+<th class="" style="padding:0.1em;;;">
+Entity tokens</th>
+</tr><tr>
+<td class="" style="padding:0 0.1em 0.4em;font-size: 12px; padding-left: 5px; text-align: center;;">
+<a href="/index.php/Entity_token" title="Entity token">Entity</a><span style="font-weight: bold; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;">&#160;&#183;&#32;</span> <a href="/index.php/Ethic" title="Ethic">Ethic</a><span style="font-weight: bold; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;">&#160;&#183;&#32;</span> <a href="/index.php/Language_token" title="Language token">Language</a><span style="font-weight: bold; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;">&#160;&#183;&#32;</span>  <a href="/index.php/Personality_value" title="Personality value">Value</a><span style="font-weight: bold; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;">&#160;&#183;&#32;</span> <a href="/index.php/Position_token" title="Position token">Position</a> (<a href="/index.php/Variable_positions" title="Variable positions">Variable positions</a>)</td>
+</tr><tr>
+<th class="" style="padding:0.1em;;;">
+Job tokens</th>
+</tr><tr>
+<td class="" style="padding:0 0.1em 0.4em;font-size: 12px; padding-left: 5px; text-align: center;;">
+<a href="/index.php/Building_token" title="Building token">Building</a><span style="font-weight: bold; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;">&#160;&#183;&#32;</span> <a href="/index.php/Labor_token" title="Labor token">Labor</a><span style="font-weight: bold; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;">&#160;&#183;&#32;</span> <a href="/index.php/Reaction" title="Reaction">Reaction</a><span style="font-weight: bold; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;">&#160;&#183;&#32;</span> <a href="/index.php/Skill_token" title="Skill token">Skill</a><span style="font-weight: bold; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;">&#160;&#183;&#32;</span> <a href="/index.php/Unit_type_token" title="Unit type token">Unit type</a></td>
+</tr><tr>
+<th class="" style="padding:0.1em;;;">
+Item tokens</th>
+</tr><tr>
+<td class="" style="padding:0 0.1em 0.4em;font-size: 12px; padding-left: 5px; text-align: center;;">
+<a href="/index.php/Item_token" title="Item token">Item type</a><span style="font-weight: bold; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;">&#160;&#183;&#32;</span> <a href="/index.php/Item_definition_token" title="Item definition token">Item definition</a><span style="font-weight: bold; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;">&#160;&#183;&#32;</span> <a href="/index.php/Ammo_token" title="Ammo token">Ammo</a><span style="font-weight: bold; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;">&#160;&#183;&#32;</span> <a href="/index.php/Armor_token" title="Armor token">Armor</a><span style="font-weight: bold; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;">&#160;&#183;&#32;</span> <a href="/index.php/Instrument_token" title="Instrument token">Instrument</a><span style="font-weight: bold; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;">&#160;&#183;&#32;</span> <a href="/index.php/Tool_token" title="Tool token">Tool</a><span style="font-weight: bold; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;">&#160;&#183;&#32;</span> <a href="/index.php/Trap_component_token" title="Trap component token">Trap component</a><span style="font-weight: bold; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;">&#160;&#183;&#32;</span> <a href="/index.php/Weapon_token" title="Weapon token">Weapon</a></td>
+</tr><tr>
+<th class="" style="padding:0.1em;;;">
+Material tokens</th>
+</tr><tr>
+<td class="" style="padding:0 0.1em 0.4em;font-size: 12px; padding-left: 5px; text-align: center;;">
+<a href="/index.php/Material_token" title="Material token">Material type</a><span style="font-weight: bold; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;">&#160;&#183;&#32;</span> <a href="/index.php/Material_definition_token" title="Material definition token">Material definition</a><span style="font-weight: bold; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;">&#160;&#183;&#32;</span> <a href="/index.php/Inorganic_material_definition_token" title="Inorganic material definition token">Inorganic material definition</a></td>
+</tr><tr>
+<th class="" style="padding:0.1em;;;">
+<hr /><big>Lua</big></th>
+</tr><tr>
+<td class="" style="padding:0 0.1em 0.4em;font-size: 12px; padding-left: 5px; text-align: center;;">
+<a href="/index.php/Lua_scripting" title="Lua scripting">Scripting</a><span style="font-weight: bold; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;">&#160;&#183;&#32;</span> <a class="mw-selflink selflink">Examples</a><span style="font-weight: bold; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;">&#160;&#183;&#32;</span> <a href="/index.php/Lua_functions" title="Lua functions">Functions</a></td>
+</tr><tr><td style="text-align:right;font-size:115%;"><div class="noprint plainlinks hlist navbar mini" style="text-transform:uppercase; font-size:80%;"><div><span class="nv-view"><a href="/index.php/Template:V50_modding" title="Template:V50 modding"><span title="View this template" style="">v</span></a></span><span style="font-weight:bold;" class="dot">&#160;·</span> <span class="nv-talk"><a href="/index.php?title=Template_talk:V50_modding&amp;action=edit&amp;redlink=1" class="new" title="Template talk:V50 modding (page does not exist)"><span title="Discuss this template" style="">t</span></a></span><span style="font-weight:bold;" class="dot">&#160;·</span> <span class="nv-edit"><a rel="nofollow" class="external text" href="//dwarffortresswiki.org/index.php?title=Template:V50_modding&amp;action=edit"><span title="Edit this template" style="">e</span></a></span></div></div></td></tr>
+</tbody></table>
+<p><br />
+
+</p>
+<dl><dd><div class="noprint relarticle mainarticle"><i>Main article: <a href="/index.php/Lua_scripting" title="Lua scripting">Lua scripting</a></i></div></dd></dl>
+<p>Snippets of vanilla generation can be found in <a href="/index.php/Category:Lua_script_pages" title="Category:Lua script pages">Category:Lua script pages</a>, and all vanilla scripts can be found in <code><a rel="nofollow" class="external text" href="https://github.com/Putnam3145/DF-Raws/tree/master/vanilla_procedural/scripts">data/vanilla/vanilla_procedural/scripts/</a></code>.
+</p>
+
+<h2><span class="mw-headline" id="Helper_functions">Helper functions</span></h2>
+<h3><span class="mw-headline" id="Search_by_reaction_class">Search by reaction class</span></h3>
+<p>This script returns a table of all inorganic materials with a given <code><a href="/index.php/Material_definition_token#REACTION_CLASS" title="Material definition token">[REACTION_CLASS]</a></code>. The <code>mat</code> table also has <code>reaction_product_class</code>, which includes both <code><a href="/index.php/Material_definition_token#MATERIAL_REACTION_PRODUCT" title="Material definition token">[MATERIAL_REACTION_PRODUCT]</a></code> and <code><a href="/index.php/Material_definition_token#ITEM_REACTION_PRODUCT" title="Material definition token">[ITEM_REACTION_PRODUCT]</a></code> IDs.
+</p>
+<div style="clear:both;"></div>
+<table class="collapsible collapsed infobox gamedata" style="background: #fdfdfd; border: 1px solid #aaa; font-size: 88%; margin: 0 auto -1px; vertical-align: middle; width: 100%; max-width: 100em; table-layout: fixed;">
+<tbody><tr style="line-height: 1.5em;"><th scope="col" style="background: #cce6b3; padding: 0.25em 1em; text-align: center; display: table-cell;&#32;;"><div style="font-size: 114%; margin: 0 9em;">get_all_by_reaction_class()</div></th></tr>
+<tr style="line-height: 1.5em; text-align: left; display: table-cell;"><td><div style="overflow: auto;"><span class="gamedata-content" style="font-family: monospace; font-size:1.25em; white-space:pre;"><div class="mw-highlight mw-highlight-lang-lua mw-content-ltr" dir="ltr"><pre><span></span><span class="kr">function</span> <span class="nf">get_all_by_reaction_class</span><span class="p">(</span><span class="n">rc</span><span class="p">)</span>
+    <span class="kd">local</span> <span class="n">valid</span><span class="o">=</span><span class="p">{}</span>
+    <span class="kr">for</span> <span class="n">i</span><span class="p">,</span><span class="n">inorg</span> <span class="kr">in</span> <span class="nb">ipairs</span><span class="p">(</span><span class="n">world</span><span class="p">.</span><span class="n">inorganic</span><span class="p">.</span><span class="n">inorganic</span><span class="p">)</span> <span class="kr">do</span>
+        <span class="kr">for</span> <span class="n">_</span><span class="p">,</span><span class="n">class</span> <span class="kr">in</span> <span class="n">inorg</span><span class="p">.</span><span class="n">mat</span><span class="p">.</span><span class="n">reaction_class</span> <span class="kr">do</span>
+            <span class="kr">if</span> <span class="n">class</span><span class="o">==</span><span class="n">rc</span> <span class="kr">then</span>
+                <span class="n">valid</span><span class="p">[</span><span class="o">#</span><span class="n">valid</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span><span class="o">=</span><span class="n">inorg</span>
+            <span class="kr">end</span>
+        <span class="kr">end</span>
+    <span class="kr">end</span>
+    <span class="kr">return</span> <span class="n">valid</span>
+<span class="kr">end</span>
+</pre></div></span></div></td></tr></tbody></table>
+<h2><span class="mw-headline" id="Languages">Languages</span></h2>
+<h3><span class="mw-headline" id="Identity_language">Identity language</span></h3>
+<p>This makes a <a href="/index.php/Language_token" title="Language token">language</a> called <code>GEN_IDENTITY</code> which is like: "Abbey abbeyabbeys the abbey of abbeys" - i.e. it's the "English" language you might see occasionally. It is present in <code>vanilla_procedural</code> and can be used for <code><a href="/index.php/Entity_token#TRANSLATION" title="Entity token">[TRANSLATION]</a></code> by default.
+</p>
+<div style="clear:both;"></div>
+<table class="collapsible collapsed infobox gamedata" style="background: #fdfdfd; border: 1px solid #aaa; font-size: 88%; margin: 0 auto -1px; vertical-align: middle; width: 100%; max-width: 100em; table-layout: fixed;">
+<tbody><tr style="line-height: 1.5em;"><th scope="col" style="background: #cce6b3; padding: 0.25em 1em; text-align: center; display: table-cell;&#32;;"><div style="font-size: 114%; margin: 0 9em;">GEN_IDENTITY</div></th></tr>
+<tr style="line-height: 1.5em; text-align: left; display: table-cell;"><td><div style="overflow: auto;"><span class="gamedata-content" style="font-family: monospace; font-size:1.25em; white-space:pre;"><div class="mw-highlight mw-highlight-lang-lua mw-content-ltr" dir="ltr"><pre><span></span><span class="n">languages</span><span class="p">.</span><span class="n">GEN_IDENTITY</span><span class="o">=</span><span class="kr">function</span><span class="p">()</span>
+    <span class="c1">-- just to demonstrate the absolute most basic method of generating one of these</span>
+    <span class="c1">-- also so that you can just mod stuff to use GEN_IDENTITY</span>
+    <span class="kd">local</span> <span class="n">tbl</span><span class="o">=</span><span class="p">{}</span>
+    <span class="kd">local</span> <span class="n">unempty</span> <span class="o">=</span> <span class="kr">function</span><span class="p">(</span><span class="n">str1</span><span class="p">,</span> <span class="n">str2</span><span class="p">)</span> 
+        <span class="kr">return</span> <span class="n">str1</span><span class="o">==</span><span class="s1">&#39;&#39;</span> <span class="ow">and</span> <span class="n">str2</span> <span class="ow">or</span> <span class="n">str1</span>
+    <span class="kr">end</span>
+    <span class="kr">for</span> <span class="n">k</span><span class="p">,</span><span class="n">v</span> <span class="kr">in</span> <span class="nb">ipairs</span><span class="p">(</span><span class="n">world</span><span class="p">.</span><span class="n">language</span><span class="p">.</span><span class="n">word</span><span class="p">)</span> <span class="kr">do</span>
+        <span class="kd">local</span> <span class="n">str</span><span class="o">=</span><span class="s1">&#39;&#39;</span>
+        <span class="n">str</span><span class="o">=</span><span class="n">unempty</span><span class="p">(</span><span class="n">str</span><span class="p">,</span><span class="n">v</span><span class="p">.</span><span class="n">NOUN_SING</span><span class="p">)</span>
+        <span class="n">str</span><span class="o">=</span><span class="n">unempty</span><span class="p">(</span><span class="n">str</span><span class="p">,</span><span class="n">v</span><span class="p">.</span><span class="n">ADJ</span><span class="p">)</span>
+        <span class="n">str</span><span class="o">=</span><span class="n">unempty</span><span class="p">(</span><span class="n">str</span><span class="p">,</span><span class="n">v</span><span class="p">.</span><span class="n">VERB_FIRST_PRES</span><span class="p">)</span>
+        <span class="n">str</span><span class="o">=</span><span class="n">unempty</span><span class="p">(</span><span class="n">str</span><span class="p">,</span><span class="nb">string.lower</span><span class="p">(</span><span class="n">v</span><span class="p">.</span><span class="n">token</span><span class="p">))</span>
+        <span class="n">tbl</span><span class="p">[</span><span class="n">v</span><span class="p">.</span><span class="n">token</span><span class="p">]</span><span class="o">=</span><span class="n">str</span>
+    <span class="kr">end</span>
+    <span class="kr">return</span> <span class="n">tbl</span>
+<span class="kr">end</span>
+</pre></div></span></div></td></tr></tbody></table>
+<h3><span class="mw-headline" id="Kobold_language">Kobold language</span></h3>
+<p>This generates a language made of <code><a href="/index.php/Creature_token#UTTERANCES" title="Creature token">[UTTERANCES]</a></code>. This is essentially a proper translation based on the <a href="/index.php/Kobold_language" title="Kobold language">kobold language</a>. Note that the hardcoded <code>utterance()</code> function generates words independently of any existing words in the language, so you may get duplicate words. 
+</p>
+<div style="clear:both;"></div>
+<table class="collapsible collapsed infobox gamedata" style="background: #fdfdfd; border: 1px solid #aaa; font-size: 88%; margin: 0 auto -1px; vertical-align: middle; width: 100%; max-width: 100em; table-layout: fixed;">
+<tbody><tr style="line-height: 1.5em;"><th scope="col" style="background: #cce6b3; padding: 0.25em 1em; text-align: center; display: table-cell;&#32;;"><div style="font-size: 114%; margin: 0 9em;">GEN_KOBOLD</div></th></tr>
+<tr style="line-height: 1.5em; text-align: left; display: table-cell;"><td><div style="overflow: auto;"><span class="gamedata-content" style="font-family: monospace; font-size:1.25em; white-space:pre;"><div class="mw-highlight mw-highlight-lang-lua mw-content-ltr" dir="ltr"><pre><span></span><span class="n">languages</span><span class="p">.</span><span class="n">GEN_KOBOLD</span><span class="o">=</span><span class="kr">function</span><span class="p">()</span>
+    <span class="kd">local</span> <span class="n">tbl</span><span class="o">=</span><span class="p">{}</span>
+    <span class="kr">for</span> <span class="n">k</span><span class="p">,</span><span class="n">v</span> <span class="kr">in</span> <span class="nb">ipairs</span><span class="p">(</span><span class="n">world</span><span class="p">.</span><span class="n">language</span><span class="p">.</span><span class="n">word</span><span class="p">)</span> <span class="kr">do</span>
+        <span class="n">tbl</span><span class="p">[</span><span class="n">v</span><span class="p">.</span><span class="n">token</span><span class="p">]</span><span class="o">=</span><span class="n">utterance</span><span class="p">()</span>
+    <span class="kr">end</span>
+    <span class="kr">return</span> <span class="n">tbl</span>
+<span class="kr">end</span>
+</pre></div></span></div></td></tr></tbody></table>
+<h2><span class="mw-headline" id="Generators">Generators</span></h2>
+<h3><span class="mw-headline" id="Non-random_generated_material">Non-random generated material</span></h3>
+<p>Here's an example of an object registered through the <code>do_once</code> table. There are no random elements, it is equivalent (save for being <code><a href="/index.php/Material_token#GENERATED" title="Material token">[GENERATED]</a></code>) to an object defined through <a href="/index.php/Material_definition_token" title="Material definition token">Material definition tokens</a> and registered through the <code>raws.register_inorganics()</code> function. It also prints itself to the lualog for debugging purposes.
+</p>
+<div style="clear:both;"></div>
+<table class="collapsible collapsed infobox gamedata" style="background: #fdfdfd; border: 1px solid #aaa; font-size: 88%; margin: 0 auto -1px; vertical-align: middle; width: 100%; max-width: 100em; table-layout: fixed;">
+<tbody><tr style="line-height: 1.5em;"><th scope="col" style="background: #cce6b3; padding: 0.25em 1em; text-align: center; display: table-cell;&#32;;"><div style="font-size: 114%; margin: 0 9em;">Single material</div></th></tr>
+<tr style="line-height: 1.5em; text-align: left; display: table-cell;"><td><div style="overflow: auto;"><span class="gamedata-content" style="font-family: monospace; font-size:1.25em; white-space:pre;"><div class="mw-highlight mw-highlight-lang-lua mw-content-ltr" dir="ltr"><pre><span></span><span class="n">do_once</span><span class="p">.</span><span class="n">cobalt</span> <span class="o">=</span> <span class="kr">function</span><span class="p">()</span>
+	<span class="kd">local</span> <span class="n">lines</span> <span class="o">=</span> <span class="p">{}</span>
+	
+	<span class="c1">-- basic inorganic definition</span>
+	<span class="n">lines</span><span class="p">[</span><span class="o">#</span><span class="n">lines</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;[INORGANIC:COBALT]&quot;</span>
+	<span class="c1">-- add [GENERATED] to save properly</span>
+	<span class="n">add_generated_info</span><span class="p">(</span><span class="n">lines</span><span class="p">)</span>
+	<span class="n">lines</span><span class="p">[</span><span class="o">#</span><span class="n">lines</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;[USE_MATERIAL_TEMPLATE:METAL_TEMPLATE]&quot;</span>
+	<span class="n">lines</span><span class="p">[</span><span class="o">#</span><span class="n">lines</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;[STATE_NAME_ADJ:ALL_SOLID:cobalt]&quot;</span>
+	<span class="n">lines</span><span class="p">[</span><span class="o">#</span><span class="n">lines</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;[STATE_NAME_ADJ:LIQUID:liquid cobalt]&quot;</span>
+	<span class="n">lines</span><span class="p">[</span><span class="o">#</span><span class="n">lines</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;[STATE_NAME_ADJ:GAS:boiling cobalt]&quot;</span>
+	<span class="n">lines</span><span class="p">[</span><span class="o">#</span><span class="n">lines</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;[STATE_COLOR:ALL_SOLID:COBALT]&quot;</span>
+	<span class="n">lines</span><span class="p">[</span><span class="o">#</span><span class="n">lines</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;[SPECIAL]&quot;</span>
+	
+	<span class="n">raws</span><span class="p">.</span><span class="n">register_inorganics</span><span class="p">(</span><span class="n">lines</span><span class="p">)</span>
+
+	<span class="c1">-- show in lualog</span>
+	<span class="n">print_table</span><span class="p">(</span><span class="n">lines</span><span class="p">)</span>
+<span class="kr">end</span>
+</pre></div></span></div></td></tr></tbody></table>
+<p><br /><br />
+You can register multiple objects at the same time. This script takes a table of color tokens, and makes a metal named after each of them, with a corresponding cheaty adventure reaction.
+</p>
+<div style="clear:both;"></div>
+<table class="collapsible collapsed infobox gamedata" style="background: #fdfdfd; border: 1px solid #aaa; font-size: 88%; margin: 0 auto -1px; vertical-align: middle; width: 100%; max-width: 100em; table-layout: fixed;">
+<tbody><tr style="line-height: 1.5em;"><th scope="col" style="background: #cce6b3; padding: 0.25em 1em; text-align: center; display: table-cell;&#32;;"><div style="font-size: 114%; margin: 0 9em;">Chromatic metals</div></th></tr>
+<tr style="line-height: 1.5em; text-align: left; display: table-cell;"><td><div style="overflow: auto;"><span class="gamedata-content" style="font-family: monospace; font-size:1.25em; white-space:pre;"><div class="mw-highlight mw-highlight-lang-lua mw-content-ltr" dir="ltr"><pre><span></span><span class="n">do_once</span><span class="p">.</span><span class="n">chromatic_metal</span> <span class="o">=</span> <span class="kr">function</span><span class="p">()</span>
+	<span class="kd">local</span> <span class="n">lines</span> <span class="o">=</span> <span class="p">{}</span>
+	<span class="kd">local</span> <span class="n">reaction_lines</span> <span class="o">=</span> <span class="p">{}</span>
+	
+	<span class="kd">local</span> <span class="n">color_tokens</span> <span class="o">=</span> <span class="p">{</span>
+			<span class="s2">&quot;AMETHYST&quot;</span><span class="p">,</span>
+			<span class="s2">&quot;AQUAMARINE&quot;</span><span class="p">,</span>
+			<span class="s2">&quot;CARDINAL&quot;</span><span class="p">,</span>
+			<span class="s2">&quot;COBALT&quot;</span><span class="p">,</span>
+			<span class="s2">&quot;EMERALD&quot;</span><span class="p">,</span>
+			<span class="s2">&quot;JADE&quot;</span><span class="p">,</span>
+			<span class="s2">&quot;MOSS_GREEN&quot;</span><span class="p">,</span>
+			<span class="s2">&quot;PEARL&quot;</span><span class="p">,</span>
+			<span class="s2">&quot;SAFFRON&quot;</span><span class="p">,</span>
+			<span class="s2">&quot;TURQUOISE&quot;</span><span class="p">,</span>
+			<span class="s2">&quot;WHITE&quot;</span><span class="p">,</span>
+	<span class="p">}</span>
+	
+	<span class="c1">-- make a metal for each color token</span>
+	<span class="kr">for</span> <span class="n">k</span><span class="p">,</span><span class="n">v</span> <span class="kr">in</span> <span class="nb">pairs</span><span class="p">(</span><span class="n">color_tokens</span><span class="p">)</span> <span class="kr">do</span>
+		<span class="c1">-- begin definition with ID token, [GENERATED] and template</span>
+		<span class="n">lines</span><span class="p">[</span><span class="o">#</span><span class="n">lines</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;[INORGANIC:CHROMATICMETAL&quot;</span><span class="o">..</span><span class="n">v</span><span class="o">..</span><span class="s2">&quot;]&quot;</span>
+		<span class="n">add_generated_info</span><span class="p">(</span><span class="n">lines</span><span class="p">)</span>
+		<span class="n">lines</span><span class="p">[</span><span class="o">#</span><span class="n">lines</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;[USE_MATERIAL_TEMPLATE:METAL_TEMPLATE]&quot;</span>
+
+		<span class="c1">-- look up the metal&#39;s color in the world table</span>
+		<span class="c1">-- using string.lower(v) would result in &quot;moss_green&quot;</span>
+		<span class="kd">local</span> <span class="n">metalname</span> <span class="o">=</span> <span class="n">world</span><span class="p">.</span><span class="n">descriptor</span><span class="p">.</span><span class="n">color</span><span class="p">[</span><span class="n">v</span><span class="p">].</span><span class="n">name</span>
+		<span class="n">lines</span><span class="p">[</span><span class="o">#</span><span class="n">lines</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;[STATE_NAME_ADJ:ALL_SOLID:&quot;</span><span class="o">..</span><span class="n">metalname</span><span class="o">..</span><span class="s2">&quot;]&quot;</span>
+		<span class="n">lines</span><span class="p">[</span><span class="o">#</span><span class="n">lines</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;[STATE_NAME_ADJ:LIQUID:liquid &quot;</span><span class="o">..</span><span class="n">metalname</span><span class="o">..</span><span class="s2">&quot;]&quot;</span>
+		<span class="n">lines</span><span class="p">[</span><span class="o">#</span><span class="n">lines</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;[STATE_NAME_ADJ:GAS:boiling &quot;</span><span class="o">..</span><span class="n">metalname</span><span class="o">..</span><span class="s2">&quot;]&quot;</span>
+		
+		<span class="c1">-- appearance</span>
+		<span class="n">lines</span><span class="p">[</span><span class="o">#</span><span class="n">lines</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;[STATE_COLOR:ALL_SOLID:&quot;</span><span class="o">..</span><span class="n">v</span><span class="o">..</span><span class="s2">&quot;]&quot;</span>
+		<span class="n">lines</span><span class="p">[</span><span class="o">#</span><span class="n">lines</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;[SPECIAL]&quot;</span>
+		
+		<span class="c1">-- create a corresponding reaction</span>
+		<span class="n">reaction_lines</span><span class="p">[</span><span class="o">#</span><span class="n">reaction_lines</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;[REACTION:CHROMATICMETAL&quot;</span><span class="o">..</span><span class="n">v</span><span class="o">..</span><span class="s2">&quot;]&quot;</span>
+		<span class="n">add_generated_info</span><span class="p">(</span><span class="n">reaction_lines</span><span class="p">)</span>
+		<span class="n">reaction_lines</span><span class="p">[</span><span class="o">#</span><span class="n">reaction_lines</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;[NAME:create &quot;</span><span class="o">..</span><span class="n">metalname</span><span class="o">..</span><span class="s2">&quot; bars]&quot;</span>
+		<span class="n">reaction_lines</span><span class="p">[</span><span class="o">#</span><span class="n">reaction_lines</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;[ADVENTURE_MODE_ENABLED]&quot;</span>
+		<span class="c1">-- make sure we&#39;re consistent with the inorganic ID</span>
+		<span class="n">reaction_lines</span><span class="p">[</span><span class="o">#</span><span class="n">reaction_lines</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;[PRODUCT:100:1:BAR:NONE:INORGANIC:CHROMATICMETAL&quot;</span><span class="o">..</span><span class="n">v</span><span class="o">..</span><span class="s2">&quot;]&quot;</span>
+		<span class="n">reaction_lines</span><span class="p">[</span><span class="o">#</span><span class="n">reaction_lines</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;[PRODUCT_DIMENSION:150]&quot;</span>
+	<span class="kr">end</span>
+	<span class="n">raws</span><span class="p">.</span><span class="n">register_inorganics</span><span class="p">(</span><span class="n">lines</span><span class="p">)</span>
+	<span class="n">raws</span><span class="p">.</span><span class="n">register_reactions</span><span class="p">(</span><span class="n">reaction_lines</span><span class="p">)</span>
+<span class="kr">end</span>
+</pre></div></span></div></td></tr></tbody></table>
+<h3><span class="mw-headline" id="Random_generation">Random generation</span></h3>
+<p>Here's an example of various DF-specific randomizers in use:
+</p>
+<ul><li><code>trandom()</code> is used to determine how many metals generate this way.</li>
+<li><code>utterance()</code> generates utterances from the <a href="/index.php/Kobold_language" title="Kobold language">Kobold language</a>, e.g. "gorsnus", "stogodilmus", "gaylgis"</li>
+<li><code>pick_random_no_replace()</code> determines the color from the table, but removes the rolled value so there's no repeats.</li></ul>
+<div style="clear:both;"></div>
+<table class="collapsible collapsed infobox gamedata" style="background: #fdfdfd; border: 1px solid #aaa; font-size: 88%; margin: 0 auto -1px; vertical-align: middle; width: 100%; max-width: 100em; table-layout: fixed;">
+<tbody><tr style="line-height: 1.5em;"><th scope="col" style="background: #cce6b3; padding: 0.25em 1em; text-align: center; display: table-cell;&#32;;"><div style="font-size: 114%; margin: 0 9em;">Kobold metals</div></th></tr>
+<tr style="line-height: 1.5em; text-align: left; display: table-cell;"><td><div style="overflow: auto;"><span class="gamedata-content" style="font-family: monospace; font-size:1.25em; white-space:pre;"><div class="mw-highlight mw-highlight-lang-lua mw-content-ltr" dir="ltr"><pre><span></span><span class="n">do_once</span><span class="p">.</span><span class="n">kobold_metal</span> <span class="o">=</span> <span class="kr">function</span><span class="p">()</span>
+	<span class="kd">local</span> <span class="n">lines</span> <span class="o">=</span> <span class="p">{}</span>
+	<span class="kd">local</span> <span class="n">reaction_lines</span> <span class="o">=</span> <span class="p">{}</span>
+	
+	<span class="kd">local</span> <span class="n">color_tokens</span> <span class="o">=</span> <span class="p">{</span>
+		<span class="s2">&quot;AMETHYST&quot;</span><span class="p">,</span>
+		<span class="s2">&quot;AQUAMARINE&quot;</span><span class="p">,</span>
+		<span class="s2">&quot;CARDINAL&quot;</span><span class="p">,</span>
+		<span class="s2">&quot;COBALT&quot;</span><span class="p">,</span>
+		<span class="s2">&quot;EMERALD&quot;</span><span class="p">,</span>
+		<span class="s2">&quot;JADE&quot;</span><span class="p">,</span>
+		<span class="s2">&quot;MOSS_GREEN&quot;</span><span class="p">,</span>
+		<span class="s2">&quot;PEARL&quot;</span><span class="p">,</span>
+		<span class="s2">&quot;SAFFRON&quot;</span><span class="p">,</span>
+		<span class="s2">&quot;TURQUOISE&quot;</span><span class="p">,</span>
+		<span class="s2">&quot;WHITE&quot;</span><span class="p">,</span>
+	<span class="p">}</span>
+	
+	<span class="c1">-- trandom() is expressed as (1dN)-1 because it uses C++ math that starts at 0</span>
+	<span class="kd">local</span> <span class="n">max_loops</span> <span class="o">=</span> <span class="n">trandom</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span><span class="o">+</span><span class="mi">1</span>
+
+	<span class="c1">-- create 1-10 metals</span>
+	<span class="kr">for</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span><span class="n">max_loops</span> <span class="kr">do</span>
+		<span class="c1">-- begin definition with ID token, [GENERATED] and template</span>
+		<span class="n">lines</span><span class="p">[</span><span class="o">#</span><span class="n">lines</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;[INORGANIC:KOBOLDMETAL&quot;</span><span class="o">..</span><span class="n">i</span><span class="o">..</span><span class="s2">&quot;]&quot;</span>
+		<span class="n">add_generated_info</span><span class="p">(</span><span class="n">lines</span><span class="p">)</span>
+		<span class="n">lines</span><span class="p">[</span><span class="o">#</span><span class="n">lines</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;[USE_MATERIAL_TEMPLATE:METAL_TEMPLATE]&quot;</span>
+
+		<span class="c1">-- this is the kobold name function</span>
+		<span class="kd">local</span> <span class="n">metalname</span> <span class="o">=</span> <span class="n">utterance</span><span class="p">()</span><span class="o">..</span><span class="s2">&quot;ite&quot;</span>
+		<span class="n">lines</span><span class="p">[</span><span class="o">#</span><span class="n">lines</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;[STATE_NAME_ADJ:ALL_SOLID:&quot;</span><span class="o">..</span><span class="n">metalname</span><span class="o">..</span><span class="s2">&quot;]&quot;</span>
+		<span class="n">lines</span><span class="p">[</span><span class="o">#</span><span class="n">lines</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;[STATE_NAME_ADJ:LIQUID:liquid &quot;</span><span class="o">..</span><span class="n">metalname</span><span class="o">..</span><span class="s2">&quot;]&quot;</span>
+		<span class="n">lines</span><span class="p">[</span><span class="o">#</span><span class="n">lines</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;[STATE_NAME_ADJ:GAS:boiling &quot;</span><span class="o">..</span><span class="n">metalname</span><span class="o">..</span><span class="s2">&quot;]&quot;</span>
+		<span class="c1">-- no_replace removes the value from the table</span>
+		<span class="c1">-- we don&#39;t need a fallback because there&#39;s more values than metals</span>
+		<span class="n">lines</span><span class="p">[</span><span class="o">#</span><span class="n">lines</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;[STATE_COLOR:ALL_SOLID:&quot;</span><span class="o">..</span><span class="n">pick_random_no_replace</span><span class="p">(</span><span class="n">color_tokens</span><span class="p">)</span><span class="o">..</span><span class="s2">&quot;]&quot;</span>
+		<span class="n">lines</span><span class="p">[</span><span class="o">#</span><span class="n">lines</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;[SPECIAL]&quot;</span>
+		
+		<span class="c1">-- create a corresponding reaction</span>
+		<span class="n">reaction_lines</span><span class="p">[</span><span class="o">#</span><span class="n">reaction_lines</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;[REACTION:KOBOLDMETAL&quot;</span><span class="o">..</span><span class="n">i</span><span class="o">..</span><span class="s2">&quot;]&quot;</span>
+		<span class="n">add_generated_info</span><span class="p">(</span><span class="n">reaction_lines</span><span class="p">)</span>
+		<span class="n">reaction_lines</span><span class="p">[</span><span class="o">#</span><span class="n">reaction_lines</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;[NAME:create &quot;</span><span class="o">..</span><span class="n">metalname</span><span class="o">..</span><span class="s2">&quot; bars]&quot;</span>
+		<span class="n">reaction_lines</span><span class="p">[</span><span class="o">#</span><span class="n">reaction_lines</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;[ADVENTURE_MODE_ENABLED]&quot;</span>
+		<span class="c1">-- make sure we&#39;re consistent with the inorganic ID</span>
+		<span class="n">reaction_lines</span><span class="p">[</span><span class="o">#</span><span class="n">reaction_lines</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;[PRODUCT:100:1:BAR:NONE:INORGANIC:KOBOLDMETAL&quot;</span><span class="o">..</span><span class="n">i</span><span class="o">..</span><span class="s2">&quot;]&quot;</span>
+		<span class="n">reaction_lines</span><span class="p">[</span><span class="o">#</span><span class="n">reaction_lines</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;[PRODUCT_DIMENSION:150]&quot;</span>
+	<span class="kr">end</span>
+	<span class="n">raws</span><span class="p">.</span><span class="n">register_inorganics</span><span class="p">(</span><span class="n">lines</span><span class="p">)</span>
+	<span class="n">raws</span><span class="p">.</span><span class="n">register_reactions</span><span class="p">(</span><span class="n">reaction_lines</span><span class="p">)</span>
+<span class="kr">end</span>
+</pre></div></span></div></td></tr></tbody></table>
+<h3><span class="mw-headline" id="New_divine_metals">New divine metals</span></h3>
+<p>Many of the tables used by vanilla procedural objects are global, and thus can be added to or overwritten by mods. You can add new metal descriptions for divine metal pretty easily, for example:
+</p>
+<div style="clear:both;"></div>
+<table class="collapsible collapsed infobox gamedata" style="background: #fdfdfd; border: 1px solid #aaa; font-size: 88%; margin: 0 auto -1px; vertical-align: middle; width: 100%; max-width: 100em; table-layout: fixed;">
+<tbody><tr style="line-height: 1.5em;"><th scope="col" style="background: #cce6b3; padding: 0.25em 1em; text-align: center; display: table-cell;&#32;;"><div style="font-size: 114%; margin: 0 9em;">Laughing metal</div></th></tr>
+<tr style="line-height: 1.5em; text-align: left; display: table-cell;"><td><div style="overflow: auto;"><span class="gamedata-content" style="font-family: monospace; font-size:1.25em; white-space:pre;"><div class="mw-highlight mw-highlight-lang-lua mw-content-ltr" dir="ltr"><pre><span></span><span class="n">metal_by_sphere</span><span class="p">.</span><span class="n">CHILDREN</span><span class="o">=</span><span class="p">{</span>
+    <span class="n">name</span><span class="o">=</span><span class="s2">&quot;laughing metal&quot;</span><span class="p">,</span>
+    <span class="n">col</span><span class="o">=</span><span class="s2">&quot;7:0:1&quot;</span><span class="p">,</span>
+    <span class="n">color</span><span class="o">=</span><span class="s2">&quot;WHITE&quot;</span>
+<span class="p">}</span>
+</pre></div></span></div></td></tr></tbody></table>
+<p><br /><br />
+You can also add alternatives to the default divine metal function, such as one based on the aforementioned kobold metals.
+Vanilla divine metal uses <code>metal_by_sphere</code> to determine its properties, and is thus valid only if the input sphere has an entry in that table.
+Note that even if the weights are nominally the same; because it is valid for all input spheres, it will outnumber instances of the more limited vanilla material.
+</p>
+<div style="clear:both;"></div>
+<table class="collapsible collapsed infobox gamedata" style="background: #fdfdfd; border: 1px solid #aaa; font-size: 88%; margin: 0 auto -1px; vertical-align: middle; width: 100%; max-width: 100em; table-layout: fixed;">
+<tbody><tr style="line-height: 1.5em;"><th scope="col" style="background: #cce6b3; padding: 0.25em 1em; text-align: center; display: table-cell;&#32;;"><div style="font-size: 114%; margin: 0 9em;">Divine kobold metal</div></th></tr>
+<tr style="line-height: 1.5em; text-align: left; display: table-cell;"><td><div style="overflow: auto;"><span class="gamedata-content" style="font-family: monospace; font-size:1.25em; white-space:pre;"><div class="mw-highlight mw-highlight-lang-lua mw-content-ltr" dir="ltr"><pre><span></span><span class="n">materials</span><span class="p">.</span><span class="n">divine</span><span class="p">.</span><span class="n">metal</span><span class="p">.</span><span class="n">kobold</span> <span class="o">=</span> <span class="kr">function</span><span class="p">(</span><span class="n">sphere</span><span class="p">)</span>
+	<span class="kr">if</span> <span class="ow">not</span> <span class="n">foo</span> <span class="kr">then</span>
+		<span class="n">log</span><span class="p">(</span><span class="o">#</span><span class="n">metal_by_sphere</span><span class="p">)</span>
+		<span class="n">log</span><span class="p">(</span><span class="o">#</span><span class="n">world</span><span class="p">.</span><span class="n">spheres</span><span class="p">)</span>
+		<span class="n">foo</span> <span class="o">=</span> <span class="kc">true</span>
+	<span class="kr">end</span>
+	<span class="kd">local</span> <span class="n">lines</span> <span class="o">=</span> <span class="p">{}</span>
+	<span class="c1">--generation function handles ID, registration, generated info</span>
+	<span class="n">lines</span><span class="p">[</span><span class="o">#</span><span class="n">lines</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;[USE_MATERIAL_TEMPLATE:METAL_TEMPLATE]&quot;</span>
+	<span class="c1">--add_generated_info(lines)</span>
+	<span class="kd">local</span> <span class="n">metalname</span> <span class="o">=</span> <span class="n">utterance</span><span class="p">()</span><span class="o">..</span><span class="s2">&quot;ite&quot;</span>
+	<span class="n">lines</span><span class="p">[</span><span class="o">#</span><span class="n">lines</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;[STATE_NAME_ADJ:ALL_SOLID:&quot;</span><span class="o">..</span><span class="n">metalname</span><span class="o">..</span><span class="s2">&quot;]&quot;</span>
+	<span class="n">lines</span><span class="p">[</span><span class="o">#</span><span class="n">lines</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;[STATE_NAME_ADJ:LIQUID:liquid &quot;</span><span class="o">..</span><span class="n">metalname</span><span class="o">..</span><span class="s2">&quot;]&quot;</span>
+	<span class="n">lines</span><span class="p">[</span><span class="o">#</span><span class="n">lines</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;[STATE_NAME_ADJ:GAS:boiling &quot;</span><span class="o">..</span><span class="n">metalname</span><span class="o">..</span><span class="s2">&quot;]&quot;</span>
+	
+	<span class="kd">local</span> <span class="n">color_tokens</span> <span class="o">=</span> <span class="p">{</span>
+		<span class="s2">&quot;AMETHYST&quot;</span><span class="p">,</span>
+		<span class="s2">&quot;AQUAMARINE&quot;</span><span class="p">,</span>
+		<span class="s2">&quot;CARDINAL&quot;</span><span class="p">,</span>
+		<span class="s2">&quot;COBALT&quot;</span><span class="p">,</span>
+		<span class="s2">&quot;EMERALD&quot;</span><span class="p">,</span>
+		<span class="s2">&quot;JADE&quot;</span><span class="p">,</span>
+		<span class="s2">&quot;MOSS_GREEN&quot;</span><span class="p">,</span>
+		<span class="s2">&quot;PEARL&quot;</span><span class="p">,</span>
+		<span class="s2">&quot;SAFFRON&quot;</span><span class="p">,</span>
+		<span class="s2">&quot;TURQUOISE&quot;</span><span class="p">,</span>
+		<span class="s2">&quot;WHITE&quot;</span><span class="p">,</span>
+	<span class="p">}</span>
+	<span class="c1">--allow for duplicate colors</span>
+	<span class="n">lines</span><span class="p">[</span><span class="o">#</span><span class="n">lines</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;[STATE_COLOR:ALL_SOLID:&quot;</span><span class="o">..</span><span class="n">pick_random</span><span class="p">(</span><span class="n">color_tokens</span><span class="p">)</span><span class="o">..</span><span class="s2">&quot;]&quot;</span>
+	
+	<span class="c1">--add a block of tokens</span>
+	<span class="n">lines</span><span class="o">=</span><span class="n">split_to_lines</span><span class="p">(</span><span class="n">lines</span><span class="p">,</span><span class="s">[[</span>
+<span class="s">    [MATERIAL_VALUE:200]</span>
+<span class="s">	[SPEC_HEAT:7500]</span>
+<span class="s">	[MELTING_POINT:NONE]</span>
+<span class="s">	[BOILING_POINT:NONE]</span>
+<span class="s">	[ITEMS_WEAPON][ITEMS_WEAPON_RANGED][ITEMS_AMMO][ITEMS_DIGGER][ITEMS_ARMOR][ITEMS_ANVIL]</span>
+<span class="s">	[ITEMS_HARD]</span>
+<span class="s">	[ITEMS_METAL]</span>
+<span class="s">	[ITEMS_BARRED]</span>
+<span class="s">	[ITEMS_SCALED]</span>
+<span class="s">	[SOLID_DENSITY:1000]</span>
+<span class="s">	[LIQUID_DENSITY:1000]</span>
+<span class="s">	[MOLAR_MASS:20000]</span>
+<span class="s">	[IMPACT_YIELD:1000000]</span>
+<span class="s">	[IMPACT_FRACTURE:2000000]</span>
+<span class="s">	[IMPACT_STRAIN_AT_YIELD:0]</span>
+<span class="s">	[COMPRESSIVE_YIELD:1000000]</span>
+<span class="s">	[COMPRESSIVE_FRACTURE:2000000]</span>
+<span class="s">	[COMPRESSIVE_STRAIN_AT_YIELD:0]</span>
+<span class="s">	[TENSILE_YIELD:1000000]</span>
+<span class="s">	[TENSILE_FRACTURE:2000000]</span>
+<span class="s">	[TENSILE_STRAIN_AT_YIELD:0]</span>
+<span class="s">	[TORSION_YIELD:1000000]</span>
+<span class="s">	[TORSION_FRACTURE:2000000]</span>
+<span class="s">	[TORSION_STRAIN_AT_YIELD:0]</span>
+<span class="s">	[SHEAR_YIELD:1000000]</span>
+<span class="s">	[SHEAR_FRACTURE:2000000]</span>
+<span class="s">	[SHEAR_STRAIN_AT_YIELD:0]</span>
+<span class="s">	[BENDING_YIELD:1000000]</span>
+<span class="s">	[BENDING_FRACTURE:2000000]</span>
+<span class="s">	[BENDING_STRAIN_AT_YIELD:0]</span>
+<span class="s">	[MAX_EDGE:12000]</span>
+<span class="s">	]]</span><span class="p">)</span>
+	<span class="c1">--sends this to get registered</span>
+	<span class="kr">return</span> <span class="p">{</span><span class="n">raws</span><span class="o">=</span><span class="n">lines</span><span class="p">,</span><span class="n">weight</span><span class="o">=</span><span class="mi">1</span><span class="p">}</span>
+<span class="kr">end</span>
+</pre></div></span></div></td></tr></tbody></table>
+<h3><span class="mw-headline" id="Remove_default_functions">Remove default functions</span></h3>
+<p>Just as easily as new functions and table entries can be added, default entries can be overwritten so that they cannot generate. This snippet removes the default forgotten beasts.
+</p><p>See <a href="/index.php/Lua_functions#Generation_Tables" title="Lua functions">Lua functions#Generation Tables</a> for a list of the tables the default functions are stored in.
+</p>
+<div class="mw-highlight mw-highlight-lang-lua mw-content-ltr" dir="ltr"><pre><span></span><span class="n">creatures</span><span class="p">.</span><span class="n">fb</span><span class="p">.</span><span class="n">default</span><span class="o">=</span><span class="kc">nil</span>
+</pre></div>
+<h3><span class="mw-headline" id="Basic_generated_creature">Basic generated creature</span></h3>
+<p>This is essentially the simplest possible creature. It has no extraordinary options (beyond an <a href="/index.php/Sphere" title="Sphere">association</a> with animals and creation), and each world generates one species from this function. It doesn't have any biome tokens or likewise, so it can only be spawned in the arena, but it is still functional.
+</p><p>A sample output would be "A quadruped composed of flame. It has two narrow tails and it has a regal bearing."
+</p>
+<div style="clear:both;"></div>
+<table class="collapsible collapsed infobox gamedata" style="background: #fdfdfd; border: 1px solid #aaa; font-size: 88%; margin: 0 auto -1px; vertical-align: middle; width: 100%; max-width: 100em; table-layout: fixed;">
+<tbody><tr style="line-height: 1.5em;"><th scope="col" style="background: #cce6b3; padding: 0.25em 1em; text-align: center; display: table-cell;&#32;;"><div style="font-size: 114%; margin: 0 9em;">do_once.basic_creature</div></th></tr>
+<tr style="line-height: 1.5em; text-align: left; display: table-cell;"><td><div style="overflow: auto;"><span class="gamedata-content" style="font-family: monospace; font-size:1.25em; white-space:pre;"><div class="mw-highlight mw-highlight-lang-lua mw-content-ltr" dir="ltr"><pre><span></span><span class="n">do_once</span><span class="p">.</span><span class="n">basic_creature</span> <span class="o">=</span> <span class="kr">function</span><span class="p">()</span>
+	<span class="kd">local</span> <span class="n">lines</span> <span class="o">=</span> <span class="p">{}</span>
+	<span class="kd">local</span> <span class="n">tok</span><span class="o">=</span><span class="s2">&quot;BASIC_PROCEDURAL_CREATURE&quot;</span>
+	<span class="n">lines</span><span class="p">[</span><span class="o">#</span><span class="n">lines</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span><span class="o">=</span><span class="s2">&quot;[CREATURE:&quot;</span><span class="o">..</span><span class="n">tok</span><span class="o">..</span><span class="s2">&quot;]&quot;</span>
+	<span class="n">add_generated_info</span><span class="p">(</span><span class="n">lines</span><span class="p">)</span>
+	
+	<span class="kd">local</span> <span class="n">options</span><span class="o">=</span><span class="p">{</span>
+		<span class="n">token</span><span class="o">=</span><span class="n">tok</span><span class="p">,</span>
+		<span class="n">spheres</span><span class="o">=</span><span class="p">{</span>
+			<span class="n">ANIMALS</span><span class="o">=</span><span class="kc">true</span><span class="p">,</span>
+			<span class="n">CREATION</span><span class="o">=</span><span class="kc">true</span>
+		<span class="p">}</span>
+	<span class="p">}</span>
+	<span class="n">lines</span><span class="o">=</span><span class="n">split_to_lines</span><span class="p">(</span><span class="n">lines</span><span class="p">,</span><span class="s">[[</span>
+<span class="s">		[NAME:procedural creature:procedural creatures:procedural]</span>
+<span class="s">		[CASTE_NAME:procedural creature:procedural creatures:procedural]</span>
+<span class="s">	]]</span><span class="p">)</span>
+	<span class="c1">--adds some common tokens depending on the options</span>
+	<span class="n">add_regular_tokens</span><span class="p">(</span><span class="n">lines</span><span class="p">,</span><span class="n">options</span><span class="p">)</span>
+	
+	<span class="c1">--handles sphere options: fills out [SPHERE] tokens from options.spheres, and so on</span>
+	<span class="n">populate_sphere_info</span><span class="p">(</span><span class="n">lines</span><span class="p">,</span><span class="n">options</span><span class="p">)</span>
+	
+	<span class="c1">--choose a creature profile to base on</span>
+	<span class="kd">local</span> <span class="n">rcp</span><span class="o">=</span><span class="n">get_random_creature_profile</span><span class="p">(</span><span class="n">options</span><span class="p">)</span>
+	<span class="c1">--set [BODY_SIZE] and some relevant tokens</span>
+	<span class="n">add_body_size</span><span class="p">(</span><span class="n">lines</span><span class="p">,</span><span class="n">rcp</span><span class="p">.</span><span class="n">min_size</span><span class="p">,</span><span class="n">options</span><span class="p">)</span>
+	<span class="c1">--add the tile from the creature profile</span>
+	<span class="n">lines</span><span class="p">[</span><span class="o">#</span><span class="n">lines</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span><span class="o">=</span><span class="s2">&quot;[CREATURE_TILE:&quot;</span><span class="o">..</span><span class="n">tile_string</span><span class="p">(</span><span class="n">rcp</span><span class="p">.</span><span class="n">tile</span><span class="p">)</span><span class="o">..</span><span class="s2">&quot;]&quot;</span>
+	
+	<span class="c1">--the Big Function determining tweaks, body, appearance, description...</span>
+	<span class="n">build_procgen_creature</span><span class="p">(</span><span class="n">rcp</span><span class="p">,</span><span class="n">lines</span><span class="p">,</span><span class="n">options</span><span class="p">)</span>
+	
+	<span class="n">raws</span><span class="p">.</span><span class="n">register_creatures</span><span class="p">(</span><span class="n">lines</span><span class="p">)</span>
+<span class="kr">end</span>
+</pre></div></span></div></td></tr></tbody></table>
+<h3><span class="mw-headline" id="Making_your_own_rcp">Making your own rcp</span></h3>
+<p>You don't have to be limited to the vanilla list of random creature variants. Mods can add new kinds of random creature profiles, materials, etc that can be seamlessly integrated into how it generates creatures. 
+</p><p>This script generates a single creature based on a <a href="http://en.wikipedia.org/wiki/Eurypterid" class="extiw" title="wikipedia:Eurypterid">eurypterid</a>. It has a unique rcp, set in the function itself.
+</p>
+<div style="clear:both;"></div>
+<table class="collapsible collapsed infobox gamedata" style="background: #fdfdfd; border: 1px solid #aaa; font-size: 88%; margin: 0 auto -1px; vertical-align: middle; width: 100%; max-width: 100em; table-layout: fixed;">
+<tbody><tr style="line-height: 1.5em;"><th scope="col" style="background: #cce6b3; padding: 0.25em 1em; text-align: center; display: table-cell;&#32;;"><div style="font-size: 114%; margin: 0 9em;">do_once.local_rcp</div></th></tr>
+<tr style="line-height: 1.5em; text-align: left; display: table-cell;"><td><div style="overflow: auto;"><span class="gamedata-content" style="font-family: monospace; font-size:1.25em; white-space:pre;"><div class="mw-highlight mw-highlight-lang-lua mw-content-ltr" dir="ltr"><pre><span></span><span class="n">do_once</span><span class="p">.</span><span class="n">local_rcp</span> <span class="o">=</span> <span class="kr">function</span><span class="p">()</span>
+	<span class="kd">local</span> <span class="n">lines</span> <span class="o">=</span> <span class="p">{}</span>
+	<span class="kd">local</span> <span class="n">tok</span><span class="o">=</span><span class="s2">&quot;LOCAL_RCP&quot;</span>
+	<span class="n">lines</span><span class="p">[</span><span class="o">#</span><span class="n">lines</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span><span class="o">=</span><span class="s2">&quot;[CREATURE:&quot;</span><span class="o">..</span><span class="n">tok</span><span class="o">..</span><span class="s2">&quot;]&quot;</span>
+	<span class="n">add_generated_info</span><span class="p">(</span><span class="n">lines</span><span class="p">)</span>
+	
+	<span class="kd">local</span> <span class="n">options</span><span class="o">=</span><span class="p">{</span>
+		<span class="n">token</span><span class="o">=</span><span class="n">tok</span><span class="p">,</span>
+		<span class="n">spheres</span><span class="o">=</span><span class="p">{</span>
+			<span class="n">ANIMALS</span><span class="o">=</span><span class="kc">true</span><span class="p">,</span>
+			<span class="n">WATER</span><span class="o">=</span><span class="kc">true</span>
+		<span class="p">}</span>
+	<span class="p">}</span>
+	<span class="n">add_regular_tokens</span><span class="p">(</span><span class="n">lines</span><span class="p">,</span><span class="n">options</span><span class="p">)</span>
+	<span class="n">populate_sphere_info</span><span class="p">(</span><span class="n">lines</span><span class="p">,</span><span class="n">options</span><span class="p">)</span>
+	<span class="c1">--habitat</span>
+	<span class="n">lines</span><span class="p">[</span><span class="o">#</span><span class="n">lines</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span><span class="o">=</span><span class="s2">&quot;[BIOME:ANY_OCEAN]&quot;</span>
+	<span class="n">lines</span><span class="p">[</span><span class="o">#</span><span class="n">lines</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span><span class="o">=</span><span class="s2">&quot;[LARGE_ROAMING]&quot;</span>
+	<span class="n">lines</span><span class="p">[</span><span class="o">#</span><span class="n">lines</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span><span class="o">=</span><span class="s2">&quot;[AQUATIC][UNDERSWIM]&quot;</span>
+	
+	<span class="c1">--define a local creature profile</span>
+	<span class="kd">local</span> <span class="n">rcp</span><span class="o">=</span><span class="p">{</span>
+		<span class="n">name_string</span><span class="o">=</span><span class="s2">&quot;eurypterid&quot;</span><span class="p">,</span>
+		<span class="n">tile</span><span class="o">=</span><span class="s1">&#39;E&#39;</span><span class="p">,</span>
+		<span class="n">body_base</span><span class="o">=</span><span class="s2">&quot;SCORPION&quot;</span><span class="p">,</span>
+		<span class="n">c_class</span><span class="o">=</span><span class="s2">&quot;CHITIN_EXO&quot;</span><span class="p">,</span>
+		<span class="n">must_have_pincers</span><span class="o">=</span><span class="kc">true</span><span class="p">,</span>
+		<span class="n">must_have_tail</span><span class="o">=</span><span class="kc">true</span><span class="p">,</span>
+		<span class="n">min_size</span><span class="o">=</span><span class="mi">70000</span><span class="p">,</span>
+		<span class="n">weight</span><span class="o">=</span><span class="mi">200</span><span class="p">,</span>
+	<span class="p">}</span>
+	<span class="kd">local</span> <span class="n">name_str</span> <span class="o">=</span> <span class="n">rcp</span><span class="p">.</span><span class="n">name_string</span><span class="o">..</span><span class="s2">&quot;:&quot;</span><span class="o">..</span><span class="n">rcp</span><span class="p">.</span><span class="n">name_string</span><span class="o">..</span><span class="s2">&quot;s:&quot;</span><span class="o">..</span><span class="n">rcp</span><span class="p">.</span><span class="n">name_string</span><span class="o">..</span><span class="s2">&quot;]&quot;</span>
+	<span class="n">lines</span><span class="p">[</span><span class="o">#</span><span class="n">lines</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;[NAME:&quot;</span><span class="o">..</span><span class="n">name_str</span>
+	<span class="n">lines</span><span class="p">[</span><span class="o">#</span><span class="n">lines</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;[CASTE_NAME:&quot;</span><span class="o">..</span><span class="n">name_str</span>
+	
+	<span class="n">add_body_size</span><span class="p">(</span><span class="n">lines</span><span class="p">,</span><span class="n">rcp</span><span class="p">.</span><span class="n">min_size</span><span class="p">,</span><span class="n">options</span><span class="p">)</span>
+	<span class="n">lines</span><span class="p">[</span><span class="o">#</span><span class="n">lines</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span><span class="o">=</span><span class="s2">&quot;[CREATURE_TILE:&quot;</span><span class="o">..</span><span class="n">tile_string</span><span class="p">(</span><span class="n">rcp</span><span class="p">.</span><span class="n">tile</span><span class="p">)</span><span class="o">..</span><span class="s2">&quot;]&quot;</span>
+	<span class="n">build_procgen_creature</span><span class="p">(</span><span class="n">rcp</span><span class="p">,</span><span class="n">lines</span><span class="p">,</span><span class="n">options</span><span class="p">)</span>
+	
+	<span class="n">raws</span><span class="p">.</span><span class="n">register_creatures</span><span class="p">(</span><span class="n">lines</span><span class="p">)</span>
+<span class="kr">end</span>
+</pre></div></span></div></td></tr></tbody></table>
+<p><br /><br />
+Adding a eurypterid profile to <code>random_creature_profiles</code> allows any creature to access it, if their profile is determined randomly.
+</p><p>This script gives it proper flippers in its body base function. It's also associated with water-based random creatures, so it can potentially generate as an aquatic <a href="/index.php/Forgotten_beast" title="Forgotten beast">forgotten beast</a> species.
+</p><p>Other feature variants stored in tables, like materials, attacks, or descriptions, can be added in this way.
+</p>
+<div style="clear:both;"></div>
+<table class="collapsible collapsed infobox gamedata" style="background: #fdfdfd; border: 1px solid #aaa; font-size: 88%; margin: 0 auto -1px; vertical-align: middle; width: 100%; max-width: 100em; table-layout: fixed;">
+<tbody><tr style="line-height: 1.5em;"><th scope="col" style="background: #cce6b3; padding: 0.25em 1em; text-align: center; display: table-cell;&#32;;"><div style="font-size: 114%; margin: 0 9em;">Global rcp</div></th></tr>
+<tr style="line-height: 1.5em; text-align: left; display: table-cell;"><td><div style="overflow: auto;"><span class="gamedata-content" style="font-family: monospace; font-size:1.25em; white-space:pre;"><div class="mw-highlight mw-highlight-lang-lua mw-content-ltr" dir="ltr"><pre><span></span><span class="n">random_creature_types</span><span class="p">.</span><span class="n">EURYPTERID</span><span class="o">=</span><span class="p">{</span>
+		<span class="n">name_string</span><span class="o">=</span><span class="s2">&quot;eurypterid&quot;</span><span class="p">,</span>
+		<span class="n">tile</span><span class="o">=</span><span class="s1">&#39;E&#39;</span><span class="p">,</span>
+		<span class="n">body_base</span><span class="o">=</span><span class="s2">&quot;SCORPION_FLIPPERS&quot;</span><span class="p">,</span>
+		<span class="n">c_class</span><span class="o">=</span><span class="s2">&quot;CHITIN_EXO&quot;</span><span class="p">,</span>
+		<span class="n">must_have_pincers</span><span class="o">=</span><span class="kc">true</span><span class="p">,</span>
+		<span class="n">must_have_tail</span><span class="o">=</span><span class="kc">true</span><span class="p">,</span>
+		<span class="n">min_size</span><span class="o">=</span><span class="mi">70000</span><span class="p">,</span>
+		<span class="n">weight</span><span class="o">=</span><span class="mi">200</span><span class="p">,</span>
+<span class="p">}</span>
+
+<span class="n">body_base_fun</span><span class="p">.</span><span class="n">SCORPION_FLIPPERS</span><span class="o">=</span><span class="kr">function</span><span class="p">(</span><span class="n">rcp</span><span class="p">,</span><span class="n">options</span><span class="p">)</span>
+		<span class="n">options</span><span class="p">.</span><span class="n">pcg_layering_base</span><span class="o">=</span><span class="s2">&quot;BEAST_SCORPION&quot;</span>
+		<span class="n">options</span><span class="p">.</span><span class="n">walk_var</span><span class="o">=</span><span class="s2">&quot;STANDARD_WALKING_GAITS&quot;</span>
+		<span class="n">options</span><span class="p">.</span><span class="n">walk_speed</span><span class="o">=</span><span class="mi">900</span>
+		<span class="kr">return</span> <span class="p">{</span><span class="s2">&quot;RCP_CEPHALOTHORAX&quot;</span><span class="p">,</span><span class="s2">&quot;RCP_ABDOMEN&quot;</span><span class="p">,</span><span class="s2">&quot;RCP_FIRST_SIMPLE_LEGS&quot;</span><span class="p">,</span><span class="s2">&quot;RCP_SECOND_SIMPLE_LEGS&quot;</span><span class="p">,</span><span class="s2">&quot;RCP_THIRD_SIMPLE_LEGS&quot;</span><span class="p">,</span><span class="s2">&quot;RCP_PINCERS&quot;</span><span class="p">,</span><span class="s2">&quot;RCP_FRONT_FLIPPER&quot;</span><span class="p">}</span>
+<span class="kr">end</span>
+
+<span class="n">water_based_random_creature</span><span class="p">.</span><span class="n">EURYPTERID</span><span class="o">=</span><span class="kc">true</span>
+</pre></div></span></div></td></tr></tbody></table>
+<h3><span class="mw-headline" id="Werebugs">Werebugs</span></h3>
+<p>You can make a custom function to determine what rcps are available to a given creature.
+</p><p>These scripts are for an arthropoid version of a <a href="/index.php/Werebeast" title="Werebeast">werebeast</a>.
+</p>
+<ul><li><code>arthropod_rcp</code> is a list of rcp keys which fit this theme (plus a few worms on there for fun), which the creature function rolls on to pick its form.</li>
+<li><code>is_bloodsucking_by_key</code>, along with <code>rcp.must_suck_blood_through_proboscis</code> and <code>rcp.must_suck_blood_through_mouth</code> are checked to assign <code><a href="/index.php/Creature_token#BLOODSUCKER" title="Creature token">[BLOODSUCKER]</a></code> to it, which allows certain creature types to exhibit vampiric behavior if their berserk rampage wasn't enough <a href="/index.php/Fun" class="mw-redirect" title="Fun">fun</a>.</li></ul>
+<p>Otherwise, the function should work the same as vanilla werebeasts, generating an associated <a href="/index.php/Interaction_token" title="Interaction token">major curse</a> in the same way and becoming "twisted into humanoid form" (at the expense of their additional limbs).
+</p>
+<div style="clear:both;"></div>
+<table class="collapsible collapsed infobox gamedata" style="background: #fdfdfd; border: 1px solid #aaa; font-size: 88%; margin: 0 auto -1px; vertical-align: middle; width: 100%; max-width: 100em; table-layout: fixed;">
+<tbody><tr style="line-height: 1.5em;"><th scope="col" style="background: #cce6b3; padding: 0.25em 1em; text-align: center; display: table-cell;&#32;;"><div style="font-size: 114%; margin: 0 9em;">arthropod_rcp</div></th></tr>
+<tr style="line-height: 1.5em; text-align: left; display: table-cell;"><td><div style="overflow: auto;"><span class="gamedata-content" style="font-family: monospace; font-size:1.25em; white-space:pre;"><div class="mw-highlight mw-highlight-lang-lua mw-content-ltr" dir="ltr"><pre><span></span><span class="kd">local</span> <span class="n">arthropod_rcp</span> <span class="o">=</span> <span class="p">{</span>
+	<span class="s2">&quot;ARACHNID_MITE&quot;</span><span class="p">,</span>
+	<span class="s2">&quot;ARACHNID_SCORPION&quot;</span><span class="p">,</span>
+	<span class="s2">&quot;ARACHNID_SPIDER&quot;</span><span class="p">,</span>
+	<span class="s2">&quot;ARACHNID_TARANTULA&quot;</span><span class="p">,</span>
+	<span class="s2">&quot;ARACHNID_TICK&quot;</span><span class="p">,</span>
+	<span class="s2">&quot;CRUSTACEAN_CRAB&quot;</span><span class="p">,</span>
+	<span class="s2">&quot;CRUSTACEAN_LOBSTER&quot;</span><span class="p">,</span>
+	<span class="s2">&quot;CRUSTACEAN_SHRIMP&quot;</span><span class="p">,</span>
+	<span class="s2">&quot;INSECT_ANT&quot;</span><span class="p">,</span>
+	<span class="s2">&quot;INSECT_ANTLION&quot;</span><span class="p">,</span>
+	<span class="s2">&quot;INSECT_APHID&quot;</span><span class="p">,</span>
+	<span class="s2">&quot;INSECT_BEE&quot;</span><span class="p">,</span>
+	<span class="s2">&quot;INSECT_BUTTERFLY&quot;</span><span class="p">,</span>
+	<span class="s2">&quot;INSECT_CADDISFLY&quot;</span><span class="p">,</span>
+	<span class="s2">&quot;INSECT_CATERPILLAR&quot;</span><span class="p">,</span>
+	<span class="s2">&quot;INSECT_CICADA&quot;</span><span class="p">,</span>
+	<span class="s2">&quot;INSECT_COCKROACH&quot;</span><span class="p">,</span>
+	<span class="s2">&quot;INSECT_CRICKET&quot;</span><span class="p">,</span>
+	<span class="s2">&quot;INSECT_DAMSELFLY&quot;</span><span class="p">,</span>
+	<span class="s2">&quot;INSECT_DARKLING_BEETLE&quot;</span><span class="p">,</span>
+	<span class="s2">&quot;INSECT_DRAGONFLY&quot;</span><span class="p">,</span>
+	<span class="s2">&quot;INSECT_EARWIG&quot;</span><span class="p">,</span>
+	<span class="s2">&quot;INSECT_FIREFLY&quot;</span><span class="p">,</span>
+	<span class="s2">&quot;INSECT_FLEA&quot;</span><span class="p">,</span>
+	<span class="s2">&quot;INSECT_FLY&quot;</span><span class="p">,</span>
+	<span class="s2">&quot;INSECT_GRASSHOPPER&quot;</span><span class="p">,</span>
+	<span class="s2">&quot;INSECT_HORNET&quot;</span><span class="p">,</span>
+	<span class="s2">&quot;INSECT_LACEWING&quot;</span><span class="p">,</span>
+	<span class="s2">&quot;INSECT_LADYBUG&quot;</span><span class="p">,</span>
+	<span class="s2">&quot;INSECT_LOUSE&quot;</span><span class="p">,</span>
+	<span class="s2">&quot;INSECT_MAGGOT&quot;</span><span class="p">,</span>
+	<span class="s2">&quot;INSECT_MANTIS&quot;</span><span class="p">,</span>
+	<span class="s2">&quot;INSECT_MAYFLY&quot;</span><span class="p">,</span>
+	<span class="s2">&quot;INSECT_MOSQUITO&quot;</span><span class="p">,</span>
+	<span class="s2">&quot;INSECT_MOTH&quot;</span><span class="p">,</span>
+	<span class="s2">&quot;INSECT_SILVERFISH&quot;</span><span class="p">,</span>
+	<span class="s2">&quot;INSECT_SCARAB_BEETLE&quot;</span><span class="p">,</span>
+	<span class="s2">&quot;INSECT_SCORPIONFLY&quot;</span><span class="p">,</span>
+	<span class="s2">&quot;INSECT_SNAKEFLY&quot;</span><span class="p">,</span>
+	<span class="s2">&quot;INSECT_STONEFLY&quot;</span><span class="p">,</span>
+	<span class="s2">&quot;INSECT_TERMITE&quot;</span><span class="p">,</span>
+	<span class="s2">&quot;INSECT_THRIPS&quot;</span><span class="p">,</span>
+	<span class="s2">&quot;INSECT_WASP&quot;</span><span class="p">,</span>
+	<span class="s2">&quot;INSECT_WEEVIL&quot;</span><span class="p">,</span>
+	<span class="s2">&quot;NEMATODE&quot;</span><span class="p">,</span>
+	<span class="s2">&quot;LEECH&quot;</span><span class="p">,</span>
+<span class="p">}</span>
+</pre></div></span></div></td></tr></tbody></table>
+<div style="clear:both;"></div>
+<table class="collapsible collapsed infobox gamedata" style="background: #fdfdfd; border: 1px solid #aaa; font-size: 88%; margin: 0 auto -1px; vertical-align: middle; width: 100%; max-width: 100em; table-layout: fixed;">
+<tbody><tr style="line-height: 1.5em;"><th scope="col" style="background: #cce6b3; padding: 0.25em 1em; text-align: center; display: table-cell;&#32;;"><div style="font-size: 114%; margin: 0 9em;">is_bloodsucking_by_key</div></th></tr>
+<tr style="line-height: 1.5em; text-align: left; display: table-cell;"><td><div style="overflow: auto;"><span class="gamedata-content" style="font-family: monospace; font-size:1.25em; white-space:pre;"><div class="mw-highlight mw-highlight-lang-lua mw-content-ltr" dir="ltr"><pre><span></span><span class="kd">local</span> <span class="n">is_bloodsucking_by_key</span> <span class="o">=</span> <span class="p">{</span>
+	<span class="n">ARACHNID_MITE</span><span class="o">=</span><span class="kc">true</span><span class="p">,</span>
+	<span class="n">ARACHNID_TICK</span><span class="o">=</span><span class="kc">true</span><span class="p">,</span>
+	<span class="n">INSECT_EARWIG</span><span class="o">=</span><span class="kc">true</span><span class="p">,</span><span class="c1">--some are parasitic</span>
+	<span class="n">INSECT_FLEA</span><span class="o">=</span><span class="kc">true</span><span class="p">,</span>
+	<span class="n">INSECT_LOUSE</span><span class="o">=</span><span class="kc">true</span><span class="p">,</span>
+	<span class="n">INSECT_MAGGOT</span><span class="o">=</span><span class="kc">true</span><span class="p">,</span>
+	<span class="n">INSECT_THRIPS</span><span class="o">=</span><span class="kc">true</span><span class="p">,</span><span class="c1">--no bloodsucking reported, but does bite humans</span>
+	<span class="n">NEMATODE</span><span class="o">=</span><span class="kc">true</span><span class="p">,</span>
+<span class="p">}</span>
+</pre></div></span></div></td></tr></tbody></table>
+<div style="clear:both;"></div>
+<table class="collapsible collapsed infobox gamedata" style="background: #fdfdfd; border: 1px solid #aaa; font-size: 88%; margin: 0 auto -1px; vertical-align: middle; width: 100%; max-width: 100em; table-layout: fixed;">
+<tbody><tr style="line-height: 1.5em;"><th scope="col" style="background: #cce6b3; padding: 0.25em 1em; text-align: center; display: table-cell;&#32;;"><div style="font-size: 114%; margin: 0 9em;">creatures.night_creature.werebeast.werebug</div></th></tr>
+<tr style="line-height: 1.5em; text-align: left; display: table-cell;"><td><div style="overflow: auto;"><span class="gamedata-content" style="font-family: monospace; font-size:1.25em; white-space:pre;"><div class="mw-highlight mw-highlight-lang-lua mw-content-ltr" dir="ltr"><pre><span></span><span class="n">creatures</span><span class="p">.</span><span class="n">night_creature</span><span class="p">.</span><span class="n">werebeast</span><span class="p">.</span><span class="n">werebug</span><span class="o">=</span><span class="kr">function</span><span class="p">(</span><span class="n">tok</span><span class="p">)</span>
+	<span class="kd">local</span> <span class="n">lines</span><span class="o">=</span><span class="p">{}</span>
+	<span class="kd">local</span> <span class="n">options</span><span class="o">=</span><span class="p">{</span>
+		<span class="n">spheres</span><span class="o">=</span><span class="p">{</span>
+			<span class="n">CHAOS</span><span class="o">=</span><span class="kc">true</span><span class="p">,</span>
+			<span class="n">ANIMALS</span><span class="o">=</span><span class="kc">true</span><span class="p">,</span>
+			<span class="n">NIGHT</span><span class="o">=</span><span class="kc">true</span><span class="p">,</span>
+			<span class="n">MOON</span><span class="o">=</span><span class="kc">true</span>
+		<span class="p">},</span>
+		<span class="n">always_glowing_eyes</span><span class="o">=</span><span class="kc">true</span><span class="p">,</span>
+		<span class="n">use_werebeast_pcg</span><span class="o">=</span><span class="kc">true</span><span class="p">,</span> <span class="c1">--use them if werebug sprites somehow exist</span>
+		<span class="n">animal_coloring_allowed</span><span class="o">=</span><span class="kc">true</span><span class="p">,</span>
+		<span class="n">no_tweak</span><span class="o">=</span><span class="kc">true</span><span class="p">,</span>
+		<span class="n">material_weakness</span><span class="o">=</span><span class="kc">true</span><span class="p">,</span>
+		<span class="n">humanoidable_only</span><span class="o">=</span><span class="kc">true</span><span class="p">,</span>
+		<span class="n">prioritize_bite</span><span class="o">=</span><span class="kc">true</span><span class="p">,</span>
+		<span class="n">force_ichor</span><span class="o">=</span><span class="kc">true</span><span class="p">,</span>
+		<span class="n">token</span><span class="o">=</span><span class="n">tok</span>
+	<span class="p">}</span>
+	<span class="n">options</span><span class="p">.</span><span class="n">night_creature_agile_pref</span><span class="o">=</span><span class="kc">true</span>
+	<span class="n">night_creature_universals</span><span class="p">(</span><span class="n">lines</span><span class="p">,</span><span class="n">options</span><span class="p">)</span>
+	<span class="n">lines</span><span class="p">[</span><span class="o">#</span><span class="n">lines</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span><span class="o">=</span><span class="s2">&quot;[NIGHT_CREATURE_HUNTER]&quot;</span>
+	<span class="n">lines</span><span class="p">[</span><span class="o">#</span><span class="n">lines</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span><span class="o">=</span><span class="s2">&quot;[CAN_LEARN]&quot;</span>
+	<span class="n">lines</span><span class="p">[</span><span class="o">#</span><span class="n">lines</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span><span class="o">=</span><span class="s2">&quot;[CAN_SPEAK]&quot;</span>
+	<span class="n">lines</span><span class="p">[</span><span class="o">#</span><span class="n">lines</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span><span class="o">=</span><span class="s2">&quot;[NO_GENDER]&quot;</span>
+	<span class="n">lines</span><span class="p">[</span><span class="o">#</span><span class="n">lines</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span><span class="o">=</span><span class="s2">&quot;[BONECARN]&quot;</span>
+	<span class="n">lines</span><span class="p">[</span><span class="o">#</span><span class="n">lines</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span><span class="o">=</span><span class="s2">&quot;[CRAZED]&quot;</span>
+	<span class="kr">if</span> <span class="n">options</span><span class="p">.</span><span class="n">night_creature_strength_pref</span> <span class="kr">then</span>
+		<span class="n">lines</span><span class="p">[</span><span class="o">#</span><span class="n">lines</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span><span class="o">=</span><span class="s2">&quot;[PHYS_ATT_RANGE:STRENGTH:1000:1250:1500:2000:2250:2500:3000]&quot;</span>
+		<span class="n">lines</span><span class="p">[</span><span class="o">#</span><span class="n">lines</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span><span class="o">=</span><span class="s2">&quot;[PHYS_ATT_RANGE:AGILITY:450:550:700:750:800:850:900]&quot;</span>
+		<span class="n">lines</span><span class="p">[</span><span class="o">#</span><span class="n">lines</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span><span class="o">=</span><span class="s2">&quot;[PHYS_ATT_RANGE:TOUGHNESS:850:900:950:1000:1050:1100:1150]&quot;</span>
+		<span class="n">lines</span><span class="p">[</span><span class="o">#</span><span class="n">lines</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span><span class="o">=</span><span class="s2">&quot;[PHYS_ATT_RANGE:ENDURANCE:850:900:950:1000:1050:1100:1150]&quot;</span>
+		<span class="n">options</span><span class="p">.</span><span class="n">special_walk_speed</span><span class="o">=</span><span class="mi">1000</span>
+	<span class="kr">elseif</span> <span class="n">options</span><span class="p">.</span><span class="n">night_creature_agile_pref</span> <span class="kr">then</span>
+		<span class="n">lines</span><span class="p">[</span><span class="o">#</span><span class="n">lines</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span><span class="o">=</span><span class="s2">&quot;[PHYS_ATT_RANGE:STRENGTH:450:550:700:750:800:850:900]&quot;</span>
+		<span class="n">lines</span><span class="p">[</span><span class="o">#</span><span class="n">lines</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span><span class="o">=</span><span class="s2">&quot;[PHYS_ATT_RANGE:AGILITY:1000:1250:1500:2000:2250:2500:3000]&quot;</span>
+		<span class="n">lines</span><span class="p">[</span><span class="o">#</span><span class="n">lines</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span><span class="o">=</span><span class="s2">&quot;[PHYS_ATT_RANGE:TOUGHNESS:850:900:950:1000:1050:1100:1150]&quot;</span>
+		<span class="n">lines</span><span class="p">[</span><span class="o">#</span><span class="n">lines</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span><span class="o">=</span><span class="s2">&quot;[PHYS_ATT_RANGE:ENDURANCE:850:900:950:1000:1050:1100:1150]&quot;</span>
+		<span class="n">options</span><span class="p">.</span><span class="n">special_walk_speed</span><span class="o">=</span><span class="mi">800</span><span class="p">;</span>
+	<span class="kr">elseif</span> <span class="n">options</span><span class="p">.</span><span class="n">night_creature_strength_agile_pref</span> <span class="kr">then</span>
+		<span class="n">lines</span><span class="p">[</span><span class="o">#</span><span class="n">lines</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span><span class="o">=</span><span class="s2">&quot;[PHYS_ATT_RANGE:STRENGTH:1000:1150:1250:1500:2000:2250:2500]&quot;</span>
+		<span class="n">lines</span><span class="p">[</span><span class="o">#</span><span class="n">lines</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span><span class="o">=</span><span class="s2">&quot;[PHYS_ATT_RANGE:AGILITY:1000:1150:1250:1500:2000:2250:2500]&quot;</span>
+		<span class="n">lines</span><span class="p">[</span><span class="o">#</span><span class="n">lines</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span><span class="o">=</span><span class="s2">&quot;[PHYS_ATT_RANGE:TOUGHNESS:850:900:950:1000:1050:1100:1150]&quot;</span>
+		<span class="n">lines</span><span class="p">[</span><span class="o">#</span><span class="n">lines</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span><span class="o">=</span><span class="s2">&quot;[PHYS_ATT_RANGE:ENDURANCE:850:900:950:1000:1050:1100:1150]&quot;</span>
+		<span class="n">options</span><span class="p">.</span><span class="n">special_walk_speed</span><span class="o">=</span><span class="mi">850</span><span class="p">;</span>
+	<span class="kr">end</span>
+	<span class="n">lines</span><span class="p">[</span><span class="o">#</span><span class="n">lines</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span><span class="o">=</span><span class="s2">&quot;[PHYS_ATT_RANGE:RECUPERATION:450:1050:1150:1250:1350:1550:2250]&quot;</span>
+	<span class="n">lines</span><span class="p">[</span><span class="o">#</span><span class="n">lines</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span><span class="o">=</span><span class="s2">&quot;[PHYS_ATT_RANGE:DISEASE_RESISTANCE:700:1300:1400:1500:1600:1800:2500]&quot;</span>
+	<span class="n">lines</span><span class="p">[</span><span class="o">#</span><span class="n">lines</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span><span class="o">=</span><span class="s2">&quot;[MENT_ATT_RANGE:ANALYTICAL_ABILITY:1250:1500:1750:2000:2500:3000:5000]&quot;</span>
+	<span class="n">lines</span><span class="p">[</span><span class="o">#</span><span class="n">lines</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span><span class="o">=</span><span class="s2">&quot;[MENT_ATT_RANGE:FOCUS:1250:1500:1750:2000:2500:3000:5000]&quot;</span>
+	<span class="n">lines</span><span class="p">[</span><span class="o">#</span><span class="n">lines</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span><span class="o">=</span><span class="s2">&quot;[MENT_ATT_RANGE:WILLPOWER:1250:1500:1750:2000:2500:3000:5000]&quot;</span>
+	<span class="n">lines</span><span class="p">[</span><span class="o">#</span><span class="n">lines</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span><span class="o">=</span><span class="s2">&quot;[MENT_ATT_RANGE:PATIENCE:0:333:666:1000:2333:3666:5000]&quot;</span>
+	<span class="n">lines</span><span class="p">[</span><span class="o">#</span><span class="n">lines</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span><span class="o">=</span><span class="s2">&quot;[MENT_ATT_RANGE:MEMORY:1250:1500:1750:2000:2500:3000:5000]&quot;</span>
+	<span class="n">lines</span><span class="p">[</span><span class="o">#</span><span class="n">lines</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span><span class="o">=</span><span class="s2">&quot;[MENT_ATT_RANGE:LINGUISTIC_ABILITY:450:1050:1150:1250:1350:1550:2250]&quot;</span>
+	<span class="n">lines</span><span class="p">[</span><span class="o">#</span><span class="n">lines</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span><span class="o">=</span><span class="s2">&quot;[MENT_ATT_RANGE:MUSICALITY:0:333:666:1000:2333:3666:5000]&quot;</span>
+	<span class="n">lines</span><span class="p">[</span><span class="o">#</span><span class="n">lines</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span><span class="o">=</span><span class="s2">&quot;[MENT_ATT_RANGE:SOCIAL_AWARENESS:700:1300:1400:1500:1600:1800:2500]&quot;</span>
+	<span class="n">lines</span><span class="p">[</span><span class="o">#</span><span class="n">lines</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span><span class="o">=</span><span class="s2">&quot;[PERSONALITY:BASHFUL:0:0:0]&quot;</span>
+	<span class="n">lines</span><span class="p">[</span><span class="o">#</span><span class="n">lines</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span><span class="o">=</span><span class="s2">&quot;[PERSONALITY:STRESS_VULNERABILITY:0:0:0]&quot;</span>
+	<span class="n">lines</span><span class="p">[</span><span class="o">#</span><span class="n">lines</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span><span class="o">=</span><span class="s2">&quot;[PERSONALITY:FRIENDLINESS:0:0:0]&quot;</span>
+	<span class="n">lines</span><span class="p">[</span><span class="o">#</span><span class="n">lines</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span><span class="o">=</span><span class="s2">&quot;[PERSONALITY:DISDAIN_ADVICE:100:100:100]&quot;</span>
+	<span class="n">lines</span><span class="p">[</span><span class="o">#</span><span class="n">lines</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span><span class="o">=</span><span class="s2">&quot;[PERSONALITY:CHEER_PROPENSITY:0:0:0]&quot;</span>
+	<span class="n">lines</span><span class="p">[</span><span class="o">#</span><span class="n">lines</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span><span class="o">=</span><span class="s2">&quot;[PERSONALITY:GRATITUDE:0:0:0]&quot;</span>
+	<span class="n">lines</span><span class="p">[</span><span class="o">#</span><span class="n">lines</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span><span class="o">=</span><span class="s2">&quot;[PERSONALITY:TRUST:0:0:0]&quot;</span>
+	<span class="n">lines</span><span class="p">[</span><span class="o">#</span><span class="n">lines</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span><span class="o">=</span><span class="s2">&quot;[PERSONALITY:ALTRUISM:0:0:0]&quot;</span>
+	<span class="n">lines</span><span class="p">[</span><span class="o">#</span><span class="n">lines</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span><span class="o">=</span><span class="s2">&quot;[PERSONALITY:CRUELTY:100:100:100]&quot;</span>
+
+	<span class="n">add_regular_tokens</span><span class="p">(</span><span class="n">lines</span><span class="p">,</span><span class="n">options</span><span class="p">)</span>
+	<span class="n">populate_sphere_info</span><span class="p">(</span><span class="n">lines</span><span class="p">,</span><span class="n">options</span><span class="p">)</span>
+	<span class="n">lines</span><span class="p">[</span><span class="o">#</span><span class="n">lines</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span><span class="o">=</span><span class="s2">&quot;[NATURAL_SKILL:WRESTLING:6]&quot;</span>
+	<span class="n">lines</span><span class="p">[</span><span class="o">#</span><span class="n">lines</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span><span class="o">=</span><span class="s2">&quot;[NATURAL_SKILL:BITE:6]&quot;</span>
+	<span class="n">lines</span><span class="p">[</span><span class="o">#</span><span class="n">lines</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span><span class="o">=</span><span class="s2">&quot;[NATURAL_SKILL:GRASP_STRIKE:6]&quot;</span>
+	<span class="n">lines</span><span class="p">[</span><span class="o">#</span><span class="n">lines</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span><span class="o">=</span><span class="s2">&quot;[NATURAL_SKILL:STANCE_STRIKE:6]&quot;</span>
+	<span class="n">lines</span><span class="p">[</span><span class="o">#</span><span class="n">lines</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span><span class="o">=</span><span class="s2">&quot;[NATURAL_SKILL:MELEE_COMBAT:6]&quot;</span>
+	<span class="n">lines</span><span class="p">[</span><span class="o">#</span><span class="n">lines</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span><span class="o">=</span><span class="s2">&quot;[NATURAL_SKILL:DODGING:6]&quot;</span>
+	<span class="n">lines</span><span class="p">[</span><span class="o">#</span><span class="n">lines</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span><span class="o">=</span><span class="s2">&quot;[NATURAL_SKILL:SITUATIONAL_AWARENESS:6]&quot;</span>
+	<span class="n">lines</span><span class="p">[</span><span class="o">#</span><span class="n">lines</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span><span class="o">=</span><span class="s2">&quot;[NATURAL_SKILL:SNEAK:20]&quot;</span>
+
+	<span class="n">lines</span><span class="p">[</span><span class="o">#</span><span class="n">lines</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span><span class="o">=</span><span class="s2">&quot;[DIFFICULTY:3]&quot;</span>
+	<span class="n">lines</span><span class="p">[</span><span class="o">#</span><span class="n">lines</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span><span class="o">=</span><span class="s2">&quot;[LAIR:SIMPLE_BURROW:50]&quot;</span>
+	<span class="c1">-- pick a random bug rcp, there&#39;s no overlap with the mammal/reptile standard werebeasts</span>
+	<span class="n">finalize_random_creature_types</span><span class="p">()</span> <span class="c1">-- good practice to run before rolling on it</span>
+	<span class="kd">local</span> <span class="n">rcp_key</span> <span class="o">=</span> <span class="n">pick_random_no_replace</span><span class="p">(</span><span class="n">arthropod_rcp</span><span class="p">)</span> <span class="ow">or</span> <span class="s2">&quot;INSECT_MANTIS&quot;</span>
+	<span class="kd">local</span> <span class="n">rcp</span><span class="o">=</span><span class="n">random_creature_types</span><span class="p">[</span><span class="n">rcp_key</span><span class="p">]</span>
+
+	<span class="kd">local</span> <span class="n">custom_desc_str</span> <span class="o">=</span> <span class="s2">&quot;it is crazed for blood and flesh&quot;</span>
+	<span class="c1">-- make them also vampires if they suck blood</span>
+	<span class="kr">if</span> <span class="n">rcp</span><span class="p">.</span><span class="n">must_suck_blood_through_proboscis</span> <span class="ow">or</span> <span class="n">rcp</span><span class="p">.</span><span class="n">must_suck_blood_through_mouth</span> <span class="ow">or</span> <span class="n">is_bloodsucking_by_key</span><span class="p">[</span><span class="n">rcp_key</span><span class="p">]</span> <span class="kr">then</span>
+		<span class="n">lines</span><span class="p">[</span><span class="o">#</span><span class="n">lines</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span><span class="o">=</span><span class="s2">&quot;[BLOODSUCKER]&quot;</span>
+		<span class="n">custom_desc_str</span> <span class="o">=</span> <span class="s2">&quot;it is crazed for warm blood&quot;</span>
+	<span class="kr">end</span>
+	<span class="c1">-- This sort of process should be fully generalized</span>
+	<span class="c1">-- to all creatures you want to have bespoke associated interactions</span>
+	<span class="c1">-- for example, you can have a blessing that allows a sort of</span>
+	<span class="c1">-- uncrazed transformation into some sort of bespoke</span>
+	<span class="c1">-- generated thing--at least, hopefully it&#39;s robust enough for that</span>
+	<span class="kd">local</span> <span class="n">choice</span><span class="o">=</span><span class="n">generate_from_list</span><span class="p">(</span><span class="n">werebeast_origin_interactions</span><span class="p">,</span><span class="n">tok</span><span class="p">,</span><span class="n">rcp</span><span class="p">.</span><span class="n">name_string</span><span class="p">,</span><span class="n">options</span><span class="p">)</span>
+	<span class="n">map_merge</span><span class="p">(</span><span class="n">options</span><span class="p">,</span><span class="n">choice</span><span class="p">.</span><span class="n">options</span><span class="p">)</span>
+	<span class="kd">local</span> <span class="n">werebeast_choice_raws</span><span class="o">=</span><span class="n">choice</span><span class="p">.</span><span class="n">interaction</span> <span class="ow">or</span> <span class="n">choice</span><span class="p">.</span><span class="n">raws</span>
+	<span class="n">raws</span><span class="p">.</span><span class="n">register_interactions</span><span class="p">(</span><span class="n">werebeast_choice_raws</span><span class="p">)</span>
+	<span class="n">add_body_size</span><span class="p">(</span><span class="n">lines</span><span class="p">,</span><span class="nb">math.max</span><span class="p">(</span><span class="n">rcp</span><span class="p">.</span><span class="n">min_size</span><span class="p">,</span><span class="mi">80000</span><span class="o">+</span><span class="n">trandom</span><span class="p">(</span><span class="mi">11</span><span class="p">)</span><span class="o">*</span><span class="mi">1000</span><span class="p">),</span><span class="n">options</span><span class="p">)</span>
+	<span class="n">lines</span><span class="p">[</span><span class="o">#</span><span class="n">lines</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span><span class="o">=</span><span class="s2">&quot;[CREATURE_TILE:165]&quot;</span> <span class="c1">--Ñ</span>
+	<span class="n">options</span><span class="p">.</span><span class="n">forced_color</span><span class="o">=</span><span class="p">{</span>
+		<span class="n">f</span><span class="o">=</span><span class="mi">6</span><span class="p">,</span>
+		<span class="n">b</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
+		<span class="n">br</span><span class="o">=</span><span class="mi">1</span>
+	<span class="p">}</span>
+	<span class="n">options</span><span class="p">.</span><span class="n">custom_desc_func</span><span class="o">=</span><span class="kr">function</span><span class="p">(</span><span class="n">options</span><span class="p">)</span>
+		<span class="kr">return</span> <span class="n">custom_desc_str</span>
+	<span class="kr">end</span>
+	<span class="n">build_procgen_creature</span><span class="p">(</span><span class="n">rcp</span><span class="p">,</span><span class="n">lines</span><span class="p">,</span><span class="n">options</span><span class="p">)</span>
+	<span class="n">lines</span><span class="p">[</span><span class="o">#</span><span class="n">lines</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span><span class="o">=</span><span class="s2">&quot;[GO_TO_START]&quot;</span>
+	<span class="c1">-- remove second words like &quot; beetle&quot;, etc from the end</span>
+	<span class="kd">local</span> <span class="n">short_name</span> <span class="o">=</span> <span class="n">rcp</span><span class="p">.</span><span class="n">name_string</span><span class="p">:</span><span class="n">gsub</span><span class="p">(</span><span class="s2">&quot;%s(%w+)$&quot;</span><span class="p">,</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
+	<span class="kd">local</span> <span class="n">name_str</span><span class="o">=</span><span class="s2">&quot;were&quot;</span><span class="o">..</span><span class="n">short_name</span><span class="o">..</span><span class="s2">&quot;:were&quot;</span><span class="o">..</span><span class="n">short_name</span><span class="o">..</span><span class="s2">&quot;s:were&quot;</span><span class="o">..</span><span class="n">short_name</span><span class="o">..</span><span class="s2">&quot;]&quot;</span>
+	<span class="n">lines</span><span class="p">[</span><span class="o">#</span><span class="n">lines</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span><span class="o">=</span><span class="s2">&quot;[NAME:&quot;</span><span class="o">..</span><span class="n">name_str</span>
+	<span class="n">lines</span><span class="p">[</span><span class="o">#</span><span class="n">lines</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span><span class="o">=</span><span class="s2">&quot;[CASTE_NAME:&quot;</span><span class="o">..</span><span class="n">name_str</span>
+	<span class="kr">return</span> <span class="p">{</span><span class="n">raws</span><span class="o">=</span><span class="n">lines</span><span class="p">,</span><span class="n">weight</span><span class="o">=</span><span class="mi">1</span><span class="p">}</span>
+<span class="kr">end</span>
+</pre></div></span></div></td></tr></tbody></table>
+<h3><span class="mw-headline" id="New_forgotten_beasts">New forgotten beasts</span></h3>
+<p>You can add new types of forgotten beasts (or more appropriately, <code><a href="/index.php/Creature_token#FEATURE_BEAST" title="Creature token">[FEATURE_BEAST]</a></code>s). These generate as alternatives when populating the caverns with unique monsters. There are a number of options to interact with shared generation functions.
+</p><p>Unbidden spirits only appear in dry cave layers, and like "spirit" <a href="/index.php/Demon" title="Demon">demons</a>, are malevolent floating beings made of gas or dust.
+</p>
+<div style="clear:both;"></div>
+<table class="collapsible collapsed infobox gamedata" style="background: #fdfdfd; border: 1px solid #aaa; font-size: 88%; margin: 0 auto -1px; vertical-align: middle; width: 100%; max-width: 100em; table-layout: fixed;">
+<tbody><tr style="line-height: 1.5em;"><th scope="col" style="background: #cce6b3; padding: 0.25em 1em; text-align: center; display: table-cell;&#32;;"><div style="font-size: 114%; margin: 0 9em;">Unbidden spirit</div></th></tr>
+<tr style="line-height: 1.5em; text-align: left; display: table-cell;"><td><div style="overflow: auto;"><span class="gamedata-content" style="font-family: monospace; font-size:1.25em; white-space:pre;"><div class="mw-highlight mw-highlight-lang-lua mw-content-ltr" dir="ltr"><pre><span></span><span class="n">creatures</span><span class="p">.</span><span class="n">fb</span><span class="p">.</span><span class="n">unbidden</span><span class="o">=</span><span class="kr">function</span><span class="p">(</span><span class="n">layer_type</span><span class="p">,</span><span class="n">tok</span><span class="p">)</span>
+    <span class="kr">if</span> <span class="n">layer_type</span><span class="o">==</span><span class="mi">0</span> <span class="kr">then</span> <span class="kr">return</span> <span class="kc">nil</span> <span class="kr">end</span> <span class="c1">-- land only</span>
+    <span class="kd">local</span> <span class="n">tbl</span><span class="o">=</span><span class="p">{}</span>
+    <span class="kd">local</span> <span class="n">options</span><span class="o">=</span><span class="p">{</span>
+        <span class="n">strong_attack_tweak</span><span class="o">=</span><span class="kc">true</span><span class="p">,</span>
+        <span class="n">always_make_uniform</span><span class="o">=</span><span class="kc">true</span><span class="p">,</span>
+        <span class="n">always_insubstantial</span><span class="o">=</span><span class="kc">true</span><span class="p">,</span>
+        <span class="n">intangible_flier</span><span class="o">=</span><span class="kc">true</span><span class="p">,</span>
+        <span class="n">spheres</span><span class="o">=</span><span class="p">{</span><span class="n">CAVERNS</span><span class="o">=</span><span class="kc">true</span><span class="p">},</span>
+        <span class="n">is_evil</span><span class="o">=</span><span class="kc">true</span><span class="p">,</span>
+        <span class="n">sickness_name</span><span class="o">=</span><span class="s2">&quot;beast sickness&quot;</span><span class="p">,</span>
+        <span class="n">token</span><span class="o">=</span><span class="n">tok</span>
+    <span class="p">}</span>
+    <span class="n">tbl</span><span class="o">=</span><span class="n">split_to_lines</span><span class="p">(</span><span class="n">tbl</span><span class="p">,</span><span class="s">[[</span>
+<span class="s">    [FEATURE_BEAST]</span>
+<span class="s">    [ATTACK_TRIGGER:0:0:2]</span>
+<span class="s">    [NAME:unbidden spirit:unbidden spirit:unbidden spirit]</span>
+<span class="s">    [CASTE_NAME:unbidden spirit:unbidden spirit:unbidden spirit]</span>
+<span class="s">    [NO_GENDER]</span>
+<span class="s">    [CARNIVORE]</span>
+<span class="s">    [DIFFICULTY:10]</span>
+
+<span class="s">    [NATURAL_SKILL:WRESTLING:6]</span>
+<span class="s">    [NATURAL_SKILL:BITE:6]</span>
+<span class="s">    [NATURAL_SKILL:GRASP_STRIKE:6]</span>
+<span class="s">    [NATURAL_SKILL:STANCE_STRIKE:6]</span>
+<span class="s">    [NATURAL_SKILL:MELEE_COMBAT:6]</span>
+<span class="s">    [NATURAL_SKILL:DODGING:6]</span>
+<span class="s">    [NATURAL_SKILL:SITUATIONAL_AWARENESS:6]</span>
+<span class="s">    [LARGE_PREDATOR]</span>
+<span class="s">    ]]</span><span class="p">)</span>
+    <span class="n">add_regular_tokens</span><span class="p">(</span><span class="n">tbl</span><span class="p">,</span><span class="n">options</span><span class="p">)</span>
+    <span class="n">tbl</span><span class="p">[</span><span class="o">#</span><span class="n">tbl</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span><span class="o">=</span><span class="n">layer_type</span><span class="o">==</span><span class="mi">0</span> <span class="ow">and</span> <span class="s2">&quot;[BIOME:SUBTERRANEAN_WATER]&quot;</span> <span class="ow">or</span> <span class="s2">&quot;[BIOME:SUBTERRANEAN_CHASM]&quot;</span>
+    <span class="kr">if</span> <span class="n">layer_type</span><span class="o">==</span><span class="mi">0</span> <span class="kr">then</span> <span class="n">options</span><span class="p">.</span><span class="n">spheres</span><span class="p">.</span><span class="n">WATER</span><span class="o">=</span><span class="kc">true</span> <span class="kr">end</span>
+    <span class="n">options</span><span class="p">.</span><span class="n">spheres</span><span class="p">[</span><span class="n">pick_random</span><span class="p">(</span><span class="n">evil_spheres</span><span class="p">)]</span><span class="o">=</span><span class="kc">true</span>
+    <span class="n">options</span><span class="p">.</span><span class="n">do_water</span><span class="o">=</span><span class="n">layer_type</span><span class="o">==</span><span class="mi">0</span>
+    <span class="n">populate_sphere_info</span><span class="p">(</span><span class="n">tbl</span><span class="p">,</span><span class="n">options</span><span class="p">)</span>
+    <span class="kd">local</span> <span class="n">rcp</span><span class="o">=</span><span class="n">get_random_creature_profile</span><span class="p">(</span><span class="n">options</span><span class="p">)</span>
+    <span class="n">add_body_size</span><span class="p">(</span><span class="n">tbl</span><span class="p">,</span><span class="nb">math.max</span><span class="p">(</span><span class="mi">10000000</span><span class="p">,</span><span class="n">rcp</span><span class="p">.</span><span class="n">min_size</span><span class="p">),</span><span class="n">options</span><span class="p">)</span>
+    <span class="n">tbl</span><span class="p">[</span><span class="o">#</span><span class="n">tbl</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span><span class="o">=</span><span class="s2">&quot;[CREATURE_TILE:&quot;</span><span class="o">..</span><span class="n">tile_string</span><span class="p">(</span><span class="n">rcp</span><span class="p">.</span><span class="n">tile</span><span class="p">)</span><span class="o">..</span><span class="s2">&quot;]&quot;</span>
+    <span class="n">build_procgen_creature</span><span class="p">(</span><span class="n">rcp</span><span class="p">,</span><span class="n">tbl</span><span class="p">,</span><span class="n">options</span><span class="p">)</span>
+    <span class="c1">-- Weight is a float; all vanilla objects have weight 1</span>
+    <span class="kr">return</span> <span class="p">{</span><span class="n">creature</span><span class="o">=</span><span class="n">tbl</span><span class="p">,</span><span class="n">weight</span><span class="o">=</span><span class="mf">0.5</span><span class="p">}</span>
+<span class="kr">end</span>
+</pre></div></span></div></td></tr></tbody></table>
+<p><br /><br />
+<a href="/index.php/Construct_creature" title="Construct creature">Elementals</a> are defined by the material they're made of, using a table of options to set the right properties. In a dry chasm layer, they'll roll on the <code>fb_elements</code> table, while in a water layer, they'll be a water elemental. Should they ever carry a <a href="/index.php/Syndrome" title="Syndrome">syndrome</a>, they would inflict <a href="http://en.wikipedia.org/wiki/Dyscrasia" class="extiw" title="wikipedia:Dyscrasia">dyskrasia</a>.
+</p><p>The most important feature is setting <code>options.sphere_rcm</code> to a key in <code>random_creature_materials</code>, so fire elementals are made of "FLAME" and earth elementals are made of "ANY_MINERAL".
+</p>
+<div style="clear:both;"></div>
+<table class="collapsible collapsed infobox gamedata" style="background: #fdfdfd; border: 1px solid #aaa; font-size: 88%; margin: 0 auto -1px; vertical-align: middle; width: 100%; max-width: 100em; table-layout: fixed;">
+<tbody><tr style="line-height: 1.5em;"><th scope="col" style="background: #cce6b3; padding: 0.25em 1em; text-align: center; display: table-cell;&#32;;"><div style="font-size: 114%; margin: 0 9em;">Elemental</div></th></tr>
+<tr style="line-height: 1.5em; text-align: left; display: table-cell;"><td><div style="overflow: auto;"><span class="gamedata-content" style="font-family: monospace; font-size:1.25em; white-space:pre;"><div class="mw-highlight mw-highlight-lang-lua mw-content-ltr" dir="ltr"><pre><span></span><span class="n">fb_elements</span> <span class="o">=</span> <span class="p">{</span>
+	<span class="p">{</span>
+		<span class="n">name</span><span class="o">=</span><span class="s2">&quot;fire&quot;</span><span class="p">,</span>
+		<span class="n">rcm</span><span class="o">=</span><span class="s2">&quot;FLAME&quot;</span><span class="p">,</span>
+		<span class="n">spheres</span><span class="o">=</span><span class="p">{</span> <span class="n">FIRE</span><span class="o">=</span><span class="kc">true</span> <span class="p">},</span>
+		<span class="n">options</span><span class="o">=</span><span class="p">{</span> <span class="n">fire_immune</span><span class="o">=</span><span class="kc">true</span> <span class="p">}</span>
+	<span class="p">},</span>
+	<span class="p">{</span>
+		<span class="n">name</span><span class="o">=</span><span class="s2">&quot;earth&quot;</span><span class="p">,</span>
+		<span class="n">rcm</span><span class="o">=</span><span class="s2">&quot;ANY_MINERAL&quot;</span><span class="p">,</span>
+		<span class="n">rcp_options</span><span class="o">=</span><span class="p">{</span> <span class="n">always_flightless</span><span class="o">=</span><span class="kc">true</span> <span class="p">},</span>
+		<span class="n">spheres</span><span class="o">=</span><span class="p">{</span>
+			<span class="n">EARTH</span><span class="o">=</span><span class="kc">true</span><span class="p">,</span>
+			<span class="n">MINERALS</span><span class="o">=</span><span class="kc">true</span>
+		<span class="p">}</span>
+	<span class="p">},</span>
+	<span class="p">{</span>
+		<span class="n">name</span><span class="o">=</span><span class="s2">&quot;air&quot;</span><span class="p">,</span>
+		<span class="n">rcm</span><span class="o">=</span><span class="s2">&quot;STEAM&quot;</span><span class="p">,</span>
+		<span class="n">spheres</span><span class="o">=</span><span class="p">{</span>
+			<span class="n">WIND</span><span class="o">=</span><span class="kc">true</span><span class="p">,</span>
+			<span class="n">SKY</span><span class="o">=</span><span class="kc">true</span>
+		<span class="p">},</span>
+		<span class="n">options</span><span class="o">=</span><span class="p">{</span>
+			<span class="n">always_insubstantial</span><span class="o">=</span><span class="kc">true</span><span class="p">,</span>
+			<span class="n">intangible_flier</span><span class="o">=</span><span class="kc">true</span>
+		<span class="p">}</span>
+	<span class="p">}</span>
+<span class="p">}</span>
+
+<span class="n">creatures</span><span class="p">.</span><span class="n">fb</span><span class="p">.</span><span class="n">elemental</span><span class="o">=</span><span class="kr">function</span><span class="p">(</span><span class="n">layer_type</span><span class="p">,</span><span class="n">tok</span><span class="p">)</span>
+	<span class="kd">local</span> <span class="n">lines</span><span class="o">=</span><span class="p">{}</span>
+	<span class="kd">local</span> <span class="n">options</span><span class="o">=</span><span class="p">{</span>
+		<span class="n">strong_attack_tweak</span><span class="o">=</span><span class="kc">true</span><span class="p">,</span>
+		<span class="n">always_make_uniform</span><span class="o">=</span><span class="kc">true</span><span class="p">,</span> <span class="c1">--irrelevant due to sphere_rcm</span>
+		<span class="n">spheres</span><span class="o">=</span><span class="p">{},</span>
+		<span class="n">sickness_name</span><span class="o">=</span><span class="s2">&quot;dyskrasia&quot;</span><span class="p">,</span>
+		<span class="n">token</span><span class="o">=</span><span class="n">tok</span>
+	<span class="p">}</span>
+	<span class="n">lines</span><span class="o">=</span><span class="n">split_to_lines</span><span class="p">(</span><span class="n">lines</span><span class="p">,</span><span class="s">[[</span>
+<span class="s">		[FEATURE_BEAST]</span>
+<span class="s">		[ATTACK_TRIGGER:0:0:2]</span>
+<span class="s">		[NO_GENDER]</span>
+<span class="s">		[NO_EAT][NO_DRINK]</span>
+<span class="s">		[DIFFICULTY:10]</span>
+<span class="s">		</span>
+<span class="s">		[NATURAL_SKILL:WRESTLING:6]</span>
+<span class="s">		[NATURAL_SKILL:BITE:6]</span>
+<span class="s">		[NATURAL_SKILL:GRASP_STRIKE:6]</span>
+<span class="s">		[NATURAL_SKILL:STANCE_STRIKE:6]</span>
+<span class="s">		[NATURAL_SKILL:MELEE_COMBAT:6]</span>
+<span class="s">		[NATURAL_SKILL:DODGING:6]</span>
+<span class="s">		[NATURAL_SKILL:SITUATIONAL_AWARENESS:6]</span>
+<span class="s">		[LARGE_PREDATOR]</span>
+<span class="s">	]]</span><span class="p">)</span>
+	
+	<span class="c1">-- Create a water elemental in water layers, otherwise use another type</span>
+	<span class="kd">local</span> <span class="n">water_elemental</span> <span class="o">=</span> <span class="p">{</span>
+		<span class="n">name</span><span class="o">=</span><span class="s2">&quot;water&quot;</span><span class="p">,</span>
+		<span class="n">rcm</span><span class="o">=</span><span class="s2">&quot;WATER&quot;</span><span class="p">,</span>
+		<span class="n">spheres</span><span class="o">=</span><span class="p">{</span><span class="n">WATER</span><span class="o">=</span><span class="kc">true</span><span class="p">},</span>
+		<span class="n">options</span><span class="o">=</span><span class="p">{</span><span class="n">do_water</span><span class="o">=</span><span class="kc">true</span><span class="p">}</span>
+	<span class="p">}</span>
+	<span class="kd">local</span> <span class="n">my_element</span> <span class="o">=</span> <span class="n">layer_type</span><span class="o">==</span><span class="mi">1</span> <span class="ow">and</span> <span class="n">pick_random</span><span class="p">(</span><span class="n">fb_elements</span><span class="p">)</span> <span class="ow">or</span> <span class="n">water_elemental</span>
+	
+	<span class="c1">-- Assign propertes from chosen element</span>
+	<span class="n">map_merge</span><span class="p">(</span><span class="n">options</span><span class="p">.</span><span class="n">spheres</span><span class="p">,</span><span class="n">my_element</span><span class="p">.</span><span class="n">spheres</span><span class="p">)</span>
+	<span class="kr">if</span> <span class="n">my_element</span><span class="p">.</span><span class="n">options</span> <span class="kr">then</span> <span class="n">map_merge</span><span class="p">(</span><span class="n">options</span><span class="p">,</span><span class="n">my_element</span><span class="p">.</span><span class="n">options</span><span class="p">)</span> <span class="kr">end</span>
+	
+	<span class="n">add_regular_tokens</span><span class="p">(</span><span class="n">lines</span><span class="p">,</span><span class="n">options</span><span class="p">)</span>
+	<span class="n">lines</span><span class="p">[</span><span class="o">#</span><span class="n">lines</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span><span class="o">=</span><span class="n">layer_type</span><span class="o">==</span><span class="mi">0</span> <span class="ow">and</span> <span class="s2">&quot;[BIOME:SUBTERRANEAN_WATER]&quot;</span> <span class="ow">or</span> <span class="s2">&quot;[BIOME:SUBTERRANEAN_CHASM]&quot;</span>
+	<span class="n">populate_sphere_info</span><span class="p">(</span><span class="n">lines</span><span class="p">,</span><span class="n">options</span><span class="p">)</span>
+	
+	<span class="c1">-- Set custom material</span>
+	<span class="n">options</span><span class="p">.</span><span class="n">sphere_rcm</span><span class="o">=</span><span class="n">my_element</span><span class="p">.</span><span class="n">rcm</span>
+	<span class="c1">-- Build body</span>
+	<span class="kd">local</span> <span class="n">rcp</span><span class="o">=</span><span class="n">get_random_creature_profile</span><span class="p">(</span><span class="n">options</span><span class="p">)</span>
+	<span class="c1">-- Set more options on the RCP</span>
+	<span class="kr">if</span> <span class="n">my_element</span><span class="p">.</span><span class="n">rcp_options</span> <span class="kr">then</span> <span class="n">map_merge</span><span class="p">(</span><span class="n">rcp</span><span class="p">.</span><span class="n">options</span><span class="p">,</span><span class="n">my_element</span><span class="p">.</span><span class="n">rcp_options</span><span class="p">)</span> <span class="kr">end</span>
+	<span class="n">add_body_size</span><span class="p">(</span><span class="n">lines</span><span class="p">,</span><span class="nb">math.max</span><span class="p">(</span><span class="mi">10000000</span><span class="p">,</span><span class="n">rcp</span><span class="p">.</span><span class="n">min_size</span><span class="p">),</span><span class="n">options</span><span class="p">)</span>
+	<span class="n">lines</span><span class="p">[</span><span class="o">#</span><span class="n">lines</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span><span class="o">=</span><span class="s2">&quot;[CREATURE_TILE:&#39;E&#39;]&quot;</span>
+	<span class="n">build_procgen_creature</span><span class="p">(</span><span class="n">rcp</span><span class="p">,</span><span class="n">lines</span><span class="p">,</span><span class="n">options</span><span class="p">)</span>
+	
+	<span class="c1">-- Generate name</span>
+	<span class="kd">local</span> <span class="n">element_name</span> <span class="o">=</span> <span class="n">my_element</span><span class="p">.</span><span class="n">name</span> <span class="ow">or</span> <span class="s2">&quot;glitchstuff&quot;</span>
+	<span class="kd">local</span> <span class="n">name_str</span> <span class="o">=</span> <span class="n">element_name</span><span class="o">..</span><span class="s2">&quot; elemental:&quot;</span><span class="o">..</span><span class="n">element_name</span><span class="o">..</span><span class="s2">&quot; elemental:&quot;</span><span class="o">..</span><span class="n">element_name</span><span class="o">..</span><span class="s2">&quot;-elemental]&quot;</span>
+	<span class="n">lines</span><span class="p">[</span><span class="o">#</span><span class="n">lines</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span><span class="o">=</span><span class="s2">&quot;[GO_TO_START]&quot;</span>
+	<span class="n">lines</span><span class="p">[</span><span class="o">#</span><span class="n">lines</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span><span class="o">=</span><span class="s2">&quot;[NAME:&quot;</span><span class="o">..</span><span class="n">name_str</span>
+	<span class="n">lines</span><span class="p">[</span><span class="o">#</span><span class="n">lines</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span><span class="o">=</span><span class="s2">&quot;[CASTE_NAME:&quot;</span><span class="o">..</span><span class="n">name_str</span>
+	
+	<span class="kr">return</span> <span class="p">{</span><span class="n">raws</span><span class="o">=</span><span class="n">lines</span><span class="p">,</span><span class="n">weight</span><span class="o">=</span><span class="mf">1.5</span><span class="p">}</span>
+<span class="kr">end</span>
+</pre></div></span></div></td></tr></tbody></table>
+<h3><span class="mw-headline" id="Tweaking_creatures">Tweaking creatures</span></h3>
+<p>Common Lua features allow you to extend functions by mirroring the original function and then overwriting it, akin to the <code>SELECT</code> tags. This function extends <code>add_regular_tokens()</code> to add <code><a href="/index.php/Creature_token#GENERAL_MATERIAL_FORCE_MULTIPLIER" title="Creature token">[GENERAL_MATERIAL_FORCE_MULTIPLIER]</a></code> to all generated creatures.
+</p>
+<div style="clear:both;"></div>
+<table class="collapsible collapsed infobox gamedata" style="background: #fdfdfd; border: 1px solid #aaa; font-size: 88%; margin: 0 auto -1px; vertical-align: middle; width: 100%; max-width: 100em; table-layout: fixed;">
+<tbody><tr style="line-height: 1.5em;"><th scope="col" style="background: #cce6b3; padding: 0.25em 1em; text-align: center; display: table-cell;&#32;;"><div style="font-size: 114%; margin: 0 9em;">add_regular_tokens (extension)</div></th></tr>
+<tr style="line-height: 1.5em; text-align: left; display: table-cell;"><td><div style="overflow: auto;"><span class="gamedata-content" style="font-family: monospace; font-size:1.25em; white-space:pre;"><div class="mw-highlight mw-highlight-lang-lua mw-content-ltr" dir="ltr"><pre><span></span><span class="n">old_add_regular_tokens</span><span class="o">=</span><span class="n">add_regular_tokens</span>
+<span class="kr">function</span> <span class="nf">add_regular_tokens</span><span class="p">(</span><span class="n">lines</span><span class="p">,</span><span class="n">options</span><span class="p">)</span>
+    <span class="n">old_add_regular_tokens</span><span class="p">(</span><span class="n">lines</span><span class="p">,</span><span class="n">options</span><span class="p">)</span>
+    <span class="n">lines</span><span class="p">[</span><span class="o">#</span><span class="n">lines</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span><span class="o">=</span><span class="s2">&quot;[GENERAL_MATERIAL_FORCE_MULTIPLIER:1:2]&quot;</span>
+<span class="kr">end</span>
+</pre></div></span></div></td></tr></tbody></table>
+<p><br /><br />
+This function is run in <code>build_body_from_rcp()</code> right before tweaks are determined (See <a href="/index.php/Lua_functions#Creature_patching" title="Lua functions">Lua functions#Creature patching</a>). If a generated creature's size is greater than 500,000 Γ (about as much as an <a href="/index.php/Elephant" title="Elephant">elephant</a>), this patch adds <code><a href="/index.php/Creature_token#POWER" title="Creature token">[POWER]</a></code> and the like to make forgotten beasts, titans, etc capable of impersonating <a href="/index.php/Deity" title="Deity">deities</a> and ruling <a href="/index.php/Civilization" title="Civilization">civilizations</a>.
+</p>
+<div style="clear:both;"></div>
+<table class="collapsible collapsed infobox gamedata" style="background: #fdfdfd; border: 1px solid #aaa; font-size: 88%; margin: 0 auto -1px; vertical-align: middle; width: 100%; max-width: 100em; table-layout: fixed;">
+<tbody><tr style="line-height: 1.5em;"><th scope="col" style="background: #cce6b3; padding: 0.25em 1em; text-align: center; display: table-cell;&#32;;"><div style="font-size: 114%; margin: 0 9em;">btc1_tweaks.titan_worship</div></th></tr>
+<tr style="line-height: 1.5em; text-align: left; display: table-cell;"><td><div style="overflow: auto;"><span class="gamedata-content" style="font-family: monospace; font-size:1.25em; white-space:pre;"><div class="mw-highlight mw-highlight-lang-lua mw-content-ltr" dir="ltr"><pre><span></span><span class="c1">-- make all large creatures into powers</span>
+<span class="n">btc1_tweaks</span><span class="p">.</span><span class="n">titan_worship</span><span class="o">=</span><span class="kr">function</span><span class="p">(</span><span class="n">lines</span><span class="p">,</span><span class="n">options</span><span class="p">,</span><span class="n">add_to_body</span><span class="p">,</span><span class="n">add_to_body_unique</span><span class="p">,</span><span class="n">add_tweak_candidate</span><span class="p">)</span>
+	<span class="kr">if</span> <span class="n">options</span><span class="p">.</span><span class="n">body_size</span><span class="o">&gt;=</span><span class="mi">500000</span> <span class="kr">then</span> <span class="c1">-- described as &quot;very large&quot;, graphics size cutoff</span>
+		<span class="n">options</span><span class="p">.</span><span class="n">can_learn</span><span class="o">=</span><span class="kc">true</span> <span class="c1">-- for flavor text</span>
+		<span class="n">lines</span><span class="p">[</span><span class="o">#</span><span class="n">lines</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span><span class="o">=</span><span class="s2">&quot;[INTELLIGENT]&quot;</span>
+		<span class="n">lines</span><span class="p">[</span><span class="o">#</span><span class="n">lines</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span><span class="o">=</span><span class="s2">&quot;[SUPERNATURAL]&quot;</span> <span class="c1">-- knows secrets according to their spheres</span>
+		<span class="n">lines</span><span class="p">[</span><span class="o">#</span><span class="n">lines</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span><span class="o">=</span><span class="s2">&quot;[POWER]&quot;</span> <span class="c1">-- impersonates deities</span>
+		<span class="n">lines</span><span class="p">[</span><span class="o">#</span><span class="n">lines</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span><span class="o">=</span><span class="s2">&quot;[SPREAD_EVIL_SPHERES_IF_RULER]&quot;</span>
+	<span class="kr">end</span>
+<span class="kr">end</span>
+</pre></div></span></div></td></tr></tbody></table>
+<h3><span class="mw-headline" id="Adamantine_alloys">Adamantine alloys</span></h3>
+<p>You can add your own arbitrary generated objects, though as of right now there's no way to make settings for them. This allows for some <i>truly</i> wild stuff; here's a fun example: adamantine-metal alloys for every single non-special metal, giving you an average of the properties of them.
+</p>
+<div style="clear:both;"></div>
+<table class="collapsible collapsed infobox gamedata" style="background: #fdfdfd; border: 1px solid #aaa; font-size: 88%; margin: 0 auto -1px; vertical-align: middle; width: 100%; max-width: 100em; table-layout: fixed;">
+<tbody><tr style="line-height: 1.5em;"><th scope="col" style="background: #cce6b3; padding: 0.25em 1em; text-align: center; display: table-cell;&#32;;"><div style="font-size: 114%; margin: 0 9em;">Adamantine alloys</div></th></tr>
+<tr style="line-height: 1.5em; text-align: left; display: table-cell;"><td><div style="overflow: auto;"><span class="gamedata-content" style="font-family: monospace; font-size:1.25em; white-space:pre;"><div class="mw-highlight mw-highlight-lang-lua mw-content-ltr" dir="ltr"><pre><span></span><span class="n">preprocess</span><span class="p">.</span><span class="n">adamantine_alloys</span><span class="o">=</span><span class="kr">function</span><span class="p">()</span>
+    <span class="kr">if</span> <span class="ow">not</span> <span class="n">random_object_parameters</span><span class="p">.</span><span class="n">main_world_randoms</span> <span class="kr">then</span> <span class="kr">return</span> <span class="kr">end</span>
+    <span class="kd">local</span> <span class="n">l</span><span class="o">=</span><span class="n">get_debug_logger</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+    <span class="kd">local</span> <span class="n">lines</span><span class="o">=</span><span class="p">{}</span>
+    <span class="kd">local</span> <span class="n">reaction_lines</span><span class="o">=</span><span class="p">{}</span>
+    <span class="kd">local</span> <span class="n">reaction_names</span><span class="o">=</span><span class="p">{}</span>
+    <span class="kd">local</span> <span class="n">adamantine</span><span class="o">=</span><span class="n">world</span><span class="p">.</span><span class="n">inorganic</span><span class="p">.</span><span class="n">inorganic</span><span class="p">.</span><span class="n">ADAMANTINE</span>
+    <span class="kr">if</span> <span class="ow">not</span> <span class="n">adamantine</span> <span class="kr">then</span> <span class="kr">return</span> <span class="kr">end</span>
+    <span class="kd">local</span> <span class="n">adamantine_color</span><span class="o">=</span><span class="n">world</span><span class="p">.</span><span class="n">descriptor</span><span class="p">.</span><span class="n">color</span><span class="p">[</span><span class="n">world</span><span class="p">.</span><span class="n">descriptor</span><span class="p">.</span><span class="n">color_pattern</span><span class="p">[</span><span class="n">adamantine</span><span class="p">.</span><span class="n">material</span><span class="p">.</span><span class="n">color_pattern</span><span class="p">.</span><span class="n">SOLID</span><span class="p">].</span><span class="n">color</span><span class="p">[</span><span class="mi">1</span><span class="p">]]</span>
+    <span class="kd">local</span> <span class="n">adamantine_modulus</span> <span class="o">=</span> <span class="mi">2500000</span>  <span class="c1">--mildly arbitrary, just below the theoretical limit</span>
+    <span class="n">l</span><span class="p">(</span><span class="s2">&quot;Starting&quot;</span><span class="p">)</span>
+    <span class="kd">local</span> <span class="n">done_category</span><span class="o">=</span><span class="kc">false</span>
+    <span class="kr">for</span> <span class="n">k</span><span class="p">,</span><span class="n">v</span> <span class="kr">in</span> <span class="nb">ipairs</span><span class="p">(</span><span class="n">world</span><span class="p">.</span><span class="n">inorganic</span><span class="p">.</span><span class="n">inorganic</span><span class="p">)</span> <span class="kr">do</span>
+        <span class="kr">if</span> <span class="ow">not</span> <span class="n">v</span><span class="p">.</span><span class="n">flags</span><span class="p">.</span><span class="n">SPECIAL</span> <span class="ow">and</span> <span class="n">v</span><span class="p">.</span><span class="n">material</span><span class="p">.</span><span class="n">flags</span><span class="p">.</span><span class="n">IS_METAL</span> <span class="kr">then</span>
+            <span class="n">l</span><span class="p">(</span><span class="n">v</span><span class="p">.</span><span class="n">token</span><span class="p">)</span>
+            <span class="kd">local</span> <span class="n">token</span><span class="o">=</span><span class="s2">&quot;GEN_ADAMANTINE_&quot;</span><span class="o">..</span><span class="n">v</span><span class="p">.</span><span class="n">token</span>
+            <span class="n">lines</span><span class="p">[</span><span class="o">#</span><span class="n">lines</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span><span class="o">=</span><span class="s2">&quot;[INORGANIC:&quot;</span><span class="o">..</span><span class="n">token</span><span class="o">..</span><span class="s2">&quot;]&quot;</span>
+            <span class="n">add_generated_info</span><span class="p">(</span><span class="n">lines</span><span class="p">)</span>
+            <span class="n">lines</span><span class="p">[</span><span class="o">#</span><span class="n">lines</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span><span class="o">=</span><span class="s2">&quot;[USE_MATERIAL_TEMPLATE:METAL_TEMPLATE]&quot;</span>
+            <span class="kr">for</span> <span class="n">kk</span><span class="p">,</span><span class="n">vv</span> <span class="kr">in</span> <span class="nb">pairs</span><span class="p">(</span><span class="n">v</span><span class="p">.</span><span class="n">material</span><span class="p">.</span><span class="n">adj</span><span class="p">)</span> <span class="kr">do</span>
+                <span class="n">lines</span><span class="p">[</span><span class="o">#</span><span class="n">lines</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span><span class="o">=</span><span class="s2">&quot;[STATE_ADJ:&quot;</span><span class="o">..</span><span class="n">kk</span><span class="o">..</span><span class="s2">&quot;:adamantine &quot;</span><span class="o">..</span><span class="n">vv</span><span class="o">..</span><span class="s2">&quot;]&quot;</span> <span class="c1">--&quot;adamantine molten steel&quot;? it&#39;s fine</span>
+            <span class="kr">end</span>
+            <span class="kr">for</span> <span class="n">kk</span><span class="p">,</span><span class="n">vv</span> <span class="kr">in</span> <span class="nb">pairs</span><span class="p">(</span><span class="n">v</span><span class="p">.</span><span class="n">material</span><span class="p">.</span><span class="n">name</span><span class="p">)</span> <span class="kr">do</span>
+                <span class="n">lines</span><span class="p">[</span><span class="o">#</span><span class="n">lines</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span><span class="o">=</span><span class="s2">&quot;[STATE_NAME:&quot;</span><span class="o">..</span><span class="n">kk</span><span class="o">..</span><span class="s2">&quot;:adamantine &quot;</span><span class="o">..</span><span class="n">vv</span><span class="o">..</span><span class="s2">&quot;]&quot;</span>
+            <span class="kr">end</span>
+            <span class="n">l</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+            <span class="kd">local</span> <span class="n">mat_values</span><span class="o">=</span><span class="p">{}</span>
+            <span class="c1">-- Find the ratio for which you get closest to (but not below) 2000000 in the material&#39;s worst property</span>
+            <span class="kd">local</span> <span class="n">worst</span><span class="o">=</span><span class="nb">math.min</span><span class="p">(</span><span class="n">v</span><span class="p">.</span><span class="n">material</span><span class="p">.</span><span class="n">yield</span><span class="p">.</span><span class="n">IMPACT</span><span class="p">,</span><span class="n">v</span><span class="p">.</span><span class="n">material</span><span class="p">.</span><span class="n">fracture</span><span class="p">.</span><span class="n">SHEAR</span><span class="p">)</span>
+            <span class="kd">local</span> <span class="n">wafers</span><span class="o">=</span><span class="mi">1</span>
+            <span class="kd">local</span> <span class="n">bars</span><span class="o">=</span><span class="mi">1</span>
+            <span class="kr">if</span> <span class="n">worst</span> <span class="o">&lt;</span> <span class="mi">2000000</span> <span class="kr">then</span>
+                <span class="kd">local</span> <span class="n">ratio</span> <span class="o">=</span> <span class="p">(</span><span class="mi">2000000</span><span class="o">-</span><span class="mi">3</span><span class="o">*</span><span class="n">worst</span><span class="p">)</span><span class="o">/</span><span class="mi">1000000</span>
+                <span class="kd">local</span> <span class="n">best_diff</span><span class="o">=</span><span class="mi">1</span>
+                <span class="kr">for</span> <span class="n">i</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="mi">10</span> <span class="kr">do</span>
+                    <span class="kd">local</span> <span class="n">wafer_amt</span><span class="o">=</span><span class="n">i</span><span class="o">*</span><span class="n">ratio</span>
+                    <span class="kr">if</span> <span class="n">wafer_amt</span><span class="o">&gt;</span><span class="mi">1</span> <span class="ow">and</span> <span class="n">wafer_amt</span><span class="o">&lt;</span><span class="mi">20</span> <span class="ow">and</span> <span class="nb">math.ceil</span><span class="p">(</span><span class="n">wafer_amt</span><span class="p">)</span><span class="o">-</span><span class="n">wafer_amt</span><span class="o">&lt;</span><span class="n">best_diff</span> <span class="kr">then</span>
+                        <span class="n">best_diff</span><span class="o">=</span><span class="nb">math.ceil</span><span class="p">(</span><span class="n">wafer_amt</span><span class="p">)</span><span class="o">-</span><span class="n">wafer_amt</span>
+                        <span class="n">wafers</span><span class="o">=</span><span class="nb">math.ceil</span><span class="p">(</span><span class="n">wafer_amt</span><span class="p">)</span>
+                        <span class="n">bars</span><span class="o">=</span><span class="n">i</span>
+                    <span class="kr">end</span>
+                <span class="kr">end</span>
+            <span class="kr">end</span>
+            <span class="kd">local</span> <span class="n">avg_denom</span><span class="o">=</span><span class="mi">1</span><span class="o">/</span><span class="p">(</span><span class="n">bars</span><span class="o">*</span><span class="mi">3</span><span class="o">+</span><span class="n">wafers</span><span class="p">)</span> <span class="c1">-- Multiplication just a bit faster than division, we&#39;re rounding at the end anyway</span>
+            <span class="kd">local</span> <span class="n">solid_cl</span><span class="o">=</span><span class="kc">nil</span>
+            <span class="kr">for</span> <span class="n">kk</span><span class="p">,</span><span class="n">vv</span> <span class="kr">in</span> <span class="nb">pairs</span><span class="p">(</span><span class="n">v</span><span class="p">.</span><span class="n">material</span><span class="p">.</span><span class="n">color_pattern</span><span class="p">)</span> <span class="kr">do</span>
+                <span class="c1">-- time to get silly</span>
+                <span class="kd">local</span> <span class="n">this_color</span><span class="o">=</span><span class="n">world</span><span class="p">.</span><span class="n">descriptor</span><span class="p">.</span><span class="n">color</span><span class="p">[</span><span class="n">world</span><span class="p">.</span><span class="n">descriptor</span><span class="p">.</span><span class="n">color_pattern</span><span class="p">[</span><span class="n">vv</span><span class="p">].</span><span class="n">color</span><span class="p">[</span><span class="mi">1</span><span class="p">]]</span>
+                <span class="kd">local</span> <span class="n">wanted_color</span><span class="o">=</span><span class="p">{</span>
+                    <span class="n">r</span><span class="o">=</span><span class="p">(</span><span class="n">this_color</span><span class="p">.</span><span class="n">r</span><span class="o">*</span><span class="n">bars</span><span class="o">*</span><span class="mi">3</span><span class="o">+</span><span class="n">adamantine_color</span><span class="p">.</span><span class="n">r</span><span class="o">*</span><span class="n">wafers</span><span class="p">)</span><span class="o">*</span><span class="n">avg_denom</span><span class="p">,</span>
+                    <span class="n">g</span><span class="o">=</span><span class="p">(</span><span class="n">this_color</span><span class="p">.</span><span class="n">g</span><span class="o">*</span><span class="n">bars</span><span class="o">*</span><span class="mi">3</span><span class="o">+</span><span class="n">adamantine_color</span><span class="p">.</span><span class="n">g</span><span class="o">*</span><span class="n">wafers</span><span class="p">)</span><span class="o">*</span><span class="n">avg_denom</span><span class="p">,</span>
+                    <span class="n">b</span><span class="o">=</span><span class="p">(</span><span class="n">this_color</span><span class="p">.</span><span class="n">b</span><span class="o">*</span><span class="n">bars</span><span class="o">*</span><span class="mi">3</span><span class="o">+</span><span class="n">adamantine_color</span><span class="p">.</span><span class="n">b</span><span class="o">*</span><span class="n">wafers</span><span class="p">)</span><span class="o">*</span><span class="n">avg_denom</span><span class="p">,</span>
+                <span class="p">}</span>
+                <span class="kd">local</span> <span class="n">best_total_diff</span><span class="o">=</span><span class="mi">1000000000</span>
+                <span class="kd">local</span> <span class="n">best_clp</span><span class="o">=</span><span class="kc">nil</span>
+                <span class="kr">for</span> <span class="n">_</span><span class="p">,</span><span class="n">clp</span> <span class="kr">in</span> <span class="nb">ipairs</span><span class="p">(</span><span class="n">world</span><span class="p">.</span><span class="n">descriptor</span><span class="p">.</span><span class="n">color_pattern</span><span class="p">)</span> <span class="kr">do</span>
+                    <span class="kr">if</span> <span class="n">clp</span><span class="p">.</span><span class="n">pattern</span><span class="o">==</span><span class="s2">&quot;MONOTONE&quot;</span> <span class="kr">then</span>
+                        <span class="kd">local</span> <span class="n">cl</span><span class="o">=</span><span class="n">world</span><span class="p">.</span><span class="n">descriptor</span><span class="p">.</span><span class="n">color</span><span class="p">[</span><span class="n">clp</span><span class="p">.</span><span class="n">color</span><span class="p">[</span><span class="mi">1</span><span class="p">]]</span>
+                        <span class="kd">local</span> <span class="n">diff</span><span class="o">=</span><span class="nb">math.abs</span><span class="p">(</span><span class="n">wanted_color</span><span class="p">.</span><span class="n">r</span><span class="o">-</span><span class="n">cl</span><span class="p">.</span><span class="n">r</span><span class="p">)</span><span class="o">+</span><span class="nb">math.abs</span><span class="p">(</span><span class="n">wanted_color</span><span class="p">.</span><span class="n">b</span><span class="o">-</span><span class="n">cl</span><span class="p">.</span><span class="n">b</span><span class="p">)</span><span class="o">+</span><span class="nb">math.abs</span><span class="p">(</span><span class="n">wanted_color</span><span class="p">.</span><span class="n">g</span><span class="o">-</span><span class="n">cl</span><span class="p">.</span><span class="n">g</span><span class="p">)</span>
+                        <span class="kr">if</span> <span class="n">diff</span><span class="o">&lt;</span><span class="n">best_total_diff</span> <span class="kr">then</span>
+                            <span class="n">best_clp</span><span class="o">=</span><span class="n">clp</span>
+                            <span class="n">best_total_diff</span><span class="o">=</span><span class="n">diff</span>
+                        <span class="kr">end</span>
+                    <span class="kr">end</span>
+                <span class="kr">end</span>
+                <span class="n">lines</span><span class="p">[</span><span class="o">#</span><span class="n">lines</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span><span class="o">=</span><span class="s2">&quot;[STATE_COLOR:&quot;</span><span class="o">..</span><span class="n">kk</span><span class="o">..</span><span class="s2">&quot;:&quot;</span><span class="o">..</span><span class="n">best_clp</span><span class="p">.</span><span class="n">token</span><span class="o">..</span><span class="s2">&quot;]&quot;</span>
+                <span class="kr">if</span> <span class="n">kk</span><span class="o">==</span><span class="s2">&quot;SOLID&quot;</span> <span class="kr">then</span> <span class="n">solid_cl</span><span class="o">=</span><span class="n">world</span><span class="p">.</span><span class="n">descriptor</span><span class="p">.</span><span class="n">color</span><span class="p">[</span><span class="n">best_clp</span><span class="p">.</span><span class="n">color</span><span class="p">[</span><span class="mi">1</span><span class="p">]]</span> <span class="kr">end</span>
+            <span class="kr">end</span>
+            <span class="kd">local</span> <span class="n">color_str</span><span class="o">=</span><span class="n">solid_cl</span><span class="p">.</span><span class="n">col_f</span><span class="o">..</span><span class="s2">&quot;:0:&quot;</span><span class="o">..</span><span class="n">solid_cl</span><span class="p">.</span><span class="n">col_br</span>
+            <span class="n">l</span><span class="p">(</span><span class="n">color_str</span><span class="p">)</span>
+            <span class="n">lines</span><span class="p">[</span><span class="o">#</span><span class="n">lines</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span><span class="o">=</span><span class="s2">&quot;[DISPLAY_COLOR:&quot;</span><span class="o">..</span><span class="n">color_str</span><span class="o">..</span><span class="s2">&quot;]&quot;</span>
+            <span class="n">lines</span><span class="p">[</span><span class="o">#</span><span class="n">lines</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span><span class="o">=</span><span class="s2">&quot;[BUILD_COLOR:&quot;</span><span class="o">..</span><span class="n">color_str</span><span class="o">..</span><span class="s2">&quot;]&quot;</span>
+            <span class="n">lines</span><span class="p">[</span><span class="o">#</span><span class="n">lines</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span><span class="o">=</span><span class="s2">&quot;[ITEMS_METAL][ITEMS_HARD][ITEMS_SCALED][ITEMS_BARRED]&quot;</span>
+            <span class="n">lines</span><span class="p">[</span><span class="o">#</span><span class="n">lines</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span><span class="o">=</span><span class="s2">&quot;[SPECIAL]&quot;</span>
+            <span class="kr">if</span> <span class="n">v</span><span class="p">.</span><span class="n">material</span><span class="p">.</span><span class="n">flags</span><span class="p">.</span><span class="n">ITEMS_DIGGER</span> <span class="kr">then</span>
+                <span class="n">lines</span><span class="p">[</span><span class="o">#</span><span class="n">lines</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span><span class="o">=</span><span class="s2">&quot;[ITEMS_DIGGER]&quot;</span>
+            <span class="kr">end</span>
+            <span class="kd">local</span> <span class="kr">function</span> <span class="nf">new_value</span><span class="p">(</span><span class="n">str</span><span class="p">)</span>
+                <span class="n">mat_values</span><span class="p">[</span><span class="n">str</span><span class="p">]</span><span class="o">=</span><span class="n">mat_values</span><span class="p">[</span><span class="n">str</span><span class="p">]</span> <span class="ow">or</span> <span class="nb">math.floor</span><span class="p">((</span><span class="n">adamantine</span><span class="p">.</span><span class="n">material</span><span class="p">[</span><span class="n">str</span><span class="p">]</span><span class="o">*</span><span class="n">wafers</span><span class="o">+</span><span class="n">v</span><span class="p">.</span><span class="n">material</span><span class="p">[</span><span class="n">str</span><span class="p">]</span><span class="o">*</span><span class="n">bars</span><span class="o">*</span><span class="mi">3</span><span class="p">)</span><span class="o">*</span><span class="n">avg_denom</span><span class="o">+</span><span class="mf">0.5</span><span class="p">)</span>
+                <span class="n">l</span><span class="p">(</span><span class="n">str</span><span class="p">,</span><span class="n">mat_values</span><span class="p">[</span><span class="n">str</span><span class="p">])</span>
+                <span class="kr">return</span> <span class="n">mat_values</span><span class="p">[</span><span class="n">str</span><span class="p">]</span>
+            <span class="kr">end</span>
+            <span class="kd">local</span> <span class="kr">function</span> <span class="nf">new_value_nested</span><span class="p">(</span><span class="n">str1</span><span class="p">,</span><span class="n">str2</span><span class="p">)</span>
+                <span class="n">mat_values</span><span class="p">[</span><span class="n">str1</span><span class="o">..</span><span class="n">str2</span><span class="p">]</span><span class="o">=</span><span class="n">mat_values</span><span class="p">[</span><span class="n">str1</span><span class="o">..</span><span class="n">str2</span><span class="p">]</span> <span class="ow">or</span> <span class="nb">math.floor</span><span class="p">((</span><span class="n">adamantine</span><span class="p">.</span><span class="n">material</span><span class="p">[</span><span class="n">str1</span><span class="p">][</span><span class="n">str2</span><span class="p">]</span><span class="o">*</span><span class="n">wafers</span><span class="o">+</span><span class="n">v</span><span class="p">.</span><span class="n">material</span><span class="p">[</span><span class="n">str1</span><span class="p">][</span><span class="n">str2</span><span class="p">]</span><span class="o">*</span><span class="n">bars</span><span class="o">*</span><span class="mi">3</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="n">bars</span><span class="o">*</span><span class="mi">3</span><span class="o">+</span><span class="n">wafers</span><span class="p">)</span><span class="o">+</span><span class="mf">0.5</span><span class="p">)</span>
+                <span class="n">l</span><span class="p">(</span><span class="n">str1</span><span class="o">..</span><span class="n">str2</span><span class="p">,</span><span class="n">mat_values</span><span class="p">[</span><span class="n">str1</span><span class="o">..</span><span class="n">str2</span><span class="p">])</span>
+                <span class="kr">return</span> <span class="n">mat_values</span><span class="p">[</span><span class="n">str1</span><span class="o">..</span><span class="n">str2</span><span class="p">]</span>
+            <span class="kr">end</span>
+            <span class="kr">if</span> <span class="n">new_value_nested</span><span class="p">(</span><span class="s2">&quot;fracture&quot;</span><span class="p">,</span><span class="s2">&quot;SHEAR&quot;</span><span class="p">)</span><span class="o">&gt;</span><span class="mi">170000</span> <span class="ow">or</span> <span class="n">new_value_nested</span><span class="p">(</span><span class="s2">&quot;yield&quot;</span><span class="p">,</span><span class="s2">&quot;IMPACT&quot;</span><span class="p">)</span><span class="o">&gt;</span><span class="mi">245000</span> <span class="kr">then</span>
+                <span class="n">lines</span><span class="p">[</span><span class="o">#</span><span class="n">lines</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span><span class="o">=</span><span class="s2">&quot;[ITEMS_WEAPON][ITEMS_AMMO]&quot;</span>
+                <span class="kr">if</span> <span class="n">new_value</span><span class="p">(</span><span class="s2">&quot;solid_density&quot;</span><span class="p">)</span><span class="o">&lt;</span><span class="mi">10000</span> <span class="kr">then</span>
+                    <span class="n">lines</span><span class="p">[</span><span class="o">#</span><span class="n">lines</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span><span class="o">=</span><span class="s2">&quot;[ITEMS_WEAPON_RANGED][ITEMS_ARMOR]&quot;</span>
+                <span class="kr">end</span>
+            <span class="kr">end</span>
+            <span class="n">lines</span><span class="p">[</span><span class="o">#</span><span class="n">lines</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span><span class="o">=</span><span class="s2">&quot;[MATERIAL_VALUE:&quot;</span><span class="o">..</span><span class="n">new_value</span><span class="p">(</span><span class="s2">&quot;base_value&quot;</span><span class="p">)</span><span class="o">..</span><span class="s2">&quot;]&quot;</span>
+            <span class="n">lines</span><span class="p">[</span><span class="o">#</span><span class="n">lines</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span><span class="o">=</span><span class="s2">&quot;[SPEC_HEAT:&quot;</span><span class="o">..</span><span class="n">new_value</span><span class="p">(</span><span class="s2">&quot;temp_spec_heat&quot;</span><span class="p">)</span><span class="o">..</span><span class="s2">&quot;]&quot;</span>
+            <span class="n">lines</span><span class="p">[</span><span class="o">#</span><span class="n">lines</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span><span class="o">=</span><span class="s2">&quot;[MELTING_POINT:&quot;</span><span class="o">..</span><span class="n">new_value</span><span class="p">(</span><span class="s2">&quot;temp_melting_point&quot;</span><span class="p">)</span><span class="o">..</span><span class="s2">&quot;]&quot;</span>
+            <span class="n">lines</span><span class="p">[</span><span class="o">#</span><span class="n">lines</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span><span class="o">=</span><span class="s2">&quot;[BOILING_POINT:&quot;</span><span class="o">..</span><span class="n">new_value</span><span class="p">(</span><span class="s2">&quot;temp_boiling_point&quot;</span><span class="p">)</span><span class="o">..</span><span class="s2">&quot;]&quot;</span>
+            <span class="n">lines</span><span class="p">[</span><span class="o">#</span><span class="n">lines</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span><span class="o">=</span><span class="s2">&quot;[SOLID_DENSITY:&quot;</span><span class="o">..</span><span class="n">new_value</span><span class="p">(</span><span class="s2">&quot;solid_density&quot;</span><span class="p">)</span><span class="o">..</span><span class="s2">&quot;]&quot;</span>
+            <span class="n">lines</span><span class="p">[</span><span class="o">#</span><span class="n">lines</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span><span class="o">=</span><span class="s2">&quot;[LIQUID_DENSITY:&quot;</span><span class="o">..</span><span class="n">new_value</span><span class="p">(</span><span class="s2">&quot;liquid_density&quot;</span><span class="p">)</span><span class="o">..</span><span class="s2">&quot;]&quot;</span>
+            <span class="n">lines</span><span class="p">[</span><span class="o">#</span><span class="n">lines</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span><span class="o">=</span><span class="s2">&quot;[MOLAR_MASS:&quot;</span><span class="o">..</span><span class="n">new_value</span><span class="p">(</span><span class="s2">&quot;molar_mass&quot;</span><span class="p">)</span><span class="o">..</span><span class="s2">&quot;]&quot;</span> <span class="c1">-- i don&#39;t think this is actually correct</span>
+            <span class="kr">for</span> <span class="n">_</span><span class="p">,</span><span class="n">thing</span> <span class="kr">in</span> <span class="nb">ipairs</span><span class="p">({</span><span class="s2">&quot;yield&quot;</span><span class="p">,</span><span class="s2">&quot;fracture&quot;</span><span class="p">})</span> <span class="kr">do</span>
+                <span class="kr">for</span> <span class="n">force</span><span class="p">,</span><span class="n">_</span> <span class="kr">in</span> <span class="nb">pairs</span><span class="p">(</span><span class="n">v</span><span class="p">.</span><span class="n">material</span><span class="p">[</span><span class="n">thing</span><span class="p">])</span> <span class="kr">do</span>
+                    <span class="n">lines</span><span class="p">[</span><span class="o">#</span><span class="n">lines</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span><span class="o">=</span><span class="s2">&quot;[&quot;</span><span class="o">..</span><span class="nb">string.upper</span><span class="p">(</span><span class="n">force</span><span class="p">)</span><span class="o">..</span><span class="s2">&quot;_&quot;</span><span class="o">..</span><span class="nb">string.upper</span><span class="p">(</span><span class="n">thing</span><span class="p">)</span><span class="o">..</span><span class="s2">&quot;:&quot;</span><span class="o">..</span><span class="n">new_value_nested</span><span class="p">(</span><span class="n">thing</span><span class="p">,</span><span class="n">force</span><span class="p">)</span><span class="o">..</span><span class="s2">&quot;]&quot;</span>
+                <span class="kr">end</span>
+            <span class="kr">end</span>
+            <span class="kr">for</span> <span class="n">_</span><span class="p">,</span><span class="n">force</span> <span class="kr">in</span> <span class="nb">ipairs</span><span class="p">(</span><span class="s2">&quot;IMPACT&quot;</span><span class="p">,</span><span class="s2">&quot;COMPRESSIVE&quot;</span><span class="p">,</span><span class="s2">&quot;TENSILE&quot;</span><span class="p">,</span><span class="s2">&quot;TORSION&quot;</span><span class="p">,</span><span class="s2">&quot;SHEAR&quot;</span><span class="p">,</span><span class="s2">&quot;BENDING&quot;</span><span class="p">)</span> <span class="kr">do</span>
+                <span class="kd">local</span> <span class="n">modulus</span> <span class="o">=</span> <span class="n">v</span><span class="p">.</span><span class="n">yield</span><span class="p">[</span><span class="n">force</span><span class="p">]</span> <span class="o">/</span> <span class="n">v</span><span class="p">.</span><span class="n">elasticity</span><span class="p">[</span><span class="n">force</span><span class="p">]</span>
+                <span class="kd">local</span> <span class="n">average_modulus</span> <span class="o">=</span> <span class="p">(</span><span class="n">adamantine_modulus</span><span class="o">*</span><span class="n">wafers</span> <span class="o">+</span> <span class="n">modulus</span><span class="o">*</span><span class="n">bars</span><span class="o">*</span><span class="mi">3</span><span class="p">)</span><span class="o">*</span><span class="n">avg_denom</span>
+                <span class="kd">local</span> <span class="n">strain_at_yield</span> <span class="o">=</span> <span class="nb">math.floor</span><span class="p">(</span><span class="n">new_value_nested</span><span class="p">(</span><span class="s2">&quot;yield&quot;</span><span class="p">,</span><span class="n">force</span><span class="p">)</span> <span class="o">/</span> <span class="n">average_modulus</span> <span class="o">+</span> <span class="mf">0.5</span><span class="p">)</span> <span class="c1">-- usually zero, but can be 1 or 2 sometimes</span>
+                <span class="n">lines</span><span class="p">[</span><span class="o">#</span><span class="n">lines</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span><span class="o">=</span><span class="s2">&quot;[&quot;</span><span class="o">..</span><span class="nb">string.upper</span><span class="p">(</span><span class="n">force</span><span class="p">)</span><span class="o">..</span><span class="s2">&quot;_YIELD:&quot;</span><span class="o">..</span><span class="n">new_value_nested</span><span class="p">(</span><span class="s2">&quot;yield&quot;</span><span class="p">,</span><span class="n">force</span><span class="p">)</span><span class="o">..</span><span class="s2">&quot;]&quot;</span>
+                <span class="n">lines</span><span class="p">[</span><span class="o">#</span><span class="n">lines</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span><span class="o">=</span><span class="s2">&quot;[&quot;</span><span class="o">..</span><span class="nb">string.upper</span><span class="p">(</span><span class="n">force</span><span class="p">)</span><span class="o">..</span><span class="s2">&quot;_FRACTURE:&quot;</span><span class="o">..</span><span class="n">new_value_nested</span><span class="p">(</span><span class="s2">&quot;fracture&quot;</span><span class="p">,</span><span class="n">force</span><span class="p">)</span><span class="o">..</span><span class="s2">&quot;]&quot;</span>
+                <span class="n">lines</span><span class="p">[</span><span class="o">#</span><span class="n">lines</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span><span class="o">=</span><span class="s2">&quot;[&quot;</span><span class="o">..</span><span class="nb">string.upper</span><span class="p">(</span><span class="n">force</span><span class="p">)</span><span class="o">..</span><span class="s2">&quot;_STRAIN_AT_YIELD:&quot;</span><span class="o">..</span><span class="n">strain_at_yield</span><span class="o">..</span><span class="s2">&quot;]&quot;</span>
+            <span class="kr">end</span>
+            <span class="n">lines</span><span class="p">[</span><span class="o">#</span><span class="n">lines</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span><span class="o">=</span><span class="s2">&quot;[MAX_EDGE:&quot;</span><span class="o">..</span><span class="n">new_value</span><span class="p">(</span><span class="s2">&quot;max_edge&quot;</span><span class="p">)</span><span class="o">..</span><span class="s2">&quot;]&quot;</span>
+            <span class="kd">local</span> <span class="n">reaction_token</span><span class="o">=</span><span class="n">token</span><span class="o">..</span><span class="s2">&quot;_MAKING&quot;</span>
+            <span class="n">reaction_lines</span><span class="p">[</span><span class="o">#</span><span class="n">reaction_lines</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span><span class="o">=</span><span class="s2">&quot;[REACTION:&quot;</span><span class="o">..</span><span class="n">reaction_token</span><span class="o">..</span><span class="s2">&quot;]&quot;</span>
+            <span class="n">add_generated_info</span><span class="p">(</span><span class="n">reaction_lines</span><span class="p">)</span>
+            <span class="n">reaction_lines</span><span class="p">[</span><span class="o">#</span><span class="n">reaction_lines</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span><span class="o">=</span><span class="s2">&quot;[NAME:make adamantine &quot;</span><span class="o">..</span><span class="n">v</span><span class="p">.</span><span class="n">material</span><span class="p">.</span><span class="n">name</span><span class="p">.</span><span class="n">SOLID</span><span class="o">..</span><span class="s2">&quot; (use bars)]&quot;</span>
+            <span class="n">reaction_lines</span><span class="p">[</span><span class="o">#</span><span class="n">reaction_lines</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span><span class="o">=</span><span class="s2">&quot;[BUILDING:SMELTER:NONE]&quot;</span>
+            <span class="n">reaction_lines</span><span class="p">[</span><span class="o">#</span><span class="n">reaction_lines</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span><span class="o">=</span><span class="s2">&quot;[REAGENT:A:&quot;</span><span class="o">..</span><span class="nb">tostring</span><span class="p">(</span><span class="mi">150</span><span class="o">*</span><span class="n">wafers</span><span class="p">)</span><span class="o">..</span><span class="s2">&quot;:BAR:NO_SUBTYPE:METAL:ADAMANTINE]&quot;</span>
+            <span class="n">reaction_lines</span><span class="p">[</span><span class="o">#</span><span class="n">reaction_lines</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span><span class="o">=</span><span class="s2">&quot;[REAGENT:B:&quot;</span><span class="o">..</span><span class="nb">tostring</span><span class="p">(</span><span class="mi">150</span><span class="o">*</span><span class="n">bars</span><span class="p">)</span><span class="o">..</span><span class="s2">&quot;:BAR:NO_SUBTYPE:METAL:&quot;</span><span class="o">..</span><span class="n">v</span><span class="p">.</span><span class="n">token</span><span class="o">..</span><span class="s2">&quot;]&quot;</span>
+            <span class="n">reaction_lines</span><span class="p">[</span><span class="o">#</span><span class="n">reaction_lines</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span><span class="o">=</span><span class="s2">&quot;[PRODUCT:100:&quot;</span><span class="o">..</span><span class="nb">tostring</span><span class="p">(</span><span class="n">bars</span><span class="o">+</span><span class="n">wafers</span><span class="p">)</span><span class="o">..</span><span class="s2">&quot;:BAR:NO_SUBTYPE:METAL:&quot;</span><span class="o">..</span><span class="n">token</span><span class="o">..</span><span class="s2">&quot;][PRODUCT_DIMENSION:150]&quot;</span>
+            <span class="n">reaction_lines</span><span class="p">[</span><span class="o">#</span><span class="n">reaction_lines</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span><span class="o">=</span><span class="s2">&quot;[FORTRESS_MODE_ENABLED]&quot;</span>
+            <span class="n">reaction_lines</span><span class="p">[</span><span class="o">#</span><span class="n">reaction_lines</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span><span class="o">=</span><span class="s2">&quot;[CATEGORY:ADAMANTINE_ALLOYS]&quot;</span>
+            <span class="kr">if</span> <span class="ow">not</span> <span class="n">done_category</span> <span class="kr">then</span>
+                <span class="n">done_category</span><span class="o">=</span><span class="kc">true</span>
+                <span class="n">reaction_lines</span><span class="p">[</span><span class="o">#</span><span class="n">reaction_lines</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span><span class="o">=</span><span class="s2">&quot;[CATEGORY_NAME:Adamantine alloys]&quot;</span>
+                <span class="n">reaction_lines</span><span class="p">[</span><span class="o">#</span><span class="n">reaction_lines</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span><span class="o">=</span><span class="s2">&quot;[CATEGORY_DESCRIPTION:Debase adamantine with other metals to get extremely strong alloys.]&quot;</span>
+                <span class="n">reaction_lines</span><span class="p">[</span><span class="o">#</span><span class="n">reaction_lines</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span><span class="o">=</span><span class="s2">&quot;[CATEGORY_KEY:CUSTOM_SHIFT_A]&quot;</span>
+            <span class="kr">end</span>
+            <span class="n">reaction_lines</span><span class="p">[</span><span class="o">#</span><span class="n">reaction_lines</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span><span class="o">=</span><span class="s2">&quot;[FUEL]&quot;</span>
+            <span class="n">reaction_lines</span><span class="p">[</span><span class="o">#</span><span class="n">reaction_lines</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span><span class="o">=</span><span class="s2">&quot;[SKILL:SMELT]&quot;</span>
+        <span class="kr">end</span>
+    <span class="kr">end</span>
+    <span class="kd">local</span> <span class="n">entity_lines</span><span class="o">=</span><span class="p">{}</span>
+    <span class="n">raws</span><span class="p">.</span><span class="n">register_inorganics</span><span class="p">(</span><span class="n">lines</span><span class="p">)</span>
+    <span class="c1">-- not used in vanilla right now, due to lack of instruments, but you CAN do this</span>
+    <span class="n">raws</span><span class="p">.</span><span class="n">register_reactions</span><span class="p">(</span><span class="n">reaction_lines</span><span class="p">)</span>
+<span class="kr">end</span>
+</pre></div></span></div></td></tr></tbody></table></div>

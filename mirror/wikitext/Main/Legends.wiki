@@ -1,0 +1,141 @@
+{{Quality|Exceptional}}
+{{av}}
+[[File:Vanitas still life.jpg|thumb|250px|right|Only two things are certain in ''Dwarf Fortress'': [[Fun]], and the legends you leave behind.]]
+
+'''Legends''' mode is one of the three main methods of interacting with an already-generated [[World generation|world]]. In Legends mode, players can view maps, histories of each civilization and any figure who has lived or died in the generated world. Any noticeable achievement made by the player in [[Dwarf fortress mode|Fortress]] or [[Adventurer mode|Adventurer]] mode is recorded and is viewable in Legends mode. You may explore Legends mode after you generate a new world. 
+
+Many players choose to generate a world where the option '[[Advanced_world_generation#Reveal_All_Historical_Events|Reveal All Historical Events]]' is set to YES (the default) - however, if you set the option to NO, then the vast majority of the world history will be hidden in Legends mode until uncovered by brave adventurers. Even when set to YES, some things may not be revealed; all ''events'' will be revealed, but some [[historical figure]]s, [[site]]s, [[region]]s, and [[civilization]]s and other entities may ''not'' be, possibly because they are not known to any civilization.
+
+Ways for an adventurer to uncover events and other things include:
+* talking to people in civilized sites and asking them various questions
+* viewing items with images, like [[coin]]s, [[armor]], [[engraving]]s, [[statue]]s, etc
+* finding artifacts and [[book]]s and other written works
+* possibly reading written works{{verify}} or by listening to stories and songs{{verify}} 
+
+You don't ''have'' to have had an adventurer or fortress game active in order to use Legends mode - some players simply enjoy it to read about the last time their favorite kingdom went to war, or learn about the dwarven civilizations before choosing to embark, etc. In fact, Legends Mode cannot be entered if there is an active adventurer or fortress in the world. However, a copy of such a world can be made, loaded in the game and the current mode retired or abandoned, then opened in Legends mode.
+
+== Accessing Legends Mode ==
+When you choose "Start Playing" in a world that doesn't have a current active game, the options include Legends mode. By accessing Legends mode, you are deciding to reveal all the knowledge of the world that would otherwise be discoverable only in pieces, through Fortress or Adventurer Mode.
+
+:Note: If you are already playing a fortress on the save you want to use, you can save to a new timeline after choosing to retire or abandon, both leaving the active fortress and allowing access to Legends mode in the new timeline.
+
+=== Navigation ===
+Upon entering legends mode, the player is presented with a list of categories. 
+To the right of each category is the number of entries for that category. 
+[[File:Legends menu v50.png|thumb|Legends Mode landing page]]
+
+Clicking into a category opens a tab for that category, with a list of entries for that category.
+The entries will be displayed with a name on the left, and (usually) a pertinent piece of information on the right.
+[[File:Legends artifacts list.png|thumb|Example of Artifacts entries]]
+
+Clicking into a specific entry opens the entry's legend page, consisting of a 
+* Title (dwarven name, english translation, what it is)
+* Description
+* Events
+* Notable Stats (kills,  relatives, etc)
+** Some entry types don't have any stats, such as sites
+[[File:Legends artifact entry rulnimak.png|thumb|Legends mode entry for the artifact Rulnimak]]
+
+On the entry's legend page, all highlighted phrases are hyperlinks to other entries (the color of the highlight indicates what category the entry is in).
+Clicking on one of these will open a new tab for that entry.
+
+
+===Categories===
+
+The following table provides a brief description of the different categories
+of entries accessible in legends mode.
+The "List Detail" is the information that is visible to the right of the name
+when viewing the category, and the "Stats" column describes what sort of information
+is available beneath the event list when viewing the entry's legends page.
+
+{| class="wikitable"
+|+ Caption text
+|-
+! Category !! Link Color !! List Detail !! Stats !! Description
+|-
+| Historical Figures 
+   || Blue
+   || Birth/Death year 
+   || Related Historical Figures, Related Entities, Kills 
+   || [[megabeast]]s, [[forgotten beast]]s, [[demon]]s, [[deity|gods]], [[Dwarf|dwarves]], [[human]]s, [[goblin]]s, [[kobold]]s, and other named [[creature]]s
+|-
+| Sites 
+   || Orange 
+   || Site Type
+   || 
+   || See [[Site]]
+|-
+| Artifacts
+   || Yellow
+   || [[Item]] material/type
+   || Kills, Slayer (wielder during the kill)
+   || See [[Legendary artifact]]
+|-
+| Codices, scrolls, etc.
+   || Pink
+   || [[Item]] material/type
+   || 
+   || Items with writing from around the world. Includes all sorts of [[books]], [[slabs]], etc
+|-
+| Regions
+   || Green
+   ||
+   ||
+   || See [[Region]]
+|-
+| Underground regions
+   || Purple
+   || 
+   || 
+   || These regions appear to all be "Unnamed underground area", and other events will refer to them as "the depths of the world". Forgotten beasts seem to spawn here.
+|-
+| Civilizations and other entities
+   || Teal
+   ||
+   || 
+   || [[civilization]]s, local governments, and [[religion]]s, etc
+|-
+| Structures
+   || N/A
+   || Structure Type
+   || 
+   || Constructed/erected buildings found in sites. See [[structures]]
+|-
+| Chronicles by age
+   || N/A
+   || Number of historical events
+   || 
+   || A list of all historical events in chronological order that occur within a specific Age in the world history. Here, you can read the battle reports from various wars, or the duels that took place between long-dead champions, or the <s>burninations</s> rampages of [[megabeast]]s amongst the [[peasant]]s.  See [[Ages|here]] for a list of ages and their conditions.
+
+|}
+
+==Exporting World information==
+
+Legends mode has a built-in tool to export XML. There are also tools to expand and view exports (see next section).
+
+In previous versions there were [[Missing_features#Other_missing_features|additional export options]] (maps, text files, etc); maps and map exports may be re-added in the future.{{cite|putnam-reddit|https://www.reddit.com/r/dwarffortress/comments/15jwh5q/comment/jv36ot3}}
+
+=== XML dump ===
+
+Once you've generated a world, you can dump much of the historical data into an XML file for external analysis. The XML dump currently doesn't include every detail of world history, but it contains many of the important ones. Be warned that a large world with, say, 1000 years (or even 10,000) of history can produce an XML dump up to a full gigabyte in size, which may prove unwieldy. Clicking the Export XML button (shown below) while in Legends mode to produce an XML dump (it will be placed in the root ''Dwarf Fortress'' directory and named the same as your game's save folder) See [[Main:XML dump|XML dump]] for information on the XML file's format.
+[[File:Legends export xml button.png|frame|none]]
+
+== Utilities & Tools ==
+{{Main|Utilities#Legends tools}}
+There are many utilities that work with the data exported from Legends mode (or at least were before v50), or make exporting that info easier.  
+
+===Export tools===
+
+When using [[DFHack]], you can use the built-in <code>exportlegends</code> to export the "detailed" data in an XML. By default with DFHack enabled, this will automatically run when the export XML button is clicked, generating both the vanilla **and** detailed xml files{{cite|DFHack Docs: exportlegends|https://docs.dfhack.org/en/stable/docs/tools/exportlegends.html}}.
+
+===Legends viewing tools and visualisers===
+
+Now reimagined, [[Utilities#LegendsViewer-Next|Legends Viewer Next]] is available for Windows, Linux, and macOS.{{cite forum|154617}}
+
+Community members are working on other utilities, such as [https://github.com/itsiggyboy/DwarvenSurveyor Dwarven Surveyor]{{cite reddit|15jwh5q}}.
+
+{{Translation| dwarven = gomath | elvish = liceva | goblin = olzul | human = en}}
+
+{{Category|Guides}}
+{{Category|Legends mode}}
+[[ru:Legends]]
