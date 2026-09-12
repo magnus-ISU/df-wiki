@@ -1,0 +1,426 @@
+<div class="mw-parser-output"><table class="metadata plainlinks ambox ambox-content" style="background-color:#fc9;" role="presentation">
+<tbody><tr><td class="mbox-image"><div style="width: 52px;"><a href="/index.php/File:Announce_migrant_icon.png" class="image"><img alt="Announce migrant icon.png" src="/images/5/5f/Announce_migrant_icon.png" decoding="async" width="32" height="32" /></a></div></td><td class="mbox-text" style=""><span class="mbox-text-span">This article was migrated from <a href="/index.php/DF2014:Interaction_examples" title="DF2014:Interaction examples">DF2014:Interaction examples</a> and may be inaccurate for the current version of DF (v53.16). See <a href="/index.php/Dwarf_Fortress_Wiki:Version_migration" title="Dwarf Fortress Wiki:Version migration">this page</a> for more information.<span class="hide-when-compact">  </span><span class="hide-when-compact"> </span></span></td></tr></tbody></table>
+<table class="version-table" style="text-align: center; margin: 3px auto 5px; padding: 0.25em; border-radius: 3px; -webkit-border-radius: 3px; -moz-border-radius: 3px; -o-border-radius: 3px; -ms-border-radius: 3px;; border: 2px solid #bbdd88; background: #f5ffee; min-width:27em"><tbody><tr><td style="padding: 0.3em 0.3em; width: 100%;"><div style="margin-bottom:6px;" class="version-links-r1"><span style="font-size:100%"><span class="version-link"><span style="text-decoration: none; color: #72A329; background-color: #E2FDCE; border-radius: 2px; -webkit-border-radius: 2px; -moz-border-radius: 2px; -o-border-radius: 2px; -ms-border-radius: 2px; border: 1px solid #bbdd88; padding: 0.2em;"><b>v53.16</b></span></span><span style="font-weight:bold;" class="dot">&#160;·</span> <span class="version-link"><a href="/index.php/DF2014:Interaction_examples" title="DF2014:Interaction examples"><span style="text-decoration: none; color: #72A329;">v0.47.05</span></a></span></span></div><span>This article is about the current version of DF.<br />Note that some content may still need to be updated.</span><br />
+<div style="float: right; font-size:75%; padding-right:2px; margin-top:-2px; margin-bottom:-7px;"><span class="version-link"><a href="/index.php/Dwarf_Fortress_Wiki:V" class="mw-redirect" title="Dwarf Fortress Wiki:V"><span style="text-decoration: none; color: #72A329;">More Info</span></a></span><span style="font-weight:bold;" class="dot">&#160;·</span> <span class="version-link"><a href="/index.php/Template:Av" class="mw-redirect" title="Template:Av"><span style="text-decoration: none; color: #72A329;">V</span></a></span></div></td></tr>
+</tbody></table>
+<p>This page was created to aid those curious about the <a href="/index.php/Interaction_token" title="Interaction token">interaction</a> process by providing example interactions for them to use or study. Those familiar with interaction raws should feel free to add helpful/obscure information to the lists below to help members of the community less experienced with interactions.
+</p>
+
+<h2><span class="mw-headline" id="General_Tips">General Tips</span></h2>
+<h3><span class="mw-headline" id="Synchronizing_Adventure_and_Fort_Mode_syndrome_timers">Synchronizing Adventure and Fort Mode syndrome timers</span></h3>
+<p>Fort mode runs 144 times faster than adventure mode - which means that a syndrome that lasts a single tick in Fort Mode will last 144 ticks in Adventure Mode.  For short-term syndromes, this will cause very different behaviors between the two modes.  In order to ensure that a syndrome operates the same way regardless of mode, add DWF_STRETCH:144 to the end of the CE effect tag.
+</p><p>It is not possible to make a syndrome that lasts shorter than 144 ticks in Adventure Mode
+</p>
+<h3><span class="mw-headline" id="Syndromes_with_no_effect">Syndromes with no effect</span></h3>
+<p>There are times you will want to create a syndrome that has no actual effect - generally in order to add a SYN_CLASS that renders the target untargetable by a different interaction.  Syndromes disappear once their effects have expired, so to do this you will need to add an effect that does nothing.
+Some examples:
+</p>
+<div style="clear:both;"></div>
+<table class="collapsible collapsed infobox gamedata" style="background: #fdfdfd; border: 1px solid #aaa; font-size: 88%; margin: 0 auto -1px; vertical-align: middle; width: 100%; max-width: 100em; table-layout: fixed;">
+<tbody><tr style="line-height: 1.5em;"><th scope="col" style="background: #cce6b3; padding: 0.25em 1em; text-align: center; display: table-cell;&#32;;"><div style="font-size: 114%; margin: 0 9em;">"Dummy" syndrome tags</div></th></tr>
+<tr style="line-height: 1.5em; text-align: left; display: table-cell;"><td><div style="overflow: auto;"><span class="gamedata-content" style="font-family: monospace; font-size:1.25em; white-space:pre;">
+[CE_SPEED_CHANGE:SPEED_PERC:100:START:0:END:1:DWF_STRETCH:144] &lt;-- Makes the target move at 100% of its current speed
+
+[CE_SKILL_ROLL_ADJUST:PERC:100:PERC_ON:0:START:0:END:1:DWF_STRETCH:144] &lt;-- Multiplies the target's skill by 100%, 0% of the time
+
+[CE_MATERIAL_FORCE_MULTIPLIER:PROB:100:MAT_MULT:NONE:NONE:1:1:START:0:END:1:DWF_STRETCH:144] &lt;-- Makes the target take 1/1 times its normal damage from attacks
+</span></div></td></tr></tbody></table>
+<p>So if you see tags like this in the examples below, this is what they are for.
+</p>
+<h2><span class="mw-headline" id="Material_Emission_Interactions">Material Emission Interactions</span></h2>
+<p>Following are several examples of material emission interactions.
+</p>
+<h3><span class="mw-headline" id="Multiple_Projectile_Emission">Multiple Projectile Emission</span></h3>
+<div style="clear:both;"></div>
+<table class="collapsible collapsed infobox gamedata" style="background: #fdfdfd; border: 1px solid #aaa; font-size: 88%; margin: 0 auto -1px; vertical-align: middle; width: 100%; max-width: 100em; table-layout: fixed;">
+<tbody><tr style="line-height: 1.5em;"><th scope="col" style="background: #cce6b3; padding: 0.25em 1em; text-align: center; display: table-cell;&#32;;"><div style="font-size: 114%; margin: 0 9em;">Example [MATERIAL_EMISSION] interaction raws that fire three projectiles of the same material</div></th></tr>
+<tr style="line-height: 1.5em; text-align: left; display: table-cell;"><td><div style="overflow: auto;"><span class="gamedata-content" style="font-family: monospace; font-size:1.25em; white-space:pre;">
+ [INTERACTION:MATERIAL_EMISSION_3]
+	[I_SOURCE:CREATURE_ACTION]
+	[I_TARGET:A:MATERIAL]
+		[IT_MATERIAL:CONTEXT_MATERIAL]
+	[I_TARGET:B:LOCATION]
+		[IT_LOCATION:CONTEXT_LOCATION] &lt;-- this is always the emitter for now
+	[I_TARGET:C:LOCATION]
+		[IT_LOCATION:CONTEXT_CREATURE_OR_LOCATION] &lt;-- lets projectiles be aimed at specific creatures
+		[IT_MANUAL_INPUT:target]
+	[I_EFFECT:MATERIAL_EMISSION]
+		[IE_TARGET:A]
+		[IE_TARGET:B]
+		[IE_TARGET:C]
+		[IE_IMMEDIATE]
+	[I_EFFECT:MATERIAL_EMISSION]
+		[IE_TARGET:A]
+		[IE_TARGET:B]
+		[IE_TARGET:C]
+		[IE_IMMEDIATE]
+	[I_EFFECT:MATERIAL_EMISSION]
+		[IE_TARGET:A]
+		[IE_TARGET:B]
+		[IE_TARGET:C]
+		[IE_IMMEDIATE]
+</span></div></td></tr></tbody></table>
+<p><br />
+By adding additional [I_EFFECT:MATERIAL_EMISSION] tags with their associated targets, you may stack additional projectiles.
+</p>
+<h3><span class="mw-headline" id="Predefined_Material_Emissions">Predefined Material Emissions</span></h3>
+<div style="clear:both;"></div>
+<table class="collapsible collapsed infobox gamedata" style="background: #fdfdfd; border: 1px solid #aaa; font-size: 88%; margin: 0 auto -1px; vertical-align: middle; width: 100%; max-width: 100em; table-layout: fixed;">
+<tbody><tr style="line-height: 1.5em;"><th scope="col" style="background: #cce6b3; padding: 0.25em 1em; text-align: center; display: table-cell;&#32;;"><div style="font-size: 114%; margin: 0 9em;">Example [MATERIAL_EMISSION] interaction raws that use a predefined material</div></th></tr>
+<tr style="line-height: 1.5em; text-align: left; display: table-cell;"><td><div style="overflow: auto;"><span class="gamedata-content" style="font-family: monospace; font-size:1.25em; white-space:pre;">
+ [INTERACTION:BASALT_EMISSION]
+	[I_SOURCE:CREATURE_ACTION]
+	[I_TARGET:A:MATERIAL]
+		[IT_MATERIAL:MATERIAL:INORGANIC:BASALT:SOLID_GLOB] &lt;-- the predefined material (INORGANIC), sub material (BASALT), and action type (SOLID_GLOB)
+	[I_TARGET:B:LOCATION]
+		[IT_LOCATION:CONTEXT_LOCATION]
+	[I_TARGET:C:LOCATION]
+		[IT_LOCATION:CONTEXT_CREATURE_OR_LOCATION]
+		[IT_MANUAL_INPUT:target]
+	[I_EFFECT:MATERIAL_EMISSION]
+		[IE_TARGET:A]
+		[IE_TARGET:B]
+		[IE_TARGET:C]
+		[IE_IMMEDIATE]
+</span></div></td></tr></tbody></table>
+<p>If a material is listed in this format, the creature will not need a [CDI:MATERIAL] tag in their creature raws in order to use it. This allows projectile attacks to be gained through substance ingestion, other interactions, etc.
+</p>
+<h3><span class="mw-headline" id="Predefined_Emissions_of_Different_Types">Predefined Emissions of Different Types</span></h3>
+<div style="clear:both;"></div>
+<table class="collapsible collapsed infobox gamedata" style="background: #fdfdfd; border: 1px solid #aaa; font-size: 88%; margin: 0 auto -1px; vertical-align: middle; width: 100%; max-width: 100em; table-layout: fixed;">
+<tbody><tr style="line-height: 1.5em;"><th scope="col" style="background: #cce6b3; padding: 0.25em 1em; text-align: center; display: table-cell;&#32;;"><div style="font-size: 114%; margin: 0 9em;">Example [MATERIAL_EMISSION] interaction raws that use two predefined material types</div></th></tr>
+<tr style="line-height: 1.5em; text-align: left; display: table-cell;"><td><div style="overflow: auto;"><span class="gamedata-content" style="font-family: monospace; font-size:1.25em; white-space:pre;">
+ [INTERACTION:BASALT_GRANITE_EMISSION]
+	[I_SOURCE:CREATURE_ACTION]
+	[I_TARGET:A:MATERIAL]
+		[IT_MATERIAL:MATERIAL:INORGANIC:BASALT:SOLID_GLOB] &lt;-- the predefined material (INORGANIC), sub material (BASALT), and action type (SOLID_GLOB)
+	[I_TARGET:A1:MATERIAL]
+		[IT_MATERIAL:MATERIAL:INORGANIC:GRANITE:LIQUID_GLOB] &lt;-- the second predefined material (INORGANIC), sub material (GRANITE), and action type (LIQUID_GLOB)
+	[I_TARGET:B:LOCATION]
+		[IT_LOCATION:CONTEXT_LOCATION]
+	[I_TARGET:C:LOCATION]
+		[IT_LOCATION:CONTEXT_CREATURE_OR_LOCATION]
+		[IT_MANUAL_INPUT:target]
+	[I_EFFECT:MATERIAL_EMISSION]
+		[IE_TARGET:A]
+		[IE_TARGET:B]
+		[IE_TARGET:C]
+		[IE_IMMEDIATE]
+	[I_EFFECT:MATERIAL_EMISSION]
+		[IE_TARGET:A1]
+		[IE_TARGET:B]
+		[IE_TARGET:C]
+		[IE_IMMEDIATE]
+</span></div></td></tr></tbody></table>
+<p>This interaction fires both a solid glob of basalt and a liquid glob of granite magma.
+</p>
+<h3><span class="mw-headline" id="Material_Emissions_With_Immunity">Material Emissions With Immunity</span></h3>
+<div style="clear:both;"></div>
+<table class="collapsible collapsed infobox gamedata" style="background: #fdfdfd; border: 1px solid #aaa; font-size: 88%; margin: 0 auto -1px; vertical-align: middle; width: 100%; max-width: 100em; table-layout: fixed;">
+<tbody><tr style="line-height: 1.5em;"><th scope="col" style="background: #cce6b3; padding: 0.25em 1em; text-align: center; display: table-cell;&#32;;"><div style="font-size: 114%; margin: 0 9em;">Example interaction raws that may only target unprotected creatures, and the protection interaction</div></th></tr>
+<tr style="line-height: 1.5em; text-align: left; display: table-cell;"><td><div style="overflow: auto;"><span class="gamedata-content" style="font-family: monospace; font-size:1.25em; white-space:pre;">
+ [INTERACTION:CTARGET_BASALT_EMISSION] &lt;-- The projectile itself
+	[I_SOURCE:CREATURE_ACTION]
+	[I_TARGET:A:MATERIAL]
+		[IT_MATERIAL:MATERIAL:INORGANIC:BASALT:SOLID_GLOB] &lt;-- the material tags used in the previous predefined material example.
+	[I_TARGET:B:LOCATION]
+		[IT_LOCATION:CONTEXT_LOCATION]
+	[I_TARGET:C:CREATURE] &lt;-- the may no longer be used on a location and must target a creature.
+		[IT_CANNOT_HAVE_SYNDROME_CLASS:NO_EMISSION] &lt;-- the syndrome class that makes targeting a creature with this interaction impossible.
+		[IT_LOCATION:CONTEXT_CREATURE]
+		[IT_MANUAL_INPUT:target]
+	[I_EFFECT:MATERIAL_EMISSION]
+		[IE_TARGET:A]
+		[IE_TARGET:B]
+		[IE_TARGET:C]
+		[IE_IMMEDIATE]
+
+ [INTERACTION:EMISSION_PROTECTION] &lt;-- The ability that protects creatures from the above projectile
+	[I_TARGET:A:CREATURE]
+		[IT_LOCATION:CONTEXT_CREATURE]
+		[IT_MANUAL_INPUT:target]
+	[I_EFFECT:ADD_SYNDROME]
+		[IE_TARGET:A]
+		[IE_IMMEDIATE]
+		[SYNDROME]
+			[SYN_CLASS:NO_EMISSION]
+			[SYN_NAME:protection from projectiles]
+			[CE_FLASH_TILE:TILE:'O':7:0:1:FREQUENCY:2000:1000:START:0:END:2:ABRUPT:DWF_STRETCH:144]
+
+</span></div></td></tr></tbody></table>
+<p>Material emissions used in this format are affected by [IT_CANNOT_HAVE_SYNDROME_CLASS:X] tags (given above as the custom tag NO_EMISSION). This allows a modder to create immunity syndromes, disallowing a creature using the emission interaction from targeting the creature with immunity.
+</p>
+<h2><span class="mw-headline" id="Targeted_Interactions">Targeted Interactions</span></h2>
+<p>Interactions that are specifically intended to target particular types of creatures.
+</p>
+<h3><span class="mw-headline" id="Turn_Undead">Turn Undead</span></h3>
+<p>An attack that hits all procedurally-generated zombies and ghouls.
+</p>
+<div style="clear:both;"></div>
+<table class="collapsible collapsed infobox gamedata" style="background: #fdfdfd; border: 1px solid #aaa; font-size: 88%; margin: 0 auto -1px; vertical-align: middle; width: 100%; max-width: 100em; table-layout: fixed;">
+<tbody><tr style="line-height: 1.5em;"><th scope="col" style="background: #cce6b3; padding: 0.25em 1em; text-align: center; display: table-cell;&#32;;"><div style="font-size: 114%; margin: 0 9em;">Turn Undead</div></th></tr>
+<tr style="line-height: 1.5em; text-align: left; display: table-cell;"><td><div style="overflow: auto;"><span class="gamedata-content" style="font-family: monospace; font-size:1.25em; white-space:pre;">
+ 
+[INTERACTION:TURN_UNDEAD] &lt;- Should work against all zombies and ghouls
+	[I_SOURCE:CREATURE_ACTION]
+	[I_TARGET:A:CREATURE]
+		[IT_LOCATION:CONTEXT_CREATURE]
+		[IT_MANUAL_INPUT:zombies]
+		[IT_CANNOT_HAVE_SYNDROME_CLASS:TURN_UNDEAD]
+		[IT_AFFECTED_CLASS:GENERAL_POISON]
+		[IT_REQUIRES:NO_AGING]
+		[IT_REQUIRES:NO_THOUGHT_CENTER_FOR_MOVEMENT]
+		[IT_REQUIRES:NO_CONNECTIONS_FOR_MOVEMENT]
+		[IT_REQUIRES:OPPOSED_TO_LIFE]
+	[I_EFFECT:ADD_SYNDROME]
+		[IE_TARGET:A]
+		[IE_IMMEDIATE]
+		[SYNDROME]
+			[SYN_NAME:turned]
+			[SYN_CLASS:TURN_UNDEAD]
+			[CE_REMOVE_TAG:NO_DIZZINESS:NONAUSEA:NOFEAR:NOPAIN:NOSTUN:START:0:END:8:DWF_STRETCH:144] &lt;-- This removes the normal undead tags, rendering them vulnerable to the syndrome's other effects.
+			[CE_SKILL_ROLL_ADJUST:PERC:50:PERC_ON:100:START:0:END:8:DWF_STRETCH:144]
+			[CE_DIZZINESS:SEV:200:PROB:100:START:0:END:8:DWF_STRETCH:144]
+			[CE_NAUSEA:SEV:200:PROB:100:START:0:END:8:DWF_STRETCH:144]
+			[CE_PAIN:SEV:100:PROB:100:START:0:END:8:DWF_STRETCH:144]
+
+</span></div></td></tr></tbody></table>
+<h3><span class="mw-headline" id="Smite_Evil">Smite Evil</span></h3>
+<p>An attack that hits all procedurally-generated bogeymen, night creatures, vampires, werebeasts, demons, and... angels. There does not currently appear to be a way of excluding angels. (Eh, it's DF angels, they probably count as evil anyway).
+</p>
+<div style="clear:both;"></div>
+<table class="collapsible collapsed infobox gamedata" style="background: #fdfdfd; border: 1px solid #aaa; font-size: 88%; margin: 0 auto -1px; vertical-align: middle; width: 100%; max-width: 100em; table-layout: fixed;">
+<tbody><tr style="line-height: 1.5em;"><th scope="col" style="background: #cce6b3; padding: 0.25em 1em; text-align: center; display: table-cell;&#32;;"><div style="font-size: 114%; margin: 0 9em;">Smite Evil</div></th></tr>
+<tr style="line-height: 1.5em; text-align: left; display: table-cell;"><td><div style="overflow: auto;"><span class="gamedata-content" style="font-family: monospace; font-size:1.25em; white-space:pre;">
+ 
+[INTERACTION:SMITE_EVIL]
+	[I_SOURCE:CREATURE_ACTION]
+	[I_TARGET:A:CREATURE]
+		[IT_LOCATION:CONTEXT_CREATURE]
+		[IT_MANUAL_INPUT:night creatures]
+		[IT_CANNOT_HAVE_SYNDROME_CLASS:SMITE_EVIL]
+		[IT_IMMUNE_CLASS:NOT_EVIL] &lt;-- used to specify custom creatures that have the normal night creature tags but will be immune to the spell.
+		[IT_REQUIRES:NO_DRINK]
+		[IT_REQUIRES:NO_EAT]
+		[IT_REQUIRES:NO_SLEEP]
+		[IT_REQUIRES:NOPAIN]
+		[IT_REQUIRES:NOSTUN]
+		[IT_REQUIRES:NONAUSEA]
+		[IT_REQUIRES:NOFEAR]
+		[IT_REQUIRES:NOEXERT]
+		[IT_REQUIRES:NO_DIZZINESS]
+		[IT_REQUIRES:NO_FEVERS]
+		[IT_REQUIRES:NOBREATHE]
+		[IT_REQUIRES:CAN_LEARN]
+		[IT_REQUIRES:CAN_SPEAK]
+	[I_EFFECT:ADD_SYNDROME]
+		[IE_TARGET:A]
+		[IE_IMMEDIATE]
+		[SYNDROME]
+			[SYN_NAME:smote]
+			[SYN_CLASS:SMITE_EVIL]
+			[CE_REMOVE_TAG:NO_DIZZINESS:NONAUSEA:NOFEAR:NOPAIN:NOSTUN:START:0:END:8:DWF_STRETCH:144]
+			[CE_SKILL_ROLL_ADJUST:PERC:50:PERC_ON:100:START:0:END:8:DWF_STRETCH:144]
+			[CE_DIZZINESS:SEV:200:PROB:100:START:0:END:8:DWF_STRETCH:144]
+			[CE_NAUSEA:SEV:200:PROB:100:START:0:END:8:DWF_STRETCH:144]
+			[CE_PAIN:SEV:100:PROB:100:START:0:END:8:DWF_STRETCH:144]
+
+</span></div></td></tr></tbody></table>
+<h2><span class="mw-headline" id="Multi-Stage_Interactions">Multi-Stage Interactions</span></h2>
+<p>These are more elaborate groups of interactions that allow you to create complex behaviors by using interactions to enable or disable other interactions.
+</p>
+<h3><span id="Timed_Self-Destruct_(or_other_powerful_ability)_with_Override_Ability"></span><span class="mw-headline" id="Timed_Self-Destruct_.28or_other_powerful_ability.29_with_Override_Ability">Timed Self-Destruct (or other powerful ability) with Override Ability</span></h3>
+<p>This will allow the user to explode after spending a certain amount of time in combat.  A few ticks before exploding, it will flash with a "!" as a warning.
+You can also replace the explosion with any other powerful ability that you want it to use only after a countdown.
+It also comes with a syndrome that will disable the explosion.
+This is intended to be used by non-playable units, like animals or zombies.
+</p>
+<div style="clear:both;"></div>
+<table class="collapsible collapsed infobox gamedata" style="background: #fdfdfd; border: 1px solid #aaa; font-size: 88%; margin: 0 auto -1px; vertical-align: middle; width: 100%; max-width: 100em; table-layout: fixed;">
+<tbody><tr style="line-height: 1.5em;"><th scope="col" style="background: #cce6b3; padding: 0.25em 1em; text-align: center; display: table-cell;&#32;;"><div style="font-size: 114%; margin: 0 9em;">Example Timed Self-Destruct with Override Ability</div></th></tr>
+<tr style="line-height: 1.5em; text-align: left; display: table-cell;"><td><div style="overflow: auto;"><span class="gamedata-content" style="font-family: monospace; font-size:1.25em; white-space:pre;">
+ 
+[INTERACTION:EXPLOSION_READY_1] &lt;-- This is the ability you actually give the creature.  Use CDI:USAGE_HINT:DEFEND, and CDI:TARGET:A:SELF_ONLY.
+	[I_SOURCE:CREATURE_ACTION]
+	[I_TARGET:A:CREATURE]
+		[IT_LOCATION:CONTEXT_CREATURE]
+		[IT_CANNOT_HAVE_SYNDROME_CLASS:EXPLOSION_READY_1]
+	[I_EFFECT:ADD_SYNDROME]
+		[IE_TARGET:A]
+		[IE_IMMEDIATE]
+		[SYNDROME]
+			[SYN_NAME:counting down]
+			[SYN_CLASS:EXPLOSION_READY_1]
+			[CE_CAN_DO_INTERACTION:START:10:END:11:DWF_STRETCH:144] &lt;--The START affects the amount of time spent in combat before the explosion can occur.
+				[CDI:ADV_NAME:Draw Energy]
+				[CDI:USAGE_HINT:DEFEND]
+				[CDI:VERB:engage self-destruct sequence:engages self-destruct sequence:NA]
+				[CDI:INTERACTION:EXPLOSION_READY_2]
+				[CDI:TARGET:A:SELF_ONLY]
+				[CDI:WAIT_PERIOD:1500]
+
+[INTERACTION:EXPLOSION_READY_2]
+	[I_SOURCE:CREATURE_ACTION]
+	[I_TARGET:A:CREATURE]
+		[IT_LOCATION:CONTEXT_CREATURE]
+		[IT_CANNOT_HAVE_SYNDROME_CLASS:EXPLOSION_READY_2]
+		[IT_CANNOT_HAVE_SYNDROME_CLASS:EXPLOSION_OVERRIDE]
+	[I_EFFECT:ADD_SYNDROME]
+		[IE_TARGET:A]
+		[IE_IMMEDIATE]
+		[SYNDROME]
+			[SYN_NAME:ready to explode]
+			[SYN_CLASS:EXPLOSION_READY_2]
+			[CE_FLASH_TILE:TILE:33:4:0:0:FREQUENCY:32:16:START:0:END:2:DWF_STRETCH:144] &lt;-- Flash as a warning
+			[CE_SPEED_CHANGE:SPEED_PERC:50:START:0:END:2:DWF_STRETCH:144]
+			[CE_CAN_DO_INTERACTION:START:1:END:2:DWF_STRETCH:144] &lt;-- The AI will use this and then immediately explode, provided it is still in combat and not affected by EXPLOSION_OVERRIDE.
+				[CDI:ADV_NAME:Remove safeties]
+				[CDI:USAGE_HINT:DEFEND]
+				[CDI:INTERACTION:EXPLOSION_READY_3]
+				[CDI:TARGET:A:SELF_ONLY]
+				[CDI:WAIT_PERIOD:250]
+
+[INTERACTION:EXPLOSION_READY_3]
+	[I_SOURCE:CREATURE_ACTION]
+	[I_TARGET:A:CREATURE]
+		[IT_LOCATION:CONTEXT_CREATURE]
+		[IT_CANNOT_HAVE_SYNDROME_CLASS:EXPLOSION_READY_3]
+		[IT_CANNOT_HAVE_SYNDROME_CLASS:EXPLOSION_OVERRIDE]
+	[I_EFFECT:ADD_SYNDROME]
+		[IE_TARGET:A]
+		[IE_IMMEDIATE]
+		[SYNDROME]
+			[SYN_NAME:about to explode]
+			[SYN_CLASS:EXPLOSION_READY_3]
+			[CE_FLASH_TILE:TILE:33:4:0:0:FREQUENCY:32:16:START:0:END:2:DWF_STRETCH:144]
+			[CE_CAN_DO_INTERACTION:START:0:END:1:DWF_STRETCH:144]
+				[CDI:ADV_NAME:Explode]
+				[CDI:USAGE_HINT:ATTACK]
+				[CDI:INTERACTION:MATERIAL_EMISSION]
+				[CDI:VERB:explode:explodes:NA]
+				[CDI:MATERIAL:CREATURE_MAT:BOMBER:EXPLOSION:UNDIRECTED_DUST] &lt;-- This points to a creature called BOMBER that contains the EXPLOSION material. It is better to put unstable materials in dummy creatures rather than making them INORGANICs, to prevent titans or forgotten beasts from being made of them.
+				[CDI:TARGET:C:LINE_OF_SIGHT]
+				[CDI:TARGET_RANGE:C:1]
+				[CDI:MAX_TARGET_NUMBER:C:1]
+				[CDI:WAIT_PERIOD:250]
+
+[INTERACTION:EXPLOSION_OVERRIDE] &lt;-- Give this to any creature you want to be able to override the explosion.  For example, a necromancer that creates kamikaze zombies may disable any zombies nearby, to prevent friendly fire.
+	[I_SOURCE:CREATURE_ACTION]
+	[I_TARGET:A:CREATURE]
+		[IT_LOCATION:CONTEXT_CREATURE]
+		[IT_CANNOT_HAVE_SYNDROME_CLASS:EXPLOSION_READY_3]
+		[IT_CANNOT_HAVE_SYNDROME_CLASS:EXPLOSION_OVERRIDE]
+	[I_EFFECT:ADD_SYNDROME]
+		[IE_TARGET:A]
+		[IE_IMMEDIATE]
+		[SYNDROME]
+			[SYN_NAME:unable to explode]
+			[SYN_CLASS:EXPLOSION_OVERRIDE]
+			[CE_SPEED_CHANGE:SPEED_PERC:100:START:0:END:2:DWF_STRETCH:144]
+
+
+</span></div></td></tr></tbody></table>
+<h2><span class="mw-headline" id="Transformation_Interactions">Transformation Interactions</span></h2>
+<p>These are interactions that will cause a creature to transform into another creature.
+</p>
+<h3><span class="mw-headline" id="Demon_Transformation">Demon Transformation</span></h3>
+<p>This is a fairly straightforward transformation, as it only relies on one caste token. This interaction will transform a creature into a random non-unique demon
+</p>
+<div style="clear:both;"></div>
+<table class="collapsible collapsed infobox gamedata" style="background: #fdfdfd; border: 1px solid #aaa; font-size: 88%; margin: 0 auto -1px; vertical-align: middle; width: 100%; max-width: 100em; table-layout: fixed;">
+<tbody><tr style="line-height: 1.5em;"><th scope="col" style="background: #cce6b3; padding: 0.25em 1em; text-align: center; display: table-cell;&#32;;"><div style="font-size: 114%; margin: 0 9em;">Demon transformation</div></th></tr>
+<tr style="line-height: 1.5em; text-align: left; display: table-cell;"><td><div style="overflow: auto;"><span class="gamedata-content" style="font-family: monospace; font-size:1.25em; white-space:pre;">
+ 
+[INTERACTION:DEMON_POLYMORPH]
+	[I_SOURCE:CREATURE_ACTION]
+	[I_TARGET:A:CREATURE]
+		[IT_LOCATION:CONTEXT_CREATURE]
+	[I_EFFECT:ADD_SYNDROME]
+		[IE_TARGET:A]
+		[IE_IMMEDIATE]
+		[SYNDROME]
+			[SYN_CONCENTRATION_ADDED:1000:0]
+			[CE_BODY_TRANSFORMATION:START:0:PEAK:0:END:5:ABRUPT:DWF_STRETCH:144]
+				[CE:CREATURE_CASTE_FLAG:DEMON] 
+			[CE_ADD_TAG:NO_AGING:START:0:PEAK:0:END:5:ABRUPT:DWF_STRETCH:144]
+
+</span></div></td></tr></tbody></table>
+<p>Note that this interaction will not work in arena mode due to the lack of generated creatures in that mode. However, it will work if a creature performs the interaction in a loaded world that contains generated demons.
+</p><p><br />
+</p>
+<h3><span class="mw-headline" id="Vault_Guardian_Transformation">Vault Guardian Transformation</span></h3>
+<p>Transformation syndromes that turn a creature into a titan or demon only really rely on the [DEMON] and [TITAN] tokens, but how can the same be achieved with vault guardians? Below is an example of an interaction that will reliably transform a creature into a random angel.
+</p>
+<div style="clear:both;"></div>
+<table class="collapsible collapsed infobox gamedata" style="background: #fdfdfd; border: 1px solid #aaa; font-size: 88%; margin: 0 auto -1px; vertical-align: middle; width: 100%; max-width: 100em; table-layout: fixed;">
+<tbody><tr style="line-height: 1.5em;"><th scope="col" style="background: #cce6b3; padding: 0.25em 1em; text-align: center; display: table-cell;&#32;;"><div style="font-size: 114%; margin: 0 9em;">Angel transformation</div></th></tr>
+<tr style="line-height: 1.5em; text-align: left; display: table-cell;"><td><div style="overflow: auto;"><span class="gamedata-content" style="font-family: monospace; font-size:1.25em; white-space:pre;">
+ 
+[INTERACTION:ANGEL_POLYMORPH]
+	[I_SOURCE:CREATURE_ACTION]
+	[I_TARGET:A:CREATURE]
+		[IT_LOCATION:CONTEXT_CREATURE]
+	[I_EFFECT:ADD_SYNDROME]
+		[IE_TARGET:A]
+		[IE_IMMEDIATE]
+		[SYNDROME]
+			[SYN_CONCENTRATION_ADDED:1000:0]
+			[CE_BODY_TRANSFORMATION:START:0:PEAK:0:END:5:ABRUPT:DWF_STRETCH:144]
+				[CE:FORBIDDEN_CREATURE_FLAG:SMALL_RACE]
+				[CE:FORBIDDEN_CREATURE_FLAG:HAS_ANY_FEATURE_BEAST]
+				[CE:CREATURE_FLAG:GENERATED] this is key, as the generated token is one unique to vault guardians and other "secret" creatures
+				[CE:FORBIDDEN_CREATURE_CASTE_FLAG:DEMON] we have to forbid all types of night creatures and other generated creatures so the game may only choose angels
+				[CE:FORBIDDEN_CREATURE_FLAG:HAS_ANY_NIGHT_CREATURE]
+				[CE:FORBIDDEN_CREATURE_FLAG:HAS_ANY_NIGHT_CREATURE_BOGEYMAN]
+				[CE:FORBIDDEN_CREATURE_FLAG:HAS_ANY_NIGHT_CREATURE_EXPERIMENTER]
+				[CE:FORBIDDEN_CREATURE_FLAG:HAS_ANY_NIGHT_CREATURE_NIGHTMARE]
+				[CE:FORBIDDEN_CREATURE_FLAG:HAS_ANY_NIGHT_CREATURE_HUNTER]
+				[CE:FORBIDDEN_CREATURE_CASTE_FLAG:CANNOT_BREATHE_AIR]
+				[CE:FORBIDDEN_CREATURE_CASTE_FLAG:IMMOBILE_LAND]
+				[CE:FORBIDDEN_CREATURE_CASTE_FLAG:MEGABEAST]
+				[CE:FORBIDDEN_CREATURE_CASTE_FLAG:SEMIMEGABEAST]
+				[CE:FORBIDDEN_CREATURE_CASTE_FLAG:TITAN]
+				[CE:FORBIDDEN_CREATURE_CASTE_FLAG:UNIQUE_DEMON]
+			[CE_ADD_TAG:NO_AGING:START:0:PEAK:0:END:5:ABRUPT:DWF_STRETCH:144]
+
+</span></div></td></tr></tbody></table>
+<p>Note that this interaction will not work in arena mode due to the lack of generated creatures in that mode. However, it will work if a creature performs the interaction in a loaded world that contains vault guardians.
+</p>
+<h2><span class="mw-headline" id="Item_Powers">Item Powers</span></h2>
+<p>An item's <a href="/index.php/Magic" title="Magic">magic</a><small><sup>v51.01-beta26</sup></small> field can hold an interaction. This sample interaction allows the wielder to shoot an icicle.
+</p>
+<div style="clear:both;"></div>
+<table class="collapsible collapsed infobox gamedata" style="background: #fdfdfd; border: 1px solid #aaa; font-size: 88%; margin: 0 auto -1px; vertical-align: middle; width: 100%; max-width: 100em; table-layout: fixed;">
+<tbody><tr style="line-height: 1.5em;"><th scope="col" style="background: #cce6b3; padding: 0.25em 1em; text-align: center; display: table-cell;&#32;;"><div style="font-size: 114%; margin: 0 9em;">Ice bolt</div></th></tr>
+<tr style="line-height: 1.5em; text-align: left; display: table-cell;"><td><div style="overflow: auto;"><span class="gamedata-content" style="font-family: monospace; font-size:1.25em; white-space:pre;">
+ 
+[INTERACTION:MYTHICAL_ITEM_POWER_1]
+   [I_SOURCE:ITEM_POWER]
+       [IS_DESCRIPTION:This item shimmers with frost.]
+       [IS_CDI:ADV_NAME:Launch ice bolt]
+       [IS_CDI:INTERACTION:MYTHICAL_ITEM_POWER_1]
+       [IS_CDI:MATERIAL:WATER:SHARP_ROCK]
+       [IS_CDI:TARGET:C:LINE_OF_SIGHT]
+       [IS_CDI:TARGET_RANGE:C:25]
+       [IS_CDI:USAGE_HINT:ATTACK]
+       [IS_CDI:VERB:focus:focuses:NA]
+       [IS_CDI:MAX_TARGET_NUMBER:C:1]
+       [IS_CDI:WAIT_PERIOD:50]
+       [IS_CDI:DEFAULT_ICON:ADVENTURE_INTERACTION_ICON_LAUNCH_ICE_BOLT]
+   [I_TARGET:A:MATERIAL]
+       [IT_MATERIAL:CONTEXT_MATERIAL]
+   [I_TARGET:B:LOCATION]
+       [IT_LOCATION:CONTEXT_LOCATION]
+   [I_TARGET:C:LOCATION]
+       [IT_LOCATION:CONTEXT_CREATURE_OR_LOCATION]
+   [IT_MANUAL_INPUT:target]
+       [I_EFFECT:MATERIAL_EMISSION]
+       [IE_TARGET:A]
+       [IE_TARGET:B]
+       [IE_TARGET:C]
+       [IE_IMMEDIATE]
+
+</span></div></td></tr></tbody></table>
+<h2><span class="mw-headline" id="See_Also">See Also</span></h2>
+<ul><li><a href="/index.php/Creature_examples" title="Creature examples">Creature examples</a></li>
+<li><a href="/index.php/Reaction_examples" title="Reaction examples">Reaction examples</a></li></ul></div>

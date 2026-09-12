@@ -1,0 +1,605 @@
+<div class="mw-parser-output"><div id="page-quality-rating" style="text-align: right;margin: 0.8em 0;font-size:75%">
+ <a href="/index.php/Dwarf_Fortress_Wiki:Quality#Tattered" title="Dwarf Fortress Wiki:Quality"><span id="stub-quality" style="text-decoration:none; color:#333333">xTATTEREDx</span></a> <span style="font-weight:bold;" class="dot">&#160;·</span> <a href="/index.php/Dwarf_Fortress_Wiki:Quality#Fine" title="Dwarf Fortress Wiki:Quality"><span id="fine-quality" style="text-decoration:none; color:#CA7A02;">+FINE+</span></a> <span style="font-weight:bold;" class="dot">&#160;·</span> <a href="/index.php/Dwarf_Fortress_Wiki:Quality#Superior" title="Dwarf Fortress Wiki:Quality"><span id="superior-quality" style="text-decoration:none; color:#8800cc;">*SUPERIOR*</span></a> <span style="font-weight:bold;" class="dot">&#160;·</span> <a href="/index.php/Dwarf_Fortress_Wiki:Quality#Exceptional" title="Dwarf Fortress Wiki:Quality"><span id="exceptional-quality" style="padding:0.2em; border:1px solid #9df; border-radius: 2px; -webkit-border-radius: 2px; -moz-border-radius: 2px; -o-border-radius: 2px; -ms-border-radius: 2px; background:#cce4ff; color:#0088CC;">≡EXCEPTIONAL≡</span></a> <span style="font-weight:bold;" class="dot">&#160;·</span> <a href="/index.php/Dwarf_Fortress_Wiki:Quality#Masterwork" title="Dwarf Fortress Wiki:Quality"><span id="masterwork-quality" style="text-decoration:none; color:#72A329;">☼MASTERWORK☼</span></a></div>
+<table class="version-table" style="text-align: center; margin: 3px auto 5px; padding: 0.25em; border-radius: 3px; -webkit-border-radius: 3px; -moz-border-radius: 3px; -o-border-radius: 3px; -ms-border-radius: 3px;; border: 2px solid #bbdd88; background: #f5ffee; min-width:27em"><tbody><tr><td style="padding: 0.3em 0.3em; width: 100%;"><div style="margin-bottom:6px;" class="version-links-r1"><span style="font-size:100%"><span class="version-link"><span style="text-decoration: none; color: #72A329; background-color: #E2FDCE; border-radius: 2px; -webkit-border-radius: 2px; -moz-border-radius: 2px; -o-border-radius: 2px; -ms-border-radius: 2px; border: 1px solid #bbdd88; padding: 0.2em;"><b>v53.16</b></span></span><span style="font-weight:bold;" class="dot">&#160;·</span> <span class="version-link"><a href="/index.php/DF2014:Item_value" title="DF2014:Item value"><span style="text-decoration: none; color: #72A329;">v0.47.05</span></a></span></span></div><span>This article is about the current version of DF.<br />Note that some content may still need to be updated.</span><br />
+<div style="float: right; font-size:75%; padding-right:2px; margin-top:-2px; margin-bottom:-7px;"><span class="version-link"><a href="/index.php/Dwarf_Fortress_Wiki:V" class="mw-redirect" title="Dwarf Fortress Wiki:V"><span style="text-decoration: none; color: #72A329;">More Info</span></a></span><span style="font-weight:bold;" class="dot">&#160;·</span> <span class="version-link"><a href="/index.php/Template:Av" class="mw-redirect" title="Template:Av"><span style="text-decoration: none; color: #72A329;">V</span></a></span></div></td></tr>
+</tbody></table>
+<dl><dd><i>For value optimization, see <a href="/index.php/Maximizing_value" title="Maximizing value">Maximizing value</a>.</i></dd>
+<dd><i>For cultural values, see <a href="/index.php/Personality_value" title="Personality value">Personality value</a>.</i></dd>
+<dd><i>For room values, see <a href="/index.php/Zone#Quality_and_value" title="Zone">Zones: Quality and value</a>.</i></dd></dl>
+<p><b>Item value</b> is determined by a number of factors: the form of the item, the material it is made out of, the <a href="/index.php/Quality" class="mw-redirect" title="Quality">quality</a> of its creation, and any <a href="/index.php/Decoration" title="Decoration">decorations</a> on it.
+</p><p>The <b>final value</b> of an item is the <b>base value</b> of the form of the item (e.g. <a href="/index.php/Block" title="Block">block</a> <i>or</i> <a href="/index.php/Statue" title="Statue">statue</a>) multiplied by the <b>material multiplier</b> (e.g. <a href="/index.php/Granite" title="Granite">granite</a> <i>or</i> <a href="/index.php/Gold" title="Gold">gold</a>), multiplied by the <b>quality modifier</b> (e.g. fine <i>or</i> masterful) if any, then summed with the final value of all <b><a href="/index.php/Decoration" title="Decoration">decorations</a></b>.
+</p>
+
+<h1><span class="mw-headline" id="Base_values_of_items">Base values of items</span></h1>
+<p>The <b>base value</b> of an item is determined by the form of the item, not what it is made out of. For example, a <a href="/index.php/Wood" title="Wood">wood</a> <a href="/index.php/Block" title="Block">block</a> uses the <b>base value</b> for a block; a native gold block uses the <i>same</i> <b>base value</b>, since it too is in the form of a "block". In both cases, the <b>final value</b> is then determined by adjusting the base value with the appropriate modifiers.
+</p>
+<h2><span class="mw-headline" id="Items_without_quality_levels">Items without quality levels</span></h2>
+<table style="border-spacing: 0">
+
+<tbody><tr style="background-color: #EEE">
+<th>Base Value
+</th>
+<th>Items
+</th></tr>
+<tr>
+<td>0</td>
+<td><a href="/index.php/Body_parts" title="Body parts">Body part</a>, <a href="/index.php/Corpse" title="Corpse">Corpse</a>, <a href="/index.php/Remains" title="Remains">Remains</a>, small rock
+</td></tr>
+<tr style="background-color: #EEE">
+<td>1</td>
+<td><a href="/index.php/Fat" title="Fat">glob</a>, <a href="/index.php/Seed" title="Seed">seed</a>, <a href="/index.php/Alcohol" title="Alcohol">alcohol</a>, powder, extract, tree branches
+</td></tr>
+<tr>
+<td>2</td>
+<td><a href="/index.php/Fish" title="Fish">Fish</a>, unprepared fish, <a href="/index.php/Meat" title="Meat">Meat</a>, <a href="/index.php/Egg" title="Egg">Egg</a>, <a href="/index.php/Plant" title="Plant">Plant</a>, <a href="/index.php/Quarry_bush" title="Quarry bush">Leaves</a>
+</td></tr>
+<tr style="background-color: #EEE">
+<td>3</td>
+<td><a href="/index.php/Log" class="mw-redirect" title="Log">Log</a>, <a href="/index.php/Stone" title="Stone">Stone</a>
+</td></tr>
+<tr>
+<td>5</td>
+<td><a href="/index.php/Bar" title="Bar">Bar</a>, <a href="/index.php/Block" title="Block">Block</a>, <a href="/index.php/Leather" title="Leather">Leather</a>
+</td></tr>
+<tr style="background-color: #EEE">
+<td>6</td>
+<td><a href="/index.php/Thread" title="Thread">Thread</a>, <a href="/index.php/Gem" title="Gem">Gem</a> (rough)
+</td></tr>
+<tr>
+<td>10</td>
+<td><a href="/index.php/Ballista_arrowhead" class="mw-redirect" title="Ballista arrowhead">Ballista arrowhead</a>, <a href="/index.php/Cheese" title="Cheese">cheese</a>, <a href="/index.php/Honeycomb" title="Honeycomb">Honeycomb</a>
+</td></tr>
+<tr>
+<td>20</td>
+<td><a href="/index.php/Gem" title="Gem">Gem</a> (cut)
+</td></tr>
+<tr style="background-color: #EEE">
+<td>Varies</td>
+<td>live vermin, tame vermin
+</td></tr></tbody></table>
+<h2><span class="mw-headline" id="Items_with_quality_level">Items with quality level</span></h2>
+<h3><span class="mw-headline" id="Misc._items">Misc. items</span></h3>
+<table style="border-spacing: 0">
+
+<tbody><tr style="background-color: #EEE">
+<th>Base Value
+</th>
+<th>Items
+</th></tr>
+<tr>
+<td>1/50</td>
+<td><a href="/index.php/Coin" class="mw-redirect" title="Coin">Coin</a><sup>1</sup>
+</td></tr>
+<tr style="background-color: #EEE">
+<td>1</td>
+<td><a href="/index.php/Die" title="Die">Die</a>, Orthopedic <a href="/index.php/Cast" class="mw-redirect" title="Cast">cast</a>, <a href="/index.php/Prepared_meal" class="mw-redirect" title="Prepared meal">Prepared meal</a><sup>4</sup>, <a href="/index.php/Ammunition" title="Ammunition">Ammo</a>
+</td></tr>
+<tr>
+<td>5</td>
+<td><a href="/index.php/Paper" class="mw-redirect" title="Paper">Paper</a> &amp; <a href="/index.php/Papyrus" class="mw-redirect" title="Papyrus">Papyrus</a> sheets
+</td></tr>
+<tr style="background-color: #EEE">
+<td>7</td>
+<td><a href="/index.php/Cloth" title="Cloth">Cloth</a><sup>2</sup>
+</td></tr>
+<tr>
+<td>10</td>
+<td>
+<p><a href="/index.php/Animal_trap" title="Animal trap">Animal trap</a>,  <a href="/index.php/Altar" title="Altar">Altar</a>, <a href="/index.php/Jewelry" title="Jewelry">Amulet</a>, <a href="/index.php/Anvil" title="Anvil">Anvil</a>, <a href="/index.php/Armor_stand" title="Armor stand">Armor stand</a>, <a href="/index.php/Backpack" class="mw-redirect" title="Backpack">Backpack</a>, <a href="/index.php/Barrel" title="Barrel">Barrel</a>, <a href="/index.php/Bed" title="Bed">Bed</a>, <a href="/index.php/Bin" title="Bin">Bin</a>, <a href="/index.php/Book" title="Book">Book</a>, <a href="/index.php/Bookcase" title="Bookcase">Bookcase</a>, <a href="/index.php/Tool" title="Tool">Bowl</a>, <a href="/index.php/Box" class="mw-redirect" title="Box">Box</a>, <a href="/index.php/Bag" title="Bag">Bag</a>, <a href="/index.php/Jewelry" title="Jewelry">Bracelet</a>, <a href="/index.php/Bucket" title="Bucket">Bucket</a>, <a href="/index.php/Cabinet" title="Cabinet">Cabinet</a>, <a href="/index.php/Cage" title="Cage">Cage</a>, <a href="/index.php/Chain" title="Chain">Chain</a>, <a href="/index.php/Chair" class="mw-redirect" title="Chair">Chair</a>, <a href="/index.php/Tool" title="Tool">Cleaver</a>, <a href="/index.php/Coffin" title="Coffin">Coffin</a>, <a href="/index.php/Jewelry" title="Jewelry">Crown</a>, <a href="/index.php/Crutch" title="Crutch">Crutch</a>, <a href="/index.php/Decoration" title="Decoration">Decoration</a><sup>3</sup>, <a href="/index.php/Display_case" class="mw-redirect" title="Display case">Display Case</a>, <a href="/index.php/Door" title="Door">Door</a>, <a href="/index.php/Jewelry" title="Jewelry">Earring</a>, <a href="/index.php/Figurine" title="Figurine">Figurine</a>, <a href="/index.php/Flask" title="Flask">Flask</a>, <a href="/index.php/Floodgate" title="Floodgate">Floodgate</a>, <a href="/index.php/Tool" title="Tool">Fork</a>, <a href="/index.php/Goblet" class="mw-redirect" title="Goblet">Goblet/mug/cup</a>, <a href="/index.php/Grate" title="Grate">Grate</a>, <a href="/index.php/Hatch_cover" title="Hatch cover">Hatch cover</a>, <a href="/index.php/Tool" title="Tool">Helve</a>, <a href="/index.php/Hive" title="Hive">Hive</a>, <a href="/index.php/Instrument" title="Instrument">Instrument</a> <i>(non-main components)</i>,  <a href="/index.php/Jug" title="Jug">Jug</a>, <a href="/index.php/Tool" title="Tool">Knives</a>, <a href="/index.php/Tool" title="Tool">Ladle</a>, <a href="/index.php/Gem" title="Gem">Large gem</a>, <a href="/index.php/Large_pot" title="Large pot">Large pot</a>, <a href="/index.php/Millstone" title="Millstone">Millstone</a>, <a href="/index.php/Tool" title="Tool">Mortar</a>, <a href="/index.php/Nest_box" title="Nest box">Nest box</a>, <a href="/index.php/Pedestal" class="mw-redirect" title="Pedestal">Pedestal</a>, <a href="/index.php/Tool" title="Tool">Pestle</a>, <a href="/index.php/Pipe_section" title="Pipe section">Pipe section</a>, <a href="/index.php/Tool" title="Tool">Pouch</a>, <a href="/index.php/Quiver" class="mw-redirect" title="Quiver">Quiver</a>, <a href="/index.php/Quern" title="Quern">Quern</a>, <a href="/index.php/Jewelry" title="Jewelry">Ring</a>, <a href="/index.php/Craft" class="mw-redirect" title="Craft">Scepter</a>, <a href="/index.php/Book" title="Book">Scroll Roller</a>, <a href="/index.php/Slab" title="Slab">Slab</a>, <a href="/index.php/Shield" class="mw-redirect" title="Shield">Shield</a>, <a href="/index.php/Tool" title="Tool">Stone axe</a>, <a href="/index.php/Health_care" title="Health care">Splint</a>, <a href="/index.php/Table" title="Table">Table</a>, <a href="/index.php/Totem" class="mw-redirect" title="Totem">Totem</a>, <a href="/index.php/Toy" class="mw-redirect" title="Toy">Toy</a>,  <a href="/index.php/Weapon_rack" title="Weapon rack">Weapon rack</a>, <a href="/index.php/Trap_component" title="Trap component">Trap component</a>, <a href="/index.php/Weapon" title="Weapon">Weapon</a>
+</p>
+</td></tr>
+<tr style="background-color: #EEE">
+<td>20</td>
+<td><a href="/index.php/Book" title="Book">Quire/Scroll</a>, <a href="/index.php/Siege_engine" title="Siege engine">Siege ammo</a>, <a href="/index.php/Health_care" title="Health care">Traction bench</a>
+</td></tr>
+<tr>
+<td>25</td>
+<td><a href="/index.php/Window" title="Window">Window</a>, <a href="/index.php/Statue" title="Statue">Statue</a>
+</td></tr>
+<tr style="background-color: #EEE">
+<td>30</td>
+<td><a href="/index.php/Siege_engine" title="Siege engine">Ballista part</a>, <a href="/index.php/Siege_engine" title="Siege engine">Catapult part</a>, <a href="/index.php/Mechanism" title="Mechanism">Mechanism</a>
+</td></tr>
+<tr>
+<td>50</td>
+<td><a href="/index.php/Tool" title="Tool">Cauldron</a>, <a href="/index.php/Instrument" title="Instrument">Instrument</a> <i>(main part)</i>, <a href="/index.php/Minecart" title="Minecart">Minecart</a>, <a href="/index.php/Parchment" class="mw-redirect" title="Parchment">Parchment</a> sheet, <a href="/index.php/Stepladder" title="Stepladder">Stepladder</a>, <a href="/index.php/Wheelbarrow" title="Wheelbarrow">Wheelbarrow</a>
+</td></tr>
+<tr style="background-color: #EEE">
+<td>200</td>
+<td>Parchment <a href="/index.php/Book" title="Book">Quire/Scroll</a>
+</td></tr>
+<tr>
+<td><i>variable</i><sup>5</sup></td>
+<td><a href="/index.php/Armor" title="Armor">Armor</a>, <a href="/index.php/Clothing" title="Clothing">Shoe</a>, <a href="/index.php/Armor" title="Armor">Helm</a>, <a href="/index.php/Clothing" title="Clothing">Glove</a>, <a href="/index.php/Clothing" title="Clothing">Pants</a>
+</td></tr></tbody></table>
+<dl><dd><i>Notes</i>:
+<ul><li>1) Coins minted at a forge are always of base quality</li>
+<li>2) Goods made out of <a href="/index.php/Cloth" title="Cloth">cloth</a> get the following built in as decorations: the cloth (with quality mod) and the <a href="/index.php/Thread" title="Thread">thread</a> (without quality). <a href="/index.php/Dye" title="Dye">Dyes</a> are added separately (with quality), as a powder, not a decoration.</li>
+<li>3) "<a href="/index.php/Decoration" title="Decoration">Decorations</a>" include "It is decorated with &lt;material&gt;", "It is encircled with bands of &lt;material&gt;", "It is adorned with hanging rings of &lt;material&gt;", "This object menaces with spikes of &lt;material&gt;", "On this object is an image of &lt;description&gt; in &lt;material&gt;", "It is studded with &lt;metal&gt;". Decorations made of gems have a base value of 20 instead. Decorations of [[bolts] (and other ammo) also use the same base value of 10 (or 20, if decoration uses gems as material) for the initial value calculations (of each single decoration), but the total value of all decorations (including quality modifiers and flat quality bonus) is then divided by 30 (rounded down) and then multiplied by the stack size to get the final decoration value - the same is done for calculations involving civilization specific decoration modifiers of ammo decorations (only then using the civ-specific decoration values instead) to get the value a merchant of that civ would offer.</li>
+<li>4) Prepared meals always have a base value of 1, with a quality modifier, but the ingredients also affect the final value.</li>
+<li>5) For these items the base value is 5, if they are produced in pairs (ie. shoes, sandals, socks), and otherwise 10.</li></ul></dd></dl>
+<h3><span class="mw-headline" id="Prepared_meal">Prepared meal</span></h3>
+<p>This table shows how the <a href="/index.php/Item_quality" title="Item quality">quality modifiers</a> compare to other items:
+</p>
+<table class="wikitable" cellspacing="0" border="1" cellpadding="5">
+
+<tbody><tr>
+<th>Quality
+</th>
+<th>Ingredient
+</th>
+<th>Meal
+</th>
+<th>Value Modifier
+</th>
+<th>Meal Bonus
+</th></tr>
+<tr>
+<td>(normal)
+</td>
+<td>minced
+</td>
+<td>(none)
+</td>
+<td style="text-align:center;">1.0×
+</td>
+<td style="text-align:center;">+0
+</td></tr>
+<tr>
+<td>-Well-Crafted-
+</td>
+<td>well-minced
+</td>
+<td>well-prepared
+</td>
+<td style="text-align:center;">1.1×
+</td>
+<td style="text-align:center;">+3
+</td></tr>
+<tr>
+<td>+Finely-crafted+
+</td>
+<td>finely minced
+</td>
+<td>finely-prepared
+</td>
+<td style="text-align:center;">1.2×
+</td>
+<td style="text-align:center;">+6
+</td></tr>
+<tr>
+<td>*Superior quality*
+</td>
+<td>superiorly minced
+</td>
+<td>superiorly prepared
+</td>
+<td style="text-align:center;">4/3×
+</td>
+<td style="text-align:center;">+10
+</td></tr>
+<tr>
+<td>≡Exceptional≡
+</td>
+<td>exceptionally minced
+</td>
+<td>exceptional prepared
+</td>
+<td style="text-align:center;">1.5×
+</td>
+<td style="text-align:center;">+15
+</td></tr>
+<tr>
+<td>☼Masterful☼
+</td>
+<td>masterfully minced
+</td>
+<td>masterfully prepared
+</td>
+<td style="text-align:center;">2.0×
+</td>
+<td style="text-align:center;">+30
+</td></tr></tbody></table>
+<p>The value of a stack of prepared meals is equal to the material multiplier of the main ingredient (multiplied by the meal's base value of 1) times the meal's quality modifier (finely-prepared, etc.), plus the <i>average</i> of the products of each ingredient's base value and quality modifier (well-minced, etc.), all multiplied by the stack size. So, for example: a well-prepared meal consisting of 5 finely-minced cow cheese, 3 finely-minced llama tripe, 1 finely-minced llama sweetbread, and 2 superiorly minced mussels would yield a stack of 11 mussel roasts with a total value of 88☼ (for 62☼ of ingredients). (Exact calculation: <code>([1 * 1 * 11/10 + 3] + ([10 * 1 * 6/5] + [2 * 1 * 6/5] + [2 * 1 * 6/5] + [2 * 1 * 4/3])/4) * (5 + 3 + 1 + 2)</code>)
+</p><p>This example can be understood as:
+</p>
+<pre>(base value of prepared meal = 1☼) × (mussel material multiplier = 1) × (well-prepared = 11/10) + (meal bonus = 3) = 4.1, rounded down to 4
++
+(
+ (value of cheese = 10☼) × (cow material multiplier = 1) × (finely-minced = 5/4) = 12
+ +
+ (value of tripe = 2☼) × (llama material multiplier = 1) × (finely minced = 5/4) = 2.4, rounded down to 2
+ +
+ (value of sweetbread = 2☼) × (llama material multiplier = 1) × (finely minced = 5/4) = 2.4, rounded down to 2
+ +
+ (value of fish = 2☼) × (mussel material multiplier = 1) × (superiorly minced = 4/3) = 2.66, rounded down to 2
+) ÷ 4 = 4.5, rounded down to 4
+
+all multiplied by the total number of meals (11)
+=
+88☼
+</pre>
+<p>Because all math is performed with integers (with the results always rounded down), ingredient quality modifiers typically will not have any visible effect for low-value ingredients.
+</p><p>The individual stack sizes of the ingredients may affect your profits, but have no effect on the final meal's value. One "masterfully minced plump helmet" cooked with ten "well-minced dog meat" will have exactly the same value and description as ten "masterfully minced plump helmet" and one "well-minced dog meat".
+</p><p>The quality symbols shown in the name of a meal reflect the highest quality involved in its making, looking at the overall preparation as well as the mincing of each ingredient. With up to five skill rolls involved, monetary values of apparently same-quality meals can vary a lot, and a lower-quality meal can be more valuable than a higher-quality meal cooked from the same ingredients.
+</p>
+<h2><span class="mw-headline" id="Material_multipliers">Material multipliers</span></h2>
+<p><span style="margin-top:5px">
+</span></p>
+<table class="vertical-navbox nowraplinks" cellspacing="5" cellpadding="0" style="float:right;clear:right;width:22.0em;margin:0 0 1.0em 1.0em;background:#f9f9f9;border:1px solid #aaa;padding:0.2em;border-spacing:0.4em 0;text-align:center;line-height:1.4em;font-size:88%;"><tbody><tr><td class="" style=";padding-top:0.4em;line-height:1.2em;"><big><b><a href="/index.php/Material_science" title="Material science">Material properties</a></b></big><br />
+<hr /></td>
+      </tr><tr>
+<td class="" style="padding:0 0.1em 0.4em;font-size:12px; padding-left:5px; text-align:center;;">
+<b>Defined</b>: <a href="/index.php/Item_value#Material_multipliers" title="Item value">Value</a> •  <a href="/index.php/Color#Material_By_Color" title="Color">Color</a> • <a href="/index.php/Density" title="Density">Density</a> • <a href="/index.php/Strain_at_yield" title="Strain at yield">Strain at yield</a> • <a href="/index.php/Temperature#Material_values" title="Temperature">Temperature values</a></td>
+</tr><tr>
+<td class="" style="padding:0 0.1em 0.4em;font-size:12px; padding-left:5px; text-align:center;;">
+<b>Derived</b>: <a href="/index.php/Magma-safe" title="Magma-safe">Magma safety</a> • <a href="/index.php/Fire-safe" title="Fire-safe">Fire safety</a></td>
+</tr><tr>
+<td class="" style="padding:0 0.1em 0.4em;font-size:12px; padding-left:5px; text-align:center;;">
+<b>Fluids</b>: <a href="/index.php/Depth" class="mw-redirect" title="Depth">Depth</a> • <a href="/index.php/Flow" title="Flow">Flow</a> • <a href="/index.php/Pressure" title="Pressure">Pressure</a></td>
+</tr></tbody></table>
+<p>
+The material multiplier for an item is found from the [MATERIAL_VALUE:#] tag in the raws for the material it is made out of, and can be further augmented using [MULTIPLY_VALUE:#]. A wood block uses the same material multiplier as a wood <a href="/index.php/Log" class="mw-redirect" title="Log">log</a> or a wooden <a href="/index.php/Box" class="mw-redirect" title="Box">chest</a> -  that is the material value for wood, which is 1.
+</p>
+<table class="collapsible collapsed" style="width:80%; border-spacing: 1">
+
+<tbody><tr style="background-color:#ccf">
+<th colspan="2">Common
+</th></tr>
+<tr style="text-align:left">
+<th style="padding-right:1em">Multiplier
+</th>
+<th>Material
+</th></tr>
+<tr style="background-color: #EEE">
+<td>×2</td>
+<td><a href="/index.php/Glass" title="Glass">Green glass</a>
+</td></tr>
+<tr>
+<td>×3</td>
+<td><a href="/index.php/Earthenware" title="Earthenware">Earthenware</a>
+</td></tr>
+<tr style="background-color: #EEE">
+<td>×4</td>
+<td><a href="/index.php/Stoneware" title="Stoneware">Stoneware</a>
+</td></tr>
+<tr>
+<td>×5</td>
+<td><a href="/index.php/Clear_glass" class="mw-redirect" title="Clear glass">Clear glass</a>
+</td></tr>
+<tr style="background-color: #EEE">
+<td>×10</td>
+<td><a href="/index.php/Crystal_glass" class="mw-redirect" title="Crystal glass">Crystal glass</a>, <a href="/index.php/Porcelain" title="Porcelain">Porcelain</a>
+</td></tr></tbody></table>
+<table class="collapsible collapsed" style="width:80%; border-spacing: 1">
+
+<tbody><tr style="background-color:#ccf">
+<th colspan="2"><a href="/index.php/Stone" title="Stone">Stones</a>
+</th></tr>
+<tr style="text-align:left">
+<th style="padding-right:1em">Multiplier
+</th>
+<th>Stone
+</th></tr>
+<tr style="background-color: #EEE">
+<td>×1</td>
+<td><a href="/index.php/Stone" title="Stone">common stone</a>, <a href="/index.php/Bismuthinite" title="Bismuthinite">Bismuthinite</a>, <a href="/index.php/Bituminous_coal" title="Bituminous coal">Bituminous coal</a>, <a href="/index.php/Lignite" title="Lignite">Lignite</a>
+</td></tr>
+<tr>
+<td>×2</td>
+<td><a href="/index.php/Cassiterite" title="Cassiterite">Cassiterite</a>, <a href="/index.php/Garnierite" title="Garnierite">Garnierite</a>, <a href="/index.php/Malachite" title="Malachite">Malachite</a>, <a href="/index.php/Native_copper" title="Native copper">Native copper</a>, <a href="/index.php/Sphalerite" title="Sphalerite">Sphalerite</a>, <a href="/index.php/Calcite" title="Calcite">Calcite</a>, <a href="/index.php/Chalk" title="Chalk">Chalk</a>, <a href="/index.php/Dolomite" title="Dolomite">Dolomite</a>, <a href="/index.php/Limestone" title="Limestone">Limestone</a>, <a href="/index.php/Marble" title="Marble">Marble</a>
+</td></tr>
+<tr style="background-color: #EEE">
+<td>×3</td>
+<td><a href="/index.php/Tetrahedrite" title="Tetrahedrite">Tetrahedrite</a>, <a href="/index.php/Obsidian" title="Obsidian">Obsidian</a>
+</td></tr>
+<tr>
+<td>×5</td>
+<td><a href="/index.php/Galena" title="Galena">Galena</a>
+</td></tr>
+<tr style="background-color: #EEE">
+<td>×8</td>
+<td><a href="/index.php/Hematite" title="Hematite">Hematite</a>, <a href="/index.php/Limonite" title="Limonite">Limonite</a>, <a href="/index.php/Magnetite" title="Magnetite">Magnetite</a>
+</td></tr>
+<tr>
+<td>×10</td>
+<td><a href="/index.php/Horn_silver" title="Horn silver">Horn silver</a>, <a href="/index.php/Native_silver" title="Native silver">Native silver</a>
+</td></tr>
+<tr style="background-color: #EEE">
+<td>×30</td>
+<td><a href="/index.php/Native_gold" title="Native gold">Native gold</a>
+</td></tr>
+<tr>
+<td>×40</td>
+<td><a href="/index.php/Native_aluminum" title="Native aluminum">Native aluminum</a>, <a href="/index.php/Native_platinum" title="Native platinum">Native platinum</a>
+</td></tr>
+<tr style="background-color: #EEE">
+<td>×250</td>
+<td><a href="/index.php/Raw_adamantine" title="Raw adamantine">Raw adamantine</a>
+</td></tr></tbody></table>
+<table class="collapsible collapsed" style="width:80%; border-spacing: 1">
+
+<tbody><tr style="background-color:#ccf">
+<th colspan="2"><a href="/index.php/Gem" title="Gem">Gems</a>
+</th></tr>
+<tr style="text-align:left">
+<th style="padding-right:1em">Multiplier
+</th>
+<th>Gem
+</th></tr>
+<tr style="background-color: #EEE">
+<td>×2</td>
+<td><a href="/index.php/Banded_agate" title="Banded agate">Banded agate</a>, <a href="/index.php/Bloodstone" title="Bloodstone">Bloodstone</a>, <a href="/index.php/Blue_jade" title="Blue jade">Blue jade</a>, <a href="/index.php/Brown_jasper" title="Brown jasper">Brown jasper</a>, <a href="/index.php/Carnelian" title="Carnelian">Carnelian</a>, <a href="/index.php/Chrysocolla" title="Chrysocolla">Chrysocolla</a>, <a href="/index.php/Chrysoprase" title="Chrysoprase">Chrysoprase</a>, <a href="/index.php/Citrine" title="Citrine">Citrine</a>, <a href="/index.php/Dendritic_agate" title="Dendritic agate">Dendritic agate</a>, <a href="/index.php/Fire_agate" title="Fire agate">Fire agate</a>, <a href="/index.php/Fortification_agate" title="Fortification agate">Fortification agate</a>, <a href="/index.php/Gray_chalcedony" title="Gray chalcedony">Gray chalcedony</a>, <a href="/index.php/Lace_agate" title="Lace agate">Lace agate</a>, <a href="/index.php/Lapis_lazuli" title="Lapis lazuli">Lapis lazuli</a>, <a href="/index.php/Lavender_jade" title="Lavender jade">Lavender jade</a>, <a href="/index.php/Milk_quartz" title="Milk quartz">Milk quartz</a>, <a href="/index.php/Moonstone" title="Moonstone">Moonstone</a>, <a href="/index.php/Morion" title="Morion">Morion</a>, <a href="/index.php/Moss_agate" title="Moss agate">Moss agate</a>, <a href="/index.php/Onyx" title="Onyx">Onyx</a>, <a href="/index.php/Pink_jade" title="Pink jade">Pink jade</a>, <a href="/index.php/Plume_agate" title="Plume agate">Plume agate</a>, <a href="/index.php/Prase" title="Prase">Prase</a>, <a href="/index.php/Pyrite" title="Pyrite">Pyrite</a>, <a href="/index.php/Rock_crystal" title="Rock crystal">Rock crystal</a>, <a href="/index.php/Sardonyx" title="Sardonyx">Sardonyx</a>, <a href="/index.php/Sard" title="Sard">Sard</a>, <a href="/index.php/Schorl" title="Schorl">Schorl</a>, <a href="/index.php/Smoky_quartz" title="Smoky quartz">Smoky quartz</a>, <a href="/index.php/Sunstone" title="Sunstone">Sunstone</a>, <a href="/index.php/Tiger_iron" title="Tiger iron">Tiger iron</a>, <a href="/index.php/Tigereye" title="Tigereye">Tigereye</a>, <a href="/index.php/Tube_agate" title="Tube agate">Tube agate</a>, <a href="/index.php/Turquoise" title="Turquoise">Turquoise</a>, <a href="/index.php/Variscite" title="Variscite">Variscite</a>, <a href="/index.php/White_chalcedony" title="White chalcedony">White chalcedony</a>, <a href="/index.php/White_jade" title="White jade">White jade</a>, <a href="/index.php/Yellow_jasper" title="Yellow jasper">Yellow jasper</a>
+</td></tr>
+<tr>
+<td>×3</td>
+<td><a href="/index.php/Aventurine" title="Aventurine">Aventurine</a>, <a href="/index.php/Picture_jasper" title="Picture jasper">Picture jasper</a>, <a href="/index.php/Rose_quartz" title="Rose quartz">Rose quartz</a>
+</td></tr>
+<tr style="background-color: #EEE">
+<td>×10</td>
+<td><a href="/index.php/Amber_opal" title="Amber opal">Amber opal</a>, <a href="/index.php/Bone_opal" title="Bone opal">Bone opal</a>, <a href="/index.php/Cherry_opal" title="Cherry opal">Cherry opal</a>, <a href="/index.php/Clear_tourmaline" title="Clear tourmaline">Clear tourmaline</a>, <a href="/index.php/Gold_opal" title="Gold opal">Gold opal</a>, <a href="/index.php/Jasper_opal" title="Jasper opal">Jasper opal</a>, <a href="/index.php/Milk_opal" title="Milk opal">Milk opal</a>, <a href="/index.php/Moss_opal" title="Moss opal">Moss opal</a>, <a href="/index.php/Onyx_opal" title="Onyx opal">Onyx opal</a>, <a href="/index.php/Pineapple_opal" title="Pineapple opal">Pineapple opal</a>, <a href="/index.php/Pipe_opal" title="Pipe opal">Pipe opal</a>, <a href="/index.php/Prase_opal" title="Prase opal">Prase opal</a>, <a href="/index.php/Resin_opal" title="Resin opal">Resin opal</a>, <a href="/index.php/Shell_opal" title="Shell opal">Shell opal</a>, <a href="/index.php/Wax_opal" title="Wax opal">Wax opal</a>, <a href="/index.php/Wood_opal" title="Wood opal">Wood opal</a>
+</td></tr>
+<tr>
+<td>×15</td>
+<td><a href="/index.php/Fire_opal" title="Fire opal">Fire opal</a>, <a href="/index.php/Jelly_opal" title="Jelly opal">Jelly opal</a>, <a href="/index.php/Melanite" title="Melanite">Melanite</a>, <a href="/index.php/Pink_tourmaline" title="Pink tourmaline">Pink tourmaline</a>, <a href="/index.php/Red_tourmaline" title="Red tourmaline">Red tourmaline</a>
+</td></tr>
+<tr style="background-color: #EEE">
+<td>×20</td>
+<td><a href="/index.php/Alexandrite" title="Alexandrite">Alexandrite</a>, <a href="/index.php/Almandine" title="Almandine">Almandine</a>, <a href="/index.php/Amethyst" title="Amethyst">Amethyst</a>, <a href="/index.php/Aquamarine" title="Aquamarine">Aquamarine</a>, <a href="/index.php/Bandfire_opal" title="Bandfire opal">Bandfire opal</a>, <a href="/index.php/Black_pyrope" title="Black pyrope">Black pyrope</a>, <a href="/index.php/Black_zircon" title="Black zircon">Black zircon</a>, <a href="/index.php/Brown_zircon" title="Brown zircon">Brown zircon</a>, <a href="/index.php/Cat%27s_eye" title="Cat&#39;s eye">Cat's eye</a>, <a href="/index.php/Chrysoberyl" title="Chrysoberyl">Chrysoberyl</a>, <a href="/index.php/Cinnamon_grossular" title="Cinnamon grossular">Cinnamon grossular</a>, <a href="/index.php/Claro_opal" title="Claro opal">Claro opal</a>, <a href="/index.php/Clear_garnet" title="Clear garnet">Clear garnet</a>, <a href="/index.php/Crystal_opal" title="Crystal opal">Crystal opal</a>, <a href="/index.php/Golden_beryl" title="Golden beryl">Golden beryl</a>, <a href="/index.php/Goshenite" title="Goshenite">Goshenite</a>, <a href="/index.php/Green_jade" title="Green jade">Green jade</a>, <a href="/index.php/Green_tourmaline" title="Green tourmaline">Green tourmaline</a>, <a href="/index.php/Green_zircon" title="Green zircon">Green zircon</a>, <a href="/index.php/Harlequin_opal" title="Harlequin opal">Harlequin opal</a>, <a href="/index.php/Heliodor" title="Heliodor">Heliodor</a>, <a href="/index.php/Honey_yellow_beryl" title="Honey yellow beryl">Honey yellow beryl</a>, <a href="/index.php/Kunzite" title="Kunzite">Kunzite</a>, <a href="/index.php/Levin_opal" title="Levin opal">Levin opal</a>, <a href="/index.php/Morganite" title="Morganite">Morganite</a>, <a href="/index.php/Peridot" title="Peridot">Peridot</a>, <a href="/index.php/Pinfire_opal" title="Pinfire opal">Pinfire opal</a>, <a href="/index.php/Pink_garnet" title="Pink garnet">Pink garnet</a>, <a href="/index.php/Precious_fire_opal" title="Precious fire opal">Precious fire opal</a>, <a href="/index.php/Purple_spinel" title="Purple spinel">Purple spinel</a>, <a href="/index.php/Red_beryl" title="Red beryl">Red beryl</a>, <a href="/index.php/Red_flash_opal" title="Red flash opal">Red flash opal</a>, <a href="/index.php/Red_grossular" title="Red grossular">Red grossular</a>, <a href="/index.php/Red_pyrope" title="Red pyrope">Red pyrope</a>, <a href="/index.php/Red_spinel" title="Red spinel">Red spinel</a>, <a href="/index.php/Red_zircon" title="Red zircon">Red zircon</a>, <a href="/index.php/Rhodolite" title="Rhodolite">Rhodolite</a>, <a href="/index.php/Rubicelle" title="Rubicelle">Rubicelle</a>, <a href="/index.php/Tanzanite" title="Tanzanite">Tanzanite</a>, <a href="/index.php/Topaz" title="Topaz">Topaz</a>, <a href="/index.php/Topazolite" title="Topazolite">Topazolite</a>, <a href="/index.php/Violet_spessartine" title="Violet spessartine">Violet spessartine</a>, <a href="/index.php/White_opal" title="White opal">White opal</a>, <a href="/index.php/Yellow_grossular" title="Yellow grossular">Yellow grossular</a>, <a href="/index.php/Yellow_spessartine" title="Yellow spessartine">Yellow spessartine</a>, <a href="/index.php/Yellow_zircon" title="Yellow zircon">Yellow zircon</a>
+</td></tr>
+<tr>
+<td>×25</td>
+<td><a href="/index.php/Clear_zircon" title="Clear zircon">Clear zircon</a>, <a href="/index.php/Indigo_tourmaline" title="Indigo tourmaline">Indigo tourmaline</a>
+</td></tr>
+<tr style="background-color: #EEE">
+<td>×30</td>
+<td><a href="/index.php/Demantoid" title="Demantoid">Demantoid</a>, <a href="/index.php/Light_yellow_diamond" title="Light yellow diamond">Light yellow diamond</a>, <a href="/index.php/Blue_garnet" title="Blue garnet">Blue garnet</a>, <a href="/index.php/Black_opal" title="Black opal">Black opal</a>, <a href="/index.php/Tsavorite" title="Tsavorite">Tsavorite</a>
+</td></tr>
+<tr>
+<td>×40</td>
+<td><a href="/index.php/Faint_yellow_diamond" title="Faint yellow diamond">Faint yellow diamond</a>, <a href="/index.php/Emerald" title="Emerald">Emerald</a>, <a href="/index.php/Ruby" title="Ruby">Ruby</a>, <a href="/index.php/Sapphire" title="Sapphire">Sapphire</a>
+</td></tr>
+<tr style="background-color: #EEE">
+<td>×60</td>
+<td><a href="/index.php/Black_diamond" title="Black diamond">Black diamond</a>, <a href="/index.php/Blue_diamond" title="Blue diamond">Blue diamond</a>, <a href="/index.php/Clear_diamond" title="Clear diamond">Clear diamond</a>, <a href="/index.php/Green_diamond" title="Green diamond">Green diamond</a>, <a href="/index.php/Red_diamond" title="Red diamond">Red diamond</a>, <a href="/index.php/Yellow_diamond" title="Yellow diamond">Yellow diamond</a>, <a href="/index.php/Star_ruby" title="Star ruby">Star ruby</a>, <a href="/index.php/Star_sapphire" title="Star sapphire">Star sapphire</a>
+</td></tr></tbody></table>
+<table class="collapsible collapsed" style="width:80%; border-spacing: 1">
+
+<tbody><tr style="background-color:#ccf">
+<th colspan="2"><a href="/index.php/Metal" title="Metal">Metals</a>
+</th></tr>
+<tr style="text-align:left">
+<th style="padding-right:1em">Multiplier
+</th>
+<th>Metal
+</th></tr>
+<tr style="background-color: #EEE">
+<td>×2</td>
+<td><a href="/index.php/Bismuth" title="Bismuth">Bismuth</a>, <a href="/index.php/Copper" title="Copper">Copper</a>, <a href="/index.php/Lead" title="Lead">Lead</a>, <a href="/index.php/Nickel" title="Nickel">Nickel</a>, <a href="/index.php/Tin" title="Tin">Tin</a>, <a href="/index.php/Zinc" title="Zinc">Zinc</a>
+</td></tr>
+<tr>
+<td>×3</td>
+<td><a href="/index.php/Lay_pewter" title="Lay pewter">Lay pewter</a>, <a href="/index.php/Nickel_silver" title="Nickel silver">Nickel silver</a>
+</td></tr>
+<tr style="background-color: #EEE">
+<td>×4</td>
+<td><a href="/index.php/Trifle_pewter" title="Trifle pewter">Trifle pewter</a>
+</td></tr>
+<tr>
+<td>×5</td>
+<td><a href="/index.php/Bronze" title="Bronze">Bronze</a>, <a href="/index.php/Fine_pewter" title="Fine pewter">Fine pewter</a>
+</td></tr>
+<tr style="background-color: #EEE">
+<td>×6</td>
+<td><a href="/index.php/Billon" title="Billon">Billon</a>, <a href="/index.php/Bismuth_bronze" title="Bismuth bronze">Bismuth bronze</a>
+</td></tr>
+<tr>
+<td>×7</td>
+<td><a href="/index.php/Brass" title="Brass">Brass</a>
+</td></tr>
+<tr style="background-color: #EEE">
+<td>×8</td>
+<td><a href="/index.php/Sterling_silver" title="Sterling silver">Sterling silver</a>
+</td></tr>
+<tr>
+<td>×10</td>
+<td><a href="/index.php/Iron" title="Iron">Iron</a>, <a href="/index.php/Pig_iron" title="Pig iron">Pig iron</a>, <a href="/index.php/Silver" title="Silver">Silver</a>
+</td></tr>
+<tr style="background-color: #EEE">
+<td>×11</td>
+<td><a href="/index.php/Black_bronze" title="Black bronze">Black bronze</a>
+</td></tr>
+<tr>
+<td>×20</td>
+<td><a href="/index.php/Electrum" title="Electrum">Electrum</a>
+</td></tr>
+<tr style="background-color: #EEE">
+<td>×23</td>
+<td><a href="/index.php/Rose_gold" title="Rose gold">Rose gold</a>
+</td></tr>
+<tr>
+<td>×30</td>
+<td><a href="/index.php/Gold" title="Gold">Gold</a>, <a href="/index.php/Steel" title="Steel">Steel</a>
+</td></tr>
+<tr style="background-color: #EEE">
+<td>×40</td>
+<td><a href="/index.php/Aluminum" title="Aluminum">Aluminum</a>, <a href="/index.php/Platinum" title="Platinum">Platinum</a>
+</td></tr>
+<tr>
+<td>×300</td>
+<td><a href="/index.php/Adamantine" title="Adamantine">Adamantine</a>
+</td></tr></tbody></table>
+<table class="collapsible collapsed" style="width:80%; border-spacing: 1">
+
+<tbody><tr style="background-color:#ccf">
+<th colspan="2"><a href="/index.php/Creature" title="Creature">Creatures</a>
+</th></tr>
+<tr style="text-align:left">
+<th style="padding-right:1em">Multiplier
+</th>
+<th>Creature
+</th></tr>
+<tr style="background-color: #EEE">
+<td>×1</td>
+<td>all <a href="/index.php/Creature" title="Creature">creatures</a> not listed below
+</td></tr>
+<tr>
+<td>×2</td>
+<td><a href="/index.php/Adder" title="Adder">adder</a>, <a href="/index.php/Beak_dog" title="Beak dog">beak dog</a>, <a href="/index.php/Black_bear" title="Black bear">black bear</a>, <a href="/index.php/Black_mamba" title="Black mamba">black mamba</a>, <a href="/index.php/Bobcat" title="Bobcat">bobcat</a>, <a href="/index.php/Bushmaster" title="Bushmaster">bushmaster</a>, <a href="/index.php/Capybara" title="Capybara">capybara</a>, <a href="/index.php/Copperhead_snake" title="Copperhead snake">copperhead snake</a>, <a href="/index.php/Cougar" title="Cougar">cougar</a>, <a href="/index.php/Coyote" title="Coyote">coyote</a>, <a href="/index.php/Dingo" title="Dingo">dingo</a>, <a href="/index.php/Elk" title="Elk">elk</a>, <a href="/index.php/Giant_cave_swallow" title="Giant cave swallow">giant cave swallow</a>, <a href="/index.php/Giant_dingo" title="Giant dingo">giant dingo</a>, <a href="/index.php/Giant_earthworm" title="Giant earthworm">giant earthworm</a>, <a href="/index.php/Giant_mole" title="Giant mole">giant mole</a>, <a href="/index.php/Giant_rat" title="Giant rat">giant rat</a>, <a href="/index.php/Helmet_snake" title="Helmet snake">helmet snake</a>, <a href="/index.php/Hyena" title="Hyena">hyena</a>, <a href="/index.php/Ice_wolf" title="Ice wolf">ice wolf</a>, <a href="/index.php/Jackal" title="Jackal">jackal</a>, <a href="/index.php/King_cobra" title="King cobra">king cobra</a>, <a href="/index.php/Magma_crab" title="Magma crab">magma crab</a>, <a href="/index.php/Molemarian" title="Molemarian">molemarian</a>, <a href="/index.php/Monitor_lizard" title="Monitor lizard">monitor lizard</a>, <a href="/index.php/Muskox" title="Muskox">muskox</a>, <a href="/index.php/Ocelot" title="Ocelot">ocelot</a>, <a href="/index.php/Panda" title="Panda">panda</a>, <a href="/index.php/Python" title="Python">python</a>, <a href="/index.php/Rattlesnake" title="Rattlesnake">rattlesnake</a>, <a href="/index.php/Sloth_bear" title="Sloth bear">sloth bear</a>, <a href="/index.php/Strangler" title="Strangler">strangler</a>, <a href="/index.php/Wolf" title="Wolf">wolf</a>, all <a href="/index.php/Giant_animal" title="Giant animal">giant</a> variants of the creatures in this category
+</td></tr>
+<tr style="background-color: #EEE">
+<td>×3</td>
+<td><a href="/index.php/Alligator" title="Alligator">alligator</a>, <a href="/index.php/Anaconda" title="Anaconda">anaconda</a>, <a href="/index.php/Blind_cave_bear" title="Blind cave bear">blind cave bear</a>, <a href="/index.php/Cheetah" title="Cheetah">cheetah</a>, <a href="/index.php/Draltha" title="Draltha">draltha</a>, <a href="/index.php/Elk_bird" title="Elk bird">elk bird</a>, <a href="/index.php/Fire_imp" title="Fire imp">fire imp</a>, <a href="/index.php/Gila_monster" title="Gila monster">gila monster</a>, <a href="/index.php/Green_devourer" title="Green devourer">green devourer</a>, <a href="/index.php/Grizzly_bear" title="Grizzly bear">grizzly bear</a>, <a href="/index.php/Jaguar" title="Jaguar">jaguar</a>, <a href="/index.php/Leopard" title="Leopard">leopard</a>, <a href="/index.php/Lion" title="Lion">lion</a>, <a href="/index.php/Lynx" title="Lynx">lynx</a>, <a href="/index.php/Polar_bear" title="Polar bear">polar bear</a>, <a href="/index.php/Rutherer" title="Rutherer">rutherer</a>, <a href="/index.php/Saltwater_crocodile" title="Saltwater crocodile">saltwater crocodile</a>, <a href="/index.php/Sasquatch" title="Sasquatch">sasquatch</a>, <a href="/index.php/Tiger" title="Tiger">tiger</a>, <a href="/index.php/Yeti" title="Yeti">yeti</a>, all <a href="/index.php/Giant_animal" title="Giant animal">giant</a> variants of the creatures in this category
+</td></tr>
+<tr>
+<td>×4</td>
+<td><a href="/index.php/Cave_crocodile" title="Cave crocodile">cave crocodile</a>, <a href="/index.php/Cave_dragon" title="Cave dragon">cave dragon</a>, <a href="/index.php/Giant_bat" title="Giant bat">giant bat</a>, <a href="/index.php/Giant_cave_spider" title="Giant cave spider">giant cave spider</a>, <a href="/index.php/Giant_olm" title="Giant olm">giant olm</a>, <a href="/index.php/Giant_cave_toad" title="Giant cave toad">giant cave toad</a>, <a href="/index.php/Jabberer" title="Jabberer">jabberer</a>, <a href="/index.php/Unicorn" title="Unicorn">unicorn</a>, <a href="/index.php/Voracious_cave_crawler" title="Voracious cave crawler">voracious cave crawler</a>, <a href="/index.php/Woolly_rhinoceros" title="Woolly rhinoceros">woolly rhinoceros</a>
+</td></tr>
+<tr style="background-color: #EEE">
+<td>×5</td>
+<td><a href="/index.php/Elephant" title="Elephant">elephant</a>, <a href="/index.php/Woolly_mammoth" title="Woolly mammoth">woolly mammoth</a>, <a href="/index.php/Sea_monster" title="Sea monster">sea monster</a>, <a href="/index.php/Sea_serpent" title="Sea serpent">sea serpent</a>, <a href="/index.php/Giraffe" title="Giraffe">giraffe</a>, <a href="/index.php/Rhinoceros" title="Rhinoceros">rhinoceros</a>, all <a href="/index.php/Giant_animal" title="Giant animal">giant</a> variants of the creatures in this category
+</td></tr>
+<tr>
+<td>×10</td>
+<td><a href="/index.php/Hydra" title="Hydra">hydra</a>
+</td></tr>
+<tr style="background-color: #EEE">
+<td>×15</td>
+<td><a href="/index.php/Dragon" title="Dragon">dragon</a>, <a href="/index.php/Roc" title="Roc">roc</a>
+</td></tr></tbody></table>
+<table class="collapsible collapsed" style="width:80%; border-spacing: 1">
+
+<tbody><tr style="background-color:#ccf">
+<th colspan="2"><a href="/index.php/Plant" title="Plant">Plants</a>
+</th></tr>
+<tr style="text-align:left">
+<th style="padding-right:1em">Multiplier
+</th>
+<th>Plant
+</th></tr>
+<tr style="background-color: #EEE">
+<td>×1</td>
+<td><a href="/index.php/Hide_root" title="Hide root">hide root</a>, <a href="/index.php/Kobold_bulb" title="Kobold bulb">kobold bulb</a>, <a href="/index.php/Muck_root" title="Muck root">muck root</a>, <a href="/index.php/Prickle_berry" title="Prickle berry">prickle berry</a>, <a href="/index.php/Rat_weed" title="Rat weed">rat weed</a>, <a href="/index.php/Sliver_barb" title="Sliver barb">sliver barb</a>, <a href="/index.php/Whip_vine" title="Whip vine">whip vine</a><br />all <a href="/index.php/Tree" title="Tree">trees</a> and plant <a href="/index.php/Seed" title="Seed">seeds</a>
+</td></tr>
+<tr>
+<td>×2</td>
+<td><a href="/index.php/Blade_weed" title="Blade weed">blade weed</a>, <a href="/index.php/Bloated_tuber" title="Bloated tuber">bloated tuber</a>, <a href="/index.php/Cave_wheat" title="Cave wheat">cave wheat</a>, <a href="/index.php/Chicory" title="Chicory">chicory</a>, <a href="/index.php/Dimple_cup" title="Dimple cup">dimple cup</a>, <a href="/index.php/Fisher_berry" title="Fisher berry">fisher berry</a>, <a href="/index.php/Longland_grass" title="Longland grass">longland grass</a>, <a href="/index.php/Pig_tail" title="Pig tail">pig tail</a>, <a href="/index.php/Plump_helmet" title="Plump helmet">plump helmet</a>, <a href="/index.php/Quarry_bush" title="Quarry bush">quarry bush</a>, <a href="/index.php/Rope_reed" title="Rope reed">rope reed</a>, <a href="/index.php/Sweet_pod" title="Sweet pod">sweet pod</a>, <a href="/index.php/Strawberry" title="Strawberry">strawberry</a><br />tuber beer (<a href="/index.php/Bloated_tuber" title="Bloated tuber">bloated tuber</a> drink)
+</td></tr>
+<tr style="background-color: #EEE">
+<td>×3</td>
+<td><a href="/index.php/Sun_berry" title="Sun berry">sun berry</a><br />whip wine (<a href="/index.php/Whip_vine" title="Whip vine">whip vine</a> drink)
+</td></tr>
+<tr>
+<td>×5</td>
+<td><a href="/index.php/Valley_herb" title="Valley herb">valley herb</a><br /><a href="/index.php/Quarry_bush" title="Quarry bush">quarry bush</a> leaf, rock nut oil (<a href="/index.php/Quarry_bush" title="Quarry bush">quarry bush</a> oil), rock nut soap (<a href="/index.php/Quarry_bush" title="Quarry bush">quarry bush</a> soap), sunshine (<a href="/index.php/Sun_berry" title="Sun berry">sun berry</a> drink)
+</td></tr>
+<tr style="background-color: #EEE">
+<td>×10</td>
+<td>redroot dye (<a href="/index.php/Hide_root" title="Hide root">hide root</a> powder)
+</td></tr>
+<tr>
+<td>×20</td>
+<td>cave wheat flour (<a href="/index.php/Cave_wheat" title="Cave wheat">cave wheat</a> powder), dimple dye (<a href="/index.php/Dimple_cup" title="Dimple cup">dimple cup</a> powder), dwarven sugar (<a href="/index.php/Sweet_pod" title="Sweet pod">sweet pod</a> powder), dwarven syrup (<a href="/index.php/Sweet_pod" title="Sweet pod">sweet pod</a> extract), emerald dye (<a href="/index.php/Blade_weed" title="Blade weed">blade weed</a> powder), longland flour (<a href="/index.php/Longland_grass" title="Longland grass">longland grass</a> powder), sliver dye (<a href="/index.php/Sliver_barb" title="Sliver barb">sliver barb</a> powder)
+</td></tr>
+<tr style="background-color: #EEE">
+<td>×25</td>
+<td>whip vine flour (<a href="/index.php/Whip_vine" title="Whip vine">whip vine</a> powder)
+</td></tr>
+<tr>
+<td>×100</td>
+<td>gnomeblight (<a href="/index.php/Kobold_bulb" title="Kobold bulb">kobold bulb</a> extract), golden salve (<a href="/index.php/Valley_herb" title="Valley herb">valley herb</a> extract)
+</td></tr>
+<tr style="background-color: #EEE">
+<td>Note</td>
+<td>Plants are made of various materials - the predominant material (usually STRUCTURAL) is listed for each individual plant, and other materials are listed separately when they differ.
+</td></tr></tbody></table>
+<table class="collapsible collapsed" style="width:80%; border-spacing: 1">
+
+<tbody><tr style="background-color:#ccf">
+<th colspan="2">Miscellaneous
+</th></tr>
+<tr style="text-align:left">
+<th style="padding-right:1em">Multiplier
+</th>
+<th>Material
+</th></tr>
+<tr style="background-color: #EEE">
+<td>×1</td>
+<td><a href="/index.php/Ash" title="Ash">Ash</a>
+</td></tr>
+<tr>
+<td>×2</td>
+<td><a href="/index.php/Amber" title="Amber">Amber</a>, <a href="/index.php/Coral" title="Coral">Coral</a>, <a href="/index.php/Coal" class="mw-redirect" title="Coal">Coal</a>, <a href="/index.php/Lye" title="Lye">Lye</a>
+</td></tr>
+<tr style="background-color: #EEE">
+<td>×3</td>
+<td><a href="/index.php/Potash" title="Potash">Potash</a>
+</td></tr>
+<tr>
+<td>×4</td>
+<td><a href="/index.php/Pearlash" title="Pearlash">Pearlash</a>
+</td></tr>
+<tr style="background-color: #EEE">
+<td>×10</td>
+<td><a href="/index.php/Salt" title="Salt">Salt</a>
+</td></tr></tbody></table>
+<h2><span class="mw-headline" id="Quality">Quality</span></h2>
+<p>Item value is further increased by applying the <a href="/index.php/Item_quality" title="Item quality">quality</a> multiplier and bonus.
+</p>
+<table>
+<tbody><tr>
+<th style="padding-right: 35px;"><b>Designation</b></th>
+<th style="text-align: left;"><b>Description</b></th>
+<th style="padding-right: 20px; padding-left: 15px; text-align: center;"><b>Value <br />Multiplier</b></th>
+<th><b>Value <br />Bonus</b></th>
+<th>
+</th></tr>
+<tr>
+<td>&#160;Item Name</td>
+<td style="text-align: center;">&#8212;&#160;&#160;&#160;&#160;</td>
+<td style="text-align: center;">&#215;1&#160;</td>
+<td style="text-align: center;">+0</td>
+<td>
+</td></tr>
+<tr>
+<td>-Item Name-</td>
+<td>Well-crafted</td>
+<td style="text-align: center;">&#215;1.1&#160;</td>
+<td style="text-align: center;">+3</td>
+<td>
+</td></tr>
+<tr>
+<td>+Item Name+</td>
+<td>Finely-crafted</td>
+<td style="text-align: center;">&#215;1.2&#160;</td>
+<td style="text-align: center;">+6</td>
+<td>
+</td></tr>
+<tr>
+<td>*Item Name*</td>
+<td>Superior quality</td>
+<td style="text-align: center;">&#215;1.33&#160;</td>
+<td style="text-align: center;">+10</td>
+<td>
+</td></tr>
+<tr>
+<td>≡Item Name≡</td>
+<td>Exceptional</td>
+<td style="text-align: center;">&#215;1.5&#160;</td>
+<td style="text-align: center;">+15</td>
+<td>
+</td></tr>
+<tr>
+<td>☼Item Name☼</td>
+<td>Masterful</td>
+<td style="text-align: center;">&#215;2&#160;</td>
+<td style="text-align: center;">+30</td>
+<td>
+</td></tr>
+<tr>
+<td>Unique Name</td>
+<td><a href="/index.php/Artifact" class="mw-redirect" title="Artifact">Artifact</a></td>
+<td style="text-align:center;">&#215;20&#160;</td>
+<td style="text-align: center;">+300</td>
+<td>
+</td></tr></tbody></table></div>

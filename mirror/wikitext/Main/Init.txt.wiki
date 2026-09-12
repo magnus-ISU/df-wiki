@@ -1,0 +1,10 @@
+{{Quality|Fine}}
+{{file|prefs/init.txt}}
+{{av}}
+:''Most of these settings are covered in detail at [[Settings]].''
+The '''init.txt''' files store the settings of much of the presentation and feel of the game, like [[Settings#Video|screen size]], or [[tilesets]]. Most of these can be changed in game, the few that are not there are described in [[Technical tricks#init.txt|technical tricks]]. The default settings with an explanation of each can be found at ``data/init/init_default.txt`` (and below) and current settings at ``prefs/init.txt``, the location of the ``prefs`` [[Game folders and files|folder]] depends on the [[Settings#Portable mode|portable mode setting]] (there is also a ``data`` folder there, but if you put a ``data/init/init_default.txt`` there it will not be read). Changes made to these files take effect the next time ''Dwarf Fortress'' is run, and apply to all worlds. Files in both ``data/init/`` and ``prefs/`` are read when ''Dwarf Fortress'' starts, in that order, with the last value read for an option being used.
+
+{{gamedata|{{/raw/premium}}|title=[[/raw/premium|init_default.txt (Premium)]]|whitespace=pre-wrap}}
+{{gamedata|{{/raw/classic}}|title=[[/raw/classic|init_default.txt (Classic)]]|whitespace=pre-wrap}}
+{{files}}
+[[ru:init.txt]]

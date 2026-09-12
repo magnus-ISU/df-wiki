@@ -1,0 +1,60 @@
+{{av}}{{Quality|Unrated}}
+Some items have characters surrounding the name, which is a way to determine certain properties at a glance. 
+
+== Quality ==
+
+'''Sword''' Ordinary
+
+'''-Sword-''' [[Item quality|Well-crafted]] ''(dashes/hypens)''
+
+'''+Sword+''' [[Item quality|Finely-crafted]] ''(plus signs/addition signs)''
+
+'''*Sword*''' [[Item quality|Superior quality]] ''(asterisks/stars)''
+
+'''≡Sword≡''' [[Item quality|Exceptional]] ''(equivalents/triple equal signs)''
+
+☼'''Sword'''☼ [[Item quality|A masterpiece]] ''(stars/open stars/circle stars)''
+
+See [[Item quality]] for a full explanation of how better qualities improve [[value]] and [[weapon|combat modifiers]].
+
+== Improvement / Decoration ==
+
+'''«Sword»''' Improved or [[Decoration|decorated]] ''(much-less-than and much-greater-than signs/double less-than or greater than signs)''
+
+Decoration can have a quality modifier themselves, leading to combinations such as:
+
+'''*«Sword»*''' Superior improvement/decoration
+
+'''≡«+Sword+»≡''' Exceptional improvement/decoration on a finely-crafted object
+
+'''*«≡Sword≡»*''' Exceptional sword with superior decoration
+
+These quality modifiers can be hidden in [[init.txt]] with [SHOW_IMP_QUALITY:NO].
+
+== Wear ==
+
+'''xSwordx''' ''Showing some [[wear]]'' - worth {{frac|3|4}} ''(surrounded by x's)''
+
+'''XSwordX''' ''Heavily worn'' or ''threadbare'' - worth {{frac|1|2}} ''(surrounded by capital X's)''
+
+'''XXSwordXX''' ''In tatters'' or ''mangled'' - worth {{frac|1|4}} ''(surrounded by double capital XX's)''
+
+== Provenance / Ownership ==
+
+'''(Sword)''' Not produced on-site (imported by [[Trade|traders]] or [[Goblinite|looted]] from [[Siege|raiders]]), does not count towards [[Created wealth|Created Wealth]]. ''(parentheses)''
+
+'''{Sword}''' Unclaimed/[[Forbid|Forbidden]] ''(braces)''
+
+'''$Sword$''' Owned by someone else, either from a [[Trade|trader]] or found in [[Adventure mode]]. Stealing this object will mark the player as a [[thief]].''(dollar signs)''
+
+== Other ==
+
+'''‼Sword‼''' On [[fire]] ''(double exclamation points)''
+
+'''◄Sword►''' [[Magic]]al (as of 51.01 beta) ''(forward and backward triangles)''
+
+==Trivia==
+The longest possible item designation is '''‼XX({≡«+Sword+»≡})XX‼''', which designates (reading from the front) that it's on fire ( '''‼''' ), in tatters ( '''XX''' ), imported ( ( ), forbidden ( { ), exceptionally ( ≡ ) decorated ( « ), and of fine quality ( + ).
+
+{{Category|Items|*}}
+[[ru:Item designations]]

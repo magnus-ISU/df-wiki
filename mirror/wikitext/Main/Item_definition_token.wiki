@@ -1,0 +1,86 @@
+{{Quality|Fine}}
+{{av}}
+{{Modding}}
+'''Item definition tokens''' are used in item definitions in the raws.
+
+Item types:
+* ITEM_AMMO - [[ammo token]]
+* ITEM_ARMOR - [[Armor token|armor-type armor token]]
+* ITEM_FOOD - see below
+* ITEM_GLOVES - [[Armor token|gloves-type armor token]]
+* ITEM_HELM - [[Armor token|helm-type armor token]]
+* ITEM_INSTRUMENT - [[instrument token]]
+* ITEM_PANTS - [[Armor token|pants-type armor token]]
+* ITEM_SHIELD - [[Armor token|shield-type armor token]]
+* ITEM_SHOES - [[Armor token|shoes-type armor token]]
+* ITEM_SIEGEAMMO - see below
+* ITEM_TOOL - [[tool token]]
+* ITEM_TOY - see below
+* ITEM_TRAPCOMP - [[trap component token]]
+* ITEM_WEAPON - [[weapon token]]
+
+==Toy tokens==
+{| {{prettytable}}
+|- bgcolor="#ddd"
+! Token
+! Arguments
+! Description
+
+|-
+| {{text anchor|NAME}}
+| singular:plural
+| What this item will be called in-game.
+
+|-
+| {{text anchor|HARD_MAT}}
+| 
+| Presumably prevents the item from being made from cloth, silk, or leather, present on everything but puzzleboxes and drums. Appears to work backwards for [[strange mood]]s.
+
+|}
+
+==Siege ammo tokens==
+{| {{prettytable}}
+|- bgcolor="#ddd"
+! Token
+! Arguments
+! Description
+
+|-
+| {{text anchor|NAME}}
+| singular:plural
+| What this item will be called in-game.
+
+|-
+| {{text anchor|CLASS}}
+| 
+| Specifies what type of siege engine uses this ammunition. Currently, only BALLISTA is permitted.
+
+|}
+
+==Food tokens==
+{| {{prettytable}}
+|- bgcolor="#ddd"
+! Token
+! Arguments
+! Description
+
+|-
+| {{text anchor|NAME}}
+| singular:plural
+| What this item will be called in-game.
+
+|-
+| {{text anchor|LEVEL}}
+| 
+| Specifies the number of ingredients that are used in this type of prepared meal - 2 for Easy, 3 for Fine, 4 for Lavish. Defaults to 2.
+
+|}
+
+For example, see [https://github.com/DF-Wiki/DFRawFunctions/blob/master/raws/v50/item_food.txt item_food.txt]
+
+== See Also ==
+* [[Item token]]
+
+{{Category|Modding}}
+{{Category|Tokens}}
+[[ru:Item definition token]]

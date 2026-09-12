@@ -1,0 +1,50 @@
+The abbreviation '''IRC''' stands for Internet Relay Chat, a form of chat protocol. It is a text-based communication method for multiple users at once. IRC networks are usually free to use by anyone and do not require any form of registration, only a nickname has to be set prior to connecting. The actual chatting takes place in channels which can usually be created or joined by any user.
+
+The common way to connect to the networks is to use specialised IRC clients such as [http://www.mirc.com mIRC] (shareware, Windows only) or [http://www.hexchat.org/ HexChat] (free and open source, cross-platform), but also many multi-protocol Instant Messaging (IM) clients like [http://www.instantbird.com/ Instantbird] or [http://www.pidgin.im/ Pidgin] or internet suites such as [http://www.seamonkey-project.org/ SeaMonkey] and [http://www.opera.com Opera] support the IRC protocol. Another quick way to join the networks is via the use of web clients that can be accessed from any browser. For more information on how to use these programs to connect to an IRC network, a quick web search usually results in many helpful tutorials. For more general information on IRC, visit the [http://en.wikipedia.org/wiki/Internet_Relay_Chat Wikipedia article] on IRC.
+
+== Some helpful hints about using IRC ==
+
+* IRC is an ethereal medium; unless archived elsewhere, you cannot see any messages in a channel that were not sent when you were online.
+* A double-click on a nickname will open the query window (private chat) with the user on most IRC clients.
+* Typing the beginning characters of a nickname and pressing Tab (or with a mouse click for some of them, like [http://www.ntalk.de/Nettalk/en/ Nettalk]) will autocomplete the nickname on most of the more fully-featured IRC clients. If there are multiple possible nicks cycle them with Tab.
+* It is possible to connect to multiple networks at the same time. Just about all IRC clients support this.
+* Activating message timestamps in the options helps a lot for following the conversation. Most IRC clients have this feature enabled by default.
+* There are many good IRC tutorials available on the internet, just search for them.
+* Most of the users online at any given time are idle or away from their computers. After you ask a question, be prepared to wait in excess of an hour for a response. This doesn't mean you're being ignored, it's just a quirk of IRC usage. This is known as "idling".
+
+== How to use IRC ==
+
+The currently most used IRC channels for ''Dwarf Fortress'':
+
+*[irc://irc.esper.net/bay12games #bay12games] on irc.esper.net ([http://irc2go.com/webchat/?net=EsperNet&room=bay12games&nick=&name=Dwarf+Fortress+Wiki+User webchat]), the official Bay 12 Games IRC channel.
+
+*[irc://irc.libera.chat/dwarffortress #dwarffortress] on irc.libera.chat ([https://web.libera.chat/#libera webchat])
+*[irc://irc.darkmyst.org/bay12lb #bay12lb] on irc.darkmyst.org ([http://irc2go.com/webchat/?net=Darkmyst&room=bay12lb&nick=&name=Dwarf+Fortress+Wiki+User webchat])
+
+*[irc://irc.synirc.net/df #df] on irc.synirc.net([http://irc2go.com/webchat/?net=synIRC&room=df&nick=&name=Dwarf+Fortress+Wiki+User webchat])
+
+*[irc://irc.quakenet.org/dwarffortress #dwarffortress] on irc.quakenet.org ([http://irc2go.com/webchat/?net=QuakeNet&room=dwarffortress&nick=&name=Dwarf+Fortress+Wiki+User webchat]) 
+
+*[irc://irc.esper.net/dwarffortress #dwarffortress] on irc.esper.net ([http://irc2go.com/webchat/?net=EsperNet&room=dwarffortress&nick=&name=Dwarf+Fortress+Wiki+User webchat])
+
+
+Users with an @ in front of their name and staying at the top of the nick list are operators, they have the power to kick or ban misbehaving users. Any chat input that begins with a / is considered to be a special command that is not sent to other users. Note that some IRC clients such as [http://quassel-irc.org/ Quassel IRC] replace these by default with icons of their own.
+
+The most commonly-used commands are:
+
+ /nick <newnick>
+
+to change your current nickname to the specified new nickname, provided that it is not used by another user.
+
+ /join #channelname
+
+to join a new channel on the current network. If there are no users on the specified channel, it will be created.
+
+ /query <nickname>
+ ''OR''
+ /msg <nickname> <message>
+
+to open a private communication window with the specified user, or directly send a message without opening the window.
+
+[[Category:community]]
+[[ru:IRC]]

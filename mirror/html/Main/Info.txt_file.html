@@ -1,0 +1,349 @@
+<div class="mw-parser-output"><div id="page-quality-rating" style="text-align: right;margin: 0.8em 0;font-size:75%">
+ <a href="/index.php/Dwarf_Fortress_Wiki:Quality#Tattered" title="Dwarf Fortress Wiki:Quality"><span id="stub-quality" style="text-decoration:none; color:#333333">xTATTEREDx</span></a> <span style="font-weight:bold;" class="dot">&#160;·</span> <a href="/index.php/Dwarf_Fortress_Wiki:Quality#Fine" title="Dwarf Fortress Wiki:Quality"><span id="fine-quality" style="padding:0.2em; border:1px solid #db8; border-radius: 2px; -webkit-border-radius: 2px; -moz-border-radius: 2px; -o-border-radius: 2px; -ms-border-radius: 2px; background:#FFE0CC; color:#CA7A02;">+FINE+</span></a> <span style="font-weight:bold;" class="dot">&#160;·</span> <a href="/index.php/Dwarf_Fortress_Wiki:Quality#Superior" title="Dwarf Fortress Wiki:Quality"><span id="superior-quality" style="text-decoration:none; color:#8800cc;">*SUPERIOR*</span></a> <span style="font-weight:bold;" class="dot">&#160;·</span> <a href="/index.php/Dwarf_Fortress_Wiki:Quality#Exceptional" title="Dwarf Fortress Wiki:Quality"><span id="exceptional-quality" style="text-decoration:none; color:#0088CC;">≡EXCEPTIONAL≡</span></a> <span style="font-weight:bold;" class="dot">&#160;·</span> <a href="/index.php/Dwarf_Fortress_Wiki:Quality#Masterwork" title="Dwarf Fortress Wiki:Quality"><span id="masterwork-quality" style="text-decoration:none; color:#72A329;">☼MASTERWORK☼</span></a></div>
+<p>This page is specifically about the <b>info.txt</b> file. A lot of what is here is redundant; it can also be found at the comprehensive <a href="/index.php/Mod" title="Mod">Mod</a> page.
+</p>
+
+<h2><span class="mw-headline" id="Directory_Structure">Directory Structure</span></h2>
+<p>Mods contain an <a class="mw-selflink selflink">info.txt file</a> and either an "objects" folder or a "graphics" folder (or both.) All of the vanilla objects in the game too use this format. Your mod folder should look something like this:
+</p>
+<pre><img alt="Folder-orange.svg" src="https://thumb.wikimedia.org/wikipedia/commons/thumb/0/09/Folder-orange.svg/20px-Folder-orange.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=imageinfo&amp;utm_content=thumbnail" decoding="async" width="20" height="20" srcset="https://thumb.wikimedia.org/wikipedia/commons/thumb/0/09/Folder-orange.svg/40px-Folder-orange.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=imageinfo&amp;utm_content=thumbnail 1.5x" /> Mod Name
+ ├ <img alt="Text-x-generic.svg" src="https://thumb.wikimedia.org/wikipedia/commons/thumb/2/20/Text-x-generic.svg/20px-Text-x-generic.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=imageinfo&amp;utm_content=thumbnail" decoding="async" width="20" height="20" srcset="https://thumb.wikimedia.org/wikipedia/commons/thumb/2/20/Text-x-generic.svg/40px-Text-x-generic.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=imageinfo&amp;utm_content=thumbnail 1.5x" /> info.txt
+ ├ <img alt="Text-x-generic.svg" src="https://thumb.wikimedia.org/wikipedia/commons/thumb/2/20/Text-x-generic.svg/20px-Text-x-generic.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=imageinfo&amp;utm_content=thumbnail" decoding="async" width="20" height="20" srcset="https://thumb.wikimedia.org/wikipedia/commons/thumb/2/20/Text-x-generic.svg/40px-Text-x-generic.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=imageinfo&amp;utm_content=thumbnail 1.5x" /> preview.png
+ ├ <img alt="Folder.svg" src="https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f3/Folder.svg/20px-Folder.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=imageinfo&amp;utm_content=thumbnail" decoding="async" width="20" height="20" srcset="https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f3/Folder.svg/40px-Folder.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=imageinfo&amp;utm_content=thumbnail 1.5x" /> objects
+ └ <img alt="Folder.svg" src="https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f3/Folder.svg/20px-Folder.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=imageinfo&amp;utm_content=thumbnail" decoding="async" width="20" height="20" srcset="https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f3/Folder.svg/40px-Folder.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=imageinfo&amp;utm_content=thumbnail 1.5x" /> graphics
+</pre>
+<p><br />
+</p>
+<h2><span class="mw-headline" id="Mod_Info">Mod Info</span></h2>
+<dl><dd><div class="noprint relarticle mainarticle"><i>Main article: <a href="/index.php/Mod_info_token" title="Mod info token">Mod info token</a></i></div></dd></dl>
+<p>Each mod must have a <code>info.txt</code> at the root of your mod folder. It has a few fields defining basic metadata information about the mod and can be edited using any text editor (like notepad++ or Subline Text). 
+</p>
+<h3><span class="mw-headline" id="Examples">Examples</span></h3>
+<p>The info.txt is formatted like so:
+</p>
+<div class="code-raw mw-highlight mw-highlight-lang-bbcode mw-content-ltr" style="border-left: 6px solid #a4a4a4;" dir="ltr"><pre><span></span><span class="k">[ID</span><span class="err">:my_first_mod</span><span class="k">]</span>
+<span class="k">[NUMERIC_VERSION</span><span class="err">:1</span><span class="k">]</span>
+<span class="k">[DISPLAYED_VERSION</span><span class="err">:1.0.0</span><span class="k">]</span>
+<span class="k">[EARLIEST_COMPATIBLE_NUMERIC_VERSION</span><span class="err">:1</span><span class="k">]</span>
+<span class="k">[EARLIEST_COMPATIBLE_DISPLAYED_VERSION</span><span class="err">:1.0.0</span><span class="k">]</span>
+<span class="k">[AUTHOR</span><span class="err">:Your</span> <span class="err">Name</span> <span class="err">Here</span><span class="k">]</span>
+<span class="k">[NAME</span><span class="err">:My</span> <span class="err">First</span> <span class="err">Mod</span><span class="k">]</span>
+<span class="k">[DESCRIPTION</span><span class="err">:A</span> <span class="err">cool</span> <span class="err">mod</span> <span class="err">I</span> <span class="err">made!</span><span class="k">]</span>
+</pre></div>
+<p>The examples below are largely identical.
+</p>
+<h4><span class="mw-headline" id="Example_Bay_12">Example Bay 12</span></h4>
+<p><i>This is the example found at <a rel="nofollow" class="external text" href="https://bay12games.com/dwarves/modding_guide.html">Bay 12 Games</a>. Comment notation used after tokens &lt;--</i>
+</p>
+<div class="code-raw mw-highlight mw-highlight-lang-bbcode mw-content-ltr" style="border-left: 6px solid #a4a4a4;" dir="ltr"><pre><span></span><span class="k">[ID</span><span class="err">:vanilla_items</span><span class="k">]</span>
+<span class="k">[NUMERIC_VERSION</span><span class="err">:5001</span><span class="k">]</span>
+<span class="k">[DISPLAYED_VERSION</span><span class="err">:50.01</span><span class="k">]</span>
+<span class="k">[EARLIEST_COMPATIBLE_NUMERIC_VERSION</span><span class="err">:5001</span><span class="k">]</span>
+<span class="k">[EARLIEST_COMPATIBLE_DISPLAYED_VERSION</span><span class="err">:50.01</span><span class="k">]</span>
+<span class="k">[AUTHOR</span><span class="err">:Mary</span> <span class="err">Lee</span><span class="k">]</span>
+<span class="k">[NAME</span><span class="err">:Vanilla</span> <span class="err">Items</span><span class="k">]</span>
+<span class="k">[DESCRIPTION</span><span class="err">:These</span> <span class="err">are</span> <span class="err">the</span> <span class="err">default</span> <span class="err">Dwarf</span> <span class="err">Fortress</span> <span class="err">items.</span><span class="k">]</span>
+<span class="k">[STEAM_TITLE</span><span class="err">:Test</span> <span class="err">Descriptors</span><span class="k">]</span>
+<span class="k">[STEAM_DESCRIPTION</span><span class="err">:Some</span> <span class="err">test</span> <span class="err">object</span> <span class="err">definitions</span> <span class="err">for</span> <span class="err">shapes</span> <span class="err">and</span> <span class="err">colors.</span><span class="k">]</span>
+<span class="k">[STEAM_TAG</span><span class="err">:mod</span><span class="k">]</span> &lt;-- as many as you want, use a separate STEAM_TAG for each one
+<span class="k">[STEAM_KEY_VALUE_TAG</span><span class="err">:test:stuff</span><span class="k">]</span> &lt;-- as many as you want, similarly
+<span class="k">[STEAM_METADATA</span><span class="err">:metadata</span> <span class="err">test</span><span class="k">]</span>
+<span class="k">[STEAM_CHANGELOG</span><span class="err">:made</span> <span class="err">some</span> <span class="err">changes</span><span class="k">]</span>
+</pre></div>
+<h4><span class="mw-headline" id="Example_DF_Wiki">Example DF Wiki</span></h4>
+<p>With entries (tokens) for the steam platform...
+</p>
+<div class="code-raw mw-highlight mw-highlight-lang-bbcode mw-content-ltr" style="border-left: 6px solid #a4a4a4;" dir="ltr"><pre><span></span><span class="k">[ID</span><span class="err">:wiki_example</span><span class="k">]</span>
+<span class="k">[NAME</span><span class="err">:Wiki</span> <span class="err">Example</span> <span class="err">Mod</span><span class="k">]</span>
+<span class="k">[NUMERIC_VERSION</span><span class="err">:5001</span><span class="k">]</span>
+<span class="k">[DISPLAYED_VERSION</span><span class="err">:50.01</span><span class="k">]</span>
+<span class="k">[EARLIEST_COMPATIBLE_NUMERIC_VERSION</span><span class="err">:5001</span><span class="k">]</span>
+<span class="k">[EARLIEST_COMPATIBLE_DISPLAYED_VERSION</span><span class="err">:50.01</span><span class="k">]</span>
+<span class="k">[AUTHOR</span><span class="err">:Dwarf</span> <span class="err">Fortress</span> <span class="err">Wiki</span><span class="k">]</span>
+<span class="k">[DESCRIPTION</span><span class="err">:This</span> <span class="err">is</span> <span class="err">an</span> <span class="err">example</span> <span class="err">mod.</span> <span class="err">This</span> <span class="err">text</span> <span class="err">shows</span> <span class="err">up</span> <span class="err">in-game.</span><span class="k">]</span>
+
+<span class="k">[STEAM_TITLE</span><span class="err">:Wiki</span> <span class="err">Example</span> <span class="err">Mod</span><span class="k">]</span>
+<span class="k">[STEAM_DESCRIPTION</span><span class="err">:This</span> <span class="err">text</span> <span class="err">shows</span> <span class="err">up</span> <span class="err">on</span> <span class="err">Steam</span> <span class="err">Workshop.</span><span class="k">]</span>
+<span class="k">[STEAM_TAG</span><span class="err">:mod</span><span class="k">]</span> 
+<span class="k">[STEAM_KEY_VALUE_TAG</span><span class="err">:test:stuff</span><span class="k">]</span>
+<span class="k">[STEAM_METADATA</span><span class="err">:metadata</span> <span class="err">test</span><span class="k">]</span>
+<span class="k">[STEAM_CHANGELOG</span><span class="err">:Made</span> <span class="err">some</span> <span class="err">changes.</span> <span class="err">Shown</span> <span class="err">in</span> <span class="err">&#39;Change</span> <span class="err">Notes&#39;</span> <span class="err">tab.</span><span class="k">]</span>
+
+<span class="k">[STEAM_FILE_ID</span><span class="err">:#########</span><span class="k">]</span>
+</pre></div>
+<h4><span class="mw-headline" id="Example_Zeeb">Example Zeeb</span></h4>
+<p>An example found on steam in the "<a rel="nofollow" class="external text" href="https://steamcommunity.com/sharedfiles/filedetails/?id=2905754195">Example Mod</a>." Contains entries for the steam platform.
+</p>
+<div class="code-raw mw-highlight mw-highlight-lang-bbcode mw-content-ltr" style="border-left: 6px solid #a4a4a4;" dir="ltr"><pre><span></span><span class="k">[ID</span><span class="err">:example_mod</span><span class="k">]</span>
+<span class="k">[NUMERIC_VERSION</span><span class="err">:1</span><span class="k">]</span>
+<span class="k">[DISPLAYED_VERSION</span><span class="err">:1.0.0</span><span class="k">]</span>
+<span class="k">[EARLIEST_COMPATIBLE_NUMERIC_VERSION</span><span class="err">:1</span><span class="k">]</span>
+<span class="k">[EARLIEST_COMPATIBLE_DISPLAYED_VERSION</span><span class="err">:1.0.0</span><span class="k">]</span>
+<span class="k">[AUTHOR</span><span class="err">:Author</span><span class="k">]</span>
+<span class="k">[NAME</span><span class="err">:Example</span> <span class="err">Mod</span><span class="k">]</span>
+<span class="k">[DESCRIPTION</span><span class="err">:This</span> <span class="err">is</span> <span class="err">just</span> <span class="err">an</span> <span class="err">empty</span> <span class="err">example</span> <span class="err">mod.</span><span class="k">]</span>
+
+<span class="k">[STEAM_TITLE</span><span class="err">:Example</span> <span class="err">Mod</span><span class="k">]</span>
+<span class="k">[STEAM_DESCRIPTION</span><span class="err">:This</span> <span class="err">is</span> <span class="err">just</span> <span class="err">an</span> <span class="err">empty</span> <span class="err">example</span> <span class="err">mod.</span><span class="k">]</span>
+<span class="k">[STEAM_TAG</span><span class="err">:example</span><span class="k">]</span>
+<span class="k">[STEAM_FILE_ID</span><span class="err">:2905754195</span><span class="k">]</span>
+</pre></div>
+<p><i>Note that you should remove the last token "STEAM_FILE_ID" as it will be autogenerated.  Remove the [STEAM_FILE_ID:###] tag since that is unique for every mod and generates automatically whenever you upload your mod to the workshop</i>
+</p>
+<h2><span class="mw-headline" id="Info.txt_Tokens">Info.txt Tokens</span></h2>
+<table class="prettytable anchortable" border="1" cellpadding="4" cellspacing="0" style="margin: 1em 1em 1em 0; background: #f9f9f9; border: 1px #aaa solid; border-collapse: collapse;">
+
+<tbody><tr bgcolor="#DCCF99">
+<th>Token
+</th>
+<th>Arguments
+</th>
+<th>Usage
+</th>
+<th>Description
+</th></tr>
+<tr>
+<td><span id="ID" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#ID">ID</a></span>
+</td>
+<td>id
+</td>
+<td><span style="color:red">Required</span>
+</td>
+<td>The ID of the mod. This should be unique, with no two mods sharing the same ID. IDs starting with "vanilla_" are reserved for vanilla raws.
+</td></tr>
+<tr>
+<td><span id="NUMERIC_VERSION" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#NUMERIC_VERSION">NUMERIC_VERSION</a></span>
+</td>
+<td>integer
+</td>
+<td><span style="color:red">Required</span>
+</td>
+<td>An <b>integer</b> version number for the mod. Must be greater than or equal to EARLIEST_COMPATIBLE_NUMERIC_VERSION. "Integer" here means 0, 1, 2, and so on. Negatives are allowed. Anything that is not an integer will not work; 0.2 will be read as "0".
+</td></tr>
+<tr>
+<td><span id="DISPLAYED_VERSION" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#DISPLAYED_VERSION">DISPLAYED_VERSION</a></span>
+</td>
+<td>string
+</td>
+<td><span style="color:red">Required</span>
+</td>
+<td>The version of the mod, as displayed in-game. This is only a display, and will have no effect.
+</td></tr>
+<tr>
+<td><span id="EARLIEST_COMPATIBLE_NUMERIC_VERSION" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#EARLIEST_COMPATIBLE_NUMERIC_VERSION">EARLIEST_COMPATIBLE_NUMERIC_VERSION</a></span>
+</td>
+<td>integer
+</td>
+<td><span style="color:red">Required</span>
+</td>
+<td>The earliest compatible numeric version of the mod. Installed mods are automatically updated, if a later compatible version is available. <b>This must be at most the same as NUMERIC_VERSION, and doing otherwise will result in an error.</b>
+</td></tr>
+<tr>
+<td><span id="EARLIEST_COMPATIBLE_DISPLAYED_VERSION" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#EARLIEST_COMPATIBLE_DISPLAYED_VERSION">EARLIEST_COMPATIBLE_DISPLAYED_VERSION</a></span>
+</td>
+<td>string
+</td>
+<td><span style="color:red">Required</span>
+</td>
+<td>The earliest compatible numeric version, as displayed in-game.
+</td></tr>
+<tr>
+<td><span id="AUTHOR" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#AUTHOR">AUTHOR</a></span>
+</td>
+<td>string
+</td>
+<td><span style="color:red">Required<sup style="font-size: 80%;">&#91;<a href="/index.php/Talk:Info.txt_file" title="Talk:Info.txt file"><span title="The material near this tag is possibly inaccurate or nonfactual.">Verify</span></a>&#93;</sup></span>
+</td>
+<td>The name of the author (usually you).
+</td></tr>
+<tr>
+<td><span id="NAME" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#NAME">NAME</a></span>
+</td>
+<td>string
+</td>
+<td><span style="color:red">Required<sup style="font-size: 80%;">&#91;<a href="/index.php/Talk:Info.txt_file" title="Talk:Info.txt file"><span title="The material near this tag is possibly inaccurate or nonfactual.">Verify</span></a>&#93;</sup></span>
+</td>
+<td>The name of the mod.
+</td></tr>
+
+
+<tr>
+<td><span id="DESCRIPTION" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#DESCRIPTION">DESCRIPTION</a></span>
+</td>
+<td>string
+</td>
+<td>
+</td>
+<td>A description of the mod, shown in the mod loading screen.
+</td></tr>
+
+
+<tr>
+<td><span id="REQUIRES_ID" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#REQUIRES_ID">REQUIRES_ID</a></span>
+</td>
+<td>string
+</td>
+<td>
+</td>
+<td>Mod cannot be used unless mod with given ID is also loaded.
+</td></tr>
+
+
+<tr>
+<td><span id="REQUIRES_ID_BEFORE_ME" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#REQUIRES_ID_BEFORE_ME">REQUIRES_ID_BEFORE_ME</a></span>
+</td>
+<td>string
+</td>
+<td>
+</td>
+<td>Mod cannot be used unless mod with given ID is earlier in the mod load list.
+</td></tr>
+
+
+<tr>
+<td><span id="REQUIRES_ID_AFTER_ME" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#REQUIRES_ID_AFTER_ME">REQUIRES_ID_AFTER_ME</a></span>
+</td>
+<td>string
+</td>
+<td>
+</td>
+<td>Mod cannot be used unless mod with given ID is later in the mod load list.
+</td></tr>
+
+
+<tr>
+<td><span id="CONFLICTS_WITH_ID" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#CONFLICTS_WITH_ID">CONFLICTS_WITH_ID</a></span>
+</td>
+<td>string
+</td>
+<td>
+</td>
+<td>Mod cannot be used if mod with given ID is also loaded.
+</td></tr>
+
+</tbody></table>
+<p><br />
+</p>
+<h2><span class="mw-headline" id="Steam_Workshop_tokens">Steam Workshop tokens</span></h2>
+<p>These tokens are required for the mod to function properly on Steam Workshop.
+</p>
+<table class="prettytable anchortable" border="1" cellpadding="4" cellspacing="0" style="margin: 1em 1em 1em 0; background: #f9f9f9; border: 1px #aaa solid; border-collapse: collapse;">
+
+<tbody><tr bgcolor="#DCCF99">
+<th>Token
+</th>
+<th>Type
+</th>
+<th>Req?
+</th>
+<th>Description
+</th>
+<th>Example
+</th>
+<th>External Doc
+</th></tr>
+<tr>
+<td><span id="STEAM_TITLE" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#STEAM_TITLE">STEAM_TITLE</a></span>
+</td>
+<td>single string
+</td>
+<td><span style="color:red">Req</span>
+</td>
+<td>The title of the mod on Steam Workshop.
+</td>
+<td><i>[STEAM_TITLE:Imani's Tweaks]</i>
+</td>
+<td><a rel="nofollow" class="external text" href="https://partner.steamgames.com/doc/api/ISteamUGC#SetItemTitle">SetItemTitle</a>
+</td></tr>
+<tr>
+<td><span id="STEAM_DESCRIPTION" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#STEAM_DESCRIPTION">STEAM_DESCRIPTION</a></span>
+</td>
+<td>single string
+</td>
+<td>
+</td>
+<td>The description of the mod on Steam Workshop. Maximum size is 8000 bytes (about 400 words).
+<p>Will overwrite the existing description of the mod on the workshop, can be omitted to avoid this behavior.
+</p>
+</td>
+<td><i>[STEAM_DESCRIPTION:This is my collection of small changes and additional content.]</i>
+</td>
+<td><a rel="nofollow" class="external text" href="https://partner.steamgames.com/doc/api/ISteamUGC#SetItemDescription">SetItemDescription</a>
+</td></tr>
+<tr>
+<td><span id="STEAM_TAG" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#STEAM_TAG">STEAM_TAG</a></span>
+</td>
+<td>multi string
+</td>
+<td>
+</td>
+<td>Any number can be used. Use a separate STEAM_TAG for each one. Each string must be under 255 chars.
+</td>
+<td><i>[STEAM_TAG:ui][STEAM_TAG:tweak]</i>
+</td>
+<td><a rel="nofollow" class="external text" href="https://partner.steamgames.com/doc/api/ISteamUGC#SetItemTags">SetItemTags</a>
+</td></tr>
+<tr>
+<td><span id="STEAM_KEY_VALUE_TAG" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#STEAM_KEY_VALUE_TAG">STEAM_KEY_VALUE_TAG</a></span>
+</td>
+<td>multi string1, string2
+</td>
+<td>
+</td>
+<td>Any number can be used.
+</td>
+<td>
+</td>
+<td><a rel="nofollow" class="external text" href="https://partner.steamgames.com/doc/api/ISteamUGC#SetReturnKeyValueTags">SetReturnKeyValueTags</a>
+</td></tr>
+<tr>
+<td><span id="STEAM_METADATA" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#STEAM_METADATA">STEAM_METADATA</a></span>
+</td>
+<td>multi string
+</td>
+<td>
+</td>
+<td>Sets arbitrary metadata for an item. This metadata can be returned from queries without having to download and install the actual content. Toady doesn't know what it does <a rel="nofollow" class="external autonumber" href="http://www.bay12forums.com/smf/index.php?topic=169696.msg8431542#msg8431542">[1]</a>.
+</td>
+<td>
+</td>
+<td><a rel="nofollow" class="external text" href="https://partner.steamgames.com/doc/api/ISteamUGC#SetItemMetadata">SetItemMetadata</a>
+</td></tr>
+<tr>
+<td><span id="STEAM_CHANGELOG" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#STEAM_CHANGELOG">STEAM_CHANGELOG</a></span>
+</td>
+<td>single string
+</td>
+<td>
+</td>
+<td>A brief description of the changes made. (Optional, set to NULL for no change note). The log message is only for the version you're uploading. This should be different each time you update a mod, and only include the changes in the new version. Steam Workshop congregates all version changelogs, so a full changelog can be seen there.
+</td>
+<td>Initial example: <i>[STEAM_CHANGELOG:Initial release]</i>
+<p>Update example: <i>[STEAM_CHANGELOG:Update the mod compatible with...]</i>
+</p>
+</td>
+<td>
+</td></tr>
+<tr>
+<td><span id="STEAM_FILE_ID" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#STEAM_FILE_ID">STEAM_FILE_ID</a></span>
+</td>
+<td>uint64
+</td>
+<td><span style="color:red">Req, autogen</span>
+</td>
+<td>Connects the mod to an entry on the Steam Workshop.
+<p>Generated automatically the first time you upload a mod to Workshop, <b>do not include it manually</b>. If you upload a mod with an existing STEAM_FILE_ID token, it will update the Workshop entry connected to the ID. (Presumably only if you're the original uploader of said mod.)
+</p>
+</td>
+<td>
+</td>
+<td>
+</td></tr></tbody></table>
+<p><br />
+</p>
+<h2><span class="mw-headline" id="See_Also">See Also</span></h2>
+<ul><li>Main article: <a href="/index.php/Mod_info_token" title="Mod info token">Mod info token</a></li>
+<li><a href="/index.php/Modding_pitfalls" title="Modding pitfalls">Modding pitfalls</a></li>
+<li><a rel="nofollow" class="external free" href="https://bay12games.com/dwarves/modding_guide.html">https://bay12games.com/dwarves/modding_guide.html</a></li>
+<li>STEAM_METADATA: <a rel="nofollow" class="external free" href="https://partner.steamgames.com/doc/api/ISteamUGC#SetItemMetadata">https://partner.steamgames.com/doc/api/ISteamUGC#SetItemMetadata</a></li>
+<li><a href="/index.php/Modding#Basics_of_DF_modding" title="Modding">Modding#Basics_of_DF_modding</a></li></ul></div>
