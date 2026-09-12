@@ -1,0 +1,624 @@
+Every world in ''Dwarf Fortress'' contains an internal '''save version''' ID number to denote the version in which it was last saved, as well as the version in which it was originally generated. When a world is loaded, the game uses this value to determine how to process all of the data it reads - data which didn't exist at the time is generated from scratch (e.g. [[v0.34:minecart|hauling routes]], added in version 0.34.08), and data which is no longer used (e.g. [[DF2014:thought|basic thoughts]], replaced with emotions in version 0.42.01) gets skipped.
+
+Not all ''Dwarf Fortress'' releases actually incremented the save version number (especially those which only fixed bugs), and some releases incremented it multiple times (once for each piece of new data stored).
+
+This number normally isn't visible during gameplay, but various tools (such as [[DFHack]]) can be used to query it.
+
+{| class=wikitable
+!Version number
+!Save version code
+|-
+| [[Release information/53.16|53.16]]
+| 3602
+|-
+| [[Release information/53.15|53.15]]
+| 3600
+|-
+| [[Release information/53.14|53.14]]
+| 3547
+|-
+| [[Release information/53.13|53.13]]
+| 3547
+|-
+| [[Release information/53.12|53.12]]
+| 3544
+|-
+| [[Release information/53.11|53.11]]
+| 3543
+|-
+| [[Release information/53.10|53.10]]
+| 3543
+|-
+| [[Release information/53.09|53.09]]
+| 3543
+|-
+| [[Release information/53.08|53.08]]
+| 3543
+|-
+| [[Release information/53.07|53.07]]
+| 3543
+|-
+| [[Release information/53.06|53.06]]
+| 3537
+|-
+| [[Release information/53.05|53.05]]
+| 3535
+|-
+| [[Release information/53.04|53.04]]
+| 3535
+|-
+| [[Release information/53.03|53.03]]
+| 3535
+|-
+| [[Release information/53.02|53.02]]
+| 3534
+|-
+| [[Release information/53.01|53.01]]
+| 3534
+|-
+| [[Release information/52.05|52.05]]
+| 3021
+|-
+| [[Release information/52.04|52.04]]
+| 3021
+|-
+| [[Release information/52.03|52.03]]
+| 3021
+|-
+| [[Release information/52.02|52.02]]
+| 3015
+|-
+| [[Release information/52.01|52.01]]
+| 3015
+|-
+| [[Release information/51.13|51.13]]
+| 3015
+|-
+| [[Release information/51.12|51.12]]
+| 3015
+|-
+| [[Release information/51.11|51.11]]
+| 3014
+|-
+| [[Release information/51.10|51.10]]
+| 3013
+|-
+| [[Release information/51.09|51.09]]
+| 3013
+|-
+| [[Release information/51.08|51.08]]
+| 3013
+|-
+| [[Release information/51.07|51.07]]
+| 3013
+|-
+| [[Release information/51.06|51.06]]
+| 3013
+|-
+| [[Release information/51.05|51.05]]
+| 3013
+|-
+| [[Release information/51.04|51.04]]
+| 3013
+|-
+| [[Release information/51.03|51.03]]
+| 3013
+|-
+| [[Release information/51.02|51.02]]
+| 3013
+|-
+| [[Release information/51.01|51.01]]
+| Various (beta)
+|-
+| [[Release information/50.15|50.15]]
+| 2082
+|-
+| [[Release information/50.14|50.14]]
+| 2082
+|-
+| [[Release information/50.13|50.13]]
+| 2082
+|-
+| [[Release information/50.12|50.12]]
+| 2081
+|-
+| [[Release information/50.11|50.11]]
+| 2081
+|-
+| [[Release information/50.10|50.10]]
+| 2081
+|-
+| [[Release information/50.09|50.09]]
+| 2081
+|-
+| [[Release information/50.08|50.08]]
+| 2081
+|-
+| [[Release information/50.07|50.07]]
+| 2081
+|-
+| [[Release information/50.06|50.06]]
+| 2081
+|-
+| [[Release information/50.05|50.05]]
+| 2081
+|-
+| [[Release information/50.04|50.04]]
+| 2080
+|-
+| [[Release information/50.03|50.03]]
+| 2080
+|-
+| [[Release information/50.02|50.02]]
+| 2079
+|-
+| [[Release information/50.01|50.01]]
+| 2078
+|-
+| [[DF2014:Release information/0.47.05|0.47.05]]
+| 1716
+|-
+| [[DF2014:Release information/0.47.04|0.47.04]]
+| 1715
+|-
+| [[DF2014:Release information/0.47.03|0.47.03]]
+| 1712
+|-
+| [[DF2014:Release information/0.47.02|0.47.02]]
+| 1711
+|-
+| [[DF2014:Release information/0.47.01|0.47.01]]
+| 1710
+|-
+| [[DF2014:Release information/0.44.12|0.44.12]]
+| 1625
+|-
+| [[DF2014:Release information/0.44.11|0.44.11]]
+| 1623
+|-
+| [[DF2014:Release information/0.44.10|0.44.10]]
+| 1620
+|-
+| [[DF2014:Release information/0.44.09|0.44.09]]
+| 1614
+|-
+| [[DF2014:Release information/0.44.08|0.44.08]]
+| 1613
+|-
+| [[DF2014:Release information/0.44.07|0.44.07]]
+| 1612
+|-
+| [[DF2014:Release information/0.44.06|0.44.06]]
+| 1611
+|-
+| [[DF2014:Release information/0.44.05|0.44.05]]
+| 1604
+|-
+| [[DF2014:Release information/0.44.04|0.44.04]]
+| 1603
+|-
+| [[DF2014:Release information/0.44.03|0.44.03]]
+| 1600
+|-
+| [[DF2014:Release information/0.44.02|0.44.02]]
+| 1597
+|-
+| [[DF2014:Release information/0.44.01|0.44.01]]
+| 1596
+|-
+| [[DF2014:Release information/0.43.05|0.43.05]]
+| 1556
+|-
+| [[DF2014:Release information/0.43.04|0.43.04]]
+| 1555
+|-
+| [[DF2014:Release information/0.43.03|0.43.03]]
+| 1553
+|-
+| [[DF2014:Release information/0.43.02|0.43.02]]
+| 1552
+|-
+| [[DF2014:Release information/0.43.01|0.43.01]]
+| 1551
+|-
+| [[DF2014:Release information/0.42.06|0.42.06]]
+| 1542
+|-
+| [[DF2014:Release information/0.42.05|0.42.05]]
+| 1537
+|-
+| [[DF2014:Release information/0.42.04|0.42.04]]
+| 1534
+|-
+| [[DF2014:Release information/0.42.03|0.42.03]]
+| 1533
+|-
+| [[DF2014:Release information/0.42.02|0.42.02]]
+| 1532
+|-
+| [[DF2014:Release information/0.42.01|0.42.01]]
+| 1531
+|-
+| [[DF2014:Release information/0.40.24|0.40.24]]
+| 1481
+|-
+| [[DF2014:Release information/0.40.23|0.40.23]]
+| 1480
+|-
+| [[DF2014:Release information/0.40.22|0.40.22]]
+| 1479
+|-
+| [[DF2014:Release information/0.40.21|0.40.21]]
+| 1478
+|-
+| [[DF2014:Release information/0.40.20|0.40.20]]
+| 1477
+|-
+| [[DF2014:Release information/0.40.19|0.40.19]]
+| 1474
+|-
+| [[DF2014:Release information/0.40.18|0.40.18]]
+| 1473
+|-
+| [[DF2014:Release information/0.40.17|0.40.17]]
+| 1472
+|-
+| [[DF2014:Release information/0.40.16|0.40.16]]
+| 1471
+|-
+| [[DF2014:Release information/0.40.15|0.40.15]]
+| 1470
+|-
+| [[DF2014:Release information/0.40.14|0.40.14]]
+| 1469
+|-
+| [[DF2014:Release information/0.40.13|0.40.13]]
+| 1462
+|-
+| [[DF2014:Release information/0.40.12|0.40.12]]
+| 1459
+|-
+| [[DF2014:Release information/0.40.11|0.40.11]]
+| 1456
+|-
+| [[DF2014:Release information/0.40.10|0.40.10]]
+| 1452
+|-
+| [[DF2014:Release information/0.40.09|0.40.09]]
+| 1451
+|-
+| [[DF2014:Release information/0.40.08|0.40.08]]
+| 1449
+|-
+| [[DF2014:Release information/0.40.07|0.40.07]]
+| 1448
+|-
+| [[DF2014:Release information/0.40.06|0.40.06]]
+| 1446
+|-
+| [[DF2014:Release information/0.40.05|0.40.05]]
+| 1445
+|-
+| [[DF2014:Release information/0.40.04|0.40.04]]
+| 1444
+|-
+| [[DF2014:Release information/0.40.03|0.40.03]]
+| 1443
+|-
+| [[DF2014:Release information/0.40.02|0.40.02]]
+| 1442
+|-
+| [[DF2014:Release information/0.40.01|0.40.01]]
+| 1441
+|-
+| [[v0.34:Release information/0.34.11|0.34.11]]
+| 1404
+|-
+| [[v0.34:Release information/0.34.10|0.34.10]]
+| 1403
+|-
+| [[v0.34:Release information/0.34.09|0.34.09]]
+| 1402
+|-
+| [[v0.34:Release information/0.34.08|0.34.08]]
+| 1400
+|-
+| [[v0.34:Release information/0.34.07|0.34.07]]
+| 1383
+|-
+| [[v0.34:Release information/0.34.06|0.34.06]]
+| 1382
+|-
+| [[v0.34:Release information/0.34.05|0.34.05]]
+| 1378
+|-
+| [[v0.34:Release information/0.34.04|0.34.04]]
+| 1377
+|-
+| [[v0.34:Release information/0.34.03|0.34.03]]
+| 1376
+|-
+| [[v0.34:Release information/0.34.02|0.34.02]]
+| 1374
+|-
+| [[v0.34:Release information/0.34.01|0.34.01]]
+| 1372
+|-
+| [[v0.31:Release information/0.31.25|0.31.25]]
+| 1362
+|-
+| [[v0.31:Release information/0.31.24|0.31.24]]
+| 1361
+|-
+| [[v0.31:Release information/0.31.23|0.31.23]]
+| 1360
+|-
+| [[v0.31:Release information/0.31.22|0.31.22]]
+| 1359
+|-
+| [[v0.31:Release information/0.31.21|0.31.21]]
+| 1354
+|-
+| [[v0.31:Release information/0.31.20|0.31.20]]
+| 1353
+|-
+| [[v0.31:Release information/0.31.19|0.31.19]]
+| 1351
+|-
+| [[v0.31:Release information/0.31.18|0.31.18]]
+| 1341
+|-
+| [[v0.31:Release information/0.31.17|0.31.17]]
+| 1340
+|-
+| [[v0.31:Release information/0.31.16|0.31.16]]
+| 1327
+|-
+| [[v0.31:Release information/0.31.15|0.31.15]]
+| 1326
+|-
+| [[v0.31:Release information/0.31.14|0.31.14]]
+| 1325
+|-
+| [[v0.31:Release information/0.31.13|0.31.13]]
+| 1323
+|-
+| [[v0.31:Release information/0.31.12|0.31.12]]
+| 1311
+|-
+| [[v0.31:Release information/0.31.11|0.31.11]]
+| 1310
+|-
+| [[v0.31:Release information/0.31.10|0.31.10]]
+| 1305
+|-
+| [[v0.31:Release information/0.31.09|0.31.09]]
+| 1304
+|-
+| [[v0.31:Release information/0.31.08|0.31.08]]
+| 1300
+|-
+| [[v0.31:Release information/0.31.07|0.31.07]]
+| Unknown
+|-
+| [[v0.31:Release information/0.31.06|0.31.06]]
+| 1297
+|-
+| [[v0.31:Release information/0.31.05|0.31.05]]
+| 1295
+|-
+| [[v0.31:Release information/0.31.04|0.31.04]]
+| 1292
+|-
+| [[v0.31:Release information/0.31.03|0.31.03]]
+| 1289
+|-
+| [[v0.31:Release information/0.31.02|0.31.02]]
+| 1288
+|-
+| [[v0.31:Release information/0.31.01|0.31.01]]
+| 1287
+|-
+| [[40d:Release information/0.28.181.40d|0.28.181.40d]]
+| 1268
+|-
+| [[40d:Release information/0.28.181.40c|0.28.181.40c]]
+| 1267
+|-
+| [[40d:Release information/0.28.181.40b|0.28.181.40b]]
+| 1266
+|-
+| [[40d:Release information/0.28.181.40a|0.28.181.40a]]
+| 1265
+|-
+| [[40d:Release information/0.28.181.39f|0.28.181.39f]]
+| 1261
+|-
+| [[40d:Release information/0.28.181.39e|0.28.181.39e]]
+| 1260
+|-
+| [[40d:Release information/0.28.181.39d|0.28.181.39d]]
+| 1259
+|-
+| [[40d:Release information/0.28.181.39c|0.28.181.39c]]
+| 1256
+|-
+| [[40d:Release information/0.28.181.39b|0.28.181.39b]]
+| 1255
+|-
+| [[40d:Release information/0.28.181.39a|0.28.181.39a]]
+| 1254
+|-
+| [[40d:Release information/0.27.176.38c|0.27.176.38c]]
+| 1235
+|-
+| [[40d:Release information/0.27.176.38b|0.27.176.38b]]
+| 1234
+|-
+| [[40d:Release information/0.27.176.38a|0.27.176.38a]]
+| 1231
+|-
+| [[40d:Release information/0.27.173.38a|0.27.173.38a]]
+| 1223
+|-
+| [[40d:Release information/0.27.169.33g|0.27.169.33g]]
+| 1216
+|-
+| [[40d:Release information/0.27.169.33f|0.27.169.33f]]
+| 1215
+|-
+| [[40d:Release information/0.27.169.33e|0.27.169.33e]]
+| 1213
+|-
+| [[40d:Release information/0.27.169.33d|0.27.169.33d]]
+| 1212
+|-
+| [[40d:Release information/0.27.169.33c|0.27.169.33c]]
+| 1211
+|-
+| [[40d:Release information/0.27.169.33b|0.27.169.33b]]
+| 1209
+|-
+| [[40d:Release information/0.27.169.33a|0.27.169.33a]]
+| 1206
+|-
+| [[40d:Release information/0.27.169.32a|0.27.169.32a]]
+| 1205
+|-
+| [[23a:Release information/0.23.130.23a|0.23.130.23a]]
+| 1169
+|-
+| [[23a:Release information/0.23.125.23b|0.23.125.23b]]
+| 1168
+|-
+| [[23a:Release information/0.23.125.23a|0.23.125.23a]]
+| 1167
+|-
+| [[23a:Release information/0.22.123.23a|0.22.123.23a]]
+| 1165
+|-
+| [[23a:Release information/0.22.121.23b|0.22.121.23b]]
+| 1161
+|-
+| [[23a:Release information/0.22.121.23a|0.22.121.23a]]
+| 1160
+|-
+| [[23a:Release information/0.22.120.23b|0.22.120.23b]]
+| 1159
+|-
+| [[23a:Release information/0.22.120.23a|0.22.120.23a]]
+| 1151
+|-
+| [[23a:Release information/0.22.110.23c|0.22.110.23c]]
+| 1148
+|-
+| [[23a:Release information/0.22.110.23b|0.22.110.23b]]
+| 1148
+|-
+| [[23a:Release information/0.22.110.23a|0.22.110.23a]]
+| 1148
+|-
+| [[23a:Release information/0.22.110.22f|0.22.110.22f]]
+| 1137
+|-
+| [[23a:Release information/0.22.110.22e|0.22.110.22e]]
+| 1134
+|-
+| [[23a:Release information/0.22.110.22d|0.22.110.22d]]
+| 1133
+|-
+| [[23a:Release information/0.22.110.22c|0.22.110.22c]]
+| 1133
+|-
+| [[23a:Release information/0.22.110.22b|0.22.110.22b]]
+| 1131
+|-
+| [[23a:Release information/0.22.110.22a|0.22.110.22a]]
+| 1131
+|-
+| [[23a:Release information/0.22.107.21a|0.22.107.21a]]
+| 1128
+|-
+| [[23a:Release information/0.21.105.21a|0.21.105.21a]]
+| 1128
+|-
+| [[23a:Release information/0.21.104.21c|0.21.104.21c]]
+| 1128
+|-
+| [[23a:Release information/0.21.104.21b|0.21.104.21b]]
+| 1125
+|-
+| [[23a:Release information/0.21.104.21a|0.21.104.21a]]
+| 1123
+|-
+| [[23a:Release information/0.21.104.19d|0.21.104.19d]]
+| 1121
+|-
+| [[23a:Release information/0.21.104.19c|0.21.104.19c]]
+| 1121
+|-
+| [[23a:Release information/0.21.104.19b|0.21.104.19b]]
+| 1119
+|-
+| [[23a:Release information/0.21.104.19a|0.21.104.19a]]
+| 1119
+|-
+| [[23a:Release information/0.21.102.19a|0.21.102.19a]]
+| 1117
+|-
+| [[23a:Release information/0.21.101.19d|0.21.101.19d]]
+| 1114
+|-
+| [[23a:Release information/0.21.101.19c|0.21.101.19c]]
+| 1114
+|-
+| [[23a:Release information/0.21.101.19b|0.21.101.19b]]
+| 1114
+|-
+| [[23a:Release information/0.21.101.19a|0.21.101.19a]]
+| 1113
+|-
+| [[23a:Release information/0.21.100.19a|0.21.100.19a]]
+| 1110
+|-
+| [[23a:Release information/0.21.95.19c|0.21.95.19c]]
+| 1110
+|-
+| [[23a:Release information/0.21.95.19b|0.21.95.19b]]
+| 1108
+|-
+| [[23a:Release information/0.21.95.19a|0.21.95.19a]]
+| 1108
+|-
+| [[23a:Release information/0.21.93.19c|0.21.93.19c]]
+| 1108
+|-
+| [[23a:Release information/0.21.93.19b|0.21.93.19b]]
+| 1108
+|-
+| [[23a:Release information/0.21.93.19a|0.21.93.19a]]
+| 1107
+|-
+| Prerelease <!-- added sasquatch, blizzard man, ice wolf, fairy, beak dog, grimeling, werewolf, foul blendec, strangler, nightwing, harpy, hydra, fire man, magma man, iron man, and mud man -->
+| 1097
+|-
+| Prerelease <!-- added alligator and saltwater crocodile -->
+| 1093
+|-
+| Prerelease <!-- added giant desert scorpion, snakeman, antman, naked mole dog, troglodyte, and giant mole -->
+| 1091
+|-
+| Prerelease <!-- added titan, bronze colossus, giant, cyclops, ettin, and minotaur -->
+| 1075
+|-
+| Prerelease <!-- added ogre and unicorn -->
+| 1074
+|-
+| Prerelease <!-- added giant lion, giant leopard, giant jaguar, giant tiger, and giant cheetah -->
+| 1073
+|-
+| Prerelease <!-- added cardinal, grackle, oriole, red-winged blackbird, large rat -->
+| 1069
+|}
+[[Category:Game development]]
+[[Category:Release information]]

@@ -1,0 +1,146 @@
+{{av}}
+{{Quality|Fine}}
+Settings for ''Dwarf Fortress'' can be accessed with a button on the main menu, which can be accessed in-game with {{Menu icon|Esc}}. They are divided into six groups; Video, Audio, Game, Keybindings, Announcements, and Difficulty. They are stored in several different files, including [[init.txt]], [[d_init.txt]], and [[interface.txt]], with current values in the <code>prefs\</code> folder and default values in the <code>data\init\</code> folder. The default files in <code>data\init\</code> include explanations of each setting, including possible values. The files in both <code>data\init\</code> and <code>prefs\</code> are read when ''Dwarf Fortress'' starts, in that order, with the last value read for each option being used. The location of the <code>prefs\</code> folder depends on various factors, see [[Game folders and files]]. Not all of the settings can be changed in game, including [[colors.txt]], [[arena.txt]], and some keybindings.
+
+== Video ==
+These settings change how the game looks and are all stored in <code>prefs\init.txt</code> and defaults in <code>data\init\init_default.txt</code>.
+* '''Windowed or Fullscreen''' - the highlighted button is the active one and they correspond with [WINDOWED:YES] or [WINDOWED:NO] in the files. [WINDOWED:PROMPT] can be set in the files to make the game ask when starting up, in which case neither button will be highlighted.
+* '''Resolution''' - the screen mode the game uses when in fullscreen mode, 'Detect' corresponds with [FULLSCREENX:0] and [FULLSCREENY:0] in the files.
+* '''Scale interface''' - whether to scale the font used to draw interface elements such as the menus and minimap to a specific number of character cells, [INTERFACE_SCALING_TO_DESIRED_GRID:YES] in the files.
+* '''Desired grid width and height''' - how much to scale the interface, in how many character cells wide and tall the interface should be. [INTERFACE_SCALING_DESIRED_GRID_WIDTH:170] and [INTERFACE_SCALING_DESIRED_GRID_HEIGHT:64] in the files. No effect if [INTERFACE_SCALING_TO_DESIRED_GRID:NO] is used.
+* '''Interface scale percentage''' - percentage to scale the interface character cell size up when not scaling to specified grid counts, not every value makes a difference since the interface won't display a partial character at the edges. [INTERFACE_SCALING_PERCENTAGE:100] in the files, no effect if [INTERFACE_SCALING_TO_DESIRED_GRID:YES] is used.
+* '''Initial window size''' - when not fullscreen, [WINDOWEDX:1200] and [WINDOWEDY:800] in the files.
+* '''Window resizable''' - when not fullscreen, [RESIZABLE:YES] in the files.
+* '''Maximum interface width''' - what percentage of the display the overlay interface elements can occupy, useful for extra wide displays to make notifications more visible. [MAXIMUM_INTERFACE_PERCENTAGE:100] in the files. The game will still use the entire window/screen and the minimap and elevation bar will stay at the edge.
+* '''Graphical FPS cap''' - how many frames to cap the graphical display rate at. [G_FPS_CAP:50] in the files.
+* '''Classic ASCII''' - [USE_CLASSIC_ASCII:NO] in the files.
+* '''Scaling mode''' - NEAREST, nearest-neighbor, distorts shapes at some zoom levels; LANCZOS, less distortion but fuzzier at some zoom levels; AUTO, the default, will try to select whichever one is more appropriate depending on the zoom level. [TEXTURE_PARAM:AUTO] in the files.
+
+As the interface gets narrower, some elements will be removed from the [[status]] bar when there's not enough room for all of them; some menus may also display elements under other elements or outside their window.
+
+There are a few other file settings that can affect the display, see [[Technical_tricks#Settings_-_init.txt|technical tricks]].
+
+== Audio ==
+These settings change how the game plays sounds and are all stored in <code>prefs\init.txt</code> with defaults in <code>data\init\init_default.txt</code>. All volumes can be from 0 to 255 in the game files, with 255 being 100%.
+* '''Master Volume''' - [MASTER_VOLUME:255] in the files.
+* '''Music Volume (Fortress)''' - [MUSIC_VOLUME:255] in the files.
+* '''Ambience Volume (Fortress)''' - [AMBIENCE_VOLUME:230] in the files.
+* '''Sound Effects Volume (Fortress)''' - [SFX_VOLUME:204] in the files.
+* '''Average Seconds Between Tracks/Interludes (Fortress)''' - [AVERAGE_TIME_BETWEEN_SONGS:240] in the files. The default of 240 gives a range of 180 to 300 seconds, which is 3 to 5 minutes.  Can be anywhere from 10 to 600.
+* '''Music Volume (Adventure)'''{{v|51.01}} - [MUSIC_VOLUME_ADV:217] in the files.
+* '''Ambience Volume (Adventure)'''{{v|51.01}} - [AMBIENCE_VOLUME_ADV:240] in the files.
+* '''Sound Effects Volume (Adventure)'''{{v|51.01}} - [SFX_VOLUME_ADV:230] in the files.
+
+The classic version of the game available on the website only includes the original songs, so most of these will have no effect without the [[premium version]] or mods.
+
+All sound can be disabled completely with [SOUND:NO] in the files. If so, the rest of these settings will be replaced by text explaining that sound is disabled and how to enable it.
+
+== Game ==
+These settings change how the game plays and most are stored in <code>prefs\d_init.txt</code> with defaults in <code>data\init\d_init_default.txt</code>, but some are in <code>prefs\init.txt</code> with defaults in <code>data\init\init_default.txt</code>.
+
+=== Display all errors ===
+* '''Display all errorlogs on screen'''{{v|53.15}} - when set to yes, all errors will be shown on screen. [DISPLAY_ALL_ERRORLOGS:NO] in init.txt, YES or NO.
+
+=== Portable mode ===
+* '''Portable mode'''{{v|52.01}} - when set to NO, the game stores mods, preferences, and saves in a folder specific to the user, (see [[game folders and files]] for details) when set to YES, it stores them in the game folder. Changing this only changes where the files will be written the next time, it does not immediately move them, or change anything else about them. Changing this to YES creates the empty file <code>prefs\portable.txt</code>, changing back to NO removes it; manually creating or removing the file changes the setting.
+
+=== Autosaves ===
+{{for/see|more information about autosaves|[[Saved_game_folder#Save_folder_format|Saved game folder]]}}
+* '''Autosave frequency''' - when to autosave, [AUTOSAVE:SEMIANNUAL] in d_init.txt, NONE, SEASONAL, SEMIANNUALLY, or YEARLY.
+* '''Autosave at embark''' - [INITIAL_SAVE:NO] in d_init.txt, YES or NO. Additionally to initial saving the game: If set to YES (and the game is paused in the beginning) then the game is paused (and saved) before a dwarf gets assigned to fishing duty (if water to fish in is available), otherwise (meaning this option is set to NO), if there is water, a dwarf is assigned to fishing duty (even if the game is paused in the beginning).
+
+=== Pausing ===
+* '''Pause after autosave''' - [AUTOSAVE_PAUSE:NO] in d_init.txt, YES or NO.
+* '''Pause after loading''' - [PAUSE_ON_LOAD:YES] in d_init.txt, YES or NO.
+
+=== Embark ===
+* '''Always confirm embark''' - asks for confirmation of the embark location even if there are no warnings such as for [[aquifer]]s, dangerous [[surroundings]], etc, [EMBARK_WARNING_ALWAYS:NO] in d_init.txt, YES or NO.
+* '''Confirm preparations''' - [POST_PREPARE_EMBARK_CONFIRMATION:IF_POINTS_REMAIN] in d_init.txt, ALWAYS, IF_POINTS_REMAIN, or NO.
+* '''Show tunnels when embarking''' - for dwarven [[tunnel]]s, shown as a black dashed line or grey double line with classic ASCII, [SHOW_EMBARK_TUNNEL:FINDER] in d_init.txt, FINDER, ALWAYS, or NO.{{verify|is there a difference between ALWAYS and FINDER now?}} More restrictive world generation settings will override these.
+* '''Default embark width and height''' - also determines what is considered a normal embark size and will only warn when the actual embark is larger than this many (width × height) tiles, [EMBARK_RECTANGLE:4:4] in d_init.txt, 2 to 16. See Maximum embark dimension below. (This option is actually listed after the feature toggles on the tab in game.)
+* '''Maximum embark dimension''' - maximum width or height for an embark, larger sizes may be buggy and need much more memory, [MAXIMUM_EMBARK_DIM:6] in d_init.txt, 6 to 16. (This option is actually listed in game near the bottom of the tab, before the dye and scroll options.)
+
+=== Feature toggles ===
+* '''Enable temperature''' - If temperature calculations are off, only a few direct temperature changes will take place; for example, magma will set tiles to high temperatures, but those tiles will never cool, making them unpathable until this setting is enabled. Effects that rely on temperature calculations, such as water freezing, melting, or evaporating, or creatures and items taking temperature-related damage, will not occur. May somewhat affect FPS, but be aware of the likely pathing issues, [TEMPERATURE:YES] in d_init.txt, YES or NO.
+* '''Enable weather''' - toggles rain and snow, rarely affects FPS, [WEATHER:YES] in d_init.txt, YES or NO.{{verify|does this affect wind or evil weather?}}
+* '''Enable caveins''' - toggles [[cave-ins]], [CAVEINS:YES] in d_init.txt, YES or NO.
+* '''Enable artifact moods''' - toggles [[strange mood]]s and the resulting [[artifact]]s, [ARTIFACTS:YES] in d_init.txt, YES or NO.{{verify|does this affect world gen artifacts?}}
+* '''Enable testing arena''' - [TESTING_ARENA:YES] in d_init.txt, YES or NO.
+* '''Walking spreads spatter (fort mode)''' - toggle the spread of blood spatter and other [[contaminant]]s by creatures on ground tiles in fortress mode. As spatter can infinitely spread, it is recommended to leave this as "NO". [WALKING_SPREADS_SPATTER_DWF:NO] in d_init.txt, YES or NO.
+* '''Walking spreads spatter (adv mode)'''{{v|51.01}} - toggle the spread of blood spatter and other [[contaminant]]s by creatures on ground tiles in adventure mode. As spatter can help with tracking creatures, it is recommended to leave this as "YES". [WALKING_SPREADS_SPATTER_ADV:NO] in d_init.txt, YES or NO.
+* '''Enable keyboard cursor''' - allows for using the keyboard controls for some designations, [KEYBOARD_CURSOR:NO] in d_init.txt, YES or NO. Arrow keys {{k|↑←↓→}} move one tile, {{k|WASD}} 10 tiles, and {{k|Shift|WASD|sep=+}} 20 tiles; also see [[Settings#Keyboard_scroll_amounts|Keyboard scroll amounts]] section below.
+* '''Log world rejects''' - logs the reasons worlds were rejected in ``[[map_rejection_log.txt]]``, useful in [[advanced world generation]] and [[modding]], [LOG_MAP_REJECTS:NO] in d_init.txt, YES or NO. ''Dwarf Fortress'' will keep adding to the file, so you may want to trim or delete it occasionally.
+* '''Multithreading''' - limited multithreading, mainly for line of sight calculations, [MULTITHREADING:YES] in d_init.txt, YES or NO.
+* '''Classic varied ground tiles'''{{v|51.05}} - if changed to NO, ground tiles will be displayed only with periods in ASCII mode, has no effect in graphics mode. [CLASSIC_VARIED_GROUND_TILES:YES] in d_init.txt. (This option is actually listed in game near the bottom of the tab, before the scroll options.)
+* '''Show rectangle dimensions'''{{v|51.06}} - if changed to NO, hides the size display when drawing selection rectangles, [SHOW_RECTANGLE_DIMENSIONS:YES] in d_init.txt. (This option is actually listed in game near the bottom of the tab, before the scroll options.)
+
+=== Pathing costs ===
+* '''Path costs''' - extreme changes to these may cause more lag, [PATH_COST:1:2:5:25] in d_init.txt, 1 to 1000.
+* '''Storage path cost decreases''' - controls how aggressively dwarves place objects in a container with like items (rather than an empty container). The default combine options are very aggressive. All in d_init.txt, 2 to 1000.
+** [STORE_DIST_ITEM_DECREASE:20] - for each object found in a container, one tile is removed from its apparent distance to the dwarf, up to this cap
+** [STORE_DIST_SEED_COMBINE:1000] - a bag with seeds already in it will appear this many tiles closer
+** [STORE_DIST_BUCKET_COMBINE:1000] - a bucket with the same liquid already in it will appear this many tiles closer
+** [STORE_DIST_BARREL_COMBINE:1000] - a barrel with the same item type already in it will appear this many tiles closer
+** [STORE_DIST_BIN_COMBINE:1000] - a bin with the same item type already in it will appear this many tiles closer
+
+=== Population and seed capacities ===
+* '''Population caps''' - can be changed at will to limit migration, strict also prevents births, [POPULATION_CAP:200] and [STRICT_POPULATION_CAP:220] in d_init.txt, 0 to 5000. Certain game features are triggered by population number, see [[difficulty]]. Some of those features may also cause the actual population to slightly go over these.
+* '''Children limits''' - how many and what percentage of total there can be at a time, [BABY_CHILD_CAP:100:1000] in d_init.txt, 0 to 1000. Only prevents further pregnancies, so migrant children, multiple births and existing pregnancies from old saves can still push you over the cap. Setting either number to zero will disallow new pregnancies in the fortress.
+* '''Visitor cap''' - This does not include merchants, diplomats, animals or invaders, but only those dropping by for a temporary visit to a tavern, library or temple, or those seeking permanent employment. Once you accept a petition from a visitor to stay at your fort, they no longer count against the cap, even if they never become a full citizen. [VISITOR_CAP:100] in d_init.txt, 0 to 5000.
+* '''Dead units cull''' - During a season changeover, the game checks if there's a certain number of units in play. If it is above this amount, it removes all the unimportant dead units who died at least two years ago. [CULL_DEAD_UNITS_AT:1000] in d_init.txt, 100 to 5000.
+* '''Seed caps''' - per type and total, when over the total cap, seeds will be periodically removed, starting with the oldest and most worthless. [SPECIFIC_SEED_CAP:200] 0 to 10000 and [FORTRESS_SEED_CAP:3000] 0 to 30000 in d_init.txt.
+
+=== Information display ===
+* '''Engraving display''' - [ENGRAVINGS_START_OBSCURED:NO] in d_init.txt, YES or NO.
+* '''Improvement quality display''' - [SHOW_IMP_QUALITY:YES] in d_init.txt, YES or NO.
+* '''Numeric liquid levels''' - can be toggled in game either with a button next to the minimap or a keybind {{menu icon|f}}, [SHOW_FLOW_AMOUNTS:NO] in d_init.txt, YES or NO.
+* '''Ramp arrows''' - can be toggled in game either with a button next to the minimap or a keybind {{menu icon|r}}, [SHOW_RAMP_ARROWS:NO] in d_init.txt, YES or NO.
+* '''Elevation layers display''' - [NUMBER_OF_LOWER_ELEVATIONS_SHOWN:8] in d_init.txt, 0 to 8.
+* '''Engraving historical events''' - [SHOW_ALL_HISTORY_IN_DWARF_MODE:YES] in d_init.txt, YES or NO.
+* '''Nickname display''' - [NICKNAME_DWARF:REPLACE_FIRST], [NICKNAME_ADVENTURE:REPLACE_FIRST], [NICKNAME_LEGENDS:REPLACE_FIRST] in d_init.txt, REPLACE_FIRST, CENTRALIZE (between first and last), or REPLACE_ALL.
+
+=== Grazing coefficient ===
+* '''Grazing coefficient''' - how much grazers get from grazing, larger numbers mean less food is needed. [GRAZE_COEFFICIENT:100] in d_init.txt, 1 to 1000000.
+
+=== FPS ===
+* '''Show FPS''' - the first number is simulation rate, the number in parentheses is graphical FPS, [FPS:NO] in init.txt, YES or NO.
+* '''Game FPS cap''' - limits how quickly the game runs the simulation, [FPS_CAP:100] in init.txt, 5 to 1000. This cap can also be temporarily changed on the fly by ~10% with {{k|Alt|Equals|sep=+}} and {{k|Alt|Minus|sep=+}}; if '''Show FPS''' is set to yes, then pressing either of those will briefly show what the cap has been changed to.
+
+=== Input timings ===
+* '''Key hold time''' - [KEY_HOLD_MS:250] in init.txt, 100 to 20000.
+* '''Key repeat time''' - [KEY_REPEAT_MS:150] in init.txt, 100 to 20000.
+* '''Key repeat acceleration''' - [KEY_REPEAT_ACCEL_START:10] 1 to 1000 and [KEY_REPEAT_ACCEL_LIMIT:8] 2 to 100 in init.txt.
+* '''Interface shutdown time''' - how long after a view recenter to ignore input, [RECENTER_INTERFACE_SHUTDOWN_MS:0] in init.txt, 0 to 2000.
+* '''Macro timing''' - [MACRO_MS:15] in init.txt, 1 to 2000.
+
+=== Compressed saves ===
+* '''Compressed saves''' - saves drive space (since running out of space while saving '''will''' corrupt the save) at the expense of slowing down save operations, [COMPRESSED_SAVES:YES] in init.txt, YES or NO.
+
+=== Dye display ===
+* '''Display worn clothing dyes (fort mode)'''{{v|50.15}} - if changed to NO, color will be determined by [[profession]], mostly only useful in ASCII mode, [DISPLAY_CLOTHING_WITH_DYES_IN_FORT_MODE:YES] in d_init.txt, YES or NO.
+* '''Display worn clothing dyes (adv mode)'''{{v|51.01}} - if changed to NO, color will be determined by profession, [DISPLAY_CLOTHING_WITH_DYES_IN_ADV_MODE:YES] in d_init.txt, YES or NO.
+
+=== Keyboard scroll amounts ===
+* '''Keyboard scroll tiles'''{{v|51.11}} - how many tiles to scroll with the "Move view/cursor" keys (default {{k|WASD}}, the FAST settings are used for {{k|Shift|WASD|sep=+}}) in the normal and world views, as well as the [[Settings#Feature_toggles|keyboard cursor]], though for that, the cursor keys {{k|↑←↓→}} also always move 1 tile, in addition to these values for the "Move view/cursor" keys. 1 to 100, and the following tokens in d_init.txt
+**[HORIZONTAL_SCROLL_SPEED:10]
+**[HORIZONTAL_SCROLL_SPEED_FAST:20]
+**[VERTICAL_SCROLL_SPEED:10]
+**[VERTICAL_SCROLL_SPEED_FAST:20]
+**[HORIZONTAL_SCROLL_SPEED_WORLD:10]
+**[HORIZONTAL_SCROLL_SPEED_WORLD_FAST:20]
+**[VERTICAL_SCROLL_SPEED_WORLD:10]
+**[VERTICAL_SCROLL_SPEED_WORLD_FAST:20]
+
+== Keybindings ==
+{{main|Controls}}{{main|interface.txt}}
+These settings change the controls and are all stored in interface.txt.
+
+== Announcements ==
+{{main|Announcement}}{{main|announcements.txt}}
+Used to control how different announcements are displayed in Dwarf Fortress. This can be useful to add alerts for critical combat events, stopping the recentering on birth events, or reducing the constant chatter of announcements like 'quota filled' or 'someone is visiting'.
+
+== Difficulty ==
+{{main|Difficulty}}
+This tab is only available when in a fortress game, and these settings are initially set when starting a fortress game. Since they are specific to each save they are stored as part of the save and are not editable outside the game. They are divided into two groups: enemies and economy; enemies can be disabled, both groups have normal and hard presets, and all of the individual settings can be adjusted in '''Custom settings'''. The values used in each preset can be seen by selecting the preset and then viewing them in '''Custom settings'''.
+
+[[ru:Settings]]

@@ -1,0 +1,3545 @@
+Welcome to my wiki guide! By popular demand I did what I could to make this as easy and simple as I could and not as overwhelming...
+
+There's a ton of information here and it "should" be able to help you with any simple reaction modding problems you run into at the moment.
+
+This WILL be updated with creature editing, entity editing and whatever else.
+
+----
+
+'''MOST IMPORTANT NOTE FOR MODDING!''' - With the way the "new" Dwarf Fortress is, when you are modding the easiest thing to do is just to generate a new world. This new version saves raw and graphic information IN the SAVE->(REGION1) folder. If you are editing an EXISTING world, you MUST edit the SAVE folder version and not the normal location for you to see the effects. To follow a safe motto for modding dwarf fortress... If you don't know if it needs a regen, just regen.
+
+It seems many people don't realize the new method of save handling and reaction handling. There are multiple places that have to be altered in order for your custom reaction/building to show up to be used. For example...
+
+If you add a smelting reaction, you have to add the reaction to the "reaction_smelter.txt", you then have to make your reaction permitted on the "entity_default.txt".<br />
+When you add a reaction to the "entity_default.txt" it will be under the [ENTITY:MOUNTAIN] listing. Your permitted reaction should look like...<br />
+[PERMITTED_REACTION:XXXCUSTOM_REACTION_NAMEXXX]<br />
+When you add your custom building to the "entity_default.txt" it should look something like...<br />
+[PERMITTED_BUILDING:XXXCUSTOM_BUILDING_NAMEXXX]<br />
+YOU WILL CHANGE "XXXCUSTOM_REACTION_NAMEXXX" and "XXXCUSTOM_BUILDING_NAMEXXX" TO WHATEVER YOU HAVE IT LISTED AS.<br />
+<br />
+Now that, that is out of the way.
+
+== Custom Build & Reaction ==
+{| class="collapsible collapsed infobox" style="background-color: white; border: 1px solid darkgrey; font-size: 100%; padding: 2px; text-align: center; width: 100%;"
+! colspan="2" style="border: 1px solid darkgrey; font-weight: bold; background-color: lightblue; padding-left: 1em; padding-right: 1em; width:100%; display:table-cell;" | Your first custom reaction and building!
+|- style="text-align: left; display:table-cell; "
+|'''You may not see the .txt, but don't worry, they should still be text files.'''
+'''This is the guide to make a custom reaction and custom building.'''
+
+'''-To start open up your dwarf fortress folder.'''
+
+'''-Next go to the raw folder.'''
+
+'''-Next go to the objects folder.'''
+
+'''-We'll make a custom reaction that doesn't go into the smelter and has it's own custom building. So find the "reaction_other.txt" file and open it.'''
+
+'''-We'll start with a very simple reaction to give us one free granite stone.'''
+
+[REACTION:CHEAT_REACTION]<br />
+[NAME:Free Granite Stone]<br />
+[BUILDING:CHEAT_WORKSHOP:NONE]<br />
+[PRODUCT:100:1:STONE:NO_SUBTYPE:STONE:GRANITE]<br />
+[SKILL:SMELT]<br />
+
+'''-Now save and close the file and look for the file named "building_custom.txt".'''
+
+'''-You should see something along the lines of a Soap Maker Workshop entry. Go ahead and select and copy everything from "[BUILDING_WORKSHOP:SOAP_MAKER]" to "[BUILD_ITEM:1:NONE:NONE:NONE:NONE][BUILDMAT][WORTHLESS_STONE_ONLY][CAN_USE_ARTIFACT]".'''
+
+'''-Paste this entry right below the Soap Maker entry, make sure there is a space between them, so you should now have two entries separated by a line break. You should have the following...'''
+
+'''building_custom.txt'''
+
+[OBJECT:BUILDING] 
+
+[BUILDING_WORKSHOP:SOAP_MAKER]<br />
+[NAME:Soap Maker's Workshop]<br />
+[NAME_COLOR:7:0:1]<br />
+[DIM:3:3]<br />
+[WORK_LOCATION:2:2]<br />
+[BUILD_LABOR:SOAP_MAKER]<br />
+[BUILD_KEY:CUSTOM_SHIFT_S]<br />
+[BLOCK:1:0:0:0]<br />
+[BLOCK:2:0:0:0]<br />
+[BLOCK:3:0:0:0]<br />
+[TILE:0:1:' ':' ':150]<br />
+[TILE:0:2:' ':' ':'/']<br />
+[TILE:0:3:'-':' ':' ']<br />
+[COLOR:0:1:0:0:0:0:0:0:6:0:0]<br />
+[COLOR:0:2:0:0:0:0:0:0:6:0:0]<br />
+[COLOR:0:3:6:0:0:0:0:0:0:0:0]<br />
+[TILE:1:1:' ':' ':'=']<br />
+[TILE:1:2:'-':' ':8]<br />
+[TILE:1:3:' ':' ':150]<br />
+[COLOR:1:1:0:0:0:0:0:0:6:0:0]<br />
+[COLOR:1:2:6:0:0:0:0:0:6:0:0]<br />
+[COLOR:1:3:0:0:0:0:0:0:6:0:0]<br />
+[TILE:2:1:'-':' ':8]<br />
+[TILE:2:2:' ':' ':8]<br />
+[TILE:2:3:' ':150:' ']<br />
+[COLOR:2:1:6:0:0:0:0:0:6:0:0]<br />
+[COLOR:2:2:0:0:0:0:0:0:6:0:0]<br />
+[COLOR:2:3:0:0:0:6:0:0:0:0:0]<br />
+[TILE:3:1:150:' ':8]<br />
+[TILE:3:2:' ':' ':8]<br />
+[TILE:3:3:' ':240:' ']<br />
+[COLOR:3:1:6:0:0:0:0:0:6:7:0]<br />
+[COLOR:3:2:0:0:0:0:0:0:6:7:0]<br />
+[COLOR:3:3:0:0:0:7:0:1:0:0:0]<br />
+[BUILD_ITEM:1:BUCKET:NONE:NONE:NONE][EMPTY][CAN_USE_ARTIFACT]<br />
+[BUILD_ITEM:1:NONE:NONE:NONE:NONE][BUILDMAT][WORTHLESS_STONE_ONLY][CAN_USE_ARTIFACT]<br />
+
+[BUILDING_WORKSHOP:SOAP_MAKER]<br />
+[NAME:Soap Maker's Workshop]<br />
+[NAME_COLOR:7:0:1]<br />
+[DIM:3:3]<br />
+[WORK_LOCATION:2:2]<br />
+[BUILD_LABOR:SOAP_MAKER]<br />
+[BUILD_KEY:CUSTOM_SHIFT_S]<br />
+[BLOCK:1:0:0:0]<br />
+[BLOCK:2:0:0:0]<br />
+[BLOCK:3:0:0:0]<br />
+[TILE:0:1:' ':' ':150]<br />
+[TILE:0:2:' ':' ':'/']<br />
+[TILE:0:3:'-':' ':' ']<br />
+[COLOR:0:1:0:0:0:0:0:0:6:0:0]<br />
+[COLOR:0:2:0:0:0:0:0:0:6:0:0]<br />
+[COLOR:0:3:6:0:0:0:0:0:0:0:0]<br />
+[TILE:1:1:' ':' ':'=']<br />
+[TILE:1:2:'-':' ':8]<br />
+[TILE:1:3:' ':' ':150]<br />
+[COLOR:1:1:0:0:0:0:0:0:6:0:0]<br />
+[COLOR:1:2:6:0:0:0:0:0:6:0:0]<br />
+[COLOR:1:3:0:0:0:0:0:0:6:0:0]<br />
+[TILE:2:1:'-':' ':8]<br />
+[TILE:2:2:' ':' ':8]<br />
+[TILE:2:3:' ':150:' ']<br />
+[COLOR:2:1:6:0:0:0:0:0:6:0:0]<br />
+[COLOR:2:2:0:0:0:0:0:0:6:0:0]<br />
+[COLOR:2:3:0:0:0:6:0:0:0:0:0]<br />
+[TILE:3:1:150:' ':8]<br />
+[TILE:3:2:' ':' ':8]<br />
+[TILE:3:3:' ':240:' ']<br />
+[COLOR:3:1:6:0:0:0:0:0:6:7:0]<br />
+[COLOR:3:2:0:0:0:0:0:0:6:7:0]<br />
+[COLOR:3:3:0:0:0:7:0:1:0:0:0]<br />
+[BUILD_ITEM:1:BUCKET:NONE:NONE:NONE][EMPTY][CAN_USE_ARTIFACT]<br />
+[BUILD_ITEM:1:NONE:NONE:NONE:NONE][BUILDMAT][WORTHLESS_STONE_ONLY][CAN_USE_ARTIFACT]<br />
+
+'''-Now you want to change the second entry to following.'''
+
+[BUILDING_WORKSHOP:CHEAT_WORKSHOP]<br />
+[NAME:Cheat Workshop]<br />
+[NAME_COLOR:7:0:1]<br />
+[DIM:3:3]<br />
+[WORK_LOCATION:2:2]<br />
+[BUILD_LABOR:SMELT]<br />
+[BUILD_KEY:CUSTOM_SHIFT_C]<br />
+[BLOCK:1:0:0:0]<br />
+[BLOCK:2:0:0:0]<br />
+[BLOCK:3:0:0:0]<br />
+[TILE:0:1:' ':' ':150]<br />
+[TILE:0:2:' ':' ':'/']<br />
+[TILE:0:3:'-':' ':' ']<br />
+[COLOR:0:1:0:0:0:0:0:0:6:0:0]<br />
+[COLOR:0:2:0:0:0:0:0:0:6:0:0]<br />
+[COLOR:0:3:6:0:0:0:0:0:0:0:0]<br />
+[TILE:1:1:' ':' ':'=']<br />
+[TILE:1:2:'-':' ':8]<br />
+[TILE:1:3:' ':' ':150]<br />
+[COLOR:1:1:0:0:0:0:0:0:6:0:0]<br />
+[COLOR:1:2:6:0:0:0:0:0:6:0:0]<br />
+[COLOR:1:3:0:0:0:0:0:0:6:0:0]<br />
+[TILE:2:1:'-':' ':8]<br />
+[TILE:2:2:' ':' ':8]<br />
+[TILE:2:3:' ':150:' ']<br />
+[COLOR:2:1:6:0:0:0:0:0:6:0:0]<br />
+[COLOR:2:2:0:0:0:0:0:0:6:0:0]<br />
+[COLOR:2:3:0:0:0:6:0:0:0:0:0]<br />
+[TILE:3:1:150:' ':8]<br />
+[TILE:3:2:' ':' ':8]<br />
+[TILE:3:3:' ':240:' ']<br />
+[COLOR:3:1:6:0:0:0:0:0:6:7:0]<br />
+[COLOR:3:2:0:0:0:0:0:0:6:7:0]<br />
+[COLOR:3:3:0:0:0:7:0:1:0:0:0]<br />
+[BUILD_ITEM:1:NONE:NONE:NONE:NONE][BUILDMAT][WORTHLESS_STONE_ONLY][CAN_USE_ARTIFACT]<br />
+
+'''-Now save this file and close it and look for the final file called "entity_default"'''
+
+'''-The beginning entry should say "[ENTITY:MOUNTAIN]"'''
+
+'''If you scroll down a bit you should eventually come to a part in the list that looks like the following.'''
+
+[PERMITTED_JOB:BONE_SETTER]<br />
+[PERMITTED_JOB:SUTURER]<br />
+[PERMITTED_JOB:SURGEON]<br />
+[PERMITTED_BUILDING:SOAP_MAKER]<br />
+[PERMITTED_REACTION:TAN_A_HIDE]<br />
+[PERMITTED_REACTION:RENDER_FAT]<br />
+[PERMITTED_REACTION:MAKE_SOAP]<br />
+
+'''-Now for simplicity sake and for keeping it a little organized go ahead and add the following between the "[PERMITTED_BUILDING:SOAP_MAKER]" and "[PERMITTED_REACTION:TAN_A_HIDE]"'''
+
+[PERMITTED_BUILDING:CHEAT_WORKSHOP]<br />
+[PERMITTED_REACTION:CHEAT_REACTION]<br />
+
+'''You should now have...'''
+
+[PERMITTED_JOB:BONE_SETTER]<br />
+[PERMITTED_JOB:SUTURER]<br />
+[PERMITTED_JOB:SURGEON]<br />
+[PERMITTED_BUILDING:SOAP_MAKER]<br />
+[PERMITTED_BUILDING:CHEAT_WORKSHOP]<br />
+[PERMITTED_REACTION:CHEAT_REACTION]<br />
+[PERMITTED_REACTION:TAN_A_HIDE]<br />
+[PERMITTED_REACTION:RENDER_FAT]<br />
+[PERMITTED_REACTION:MAKE_SOAP]<br />
+
+'''-Now save and close this file.'''
+
+'''-You have now successfully created your first custom reaction, custom building and you've added it to the entity file!'''
+
+'''-Generate a new world and test it! Your custom building should be under the workshop menu at the bottom most likely. You could also press Shift+c to hotkey build it. It's going to use the furnace operating skill to build the workshop and use the custom reaction.'''
+
+'''-After all is said and done you should have one workshop named "Cheat Workshop" and one extra Granite!'''
+
+'''-Mind you this workshop is going to look like a soap makers workshop, but we want to keep things easy!'''
+
+'''-If you want to change the appearance of your workshop, use this utility: http://dffd.wimbli.com/file.php?id=2068'''
+|-
+|}
+
+== Various Reactions and Information ==
+{| class="collapsible collapsed infobox" style="background-color: white; border: 1px solid darkgrey; font-size: 100%; padding: 2px; text-align: center; width: 100%;"
+! colspan="2" style="border: 1px solid darkgrey; font-weight: bold; background-color: lightblue; padding-left: 1em; padding-right: 1em; width:100%; display:table-cell;" | Current List of Products
+|- style="text-align: left; display:table-cell; "
+|[PRODUCT:100:1:SEEDS:NONE:PLANT_MAT:POD_SWEET:SEED]<br />
+<br />
+[REAGENT:A:1:BARREL:NONE:NONE:NONE][EMPTY][PRESERVE_REAGENT]<br />
+[PRODUCT:100:1:DRINK:NONE:PLANT_MAT:POD_SWEET:DRINK][PRODUCT_TO_CONTAINER:A]<br />
+<br />
+[REAGENT:A:1:BARREL:NONE:NONE:NONE][EMPTY][PRESERVE_REAGENT]<br />
+[PRODUCT:100:1:DRINK:NONE:PLANT_MAT:MUSHROOM_HELMET_PLUMP:DRINK][PRODUCT_TO_CONTAINER:A]<br />
+<br />
+[PRODUCT:100:1:WEAPON:ITEM_WEAPON_PICK:INORGANIC:STEEL]<br />
+<br />
+[PRODUCT:100:1:WEAPON:ITEM_WEAPON_MACE:INORGANIC:STEEL]<br />
+<br />
+[PRODUCT:100:1:WEAPON:ITEM_WEAPON_SPEAR:INORGANIC:STEEL]<br />
+<br />
+[PRODUCT:100:1:WEAPON:ITEM_WEAPON_SWORD_SHORT:INORGANIC:STEEL]<br />
+<br />
+[PRODUCT:100:1:WEAPON:ITEM_WEAPON_HAMMER_WAR:INORGANIC:STEEL]<br />
+<br />
+[PRODUCT:100:1:WEAPON:ITEM_WEAPON_AXE_BATTLE:INORGANIC:STEEL]<br />
+<br />
+[PRODUCT:100:1:WEAPON:ITEM_WEAPON_CROSSBOW:INORGANIC:STEEL]<br />
+<br />
+[PRODUCT:100:1:WEAPON:ITEM_WEAPON_SPEAR_TRAINING:PLANT_MAT:OAK:WOOD]<br />
+<br />
+[PRODUCT:100:1:WEAPON:ITEM_WEAPON_SWORD_SHORT_TRAINING:PLANT_MAT:OAK:WOOD]<br />
+<br />
+[PRODUCT:100:1:WEAPON:ITEM_WEAPON_AXE_TRAINING:PLANT_MAT:OAK:WOOD]<br />
+<br />
+[PRODUCT:100:1:AMMO:ITEM_AMMO_BOLTS:INORGANIC:STEEL]<br />
+<br />
+[PRODUCT:100:1:ANVIL:NONE:INORGANIC:STEEL]<br />
+<br />
+[PRODUCT:100:1:SKIN_TANNED:NONE:CREATURE_MAT:WARTHOG:LEATHER]<br />
+<br />
+[PRODUCT:100:1:CLOTH:NONE:PLANT_MAT:GRASS_TAIL_PIG:THREAD]<br />
+<br />
+[PRODUCT:100:1:CLOTH:NONE:CREATURE_MAT:SPIDER_CAVE_GIANT:SILK]<br />
+<br />
+[PRODUCT:100:1:SMALLGEM:NONE:INORGANIC:DIAMOND_CLEAR]<br />
+<br />
+[PRODUCT:100:1:GEM:NONE:INORGANIC:DIAMOND_CLEAR]<br />
+<br />
+[REAGENT:A:1:BOX:NONE:NONE:NONE][BAG][EMPTY][PRESERVE_REAGENT]<br />
+[PRODUCT:100:1:POWDER_MISC:NONE:INORGANIC:SAND_RED][PRODUCT_TO_CONTAINER:A]<br />
+(Can be... SAND_RED, SAND_YELLOW, SAND_WHITE, SAND_BLACK, SAND<br />
+<br />
+[PRODUCT:100:1:ROUGH:NONE:GLASS_CRYSTAL:NONE]<br />
+<br />
+[PRODUCT:100:1:BLOCKS:NONE:INORGANIC:OBSIDIAN]<br />
+<br />
+[PRODUCT:100:1:TRAPCOMP:ITEM_TRAPCOMP_GIANTAXEBLADE:PLANT_MAT:OAK:WOOD]<br />
+<br />
+[PRODUCT:100:1:TRAPCOMP:ITEM_TRAPCOMP_ENORMOUSCORKSCREW:PLANT_MAT:OAK:WOOD]<br />
+<br />
+[PRODUCT:100:1:TRAPCOMP:ITEM_TRAPCOMP_SPIKEDBALL:PLANT_MAT:OAK:WOOD]<br />
+<br />
+[PRODUCT:100:1:TRAPCOMP:ITEM_TRAPCOMP_LARGESERRATEDDISC:PLANT_MAT:OAK:WOOD]<br />
+<br />
+[PRODUCT:100:1:TRAPCOMP:ITEM_TRAPCOMP_MENACINGSPIKE:PLANT_MAT:OAK:WOOD]<br />
+<br />
+[PRODUCT:100:1:SHIELD:ITEM_SHIELD_SHIELD:INORGANIC:STEEL]<br />
+<br />
+[PRODUCT:100:1:SHIELD:ITEM_SHIELD_BUCKLER:INORGANIC:STEEL]<br />
+<br />
+[PRODUCT:100:1:CHEESE:NONE:CREATURE_MAT:COW:CHEESE]<br />
+<br />
+[PRODUCT:100:1:CHEESE:NONE:CREATURE_MAT:HORSE:CHEESE]<br />
+<br />
+[PRODUCT:100:1:CHEESE:NONE:CREATURE_MAT:DONKEY:CHEESE]<br />
+<br />
+[REAGENT:A:1:BOX:NONE:NONE:NONE][BAG][EMPTY][PRESERVE_REAGENT]<br />
+[PRODUCT:100:1:POWDER_MISC:NONE:INORGANIC:PLASTER][PRODUCT_TO_CONTAINER:A]<br />
+<br />
+[REAGENT:A:1:BOX:NONE:NONE:NONE][BAG][EMPTY][PRESERVE_REAGENT]<br />
+[PRODUCT:100:1:POWDER_MISC:NONE:PLANT_MAT:POD_SWEET:MILL][PRODUCT_TO_CONTAINER:A]<br />
+<br />
+[REAGENT:A:1:BOX:NONE:NONE:NONE][BAG][EMPTY][PRESERVE_REAGENT]<br />
+[PRODUCT:100:1:POWDER_MISC:NONE:PLANT_MAT:MUSHROOM_CUP_DIMPLE:MILL][PRODUCT_TO_CONTAINER:A]<br />
+<br />
+[REAGENT:A:1:BOX:NONE:NONE:NONE][BAG][EMPTY][PRESERVE_REAGENT]<br />
+[PRODUCT:100:1:POWDER_MISC:NONE:PLANT_MAT:GRASS_WHEAT_CAVE:MILL][PRODUCT_TO_CONTAINER:A]<br />
+<br />
+[REAGENT:A:1:BARREL:NONE:NONE:NONE][EMPTY][PRESERVE_REAGENT]<br />
+[PRODUCT:100:1:LIQUID_MISC:NONE:CREATURE_MAT:COW:BLOOD][PRODUCT_TO_CONTAINER:A]<br />
+<br />
+[REAGENT:A:1:BARREL:NONE:NONE:NONE][EMPTY][PRESERVE_REAGENT]<br />
+[PRODUCT:100:1:LIQUID_MISC:NONE:CREATURE_MAT:COW:MILK][PRODUCT_TO_CONTAINER:A]<br />
+<br />
+[REAGENT:A:1:BARREL:NONE:NONE:NONE][EMPTY][PRESERVE_REAGENT]<br />
+[PRODUCT:100:1:LIQUID_MISC:NONE:PLANT_MAT:POD_SWEET:EXTRACT][PRODUCT_TO_CONTAINER:A]<br />
+<br />
+[REAGENT:A:1:BARREL:NONE:NONE:NONE][EMPTY][PRESERVE_REAGENT]<br />
+[PRODUCT:100:1:LIQUID_MISC:NONE:CREATURE_MAT:DRAGONFLY:ICHOR][PRODUCT_TO_CONTAINER:A]<br />
+<br />
+[REAGENT:A:1:BARREL:NONE:NONE:NONE][EMPTY][PRESERVE_REAGENT]<br />
+[PRODUCT:100:1:LIQUID_MISC:NONE:CREATURE_MAT:SPIDER_CAVE_GIANT:POISON][PRODUCT_TO_CONTAINER:A]<br />
+<br />
+[PRODUCT:100:1:EARRING:NONE:INORGANIC:CLAYSTONE]<br />
+<br />
+[PRODUCT:100:1:RING:NONE:INORGANIC:CLAYSTONE]<br />
+<br />
+[PRODUCT:100:1:FIGURINE:NONE:INORGANIC:CLAYSTONE]<br />
+<br />
+[PRODUCT:100:1:CROWN:NONE:INORGANIC:CLAYSTONE]<br />
+<br />
+[PRODUCT:100:1:SCEPTER:NONE:INORGANIC:CLAYSTONE]<br />
+<br />
+[PRODUCT:100:1:BRACELET:NONE:INORGANIC:CLAYSTONE]<br />
+<br />
+[PRODUCT:100:1:AMULET:NONE:INORGANIC:CLAYSTONE]<br />
+<br />
+[PRODUCT:100:1:CAGE:NONE:INORGANIC:NICKEL]<br />
+<br />
+[PRODUCT:100:1:BARREL:NONE:PLANT_MAT:OAK:WOOD]<br />
+<br />
+[PRODUCT:100:1:BUCKET:NONE:PLANT_MAT:OAK:WOOD]<br />
+<br />
+[PRODUCT:100:1:FLASK:NONE:CREATURE_MAT:WARTHOG:LEATHER]<br />
+<br />
+[PRODUCT:100:1:FLASK:NONE:INORGANIC:IRON]<br />
+<br />
+[PRODUCT:100:1:QUIVER:NONE:CREATURE_MAT:WARTHOG:LEATHER]<br />
+<br />
+[PRODUCT:100:1:BACKPACK:NONE:CREATURE_MAT:WARTHOG:LEATHER]<br />
+<br />
+[PRODUCT:100:1:BOX:NONE:CREATURE_MAT:WARTHOG:LEATHER]<br />
+<br />
+[PRODUCT:100:1:BOX:NONE:PLANT_MAT:GRASS_TAIL_PIG:THREAD]<br />
+<br />
+[PRODUCT:100:1:BOX:NONE:CREATURE_MAT:SPIDER_CAVE_GIANT:SILK]<br />
+<br />
+[PRODUCT:100:1:THREAD:NONE:PLANT_MAT:GRASS_TAIL_PIG:THREAD]<br />
+<br />
+[PRODUCT:100:1:THREAD:NONE:CREATURE_MAT:SPIDER_CAVE_GIANT:SILK]<br />
+<br />
+[PRODUCT:100:1:CHAIN:NONE:PLANT_MAT:GRASS_TAIL_PIG:THREAD]<br />
+<br />
+[PRODUCT:100:1:CHAIN:NONE:CREATURE_MAT:SPIDER_CAVE_GIANT:SILK]<br />
+<br />
+[PRODUCT:100:1:SPLINT:NONE:PLANT_MAT:OAK:WOOD]<br />
+<br />
+[PRODUCT:100:1:CRUTCH:NONE:PLANT_MAT:OAK:WOOD]<br />
+<br />
+[PRODUCT:100:1:BAR:NONE:COAL:COKE]<br />
+<br />
+[PRODUCT:100:1:BAR:NONE:PEARLASH:NONE]<br />
+<br />
+[PRODUCT:100:1:BAR:NONE:POTASH:NONE]<br />
+<br />
+[PRODUCT:100:1:BAR:NONE:COAL:CHARCOAL]<br />
+<br />
+[REAGENT:A:1:BARREL:NONE:NONE:NONE][EMPTY][PRESERVE_REAGENT]<br />
+[PRODUCT:100:1:LIQUID_MISC:NONE:LYE:NONE][PRODUCT_TO_CONTAINER:A]<br />
+<br />
+[PRODUCT:100:1:FLASK:VIAL:GLASS_XXX:NONE<br />
+(XXX can be GREEN, CLEAR or CRYSTAL)<br />
+<br />
+[PRODUCT:100:1:DOOR:NONE:METAL:GOLD]<br />
+<br />
+[PRODUCT:100:1:CHAIR:NONE:METAL:GOLD]<br />
+<br />
+[PRODUCT:100:1:TABLE:NONE:METAL:GOLD]<br />
+<br />
+[PRODUCT:100:2:BOX:NO_SUBTYPE:METAL:GOLD]<br />
+<br />
+[PRODUCT:100:2:CABINET:NONE:METAL:GOLD]<br />
+<br />
+[PRODUCT:100:1:BED:NONE:METAL:GOLD]<br />
+<br />
+[PRODUCT:100:1:ARMORSTAND:NONE:METAL:GOLD]<br />
+<br />
+[PRODUCT:100:1:WEAPONRACK:NONE:METAL:GOLD]<br />
+<br />
+[PRODUCT:100:1:STATUE:NO_SUBTYPE:METAL:ADAMANTINE]<br />
+<br />
+[PRODUCT:100:1:SIEGEAMMO:ITEM_SIEGEAMMO_BALLISTA:METAL:STEEL]<br />
+<br />
+[PRODUCT:100:1:BALLISTAPARTS:NO_SUBTYPE:METAL:STEEL]
+|-
+|}
+{| class="collapsible collapsed infobox" style="background-color: white; border: 1px solid darkgrey; font-size: 100%; padding: 2px; text-align: center; width: 100%;"
+! colspan="2" style="border: 1px solid darkgrey; font-weight: bold; background-color: lightblue; padding-left: 1em; padding-right: 1em; width:100%; display:table-cell;" | Most Creature Specific Products
+|- style="text-align: left; display:table-cell; "
+|Please see full creature list to fill in CCC.<br />
+<br />
+[PRODUCT:100:1:MEAT:NONE:CREATURE_MAT:CCC:MUSCLE]<br />
+<br />
+[PRODUCT:100:1:MEAT:NONE:CREATURE_MAT:CCC:BRAIN]<br />
+<br />
+[PRODUCT:100:1:MEAT:NONE:CREATURE_MAT:CCC:KIDNEY]<br />
+<br />
+[PRODUCT:100:1:MEAT:NONE:CREATURE_MAT:CCC:SPLEEN]<br />
+<br />
+[PRODUCT:100:1:MEAT:NONE:CREATURE_MAT:CCC:PANCREAS]<br />
+<br />
+[PRODUCT:100:1:MEAT:NONE:CREATURE_MAT:CCC:STOMACH]<br />
+<br />
+[PRODUCT:100:1:MEAT:NONE:CREATURE_MAT:CCC:LIVER]<br />
+<br />
+[PRODUCT:100:1:MEAT:NONE:CREATURE_MAT:CCC:GUT]<br />
+<br />
+[PRODUCT:100:1:MEAT:NONE:CREATURE_MAT:CCC:HEART]<br />
+<br />
+[PRODUCT:100:1:MEAT:NONE:CREATURE_MAT:CCC:LUNG]<br />
+<br />
+[PRODUCT:100:1:FISH:NONE:LOBSTER_CAVE:MALE]<br />
+<br />
+[PRODUCT:100:1:FISH:NONE:LOBSTER_CAVE:FEMALE]<br />
+<br />
+[PRODUCT:100:1:FISH:NONE:FISH_CAVE:MALE]<br />
+<br />
+[PRODUCT:100:1:FISH:NONE:FISH_CAVE:FEMALE]
+|-
+|}
+{| class="collapsible collapsed infobox" style="background-color: white; border: 1px solid darkgrey; font-size: 100%; padding: 2px; text-align: center; width: 100%;"
+! colspan="2" style="border: 1px solid darkgrey; font-weight: bold; background-color: lightblue; padding-left: 1em; padding-right: 1em; width:100%; display:table-cell;" | Skills List
+|- style="text-align: left; display:table-cell; "
+|MINING<br />
+WOODCUTTING<br />
+CARPENTRY<br />
+DETAILSTONE<br />
+MASONRY<br />
+PROCESSFISH<br />
+TRAPPING<br />
+WEAVING<br />
+BREWING<br />
+ALCHEMY<br />
+EXTRACT_STRAND<br />
+CLOTHESMAKING<br />
+MILLING<br />
+PROCESSPLANTS<br />
+CHEESEMAKING<br />
+HERBALISM<br />
+CUTGEM<br />
+ENCRUSTGEM<br />
+WOODCRAFT<br />
+STONECRAFT<br />
+METALCRAFT<br />
+LEATHERWORK<br />
+BONECARVE<br />
+AXE<br />
+SWORD<br />
+MISC_WEAPON (not too sure what weapons fall under this)<br />
+DAGGER<br />
+MACE<br />
+HAMMER<br />
+SPEAR<br />
+CROSSBOW<br />
+SHIELD<br />
+ARMOR<br />
+PIKE<br />
+WHIP<br />
+BOW<br />
+BLOWGUN<br />
+THROW<br />
+MECHANICS<br />
+MAGIC_NATURE (this raises "druid" iirc)<br />
+SNEAK (raises "ambush" must have hunter to train this iirc)<br />
+DESIGNBUILDING<br />
+DRESS_WOUNDS<br />
+SET_BONE<br />
+SUTURE<br />
+CRUTCH_WALK<br />
+WOOD_BURNING<br />
+SOAP_MAKING<br />
+SWIMMING<br />
+NEGOTIATION<br />
+JUDGING_INTENT<br />
+APPRAISAL<br />
+ORGANIZATION<br />
+RECORD_KEEPING<br />
+INTIMIDATION<br />
+CONVERSATION<br />
+COMEDY<br />
+FLATTERY<br />
+CONSOLE<br />
+PACIFY<br />
+TRACKING<br />
+KNOWLEDGE_ACQUISITION (this raises "student" skill)<br />
+CONCENTRATION<br />
+SITUATIONAL_AWARENESS<br />
+PROSE (this raises "writing" skill")<br />
+READING<br />
+SPEAKING<br />
+COORDINATION<br />
+LEADERSHIP<br />
+TEACHING<br />
+MELEE_COMBAT (one of the few that don't seem to be used by dwarves)<br />
+RANGED_COMBAT (one of the few that don't seem to be used by dwarves)<br />
+WRESTLING<br />
+BITE<br />
+GRASP_STRIKE (one of the few that don't seem to be used by dwarves)<br />
+STANCE_STRIKE (one of the few that don't seem to be used by dwarves)<br />
+DODGING
+|-
+|}
+{| class="collapsible collapsed infobox" style="background-color: white; border: 1px solid darkgrey; font-size: 100%; padding: 2px; text-align: center; width: 100%;"
+! colspan="2" style="border: 1px solid darkgrey; font-weight: bold; background-color: lightblue; padding-left: 1em; padding-right: 1em; width:100%; display:table-cell;" | Creature List
+|- style="text-align: left; display:table-cell; "
+|TOAD<br />
+WORM<br />
+BIRD_BLUEJAY<br />
+BIRD_CARDINAL<br />
+BIRD_GRACKLE<br />
+BIRD_ORIOLE<br />
+BIRD_RW_BLACKBIRD<br />
+DOG<br />
+CAT<br />
+MULE<br />
+DONKEY<br />
+HORSE<br />
+COW<br />
+CHIMERA<br />
+CENTAUR<br />
+GRIFFON<br />
+FLY<br />
+ROACH_LARGE<br />
+BEETLE<br />
+ANT<br />
+BUTTERFLY_MONARCH<br />
+FIREFLY<br />
+DRAGONFLY<br />
+GOAT_MOUTAIN<br />
+MARMOT_HOARY<br />
+BIRD_EAGLE_GIANT<br />
+GNOME_MOUNTAIN<br />
+GNOME_DARK<br />
+WALRUS<br />
+WHALE<br />
+FISH_LAMPREY_SEA<br />
+SHARK_GREAT_WHITE<br />
+SHARK_FRILL<br />
+SHARK_SPINY_DOGFISH<br />
+SHARK_WOBBEGONG_SPOTTED<br />
+SHARK_WHALE<br />
+SHARK_BASKING<br />
+SHARK_NURSE<br />
+SHARK_MAKO_SHORTFIN<br />
+SHARK_MAKO_LONGFIN<br />
+SHARK_TIGER<br />
+SHARK_BULL<br />
+SHARK_REEF_BLACKTIP<br />
+SHARK_REEF_WHITETIP<br />
+SHARK_BLUE<br />
+SHARK_HAMMERHEAD<br />
+SHARK_ANGEL<br />
+FISH_SKATE_COMMON<br />
+FISH_RAY_MANTA<br />
+FISH_STINGRAY<br />
+FISH_COELACANTH<br />
+FISH_STURGEON<br />
+FISH_CONGER_EEL<br />
+FISH_MILKFISH<br />
+FISH_COD<br />
+FISH_OPAH<br />
+FISH_GROUPER_GIANT<br />
+FISH_BLUEFISH<br />
+FISH_SUNFISH_OCEAN<br />
+FISH_SWORDFISH<br />
+FISH_MARLIN<br />
+FISH_HALIBUT<br />
+FISH_BARRACUDA_GREAT<br />
+FISH_TUNA_BLUEFIN<br />
+HIPPO<br />
+FISH_GAR_LONGNOSE<br />
+FISH_CARP<br />
+FISH_TIGERFISH<br />
+FISH_PIKE<br />
+BEAR_GRIZZLY<br />
+BEAR_BLACK<br />
+DEER<br />
+FOX<br />
+RACCOON<br />
+MACAQUE_RHESUS<br />
+COUGAR<br />
+WOLF<br />
+GROUNDHOG<br />
+ALLIGATOR<br />
+BIRD_BUZZARD<br />
+ELEPHANT<br />
+WARTHOG<br />
+LION<br />
+LEOPARD<br />
+JAGUAR<br />
+TIGER<br />
+CHEETAH<br />
+GAZELLE<br />
+MANDRILL<br />
+CHIMPANZEE<br />
+BONOBO<br />
+GORILLA<br />
+ORANGUTAN<br />
+GIBBON_SIAMANG<br />
+GIBBON_WHITE_HANDED<br />
+GIBBON_BLACK_HANDED<br />
+GIBBON_GRAY<br />
+GIBBON_SILVERY<br />
+GIBBON_PILEATED<br />
+GIBBON_BILOU<br />
+GIBBON_WHITE_BROWED<br />
+GIBBON_BLACK_CRESTED<br />
+CAMEL_1_HUMP<br />
+CAMEL_2_HUMP<br />
+CROCODILE_SALTWATER<br />
+BIRD_VULTURE<br />
+MUSKOX<br />
+ELK<br />
+BEAR_POLAR<br />
+FLOATING_GUTS<br />
+DRUNIAN<br />
+CREEPING_EYE<br />
+VORACIOUS_CAVE_CRAWLER<br />
+BLIND_CAVE_OGRE<br />
+CAP_HOPPER<br />
+MAGMA_CRAB<br />
+CRUNDLE<br />
+HUNGRY_HEAD<br />
+FLESH_BALL<br />
+ELK_BIRD<br />
+HELMET_SNAKE<br />
+GREEN_DEVOURER<br />
+RUTHERER<br />
+CREEPY_CRAWLER<br />
+DRALTHA<br />
+GIANT_EARTHWORM<br />
+BLOOD_MAN<br />
+BUGBAT<br />
+MANERA<br />
+MOLEMARIAN<br />
+JABBERER<br />
+POND_GRABBER<br />
+BLIND_CAVE_BEAR<br />
+CAVE_DRAGON<br />
+REACHER<br />
+ELEMENTMAN_GABBRO<br />
+CAVE_FLOATER<br />
+PLUMP_HELMET_MAN<br />
+CAVE_BLOB<br />
+ELEMENTMAN_AMETHYST<br />
+FOXSQUIRREL<br />
+MOGHOPPER<br />
+RAT_DEMON<br />
+WAMBLER_FLUFFY<br />
+LIZARD_RHINO_TWO_LEGGED<br />
+WORM_KNUCKLE<br />
+SPIDER_PHANTOM<br />
+FLY_ACORN<br />
+GNAT_BLOOD<br />
+SNAILMAN<br />
+SLUGMAN<br />
+LEECHMAN<br />
+LIZARD<br />
+TURTLE<br />
+LION_GIANT<br />
+LEOPARD_GIANT<br />
+JAGUAR_GIANT<br />
+TIGER_GIANT<br />
+CHEETAH_GIANT<br />
+SCORPION_DESERT_GIANT<br />
+TIGERMAN<br />
+RAT<br />
+SQUIRREL_GRAY<br />
+SQUIRREL_RED<br />
+CHIPMUNK<br />
+HEDGEHOG<br />
+MUSSEL<br />
+OYSTER<br />
+FISH_SALMON<br />
+FISH_CLOWNFISH<br />
+FISH_HAGFISH<br />
+FISH_LAMPREY_BROOK<br />
+FISH_RAY_BAT<br />
+FISH_RAY_THORNBACK<br />
+FISH_RATFISH_SPOTTED<br />
+FISH_HERRING<br />
+FISH_SHAD<br />
+FISH_ANCHOVY<br />
+FISH_TROUT_STEELHEAD<br />
+FISH_HAKE<br />
+FISH_SEAHORSE<br />
+FISH_GLASSEYE<br />
+FISH_PUFFER_WHITE_SPOTTED<br />
+FISH_SOLE<br />
+FISH_FLOUNDER<br />
+FISH_MACKEREL<br />
+JELLYFISH_SEA_NETTLE<br />
+FISH_LUNGFISH<br />
+FISH_LOACH_CLOWN<br />
+FISH_BULLHEAD_BROWN<br />
+FISH_BULLHEAD_YELLOW<br />
+FISH_BULLHEAD_BLACK<br />
+FISH_KNIFEFISH_BANDED<br />
+FISH_CHAR<br />
+FISH_TROUT_RAINBOW<br />
+FISH_MOLLY_SAILFIN<br />
+FISH_GUPPY<br />
+FISH_PERCH<br />
+DWARF<br />
+HUMAN<br />
+ELF<br />
+GOBLIN<br />
+KOBOLD<br />
+GREMLIN<br />
+TROLL<br />
+OGRE<br />
+UNICORN<br />
+DRAGON<br />
+SATYR<br />
+COLOSSUS_BRONZE<br />
+GIANT<br />
+CYCLOPS<br />
+ETTIN<br />
+MINOTAUR<br />
+YETI<br />
+SASQUATCH<br />
+BLIZZARD_MAN<br />
+WOLF_ICE<br />
+FAIRY<br />
+PIXIE<br />
+BEAK_DOG<br />
+GRIMELING<br />
+WEREWOLF<br />
+BLENDEC_FOUL<br />
+STRANGLER<br />
+NIGHTWING<br />
+HARPY<br />
+HYDRA<br />
+MERPERSON<br />
+SEA_SERPENT<br />
+SEA_MONSTER<br />
+CROCODILE_CAVE<br />
+TOAD_GIANT<br />
+OLM_GIANT<br />
+BAT_GIANT<br />
+RAT_GIANT<br />
+RAT_LARGE<br />
+MOLE_DOG_NAKED<br />
+TROGLODYTE<br />
+MOLE_GIANT<br />
+IMP_FIRE<br />
+SPIDER_CAVE_GIANT<br />
+SPIDER_CAVE<br />
+FISH_CAVE<br />
+CAVE_FISH_MAN<br />
+LOBSTER_CAVE<br />
+SNAKE_FIRE<br />
+OLM<br />
+OLM_MAN<br />
+BAT<br />
+BAT_MAN<br />
+MAGGOT_PURRING<br />
+ELEMENTMAN_FIRE<br />
+ELEMENTMAN_MAGMA<br />
+ELEMENTMAN_IRON<br />
+ELEMENTMAN_MUD<br />
+BIRD_SWALLOW_CAVE<br />
+CAVE_SWALLOW_MAN<br />
+BIRD_SWALLOW_CAVE_GIANT<br />
+AMPHIBIAN_MAN<br />
+REPTILE_MAN<br />
+SERPENT_MAN<br />
+ANT_MAN
+|-
+|}
+{| class="collapsible collapsed infobox" style="background-color: white; border: 1px solid darkgrey; font-size: 100%; padding: 2px; text-align: center; width: 100%;"
+! colspan="2" style="border: 1px solid darkgrey; font-weight: bold; background-color: lightblue; padding-left: 1em; padding-right: 1em; width:100%; display:table-cell;" | Basic Body Modification
+|- style="text-align: left; display:table-cell; "
+|This section has some basic body modifications to change your dwarves in a subtle  way.
+<br />
+<br />
+'''Just copy from the points indicated by bold to the matching points in the creature_standard.txt and paste over any of the information that is in-between the 2 bold points of the original'''<br />
+<br />
+{| class="collapsible collapsed infobox" style="background-color: white; border: 1px solid darkgrey; font-size: 100%; padding: 2px; text-align: center; width: 100%;"
+! colspan="2" style="border: 1px solid darkgrey; font-weight: bold; background-color: lightblue; padding-left: 1em; padding-right: 1em; width:100%; display:table-cell;" | Obsidian Skin & Bones
+|- style="text-align: left; display:table-cell; "
+|'''Next we use body detail plans (which have their own raw file) to streamline the addition of some of the common materials, tissues and their relationships with each other.'''<br />
+<br />
+[BODY_DETAIL_PLAN:STANDARD_MATERIALS]<br />
+[BODY_DETAIL_PLAN:STANDARD_TISSUES]<br />
+[BODY_DETAIL_PLAN:HEAD_HAIR_TISSUE_LAYERS]<br />
+<br />
+[BODY_DETAIL_PLAN:VERTEBRATE_TISSUE_LAYERS:SKIN_OBSIDIAN:FAT:MUSCLE:BONE_OBSIDIAN:CARTILAGE]<br />
+<br />
+[TISSUE:SKIN_OBSIDIAN]<br />
+[TISSUE_NAME:obsidian:NP]<br />
+[SCARS]<br />
+[TISSUE_MATERIAL:INORGANIC:OBSIDIAN]<br />
+[RELATIVE_THICKNESS:1]<br />
+[HEALING_RATE:1]<br />
+[VASCULAR:1]<br />
+[CONNECTS]<br />
+[TISSUE_SHAPE:LAYER]<br />
+<br />
+[TISSUE:BONE_OBSIDIAN]<br />
+[TISSUE_NAME:obsidianbone:NP]<br />
+[STRUCTURAL]<br />
+[CONNECTIVE_TISSUE_ANCHOR]<br />
+[TISSUE_MATERIAL:INORGANIC:OBSIDIAN]<br />
+[RELATIVE_THICKNESS:2]<br />
+[HEALING_RATE:1]<br />
+[VASCULAR:3]<br />
+[CONNECTS]<br />
+[TISSUE_SHAPE:LAYER]<br />
+[SETTABLE]<br />
+[SPLINTABLE]<br />
+<br />
+[BODY_DETAIL_PLAN:STANDARD_MATERIALS]<br />
+[REMOVE_MATERIAL:BONE]<br />
+[REMOVE_MATERIAL:SKIN]<br />
+<br />
+[BODY_DETAIL_PLAN:STANDARD_TISSUES]<br />
+[REMOVE_TISSUE:BONE]<br />
+[REMOVE_TISSUE:SKIN]<br />
+<br />
+[SELECT_TISSUE_LAYER:BY_CATEGORY:ALL]<br />
+[TL_HEALING_RATE:1]<br />
+<br />
+[SELECT_MATERIAL:ALL] ''You don't need this part. It just makes your dwarves' skin and bones never melt or freeze. If you don't want it then just skip this part.''<br />
+[COLDDAM_POINT:NONE]<br />
+[HEATDAM_POINT:NONE]<br />
+[IGNITE_POINT:NONE]<br />
+[IF_EXISTS_SET_MELTING_POINT:NONE]<br />
+[IF_EXISTS_SET_BOILING_POINT:NONE]<br />
+[SPEC_HEAT:NONE]<br />
+<br />
+<br />
+<br />
+'''Eyebrows and eyelashes are manually added here.'''<br />
+|-
+|}
+{| class="collapsible collapsed infobox" style="background-color: white; border: 1px solid darkgrey; font-size: 100%; padding: 2px; text-align: center; width: 100%;"
+! colspan="2" style="border: 1px solid darkgrey; font-weight: bold; background-color: lightblue; padding-left: 1em; padding-right: 1em; width:100%; display:table-cell;" | Obsidian Tendons and Ligaments
+|- style="text-align: left; display:table-cell; "
+|'''Tendons and ligaments are currently very abstract, but adding these flags will let wounds occur that damage them.  The number afterward is the healing rate.  Lower is faster.'''<br />
+<br />
+<br />
+<br />
+[TENDONS:LOCAL_CREATURE_MAT:OBSIDIAN:1]<br />
+[LIGAMENTS:LOCAL_CREATURE_MAT:OBSIDIAN:1]<br />
+<br />
+[TISSUE:OBSIDIAN]<br />
+[TISSUE_NAME:obsidian:np]<br />
+[TISSUE_MATERIAL:INORGANIC:OBSIDIAN]<br />
+[MUSCULAR]<br />
+[FUNCTIONAL]<br />
+[STRUCTURAL]<br />
+[RELATIVE_THICKNESS:1]<br />
+[CONNECTS]<br />
+[TL_HEALING_RATE:1]<br />
+[TISSUE_SHAPE:LAYER]<br />
+<br />
+'''This makes the creature susceptible to severed nerves when muscles are torn in limb, grasp and stance parts.'''<br />
+|-
+|}
+{| class="collapsible collapsed infobox" style="background-color: white; border: 1px solid darkgrey; font-size: 100%; padding: 2px; text-align: center; width: 100%;"
+! colspan="2" style="border: 1px solid darkgrey; font-weight: bold; background-color: lightblue; padding-left: 1em; padding-right: 1em; width:100%; display:table-cell;" | Obsidian Skin Colors
+|- style="text-align: left; display:table-cell; "
+|==''This is very important to have, as it prevents the whole thing from not working and or spamming the error log with messages''==<br />
+<br />
+'''Here all of the skin is selected and various colors are listed.'''<br />
+<br />
+[SET_TL_GROUP:BY_CATEGORY:ALL:SKIN_OBSIDIAN]<br />
+[TL_COLOR_MODIFIER:BROWN:1:BURNT_UMBER:1:CINNAMON:1:COPPER:1:DARK_BROWN:1:DARK_PEACH:1:DARK_TAN:1:ECRU:1:PALE_BROWN:1:PALE_CHESTNUT:1:PALE_PINK:1:PEACH:1:PINK:1:RAW_UMBER:1:SEPIA:1:TAN:1:TAUPE_PALE:1:TAUPE_SANDY:1]<br />
+[TLCM_NOUN:skin:SINGULAR]<br />
+<br />
+[TISSUE_LAYER_APPEARANCE_MODIFIER:WRINKLY:0:0:0:0:0:0:0]<br />
+[APP_MOD_RATE:1:YEARLY:0:100:60:0:NO_END]<br />
+[APP_MOD_NOUN:skin:SINGULAR]<br />
+[APP_MOD_DESC_RANGE:0:0:0:1:25:50]<br />
+<br />
+'''Now we do the eyes, using the somewhat clunky eye color patterns.'''<br />
+|-
+|}
+|-
+|}
+
+== Finished Reactions/Buildings ==
+=== SKILLS ===
+{| class="collapsible collapsed infobox" style="background-color: white; border: 1px solid darkgrey; font-size: 100%; padding: 2px; text-align: center; width: 100%;"
+! colspan="2" style="border: 1px solid darkgrey; font-weight: bold; background-color: lightblue; padding-left: 1em; padding-right: 1em; width:100%; display:table-cell;" | Skill Training
+|- style="text-align: left; display:table-cell; "
+|'''How to train your dwarf'''<br />
+<br />
+'''What is here...'''<br />
+'''87 reactions... that will train your dwarf in near every skill imaginable (I excluded some for the sake that dwarves don't really use them.)'''<br />
+'''2 custom buildings... these are to separate what I called civilian skills and military skills... red military, blue civilian.'''<br />
+'''89 permit listings... these are to allow your race (dwarf) to use the buildings and the reactions.'''<br />
+<br />
+'''All of what is contained here is required to have a custom building and custom reaction. Please remember that you MUST generate a new world when you ADD new reactions or buildings.'''
+{| class="collapsible collapsed infobox" style="background-color: white; border: 1px solid darkgrey; font-size: 100%; padding: 2px; text-align: center; width: 100%;"
+! colspan="2" style="border: 1px solid darkgrey; font-weight: bold; background-color: lightblue; padding-left: 1em; padding-right: 1em; width:100%; display:table-cell;" | reaction_cheats_skills.txt
+|- style="text-align: left; display:table-cell; "
+|reaction_cheats_skill<br />
+<br />
+[OBJECT:REACTION]<br />
+<br />
+[REACTION:TRAIN_M_001]<br />
+[NAME:Train Sneak]<br />
+[BUILDING:TRAINING_BOOTH_MILITARY:NONE]<br />
+[SKILL:SNEAK]<br />
+<br />
+[REACTION:TRAIN_M_002]<br />
+[NAME:Train Dodging]<br />
+[BUILDING:TRAINING_BOOTH_MILITARY:NONE]<br />
+[SKILL:DODGING]<br />
+<br />
+[REACTION:TRAIN_M_003]<br />
+[NAME:Train Biting]<br />
+[BUILDING:TRAINING_BOOTH_MILITARY:NONE]<br />
+[SKILL:BITE]<br />
+<br />
+[REACTION:TRAIN_M_004]<br />
+[NAME:Train Wrestling]<br />
+[BUILDING:TRAINING_BOOTH_MILITARY:NONE]<br />
+[SKILL:WRESTLING]<br />
+<br />
+[REACTION:TRAIN_M_005]<br />
+[NAME:Train Armor]<br />
+[BUILDING:TRAINING_BOOTH_MILITARY:NONE]<br />
+[SKILL:ARMOR]<br />
+<br />
+[REACTION:TRAIN_M_006]<br />
+[NAME:Train Shield]<br />
+[BUILDING:TRAINING_BOOTH_MILITARY:NONE]<br />
+[SKILL:SHIELD]<br />
+<br />
+[REACTION:TRAIN_M_007]<br />
+[NAME:Train Crossbow]<br />
+[BUILDING:TRAINING_BOOTH_MILITARY:NONE]<br />
+[SKILL:CROSSBOW]<br />
+<br />
+[REACTION:TRAIN_M_008]<br />
+[NAME:Train Spear]<br />
+[BUILDING:TRAINING_BOOTH_MILITARY:NONE]<br />
+[SKILL:SPEAR]<br />
+<br />
+[REACTION:TRAIN_M_009]<br />
+[NAME:Train Hammer]<br />
+[BUILDING:TRAINING_BOOTH_MILITARY:NONE]<br />
+[SKILL:HAMMER]<br />
+<br />
+[REACTION:TRAIN_M_010]<br />
+[NAME:Train Mace]<br />
+[BUILDING:TRAINING_BOOTH_MILITARY:NONE]<br />
+[SKILL:MACE]<br />
+<br />
+[REACTION:TRAIN_M_011]<br />
+[NAME:Train Sword]<br />
+[BUILDING:TRAINING_BOOTH_MILITARY:NONE]<br />
+[SKILL:SWORD]<br />
+<br />
+[REACTION:TRAIN_M_012]<br />
+[NAME:Train Axe]<br />
+[BUILDING:TRAINING_BOOTH_MILITARY:NONE]<br />
+[SKILL:AXE]<br />
+<br />
+[REACTION:TRAIN_C_001]<br />
+[NAME:Train Smelt]<br />
+[BUILDING:TRAINING_BOOTH_CIVILIAN:NONE]<br />
+[SKILL:SMELT]<br />
+<br />
+[REACTION:TRAIN_C_002]<br />
+[NAME:Train Glassmaker]<br />
+[BUILDING:TRAINING_BOOTH_CIVILIAN:NONE]<br />
+[SKILL:GLASSMAKER]<br />
+<br />
+[REACTION:TRAIN_C_003]<br />
+[NAME:Train Dyer]<br />
+[BUILDING:TRAINING_BOOTH_CIVILIAN:NONE]<br />
+[SKILL:DYER]<br />
+<br />
+[REACTION:TRAIN_C_004]<br />
+[NAME:Train Writing]<br />
+[BUILDING:TRAINING_BOOTH_CIVILIAN:NONE]<br />
+[SKILL:PROSE]<br />
+<br />
+[REACTION:TRAIN_C_005]<br />
+[NAME:Train Cook]<br />
+[BUILDING:TRAINING_BOOTH_CIVILIAN:NONE]<br />
+[SKILL:COOK]<br />
+<br />
+[REACTION:TRAIN_C_006]<br />
+[NAME:Train Butcher]<br />
+[BUILDING:TRAINING_BOOTH_CIVILIAN:NONE]<br />
+[SKILL:BUTCHER]<br />
+<br />
+[REACTION:TRAIN_C_007]<br />
+[NAME:Train Tanner]<br />
+[BUILDING:TRAINING_BOOTH_CIVILIAN:NONE]<br />
+[SKILL:TANNER]<br />
+<br />
+[REACTION:TRAIN_C_008]<br />
+[NAME:Train Bowyer]<br />
+[BUILDING:TRAINING_BOOTH_CIVILIAN:NONE]<br />
+[SKILL:BOWYER]<br />
+<br />
+[REACTION:TRAIN_C_009]<br />
+[NAME:Train Animal Train]<br />
+[BUILDING:TRAINING_BOOTH_CIVILIAN:NONE]<br />
+[SKILL:ANIMALTRAIN]<br />
+<br />
+[REACTION:TRAIN_C_010]<br />
+[NAME:Train Animal Care]<br />
+[BUILDING:TRAINING_BOOTH_CIVILIAN:NONE]<br />
+[SKILL:ANIMALCARE]<br />
+<br />
+[REACTION:TRAIN_C_011]<br />
+[NAME:Train Diagnose]<br />
+[BUILDING:TRAINING_BOOTH_CIVILIAN:NONE]<br />
+[SKILL:DIAGNOSE]<br />
+<br />
+[REACTION:TRAIN_C_012]<br />
+[NAME:Train Surgery]<br />
+[BUILDING:TRAINING_BOOTH_CIVILIAN:NONE]<br />
+[SKILL:SURGERY]<br />
+<br />
+[REACTION:TRAIN_C_013]<br />
+[NAME:Train Dissect Vermin]<br />
+[BUILDING:TRAINING_BOOTH_CIVILIAN:NONE]<br />
+[SKILL:DISSECT_VERMIN]<br />
+<br />
+[REACTION:TRAIN_C_014]<br />
+[NAME:Train Milk]<br />
+[BUILDING:TRAINING_BOOTH_CIVILIAN:NONE]<br />
+[SKILL:MILK]<br />
+<br />
+[REACTION:TRAIN_C_015]<br />
+[NAME:Train Dissect Fish]<br />
+[BUILDING:TRAINING_BOOTH_CIVILIAN:NONE]<br />
+[SKILL:DISSECT_FISH]<br />
+<br />
+[REACTION:TRAIN_C_016]<br />
+[NAME:Train Forge Weapon]<br />
+[BUILDING:TRAINING_BOOTH_CIVILIAN:NONE]<br />
+[SKILL:FORGE_WEAPON]<br />
+<br />
+[REACTION:TRAIN_C_017]<br />
+[NAME:Train Forge Armor]<br />
+[BUILDING:TRAINING_BOOTH_CIVILIAN:NONE]<br />
+[SKILL:FORGE_ARMOR]<br />
+<br />
+[REACTION:TRAIN_C_018]<br />
+[NAME:Train Forge Furniture]<br />
+[BUILDING:TRAINING_BOOTH_CIVILIAN:NONE]<br />
+[SKILL:FORGE_FURNITURE]<br />
+<br />
+[REACTION:TRAIN_C_019]<br />
+[NAME:Train Extract Strand]<br />
+[BUILDING:TRAINING_BOOTH_CIVILIAN:NONE]<br />
+[SKILL:EXTRACT_STRAND]<br />
+<br />
+[REACTION:TRAIN_C_020]<br />
+[NAME:Train Siege Craft]<br />
+[BUILDING:TRAINING_BOOTH_CIVILIAN:NONE]<br />
+[SKILL:SIEGECRAFT]<br />
+<br />
+[REACTION:TRAIN_C_021]<br />
+[NAME:Train Siege Operate]<br />
+[BUILDING:TRAINING_BOOTH_CIVILIAN:NONE]<br />
+[SKILL:SIEGEOPERATE]<br />
+<br />
+[REACTION:TRAIN_C_022]<br />
+[NAME:Train Potash Making]<br />
+[BUILDING:TRAINING_BOOTH_CIVILIAN:NONE]<br />
+[SKILL:POTASH_MAKING]<br />
+<br />
+[REACTION:TRAIN_C_023]<br />
+[NAME:Train Lye Making]<br />
+[BUILDING:TRAINING_BOOTH_CIVILIAN:NONE]<br />
+[SKILL:LYE_MAKING]<br />
+<br />
+[REACTION:TRAIN_C_024]<br />
+[NAME:Train Operate Pump]<br />
+[BUILDING:TRAINING_BOOTH_CIVILIAN:NONE]<br />
+[SKILL:OPERATE_PUMP]<br />
+<br />
+[REACTION:TRAIN_C_025]<br />
+[NAME:Train Mining]<br />
+[BUILDING:TRAINING_BOOTH_CIVILIAN:NONE]<br />
+[SKILL:MINING]<br />
+<br />
+[REACTION:TRAIN_C_026]<br />
+[NAME:Train Woodcutting]<br />
+[BUILDING:TRAINING_BOOTH_CIVILIAN:NONE]<br />
+[SKILL:WOODCUTTING]<br />
+<br />
+[REACTION:TRAIN_C_027]<br />
+[NAME:Train Carpentry]<br />
+[BUILDING:TRAINING_BOOTH_CIVILIAN:NONE]<br />
+[SKILL:CARPENTRY]<br />
+<br />
+[REACTION:TRAIN_C_028]<br />
+[NAME:Train Detail Stone]<br />
+[BUILDING:TRAINING_BOOTH_CIVILIAN:NONE]<br />
+[SKILL:DETAILSTONE]<br />
+<br />
+[REACTION:TRAIN_C_029]<br />
+[NAME:Train Masonry]<br />
+[BUILDING:TRAINING_BOOTH_CIVILIAN:NONE]<br />
+[SKILL:MASONRY]<br />
+<br />
+[REACTION:TRAIN_C_030]<br />
+[NAME:Train Process Fish]<br />
+[BUILDING:TRAINING_BOOTH_CIVILIAN:NONE]<br />
+[SKILL:PROCESSFISH]<br />
+<br />
+[REACTION:TRAIN_C_031]<br />
+[NAME:Train Trapping]<br />
+[BUILDING:TRAINING_BOOTH_CIVILIAN:NONE]<br />
+[SKILL:TRAPPING]<br />
+<br />
+[REACTION:TRAIN_C_032]<br />
+[NAME:Train Weaving]<br />
+[BUILDING:TRAINING_BOOTH_CIVILIAN:NONE]<br />
+[SKILL:WEAVING]<br />
+<br />
+[REACTION:TRAIN_C_033]<br />
+[NAME:Train Brewing]<br />
+[BUILDING:TRAINING_BOOTH_CIVILIAN:NONE]<br />
+[SKILL:BREWING]<br />
+<br />
+[REACTION:TRAIN_C_034]<br />
+[NAME:Train Alchemy]<br />
+[BUILDING:TRAINING_BOOTH_CIVILIAN:NONE]<br />
+[SKILL:ALCHEMY]<br />
+<br />
+[REACTION:TRAIN_C_035]<br />
+[NAME:Train Clothes Making]<br />
+[BUILDING:TRAINING_BOOTH_CIVILIAN:NONE]<br />
+[SKILL:CLOTHESMAKING]<br />
+<br />
+[REACTION:TRAIN_C_036]<br />
+[NAME:Train Milling]<br />
+[BUILDING:TRAINING_BOOTH_CIVILIAN:NONE]<br />
+[SKILL:MILLING]<br />
+<br />
+[REACTION:TRAIN_C_037]<br />
+[NAME:Train Process Plants]<br />
+[BUILDING:TRAINING_BOOTH_CIVILIAN:NONE]<br />
+[SKILL:PROCESSPLANTS]<br />
+<br />
+[REACTION:TRAIN_C_038]<br />
+[NAME:Train Cheese Making]<br />
+[BUILDING:TRAINING_BOOTH_CIVILIAN:NONE]<br />
+[SKILL:CHEESEMAKING]<br />
+<br />
+[REACTION:TRAIN_C_039]<br />
+[NAME:Train Herbalism]<br />
+[BUILDING:TRAINING_BOOTH_CIVILIAN:NONE]<br />
+[SKILL:HERBALISM]<br />
+<br />
+[REACTION:TRAIN_C_040]<br />
+[NAME:Train Cut Gem]<br />
+[BUILDING:TRAINING_BOOTH_CIVILIAN:NONE]<br />
+[SKILL:CUTGEM]<br />
+<br />
+[REACTION:TRAIN_C_041]<br />
+[NAME:Train Encrust Gem]<br />
+[BUILDING:TRAINING_BOOTH_CIVILIAN:NONE]<br />
+[SKILL:ENCRUSTGEM]<br />
+<br />
+[REACTION:TRAIN_C_042]<br />
+[NAME:Train Wood Craft]<br />
+[BUILDING:TRAINING_BOOTH_CIVILIAN:NONE]<br />
+[SKILL:WOODCRAFT]<br />
+<br />
+[REACTION:TRAIN_C_043]<br />
+[NAME:Train Stone Craft]<br />
+[BUILDING:TRAINING_BOOTH_CIVILIAN:NONE]<br />
+[SKILL:STONECRAFT]<br />
+<br />
+[REACTION:TRAIN_C_044]<br />
+[NAME:Train Metal Craft]<br />
+[BUILDING:TRAINING_BOOTH_CIVILIAN:NONE]<br />
+[SKILL:METALCRAFT]<br />
+<br />
+[REACTION:TRAIN_C_045]<br />
+[NAME:Train Leather Work]<br />
+[BUILDING:TRAINING_BOOTH_CIVILIAN:NONE]<br />
+[SKILL:LEATHERWORK]<br />
+<br />
+[REACTION:TRAIN_C_046]<br />
+[NAME:Train Bone Carve]<br />
+[BUILDING:TRAINING_BOOTH_CIVILIAN:NONE]<br />
+[SKILL:BONECARVE]<br />
+<br />
+[REACTION:TRAIN_C_047]<br />
+[NAME:Train Mechanics]<br />
+[BUILDING:TRAINING_BOOTH_CIVILIAN:NONE]<br />
+[SKILL:MECHANICS]<br />
+<br />
+[REACTION:TRAIN_C_048]<br />
+[NAME:Train Design Building]<br />
+[BUILDING:TRAINING_BOOTH_CIVILIAN:NONE]<br />
+[SKILL:DESIGNBUILDING]<br />
+<br />
+[REACTION:TRAIN_C_049]<br />
+[NAME:Train Dress Wounds]<br />
+[BUILDING:TRAINING_BOOTH_CIVILIAN:NONE]<br />
+[SKILL:DRESS_WOUNDS]<br />
+<br />
+[REACTION:TRAIN_C_050]<br />
+[NAME:Train Set Bone]<br />
+[BUILDING:TRAINING_BOOTH_CIVILIAN:NONE]<br />
+[SKILL:SET_BONE]<br />
+<br />
+[REACTION:TRAIN_C_051]<br />
+[NAME:Train Suture]<br />
+[BUILDING:TRAINING_BOOTH_CIVILIAN:NONE]<br />
+[SKILL:SUTURE]<br />
+<br />
+[REACTION:TRAIN_C_052]<br />
+[NAME:Train Crutch Walk]<br />
+[BUILDING:TRAINING_BOOTH_CIVILIAN:NONE]<br />
+[SKILL:CRUTCH_WALK]<br />
+<br />
+[REACTION:TRAIN_C_053]<br />
+[NAME:Train Wood Burning]<br />
+[BUILDING:TRAINING_BOOTH_CIVILIAN:NONE]<br />
+[SKILL:WOOD_BURNING]<br />
+<br />
+[REACTION:TRAIN_C_054]<br />
+[NAME:Train Soap Making]<br />
+[BUILDING:TRAINING_BOOTH_CIVILIAN:NONE]<br />
+[SKILL:SOAP_MAKING]<br />
+<br />
+[REACTION:TRAIN_C_055]<br />
+[NAME:Train Swimming]<br />
+[BUILDING:TRAINING_BOOTH_CIVILIAN:NONE]<br />
+[SKILL:SWIMMING]<br />
+<br />
+[REACTION:TRAIN_C_056]<br />
+[NAME:Train Negotiation]<br />
+[BUILDING:TRAINING_BOOTH_CIVILIAN:NONE]<br />
+[SKILL:NEGOTIATION]<br />
+<br />
+[REACTION:TRAIN_C_057]<br />
+[NAME:Train Judging Intent]<br />
+[BUILDING:TRAINING_BOOTH_CIVILIAN:NONE]<br />
+[SKILL:JUDGING_INTENT]<br />
+<br />
+[REACTION:TRAIN_C_058]<br />
+[NAME:Train Appraisal]<br />
+[BUILDING:TRAINING_BOOTH_CIVILIAN:NONE]<br />
+[SKILL:APPRAISAL]<br />
+<br />
+[REACTION:TRAIN_C_059]<br />
+[NAME:Train Organization]<br />
+[BUILDING:TRAINING_BOOTH_CIVILIAN:NONE]<br />
+[SKILL:ORGANIZATION]<br />
+<br />
+[REACTION:TRAIN_C_060]<br />
+[NAME:Train Record Keeping]<br />
+[BUILDING:TRAINING_BOOTH_CIVILIAN:NONE]<br />
+[SKILL:RECORD_KEEPING]<br />
+<br />
+[REACTION:TRAIN_C_061]<br />
+[NAME:Train Intimidation]<br />
+[BUILDING:TRAINING_BOOTH_CIVILIAN:NONE]<br />
+[SKILL:INTIMIDATION]<br />
+<br />
+[REACTION:TRAIN_C_062]<br />
+[NAME:Train Conversation]<br />
+[BUILDING:TRAINING_BOOTH_CIVILIAN:NONE]<br />
+[SKILL:CONVERSATION]<br />
+<br />
+[REACTION:TRAIN_C_063]<br />
+[NAME:Train Comedy]<br />
+[BUILDING:TRAINING_BOOTH_CIVILIAN:NONE]<br />
+[SKILL:COMEDY]<br />
+<br />
+[REACTION:TRAIN_C_064]<br />
+[NAME:Train Flattery]<br />
+[BUILDING:TRAINING_BOOTH_CIVILIAN:NONE]<br />
+[SKILL:FLATTERY]<br />
+<br />
+[REACTION:TRAIN_C_065]<br />
+[NAME:Train Console]<br />
+[BUILDING:TRAINING_BOOTH_CIVILIAN:NONE]<br />
+[SKILL:CONSOLE]<br />
+<br />
+[REACTION:TRAIN_C_066]<br />
+[NAME:Train Pacify]<br />
+[BUILDING:TRAINING_BOOTH_CIVILIAN:NONE]<br />
+[SKILL:PACIFY]<br />
+<br />
+[REACTION:TRAIN_C_067]<br />
+[NAME:Train Tracking]<br />
+[BUILDING:TRAINING_BOOTH_CIVILIAN:NONE]<br />
+[SKILL:TRACKING]<br />
+<br />
+[REACTION:TRAIN_C_068]<br />
+[NAME:Train Concentration]<br />
+[BUILDING:TRAINING_BOOTH_CIVILIAN:NONE]<br />
+[SKILL:CONCENTRATION]<br />
+<br />
+[REACTION:TRAIN_C_069]<br />
+[NAME:Train Situational Awareness]<br />
+[BUILDING:TRAINING_BOOTH_CIVILIAN:NONE]<br />
+[SKILL:SITUATIONAL_AWARENESS]<br />
+<br />
+[REACTION:TRAIN_C_070]<br />
+[NAME:Train Reading]<br />
+[BUILDING:TRAINING_BOOTH_CIVILIAN:NONE]<br />
+[SKILL:READING]<br />
+<br />
+[REACTION:TRAIN_C_071]<br />
+[NAME:Train Speaking]<br />
+[BUILDING:TRAINING_BOOTH_CIVILIAN:NONE]<br />
+[SKILL:SPEAKING]<br />
+<br />
+[REACTION:TRAIN_C_072]<br />
+[NAME:Train Coordination]<br />
+[BUILDING:TRAINING_BOOTH_CIVILIAN:NONE]<br />
+[SKILL:COORDINATION]<br />
+<br />
+[REACTION:TRAIN_C_073]<br />
+[NAME:Train Leadership]<br />
+[BUILDING:TRAINING_BOOTH_CIVILIAN:NONE]<br />
+[SKILL:LEADERSHIP]<br />
+<br />
+[REACTION:TRAIN_C_074]<br />
+[NAME:Train Teaching]<br />
+[BUILDING:TRAINING_BOOTH_CIVILIAN:NONE]<br />
+[SKILL:TEACHING]<br />
+<br />
+[REACTION:TRAIN_C_075]<br />
+[NAME:Train Student]<br />
+[BUILDING:TRAINING_BOOTH_CIVILIAN:NONE]<br />
+[SKILL:KNOWLEDGE_ACQUISITION]
+|-
+|}
+{| class="collapsible collapsed infobox" style="background-color: white; border: 1px solid darkgrey; font-size: 100%; padding: 2px; text-align: center; width: 100%;"
+! colspan="2" style="border: 1px solid darkgrey; font-weight: bold; background-color: lightblue; padding-left: 1em; padding-right: 1em; width:100%; display:table-cell;" | building_cheats.txt
+|- style="text-align: left; display:table-cell; "
+|building_cheats<br />
+<br />
+[OBJECT:BUILDING]<br />
+<br />
+[BUILDING_WORKSHOP:TRAINING_BOOTH_CIVILIAN]<br />
+[NAME:Civilian Training Booth]<br />
+[NAME_COLOR:7:0:1]<br />
+[WORK_LOCATION:2:2]<br />
+[BUILD_LABOR:CARPENTER]<br />
+[BUILD_KEY:NONE]<br />
+[DIM:3:3]<br />
+[BLOCK:1:1:0:1]<br />
+[BLOCK:2:0:0:0]<br />
+[BLOCK:3:1:0:1]<br />
+[TILE:0:1:32:32:32]<br />
+[TILE:0:2:32:32:32]<br />
+[TILE:0:3:32:32:32]<br />
+[COLOR:0:1:0:0:0:0:0:0:0:0:0]<br />
+[COLOR:0:2:0:0:0:0:0:0:0:0:0]<br />
+[COLOR:0:3:0:0:0:0:0:0:0:0:0]<br />
+[TILE:1:1:32:32:32]<br />
+[TILE:1:2:32:32:32]<br />
+[TILE:1:3:32:32:32]<br />
+[COLOR:1:1:0:0:0:0:0:0:0:0:0]<br />
+[COLOR:1:2:0:0:0:0:0:0:0:0:0]<br />
+[COLOR:1:3:0:0:0:0:0:0:0:0:0]<br />
+[TILE:2:1:32:32:32]<br />
+[TILE:2:2:32:32:32]<br />
+[TILE:2:3:32:32:32]<br />
+[COLOR:2:1:0:0:0:0:0:0:0:0:0]<br />
+[COLOR:2:2:0:0:0:0:0:0:0:0:0]<br />
+[COLOR:2:3:0:0:0:0:0:0:0:0:0]<br />
+[TILE:3:1:201:61:187]<br />
+[TILE:3:2:61:61:61]<br />
+[TILE:3:3:200:61:188]<br />
+[COLOR:3:1:3:7:1:3:7:1:3:7:1]<br />
+[COLOR:3:2:3:7:1:3:7:1:3:7:1]<br />
+[COLOR:3:3:3:7:1:3:7:1:3:7:1]<br />
+[BUILD_ITEM:1:NONE:NONE:NONE:NONE][BUILDMAT][WORTHLESS_STONE_ONLY][CAN_USE_ARTIFACT]<br />
+<br />
+[BUILDING_WORKSHOP:TRAINING_BOOTH_MILITARY]<br />
+[NAME:Military Training Booth]<br />
+[NAME_COLOR:7:0:1]<br />
+[WORK_LOCATION:2:2]<br />
+[BUILD_LABOR:CARPENTER]<br />
+[BUILD_KEY:NONE]<br />
+[DIM:3:3]<br />
+[BLOCK:1:1:0:1]<br />
+[BLOCK:2:0:0:0]<br />
+[BLOCK:3:1:0:1]<br />
+[TILE:0:1:32:32:32]<br />
+[TILE:0:2:32:32:32]<br />
+[TILE:0:3:32:32:32]<br />
+[COLOR:0:1:0:0:0:0:0:0:0:0:0]<br />
+[COLOR:0:2:0:0:0:0:0:0:0:0:0]<br />
+[COLOR:0:3:0:0:0:0:0:0:0:0:0]<br />
+[TILE:1:1:32:32:32]<br />
+[TILE:1:2:32:32:32]<br />
+[TILE:1:3:32:32:32]<br />
+[COLOR:1:1:0:0:0:0:0:0:0:0:0]<br />
+[COLOR:1:2:0:0:0:0:0:0:0:0:0]<br />
+[COLOR:1:3:0:0:0:0:0:0:0:0:0]<br />
+[TILE:2:1:32:32:32]<br />
+[TILE:2:2:32:32:32]<br />
+[TILE:2:3:32:32:32]<br />
+[COLOR:2:1:0:0:0:0:0:0:0:0:0]<br />
+[COLOR:2:2:0:0:0:0:0:0:0:0:0]<br />
+[COLOR:2:3:0:0:0:0:0:0:0:0:0]<br />
+[TILE:3:1:201:61:187]<br />
+[TILE:3:2:61:61:61]<br />
+[TILE:3:3:200:61:188]<br />
+[COLOR:3:1:4:0:1:4:0:1:4:0:1]<br />
+[COLOR:3:2:4:0:1:4:0:1:4:0:1]<br />
+[COLOR:3:3:4:0:1:4:0:1:4:0:1]<br />
+[BUILD_ITEM:1:NONE:NONE:NONE:NONE][BUILDMAT][WORTHLESS_STONE_ONLY][CAN_USE_ARTIFACT]
+|-
+|}
+{| class="collapsible collapsed infobox" style="background-color: white; border: 1px solid darkgrey; font-size: 100%; padding: 2px; text-align: center; width: 100%;"
+! colspan="2" style="border: 1px solid darkgrey; font-weight: bold; background-color: lightblue; padding-left: 1em; padding-right: 1em; width:100%; display:table-cell;" | entity_default.txt
+|- style="text-align: left; display:table-cell; "
+|[PERMITTED_BUILDING:TRAINING_BOOTH_CIVILIAN]<br />
+[PERMITTED_BUILDING:TRAINING_BOOTH_MILITARY]<br />
+[PERMITTED_REACTION:TRAIN_M_001]<br />
+[PERMITTED_REACTION:TRAIN_M_002]<br />
+[PERMITTED_REACTION:TRAIN_M_003]<br />
+[PERMITTED_REACTION:TRAIN_M_004]<br />
+[PERMITTED_REACTION:TRAIN_M_005]<br />
+[PERMITTED_REACTION:TRAIN_M_006]<br />
+[PERMITTED_REACTION:TRAIN_M_007]<br />
+[PERMITTED_REACTION:TRAIN_M_008]<br />
+[PERMITTED_REACTION:TRAIN_M_009]<br />
+[PERMITTED_REACTION:TRAIN_M_010]<br />
+[PERMITTED_REACTION:TRAIN_M_011]<br />
+[PERMITTED_REACTION:TRAIN_M_012]<br />
+[PERMITTED_REACTION:TRAIN_C_001]<br />
+[PERMITTED_REACTION:TRAIN_C_002]<br />
+[PERMITTED_REACTION:TRAIN_C_003]<br />
+[PERMITTED_REACTION:TRAIN_C_004]<br />
+[PERMITTED_REACTION:TRAIN_C_005]<br />
+[PERMITTED_REACTION:TRAIN_C_006]<br />
+[PERMITTED_REACTION:TRAIN_C_007]<br />
+[PERMITTED_REACTION:TRAIN_C_008]<br />
+[PERMITTED_REACTION:TRAIN_C_009]<br />
+[PERMITTED_REACTION:TRAIN_C_010]<br />
+[PERMITTED_REACTION:TRAIN_C_011]<br />
+[PERMITTED_REACTION:TRAIN_C_012]<br />
+[PERMITTED_REACTION:TRAIN_C_013]<br />
+[PERMITTED_REACTION:TRAIN_C_014]<br />
+[PERMITTED_REACTION:TRAIN_C_015]<br />
+[PERMITTED_REACTION:TRAIN_C_016]<br />
+[PERMITTED_REACTION:TRAIN_C_017]<br />
+[PERMITTED_REACTION:TRAIN_C_018]<br />
+[PERMITTED_REACTION:TRAIN_C_019]<br />
+[PERMITTED_REACTION:TRAIN_C_020]<br />
+[PERMITTED_REACTION:TRAIN_C_021]<br />
+[PERMITTED_REACTION:TRAIN_C_022]<br />
+[PERMITTED_REACTION:TRAIN_C_023]<br />
+[PERMITTED_REACTION:TRAIN_C_024]<br />
+[PERMITTED_REACTION:TRAIN_C_025]<br />
+[PERMITTED_REACTION:TRAIN_C_026]<br />
+[PERMITTED_REACTION:TRAIN_C_027]<br />
+[PERMITTED_REACTION:TRAIN_C_028]<br />
+[PERMITTED_REACTION:TRAIN_C_029]<br />
+[PERMITTED_REACTION:TRAIN_C_030]<br />
+[PERMITTED_REACTION:TRAIN_C_031]<br />
+[PERMITTED_REACTION:TRAIN_C_032]<br />
+[PERMITTED_REACTION:TRAIN_C_033]<br />
+[PERMITTED_REACTION:TRAIN_C_034]<br />
+[PERMITTED_REACTION:TRAIN_C_035]<br />
+[PERMITTED_REACTION:TRAIN_C_036]<br />
+[PERMITTED_REACTION:TRAIN_C_037]<br />
+[PERMITTED_REACTION:TRAIN_C_038]<br />
+[PERMITTED_REACTION:TRAIN_C_039]<br />
+[PERMITTED_REACTION:TRAIN_C_040]<br />
+[PERMITTED_REACTION:TRAIN_C_041]<br />
+[PERMITTED_REACTION:TRAIN_C_042]<br />
+[PERMITTED_REACTION:TRAIN_C_043]<br />
+[PERMITTED_REACTION:TRAIN_C_044]<br />
+[PERMITTED_REACTION:TRAIN_C_045]<br />
+[PERMITTED_REACTION:TRAIN_C_046]<br />
+[PERMITTED_REACTION:TRAIN_C_047]<br />
+[PERMITTED_REACTION:TRAIN_C_048]<br />
+[PERMITTED_REACTION:TRAIN_C_049]<br />
+[PERMITTED_REACTION:TRAIN_C_050]<br />
+[PERMITTED_REACTION:TRAIN_C_051]<br />
+[PERMITTED_REACTION:TRAIN_C_052]<br />
+[PERMITTED_REACTION:TRAIN_C_053]<br />
+[PERMITTED_REACTION:TRAIN_C_054]<br />
+[PERMITTED_REACTION:TRAIN_C_055]<br />
+[PERMITTED_REACTION:TRAIN_C_056]<br />
+[PERMITTED_REACTION:TRAIN_C_057]<br />
+[PERMITTED_REACTION:TRAIN_C_058]<br />
+[PERMITTED_REACTION:TRAIN_C_059]<br />
+[PERMITTED_REACTION:TRAIN_C_060]<br />
+[PERMITTED_REACTION:TRAIN_C_061]<br />
+[PERMITTED_REACTION:TRAIN_C_062]<br />
+[PERMITTED_REACTION:TRAIN_C_063]<br />
+[PERMITTED_REACTION:TRAIN_C_064]<br />
+[PERMITTED_REACTION:TRAIN_C_065]<br />
+[PERMITTED_REACTION:TRAIN_C_066]<br />
+[PERMITTED_REACTION:TRAIN_C_067]<br />
+[PERMITTED_REACTION:TRAIN_C_068]<br />
+[PERMITTED_REACTION:TRAIN_C_069]<br />
+[PERMITTED_REACTION:TRAIN_C_070]<br />
+[PERMITTED_REACTION:TRAIN_C_071]<br />
+[PERMITTED_REACTION:TRAIN_C_072]<br />
+[PERMITTED_REACTION:TRAIN_C_073]<br />
+[PERMITTED_REACTION:TRAIN_C_074]<br />
+[PERMITTED_REACTION:TRAIN_C_075]
+|-
+|}
+|-
+|}
+
+=== TREES & PLANTS ===
+{| class="collapsible collapsed infobox" style="background-color: white; border: 1px solid darkgrey; font-size: 100%; padding: 2px; text-align: center; width: 100%;"
+! colspan="2" style="border: 1px solid darkgrey; font-weight: bold; background-color: lightblue; padding-left: 1em; padding-right: 1em; width:100%; display:table-cell;" | Trees & Plants
+|- style="text-align: left; display:table-cell; "
+|'''''For food in bed'''''<br />
+<br />
+'''What is in this post...'''<br />
+'''52 reactions... will give you access to all plants and trees.'''<br />
+'''2 custom buildings... two buildings, one for plants and one for trees'''<br />
+'''54 permit listings... these are to allow your race (dwarf) to use the buildings and the reactions.'''<br />
+<br />
+'''All of what is contained here is required to have a custom building and custom reaction. Please remember that you MUST generate a new world when you ADD new reactions or buildings.'''
+{| class="collapsible collapsed infobox" style="background-color: white; border: 1px solid darkgrey; font-size: 100%; padding: 2px; text-align: center; width: 100%;"
+! colspan="2" style="border: 1px solid darkgrey; font-weight: bold; background-color: lightblue; padding-left: 1em; padding-right: 1em; width:100%; display:table-cell;" | reaction_cheats_trees_plants.txt
+|- style="text-align: left; display:table-cell; "
+|reaction_cheats_trees_plants<br />
+<br />
+[OBJECT:REACTION]<br />
+<br />
+[REACTION:CHEAT_TREE_001]<br />
+[NAME:Free Mangrove]<br />
+[BUILDING:CHEAT_FREE_TREE:NONE]<br />
+[PRODUCT:100:1:WOOD:NO_SUBTYPE:PLANT_MAT:MANGROVE:WOOD]<br />
+<br />
+[REACTION:CHEAT_TREE_002]<br />
+[NAME:Free Saguaro]<br />
+[BUILDING:CHEAT_FREE_TREE:NONE]<br />
+[PRODUCT:100:1:WOOD:NO_SUBTYPE:PLANT_MAT:SAGUARO:WOOD]<br />
+<br />
+[REACTION:CHEAT_TREE_003]<br />
+[NAME:Free Pine]<br />
+[BUILDING:CHEAT_FREE_TREE:NONE]<br />
+[PRODUCT:100:1:WOOD:NO_SUBTYPE:PLANT_MAT:PINE:WOOD]<br />
+<br />
+[REACTION:CHEAT_TREE_004]<br />
+[NAME:Free Cedar]<br />
+[BUILDING:CHEAT_FREE_TREE:NONE]<br />
+[PRODUCT:100:1:WOOD:NO_SUBTYPE:PLANT_MAT:CEDAR:WOOD]<br />
+<br />
+[REACTION:CHEAT_TREE_005]<br />
+[NAME:Free Oak]<br />
+[BUILDING:CHEAT_FREE_TREE:NONE]<br />
+[PRODUCT:100:1:WOOD:NO_SUBTYPE:PLANT_MAT:OAK:WOOD]<br />
+<br />
+[REACTION:CHEAT_TREE_006]<br />
+[NAME:Free Mahogany]<br />
+[BUILDING:CHEAT_FREE_TREE:NONE]<br />
+[PRODUCT:100:1:WOOD:NO_SUBTYPE:PLANT_MAT:MAHOGANY:WOOD]<br />
+<br />
+[REACTION:CHEAT_TREE_007]<br />
+[NAME:Free Acacia]<br />
+[BUILDING:CHEAT_FREE_TREE:NONE]<br />
+[PRODUCT:100:1:WOOD:NO_SUBTYPE:PLANT_MAT:ACACIA:WOOD]<br />
+<br />
+[REACTION:CHEAT_TREE_008]<br />
+[NAME:Free Kapok]<br />
+[BUILDING:CHEAT_FREE_TREE:NONE]<br />
+[PRODUCT:100:1:WOOD:NO_SUBTYPE:PLANT_MAT:KAPOK:WOOD]<br />
+<br />
+[REACTION:CHEAT_TREE_009]<br />
+[NAME:Free Maple]<br />
+[BUILDING:CHEAT_FREE_TREE:NONE]<br />
+[PRODUCT:100:1:WOOD:NO_SUBTYPE:PLANT_MAT:MAPLE:WOOD]<br />
+<br />
+[REACTION:CHEAT_TREE_010]<br />
+[NAME:Free Willow]<br />
+[BUILDING:CHEAT_FREE_TREE:NONE]<br />
+[PRODUCT:100:1:WOOD:NO_SUBTYPE:PLANT_MAT:WILLOW:WOOD]<br />
+<br />
+[REACTION:CHEAT_TREE_011]<br />
+[NAME:Free Tower Cap]<br />
+[BUILDING:CHEAT_FREE_TREE:NONE]<br />
+[PRODUCT:100:1:WOOD:NO_SUBTYPE:PLANT_MAT:TOWER_CAP:WOOD]<br />
+<br />
+[REACTION:CHEAT_TREE_012]<br />
+[NAME:Free Black Cap]<br />
+[BUILDING:CHEAT_FREE_TREE:NONE]<br />
+[PRODUCT:100:1:WOOD:NO_SUBTYPE:PLANT_MAT:BLACK_CAP:WOOD]<br />
+<br />
+[REACTION:CHEAT_TREE_013]<br />
+[NAME:Free Nether Cap]<br />
+[BUILDING:CHEAT_FREE_TREE:NONE]<br />
+[PRODUCT:100:1:WOOD:NO_SUBTYPE:PLANT_MAT:NETHER_CAP:WOOD]<br />
+<br />
+[REACTION:CHEAT_TREE_014]<br />
+[NAME:Free Goblin Cap]<br />
+[BUILDING:CHEAT_FREE_TREE:NONE]<br />
+[PRODUCT:100:1:WOOD:NO_SUBTYPE:PLANT_MAT:GOBLIN_CAP:WOOD]<br />
+<br />
+[REACTION:CHEAT_TREE_015]<br />
+[NAME:Free Fungiwood]<br />
+[BUILDING:CHEAT_FREE_TREE:NONE]<br />
+[PRODUCT:100:1:WOOD:NO_SUBTYPE:PLANT_MAT:FUNGIWOOD:WOOD]<br />
+<br />
+[REACTION:CHEAT_TREE_016]<br />
+[NAME:Free Tunnel Tube]<br />
+[BUILDING:CHEAT_FREE_TREE:NONE]<br />
+[PRODUCT:100:1:WOOD:NO_SUBTYPE:PLANT_MAT:TUNNEL_TUBE:WOOD]<br />
+<br />
+[REACTION:CHEAT_TREE_017]<br />
+[NAME:Free Spore Tree]<br />
+[BUILDING:CHEAT_FREE_TREE:NONE]<br />
+[PRODUCT:100:1:WOOD:NO_SUBTYPE:PLANT_MAT:SPORE_TREE:WOOD]<br />
+<br />
+[REACTION:CHEAT_TREE_018]<br />
+[NAME:Free Blood Thorn]<br />
+[BUILDING:CHEAT_FREE_TREE:NONE]<br />
+[PRODUCT:100:1:WOOD:NO_SUBTYPE:PLANT_MAT:BLOOD_THORN:WOOD]<br />
+<br />
+[REACTION:CHEAT_TREE_019]<br />
+[NAME:Free Glumprong]<br />
+[BUILDING:CHEAT_FREE_TREE:NONE]<br />
+[PRODUCT:100:1:WOOD:NO_SUBTYPE:PLANT_MAT:GLUMPRONG:WOOD]<br />
+<br />
+[REACTION:CHEAT_TREE_020]<br />
+[NAME:Free Feather]<br />
+[BUILDING:CHEAT_FREE_TREE:NONE]<br />
+[PRODUCT:100:1:WOOD:NO_SUBTYPE:PLANT_MAT:FEATHER:WOOD]<br />
+<br />
+[REACTION:CHEAT_TREE_021]<br />
+[NAME:Free Highwood]<br />
+[BUILDING:CHEAT_FREE_TREE:NONE]<br />
+[PRODUCT:100:1:WOOD:NO_SUBTYPE:PLANT_MAT:HIGHWOOD:WOOD]<br />
+<br />
+[REACTION:CHEAT_TREE_022]<br />
+[NAME:Free Larch]<br />
+[BUILDING:CHEAT_FREE_TREE:NONE]<br />
+[PRODUCT:100:1:WOOD:NO_SUBTYPE:PLANT_MAT:LARCH:WOOD]<br />
+<br />
+[REACTION:CHEAT_TREE_023]<br />
+[NAME:Free Chestnut]<br />
+[BUILDING:CHEAT_FREE_TREE:NONE]<br />
+[PRODUCT:100:1:WOOD:NO_SUBTYPE:PLANT_MAT:CHESTNUT:WOOD]<br />
+<br />
+[REACTION:CHEAT_TREE_024]<br />
+[NAME:Free Alder]<br />
+[BUILDING:CHEAT_FREE_TREE:NONE]<br />
+[PRODUCT:100:1:WOOD:NO_SUBTYPE:PLANT_MAT:ALDER:WOOD]<br />
+<br />
+[REACTION:CHEAT_TREE_025]<br />
+[NAME:Free Birch]<br />
+[BUILDING:CHEAT_FREE_TREE:NONE]<br />
+[PRODUCT:100:1:WOOD:NO_SUBTYPE:PLANT_MAT:BIRCH:WOOD]<br />
+<br />
+[REACTION:CHEAT_TREE_026]<br />
+[NAME:Free Ash]<br />
+[BUILDING:CHEAT_FREE_TREE:NONE]<br />
+[PRODUCT:100:1:WOOD:NO_SUBTYPE:PLANT_MAT:ASH:WOOD]<br />
+<br />
+[REACTION:CHEAT_TREE_027]<br />
+[NAME:Free Candlenut]<br />
+[BUILDING:CHEAT_FREE_TREE:NONE]<br />
+[PRODUCT:100:1:WOOD:NO_SUBTYPE:PLANT_MAT:CANDLENUT:WOOD]<br />
+<br />
+[REACTION:CHEAT_TREE_028]<br />
+[NAME:Free Mango]<br />
+[BUILDING:CHEAT_FREE_TREE:NONE]<br />
+[PRODUCT:100:1:WOOD:NO_SUBTYPE:PLANT_MAT:MANGO:WOOD]<br />
+<br />
+[REACTION:CHEAT_TREE_029]<br />
+[NAME:Free Rubber]<br />
+[BUILDING:CHEAT_FREE_TREE:NONE]<br />
+[PRODUCT:100:1:WOOD:NO_SUBTYPE:PLANT_MAT:RUBBER:WOOD]<br />
+<br />
+[REACTION:CHEAT_TREE_030]<br />
+[NAME:Free Cacao]<br />
+[BUILDING:CHEAT_FREE_TREE:NONE]<br />
+[PRODUCT:100:1:WOOD:NO_SUBTYPE:PLANT_MAT:CACAO:WOOD]<br />
+<br />
+[REACTION:CHEAT_TREE_031]<br />
+[NAME:Free Palm]<br />
+[BUILDING:CHEAT_FREE_TREE:NONE]<br />
+[PRODUCT:100:1:WOOD:NO_SUBTYPE:PLANT_MAT:PALM:WOOD]<br />
+<br />
+[REACTION:CHEAT_PLANT_001]<br />
+[NAME:Free Plump Helmet Mushroom]<br />
+[BUILDING:CHEAT_FREE_PLANT:NONE]<br />
+[PRODUCT:100:20:PLANT:NO_SUBTYPE:PLANT_MAT:MUSHROOM_HELMET_PLUMP:PLANT]<br />
+<br />
+[REACTION:CHEAT_PLANT_002]<br />
+[NAME:Free Pig Tail Grass]<br />
+[BUILDING:CHEAT_FREE_PLANT:NONE]<br />
+[PRODUCT:100:20:PLANT:NO_SUBTYPE:PLANT_MAT:GRASS_TAIL_PIG:PLANT]<br />
+<br />
+[REACTION:CHEAT_PLANT_003]<br />
+[NAME:Free Cave Wheat Grass]<br />
+[BUILDING:CHEAT_FREE_PLANT:NONE]<br />
+[PRODUCT:100:20:PLANT:NO_SUBTYPE:PLANT_MAT:GRASS_WHEAT_CAVE:PLANT]<br />
+<br />
+[REACTION:CHEAT_PLANT_004]<br />
+[NAME:Free Sweet Pod]<br />
+[BUILDING:CHEAT_FREE_PLANT:NONE]<br />
+[PRODUCT:100:20:PLANT:NO_SUBTYPE:PLANT_MAT:POD_SWEET:PLANT]<br />
+<br />
+[REACTION:CHEAT_PLANT_005]<br />
+[NAME:Free Quarry Bush]<br />
+[BUILDING:CHEAT_FREE_PLANT:NONE]<br />
+[PRODUCT:100:20:PLANT:NO_SUBTYPE:PLANT_MAT:BUSH_QUARRY:PLANT]<br />
+<br />
+[REACTION:CHEAT_PLANT_006]<br />
+[NAME:Free Muck Root]<br />
+[BUILDING:CHEAT_FREE_PLANT:NONE]<br />
+[PRODUCT:100:20:PLANT:NO_SUBTYPE:PLANT_MAT:ROOT_MUCK:PLANT]<br />
+<br />
+[REACTION:CHEAT_PLANT_007]<br />
+[NAME:Free Bloated Tuber]<br />
+[BUILDING:CHEAT_FREE_PLANT:NONE]<br />
+[PRODUCT:100:20:PLANT:NO_SUBTYPE:PLANT_MAT:TUBER_BLOATED:PLANT]<br />
+<br />
+[REACTION:CHEAT_PLANT_008]<br />
+[NAME:Free Kobold Bulb]<br />
+[BUILDING:CHEAT_FREE_PLANT:NONE]<br />
+[PRODUCT:100:20:PLANT:NO_SUBTYPE:PLANT_MAT:BULB_KOBOLD:PLANT]<br />
+<br />
+[REACTION:CHEAT_PLANT_009]<br />
+[NAME:Free Prickle Berries]<br />
+[BUILDING:CHEAT_FREE_PLANT:NONE]<br />
+[PRODUCT:100:20:PLANT:NO_SUBTYPE:PLANT_MAT:BERRIES_PRICKLE:PLANT]<br />
+<br />
+[REACTION:CHEAT_PLANT_010]<br />
+[NAME:Free Wild Stawberries]<br />
+[BUILDING:CHEAT_FREE_PLANT:NONE]<br />
+[PRODUCT:100:20:PLANT:NO_SUBTYPE:PLANT_MAT:BERRIES_STRAW_WILD:PLANT]<br />
+<br />
+[REACTION:CHEAT_PLANT_011]<br />
+[NAME:Free Longland Grass]<br />
+[BUILDING:CHEAT_FREE_PLANT:NONE]<br />
+[PRODUCT:100:20:PLANT:NO_SUBTYPE:PLANT_MAT:GRASS_LONGLAND:PLANT]<br />
+<br />
+[REACTION:CHEAT_PLANT_012]<br />
+[NAME:Free Valley Herb]<br />
+[BUILDING:CHEAT_FREE_PLANT:NONE]<br />
+[PRODUCT:100:20:PLANT:NO_SUBTYPE:PLANT_MAT:HERB_VALLEY:PLANT]<br />
+<br />
+[REACTION:CHEAT_PLANT_013]<br />
+[NAME:Free Rat Weed]<br />
+[BUILDING:CHEAT_FREE_PLANT:NONE]<br />
+[PRODUCT:100:20:PLANT:NO_SUBTYPE:PLANT_MAT:WEED_RAT:PLANT]<br />
+<br />
+[REACTION:CHEAT_PLANT_014]<br />
+[NAME:Free Fisher Berries]<br />
+[BUILDING:CHEAT_FREE_PLANT:NONE]<br />
+[PRODUCT:100:20:PLANT:NO_SUBTYPE:PLANT_MAT:BERRIES_FISHER:PLANT]<br />
+<br />
+[REACTION:CHEAT_PLANT_015]<br />
+[NAME:Free Rope Reed]<br />
+[BUILDING:CHEAT_FREE_PLANT:NONE]<br />
+[PRODUCT:100:20:PLANT:NO_SUBTYPE:PLANT_MAT:REED_ROPE:PLANT]<br />
+<br />
+[REACTION:CHEAT_PLANT_016]<br />
+[NAME:Free Dimple Cup Mushroom]<br />
+[BUILDING:CHEAT_FREE_PLANT:NONE]<br />
+[PRODUCT:100:20:PLANT:NO_SUBTYPE:PLANT_MAT:MUSHROOM_CUP_DIMPLE:PLANT]<br />
+<br />
+[REACTION:CHEAT_PLANT_017]<br />
+[NAME:Free Blade Weed]<br />
+[BUILDING:CHEAT_FREE_PLANT:NONE]<br />
+[PRODUCT:100:20:PLANT:NO_SUBTYPE:PLANT_MAT:WEED_BLADE:PLANT]<br />
+<br />
+[REACTION:CHEAT_PLANT_018]<br />
+[NAME:Free Hide Root]<br />
+[BUILDING:CHEAT_FREE_PLANT:NONE]<br />
+[PRODUCT:100:20:PLANT:NO_SUBTYPE:PLANT_MAT:ROOT_HIDE:PLANT]<br />
+<br />
+[REACTION:CHEAT_PLANT_019]<br />
+[NAME:Free Sliver Barb]<br />
+[BUILDING:CHEAT_FREE_PLANT:NONE]<br />
+[PRODUCT:100:20:PLANT:NO_SUBTYPE:PLANT_MAT:SLIVER_BARB:PLANT]<br />
+<br />
+[REACTION:CHEAT_PLANT_020]<br />
+[NAME:Free Sun Berry]<br />
+[BUILDING:CHEAT_FREE_PLANT:NONE]<br />
+[PRODUCT:100:20:PLANT:NO_SUBTYPE:PLANT_MAT:BERRY_SUN:PLANT]<br />
+<br />
+[REACTION:CHEAT_PLANT_021]<br />
+[NAME:Free Whip Vine]<br />
+[BUILDING:CHEAT_FREE_PLANT:NONE]<br />
+[PRODUCT:100:20:PLANT:NO_SUBTYPE:PLANT_MAT:VINE_WHIP:PLANT]
+|-
+|}
+{| class="collapsible collapsed infobox" style="background-color: white; border: 1px solid darkgrey; font-size: 100%; padding: 2px; text-align: center; width: 100%;"
+! colspan="2" style="border: 1px solid darkgrey; font-weight: bold; background-color: lightblue; padding-left: 1em; padding-right: 1em; width:100%; display:table-cell;" | building_cheats.txt
+|- style="text-align: left; display:table-cell; "
+|building_cheats
+<br />
+[BUILDING_WORKSHOP:CHEAT_FREE_TREE]<br />
+[NAME:Cheat Free Tree]<br />
+[NAME_COLOR:7:0:1]<br />
+[WORK_LOCATION:2:2]<br />
+[BUILD_LABOR:CARPENTER]<br />
+[BUILD_KEY:NONE]<br />
+[BLOCK:1:1:0:1]<br />
+[BLOCK:2:0:0:0]<br />
+[BLOCK:3:1:0:1]<br />
+[DIM:3:3]<br />
+[TILE:0:1:32:49:32]<br />
+[TILE:0:2:32:49:32]<br />
+[TILE:0:3:32:49:32]<br />
+[COLOR:0:1:0:0:0:4:0:1:0:0:0]<br />
+[COLOR:0:2:0:0:0:4:0:1:0:0:0]<br />
+[COLOR:0:3:0:0:0:4:0:1:0:0:0]<br />
+[TILE:1:1:32:50:32]<br />
+[TILE:1:2:32:50:32]<br />
+[TILE:1:3:32:50:32]<br />
+[COLOR:1:1:0:0:0:4:0:1:0:0:0]<br />
+[COLOR:1:2:0:0:0:4:0:1:0:0:0]<br />
+[COLOR:1:3:0:0:0:4:0:1:0:0:0]<br />
+[TILE:2:1:32:51:0]<br />
+[TILE:2:2:32:51:32]<br />
+[TILE:2:3:32:51:32]<br />
+[COLOR:2:1:0:0:0:4:0:1:0:0:0]<br />
+[COLOR:2:2:0:0:0:4:0:1:0:0:0]<br />
+[COLOR:2:3:0:0:0:4:0:1:0:0:0]<br />
+[TILE:3:1:3:61:4]<br />
+[TILE:3:2:61:61:61]<br />
+[TILE:3:3:5:61:6]<br />
+[COLOR:3:1:2:2:1:0:2:0:2:2:1]<br />
+[COLOR:3:2:0:2:0:0:2:0:0:2:0]<br />
+[COLOR:3:3:2:2:1:0:2:0:2:2:1]<br />
+[BUILD_ITEM:1:NONE:NONE:NONE:NONE][BUILDMAT][WORTHLESS_STONE_ONLY][CAN_USE_ARTIFACT]<br />
+<br />
+[BUILDING_WORKSHOP:CHEAT_FREE_PLANT]<br />
+[NAME:Cheat Free Plant]<br />
+[NAME_COLOR:7:0:1]<br />
+[WORK_LOCATION:2:2]<br />
+[BUILD_LABOR:CARPENTER]<br />
+[BUILD_KEY:NONE]<br />
+[BLOCK:1:1:0:1]<br />
+[BLOCK:2:0:0:0]<br />
+[BLOCK:3:1:0:1]<br />
+[DIM:3:3]<br />
+[TILE:0:1:32:49:32]<br />
+[TILE:0:2:32:49:32]<br />
+[TILE:0:3:32:49:32]<br />
+[COLOR:0:1:0:0:0:4:0:1:0:0:0]<br />
+[COLOR:0:2:0:0:0:4:0:1:0:0:0]<br />
+[COLOR:0:3:0:0:0:4:0:1:0:0:0]<br />
+[TILE:1:1:32:50:32]<br />
+[TILE:1:2:32:50:32]<br />
+[TILE:1:3:32:50:32]<br />
+[COLOR:1:1:0:0:0:4:0:1:0:0:0]<br />
+[COLOR:1:2:0:0:0:4:0:1:0:0:0]<br />
+[COLOR:1:3:0:0:0:4:0:1:0:0:0]<br />
+[TILE:2:1:32:51:0]<br />
+[TILE:2:2:32:51:32]<br />
+[TILE:2:3:32:51:32]<br />
+[COLOR:2:1:0:0:0:4:0:1:0:0:0]<br />
+[COLOR:2:2:0:0:0:4:0:1:0:0:0]<br />
+[COLOR:2:3:0:0:0:4:0:1:0:0:0]<br />
+[TILE:3:1:34:61:34]<br />
+[TILE:3:2:61:61:61]<br />
+[TILE:3:3:34:61:34]<br />
+[COLOR:3:1:2:2:1:0:2:0:2:2:1]<br />
+[COLOR:3:2:0:2:0:0:2:0:0:2:0]<br />
+[COLOR:3:3:2:2:1:0:2:0:2:2:1]<br />
+[BUILD_ITEM:1:NONE:NONE:NONE:NONE][BUILDMAT][WORTHLESS_STONE_ONLY][CAN_USE_ARTIFACT]
+|-
+|}
+{| class="collapsible collapsed infobox" style="background-color: white; border: 1px solid darkgrey; font-size: 100%; padding: 2px; text-align: center; width: 100%;"
+! colspan="2" style="border: 1px solid darkgrey; font-weight: bold; background-color: lightblue; padding-left: 1em; padding-right: 1em; width:100%; display:table-cell;" | entity_default.txt
+|- style="text-align: left; display:table-cell; "
+|[PERMITTED_BUILDING:CHEAT_FREE_PLANT]<br />
+[PERMITTED_BUILDING:CHEAT_FREE_TREE]<br />
+[PERMITTED_REACTION:CHEAT_TREE_001]<br />
+[PERMITTED_REACTION:CHEAT_TREE_002]<br />
+[PERMITTED_REACTION:CHEAT_TREE_003]<br />
+[PERMITTED_REACTION:CHEAT_TREE_004]<br />
+[PERMITTED_REACTION:CHEAT_TREE_005]<br />
+[PERMITTED_REACTION:CHEAT_TREE_006]<br />
+[PERMITTED_REACTION:CHEAT_TREE_007]<br />
+[PERMITTED_REACTION:CHEAT_TREE_008]<br />
+[PERMITTED_REACTION:CHEAT_TREE_009]<br />
+[PERMITTED_REACTION:CHEAT_TREE_010]<br />
+[PERMITTED_REACTION:CHEAT_TREE_011]<br />
+[PERMITTED_REACTION:CHEAT_TREE_012]<br />
+[PERMITTED_REACTION:CHEAT_TREE_013]<br />
+[PERMITTED_REACTION:CHEAT_TREE_014]<br />
+[PERMITTED_REACTION:CHEAT_TREE_015]<br />
+[PERMITTED_REACTION:CHEAT_TREE_016]<br />
+[PERMITTED_REACTION:CHEAT_TREE_017]<br />
+[PERMITTED_REACTION:CHEAT_TREE_018]<br />
+[PERMITTED_REACTION:CHEAT_TREE_019]<br />
+[PERMITTED_REACTION:CHEAT_TREE_020]<br />
+[PERMITTED_REACTION:CHEAT_TREE_021]<br />
+[PERMITTED_REACTION:CHEAT_TREE_022]<br />
+[PERMITTED_REACTION:CHEAT_TREE_023]<br />
+[PERMITTED_REACTION:CHEAT_TREE_024]<br />
+[PERMITTED_REACTION:CHEAT_TREE_025]<br />
+[PERMITTED_REACTION:CHEAT_TREE_026]<br />
+[PERMITTED_REACTION:CHEAT_TREE_027]<br />
+[PERMITTED_REACTION:CHEAT_TREE_028]<br />
+[PERMITTED_REACTION:CHEAT_TREE_029]<br />
+[PERMITTED_REACTION:CHEAT_TREE_030]<br />
+[PERMITTED_REACTION:CHEAT_TREE_031]<br />
+[PERMITTED_REACTION:CHEAT_PLANT_001]<br />
+[PERMITTED_REACTION:CHEAT_PLANT_002]<br />
+[PERMITTED_REACTION:CHEAT_PLANT_003]<br />
+[PERMITTED_REACTION:CHEAT_PLANT_004]<br />
+[PERMITTED_REACTION:CHEAT_PLANT_005]<br />
+[PERMITTED_REACTION:CHEAT_PLANT_006]<br />
+[PERMITTED_REACTION:CHEAT_PLANT_007]<br />
+[PERMITTED_REACTION:CHEAT_PLANT_008]<br />
+[PERMITTED_REACTION:CHEAT_PLANT_009]<br />
+[PERMITTED_REACTION:CHEAT_PLANT_010]<br />
+[PERMITTED_REACTION:CHEAT_PLANT_011]<br />
+[PERMITTED_REACTION:CHEAT_PLANT_012]<br />
+[PERMITTED_REACTION:CHEAT_PLANT_013]<br />
+[PERMITTED_REACTION:CHEAT_PLANT_014]<br />
+[PERMITTED_REACTION:CHEAT_PLANT_015]<br />
+[PERMITTED_REACTION:CHEAT_PLANT_016]<br />
+[PERMITTED_REACTION:CHEAT_PLANT_017]<br />
+[PERMITTED_REACTION:CHEAT_PLANT_018]<br />
+[PERMITTED_REACTION:CHEAT_PLANT_019]<br />
+[PERMITTED_REACTION:CHEAT_PLANT_020]<br />
+[PERMITTED_REACTION:CHEAT_PLANT_021]
+|-
+|}
+|-
+|}
+
+=== MINERALS, STONES, METALS, GEMS ===
+{| class="collapsible collapsed infobox" style="background-color: white; border: 1px solid darkgrey; font-size: 100%; padding: 2px; text-align: center; width: 100%;"
+! colspan="2" style="border: 1px solid darkgrey; font-weight: bold; background-color: lightblue; padding-left: 1em; padding-right: 1em; width:100%; display:table-cell;" | Minerals, Stones, Metals, Gems
+|- style="text-align: left; display:table-cell; "
+|'''''That crap you stand on and has walled you in... plus shinies!'''''<br />
+<br />
+'''What is here...'''<br />
+'''236 reactions... every mineral, stone, metal and gems that you could ask for... literally, all of them.'''<br />
+'''4 custom buildings... one for each category - mineral, stone, metal and gem.'''<br />
+'''239 permit listings... these are to allow your race (dwarf) to use the buildings and the reactions.'''<br />
+<br />
+'''All of what is contained here is required to have a custom building and custom reaction. Please remember that you MUST generate a new world when you ADD new reactions or buildings.'''<br />
+<br />
+'''File = reaction_cheats_mineral --- below is a reaction for every mineral.'''<br />
+'''reaction_cheats_mineral'''
+{| class="collapsible collapsed infobox" style="background-color: white; border: 1px solid darkgrey; font-size: 100%; padding: 2px; text-align: center; width: 100%;"
+! colspan="2" style="border: 1px solid darkgrey; font-weight: bold; background-color: lightblue; padding-left: 1em; padding-right: 1em; width:100%; display:table-cell;" | reaction_cheats_stones.txt
+|- style="text-align: left; display:table-cell; "
+|reaction_cheats_stones
+<br />
+[OBJECT:REACTION]<br />
+<br />
+[REACTION:CHEAT_MINERAL_001]<br />
+[NAME:Free Mineral Hematite]<br />
+[BUILDING:CHEAT_FREE_MINERAL:NONE]<br />
+[PRODUCT:100:1:BOULDER:NO_SUBTYPE:INORGANIC:HEMATITE]<br />
+<br />
+[REACTION:CHEAT_MINERAL_002]<br />
+[NAME:Free Mineral Limonite]<br />
+[BUILDING:CHEAT_FREE_MINERAL:NONE]<br />
+[PRODUCT:100:1:BOULDER:NO_SUBTYPE:INORGANIC:LIMONITE]<br />
+<br />
+[REACTION:CHEAT_MINERAL_003]<br />
+[NAME:Free Mineral Garnierite]<br />
+[BUILDING:CHEAT_FREE_MINERAL:NONE]<br />
+[PRODUCT:100:1:BOULDER:NO_SUBTYPE:INORGANIC:GARNIERITE]<br />
+<br />
+[REACTION:CHEAT_MINERAL_004]<br />
+[NAME:Free Mineral Native Gold]<br />
+[BUILDING:CHEAT_FREE_MINERAL:NONE]<br />
+[PRODUCT:100:1:BOULDER:NO_SUBTYPE:INORGANIC:NATIVE_GOLD]<br />
+<br />
+[REACTION:CHEAT_MINERAL_005]<br />
+[NAME:Free Mineral Native Silver]<br />
+[BUILDING:CHEAT_FREE_MINERAL:NONE]<br />
+[PRODUCT:100:1:BOULDER:NO_SUBTYPE:INORGANIC:NATIVE_SILVER]<br />
+<br />
+[REACTION:CHEAT_MINERAL_006]<br />
+[NAME:Free Mineral Native Copper]<br />
+[BUILDING:CHEAT_FREE_MINERAL:NONE]<br />
+[PRODUCT:100:1:BOULDER:NO_SUBTYPE:INORGANIC:NATIVE_COPPER]<br />
+<br />
+[REACTION:CHEAT_MINERAL_007]<br />
+[NAME:Free Mineral Malachite]<br />
+[BUILDING:CHEAT_FREE_MINERAL:NONE]<br />
+[PRODUCT:100:1:BOULDER:NO_SUBTYPE:INORGANIC:MALACHITE]<br />
+<br />
+[REACTION:CHEAT_MINERAL_008]<br />
+[NAME:Free Mineral Galena]<br />
+[BUILDING:CHEAT_FREE_MINERAL:NONE]<br />
+[PRODUCT:100:1:BOULDER:NO_SUBTYPE:INORGANIC:GALENA]<br />
+<br />
+[REACTION:CHEAT_MINERAL_009]<br />
+[NAME:Free Mineral Sphalerite]<br />
+[BUILDING:CHEAT_FREE_MINERAL:NONE]<br />
+[PRODUCT:100:1:BOULDER:NO_SUBTYPE:INORGANIC:SPHALERITE]<br />
+<br />
+[REACTION:CHEAT_MINERAL_010]<br />
+[NAME:Free Mineral Cassiterite]<br />
+[BUILDING:CHEAT_FREE_MINERAL:NONE]<br />
+[PRODUCT:100:1:BOULDER:NO_SUBTYPE:INORGANIC:CASSITERITE]<br />
+<br />
+[REACTION:CHEAT_MINERAL_011]<br />
+[NAME:Free Mineral Coal Bituminous]<br />
+[BUILDING:CHEAT_FREE_MINERAL:NONE]<br />
+[PRODUCT:100:1:BOULDER:NO_SUBTYPE:INORGANIC:COAL_BITUMINOUS]<br />
+<br />
+[REACTION:CHEAT_MINERAL_012]<br />
+[NAME:Free Mineral Lignite]<br />
+[BUILDING:CHEAT_FREE_MINERAL:NONE]<br />
+[PRODUCT:100:1:BOULDER:NO_SUBTYPE:INORGANIC:LIGNITE]<br />
+<br />
+[REACTION:CHEAT_MINERAL_013]<br />
+[NAME:Free Mineral Native Platinum]<br />
+[BUILDING:CHEAT_FREE_MINERAL:NONE]<br />
+[PRODUCT:100:1:BOULDER:NO_SUBTYPE:INORGANIC:NATIVE_PLATINUM]<br />
+<br />
+[REACTION:CHEAT_MINERAL_014]<br />
+[NAME:Free Mineral Cinnabar]<br />
+[BUILDING:CHEAT_FREE_MINERAL:NONE]<br />
+[PRODUCT:100:1:BOULDER:NO_SUBTYPE:INORGANIC:CINNABAR]<br />
+<br />
+[REACTION:CHEAT_MINERAL_015]<br />
+[NAME:Free Mineral Cobaltite]<br />
+[BUILDING:CHEAT_FREE_MINERAL:NONE]<br />
+[PRODUCT:100:1:BOULDER:NO_SUBTYPE:INORGANIC:COBALTITE]<br />
+<br />
+[REACTION:CHEAT_MINERAL_016]<br />
+[NAME:Free Mineral Tetrahedrite]<br />
+[BUILDING:CHEAT_FREE_MINERAL:NONE]<br />
+[PRODUCT:100:1:BOULDER:NO_SUBTYPE:INORGANIC:TETRAHEDRITE]<br />
+<br />
+[REACTION:CHEAT_MINERAL_017]<br />
+[NAME:Free Mineral Horn Silver]<br />
+[BUILDING:CHEAT_FREE_MINERAL:NONE]<br />
+[PRODUCT:100:1:BOULDER:NO_SUBTYPE:INORGANIC:HORN_SILVER]<br />
+<br />
+[REACTION:CHEAT_MINERAL_018]<br />
+[NAME:Free Mineral Gypsum]<br />
+[BUILDING:CHEAT_FREE_MINERAL:NONE]<br />
+[PRODUCT:100:1:BOULDER:NO_SUBTYPE:INORGANIC:GYPSUM]<br />
+<br />
+[REACTION:CHEAT_MINERAL_019]<br />
+[NAME:Free Mineral Talc]<br />
+[BUILDING:CHEAT_FREE_MINERAL:NONE]<br />
+[PRODUCT:100:1:BOULDER:NO_SUBTYPE:INORGANIC:TALC]<br />
+<br />
+[REACTION:CHEAT_MINERAL_020]<br />
+[NAME:Free Mineral Jet]<br />
+[BUILDING:CHEAT_FREE_MINERAL:NONE]<br />
+[PRODUCT:100:1:BOULDER:NO_SUBTYPE:INORGANIC:JET]<br />
+<br />
+[REACTION:CHEAT_MINERAL_021]<br />
+[NAME:Free Mineral Puddingstone]<br />
+[BUILDING:CHEAT_FREE_MINERAL:NONE]<br />
+[PRODUCT:100:1:BOULDER:NO_SUBTYPE:INORGANIC:PUDDINGSTONE]<br />
+<br />
+[REACTION:CHEAT_MINERAL_022]<br />
+[NAME:Free Mineral Petrified Wood]<br />
+[BUILDING:CHEAT_FREE_MINERAL:NONE]<br />
+[PRODUCT:100:1:BOULDER:NO_SUBTYPE:INORGANIC:PETRIFIED_WOOD]<br />
+<br />
+[REACTION:CHEAT_MINERAL_023]<br />
+[NAME:Free Mineral Graphite]<br />
+[BUILDING:CHEAT_FREE_MINERAL:NONE]<br />
+[PRODUCT:100:1:BOULDER:NO_SUBTYPE:INORGANIC:GRAPHITE]<br />
+<br />
+[REACTION:CHEAT_MINERAL_024]<br />
+[NAME:Free Mineral Brimstone]<br />
+[BUILDING:CHEAT_FREE_MINERAL:NONE]<br />
+[PRODUCT:100:1:BOULDER:NO_SUBTYPE:INORGANIC:BRIMSTONE]<br />
+<br />
+[REACTION:CHEAT_MINERAL_025]<br />
+[NAME:Free Mineral Kimberlite]<br />
+[BUILDING:CHEAT_FREE_MINERAL:NONE]<br />
+[PRODUCT:100:1:BOULDER:NO_SUBTYPE:INORGANIC:KIMBERLITE]<br />
+<br />
+[REACTION:CHEAT_MINERAL_026]<br />
+[NAME:Free Mineral Bismuthinite]<br />
+[BUILDING:CHEAT_FREE_MINERAL:NONE]<br />
+[PRODUCT:100:1:BOULDER:NO_SUBTYPE:INORGANIC:BISMUTHINITE]<br />
+<br />
+[REACTION:CHEAT_MINERAL_027]<br />
+[NAME:Free Mineral Realgar]<br />
+[BUILDING:CHEAT_FREE_MINERAL:NONE]<br />
+[PRODUCT:100:1:BOULDER:NO_SUBTYPE:INORGANIC:REALGAR]<br />
+<br />
+[REACTION:CHEAT_MINERAL_028]<br />
+[NAME:Free Mineral Orpiment]<br />
+[BUILDING:CHEAT_FREE_MINERAL:NONE]<br />
+[PRODUCT:100:1:BOULDER:NO_SUBTYPE:INORGANIC:ORPIMENT]<br />
+<br />
+[REACTION:CHEAT_MINERAL_029]<br />
+[NAME:Free Mineral Stibnite]<br />
+[BUILDING:CHEAT_FREE_MINERAL:NONE]<br />
+[PRODUCT:100:1:BOULDER:NO_SUBTYPE:INORGANIC:STIBNITE]<br />
+<br />
+[REACTION:CHEAT_MINERAL_030]<br />
+[NAME:Free Mineral Marcasite]<br />
+[BUILDING:CHEAT_FREE_MINERAL:NONE]<br />
+[PRODUCT:100:1:BOULDER:NO_SUBTYPE:INORGANIC:MARCASITE]<br />
+<br />
+[REACTION:CHEAT_MINERAL_031]<br />
+[NAME:Free Mineral Sylvite]<br />
+[BUILDING:CHEAT_FREE_MINERAL:NONE]<br />
+[PRODUCT:100:1:BOULDER:NO_SUBTYPE:INORGANIC:SYLVITE]<br />
+<br />
+[REACTION:CHEAT_MINERAL_032]<br />
+[NAME:Free Mineral Cryolite]<br />
+[BUILDING:CHEAT_FREE_MINERAL:NONE]<br />
+[PRODUCT:100:1:BOULDER:NO_SUBTYPE:INORGANIC:CRYOLITE]<br />
+<br />
+[REACTION:CHEAT_MINERAL_033]<br />
+[NAME:Free Mineral Periclase]<br />
+[BUILDING:CHEAT_FREE_MINERAL:NONE]<br />
+[PRODUCT:100:1:BOULDER:NO_SUBTYPE:INORGANIC:PERICLASE]<br />
+<br />
+[REACTION:CHEAT_MINERAL_034]<br />
+[NAME:Free Mineral Ilmenite]<br />
+[BUILDING:CHEAT_FREE_MINERAL:NONE]<br />
+[PRODUCT:100:1:BOULDER:NO_SUBTYPE:INORGANIC:ILMENITE]<br />
+<br />
+[REACTION:CHEAT_MINERAL_035]<br />
+[NAME:Free Mineral Rutile]<br />
+[BUILDING:CHEAT_FREE_MINERAL:NONE]<br />
+[PRODUCT:100:1:BOULDER:NO_SUBTYPE:INORGANIC:RUTILE]<br />
+<br />
+[REACTION:CHEAT_MINERAL_036]<br />
+[NAME:Free Mineral Magnetite]<br />
+[BUILDING:CHEAT_FREE_MINERAL:NONE]<br />
+[PRODUCT:100:1:BOULDER:NO_SUBTYPE:INORGANIC:MAGNETITE]<br />
+<br />
+[REACTION:CHEAT_MINERAL_037]<br />
+[NAME:Free Mineral Chromite]<br />
+[BUILDING:CHEAT_FREE_MINERAL:NONE]<br />
+[PRODUCT:100:1:BOULDER:NO_SUBTYPE:INORGANIC:CHROMITE]<br />
+<br />
+[REACTION:CHEAT_MINERAL_038]<br />
+[NAME:Free Mineral Pyrolusite]<br />
+[BUILDING:CHEAT_FREE_MINERAL:NONE]<br />
+[PRODUCT:100:1:BOULDER:NO_SUBTYPE:INORGANIC:PYROLUSITE]<br />
+<br />
+[REACTION:CHEAT_MINERAL_039]<br />
+[NAME:Free Mineral Pitchblende]<br />
+[BUILDING:CHEAT_FREE_MINERAL:NONE]<br />
+[PRODUCT:100:1:BOULDER:NO_SUBTYPE:INORGANIC:PITCHBLENDE]<br />
+<br />
+[REACTION:CHEAT_MINERAL_040]<br />
+[NAME:Free Mineral Bauxite]<br />
+[BUILDING:CHEAT_FREE_MINERAL:NONE]<br />
+[PRODUCT:100:1:BOULDER:NO_SUBTYPE:INORGANIC:BAUXITE]<br />
+<br />
+[REACTION:CHEAT_MINERAL_041]<br />
+[NAME:Free Mineral Native Aluminum]<br />
+[BUILDING:CHEAT_FREE_MINERAL:NONE]<br />
+[PRODUCT:100:1:BOULDER:NO_SUBTYPE:INORGANIC:NATIVE_ALUMINUM]<br />
+<br />
+[REACTION:CHEAT_MINERAL_042]<br />
+[NAME:Free Mineral Borax]<br />
+[BUILDING:CHEAT_FREE_MINERAL:NONE]<br />
+[PRODUCT:100:1:BOULDER:NO_SUBTYPE:INORGANIC:BORAX]<br />
+<br />
+[REACTION:CHEAT_MINERAL_043]<br />
+[NAME:Free Mineral Olivine]<br />
+[BUILDING:CHEAT_FREE_MINERAL:NONE]<br />
+[PRODUCT:100:1:BOULDER:NO_SUBTYPE:INORGANIC:OLIVINE]<br />
+<br />
+[REACTION:CHEAT_MINERAL_044]<br />
+[NAME:Free Mineral Hornblende]<br />
+[BUILDING:CHEAT_FREE_MINERAL:NONE]<br />
+[PRODUCT:100:1:BOULDER:NO_SUBTYPE:INORGANIC:HORNBLENDE]<br />
+<br />
+[REACTION:CHEAT_MINERAL_045]<br />
+[NAME:Free Mineral Kaolinite]<br />
+[BUILDING:CHEAT_FREE_MINERAL:NONE]<br />
+[PRODUCT:100:1:BOULDER:NO_SUBTYPE:INORGANIC:KAOLINITE]<br />
+<br />
+[REACTION:CHEAT_MINERAL_046]<br />
+[NAME:Free Mineral Serpentine]<br />
+[BUILDING:CHEAT_FREE_MINERAL:NONE]<br />
+[PRODUCT:100:1:BOULDER:NO_SUBTYPE:INORGANIC:SERPENTINE]<br />
+<br />
+[REACTION:CHEAT_MINERAL_047]<br />
+[NAME:Free Mineral Orthoclase]<br />
+[BUILDING:CHEAT_FREE_MINERAL:NONE]<br />
+[PRODUCT:100:1:BOULDER:NO_SUBTYPE:INORGANIC:ORTHOCLASE]<br />
+<br />
+[REACTION:CHEAT_MINERAL_048]<br />
+[NAME:Free Mineral Microcline]<br />
+[BUILDING:CHEAT_FREE_MINERAL:NONE]<br />
+[PRODUCT:100:1:BOULDER:NO_SUBTYPE:INORGANIC:MICROCLINE]<br />
+<br />
+[REACTION:CHEAT_MINERAL_049]<br />
+[NAME:Free Mineral Mica]<br />
+[BUILDING:CHEAT_FREE_MINERAL:NONE]<br />
+[PRODUCT:100:1:BOULDER:NO_SUBTYPE:INORGANIC:MICA]<br />
+<br />
+[REACTION:CHEAT_MINERAL_050]<br />
+[NAME:Free Mineral Calcite]<br />
+[BUILDING:CHEAT_FREE_MINERAL:NONE]<br />
+[PRODUCT:100:1:BOULDER:NO_SUBTYPE:INORGANIC:CALCITE]<br />
+<br />
+[REACTION:CHEAT_MINERAL_051]<br />
+[NAME:Free Mineral Saltpeter]<br />
+[BUILDING:CHEAT_FREE_MINERAL:NONE]<br />
+[PRODUCT:100:1:BOULDER:NO_SUBTYPE:INORGANIC:SALTPETER]<br />
+<br />
+[REACTION:CHEAT_MINERAL_052]<br />
+[NAME:Free Mineral Alabaster]<br />
+[BUILDING:CHEAT_FREE_MINERAL:NONE]<br />
+[PRODUCT:100:1:BOULDER:NO_SUBTYPE:INORGANIC:ALABASTER]<br />
+<br />
+[REACTION:CHEAT_MINERAL_053]<br />
+[NAME:Free Mineral Selenite]<br />
+[BUILDING:CHEAT_FREE_MINERAL:NONE]<br />
+[PRODUCT:100:1:BOULDER:NO_SUBTYPE:INORGANIC:SELENITE]<br />
+<br />
+[REACTION:CHEAT_MINERAL_054]<br />
+[NAME:Free Mineral Satinspar]<br />
+[BUILDING:CHEAT_FREE_MINERAL:NONE]<br />
+[PRODUCT:100:1:BOULDER:NO_SUBTYPE:INORGANIC:SATINSPAR]<br />
+<br />
+[REACTION:CHEAT_MINERAL_055]<br />
+[NAME:Free Mineral Anhydrite]<br />
+[BUILDING:CHEAT_FREE_MINERAL:NONE]<br />
+[PRODUCT:100:1:BOULDER:NO_SUBTYPE:INORGANIC:ANHYDRITE]<br />
+<br />
+[REACTION:CHEAT_MINERAL_056]<br />
+[NAME:Free Mineral Alunite]<br />
+[BUILDING:CHEAT_FREE_MINERAL:NONE]<br />
+[PRODUCT:100:1:BOULDER:NO_SUBTYPE:INORGANIC:ALUNITE]<br />
+<br />
+[REACTION:CHEAT_MINERAL_057]<br />
+[NAME:Free Mineral Raw Adamantine]<br />
+[BUILDING:CHEAT_FREE_MINERAL:NONE]<br />
+[PRODUCT:100:1:BOULDER:NO_SUBTYPE:INORGANIC:RAW_ADAMANTINE]<br />
+<br />
+[REACTION:CHEAT_MINERAL_058]<br />
+[NAME:Free Mineral Slade]<br />
+[BUILDING:CHEAT_FREE_MINERAL:NONE]<br />
+[PRODUCT:100:1:BOULDER:NO_SUBTYPE:INORGANIC:SLADE]<br />
+<br />
+[REACTION:CHEAT_STONE_001]<br />
+[NAME:Free Stone Sandstone]<br />
+[BUILDING:CHEAT_FREE_STONE:NONE]<br />
+[PRODUCT:100:1:BOULDER:NO_SUBTYPE:INORGANIC:SANDSTONE]<br />
+<br />
+[REACTION:CHEAT_STONE_002]<br />
+[NAME:Free Stone Siltstone]<br />
+[BUILDING:CHEAT_FREE_STONE:NONE]<br />
+[PRODUCT:100:1:BOULDER:NO_SUBTYPE:INORGANIC:SILTSTONE]<br />
+<br />
+[REACTION:CHEAT_STONE_003]<br />
+[NAME:Free Stone Mudstone]<br />
+[BUILDING:CHEAT_FREE_STONE:NONE]<br />
+[PRODUCT:100:1:BOULDER:NO_SUBTYPE:INORGANIC:MUDSTONE]<br />
+
+[REACTION:CHEAT_STONE_004]<br />
+[NAME:Free Stone Shale]<br />
+[BUILDING:CHEAT_FREE_STONE:NONE]<br />
+[PRODUCT:100:1:BOULDER:NO_SUBTYPE:INORGANIC:SHALE]<br />
+<br />
+[REACTION:CHEAT_STONE_005]<br />
+[NAME:Free Stone Claystone]<br />
+[BUILDING:CHEAT_FREE_STONE:NONE]<br />
+[PRODUCT:100:1:BOULDER:NO_SUBTYPE:INORGANIC:CLAYSTONE]<br />
+<br />
+[REACTION:CHEAT_STONE_006]<br />
+[NAME:Free Stone Rock Salt]<br />
+[BUILDING:CHEAT_FREE_STONE:NONE]<br />
+[PRODUCT:100:1:BOULDER:NO_SUBTYPE:INORGANIC:ROCK_SALT]<br />
+<br />
+[REACTION:CHEAT_STONE_007]<br />
+[NAME:Free Stone Limestone]<br />
+[BUILDING:CHEAT_FREE_STONE:NONE]<br />
+[PRODUCT:100:1:BOULDER:NO_SUBTYPE:INORGANIC:LIMESTONE]<br />
+<br />
+[REACTION:CHEAT_STONE_008]<br />
+[NAME:Free Stone Conglomerate]<br />
+[BUILDING:CHEAT_FREE_STONE:NONE]<br />
+[PRODUCT:100:1:BOULDER:NO_SUBTYPE:INORGANIC:CONGLOMERATE]<br />
+<br />
+[REACTION:CHEAT_STONE_009]<br />
+[NAME:Free Stone Dolomite]<br />
+[BUILDING:CHEAT_FREE_STONE:NONE]<br />
+[PRODUCT:100:1:BOULDER:NO_SUBTYPE:INORGANIC:DOLOMITE]<br />
+<br />
+[REACTION:CHEAT_STONE_010]<br />
+[NAME:Free Stone Chert]<br />
+[BUILDING:CHEAT_FREE_STONE:NONE]<br />
+[PRODUCT:100:1:BOULDER:NO_SUBTYPE:INORGANIC:CHERT]<br />
+<br />
+[REACTION:CHEAT_STONE_011]<br />
+[NAME:Free Stone Chalk]<br />
+[BUILDING:CHEAT_FREE_STONE:NONE]<br />
+[PRODUCT:100:1:BOULDER:NO_SUBTYPE:INORGANIC:CHALK]<br />
+<br />
+[REACTION:CHEAT_STONE_012]<br />
+[NAME:Free Stone Granite]<br />
+[BUILDING:CHEAT_FREE_STONE:NONE]<br />
+[PRODUCT:100:1:BOULDER:NO_SUBTYPE:INORGANIC:GRANITE]<br />
+<br />
+[REACTION:CHEAT_STONE_013]<br />
+[NAME:Free Stone Diorite]<br />
+[BUILDING:CHEAT_FREE_STONE:NONE]<br />
+[PRODUCT:100:1:BOULDER:NO_SUBTYPE:INORGANIC:DIORITE]<br />
+<br />
+[REACTION:CHEAT_STONE_014]<br />
+[NAME:Free Stone Gabbro]<br />
+[BUILDING:CHEAT_FREE_STONE:NONE]<br />
+[PRODUCT:100:1:BOULDER:NO_SUBTYPE:INORGANIC:GABBRO]<br />
+<br />
+[REACTION:CHEAT_STONE_015]<br />
+[NAME:Free Stone Rhyolite]<br />
+[BUILDING:CHEAT_FREE_STONE:NONE]<br />
+[PRODUCT:100:1:BOULDER:NO_SUBTYPE:INORGANIC:RHYOLITE]<br />
+<br />
+[REACTION:CHEAT_STONE_016]<br />
+[NAME:Free Stone Basalt]<br />
+[BUILDING:CHEAT_FREE_STONE:NONE]<br />
+[PRODUCT:100:1:BOULDER:NO_SUBTYPE:INORGANIC:BASALT]<br />
+<br />
+[REACTION:CHEAT_STONE_017]<br />
+[NAME:Free Stone Andesite]<br />
+[BUILDING:CHEAT_FREE_STONE:NONE]<br />
+[PRODUCT:100:1:BOULDER:NO_SUBTYPE:INORGANIC:ANDESITE]<br />
+<br />
+[REACTION:CHEAT_STONE_018]<br />
+[NAME:Free Stone Dacite]<br />
+[BUILDING:CHEAT_FREE_STONE:NONE]<br />
+[PRODUCT:100:1:BOULDER:NO_SUBTYPE:INORGANIC:DACITE]<br />
+<br />
+[REACTION:CHEAT_STONE_019]<br />
+[NAME:Free Stone Obsidian]<br />
+[BUILDING:CHEAT_FREE_STONE:NONE]<br />
+[PRODUCT:100:1:BOULDER:NO_SUBTYPE:INORGANIC:OBSIDIAN]<br />
+<br />
+[REACTION:CHEAT_STONE_020]<br />
+[NAME:Free Stone Quartzite]<br />
+[BUILDING:CHEAT_FREE_STONE:NONE]<br />
+[PRODUCT:100:1:BOULDER:NO_SUBTYPE:INORGANIC:QUARTZITE]<br />
+<br />
+[REACTION:CHEAT_STONE_021]<br />
+[NAME:Free Stone Slate]<br />
+[BUILDING:CHEAT_FREE_STONE:NONE]<br />
+[PRODUCT:100:1:BOULDER:NO_SUBTYPE:INORGANIC:SLATE]<br />
+<br />
+[REACTION:CHEAT_STONE_022]<br />
+[NAME:Free Stone Phyllite]<br />
+[BUILDING:CHEAT_FREE_STONE:NONE]<br />
+[PRODUCT:100:1:BOULDER:NO_SUBTYPE:INORGANIC:PHYLLITE]<br />
+<br />
+[REACTION:CHEAT_STONE_023]<br />
+[NAME:Free Stone Schist]<br />
+[BUILDING:CHEAT_FREE_STONE:NONE]<br />
+[PRODUCT:100:1:BOULDER:NO_SUBTYPE:INORGANIC:SCHIST]<br />
+<br />
+[REACTION:CHEAT_STONE_024]<br />
+[NAME:Free Stone Gneiss]<br />
+[BUILDING:CHEAT_FREE_STONE:NONE]<br />
+[PRODUCT:100:1:BOULDER:NO_SUBTYPE:INORGANIC:GNEISS]<br />
+<br />
+[REACTION:CHEAT_STONE_025]<br />
+[NAME:Free Stone Marble]<br />
+[BUILDING:CHEAT_FREE_STONE:NONE]<br />
+[PRODUCT:100:1:BOULDER:NO_SUBTYPE:INORGANIC:MARBLE]<br />
+<br />
+[REACTION:CHEAT_METAL_001]<br />
+[NAME:Free Metal Iron]<br />
+[BUILDING:CHEAT_FREE_METAL:NONE]<br />
+[PRODUCT:100:1:BAR:NO_SUBTYPE:INORGANIC:IRON]<br />
+<br />
+[REACTION:CHEAT_METAL_002]<br />
+[NAME:Free Metal Gold]<br />
+[BUILDING:CHEAT_FREE_METAL:NONE]<br />
+[PRODUCT:100:1:BAR:NO_SUBTYPE:INORGANIC:GOLD]<br />
+<br />
+[REACTION:CHEAT_METAL_003]<br />
+[NAME:Free Metal Silver]<br />
+[BUILDING:CHEAT_FREE_METAL:NONE]<br />
+[PRODUCT:100:1:BAR:NO_SUBTYPE:INORGANIC:SILVER]<br />
+<br />
+[REACTION:CHEAT_METAL_004]<br />
+[NAME:Free Metal Copper]<br />
+[BUILDING:CHEAT_FREE_METAL:NONE]<br />
+[PRODUCT:100:1:BAR:NO_SUBTYPE:INORGANIC:COPPER]<br />
+<br />
+[REACTION:CHEAT_METAL_005]<br />
+[NAME:Free Metal Nickel]<br />
+[BUILDING:CHEAT_FREE_METAL:NONE]<br />
+[PRODUCT:100:1:BAR:NO_SUBTYPE:INORGANIC:NICKEL]<br />
+<br />
+[REACTION:CHEAT_METAL_006]<br />
+[NAME:Free Metal Zinc]<br />
+[BUILDING:CHEAT_FREE_METAL:NONE]<br />
+[PRODUCT:100:1:BAR:NO_SUBTYPE:INORGANIC:ZINC]<br />
+<br />
+[REACTION:CHEAT_METAL_007]<br />
+[NAME:Free Metal Bronze]<br />
+[BUILDING:CHEAT_FREE_METAL:NONE]<br />
+[PRODUCT:100:1:BAR:NO_SUBTYPE:INORGANIC:BRONZE]<br />
+<br />
+[REACTION:CHEAT_METAL_008]<br />
+[NAME:Free Metal Brass]<br />
+[BUILDING:CHEAT_FREE_METAL:NONE]<br />
+[PRODUCT:100:1:BAR:NO_SUBTYPE:INORGANIC:BRASS]<br />
+<br />
+[REACTION:CHEAT_METAL_009]<br />
+[NAME:Free Metal Steel]<br />
+[BUILDING:CHEAT_FREE_METAL:NONE]<br />
+[PRODUCT:100:1:BAR:NO_SUBTYPE:INORGANIC:STEEL]<br />
+<br />
+[REACTION:CHEAT_METAL_010]<br />
+[NAME:Free Metal Pig Iron]<br />
+[BUILDING:CHEAT_FREE_METAL:NONE]<br />
+[PRODUCT:100:1:BAR:NO_SUBTYPE:INORGANIC:PIG_IRON]<br />
+<br />
+[REACTION:CHEAT_METAL_011]<br />
+[NAME:Free Metal Platinum]<br />
+[BUILDING:CHEAT_FREE_METAL:NONE]<br />
+[PRODUCT:100:1:BAR:NO_SUBTYPE:INORGANIC:PLATINUM]<br />
+<br />
+[REACTION:CHEAT_METAL_012]<br />
+[NAME:Free Metal Electrum]<br />
+[BUILDING:CHEAT_FREE_METAL:NONE]<br />
+[PRODUCT:100:1:BAR:NO_SUBTYPE:INORGANIC:ELECTRUM]<br />
+<br />
+[REACTION:CHEAT_METAL_013]<br />
+[NAME:Free Metal Tin]<br />
+[BUILDING:CHEAT_FREE_METAL:NONE]<br />
+[PRODUCT:100:1:BAR:NO_SUBTYPE:INORGANIC:TIN]<br />
+<br />
+[REACTION:CHEAT_METAL_014]<br />
+[NAME:Free Metal Pewter Fine]<br />
+[BUILDING:CHEAT_FREE_METAL:NONE]<br />
+[PRODUCT:100:1:BAR:NO_SUBTYPE:INORGANIC:PEWTER_FINE]<br />
+<br />
+[REACTION:CHEAT_METAL_015]<br />
+[NAME:Free Metal Pewter Trifle]<br />
+[BUILDING:CHEAT_FREE_METAL:NONE]<br />
+[PRODUCT:100:1:BAR:NO_SUBTYPE:INORGANIC:PEWTER_TRIFLE]<br />
+<br />
+[REACTION:CHEAT_METAL_016]<br />
+[NAME:Free Metal Pewter Lay]<br />
+[BUILDING:CHEAT_FREE_METAL:NONE]<br />
+[PRODUCT:100:1:BAR:NO_SUBTYPE:INORGANIC:PEWTER_LAY]<br />
+<br />
+[REACTION:CHEAT_METAL_017]<br />
+[NAME:Free Metal Lead]<br />
+[BUILDING:CHEAT_FREE_METAL:NONE]<br />
+[PRODUCT:100:1:BAR:NO_SUBTYPE:INORGANIC:LEAD]<br />
+<br />
+[REACTION:CHEAT_METAL_018]<br />
+[NAME:Free Metal Aluminum]<br />
+[BUILDING:CHEAT_FREE_METAL:NONE]<br />
+[PRODUCT:100:1:BAR:NO_SUBTYPE:INORGANIC:ALUMINUM]<br />
+<br />
+[REACTION:CHEAT_METAL_019]<br />
+[NAME:Free Metal Nickel Silver]<br />
+[BUILDING:CHEAT_FREE_METAL:NONE]<br />
+[PRODUCT:100:1:BAR:NO_SUBTYPE:INORGANIC:NICKEL_SILVER]<br />
+<br />
+[REACTION:CHEAT_METAL_020]<br />
+[NAME:Free Metal Billion]<br />
+[BUILDING:CHEAT_FREE_METAL:NONE]<br />
+[PRODUCT:100:1:BAR:NO_SUBTYPE:INORGANIC:BILLON]<br />
+<br />
+[REACTION:CHEAT_METAL_021]<br />
+[NAME:Free Metal Sterling Silver]<br />
+[BUILDING:CHEAT_FREE_METAL:NONE]<br />
+[PRODUCT:100:1:BAR:NO_SUBTYPE:INORGANIC:STERLING_SILVER]<br />
+<br />
+[REACTION:CHEAT_METAL_022]<br />
+[NAME:Free Metal Black Bronze]<br />
+[BUILDING:CHEAT_FREE_METAL:NONE]<br />
+[PRODUCT:100:1:BAR:NO_SUBTYPE:INORGANIC:BLACK_BRONZE]<br />
+<br />
+[REACTION:CHEAT_METAL_023]<br />
+[NAME:Free Metal Rose Gold]<br />
+[BUILDING:CHEAT_FREE_METAL:NONE]<br />
+[PRODUCT:100:1:BAR:NO_SUBTYPE:INORGANIC:ROSE_GOLD]<br />
+<br />
+[REACTION:CHEAT_METAL_024]<br />
+[NAME:Free Metal Bismuth]<br />
+[BUILDING:CHEAT_FREE_METAL:NONE]<br />
+[PRODUCT:100:1:BAR:NO_SUBTYPE:INORGANIC:BISMUTH]<br />
+<br />
+[REACTION:CHEAT_METAL_025]<br />
+[NAME:Free Metal Bismuth Bronze]<br />
+[BUILDING:CHEAT_FREE_METAL:NONE]<br />
+[PRODUCT:100:1:BAR:NO_SUBTYPE:INORGANIC:BISMUTH_BRONZE]<br />
+<br />
+[REACTION:CHEAT_METAL_026]<br />
+[NAME:Free Metal Adamantine]<br />
+[BUILDING:CHEAT_FREE_METAL:NONE]<br />
+[PRODUCT:100:1:BAR:NO_SUBTYPE:INORGANIC:ADAMANTINE]<br />
+<br />
+[REACTION:CHEAT_GEM_001]<br />
+[NAME:Free Gem Onyx]<br />
+[BUILDING:CHEAT_FREE_GEM:NONE]<br />
+[PRODUCT:100:1:ROUGH:NO_SUBTYPE:INORGANIC:ONYX]<br />
+<br />
+[REACTION:CHEAT_GEM_002]<br />
+[NAME:Free Gem Morion]<br />
+[BUILDING:CHEAT_FREE_GEM:NONE]<br />
+[PRODUCT:100:1:ROUGH:NO_SUBTYPE:INORGANIC:MORION]<br />
+<br />
+[REACTION:CHEAT_GEM_003]<br />
+[NAME:Free Gem Schorl]<br />
+[BUILDING:CHEAT_FREE_GEM:NONE]<br />
+[PRODUCT:100:1:ROUGH:NO_SUBTYPE:INORGANIC:SCHORL]<br />
+<br />
+[REACTION:CHEAT_GEM_004]<br />
+[NAME:Free Gem Lace Agate]<br />
+[BUILDING:CHEAT_FREE_GEM:NONE]<br />
+[PRODUCT:100:1:ROUGH:NO_SUBTYPE:INORGANIC:LACE AGATE]<br />
+<br />
+[REACTION:CHEAT_GEM_005]<br />
+[NAME:Free Gem Blue Jade]<br />
+[BUILDING:CHEAT_FREE_GEM:NONE]<br />
+[PRODUCT:100:1:ROUGH:NO_SUBTYPE:INORGANIC:BLUE JADE]<br />
+<br />
+[REACTION:CHEAT_GEM_006]<br />
+[NAME:Free Gem Lapis Lazuli]<br />
+[BUILDING:CHEAT_FREE_GEM:NONE]<br />
+[PRODUCT:100:1:ROUGH:NO_SUBTYPE:INORGANIC:LAPIS LAZULI]<br />
+<br />
+[REACTION:CHEAT_GEM_007]<br />
+[NAME:Free Gem Prase]<br />
+[BUILDING:CHEAT_FREE_GEM:NONE]<br />
+[PRODUCT:100:1:ROUGH:NO_SUBTYPE:INORGANIC:PRASE]<br />
+<br />
+[REACTION:CHEAT_GEM_008]<br />
+[NAME:Free Gem Prase Opal]<br />
+[BUILDING:CHEAT_FREE_GEM:NONE]<br />
+[PRODUCT:100:1:ROUGH:NO_SUBTYPE:INORGANIC:PRASE OPAL]<br />
+<br />
+[REACTION:CHEAT_GEM_009]<br />
+[NAME:Free Gem Bloodstone]<br />
+[BUILDING:CHEAT_FREE_GEM:NONE]<br />
+[PRODUCT:100:1:ROUGH:NO_SUBTYPE:INORGANIC:BLOODSTONE]<br />
+<br />
+[REACTION:CHEAT_GEM_010]<br />
+[NAME:Free Gem Moss Agate]<br />
+[BUILDING:CHEAT_FREE_GEM:NONE]<br />
+[PRODUCT:100:1:ROUGH:NO_SUBTYPE:INORGANIC:MOSS AGATE]<br />
+<br />
+[REACTION:CHEAT_GEM_011]<br />
+[NAME:Free Gem Moss Opal]<br />
+[BUILDING:CHEAT_FREE_GEM:NONE]<br />
+[PRODUCT:100:1:ROUGH:NO_SUBTYPE:INORGANIC:MOSS OPAL]<br />
+<br />
+[REACTION:CHEAT_GEM_012]<br />
+[NAME:Free Gem Variscite]<br />
+[BUILDING:CHEAT_FREE_GEM:NONE]<br />
+[PRODUCT:100:1:ROUGH:NO_SUBTYPE:INORGANIC:VARISCITE]<br />
+<br />
+[REACTION:CHEAT_GEM_013]<br />
+[NAME:Free Gem Chyrsoprase]<br />
+[BUILDING:CHEAT_FREE_GEM:NONE]<br />
+[PRODUCT:100:1:ROUGH:NO_SUBTYPE:INORGANIC:CHRYSOPRASE]<br />
+<br />
+[REACTION:CHEAT_GEM_014]<br />
+[NAME:Free Gem Chrysocolla]<br />
+[BUILDING:CHEAT_FREE_GEM:NONE]<br />
+[PRODUCT:100:1:ROUGH:NO_SUBTYPE:INORGANIC:CHRYSOCOLLA]<br />
+<br />
+[REACTION:CHEAT_GEM_015]<br />
+[NAME:Free Gem Sard]<br />
+[BUILDING:CHEAT_FREE_GEM:NONE]<br />
+[PRODUCT:100:1:ROUGH:NO_SUBTYPE:INORGANIC:SARD]<br />
+<br />
+[REACTION:CHEAT_GEM_016]<br />
+[NAME:Free Gem Carnelian]<br />
+[BUILDING:CHEAT_FREE_GEM:NONE]<br />
+[PRODUCT:100:1:ROUGH:NO_SUBTYPE:INORGANIC:CARNELIAN]<br />
+<br />
+[REACTION:CHEAT_GEM_017]<br />
+[NAME:Free Gem Banded Agate]<br />
+[BUILDING:CHEAT_FREE_GEM:NONE]<br />
+[PRODUCT:100:1:ROUGH:NO_SUBTYPE:INORGANIC:BANDED AGATE]<br />
+<br />
+[REACTION:CHEAT_GEM_018]<br />
+[NAME:Free Gem Sardonyx]<br />
+[BUILDING:CHEAT_FREE_GEM:NONE]<br />
+[PRODUCT:100:1:ROUGH:NO_SUBTYPE:INORGANIC:SARDONYX]<br />
+<br />
+[REACTION:CHEAT_GEM_019]<br />
+[NAME:Free Gem Cherry Opal]<br />
+[BUILDING:CHEAT_FREE_GEM:NONE]<br />
+[PRODUCT:100:1:ROUGH:NO_SUBTYPE:INORGANIC:CHERRY OPAL]<br />
+<br />
+[REACTION:CHEAT_GEM_020]<br />
+[NAME:Free Gem Lavender Jade]<br />
+[BUILDING:CHEAT_FREE_GEM:NONE]<br />
+[PRODUCT:100:1:ROUGH:NO_SUBTYPE:INORGANIC:LAVENDER JADE]<br />
+<br />
+[REACTION:CHEAT_GEM_021]<br />
+[NAME:Free Gem Pink Jade]<br />
+[BUILDING:CHEAT_FREE_GEM:NONE]<br />
+[PRODUCT:100:1:ROUGH:NO_SUBTYPE:INORGANIC:PINK JADE]<br />
+<br />
+[REACTION:CHEAT_GEM_022]<br />
+[NAME:Free Gem Tube Agate]<br />
+[BUILDING:CHEAT_FREE_GEM:NONE]<br />
+[PRODUCT:100:1:ROUGH:NO_SUBTYPE:INORGANIC:TUBE AGATE]<br />
+<br />
+[REACTION:CHEAT_GEM_023]<br />
+[NAME:Free Gem Fire Agate]<br />
+[BUILDING:CHEAT_FREE_GEM:NONE]<br />
+[PRODUCT:100:1:ROUGH:NO_SUBTYPE:INORGANIC:FIRE AGATE]<br />
+<br />
+[REACTION:CHEAT_GEM_024]<br />
+[NAME:Free Gem Plume Agate]<br />
+[BUILDING:CHEAT_FREE_GEM:NONE]<br />
+[PRODUCT:100:1:ROUGH:NO_SUBTYPE:INORGANIC:PLUME AGATE]<br />
+<br />
+[REACTION:CHEAT_GEM_025]<br />
+[NAME:Free Gem Brown Jasper]<br />
+[BUILDING:CHEAT_FREE_GEM:NONE]<br />
+[PRODUCT:100:1:ROUGH:NO_SUBTYPE:INORGANIC:BROWN JASPER]<br />
+<br />
+[REACTION:CHEAT_GEM_026]<br />
+[NAME:Free Gem Picture Jasper]<br />
+[BUILDING:CHEAT_FREE_GEM:NONE]<br />
+[PRODUCT:100:1:ROUGH:NO_SUBTYPE:INORGANIC:PICTURE JASPER]<br />
+<br />
+[REACTION:CHEAT_GEM_027]<br />
+[NAME:Free Gem Smoky Quartz]<br />
+[BUILDING:CHEAT_FREE_GEM:NONE]<br />
+[PRODUCT:100:1:ROUGH:NO_SUBTYPE:INORGANIC:SMOKY QUARTZ]<br />
+<br />
+[REACTION:CHEAT_GEM_028]<br />
+[NAME:Free Gem Wax Opal]<br />
+[BUILDING:CHEAT_FREE_GEM:NONE]<br />
+[PRODUCT:100:1:ROUGH:NO_SUBTYPE:INORGANIC:WAX OPAL]<br />
+<br />
+[REACTION:CHEAT_GEM_029]<br />
+[NAME:Free Gem Wood Opal]<br />
+[BUILDING:CHEAT_FREE_GEM:NONE]<br />
+[PRODUCT:100:1:ROUGH:NO_SUBTYPE:INORGANIC:WOOD OPAL]<br />
+<br />
+[REACTION:CHEAT_GEM_030]<br />
+[NAME:Free Gem Amber Opal]<br />
+[BUILDING:CHEAT_FREE_GEM:NONE]<br />
+[PRODUCT:100:1:ROUGH:NO_SUBTYPE:INORGANIC:AMBER OPAL]<br />
+<br />
+[REACTION:CHEAT_GEM_031]<br />
+[NAME:Free Gem Gold Opal]<br />
+[BUILDING:CHEAT_FREE_GEM:NONE]<br />
+[PRODUCT:100:1:ROUGH:NO_SUBTYPE:INORGANIC:GOLD OPAL]<br />
+<br />
+[REACTION:CHEAT_GEM_032]<br />
+[NAME:Free Gem Citrine]<br />
+[BUILDING:CHEAT_FREE_GEM:NONE]<br />
+[PRODUCT:100:1:ROUGH:NO_SUBTYPE:INORGANIC:CITRINE]<br />
+<br />
+[REACTION:CHEAT_GEM_033]<br />
+[NAME:Free Gem Yellow Jasper]<br />
+[BUILDING:CHEAT_FREE_GEM:NONE]<br />
+[PRODUCT:100:1:ROUGH:NO_SUBTYPE:INORGANIC:YELLOW JASPER]<br />
+<br />
+[REACTION:CHEAT_GEM_034]<br />
+[NAME:Free Gem Tigereye]<br />
+[BUILDING:CHEAT_FREE_GEM:NONE]<br />
+[PRODUCT:100:1:ROUGH:NO_SUBTYPE:INORGANIC:TIGEREYE]<br />
+<br />
+[REACTION:CHEAT_GEM_035]<br />
+[NAME:Free Gem Tiger Iron]<br />
+[BUILDING:CHEAT_FREE_GEM:NONE]<br />
+[PRODUCT:100:1:ROUGH:NO_SUBTYPE:INORGANIC:TIGER IRON]<br />
+<br />
+[REACTION:CHEAT_GEM_036]<br />
+[NAME:Free Gem Sunstone]<br />
+[BUILDING:CHEAT_FREE_GEM:NONE]<br />
+[PRODUCT:100:1:ROUGH:NO_SUBTYPE:INORGANIC:SUNSTONE]<br />
+<br />
+[REACTION:CHEAT_GEM_037]<br />
+[NAME:Free Gem Resin Opal]<br />
+[BUILDING:CHEAT_FREE_GEM:NONE]<br />
+[PRODUCT:100:1:ROUGH:NO_SUBTYPE:INORGANIC:RESIN OPAL]<br />
+<br />
+[REACTION:CHEAT_GEM_038]<br />
+[NAME:Free Gem Pyrite]<br />
+[BUILDING:CHEAT_FREE_GEM:NONE]<br />
+[PRODUCT:100:1:ROUGH:NO_SUBTYPE:INORGANIC:PYRITE]<br />
+<br />
+[REACTION:CHEAT_GEM_039]<br />
+[NAME:Free Gem Clear Tourmaline]<br />
+[BUILDING:CHEAT_FREE_GEM:NONE]<br />
+[PRODUCT:100:1:ROUGH:NO_SUBTYPE:INORGANIC:CLEAR TOURMALINE]<br />
+<br />
+[REACTION:CHEAT_GEM_040]<br />
+[NAME:Free Gem Gray Chalcedony]<br />
+[BUILDING:CHEAT_FREE_GEM:NONE]<br />
+[PRODUCT:100:1:ROUGH:NO_SUBTYPE:INORGANIC:GRAY CHALCEDONY]<br />
+<br />
+[REACTION:CHEAT_GEM_041]<br />
+[NAME:Free Gem Dendritic Agate]<br />
+[BUILDING:CHEAT_FREE_GEM:NONE]<br />
+[PRODUCT:100:1:ROUGH:NO_SUBTYPE:INORGANIC:DENDRITIC AGATE]<br />
+<br />
+[REACTION:CHEAT_GEM_042]<br />
+[NAME:Free Gem Shell Opal]<br />
+[BUILDING:CHEAT_FREE_GEM:NONE]<br />
+[PRODUCT:100:1:ROUGH:NO_SUBTYPE:INORGANIC:SHELL OPAL]<br />
+<br />
+[REACTION:CHEAT_GEM_043]<br />
+[NAME:Free Gem Bone Opal]<br />
+[BUILDING:CHEAT_FREE_GEM:NONE]<br />
+[PRODUCT:100:1:ROUGH:NO_SUBTYPE:INORGANIC:BONE OPAL]<br />
+<br />
+[REACTION:CHEAT_GEM_044]<br />
+[NAME:Free Gem White Chalcedony]<br />
+[BUILDING:CHEAT_FREE_GEM:NONE]<br />
+[PRODUCT:100:1:ROUGH:NO_SUBTYPE:INORGANIC:WHITE CHALCEDONY]<br />
+<br />
+[REACTION:CHEAT_GEM_045]<br />
+[NAME:Free Gem Fortification Agate]<br />
+[BUILDING:CHEAT_FREE_GEM:NONE]<br />
+[PRODUCT:100:1:ROUGH:NO_SUBTYPE:INORGANIC:FORTIFICATION AGATE]<br />
+<br />
+[REACTION:CHEAT_GEM_046]<br />
+[NAME:Free Gem Milk Quartz]<br />
+[BUILDING:CHEAT_FREE_GEM:NONE]<br />
+[PRODUCT:100:1:ROUGH:NO_SUBTYPE:INORGANIC:MILK QUARTZ]<br />
+<br />
+[REACTION:CHEAT_GEM_047]<br />
+[NAME:Free Gem Moonstone]<br />
+[BUILDING:CHEAT_FREE_GEM:NONE]<br />
+[PRODUCT:100:1:ROUGH:NO_SUBTYPE:INORGANIC:MOONSTONE]<br />
+<br />
+[REACTION:CHEAT_GEM_048]<br />
+[NAME:Free Gem White Jade]<br />
+[BUILDING:CHEAT_FREE_GEM:NONE]<br />
+[PRODUCT:100:1:ROUGH:NO_SUBTYPE:INORGANIC:WHITE JADE]<br />
+<br />
+[REACTION:CHEAT_GEM_049]<br />
+[NAME:Free Gem Jasper Opal]<br />
+[BUILDING:CHEAT_FREE_GEM:NONE]<br />
+[PRODUCT:100:1:ROUGH:NO_SUBTYPE:INORGANIC:JASPER OPAL]<br />
+<br />
+[REACTION:CHEAT_GEM_050]<br />
+[NAME:Free Gem Pineapple Opal]<br />
+[BUILDING:CHEAT_FREE_GEM:NONE]<br />
+[PRODUCT:100:1:ROUGH:NO_SUBTYPE:INORGANIC:PINEAPPLE OPAL]<br />
+<br />
+[REACTION:CHEAT_GEM_051]<br />
+[NAME:Free Gem Onyx Opal]<br />
+[BUILDING:CHEAT_FREE_GEM:NONE]<br />
+[PRODUCT:100:1:ROUGH:NO_SUBTYPE:INORGANIC:ONYX OPAL]<br />
+<br />
+[REACTION:CHEAT_GEM_052]<br />
+[NAME:Free Gem Milk Opal]<br />
+[BUILDING:CHEAT_FREE_GEM:NONE]<br />
+[PRODUCT:100:1:ROUGH:NO_SUBTYPE:INORGANIC:MILK OPAL]<br />
+<br />
+[REACTION:CHEAT_GEM_053]<br />
+[NAME:Free Gem Pipe Opal]<br />
+[BUILDING:CHEAT_FREE_GEM:NONE]<br />
+[PRODUCT:100:1:ROUGH:NO_SUBTYPE:INORGANIC:PIPE OPAL]<br />
+<br />
+[REACTION:CHEAT_GEM_054]<br />
+[NAME:Free Gem Aventurine]<br />
+[BUILDING:CHEAT_FREE_GEM:NONE]<br />
+[PRODUCT:100:1:ROUGH:NO_SUBTYPE:INORGANIC:AVENTURINE]<br />
+<br />
+[REACTION:CHEAT_GEM_055]<br />
+[NAME:Free Gem Turquoise]<br />
+[BUILDING:CHEAT_FREE_GEM:NONE]<br />
+[PRODUCT:100:1:ROUGH:NO_SUBTYPE:INORGANIC:TURQUOISE]<br />
+<br />
+[REACTION:CHEAT_GEM_056]<br />
+[NAME:Free Gem Rose Quartz]<br />
+[BUILDING:CHEAT_FREE_GEM:NONE]<br />
+[PRODUCT:100:1:ROUGH:NO_SUBTYPE:INORGANIC:QUARTZ_ROSE]<br />
+<br />
+[REACTION:CHEAT_GEM_057]<br />
+[NAME:Free Gem Rock Crystal]<br />
+[BUILDING:CHEAT_FREE_GEM:NONE]<br />
+[PRODUCT:100:1:ROUGH:NO_SUBTYPE:INORGANIC:CRYSTAL_ROCK]<br />
+<br />
+[REACTION:CHEAT_GEM_058]<br />
+[NAME:Free Gem Black Zircon]<br />
+[BUILDING:CHEAT_FREE_GEM:NONE]<br />
+[PRODUCT:100:1:ROUGH:NO_SUBTYPE:INORGANIC:BLACK ZIRCON]<br />
+<br />
+[REACTION:CHEAT_GEM_059]<br />
+[NAME:Free Gem Black Pyrope]<br />
+[BUILDING:CHEAT_FREE_GEM:NONE]<br />
+[PRODUCT:100:1:ROUGH:NO_SUBTYPE:INORGANIC:BLACK PYROPE]<br />
+<br />
+[REACTION:CHEAT_GEM_060]<br />
+[NAME:Free Gem Melanite]<br />
+[BUILDING:CHEAT_FREE_GEM:NONE]<br />
+[PRODUCT:100:1:ROUGH:NO_SUBTYPE:INORGANIC:MELANITE]<br />
+<br />
+[REACTION:CHEAT_GEM_061]<br />
+[NAME:Free Gem Indigo Tourmaline]<br />
+[BUILDING:CHEAT_FREE_GEM:NONE]<br />
+[PRODUCT:100:1:ROUGH:NO_SUBTYPE:INORGANIC:INDIGO TOURMALINE]<br />
+<br />
+[REACTION:CHEAT_GEM_062]<br />
+[NAME:Free Gem Blue Garnet]<br />
+[BUILDING:CHEAT_FREE_GEM:NONE]<br />
+[PRODUCT:100:1:ROUGH:NO_SUBTYPE:INORGANIC:BLUE GARNET]<br />
+<br />
+[REACTION:CHEAT_GEM_063]<br />
+[NAME:Free Gem Tsavorite]<br />
+[BUILDING:CHEAT_FREE_GEM:NONE]<br />
+[PRODUCT:100:1:ROUGH:NO_SUBTYPE:INORGANIC:TSAVORITE]<br />
+<br />
+[REACTION:CHEAT_GEM_064]<br />
+[NAME:Free Gem Green Tourmaline]<br />
+[BUILDING:CHEAT_FREE_GEM:NONE]<br />
+[PRODUCT:100:1:ROUGH:NO_SUBTYPE:INORGANIC:GREEN TOURMALINE]<br />
+<br />
+[REACTION:CHEAT_GEM_065]<br />
+[NAME:Free Gem Demantoid]<br />
+[BUILDING:CHEAT_FREE_GEM:NONE]<br />
+[PRODUCT:100:1:ROUGH:NO_SUBTYPE:INORGANIC:DEMANTOID]<br />
+<br />
+[REACTION:CHEAT_GEM_066]<br />
+[NAME:Free Gem Green Zircon]<br />
+[BUILDING:CHEAT_FREE_GEM:NONE]<br />
+[PRODUCT:100:1:ROUGH:NO_SUBTYPE:INORGANIC:GREEN ZIRCON]<br />
+<br />
+[REACTION:CHEAT_GEM_067]<br />
+[NAME:Free Gem Green Jade]<br />
+[BUILDING:CHEAT_FREE_GEM:NONE]<br />
+[PRODUCT:100:1:ROUGH:NO_SUBTYPE:INORGANIC:GREEN JADE]<br />
+<br />
+[REACTION:CHEAT_GEM_068]<br />
+[NAME:Free Gem Heliodor]<br />
+[BUILDING:CHEAT_FREE_GEM:NONE]<br />
+[PRODUCT:100:1:ROUGH:NO_SUBTYPE:INORGANIC:HELIODOR]<br />
+<br />
+[REACTION:CHEAT_GEM_069]<br />
+[NAME:Free Gem Peridot]<br />
+[BUILDING:CHEAT_FREE_GEM:NONE]<br />
+[PRODUCT:100:1:ROUGH:NO_SUBTYPE:INORGANIC:PERIDOT]<br />
+<br />
+[REACTION:CHEAT_GEM_070]<br />
+[NAME:Free Gem Red Zircon]<br />
+[BUILDING:CHEAT_FREE_GEM:NONE]<br />
+[PRODUCT:100:1:ROUGH:NO_SUBTYPE:INORGANIC:RED ZIRCON]<br />
+<br />
+[REACTION:CHEAT_GEM_071]<br />
+[NAME:Free Gem Red Tourmaline]<br />
+[BUILDING:CHEAT_FREE_GEM:NONE]<br />
+[PRODUCT:100:1:ROUGH:NO_SUBTYPE:INORGANIC:RED TOURMALINE]<br />
+<br />
+[REACTION:CHEAT_GEM_072]<br />
+[NAME:Free Gem Red Pyrope]<br />
+[BUILDING:CHEAT_FREE_GEM:NONE]<br />
+[PRODUCT:100:1:ROUGH:NO_SUBTYPE:INORGANIC:RED PYROPE]<br />
+<br />
+[REACTION:CHEAT_GEM_073]<br />
+[NAME:Free Gem Almandine]<br />
+[BUILDING:CHEAT_FREE_GEM:NONE]<br />
+[PRODUCT:100:1:ROUGH:NO_SUBTYPE:INORGANIC:ALMANDINE]<br />
+<br />
+[REACTION:CHEAT_GEM_074]<br />
+[NAME:Free Gem Red Grossular]<br />
+[BUILDING:CHEAT_FREE_GEM:NONE]<br />
+[PRODUCT:100:1:ROUGH:NO_SUBTYPE:INORGANIC:RED GROSSULAR]<br />
+<br />
+[REACTION:CHEAT_GEM_075]<br />
+[NAME:Free Gem Pink Tourmaline]<br />
+[BUILDING:CHEAT_FREE_GEM:NONE]<br />
+[PRODUCT:100:1:ROUGH:NO_SUBTYPE:INORGANIC:PINK TOURMALINE]<br />
+<br />
+[REACTION:CHEAT_GEM_076]<br />
+[NAME:Free Gem Red Beryl]<br />
+[BUILDING:CHEAT_FREE_GEM:NONE]<br />
+[PRODUCT:100:1:ROUGH:NO_SUBTYPE:INORGANIC:RED BERYL]<br />
+<br />
+[REACTION:CHEAT_GEM_077]<br />
+[NAME:Free Gem Fire Opal]<br />
+[BUILDING:CHEAT_FREE_GEM:NONE]<br />
+[PRODUCT:100:1:ROUGH:NO_SUBTYPE:INORGANIC:FIRE OPAL]<br />
+<br />
+[REACTION:CHEAT_GEM_078]<br />
+[NAME:Free Gem Rhodolite]<br />
+[BUILDING:CHEAT_FREE_GEM:NONE]<br />
+[PRODUCT:100:1:ROUGH:NO_SUBTYPE:INORGANIC:RHODOLITE]<br />
+<br />
+[REACTION:CHEAT_GEM_079]<br />
+[NAME:Free Gem Purple Spinel]<br />
+[BUILDING:CHEAT_FREE_GEM:NONE]<br />
+[PRODUCT:100:1:ROUGH:NO_SUBTYPE:INORGANIC:SPINEL_PURPLE]<br />
+<br />
+[REACTION:CHEAT_GEM_080]<br />
+[NAME:Free Gem Alexandrite]<br />
+[BUILDING:CHEAT_FREE_GEM:NONE]<br />
+[PRODUCT:100:1:ROUGH:NO_SUBTYPE:INORGANIC:ALEXANDRITE]<br />
+<br />
+[REACTION:CHEAT_GEM_081]<br />
+[NAME:Free Gem Tanzanite]<br />
+[BUILDING:CHEAT_FREE_GEM:NONE]<br />
+[PRODUCT:100:1:ROUGH:NO_SUBTYPE:INORGANIC:TANZANITE]<br />
+<br />
+[REACTION:CHEAT_GEM_082]<br />
+[NAME:Free Gem Morganite]<br />
+[BUILDING:CHEAT_FREE_GEM:NONE]<br />
+[PRODUCT:100:1:ROUGH:NO_SUBTYPE:INORGANIC:MORGANITE]<br />
+<br />
+[REACTION:CHEAT_GEM_083]<br />
+[NAME:Free Gem Violet Spessartine]<br />
+[BUILDING:CHEAT_FREE_GEM:NONE]<br />
+[PRODUCT:100:1:ROUGH:NO_SUBTYPE:INORGANIC:VIOLET SPESSARTINE]<br />
+<br />
+[REACTION:CHEAT_GEM_084]<br />
+[NAME:Free Gem Pink Garnet]<br />
+[BUILDING:CHEAT_FREE_GEM:NONE]<br />
+[PRODUCT:100:1:ROUGH:NO_SUBTYPE:INORGANIC:PINK GARNET]<br />
+<br />
+[REACTION:CHEAT_GEM_085]<br />
+[NAME:Free Gem Kunzite]<br />
+[BUILDING:CHEAT_FREE_GEM:NONE]<br />
+[PRODUCT:100:1:ROUGH:NO_SUBTYPE:INORGANIC:KUNZITE]<br />
+<br />
+[REACTION:CHEAT_GEM_086]<br />
+[NAME:Free Gem Cinnamon Grossular]<br />
+[BUILDING:CHEAT_FREE_GEM:NONE]<br />
+[PRODUCT:100:1:ROUGH:NO_SUBTYPE:INORGANIC:CINNAMON GROSSULAR]<br />
+<br />
+[REACTION:CHEAT_GEM_087]<br />
+[NAME:Free Gem Honey Yellow Beryl]<br />
+[BUILDING:CHEAT_FREE_GEM:NONE]<br />
+[PRODUCT:100:1:ROUGH:NO_SUBTYPE:INORGANIC:HONEY YELLOW BERYL]<br />
+<br />
+[REACTION:CHEAT_GEM_088]<br />
+[NAME:Free Gem Jelly Opal]<br />
+[BUILDING:CHEAT_FREE_GEM:NONE]<br />
+[PRODUCT:100:1:ROUGH:NO_SUBTYPE:INORGANIC:JELLY OPAL]<br />
+<br />
+[REACTION:CHEAT_GEM_089]<br />
+[NAME:Free Gem Brown Zircon]<br />
+[BUILDING:CHEAT_FREE_GEM:NONE]<br />
+[PRODUCT:100:1:ROUGH:NO_SUBTYPE:INORGANIC:BROWN ZIRCON]<br />
+<br />
+[REACTION:CHEAT_GEM_090]<br />
+[NAME:Free Gem Yellow Zircon]<br />
+[BUILDING:CHEAT_FREE_GEM:NONE]<br />
+[PRODUCT:100:1:ROUGH:NO_SUBTYPE:INORGANIC:YELLOW ZIRCON]<br />
+<br />
+[REACTION:CHEAT_GEM_091]<br />
+[NAME:Free Gem Golden Beryl]<br />
+[BUILDING:CHEAT_FREE_GEM:NONE]<br />
+[PRODUCT:100:1:ROUGH:NO_SUBTYPE:INORGANIC:GOLDEN BERYL]<br />
+<br />
+[REACTION:CHEAT_GEM_092]<br />
+[NAME:Free Gem Yellow Spessartine]<br />
+[BUILDING:CHEAT_FREE_GEM:NONE]<br />
+[PRODUCT:100:1:ROUGH:NO_SUBTYPE:INORGANIC:YELLOW SPESSARTINE]<br />
+<br />
+[REACTION:CHEAT_GEM_093]<br />
+[NAME:Free Gem Topaz]<br />
+[BUILDING:CHEAT_FREE_GEM:NONE]<br />
+[PRODUCT:100:1:ROUGH:NO_SUBTYPE:INORGANIC:TOPAZ]<br />
+<br />
+[REACTION:CHEAT_GEM_094]<br />
+[NAME:Free Gem Topazolite]<br />
+[BUILDING:CHEAT_FREE_GEM:NONE]<br />
+[PRODUCT:100:1:ROUGH:NO_SUBTYPE:INORGANIC:TOPAZOLITE]<br />
+<br />
+[REACTION:CHEAT_GEM_095]<br />
+[NAME:Free Gem Yellow Grossular]<br />
+[BUILDING:CHEAT_FREE_GEM:NONE]<br />
+[PRODUCT:100:1:ROUGH:NO_SUBTYPE:INORGANIC:YELLOW GROSSULAR]<br />
+<br />
+[REACTION:CHEAT_GEM_096]<br />
+[NAME:Free Gem Rubicelle]<br />
+[BUILDING:CHEAT_FREE_GEM:NONE]<br />
+[PRODUCT:100:1:ROUGH:NO_SUBTYPE:INORGANIC:RUBICELLE]<br />
+<br />
+[REACTION:CHEAT_GEM_097]<br />
+[NAME:Free Gem Clear Garnet]<br />
+[BUILDING:CHEAT_FREE_GEM:NONE]<br />
+[PRODUCT:100:1:ROUGH:NO_SUBTYPE:INORGANIC:CLEAR GARNET]<br />
+<br />
+[REACTION:CHEAT_GEM_098]<br />
+[NAME:Free Gem Goshenite]<br />
+[BUILDING:CHEAT_FREE_GEM:NONE]<br />
+[PRODUCT:100:1:ROUGH:NO_SUBTYPE:INORGANIC:GOSHENITE]<br />
+<br />
+[REACTION:CHEAT_GEM_099]<br />
+[NAME:Free Gem Cat's Eye]<br />
+[BUILDING:CHEAT_FREE_GEM:NONE]<br />
+[PRODUCT:100:1:ROUGH:NO_SUBTYPE:INORGANIC:CAT'S EYE]<br />
+<br />
+[REACTION:CHEAT_GEM_100]<br />
+[NAME:Free Gem Clear Zircon]<br />
+[BUILDING:CHEAT_FREE_GEM:NONE]<br />
+[PRODUCT:100:1:ROUGH:NO_SUBTYPE:INORGANIC:CLEAR ZIRCON]<br />
+<br />
+[REACTION:CHEAT_GEM_101]<br />
+[NAME:Free Gem Amethyst]<br />
+[BUILDING:CHEAT_FREE_GEM:NONE]<br />
+[PRODUCT:100:1:ROUGH:NO_SUBTYPE:INORGANIC:AMETHYST]<br />
+<br />
+[REACTION:CHEAT_GEM_102]<br />
+[NAME:Free Gem Aquamarine]<br />
+[BUILDING:CHEAT_FREE_GEM:NONE]<br />
+[PRODUCT:100:1:ROUGH:NO_SUBTYPE:INORGANIC:AQUAMARINE]<br />
+<br />
+[REACTION:CHEAT_GEM_103]<br />
+[NAME:Free Gem Red Spinel]<br />
+[BUILDING:CHEAT_FREE_GEM:NONE]<br />
+[PRODUCT:100:1:ROUGH:NO_SUBTYPE:INORGANIC:SPINEL_RED]<br />
+<br />
+[REACTION:CHEAT_GEM_104]<br />
+[NAME:Free Gem Chrysoberyl]<br />
+[BUILDING:CHEAT_FREE_GEM:NONE]<br />
+[PRODUCT:100:1:ROUGH:NO_SUBTYPE:INORGANIC:CHRYSOBERYL]<br />
+<br />
+[REACTION:CHEAT_GEM_105]<br />
+[NAME:Free Gem Precious Fire Opal]<br />
+[BUILDING:CHEAT_FREE_GEM:NONE]<br />
+[PRODUCT:100:1:ROUGH:NO_SUBTYPE:INORGANIC:OPAL_PFIRE]<br />
+<br />
+[REACTION:CHEAT_GEM_106]<br />
+[NAME:Free Gem Red Flash Opal]<br />
+[BUILDING:CHEAT_FREE_GEM:NONE]<br />
+[PRODUCT:100:1:ROUGH:NO_SUBTYPE:INORGANIC:OPAL_REDFLASH]<br />
+<br />
+[REACTION:CHEAT_GEM_107]<br />
+[NAME:Free Gem Black Opal]<br />
+[BUILDING:CHEAT_FREE_GEM:NONE]<br />
+[PRODUCT:100:1:ROUGH:NO_SUBTYPE:INORGANIC:OPAL_BLACK]<br />
+<br />
+[REACTION:CHEAT_GEM_108]<br />
+[NAME:Free Gem White Opal]<br />
+[BUILDING:CHEAT_FREE_GEM:NONE]<br />
+[PRODUCT:100:1:ROUGH:NO_SUBTYPE:INORGANIC:OPAL_WHITE]<br />
+<br />
+[REACTION:CHEAT_GEM_109]<br />
+[NAME:Free Gem Crystal Opal]<br />
+[BUILDING:CHEAT_FREE_GEM:NONE]<br />
+[PRODUCT:100:1:ROUGH:NO_SUBTYPE:INORGANIC:OPAL_CRYSTAL]<br />
+<br />
+[REACTION:CHEAT_GEM_110]<br />
+[NAME:Free Gem Claro Opal]<br />
+[BUILDING:CHEAT_FREE_GEM:NONE]<br />
+[PRODUCT:100:1:ROUGH:NO_SUBTYPE:INORGANIC:OPAL_CLARO]<br />
+<br />
+[REACTION:CHEAT_GEM_111]<br />
+[NAME:Free Gem Levin Opal]<br />
+[BUILDING:CHEAT_FREE_GEM:NONE]<br />
+[PRODUCT:100:1:ROUGH:NO_SUBTYPE:INORGANIC:OPAL_LEVIN]<br />
+<br />
+[REACTION:CHEAT_GEM_112]<br />
+[NAME:Free Gem Harlequin Opal]<br />
+[BUILDING:CHEAT_FREE_GEM:NONE]<br />
+[PRODUCT:100:1:ROUGH:NO_SUBTYPE:INORGANIC:OPAL_HARLEQUIN]<br />
+<br />
+[REACTION:CHEAT_GEM_113]<br />
+[NAME:Free Gem Pinfire Opal]<br />
+[BUILDING:CHEAT_FREE_GEM:NONE]<br />
+[PRODUCT:100:1:ROUGH:NO_SUBTYPE:INORGANIC:OPAL_PINFIRE]<br />
+<br />
+[REACTION:CHEAT_GEM_114]<br />
+[NAME:Free Gem Bandfire Opal]<br />
+[BUILDING:CHEAT_FREE_GEM:NONE]<br />
+[PRODUCT:100:1:ROUGH:NO_SUBTYPE:INORGANIC:OPAL_BANDFIRE]<br />
+<br />
+[REACTION:CHEAT_GEM_115]<br />
+[NAME:Free Gem Light Yellow Diamond]<br />
+[BUILDING:CHEAT_FREE_GEM:NONE]<br />
+[PRODUCT:100:1:ROUGH:NO_SUBTYPE:INORGANIC:DIAMOND_LY]<br />
+<br />
+[REACTION:CHEAT_GEM_116]<br />
+[NAME:Free Gem Faint Yellow Diamond]<br />
+[BUILDING:CHEAT_FREE_GEM:NONE]<br />
+[PRODUCT:100:1:ROUGH:NO_SUBTYPE:INORGANIC:DIAMOND_FY]<br />
+<br />
+[REACTION:CHEAT_GEM_117]<br />
+[NAME:Free Gem Emerald]<br />
+[BUILDING:CHEAT_FREE_GEM:NONE]<br />
+[PRODUCT:100:1:ROUGH:NO_SUBTYPE:INORGANIC:EMERALD]<br />
+<br />
+[REACTION:CHEAT_GEM_118]<br />
+[NAME:Free Gem Ruby]<br />
+[BUILDING:CHEAT_FREE_GEM:NONE]<br />
+[PRODUCT:100:1:ROUGH:NO_SUBTYPE:INORGANIC:RUBY]<br />
+<br />
+[REACTION:CHEAT_GEM_119]<br />
+[NAME:Free Gem Sapphire]<br />
+[BUILDING:CHEAT_FREE_GEM:NONE]<br />
+[PRODUCT:100:1:ROUGH:NO_SUBTYPE:INORGANIC:SAPPHIRE]<br />
+<br />
+[REACTION:CHEAT_GEM_120]<br />
+[NAME:Free Gem Clear Diamond]<br />
+[BUILDING:CHEAT_FREE_GEM:NONE]<br />
+[PRODUCT:100:1:ROUGH:NO_SUBTYPE:INORGANIC:DIAMOND_CLEAR]<br />
+<br />
+[REACTION:CHEAT_GEM_121]<br />
+[NAME:Free Gem Red Diamond]<br />
+[BUILDING:CHEAT_FREE_GEM:NONE]<br />
+[PRODUCT:100:1:ROUGH:NO_SUBTYPE:INORGANIC:DIAMOND_RED]<br />
+<br />
+[REACTION:CHEAT_GEM_122]<br />
+[NAME:Free Gem Green Diamond]<br />
+[BUILDING:CHEAT_FREE_GEM:NONE]<br />
+[PRODUCT:100:1:ROUGH:NO_SUBTYPE:INORGANIC:DIAMOND_GREEN]<br />
+<br />
+[REACTION:CHEAT_GEM_123]<br />
+[NAME:Free Gem Blue Diamond]<br />
+[BUILDING:CHEAT_FREE_GEM:NONE]<br />
+[PRODUCT:100:1:ROUGH:NO_SUBTYPE:INORGANIC:DIAMOND_BLUE]<br />
+<br />
+[REACTION:CHEAT_GEM_124]<br />
+[NAME:Free Gem Yellow Diamond]<br />
+[BUILDING:CHEAT_FREE_GEM:NONE]<br />
+[PRODUCT:100:1:ROUGH:NO_SUBTYPE:INORGANIC:DIAMOND_YELLOW]<br />
+<br />
+[REACTION:CHEAT_GEM_125]<br />
+[NAME:Free Gem Black Diamond]<br />
+[BUILDING:CHEAT_FREE_GEM:NONE]<br />
+[PRODUCT:100:1:ROUGH:NO_SUBTYPE:INORGANIC:DIAMOND_BLACK]<br />
+<br />
+[REACTION:CHEAT_GEM_126]<br />
+[NAME:Free Gem Star Sapphire]<br />
+[BUILDING:CHEAT_FREE_GEM:NONE]<br />
+[PRODUCT:100:1:ROUGH:NO_SUBTYPE:INORGANIC:SAPPHIRE_STAR]<br />
+<br />
+[REACTION:CHEAT_GEM_127]<br />
+[NAME:Free Gem Star Ruby]<br />
+[BUILDING:CHEAT_FREE_GEM:NONE]<br />
+[PRODUCT:100:1:ROUGH:NO_SUBTYPE:INORGANIC:RUBY_STAR]
+|-
+|}
+{| class="collapsible collapsed infobox" style="background-color: white; border: 1px solid darkgrey; font-size: 100%; padding: 2px; text-align: center; width: 100%;"
+! colspan="2" style="border: 1px solid darkgrey; font-weight: bold; background-color: lightblue; padding-left: 1em; padding-right: 1em; width:100%; display:table-cell;" | building_cheats.txt
+|- style="text-align: left; display:table-cell; "
+|building_cheats<br />
+<br />
+[BUILDING_WORKSHOP:CHEAT_FREE_MINERAL]<br />
+[NAME:Cheat Free Mineral]<br />
+[NAME_COLOR:7:0:1]<br />
+[WORK_LOCATION:2:2]<br />
+[BUILD_LABOR:CARPENTER]<br />
+[BUILD_KEY:NONE]<br />
+[BLOCK:1:1:0:1]<br />
+[BLOCK:2:0:0:0]<br />
+[BLOCK:3:1:0:1]<br />
+[DIM:3:3]<br />
+[TILE:0:1:32:49:32]<br />
+[TILE:0:2:32:49:32]<br />
+[TILE:0:3:32:49:32]<br />
+[COLOR:0:1:0:0:0:4:0:1:0:0:0]<br />
+[COLOR:0:2:0:0:0:4:0:1:0:0:0]<br />
+[COLOR:0:3:0:0:0:4:0:1:0:0:0]<br />
+[TILE:1:1:32:50:32]<br />
+[TILE:1:2:32:50:32]<br />
+[TILE:1:3:32:50:32]<br />
+[COLOR:1:1:0:0:0:4:0:1:0:0:0]<br />
+[COLOR:1:2:0:0:0:4:0:1:0:0:0]<br />
+[COLOR:1:3:0:0:0:4:0:1:0:0:0]<br />
+[TILE:2:1:0:51:0]<br />
+[TILE:2:2:0:51:0]<br />
+[TILE:2:3:0:51:0]<br />
+[COLOR:2:1:4:0:1:4:0:1:4:0:1]<br />
+[COLOR:2:2:4:0:1:4:0:1:4:0:1]<br />
+[COLOR:2:3:4:0:1:4:0:1:4:0:1]<br />
+[TILE:3:1:42:61:240]<br />
+[TILE:3:2:61:61:61]<br />
+[TILE:3:3:240:61:42]<br />
+[COLOR:3:1:7:0:0:7:0:0:7:0:0]<br />
+[COLOR:3:2:7:0:0:7:0:0:7:0:0]<br />
+[COLOR:3:3:7:0:0:7:0:0:7:0:0]<br />
+[BUILD_ITEM:1:NONE:NONE:NONE:NONE][BUILDMAT][WORTHLESS_STONE_ONLY][CAN_USE_ARTIFACT]<br />
+<br />
+[BUILDING_WORKSHOP:CHEAT_FREE_STONE]<br />
+[NAME:Cheat Free Stone]<br />
+[NAME_COLOR:7:0:1]<br />
+[WORK_LOCATION:2:2]<br />
+[BUILD_LABOR:CARPENTER]<br />
+[BUILD_KEY:NONE]<br />
+[BLOCK:1:1:0:1]<br />
+[BLOCK:2:0:0:0]<br />
+[BLOCK:3:1:0:1]<br />
+[DIM:3:3]<br />
+[TILE:0:1:32:49:32]<br />
+[TILE:0:2:32:49:32]<br />
+[TILE:0:3:32:49:32]<br />
+[COLOR:0:1:0:0:0:4:0:1:0:0:0]<br />
+[COLOR:0:2:0:0:0:4:0:1:0:0:0]<br />
+[COLOR:0:3:0:0:0:4:0:1:0:0:0]<br />
+[TILE:1:1:32:50:32]<br />
+[TILE:1:2:32:50:32]<br />
+[TILE:1:3:32:50:32]<br />
+[COLOR:1:1:0:0:0:4:0:1:0:0:0]<br />
+[COLOR:1:2:0:0:0:4:0:1:0:0:0]<br />
+[COLOR:1:3:0:0:0:4:0:1:0:0:0]<br />
+[TILE:2:1:0:51:0]<br />
+[TILE:2:2:0:51:0]<br />
+[TILE:2:3:0:51:0]<br />
+[COLOR:2:1:4:0:1:4:0:1:4:0:1]<br />
+[COLOR:2:2:4:0:1:4:0:1:4:0:1]<br />
+[COLOR:2:3:4:0:1:4:0:1:4:0:1]<br />
+[TILE:3:1:42:61:240]<br />
+[TILE:3:2:61:61:61]<br />
+[TILE:3:3:240:61:42]<br />
+[COLOR:3:1:7:0:0:7:0:0:7:0:0]<br />
+[COLOR:3:2:7:0:0:7:0:0:7:0:0]<br />
+[COLOR:3:3:7:0:0:7:0:0:7:0:0]<br />
+[BUILD_ITEM:1:NONE:NONE:NONE:NONE][BUILDMAT][WORTHLESS_STONE_ONLY][CAN_USE_ARTIFACT]<br />
+<br />
+[BUILDING_WORKSHOP:CHEAT_FREE_METAL]<br />
+[NAME:Cheat Free Metal]<br />
+[NAME_COLOR:7:0:1]<br />
+[WORK_LOCATION:2:2]<br />
+[BUILD_LABOR:CARPENTER]<br />
+[BUILD_KEY:NONE]<br />
+[BLOCK:1:1:0:1]<br />
+[BLOCK:2:0:0:0]<br />
+[BLOCK:3:1:0:1]<br />
+[DIM:3:3]<br />
+[TILE:0:1:32:49:32]<br />
+[TILE:0:2:32:49:32]<br />
+[TILE:0:3:32:49:32]<br />
+[COLOR:0:1:0:0:0:4:0:1:0:0:0]<br />
+[COLOR:0:2:0:0:0:4:0:1:0:0:0]<br />
+[COLOR:0:3:0:0:0:4:0:1:0:0:0]<br />
+[TILE:1:1:32:50:32]<br />
+[TILE:1:2:32:50:32]<br />
+[TILE:1:3:32:50:32]<br />
+[COLOR:1:1:0:0:0:4:0:1:0:0:0]<br />
+[COLOR:1:2:0:0:0:4:0:1:0:0:0]<br />
+[COLOR:1:3:0:0:0:4:0:1:0:0:0]<br />
+[TILE:2:1:0:51:0]<br />
+[TILE:2:2:0:51:0]<br />
+[TILE:2:3:0:51:0]<br />
+[COLOR:2:1:4:0:1:4:0:1:4:0:1]<br />
+[COLOR:2:2:4:0:1:4:0:1:4:0:1]<br />
+[COLOR:2:3:4:0:1:4:0:1:4:0:1]<br />
+[TILE:3:1:42:61:240]<br />
+[TILE:3:2:61:61:61]<br />
+[TILE:3:3:240:61:42]<br />
+[COLOR:3:1:0:0:1:7:0:0:0:0:1]<br />
+[COLOR:3:2:7:0:0:7:0:0:7:0:0]<br />
+[COLOR:3:3:0:0:1:7:0:0:0:0:1]<br />
+[BUILD_ITEM:1:NONE:NONE:NONE:NONE][BUILDMAT][WORTHLESS_STONE_ONLY][CAN_USE_ARTIFACT]<br />
+<br />
+[BUILDING_WORKSHOP:CHEAT_FREE_GEM]<br />
+[NAME:Cheat Free Gem]<br />
+[NAME_COLOR:7:0:1]<br />
+[WORK_LOCATION:2:2]<br />
+[BUILD_LABOR:CARPENTER]<br />
+[BUILD_KEY:NONE]<br />
+[BLOCK:1:1:0:1]<br />
+[BLOCK:2:0:0:0]<br />
+[BLOCK:3:1:0:1]<br />
+[DIM:3:3]<br />
+[TILE:0:1:32:49:32]<br />
+[TILE:0:2:32:49:32]<br />
+[TILE:0:3:32:49:32]<br />
+[COLOR:0:1:0:0:0:4:0:1:0:0:0]<br />
+[COLOR:0:2:0:0:0:4:0:1:0:0:0]<br />
+[COLOR:0:3:0:0:0:4:0:1:0:0:0]<br />
+[TILE:1:1:32:50:32]<br />
+[TILE:1:2:32:50:32]<br />
+[TILE:1:3:32:50:32]<br />
+[COLOR:1:1:0:0:0:4:0:1:0:0:0]<br />
+[COLOR:1:2:0:0:0:4:0:1:0:0:0]<br />
+[COLOR:1:3:0:0:0:4:0:1:0:0:0]<br />
+[TILE:2:1:0:51:0]<br />
+[TILE:2:2:0:51:0]<br />
+[TILE:2:3:0:51:0]<br />
+[COLOR:2:1:4:0:1:4:0:1:4:0:1]<br />
+[COLOR:2:2:4:0:1:4:0:1:4:0:1]<br />
+[COLOR:2:3:4:0:1:4:0:1:4:0:1]<br />
+[TILE:3:1:42:61:15]<br />
+[TILE:3:2:61:61:61]<br />
+[TILE:3:3:15:61:42]<br />
+[COLOR:3:1:2:0:1:7:0:0:2:0:1]<br />
+[COLOR:3:2:7:0:0:7:0:0:7:0:0]<br />
+[COLOR:3:3:2:0:1:7:0:0:2:0:1]<br />
+[BUILD_ITEM:1:NONE:NONE:NONE:NONE][BUILDMAT][WORTHLESS_STONE_ONLY][CAN_USE_ARTIFACT]
+|-
+|}
+{| class="collapsible collapsed infobox" style="background-color: white; border: 1px solid darkgrey; font-size: 100%; padding: 2px; text-align: center; width: 100%;"
+! colspan="2" style="border: 1px solid darkgrey; font-weight: bold; background-color: lightblue; padding-left: 1em; padding-right: 1em; width:100%; display:table-cell;" | entity_default.txt
+|- style="text-align: left; display:table-cell; "
+|[PERMITTED_BUILDING:CHEAT_FREE_MINERAL]<br />
+[PERMITTED_BUILDING:CHEAT_FREE_STONE]<br />
+[PERMITTED_BUILDING:CHEAT_FREE_METAL]<br />
+[PERMITTED_BUILDING:CHEAT_FREE_GEM]<br />
+[PERMITTED_REACTION:CHEAT_MINERAL_001]<br />
+[PERMITTED_REACTION:CHEAT_MINERAL_002]<br />
+[PERMITTED_REACTION:CHEAT_MINERAL_003]<br />
+[PERMITTED_REACTION:CHEAT_MINERAL_004]<br />
+[PERMITTED_REACTION:CHEAT_MINERAL_005]<br />
+[PERMITTED_REACTION:CHEAT_MINERAL_006]<br />
+[PERMITTED_REACTION:CHEAT_MINERAL_007]<br />
+[PERMITTED_REACTION:CHEAT_MINERAL_008]<br />
+[PERMITTED_REACTION:CHEAT_MINERAL_009]<br />
+[PERMITTED_REACTION:CHEAT_MINERAL_010]<br />
+[PERMITTED_REACTION:CHEAT_MINERAL_011]<br />
+[PERMITTED_REACTION:CHEAT_MINERAL_012]<br />
+[PERMITTED_REACTION:CHEAT_MINERAL_013]<br />
+[PERMITTED_REACTION:CHEAT_MINERAL_014]<br />
+[PERMITTED_REACTION:CHEAT_MINERAL_015]<br />
+[PERMITTED_REACTION:CHEAT_MINERAL_016]<br />
+[PERMITTED_REACTION:CHEAT_MINERAL_017]<br />
+[PERMITTED_REACTION:CHEAT_MINERAL_018]<br />
+[PERMITTED_REACTION:CHEAT_MINERAL_019]<br />
+[PERMITTED_REACTION:CHEAT_MINERAL_020]<br />
+[PERMITTED_REACTION:CHEAT_MINERAL_021]<br />
+[PERMITTED_REACTION:CHEAT_MINERAL_022]<br />
+[PERMITTED_REACTION:CHEAT_MINERAL_023]<br />
+[PERMITTED_REACTION:CHEAT_MINERAL_024]<br />
+[PERMITTED_REACTION:CHEAT_MINERAL_025]<br />
+[PERMITTED_REACTION:CHEAT_MINERAL_026]<br />
+[PERMITTED_REACTION:CHEAT_MINERAL_027]<br />
+[PERMITTED_REACTION:CHEAT_MINERAL_028]<br />
+[PERMITTED_REACTION:CHEAT_MINERAL_029]<br />
+[PERMITTED_REACTION:CHEAT_MINERAL_030]<br />
+[PERMITTED_REACTION:CHEAT_MINERAL_031]<br />
+[PERMITTED_REACTION:CHEAT_MINERAL_032]<br />
+[PERMITTED_REACTION:CHEAT_MINERAL_033]<br />
+[PERMITTED_REACTION:CHEAT_MINERAL_034]<br />
+[PERMITTED_REACTION:CHEAT_MINERAL_035]<br />
+[PERMITTED_REACTION:CHEAT_MINERAL_036]<br />
+[PERMITTED_REACTION:CHEAT_MINERAL_037]<br />
+[PERMITTED_REACTION:CHEAT_MINERAL_038]<br />
+[PERMITTED_REACTION:CHEAT_MINERAL_039]<br />
+[PERMITTED_REACTION:CHEAT_MINERAL_040]<br />
+[PERMITTED_REACTION:CHEAT_MINERAL_041]<br />
+[PERMITTED_REACTION:CHEAT_MINERAL_042]<br />
+[PERMITTED_REACTION:CHEAT_MINERAL_043]<br />
+[PERMITTED_REACTION:CHEAT_MINERAL_044]<br />
+[PERMITTED_REACTION:CHEAT_MINERAL_045]<br />
+[PERMITTED_REACTION:CHEAT_MINERAL_046]<br />
+[PERMITTED_REACTION:CHEAT_MINERAL_047]<br />
+[PERMITTED_REACTION:CHEAT_MINERAL_048]<br />
+[PERMITTED_REACTION:CHEAT_MINERAL_049]<br />
+[PERMITTED_REACTION:CHEAT_MINERAL_050]<br />
+[PERMITTED_REACTION:CHEAT_MINERAL_051]<br />
+[PERMITTED_REACTION:CHEAT_MINERAL_052]<br />
+[PERMITTED_REACTION:CHEAT_MINERAL_053]<br />
+[PERMITTED_REACTION:CHEAT_MINERAL_054]<br />
+[PERMITTED_REACTION:CHEAT_MINERAL_055]<br />
+[PERMITTED_REACTION:CHEAT_MINERAL_056]<br />
+[PERMITTED_REACTION:CHEAT_MINERAL_057]<br />
+[PERMITTED_REACTION:CHEAT_MINERAL_058]<br />
+[PERMITTED_REACTION:CHEAT_STONE_001]<br />
+[PERMITTED_REACTION:CHEAT_STONE_002]<br />
+[PERMITTED_REACTION:CHEAT_STONE_003]<br />
+[PERMITTED_REACTION:CHEAT_STONE_004]<br />
+[PERMITTED_REACTION:CHEAT_STONE_005]<br />
+[PERMITTED_REACTION:CHEAT_STONE_006]<br />
+[PERMITTED_REACTION:CHEAT_STONE_007]<br />
+[PERMITTED_REACTION:CHEAT_STONE_008]<br />
+[PERMITTED_REACTION:CHEAT_STONE_009]<br />
+[PERMITTED_REACTION:CHEAT_STONE_010]<br />
+[PERMITTED_REACTION:CHEAT_STONE_011]<br />
+[PERMITTED_REACTION:CHEAT_STONE_012]<br />
+[PERMITTED_REACTION:CHEAT_STONE_013]<br />
+[PERMITTED_REACTION:CHEAT_STONE_014]<br />
+[PERMITTED_REACTION:CHEAT_STONE_015]<br />
+[PERMITTED_REACTION:CHEAT_STONE_016]<br />
+[PERMITTED_REACTION:CHEAT_STONE_017]<br />
+[PERMITTED_REACTION:CHEAT_STONE_018]<br />
+[PERMITTED_REACTION:CHEAT_STONE_019]<br />
+[PERMITTED_REACTION:CHEAT_STONE_020]<br />
+[PERMITTED_REACTION:CHEAT_STONE_021]<br />
+[PERMITTED_REACTION:CHEAT_STONE_022]<br />
+[PERMITTED_REACTION:CHEAT_STONE_023]<br />
+[PERMITTED_REACTION:CHEAT_STONE_024]<br />
+[PERMITTED_REACTION:CHEAT_STONE_025]<br />
+[PERMITTED_REACTION:CHEAT_METAL_001]<br />
+[PERMITTED_REACTION:CHEAT_METAL_002]<br />
+[PERMITTED_REACTION:CHEAT_METAL_003]<br />
+[PERMITTED_REACTION:CHEAT_METAL_004]<br />
+[PERMITTED_REACTION:CHEAT_METAL_005]<br />
+[PERMITTED_REACTION:CHEAT_METAL_006]<br />
+[PERMITTED_REACTION:CHEAT_METAL_007]<br />
+[PERMITTED_REACTION:CHEAT_METAL_008]<br />
+[PERMITTED_REACTION:CHEAT_METAL_009]<br />
+[PERMITTED_REACTION:CHEAT_METAL_010]<br />
+[PERMITTED_REACTION:CHEAT_METAL_011]<br />
+[PERMITTED_REACTION:CHEAT_METAL_012]<br />
+[PERMITTED_REACTION:CHEAT_METAL_013]<br />
+[PERMITTED_REACTION:CHEAT_METAL_014]<br />
+[PERMITTED_REACTION:CHEAT_METAL_015]<br />
+[PERMITTED_REACTION:CHEAT_METAL_016]<br />
+[PERMITTED_REACTION:CHEAT_METAL_017]<br />
+[PERMITTED_REACTION:CHEAT_METAL_018]<br />
+[PERMITTED_REACTION:CHEAT_METAL_019]<br />
+[PERMITTED_REACTION:CHEAT_METAL_020]<br />
+[PERMITTED_REACTION:CHEAT_METAL_021]<br />
+[PERMITTED_REACTION:CHEAT_METAL_022]<br />
+[PERMITTED_REACTION:CHEAT_METAL_023]<br />
+[PERMITTED_REACTION:CHEAT_METAL_024]<br />
+[PERMITTED_REACTION:CHEAT_METAL_025]<br />
+[PERMITTED_REACTION:CHEAT_METAL_026]<br />
+[PERMITTED_REACTION:CHEAT_GEM_001]<br />
+[PERMITTED_REACTION:CHEAT_GEM_002]<br />
+[PERMITTED_REACTION:CHEAT_GEM_003]<br />
+[PERMITTED_REACTION:CHEAT_GEM_004]<br />
+[PERMITTED_REACTION:CHEAT_GEM_005]<br />
+[PERMITTED_REACTION:CHEAT_GEM_006]<br />
+[PERMITTED_REACTION:CHEAT_GEM_007]<br />
+[PERMITTED_REACTION:CHEAT_GEM_008]<br />
+[PERMITTED_REACTION:CHEAT_GEM_009]<br />
+[PERMITTED_REACTION:CHEAT_GEM_010]<br />
+[PERMITTED_REACTION:CHEAT_GEM_011]<br />
+[PERMITTED_REACTION:CHEAT_GEM_012]<br />
+[PERMITTED_REACTION:CHEAT_GEM_013]<br />
+[PERMITTED_REACTION:CHEAT_GEM_014]<br />
+[PERMITTED_REACTION:CHEAT_GEM_015]<br />
+[PERMITTED_REACTION:CHEAT_GEM_016]<br />
+[PERMITTED_REACTION:CHEAT_GEM_017]<br />
+[PERMITTED_REACTION:CHEAT_GEM_018]<br />
+[PERMITTED_REACTION:CHEAT_GEM_019]<br />
+[PERMITTED_REACTION:CHEAT_GEM_020]<br />
+[PERMITTED_REACTION:CHEAT_GEM_021]<br />
+[PERMITTED_REACTION:CHEAT_GEM_022]<br />
+[PERMITTED_REACTION:CHEAT_GEM_023]<br />
+[PERMITTED_REACTION:CHEAT_GEM_024]<br />
+[PERMITTED_REACTION:CHEAT_GEM_025]<br />
+[PERMITTED_REACTION:CHEAT_GEM_026]<br />
+[PERMITTED_REACTION:CHEAT_GEM_027]<br />
+[PERMITTED_REACTION:CHEAT_GEM_028]<br />
+[PERMITTED_REACTION:CHEAT_GEM_029]<br />
+[PERMITTED_REACTION:CHEAT_GEM_030]<br />
+[PERMITTED_REACTION:CHEAT_GEM_031]<br />
+[PERMITTED_REACTION:CHEAT_GEM_032]<br />
+[PERMITTED_REACTION:CHEAT_GEM_033]<br />
+[PERMITTED_REACTION:CHEAT_GEM_034]<br />
+[PERMITTED_REACTION:CHEAT_GEM_035]<br />
+[PERMITTED_REACTION:CHEAT_GEM_036]<br />
+[PERMITTED_REACTION:CHEAT_GEM_037]<br />
+[PERMITTED_REACTION:CHEAT_GEM_038]<br />
+[PERMITTED_REACTION:CHEAT_GEM_039]<br />
+[PERMITTED_REACTION:CHEAT_GEM_040]<br />
+[PERMITTED_REACTION:CHEAT_GEM_041]<br />
+[PERMITTED_REACTION:CHEAT_GEM_042]<br />
+[PERMITTED_REACTION:CHEAT_GEM_043]<br />
+[PERMITTED_REACTION:CHEAT_GEM_044]<br />
+[PERMITTED_REACTION:CHEAT_GEM_045]<br />
+[PERMITTED_REACTION:CHEAT_GEM_046]<br />
+[PERMITTED_REACTION:CHEAT_GEM_047]<br />
+[PERMITTED_REACTION:CHEAT_GEM_048]<br />
+[PERMITTED_REACTION:CHEAT_GEM_049]<br />
+[PERMITTED_REACTION:CHEAT_GEM_050]<br />
+[PERMITTED_REACTION:CHEAT_GEM_051]<br />
+[PERMITTED_REACTION:CHEAT_GEM_052]<br />
+[PERMITTED_REACTION:CHEAT_GEM_053]<br />
+[PERMITTED_REACTION:CHEAT_GEM_054]<br />
+[PERMITTED_REACTION:CHEAT_GEM_055]<br />
+[PERMITTED_REACTION:CHEAT_GEM_056]<br />
+[PERMITTED_REACTION:CHEAT_GEM_057]<br />
+[PERMITTED_REACTION:CHEAT_GEM_058]<br />
+[PERMITTED_REACTION:CHEAT_GEM_059]<br />
+[PERMITTED_REACTION:CHEAT_GEM_060]<br />
+[PERMITTED_REACTION:CHEAT_GEM_061]<br />
+[PERMITTED_REACTION:CHEAT_GEM_062]<br />
+[PERMITTED_REACTION:CHEAT_GEM_063]<br />
+[PERMITTED_REACTION:CHEAT_GEM_064]<br />
+[PERMITTED_REACTION:CHEAT_GEM_065]<br />
+[PERMITTED_REACTION:CHEAT_GEM_066]<br />
+[PERMITTED_REACTION:CHEAT_GEM_067]<br />
+[PERMITTED_REACTION:CHEAT_GEM_068]<br />
+[PERMITTED_REACTION:CHEAT_GEM_069]<br />
+[PERMITTED_REACTION:CHEAT_GEM_070]<br />
+[PERMITTED_REACTION:CHEAT_GEM_071]<br />
+[PERMITTED_REACTION:CHEAT_GEM_072]<br />
+[PERMITTED_REACTION:CHEAT_GEM_073]<br />
+[PERMITTED_REACTION:CHEAT_GEM_074]<br />
+[PERMITTED_REACTION:CHEAT_GEM_075]<br />
+[PERMITTED_REACTION:CHEAT_GEM_076]<br />
+[PERMITTED_REACTION:CHEAT_GEM_077]<br />
+[PERMITTED_REACTION:CHEAT_GEM_078]<br />
+[PERMITTED_REACTION:CHEAT_GEM_079]<br />
+[PERMITTED_REACTION:CHEAT_GEM_080]<br />
+[PERMITTED_REACTION:CHEAT_GEM_081]<br />
+[PERMITTED_REACTION:CHEAT_GEM_082]<br />
+[PERMITTED_REACTION:CHEAT_GEM_083]<br />
+[PERMITTED_REACTION:CHEAT_GEM_084]<br />
+[PERMITTED_REACTION:CHEAT_GEM_085]<br />
+[PERMITTED_REACTION:CHEAT_GEM_086]<br />
+[PERMITTED_REACTION:CHEAT_GEM_087]<br />
+[PERMITTED_REACTION:CHEAT_GEM_088]<br />
+[PERMITTED_REACTION:CHEAT_GEM_089]<br />
+[PERMITTED_REACTION:CHEAT_GEM_090]<br />
+[PERMITTED_REACTION:CHEAT_GEM_091]<br />
+[PERMITTED_REACTION:CHEAT_GEM_092]<br />
+[PERMITTED_REACTION:CHEAT_GEM_093]<br />
+[PERMITTED_REACTION:CHEAT_GEM_094]<br />
+[PERMITTED_REACTION:CHEAT_GEM_095]<br />
+[PERMITTED_REACTION:CHEAT_GEM_096]<br />
+[PERMITTED_REACTION:CHEAT_GEM_097]<br />
+[PERMITTED_REACTION:CHEAT_GEM_098]<br />
+[PERMITTED_REACTION:CHEAT_GEM_099]<br />
+[PERMITTED_REACTION:CHEAT_GEM_100]<br />
+[PERMITTED_REACTION:CHEAT_GEM_101]<br />
+[PERMITTED_REACTION:CHEAT_GEM_102]<br />
+[PERMITTED_REACTION:CHEAT_GEM_103]<br />
+[PERMITTED_REACTION:CHEAT_GEM_104]<br />
+[PERMITTED_REACTION:CHEAT_GEM_105]<br />
+[PERMITTED_REACTION:CHEAT_GEM_106]<br />
+[PERMITTED_REACTION:CHEAT_GEM_107]<br />
+[PERMITTED_REACTION:CHEAT_GEM_108]<br />
+[PERMITTED_REACTION:CHEAT_GEM_109]<br />
+[PERMITTED_REACTION:CHEAT_GEM_110]<br />
+[PERMITTED_REACTION:CHEAT_GEM_111]<br />
+[PERMITTED_REACTION:CHEAT_GEM_112]<br />
+[PERMITTED_REACTION:CHEAT_GEM_113]<br />
+[PERMITTED_REACTION:CHEAT_GEM_114]<br />
+[PERMITTED_REACTION:CHEAT_GEM_115]<br />
+[PERMITTED_REACTION:CHEAT_GEM_116]<br />
+[PERMITTED_REACTION:CHEAT_GEM_117]<br />
+[PERMITTED_REACTION:CHEAT_GEM_118]<br />
+[PERMITTED_REACTION:CHEAT_GEM_119]<br />
+[PERMITTED_REACTION:CHEAT_GEM_120]<br />
+[PERMITTED_REACTION:CHEAT_GEM_121]<br />
+[PERMITTED_REACTION:CHEAT_GEM_122]<br />
+[PERMITTED_REACTION:CHEAT_GEM_123]<br />
+[PERMITTED_REACTION:CHEAT_GEM_124]<br />
+[PERMITTED_REACTION:CHEAT_GEM_125]<br />
+[PERMITTED_REACTION:CHEAT_GEM_126]<br />
+[PERMITTED_REACTION:CHEAT_GEM_127]<br />
+|-
+|}
+|-
+|}
+[[Category:v0.31:Modding]]

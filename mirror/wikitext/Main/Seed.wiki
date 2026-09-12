@@ -1,0 +1,365 @@
+{{Quality|Superior|23:36, 15 February 2023 (UTC)}}
+{{av}}
+:''Looking for information on world generation seeds? See [[Advanced_world_generation#Seed_notes|Advanced world generation]].''
+:''For information on seed management, see [[How do I manage my seeds and crops]]?''
+[[File:seeds_sprite_preview.png|right]]'''Seeds''' are used in [[farming]] to grow [[crop]]s - some can be used to make [[oil]]. They can be stored in [[bag]]s (100 seeds per bag), which can in turn be stored in [[barrel]]s or [[pot]]s (10 bags per barrel/pot). Different seeds generally can't be mixed within a bag, so storing seeds of 10 different types requires 10 (or more) different bags (though a bug does cause dwarves to combine seeds occasionally).
+
+Seeds can be brought on embark, obtained by [[trading]], or be produced from plants acquired by [[plant gathering]] (or growing the respective [[crop]]s). When a plant is eaten or used in [[brewing]], [[milling]] or [[plant processing]], it leaves one or two plantable seeds (see below for details). The exceptions are [[valley herb]] and [[kobold bulb]], which will not leave behind seeds after processing. [[Cooking]] plants in a [[kitchen]] never produces seeds.
+
+[[Tree]] seeds cannot currently be planted, though a few varieties, such as [[macadamia]]s and [[walnut]]s, are edible or cookable. Some seeds do not have a sprite assigned to them. 
+
+However, presently dwarves will rather starve than eat a seed raw.
+Sadly, some seeds are completely worthless, based on them being unfarmable, inedible, and un-processable. For the moment these can be dumped/sold freely.
+
+__TOC__
+==Seed List==
+
+{|  border = 1 cellspacing="0" cellpadding="5" class="wikitable sortable"
+|-
+! Seed type || Graphic || Edible Raw || Cookable || Farmable || Vermin Edible || Oil Seed || Raws/Menu Order || Worthless?
+|-
+|[[Abaca]] seeds || style="text-align:center;" | [[File:abaca_seeds.png]] || No || No || No || Yes || No || 092 || Yes
+|-
+|[[Acacia]] seeds || style="text-align:center;" | [[File:acacia_seeds.png]] || No || Yes || No || Yes || No || 153 || No
+|-
+|[[Oak|Acorns]] || style="text-align:center;" | [[File:oak_sprite.png]] || Yes || Yes || No || Yes || No || 152 || No
+|-
+|[[Alfalfa]] seeds || style="text-align:center;" | [[File:alfalfa_seeds_sprite.png]] || No || Yes || Yes || Yes || No || 009 || No
+|-
+|[[Almond]]s || style="text-align:center;" | [[File:almond_sprite.png]] || Yes || Yes || No || Yes || No || 119 || No
+|-
+|[[Apple]] seeds || style="text-align:center;" | [[File:apple_seeds.png]] || No || No || No || Yes || No || 120 || Yes
+|-
+|[[Apricot]] pits || style="text-align:center;" | [[File:abaca_seeds.png]] || No || No || No || Yes || No || 121 || Yes 
+|-
+|[[Artichoke]] seeds || style="text-align:center;" | [[File:artichoke_seeds_sprite.png]] || No || No || Yes || Yes || No || 035 || No
+|-
+|[[Asparagus]] seeds || style="text-align:center;" | [[File:asparagus_seeds_sprite.png]] || No || No || Yes || Yes || No || 036 || No
+|-
+|[[Avocado]] pits || style="text-align:center;" | [[File:avocado_seeds_sprite.png]] || No || No || No || Yes || No || 103 || Yes 
+|-
+|[[Bambara groundnut]] || style="text-align:center;" | [[File:bambara_groundnut_seeds_sprite.png]] || Yes || Yes || Yes || Yes || No || 037 || No
+|-
+|[[Banana]] seeds || style="text-align:center;" | [[File:banana_seeds.png]] || No || No || No || Yes || No || 093 || Yes
+|-
+|[[Barley]] seeds || style="text-align:center;" | [[File:generic_wheat_seeds_sprite.png]] || No || Yes || Yes || Yes || No || 006 || No
+|-
+|[[Bayberry]] seeds || style="text-align:center;" | [[File:bayberry_seeds.png]] || No || No || No || Yes || No || 122 || Yes
+|-
+|[[Beet]] seeds || style="text-align:center;" | [[File:beet_seeds_sprite.png]] || No || No || Yes || No || No || 040 || No
+|-
+|[[Bilberry]] seeds || style="text-align:center;" | [[File:bilberry_seeds_sprite.png]] || No || No || Yes || No || No || 087 || No
+|-
+|[[Bitter melon]] seeds || style="text-align:center;" | [[File:bitter_melon_seeds_sprite.png]] || No || No || Yes || No || No || 041 || No
+|-
+|[[Bitter orange]] seeds || style="text-align:center;" | [[File:bitter_orange_seeds.png]] || No || No || No || Yes || No || 108 || Yes
+|-
+|[[Bitter vetch]] seeds || style="text-align:center;" | [[File:bitter_vetch_seeds_sprite.png]] || No || Yes || Yes || Yes || No || 016 || No
+|-
+|[[Blackberry]] seeds || style="text-align:center;" | [[File:blackberry_seeds_sprite.png]] || No || No || Yes || No || No || 089 || No
+|-
+|[[Blade weed]] seeds || style="text-align:center;" | [[File:blade_weed_seeds_sprite.png]] || No || Yes || Yes || Yes || No || 147 || No
+|-
+|[[Bloated tuber]] seeds || style="text-align:center;" | [[File:bloated_tuber_seeds_sprite.png]] || No || No || Yes || No || No || 139 || No
+|-
+|[[Blood amaranth]] seeds || style="text-align:center;" | [[File:blood_amaranth_seeds_sprite.png]] || No || Yes || Yes || Yes || No || 018 || No
+|-
+|[[Blueberry]] seeds || style="text-align:center;" | [[File:blueberry_seeds_sprite.png]] || No || No || Yes || No || No || 088 || No
+|-
+|[[Broad bean]] || style="text-align:center;" | [[File:broad_bean_seeds_sprite.png]] || No || Yes || Yes || Yes || No || 039 || No
+|-
+|[[Buckwheat]] seeds || style="text-align:center;" | [[File:buckwheat_seeds_sprite.png]] || No || Yes || Yes || Yes || No || 007 || No
+|-
+|[[Cabbage]] seeds || style="text-align:center;" | [[File:cabbage_seeds_sprite.png]] || No || No || Yes || No || No || 042 || No
+|-
+|[[Cacao tree|Cacao]] beans || style="text-align:center;" | [[File:cacao_seeds.png]] || No || Yes || No || No || No || 157 || No
+|-
+|[[Candlenut]]s || style="text-align:center;" | [[File:candlenut_sprite.png]] || No || Yes || No || Yes || No || 155 || No
+|-
+|[[Caper]] seeds || style="text-align:center;" | [[File:caper_seeds_sprite.png]] || No || No || Yes || No || No || 043 || No
+|-
+|[[Carambola]] seeds || style="text-align:center;" | [[File:carambola_seeds.png]] || No || No || No || Yes || No || 094 || Yes
+|-
+|[[Wild carrot|Carrot]] seeds || style="text-align:center;" | [[File:wild_carrot_seeds_sprite.png]] || No || Yes || Yes || Yes || No || 044 || No
+|-
+|[[Cashew]]s || style="text-align:center;" | [[File:cashew_seeds.png]] || No || No || No || Yes || No|| 095 || Yes
+|-
+|[[Cassava]] seeds || style="text-align:center;" | [[File:cassava_seeds_sprite.png]] || No || No || Yes || No || No || 045 || No
+|-
+|[[Cave wheat]] seeds || style="text-align:center;" | [[File:cave_wheat_seeds_sprite.png]] || No || Yes || Yes || Yes || No || 135 || No
+|-
+|[[Celery]] seeds || style="text-align:center;" | [[File:celery_seeds_sprite.png]] || No || No || Yes || No || No || 046 || No
+|-
+|[[Cherry]] pits || style="text-align:center;" | [[File:cherry_seeds.png]] || No || No || No || Yes || No || 123 || Yes
+|-
+|[[Chestnut]]s || style="text-align:center;" | [[File:chestnut_sprite.png]] || Yes || Yes || No || Yes || No || 154 || No
+|-
+|[[Chickpea]] || style="text-align:center;" | [[File:chickpea_seeds_sprite.png]] || No || Yes || Yes || Yes || No || 047 || No
+|-
+|[[Chicory]] seeds || style="text-align:center;" | [[File:chicory_seeds_sprite.png]] || No || No || Yes || No || No || 048 || No
+|-
+|[[Citron]] seeds || style="text-align:center;" | [[File:citron_seeds.png]] || No || No || No || Yes || No || 106 || Yes
+|-
+|[[Coffee]] beans || style="text-align:center;" | [[File:coffee_seeds.png]] || No || No || No || No || No || 096 || Yes
+|-
+|[[Cotton]] seeds || style="text-align:center;" | [[File:cotton_seeds_sprite.png]] || Yes || Yes || Yes || Yes || Yes || 031 || No
+|-
+|[[Cowpea]] || style="text-align:center;" | [[File:cowpea_seeds_sprite.png]] || No || Yes || Yes || Yes || No || 049 || No
+|-
+|[[Cranberry]] seeds || style="text-align:center;" | [[File:cranberry_seeds_sprite.png]] || No || No || Yes || No || No || 086 || No
+|-
+|[[Cucumber]] seeds || style="text-align:center;" | [[File:cucumber_seeds_sprite.png]] || No || No || Yes || No || No || 050 || No
+|-
+|[[Custard-apple]] seeds || style="text-align:center;" | [[File:custard_apple_seeds.png]] || No || No || No || Yes || No || 113 || Yes
+|-
+|[[Date palm]] seeds || style="text-align:center;" | [[File:date_palm_seeds.png]] || No || No || No || Yes || No || 114 || Yes
+|-
+|[[Desert lime]] seeds || style="text-align:center;" | [[File:desert_lime_seeds.png]] || No || No || No || Yes || No || 111 || Yes
+|-
+|[[Dimple cup]] spawn || style="text-align:center;" | [[File:dimple_cup_seeds_sprite.png]] || No || Yes || Yes || Yes || No || 146 || No
+|-
+|[[Durian]] seeds || style="text-align:center;" | [[File:durian_seeds.png]] || No || Yes || No || Yes || No || 097 || No
+|-
+|[[Eggplant]] seeds || style="text-align:center;" | [[File:eggplant_seeds_sprite.png]] || Yes || Yes || Yes || Yes || No || 051 || No
+|-
+|[[Elephant-head amaranth]] seeds || style="text-align:center;" | [[File:elephant_head_amaranth_seeds_sprite.png]] || No || Yes || Yes || Yes || No || 021 || No
+|-
+|[[Finger lime]] seeds || style="text-align:center;" | [[File:finger_lime_seeds.png]] || No || No || No || Yes || No || 109 || Yes
+|-
+|[[Finger millet]] || style="text-align:center;" | [[File:finger_millet_seeds_sprite.png]] || No || Yes || Yes || Yes || No || 024 || No
+|-
+|[[Fisher berry]] seeds || style="text-align:center;" | [[File:fisher_berry_seeds_sprite.png]] || No || Yes || Yes || Yes || No || 144 || No
+|-
+|[[Flax]] seeds || style="text-align:center;" | [[File:flax_seeds_sprite.png]] || Yes || Yes || Yes || Yes || Yes|| 028 || No
+|-
+|[[Fonio]] || style="text-align:center;" | [[File:fonio_seeds_sprite.png]] || No || Yes || Yes || Yes || No || 026 || No
+|-
+|[[Foxtail millet]] || style="text-align:center;" | [[File:foxtail_millet_seeds_sprite.png]] || No || Yes || Yes || Yes || No || 025 || No
+|-
+|[[Garden cress]] seeds || style="text-align:center;" | [[File:garden_cress_seeds_sprite.png]] || No || No || Yes || No || No || 052 || No
+|-
+|[[Garlic]] seeds || style="text-align:center;" | [[File:garlic_seeds_sprite.png]] || No || Yes || Yes || Yes || No || 053 || No
+|-
+|[[Ginkgo]] seeds || style="text-align:center;" | [[File:ginkgo_seeds2.png]] || Yes || Yes || No || Yes || No || 124 || No
+|-
+|[[Grape]] seeds || style="text-align:center;" | [[File:grape_seeds_sprite.png]] || No || No || Yes || No || No || 085 || No
+|-
+|[[Guava]] seeds || style="text-align:center;" | [[File:guava_seeds.png]] || No || No || No || Yes || No || 098 || Yes
+|-
+|[[Hard wheat]] seeds || style="text-align:center;" | [[File:generic_wheat_seeds_sprite.png]] || No || Yes || Yes || Yes || No || 004 || No
+|-
+|[[Hazel]] nuts || style="text-align:center;" | [[File:guava_seeds.png]] || Yes || Yes || No || Yes || No || 125 || No
+|-
+|[[Hemp]] seeds || style="text-align:center;" | [[File:hemp_seeds_sprite.png]] || Yes || Yes || Yes || Yes || Yes || 030 || No
+|-
+|[[Hide root]] seeds || style="text-align:center;" | [[File:hide_root_seeds_sprite.png]] || No || Yes || Yes || Yes || No || 148 || No
+|-
+|[[Horned melon]] seeds || style="text-align:center;" | [[File:horned_melon_seeds_sprite.png]] || No || No || Yes || No || No || 054 || No
+|-
+|[[Jute]] seeds || style="text-align:center;" | [[File:jute_seeds_sprite.png]] || No || No || Yes || No || No || 029 || No
+|-
+|[[Kaniwa]] seeds || style="text-align:center;" | [[File:kaniwa_seeds_sprite.png]] || No || Yes || Yes || Yes || No || 015 || No
+|-
+|[[Kenaf]] seeds || style="text-align:center;" | [[File:kenaf_seeds_sprite.png]] || Yes || Yes || Yes || Yes || Yes || 033 || No
+|-
+|[[Kumquat]] seeds || style="text-align:center;" | [[File:kumquat_seeds.png]] || No || No || No || Yes || No || 112 || Yes
+|-
+|[[Leek]] seeds || style="text-align:center;" | [[File:leek_seeds_sprite.png]] || No || No || Yes || No || No || 055 || No
+|-
+|[[Lentil]] || style="text-align:center;" | [[File:lentil_seeds_sprite.png]] || No || Yes || Yes || Yes || No || 056 || No
+|-
+|[[Lesser yam]] seeds || style="text-align:center;" | [[File:lesser_yam_seeds_sprite.png]] || No || No || Yes || No || No || 080 || No
+|-
+|[[Lettuce]] seeds || style="text-align:center;" | [[File:lettuce_seeds_sprite.png]] || No || No || Yes || No || No || 057 || No
+|-
+|[[Lime]] seeds || style="text-align:center;" | [[File:lime_seeds.png]] || No || No || No || Yes || No || 104 || Yes
+|-
+|[[Long yam]] seeds || style="text-align:center;" | [[File:long_yam_seeds_sprite.png]] || No || No || Yes || No || No || 081 || No
+|-
+|[[Longland grass]] seeds || style="text-align:center;" | [[File:longland_grass_seeds_sprite.png]] || No || Yes || Yes || Yes || No || 142 || No
+|-
+|[[Lychee]] seeds || style="text-align:center;" | [[File:lychee_seeds.png]] || No || No || No || Yes || No || 115 || Yes
+|-
+|[[Macadamia]] nuts || style="text-align:center;" | [[File:macadamia_seeds.png]] || Yes || Yes || No || Yes || No || 116 || No
+|-
+|[[Maize]] || style="text-align:center;" | [[File:maize_seeds_sprite.png]] || No || Yes || Yes || Yes || No || 013 || No
+|-
+|[[Mango tree|Mango]] pits || style="text-align:center;" | [[File:mango_seeds.png]] || No || No || No || Yes || No || 156 || Yes
+|-
+|[[Muck root]] seeds || style="text-align:center;" | [[File:muck_root_seeds_sprite.png]] || No || No || Yes || No || No || 138 || No
+|-
+|[[Mung bean]] || style="text-align:center;" | [[File:mung_bean_seeds_sprite.png]] || No || Yes || Yes || Yes || No || 058 || No
+|-
+|[[Muskmelon]] seeds || style="text-align:center;" | [[File:muskmelon_seeds_sprite.png]] || No || No || Yes || No || No || 059 || No
+|-
+|[[Oats]] seeds || style="text-align:center;" | [[File:oats_seeds_sprite.png]] || No || Yes || Yes || Yes || No || 008 || No
+|-
+|[[Olive]] pits || style="text-align:center;" | [[File:olive_seeds.png]] || No || No || No || Yes || No || 117 || Yes
+|-
+|[[Onion]] seeds || style="text-align:center;" | [[File:onion_seeds_sprite.png]] || No || No || Yes || No || No || 060 || No
+|-
+|[[Orange]] seeds || style="text-align:center;" | [[File:orange_seeds.png]] || No || No || No || Yes || No || 107 || Yes
+|-
+|[[Papaya]] seeds || style="text-align:center;" | [[File:papaya_seeds.png]] || No || No || No || Yes || No || 099 || Yes
+|-
+|[[Papyrus sedge]] seeds || style="text-align:center;" | [[File:papyrus_sedge_seeds_sprite.png]] || No || No || Yes || No || No || 034 || No
+|-
+|[[Paradise nut]]s || style="text-align:center;" | [[File:paradise_nut_seeds.png]] || No || No || No || Yes || No || 100 || Yes
+|-
+|[[Parsnip]] seeds || style="text-align:center;" | [[File:parsnip_seeds_sprite.png]] || No || Yes || Yes || Yes || No || 061 || No
+|-
+|[[Passion fruit]] seeds || style="text-align:center;" | [[File:passion_fruit_seeds_sprite.png]] || No || No || Yes || No || No || 084 || No
+|-
+|[[Pea]]s || style="text-align:center;" | [[File:pea_seeds_sprite.png]] || No || Yes || Yes || Yes || No || 062 || No
+|-
+|[[Peach]] pits || style="text-align:center;" | [[File:peach_seeds.png]] || No || No || No || Yes || No || 126 || Yes
+|-
+|[[Peanut|Peanuts]] || style="text-align:center;" | [[File:peanut_seeds_sprite.png]] || Yes || Yes || Yes || Yes || No || 063 || No
+|-
+|[[Pear]] seeds || style="text-align:center;" | [[File:pear_seeds.png]] || No || No || No || Yes || No || 127 || Yes
+|-
+|[[Pearl millet]] || style="text-align:center;" | [[File:pearl_millet_seeds_sprite.png]] || No || Yes || Yes || Yes || No || 022 || No
+|-
+|[[Pecan]]s || style="text-align:center;" | [[File:pecan_sprite.png]] || Yes || Yes || No || Yes || No || 128 || No
+|-
+|[[Pendant amaranth]] seeds || style="text-align:center;" | [[File:pendant_amaranth_seeds_sprite.png]] || No || Yes || Yes || Yes || No || 017 || No
+|-
+|[[Pepper]] seeds || style="text-align:center;" | [[File:pepper_seeds_sprite.png]] || No || No || Yes || No || No || 064 || No
+|-
+|[[Persimmon]] seeds || style="text-align:center;" | [[File:persimmon_seeds.png]] || No || No || No || Yes || No || 129 || Yes
+|-
+|[[Pig tail]] seeds || style="text-align:center;" | [[File:pig_tail_seeds_sprite.png]] || No || Yes || Yes || Yes || No || 134 || No
+|-
+|[[Pineapple]] seeds || style="text-align:center;" | [[File:pineapple_seeds_sprite.png]] || No || No || Yes || Yes || No || 091 || No
+|-
+|[[Plum]] pits || style="text-align:center;" | [[File:plum_seeds.png]] || No || No || No || Yes || No || 130 || Yes
+|-
+|[[Plump helmet]] spawn || style="text-align:center;" | [[File:plump_helmet_seeds_sprite.png]] || No || Yes || Yes || Yes || No || 133 || No
+|-
+|[[Pomegranate]] seeds || style="text-align:center;" | [[File:pomegranate_seeds2.png]] || No || No || No || Yes || No || 118 || Yes
+|-
+|[[Pomelo]] seeds || style="text-align:center;" | [[File:pomelo_seeds.png]] || No || No || No || Yes || No || 105 || Yes 
+|-
+|[[Potato]] seeds || style="text-align:center;" | [[File:potato_seeds_sprite.png]] || No || No || Yes || No || No || 065 || No
+|-
+|[[Prickle berry]] seeds || style="text-align:center;" | [[File:prickle_berry_seeds_sprite.png]] || No || Yes || Yes || Yes || No || 140 || No
+|-
+|[[Purple amaranth]] seeds || style="text-align:center;" | [[File:purple_amaranth_seeds_sprite.png]] || No || Yes || Yes || Yes || No || 019 || No
+|-
+|[[Purple yam]] seeds || style="text-align:center;" | [[File:purple_yam_seeds_sprite.png]] || No || No || Yes || No || No || 082 || No
+|-
+|[[Quinoa]] seeds || style="text-align:center;" | [[File:quinoa_seeds_sprite.png]] || No || Yes || Yes || Yes || No || 014 || No
+|-
+|[[Radish]] seeds || style="text-align:center;" | [[File:radish_seeds_sprite.png]] || No || No || Yes || No || No || 066 || No
+|-
+|[[Rambutan]] seeds || style="text-align:center;" | [[File:rambutan_seeds.png]] || No || Yes || No || Yes || No || 101 || No
+|-
+|[[Ramie]] seeds || style="text-align:center;" | [[File:ramie_seeds_sprite.png]] || No || No || Yes || No || No || 032 || No
+|-
+|[[Raspberry]] seeds || style="text-align:center;" | [[File:raspberry_seeds_sprite.png]] || No || No || Yes || No || No || 090 || No
+|-
+|[[Rat weed]] seeds || style="text-align:center;" | [[File:rat_weed_seeds_sprite.png]] || No || Yes || Yes || Yes || No || 143 || No
+|-
+|[[Red bean]]s || style="text-align:center;" | [[File:red_bean_seeds_sprite.png]] || No || Yes || Yes || Yes || No || 067 || No
+|-
+|[[Red spinach]] seeds || style="text-align:center;" | [[File:red_spinach_seeds_sprite.png]] || No || Yes || Yes || Yes || No || 020 || No
+|-
+|[[Rhubarb]] seeds || style="text-align:center;" | [[File:rhubarb_seeds_sprite.png]] || No || No || Yes || No || No || 068 || No
+|-
+|[[Rice]] || style="text-align:center;" | [[File:rice_seeds_sprite.png]] || No || Yes || Yes || Yes || No || 012 || No
+|-
+|[[Quarry bush|Rock nuts]] || style="text-align:center;" | [[File:quarry_bush_seeds_sprite.png]] || Yes || Yes || Yes || Yes || Yes || 137 || No
+|-
+|[[Rope reed]] seeds || style="text-align:center;" | [[File:rope_reed_seeds_sprite.png]] || No || Yes || Yes || Yes || No || 145 || No
+|-
+|[[Round lime]] seeds || style="text-align:center;" | [[File:round_lime_seeds.png]] || No || No || No || Yes || No || 110 || Yes
+|-
+|[[Rye]] seeds || style="text-align:center;" | [[File:rye_seeds_sprite.png]] || No || Yes || Yes || Yes || No || 010 || No
+|-
+|[[Sand pear]] seeds || style="text-align:center;" | [[File:sand_pear_seeds.png]] || No || No || No || Yes || No || 131 || Yes 
+|-
+|[[Single-grain wheat]] seeds || style="text-align:center;" | [[File:generic_wheat_seeds_sprite.png]] || No || Yes || Yes || Yes || No || 001 || No
+|-
+|[[Sliver barb]] seeds || style="text-align:center;" | [[File:sliver_barb_seeds_sprite.png]] || No || Yes || Yes || Yes || No || 149 || No
+|-
+|[[Soft wheat]] seeds || style="text-align:center;" | [[File:generic_wheat_seeds_sprite.png]] || No || Yes || Yes || Yes || No || 003 || No
+|-
+|[[Sorghum]] seeds || style="text-align:center;" | [[File:sorghum_seeds_sprite.png]] || No || Yes || Yes || Yes || No || 011 || No
+|-
+|[[Soybean]] || style="text-align:center;" | [[File:soybean_seeds_sprite.png]] || No || Yes || Yes || Yes || No || 069 || No
+|-
+|[[Spelt]] seeds || style="text-align:center;" | [[File:generic_wheat_seeds_sprite.png]] || No || Yes || Yes || Yes || No || 005 || No
+|-
+|[[Spinach]] seeds || style="text-align:center;" | [[File:spinach_seeds_sprite.png]] || No || No || Yes || No || No || 070 || No
+|-
+|[[Squash]] seeds || style="text-align:center;" | [[File:squash_seeds_sprite.png]] || No || No || Yes || No || No || 071 || No
+|-
+|[[Strawberry]] seeds || style="text-align:center;" | [[File:strawberry_fruit_sprite.png]] || No || Yes || Yes || Yes || No || 141 || No
+|-
+|[[String bean]] || style="text-align:center;" | [[File:string_bean_seeds_sprite.png]] || No || Yes || Yes || Yes || No || 038 || No
+|-
+|[[Sun berry]] seeds || style="text-align:center;" | [[File:sun_berry_seeds_sprite.png]] || No || Yes || Yes || Yes || No || 150 || No
+|-
+|[[Sweet pod]] seeds || style="text-align:center;" | [[File:sweet_pod_seeds_sprite.png]] || No || Yes || Yes || Yes || No || 136 || No
+|-
+|[[Sweet potato]] seeds || style="text-align:center;" | [[File:sweet_potato_seeds_sprite.png]] || No || No || Yes || No || No || 072 || No
+|-
+|[[Taro]] seeds || style="text-align:center;" | [[File:taro_seeds_sprite.png]] || No || No || Yes || No || No || 073 || No
+|-
+|[[Tea]] seeds || style="text-align:center;" | [[File:tea_sprite.png]] || No || No || No || Yes || No || 102 || Yes
+|-
+|[[Teff]] || style="text-align:center;" | [[File:teff_seeds_sprite.png]] || No || Yes || Yes || Yes || No || 027 || No
+|-
+|[[Tomatillo]] seeds || style="text-align:center;" | [[File:tomatillo_seeds_sprite.png]] || No || Yes || Yes || Yes || No || 075 || No
+|-
+|[[Tomato]] seeds || style="text-align:center;" | [[File:tomato_seeds_sprite.png]] || No || Yes || Yes || Yes || No || 074 || No
+|-
+|[[Turnip]] seeds || style="text-align:center;" | [[File:turnip_seeds_sprite.png]] || No || No || Yes || No || No || 076 || No
+|-
+|[[Two-grain wheat]] seeds || style="text-align:center;" | [[File:generic_wheat_seeds_sprite.png]] || No || Yes || Yes || Yes || No || 002 || No
+|-
+|[[Urad bean]]s || style="text-align:center;" | [[File:urad_bean_seeds_sprite.png]] || No || Yes || Yes || Yes || No || 077 || No
+|-
+|[[Walnut]]s || style="text-align:center;" | [[File:walnut_sprite.png]] || Yes || Yes || No || Yes || No || 132 || No
+|-
+|[[Watermelon]] seeds || style="text-align:center;" | [[File:watermelon_seeds_sprite.png]] || No || No || Yes || No || No || 078 || No
+|-
+|[[Whip vine]] seeds || style="text-align:center;" | [[File:whip_vine_seeds_sprite.png]] || No || Yes || Yes || Yes || No || 151 || No
+|-
+|[[White millet]] || style="text-align:center;" | [[File:white_millet_seeds_sprite.png]] || No || Yes || Yes || Yes || No || 023 || No 
+|-
+|[[White yam]] seeds || style="text-align:center;" | [[File:white_yam_seeds_sprite.png]] || No || No || Yes || No || No || 083 || No
+|-
+|[[Winter melon]] seeds || style="text-align:center;" | [[File:winter_melon_seeds_sprite.png]] || No || No || Yes || No || No || 079 || No
+|}
+
+==Seed Production==
+Seeds are produced by [[brewing]] (at a [[still]]), [[milling]] (at a [[millstone]] or [[quern]]), [[Plant processing|processing]] (at a [[farmer's workshop]]), or by dwarves eating the plants raw (uncooked). Note that cooking (at a [[kitchen]]) and make dye jobs (at a [[Dyer's shop]]) do *not* produce seeds. For information on where to grow, gather, or process specific plants, consult the specific plant's page or the general [[crop]]s page.
+
+In order to prevent your fortress becoming cluttered with millions of seeds, there is a cap of 200 seeds for each plant species and a global cap of 3000 seeds. Both of these limits can be modified in the [[Settings#Population_and_seed_capacities|settings]]. The maximum global seed cap is 30,000. Seed-producing activities will only produce seeds if your fortress contains fewer than 200 seeds of that species. You can exceed the individual species seed cap by buying seeds from caravans, and seed production will restart when your stocks fall below the cap. If the number of seeds in the fortress exceed the global seed cap, seeds will be deleted from the species with the highest number of seeds in stock. If two or more species are tied for the highest number of seeds, it will bounce between them, lowering the number of seeds equally until under the global seed cap and including more species as they reach equivalent stock amounts. Note that this removal may affect "strategic seed stockpiles" (i.e. seeds forbidden from use in case of typical dwarven culinary stupidity). While at the global seed cap merchants will not bring seeds in trade.
+
+'''Note:''' In case you are confused about getting spam of messages like "Urist McFarmer cancels Plant seeds: Needs [seed name]", while you are sure that you have enough seeds, no burrow restrictions or closed doors, the reason for this is most likely: the haulers see a seed somewhere and take the '''whole seed bag''' from stockpile to go pick it up, making the farmer cancel his job. The problem is exacerbated when barrels are used on the seed stockpile, because the dwarves will additionally store the seed bags inside barrels, blocking even more seeds during each hauling job and extending hauling jobs by first bringing the seed bag to the seed, then returning to the stockpile, picking up the barrel to bring it to the bag, storing the bag in the barrel and only then bringing the barrel bag to the stockpile. During all this time, the seed barrel and all its contents will be blocked from access by any other job.
+
+You can simply disallow barrels from the stockpile, which requires a somewhat larger stockpile but makes seed collection jobs much shorter and less disruptive. Bags will always be used to store seeds in stockpiles, you cannot forbid that. 
+
+Another way to deal with this problem is this: set up 2 seed stockpiles, with the larger (primary) one set to only accept items from links ([[File:V50_stockpile_workshop_button.png]]). Set the secondary (smaller) pile to take from anywhere and [[File:V50_stockpile_take_button.png]] give to the main stockpile. Now, when a seed shows up in your dining room or brewery, the dwarves should try to put it into the secondary pile first, which shouldn't have anything in it for long (so no bag for world tour). Once the seed arrives in the secondary stockpile, a new job will be created, moving the seed over into the main stockpile.  Now the bag will be picked up to move that seed into it, but if the piles are next to each other it should only be in transit for a few seconds reducing the likelihood of cancellation spam. 
+
+As a workaround, you can finally make use of the peculiarities of stockpile commands: setting a stockpile to "take" from a mill, still or farmer's workshop will prevent the workshop from sending its products to any other stockpile. If the stockpile in question doesn't accept seeds, all seeds produced by the workshop will stay in the building, readily accessible to farmers. This can be handy if the workshop is directly adjacent to the farm plot, but can cause cluttering of the workshop if other products like barrels of booze aren't moved out of the shop regularly.
+
+{{Translation
+| dwarven = lenod
+| elvish  = are
+| goblin  = ösmosp
+| human   = ase
+}}
+
+==Bugs==
+*Dwarves compulsively store seeds in bags.{{bug|7869}}
+*Planted seeds removed from field by seed cap.{{bug|8107}} (Fixed in version 51.06.)
+*Seeds carried by merchants count against fortress seed cap.{{bug|8108}} (Fixed in version 51.06: Merchants no longer bring seeds when at seed cap.)
+*Conflict between the two seed caps can remove an entire type of seed.{{bug|8091}} (Fixed in version 51.06.)
+
+[[File:India_-_Varanasi_green_peas_-_2714.jpg|thumb|350px|center|Some seeds are edible, either raw or cooked.]]
+{{gamedata}}
+{{materials}}
+[[ru:Seed]]
