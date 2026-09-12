@@ -1,0 +1,934 @@
+{{Quality|Superior}}
+{{av}}
+{{Modding}}
+
+A list of all '''procedural graphics layer tokens''', used for {{token|PCG_LAYERING}} tokens.
+
+{| {{prettytable}} class="sortable"
+|- style='background-color:#ddd'
+! Token
+|-
+| {{text_anchor|BEAST_AMORPHOUS}}
+|-
+| {{text_anchor|BEAST_AMORPHOUS_SHELL_BACK}}
+|-
+| {{text_anchor|BEAST_SNAKE}}
+|-
+| {{text_anchor|BEAST_SNAKE_MANDIBLES}}
+|-
+| {{text_anchor|BEAST_SNAKE_HORNS}}
+|-
+| {{text_anchor|BEAST_SNAKE_WINGS_LACY_BACK}}
+|-
+| {{text_anchor|BEAST_SNAKE_WINGS_LACY_FRONT}}
+|-
+| {{text_anchor|BEAST_SNAKE_WINGS_FEATHERED_BACK}}
+|-
+| {{text_anchor|BEAST_SNAKE_WINGS_FEATHERED_FRONT}}
+|-
+| {{text_anchor|BEAST_SNAKE_WINGS_BAT_BACK}}
+|-
+| {{text_anchor|BEAST_SNAKE_WINGS_BAT_FRONT}}
+|-
+| {{text_anchor|BEAST_SNAKE_EYE_ONE}}
+|-
+| {{text_anchor|BEAST_SNAKE_EYE_TWO}}
+|-
+| {{text_anchor|BEAST_SNAKE_EYE_THREE}}
+|-
+| {{text_anchor|BEAST_SNAKE_SHELL_BACK}}
+|-
+| {{text_anchor|BEAST_SNAKE_TRUNK}}
+|-
+| {{text_anchor|BEAST_SNAKE_ANTENNAE}}
+|-
+| {{text_anchor|BEAST_WORM_LONG}}
+|-
+| {{text_anchor|BEAST_WORM_LONG_MANDIBLES}}
+|-
+| {{text_anchor|BEAST_WORM_LONG_HORNS}}
+|-
+| {{text_anchor|BEAST_WORM_LONG_WINGS_LACY_BACK}}
+|-
+| {{text_anchor|BEAST_WORM_LONG_WINGS_LACY_FRONT}}
+|-
+| {{text_anchor|BEAST_WORM_LONG_WINGS_FEATHERED_BACK}}
+|-
+| {{text_anchor|BEAST_WORM_LONG_WINGS_FEATHERED_FRONT}}
+|-
+| {{text_anchor|BEAST_WORM_LONG_WINGS_BAT_BACK}}
+|-
+| {{text_anchor|BEAST_WORM_LONG_WINGS_BAT_FRONT}}
+|-
+| {{text_anchor|BEAST_WORM_LONG_EYE_ONE}}
+|-
+| {{text_anchor|BEAST_WORM_LONG_EYE_TWO}}
+|-
+| {{text_anchor|BEAST_WORM_LONG_EYE_THREE}}
+|-
+| {{text_anchor|BEAST_WORM_LONG_SHELL_BACK}}
+|-
+| {{text_anchor|BEAST_WORM_LONG_TRUNK}}
+|-
+| {{text_anchor|BEAST_WORM_LONG_ANTENNAE}}
+|-
+| {{text_anchor|BEAST_WORM_SHORT}}
+|-
+| {{text_anchor|BEAST_WORM_SHORT_MANDIBLES}}
+|-
+| {{text_anchor|BEAST_WORM_SHORT_HORNS}}
+|-
+| {{text_anchor|BEAST_WORM_SHORT_WINGS_LACY_BACK}}
+|-
+| {{text_anchor|BEAST_WORM_SHORT_WINGS_LACY_FRONT}}
+|-
+| {{text_anchor|BEAST_WORM_SHORT_WINGS_FEATHERED_BACK}}
+|-
+| {{text_anchor|BEAST_WORM_SHORT_WINGS_FEATHERED_FRONT}}
+|-
+| {{text_anchor|BEAST_WORM_SHORT_WINGS_BAT_BACK}}
+|-
+| {{text_anchor|BEAST_WORM_SHORT_EYE_ONE}}
+|-
+| {{text_anchor|BEAST_WORM_SHORT_EYE_TWO}}
+|-
+| {{text_anchor|BEAST_WORM_SHORT_EYE_THREE}}
+|-
+| {{text_anchor|BEAST_WORM_SHORT_SHELL_BACK}}
+|-
+| {{text_anchor|BEAST_WORM_SHORT_TRUNK}}
+|-
+| {{text_anchor|BEAST_WORM_SHORT_ANTENNAE}}
+|-
+| {{text_anchor|BEAST_INSECT}}
+|-
+| {{text_anchor|BEAST_INSECT_MANDIBLES}}
+|-
+| {{text_anchor|BEAST_INSECT_HORNS}}
+|-
+| {{text_anchor|BEAST_INSECT_WINGS_LACY_BACK}}
+|-
+| {{text_anchor|BEAST_INSECT_WINGS_FEATHERED_FRONT}}
+|-
+| {{text_anchor|BEAST_INSECT_WINGS_BAT_FRONT}}
+|-
+| {{text_anchor|BEAST_INSECT_EYE_ONE}}
+|-
+| {{text_anchor|BEAST_INSECT_EYE_TWO}}
+|-
+| {{text_anchor|BEAST_INSECT_EYE_THREE}}
+|-
+| {{text_anchor|BEAST_INSECT_PROBOSCIS}}
+|-
+| {{text_anchor|BEAST_INSECT_SHELL_BACK}}
+|-
+| {{text_anchor|BEAST_INSECT_TRUNK}}
+|-
+| {{text_anchor|BEAST_INSECT_ANTENNAE}}
+|-
+| {{text_anchor|BEAST_SPIDER}}
+|-
+| {{text_anchor|BEAST_SPIDER_MANDIBLES}}
+|-
+| {{text_anchor|BEAST_SPIDER_HORNS}}
+|-
+| {{text_anchor|BEAST_SPIDER_WINGS_LACY_FRONT}}
+|-
+| {{text_anchor|BEAST_SPIDER_WINGS_FEATHERED_FRONT}}
+|-
+| {{text_anchor|BEAST_SPIDER_WINGS_BAT_FRONT}}
+|-
+| {{text_anchor|BEAST_SPIDER_EYE_ONE}}
+|-
+| {{text_anchor|BEAST_SPIDER_EYE_TWO}}
+|-
+| {{text_anchor|BEAST_SPIDER_EYE_THREE}}
+|-
+| {{text_anchor|BEAST_SPIDER_SHELL_FRONT}}
+|-
+| {{text_anchor|BEAST_SPIDER_TRUNK}}
+|-
+| {{text_anchor|BEAST_SPIDER_ANTENNAE}}
+|-
+| {{text_anchor|BEAST_SCORPION}}
+|-
+| {{text_anchor|BEAST_SCORPION_MANDIBLES}}
+|-
+| {{text_anchor|BEAST_SCORPION_HORNS}}
+|-
+| {{text_anchor|BEAST_SCORPION_WINGS_LACY_BACK}}
+|-
+| {{text_anchor|BEAST_SCORPION_WINGS_LACY_FRONT}}
+|-
+| {{text_anchor|BEAST_SCORPION_WINGS_FEATHERED_BACK}}
+|-
+| {{text_anchor|BEAST_SCORPION_WINGS_FEATHERED_FRONT}}
+|-
+| {{text_anchor|BEAST_SCORPION_WINGS_BAT_BACK}}
+|-
+| {{text_anchor|BEAST_SCORPION_WINGS_BAT_FRONT}}
+|-
+| {{text_anchor|BEAST_SCORPION_EYE_ONE}}
+|-
+| {{text_anchor|BEAST_SCORPION_EYE_TWO}}
+|-
+| {{text_anchor|BEAST_SCORPION_EYE_THREE}}
+|-
+| {{text_anchor|BEAST_SCORPION_TAIL_ONE}}
+|-
+| {{text_anchor|BEAST_SCORPION_TAIL_TWO}}
+|-
+| {{text_anchor|BEAST_SCORPION_TAIL_THREE}}
+|-
+| {{text_anchor|BEAST_SCORPION_SHELL_FRONT}}
+|-
+| {{text_anchor|BEAST_SCORPION_TRUNK}}
+|-
+| {{text_anchor|BEAST_SCORPION_ANTENNAE}}
+|-
+| {{text_anchor|BEAST_BIPEDAL_DINOSAUR}}
+|-
+| {{text_anchor|BEAST_BIPEDAL_DINOSAUR_MANDIBLES}}
+|-
+| {{text_anchor|BEAST_BIPEDAL_DINOSAUR_HORNS}}
+|-
+| {{text_anchor|BEAST_BIPEDAL_DINOSAUR_WINGS_LACY_BACK}}
+|-
+| {{text_anchor|BEAST_BIPEDAL_DINOSAUR_WINGS_LACY_FRONT}}
+|-
+| {{text_anchor|BEAST_BIPEDAL_DINOSAUR_WINGS_FEATHERED_BACK}}
+|-
+| {{text_anchor|BEAST_BIPEDAL_DINOSAUR_WINGS_BAT_BACK}}
+|-
+| {{text_anchor|BEAST_BIPEDAL_DINOSAUR_EYE_ONE}}
+|-
+| {{text_anchor|BEAST_BIPEDAL_DINOSAUR_EYE_TWO}}
+|-
+| {{text_anchor|BEAST_BIPEDAL_DINOSAUR_EYE_THREE}}
+|-
+| {{text_anchor|BEAST_BIPEDAL_DINOSAUR_TAIL_ONE}}
+|-
+| {{text_anchor|BEAST_BIPEDAL_DINOSAUR_TAIL_TWO}}
+|-
+| {{text_anchor|BEAST_BIPEDAL_DINOSAUR_TAIL_THREE}}
+|-
+| {{text_anchor|BEAST_BIPEDAL_DINOSAUR_SHELL_BACK}}
+|-
+| {{text_anchor|BEAST_BIPEDAL_DINOSAUR_TRUNK}}
+|-
+| {{text_anchor|BEAST_BIPEDAL_DINOSAUR_ANTENNAE}}
+|-
+| {{text_anchor|BEAST_HUMANOID}}
+|-
+| {{text_anchor|BEAST_HUMANOID_MANDIBLES}}
+|-
+| {{text_anchor|BEAST_HUMANOID_HORNS}}
+|-
+| {{text_anchor|BEAST_HUMANOID_WINGS_LACY_BACK}}
+|-
+| {{text_anchor|BEAST_HUMANOID_WINGS_LACY_FRONT}}
+|-
+| {{text_anchor|BEAST_HUMANOID_WINGS_FEATHERED_BACK}}
+|-
+| {{text_anchor|BEAST_HUMANOID_WINGS_BAT_BACK}}
+|-
+| {{text_anchor|BEAST_HUMANOID_EYE_ONE}}
+|-
+| {{text_anchor|BEAST_HUMANOID_EYE_TWO}}
+|-
+| {{text_anchor|BEAST_HUMANOID_EYE_THREE}}
+|-
+| {{text_anchor|BEAST_HUMANOID_TAIL_ONE}}
+|-
+| {{text_anchor|BEAST_HUMANOID_TAIL_TWO}}
+|-
+| {{text_anchor|BEAST_HUMANOID_TAIL_THREE}}
+|-
+| {{text_anchor|BEAST_HUMANOID_SHELL_BACK}}
+|-
+| {{text_anchor|BEAST_HUMANOID_TRUNK}}
+|-
+| {{text_anchor|BEAST_HUMANOID_ANTENNAE}}
+|-
+| {{text_anchor|BEAST_FRONT_GRASP}}
+|-
+| {{text_anchor|BEAST_FRONT_GRASP_HEX}}
+|-
+| {{text_anchor|BEAST_FRONT_GRASP_OCT}}
+|-
+| {{text_anchor|BEAST_FRONT_GRASP_MANDIBLES}}
+|-
+| {{text_anchor|BEAST_FRONT_GRASP_HORNS}}
+|-
+| {{text_anchor|BEAST_FRONT_GRASP_WINGS_LACY_BACK}}
+|-
+| {{text_anchor|BEAST_FRONT_GRASP_WINGS_LACY_FRONT}}
+|-
+| {{text_anchor|BEAST_FRONT_GRASP_WINGS_FEATHERED_BACK}}
+|-
+| {{text_anchor|BEAST_FRONT_GRASP_WINGS_BAT_BACK}}
+|-
+| {{text_anchor|BEAST_FRONT_GRASP_EYE_ONE}}
+|-
+| {{text_anchor|BEAST_FRONT_GRASP_EYE_TWO}}
+|-
+| {{text_anchor|BEAST_FRONT_GRASP_EYE_THREE}}
+|-
+| {{text_anchor|BEAST_FRONT_GRASP_TAIL_ONE}}
+|-
+| {{text_anchor|BEAST_FRONT_GRASP_TAIL_TWO}}
+|-
+| {{text_anchor|BEAST_FRONT_GRASP_TAIL_THREE}}
+|-
+| {{text_anchor|BEAST_FRONT_GRASP_SHELL_BACK}}
+|-
+| {{text_anchor|BEAST_FRONT_GRASP_TRUNK}}
+|-
+| {{text_anchor|BEAST_FRONT_GRASP_ANTENNAE}}
+|-
+| {{text_anchor|BEAST_QUADRUPED_BULKY}}
+|-
+| {{text_anchor|BEAST_QUADRUPED_BULKY_HEX}}
+|-
+| {{text_anchor|BEAST_QUADRUPED_BULKY_OCT}}
+|-
+| {{text_anchor|BEAST_QUADRUPED_BULKY_MANDIBLES}}
+|-
+| {{text_anchor|BEAST_QUADRUPED_BULKY_HORNS}}
+|-
+| {{text_anchor|BEAST_QUADRUPED_BULKY_WINGS_LACY_BACK}}
+|-
+| {{text_anchor|BEAST_QUADRUPED_BULKY_WINGS_LACY_FRONT}}
+|-
+| {{text_anchor|BEAST_QUADRUPED_BULKY_WINGS_FEATHERED_BACK}}
+|-
+| {{text_anchor|BEAST_QUADRUPED_BULKY_WINGS_FEATHERED_FRONT}}
+|-
+| {{text_anchor|BEAST_QUADRUPED_BULKY_WINGS_BAT_BACK}}
+|-
+| {{text_anchor|BEAST_QUADRUPED_BULKY_WINGS_BAT_FRONT}}
+|-
+| {{text_anchor|BEAST_QUADRUPED_BULKY_EYE_ONE}}
+|-
+| {{text_anchor|BEAST_QUADRUPED_BULKY_EYE_TWO}}
+|-
+| {{text_anchor|BEAST_QUADRUPED_BULKY_EYE_THREE}}
+|-
+| {{text_anchor|BEAST_QUADRUPED_BULKY_TAIL_ONE}}
+|-
+| {{text_anchor|BEAST_QUADRUPED_BULKY_TAIL_TWO}}
+|-
+| {{text_anchor|BEAST_QUADRUPED_BULKY_TAIL_THREE}}
+|-
+| {{text_anchor|BEAST_QUADRUPED_BULKY_SHELL_FRONT}}
+|-
+| {{text_anchor|BEAST_QUADRUPED_BULKY_TRUNK}}
+|-
+| {{text_anchor|BEAST_QUADRUPED_BULKY_ANTENNAE}}
+|-
+| {{text_anchor|BEAST_QUADRUPED_SLINKY}}
+|-
+| {{text_anchor|BEAST_QUADRUPED_SLINKY_HEX}}
+|-
+| {{text_anchor|BEAST_QUADRUPED_SLINKY_OCT}}
+|-
+| {{text_anchor|BEAST_QUADRUPED_SLINKY_MANDIBLES}}
+|-
+| {{text_anchor|BEAST_QUADRUPED_SLINKY_HORNS}}
+|-
+| {{text_anchor|BEAST_QUADRUPED_SLINKY_WINGS_LACY_FRONT}}
+|-
+| {{text_anchor|BEAST_QUADRUPED_SLINKY_WINGS_FEATHERED_BACK}}
+|-
+| {{text_anchor|BEAST_QUADRUPED_SLINKY_WINGS_FEATHERED_FRONT}}
+|-
+| {{text_anchor|BEAST_QUADRUPED_SLINKY_WINGS_BAT_BACK}}
+|-
+| {{text_anchor|BEAST_QUADRUPED_SLINKY_WINGS_BAT_FRONT}}
+|-
+| {{text_anchor|BEAST_QUADRUPED_SLINKY_EYE_ONE}}
+|-
+| {{text_anchor|BEAST_QUADRUPED_SLINKY_EYE_TWO}}
+|-
+| {{text_anchor|BEAST_QUADRUPED_SLINKY_EYE_THREE}}
+|-
+| {{text_anchor|BEAST_QUADRUPED_SLINKY_TAIL_ONE}}
+|-
+| {{text_anchor|BEAST_QUADRUPED_SLINKY_TAIL_TWO}}
+|-
+| {{text_anchor|BEAST_QUADRUPED_SLINKY_TAIL_THREE}}
+|-
+| {{text_anchor|BEAST_QUADRUPED_SLINKY_SHELL_FRONT}}
+|-
+| {{text_anchor|BEAST_QUADRUPED_SLINKY_TRUNK}}
+|-
+| {{text_anchor|BEAST_QUADRUPED_SLINKY_ANTENNAE}}
+|-
+| {{text_anchor|BEAST_WALRUS}}
+|-
+| {{text_anchor|BEAST_WALRUS_MANDIBLES}}
+|-
+| {{text_anchor|BEAST_WALRUS_WINGS_LACY_BACK}}
+|-
+| {{text_anchor|BEAST_WALRUS_WINGS_LACY_FRONT}}
+|-
+| {{text_anchor|BEAST_WALRUS_WINGS_FEATHERED_BACK}}
+|-
+| {{text_anchor|BEAST_WALRUS_WINGS_FEATHERED_FRONT}}
+|-
+| {{text_anchor|BEAST_WALRUS_WINGS_BAT_BACK}}
+|-
+| {{text_anchor|BEAST_WALRUS_EYE_ONE}}
+|-
+| {{text_anchor|BEAST_WALRUS_EYE_TWO}}
+|-
+| {{text_anchor|BEAST_WALRUS_EYE_THREE}}
+|-
+| {{text_anchor|BEAST_WALRUS_TAIL_ONE}}
+|-
+| {{text_anchor|BEAST_WALRUS_TAIL_TWO}}
+|-
+| {{text_anchor|BEAST_WALRUS_TAIL_THREE}}
+|-
+| {{text_anchor|BEAST_WALRUS_SHELL_BACK}}
+|-
+| {{text_anchor|BEAST_WALRUS_TRUNK}}
+|-
+| {{text_anchor|BEAST_WALRUS_ANTENNAE}}
+|-
+| {{text_anchor|BEAST_SMALL_AMORPHOUS}}
+|-
+| {{text_anchor|BEAST_SMALL_AMORPHOUS_SHELL_BACK}}
+|-
+| {{text_anchor|BEAST_SMALL_SNAKE}}
+|-
+| {{text_anchor|BEAST_SMALL_SNAKE_MANDIBLES}}
+|-
+| {{text_anchor|BEAST_SMALL_SNAKE_HORNS}}
+|-
+| {{text_anchor|BEAST_SMALL_SNAKE_WINGS_LACY_BACK}}
+|-
+| {{text_anchor|BEAST_SMALL_SNAKE_WINGS_LACY_FRONT}}
+|-
+| {{text_anchor|BEAST_SMALL_SNAKE_WINGS_FEATHERED_BACK}}
+|-
+| {{text_anchor|BEAST_SMALL_SNAKE_WINGS_FEATHERED_FRONT}}
+|-
+| {{text_anchor|BEAST_SMALL_SNAKE_WINGS_BAT_BACK}}
+|-
+| {{text_anchor|BEAST_SMALL_SNAKE_WINGS_BAT_FRONT}}
+|-
+| {{text_anchor|BEAST_SMALL_SNAKE_EYE_ONE}}
+|-
+| {{text_anchor|BEAST_SMALL_SNAKE_EYE_TWO}}
+|-
+| {{text_anchor|BEAST_SMALL_SNAKE_EYE_THREE}}
+|-
+| {{text_anchor|BEAST_SMALL_SNAKE_SHELL_BACK}}
+|-
+| {{text_anchor|BEAST_SMALL_SNAKE_TRUNK}}
+|-
+| {{text_anchor|BEAST_SMALL_SNAKE_ANTENNAE}}
+|-
+| {{text_anchor|BEAST_SMALL_WORM_LONG}}
+|-
+| {{text_anchor|BEAST_SMALL_WORM_LONG_MANDIBLES}}
+|-
+| {{text_anchor|BEAST_SMALL_WORM_LONG_HORNS}}
+|-
+| {{text_anchor|BEAST_SMALL_WORM_LONG_WINGS_LACY_BACK}}
+|-
+| {{text_anchor|BEAST_SMALL_WORM_LONG_WINGS_LACY_FRONT}}
+|-
+| {{text_anchor|BEAST_SMALL_WORM_LONG_WINGS_FEATHERED_BACK}}
+|-
+| {{text_anchor|BEAST_SMALL_WORM_LONG_WINGS_FEATHERED_FRONT}}
+|-
+| {{text_anchor|BEAST_SMALL_WORM_LONG_WINGS_BAT_BACK}}
+|-
+| {{text_anchor|BEAST_SMALL_WORM_LONG_WINGS_BAT_FRONT}}
+|-
+| {{text_anchor|BEAST_SMALL_WORM_LONG_EYE_ONE}}
+|-
+| {{text_anchor|BEAST_SMALL_WORM_LONG_EYE_TWO}}
+|-
+| {{text_anchor|BEAST_SMALL_WORM_LONG_EYE_THREE}}
+|-
+| {{text_anchor|BEAST_SMALL_WORM_LONG_SHELL_BACK}}
+|-
+| {{text_anchor|BEAST_SMALL_WORM_LONG_TRUNK}}
+|-
+| {{text_anchor|BEAST_SMALL_WORM_LONG_ANTENNAE}}
+|-
+| {{text_anchor|BEAST_SMALL_WORM_SHORT}}
+|-
+| {{text_anchor|BEAST_SMALL_WORM_SHORT_MANDIBLES}}
+|-
+| {{text_anchor|BEAST_SMALL_WORM_SHORT_HORNS}}
+|-
+| {{text_anchor|BEAST_SMALL_WORM_SHORT_WINGS_LACY_BACK}}
+|-
+| {{text_anchor|BEAST_SMALL_WORM_SHORT_WINGS_LACY_FRONT}}
+|-
+| {{text_anchor|BEAST_SMALL_WORM_SHORT_WINGS_FEATHERED_BACK}}
+|-
+| {{text_anchor|BEAST_SMALL_WORM_SHORT_WINGS_FEATHERED_FRONT}}
+|-
+| {{text_anchor|BEAST_SMALL_WORM_SHORT_WINGS_BAT_BACK}}
+|-
+| {{text_anchor|BEAST_SMALL_WORM_SHORT_EYE_ONE}}
+|-
+| {{text_anchor|BEAST_SMALL_WORM_SHORT_EYE_TWO}}
+|-
+| {{text_anchor|BEAST_SMALL_WORM_SHORT_EYE_THREE}}
+|-
+| {{text_anchor|BEAST_SMALL_WORM_SHORT_SHELL_BACK}}
+|-
+| {{text_anchor|BEAST_SMALL_WORM_SHORT_TRUNK}}
+|-
+| {{text_anchor|BEAST_SMALL_WORM_SHORT_ANTENNAE}}
+|-
+| {{text_anchor|BEAST_SMALL_INSECT}}
+|-
+| {{text_anchor|BEAST_SMALL_INSECT_MANDIBLES}}
+|-
+| {{text_anchor|BEAST_SMALL_INSECT_HORNS}}
+|-
+| {{text_anchor|BEAST_SMALL_INSECT_WINGS_LACY_BACK}}
+|-
+| {{text_anchor|BEAST_SMALL_INSECT_WINGS_FEATHERED_FRONT}}
+|-
+| {{text_anchor|BEAST_SMALL_INSECT_WINGS_BAT_FRONT}}
+|-
+| {{text_anchor|BEAST_SMALL_INSECT_EYE_ONE}}
+|-
+| {{text_anchor|BEAST_SMALL_INSECT_EYE_TWO}}
+|-
+| {{text_anchor|BEAST_SMALL_INSECT_EYE_THREE}}
+|-
+| {{text_anchor|BEAST_SMALL_INSECT_PROBOSCIS}}
+|-
+| {{text_anchor|BEAST_SMALL_INSECT_SHELL_BACK}}
+|-
+| {{text_anchor|BEAST_SMALL_INSECT_TRUNK}}
+|-
+| {{text_anchor|BEAST_SMALL_INSECT_ANTENNAE}}
+|-
+| {{text_anchor|BEAST_SMALL_SPIDER}}
+|-
+| {{text_anchor|BEAST_SMALL_SPIDER_MANDIBLES}}
+|-
+| {{text_anchor|BEAST_SMALL_SPIDER_HORNS}}
+|-
+| {{text_anchor|BEAST_SMALL_SPIDER_WINGS_LACY_FRONT}}
+|-
+| {{text_anchor|BEAST_SMALL_SPIDER_WINGS_FEATHERED_FRONT}}
+|-
+| {{text_anchor|BEAST_SMALL_SPIDER_WINGS_BAT_FRONT}}
+|-
+| {{text_anchor|BEAST_SMALL_SPIDER_EYE_ONE}}
+|-
+| {{text_anchor|BEAST_SMALL_SPIDER_EYE_TWO}}
+|-
+| {{text_anchor|BEAST_SMALL_SPIDER_EYE_THREE}}
+|-
+| {{text_anchor|BEAST_SMALL_SPIDER_SHELL_FRONT}}
+|-
+| {{text_anchor|BEAST_SMALL_SPIDER_TRUNK}}
+|-
+| {{text_anchor|BEAST_SMALL_SPIDER_ANTENNAE}}
+|-
+| {{text_anchor|BEAST_SMALL_SCORPION}}
+|-
+| {{text_anchor|BEAST_SMALL_SCORPION_MANDIBLES}}
+|-
+| {{text_anchor|BEAST_SMALL_SCORPION_HORNS}}
+|-
+| {{text_anchor|BEAST_SMALL_SCORPION_WINGS_LACY_BACK}}
+|-
+| {{text_anchor|BEAST_SMALL_SCORPION_WINGS_LACY_FRONT}}
+|-
+| {{text_anchor|BEAST_SMALL_SCORPION_WINGS_FEATHERED_BACK}}
+|-
+| {{text_anchor|BEAST_SMALL_SCORPION_WINGS_FEATHERED_FRONT}}
+|-
+| {{text_anchor|BEAST_SMALL_SCORPION_WINGS_BAT_BACK}}
+|-
+| {{text_anchor|BEAST_SMALL_SCORPION_WINGS_BAT_FRONT}}
+|-
+| {{text_anchor|BEAST_SMALL_SCORPION_EYE_ONE}}
+|-
+| {{text_anchor|BEAST_SMALL_SCORPION_EYE_TWO}}
+|-
+| {{text_anchor|BEAST_SMALL_SCORPION_EYE_THREE}}
+|-
+| {{text_anchor|BEAST_SMALL_SCORPION_TAIL_ONE}}
+|-
+| {{text_anchor|BEAST_SMALL_SCORPION_TAIL_TWO}}
+|-
+| {{text_anchor|BEAST_SMALL_SCORPION_TAIL_THREE}}
+|-
+| {{text_anchor|BEAST_SMALL_SCORPION_SHELL_FRONT}}
+|-
+| {{text_anchor|BEAST_SMALL_SCORPION_TRUNK}}
+|-
+| {{text_anchor|BEAST_SMALL_SCORPION_ANTENNAE}}
+|-
+| {{text_anchor|BEAST_SMALL_BIPEDAL_DINOSAUR}}
+|-
+| {{text_anchor|BEAST_SMALL_BIPEDAL_DINOSAUR_MANDIBLES}}
+|-
+| {{text_anchor|BEAST_SMALL_BIPEDAL_DINOSAUR_HORNS}}
+|-
+| {{text_anchor|BEAST_SMALL_BIPEDAL_DINOSAUR_WINGS_LACY_BACK}}
+|-
+| {{text_anchor|BEAST_SMALL_BIPEDAL_DINOSAUR_WINGS_LACY_FRONT}}
+|-
+| {{text_anchor|BEAST_SMALL_BIPEDAL_DINOSAUR_WINGS_FEATHERED_BACK}}
+|-
+| {{text_anchor|BEAST_SMALL_BIPEDAL_DINOSAUR_WINGS_BAT_BACK}}
+|-
+| {{text_anchor|BEAST_SMALL_BIPEDAL_DINOSAUR_EYE_ONE}}
+|-
+| {{text_anchor|BEAST_SMALL_BIPEDAL_DINOSAUR_EYE_TWO}}
+|-
+| {{text_anchor|BEAST_SMALL_BIPEDAL_DINOSAUR_EYE_THREE}}
+|-
+| {{text_anchor|BEAST_SMALL_BIPEDAL_DINOSAUR_TAIL_ONE}}
+|-
+| {{text_anchor|BEAST_SMALL_BIPEDAL_DINOSAUR_TAIL_TWO}}
+|-
+| {{text_anchor|BEAST_SMALL_BIPEDAL_DINOSAUR_TAIL_THREE}}
+|-
+| {{text_anchor|BEAST_SMALL_BIPEDAL_DINOSAUR_SHELL_BACK}}
+|-
+| {{text_anchor|BEAST_SMALL_BIPEDAL_DINOSAUR_TRUNK}}
+|-
+| {{text_anchor|BEAST_SMALL_BIPEDAL_DINOSAUR_ANTENNAE}}
+|-
+| {{text_anchor|BEAST_SMALL_HUMANOID}}
+|-
+| {{text_anchor|BEAST_SMALL_HUMANOID_MANDIBLES}}
+|-
+| {{text_anchor|BEAST_SMALL_HUMANOID_HORNS}}
+|-
+| {{text_anchor|BEAST_SMALL_HUMANOID_WINGS_LACY_BACK}}
+|-
+| {{text_anchor|BEAST_SMALL_HUMANOID_WINGS_LACY_FRONT}}
+|-
+| {{text_anchor|BEAST_SMALL_HUMANOID_WINGS_FEATHERED_BACK}}
+|-
+| {{text_anchor|BEAST_SMALL_HUMANOID_WINGS_BAT_BACK}}
+|-
+| {{text_anchor|BEAST_SMALL_HUMANOID_EYE_ONE}}
+|-
+| {{text_anchor|BEAST_SMALL_HUMANOID_EYE_TWO}}
+|-
+| {{text_anchor|BEAST_SMALL_HUMANOID_EYE_THREE}}
+|-
+| {{text_anchor|BEAST_SMALL_HUMANOID_TAIL_ONE}}
+|-
+| {{text_anchor|BEAST_SMALL_HUMANOID_TAIL_TWO}}
+|-
+| {{text_anchor|BEAST_SMALL_HUMANOID_TAIL_THREE}}
+|-
+| {{text_anchor|BEAST_SMALL_HUMANOID_SHELL_BACK}}
+|-
+| {{text_anchor|BEAST_SMALL_HUMANOID_TRUNK}}
+|-
+| {{text_anchor|BEAST_SMALL_HUMANOID_ANTENNAE}}
+|-
+| {{text_anchor|BEAST_SMALL_FRONT_GRASP}}
+|-
+| {{text_anchor|BEAST_SMALL_FRONT_GRASP_HEX}}
+|-
+| {{text_anchor|BEAST_SMALL_FRONT_GRASP_OCT}}
+|-
+| {{text_anchor|BEAST_SMALL_FRONT_GRASP_MANDIBLES}}
+|-
+| {{text_anchor|BEAST_SMALL_FRONT_GRASP_HORNS}}
+|-
+| {{text_anchor|BEAST_SMALL_FRONT_GRASP_WINGS_LACY_BACK}}
+|-
+| {{text_anchor|BEAST_SMALL_FRONT_GRASP_WINGS_LACY_FRONT}}
+|-
+| {{text_anchor|BEAST_SMALL_FRONT_GRASP_WINGS_FEATHERED_BACK}}
+|-
+| {{text_anchor|BEAST_SMALL_FRONT_GRASP_WINGS_BAT_BACK}}
+|-
+| {{text_anchor|BEAST_SMALL_FRONT_GRASP_EYE_ONE}}
+|-
+| {{text_anchor|BEAST_SMALL_FRONT_GRASP_EYE_TWO}}
+|-
+| {{text_anchor|BEAST_SMALL_FRONT_GRASP_EYE_THREE}}
+|-
+| {{text_anchor|BEAST_SMALL_FRONT_GRASP_TAIL_ONE}}
+|-
+| {{text_anchor|BEAST_SMALL_FRONT_GRASP_TAIL_TWO}}
+|-
+| {{text_anchor|BEAST_SMALL_FRONT_GRASP_TAIL_THREE}}
+|-
+| {{text_anchor|BEAST_SMALL_FRONT_GRASP_SHELL_BACK}}
+|-
+| {{text_anchor|BEAST_SMALL_FRONT_GRASP_TRUNK}}
+|-
+| {{text_anchor|BEAST_SMALL_FRONT_GRASP_ANTENNAE}}
+|-
+| {{text_anchor|BEAST_SMALL_QUADRUPED_BULKY}}
+|-
+| {{text_anchor|BEAST_SMALL_QUADRUPED_BULKY_HEX}}
+|-
+| {{text_anchor|BEAST_SMALL_QUADRUPED_BULKY_OCT}}
+|-
+| {{text_anchor|BEAST_SMALL_QUADRUPED_BULKY_MANDIBLES}}
+|-
+| {{text_anchor|BEAST_SMALL_QUADRUPED_BULKY_HORNS}}
+|-
+| {{text_anchor|BEAST_SMALL_QUADRUPED_BULKY_WINGS_LACY_BACK}}
+|-
+| {{text_anchor|BEAST_SMALL_QUADRUPED_BULKY_WINGS_LACY_FRONT}}
+|-
+| {{text_anchor|BEAST_SMALL_QUADRUPED_BULKY_WINGS_FEATHERED_BACK}}
+|-
+| {{text_anchor|BEAST_SMALL_QUADRUPED_BULKY_WINGS_FEATHERED_FRONT}}
+|-
+| {{text_anchor|BEAST_SMALL_QUADRUPED_BULKY_WINGS_BAT_BACK}}
+|-
+| {{text_anchor|BEAST_SMALL_QUADRUPED_BULKY_WINGS_BAT_FRONT}}
+|-
+| {{text_anchor|BEAST_SMALL_QUADRUPED_BULKY_EYE_ONE}}
+|-
+| {{text_anchor|BEAST_SMALL_QUADRUPED_BULKY_EYE_TWO}}
+|-
+| {{text_anchor|BEAST_SMALL_QUADRUPED_BULKY_EYE_THREE}}
+|-
+| {{text_anchor|BEAST_SMALL_QUADRUPED_BULKY_TAIL_ONE}}
+|-
+| {{text_anchor|BEAST_SMALL_QUADRUPED_BULKY_TAIL_TWO}}
+|-
+| {{text_anchor|BEAST_SMALL_QUADRUPED_BULKY_TAIL_THREE}}
+|-
+| {{text_anchor|BEAST_SMALL_QUADRUPED_BULKY_SHELL_FRONT}}
+|-
+| {{text_anchor|BEAST_SMALL_QUADRUPED_BULKY_TRUNK}}
+|-
+| {{text_anchor|BEAST_SMALL_QUADRUPED_BULKY_ANTENNAE}}
+|-
+| {{text_anchor|BEAST_SMALL_QUADRUPED_SLINKY}}
+|-
+| {{text_anchor|BEAST_SMALL_QUADRUPED_SLINKY_HEX}}
+|-
+| {{text_anchor|BEAST_SMALL_QUADRUPED_SLINKY_OCT}}
+|-
+| {{text_anchor|BEAST_SMALL_QUADRUPED_SLINKY_MANDIBLES}}
+|-
+| {{text_anchor|BEAST_SMALL_QUADRUPED_SLINKY_HORNS}}
+|-
+| {{text_anchor|BEAST_SMALL_QUADRUPED_SLINKY_WINGS_LACY_FRONT}}
+|-
+| {{text_anchor|BEAST_SMALL_QUADRUPED_SLINKY_WINGS_FEATHERED_BACK}}
+|-
+| {{text_anchor|BEAST_SMALL_QUADRUPED_SLINKY_WINGS_FEATHERED_FRONT}}
+|-
+| {{text_anchor|BEAST_SMALL_QUADRUPED_SLINKY_WINGS_BAT_BACK}}
+|-
+| {{text_anchor|BEAST_SMALL_QUADRUPED_SLINKY_WINGS_BAT_FRONT}}
+|-
+| {{text_anchor|BEAST_SMALL_QUADRUPED_SLINKY_EYE_ONE}}
+|-
+| {{text_anchor|BEAST_SMALL_QUADRUPED_SLINKY_EYE_TWO}}
+|-
+| {{text_anchor|BEAST_SMALL_QUADRUPED_SLINKY_EYE_THREE}}
+|-
+| {{text_anchor|BEAST_SMALL_QUADRUPED_SLINKY_TAIL_ONE}}
+|-
+| {{text_anchor|BEAST_SMALL_QUADRUPED_SLINKY_TAIL_TWO}}
+|-
+| {{text_anchor|BEAST_SMALL_QUADRUPED_SLINKY_TAIL_THREE}}
+|-
+| {{text_anchor|BEAST_SMALL_QUADRUPED_SLINKY_SHELL_FRONT}}
+|-
+| {{text_anchor|BEAST_SMALL_QUADRUPED_SLINKY_TRUNK}}
+|-
+| {{text_anchor|BEAST_SMALL_QUADRUPED_SLINKY_ANTENNAE}}
+|-
+| {{text_anchor|BEAST_SMALL_WALRUS}}
+|-
+| {{text_anchor|BEAST_SMALL_WALRUS_MANDIBLES}}
+|-
+| {{text_anchor|BEAST_SMALL_WALRUS_WINGS_LACY_BACK}}
+|-
+| {{text_anchor|BEAST_SMALL_WALRUS_WINGS_LACY_FRONT}}
+|-
+| {{text_anchor|BEAST_SMALL_WALRUS_WINGS_FEATHERED_BACK}}
+|-
+| {{text_anchor|BEAST_SMALL_WALRUS_WINGS_FEATHERED_FRONT}}
+|-
+| {{text_anchor|BEAST_SMALL_WALRUS_WINGS_BAT_BACK}}
+|-
+| {{text_anchor|BEAST_SMALL_WALRUS_EYE_ONE}}
+|-
+| {{text_anchor|BEAST_SMALL_WALRUS_EYE_TWO}}
+|-
+| {{text_anchor|BEAST_SMALL_WALRUS_EYE_THREE}}
+|-
+| {{text_anchor|BEAST_SMALL_WALRUS_TAIL_ONE}}
+|-
+| {{text_anchor|BEAST_SMALL_WALRUS_TAIL_TWO}}
+|-
+| {{text_anchor|BEAST_SMALL_WALRUS_TAIL_THREE}}
+|-
+| {{text_anchor|BEAST_SMALL_WALRUS_SHELL_BACK}}
+|-
+| {{text_anchor|BEAST_SMALL_WALRUS_TRUNK}}
+|-
+| {{text_anchor|BEAST_SMALL_WALRUS_ANTENNAE}}
+|-
+| {{text_anchor|WEREBEAST_ANTEATER}}
+|-
+| {{text_anchor|WEREBEAST_ANTELOPE}}
+|-
+| {{text_anchor|WEREBEAST_APE}}
+|-
+| {{text_anchor|WEREBEAST_ARMADILLO}}
+|-
+| {{text_anchor|WEREBEAST_BADGER}}
+|-
+| {{text_anchor|WEREBEAST_BEAR}}
+|-
+| {{text_anchor|WEREBEAST_BEAVER}}
+|-
+| {{text_anchor|WEREBEAST_BISON}}
+|-
+| {{text_anchor|WEREBEAST_BUFFALO}}
+|-
+| {{text_anchor|WEREBEAST_BULL}}
+|-
+| {{text_anchor|WEREBEAST_CAPYBARA}}
+|-
+| {{text_anchor|WEREBEAST_CAMEL}}
+|-
+| {{text_anchor|WEREBEAST_CAT}}
+|-
+| {{text_anchor|WEREBEAST_CAVY}}
+|-
+| {{text_anchor|WEREBEAST_CHAMELEON}}
+|-
+| {{text_anchor|WEREBEAST_CHINCHILLA}}
+|-
+| {{text_anchor|WEREBEAST_CIVET}}
+|-
+| {{text_anchor|WEREBEAST_COATI}}
+|-
+| {{text_anchor|WEREBEAST_COYOTE}}
+|-
+| {{text_anchor|WEREBEAST_DEER}}
+|-
+| {{text_anchor|WEREBEAST_DONKEY}}
+|-
+| {{text_anchor|WEREBEAST_ELEPHANT}}
+|-
+| {{text_anchor|WEREBEAST_ELK}}
+|-
+| {{text_anchor|WEREBEAST_FOX}}
+|-
+| {{text_anchor|WEREBEAST_GECKO}}
+|-
+| {{text_anchor|WEREBEAST_GILA_MONSTER}}
+|-
+| {{text_anchor|WEREBEAST_GIRAFFE}}
+|-
+| {{text_anchor|WEREBEAST_GOAT}}
+|-
+| {{text_anchor|WEREBEAST_GOPHER}}
+|-
+| {{text_anchor|WEREBEAST_HARE}}
+|-
+| {{text_anchor|WEREBEAST_HEDGEHOG}}
+|-
+| {{text_anchor|WEREBEAST_HORSE}}
+|-
+| {{text_anchor|WEREBEAST_HYENA}}
+|-
+| {{text_anchor|WEREBEAST_IGUANA}}
+|-
+| {{text_anchor|WEREBEAST_JACKAL}}
+|-
+| {{text_anchor|WEREBEAST_KANGAROO}}
+|-
+| {{text_anchor|WEREBEAST_KOALA}}
+|-
+| {{text_anchor|WEREBEAST_LEMUR}}
+|-
+| {{text_anchor|WEREBEAST_LIZARD}}
+|-
+| {{text_anchor|WEREBEAST_LLAMA}}
+|-
+| {{text_anchor|WEREBEAST_LORIS}}
+|-
+| {{text_anchor|WEREBEAST_MAMMOTH}}
+|-
+| {{text_anchor|WEREBEAST_MARMOT}}
+|-
+| {{text_anchor|WEREBEAST_MOLE}}
+|-
+| {{text_anchor|WEREBEAST_MONGOOSE}}
+|-
+| {{text_anchor|WEREBEAST_MONITOR_LIZARD}}
+|-
+| {{text_anchor|WEREBEAST_MOOSE}}
+|-
+| {{text_anchor|WEREBEAST_MONKEY}}
+|-
+| {{text_anchor|WEREBEAST_MOUSE}}
+|-
+| {{text_anchor|WEREBEAST_OPOSSUM}}
+|-
+| {{text_anchor|WEREBEAST_PANDA}}
+|-
+| {{text_anchor|WEREBEAST_PANGOLIN}}
+|-
+| {{text_anchor|WEREBEAST_PANTHER}}
+|-
+| {{text_anchor|WEREBEAST_PIG}}
+|-
+| {{text_anchor|WEREBEAST_PORCUPINE}}
+|-
+| {{text_anchor|WEREBEAST_RABBIT}}
+|-
+| {{text_anchor|WEREBEAST_RACCOON}}
+|-
+| {{text_anchor|WEREBEAST_RAT}}
+|-
+| {{text_anchor|WEREBEAST_RHINOCEROS}}
+|-
+| {{text_anchor|WEREBEAST_SHEEP}}
+|-
+| {{text_anchor|WEREBEAST_SHREW}}
+|-
+| {{text_anchor|WEREBEAST_SKINK}}
+|-
+| {{text_anchor|WEREBEAST_SKUNK}}
+|-
+| {{text_anchor|WEREBEAST_SLOTH}}
+|-
+| {{text_anchor|WEREBEAST_SQUIRREL}}
+|-
+| {{text_anchor|WEREBEAST_TAPIR}}
+|-
+| {{text_anchor|WEREBEAST_TORTOISE}}
+|-
+| {{text_anchor|WEREBEAST_WARTHOG}}
+|-
+| {{text_anchor|WEREBEAST_WEASEL}}
+|-
+| {{text_anchor|WEREBEAST_WOLF}}
+|-
+| {{text_anchor|WEREBEAST_WOMBAT}}
+|-
+| {{text_anchor|WEREBEAST_ZEBRA}}
+|}
+
+{{Category|Modding}}
+{{Category|Tokens}}
+[[ru:Procedural graphics layer]]

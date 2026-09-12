@@ -1,0 +1,474 @@
+{{migrated article}}
+{{Quality|Unrated}}
+{{av}}
+
+
+[[Power]] is used to drive devices, typically replacing or improving tasks normally done by dwarves, such as pumping [[water]] using a [[screw pump]], [[milling]] certain types of [[food]] at a [[millstone]], or moving [[minecart]]s. Power is produced by [[windmill]]s and [[water wheel]]s.
+
+==Power requirements==
+Most all [[machine component]]s connected to a power system consume some power, whether they produce any, perform some useful work, transfer power to another component, or (currently) serve no purpose and are simply "idling". So, a screw pump  attached to the power train costs -10 power, regardless of whether there is currently any liquid for it to pump or not, and a millstone attached to a power source also consumes -10 power, whether or not there are currently any milling jobs, etc.
+
+'''Power production''':
+* [[Water wheel]]: produces net +90* if active, or -10 if not*
+* [[Windmill]]: produces +40, +20 or (rarely) +0, depending on [[Weather#Wind|wind]]; consumes -0 power 
+
+:: ''(* Technically, the actual power production is +100, but any and every water wheel costs -10 power to turn, so it's easiest to consider the effective output as only +90/wheel.  If a wheel is being turned in still water (by being attached to other machinery etc.) it produces no power of its own, and it costs -10 to turn it. This does not create a "[[flow]]" of liquid.)''
+
+'''Power consumption''':
+* [[Axle]]: -1 per tile ''(both horizontal and vertical axles)''
+* [[Gear assembly]]: -5
+* [[Millstone]]: -10
+* [[Screw pump]]: -10
+* [[Roller]]: -2 per roller
+
+Machines such as screw pumps, millstones and rollers can most easily be (temporarily) disconnected from/reconnected to a power source by levers attached to a gear assembly in the power train (although there are always other methods).
+
+==Power transfer==
+<!-- How to move power -->
+Power can be transferred between devices using [[gear assembly|gear assemblies]] and [[axle]]s. Axles transfer power in a single direction -- north, south, east, west, up, or down.  Axles are classified as "horizontal" or "vertical", with the former going north/south or east/west, and with the latter going up or down [[Z-level]]s.  Axles must terminate at a device, or a gear assembly, or another axle of the same kind.  You cannot transfer power from a horizontal to a vertical axle (or from a north/south to an east/west horizontal axle) without a gear assembly. Horizontal axles may be placed individually up to 10 tiles long at a time; if you want a longer axle, you may simply place two or more of them in a line, you don't need gear assemblies between them to connect them.  Vertical axles are always placed one tile at a time, and may be as tall as you wish.
+
+Gear assemblies take up a single tile and transfer power to any device, axle or gear assembly within the six orthogonally adjacent tiles (north, south, east, west, above, below). Gear assemblies are best used for moving power through right-angles. For example, they can be built as bases for windmills to move power out sideways along an axle.  Gear assemblies can also be linked to a [[lever]] to disengage them, which will stop power transfer through that tile.  Don't do this with gears that are supporting machinery above them, as the machinery may collapse.
+
+Because of the high power use of gear assemblies (5), axles are more appropriate and convenient to build when transferring power across horizontal or vertical distances. An axle uses (1) power for every tile of power transfer. An axle 5 tiles long will use (5) power. Axles can be directly attached to windmills, waterwheels and screw pumps in order to provide power.
+
+Devices that use power are also capable of transferring it. Adjacent screw pumps will transfer power between themselves. The only way to prevent this is to leave a tile gap between devices, or move them diagonally from each other.
+
+Single-tile rollers transfer power in all four cardinal directions. Rollers transfer power perpendicular to their direction and ''may'' transfer along their direction (it's unreliable).
+Rollers need 1 rope and have the same length:material math as [[axle]]s, and just like axles, they may be built individually up to 10 tiles long, but can only be built horizontally, not vertically across z-layers. Rollers consume 2x more power per tile than axles and need more materials. But they aren't used to connect along their direction anyway, and axles don't transfer perpendicularly on their own. When compared to axles ''combined with gear assemblies'', rollers are more efficient—the lower per-tile cost of an axle is offset by the gears on its ends eating power (10 total).
+
+{|
+|'''Gear assembly'''
+|'''Roller (1x1)'''
+|
+|-
+|
+{| style="border-spacing:0;"
+|-
+|1|| || || ||2|| || || ||3
+|-
+|{{RT|+|7:0:0}}
+|{{RT|+|7:0:0}}
+|{{RT|+|7:0:0}}
+|·
+|{{RT|+|7:0:0}}
+|{{RT|│|2:0:1}}
+|{{RT|+|7:0:0}}
+|·
+|{{RT|+|7:0:0}}
+|{{RT|+|7:0:0}}
+|{{RT|+|7:0:0}}
+|-
+|{{RT|+|7:0:0}}
+|{{RT|o|2:0:1}}
+|{{RT|+|7:0:0}}
+|·
+|{{RT|─|2:0:1}}
+|{{RT|☼|6:0:1}}
+|{{RT|─|2:0:1}}
+|·
+|{{RT|+|7:0:0}}
+|{{RT|o|2:0:1}}
+|{{RT|+|7:0:0}}
+|-
+|{{RT|+|7:0:0}}
+|{{RT|+|7:0:0}}
+|{{RT|+|7:0:0}}
+|·
+|{{RT|+|7:0:0}}
+|{{RT|│|2:0:1}}
+|{{RT|+|7:0:0}}
+|·
+|{{RT|+|7:0:0}}
+|{{RT|+|7:0:0}}
+|{{RT|+|7:0:0}}
+|}
+||
+{| style="border-spacing:0;"
+|-
+|1|| || || ||2|| || || ||3
+|-
+|{{RT|+|7:0:0}}
+|{{RT|+|7:0:0}}
+|{{RT|+|7:0:0}}
+|·
+|{{RT|+|7:0:0}}
+|{{RT|│|2:0:1}}
+|{{RT|+|7:0:0}}
+|·
+|{{RT|+|7:0:0}}
+|{{RT|+|7:0:0}}
+|{{RT|+|7:0:0}}
+|-
+|{{RT|+|7:0:0}}
+|{{RT|+|7:0:0}}
+|{{RT|+|7:0:0}}
+|·
+|{{RT|─|2:0:1}}
+|{{RT|╟|6:0:1}}
+|{{RT|─|2:0:1}}
+|·
+|{{RT|+|7:0:0}}
+|{{RT|+|7:0:0}}
+|{{RT|+|7:0:0}}
+|-
+|{{RT|+|7:0:0}}
+|{{RT|+|7:0:0}}
+|{{RT|+|7:0:0}}
+|·
+|{{RT|+|7:0:0}}
+|{{RT|│|2:0:1}}
+|{{RT|+|7:0:0}}
+|·
+|{{RT|+|7:0:0}}
+|{{RT|+|7:0:0}}
+|{{RT|+|7:0:0}}
+|}
+|}
+
+{|
+|'''Axles+Gears'''
+|'''Rollers'''
+|-
+|
+{| style="border-spacing:0;"
+|-
+|{{RT|+|7:0:0}}
+|{{RT|☼|7:0:1}}
+|{{RT|─|7:0:0}}
+|{{RT|─|7:0:0}}
+|{{RT|─|7:0:0}}
+|{{RT|─|7:0:0}}
+|{{RT|─|7:0:0}}
+|{{RT|─|7:0:0}}
+|{{RT|─|7:0:0}}
+|{{RT|─|7:0:0}}
+|{{RT|─|7:0:0}}
+|{{RT|─|7:0:0}}
+|{{RT|☼|7:0:1}}
+|{{RT|+|7:0:0}}
+|-
+|{{RT|+|7:0:0}}
+|{{RT|%|2:0:1}}
+|{{RT|+|7:0:0}}
+|{{RT|+|7:0:0}}
+|{{RT|+|7:0:0}}
+|{{RT|+|7:0:0}}
+|{{RT|+|7:0:0}}
+|{{RT|+|7:0:0}}
+|{{RT|+|7:0:0}}
+|{{RT|+|7:0:0}}
+|{{RT|+|7:0:0}}
+|{{RT|+|7:0:0}}
+|{{RT|%|2:0:1}}
+|{{RT|+|7:0:0}}
+|}
+|
+{| style="border-spacing:0;"
+|-
+|{{RT|+|7:0:0}}
+|{{RT|+|7:0:0}}
+|{{RT|╟|7:0:0}}
+|{{RT|╟|7:0:0}}
+|{{RT|╟|7:0:0}}
+|{{RT|╟|7:0:0}}
+|{{RT|╟|7:0:0}}
+|{{RT|╟|7:0:0}}
+|{{RT|╟|7:0:0}}
+|{{RT|╟|7:0:0}}
+|{{RT|╟|7:0:0}}
+|{{RT|╟|7:0:0}}
+|{{RT|+|7:0:0}}
+|{{RT|+|7:0:0}}
+|-
+|{{RT|+|7:0:0}}
+|{{RT|+|7:0:0}}
+|{{RT|%|2:0:1}}
+|{{RT|+|7:0:0}}
+|{{RT|+|7:0:0}}
+|{{RT|+|7:0:0}}
+|{{RT|+|7:0:0}}
+|{{RT|+|7:0:0}}
+|{{RT|+|7:0:0}}
+|{{RT|+|7:0:0}}
+|{{RT|+|7:0:0}}
+|{{RT|%|2:0:1}}
+|{{RT|+|7:0:0}}
+|{{RT|+|7:0:0}}
+|}
+|}
+Axles vs. Rollers (a single U- or Z- connection):
+{| class="wikitable"
+|-
+! Length
+! Axle+Gears<br/>Power
+! Axle+Gears<br/>Materials
+! Single Roller<br/>Power
+! Single Roller<br/>Materials
+|-
+| 2
+| 10
+| 2 Mechanism
+| 4
+| 1 Mechanism, 1 Rope
+|-
+| 3
+| 11
+| 2 Mechanism, 1 Wood
+| 6
+| 1 Mechanism, 1 Rope
+|-
+| 4
+| 12
+| 2 Mechanism, 1 Wood
+| 8
+| 2 Mechanism, 1 Rope
+|-
+| 5
+| 13
+| 2 Mechanism, 1 Wood
+| 10
+| 2 Mechanism, 1 Rope
+|-
+| 6
+| 14
+| 2 Mechanism, 2 Wood
+| 12
+| 2 Mechanism, 1 Rope
+|-
+| 7
+| 15
+| 2 Mechanism, 2 Wood
+| 14
+| 2 Mechanism, 1 Rope
+|-
+| 8
+| 16
+| 2 Mechanism, 2 Wood
+| 16
+| 3 Mechanism, 1 Rope
+|-
+| 9
+| 17
+| 2 Mechanism, 2 Wood
+| 18
+| 3 Mechanism, 1 Rope
+|-
+| 10
+| 18
+| 2 Mechanism, 3 Wood
+| 20
+| 3 Mechanism, 1 Rope
+|-
+| 11
+| 19
+| 2 Mechanism, 3 Wood
+| 
+| 
+|-
+| 12
+| 20
+| 2 Mechanism, 3 Wood
+| 
+| 
+|-
+|}
+Of course, a non-switching power bus (e.g. collecting power from water wheels or feeding many pumps on the same level) needs extra gears in the middle, thus rollers are far more efficient, though not trivial to connect at the ends (with water wheel arrays it's easier to alternate sides, connecting through the end wheels):
+{|
+|'''Gears'''
+|'''Rollers'''
+|-
+|
+{| style="border-spacing:0;"
+|-
+|{{RT|+|7:0:0}}
+|{{RT|+|7:0:0}}
+|{{RT|☼|7:0:1}}
+|{{RT|─|7:0:0}}
+|{{RT|─|7:0:0}}
+|{{RT|☼|7:0:0}}
+|{{RT|─|7:0:0}}
+|{{RT|─|7:0:0}}
+|{{RT|☼|7:0:1}}
+|{{RT|─|7:0:0}}
+|{{RT|─|7:0:0}}
+|{{RT|☼|7:0:0}}
+|{{RT|─|7:0:0}}
+|{{RT|─|7:0:0}}
+|{{RT|☼|7:0:1}}
+|{{RT|─|7:0:0}}
+|-
+|{{RT|+|7:0:0}}
+|{{RT|W|6:1:0}}
+|{{RT|W|6:1:0}}
+|{{RT|W|6:0:0}}
+|{{RT|W|6:1:1}}
+|{{RT|W|6:1:1}}
+|{{RT|W|6:0:1}}
+|{{RT|W|6:1:0}}
+|{{RT|W|6:1:0}}
+|{{RT|W|6:0:0}}
+|{{RT|W|6:1:1}}
+|{{RT|W|6:1:1}}
+|{{RT|W|6:0:1}}
+|{{RT|W|6:1:0}}
+|{{RT|W|6:1:0}}
+|{{RT|W|6:0:0}}
+|-
+|{{RT|+|7:0:0}}
+|{{RT|W|6:1:1}}
+|{{RT|W|6:1:1}}
+|{{RT|W|6:0:1}}
+|{{RT|W|6:1:0}}
+|{{RT|W|6:1:0}}
+|{{RT|W|6:0:0}}
+|{{RT|W|6:1:1}}
+|{{RT|W|6:1:1}}
+|{{RT|W|6:0:1}}
+|{{RT|W|6:1:0}}
+|{{RT|W|6:1:0}}
+|{{RT|W|6:0:0}}
+|{{RT|W|6:1:1}}
+|{{RT|W|6:1:1}}
+|{{RT|W|6:0:1}}
+|-
+|{{RT|+|7:0:0}}
+|{{RT|+|7:0:0}}
+|{{RT|+|7:0:0}}
+|{{RT|+|7:0:0}}
+|{{RT|+|7:0:0}}
+|{{RT|+|7:0:0}}
+|{{RT|+|7:0:0}}
+|{{RT|+|7:0:0}}
+|{{RT|+|7:0:0}}
+|{{RT|+|7:0:0}}
+|{{RT|+|7:0:0}}
+|{{RT|+|7:0:0}}
+|{{RT|+|7:0:0}}
+|{{RT|+|7:0:0}}
+|{{RT|+|7:0:0}}
+|{{RT|+|7:0:0}}
+|}
+|
+{| style="border-spacing:0;"
+|-
+|{{RT|+|7:0:0}}
+|{{RT|+|7:0:0}}
+|{{RT|╟|7:0:0}}
+|{{RT|╟|7:0:0}}
+|{{RT|╟|7:0:0}}
+|{{RT|╟|7:0:0}}
+|{{RT|╟|7:0:0}}
+|{{RT|╟|7:0:0}}
+|{{RT|╟|7:0:0}}
+|{{RT|╟|7:0:0}}
+|{{RT|╟|7:0:0}}
+|{{RT|╟|7:0:0}}
+|{{RT|+|7:0:0}}
+|{{RT|+|7:0:0}}
+|{{RT|+|7:0:0}}
+|{{RT|+|7:0:0}}
+|-
+|{{RT|+|7:0:0}}
+|{{RT|W|6:1:0}}
+|{{RT|W|6:1:0}}
+|{{RT|W|6:0:0}}
+|{{RT|W|6:1:1}}
+|{{RT|W|6:1:1}}
+|{{RT|W|6:0:1}}
+|{{RT|W|6:1:0}}
+|{{RT|W|6:1:0}}
+|{{RT|W|6:0:0}}
+|{{RT|W|6:1:1}}
+|{{RT|W|6:1:1}}
+|{{RT|W|6:0:1}}
+|{{RT|W|6:1:0}}
+|{{RT|W|6:1:0}}
+|{{RT|W|6:0:0}}
+|-
+|{{RT|+|7:0:0}}
+|{{RT|W|6:1:1}}
+|{{RT|W|6:1:1}}
+|{{RT|W|6:0:1}}
+|{{RT|W|6:1:0}}
+|{{RT|W|6:1:0}}
+|{{RT|W|6:0:0}}
+|{{RT|W|6:1:1}}
+|{{RT|W|6:1:1}}
+|{{RT|W|6:0:1}}
+|{{RT|W|6:1:0}}
+|{{RT|W|6:1:0}}
+|{{RT|W|6:0:0}}
+|{{RT|W|6:1:1}}
+|{{RT|W|6:1:1}}
+|{{RT|W|6:0:1}}
+|-
+|{{RT|+|7:0:0}}
+|{{RT|+|7:0:0}}
+|{{RT|+|7:0:0}}
+|{{RT|+|7:0:0}}
+|{{RT|+|7:0:0}}
+|{{RT|+|7:0:0}}
+|{{RT|+|7:0:0}}
+|{{RT|+|7:0:0}}
+|{{RT|+|7:0:0}}
+|{{RT|+|7:0:0}}
+|{{RT|+|7:0:0}}
+|{{RT|╟|7:0:0}}
+|{{RT|╟|7:0:0}}
+|{{RT|╟|7:0:0}}
+|{{RT|╟|7:0:0}}
+|{{RT|╟|7:0:0}}
+|}
+|}
+
+Axles vs. Rollers (water powerplant side bus):
+{| class="wikitable"
+|-
+! Water wheel<br/> (groups)
+! Length
+! Axles+Gears<br/>Power
+! Axles+Gears<br/>Materials
+! Single Roller<br/>Power
+! Single Roller<br/>Materials<br/>
+|-
+| 2
+| 4
+| 12
+| 2 Mechanism, 1 Wood
+| 8
+| 2 Mechanism, 1 Rope
+|-
+| 3
+| 7
+| 19
+| 3 Mechanism, 2 Wood
+| 14
+| 2 Mechanism, 1 Rope
+|-
+| 4
+| 10
+| 26
+| 4 Mechanism, 3 Wood
+| 20
+| 3 Mechanism, 1 Rope
+|-
+|}
+
+==Security==
+Often it's a good idea to block passage of [[Flood|liquids]] and creatures (whether to keep wildlife from getting inside or children from reaching dangerous areas) along the power transfer elements. Since [[machine component]]s are buildings, simply sticking an axle through a tile occupied by a grate or fortification is not possible. One can make an axle-train first going down the moat, across, then up (through a ring of floor over a 3x3 well to stop climbers) - though this still won't block fliers who can swim through the moat. Or perhaps a screw pump will make a floor-type security wall for a downward axle.  The "wall" tile of a pump is also good for protected horizontal power transfer. This is used e.g. "[http://www.bay12forums.com/smf/index.php?topic=144966.0 Invincible Windmill Farm]" by Tercicatrix. The pump including its "wall" is still vulnerable to building destroyers that manage to find a place to stand on. There's also an exploit: power transfer through the floor from a windmill down to a machine component built after it. Other than that, the most foolproof method is water flow through floor bars/grates.
+
+==Frozen components==
+Machine components on natural ice floors will freeze solid. This also causes all connected components to stop working.
+When you look at a component using 'q', you can see if the component is "frozen" (not working because it is frozen solid) or "frozen elsewhere" (not working because another component is frozen solid).
+
+Re-activating frozen machinery is plagued with bugs - removing frozen parts frequently fails to remove the "frozen elsewhere" status of connected machinery, and removing or disconnecting machine parts that aren't frozen themselves can render still-frozen parts operative. {{bug|2295}}
+
+Seasonally frozen machinery will reliably return to working order when the ice thaws.
+
+{{Translation
+| dwarven = midor
+| elvish  = anòva
+| goblin  = slatsu
+| human   = zotho
+}}
+[[ru:Power]]

@@ -1,0 +1,220 @@
+{{av}}
+{{minorspoiler}}
+{{infostart|}}
+:''"In the beginning, there was an endless expanse of salt..."'' - [[Toady One]], [http://www.bay12forums.com/smf/index.php?topic=169696.msg8565801#msg8565801 Future of the Fortress]
+
+[[File:Mythical remnant sprite preview.png|right]]'''Primordial remnants''', alternatively known as '''remnants of creation''' and '''mythical remnants''', are a type of procedurally-generated material that can be found as [[artifact]]s.
+
+==Properties==
+{{infoheader|Properties}}
+{{infocell|
+* [[Material value]] 200☼
+* [[Material science|Impact strength]] 2 GPa
+* [[Material science|Shear strength]] 2 GPa&nbsp;{{Tooltip|×1.2|MAX_EDGE of 12,000 compared to the default 10,000 for metals}}
+{{firemagmasafe|yes|yes}}
+* [[Melting point]] None
+* [[Boiling point]] None
+* [[Ignition point]] None
+* [[Solid density]] 1000 kg/m³
+* [[Specific heat]] 7500 J/kg·K}}
+{{infoend}} The name and appearance of a remnant is generated based on its associated [[sphere]]. This linkage is consistent between all remnants and [[mysterious dungeon]]s - "cosmic wood" might be guarded by "adepts of the forest," while a "primal crystal" might generate "gem worshippers". Currently, only one type of remnant can exist in a world.
+
+Remnants have identical mechanical properties to [[divine metal]]  -  their yield is 1,000,000 KPa in all dimensions, and fractures at 2,000,000 KPa - superior to [[steel]]. They are perfectly inelastic and can be extremely sharp, with a strain-at-yield of 0 and a max edge of 12,000. Their density is 1,000 kg/m³, about as much as [[wood]]. Remnants are completely fireproof.
+
+(A remnant associated with the [[sphere]] of [[Sphere#METALS|metals]] gains the {{token|ITEMS_METAL|md}} token, and is thus recognized as being [[metal]].)
+
+Because remnants are hidden in [[mysterious dungeon]]s without any historical interactions, they can't be viewed in [[legends mode]] until they're encountered in play.
+
+==Raw material==
+Primordial remnants originate from [[Mysterious dungeon|mysterious lair]]s, though [[historical figure]]s can steal them like other [[artifact]]s, and bring them into the wider world. 
+
+They have, as of yet, no known powers or uses (but equipment made from them has; see below). [[Religion]]s seek to gather them, and therefore offer a [[quest]] to retrieve one.  They are categorized as a "small rock," like those used for [[Knapper|knapping]].
+
+==List of remnants==
+There are unique sprites and different colors for primordial remnants, depending on the sphere they are attached to. Similar materials can have ambiguous spheres, and thus the powers a sphere grants are sometimes indeterminate on the remnant name alone.
+
+{| class="wikitable" style="width:;"
+|-
+! style="background:#c4c4c4;" | Icon
+! style="background:#c4c4c4;" | Possible Sphere(s)
+! style="background:#c4c4c4;" | Name
+! style="background:#c4c4c4;" | Color
+! style="background:#c4c4c4;" | Possible Powers (based on sphere)
+|-
+| [[File:remnant_1.png]]
+| Default / None
+| glitchstuff
+| Black
+| —
+|-
+| [[File:remnant_2.png]]
+| Mountains, Minerals, Caverns
+| stone
+| style="background: {{fgcolor|0:1}}; color: #fff;"| Gray
+| '''Mountains''' – Ice Bolt, Suffocate, Cause Dizziness<br>
+'''Minerals''' – Propel<br>
+'''Caverns''' – Blind
+|-
+| [[File:remnant_3.png]]
+| Jewels
+| crystal
+| style="background: {{fgcolor|7:1}};"| White
+| '''Jewels''' – Propel
+|-
+| [[File:remnant_4.png]]
+| Chaos
+| chaos
+| style="background: {{fgcolor|4:1}}; color: #fff;"| Red
+| '''Chaos''' – Cause Pain, Blister, Bleeding, Nausea, Cause Dizziness
+|-
+| [[File:remnant_5.png]]
+| Darkness, Death, Nightmares
+| darkness
+| style="background: {{fgcolor|0:1}}; color: #fff;"| Black
+| '''Darkness''' – Blind<br>
+'''Death''' – Cause Pain, Paralysis, Blind, Suffocate<br>
+'''Nightmares''' – Propel, Cause Pain, Blister, Paralysis, Bleeding, Sicken (Cough Blood), Sicken (Vomit Blood), Nausea, Rot, Blind, Suffocate, Cause Dizziness
+|-
+| [[File:remnant_6.png]]
+| Dreams
+| dreamstuff
+| style="background: {{fgcolor|2:1}};"| Green
+| '''Dreams''' – Propel
+|-
+| [[File:remnant_7.png]]
+| Fire
+| fire
+| style="background: {{fgcolor|4:1}}; color: #fff;"| Red
+| '''Fire''' – Blister, Blind
+|-
+| [[File:remnant_8.png]]
+| Light
+| light
+| style="background: {{fgcolor|6:1}};"| Yellow
+| '''Light''' – Blind
+|-
+| [[File:remnant_9.png]]
+| Lightning
+| lightning
+| style="background: {{fgcolor|6:1}};"| Yellow
+| '''Lightning''' – Blind
+|-
+| [[File:remnant_10.png]]
+| Metals
+| metal
+| style="background: {{fgcolor|7:1}};"| Silver
+| '''Metals''' – Propel
+|-
+| [[File:remnant_11.png]]
+| Moon
+| [[moonstone]]
+| style="background: {{fgcolor|7:1}};"| White
+| '''Moon''' – Blind
+|-
+| [[File:remnant_12.png]]
+| Muck
+| [[mudstone]]
+| style="background: {{fgcolor|6:0}}; color: #fff;"| Brown
+| '''Muck''' – Nausea, Rot, Blind, Suffocate
+|-
+| [[File:remnant_13.png]]
+| Oceans, Water
+| ice
+| style="background: {{fgcolor|1:1}}; color: #fff;"| Blue
+| '''Oceans''' – Ice Bolt<br>
+'''Water''' – Ice Bolt, Suffocate
+|-
+| [[File:remnant_14.png]]
+| Plants
+| leaf
+| style="background: {{fgcolor|2:1}};"| Green
+| '''Plants''' – Propel
+|-
+| [[File:remnant_15.png]]
+| Salt
+| salt
+| style="background: {{fgcolor|7:1}};"| White
+| '''Salt''' – Paralysis, Nausea
+|-
+| [[File:remnant_16.png]]
+| Mist, Sky, Storms, Wind
+| cloudstuff
+| style="background: {{fgcolor|7:1}};"| White
+| '''Mist''' – Blind<br>
+'''Sky''' – Propel<br>
+'''Storms''' – Ice Bolt, Propel<br>
+'''Wind''' – Propel
+|-
+| [[File:remnant_17.png]]
+| Stars
+| stardust
+| style="background: {{fgcolor|6:1}};"| Yellow
+| '''Stars''' – Blind
+|-
+| [[File:remnant_18.png]]
+| Sun
+| [[sunstone]]
+| style="background: {{fgcolor|6:1}};"| Yellow
+| '''Sun''' – Blister, Blind
+|-
+| [[File:remnant_19.png]]
+| Trees
+| wood
+| style="background: {{fgcolor|6:0}}; color: #fff;"| Brown
+| '''Trees''' – Propel
+|- 
+| [[File:remnant_20.png]]
+| Volcanoes
+| [[obsidian]]
+| style="background: {{fgcolor|4:1}}; color: #fff;"| Red
+| '''Volcanoes''' – Propel
+|}
+
+==Equipment==
+[[Jewelry]] and [[weapon]]s made from primordial remnants are found in [[mysterious dungeon]]s and palaces, respectively. These items are also [[Magic|magical]], granting the wielder use of an {{Adv menu icon|X}} [[interaction]]. Weapons made from these materials are as strong as [[divine metal]], and use the same set of special graphics. The powers are based on the sphere of the primordial remnant, see the above table. For more information on magic powers and their effects, see [[intelligent undead]].
+
+==List of powers==
+{| class="wikitable"
+|-
+! Icon !! Power !! Flavor text
+|-
+| [[File:icon_ice_bolt.png]] || '''Ice Bolt''' || ''This item shimmers with frost.''
+|-
+| [[File:icon_propel_away.png]] || '''Propel Away''' || ''Air swirls around this item.''
+|-
+| [[File:icon_pain.png]] || '''Pain''' || ''This item feels sinister.''
+|-
+| [[File:icon_paralyze.png]] || '''Paralysis''' || ''This item feels strangely still.''
+|-
+| [[File:icon_blisters.png]] || '''Blisters''' || ''This item feels prickly.''
+|-
+| [[File:icon_sicken_anim.gif]] || '''Sicken''' || ''This item is unsettling.''
+|-
+| [[File:icon_bleeding.png]] || '''Bleeding''' || N/A
+|-
+| [[File:icon_blind.png]] || '''Blind''' || ''This item is difficult to look at.''
+|-
+| [[File:icon_rot.png]] || '''Rot''' || ''This item smells foul.''
+|-
+| [[File:icon_dizziness.png]] || '''Dizziness''' || ''This item seems to spin in place.''
+|-
+| [[File:icon_suffocate.png]] || '''Suffocate''' || ''This item whistles quietly.''
+
+|}
+
+
+{{D for Dwarf}}
+<!--Reference: Sweet Dreams by Eurythmics-->
+
+A world can generate where sweet [[Sphere#DREAMS|dreams]] are made of these. Adventurers might have to travel the [[world]] and several [[Ocean|seas]], as everybody (or at least the [[Priest|clergy]]) is looking for something.
+
+<!--Reference: Dark Souls-->
+A [[Chosen]] [[Intelligent undead|undead]] can gather [[Sphere#FIRE|fire]]-based remnants to prevent the [[Calendar#Ages|Age of Death]]. 
+
+{{Scriptdata}}
+{{v50 materials}}
+{{Category|Items}}
+{{Category|Myth}}
+{{Category|Adventurer mode}}
+{{Category|Lore}}
+[[ru:Primordial remnant]]

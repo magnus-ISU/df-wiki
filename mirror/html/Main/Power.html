@@ -1,0 +1,857 @@
+<div class="mw-parser-output"><table class="metadata plainlinks ambox ambox-content" style="background-color:#fc9;" role="presentation">
+<tbody><tr><td class="mbox-image"><div style="width: 52px;"><a href="/index.php/File:Announce_migrant_icon.png" class="image"><img alt="Announce migrant icon.png" src="/images/5/5f/Announce_migrant_icon.png" decoding="async" width="32" height="32" /></a></div></td><td class="mbox-text" style=""><span class="mbox-text-span">This article was migrated from <a href="/index.php/DF2014:Power" title="DF2014:Power">DF2014:Power</a> and may be inaccurate for the current version of DF (v53.16). See <a href="/index.php/Dwarf_Fortress_Wiki:Version_migration" title="Dwarf Fortress Wiki:Version migration">this page</a> for more information.<span class="hide-when-compact">  </span><span class="hide-when-compact"> </span></span></td></tr></tbody></table><div id="page-quality-rating" style="text-align: right;margin: 0.8em 0;font-size:75%">
+<a href="/index.php/Dwarf_Fortress_Wiki:Quality#Unknown" title="Dwarf Fortress Wiki:Quality"><span id="unknown-quality" style="padding:.2em; border:1px solid #f00; border-radius: 2px; -webkit-border-radius: 2px; -moz-border-radius: 2px; -o-border-radius: 2px; -ms-border-radius: 2px; background:#ffccaa;text-decoration:none; color:#ff0000">!!UNKNOWN!!</span></a> <span style="font-weight:bold;" class="dot">&#160;·</span> <a href="/index.php/Dwarf_Fortress_Wiki:Quality#Tattered" title="Dwarf Fortress Wiki:Quality"><span id="stub-quality" style="text-decoration:none; color:#333333">xTATTEREDx</span></a> <span style="font-weight:bold;" class="dot">&#160;·</span> <a href="/index.php/Dwarf_Fortress_Wiki:Quality#Fine" title="Dwarf Fortress Wiki:Quality"><span id="fine-quality" style="text-decoration:none; color:#CA7A02;">+FINE+</span></a> <span style="font-weight:bold;" class="dot">&#160;·</span> <a href="/index.php/Dwarf_Fortress_Wiki:Quality#Superior" title="Dwarf Fortress Wiki:Quality"><span id="superior-quality" style="text-decoration:none; color:#8800cc;">*SUPERIOR*</span></a> <span style="font-weight:bold;" class="dot">&#160;·</span> <a href="/index.php/Dwarf_Fortress_Wiki:Quality#Exceptional" title="Dwarf Fortress Wiki:Quality"><span id="exceptional-quality" style="text-decoration:none; color:#0088CC;">≡EXCEPTIONAL≡</span></a> <span style="font-weight:bold;" class="dot">&#160;·</span> <a href="/index.php/Dwarf_Fortress_Wiki:Quality#Masterwork" title="Dwarf Fortress Wiki:Quality"><span id="masterwork-quality" style="text-decoration:none; color:#72A329;">☼MASTERWORK☼</span></a></div>
+<table class="version-table" style="text-align: center; margin: 3px auto 5px; padding: 0.25em; border-radius: 3px; -webkit-border-radius: 3px; -moz-border-radius: 3px; -o-border-radius: 3px; -ms-border-radius: 3px;; border: 2px solid #bbdd88; background: #f5ffee; min-width:27em"><tbody><tr><td style="padding: 0.3em 0.3em; width: 100%;"><div style="margin-bottom:6px;" class="version-links-r1"><span style="font-size:100%"><span class="version-link"><span style="text-decoration: none; color: #72A329; background-color: #E2FDCE; border-radius: 2px; -webkit-border-radius: 2px; -moz-border-radius: 2px; -o-border-radius: 2px; -ms-border-radius: 2px; border: 1px solid #bbdd88; padding: 0.2em;"><b>v53.16</b></span></span><span style="font-weight:bold;" class="dot">&#160;·</span> <span class="version-link"><a href="/index.php/DF2014:Power" title="DF2014:Power"><span style="text-decoration: none; color: #72A329;">v0.47.05</span></a></span></span></div><span>This article is about the current version of DF.<br />Note that some content may still need to be updated.</span><br />
+<div style="float: right; font-size:75%; padding-right:2px; margin-top:-2px; margin-bottom:-7px;"><span class="version-link"><a href="/index.php/Dwarf_Fortress_Wiki:V" class="mw-redirect" title="Dwarf Fortress Wiki:V"><span style="text-decoration: none; color: #72A329;">More Info</span></a></span><span style="font-weight:bold;" class="dot">&#160;·</span> <span class="version-link"><a href="/index.php/Template:Av" class="mw-redirect" title="Template:Av"><span style="text-decoration: none; color: #72A329;">V</span></a></span></div></td></tr>
+</tbody></table>
+<p><br />
+<a class="mw-selflink selflink">Power</a> is used to drive devices, typically replacing or improving tasks normally done by dwarves, such as pumping <a href="/index.php/Water" title="Water">water</a> using a <a href="/index.php/Screw_pump" title="Screw pump">screw pump</a>, <a href="/index.php/Milling" class="mw-redirect" title="Milling">milling</a> certain types of <a href="/index.php/Food" title="Food">food</a> at a <a href="/index.php/Millstone" title="Millstone">millstone</a>, or moving <a href="/index.php/Minecart" title="Minecart">minecarts</a>. Power is produced by <a href="/index.php/Windmill" title="Windmill">windmills</a> and <a href="/index.php/Water_wheel" title="Water wheel">water wheels</a>.
+</p>
+
+<h2><span class="mw-headline" id="Power_requirements">Power requirements</span></h2>
+<p>Most all <a href="/index.php/Machine_component" title="Machine component">machine components</a> connected to a power system consume some power, whether they produce any, perform some useful work, transfer power to another component, or (currently) serve no purpose and are simply "idling". So, a screw pump  attached to the power train costs -10 power, regardless of whether there is currently any liquid for it to pump or not, and a millstone attached to a power source also consumes -10 power, whether or not there are currently any milling jobs, etc.
+</p><p><b>Power production</b>:
+</p>
+<ul><li><a href="/index.php/Water_wheel" title="Water wheel">Water wheel</a>: produces net +90* if active, or -10 if not*</li>
+<li><a href="/index.php/Windmill" title="Windmill">Windmill</a>: produces +40, +20 or (rarely) +0, depending on <a href="/index.php/Weather#Wind" title="Weather">wind</a>; consumes -0 power</li></ul>
+<dl><dd><dl><dd><i>(* Technically, the actual power production is +100, but any and every water wheel costs -10 power to turn, so it's easiest to consider the effective output as only +90/wheel.  If a wheel is being turned in still water (by being attached to other machinery etc.) it produces no power of its own, and it costs -10 to turn it. This does not create a "<a href="/index.php/Flow" title="Flow">flow</a>" of liquid.)</i></dd></dl></dd></dl>
+<p><b>Power consumption</b>:
+</p>
+<ul><li><a href="/index.php/Axle" title="Axle">Axle</a>: -1 per tile <i>(both horizontal and vertical axles)</i></li>
+<li><a href="/index.php/Gear_assembly" title="Gear assembly">Gear assembly</a>: -5</li>
+<li><a href="/index.php/Millstone" title="Millstone">Millstone</a>: -10</li>
+<li><a href="/index.php/Screw_pump" title="Screw pump">Screw pump</a>: -10</li>
+<li><a href="/index.php/Roller" title="Roller">Roller</a>: -2 per roller</li></ul>
+<p>Machines such as screw pumps, millstones and rollers can most easily be (temporarily) disconnected from/reconnected to a power source by levers attached to a gear assembly in the power train (although there are always other methods).
+</p>
+<h2><span class="mw-headline" id="Power_transfer">Power transfer</span></h2>
+<p>Power can be transferred between devices using <a href="/index.php/Gear_assembly" title="Gear assembly">gear assemblies</a> and <a href="/index.php/Axle" title="Axle">axles</a>. Axles transfer power in a single direction -- north, south, east, west, up, or down.  Axles are classified as "horizontal" or "vertical", with the former going north/south or east/west, and with the latter going up or down <a href="/index.php/Z-level" title="Z-level">Z-levels</a>.  Axles must terminate at a device, or a gear assembly, or another axle of the same kind.  You cannot transfer power from a horizontal to a vertical axle (or from a north/south to an east/west horizontal axle) without a gear assembly. Horizontal axles may be placed individually up to 10 tiles long at a time; if you want a longer axle, you may simply place two or more of them in a line, you don't need gear assemblies between them to connect them.  Vertical axles are always placed one tile at a time, and may be as tall as you wish.
+</p><p>Gear assemblies take up a single tile and transfer power to any device, axle or gear assembly within the six orthogonally adjacent tiles (north, south, east, west, above, below). Gear assemblies are best used for moving power through right-angles. For example, they can be built as bases for windmills to move power out sideways along an axle.  Gear assemblies can also be linked to a <a href="/index.php/Lever" title="Lever">lever</a> to disengage them, which will stop power transfer through that tile.  Don't do this with gears that are supporting machinery above them, as the machinery may collapse.
+</p><p>Because of the high power use of gear assemblies (5), axles are more appropriate and convenient to build when transferring power across horizontal or vertical distances. An axle uses (1) power for every tile of power transfer. An axle 5 tiles long will use (5) power. Axles can be directly attached to windmills, waterwheels and screw pumps in order to provide power.
+</p><p>Devices that use power are also capable of transferring it. Adjacent screw pumps will transfer power between themselves. The only way to prevent this is to leave a tile gap between devices, or move them diagonally from each other.
+</p><p>Single-tile rollers transfer power in all four cardinal directions. Rollers transfer power perpendicular to their direction and <i>may</i> transfer along their direction (it's unreliable).
+Rollers need 1 rope and have the same length:material math as <a href="/index.php/Axle" title="Axle">axles</a>, and just like axles, they may be built individually up to 10 tiles long, but can only be built horizontally, not vertically across z-layers. Rollers consume 2x more power per tile than axles and need more materials. But they aren't used to connect along their direction anyway, and axles don't transfer perpendicularly on their own. When compared to axles <i>combined with gear assemblies</i>, rollers are more efficient—the lower per-tile cost of an axle is offset by the gears on its ends eating power (10 total).
+</p>
+<table>
+<tbody><tr>
+<td><b>Gear assembly</b>
+</td>
+<td><b>Roller (1x1)</b>
+</td>
+<td>
+</td></tr>
+<tr>
+<td>
+<table style="border-spacing:0;">
+
+<tbody><tr>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>2</td>
+<td></td>
+<td></td>
+<td></td>
+<td>3
+</td></tr>
+<tr>
+<td style="padding: 0; line-height: 1;"><code style="color: #C0C0C0; background: #000000; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; border: none; border-radius: 0px; padding: 0;">+</code>
+</td>
+<td style="padding: 0; line-height: 1;"><code style="color: #C0C0C0; background: #000000; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; border: none; border-radius: 0px; padding: 0;">+</code>
+</td>
+<td style="padding: 0; line-height: 1;"><code style="color: #C0C0C0; background: #000000; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; border: none; border-radius: 0px; padding: 0;">+</code>
+</td>
+<td>·
+</td>
+<td style="padding: 0; line-height: 1;"><code style="color: #C0C0C0; background: #000000; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; border: none; border-radius: 0px; padding: 0;">+</code>
+</td>
+<td style="padding: 0; line-height: 1;"><code style="color: #13FD65; background: #000000; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; border: none; border-radius: 0px; padding: 0;">│</code>
+</td>
+<td style="padding: 0; line-height: 1;"><code style="color: #C0C0C0; background: #000000; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; border: none; border-radius: 0px; padding: 0;">+</code>
+</td>
+<td>·
+</td>
+<td style="padding: 0; line-height: 1;"><code style="color: #C0C0C0; background: #000000; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; border: none; border-radius: 0px; padding: 0;">+</code>
+</td>
+<td style="padding: 0; line-height: 1;"><code style="color: #C0C0C0; background: #000000; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; border: none; border-radius: 0px; padding: 0;">+</code>
+</td>
+<td style="padding: 0; line-height: 1;"><code style="color: #C0C0C0; background: #000000; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; border: none; border-radius: 0px; padding: 0;">+</code>
+</td></tr>
+<tr>
+<td style="padding: 0; line-height: 1;"><code style="color: #C0C0C0; background: #000000; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; border: none; border-radius: 0px; padding: 0;">+</code>
+</td>
+<td style="padding: 0; line-height: 1;"><code style="color: #13FD65; background: #000000; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; border: none; border-radius: 0px; padding: 0;">o</code>
+</td>
+<td style="padding: 0; line-height: 1;"><code style="color: #C0C0C0; background: #000000; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; border: none; border-radius: 0px; padding: 0;">+</code>
+</td>
+<td>·
+</td>
+<td style="padding: 0; line-height: 1;"><code style="color: #13FD65; background: #000000; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; border: none; border-radius: 0px; padding: 0;">─</code>
+</td>
+<td style="padding: 0; line-height: 1;"><code style="color: #FFE111; background: #000000; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; border: none; border-radius: 0px; padding: 0;">☼</code>
+</td>
+<td style="padding: 0; line-height: 1;"><code style="color: #13FD65; background: #000000; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; border: none; border-radius: 0px; padding: 0;">─</code>
+</td>
+<td>·
+</td>
+<td style="padding: 0; line-height: 1;"><code style="color: #C0C0C0; background: #000000; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; border: none; border-radius: 0px; padding: 0;">+</code>
+</td>
+<td style="padding: 0; line-height: 1;"><code style="color: #13FD65; background: #000000; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; border: none; border-radius: 0px; padding: 0;">o</code>
+</td>
+<td style="padding: 0; line-height: 1;"><code style="color: #C0C0C0; background: #000000; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; border: none; border-radius: 0px; padding: 0;">+</code>
+</td></tr>
+<tr>
+<td style="padding: 0; line-height: 1;"><code style="color: #C0C0C0; background: #000000; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; border: none; border-radius: 0px; padding: 0;">+</code>
+</td>
+<td style="padding: 0; line-height: 1;"><code style="color: #C0C0C0; background: #000000; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; border: none; border-radius: 0px; padding: 0;">+</code>
+</td>
+<td style="padding: 0; line-height: 1;"><code style="color: #C0C0C0; background: #000000; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; border: none; border-radius: 0px; padding: 0;">+</code>
+</td>
+<td>·
+</td>
+<td style="padding: 0; line-height: 1;"><code style="color: #C0C0C0; background: #000000; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; border: none; border-radius: 0px; padding: 0;">+</code>
+</td>
+<td style="padding: 0; line-height: 1;"><code style="color: #13FD65; background: #000000; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; border: none; border-radius: 0px; padding: 0;">│</code>
+</td>
+<td style="padding: 0; line-height: 1;"><code style="color: #C0C0C0; background: #000000; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; border: none; border-radius: 0px; padding: 0;">+</code>
+</td>
+<td>·
+</td>
+<td style="padding: 0; line-height: 1;"><code style="color: #C0C0C0; background: #000000; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; border: none; border-radius: 0px; padding: 0;">+</code>
+</td>
+<td style="padding: 0; line-height: 1;"><code style="color: #C0C0C0; background: #000000; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; border: none; border-radius: 0px; padding: 0;">+</code>
+</td>
+<td style="padding: 0; line-height: 1;"><code style="color: #C0C0C0; background: #000000; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; border: none; border-radius: 0px; padding: 0;">+</code>
+</td></tr></tbody></table>
+</td>
+<td>
+<table style="border-spacing:0;">
+
+<tbody><tr>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>2</td>
+<td></td>
+<td></td>
+<td></td>
+<td>3
+</td></tr>
+<tr>
+<td style="padding: 0; line-height: 1;"><code style="color: #C0C0C0; background: #000000; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; border: none; border-radius: 0px; padding: 0;">+</code>
+</td>
+<td style="padding: 0; line-height: 1;"><code style="color: #C0C0C0; background: #000000; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; border: none; border-radius: 0px; padding: 0;">+</code>
+</td>
+<td style="padding: 0; line-height: 1;"><code style="color: #C0C0C0; background: #000000; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; border: none; border-radius: 0px; padding: 0;">+</code>
+</td>
+<td>·
+</td>
+<td style="padding: 0; line-height: 1;"><code style="color: #C0C0C0; background: #000000; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; border: none; border-radius: 0px; padding: 0;">+</code>
+</td>
+<td style="padding: 0; line-height: 1;"><code style="color: #13FD65; background: #000000; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; border: none; border-radius: 0px; padding: 0;">│</code>
+</td>
+<td style="padding: 0; line-height: 1;"><code style="color: #C0C0C0; background: #000000; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; border: none; border-radius: 0px; padding: 0;">+</code>
+</td>
+<td>·
+</td>
+<td style="padding: 0; line-height: 1;"><code style="color: #C0C0C0; background: #000000; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; border: none; border-radius: 0px; padding: 0;">+</code>
+</td>
+<td style="padding: 0; line-height: 1;"><code style="color: #C0C0C0; background: #000000; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; border: none; border-radius: 0px; padding: 0;">+</code>
+</td>
+<td style="padding: 0; line-height: 1;"><code style="color: #C0C0C0; background: #000000; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; border: none; border-radius: 0px; padding: 0;">+</code>
+</td></tr>
+<tr>
+<td style="padding: 0; line-height: 1;"><code style="color: #C0C0C0; background: #000000; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; border: none; border-radius: 0px; padding: 0;">+</code>
+</td>
+<td style="padding: 0; line-height: 1;"><code style="color: #C0C0C0; background: #000000; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; border: none; border-radius: 0px; padding: 0;">+</code>
+</td>
+<td style="padding: 0; line-height: 1;"><code style="color: #C0C0C0; background: #000000; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; border: none; border-radius: 0px; padding: 0;">+</code>
+</td>
+<td>·
+</td>
+<td style="padding: 0; line-height: 1;"><code style="color: #13FD65; background: #000000; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; border: none; border-radius: 0px; padding: 0;">─</code>
+</td>
+<td style="padding: 0; line-height: 1;"><code style="color: #FFE111; background: #000000; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; border: none; border-radius: 0px; padding: 0;">╟</code>
+</td>
+<td style="padding: 0; line-height: 1;"><code style="color: #13FD65; background: #000000; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; border: none; border-radius: 0px; padding: 0;">─</code>
+</td>
+<td>·
+</td>
+<td style="padding: 0; line-height: 1;"><code style="color: #C0C0C0; background: #000000; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; border: none; border-radius: 0px; padding: 0;">+</code>
+</td>
+<td style="padding: 0; line-height: 1;"><code style="color: #C0C0C0; background: #000000; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; border: none; border-radius: 0px; padding: 0;">+</code>
+</td>
+<td style="padding: 0; line-height: 1;"><code style="color: #C0C0C0; background: #000000; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; border: none; border-radius: 0px; padding: 0;">+</code>
+</td></tr>
+<tr>
+<td style="padding: 0; line-height: 1;"><code style="color: #C0C0C0; background: #000000; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; border: none; border-radius: 0px; padding: 0;">+</code>
+</td>
+<td style="padding: 0; line-height: 1;"><code style="color: #C0C0C0; background: #000000; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; border: none; border-radius: 0px; padding: 0;">+</code>
+</td>
+<td style="padding: 0; line-height: 1;"><code style="color: #C0C0C0; background: #000000; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; border: none; border-radius: 0px; padding: 0;">+</code>
+</td>
+<td>·
+</td>
+<td style="padding: 0; line-height: 1;"><code style="color: #C0C0C0; background: #000000; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; border: none; border-radius: 0px; padding: 0;">+</code>
+</td>
+<td style="padding: 0; line-height: 1;"><code style="color: #13FD65; background: #000000; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; border: none; border-radius: 0px; padding: 0;">│</code>
+</td>
+<td style="padding: 0; line-height: 1;"><code style="color: #C0C0C0; background: #000000; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; border: none; border-radius: 0px; padding: 0;">+</code>
+</td>
+<td>·
+</td>
+<td style="padding: 0; line-height: 1;"><code style="color: #C0C0C0; background: #000000; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; border: none; border-radius: 0px; padding: 0;">+</code>
+</td>
+<td style="padding: 0; line-height: 1;"><code style="color: #C0C0C0; background: #000000; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; border: none; border-radius: 0px; padding: 0;">+</code>
+</td>
+<td style="padding: 0; line-height: 1;"><code style="color: #C0C0C0; background: #000000; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; border: none; border-radius: 0px; padding: 0;">+</code>
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+<table>
+<tbody><tr>
+<td><b>Axles+Gears</b>
+</td>
+<td><b>Rollers</b>
+</td></tr>
+<tr>
+<td>
+<table style="border-spacing:0;">
+
+<tbody><tr>
+<td style="padding: 0; line-height: 1;"><code style="color: #C0C0C0; background: #000000; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; border: none; border-radius: 0px; padding: 0;">+</code>
+</td>
+<td style="padding: 0; line-height: 1;"><code style="color: #FFFFFF; background: #000000; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; border: none; border-radius: 0px; padding: 0;">☼</code>
+</td>
+<td style="padding: 0; line-height: 1;"><code style="color: #C0C0C0; background: #000000; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; border: none; border-radius: 0px; padding: 0;">─</code>
+</td>
+<td style="padding: 0; line-height: 1;"><code style="color: #C0C0C0; background: #000000; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; border: none; border-radius: 0px; padding: 0;">─</code>
+</td>
+<td style="padding: 0; line-height: 1;"><code style="color: #C0C0C0; background: #000000; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; border: none; border-radius: 0px; padding: 0;">─</code>
+</td>
+<td style="padding: 0; line-height: 1;"><code style="color: #C0C0C0; background: #000000; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; border: none; border-radius: 0px; padding: 0;">─</code>
+</td>
+<td style="padding: 0; line-height: 1;"><code style="color: #C0C0C0; background: #000000; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; border: none; border-radius: 0px; padding: 0;">─</code>
+</td>
+<td style="padding: 0; line-height: 1;"><code style="color: #C0C0C0; background: #000000; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; border: none; border-radius: 0px; padding: 0;">─</code>
+</td>
+<td style="padding: 0; line-height: 1;"><code style="color: #C0C0C0; background: #000000; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; border: none; border-radius: 0px; padding: 0;">─</code>
+</td>
+<td style="padding: 0; line-height: 1;"><code style="color: #C0C0C0; background: #000000; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; border: none; border-radius: 0px; padding: 0;">─</code>
+</td>
+<td style="padding: 0; line-height: 1;"><code style="color: #C0C0C0; background: #000000; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; border: none; border-radius: 0px; padding: 0;">─</code>
+</td>
+<td style="padding: 0; line-height: 1;"><code style="color: #C0C0C0; background: #000000; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; border: none; border-radius: 0px; padding: 0;">─</code>
+</td>
+<td style="padding: 0; line-height: 1;"><code style="color: #FFFFFF; background: #000000; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; border: none; border-radius: 0px; padding: 0;">☼</code>
+</td>
+<td style="padding: 0; line-height: 1;"><code style="color: #C0C0C0; background: #000000; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; border: none; border-radius: 0px; padding: 0;">+</code>
+</td></tr>
+<tr>
+<td style="padding: 0; line-height: 1;"><code style="color: #C0C0C0; background: #000000; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; border: none; border-radius: 0px; padding: 0;">+</code>
+</td>
+<td style="padding: 0; line-height: 1;"><code style="color: #13FD65; background: #000000; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; border: none; border-radius: 0px; padding: 0;">%</code>
+</td>
+<td style="padding: 0; line-height: 1;"><code style="color: #C0C0C0; background: #000000; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; border: none; border-radius: 0px; padding: 0;">+</code>
+</td>
+<td style="padding: 0; line-height: 1;"><code style="color: #C0C0C0; background: #000000; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; border: none; border-radius: 0px; padding: 0;">+</code>
+</td>
+<td style="padding: 0; line-height: 1;"><code style="color: #C0C0C0; background: #000000; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; border: none; border-radius: 0px; padding: 0;">+</code>
+</td>
+<td style="padding: 0; line-height: 1;"><code style="color: #C0C0C0; background: #000000; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; border: none; border-radius: 0px; padding: 0;">+</code>
+</td>
+<td style="padding: 0; line-height: 1;"><code style="color: #C0C0C0; background: #000000; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; border: none; border-radius: 0px; padding: 0;">+</code>
+</td>
+<td style="padding: 0; line-height: 1;"><code style="color: #C0C0C0; background: #000000; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; border: none; border-radius: 0px; padding: 0;">+</code>
+</td>
+<td style="padding: 0; line-height: 1;"><code style="color: #C0C0C0; background: #000000; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; border: none; border-radius: 0px; padding: 0;">+</code>
+</td>
+<td style="padding: 0; line-height: 1;"><code style="color: #C0C0C0; background: #000000; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; border: none; border-radius: 0px; padding: 0;">+</code>
+</td>
+<td style="padding: 0; line-height: 1;"><code style="color: #C0C0C0; background: #000000; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; border: none; border-radius: 0px; padding: 0;">+</code>
+</td>
+<td style="padding: 0; line-height: 1;"><code style="color: #C0C0C0; background: #000000; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; border: none; border-radius: 0px; padding: 0;">+</code>
+</td>
+<td style="padding: 0; line-height: 1;"><code style="color: #13FD65; background: #000000; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; border: none; border-radius: 0px; padding: 0;">%</code>
+</td>
+<td style="padding: 0; line-height: 1;"><code style="color: #C0C0C0; background: #000000; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; border: none; border-radius: 0px; padding: 0;">+</code>
+</td></tr></tbody></table>
+</td>
+<td>
+<table style="border-spacing:0;">
+
+<tbody><tr>
+<td style="padding: 0; line-height: 1;"><code style="color: #C0C0C0; background: #000000; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; border: none; border-radius: 0px; padding: 0;">+</code>
+</td>
+<td style="padding: 0; line-height: 1;"><code style="color: #C0C0C0; background: #000000; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; border: none; border-radius: 0px; padding: 0;">+</code>
+</td>
+<td style="padding: 0; line-height: 1;"><code style="color: #C0C0C0; background: #000000; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; border: none; border-radius: 0px; padding: 0;">╟</code>
+</td>
+<td style="padding: 0; line-height: 1;"><code style="color: #C0C0C0; background: #000000; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; border: none; border-radius: 0px; padding: 0;">╟</code>
+</td>
+<td style="padding: 0; line-height: 1;"><code style="color: #C0C0C0; background: #000000; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; border: none; border-radius: 0px; padding: 0;">╟</code>
+</td>
+<td style="padding: 0; line-height: 1;"><code style="color: #C0C0C0; background: #000000; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; border: none; border-radius: 0px; padding: 0;">╟</code>
+</td>
+<td style="padding: 0; line-height: 1;"><code style="color: #C0C0C0; background: #000000; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; border: none; border-radius: 0px; padding: 0;">╟</code>
+</td>
+<td style="padding: 0; line-height: 1;"><code style="color: #C0C0C0; background: #000000; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; border: none; border-radius: 0px; padding: 0;">╟</code>
+</td>
+<td style="padding: 0; line-height: 1;"><code style="color: #C0C0C0; background: #000000; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; border: none; border-radius: 0px; padding: 0;">╟</code>
+</td>
+<td style="padding: 0; line-height: 1;"><code style="color: #C0C0C0; background: #000000; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; border: none; border-radius: 0px; padding: 0;">╟</code>
+</td>
+<td style="padding: 0; line-height: 1;"><code style="color: #C0C0C0; background: #000000; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; border: none; border-radius: 0px; padding: 0;">╟</code>
+</td>
+<td style="padding: 0; line-height: 1;"><code style="color: #C0C0C0; background: #000000; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; border: none; border-radius: 0px; padding: 0;">╟</code>
+</td>
+<td style="padding: 0; line-height: 1;"><code style="color: #C0C0C0; background: #000000; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; border: none; border-radius: 0px; padding: 0;">+</code>
+</td>
+<td style="padding: 0; line-height: 1;"><code style="color: #C0C0C0; background: #000000; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; border: none; border-radius: 0px; padding: 0;">+</code>
+</td></tr>
+<tr>
+<td style="padding: 0; line-height: 1;"><code style="color: #C0C0C0; background: #000000; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; border: none; border-radius: 0px; padding: 0;">+</code>
+</td>
+<td style="padding: 0; line-height: 1;"><code style="color: #C0C0C0; background: #000000; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; border: none; border-radius: 0px; padding: 0;">+</code>
+</td>
+<td style="padding: 0; line-height: 1;"><code style="color: #13FD65; background: #000000; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; border: none; border-radius: 0px; padding: 0;">%</code>
+</td>
+<td style="padding: 0; line-height: 1;"><code style="color: #C0C0C0; background: #000000; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; border: none; border-radius: 0px; padding: 0;">+</code>
+</td>
+<td style="padding: 0; line-height: 1;"><code style="color: #C0C0C0; background: #000000; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; border: none; border-radius: 0px; padding: 0;">+</code>
+</td>
+<td style="padding: 0; line-height: 1;"><code style="color: #C0C0C0; background: #000000; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; border: none; border-radius: 0px; padding: 0;">+</code>
+</td>
+<td style="padding: 0; line-height: 1;"><code style="color: #C0C0C0; background: #000000; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; border: none; border-radius: 0px; padding: 0;">+</code>
+</td>
+<td style="padding: 0; line-height: 1;"><code style="color: #C0C0C0; background: #000000; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; border: none; border-radius: 0px; padding: 0;">+</code>
+</td>
+<td style="padding: 0; line-height: 1;"><code style="color: #C0C0C0; background: #000000; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; border: none; border-radius: 0px; padding: 0;">+</code>
+</td>
+<td style="padding: 0; line-height: 1;"><code style="color: #C0C0C0; background: #000000; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; border: none; border-radius: 0px; padding: 0;">+</code>
+</td>
+<td style="padding: 0; line-height: 1;"><code style="color: #C0C0C0; background: #000000; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; border: none; border-radius: 0px; padding: 0;">+</code>
+</td>
+<td style="padding: 0; line-height: 1;"><code style="color: #13FD65; background: #000000; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; border: none; border-radius: 0px; padding: 0;">%</code>
+</td>
+<td style="padding: 0; line-height: 1;"><code style="color: #C0C0C0; background: #000000; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; border: none; border-radius: 0px; padding: 0;">+</code>
+</td>
+<td style="padding: 0; line-height: 1;"><code style="color: #C0C0C0; background: #000000; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; border: none; border-radius: 0px; padding: 0;">+</code>
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+<p>Axles vs. Rollers (a single U- or Z- connection):
+</p>
+<table class="wikitable">
+
+<tbody><tr>
+<th>Length
+</th>
+<th>Axle+Gears<br />Power
+</th>
+<th>Axle+Gears<br />Materials
+</th>
+<th>Single Roller<br />Power
+</th>
+<th>Single Roller<br />Materials
+</th></tr>
+<tr>
+<td>2
+</td>
+<td>10
+</td>
+<td>2 Mechanism
+</td>
+<td>4
+</td>
+<td>1 Mechanism, 1 Rope
+</td></tr>
+<tr>
+<td>3
+</td>
+<td>11
+</td>
+<td>2 Mechanism, 1 Wood
+</td>
+<td>6
+</td>
+<td>1 Mechanism, 1 Rope
+</td></tr>
+<tr>
+<td>4
+</td>
+<td>12
+</td>
+<td>2 Mechanism, 1 Wood
+</td>
+<td>8
+</td>
+<td>2 Mechanism, 1 Rope
+</td></tr>
+<tr>
+<td>5
+</td>
+<td>13
+</td>
+<td>2 Mechanism, 1 Wood
+</td>
+<td>10
+</td>
+<td>2 Mechanism, 1 Rope
+</td></tr>
+<tr>
+<td>6
+</td>
+<td>14
+</td>
+<td>2 Mechanism, 2 Wood
+</td>
+<td>12
+</td>
+<td>2 Mechanism, 1 Rope
+</td></tr>
+<tr>
+<td>7
+</td>
+<td>15
+</td>
+<td>2 Mechanism, 2 Wood
+</td>
+<td>14
+</td>
+<td>2 Mechanism, 1 Rope
+</td></tr>
+<tr>
+<td>8
+</td>
+<td>16
+</td>
+<td>2 Mechanism, 2 Wood
+</td>
+<td>16
+</td>
+<td>3 Mechanism, 1 Rope
+</td></tr>
+<tr>
+<td>9
+</td>
+<td>17
+</td>
+<td>2 Mechanism, 2 Wood
+</td>
+<td>18
+</td>
+<td>3 Mechanism, 1 Rope
+</td></tr>
+<tr>
+<td>10
+</td>
+<td>18
+</td>
+<td>2 Mechanism, 3 Wood
+</td>
+<td>20
+</td>
+<td>3 Mechanism, 1 Rope
+</td></tr>
+<tr>
+<td>11
+</td>
+<td>19
+</td>
+<td>2 Mechanism, 3 Wood
+</td>
+<td>
+</td>
+<td>
+</td></tr>
+<tr>
+<td>12
+</td>
+<td>20
+</td>
+<td>2 Mechanism, 3 Wood
+</td>
+<td>
+</td>
+<td>
+</td></tr>
+</tbody></table>
+<p>Of course, a non-switching power bus (e.g. collecting power from water wheels or feeding many pumps on the same level) needs extra gears in the middle, thus rollers are far more efficient, though not trivial to connect at the ends (with water wheel arrays it's easier to alternate sides, connecting through the end wheels):
+</p>
+<table>
+<tbody><tr>
+<td><b>Gears</b>
+</td>
+<td><b>Rollers</b>
+</td></tr>
+<tr>
+<td>
+<table style="border-spacing:0;">
+
+<tbody><tr>
+<td style="padding: 0; line-height: 1;"><code style="color: #C0C0C0; background: #000000; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; border: none; border-radius: 0px; padding: 0;">+</code>
+</td>
+<td style="padding: 0; line-height: 1;"><code style="color: #C0C0C0; background: #000000; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; border: none; border-radius: 0px; padding: 0;">+</code>
+</td>
+<td style="padding: 0; line-height: 1;"><code style="color: #FFFFFF; background: #000000; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; border: none; border-radius: 0px; padding: 0;">☼</code>
+</td>
+<td style="padding: 0; line-height: 1;"><code style="color: #C0C0C0; background: #000000; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; border: none; border-radius: 0px; padding: 0;">─</code>
+</td>
+<td style="padding: 0; line-height: 1;"><code style="color: #C0C0C0; background: #000000; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; border: none; border-radius: 0px; padding: 0;">─</code>
+</td>
+<td style="padding: 0; line-height: 1;"><code style="color: #C0C0C0; background: #000000; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; border: none; border-radius: 0px; padding: 0;">☼</code>
+</td>
+<td style="padding: 0; line-height: 1;"><code style="color: #C0C0C0; background: #000000; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; border: none; border-radius: 0px; padding: 0;">─</code>
+</td>
+<td style="padding: 0; line-height: 1;"><code style="color: #C0C0C0; background: #000000; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; border: none; border-radius: 0px; padding: 0;">─</code>
+</td>
+<td style="padding: 0; line-height: 1;"><code style="color: #FFFFFF; background: #000000; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; border: none; border-radius: 0px; padding: 0;">☼</code>
+</td>
+<td style="padding: 0; line-height: 1;"><code style="color: #C0C0C0; background: #000000; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; border: none; border-radius: 0px; padding: 0;">─</code>
+</td>
+<td style="padding: 0; line-height: 1;"><code style="color: #C0C0C0; background: #000000; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; border: none; border-radius: 0px; padding: 0;">─</code>
+</td>
+<td style="padding: 0; line-height: 1;"><code style="color: #C0C0C0; background: #000000; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; border: none; border-radius: 0px; padding: 0;">☼</code>
+</td>
+<td style="padding: 0; line-height: 1;"><code style="color: #C0C0C0; background: #000000; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; border: none; border-radius: 0px; padding: 0;">─</code>
+</td>
+<td style="padding: 0; line-height: 1;"><code style="color: #C0C0C0; background: #000000; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; border: none; border-radius: 0px; padding: 0;">─</code>
+</td>
+<td style="padding: 0; line-height: 1;"><code style="color: #FFFFFF; background: #000000; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; border: none; border-radius: 0px; padding: 0;">☼</code>
+</td>
+<td style="padding: 0; line-height: 1;"><code style="color: #C0C0C0; background: #000000; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; border: none; border-radius: 0px; padding: 0;">─</code>
+</td></tr>
+<tr>
+<td style="padding: 0; line-height: 1;"><code style="color: #C0C0C0; background: #000000; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; border: none; border-radius: 0px; padding: 0;">+</code>
+</td>
+<td style="padding: 0; line-height: 1;"><code style="color: #D79B2D; background: #207DF1; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; border: none; border-radius: 0px; padding: 0;">W</code>
+</td>
+<td style="padding: 0; line-height: 1;"><code style="color: #D79B2D; background: #207DF1; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; border: none; border-radius: 0px; padding: 0;">W</code>
+</td>
+<td style="padding: 0; line-height: 1;"><code style="color: #D79B2D; background: #000000; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; border: none; border-radius: 0px; padding: 0;">W</code>
+</td>
+<td style="padding: 0; line-height: 1;"><code style="color: #FFE111; background: #207DF1; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; border: none; border-radius: 0px; padding: 0;">W</code>
+</td>
+<td style="padding: 0; line-height: 1;"><code style="color: #FFE111; background: #207DF1; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; border: none; border-radius: 0px; padding: 0;">W</code>
+</td>
+<td style="padding: 0; line-height: 1;"><code style="color: #FFE111; background: #000000; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; border: none; border-radius: 0px; padding: 0;">W</code>
+</td>
+<td style="padding: 0; line-height: 1;"><code style="color: #D79B2D; background: #207DF1; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; border: none; border-radius: 0px; padding: 0;">W</code>
+</td>
+<td style="padding: 0; line-height: 1;"><code style="color: #D79B2D; background: #207DF1; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; border: none; border-radius: 0px; padding: 0;">W</code>
+</td>
+<td style="padding: 0; line-height: 1;"><code style="color: #D79B2D; background: #000000; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; border: none; border-radius: 0px; padding: 0;">W</code>
+</td>
+<td style="padding: 0; line-height: 1;"><code style="color: #FFE111; background: #207DF1; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; border: none; border-radius: 0px; padding: 0;">W</code>
+</td>
+<td style="padding: 0; line-height: 1;"><code style="color: #FFE111; background: #207DF1; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; border: none; border-radius: 0px; padding: 0;">W</code>
+</td>
+<td style="padding: 0; line-height: 1;"><code style="color: #FFE111; background: #000000; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; border: none; border-radius: 0px; padding: 0;">W</code>
+</td>
+<td style="padding: 0; line-height: 1;"><code style="color: #D79B2D; background: #207DF1; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; border: none; border-radius: 0px; padding: 0;">W</code>
+</td>
+<td style="padding: 0; line-height: 1;"><code style="color: #D79B2D; background: #207DF1; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; border: none; border-radius: 0px; padding: 0;">W</code>
+</td>
+<td style="padding: 0; line-height: 1;"><code style="color: #D79B2D; background: #000000; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; border: none; border-radius: 0px; padding: 0;">W</code>
+</td></tr>
+<tr>
+<td style="padding: 0; line-height: 1;"><code style="color: #C0C0C0; background: #000000; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; border: none; border-radius: 0px; padding: 0;">+</code>
+</td>
+<td style="padding: 0; line-height: 1;"><code style="color: #FFE111; background: #207DF1; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; border: none; border-radius: 0px; padding: 0;">W</code>
+</td>
+<td style="padding: 0; line-height: 1;"><code style="color: #FFE111; background: #207DF1; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; border: none; border-radius: 0px; padding: 0;">W</code>
+</td>
+<td style="padding: 0; line-height: 1;"><code style="color: #FFE111; background: #000000; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; border: none; border-radius: 0px; padding: 0;">W</code>
+</td>
+<td style="padding: 0; line-height: 1;"><code style="color: #D79B2D; background: #207DF1; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; border: none; border-radius: 0px; padding: 0;">W</code>
+</td>
+<td style="padding: 0; line-height: 1;"><code style="color: #D79B2D; background: #207DF1; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; border: none; border-radius: 0px; padding: 0;">W</code>
+</td>
+<td style="padding: 0; line-height: 1;"><code style="color: #D79B2D; background: #000000; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; border: none; border-radius: 0px; padding: 0;">W</code>
+</td>
+<td style="padding: 0; line-height: 1;"><code style="color: #FFE111; background: #207DF1; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; border: none; border-radius: 0px; padding: 0;">W</code>
+</td>
+<td style="padding: 0; line-height: 1;"><code style="color: #FFE111; background: #207DF1; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; border: none; border-radius: 0px; padding: 0;">W</code>
+</td>
+<td style="padding: 0; line-height: 1;"><code style="color: #FFE111; background: #000000; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; border: none; border-radius: 0px; padding: 0;">W</code>
+</td>
+<td style="padding: 0; line-height: 1;"><code style="color: #D79B2D; background: #207DF1; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; border: none; border-radius: 0px; padding: 0;">W</code>
+</td>
+<td style="padding: 0; line-height: 1;"><code style="color: #D79B2D; background: #207DF1; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; border: none; border-radius: 0px; padding: 0;">W</code>
+</td>
+<td style="padding: 0; line-height: 1;"><code style="color: #D79B2D; background: #000000; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; border: none; border-radius: 0px; padding: 0;">W</code>
+</td>
+<td style="padding: 0; line-height: 1;"><code style="color: #FFE111; background: #207DF1; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; border: none; border-radius: 0px; padding: 0;">W</code>
+</td>
+<td style="padding: 0; line-height: 1;"><code style="color: #FFE111; background: #207DF1; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; border: none; border-radius: 0px; padding: 0;">W</code>
+</td>
+<td style="padding: 0; line-height: 1;"><code style="color: #FFE111; background: #000000; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; border: none; border-radius: 0px; padding: 0;">W</code>
+</td></tr>
+<tr>
+<td style="padding: 0; line-height: 1;"><code style="color: #C0C0C0; background: #000000; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; border: none; border-radius: 0px; padding: 0;">+</code>
+</td>
+<td style="padding: 0; line-height: 1;"><code style="color: #C0C0C0; background: #000000; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; border: none; border-radius: 0px; padding: 0;">+</code>
+</td>
+<td style="padding: 0; line-height: 1;"><code style="color: #C0C0C0; background: #000000; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; border: none; border-radius: 0px; padding: 0;">+</code>
+</td>
+<td style="padding: 0; line-height: 1;"><code style="color: #C0C0C0; background: #000000; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; border: none; border-radius: 0px; padding: 0;">+</code>
+</td>
+<td style="padding: 0; line-height: 1;"><code style="color: #C0C0C0; background: #000000; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; border: none; border-radius: 0px; padding: 0;">+</code>
+</td>
+<td style="padding: 0; line-height: 1;"><code style="color: #C0C0C0; background: #000000; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; border: none; border-radius: 0px; padding: 0;">+</code>
+</td>
+<td style="padding: 0; line-height: 1;"><code style="color: #C0C0C0; background: #000000; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; border: none; border-radius: 0px; padding: 0;">+</code>
+</td>
+<td style="padding: 0; line-height: 1;"><code style="color: #C0C0C0; background: #000000; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; border: none; border-radius: 0px; padding: 0;">+</code>
+</td>
+<td style="padding: 0; line-height: 1;"><code style="color: #C0C0C0; background: #000000; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; border: none; border-radius: 0px; padding: 0;">+</code>
+</td>
+<td style="padding: 0; line-height: 1;"><code style="color: #C0C0C0; background: #000000; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; border: none; border-radius: 0px; padding: 0;">+</code>
+</td>
+<td style="padding: 0; line-height: 1;"><code style="color: #C0C0C0; background: #000000; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; border: none; border-radius: 0px; padding: 0;">+</code>
+</td>
+<td style="padding: 0; line-height: 1;"><code style="color: #C0C0C0; background: #000000; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; border: none; border-radius: 0px; padding: 0;">+</code>
+</td>
+<td style="padding: 0; line-height: 1;"><code style="color: #C0C0C0; background: #000000; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; border: none; border-radius: 0px; padding: 0;">+</code>
+</td>
+<td style="padding: 0; line-height: 1;"><code style="color: #C0C0C0; background: #000000; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; border: none; border-radius: 0px; padding: 0;">+</code>
+</td>
+<td style="padding: 0; line-height: 1;"><code style="color: #C0C0C0; background: #000000; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; border: none; border-radius: 0px; padding: 0;">+</code>
+</td>
+<td style="padding: 0; line-height: 1;"><code style="color: #C0C0C0; background: #000000; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; border: none; border-radius: 0px; padding: 0;">+</code>
+</td></tr></tbody></table>
+</td>
+<td>
+<table style="border-spacing:0;">
+
+<tbody><tr>
+<td style="padding: 0; line-height: 1;"><code style="color: #C0C0C0; background: #000000; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; border: none; border-radius: 0px; padding: 0;">+</code>
+</td>
+<td style="padding: 0; line-height: 1;"><code style="color: #C0C0C0; background: #000000; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; border: none; border-radius: 0px; padding: 0;">+</code>
+</td>
+<td style="padding: 0; line-height: 1;"><code style="color: #C0C0C0; background: #000000; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; border: none; border-radius: 0px; padding: 0;">╟</code>
+</td>
+<td style="padding: 0; line-height: 1;"><code style="color: #C0C0C0; background: #000000; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; border: none; border-radius: 0px; padding: 0;">╟</code>
+</td>
+<td style="padding: 0; line-height: 1;"><code style="color: #C0C0C0; background: #000000; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; border: none; border-radius: 0px; padding: 0;">╟</code>
+</td>
+<td style="padding: 0; line-height: 1;"><code style="color: #C0C0C0; background: #000000; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; border: none; border-radius: 0px; padding: 0;">╟</code>
+</td>
+<td style="padding: 0; line-height: 1;"><code style="color: #C0C0C0; background: #000000; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; border: none; border-radius: 0px; padding: 0;">╟</code>
+</td>
+<td style="padding: 0; line-height: 1;"><code style="color: #C0C0C0; background: #000000; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; border: none; border-radius: 0px; padding: 0;">╟</code>
+</td>
+<td style="padding: 0; line-height: 1;"><code style="color: #C0C0C0; background: #000000; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; border: none; border-radius: 0px; padding: 0;">╟</code>
+</td>
+<td style="padding: 0; line-height: 1;"><code style="color: #C0C0C0; background: #000000; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; border: none; border-radius: 0px; padding: 0;">╟</code>
+</td>
+<td style="padding: 0; line-height: 1;"><code style="color: #C0C0C0; background: #000000; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; border: none; border-radius: 0px; padding: 0;">╟</code>
+</td>
+<td style="padding: 0; line-height: 1;"><code style="color: #C0C0C0; background: #000000; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; border: none; border-radius: 0px; padding: 0;">╟</code>
+</td>
+<td style="padding: 0; line-height: 1;"><code style="color: #C0C0C0; background: #000000; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; border: none; border-radius: 0px; padding: 0;">+</code>
+</td>
+<td style="padding: 0; line-height: 1;"><code style="color: #C0C0C0; background: #000000; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; border: none; border-radius: 0px; padding: 0;">+</code>
+</td>
+<td style="padding: 0; line-height: 1;"><code style="color: #C0C0C0; background: #000000; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; border: none; border-radius: 0px; padding: 0;">+</code>
+</td>
+<td style="padding: 0; line-height: 1;"><code style="color: #C0C0C0; background: #000000; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; border: none; border-radius: 0px; padding: 0;">+</code>
+</td></tr>
+<tr>
+<td style="padding: 0; line-height: 1;"><code style="color: #C0C0C0; background: #000000; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; border: none; border-radius: 0px; padding: 0;">+</code>
+</td>
+<td style="padding: 0; line-height: 1;"><code style="color: #D79B2D; background: #207DF1; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; border: none; border-radius: 0px; padding: 0;">W</code>
+</td>
+<td style="padding: 0; line-height: 1;"><code style="color: #D79B2D; background: #207DF1; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; border: none; border-radius: 0px; padding: 0;">W</code>
+</td>
+<td style="padding: 0; line-height: 1;"><code style="color: #D79B2D; background: #000000; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; border: none; border-radius: 0px; padding: 0;">W</code>
+</td>
+<td style="padding: 0; line-height: 1;"><code style="color: #FFE111; background: #207DF1; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; border: none; border-radius: 0px; padding: 0;">W</code>
+</td>
+<td style="padding: 0; line-height: 1;"><code style="color: #FFE111; background: #207DF1; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; border: none; border-radius: 0px; padding: 0;">W</code>
+</td>
+<td style="padding: 0; line-height: 1;"><code style="color: #FFE111; background: #000000; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; border: none; border-radius: 0px; padding: 0;">W</code>
+</td>
+<td style="padding: 0; line-height: 1;"><code style="color: #D79B2D; background: #207DF1; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; border: none; border-radius: 0px; padding: 0;">W</code>
+</td>
+<td style="padding: 0; line-height: 1;"><code style="color: #D79B2D; background: #207DF1; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; border: none; border-radius: 0px; padding: 0;">W</code>
+</td>
+<td style="padding: 0; line-height: 1;"><code style="color: #D79B2D; background: #000000; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; border: none; border-radius: 0px; padding: 0;">W</code>
+</td>
+<td style="padding: 0; line-height: 1;"><code style="color: #FFE111; background: #207DF1; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; border: none; border-radius: 0px; padding: 0;">W</code>
+</td>
+<td style="padding: 0; line-height: 1;"><code style="color: #FFE111; background: #207DF1; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; border: none; border-radius: 0px; padding: 0;">W</code>
+</td>
+<td style="padding: 0; line-height: 1;"><code style="color: #FFE111; background: #000000; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; border: none; border-radius: 0px; padding: 0;">W</code>
+</td>
+<td style="padding: 0; line-height: 1;"><code style="color: #D79B2D; background: #207DF1; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; border: none; border-radius: 0px; padding: 0;">W</code>
+</td>
+<td style="padding: 0; line-height: 1;"><code style="color: #D79B2D; background: #207DF1; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; border: none; border-radius: 0px; padding: 0;">W</code>
+</td>
+<td style="padding: 0; line-height: 1;"><code style="color: #D79B2D; background: #000000; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; border: none; border-radius: 0px; padding: 0;">W</code>
+</td></tr>
+<tr>
+<td style="padding: 0; line-height: 1;"><code style="color: #C0C0C0; background: #000000; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; border: none; border-radius: 0px; padding: 0;">+</code>
+</td>
+<td style="padding: 0; line-height: 1;"><code style="color: #FFE111; background: #207DF1; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; border: none; border-radius: 0px; padding: 0;">W</code>
+</td>
+<td style="padding: 0; line-height: 1;"><code style="color: #FFE111; background: #207DF1; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; border: none; border-radius: 0px; padding: 0;">W</code>
+</td>
+<td style="padding: 0; line-height: 1;"><code style="color: #FFE111; background: #000000; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; border: none; border-radius: 0px; padding: 0;">W</code>
+</td>
+<td style="padding: 0; line-height: 1;"><code style="color: #D79B2D; background: #207DF1; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; border: none; border-radius: 0px; padding: 0;">W</code>
+</td>
+<td style="padding: 0; line-height: 1;"><code style="color: #D79B2D; background: #207DF1; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; border: none; border-radius: 0px; padding: 0;">W</code>
+</td>
+<td style="padding: 0; line-height: 1;"><code style="color: #D79B2D; background: #000000; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; border: none; border-radius: 0px; padding: 0;">W</code>
+</td>
+<td style="padding: 0; line-height: 1;"><code style="color: #FFE111; background: #207DF1; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; border: none; border-radius: 0px; padding: 0;">W</code>
+</td>
+<td style="padding: 0; line-height: 1;"><code style="color: #FFE111; background: #207DF1; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; border: none; border-radius: 0px; padding: 0;">W</code>
+</td>
+<td style="padding: 0; line-height: 1;"><code style="color: #FFE111; background: #000000; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; border: none; border-radius: 0px; padding: 0;">W</code>
+</td>
+<td style="padding: 0; line-height: 1;"><code style="color: #D79B2D; background: #207DF1; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; border: none; border-radius: 0px; padding: 0;">W</code>
+</td>
+<td style="padding: 0; line-height: 1;"><code style="color: #D79B2D; background: #207DF1; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; border: none; border-radius: 0px; padding: 0;">W</code>
+</td>
+<td style="padding: 0; line-height: 1;"><code style="color: #D79B2D; background: #000000; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; border: none; border-radius: 0px; padding: 0;">W</code>
+</td>
+<td style="padding: 0; line-height: 1;"><code style="color: #FFE111; background: #207DF1; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; border: none; border-radius: 0px; padding: 0;">W</code>
+</td>
+<td style="padding: 0; line-height: 1;"><code style="color: #FFE111; background: #207DF1; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; border: none; border-radius: 0px; padding: 0;">W</code>
+</td>
+<td style="padding: 0; line-height: 1;"><code style="color: #FFE111; background: #000000; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; border: none; border-radius: 0px; padding: 0;">W</code>
+</td></tr>
+<tr>
+<td style="padding: 0; line-height: 1;"><code style="color: #C0C0C0; background: #000000; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; border: none; border-radius: 0px; padding: 0;">+</code>
+</td>
+<td style="padding: 0; line-height: 1;"><code style="color: #C0C0C0; background: #000000; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; border: none; border-radius: 0px; padding: 0;">+</code>
+</td>
+<td style="padding: 0; line-height: 1;"><code style="color: #C0C0C0; background: #000000; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; border: none; border-radius: 0px; padding: 0;">+</code>
+</td>
+<td style="padding: 0; line-height: 1;"><code style="color: #C0C0C0; background: #000000; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; border: none; border-radius: 0px; padding: 0;">+</code>
+</td>
+<td style="padding: 0; line-height: 1;"><code style="color: #C0C0C0; background: #000000; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; border: none; border-radius: 0px; padding: 0;">+</code>
+</td>
+<td style="padding: 0; line-height: 1;"><code style="color: #C0C0C0; background: #000000; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; border: none; border-radius: 0px; padding: 0;">+</code>
+</td>
+<td style="padding: 0; line-height: 1;"><code style="color: #C0C0C0; background: #000000; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; border: none; border-radius: 0px; padding: 0;">+</code>
+</td>
+<td style="padding: 0; line-height: 1;"><code style="color: #C0C0C0; background: #000000; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; border: none; border-radius: 0px; padding: 0;">+</code>
+</td>
+<td style="padding: 0; line-height: 1;"><code style="color: #C0C0C0; background: #000000; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; border: none; border-radius: 0px; padding: 0;">+</code>
+</td>
+<td style="padding: 0; line-height: 1;"><code style="color: #C0C0C0; background: #000000; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; border: none; border-radius: 0px; padding: 0;">+</code>
+</td>
+<td style="padding: 0; line-height: 1;"><code style="color: #C0C0C0; background: #000000; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; border: none; border-radius: 0px; padding: 0;">+</code>
+</td>
+<td style="padding: 0; line-height: 1;"><code style="color: #C0C0C0; background: #000000; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; border: none; border-radius: 0px; padding: 0;">╟</code>
+</td>
+<td style="padding: 0; line-height: 1;"><code style="color: #C0C0C0; background: #000000; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; border: none; border-radius: 0px; padding: 0;">╟</code>
+</td>
+<td style="padding: 0; line-height: 1;"><code style="color: #C0C0C0; background: #000000; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; border: none; border-radius: 0px; padding: 0;">╟</code>
+</td>
+<td style="padding: 0; line-height: 1;"><code style="color: #C0C0C0; background: #000000; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; border: none; border-radius: 0px; padding: 0;">╟</code>
+</td>
+<td style="padding: 0; line-height: 1;"><code style="color: #C0C0C0; background: #000000; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; font-weight:bold; border: none; border-radius: 0px; padding: 0;">╟</code>
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+<p>Axles vs. Rollers (water powerplant side bus):
+</p>
+<table class="wikitable">
+
+<tbody><tr>
+<th>Water wheel<br /> (groups)
+</th>
+<th>Length
+</th>
+<th>Axles+Gears<br />Power
+</th>
+<th>Axles+Gears<br />Materials
+</th>
+<th>Single Roller<br />Power
+</th>
+<th>Single Roller<br />Materials<br />
+</th></tr>
+<tr>
+<td>2
+</td>
+<td>4
+</td>
+<td>12
+</td>
+<td>2 Mechanism, 1 Wood
+</td>
+<td>8
+</td>
+<td>2 Mechanism, 1 Rope
+</td></tr>
+<tr>
+<td>3
+</td>
+<td>7
+</td>
+<td>19
+</td>
+<td>3 Mechanism, 2 Wood
+</td>
+<td>14
+</td>
+<td>2 Mechanism, 1 Rope
+</td></tr>
+<tr>
+<td>4
+</td>
+<td>10
+</td>
+<td>26
+</td>
+<td>4 Mechanism, 3 Wood
+</td>
+<td>20
+</td>
+<td>3 Mechanism, 1 Rope
+</td></tr>
+</tbody></table>
+<h2><span class="mw-headline" id="Security">Security</span></h2>
+<p>Often it's a good idea to block passage of <a href="/index.php/Flood" title="Flood">liquids</a> and creatures (whether to keep wildlife from getting inside or children from reaching dangerous areas) along the power transfer elements. Since <a href="/index.php/Machine_component" title="Machine component">machine components</a> are buildings, simply sticking an axle through a tile occupied by a grate or fortification is not possible. One can make an axle-train first going down the moat, across, then up (through a ring of floor over a 3x3 well to stop climbers) - though this still won't block fliers who can swim through the moat. Or perhaps a screw pump will make a floor-type security wall for a downward axle.  The "wall" tile of a pump is also good for protected horizontal power transfer. This is used e.g. "<a rel="nofollow" class="external text" href="http://www.bay12forums.com/smf/index.php?topic=144966.0">Invincible Windmill Farm</a>" by Tercicatrix. The pump including its "wall" is still vulnerable to building destroyers that manage to find a place to stand on. There's also an exploit: power transfer through the floor from a windmill down to a machine component built after it. Other than that, the most foolproof method is water flow through floor bars/grates.
+</p>
+<h2><span class="mw-headline" id="Frozen_components">Frozen components</span></h2>
+<p>Machine components on natural ice floors will freeze solid. This also causes all connected components to stop working.
+When you look at a component using 'q', you can see if the component is "frozen" (not working because it is frozen solid) or "frozen elsewhere" (not working because another component is frozen solid).
+</p><p>Re-activating frozen machinery is plagued with bugs - removing frozen parts frequently fails to remove the "frozen elsewhere" status of connected machinery, and removing or disconnecting machine parts that aren't frozen themselves can render still-frozen parts operative. <span class=""><sup><a href="#Bugs">Bug</a>:<a rel="nofollow" class="external text" href="https://dwarffortressbugtracker.com/view.php?id=2295">2295</a></sup></span>
+</p><p>Seasonally frozen machinery will reliably return to working order when the ice thaws.
+</p>
+<table class="wikitable floatright" style="text-align:center;">
+<tbody><tr>
+<td>"Power" in other <b><a href="/index.php/Language" title="Language">Languages</a></b> <a href="/index.php/File:Story_tell_indicator.png" class="image"><img alt="Story tell indicator.png" src="/images/9/90/Story_tell_indicator.png" decoding="async" width="20" height="18" /></a>
+<table style="text-align:left;">
+
+
+
+<tbody><tr>
+<th><b><a href="/index.php/Dwarven_language" title="Dwarven language">Dwarven</a></b>:
+</th>
+<td>midor
+</td></tr>
+
+<tr>
+<th><b><a href="/index.php/Elven_language" title="Elven language">Elven</a></b>:
+</th>
+<td>anòva
+</td></tr>
+
+<tr>
+<th><b><a href="/index.php/Goblin_language" title="Goblin language">Goblin</a></b>:
+</th>
+<td>slatsu
+</td></tr>
+
+<tr>
+<th><b><a href="/index.php/Human_language" title="Human language">Human</a></b>:
+</th>
+<td>zotho
+</td></tr></tbody></table>
+</td></tr></tbody></table></div>

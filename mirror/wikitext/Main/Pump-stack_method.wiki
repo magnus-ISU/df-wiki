@@ -1,0 +1,376 @@
+{{migrated article}}
+{{Quality|Unrated}}
+{{av}}
+
+
+[[file:Pump aquifer main.png|frame|right|The top of a functioning pump-stack aquifer pierce.]]
+
+Kingubu posted this novel approach to [[Aquifer]] piercing over on the bay12 forums. This tutorial is based extensively on that video, adding only a few improvements that have since been made to the method.  Kingubu's method, which he loosely referred to as the no-cancellation-spam method but is here called the pump-stack method, is significantly faster than the famed [[Double-slit method]] but does require significantly more materials and labors since it involves building a double [[Screw_pump#Pump_stack|pump stack]].  In its simplest form, the method draws heavily on the [[Water_wheel#Dwarven_Water_Reactor|Dwarven water reactor]] exploit, so it may not be for everyone.  However, it is entirely possible to accomplish the method without the exploit, but it is somewhat slower as you will need to build a [[Power|power system]] to run the pump stack.
+
+Links to Kingubu's videos as well as one made by TacoMagic are in the links section at the end of the tutorial.
+
+== Before You Start ==
+
+=== Double-slit method ===
+Go and read the [[Double-slit method|double-slit method tutorial]], and possibly run through it with an aquifer.  Knowing the basics of how aquifers drain is crucial to getting this method to work.  Take particular note of the [[Double-slit_method#Draining_an_aquifer|draining an aquifer]] section.
+
+=== Pump stacks ===
+If not already familiar with them, get yourself comfortable with building a powered [[Screw_pump#Pump_stack|pump stack]].
+
+== The Embark ==
+
+Your best bet for your first try at this aquifer pierce is to bring at least the following:
+* 1 Proficient Mechanic/Carpenter
+* 3 Proficient Carpenters/Architects
+* 1 proficient Wood Cutter/Carpenter
+* 2 Proficient miners
+* 10 stone.
+* 2 picks
+* 1 axe
+* Lots of food and alcohol.
+
+Embark in an area with an aquifer and plenty of trees.  Picking an area with deep soil increases your chance of getting a multi-level aquifer to practice on.  It is recommended that you try as flat of an area as possible for your first attempt.  Picking a calm site with invaders turned off will provide a less distracting learning environment.
+
+== The Method ==
+
+=== Prepping the site ===
+The first things you'll want to do is queue a lot of trees for cutting, build three carpenter's workshops, a mechanic's workshop, and dig a 4x3 shaft of stairs down from the surface until you hit aquifer.  Of importance, dig the shaft one level at a time and check the level below the stairs before you dig the soil.  Stop as soon as you see the damp soil.  Do not dig stairs in it.
+
+Once the workshops are constructed queue up the following:
+* 6 [[Block|wood blocks]] (Once these are done, queue up a bunch more, it'll speed up building the walls later)
+* 6 [[Trap component|enormous wooden corkscrews]]
+* 6 [[Pipe section|wooden pipe sections]]
+* 1 [[Hatch cover|wooden hatch cover]]
+* 3 [[Mechanism|rock mechanisms]]
+
+Meanwhile, once you reach aquifer create a decent sized room on the level above the aquifer.  You'll need plenty of room to work with; at minimum you'll want at least 10x6 room extending down and to the left of the staircase, with a buffer of 1 tile around it.  See below:
+
+{|class="wikitable1"
+|-valign="top" 
+| [[Image:Pump_aquifer_prep.png‎|frame|left|What your prep site should look like.  The aquifer is the layer directly below this]]
+| [[Image:Pump_aquifer_pre_dig.png|frame|left|The aquifer level below the stairs, currently not dug out.]]
+|}
+
+Next, pause the game and set up a 4x3 up/down stairs designation starting in the aquifer and extending 10 or so levels down.  This will be used to test for aquifer as you descend.  More on this in a bit.
+
+{|class="wikitable1"
+|-valign="top" 
+| [[Image:Pump_aquifer_designation.png‎|frame|left|10 levels of this, starting with that undug aquifer just below your prep room.]]
+|}
+
+Now you're set up and ready to start digging.
+
+=== Getting started ===
+
+Unpause the game and wait for your miner to dig out one of the designated aquifer tiles.  You're looking for a damp stone cancellation.  If you get one right as the stair dig is complete, that means there is more than one level of aquifer.
+
+{|class="wikitable1"
+|-valign="top" 
+| [[Image:Pump_aquifer_damp_cancel.png‎|frame|left|If there is aquifer below the level you're digging, the tile under the stairs will have the digging designation canceled.]]
+|-
+| [[Image:Pump_aquifer_damp_message.png|frame|left|The message you'll get, and the game will pause.]]
+|}
+
+If you get a cancellation, remove the up/down stairs designation on the new damp-stone layer.  Then unpause the game and let your miners finish digging out the top layer of the aquifer.  If you don't get a cancellation, pause the game, remove the designation, finish this section and then proceed to the [[Pump-stack_method#Draining_the_lowest_layer|draining the lowest layer]] section.
+
+{|class="wikitable1"
+|-valign="top" 
+| [[Image:Pump_aquifer_designation_cancell.png‎|frame|left|Once your miners have dug the first set of stairs, remove the designation around the revealed stone.]]
+| [[Image:Pump_aquifer_flooded_stairs.png|frame|left|Let the diggers finish the up/down stairs in the first level of aquifer.]]
+|}
+
+Now, head back to the top level.  You'll need to designate channels as shown below.  The area channeled out on the left will be the drain into which all the water from your aquifer pierce will be pumped.
+
+{|class="wikitable1"
+|-valign="top" 
+| [[Image:Pump_aquifer_top_channel.png‎|frame|left|Set your channeling like this.]]
+| [[Image:Pump_aquifer_top_channeled.png|frame|left|After it's done being channeled]]
+|}
+
+Now it's time to build the first set of [[Screw pump|screw pumps]], some [[Gear assembly|gear assemblies]], and the [[Water wheel|water wheel]] that will run the show.  The pumps should be set to pump out of the stairway and into the drain.  In this case, pump from East to West.  You'll do this part in two steps:  First the two pumps and the gear assembly just south of them, and then the water wheel and hanging gear.  See below.
+
+{|class="wikitable1"
+|-valign="top" 
+| [[Image:Pump_aquifer_top_pumps.png‎|frame|left|First, build these two pumps (pumping from the East) and the gear assembly just below them.]]
+| [[Image:Pump_aquifer_top_wheel.png|frame|left|Next, build a waterwheel attached to the bottom gear assembly, and construct an assembly next to the top pump, hanging over the channel*.]]
+|}
+<nowiki>*</nowiki>If your aquifer is only 1 layer thick, you do not need this gear assembly.
+
+Now that your pumps are built and the power is ready, it's time to start them up.  Channel out that missing tile and it'll start the pumps (otherwise you can always enable pumping labor on somebody and just start them manually). You will get a little splatter when it starts up, but this is normal and nothing to worry about.  It stops immediately and will evaporate after a minute or two.
+
+{|class="wikitable1"
+|-valign="top" 
+| [[Image:Pump_aquifer_top_start.png‎|frame|left|Channeling out this top left tile will start the show.]]
+| [[Image:Pump_aquifer_top_splatter.png|frame|left|The water will splash out a bit when it starts, but it only leaves only a few tiles of 1/7 water that will evaporate.]]
+|}
+
+Now that your pumps are working, you can see that you've created a few safe places in your staircase to work towards setting up a drain.  How you accomplish that depends on if you have an aquifer layer below this one or not.
+
+{|class="wikitable1"
+|-valign="top" 
+| [[Image:Pump_aquifer_first_pumping.png|frame|left|The pumps have created a nice dry spot to work, but you'll need more than that to fully conquer this aquifer.]]
+|}
+
+If your aquifer is only 1-layer deep, go to the [[Pump-stack_method#Draining_the_lowest_layer|draining the lowest layer]] section, and follow the directions there.  Otherwise proceed to the next section.
+
+=== Draining an aquifer layer into a lower one ===
+
+If your current pumped layer has another layer of aquifer below it, then the first thing you need to do is drill down into that aquifer layer and see if there is another aquifer layer below that.  Doing this is called drilling a pilot hole.  To do this, dig up/down stairs under the top left set of stairs in the pit.  This corresponds to the tile that is being actively pumped dry by the top of the two pumps.  Once again, you're looking for a damp stone cancellation once the stairs are dug.
+
+{|class="wikitable1"
+|-valign="top" 
+| [[Image:Pump_aquifer_second_dig.png‎|frame|left|Dig up/down stairs into this tile underneath the aquifer being pumped. This designation might get canceled because of dangerous terrain.  If that happens, just restart it, the miners will eventually find a clear path and get it done.]]
+| [[Image:Pump_aquifer_third_damp.png|frame|left|Once again, you're looking for the miner to cancel the designation directly below the new up/down stair.  In this case the miner cancels the job due to damp stone.  The next level is another aquifer.]]
+|}
+
+Once you dig those stairs and either get a cancellation or not, remove the up/down stairs designation on the layer below the one where you just dug the stairs and continue.
+
+{|class="wikitable1"
+|-valign="top" 
+| [[Image:Pump_aquifer_third_designation_cancel.png‎|frame|left|Just like the last time you dug your pilot hole.  Whether or not you get a damp stone warning, cancel all designation on that layer.  This should leave a single visible tile.]]
+|}
+
+At this point, you're ready to dig out the aquifer underneath your pumping layer.  It's best to do this one column at a time as doing so avoids "dangerous terrain" cancellations.
+
+{|class="wikitable1"
+|-valign="top" 
+| [[Image:Pump_aquifer_first_first_row.png|frame|left|Starting just below your pilot hole, dig up/down stairs one column at a time.]]
+| [[Image:Pump_aquifer_first_second_row.png|frame|left|You do it one column at a time to avoid cancellations due to the water up above creating dangerous terrain.]]
+|-
+| [[Image:Pump_aquifer_first_third_row.png|frame|left|Those cancellations are irritating in that they often require you to re-designate areas of this level of digging.]]
+| [[Image:Pump_aquifer_first_fourth_row.png|frame|left|Last column!  Once this column is done, the aquifer layer directly above this one will be draining directly into this layer.]]
+|}
+
+At this point you now have a working drain for the entire aquifer layer above.
+
+{|class="wikitable1"
+|-valign="top" 
+| [[Image:Pump_aquifer_first_draining.png‎|frame|left|Your top aquifer layer.  As you can see, there is no longer any water visible on the staircase here.  It's draining directly into the layer below it.  This layer is ready to wall off.]]
+|}
+
+=== Walling off and extending the stack ===
+Walling off the aquifer is extremely easy in the pump-stack method.  All you do is dig out every other tile around the staircase, and then put a wall there.  You'll almost never get build suspensions doing the walling like this, which is why it was originally pitched as a "no-job-cancellation" method.
+
+{|class="wikitable1"
+|-valign="top" 
+| [[Image:Pump_aquifer_first_wall_dig.png‎|frame|left|Set every other tile around the stairs for mining.  Remember, aquifers don't drain diagonally so you don't need to count the corners.]]
+| [[Image:Pump_aquifer_first_wall_dug.png|frame|left|Now that they're dug out, you're ready to wall.  This is why it was suggested you make extra wood blocks.  You can use those to speed up walling.]]
+|-
+| [[Image:Pump_aquifer_first_wall_walled.png|frame|left|All walled up!  Now you're ready to do the rest.]]
+|}
+
+Doing everything that's left is just as easy.  Designate all the remaining aquifer tiles (being mindful to ignore the diagonal tiles) and replace them with walls.
+
+{|class="wikitable1"
+|-valign="top" 
+| [[Image:Pump_aquifer_first_wall_dig2.png‎|frame|left|Designate all the remaining tiles. As mentioned, you do not need to dig the diagonals.]]
+| [[Image:Pump_aquifer_first_wall_dug2.png|frame|left|All dug out and ready to wall.  Once again, you'll only very rarely get a suspended construction.]]
+|-
+| [[Image:Pump_aquifer_first_walled2.png|frame|left|Now the floor is completely walled.]]
+|}
+
+Now that you're walled off and dry, it's time to extend the pump stack onto this floor.  To do this, first channel out the four tiles as shown below.  While your dwarves are channeling these tiles, set a gear to hang from the gear built on the top level.  This will simultaneously act as a power-transfer from the top pumps and give you something to attach the pumps on this level to.  You only need to do this gear hang on the very first level of a multi-level aquifer.  In a single-level aquifer you'll only be using the top pumps, and in lower levels of a multi-level aquifer, you'll be hanging the pumps from the ones directly above.
+
+{|class="wikitable1"
+|-valign="top" 
+| [[Image:Pump_aquifer_first_channel.png|frame|left|Channel out these tiles.  The tiles on the far right are channeled out so that the pumps can draw water from there.  The tiles on the left are channeled out so that the pumps can transmit power to pumps built below them.]]
+| [[Image:Pump_aquifer_first_gear.png|frame|left|While the channels are being dug, have your dwarves hang a gear from the one you built on the top level.]]
+|}
+
+Once the gear is built and the channels dug, place your pumps.  They need to pump from East to West.
+
+{|class="wikitable1"
+|-valign="top" 
+| [[Image:Pump_aquifer_first_pumps.png‎|frame|left|The built pumps.  They pump the water out of the channel at the right to the stairs at the left.  This water is then pumped out by the pumps on the level above before it has a chance to fall back into the aquifer level below.]]
+| [[Image:Pump_aquifer_second_draining.png|frame|left|Just like with the first level, you have a little room to work with on the right, which is enough to get started.]]
+|}
+
+So, the first leg of the pump stack is complete.  At this point you've either hit more aquifer or you're ready to finish off.
+
+=== Continuing down ===
+
+From here on out each aquifer level is pretty much the same.  You dig your pilot up/down stairs into the next level to see if there's an aquifer below that one, make a note if you find more aquifer or not, cancel the designations, dig out the next aquifer level to create a drain, wall off the working level, add the pumps, and move to the next.
+
+Since your pumps are creating your work spot in the top-right of the working level, you dig your up/down stairs below the top-right tile.
+
+{|class="wikitable1"
+|-valign="top" 
+| [[Image:Pump_aquifer_fourth_damp.png‎|frame|left|In this case, there's another damp stone designation cancellation. That means more aquifer below the drain level.  Cancel the rest of the up/down stair designations on this level.]]
+|}
+
+Once you've done your pilot hole, use up/down stairs to dig out the level one column at a time.
+
+{|class="wikitable1"
+|-valign="top" 
+| [[Image:Pump_aquifer_fourth_first_row.png|frame|left|This time moving from right to left starting with the two tiles just South of the pilot hole.]]
+| [[Image:Pump_aquifer_fourth_dug.png|frame|left|Once you're done, you've created another drain.  Time to wall off the level above.]]
+|}
+
+Once you've got your drain set, wall off the level. Or, if you're lucky enough to have an aquifer in a sandstone or conglomerate level, just smooth the walls.
+
+{|class="wikitable1"
+|-valign="top" 
+| [[Image:Pump_aquifer_third_draining.png|frame|left|What luck!  Sandstone, you can smooth it rather than mining out the aquifer and building walls.  That save a lot of time!]]
+| [[Image:Pump_aquifer_second_smooth.png|frame|left|Smoothed and dry!  Faster and easier than building walls.]]
+|}
+
+Now that you're walled off, it's time to extend the pump-stack down to this level.  All you need to do is channel 4 tiles and build the pumps.  These new pumps will hang from the ones above through the power transfer channel.  Remember, these pumps are facing the opposite direction, so you need to mirror everything left to right.
+
+{|class="wikitable1"
+|-valign="top" 
+| [[Image:Pump_aquifer_second_channel.png|frame|left|Channel out these four tiles.  The ones near the wall let the water into the pump, and the ones toward the center transfer power and give you a place to hang the next set of pumps.]]
+| [[Image:Pump_aquifer_second_pumps.png|frame|left|The pumps are in place, pumping from the West.]]
+|}
+
+And with that, you're ready for the next level.  Just keep adding onto your pump stack until you finally dig a pilot hole without a damp stone cancellation.  Once you get that lack of cancellation, finish off the walling of your current working layer, and proceed to the last layer section.
+
+Also of note: if your aquifer is deep enough, that one water wheel up top probably won't be enough.  Adding a second wheel is usually necessary if your aquifer is deeper than 3 layers.
+
+{|class="wikitable1"
+|-valign="top" 
+| [[Image:Pump_aquifer_top_wheel2.png‎|frame|left|A second wheel added to the power generator. In the unlikely event that you need a third wheel, just extend the wall to the West and dig another column into the drain.]]
+|}
+
+=== Draining the lowest layer ===
+
+The lowest layer is always the problem layer for any aquifer pierce method because there's nothing to drain it directly into.  The double-slit method is able to get around this by draining small spaces and utilizing clever wall building and evaporation to finish off.  Unfortunately, that isn't an option here.
+
+Once you've found the bottom layer, you'll be looking at something similar to the below pictures just under where you dug your pilot hole.  At this point you may as well cancel not only this set of designations, but all other remaining designations you put in place to locate damp stone.  At this point, you have an opportunity to check your work.  There will be a single visible tile under the pilot hole.  If this tile is a layer stone, or something that doesn't appear in sedimentary rock, then you're in the clear.  If it's ore, gems, or stone that can appear in sedimentary layers, then proceed carefully, as you might just be digging into an ore vein and might still have some aquifer to deal with.
+
+{|class="wikitable1"
+|-valign="top" 
+| [[Image:Pump_aquifer_no_damp.png‎|frame|left|A pilot hole that leaves the entire designation intact.]]
+| [[Image:Pump_aquifer_no_damp_cancel_deg.png‎|frame|left|Check the single tile you can see.  If it's something that can't appear in sedimentary layers, then you're good to go.  In this case, we have slate, so we know we're at the bottom.]]
+|}
+
+At this point, dig out the layer your pilot hole is in (this is the bottom layer of the aquifer) and wall-off the layer above the bottom layer like normal.
+
+{|class="wikitable1"
+|-valign="top" 
+| [[Image:Pump_aquifer_bottom.png‎|frame|left|The bottom layer mined out with up/down stairs.  It acts like a drain just like any other layer.]]
+| [[Image:Pump_aquifer_below.png‎|frame|left|Once again, it's good to check your work.  We've got solid slate here, so we know that we're actually at the bottom.]]
+|}
+
+Once you've got your pump-stack on the layer above the bottom in place, and they're pumping water out of the lowest layer, it's time to finally use that hatch cover you built near the beginning of this pierce.  Have the hatch cover built in the corner you would normally use to dig a pilot hole.  You are probably going to get a lot of build suspensions when placing this hatch cover.  Just keep unsuspending it and it'll eventually get built.
+
+{|class="wikitable1"
+|-valign="top" 
+| [[Image:Pump_aquifer_hatch.png‎|frame|left|Normally a pilot hole goes here, but on the last layer, you build a hatch cover.]]
+| [[Image:Pump_aquifer_suspended.png‎|frame|left|You'll see this a lot.  Keep unsuspending and it'll eventually get built.]]
+|}
+
+Once the hatch cover is down, close it firmly so you don't get animals down there.  If at any point you built a stone stockpile or have stone enabled on any stockpile in your fort, now is a good time to disable those stockpiles.  You want to prevent anyone but miners from going through the hatch you just built, so preventing animal pathing and stone-collection keeps out things who shouldn't be down there.  That hatch cover is to hold back the water while your miners dig a drain.
+
+Now that your hatch is in place, it's basic water draining 101.  Dig a single 1 tile shaft of up/down stairs under that hatch cover down a few levels.  You can either try taking that shaft down until you hit the caverns and drain into there, or you can aim to drain off the side of the map.  In this case, it will be assumed that you'll chose to do a side-drain.  Once you're down a few levels, mine a passage to the closest map edge.
+
+{|class="wikitable1"
+|-valign="top" 
+| [[Image:Pump_aquifer_below_dig.png‎|frame|left|A single tile shaft of up/down stairs under the hatch.  You'll want to go down at least 3 or 4 z-levels.]]
+| [[Image:Pump_aquifer_drain.png‎|frame|left|Once you're down a few levels, dig a passage all the way to the edge of the map.]]
+|}
+
+Once you've got the passage mined out, smooth the tiles at the edge of the map, and then carve them into fortifications.  This will be your drain.
+{|class="wikitable1"
+|-valign="top" 
+| [[Image:Pump_aquifer_drain_end.png|frame|left|The edge of the map.  You can't mine those edge tiles.]]
+| [[Image:Pump_aquifer_drain_smooth.png|frame|left|Instead, smooth them.]]
+|-
+| [[Image:Pump_aquifer_drain_fortification.png|frame|left|Finally, carve them into fortifications.  You now have a drain.]]
+|}
+
+With the drain ready, it's now time to connect it to the bottom layer of your aquifer.  You do this by digging out up/down stairs in the same 4x3 area as the rest of the staircase.  Dig them starting at your drain and move upwards one floor at a time, connecting the shaft to your aquifer layer at the very end.
+
+{|class="wikitable1"
+|-valign="top" 
+| [[Image:Pump_aquifer_drain_stairs.png|frame|left|Start digging the 4x3 shaft of up/down stairs here.  Once they're done, dig them on the next level up.]]
+| [[Image:Pump_aquifer_drain_stairs_up.png|frame|left|Do them one layer at at time moving up.  Eventually, they will connect to your bottom aquifer layer.]]
+|}
+
+Once that shaft hooks up to your bottom aquifer layer, it'll start draining down the shaft and off the map.
+
+{|class="wikitable1"
+|-valign="top" 
+| [[Image:Pump_aquifer_drain_working.png|frame|left|The drain doing its thing.]]
+|}
+
+At this point, remove the hatch cover and wall-off or smooth the bottom layer.  You're done!  All you need to do now is wait for the water in the drain passage to work its way off the map and evaporate.
+
+== F.A.Q. ==
+
+*Q: Why use this method instead of the 2-slit method?
+*A: This method is quite a bit faster.  You can breach a 7-layer aquifer in 3 months or less with this method, which is less than half the time a 2-slit method would take.  It also involves a ton less cancellation spam on the buildings.  In a typical breach, likely you'll only see a few designation cancels here and there, and the suspension spam on the hatch cover.
+
+*Q: Why wouldn't you use this method?
+*A: This method is very resource intensive and crutches on the dwarven water reactor exploit.  While you can do it without the exploit by providing power in some other way, you cannot get past the fact that it uses a lot of resources.  Just for the operating parts, at minimum, this method requires 9 wood and 3 stone for the top pumping system, and then 6 wood per layer.  In a treeless embark, that's a lot wood to bring with.  In contrast, the 2-slit method can be achieved using only 6 pieces of wood, or 2 pieces of wood and 5 rock-blocks.  Additionally, this method requires 2 additional pieces of walling material per floor over what is needed by the 2-slit method.
+
+*Q: I forgot to bring stone and it's all trapped under the aquifer!  Is there a way to do this without the stone!?
+*A: Yes there is.  There is an appendix to this tutorial in the process of being made that walks through a method that operates without stone.
+
+*Q: Is there a way to do this with dwarf labor instead of power?
+*A: For shallow aquifers, it is certainly possible.  With deeper aquifers it becomes less likely as any 1 dwarf taking a break makes the whole pumping chain fall apart.  It is probably not entirely impossible, just very impractical.
+
+== Appendix A: No Stone Version ==
+
+It is entirely possible to do this method without using any stone at all.  It requires 3 more pumps in place of the mechanisms at a net increase in power cost of 15.  Doing the method without stone only changes the top of the stack, and the first aquifer level.
+
+To start, follow along with the normal steps until you reach the point just before you build the two pumps on the top of the aquifer.
+
+{|class="wikitable1"
+|-valign="top" 
+| [[Image:Pump_aquifer_top_channeled.png|frame|left|You want the top to look like this.]]
+|}
+
+Instead of building 2 pumps and a mechanism, instead build 3 pumps in a row.  After that, you'll want to build a single pump hanging from the southern pump, and the water wheel hanging from the same pump.  Of note, the hanging pump will need to be set so that it's pumping towards the pump it is attached to.
+
+{|class="wikitable1"
+|-valign="top" 
+| [[Image:Pump_stack_stoneless_pump_top.png|frame|left|3 pumps all pumping East to West.]]
+| [[Image:Pump_stack_stoneless_wheel_top.png‎|frame|left|Add a water wheel to the bottom pump, and then hang a pump off the other end.  The hanging pump is pumping East to West.]]
+|}
+
+From there, proceed as normal until you have the two channels cut into the aquifer level.
+
+{|class="wikitable1"
+|-valign="top" 
+| [[Image:Pump_stack_stoneless_aquifer_channeled.png|frame|left|This step.  First aquifer level, 2 slits channeled.]]
+|}
+
+First, build a screw pump pumping towards the wall in the lower left-hand corner.  This will hang from the aquifer above.  From there, build the two pumps as normal.
+
+{|class="wikitable1"
+|-valign="top" 
+| [[Image:Pump_stack_stoneless_aquifer_transpump.png|frame|left|The power-transfer pump.  It's pumping East to West, toward the wall.]]
+| [[Image:Pump_stack_stoneless_aquifer_pumps.png‎|frame|left|Build the other two pumps as normal, pumping from the East out of the channel there.]]
+|}
+
+And that's it.  The rest of the breach proceeds as normal.  So, the only difference between the normal method and this one is that you're using 3 pumps as power-transfer units.  So, if you've got lots of trees and don't want to bring any stone with you, all you need is 15 extra power and you can leave the stone at mountainhome.
+
+== Appendix B: More efficient top setup ==
+
+This is a more efficient layout for the top stack, but it requires a little more planning, and an extra step when deconstructing (unless you don't mind losing a log or four).
+
+To do this version, get to the point where you're ready to dig out your top layer, but instead of a 10x6 chamber, make an 11x5 chamber (or 10x5 if you suspect you have less than 3 aquifer layers).  Then follow the steps below.
+
+{|class="wikitable1"
+|-valign="top" 
+| [[Image:Pump aquifer effecient top start.png‎|frame|left|Dig out, channel, and dig stairs as above.  Make sure to dig out up/down stairs under those downward stairs, failing to do that will cause the pump room to flood.  You can do this with a 10x5 chamber if you have 3 or fewer aquifer layers.  11x5 gives you enough room for a second water wheel.]]
+| [[Image:Pump aquifer effecient top axes.png|frame|left|Build 2 horizontal axes as above.]]
+|-
+| [[Image:Pump aquifer effecient top third.png|frame|left|Build either a pump pumping from the east or a gear assembly at the end of the staircase axis.  This will transmit the power down to the pump stack, removing the need to build anything for power transfer on the first aquifer layer.]]
+| [[Image:Pump aquifer effecient top finished.png|frame|left|Finally, build a water wheel off the drain axis.  If you want to add another wheel, you will need to channel out another 3 tiles to the west of the drain.]]
+|}
+
+From here forward, complete each layer as the continuation of the pump stack.  You will not need to build anything special for power-transmission on the first aquifer level since power will transmit from the gear/pump that was built on the staircase.  This method of building the top saves quite a bit of power over the standard method shown in the main tutorial.
+
+Of note: The downward stairs provide a place for workers to stand when building and deconstructing the horizontal axis.  Using channels will prevent access and cause the axis to show up as unbuildable.
+
+== Links ==
+Kingubu's original [http://www.bay12forums.com/smf/index.php?topic=143064.0 forum post].
+
+Kingubu's multi-layer pump-stack [https://www.youtube.com/watch?v=_ewHfJw9HCw&feature=youtu.be tutorial video].
+
+[https://www.youtube.com/watch?v=vOR8fG4fhX8&feature=youtu.be A single-layer variation video], also by Kingubu.
+
+[https://www.youtube.com/watch?v=_FmXM6PGUXA&list=UUuVhjOjVRS1cF8tpHa8WPPw Tutorial Video] created by TacoMagic.
+
+[http://dffd.wimbli.com/file.php?id=9881 A fully-explorable step-by-step Pump-Stack Method sandbox embark].  This was an embark put together by TacoMagic as supplementary material for this tutorial.  It includes a readme file with a step-by-step description of the embark.
