@@ -1,0 +1,57 @@
+{{infostart|{{{name}}}}}
+{{infocell|{{char|{{{symbol|?}}}}}|style=color: {{fgcolor|{{{color|2:0:0}}}}}; background: black; font-size:x-large; font-weight: bold; font-family: 'Courier New', 'Quicktype Mono', 'Bitstream Vera Sans Mono', 'Lucida Console',  'Lucida Sans Typewriter', monospace; text-align:center; vertical-align:center}}
+{{#if:{{{pref|}}}|{{infopref|{{{pref}}}}}}}
+{{infoheader|Biome}}
+{{infocell|{{{biome|}}}}}
+{{infocell|{{wetdry|{{{wet|}}}|{{{dry|}}}}}}}
+{{infoheader|Trunk Graphic}}
+{{infocell|{{#if:{{{graphic|}}}|[[File:{{{graphic}}}|center]]|<center>No graphic</center>}}}}
+{{infoheader|Product Graphic}}
+{{infocell|{{#if:{{{product|}}}|[[File:{{{product}}}|center]]|<center>No graphic</center>}}}}
+{{infoheader|Sapling Graphic}}
+{{infocell|{{#if:{{{sapling|}}}|[[File:{{{sapling}}}|center]]|<center>No graphic</center>}}}}
+{{#if:{{{alignment|}}}|{{infoheader|Alignment}}
+{{infocell|{{{alignment}}}|style=text-align:center}}}}
+{{infoheader|Properties}}
+{{inforow|Deciduous|<noinclude>''yes/no''</noinclude><includeonly>{{{deciduous|no}}}</includeonly>}}
+{{inforow|Density|<noinclude>''density''</noinclude><includeonly>{{{density|500}}}</includeonly>}}
+{{#if:{{{wood|}}}{{{wood_color|}}}|{{inforow|[[Color]]|<noinclude>''raw color''</noinclude><includeonly>{{tagvalue|{{raw|v50:descriptor_color_standard.txt|COLOR|{{{wood_color}}}}}|NAME}}</includeonly>}}}}
+{{inforow|Max trunk height|<noinclude>''Max trunk height''</noinclude><includeonly>{{{max_trunk_height}}}</includeonly>}}
+{{inforow|Max trunk diameter|<noinclude>''Max trunk diameter''</noinclude><includeonly>{{{max_trunk_diameter}}}</includeonly>}}
+{{inforow|Trunk branching|<noinclude>''Trunk branching''</noinclude><includeonly>{{{trunk_branching}}}</includeonly>}}
+{{inforow|Heavy branch radius|<noinclude>''Heavy branch radius''</noinclude><includeonly>{{{heavy_branch_radius}}}</includeonly>}}
+{{inforow|Branch radius|<noinclude>''Branch radius''</noinclude><includeonly>{{{branch_radius}}}</includeonly>}}
+{{inforow|Root radius|<noinclude>''Root radius''</noinclude><includeonly>{{{root_radius}}}</includeonly>}}
+{{inforow|Heavy branch density|<noinclude>''Heavy branch density''</noinclude><includeonly>{{{heavy_branch_density}}}</includeonly>}}
+{{inforow|Branch density|<noinclude>''Branch density''</noinclude><includeonly>{{{branch_density}}}</includeonly>}}
+{{inforow|Root density|<noinclude>''Root density''</noinclude><includeonly>{{{root_density}}}</includeonly>}}
+{{infoheader|Products}}<noinclude>
+{{infocell|''products''}}</noinclude><includeonly>
+{{#if:{{{wood|}}}|{{inforow|[[Wood]]|{{{wood}}}}}{{Category|Wood}}|{{!-}}}}
+{{#if:{{{fruit|}}}|{{inforow|[[Fruit]]|{{{fruit}}}}}{{Category|Fruit}}|{{!-}}}}
+{{#if:{{{fruitnut|}}}|{{inforow|[[Fruit]]|{{{fruitnut}}}}}{{Category|Fruit}}|{{!-}}}}
+{{#if:{{{leaf|}}}|{{inforow|[[Leaf]]|{{{leaf}}}}}{{Category|Leaves}}|{{!-}}}}
+{{#if:{{{flower|}}}|{{inforow|[[Flower]]|{{{flower}}}}}{{Category|Flowers}}|{{!-}}}}
+{{#if:{{{nut|}}}|{{inforow|[[Nut]]|{{{nut}}}}}{{Category|Nuts}}|{{!-}}}}
+{{#if:{{{alcohol|}}}|{{inforow|[[Alcohol]]|{{{alcohol}}}{{Category|Brewable}}|}}|{{!-}}}}
+{{#if:{{{mill|}}}|{{inforow|[[Powder]]|{{{mill}}}|}}{{Category|Millable}}|{{!-}}}}
+{{#if:{{{oil|}}}|{{inforow|[[Oil]]|{{{oil}}}}}{{Category|Pressable}}|{{!-}}}}
+{{#if:{{{process|}}}|{{inforow|[[Thresher|Processed to]]|[[{{{process}}}]]|}}{{Category|Processable}}|{{!-}}}}
+{{#if:{{{other_products|}}}|{{infocell|{{{other_products}}}}}{{Category|Other products}}|{{!-}}}}}}
+{{#if:{{{leaf|}}}|{{infoheader|Leaf Properties}}
+{{#if:{{{leaf_edible|}}}|{{inforow|[[Food|Edible]]|{{{leaf_edible}}}}}}}
+{{#if:{{{leaf_cookable|}}}|{{inforow|[[Kitchen|Cookable]]|{{{leaf_cookable}}}}}}}|{{!-}}}}
+{{#if:{{{flower|}}}|{{infoheader|Flower Properties}}
+{{#if:{{{flower_edible|}}}|{{inforow|[[Food|Edible]]|{{{flower_edible}}}}}}}
+{{#if:{{{flower_cookable|}}}|{{inforow|[[Kitchen|Cookable]]|{{{flower_cookable}}}}}}}|{{!-}}}}
+{{#if:{{{fruit|}}}|{{infoheader|Fruit Properties}}
+{{#if:{{{fruit_edible|}}}|{{inforow|[[Food|Edible]]|{{{fruit_edible}}}}}}}
+{{#if:{{{fruit_cookable|}}}|{{inforow|[[Kitchen|Cookable]]|{{{fruit_cookable}}}}}}}|{{!-}}}}
+{{#if:{{{fruitnut|}}}|{{infoheader|Fruit Properties}}
+{{#if:{{{fruitnut_edible|}}}|{{inforow|[[Food|Edible]]|{{{fruitnut_edible}}}}}}}
+{{#if:{{{fruitnut_cookable|}}}|{{inforow|[[Kitchen|Cookable]]|{{{fruitnut_cookable}}}}}}}|{{!-}}}}
+{{#if:{{{seed|}}}|{{infoheader|Seed Properties}}
+{{#if:{{{seed_edible|}}}|{{inforow|[[Food|Edible]]|{{{seed_edible}}}}}}}
+{{#if:{{{seed_cookable|}}}|{{inforow|[[Kitchen|Cookable]]|{{{seed_cookable}}}}}}}|{{!-}}}}</includeonly>
+{{#ifeq:{{{wiki}}}|no||{{infocell|style=text-align:center; background-color: #eee; border-top: 1px solid #aaa|1=[[wikipedia:{{#if:{{{wiki|}}}|{{{wiki}}}|{{{name}}}}}|Wikipedia article]]}}|{{!-}}}}
+{{infoend}}<includeonly>{{Category|Trees}}</includeonly><noinclude>[[Category:Infobox templates]]{{documentation}}</noinclude>

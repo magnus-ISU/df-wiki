@@ -1,0 +1,3 @@
+{{#if:{{{1|}}}|*Requesting [[User:{{#rmatch:{{{1|}}}|User:([A-Za-z0-9 ]+)|\1}} |this user page]] --}}{{{1|<span class="error">Invalid syntax: use <code><nowiki>{{upr|~~~~}}</nowiki></code></span>}}}<noinclude>
+
+Warning: this template will NOT work with unusual signatures (but if you have a custom signature by now, you should probably have permission to [[Special:MyPage|create pages]] or know how to format a request correctly).

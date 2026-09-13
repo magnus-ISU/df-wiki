@@ -1,0 +1,11 @@
+|-<!-- If a graphic isn't supplied, try to find one based on the creature name. #ifexist is expensive: reducing font size to hide red links is cheaper. Hyphens in names are also replaced with underscores in image links.-->
+|style="padding:0px; text-align: center; {{#if:{{{bgcolor|}}}|background:{{{bgcolor}}}}};"|{{{graphic|<span style="font-size:0%">[[File:{{#mreplace:{{{name}}}|-|_}}_sprite.png]]</span>}}}
+|style="font-size:145%;font-weight: bold; font-family: 'Courier New', 'Quicktype Mono', 'Bitstream Vera Sans Mono', 'Lucida Console', 'Lucida Sans Typewriter', monospace; background: black;color:{{fgcolor|{{{color|0:0:0}}}}};text-align:center;"|{{{symbol|}}}
+|{{{name|}}}
+|{{{playable|}}}
+|{{{hostile|}}}
+|{{{food|}}}
+|{{{size|}}}
+|{{{value|}}}
+|{{{biome|}}}
+|{{{note|}}}

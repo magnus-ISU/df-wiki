@@ -1,0 +1,4 @@
+{{#vardefine:tutorialversion|{{#rsplit:{{FULLPAGENAME}}|:|1}}}}{{#vardefine:tutorial-base|{{#rsplit:{{FULLPAGENAME}}|:|2}}}}{{
+#ifeq:{{ns/0|{{#var:tutorialversion}}}}|cv|<span class="error">Invalid page name</span>|
+{{version links|center=This tutorial is for DF v{{#var:tutorialversion}}.|bottom=[[Tutorial:{{#var:tutorial-base}}|More versions]]|theme={{#ifeq:{{ns|{{#var:tutorialversion}}}}|{{DF:Current}}|green|orange}}}}
+}}<noinclude>[[category:version templates]]</noinclude>

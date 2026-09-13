@@ -1,0 +1,7 @@
+<includeonly>{{#df_tagvalue:{{{1}}}|{{{2}}}|{{{3|0}}}|{{{notfound|not found}}}}}</includeonly><noinclude>
+Usage: <nowiki>{{ tagvalue | raw entry | tag name | number | notfound=placeholder text }}</nowiki>
+
+Returns: value associated to that tag. uses the (N+1)th (default first) tag encountered. If the tag is not found, the "notfound" parameter specifies what gets returned (defaults to "not found").
+
+[[category:raw templates]]
+</noinclude>

@@ -1,0 +1,11 @@
+Teletype (<nowiki><tt></nowiki>) is stylistically recommended for usage when referring to [[token]]s, inline pieces of code, file formats, et cetera, to easily distinguish between regular wiki text and references to the game's code. This template makes the process slightly easier. It takes up to three parameters: the tagged contents, required for anything to display; the second adds mouseover text, which is completely optional and rarely needed; and the third allows you to change the color of the mouseover underline - #00C is the default - and so is all the more optional.
+
+{{tl|tt|[GROWDUR:500]}} → {{tt|[GROWDUR:500]}}<br/>
+{{tl|tt|[GROWDUR:500]|There are 1008 GROWDURs per season.}} → {{tt|[GROWDUR:500]|There are 1008 GROWDURs per season.}}<br/>
+{{tl|tt|[GROWDUR:500]|There are 1008 GROWDURs per season.|#4a8}} → {{tt|[GROWDUR:500]|There are 1008 GROWDURs per season.|#4a8}}
+
+== See also ==
+* {{tl|token}}
+
+<includeonly>[[Category:Inline formatting templates]]</includeonly>
+<noinclude>[[Category:Template Documentation]]</noinclude>

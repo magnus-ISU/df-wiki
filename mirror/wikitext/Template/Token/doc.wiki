@@ -1,0 +1,119 @@
+== Usage ==
+ {{<nowiki/>token| TOKEN (required) | token type | ''arguments (optional)'' }}
+
+=== List of token types ===
+
+{| class="wikitable"
+! Values !! Page
+|-
+| am, ammo || [[Ammo token]]
+|-
+| ar, armor || [[Armor token]]
+|-
+| au, audio || [[Audio|Audio token]]
+|-
+| bi, biome || [[Biome token]]
+|-
+| bd, bdp, bodydetail, bodydetailplan || [[Body detail plan token]]
+|-
+| bo, bod, body || [[Body token]]
+|-
+| bg, bdg, bodygloss || [[Bodygloss]]
+|-
+| b, bd, bld, build, building || [[Building token]]
+|-
+| cm, cman, creaturemannerism, cmannerism, manner, manners, mannerism || [[Creature mannerism token]]
+|-
+| ct, tx, text, ctext, txt, ctxt, ctexture, creaturetexture, texture || [[Creature texture token]]
+|-
+| c, cr, creature || [[Creature token]]
+|-
+| cv, v, var, cvar, variation, cvariation, creaturevariation || [[Creature variation token]]
+|-
+| e, ent, entity || [[Entity token]]
+|-
+| et, eth, ethic, ethics || [[Ethic]]
+|-
+| ge, gem || [[Gem token]] (23a)
+|-
+| g, gr, graphics || [[Graphics token]]
+|-
+| im, imat, imd, imdef, imatdef, inorganic, inorganicmaterial, inorganicmaterialdefinition || [[Inorganic material definition token]]
+|-
+| in, int, inter, interaction || [[Interaction token]]
+|-
+| id, idef, itdef, itemdef, item definition || [[Item definition token]]
+|-
+| i, it, item || [[Item token]]
+|-
+| ins, instrument || [[Instrument token]]
+|-
+| lb, labor || [[Labor token]]
+|-
+| la, language || [[Language token]]
+|-
+| m, mat, material || [[Material token]]
+|-
+| md, mdef, matdef, mdefinition, materialdefinition || [[Material definition token]]
+|-
+| mt, metal || [[Metal token]] (40d)
+|-
+| mi, modinfo || [[Mod info token]]
+|-
+| p, pl, plant || [[Plant token]]
+|-
+| pg, goal || [[Personality goal]]
+|-
+| pt, personality, trait, personalitytrait, pf, facet, personalityfacet || [[Personality facet]]
+|-
+| pv, v, vl, value, values, bf, belief, beliefs || [[Personality value]]
+|-
+| po, position || [[Position token]]
+|-
+| r, react, reaction || [[Reaction]]
+|-
+| s, sk, skill || [[Skill token]]
+|-
+| st, stone || [[Stone token]] (40d)
+|-
+| sy, syndrome || [[Syndrome]]
+|-
+| td, tdef, tissue, tdefintion, tissuedefinition || [[Tissue definition token]]
+|-
+| to, tool || [[Tool token]]
+|-
+| tc, trap, trapcomponent || [[Trap component token]]
+|-
+| ts, textset, text, speech || [[Speech file]]
+|-
+| ut, unit, unittype || [[Unit type token]]
+|-
+| wp, weapon || [[Weapon token]]
+|-
+| wd, wood || [[Wood token]] (40d)
+|-
+| wo, world || [[Advanced world generation]]
+|}
+
+== Examples ==
+<pre>
+*{{token|ATTACK|am}}
+*{{token|ARMORLEVEL|ar}}
+*{{token|SPEED|c}}
+*{{token|MANNERISM_EYES}}
+*{{token|NAME|c|cat:cats:cat}}
+*{{token|}}
+</pre>
+
+*{{token|ATTACK|am}} (ammo)
+*{{token|ARMORLEVEL|ar}} (armor)
+*{{token|SPEED|c}} (creature)
+*{{token|MANNERISM_EYES}} (token type not defined, guesses mannerism)
+*{{token|NAME|c|cat:cats:cat}}
+*{{token|}}
+
+==To do==
+* Add {{tl|text anchor}} to token tables (JS):
+:<pre style="white-space:pre-wrap">$('#wpTextbox1').val($('#wpTextbox1').val().replace(/\|-\s*\n\|\s*([A-Z_]+)\s*\n/g, function(m, a){return '|-\n| {{text anchor|'+a+'}}\n'}));</pre>
+:To check for missed rows:
+:<pre>$('#wikiPreview tr').has('.text-anchor').hide()</pre>

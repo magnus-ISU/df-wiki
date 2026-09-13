@@ -1,0 +1,49 @@
+<includeonly><code>{{#if:{{{3|}}}|[<nowiki/>}}[[{{{link|{{#switch:{{lc:{{{2}}}}}
+|<!-- frequently used pages are placed on top for better performance
+-->c|cr|creature=Creature token
+|e|ent|entity=Entity token
+|am|ammo=Ammo token
+|ar|armor=Armor token
+|au|audio=Audio
+|bi|biome=Biome token
+|bd|bdp|bodydetail|bodydetailplan=Body detail plan token
+|bo|bod|body=Body token
+|bg|bdg|bodygloss=Bodygloss
+|b|bd|bld|build|building=Building token
+|cm|cman|creaturemannerism|cmannerism|manner|manners|mannerism=Creature mannerism token
+|ct|tx|text|ctext|txt|ctxt|ctexture|creaturetexture|texture=Creature texture token
+|cv|v|var|cvar|variation|cvariation|creaturevariation=Creature variation token
+|et|eth|ethic|ethics=Ethic
+|ge|gem=Gem token
+|im|imat|imd|imdef|imatdef|inorganic|inorganicmaterial|inorganicmaterialdefinition=Inorganic material definition token
+|in|int|inter|interaction=Interaction token
+|id|idef|itdef|itemdef|item definition=Item definition token
+|i|it|item=Item token
+|ins|instrument=Instrument token
+|lb|labor=Labor token
+|la|language=Language token
+|m|mat|material=Material token
+|md|mdef|matdef|mdefinition|materialdefinition=Material definition token
+|mi|modinfo=Mod info token
+|mt|metal=Metal token
+|p|pl|plant=Plant token
+|pt|personality|trait|personalitytrait|pf|facet|personalityfacet=Personality facet
+|pv|v|vl|value|values|bf|belief|beliefs=Personality value
+|pg|goal=Personality goal
+|po|position=Position token
+|r|react|reaction=Reaction
+|s|sk|skill=Skill token
+|st|stone=Stone token
+|sy|syndrome=Syndrome
+|td|tdef|tissue|tdefintion|tissuedefinition=Tissue definition token
+|to|tool=Tool token
+|tc|trap|trapcomponent=Trap component token
+|ts|textset|text|speech=Speech file
+|ut|unit|unittype=Unit type token
+|wd|wood=Wood token
+|wp|weapon=Weapon token
+|wo|world=Advanced world generation
+|g|gr|graphics=Graphics token
+|#default={{token/guess type|{{{1|}}}}}
+}}#{{uc:{{{1|}}}}}}}}|{{#if:{{{3|}}}||[}}{{uc:{{{1}}}}}{{#if:{{{3|}}}|]]:{{{3}}}]|]]]}}</code></includeonly><noinclude>
+{{documentation}}</noinclude>

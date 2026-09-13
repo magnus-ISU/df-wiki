@@ -1,0 +1,4 @@
+<<includeonly>td</includeonly><noinclude>div</noinclude> style="height: 120px; width: 150px; border: 1px solid #ccc; {{border-radius|3px}}; background: {{#ifexist:{{{1}}}|{{{existbg|#f6f6f6}}}|{{{noexistbg|#f6f6f6}}}}}; text-align: center; padding-top: 60px; margin: 0px 5px; display: table-cell; vertical-align: top;">
+<div style="font-size: 150%; font-weight: bold; padding: 5px;">{{#ifexist:{{{1}}}|[[{{{1}}}|{{{2}}}]]|{{{2}}}}}</div>
+<div>{{#ifexist:{{{1}}}||Not available}}</div>
+</<includeonly>td</includeonly><noinclude>div</noinclude>>

@@ -1,0 +1,9 @@
+<includeonly>[[Category:Raw templates]]</includeonly>
+<noinclude>[[Category:Template Documentation]]</noinclude>
+
+Usage:
+<pre>{{vermin_attrib_proc|creature raws}}</pre>
+
+Returns a formatted list of "interesting" attribute tags for the given vermin creature raw data.
+
+After making any edits that change the way categorization works in this template, you must also make a [[wikipedia:Help:Purge#Null_edit|null edit]] to {{t|Verminlookup/aux}} in order to propagate the changes correctly. <!-- Actually, doing a null edit to any template directly transcluded on all the creature pages (or indirectly transcluded without a text parsing step in between the page and the template) would accomplish the same thing, but let's keep things simple-->

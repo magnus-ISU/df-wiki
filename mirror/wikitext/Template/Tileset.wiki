@@ -1,0 +1,85 @@
+<includeonly>{| style="width: 100%; margin: 0 0 0.5em 0.5em; border-spacing: 0;"
+|-
+| style="width:270px; padding-top:0.5em;" valign="top" | <div style="background:darkmagenta; float:left;">{{#if: {{{image|}}}
+  | {{{image}}}
+  | {{#if: {{{filename|}}} | [[Image:{{{filename|}}}]] | <span class="error">no image file</span> }}
+}}</div> || valign="top" | 
+
+{|
+|- {{#if:{{{title|{{{filename|}}}}}}||style="display:none;"}}
+! style="text-align:left; padding:0 2em 0 1em;" | Title
+| <span id="{{{title|{{{filename}}}}}}">[[#{{{title|{{{filename}}}}}}|{{{title|{{{filename}}}}}}]]</span>
+|- 
+! style="text-align:left; padding:0 2em 0 1em;" | Author
+| {{{author|-}}}
+|- {{#if:{{{dated|}}}||style="display:none;"}}
+! style="text-align:left; padding:0 2em 0 1em;" | Dated
+| {{{dated|}}}
+|-
+! style="text-align:left; padding:0 2em 0 1em;" | Tile Size
+| {{{size|-}}}
+|- {{#if:{{{resolution|}}}||style="display:none;"}}
+! style="text-align:left; padding:0 2em 0 1em;" | Resolution
+| {{{resolution|}}}
+|- {{#if:{{{versions|}}}||style="display:none;"}}
+! style="text-align:left; padding:0 2em 0 1em;" | Versions
+| {{{versions|}}}
+|- {{#if:{{{comments|}}}||style="display:none;"}}
+! style="text-align:left; padding:0 2em 0 1em;" valign="top" | Comments
+| {{{comments|-}}}
+|}
+
+|
+{| style="float: right;"
+|- {{#if:{{{demo|}}}||style="display:none;"}} 
+| valign="top" |  <div style="background:none; float:right;">{{{demo|}}}</div> || valign="top" | 
+|- {{#if:{{{demo2|}}}||style="display:none;"}}
+| valign="top" | <div style="background:none; float:right;">{{{demo2|}}}</div> || valign="top" | 
+|- {{#if:{{{demo3|}}}||style="display:none;"}}
+| valign="top" | <div style="background:none; float:right;">{{{demo3|}}}</div> || valign="top" | 
+|- {{#if:{{{demo4|}}}||style="display:none;"}}
+| valign="top" | <div style="background:none; float:right;">{{{demo4|}}}</div> || valign="top" | 
+|}
+
+|}</includeonly><noinclude>
+Usage:
+<pre><nowiki>
+{{Tileset|
+|filename=Herrbdog_16x16_tileset.gif
+|title=herrbdog_16x16
+|image=[[File:Herrbdog_16x16_tileset.gif]]
+|author=[[User:Herrbdog|Herrbdog]]
+|dated=2007-11-15
+|size=16&amp;times;16
+|resolution=1280&amp;times;400
+|versions=14&times;14, 16&times;16
+|comments=This is Herrbdog's well-known tileset.
+|demo=
+|demo2=
+|demo3=
+|demo4=
+}}
+</nowiki></pre>
+
+It is best to specify <code>filename=tileset.png</code>, and leave <code>title</code> and <code>image</code> unspecified, in most cases.
+
+Output:
+
+{{Tileset|
+|filename=Herrbdog_16x16_tileset.gif
+|title=herrbdog_16x16
+|image=[[File:Herrbdog_16x16_tileset.gif]]
+|author=[[User:Herrbdog|Herrbdog]]
+|dated=2007-11-15
+|size=16&times;16
+|resolution=1280&times;400
+|versions=14&times;14, 16&times;16
+|comments=This is Herrbdog's well-known tileset.
+|demo=
+|demo2=
+|demo3=
+|demo4=
+}}
+
+[[Category:Templates]]
+</noinclude>

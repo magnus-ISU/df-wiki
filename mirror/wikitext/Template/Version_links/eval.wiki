@@ -1,0 +1,5 @@
+<noinclude>Converts <pre>[[*a|b]][[c|d]]</pre> to <pre>{{version links/link|selected=1|a|b}}{{version links|c|d}}</pre>
+----</noinclude>{{#eval:{{#mreplace:{{#rreplace:{{{1|
+[[*a|b]][[c|d]]
+}}}|\n|}}
+|{{!))}}{{!((}}|{{))}}{{#delay:dot}} {{((}}version links/link{{!}}|{{!((}}|{{((}}version links/link{{!}}|{{!))}}|{{))}}|{{!}}*|{{!}}selected=1{{!}}}}}}

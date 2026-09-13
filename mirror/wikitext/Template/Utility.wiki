@@ -1,0 +1,10 @@
+{{infostart|{{{name|{{PAGENAME}}}}}}}
+{{inforow|Version:|{{{version}}}}}
+{{inforow|Last updated:|{{{lastupdate}}}}}{{
+#if:{{{dfversion|}}}|
+{{inforow|Supported DF version:|v{{{dfversion}}}}}
+{{#ifeq:{{{dfversion}}}|{{current/version}}||{{infoheader|bg=red|Out of date for v{{current/version}}}}}}}}{{
+#if:{{{dfversions|}}}|
+{{infocell|Supported DF versions:<br/>{{{dfversions}}}}}}}{{
+#if:{{{thread|}}}|{{infoheader|[{{{thread}}} Forum thread]}}}}{{
+#if:{{{download|}}}|{{infoheader|[{{{download}}} Download]}}}}

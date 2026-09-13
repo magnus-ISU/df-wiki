@@ -1,0 +1,24 @@
+{{infostart|{{{name}}}}}
+{{infocell|style=color: white; background: black; text-align:center; vertical-align:middle;|1=
+{{#if:{{{image|}}}|<div class="mw-collapsible" id="mw-customcollapsible-classicimage" style="height: 128px; line-height: 128px; image-rendering: pixelated; -webkit-image-rendering: pixelated; -moz-image-rendering: pixelated;">[[File:{{{image}}}|200x128px|class=df-sprite df-sprite-infobox]]</div>}}
+<div class="{{#if:{{{image|}}}|mw-collapsible mw-collapsed}}" id="mw-customcollapsible-classicimage" style="color: {{fgcolor|{{{color|5:0:1}}}}}; font-size:xx-large; font-weight: bold; font-family: 'Courier New', 'Quicktype Mono', 'Bitstream Vera Sans Mono', 'Lucida Console',  'Lucida Sans Typewriter', monospace; {{#if:{{{image|}}}|height: 128px; line-height: 128px;}}">{{#tag:nowiki|{{char|{{{symbol|?}}}}}}}</div>
+{{#if:{{{image|}}}|<span class="mw-customtoggle-classicimage mw-ui-button mw-ui-progressive" style="float:right; padding:0px; user-select: none;">Toggle</span>}}
+}}
+{{#if:{{{pref|}}}|{{infopref|{{{pref}}}}}}}
+{{#if:{{{portrait|}}}|{{infoheader|Portrait}}}}
+{{#if:{{{portrait|}}}|{{infocell|[[File:{{{portrait|}}}|center]]}}}}
+{{infoheader|[[Biome]]}}
+{{infocell|{{#if:{{{biome|}}}|{{{biome|}}}|Nowhere}}}}
+{{#ifeq:{{{vary|no}}}|no|{{!-}}|
+{{infoheader|Variations}}
+{{infocell|{{{vary|unknown}}} }} }}
+{{#ifexpr:{{#if:{{{alignment|}}}|1|0}} or {{#if:{{{attribs|}}}|1|0}}|
+{{infoheader|Attributes}}
+{{#if:{{{alignment|}}}|{{inforow|Alignment:|{{{alignment}}} }}|{{!-}}}}}}
+{{#if:{{{attribs|}}}|{{infocell|{{span-hide}}{{{attribs}}}{{end-span}}}}|{{!-}}}}
+{{#ifexpr:{{#if:{{tag|{{/raw|}}|PET}}|1|0}} or {{
+#if:{{tag|{{/raw|}}|PET_EXOTIC}}|1|0}}|{{inforow|Pet value|{{formatnum:{{{petvalue|0}}}}}}}}}
+{{infoheader|[[season|Active Seasons]]}}
+{{infocell|{{seasons|{{{spring|}}}|{{{summer|}}}|{{{autumn|}}}|{{{winter|}}}}}}}
+{{#ifeq:{{{wiki}}}|no||{{infocell|style=text-align:center; background-color: #eee; border-top: 1px solid #aaa|1=[[wikipedia:{{#if:{{{wiki|}}}|{{{wiki}}}|{{{name}}}}}|Wikipedia article]]}}|{{!-}}}}
+{{infoend}}<noinclude>{{documentation}}[[Category:Infobox templates]]</noinclude>

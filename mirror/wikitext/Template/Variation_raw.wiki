@@ -1,0 +1,10 @@
+<includeonly>{{#if:{{{4|}}}|{{#df_raw:{{{1}}}|{{{2}}}|{{{3}}}|not found}}|{{#df_cvariation:{{#df_raw:{{{1}}}|{{{2}}}|{{{3}}}|not found}}|{{{1}}}|{{{5}}}|{{{6|}}}}}}}</includeonly><noinclude>
+Usage: <nowiki>{{variation raw | raw filename | object type | object name | no_decode | variation file 1 | variation file 2}}</nowiki>
+
+Returns: Raw entry of that object, with all formatting intact. If a value is not specified for 'no_decode', parses creature variations from the specified file and produces composite raws.
+
+In order to support the Masterwork mod, up to 2 creature variation files can be specified.
+
+This template uses [https://github.com/DF-Wiki/DFRawFunctions DFRawFunctions extension] 
+[[category:raw templates]]
+</noinclude>

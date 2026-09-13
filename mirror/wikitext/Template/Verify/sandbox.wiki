@@ -1,0 +1,7 @@
+<includeonly><small><sup>{{#if:{{{1|}}}
+|{{#vardefine:verify-count|{{#expr:{{#var:verify-count|0}}+1}}}}[[{{TALKPAGENAME}}#{{{1}}}|[{{#var:verify-count}}] ]]
+|{{#switch:{{NAMESPACE}}|{{df:current}}=[[Category:verify|{{PAGENAME}}]]|{{df:current}} Talk=[[Category:verify]]}}[[{{TALKPAGENAME}}|Verify]]}}</sup></small></includeonly><noinclude>
+This is an unverified statement. {{verify/sandbox}}
+
+This is verified! {{verify/sandbox|Section}}
+</noinclude>

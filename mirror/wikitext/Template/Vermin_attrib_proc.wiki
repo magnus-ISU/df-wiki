@@ -1,0 +1,16 @@
+<includeonly>
+{{#if:{{tag|{{{1}}}|AQUATIC}}|{{attrib format|{{Catlink|Aquatic}}{{Category|Aquatic}}}}}}{{
+#if:{{tag|{{{1}}}|AMPHIBIOUS}}|{{attrib format|{{Catlink|Amphibious}}{{Category|Amphibious}}}}}}{{
+#if:{{tag|{{{1}}}|VERMIN_EATER}}|{{attrib format|Devours food{{Category|Devours food}}}}}}{{
+#if:{{tag|{{{1}}}|PET_EXOTIC}}|{{attrib format|[[Exotic pet]]{{Category|Exotic pet}}}}}}{{
+#if:{{tag|{{{1}}}|EXTRACT}}|{{attrib format|[[Extract]]}}}}{{
+#ifexpr:{{#if:{{tag|{{{1}}}|FISHITEM}}|1|0}} and {{#if:{{tag|{{{1}}}|VERMIN_NOFISH}}|0|1}}|{{attrib format|[[Fishing|Fishable]]{{Category|Fishable}}}}}}{{
+#if:{{tag|{{{1}}}|FLIER}}|{{attrib format|{{Catlink|Flying}}{{Category|Flying}}}}}}{{
+#if:{{tag|{{{1}}}|VERMIN_HATEABLE}}|{{attrib format|[[Hateable]]{{Category|Hateable}}}}}}{{
+#if:{{tag|{{{1}}}|ARTIFICIAL_HIVEABLE}}|{{attrib format|[[Hive]]able{{Category|Hiveable}}}}}}{{
+#if:{{tag|{{{1}}}|MILKABLE}}|{{attrib format|[[Milk]]able{{Category|Milkable}}}}}}{{
+#if:{{tag|{{{1}}}|PET}}|{{attrib format|[[Pet]]{{Category|Pet}}}}}}{{
+#if:{{tag|{{{1}}}|SYNDROME}}|{{attrib format|[[Syndrome]]{{Category|Syndrome}}}}}}{{
+#if:{{tag|{{{1}}}|USE_MATERIAL_TEMPLATE|1|SHELL}}{{tag|{{{1}}}|HASSHELL}}|{{attrib format|{{Catlink|Shell}}{{Category|Shell}}}}}}{{
+#if:{{tag|{{{1}}}|WEBBER}}|{{attrib format|[[Web]]s{{Category|Webs}}}}}}
+</includeonly><noinclude>{{documentation}}</noinclude>

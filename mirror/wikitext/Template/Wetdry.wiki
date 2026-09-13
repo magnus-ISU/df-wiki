@@ -1,0 +1,13 @@
+{| style="font-size: 80%; width: 100%; text-align: center"
+|-
+{{#if: {{{1|}}}|
+{{!}} style="font-weight: bold; background:#aaf; border: 1px solid; color:#000" {{!}} Wet
+|
+{{!}} style="font-weight: bold; background:#eee; border: 1px solid; color:#ccc" {{!}} Wet
+}}
+{{#if: {{{2|}}}|
+{{!}} style="font-weight: bold; background:#ffa; border: 1px solid; color:#000" {{!}} Dry
+|
+{{!}} style="font-weight: bold; background:#eee; border: 1px solid; color:#ccc" {{!}} Dry
+}}
+|}

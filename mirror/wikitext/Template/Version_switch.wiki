@@ -1,0 +1,18 @@
+{{#switch:{{NAMESPACE}}
+|Template=
+This is a helper template that transcludes different templates based on the namespace of the page where it is included. The following templates are supported:
+* [[Template:v50 {{{1}}}]]
+* [[Template:DF2014 {{{1}}}]]
+* [[Template:v0.34 {{{1}}}]]
+* [[Template:Masterwork {{{1}}}]]
+* [[Template:v0.31 {{{1}}}]]
+* [[Template:40d {{{1}}}]]
+* [[Template:23a {{{1}}}]]
+[[Category:Templates]]
+|23a|40d|v0.31|v0.34|DF2014|Masterwork ={{ {{NAMESPACE}} {{{1}}} |cat={{{cat|}}} }}
+|={{ v50 {{{1}}} |cat={{{cat|}}} }}
+|#default ={{{{df:current}} {{{1}}} |cat={{{cat|}}} }}
+}}<noinclude><!-- line break is necessary -->
+{{documentation}}
+[[Category:version templates]]
+</noinclude>

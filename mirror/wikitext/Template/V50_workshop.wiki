@@ -1,0 +1,83 @@
+<includeonly>{{infostart|{{{name|{{PAGENAME}}}}}}}
+{{infocell|{{Tooltip|Shortcut|Keyboard shortcut}}: {{k-|b|o|{{{key|{{{key1|???}}}}}}|{{{key2|}}}}}|style=text-align:center}}
+{{infocell|}}
+<div style="display:flex; flex-wrap: wrap; width:100%; background-color:#eaecf0;"><!-- 
+
+-- Premium 
+--><div style="margin: auto;">{{#ifexist:File:{{{image|{{{name|}}}}}}.png|[[File:{{{image|{{{name|}}}}}}.png]]|[[File:Icons8 flat add image.svg|80px|link=File:{{{image|{{{name|}}}}}}.png]]}}</div><!-- 
+
+-- Classic 
+--><div style="margin: auto; font-size:150%;">{{Picture {{#ifexist:Template:Picture {{NAMESPACE}} {{{name}}}|{{NAMESPACE}} {{{name}}}|{{#ifexist:Template:Picture {{{name}}}|{{{name}}}|Blank}}}}}}</div>
+</div>
+{{infoheader|Icon}}
+{{infocell|{{{icon|}}}|style=padding-left:42%}}
+{{#if:{{{job|}}}|{{infoheader|Job Requirement}}
+{{infocell|{{{job|}}}}}}}
+{{infoheader|Construction}}
+{{#ifeq:{{{onecol|no}}}|no|
+{{!}}- <!-- Two columns -->
+! style{{=}}"text-align: left; padding: 0.2em 0.25em 0; width: 50%; border-right: 1px solid #aaa" {{!}} Materials
+! style{{=}}"text-align: left; padding: 0.2em 0.25em 0; width: 50%" {{!}} Labors
+{{!}}-
+{{!}} style{{=}}"padding: 0.1em 0.25em 0.25em; width: 50%; vertical-align: top; border-right: 1px solid #aaa" {{!}}
+{{{construction}}}
+{{!}} style{{=}}"padding: 0.1em 0.25em 0.25em; width: 50%; vertical-align: top" {{!}}
+| <!-- One column -->
+! style{{=}}"text-align: left; padding: 0.2em 0.25em 0; width: 50%; border-right: 1px solid #aaa" {{!}} Materials
+{{!}}-
+{{!}} style{{=}}"padding: 0.1em 0.25em 0.25em; width: 50%; vertical-align: top; border-right: 1px solid #aaa" {{!}}
+{{{construction}}}
+{{!}}-
+! style{{=}}"text-align: left; padding: 0.2em 0.25em 0; width: 50%" {{!}} Jobs
+{{!}}-
+{{!}} style{{=}}"padding: 0.1em 0.25em 0.25em; width: 50%; vertical-align: top" {{!}}
+}}
+{{{construction_job}}}
+{{infoheader|Materials Used}}
+{{infocell|{{{use}}}}}
+{{infoheader|Goods Created}}
+{{infocell|{{{production}}}}}
+{{#if:{{{power|}}}|{{infoheader|Power}}
+{{infocell|{{{power|}}}}}}}
+{{infoend}}{{Category|Workshops}}{{interwiki|{{FULLPAGENAME}}}}</includeonly><noinclude>
+
+V50 workshop template, based on {{tl|workshop}}
+
+== Usage ==
+This automatically includes the page in the "Workshops" category.
+
+The image tries load <code>File:{{{name}}}.png</code> if the image is already in use here on commons (as it is likely is) use <code>|image=another-name</code>. Note: [[screenshot]]s should be at the "native" resolution.
+To add a fourth keyboard shortcut for workshops in subcategories, add <code>|key2=xx</code>
+
+ <nowiki>
+{{V50 workshop|name=Carpenter's workshop|key=c|job=[[Carpentry]]
+|icon=
+|construction=
+1 of
+* [[Block]]
+* [[Stone]]
+* [[Wood]]
+|construction_job=
+* [[Carpentry]]
+|use=
+* [[Wood]]
+|production=
+* [[Animal trap]]
+* [[Armor stand]]
+* [[Barrel]]
+* [[Bin]]
+* [[Bucket]]
+* [[Buckler]]
+* [[Bed]]
+* [[Cabinet]]
+* [[Chair]]
+* [[Chest]]
+* [[Door]]
+* [[Floodgate]]
+* [[Shield]]
+* [[Table]]
+* [[Weapon rack]]
+}}
+</nowiki>
+[[Category:Building templates]]
+</noinclude>

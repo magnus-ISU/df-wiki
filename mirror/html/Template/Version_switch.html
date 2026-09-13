@@ -1,0 +1,26 @@
+<div class="mw-parser-output"><p>This is a helper template that transcludes different templates based on the namespace of the page where it is included. The following templates are supported:
+</p>
+<ul><li>[[Template:v50 {{{1}}}]]</li>
+<li>[[Template:DF2014 {{{1}}}]]</li>
+<li>[[Template:v0.34 {{{1}}}]]</li>
+<li>[[Template:Masterwork {{{1}}}]]</li>
+<li>[[Template:v0.31 {{{1}}}]]</li>
+<li>[[Template:40d {{{1}}}]]</li>
+<li>[[Template:23a {{{1}}}]]</li></ul>
+<div class="plainlinks" style="clear: both; margin: 1em 0 0 0; border: 1px solid #aaa; background-color: #f0f0f8; padding: 5px 1em; border-radius: .4em; -webkit-border-radius: .4em; -moz-border-radius: .4em; -o-border-radius: .4em; -ms-border-radius: .4em;">
+<h2><span id="(view_-_edit_-__history_-__purge)_Documentation"></span><span class="mw-headline" id=".28view_-_edit_-_.0Ahistory_-_.0Apurge.29_Documentation"><span style="float: right; font-size: small; font-family: sans-serif;">
+(<a href="/index.php/Template:Version_switch/doc" title="Template:Version switch/doc"><span title="View this documentation">view</span></a> - <a rel="nofollow" class="external text" href="//dwarffortresswiki.org/index.php?title=Template:Version_switch/doc&amp;action=edit"><span title="Edit this documentation">edit</span></a> - 
+<a rel="nofollow" class="external text" href="//dwarffortresswiki.org/index.php?title=Template:Version_switch/doc&amp;action=history"><span title="Documentation history">history</span></a> - 
+<a rel="nofollow" class="external text" href="//dwarffortresswiki.org/index.php?title=Template:Version_switch&amp;action=purge"><span title="Purge this documentation (causes it to be updated; use only if it doesn&#39;t update after editing, NOT in a preview)">purge</span></a>)</span> Documentation</span></h2>
+<p>This template includes other templates based on the current page's namespace.
+</p>
+<h2><span class="mw-headline" id="Usage">Usage</span></h2>
+<pre>{{version switch|<i>Base template name</i>}}
+</pre>
+<h2><span class="mw-headline" id="Examples">Examples</span></h2>
+<pre>{{version switch|metals}}</pre>
+<ul><li>When the template is included in the template namespace, a list of supported templates will be displayed (such as <a href="/index.php/Template:DF2014_metals" title="Template:DF2014 metals">Template:DF2014 metals</a>, <a href="/index.php/Template:V0.34_metals" title="Template:V0.34 metals">Template:v0.34 metals</a>, etc.).</li>
+<li>When included from a supported namespace, the appropriate template for that namespace will be included (such as <a href="/index.php/Template:40d_metals" title="Template:40d metals">Template:40d metals</a> when included on a 40d page).</li>
+<li>When included in any other namespace, the template for the current version will be included (<a href="/index.php/Template:V50_metals" title="Template:V50 metals">Template:v50 metals</a> in this case).</li></ul>
+</div>
+</div>

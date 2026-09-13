@@ -1,0 +1,12 @@
+{{infostart|{{{name}}}}}
+{{infocell|{{char|{{{symbol|?}}}}}|style=color: {{fgcolor|{{{color|2:0:0}}}}}; background: black; font-size:x-large; font-weight: bold; font-family: 'Courier New', 'Quicktype Mono', 'Bitstream Vera Sans Mono', 'Lucida Console',  'Lucida Sans Typewriter', monospace; text-align:center; vertical-align:center}}
+{{infoheader|Biome}}
+{{infocell|{{{biome|}}}}}
+{{infocell|{{wetdry|{{{wet|}}}|{{{dry|}}}}}}}
+{{#if:{{{alignment|}}}|{{infoheader|Alignment}}
+{{infocell|{{{alignment}}}|style=text-align:center}}}}
+{{infoheader|Properties}}
+{{inforow|Deciduous|<noinclude>''yes/no''</noinclude><includeonly>{{{autumncolor|no}}}</includeonly>}}
+{{inforow|Density|<noinclude>''density''</noinclude><includeonly>{{{density|500}}}</includeonly>}}
+{{#ifeq:{{{wiki}}}|no||{{infocell|style=text-align:center; background-color: #eee; border-top: 1px solid #aaa|1=[[wikipedia:{{#if:{{{wiki|}}}|{{{wiki}}}|{{{name}}}}}|Wikipedia article]]}}|{{!-}}}}
+{{infoend}}<includeonly>{{Category|Trees}}</includeonly><noinclude>{{documentation}}</noinclude>

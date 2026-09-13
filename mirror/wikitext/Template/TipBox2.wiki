@@ -1,0 +1,32 @@
+<div style="float: {{{float|none}}}; clear:{{{clear|{{{float|both}}}}}};
+            border: 2px solid black; background: {{{textbg|white}}};
+            margin: {{#if:{{{float|}}}|1em|auto}}; 
+               {{#ifeq:{{{float}}}|right|margin-right:0em;}}
+               {{#ifeq:{{{float}}}|left|margin-left:0em;}}
+            width: {{#if:{{{float|}}}|{{{width|35%}}}|{{{width|80%}}}}};">
+<div style="background: {{{titlebg|#0a0}}}; padding: 0.3em 0.5em; border-bottom: 1px solid black; text-align: center; font-size:120%; color:{{{textcolor|#ffffff}}}">'''{{{1|Title}}}'''</div>
+<div style="padding: 0 0.5em;">
+{{{2|Body text}}}
+</div>
+</div>
+<noinclude>
+
+= Usage =
+
+<pre>{{TipBox2|Title|Body Text|
+   float=[left/right/none]|
+   clear=[left/right/none]|
+   textbg=[html color]|
+   titlebg=[html color]|
+   width=[css width]
+}}
+</pre>
+
+
+{{TipBox2|This is a title....|Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.}}
+
+{{TipBox2|float=left|This is a title....|Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.}}
+{{TipBox2|float=right|This is a title....|Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.}}
+
+[[Category:Templates]][[Category:Formatting Templates]]
+</noinclude>

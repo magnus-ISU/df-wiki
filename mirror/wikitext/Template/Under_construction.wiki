@@ -1,0 +1,20 @@
+{| style="margin: 0 {{#ifeq:{{{align|}}} | left | 0 | {{#ifeq: {{{align|}}} | right | 20 | 10 }} }}%; border-collapse: collapse; background: #fbfbfb; border: 1px solid #aaa; border-left: 10px solid #1e90ff; width:{{width|80}}%;"
+|-
+| style="padding: 0.5em 0 0.5em 0.5em; text-align: center;" | [[Image:dwarven_science_stretched.png]]
+| style="padding: 0.25em 0.5em; width: 100%;" | <b>Research Pending!</b><br>This article or section is incomplete/under construction (likely due to recent changes) and may still be outdated or missing details. Feel free to do some testing and expand it.<br>{{{extra|}}}
+|}<includeonly>[[Category:Needs update]]</includeonly><noinclude>
+For articles/sections that have been partially updated for a new version, but may still be missing some features. Use instead of [[:Template:old]] when the section in question is likely to be updated quickly and already has some modifications for the new version. Code hijacked from [[:Template:old]].
+
+Parameters:<br>
+extra: Extra text (ie, reasoning for this template). Default is nothing.<br>
+align: Alignment (center, left, or right). Default is center.<br>
+width: Width, in percentage of page. Default is 80%.<br>
+
+Articles that include this template are automatically added to [[:Category:Needs update]].
+
+'''See also:'''
+*[[:Template:old]]
+*[[:Template:version]]
+
+[[Category:Warnings]]
+</noinclude>

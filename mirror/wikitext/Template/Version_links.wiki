@@ -1,0 +1,3 @@
+{{#vardefine:version_links_theme|{{{theme}}}}}{{version links/0|color={{icolor|{{{theme}}}|text}}|bordercolor={{icolor|{{{theme}}}|border}}|background={{icolor|{{{theme}}}|background}}|r1={{#if:{{{r1|}}}|{{version links/eval|{{{r1}}}}}}}|r2={{#if:{{{r2|}}}|{{version links/eval|{{{r2}}}}}}}|bottom={{{bottom}}}|center={{{center}}}}}<noinclude>
+[[category:version templates]]
+</noinclude>

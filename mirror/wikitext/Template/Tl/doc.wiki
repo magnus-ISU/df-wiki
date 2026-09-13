@@ -1,0 +1,11 @@
+{{Tl|Tl}} is a simple macro template used to display a template name as a displayed formatted template, with the template linked inside: '''tl''' stands for '''t'''emplate '''l'''ink. It is meant to be used on internal pages and template documentation to exposit simple templates with up to three variables supported.
+
+{{tt|<nowiki>{{tl|cv}}</nowiki>}} → {{tl|cv}}<br/>
+{{tt|<nowiki>{{tl|dffd|997}}</nowiki>}} → {{tl|dffd|997}}<br/>
+{{tt|<nowiki>{{tl|dffd|997|Map Compressor}}</nowiki>}} → {{tl|dffd|997|Map Compressor}}<br/>
+{{tt|<nowiki>{{tl|tt|{{tt|[HOMEOTHERM]}}|Warm-blooded creature|#4a8}}</nowiki>}} → {{tl|tt|{{tt|[HOMEOTHERM]}}|Warm-blooded creature|#4a8}}
+
+
+
+<includeonly>[[Category:Inline formatting templates]]</includeonly>
+<noinclude>[[Category:Template Documentation]]</noinclude>

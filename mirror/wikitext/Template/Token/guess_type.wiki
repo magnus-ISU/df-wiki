@@ -1,0 +1,5 @@
+<includeonly>{{#switch: 1
+| {{#rmatch:{{{1}}}|^CV_{{!}}^CVCT_|1}} = Creature variation token
+| {{#rmatch:{{{1}}}|^MANNERISM_|1}} = Creature mannerism token
+| #default = Creature token
+}}</includeonly>

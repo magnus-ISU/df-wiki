@@ -1,0 +1,52 @@
+<!--
+
+// Check for {{{1}}} parameter
+
+-->{{#if:{{{1|<noinclude>Example</noinclude>}}}|<!--then:
+
+// Div, styling
+
+--><div style="background-color: #BBDDFF; border: #4169E1 1px solid; margin: 2em 0 1em; padding: 0.5em 1em; font-weight: bold; vertical-align: middle;"><!--
+
+// Image
+
+-->  [[Image:Nuvola apps edu languages.svg|left|40px|link=<!--
+// Prefix the given page with User talk:, if no namespace given
+-->    {{#ifeq:{{NAMESPACE:{{{1<noinclude>|Example</noinclude>}}}}}|{{ns:0}}|{{ns:3}}:}}<!--
+-->    {{{1<noinclude>|Example</noinclude>}}}<!--
+// Section link
+-->    {{#if:{{{2|}}}|&#35;{{{2}}}}}|You have new messages]]<!--
+
+// Text
+
+-->Hello, {{#titleparts:{{PAGENAME}}|1}}. You have new messages at <!--
+// Prefix the given page with User talk:, if it has no namespace given
+-->  [[{{#ifeq:{{NAMESPACE:{{{1<noinclude>|Example</noinclude>}}}}}|{{ns:0}}|{{ns:3}}:}}<!--
+// Page link
+-->  {{{1<noinclude>|Example</noinclude>}}}<!--
+// Section link
+-->  {{#if:{{{2|}}}|&#35;{{{2}}}}}<!--
+// Link text
+-->  |{{#if:<!--
+// Evaluates to "NOT USERSPACE" if namespace is neither 0 nor 3
+-->    {{#switch:{{NAMESPACE:{{{1<noinclude>|Example</noinclude>}}}}}<!--
+-->      |{{ns:0}}|{{ns:3}}=<!--silent--><!--
+-->      |NOT USERSPACE}}<!--
+// Evaluates to "IS SUBPAGE" if the page is a subpage
+-->    {{#ifeq:{{#titleparts:{{{1<noinclude>|Example</noinclude>}}}|1|2}}|<!--
+-->      <!--empty-->|<!--silent-->|IS SUBPAGE}}<!--
+// Display full page title if either NOT USERSPACE or IS SUBPAGE is true
+-->    |{{#ifeq:{{NAMESPACE:{{{1<noinclude>|Example</noinclude>}}}}}|{{ns:0}}|{{ns:3}}:}}<!--
+-->    {{{1<noinclude>|Example</noinclude>}}}<!--
+// Display the PAGENAME of {{{1}}} (i.e. the user name) otherwise
+-->    |{{PAGENAME:{{{1<noinclude>|Example</noinclude>}}}}}'s talk page}}]].<br /><!--
+
+// Timestamp, notice
+
+--><span class="plainlinks" style="font-size: 88%; font-weight: normal;">{{#if:{{{ts|}}}|Message added {{{ts}}}.}} You can [{{fullurl:{{FULLPAGENAMEE}}|action=edit}} remove this notice] at any time by removing the {{tl|Talkback}} or {{tl|Tb}} template.</span><!--
+--></div><!--
+
+// Display an error message if no parameter given
+
+-->|<!--else:
+--><span class="error">ERROR: Please enter the ''username'' parameter when using the {{tl|Talkback}} template.</span>}}

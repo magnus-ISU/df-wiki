@@ -1,0 +1,31 @@
+<noinclude>returns a simple release ordering string for article versions:
+
+Alphanumeric order:
+
+*23a:Articles
+*40d:Articles
+*DF2012:Articles
+*V0.31:Articles
+
+
+Release order:
+
+*DF2012:Articles
+*V0.31:Articles
+*40d:Articles
+*23a:Articles
+
+----
+Supports up to 8 versions
+
+df2012: {{version order|df2012}}
+
+V0.31: {{version order|V0.31}}
+
+40D: {{version order|40D}}
+
+23a: {{version order|23a}}
+
+unknown: {{version order|unknown}}
+
+</noinclude>{{#switch:{{uc:{{{1}}}}}|DF2012|V0.34=E|DF2010|V0.31=F|40D=G|23A=H|#default=D}}

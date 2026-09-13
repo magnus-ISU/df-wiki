@@ -1,0 +1,19 @@
+<includeonly>{{#ifeq:{{NAMESPACE}}|DF2014|{{#ifexist: Category:Version {{{1}}}|[[Category:Version {{{1}}}]]<small><sup>[[:Category:Version {{{1}}}|v{{{1}}}]]</sup></small>|[[Category:Unknown version]]<small><sup>v{{{1}}}[[:Category:Unknown version|?????]]</sup></small>}}|<small><sup>v{{{1}}}</sup></small>}}</includeonly><noinclude>
+{{shortcut|Template:V}}
+
+
+==Usage==
+
+<pre><nowiki>Example.{{version|0.23.130.23a}}</nowiki></pre>
+
+gives
+
+ Example.<small><sup>[[:Category:Version 0.23.130.23a|v0.23.130.23a]]</sup></small>
+
+This template is intended for use when a statement is appropriate for a particular version (bug reports, functionality that is likely to undergo change). Place it after the final punctuation of the sentence or paragraph it refers to.  This also includes the page into a category for that version. Please double check that it links to the correct category.
+
+If tracking the version number is a hassle, you can use {{tl|current}} to tag information you know is true for the current version. Make sure to '''subst''' it.
+
+Due to the "timelessness" of this wiki, usage of this template is discouraged - bugs should be marked with the {{tl|bug}} template, and they should be removed once they have been fixed (unless a new major release fails to fix them, in which case the link should be removed).
+
+[[Category:Version templates]]</noinclude>

@@ -1,0 +1,47 @@
+<includeonly>{{TreeInfo {{#switch:{{NAMESPACE}}|DF2014|#default=|v0.34|v0.31|40d|23a=v0.34}}|
+name={{ucfirst:{{tagvalue|{{{1}}}|NAME|notfound={{tagvalue|{{{1}}}|ALL_NAMES}}}}}}|
+pref={{prefstring|{{{1}}}}}|
+symbol={{char|{{tagvalue|{{{1}}}|TREE_TILE}}}}|
+graphic={{{graphic|}}}|
+product={{{product|}}}|
+sapling={{{sapling|}}}|
+color={{tagvalue|{{{1}}}|TREE_COLOR|notfound=2:0:0}}|
+alignment={{#if:{{tag|{{{1}}}|GOOD}}|Good<br />}}{{#if:{{tag|{{{1}}}|EVIL}}|Evil<br />}}{{#if:{{tag|{{{1}}}|SAVAGE}}|Savage}}|
+biome={{biomelist/aux|{{{1}}}}}|
+wet={{tag|{{{1}}}|WET}}|
+dry={{tag|{{{1}}}|DRY}}|
+autumncolor={{#if:{{tag|{{{1}}}|AUTUMNCOLOR}}|Yes|No}}|
+deciduous={{#if:{{tag|{{#df_raw:{{{1}}}|GROWTH|LEAVES}}|GROWTH_DROPS_OFF}}|Yes|No}}|
+density={{tagvalue|{{{1}}}|SOLID_DENSITY|notfound=500}}|
+max_trunk_height={{tagvalue|{{{1}}}|MAX_TRUNK_HEIGHT|notfound=5}}|
+max_trunk_diameter={{tagvalue|{{{1}}}|MAX_TRUNK_DIAMETER|notfound=3}}|
+trunk_branching={{tagvalue|{{{1}}}|TRUNK_BRANCHING|notfound=2}}|
+branch_radius={{tagvalue|{{{1}}}|BRANCH_RADIUS|notfound=2}}|
+branch_density={{tagvalue|{{{1}}}|BRANCH_DENSITY|notfound=10}}|
+heavy_branch_radius={{tagvalue|{{{1}}}|HEAVY_BRANCH_RADIUS|notfound=1}}|
+heavy_branch_density={{tagvalue|{{{1}}}|HEAVY_BRANCH_DENSITY|notfound=2}}|
+root_radius={{tagvalue|{{{1}}}|ROOT_RADIUS|notfound=3}}|
+root_density={{tagvalue|{{{1}}}|ROOT_DENSITY|notfound=5}}|
+wood={{ucfirst:{{#df_statedesc:{{#df_raw:{{{1}}}|USE_MATERIAL_TEMPLATE|WOOD:WOOD_TEMPLATE}}|NAME|SOLID}}|}}|
+wood_color={{tagentry|{{{1}}}|STATE_COLOR|2|ALL_SOLID||notfound={{#ifeq:{{tagvalue|{{{1}}}|USE_MATERIAL_TEMPLATE}}|WOOD_TEMPLATE|BROWN}}}}|
+alcohol={{#if:{{tag|{{{1}}}|DRINK}}|{{ucfirst:{{#df_statedesc:{{#df_raw:{{{1}}}|USE_MATERIAL_TEMPLATE|{{tagentry|{{{1}}}|DRINK|2}}:PLANT_ALCOHOL_TEMPLATE}}|NAME|LIQUID}}}}|}}|
+mill={{#if:{{tag|{{{1}}}|MILL}}|{{ucfirst:{{#df_statedesc:{{#df_raw:{{{1}}}|USE_MATERIAL_TEMPLATE|{{tagentry|{{{1}}}|MILL|2}}:PLANT_POWDER_TEMPLATE}}|NAME|POWDER}}}}|}}|
+oil={{ucfirst:{{#df_statedesc:{{#df_raw:{{{1}}}|USE_MATERIAL_TEMPLATE|OIL:PLANT_OIL_TEMPLATE}}|NAME|LIQUID}}|}}|
+process={{#if:{{tag|{{{1}}}|THREAD}}|Thread}}|
+fruit={{#if:{{tag|{{#df_raw:{{{1}}}|USE_MATERIAL_TEMPLATE|FRUIT:FRUIT_TEMPLATE}}|STOCKPILE_PLANT_GROWTH}}|{{ucfirst:{{tagentry|{{#df_raw:{{{1}}}|GROWTH|FRUIT}}|GROWTH_NAME|1|notfound=}}}}|}}|
+fruit_edible={{#if:{{tag|{{#df_raw:{{{1}}}|USE_MATERIAL_TEMPLATE|FRUIT:FRUIT_TEMPLATE}}|EDIBLE_RAW}}|Yes|No}}|
+fruit_cookable={{#if:{{tag|{{#df_raw:{{{1}}}|USE_MATERIAL_TEMPLATE|FRUIT:FRUIT_TEMPLATE}}|EDIBLE_COOKED}}|Yes}}|
+fruitnut={{#if:{{tag|{{#df_raw:{{{1}}}|USE_MATERIAL_TEMPLATE|NUT:FRUIT_TEMPLATE}}|STOCKPILE_PLANT_GROWTH}}|{{ucfirst:{{tagentry|{{#df_raw:{{{1}}}|GROWTH|FRUIT}}|GROWTH_NAME|1|notfound=}}}}|}}|
+fruitnut_edible={{#if:{{tag|{{#df_raw:{{{1}}}|USE_MATERIAL_TEMPLATE|NUT:FRUIT_TEMPLATE}}|EDIBLE_RAW}}|Yes|No}}|
+fruitnut_cookable={{#if:{{tag|{{#df_raw:{{{1}}}|USE_MATERIAL_TEMPLATE|NUT:FRUIT_TEMPLATE}}|EDIBLE_COOKED}}|Yes}}|
+leaf={{#if:{{tag|{{#df_raw:{{{1}}}|USE_MATERIAL_TEMPLATE|LEAF:LEAF_TEMPLATE}}|STOCKPILE_PLANT_GROWTH}}|{{ucfirst:{{tagentry|{{#df_raw:{{{1}}}|GROWTH|LEAVES}}|GROWTH_NAME|1|notfound=}}}}|}}|
+leaf_edible={{#if:{{tag|{{#df_raw:{{{1}}}|USE_MATERIAL_TEMPLATE|LEAF:LEAF_TEMPLATE}}|EDIBLE_RAW}}|Yes|No}}|
+leaf_cookable={{#if:{{tag|{{#df_raw:{{{1}}}|USE_MATERIAL_TEMPLATE|LEAF:LEAF_TEMPLATE}}|EDIBLE_COOKED}}|Yes}}|
+flower={{#if:{{tag|{{#df_raw:{{{1}}}|USE_MATERIAL_TEMPLATE|FLOWER:FLOWER_TEMPLATE}}|STOCKPILE_PLANT_GROWTH}}|{{ucfirst:{{tagentry|{{#df_raw:{{{1}}}|GROWTH|FLOWERS}}|GROWTH_NAME|1|notfound=}}}}|}}|
+flower_edible={{#if:{{tag|{{#df_raw:{{{1}}}|USE_MATERIAL_TEMPLATE|FLOWER:FLOWER_TEMPLATE}}|EDIBLE_RAW}}|Yes|No}}|
+flower_cookable={{#if:{{tag|{{#df_raw:{{{1}}}|USE_MATERIAL_TEMPLATE|FLOWER:FLOWER_TEMPLATE}}|EDIBLE_COOKED}}|Yes}}|
+nut={{ucfirst:{{tagentry|{{#df_raw:{{{1}}}|GROWTH|NUT}}|GROWTH_NAME|1|notfound=}}}}|
+seed={{ucfirst:{{tagentry|{{{1}}}|SEED|2|notfound=}}}}|
+seed_edible={{#if:{{tag|{{#df_raw:{{{1}}}|USE_MATERIAL_TEMPLATE|SEED:SEED_TEMPLATE}}|EDIBLE_RAW}}|Yes|No}}|
+seed_cookable={{#if:{{tag|{{#df_raw:{{{1}}}|USE_MATERIAL_TEMPLATE|SEED:SEED_TEMPLATE}}|EDIBLE_COOKED}}|Yes}}|
+wiki={{{wiki|}}}}}{{interwiki|{{FULLPAGENAME}}}}</includeonly><noinclude>[[Category:raw templates]]</noinclude>

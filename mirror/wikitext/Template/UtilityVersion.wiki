@@ -1,0 +1,19 @@
+{{version links
+|theme={{#switch:{{{1|none}}}|{{DF:Current}}=green|web|multiple=blue|none=gray|#default=orange}}
+|center={{#switch:{{{1|multiple}}}
+|web=This is a web-based utility - it applies to multiple versions of DF.
+|multiple=This utility page applies to multiple versions of DF.
+|#default=This utility page is about v{{nsv|{{{1}}}}}, {{#switch:{{{1}}}|{{DF:Current}}=the current version[[Category:Utility:Current]]|#default=an '''older version'''<includeonly>[[Category:Utility:Outdated]]</includeonly>}} of DF.
+}}
+|bottom={{version links/link|Template:uv|More Info}}
+}}<noinclude>{{shortcut|template:uv}}
+
+This template is to be used where/how?
+
+==Usage==
+<pre>
+ {{UtilityVersion}}
+ {{UtilityVersion|web}}
+ {{UtilityVersion|multiple}}
+</pre>
+</noinclude>

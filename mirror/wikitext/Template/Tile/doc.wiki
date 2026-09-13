@@ -1,0 +1,18 @@
+{{documentation subpage}}
+
+'''Template:Tile''' can be used to display tiles close to what they appear as in Dwarf Fortress. It is designed to be used for free-standing tiles. There is a [[:Template:Raw_Tile|padding-free variant]] for use in grids and other places where padding between the tiles is not desirable. The [[:Template:Dwarf|Dwarf template]] can be used to insert dwarf faces.
+
+== Usage ==
+
+ <nowiki>{{Tile|<character>|<#color>|<#background>|<size>}}</nowiki>
+ <nowiki>{{Tile|<character>|<#color>|<#background>}}</nowiki>
+ <nowiki>{{Tile|<character>|<x:y:z>}}</nowiki>
+ <nowiki>{{Tile|<character>|<x:y:z>||<size>}}</nowiki>
+
+=== Special characters ===
+
+Special characters can be copied from the [[character table]]. Characters used in the template syntax (e.g. | or =) need to be escaped.
+
+=== Examples ===
+
+Using <code><nowiki>{{Tile|*|#090|#fff}}</nowiki></code> and  <code><nowiki>{{Tile|÷|0:6:0}}</nowiki></code> will insert ore chunks {{Tile|*|#090|#fff}} and barrels {{Tile|÷|0:6:0}} into text.

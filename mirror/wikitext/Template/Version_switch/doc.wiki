@@ -1,0 +1,8 @@
+This template includes other templates based on the current page's namespace.
+==Usage==
+ {{<nowiki/>version switch|''Base template name''}}
+==Examples==
+<pre>{{version switch|metals}}</pre>
+* When the template is included in the template namespace, a list of supported templates will be displayed (such as [[Template:DF2014 metals]], [[Template:v0.34 metals]], etc.).
+* When included from a supported namespace, the appropriate template for that namespace will be included (such as [[Template:40d metals]] when included on a 40d page).
+* When included in any other namespace, the template for the current version will be included ([[Template:v50 metals]] in this case).

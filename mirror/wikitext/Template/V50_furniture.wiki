@@ -1,0 +1,118 @@
+<includeonly>{| class="infobox" style="float: right; border: 1px solid #aaa; margin: 0 0 0.5em 0.5em; border-spacing: 0; width: 17em"
+|+ style="font-weight: bold" |{{{name|?}}}
+|-
+| colspan="6" | 
+ {| style="margin: auto;"
+  |<div><div id="furniture_template_prototype" style="margin-top:-7px; float:left; margin-top:5px; margin-right:3px;">{{{graphic|}}}</div> / {{tile|{{{tile|?}}}|{{{col|7:0:0}}}||2em}}</div>
+  |}
+|-
+! colspan="6" style="border-top: 1px solid #aaa; border-bottom: 1px solid #aaa; background: #eee; padding: 0.1em 0.25em" | Construction
+|-
+! colspan="2" style="text-align: left; padding: 0.2em 0.25em 0; width: 50%; border-right: 1px solid #aaa" | Materials
+! colspan="2" style="text-align: left; padding: 0.2em 0.25em 0; width: 50%; border-right: 1px solid #aaa" | Workshops
+! colspan="2" style="text-align: left; padding: 0.2em 0.25em 0; width: 50%" | Labors
+|-
+| colspan="2" style="padding: 0.1em 0.25em 0.25em; width: 50%; vertical-align: top; border-right: 1px solid #aaa" |{{{materials|{{#switch:{{{wood|{{{woodcraft}}}}}}|#default=|y|yes=
+* [[Wood]]<br /><br />}}{{#switch:{{{stone|{{{stonecraft|{{{stonecarve|}}}}}}}}}|#default=|y|yes=
+* [[Stone]]<br /><br />}}{{#switch:{{{metal|{{{metalcraft}}}}}}|#default=|y|yes=
+* [[Metal]] {{ #if: {{{bars|}}} | <br />([[Melt item#Yield|×{{{bars}}}]]) | <br />}}<br />}}{{#switch:{{{glass}}}|#default=|y|yes=
+* [[Glass]]<br /><br />}}{{#switch:{{{cloth}}}|#default=|y|yes=
+* [[Cloth]]<br /><br />}}{{#switch:{{{leather|{{{cloth|}}}}}}|#default=|y|yes=
+* [[Leather]]<br /><br />}}{{#switch:{{{slab|{{{slabv50|}}}}}}|#default=|y|yes=
+* [[Slab]]<br /><br />}}{{#switch:{{{ceramic}}}|#default=|y|yes=
+* [[Ceramic]]<br /><br />}}}}}
+| colspan="2" style="padding: 0.1em 0.25em 0.25em; width: 50%; vertical-align: top; border-right: 1px solid #aaa" |{{{workshops|{{#switch:{{{wood}}}|#default=|y|yes=
+* [[Carpenter's workshop]]}}{{#switch:{{{woodcraft}}}|#default=|y|yes=
+* [[Craftsdwarf's workshop]]}}{{#switch:{{{stone}}}|#default=|y|yes=
+* [[Mason's workshop]]}}{{#switch:{{{stonecarve}}}|#default=|y|yes=
+* [[Stoneworker's workshop]]}}{{#switch:{{{stonecraft}}}|#default=|y|yes=
+* [[Craftsdwarf's workshop]]}}{{#switch:{{{metal}}}|#default=|y|yes=
+* [[Metalsmith's forge]]}}{{#switch:{{{metalcraft}}}|#default=|y|yes=
+* [[Metalsmith's forge]]}}{{#switch:{{{glass}}}|#default=|y|yes=
+* [[Glass furnace]]}}{{#switch:{{{cloth}}}|#default=|y|yes=
+* [[Clothier's shop]]}}{{#switch:{{{leather|{{{cloth|}}}}}}|#default=|y|yes=
+* [[Leather works]]}}{{#switch:{{{slab}}}|#default=|y|yes=
+* [[Craftsdwarf's workshop]]}}{{#switch:{{{slabv50}}}|#default=|y|yes=
+* [[Stoneworker's workshop]]}}{{#switch:{{{ceramic}}}|#default=|y|yes=
+* [[Kiln]] or [[Magma kiln]]<br /><br />}}}}}
+| colspan="2" style="padding: 0.1em 0.25em 0.25em; width: 50%; vertical-align: top" |{{{labors|{{#switch:{{{wood}}}|#default=|y|yes=
+* [[Carpentry]]<br /><br />}}{{#switch:{{{woodcraft}}}|#default=|y|yes=
+* [[Woodcrafting]]<br /><br />}}{{#switch:{{{stone}}}|#default=|y|yes=
+* [[Masonry]]<br /><br />}}{{#switch:{{{stonecarve}}}|#default=|y|yes=
+* [[Stone carving]]<br />}}{{#switch:{{{stonecraft}}}|#default=|y|yes=
+* [[Stonecrafting]]<br /><br />}}{{#switch:{{{metal}}}|#default=|y|yes=
+* [[Blacksmithing]]<br /><br />}}{{#switch:{{{metalcraft}}}|#default=|y|yes=
+* [[Metalcrafting]]<br /><br />}}{{#switch:{{{glass}}}|#default=|y|yes=
+* [[Glassmaking]]<br /><br />}}{{#switch:{{{cloth}}}|#default=|y|yes=
+* [[Clothesmaking]]<br /><br />}}{{#switch:{{{leather|{{{cloth|}}}}}}|#default=|y|yes=
+* [[Leatherworking]]<br /><br />}}{{#switch:{{{slab}}}|#default=|y|yes=
+* [[Engraving]]<br /><br />}}{{#switch:{{{slabv50}}}|#default=|y|yes=
+* [[Stone engraving]]<br />}}{{#switch:{{{ceramic}}}|#default=|y|yes=
+* [[Pottery]]<br /><br />}}}}}
+|-
+! colspan="6" style="border-top: 1px solid #aaa; border-bottom: 1px solid #aaa; background: #eee; padding: 0.1em 0.25em" | [[Zone|Rooms]]
+|-
+| colspan="6" style="padding: 0.25em" |
+{{{rooms|''None''}}}
+{{ #if: {{{value|}}} | {{#if: {{{size|}}} | {{#if: {{{capacity|}}} |
+{{!}}-
+! colspan="2" style="border-top: 1px solid #aaa; border-bottom: 1px solid #aaa; background: #eee; padding: 0.1em 0.25em; border-right: 1px solid #aaa" {{!}} [[Value|Value]]
+! colspan="2" style="border-top: 1px solid #aaa; border-bottom: 1px solid #aaa; background: #eee; padding: 0.1em 0.25em; border-right: 1px solid #aaa" {{!}} [[Size#Items|Size]]
+! colspan="2" style="border-top: 1px solid #aaa; border-bottom: 1px solid #aaa; background: #eee; padding: 0.1em 0.25em" {{!}} [[Storage|Capacity]]
+{{!}}-
+{{!}} colspan="2" style="padding: 0.25em; text-align: center; border-right: 1px solid #aaa" {{!}} {{{value}}}☼
+{{!}} colspan="2" style="padding: 0.25em; text-align: center; border-right: 1px solid #aaa" {{!}} {{{size}}} cm³ 
+{{!}} colspan="2" style="padding: 0.25em; text-align: center;" {{!}} {{{capacity}}} cm³  |
+{{!}}-
+! colspan="3" style="border-top: 1px solid #aaa; border-bottom: 1px solid #aaa; background: #eee; padding: 0.1em 0.25em; border-right: 1px solid #aaa" {{!}} [[Value|Base value]]
+! colspan="3" style="border-top: 1px solid #aaa; border-bottom: 1px solid #aaa; background: #eee; padding: 0.1em 0.25em" {{!}} [[Size#Items|Size]]
+{{!}}-
+{{!}} colspan="3" style="padding: 0.25em; text-align: center;; border-right: 1px solid #aaa"; {{!}} {{{value}}}☼
+{{!}} colspan="3" style="padding: 0.25em; text-align: center;" {{!}} {{{size}}} cm³ 
+}} |
+{{!}}-
+! colspan="6" style="border-top: 1px solid #aaa; border-bottom: 1px solid #aaa; background: #eee; padding: 0.1em 0.25em" {{!}} [[Value|Base value]]
+{{!}}-
+{{!}} colspan="6" style="padding: 0.25em" {{!}}
+{{{value}}}☼ |}}}}
+|}{{#switch:{{NAMESPACE}}|Template = |#default={{Category|Furniture}}}}</includeonly><noinclude>
+{{v50_furniture|name=Bed
+|graphic=[[File:bed_sprite_prototype.png]]
+|tile=Θ|col=6:0:0
+|wood=y
+|rooms=
+* [[Bedroom]]
+* [[Barracks]]
+* [[Dormitory]]
+|value=10
+|size=10
+|capacity=10
+}}
+
+{{v50_furniture|name=Bed
+|graphic=[[File:bed_sprite_prototype.png]]
+|tile=Θ|col=6:0:0
+|wood=y
+|rooms=
+* [[Bedroom]]
+* [[Barracks]]
+* [[Dormitory]]
+|value=10
+}}
+
+==Usage==
+<pre>{{v50_furniture|name=Bed
+|graphic=[[File:bed_sprite_prototype.png]]
+|tile=Θ|col=6:0:0
+|wood=y
+|rooms=
+* [[Bedroom]]
+* [[Barracks]]
+* [[Dormitory]]
+|value=10
+|size=10
+|capacity=10
+}}</pre>
+Adds <nowiki>[[Category:Furniture]]</nowiki> to the article.
+[[Category:Templates]]
+[[Category:Infobox templates]]</noinclude>
