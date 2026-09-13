@@ -1,0 +1,550 @@
+''(For a discussion of how DF displays different items and decides which colors get altered and when, see [[color]].)''
+
+Dwarf Fortress uses '''color schemes''' to determine how the game will be presented during play, whether a [[ranger]] will appear bright Spring green or dark forest green, or whether [[microcline]] will be "eye blasting blue" or something more calm.  The default scheme is quite bold - other schemes are easily possible, even to better accommodate those of us with problems seeing standard color mixes, or just can't take "eye blasting blue".  
+
+A color scheme is broken down into 16 color labels:
+
+:BLACK, DGRAY
+:BLUE, LBLUE
+:GREEN, LGREEN
+:CYAN, LCYAN
+:RED, LRED
+:MAGENTA, LMAGENTA
+:BROWN, YELLOW
+:LGRAY, WHITE
+
+The color scheme data is located in the [[colors.txt]] file, found in the Dwarf Fortress/data/init folder.
+
+==What colors show up where==
+
+The easiest place to see all the colors next to each other is in the {{k|u}}nits list, where the different [[Skill#Professions.2C_colors.2C_.26_skill_categories|professional categories]] all have their identifying colors.  In that order (and with the default color values), they are...
+
+
+{| style="margin: 0 auto"
+|-
+| valign='top' |
+
+{{Skill Box|BLACK|0:0|0:0|
+''background''
+}}
+
+{{Skill Box|LCYAN|0:0|3:1|
+''current job listing*''
+}}
+
+{{Skill Box|LGRAY|7:0|7:0|
+[[Miner]]s
+}}
+
+{{Skill Box|YELLOW|6:1|6:1|
+[[Woodworker]]s
+}}
+
+| valign='top' |
+
+{{Skill Box|WHITE|7:1|7:1|
+[[Stoneworker]]s
+}}
+
+{{Skill Box|GREEN|2:0|2:0|
+[[Ranger]]s
+}}
+
+{{Skill Box|DGRAY|0:1|0:1|
+[[Metalsmith]]s
+}}
+
+{{Skill Box|LGREEN|2:1|2:1|
+[[Jeweler]]s
+}}
+
+| valign='top' |
+
+{{Skill Box|LBLUE|1:1|1:1|
+[[Craftsdwarf]]s
+}}
+
+{{Skill Box|BLUE|1:0|1:0|
+[[Fishery worker]]
+}}
+
+{{Skill Box|BROWN|6:0|6:0|
+[[Farmer]]s
+}}
+
+{{Skill Box|LRED|4:1|4:1|
+[[Engineer]]s
+}}
+
+| valign='top' |
+
+{{Skill Box|MAGENTA|5:0|5:0|
+[[Administrator]]s
+}}
+
+{{Skill Box|CYAN|3:0|3:0|
+[[Peasant]]s
+}}
+
+{{Skill Box|RED|4:0|4:0|
+[[Child]]ren
+}}
+
+{{Skill Box|LMAGENTA|0:0|5:1|
+[[Monarch]]s,
+''deceased''
+}}
+|}
+
+::''(* "On Break" is displayed in CYAN.)''
+
+Some other color uses:
+:* [[Magma]] is LRED. (Magma 1 level lower than current view is RED.)
+:* [[Water]] is LBLUE. (Water 1 level lower than current view is BLUE.)
+:* [[River]]s and [[brook]]s are LCYAN on their surface (w/ water below).
+:* For aesthetic purposes, almost all colours can be represented in stones (with the exception of LMAGENTA, CYAN, and BLACK). 
+:** BLACK: Can possibly be represented with [[Black-cap]] logs - the raws suggest that the cut logs are BLACK, but they also suggest that they're DGRAY.
+:** DGRAY: A wide variety of stones are DGRAY, one example being [[Gabbro]].
+:** BLUE: [[Kimberlite]] is the only stone that is BLUE. [[Nether-cap]]s also produce BLUE wood.
+:** LBLUE: [[Cobaltite]] is the only stone that is LBLUE.
+:** GREEN: [[Olivine]] is GREEN, as are Malachite and [[Serpentine]].
+:** LGREEN: [[Garnierite]] is the only LGREEN stone.
+:** CYAN: While there are no stones, [[Spore tree]]s are CYAN.
+:** LCYAN: [[Microcline]] is a LCYAN rock. [[Adamantine]] and its ore, [[Raw adamantine]], also display in LCYAN.
+:** RED: [[Bauxite]] and [[Kaolinite]] are RED, as is the [[Blood thorn]] tree.
+:** LRED: [[Realgar]], [[Petrified wood]], and [[Cinnabar]] are LRED. [[Goblin-cap]]s are also LRED
+:** MAGENTA: [[Rutile]] and [[Pitchblende]] are MAGENTA, and [[Glumprong]]s are MAGENTA trees.
+:** LMAGENTA: No stones are LMAGENTA, but [[Tunnel tube]]s are.
+:** BROWN: A lot of stones are BROWN; [[Chert]] is one example.
+:** YELLOW: [[Brimstone]], [[Gypsum]], [[Orthoclase]] and many other stones are YELLOW, as is the [[Fungiwood]] tree.
+:** LGRAY: Lots of stones are LGRAY, such as [[Granite]].
+:** WHITE: Many stones are WHITE, such as [[Limestone]], or [[Rock salt]]. The [[Tower-cap]] and [[Feather tree]] both produce WHITE wood.
+<!-- Someone more adept with the editting syntax should probably rearrange this information somehow. -->
+
+= Default Scheme =
+
+The default Dwarf Fortress color scheme is based off the 16 standard HTML colors, as discussed [http://en.wikipedia.org/wiki/Web_colors#HTML_color_names here].  (Some have been renamed in DF, but the tones themselves are the same.)
+
+These are broken up into 8 pairs, one darker, one lighter, as ordered below.  When a color is flashing or a displayed tile is "dark/bright" according to the game display, these colors are the two that work "together" to create that contrast.  Keep this in mind if creating a [[Color scheme#Custom color schemes|custom color scheme]], as described below.  (See [[Color]] for a more complete discussion.)
+
+If you lose the default scheme and neglected to make a backup ''(didn't we warn you to use "care and caution" when modding?)'', you can find the standard scheme below, without having to download DF again.
+
+Open Dwarf Fortress/data/init/[[colors.txt]], and copy the text as seen below over the values found at the very bottom of the file.  Save that file, re-start Dwarf Fortress, and you're set.
+
+{{color scheme
+|black=#000000
+|dgray=#808080
+|blue=#000080
+|lblue=#0000ff
+|green=#008000
+|lgreen=#00ff00
+|cyan=#008080
+|lcyan=#00ffff
+|red=#800000
+|lred=#ff0000
+|magenta=#800080
+|lmagenta=#ff00ff
+|brown=#808000
+|yellow=#ffff00
+|lgray=#c0c0c0
+|white=#ffffff
+}}
+
+= Custom color schemes =
+{{mod}}
+
+Players who are not satisfied with the default color scheme can alter things to suit their aesthetic tastes. In order for any scheme changes to take effect, the "colors.txt" file must be altered and saved. This file can be found by going to (your DF v0.34 folder)->(data)->(init)-> open file "colors.txt". The changes will not take effect until after you close and restart Dwarf Fortress.
+
+The 16 colors are not fixed, except by their definitions in colors.txt.  If you wanted to change YELLOW to something slightly brighter or darker, or more orange, or into deep purple, you can by changing the values listed under the label "YELLOW".  Note that the color names are ''case sensitive'' - the color is "YELLOW", not "Yellow" or "yellow".
+
+When designing a custom color, 3 "lights" of color are used: '''R'''ed, '''G'''reen, and '''B'''lue (RGB), on a scale of 0-255.  The more light (the higher the value), the brighter the color; the less light (the lower the value), the darker. Using "light" is not the same as using "pigment" ''(the standard "paint mixing" formulae we learned in school, where Red, Yellow and Blue are the 3 basic ingredients)'' - B+R does not give "purple" in this format.  
+
+Since we're using Red, Green and Blue light, some form of those three colors is relatively easy to achieve - but look at examples of the other standard colors below to understand how they mix together and how to "shade" or "tint", or brighten or darken a color - or you can simply find a color below that you like and go from that, or use one of these [[Color#Color_tokens|standard RGB colors]].  Always use caution to avoid ending up with colors that are "too similar".
+
+To change to a new color scheme, copy/paste a color list (or part of one or more) found below (or make your own up) over the existing scheme - don't worry, if you don't like it, the original, default scheme is listed above.
+
+''(Note also that when posting screenshots to this wiki (and the forum boards), custom color schemes (or [[tilesets]]) can cause confusion with players who do not use those specific mixes.  This wiki requests you use one of the default set-ups that come with the game to post screenshots here.)''
+
+
+----
+
+
+=== Lee's Colour scheme ===
+
+A quest to provide the optimal set of colours: all colours very easily distinguishable and earthy/natural without being washed out or too bright and garish. I'm picky and I went through many different colour schemes but I think this is almost there, so enjoy.
+
+
+{{color scheme
+|black=#000000
+|dgray=#646464
+|blue=#1E55A5
+|lblue=#5A82D2
+|green=#467D37
+|lgreen=#6EB437
+|cyan=#2D9187
+|lcyan=#46D7C3
+|red=#AA1400
+|lred=#D73C00
+|magenta=#822873
+|lmagenta=#D255BE
+|brown=#785032
+|yellow=#EBB400
+|lgray=#A0A0A0
+|white=#FAFAFA
+}}
+
+
+----
+
+=== "Natural" scheme ===
+
+This mix softens the glaring colors of the original to earthtones.
+
+{{color scheme
+|black=#000000
+|dgray=#585356
+|blue=#0d67c4
+|lblue=#91caff
+|green=#449e35
+|lgreen=#83d452
+|cyan=#56a3cd
+|lcyan=#b0dfd7
+|red=#971a1a
+|lred=#ff2222
+|magenta=#ff6ebb
+|lmagenta=#ffa7f6
+|brown=#785e2f
+|yellow=#ffda5a
+|lgray=#b9c0a2
+|white=#ffffff
+}}
+
+
+
+----
+
+=== True Brown ===
+
+Default scheme with BROWN actually being a shade of brown (rather than Olive Green). Created by [http://df.magmawiki.com/index.php?title=User:Met Met].
+
+{{color scheme
+|black=#000000
+|dgray=#505050
+|blue=#000080
+|lblue=#0000ff
+|green=#008000
+|lgreen=#00ff00
+|cyan=#008080
+|lcyan=#00ffff
+|red=#800000
+|lred=#ff0000
+|magenta=#800080
+|lmagenta=#ff00ff
+|brown=#785e30
+|yellow=#ffff00
+|lgray=#c0c0c0
+|white=#ffffff
+}}
+
+
+----
+
+
+=== Another natural scheme ===
+
+{{color scheme
+|black=#000000
+|dgray=#505050
+|blue=#495f9d
+|lblue=#6f8aa5
+|green=#597537
+|lgreen=#a0c852
+|cyan=#65909e
+|lcyan=#9fc4d2
+|red=#920000
+|lred=#ce4901
+|magenta=#a53665
+|lmagenta=#ef96cf
+|brown=#8a693b
+|yellow=#ffc600
+|lgray=#808080
+|white=#ffffff
+}}
+
+
+----
+
+
+=== Higher-visibility scheme ===
+
+Tired of trying to see your metalsmiths (dark grey) and fishery workers (navy blue) against a black background?  This scheme "brightens" most of the colors, while trying to stay true to the original tone when possible.  (Except BROWN, which is now actually "brown", not olive green.)
+
+{{color scheme
+|black=#000000|blackt=*
+|dgray=#787878
+|blue=#2c88de
+|lblue=#90caff
+|green=#209020
+|lgreen=#42e828
+|cyan=#008080|cyant=*
+|lcyan=#80e0d8
+|red=#b00808
+|lred=#ff0000|lredt=*
+|magenta=#b038a0
+|lmagenta=#ff54ff
+|brown=#785e30
+|yellow=#ffec30
+|lgray=#b0b0b0
+|white=#ffffff|whitet=*
+}}
+:''(* unchanged'')
+
+Original on the left, this scheme on the right...
+
+{| style="margin: 0 auto"
+|-
+| valign='top' |
+
+{{Skill Box|DGRAY|#888|#888|
+[[Metalsmith]]s
+}}
+
+{{Skill Box|GREEN|#080|#080|
+[[Ranger]]s
+}}
+
+{{Skill Box|BLUE|rgb(00, 00, 80)|rgb(00, 00, 80)|
+[[Fishery worker]]
+}}
+
+{{Skill Box|LBLUE|#00f|#00f|
+[[Craftsdwarf]]s
+}}
+
+{{Skill Box|BROWN|#880|#880|
+[[Farmer]]s
+}}
+
+{{Skill Box|MAGENTA|#808|#808|
+[[Administrator]]s
+}}
+
+{{Skill Box|RED|#800|#800|
+[[Child]]ren
+}}
+
+| valign='top' |
+
+{{Skill Box|DGRAY|rgb(176, 176, 176)|rgb(176, 176, 176)|
+[[Metalsmith]]s
+}}
+
+{{Skill Box|GREEN|rgb(32, 144, 32)|rgb(32, 144, 32)|
+[[Ranger]]s
+}}
+
+{{Skill Box|BLUE|rgb(44, 136, 222)|rgb(44, 136, 222)|
+[[Fishery worker]]
+}}
+
+{{Skill Box|LBLUE|rgb(144, 202, 255)|rgb(144, 202, 255)|
+[[Craftsdwarf]]s
+}}
+
+{{Skill Box|BROWN|rgb(120, 94, 48)|rgb(120, 94, 48)|
+[[Farmer]]s
+}}
+
+{{Skill Box|MAGENTA|rgb(176, 56, 160)|rgb(176, 56, 160)|
+[[Administrator]]s
+}}
+
+{{Skill Box|RED|rgb(176, 8, 8)|rgb(176, 8, 8)|
+[[Child]]ren
+}}
+|}
+
+----
+
+=== (Yet) Another scheme ===
+
+{{color scheme
+|black=#000000
+|dgray=#707070
+|blue=#203090
+|lblue=#2838ff
+|green=#309020
+|lgreen=#30f020
+|cyan=#208090
+|lcyan=#38d0ff
+|red=#971a1a
+|lred=#ff3020
+|magenta=#702090
+|lmagenta=#d038ff
+|brown=#907030
+|yellow=#ffe020
+|lgray=#b0b0b0
+|white=#ffffff
+}}
+
+
+----
+
+
+=== True CGA Scheme ===
+
+This scheme uses the genuine [http://en.wikipedia.org/wiki/Color_Graphics_Adapter CGA] palette, in case you're an old-school purist.  
+
+''(Note that the CGA "brown" can be difficult to distinguish from "red" unless it is immediately nearby.  For a slightly more readable version, you can "cheat" and replace the'' [BROWN_G:85]
+''with  ''[BROWN_G:170]. '')''
+
+
+{{color scheme
+|black=#000000
+|dgray=#555555
+|blue=#0000aa
+|lblue=#5555ff
+|green=#00aa00
+|lgreen=#55ff55
+|cyan=#00aaaa
+|lcyan=#55ffff
+|red=#aa0000
+|lred=#ff5555
+|magenta=#aa00aa
+|lmagenta=#ff55ff
+|brown=#aa5500
+|yellow=#ffff55
+|lgray=#aaaaaa
+|white=#ffffff
+}}
+
+
+----
+
+
+=== For the Chromatically Challenged ===
+
+Colour blindness can result in colours being too similar, such as red and brown, so this scheme sacrifices true colour accuracy for a greater difference in hues. If you have normal colour vision, then this probably looks really weird.
+
+
+{{color scheme
+|black=#000000
+|dgray=#808080
+|blue=#0000C0
+|lblue=#3030FF
+|green=#008000
+|lgreen=#00D000
+|cyan=#007090
+|lcyan=#40D0FF
+|red=#C00000
+|lred=#FF3030
+|magenta=#A00080
+|lmagenta=#FF40D0
+|brown=#606000
+|yellow=#FFFF40
+|lgray=#C0C0C0
+|white=#FFFFFF
+}}
+
+=== Red/Green Colorblindness ===
+
+A modification of the chromatically challenged color scheme above, made to the tastes of someone with Red/Green colorblindness.
+
+{{color scheme
+|black=#000000
+|dgray=#707070
+|blue=#0000F0
+|lblue=#5050FF
+|green=#008000
+|lgreen=#00D000
+|cyan=#007090
+|lcyan=#40D0FF
+|red=#F00000
+|lred=#FF5050
+|magenta=#A00080
+|lmagenta=#FF30F0
+|brown=#806000
+|yellow=#FFFF40
+|lgray=#D0D0D0
+|white=#FFFFFF
+}}
+
+=== Tango Scheme ===
+
+Color scheme to match [http://tango.freedesktop.org/Tango_Icon_Theme_Guidelines Tango palette]. Cyan values were missing from palette, so blue/plum values are used instead.
+
+{{color scheme
+|black=#2E3436
+|dgray=#888a85
+|blue=#204a87
+|lblue=#3465a4
+|green=#4e9a06
+|lgreen=#8ae234
+|cyan=#75507b
+|lcyan=#729fcf
+|red=#a40000
+|lred=#ef2929
+|magenta=#5c3566
+|lmagenta=#ad7fa8
+|brown=#ce5c00
+|yellow=#fce94f
+|lgray=#babdb6
+|white=#eeeeec
+}}
+
+=== AngleWyrm's Colorset ===
+Blues greens and brown that are easy on the eyes.
+
+{{color scheme
+|black=#000
+|dgray=#484848
+|blue=#303c78
+|lblue=#5064b4
+|green=#1e6428
+|lgreen=#289632
+|cyan=#285a82
+|lcyan=#729fcf
+|red=#a40000
+|lred=#ef2929
+|magenta=#5c3566
+|lmagenta=#ad7fa8
+|brown=#785032
+|yellow=#b4aa3c
+|lgray=#808080
+|white=#eeeeec
+}}
+
+=== Putnam's Fortbent Color Scheme ===
+
+A color scheme designed for closest accuracy to Homestuck's colors; no accuracy to actual in-game colors guaranteed. 
+
+{{color scheme
+|black=#000000
+|dgray=#626262
+|dgrayt=(Caliborn gray tumut)
+|blue=#000056
+|bluet=(Equius B100)
+|lblue=#005682
+|lbluet=(Vriska Cerulean!!!!!!!!)
+|green=#416600
+|greent=(:33 < *nepeta green*)
+|lgreen=#00FF00
+|lgreent=(Calliope's blood)
+|cyan=#008282
+|cyant=(T3R3Z1 T34L)
+|lcyan=#00FFFF
+|red=#a10000
+|redt=(aradia red)
+|lred=#FF0000
+|magenta=#6a006a
+|magentat=(eridan vviolet)
+|lmagenta=#77003c
+|lmagentat=(meenah purple)
+|brown=#a15000
+|brownt=(uHH, tAVROS BROWN)
+|yellow=#a1a100
+|yellowt=(yucky mu2tard yellow)
+|lgray=#929292
+|lgrayt=(Calliope gray!)
+|white=#FFFFFF
+}}

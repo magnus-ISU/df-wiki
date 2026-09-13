@@ -1,0 +1,5 @@
+{{#if:{{{1|}}}|{{cite|forum-{{lc:{{{1}}}}}|
+{{#if:{{cite/defined|forum-{{lc:{{{1}}}}}}}||{{forum link/url|{{{1}}}}}}}
+}}|<span class="error">Usage: <nowiki>{{cite forum | thread ID}}</nowiki></span>}}<noinclude>
+{{documentation}}
+</noinclude>

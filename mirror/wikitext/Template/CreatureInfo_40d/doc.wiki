@@ -1,0 +1,21 @@
+Note: ''size'' may be specified to provide a default for bones, meat, and chunks.
+
+Usage:
+<pre><nowiki>
+{{CreatureInfo 40d|name=Elephant|symbol=E|color=7:0:0|
+size=16|fat=10|skulls=1|modvalue=3|skin=Yes|
+biome=
+* Any tropical forest
+* Tropical shrubland
+}}
+</nowiki></pre>
+
+{{CreatureInfo 40d|name=Elephant|symbol=E|color=7:0:0|
+size=16|fat=10|skulls=1|modvalue=3|skin=Yes
+|biome=
+* Any tropical forest
+* Tropical shrubland
+}}
+<div style="clear: both">
+<includeonly>[[Category:Templates]]</includeonly>
+<noinclude>[[Category:Template Documentation]]</noinclude>

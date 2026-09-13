@@ -1,0 +1,21 @@
+{{documentation subpage}}
+This is intended to be used in a CSS context as a shorter way of expressing border radii. It uses several vendor-specific prefixes, as well as the standard CSS3 <code>border-radius</code>.
+
+==Examples==
+<pre>
+<div style="border: 1px solid black; {{border radius|5px}}">Test</div>
+</pre>
+Produces:
+<div style="border: 1px solid black; {{border radius|5px}}">Test</div>
+Source:
+<pre>
+<div style="border: 1px solid black; border-radius: 5px; -webkit-border-radius: 5px; 
+-moz-border-radius: 5px; -o-border-radius: 5px; -ms-border-radius: 5px;">Test</div>
+</pre>
+==Technical==
+A semicolon after the template (<code><nowiki>{{border radius|4px}};</nowiki></code>) '''is not necessary'''. This template ends with a semicolon. Extra semicolons could cause problems in a few browsers.
+
+This doesn't yet support specific corners, since CSS3 and the Webkit-specific version use <code>top-right-border-radius</code> and <code>-webkit-top-right-border-radius</code> (respectively), while Mozilla uses <code>-moz-border-radius-topright</code>.  Feel free to implement this (it shouldn't be too hard), but '''''please''''' test it on your user page or at [[/Sandbox]] '''''before''''' changing this template. Bad CSS on the [[main page]] is not good.
+
+<includeonly>[[Category:Formatting Templates]]</includeonly>
+<noinclude>[[Category:Template Documentation]]</noinclude>

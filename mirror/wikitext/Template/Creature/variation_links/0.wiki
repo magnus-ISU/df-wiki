@@ -1,0 +1,9 @@
+{{#ifexist:{{{ns}}}:{{{1}}}|[[{{{ns}}}:{{{1}}}|{{{1}}}]]}}<nowiki></nowiki> {{#ifexist:{{{ns}}}:{{{1}}} man/raw|{{{sep|-}}} [[{{{ns}}}:{{{1}}} man|{{{1}}} man]]}} {{#ifexist:{{{ns}}}:Large {{lcfirst:{{{1}}}}}/raw|{{{sep|-}}} [[{{{ns}}}:Large {{lcfirst:{{{1}}}}}|Large {{lcfirst:{{{1}}}}}]]}} {{#ifexist:{{{ns}}}:Giant {{lcfirst:{{{1}}}}}/raw|{{{sep|-}}} [[{{{ns}}}:Giant {{lcfirst:{{{1}}}}}|Giant {{lcfirst:{{{1}}}}}]]}} {{#ifexist:{{{ns}}}:Gigantic {{lcfirst:{{{1}}}}}/raw|{{{sep|-}}} [[{{{ns}}}:Gigantic {{lcfirst:{{{1}}}}}|Gigantic {{lcfirst:{{{1}}}}}]]}}<noinclude>
+This does the "work" - the parent template just makes it look pretty.
+
+Tests:
+{{creature/variation links/0|Aardvark|ns=DF2012}}
+
+{{creature/variation links/0|Fire|ns=DF2012}}
+
+</noinclude>

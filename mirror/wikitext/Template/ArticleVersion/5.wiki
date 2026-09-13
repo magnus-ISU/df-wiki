@@ -1,0 +1,55 @@
+<noinclude>
+<!-- DO NOT edit this template unless you know very well what you are doing. This template is extremely easy to break. -->
+{{shortcut|template:av}}
+</noinclude>{{
+#vardefine:PAGE|{{{1|{{PAGENAME}}}}}}}{{
+#vardefine:ecur|{{#ifexist:DF2014:{{#var:PAGE}}|1}}}}{{
+#vardefine:e5|{{#var:ecur}}}}{{
+#vardefine:e4|{{#ifexist:v0.34:{{#var:PAGE}}|1}}}}{{
+#vardefine:e3|{{#ifexist:v0.31:{{#var:PAGE}}|1}}}}{{
+#vardefine:e2|{{#ifexist:40d:{{#var:PAGE}}|1}}}}{{
+#vardefine:e1|{{#ifexist:23a:{{#var:PAGE}}|1}}}}{{
+#vardefine:emw|{{#ifexist:Masterwork:{{#var:PAGE}}|1}}}}{{
+#vardefine:evan|{{#if:{{#var:e5}}{{#var:e4}}{{#var:e3}}{{#var:e2}}{{#var:e1}}|1}}}}{{
+#vardefine:emod|{{#if:{{#var:emw}}|1}}}}{{
+#vardefine:ismod|{{#switch:{{NAMESPACE}}|Masterwork=1}}
+}}{{version links
+|theme={{#switch:{{NAMESPACE}}|{{DF:Current}}=green|Template|Dwarf Fortress Wiki=blue|Masterwork=purple|#default=orange}}
+|r1={{#if:{{#var:evan}}|
+[[{{#ifeq:{{NAMESPACE}}|DF2014|*}}DF2014:{{PAGENAME}}|v0.xx.01]]
+[[{{#ifeq:{{NAMESPACE}}|v0.34|*}}v0.34:{{PAGENAME}}|v0.34.11]]
+[[{{#ifeq:{{NAMESPACE}}|v0.31|*}}v0.31:{{PAGENAME}}|v0.31.25]]
+[[{{#ifeq:{{NAMESPACE}}|40d|*}}40d:{{PAGENAME}}|v0.28.181.40d]]
+[[{{#ifeq:{{NAMESPACE}}|23a|*}}23a:{{PAGENAME}}|v0.23.130.23a]]
+}}
+|r2={{#if:{{#var:emod}}|
+{{#if:{{#var:ismod}}||Mods:&nbsp;}}
+[[{{#ifeq:{{NAMESPACE}}|Masterwork|*}}Masterwork:{{PAGENAME}}|Masterwork]]
+}}
+|bottom={{version links/link|Template:av|More Info}}
+|center={{#switch:{{NAMESPACE}}|#default=This article is about an '''older version''' of DF.[[category:Obsolete|{{PAGENAME}}]]{{#if:{{#var:e4}}||[[category:Missing current version|{{PAGENAME}}]]}}|Template=This article is in the template namespace.|Dwarf Fortress Wiki=This article is in the DF wiki namespace.|{{df:current}}=This article is about the current version of DF.[[category:Current|{{PAGENAME}}]]|Masterwork=This article is about a '''[[Main:mod|mod]]'''.}}
+}}{{#ifeq:{{lc:{{NAMESPACE}}}}|masterwork|{{mwv}}}}
+<noinclude>
+'''This is a copy of {{tl|av}} with five versions. Namespaces and version numbers are subject to change. &mdash;[[User:Lethosor|<span style="color:#074">Lethosor</span>]] ([[User talk:Lethosor|<span style="color:#092">talk</span>]]) 19:02, 19 June 2014 (UTC)
+
+==Example==
+<!-- Note the use of {{nocats}} with a Cat example -->
+<div style="border:1px solid #ccc; background-color:#fcfcfc; padding:1em; {{border radius|3px}}">
+= Cat =
+<div style="position:relative;">{{nocats|{{quality|fine}}}}</div>
+{{creaturelookup/0|Cat}}
+{{nocats|{{av5|Cat}}}}
+
+__TOC__
+
+{{clear}}
+{{gamedata|{{cv:cat/raw}}}}
+{{creatures}}
+</div>
+
+{{docbox|Documentation|template:ArticleVersion/doc}}
+{{ArticleVersion/doc}}
+{{docbox-foot}}
+[[category:Templates]]
+
+</noinclude>

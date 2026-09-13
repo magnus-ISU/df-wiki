@@ -1,0 +1,14 @@
+{{creature/variation/0|{{creature/basename|{{{1|{{PAGENAME}} }}} }}|ns={{#switch:{{NAMESPACE}}|DF2012|Masterwork={{NAMESPACE}}|#default=cv}}}}<noinclude>{{creature/case notice}}
+
+Returns a mask for existing creature variations: 00, 01, 10, or 11 (first digit: "man", 2nd: "giant")
+
+Additionally, "L" means "Large" exists, "G" means "Giant" exists. For compatibility, absence of these produces no text. (No variations=00, not 0000)
+==Examples==
+Ant:{{creature/variation|ant}}
+
+Bat:{{creature/variation|bat}}
+
+Cat:{{creature/variation|cat}}
+
+Rat:{{creature/variation|rat}} ([[Large rat]], [[giant rat]], but no [[Special:search/rat man|rat man]])
+</noinclude>

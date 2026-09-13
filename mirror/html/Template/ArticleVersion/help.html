@@ -1,0 +1,20 @@
+<div class="mw-parser-output"><p>{{<a href="/index.php/Template:Av" class="mw-redirect" title="Template:Av">av</a>}} is a complex template - this is a reference guide explaining some important parts.  
+</p>
+<h2><span class="mw-headline" id="Structure">Structure</span></h2>
+<p>This template consists of 2 main parts: <b><a href="#Variables">Variable definitions</a></b> and a <b><a href="#Table">table</a></b> (as well as documentation).
+</p>
+<h3><span class="mw-headline" id="Variables">Variables</span></h3>
+<p>Variables are used to cut down on <tt>#ifexist</tt> - storing the result in a variable does not require multiple, identical invocations of an expensive parser function (also, it's a lot easier to read).
+</p><p>The variables defined in the template are list
+</p>
+<ul><li><tt>PAGE</tt>: The current page - uses the first parameter to av if specified, or defaults to {{PAGENAME}} (this is not implemented completely – you can specify a page name for av to use, but the colors are still determined by the namespace)</li>
+<li><b>Existence checks</b>
+<ul><li><tt>e4</tt>, <tt>e3</tt>, <tt>e2</tt>, <tt>e1</tt>: These variables are set to 1 if the article exists in the corresponding namespace. The <tt>e</tt> stands for "exists".
+<ul><li>Currently, DF2012=4, v0.31=3, 40d=2, and 23a=1. DF2012 is likely to change when the next version is released, so using the namespace as the variable name would make updating the template harder.</li>
+<li>Note that this variable is <b>blank</b> when the page does not exist (this is for easy use with <tt>#if</tt>, which treats a blank string as false). If you need 0 to represent false, use <tt>{{#var:e4|0}}</tt> (this technique is used with <tt>eboth</tt>)</li></ul></li>
+<li><tt>emw</tt>: 1 if the page exists in the Masterwork (mod) namespace</li>
+<li><tt>evan</tt> (Abbreviation of "<b>e</b>xists in <b>van</b>illa DF"): 1 if the page exists in <i>any</i> vanilla namespace</li>
+<li><tt>emod</tt>: 1 if the page exists in any mod namespace. This is currently redundant, since Masterwork is the only mod currently implemented. However, this should <b>not</b> be used when checking for a mod (don't resort to <tt>emw</tt> just because it works at the moment)</li>
+<li><tt>ismod</tt>: 1 if the <i>current page</i> is about a mod (not exactly related, but close enough)</li>
+<li><tt>eboth</tt>: 1 if the page exists in a vanilla <b>and</b> mod namespace</li>
+<li><tt>enone</tt>: 1 if the page does not exist in a vanilla or mod namespace (this is <b>not</b> the opposite of <tt>eboth</tt> - both are blank if the page exists in one set of namespaces but not the other)</li></ul></li></ul></div>

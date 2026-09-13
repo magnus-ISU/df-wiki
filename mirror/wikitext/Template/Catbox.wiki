@@ -1,0 +1,11 @@
+<table class="listlinkbox noprint" style="float: right; background: #fff; margin: .3em .3em .3em 1em; padding: 3px; text-align: center;"><tr><th style="border: none; background: transparent;">
+<div style="position: relative; width: 84px; height: 94px; overflow: hidden;">
+<div style="position: absolute; top: 16px; left: 0px; width:84px; overflow: hidden; z-index: 3;">[[:Category:{{{1|{{FULLPAGENAME}}}}}|View the<br>related<br>category]]</div>
+<div style="position: absolute; top: 0px; left: 0px; z-index: 2;">[[Image:catback.png|link=:Category:{{{1|{{FULLPAGENAME}}}}}]]</div>
+</div>
+</th></tr></table><noinclude>Usage: 
+
+<nowiki>{{catbox | cat}}</nowiki> creates a floating box linked to category "cat". (specifically, <nowiki>[[:Category:</nowiki>''cat'']])
+
+<nowiki>{{catbox}}</nowiki> creates a floating box linked to the category with the same name as the current page (including namespace).
+</noinclude><noinclude>[[Category:Navigation templates]]</noinclude>

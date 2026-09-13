@@ -1,0 +1,13 @@
+{{#if:{{{10|}}}|{{#vardefine:columns|10}}|{{#if:{{{9|}}}|{{#vardefine:columns|9}}|{{#if:{{{8|}}}|{{#vardefine:columns|8}}|{{#if:{{{7|}}}|{{#vardefine:columns|7}}|{{#if:{{{6|}}}|{{#vardefine:columns|6}}|{{#if:{{{5|}}}|{{#vardefine:columns|5}}|{{#if:{{{4|}}}|{{#vardefine:columns|4}}|{{#if:{{{3|}}}|{{#vardefine:columns|3}}|{{#if:{{{2|}}}|{{#vardefine:columns|2}}|{{#if:{{{1|}}}|{{#vardefine:columns|1}}|{{#vardefine:columns|0}}
+}}}}}}}}}}}}}}}}}}}}<div style="{{{style|}}}"><!--
+-->{{#if:{{{1|}}}|<div style="float:left; width:{{#expr:100/{{#var:columns}}}}%; padding:{{{cpadding|0.2em}}}; box-sizing:border-box; {{{cstyle|}}}">{{{1}}}</div>}}<!--
+-->{{#if:{{{2|}}}|<div style="float:left; width:{{#expr:100/{{#var:columns}}}}%; padding:{{{cpadding|0.2em}}}; box-sizing:border-box; {{{cstyle|}}}">{{{2}}}</div>}}<!--
+-->{{#if:{{{3|}}}|<div style="float:left; width:{{#expr:100/{{#var:columns}}}}%; padding:{{{cpadding|0.2em}}}; box-sizing:border-box; {{{cstyle|}}}">{{{3}}}</div>}}<!--
+-->{{#if:{{{4|}}}|<div style="float:left; width:{{#expr:100/{{#var:columns}}}}%; padding:{{{cpadding|0.2em}}}; box-sizing:border-box; {{{cstyle|}}}">{{{4}}}</div>}}<!--
+-->{{#if:{{{5|}}}|<div style="float:left; width:{{#expr:100/{{#var:columns}}}}%; padding:{{{cpadding|0.2em}}}; box-sizing:border-box; {{{cstyle|}}}">{{{5}}}</div>}}<!--
+-->{{#if:{{{6|}}}|<div style="float:left; width:{{#expr:100/{{#var:columns}}}}%; padding:{{{cpadding|0.2em}}}; box-sizing:border-box; {{{cstyle|}}}">{{{6}}}</div>}}<!--
+-->{{#if:{{{7|}}}|<div style="float:left; width:{{#expr:100/{{#var:columns}}}}%; padding:{{{cpadding|0.2em}}}; box-sizing:border-box; {{{cstyle|}}}">{{{7}}}</div>}}<!--
+-->{{#if:{{{8|}}}|<div style="float:left; width:{{#expr:100/{{#var:columns}}}}%; padding:{{{cpadding|0.2em}}}; box-sizing:border-box; {{{cstyle|}}}">{{{8}}}</div>}}<!--
+-->{{#if:{{{9|}}}|<div style="float:left; width:{{#expr:100/{{#var:columns}}}}%; padding:{{{cpadding|0.2em}}}; box-sizing:border-box; {{{cstyle|}}}">{{{9}}}</div>}}<!--
+-->{{#if:{{{10|}}}|<div style="float:left; width:{{#expr:100/{{#var:columns}}}}%; padding:{{{cpadding|0.2em}}}; box-sizing:border-box; {{{cstyle|}}}">{{{10}}}</div>}}<!--
+--></div>

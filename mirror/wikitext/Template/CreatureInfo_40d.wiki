@@ -1,0 +1,35 @@
+{{infostart|{{{name}}}}}
+{{infocell|{{#if:{{{wagon|}}}|▓▓▓<br/>▓░▓<br/>▓░▓|{{char|{{{symbol|?}}}}}}}|style=color: {{fgcolor|{{{color|5:0:1}}}}}; background: black; font-size:x-large; font-weight: bold; font-family: 'Courier New', 'Quicktype Mono', 'Bitstream Vera Sans Mono', 'Lucida Console',  'Lucida Sans Typewriter', monospace; text-align:center; vertical-align:center}}
+{{Infoportrait|Portrait}}
+{{infoheader|[[Biome]]}}
+{{infocell|{{#if:{{{biome|}}}|{{{biome|}}}|Special}}}}
+{{#ifexpr:{{#if:{{{alignment|}}}|1|0}} or {{#ifexpr:{{{bldgdest|0}}}>0|1|0}} or {{#if:{{{attribs|}}}|1|0}}|
+{{infoheader|Attributes}}
+{{#if:{{{alignment|}}}|{{inforow|Alignment:|{{{alignment}}} }}|{{!-}}}}
+{{#ifexpr:{{{bldgdest|0}}}>0|{{infocell|[[Building destroyer]]: Level {{{bldgdest}}}{{Category|Building destroyer}}}}|{{!-}}}}}}
+{{#if:{{{attribs|}}}|{{infocell|{{span-hide}}{{{attribs}}}{{end-span}}}}|{{!-}}}}
+{{#ifexpr:{{#if:{{{pet|}}}|1|0}} or {{#if:{{{exotic|}}}|1|0}}|
+{{infoheader|Tamed Attributes}}
+{{inforow|Pet value|{{formatnum:{{{petvalue|0}}}}}}}
+{{#if:{{{tame_attribs|}}}|{{infocell|{{span-hide}}{{{tame_attribs}}}{{end-span}}}}|{{!-}}}}
+{{infocell|{{#ifexpr:{{#expr:{{{train_hunt|0}}}+{{{train_war|0}}}>0}}
+|[[Animal trainer|Trainable]]:&nbsp; {{#ifexpr:{{{train_hunt|0}}}>0|Hunting {{Category|Hunting animals}}|}} &nbsp; {{#ifexpr:{{{train_war|0}}}>0|War {{Category|War animals}}|}}|Not hunting/war [[Animal trainer|trainable]]}}}}|{{infoheader|bg=#fbb|Cannot be tamed}}}}
+{{#if:{{{childage|}}}{{{adultage|}}}{{{maxage|}}}|<nowiki/>
+{{infoheader|Age}}
+{{#if:{{{childage|}}}|{{inforow|Child at:|{{{childage}}}}}}}
+{{inforow|Adult at:|{{{adultage}}}}}
+{{inforow|Max age:|{{{maxage}}}}}}}
+{{#if:{{{item|}}}|{{infoheader|Becomes after death}}
+{{infocell|{{{item|}}}}}|
+{{infoheader|{{#ifeq:{{{butcher|yes}}}|no|Rotting leaves|Butchering returns}}}}
+{{#if:{{{modvalue|}}}|([[Modvalue|Value multiplier]] ×{{{modvalue|}}})}}
+{{inforow|[[Bone]]s|{{{bones|{{{size|<noinclude>''bones''</noinclude><includeonly>?</includeonly>}}}}}}}}
+{{#ifeq:{{{butcher|yes}}}|no||
+{{inforow|[[Chunk]]s|<noinclude>''chunks''</noinclude><includeonly>{{{chunks|{{{size|?}}}}}}</includeonly>}}
+{{inforow|[[Meat]]|<noinclude>''meat''</noinclude><includeonly>{{{meat|{{{size|?}}}}}}</includeonly>}}
+{{inforow|[[Fat]]|<noinclude>''fat''</noinclude><includeonly>{{{fat|?}}}</includeonly>}}
+|{{!-}}}}
+{{inforow|[[Skull]]s|<noinclude>''skulls''</noinclude><includeonly>{{{skulls|?}}}</includeonly>}}
+{{#ifeq:{{{butcher|yes}}}|no||{{inforow|[[Skin]]|<noinclude>''skin''</noinclude><includeonly>{{{skin|?}}}</includeonly>}}|{{!-}}}}}}
+{{#ifeq:{{{wiki}}}|no||{{infocell|style=text-align:center; background-color: #eee; border-top: 1px solid #aaa|1=[[wikipedia:{{#if:{{{wiki|}}}|{{{wiki}}}|{{{name}}}}}|Wikipedia article]]}}|{{!-}}}}
+{{infoend}}<noinclude>{{documentation}}</noinclude>

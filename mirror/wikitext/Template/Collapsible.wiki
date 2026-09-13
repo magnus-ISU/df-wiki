@@ -1,0 +1,8 @@
+<div style="width:auto">
+{| class="collapsible {{#ifeq:{{{hidden|no}}}|no||collapsed}}" style="width: {{{width|100%}}}; margin:{{#switch:{{{boxalign|center}}}|center=0px auto|left=0px 0px 0px auto|right=0px auto 0px 0px}};"
+! style="{{#if:{{{lcolor|}}}|color:{{{lcolor|}}}}}; background-color:{{{hbgcolor|transparent}}}; border-color:{{{hbordercolor|#fff}}}; border-width:{{{hborderwidth|2px}}} text-align: {{{halign|center}}};" |<span style="text-align: {{{halign|{{{talign|center}}}}}}; color: {{{hcolor|black}}};">{{{1|}}}</span>
+|-
+| style="text-align: {{{align|left}}}; color: {{{color|black}}}; background-color:{{{bgcolor|transparent}}}; border-color:{{{bordercolor|#fff}}}; border-width:{{{borderwidth|2px}}}"| {{#if:{{{2|}}}|{{{2}}}|{{{1|No text supplied! (Use <code><nowiki>{{collapsible|text}}</nowiki></code>)}}}}}
+|}</div><noinclude>
+{{doc}}
+</noinclude>

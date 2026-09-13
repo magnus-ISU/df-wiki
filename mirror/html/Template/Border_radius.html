@@ -1,0 +1,25 @@
+<div class="mw-parser-output"><div class="plainlinks" style="clear: both; margin: 1em 0 0 0; border: 1px solid #aaa; background-color: #f0f0f8; padding: 5px 1em; border-radius: .4em; -webkit-border-radius: .4em; -moz-border-radius: .4em; -o-border-radius: .4em; -ms-border-radius: .4em;">
+<h2><span id="(view_-_edit_-__history_-__purge)_Documentation"></span><span class="mw-headline" id=".28view_-_edit_-_.0Ahistory_-_.0Apurge.29_Documentation"><span style="float: right; font-size: small; font-family: sans-serif;">
+(<a href="/index.php/Template:Border_radius/doc" title="Template:Border radius/doc"><span title="View this documentation">view</span></a> - <a rel="nofollow" class="external text" href="//dwarffortresswiki.org/index.php?title=Template:Border_radius/doc&amp;action=edit"><span title="Edit this documentation">edit</span></a> - 
+<a rel="nofollow" class="external text" href="//dwarffortresswiki.org/index.php?title=Template:Border_radius/doc&amp;action=history"><span title="Documentation history">history</span></a> - 
+<a rel="nofollow" class="external text" href="//dwarffortresswiki.org/index.php?title=Template:Border_radius&amp;action=purge"><span title="Purge this documentation (causes it to be updated; use only if it doesn&#39;t update after editing, NOT in a preview)">purge</span></a>)</span> Documentation</span></h2>
+<p><br />
+This is intended to be used in a CSS context as a shorter way of expressing border radii. It uses several vendor-specific prefixes, as well as the standard CSS3 <code>border-radius</code>.
+</p>
+<h2><span class="mw-headline" id="Examples">Examples</span></h2>
+<pre>&lt;div style="border: 1px solid black; {{border radius|5px}}"&gt;Test&lt;/div&gt;
+</pre>
+<p>Produces:
+</p>
+<div style="border: 1px solid black; border-radius: 5px; -webkit-border-radius: 5px; -moz-border-radius: 5px; -o-border-radius: 5px; -ms-border-radius: 5px;">Test</div>
+<p>Source:
+</p>
+<pre>&lt;div style="border: 1px solid black; border-radius: 5px; -webkit-border-radius: 5px; 
+-moz-border-radius: 5px; -o-border-radius: 5px; -ms-border-radius: 5px;"&gt;Test&lt;/div&gt;
+</pre>
+<h2><span class="mw-headline" id="Technical">Technical</span></h2>
+<p>A semicolon after the template (<code>{{border radius|4px}};</code>) <b>is not necessary</b>. This template ends with a semicolon. Extra semicolons could cause problems in a few browsers.
+</p><p>This doesn't yet support specific corners, since CSS3 and the Webkit-specific version use <code>top-right-border-radius</code> and <code>-webkit-top-right-border-radius</code> (respectively), while Mozilla uses <code>-moz-border-radius-topright</code>.  Feel free to implement this (it shouldn't be too hard), but <i><b>please</b></i> test it on your user page or at <a href="/index.php?title=Template:Border_radius/Sandbox&amp;action=edit&amp;redlink=1" class="new" title="Template:Border radius/Sandbox (page does not exist)">/Sandbox</a> <i><b>before</b></i> changing this template. Bad CSS on the <a href="/index.php/Main_page" class="mw-redirect" title="Main page">main page</a> is not good.
+</p>
+</div>
+</div>

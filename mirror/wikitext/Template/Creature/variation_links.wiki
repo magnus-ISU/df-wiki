@@ -1,0 +1,31 @@
+<includeonly>{{creature/variation links/0|sep={{{sep|-}}}|ns={{#switch:{{NAMESPACE}}|DF2014=DF2014|v0.34=v0.34|v0.31=v0.31|40d=40d|23a=23a|Masterwork=Masterwork|#default=cv}}|{{Creature/basename|{{{1|{{PAGENAME}} }}} }} }}</includeonly><noinclude>{{creature/case notice}}
+Examples:
+
+Bat: {{creature/variation links|Bat}}
+
+Bat man: {{creature/variation links|Bat man}}
+
+Giant bat: {{creature/variation links|Giant bat}}
+
+Ant man: {{creature/variation links|Ant man}}
+
+Giant giraffe: {{creature/variation links|Giant giraffe}}
+
+Giant badger: {{creature/variation links|Giant badger}}
+
+Rat: {{creature/variation links|Rat}}
+
+Panda: {{creature/variation links|Panda}}
+
+Squid: {{creature/variation links|Squid}}
+
+[[/case examples|Case sensitivity examples]]
+===List===
+Harp seal:
+*{{creature/variation links|Harp seal|sep=<li>}}
+
+
+NOTE: the automatic variation information can be overridden by passing a "vary" parameter to creaturelookup/0. Passing a value of "no" will disable variation information; all other passed values will be displayed in the variation box. (ex. [[DF2012:Giant tortoise]], [[DF2012:Fire man]])
+
+[[Category:Creature macros]]
+</noinclude>

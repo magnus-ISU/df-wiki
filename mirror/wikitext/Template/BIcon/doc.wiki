@@ -1,0 +1,16 @@
+This is a template used to display biome icons. You can hover over the icon with the mouse for the name of the biome it represents.
+
+Usage: <pre>{{bIcon|<ID# OR Token>}}</pre>
+
+Examples:
+* <nowiki>{{BIcon|12}}</nowiki> -> {{BIcon|12}}
+* <nowiki>{{BIcon|RIVER_TROPICAL_BRACKISHWATER}}</nowiki> -> {{BIcon|RIVER_TROPICAL_BRACKISHWATER}}
+* <nowiki>{{BIcon|ALL_MAIN}} {{BIcon|ANY_LAND}} {{BIcon|ANY_OCEAN}}</nowiki> -> {{BIcon|ALL_MAIN}} {{BIcon|ANY_LAND}} {{BIcon|ANY_OCEAN}}
+
+'''NOTES:'''
+* For cavern layer depth indicators use 'C1', 'C2', 'C3' and 'TO'. ex: {{BIcon|C1}} {{BIcon|C2}}{{BIcon|TO}}{{BIcon|C3}}
+* There are ID#'s included for individually specifying saltwater, freshwater, and brackish-water. They are 'S', 'F' and 'B' respectively.
+* For night creatures and hidden fun stuff use 'N' and 'HFS'; {{BIcon|N}} {{BIcon|HFS}}
+
+
+To see a full listing of which ID#s and tokens correspond to which biome, see [[Biome token|this article]].

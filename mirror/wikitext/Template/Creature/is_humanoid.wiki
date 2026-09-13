@@ -1,0 +1,10 @@
+<includeonly>{{#ifeq:{{#df_tagentry:{{{{{ns|{{NAMESPACE}}}}}:{{{1|{{PAGENAME}}}}}/raw|1}}|APPLY_CREATURE_VARIATION|0|1|notfound}}|ANIMAL_PERSON|1|{{
+#ifeq:{{#rsplit:{{#rreplace:{{#df_tagentry:{{{{{ns|{{NAMESPACE}}}}}:{{{1|{{PAGENAME}}}}}/raw}}|BODY|0|1|NOT_HUMANOID}}|HUMANOID_ARMLESS|INVALID_TYPE}}|_|0}}|HUMANOID|1|0}}}}</includeonly><noinclude>
+Returns 1 if the given creature is a humanoid, 0 otherwise
+===Examples===
+<nowiki>{{creature/is humanoid|ant|ns=DF2012}}</nowiki>: {{creature/is humanoid|ant|ns=DF2012}}<br/>
+<nowiki>{{creature/is humanoid|antman|ns=DF2012}}</nowiki>: {{creature/is humanoid|antman|ns=DF2012}}<br/>
+<nowiki>{{creature/is humanoid|barn owl|ns=DF2012}}</nowiki>: {{creature/is humanoid|barn owl|ns=DF2012}}<br/>
+<nowiki>{{creature/is humanoid|crab man|ns=DF2012}}</nowiki>: {{creature/is humanoid|crab man|ns=DF2012}}
+
+</noinclude>

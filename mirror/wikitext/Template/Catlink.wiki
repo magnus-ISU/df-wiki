@@ -1,0 +1,19 @@
+<noinclude>{{documentation}}
+[[Category:Version templates|Catlink]]
+
+<!--
+[[:Category:{{NAMESPACE}}:{{{1}}}|{{#if:{{{2}}}|{{{2}}}|{{{1}}}}}]]
+[[:Category:{{NAMESPACE}}:{{{1}}}|{{{1}}}]]
+[[:Category:{{NAMESPACE}}:{{{1}}}|{{{2|{{{1}}}}}}]]
+[[:Category:{{NAMESPACE}}:{{ucfirst:{{{1}}}}}|{{{2|{{{1}}}}}}]]
+/-->
+
+</noinclude><includeonly>[[:Category:{{#switch: {{NAMESPACE}}
+|Masterwork
+|23a
+|40d
+|v0.31
+|v0.34
+|DF2014={{NAMESPACE}}:
+|#default = 
+}}{{ucfirst:{{{1}}}}}|{{{2|{{{1}}}}}}]]</includeonly>

@@ -1,0 +1,25 @@
+<noinclude>
+<!-- DO NOT edit this template unless you know very well what you are doing. This template is extremely easy to break. -->{{shortcut|template:cv}}</noinclude><includeonly>{{#vardefine:cv-page|{{PAGENAME}}}}{{
+#ifeq:{{NAMESPACE}}|Category|
+<!-- display -->
+{{#vardefine:cv-ns|{{#rsplit:{{#var:cv-page}}|:|0}}}}{{
+#vardefine:cv-cn|{{#rsplit:{{#var:cv-page}}|:|1}}
+}}{{#ifeq:{{#var:cv-cn}}|{{#var:cv-ns}}|{{#vardefine:cv-ns|parent}}}}{{
+version links
+|theme={{#switch:{{lc:{{#var:cv-ns}}}}|{{lc:{{DF:Current}}}}|parent=green|#default=orange}}
+|r1=
+[[{{#ifeq:{{#var:cv-ns}}||*}}:Category:{{#var:cv-cn}}|v{{current/version}}]]
+[[{{#ifeq:{{#var:cv-ns}}|DF2014|*}}:Category:DF2014:{{#var:cv-cn}}|v{{#ifeq:{{#var:cv-ns}}|DF2014|0.47.05|0.47}}]]
+[[{{#ifeq:{{#var:cv-ns}}|V0.34|*}}:Category:V0.34:{{#var:cv-cn}}|v{{#ifeq:{{#var:cv-ns}}|V0.34|0.34.11|0.34}}]]
+[[{{#ifeq:{{#var:cv-ns}}|V0.31|*}}:Category:V0.31:{{#var:cv-cn}}|v{{#ifeq:{{#var:cv-ns}}|V0.31|0.31.25|0.31}}]]
+[[{{#ifeq:{{#var:cv-ns}}|40d|*}}:Category:40d:{{#var:cv-cn}}|v{{#ifeq:{{#var:cv-ns}}|40d|0.28.181.40d|0.28}}]]
+[[{{#ifeq:{{#var:cv-ns}}|23a|*}}:Category:23a:{{#var:cv-cn}}|v{{#ifeq:{{#var:cv-ns}}|23a|0.23.130.23a|0.23}}]]
+|bottom={{version links/link|:Category:{{#var:cv-cn}}|Parent}}
+|center={{#switch:{{lc:{{#var:cv-ns}}}}|#default=This category contains pages about an '''older version''' of DF.|parent|{{lc:{{df:current}}}}=This category contains pages about the current version of DF.<br>This is a parent category.|template=This category is in the template namespace.}}
+}}{{#ifeq:{{#var:cv-ns}}|parent||[[Category:{{#var:cv-ns}}|{{#var:cv-cn}}]]}}[[Category:{{#var:cv-cn}}|*{{version order|{{#var:cv-ns}}}}]]|<!-- errors -->
+<span class="error">This page is not in the Category namespace!</span>}}
+</includeonly><noinclude>
+{{documentation}}
+[[category:Templates]]
+[[category:Version templates]]
+</noinclude>

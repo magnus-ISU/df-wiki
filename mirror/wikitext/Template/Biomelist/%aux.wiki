@@ -1,0 +1,4 @@
+<includeonly>{{#eval:{{#df_foreachtag:{{{1}}}|BIOME|{{#delay:#if:{{#delay:BiomeToken|\2}}|<nowiki></nowiki>
+* {{#delay:BiomeToken|\2}}}}}}}}{{#if:{{tag|{{{1}}}|COMMON_DOMESTIC}}|<nowiki></nowiki>
+*[[Domestic animal|Domesticated]]}}{{#if:{{tag|{{{1}}}|UNDERGROUND_DEPTH}}|<nowiki></nowiki>
+* Underground Depth: {{#eval:{{#df_foreachtag:{{{1}}}|UNDERGROUND_DEPTH|{{#delay:#ifeq:\2|\3|\2|\2-\3}}}}}}}}</includeonly><noinclude>[[category:raw templates]]</noinclude>

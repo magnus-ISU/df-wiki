@@ -1,0 +1,41 @@
+<includeonly><!--
+--><div class="div-col" style="column-width: {{{colwidth|20em}}};{{#if:{{{gap|}}}|column-gap: {{{gap}}};}}"><!--
+-->{{{1|}}}</div><!-- 
+--></includeonly><noinclude>
+
+'''Columns-list''' is wrapper template that turns a list into a list with columns. It's a rudimentary variant of the template from wikipidea see [https://en.wikipedia.org/wiki/Template:Columns-list Columns-list] [https://en.wikipedia.org/wiki/Template:Div_col Div_col]. 
+
+== Use ==
+The width of each column may be specified using <code>colwidth</code> and a value in ems (default:20em).
+ <nowiki>{{</nowiki>columns-list|colwidth=''width''|
+ ''Text (usually a list)''
+ <nowiki>}}</nowiki>
+Here, ''width'' specifies the width of the columns, and determines dynamically the number of columns based on screen width; more columns will be shown on wider displays.
+
+== Example ==
+
+colwidth=20em
+{{columns-list|
+* a
+* b
+* c
+* d
+* e
+* f
+* g
+* h
+}}
+
+colwidth=30em
+{{columns-list|colwidth=30em|
+* a
+* b
+* c
+* d
+* e
+* f
+* g
+* h
+}}
+[[category:templates]]
+</noinclude>

@@ -1,0 +1,17 @@
+<includeonly>{{#ifeq:{{creature/eggs/0|{{{1|{{FULLPAGENAME}}}}}|1}}|{{creature/eggs/0|{{{1|{{FULLPAGENAME}}}}}|2}}|{{creature/eggs/0|{{{1|{{FULLPAGENAME}}}}}|1}}|{{#rreplace:{{creature/eggs/0|{{{1|{{FULLPAGENAME}}}}}}}|:|-}}}}</includeonly><noinclude>
+
+
+Returns the number of eggs produced by a given creature (by default, uses the current page name).
+
+Aardvark: {{creature/eggs|Aardvark}}
+
+Albatross: {{creature/eggs|Albatross}}
+
+Cave crocodile: {{creature/eggs|Cave crocodile}}
+
+Duck: {{creature/eggs|Duck}}
+
+Giant parakeet: {{creature/eggs|Giant parakeet}}
+
+[[Category:Creature macros]]
+</noinclude>

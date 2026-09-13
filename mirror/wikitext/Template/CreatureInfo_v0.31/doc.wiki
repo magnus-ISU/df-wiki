@@ -1,0 +1,112 @@
+{{CreatureInfo v0.31
+|name=Whale
+|symbol=W|color=7:0:0
+|biome=
+* Any [[ocean]]
+|align=Neutral
+|meat=574-773
+|fat=107-236
+|eye=2
+|lung=84-120
+|heart=21-30
+|intestine=127-180
+|liver=42-60
+|tripe=42-60
+|sweetbread=21-30
+|spleen=21-30
+|kidney=42-60
+|brain=42-60
+|bone=109-157
+|skull=1
+|contrib=no
+}}
+
+== '''CreatureInfo 0.31''' ==
+
+* It is possible to display Itemcorpses (for example [[bronze colossus]]).
+* It is possible to display [NOT_BUTCHERABLE] ( for example [[magma crab]]).
+* Unnecessary lines are not displayed (like hooves for [[whale]]s)
+* Alignment (good evil savage) integrated, but not displayed if it is neutral
+* Pet attributes shown if the creature can be tamed
+
+=== Variables ===
+
+==== General ====
+
+* '''name'''   = name of the creature
+* '''symbol''' = symbol of the creature
+* '''color'''  = color of the symbol
+* '''align'''  = alignment
+** ''good''   -> good alignment is displayed
+** ''evil''   -> evil alignment is displayed
+** ''savage'' -> savage alignment is displayed
+** ''neutral'' or nothing -> alignment is ignored
+* '''biome'''  = list of the biomes
+* '''pet attributes'''  = list of pet attributes
+** ''petv'' = pet value
+** ''train'' -> can be trained at a kennel
+* '''death'''  = selects caption for "what happens after death"
+** ''rot''     -> rotting leaves
+** ''item''    -> turns after Death to
+***'''item'''   = if death=item then item description
+** ''nobutcher'' -> creature can not be butchered
+** ''butcher'' or nothing -> butchering returns
+* '''valm'''   = Value multiplier returns nothing when left out<br />
+* '''contrib''' = displays contribute message<br />
+* '''wiki'''   = links to wiki or not<br />
+
+==== Butchering results ====
+
+* '''meat'''
+* '''fat'''
+* '''brain'''
+* '''heart'''
+* '''lung'''
+* '''intestine'''
+* '''liver'''
+* '''kidney'''
+* '''tripe'''
+* '''sweetbread'''
+* '''eye'''
+* '''spleen'''
+* '''bone'''
+* '''skull'''
+* '''ivory'''
+* '''tooth'''
+* '''hoof'''
+* '''horn'''
+* '''shell'''
+* '''skin'''   = selects skintype (and skinnable)<br />
+** ''none''   -> not skinnable<br />
+** ''scale''  -> scale<br />
+** ''chitin'' -> chitin<br />
+** ''hide''   -> raw hide<br />
+
+===Usage===
+<pre><nowiki>
+{{CreatureInfo v0.31
+|name=Whale
+|symbol=W|color=7:0:0
+|biome=* Any [[ocean]]
+|align=neutral
+|meat=574-773
+|fat=107-236
+|eye=2
+|lung=84-120
+|heart=21-30
+|intestine=127-180
+|liver=42-60
+|tripe=42-60
+|sweetbread=21-30
+|spleen=21-30
+|kidney=42-60
+|brain=42-60
+|bone=109-157
+|skull=1
+|contrib=no
+}}
+
+</nowiki></pre>
+<div style="clear: both">
+<includeonly>[[Category:Templates]]</includeonly>
+<noinclude>[[Category:Template Documentation]]</noinclude>

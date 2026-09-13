@@ -1,0 +1,60 @@
+<includeonly>{{#if:{{#var:evan}}{{#var:emw}}|<!-- av included already, should be AFTER this template -->
+[[Category:Pages with incorrectly-ordered templates]]}}{{CreatureInfo {{#switch:{{NAMESPACE}}|DF2014|v0.40=v0.40|DF2012|v0.34=v0.34|Masterwork=Masterwork|v0.31|40d|23a=v0.31|#default=v0.40}}|
+name={{ucfirst:{{tagentry|{{/raw}}|NAME|1}}}}|
+pref={{prefstring|{{/raw}}}}|
+symbol={{tagvalue|{{/raw}}|CREATURE_TILE}}|
+wagon={{#if:{{tag|{{/raw}}|EQUIPMENT_WAGON}}|1}}|
+image={{{image|}}}|
+portrait={{{portrait|}}}|
+color={{tagvalue|{{/raw}}|COLOR}}|
+biome={{#if:{{{biome|}}}|{{{biome}}}|{{biomelist/aux|{{/raw}}}}}}|
+vary={{{vary|{{#ifeq:{{creature/variation}}|00|no|{{creature/variation links}}}}}}}|
+alignment={{#if:{{tag|{{/raw}}|GOOD}}|Good<br />}}{{#if:{{tag|{{/raw}}|EVIL}}|Evil<br />}}{{#if:{{tag|{{/raw}}|SAVAGE}}|Savage}}|
+bldgdest={{tagvalue|{{/raw}}|BUILDINGDESTROYER|notfound=0}}|
+attribs={{attrib_proc|{{/raw}}|{{PAGENAME}}}}|
+tame_attribs={{tame_attrib_proc/{{NAMESPACE}}|{{/raw}}}}|
+pet={{tag|{{/raw|}}|PET}}|
+exotic={{tag|{{/raw|}}|PET_EXOTIC}}|
+petvalue={{tagvalue|{{/raw}}|PETVALUE|notfound=0}}|
+grazer={{grazer_proc|{{tagvalue|{{/raw}}|GRAZER|notfound=0}}}}|
+train_hunt={{#expr:{{#if:{{tag|{{/raw}}|TRAINABLE}}|1|0}} or {{#if:{{tag|{{/raw}}|TRAINABLE_HUNTING}}|1|0}}}}|
+train_war={{#expr:{{#if:{{tag|{{/raw}}|TRAINABLE}}|1|0}} or {{#if:{{tag|{{/raw}}|TRAINABLE_WAR}}|1|0}}}}|
+valm={{tagvalue|{{#df_raw:{{/raw}}|SELECT_MATERIAL|ALL}}|MULTIPLY_VALUE|notfound=}}|
+size0={{#if:{{{size0|}}}|{{{size0|}}}|{{bodysize|{{/raw}}|0}}}}|
+size1={{#if:{{{size1|}}}|{{{size1|}}}|{{bodysize|{{/raw}}|1}}}}|
+size2={{#if:{{{size2|}}}|{{{size2|}}}|{{bodysize|{{/raw}}|2}}}}|
+childage={{tagvalue|{{/raw}}|BABY|notfound=}}|
+adultage={{tagvalue|{{/raw}}|CHILD|notfound=Birth}}|
+maxage={{#mreplace:{{tagvalue|{{/raw}}|MAXAGE|notfound=Immortal}}|:|-}}|
+death={{#if:{{{death|}}}|{{{death}}}|{{#ifexpr:{{#if:{{tag|{{/raw}}|INTELLIGENT}}|1|0}} or {{#if:{{tag|{{/raw}}|CAN_LEARN}}|1|0}} or {{#if:{{tag|{{/raw}}|NOT_BUTCHERABLE}}|1|0}}|nobutcher}}}}|
+eggs={{#ifeq:{{creature/eggs}}|0||{{creature/eggs}}}}|
+item={{#param:item|items|}}|
+meat={{#param:meat|meats|}}|
+fat={{#param:fat|fats|}}|
+brain={{#param:brain|brains|}}|
+gizzard={{#param:gizzard|gizzards|}}|
+heart={{#param:heart|hearts|}}|
+lung={{#param:lung|lungs|}}|
+intestine={{#param:intestine|intestines|}}|
+liver={{#param:liver|livers|}}|
+kidney={{#param:kidney|kidneys|}}|
+tripe={{#param:tripe|tripes|}}|
+sweetbread={{#param:sweetbread|sweetbreads|}}|
+eye={{#param:eye|eyes|}}|
+spleen={{#param:spleen|spleens|}}|
+bone={{#param:bone|bones|}}|
+skull={{#param:skull|skulls|}}|
+ivory={{#param:ivory|ivories|tusk|tusks|}}|
+tooth={{#param:tooth|teeth|}}|
+hoof={{#param:hoof|hooves|}}|
+horn={{#param:horn|horns|}}|
+shell={{#param:shell|shells|}}|
+skin={{{skin|{{#if:{{{hide|}}}|hide|{{#if:{{#param:scale|scales|}}|scale|{{#if:{{{chitin|}}}|chitin}} }} }} }}}|
+wool={{{wool|}}}|
+gizzard_stone={{#param:gizzard_stone|gizzard_stones|}}|
+feather={{#param:feather|feathers|}}|
+contrib={{{contrib|}}}|
+wiki={{#param:wiki|wp|wikipedia|}}}}{{#ifeq:{{tagvalue|{{/raw}}|CREATURE_CLASS|0|notfound=}}|REAL_WORLD_EXTINCT|{{Category|Extinct animals}}}}</includeonly><noinclude>
+This is an intermediary template which pulls necessary details from the creature's raws and passes the results on to the proper CreatureInfo template for display.
+
+[[category:raw templates]]</noinclude>

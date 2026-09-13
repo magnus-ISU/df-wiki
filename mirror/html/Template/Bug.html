@@ -1,0 +1,29 @@
+<div class="mw-parser-output"><span class=""><sup><a href="#Bugs">Bug</a></sup><div class="plainlinks" style="clear: both; margin: 1em 0 0 0; border: 1px solid #aaa; background-color: #f0f0f8; padding: 5px 1em; border-radius: .4em; -webkit-border-radius: .4em; -moz-border-radius: .4em; -o-border-radius: .4em; -ms-border-radius: .4em;">
+<h2><span id="(view_-_edit_-__history_-__purge)_Documentation"></span><span class="mw-headline" id=".28view_-_edit_-_.0Ahistory_-_.0Apurge.29_Documentation"><span style="float: right; font-size: small; font-family: sans-serif;">
+(<a href="/index.php/Template:Bug/doc" title="Template:Bug/doc"><span title="View this documentation">view</span></a> - <a rel="nofollow" class="external text" href="//dwarffortresswiki.org/index.php?title=Template:Bug/doc&amp;action=edit"><span title="Edit this documentation">edit</span></a> - 
+<a rel="nofollow" class="external text" href="//dwarffortresswiki.org/index.php?title=Template:Bug/doc&amp;action=history"><span title="Documentation history">history</span></a> - 
+<a rel="nofollow" class="external text" href="//dwarffortresswiki.org/index.php?title=Template:Bug&amp;action=purge"><span title="Purge this documentation (causes it to be updated; use only if it doesn&#39;t update after editing, NOT in a preview)">purge</span></a>)</span> Documentation</span></h2>
+<p>Used for linking to bugs on the <a rel="nofollow" class="external text" href="https://dwarffortressbugtracker.com/">Bug Tracker</a>
+</p><p>See also <a href="/index.php/Category:References_to_fixed_bugs" title="Category:References to fixed bugs">Category:References to fixed bugs</a>
+</p>
+<h2><span class="mw-headline" id="Usage">Usage</span></h2>
+<p>The first parameter is the number of the bug on the bug tracker. Leading 0's aren't necessary.
+</p>
+<pre>{{bug|296}}</pre>
+<p><span class=""><sup><a href="#Bugs">Bug</a>:<a rel="nofollow" class="external text" href="https://dwarffortressbugtracker.com/view.php?id=296">296</a></sup></span>
+</p><p>An optional parameter is a link to the workaround. This should be used temporarily, while the bug is <b>not</b> fixed. If the bug is fixed, remove it from the article. (<a href="/index.php/Dwarf_Fortress_Wiki:Community_Portal#T" title="Dwarf Fortress Wiki:Community Portal">Rule T</a>)
+</p><p>Note that this parameter is <b>named</b>. You need to use <code>workaround=http://...</code>, not just the link as the second parameter.
+</p>
+<pre>{{bug|6290|workaround=http://www.bay12forums.com/smf/index.php?topic=122782.0}}</pre>
+<p><span class=""><sup><a href="#Bugs">Bug</a>:<a rel="nofollow" class="external text" href="https://dwarffortressbugtracker.com/view.php?id=6290">6290</a> (<a rel="nofollow" class="external text" href="http://www.bay12forums.com/smf/index.php?topic=122782.0">Workaround</a>)</sup></span>
+</p>
+If the workaround is listed in the comments of the bug report, use <pre>{{bug|number|workaround=comments}}</pre>
+<p><span class=""><sup><a href="#Bugs">Bug</a>:<a rel="nofollow" class="external text" href="https://dwarffortressbugtracker.com/view.php?id=1">1</a> <span style="color: #740;">(Workaround in comments)</span></sup></span>
+</p>
+<h3><span id="Linking_to_an_article's_&quot;bugs&quot;_section"></span><span class="mw-headline" id="Linking_to_an_article.27s_.22bugs.22_section">Linking to an article's "bugs" section</span></h3>
+Some articles have a separate section for bugs. Using this template without a bug number will link to that section. For example, <pre>{{bug}}</pre> produces this: <span class=""><sup><a href="#Bugs">Bug</a></sup></span>
+If the section title containing bugs is something other than "Bugs", specify this in the <code>section</code> parameter. <pre>{{bug|section=Usage}}</pre> produces this: <span class=""><sup><a href="#Bugs">Bug</a></sup></span> (this should jump to the Usage section of this documentation, which does not actually contain bugs).
+<h2><span class="mw-headline" id="Bugs">Bugs</span></h2>
+<p>This is a sample section, which would contain bugs in a real article. It is here to serve as an example for linking to the bugs section.
+</p>
+</div></span></div>

@@ -1,0 +1,73 @@
+[[Template:C]] converts two case-insensitive hex digits into a style for the appropriate DF colors. The colors are:
+{| cellspacing=0 cellpadding=2 {{c|0|f}}
+|- {{c|f|0}}
+|0
+|Black
+|#000000
+|- {{c|f|1}}
+|1
+|Blue
+|#000080
+|- {{c|f|2}}
+|2
+|Green
+|#008000
+|- {{c|f|3}}
+|3
+|Cyan
+|#008080
+|- {{c|f|4}}
+|4
+|Red
+|#800000
+|- {{c|f|5}}
+|5
+|Magenta
+|#800080
+|- {{c|f|6}}
+|6
+|Brown
+|#808000
+|- {{c||7}}
+|7
+|Light Grey
+|#c0c0c0
+|- {{c||8}}
+|8
+|Dark Grey
+|#808080
+|- {{c|f|9}}
+|9
+|Light Blue
+|#0000ff
+|- {{c||a}}
+|A
+|Light Green
+|#00ff00
+|- {{c||b}}
+|B
+|Light Cyan
+|#00ffff
+|- {{c|f|c}}
+|C
+|Light Red
+|#ff0000
+|- {{c||d}}
+|D
+|Light Magenta
+|#ff00ff
+|- {{c||e}}
+|E
+|Yellow
+|#ffff00
+|- {{c||f}}
+|F
+|White
+|#ffffff
+|}
+
+For example, '''<nowiki>{{c|f|3}}</nowiki>''' produces '''style="color:#fff;background-color:#008080;"''', '''<nowiki>{{c|7}}</nowiki>''' produces '''style="color:#c0c0c0;"''', and '''<nowiki>{{c||D}}</nowiki>''' produces '''style="background-color:#f0f;"'''. Styles like this can be used in many places. In fact, this template was used to color the table rows above. '''<nowiki><span {{c|f|0}}>white text on a black background</span></nowiki>''' can be used to color small amounts of text, but the major use is in coloring tables, table rows, and table cells for ASCII diagrams.
+
+Additional style can be added as a third parameter. E.g., '''<nowiki>{{c|8|0|font-family: Courier New, monospace}}</nowiki>'''.
+
+[[Category:Formatting Templates]]

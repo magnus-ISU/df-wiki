@@ -1,0 +1,6 @@
+{{#if:{{{1|}}}
+|{{#if:{{{2|}}}|{{#vardefine:citation_url-{{{1}}}|{{{2}}}}}{{var_incr|citation_id|default=1}}{{#vardefine:citation_id-{{{1}}}|{{#var:citation_id}}}}}}<!--
+-->{{#if:{{#var:citation_url-{{{1}}}}}|<sup class="plainlinks" style="line-height: 0; position: relative; vertical-align: baseline; top: -0.5em;">{{#ifeq:{{#substr:{{#var:citation_url-{{{1}}}}}|0|4}}|http|[{{#var:citation_url-{{{1}}}}} &#91;{{#var:citation_id-{{{1}}}}}&#93;]|[[{{#var:citation_url-{{{1}}}}}|&#91;{{#var:citation_id-{{{1}}}}}&#93;]]}}<nowiki/></sup>
+|<span class="error">Citation <code>{{{1}}}</code> not defined!</span>}}
+|<span class="error">Invalid usage - see [[Template:Cite]]</span>}}
+<noinclude>{{documentation}}</noinclude>

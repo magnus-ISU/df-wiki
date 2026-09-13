@@ -1,0 +1,24 @@
+<div class="mw-parser-output"><table class="plainlinks ombox ambox-notice" style="margin-bottom:1.0em;">
+<tbody><tr>
+<td class="mbox-image">
+  <img alt="" src="https://thumb.wikimedia.org/wikipedia/commons/thumb/1/15/Edit-copy_green.svg/40px-Edit-copy_green.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=imageinfo&amp;utm_content=thumbnail" decoding="async" width="40" height="40" srcset="https://thumb.wikimedia.org/wikipedia/commons/thumb/1/15/Edit-copy_green.svg/60px-Edit-copy_green.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=imageinfo&amp;utm_content=thumbnail 1.5x, https://thumb.wikimedia.org/wikipedia/commons/thumb/1/15/Edit-copy_green.svg/120px-Edit-copy_green.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=imageinfo&amp;utm_content=thumbnail 2x" /></td>
+<td class="mbox-text" style=""> This is a documentation subpage for <a href="/index.php/Template:Border_radius" title="Template:Border radius">Template:Border radius</a>.<br />It contains usage information, <a href="http://en.wikipedia.org/wiki/Categorization" class="extiw" title="wikipedia:Categorization">categories</a> and other content that is not part of the original template page. </td>
+</tr>
+</tbody></table>
+<p>This is intended to be used in a CSS context as a shorter way of expressing border radii. It uses several vendor-specific prefixes, as well as the standard CSS3 <code>border-radius</code>.
+</p>
+<h2><span class="mw-headline" id="Examples">Examples</span></h2>
+<pre>&lt;div style="border: 1px solid black; {{border radius|5px}}"&gt;Test&lt;/div&gt;
+</pre>
+<p>Produces:
+</p>
+<div style="border: 1px solid black; border-radius: 5px; -webkit-border-radius: 5px; -moz-border-radius: 5px; -o-border-radius: 5px; -ms-border-radius: 5px;">Test</div>
+<p>Source:
+</p>
+<pre>&lt;div style="border: 1px solid black; border-radius: 5px; -webkit-border-radius: 5px; 
+-moz-border-radius: 5px; -o-border-radius: 5px; -ms-border-radius: 5px;"&gt;Test&lt;/div&gt;
+</pre>
+<h2><span class="mw-headline" id="Technical">Technical</span></h2>
+<p>A semicolon after the template (<code>{{border radius|4px}};</code>) <b>is not necessary</b>. This template ends with a semicolon. Extra semicolons could cause problems in a few browsers.
+</p><p>This doesn't yet support specific corners, since CSS3 and the Webkit-specific version use <code>top-right-border-radius</code> and <code>-webkit-top-right-border-radius</code> (respectively), while Mozilla uses <code>-moz-border-radius-topright</code>.  Feel free to implement this (it shouldn't be too hard), but <i><b>please</b></i> test it on your user page or at <a href="/index.php?title=Template:Border_radius/doc/Sandbox&amp;action=edit&amp;redlink=1" class="new" title="Template:Border radius/doc/Sandbox (page does not exist)">/Sandbox</a> <i><b>before</b></i> changing this template. Bad CSS on the <a href="/index.php/Main_page" class="mw-redirect" title="Main page">main page</a> is not good.
+</p></div>

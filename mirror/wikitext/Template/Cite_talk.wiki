@@ -1,0 +1,3 @@
+{{#if:{{{1|}}}|{{cite|talk-{{lc:{{{1}}}}}|
+{{#if:{{cite/defined|talk-{{lc:{{{1}}}}}}}||{{#if:{{#strpos:{{{1}}}|:}}|{{#if:{{#strpos:{{lc:{{{1}}}}}|talk:}}|{{{1}}}|{{#rreplace:{{{1}}}|:|_talk:}}}}|{{TALKSPACE}}:{{{1}}}}}
+}}}}|<span class="error">Usage: <nowiki>{{cite talk | talk page}}</nowiki></span>}}<noinclude>{{documentation}}</noinclude>

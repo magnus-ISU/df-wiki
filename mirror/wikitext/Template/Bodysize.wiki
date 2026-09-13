@@ -1,0 +1,10 @@
+<includeonly>{{#ifeq:{{tagvalue|{{{1|}}}|GRAVITATE_BODY_SIZE|notfound=0}}|0|{{#expr:{{{3|{{tagentryspec|{{{1|}}}|BODY_SIZE|3|{{#expr:{{{2|2}}}-3}}|notfound=0}}}}} * ({{tagvalue|{{{1|}}}|CHANGE_BODY_SIZE_PERC|notfound=100}}/100)}}|{{#expr:{{{3|{{tagentryspec|{{{1|}}}|BODY_SIZE|3|{{#expr:{{{2|2}}}-3}}|notfound=0}}}}} * ({{tagentryspec|{{{1|}}}|BODY_SIZE|3|-1|notfound=1}} + {{tagvalue|{{{1|}}}|GRAVITATE_BODY_SIZE|notfound=0}}) / ({{tagentryspec|{{{1|}}}|BODY_SIZE|3|-1|notfound=1}} * 2)}}}}</includeonly><noinclude>
+Usage: <nowiki>{{bodysize | creature raws | growth stage | override}}</nowiki>
+
+growth_stage<br> 
+0 -> child<br>
+1 -> adolescent<br>
+2 -> adult (default)
+
+[[Category:Templates]]
+</noinclude>

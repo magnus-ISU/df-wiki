@@ -1,0 +1,74 @@
+{{infostart|
+{{{name}}}}}
+{{infocell|{{#if:{{{wagon|}}}|▓▓▓<br/>▓░▓<br/>▓░▓|{{char|{{{symbol|?}}}}}}}|style=color: {{fgcolor|{{{color|7:0:1}}}}}; background: black; font-size:x-large; font-weight: bold; font-family: 'Courier New', 'Quicktype Mono', 'Bitstream Vera Sans Mono', 'Lucida Console',  'Lucida Sans Typewriter', monospace; text-align:center; vertical-align:center}}
+{{#if:{{{pref|}}}|{{infopref|{{{pref}}}}}}}
+{{infoheader|Biome}}
+{{infocell|{{#if:{{{biome|}}}|{{{biome|}}}|Any location}}}}
+{{#ifeq:{{{vary|no}}}|no|{{!-}}|
+{{infoheader|Variations}}
+{{infocell|{{{vary|unknown}}} }} }}
+{{#ifexpr:{{#if:{{{alignment|}}}|1|0}} or {{#ifexpr:{{{bldgdest|0}}}>0|1|0}} or {{#if:{{{attribs|}}}|1|0}}|
+{{infoheader|Attributes}}
+{{#if:{{{alignment|}}}|{{inforow|Alignment:|{{{alignment}}} }}|{{!-}}}}
+{{#ifexpr:{{{bldgdest|0}}}>0|{{infocell|[[Building destroyer]]: Level {{{bldgdest}}}{{Category|Building destroyer}}}}|{{!-}}}}}}
+{{#if:{{{attribs|}}}|{{infocell|{{span-hide}}{{{attribs}}}{{end-span}}}}|{{!-}}}}
+{{#ifexpr:{{#if:{{{pet|}}}|1|0}} or {{#if:{{{exotic|}}}|1|0}}|
+{{infoheader|Tamed Attributes}}
+{{inforow|Pet value|{{formatnum:{{{petvalue|0}}}}}}}
+{{#if:{{{grazer|}}}|{{inforow|[[Grazer]]:|{{{grazer}}} {{Category|Grazer}}}}|{{!-}}}}
+{{#if:{{{tame_attribs|}}}|{{infocell|{{span-hide}}{{{tame_attribs}}}{{end-span}}}}|{{!-}}}}
+{{infocell|{{#ifexpr:{{#expr:{{{train_hunt|0}}}+{{{train_war|0}}}>0}}
+|[[Animal trainer|Trainable]]:&nbsp; {{#ifexpr:{{{train_hunt|0}}}>0|Hunting {{Category|Hunting animals}}|}} &nbsp; {{#ifexpr:{{{train_war|0}}}>0|War {{Category|War animals}}|}}|Not [[Animal trainer|trainable]]}}}}|{{infoheader|bg=#fbb|Cannot be tamed}}}}{{
+#ifexpr:{{#expr:{{{size0|0}}}+{{{size1|0}}}+{{{size2|0}}}}}>0|&nbsp;
+{{infoheader|Size}}
+{{infocell|{{#ifexpr:{{{size0|0}}}>0|{{inforow|'''Birth:'''|{{formatnum:{{{size0}}} cm<sup>3</sup> }}}}
+{{#ifexpr:{{{size1|0}}}>0|{{inforow|'''Mid:'''|{{formatnum:{{{size1}}} cm<sup>3</sup> }}}}}}
+|{{#ifexpr:{{{size1|0}}}>0|{{inforow|'''Birth:'''|{{formatnum:{{{size1}}} cm<sup>3</sup> }}}}}}}}
+{{#ifexpr:{{{size2|0}}}>0|{{inforow|'''Max:'''|{{formatnum:{{{size2}}} cm<sup>3</sup> }}}}}}}}||}}
+{{#if:{{{eggs|}}}|{{infoheader|[[Food|Food products]]}}
+{{#if:{{{eggs|}}}|{{inforow|[[Egg]]s|{{{eggs}}}}}}}}}{{
+#if:{{{childage|}}}{{{adultage|}}}{{{maxage|}}}|<nowiki/>
+{{infoheader|Age}}
+{{#if:{{{childage|}}}|{{inforow|Child at:|{{{childage}}}}}}}
+{{inforow|Adult at:|{{{adultage}}}}}
+{{inforow|Max age:|{{{maxage}}}}}}}
+{{infoheader|{{#switch:{{{death|}}}
+|rot=Rotting leaves
+|item=Becomes after death
+|nobutcher=Cannot be butchered
+|butcher |#default=[[Meat industry|Butchering returns]]}}}}
+{{#if:{{{valm|}}}|([[Multiply value|Value multiplier]] ×{{{valm|}}})}}
+{{#ifeq:{{{death|}}}|item|{{infocell|{{{item|}}}}}|{{!-}}}}
+{{#switch:{{{death|}}}
+|nobutcher
+|item={{!-}}
+|#default={{infocell|'''Food items'''}}
+{{#if:{{{meat|}}}|{{inforow|[[Meat]]|{{{meat|}}}}}|{{!-}}}}
+{{#if:{{{fat|}}}|{{inforow|[[Fat]]|{{{fat|}}}}}|{{!-}}}}
+{{#if:{{{brain|}}}|{{inforow|[[Brain]]|{{{brain|}}}}}|{{!-}}}}
+{{#if:{{{gizzard|}}}|{{inforow|[[Gizzard]]|{{{gizzard|}}}}}|{{!-}}}}
+{{#if:{{{heart|}}}|{{inforow|[[Heart]]|{{{heart|}}}}}|{{!-}}}}
+{{#if:{{{lung|}}}|{{inforow|[[Lung]]s|{{{lung|}}}}}|{{!-}}}}
+{{#if:{{{intestine|}}}|{{inforow|[[Intestines]]|{{{intestine|}}}}}|{{!-}}}}
+{{#if:{{{liver|}}}|{{inforow|[[Liver]]|{{{liver|}}}}}|{{!-}}}}
+{{#if:{{{kidney|}}}|{{inforow|[[Kidney]]s|{{{kidney|}}}}}|{{!-}}}}
+{{#if:{{{tripe|}}}|{{inforow|[[Tripe]]|{{{tripe|}}}}}|{{!-}}}}
+{{#if:{{{sweetbread|}}}|{{inforow|[[Sweetbread]]|{{{sweetbread|}}}}}|{{!-}}}}
+{{#if:{{{eye|}}}|{{inforow|[[Eye]]s|{{{eye|}}}}}|{{!-}}}}
+{{#if:{{{spleen|}}}|{{inforow|[[Spleen]]|{{{spleen|}}}}}|{{!-}}}}
+{{infocell|'''Raw materials'''}}
+{{#if:{{{bone|}}}|{{inforow|[[Bones]]|{{{bone|}}}}}|{{!-}}}}
+{{#if:{{{skull|}}}|{{inforow|[[Skull]]|{{{skull|}}}}}|{{!-}}}}
+{{#if:{{{ivory|}}}|{{inforow|[[Ivory]]|{{{ivory|}}}}}|{{!-}}}}
+{{#if:{{{tooth|}}}|{{inforow|[[Teeth]]|{{{tooth|}}}}}|{{!-}}}}
+{{#if:{{{hoof|}}}|{{inforow|[[Hooves]]|{{{hoof|}}}}}|{{!-}}}}
+{{#if:{{{horn|}}}|{{inforow|[[Horns]]|{{{horn|}}}}}|{{!-}}}}
+{{#if:{{{shell|}}}|{{inforow|[[Shell]]|{{{shell|}}}}}|{{!-}}}}
+{{#if:{{{skin|}}}|{{inforow|[[Skin]]|{{#switch:{{{skin|}}}|hide=Raw hide|scale=Scales|chitin=Chitin|none=not skinnable|#default={{{skin|}}}}}}}|{{!-}}}}
+{{#if:{{{wool|}}}|{{inforow|[[Wool]]|{{{wool|}}}}}|{{!-}}}}
+{{#if:{{{feather|}}}|{{inforow|[[Feather]]|{{{feather|}}}}}|{{!-}}}}
+{{#if:{{{gizzard_stone|}}}|{{inforow|[[Gizzard stone]]|{{{gizzard_stone|}}}}}|{{!-}}}}
+{{#ifeq:{{{contrib|}}}|no|{{!-}}|{{infocell|style=text-align:center; background-color: #eee; border-top: 1px solid #aaa|''There is too little information about this creature.<br /> Please contribute if you can!''{{Category|Incomplete butchering returns|{{PAGENAME}}}}}}|{{!-}}}}
+}}
+{{#ifexpr:{{#if:{{{wiki|}}}|1|0}} and {{#ifeq:{{{wiki|}}}|no|0|1}}|{{infocell|style=text-align:center; background-color: #eee; border-top: 1px solid #aaa|1=[[wikipedia:{{#ifeq:{{{wiki|}}}|yes|{{{name}}}|{{{wiki|}}}}}|Wikipedia article]]}}|{{!-}}}}
+{{infoend}}<noinclude>{{documentation}}</noinclude>

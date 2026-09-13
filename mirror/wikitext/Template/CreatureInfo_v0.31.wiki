@@ -1,0 +1,62 @@
+{{infostart|
+{{{name}}}}}
+{{infocell|{{#if:{{{wagon|}}}|▓▓▓<br/>▓░▓<br/>▓░▓|{{char|{{{symbol|?}}}}}}}|style=color: {{fgcolor|{{{color|7:0:1}}}}}; background: black; font-size:x-large; font-weight: bold; font-family: 'Courier New', 'Quicktype Mono', 'Bitstream Vera Sans Mono', 'Lucida Console',  'Lucida Sans Typewriter', monospace; text-align:center; vertical-align:center}}
+{{infoheader|Biome}}
+{{infocell|{{#if:{{{biome|}}}|{{{biome|}}}|Any location}}}}
+{{#ifexpr:{{#if:{{{pet|}}}|1|0}} or {{#if:{{{exotic|}}}|1|0}}|
+{{infoheader|Pet Attributes}}
+{{inforow|Pet value|{{formatnum:{{{petvalue|0}}}}}}}
+{{infocell|{{#switch:{{{train_hunt|0}}}{{{train_war|0}}}|11=Can be [[Kennel|trained]] for either hunting or for war|10=Can be [[Kennel|trained]] only for hunting|01=Can be [[Kennel|trained]] only for war|00=Cannot be [[Kennel|trained]]}}}}
+{{#if:{{{exotic}}}|{{infocell|Exotic - cannot be tamed}}}}|
+{{infoheader|Cannot be tamed}}}}{{
+#ifexpr:{{#expr:{{{size0|0}}}+{{{size1|0}}}+{{{size2|0}}}}}>0|&nbsp;
+{{infoheader|Size}}
+{{infocell|{{#ifexpr:{{{size0|0}}}>0|{{inforow|'''Birth:'''|{{formatnum:{{{size0}}} cm<sup>3</sup> }}}}
+{{#ifexpr:{{{size1|0}}}>0|{{inforow|'''Mid:'''|{{formatnum:{{{size1}}} cm<sup>3</sup> }}}}}}
+|{{#ifexpr:{{{size1|0}}}>0|{{inforow|'''Birth:'''|{{formatnum:{{{size1}}} cm<sup>3</sup> }}}}}}}}
+{{#ifexpr:{{{size2|0}}}>0|{{inforow|'''Max:'''|{{formatnum:{{{size2}}} cm<sup>3</sup> }}}}}}}}||}}
+{{#if:{{{alignment|}}}|{{infoheader|Alignment}}
+{{infocell|{{{alignment}}}|style=text-align:center}}}}{{
+#if:{{{childage|}}}{{{adultage|}}}{{{maxage|}}}|<nowiki/>
+{{infoheader|Age}}
+{{#if:{{{childage|}}}|{{inforow|Child at:|{{{childage}}}}}}}
+{{inforow|Adult at:|{{{adultage}}}}}
+{{inforow|Max age:|{{{maxage}}}}}}}
+{{infoheader|{{#switch:{{{death|}}}
+|rot=Rotting leaves
+|item=Becomes after death
+|nobutcher=This creature cannot be butchered
+|butcher |#default=[[Meat industry|Butchering returns]]}}}}
+{{#if:{{{valm|}}}|([[Multiply value|Value multiplier]] ×{{{valm|}}})}}
+{{#ifeq:{{{death|}}}|item|{{infocell|{{{item|}}}}}|{{!-}}}}
+{{#switch:{{{death|}}}
+|nobutcher
+|item={{!-}}
+|#default={{infocell|'''Food items'''}}}}
+{{#if:{{{meat|}}}|{{inforow|[[Meat]]|{{{meat|}}}}}|{{!-}}}}
+{{#if:{{{fat|}}}|{{inforow|[[Fat]]|{{{fat|}}}}}|{{!-}}}}
+{{#if:{{{brain|}}}|{{inforow|[[Brain]]|{{{brain|}}}}}|{{!-}}}}
+{{#if:{{{heart|}}}|{{inforow|[[Heart]]|{{{heart|}}}}}|{{!-}}}}
+{{#if:{{{lung|}}}|{{inforow|[[Lung]]s|{{{lung|}}}}}|{{!-}}}}
+{{#if:{{{intestine|}}}|{{inforow|[[Intestines]]|{{{intestine|}}}}}|{{!-}}}}
+{{#if:{{{liver|}}}|{{inforow|[[Liver]]|{{{liver|}}}}}|{{!-}}}}
+{{#if:{{{kidney|}}}|{{inforow|[[Kidney]]s|{{{kidney|}}}}}|{{!-}}}}
+{{#if:{{{tripe|}}}|{{inforow|[[Tripe]]|{{{tripe|}}}}}|{{!-}}}}
+{{#if:{{{sweetbread|}}}|{{inforow|[[Sweetbread]]|{{{sweetbread|}}}}}|{{!-}}}}
+{{#if:{{{eye|}}}|{{inforow|[[Eye]]s|{{{eye|}}}}}|{{!-}}}}
+{{#if:{{{spleen|}}}|{{inforow|[[Spleen]]|{{{spleen|}}}}}|{{!-}}}}
+{{#switch:{{{death|}}}
+|nobutcher
+|item={{!-}}
+|#default={{infocell|'''Raw materials'''}}}}
+{{#if:{{{bone|}}}|{{inforow|[[Bones]]|{{{bone|}}}}}|{{!-}}}}
+{{#if:{{{skull|}}}|{{inforow|[[Skull]]|{{{skull|}}}}}|{{!-}}}}
+{{#if:{{{ivory|}}}|{{inforow|[[Ivory]]|{{{ivory|}}}}}|{{!-}}}}
+{{#if:{{{tooth|}}}|{{inforow|[[Teeth]]|{{{tooth|}}}}}|{{!-}}}}
+{{#if:{{{hoof|}}}|{{inforow|[[Hooves]]|{{{hoof|}}}}}|{{!-}}}}
+{{#if:{{{horn|}}}|{{inforow|[[Horns]]|{{{horn|}}}}}|{{!-}}}}
+{{#if:{{{shell|}}}|{{inforow|[[Shell]]|{{{shell|}}}}}|{{!-}}}}
+{{#if:{{{skin|}}}|{{inforow|[[Skin]]|{{#switch:{{{skin|hide}}}|hide=Raw hide|scale=Scales|chitin=Chitin|none=not skinnable|#default='''Unknown'''}}}}|{{!-}}}}
+{{#ifeq:{{{contrib|}}}|no|{{!-}}|{{infocell|style=text-align:center; background-color: #eee; border-top: 1px solid #aaa|''There is too little information about this creature.<br /> Please contribute if you can!''}}|{{!-}}}}
+{{#ifeq:{{{wiki|}}}|no|{{!-}}|{{infocell|style=text-align:center; background-color: #eee; border-top: 1px solid #aaa|1=[[wikipedia:{{#if:{{{wiki|}}}|{{{wiki|}}}|{{{name}}}}}|Wikipedia article]]}}|{{!-}}}}
+{{infoend}}<noinclude>{{documentation}}</noinclude>

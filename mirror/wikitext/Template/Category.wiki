@@ -1,0 +1,12 @@
+<noinclude>{{documentation}}
+[[Category:Version templates|Category]]
+</noinclude><includeonly>{{#if:{{{ns|}}}|[[Category:{{ucfirst:{{{ns}}}}}:{{ucfirst:{{{1}}}}}|{{{2|{{PAGENAME}}}}}]]|{{#switch: {{NAMESPACE}}
+|23a
+|40d
+|v0.31
+|v0.34
+|DF2014
+|Masterwork=[[Category:{{NAMESPACE}}:{{ucfirst:{{{1}}}}}|{{{2|{{PAGENAME}}}}}]]
+|Template=
+|#default=[[Category:{{ucfirst:{{{1}}}}}|{{{2|{{PAGENAME}}}}}]]
+}}}}</includeonly>

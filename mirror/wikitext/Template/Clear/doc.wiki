@@ -1,0 +1,45 @@
+This template consists of <tt>&lt;div style="clear:both;"&gt;&lt;/div&gt;</tt>
+
+<nowiki>{{clear}}</nowiki> makes the following content start below all previous content in all columns. It can be used to stop text from flowing next to unrelated images or sidebars.
+
+In addition, the first parameter can be used to override "both"; for example, {{<nowiki/>clear|left}} will force the following content to appear below floating content on the left side only. (See [http://www.w3schools.com/cssref/pr_class_clear.asp this page] for more information.)
+
+==Use on creature pages==
+
+This template can often prevent misaligned raw and creature boxes caused by the sidebar at the left of creature pages.
+
+===Option 1, without <nowiki>{{clear}}</nowiki>===
+
+{{creatureInfo v0.34|name=Animal 1}}
+<div style="height: 25em;">
+Text
+
+Text
+
+Text
+
+Text
+</div>
+{{creatures}}
+
+
+----
+
+
+===Option 2, with <nowiki>{{clear}}</nowiki>===
+
+{{creatureInfo v0.34|name=Animal 2}}
+<div style="height: 25em;">
+Text
+
+Text
+
+Text
+
+Text
+</div>
+{{clear}}
+{{creatures}}
+
+<includeonly>[[Category:Templates]]</includeonly>
+<noinclude>[[Category:Template Documentation]]</noinclude>

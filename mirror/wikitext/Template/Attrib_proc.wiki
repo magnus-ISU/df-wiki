@@ -1,0 +1,38 @@
+<includeonly>{{
+#if:{{tag|{{{1}}}|FLIER}}|{{attrib format|{{Catlink|Flying}}{{Category|Flying}}}}}}{{
+#if:{{tag|{{{1}}}|MEGABEAST}}|{{attrib format|{{Catlink|Megabeasts|Megabeast}}{{Category|Megabeasts}}}}}}{{
+#if:{{tag|{{{1}}}|SEMIMEGABEAST}}|{{attrib format|{{Catlink|Semi-megabeasts|Semi-megabeast}}{{Category|Semi-megabeasts}}}}}}{{
+#if:{{tag|{{{1}}}|TRAPAVOID}}|{{attrib format|{{Catlink|Trapavoid}}{{Category|Trapavoid}}}}}}{{
+#if:{{tag|{{{1}}}|MISCHIEVOUS}}{{tag|{{{1}}}|MISCHIEVIOUS}}|{{attrib format|{{Catlink|Mischievous}}{{Category|Mischievous}}}}}}{{
+#if:{{tag|{{{1}}}|AQUATIC}}|{{attrib format|{{Catlink|Aquatic}}{{Category|Aquatic}}}}}}{{
+#if:{{tag|{{{1}}}|AMPHIBIOUS}}|{{attrib format|{{Catlink|Amphibious}}{{Category|Amphibious}}}}}}{{
+#ifexpr:{{#ifeq:{{NAMESPACE}}|23a|1|0}} or {{#ifeq:{{NAMESPACE}}|40d|1|0}}|{{
+  #if:{{tag|{{{1}}}|NO_GENDER}}|{{attrib format|{{Catlink|Genderless}}{{Category|Genderless}}}}}}{{
+  #if:{{tag|{{{1}}}|MALE}}|{{attrib format|Always Male}}}}{{
+  #if:{{tag|{{{1}}}|FEMALE}}|{{attrib format|Always Female}}}}|{{
+  #if:{{tag|{{{1}}}|MALE}}{{tag|{{{1}}}|FEMALE}}||{{attrib format|{{Catlink|Genderless}}{{Category|Genderless}}}}}}}}{{
+#if:{{tag|{{{1}}}|NOSTUN}}|{{attrib format|{{Catlink|No Stun}}{{Category|No Stun}}}}}}{{
+#if:{{tag|{{{1}}}|NOPAIN}}|{{attrib format|{{Catlink|No Pain}}{{Category|No Pain}}}}}}{{
+#if:{{tag|{{{1}}}|NOEXERT}}|{{attrib format|{{Catlink|No Exert}}{{Category|No Exert}}}}}}{{
+#if:{{tag|{{{1}}}|CURIOUSBEAST_EATER}}|{{attrib format|{{Catlink|Steals food}}{{Category|Steals food}}}}}}{{
+#if:{{tag|{{{1}}}|CURIOUSBEAST_GUZZLER}}|{{attrib format|{{Catlink|Steals drink}}{{Category|Steals drink}}}}}}{{
+#if:{{tag|{{{1}}}|CURIOUSBEAST_ITEM}}|{{attrib format|{{Catlink|Steals items}}{{Category|Steals items}}}}}}{{
+#ifexpr:{{#if:{{tag|{{{1}}}|FIREIMMUNE}}|1|0}} or {{#if:{{tag|{{{1}}}|FIREIMMUNE_SUPER}}|1|0}}|{{attrib format|{{Catlink|Fire immune}}{{Category|Fire immune}}}}}}{{
+#ifexpr:{{#if:{{tag|{{{1}}}|INTELLIGENT}}|1|0}} or {{#if:{{tag|{{{1}}}|CAN_LEARN}}|1|0}}|{{attrib format|{{Catlink|Learns}}{{Category|Learns}}}}}}{{
+#ifexpr:{{#if:{{tag|{{{1}}}|TRAINABLE}}|1|0}} or {{#if:{{tag|{{{1}}}|TRAINABLE_WAR}}|1|0}}|{{attrib format|{{Catlink|War animals}}{{Category|War animals}}}}}}{{
+#ifexpr:{{#if:{{tag|{{{1}}}|TRAINABLE}}|1|0}} or {{#if:{{tag|{{{1}}}|TRAINABLE_HUNTING}}|1|0}}|{{attrib format|{{Catlink|Hunting animals}}{{Category|Hunting animals}}}}}}{{
+#ifexpr:{{#if:{{tag|{{{1}}}|GRAZER}}|1|0}} or {{#if:{{tag|{{{1}}}|STANDARD_GRAZER}}|1|0}}|{{attrib format|{{Catlink|Grazer}}{{Category|Grazer}}}}}}{{
+#if:{{tag|{{{1}}}|FANCIFUL}}|{{attrib format|{{Catlink|Fanciful}}{{Category|Fanciful}}}}}}{{
+#if:{{tag|{{{1}}}|MOUNT}}|{{attrib format|{{Catlink|Mount}}{{Category|Mount}}}}}}{{
+#if:{{tag|{{{1}}}|MOUNT_EXOTIC}}|{{attrib format|{{Catlink|Exotic mount}}{{Category|Exotic mount}}}}}}{{
+#if:{{tag|{{{1}}}|USE_MATERIAL_TEMPLATE|1|SHELL}}{{tag|{{{1}}}|HASSHELL}}|{{attrib format|{{Catlink|Shell}}{{Category|Shell}}}}}}{{
+#if:{{tag|{{{1}}}|USE_MATERIAL_TEMPLATE|1|MILK}}{{tag|{{{1}}}|MILKABLE}}|{{attrib format|{{Catlink|Milkable}}{{Category|Milkable}}}}}}{{
+#if:{{tag|{{{1}}}|SHEARABLE_TISSUE_LAYER}}{{tag|{{{1}}}|YARN}}|{{attrib format|{{Catlink|Shearable}}{{Category|Shearable}}}}}}{{
+#if:{{tag|{{{1}}}|USE_MATERIAL_TEMPLATE|1|CHITIN}}|{{attrib format|{{Catlink|Horn}}{{Category|Chitin}}}}}}{{
+#if:{{tag|{{{1}}}|USE_MATERIAL_TEMPLATE|1|HOOF}}|{{attrib format|{{Catlink|Horn}}{{Category|Hoof}}}}}}{{
+#if:{{tag|{{{1}}}|USE_MATERIAL_TEMPLATE|1|HORN}}|{{attrib format|{{Catlink|Horn}}{{Category|Horn}}}}}}{{
+#if:{{tag|{{{1}}}|WEBBER}}|{{attrib format|[[Web]]s{{Category|Webs}}}}}}{{
+#if:{{tag|{{{1}}}|SYNDROME}}|{{attrib format|[[Syndrome]]{{Category|Syndrome}}}}}}{{
+#if:{{tag|{{{1}}}|BEACH_FREQUENCY}}|{{attrib format|[[Beaching]]{{Category|Beaching}}}}}}{{
+#if:{{tag|{{{1}}}|LAYS_EGGS}}|{{attrib format|{{Catlink|Egglaying}}{{Category|Egglaying}}}}}}{{
+#ifeq:{{creature/is humanoid|{{{2}}}}}|1|{{attrib format|{{catlink|Humanoids|Humanoid}}{{category|Humanoids}}}}}}</includeonly><noinclude>{{documentation}}</noinclude>

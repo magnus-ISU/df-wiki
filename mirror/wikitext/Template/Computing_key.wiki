@@ -1,0 +1,120 @@
+<!-- ToDo -->
+<noinclude>
+This template holds a list of different elements to be used to describe logic gates schematically. The elements are based on the DF [[character table|characters]], but are optimized for this purpose. The background colors for floors and walls for example are choosen to reduce the contrast to the white background of the wiki. Before you change something, make sure change all diagrams the elements are used in, too. I used the {{tl|RTL}} template to create the overlaying sub- and superscript characters.
+</noinclude>
+{| style="border-spacing:0; padding:0;"
+|-
+|{{RTL|#FFF}}
+|{{RTL|#FFF}}
+|{{RTL|#FFF}}
+|{{RTL|#FFF}}
+|any tile
+|-
+|{{RTL|#DDD}}
+|{{RTL|#FFF}}
+|{{RTL|#FFF}}
+|{{RTL|#FFF}}
+|floor
+|-
+|{{RTL|#BBB}}
+|{{RTL|#FFF}}
+|{{RTL|#FFF}}
+|{{RTL|#FFF}}
+|no floor
+|-
+|{{RTL|#222}}
+|{{RTL|#FFF}}
+|{{RTL|#FFF}}
+|{{RTL|#FFF}}
+|solid
+|-
+|{{RTL|#FFF}}
+|{{RTL|#FFF}}
+|{{RTL|#FFF}}
+|{{RTL|#FFF}}
+|{{RTL|#FFF}}
+|-
+|{{RTL|#840|║|#FFF}}
+|{{RTL|#FFF}}
+|{{RTL|#840|o|#FFF}}
+|{{RTL|#FFF}}
+|[[axle]]
+|-
+|{{RTL|#222|·|#BBB}}
+|{{RTL|#FFF}}
+|{{RTL|#FFF}}
+|{{RTL|#FFF}}
+|[[channel]]
+|-
+|{{RTL|#AAA|┼|#444}}
+|{{RTL|#FFF}}
+|{{RTL|#FFF}}
+|{{RTL|#FFF}}
+|[[door]]
+|-
+|{{RTL|#AAA|X|#444}}
+|{{RTL|#FFF}}
+|{{RTL|#FFF}}
+|{{RTL|#FFF}}
+|[[flood gate]]
+|-
+|{{RTL|#444|*}}
+|{{RTL|#FFF}}
+|{{RTL|#FFF}}
+|{{RTL|#FFF}}
+|[[gear assembly]]
+|-
+|{{RTL|#F22|≈}}
+|{{RTL|#FFF}}
+|{{RTL|#FFF}}
+|{{RTL|#FFF}}
+|[[magma]] source
+|-
+|{{RTL|#FFF||||||1|#F88|left}}
+|{{RTL|#FFF||||||&hellip;|#F88|left}}
+|{{RTL|#FFF||||||7|#F88|left}}
+|{{RTL|#FFF}}
+|magma depth
+|-
+|{{RTL|#222|▲|#DDD}}
+|{{RTL|#FFF}}
+|{{RTL|#222|▼|#BBB}}
+|{{RTL|#FFF}}
+|[[ramp]]
+|-
+|{{RTL|#808|^|#DDD}}
+|{{RTL|#FFF}}
+|{{RTL|#FFF}}
+|{{RTL|#FFF}}
+|[[pressure plate]] (reacting on creatures)
+|-
+|{{RTL|#F22|^|#DDD}}
+|{{RTL|#FFF}}
+|{{RTL|#FFF}}
+|{{RTL|#FFF}}
+|pressure plate (reacting on magma)
+|-
+|{{RTL|#00A|^|#DDD}}
+|{{RTL|#FFF}}
+|{{RTL|#FFF}}
+|{{RTL|#FFF}}
+|pressure plate (reacting on water)
+|-
+|{{RTL|#444|÷|#DDD}}
+|{{RTL|#444|÷||►|#444|center|►|#444|center}}
+|{{RTL|#FFF}}
+|{{RTL|#FFF}}
+|[[screw pump]] (pumping right)
+|-
+|{{RTL|#00A|≈}}
+|{{RTL|#FFF}}
+|{{RTL|#FFF}}
+|{{RTL|#FFF}}
+|[[water]] source
+|-
+|{{RTL|#FFF||||||1|#88F|left}}
+|{{RTL|#FFF||||||&hellip;|#88F|left}}
+|{{RTL|#FFF||||||7|#88F|left}}
+|{{RTL|#FFF}}
+|water depth
+|}

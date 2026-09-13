@@ -1,0 +1,13 @@
+{{#ifexist:{{{2|{{DF:Current}}}}}:{{{1}}}/raw|1|0}}<noinclude>
+
+A boolean used to determine if a creature exists.
+
+Usage:
+<pre>{{creature/exists|name|namespace={{DF:Current}}}}</pre>
+
+<pre>{{creature/exists|Aardvark}}</pre>
+Returns {{creature/exists|Aardvark}}
+ 
+<pre>{{creature/exists|Clown}}</pre>
+Returns {{creature/exists|Clown}}
+[[Category:Creature macros]]</noinclude>

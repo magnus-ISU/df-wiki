@@ -1,0 +1,10 @@
+<includeonly><table style="border-spacing: 0; background: black; padding: 0.2em; display: inline-table;">
+<tr>
+<td style="padding: 0">{{Raw Tile|{{{1}}}|{{{3}}}|black}}</td>
+<td style="padding: 0">{{Raw Tile|{{{2}}}|{{{4|{{{3}}}}}}|black}}</td>
+</tr>
+<tr>
+<td style="padding: 0">{{Raw Tile|{{{2}}}|{{#ifeq:{{{5|}}}|altc|{{{4|{{{3}}}}}}|{{{3}}}}}|black}}</td>
+<td style="padding: 0">{{Raw Tile|{{{1}}}|{{#ifeq:{{{5|}}}|altc|{{{3}}}|{{{4|{{{3}}}}}}}}|black}}</td>
+</tr>
+</table></includeonly><noinclude>[[Category:Formatting Templates]]</noinclude>

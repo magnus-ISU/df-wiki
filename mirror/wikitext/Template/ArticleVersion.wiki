@@ -1,0 +1,36 @@
+<noinclude>
+<!-- DO NOT edit this template unless you know very well what you are doing. This template is extremely easy to break. -->
+{{shortcut|template:av}}
+</noinclude>{{
+#vardefine:PAGE|{{{1|{{PAGENAME}}}}}}}{{
+#vardefine:NSID|{{ns-rel-id|{{NAMESPACE}}}}}}{{
+#vardefine:e6|{{#ifexist:Main:{{#var:PAGE}}|1}}}}{{
+#vardefine:e5|{{#ifexist:DF2014:{{#var:PAGE}}|1}}}}{{
+#vardefine:e4|{{#ifexist:v0.34:{{#var:PAGE}}|1}}}}{{
+#vardefine:e3|{{#ifexist:v0.31:{{#var:PAGE}}|1}}}}{{
+#vardefine:e2|{{#ifexist:40d:{{#var:PAGE}}|1}}}}{{
+#vardefine:e1|{{#ifexist:23a:{{#var:PAGE}}|1}}}}{{
+#vardefine:ecur|{{#var:e6}}}}{{
+#vardefine:emw|{{#ifexist:Masterwork:{{#var:PAGE}}|1}}}}{{
+#vardefine:evan|{{#if:{{#var:e6}}{{#var:e5}}{{#var:e4}}{{#var:e3}}{{#var:e2}}{{#var:e1}}|1}}}}{{
+#vardefine:emod|{{#if:{{#var:emw}}|1}}}}{{
+#vardefine:ismod|{{#switch:{{NAMESPACE}}|Masterwork=1}}
+}}{{version links
+|theme={{#switch:{{NAMESPACE}}|=green|Template|Dwarf Fortress Wiki=blue|Masterwork=purple|#default=orange}}
+|r1={{#if:{{#var:evan}}|
+[[{{#ifeq:{{#var:NSID}}|6|*}}{{ns-name|id=6}}:{{PAGENAME}}|v{{current/version}}]]
+[[{{#ifeq:{{#var:NSID}}|5|*}}{{ns-name|id=5}}:{{PAGENAME}}|v{{#switch:{{#var:NSID}}|6|5=0.47.05|0.47}}]]
+{{#ifeq:{{NAMESPACE}}|||[[{{#ifeq:{{#var:NSID}}|4|*}}{{ns-name|id=4}}:{{PAGENAME}}|v{{#ifeq:{{#var:NSID}}|4|0.34.11|0.34}}]]}}
+{{#ifeq:{{NAMESPACE}}|||[[{{#ifeq:{{#var:NSID}}|3|*}}{{ns-name|id=3}}:{{PAGENAME}}|v{{#ifeq:{{#var:NSID}}|3|0.31.25|0.31}}]]}}
+{{#ifeq:{{NAMESPACE}}|||[[{{#ifeq:{{#var:NSID}}|2|*}}{{ns-name|id=2}}:{{PAGENAME}}|v{{#ifeq:{{#var:NSID}}|2|0.28.181.40d|0.28}}]]}}
+{{#ifeq:{{NAMESPACE}}|||[[{{#ifeq:{{#var:NSID}}|1|*}}{{ns-name|id=1}}:{{PAGENAME}}|v{{#ifeq:{{#var:NSID}}|1|0.23.130.23a|0.23}}]]}}
+}}
+<!--|r2={{#if:{{#var:emod}}|
+{{#if:{{#var:ismod}}||Mods:&nbsp;}}
+[[{{#ifeq:{{NAMESPACE}}|Masterwork|*}}Masterwork:{{PAGENAME}}|Masterwork]]
+}}-->
+|bottom={{version links/link|DF:V|More Info}}{{dot}} {{version links/link|T:av|V}}
+|center={{#switch:{{NAMESPACE}}|#default=This article is about an '''older version''' of DF.{{#if:{{#var:ecur}}||[[category:Missing current version|{{PAGENAME}}]]}}|Template=This article is in the template namespace.|Dwarf Fortress Wiki=This article is in the DF wiki namespace.|=This article is about the current version of DF.<br />Note that some content may still need to be updated.[[category:Current|{{PAGENAME}}]]|Masterwork=This article is about a '''[[Main:mod|mod]]'''.}}
+}}{{#ifeq:{{lc:{{NAMESPACE}}}}|masterwork|{{mwv}}}}<noinclude>
+{{Documentation}}
+</noinclude>

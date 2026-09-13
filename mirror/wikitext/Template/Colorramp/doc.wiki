@@ -1,0 +1,14 @@
+Takes up to nine colors and creates a row of █ (block) characters in the specified order.
+
+Examples:
+<pre>
+{{Colorramp|{{fgcolor|4:0}}|{{fgcolor|4:1}}|{{fgcolor|6:1}}|{{fgcolor|2:1}}|{{fgcolor|3:1}}|{{fgcolor|1:0}}|{{fgcolor|1:1}}|{{fgcolor|5:0}}}}
+{{Colorramp|mediumvioletred|mediumvioletred|mediumpurple|midnightblue|midnightblue}}
+{{Colorramp|#02f908|#009e75|#e45bd9|#3f55c6|#635589}}
+</pre>
+
+Output:
+
+{{Colorramp|{{fgcolor|4:0}}|{{fgcolor|4:1}}|{{fgcolor|6:1}}|{{fgcolor|2:1}}|{{fgcolor|3:1}}|{{fgcolor|1:0}}|{{fgcolor|1:1}}|{{fgcolor|5:0}}}}
+{{Colorramp|mediumvioletred|mediumvioletred|mediumpurple|midnightblue|midnightblue}}
+{{Colorramp|#02f908|#009e75|#e45bd9|#3f55c6|#635589}}

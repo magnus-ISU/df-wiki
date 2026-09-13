@@ -1,0 +1,27 @@
+<pre>
+<table style='text-align: center; margin: 0 32%; padding: 0.25em; border: 2px {{#switch:{{NAMESPACE}}|{{df:current}}=solid #bd8; background: #f5ffee;|Template=solid #9df; background: #eef5ff;|Dwarf Fortress Wiki=solid #9df; background: #eef5ff;|#default=solid #db8; background: #fff5ee;}} width:36%'>
+	<tr>
+		<td style="padding: 0.3em 0.3em; width: 100%;">
+			<div style="margin-bottom:6px;">
+				<font style="font-size:100%">
+					<!--- Place new version links here. --->
+					{{#ifeq:{{NAMESPACE}}|DF2012|{{avcurrent|v0.34.01|{{NAMESPACE}}}}{{dot}}|{{#ifexist:DF2012:{{PAGENAME}}|{{avcolorlinks|DF2012:{{PAGENAME}}|v0.34.01|{{NAMESPACE}}}}{{dot}}|<font style="font-size:95%">{{avbadlink|DF2012:{{PAGENAME}}|v0.34.01}}</font>{{dot}}}}}}
+					{{#ifeq:{{NAMESPACE}}|v0.31|{{avcurrent|v0.31.25|{{NAMESPACE}}}}{{dot}}|{{#ifexist:v0.31:{{PAGENAME}}|{{avcolorlinks|v0.31:{{PAGENAME}}|v0.31.25|{{NAMESPACE}}}}{{dot}}|<font style="font-size:95%">{{avbadlink|v0.31:{{PAGENAME}}|v0.31.02}}</font>{{dot}}}}}}
+					{{#ifeq:{{NAMESPACE}}|40d|{{avcurrent|v0.28.181.40d|{{NAMESPACE}}}}{{dot}}|{{#ifexist:40d:{{PAGENAME}}|{{avcolorlinks|40d:{{PAGENAME}}|v0.28.181.40d|{{NAMESPACE}}}}{{dot}}|<font style="font-size:95%">{{avbadlink|40d:{{PAGENAME}}|v0.28.181.40d}}</font>{{dot}}}}}}
+					{{#ifeq:{{NAMESPACE}}|23a|{{avcurrent|v0.23.130.23a|{{NAMESPACE}}}}|{{#ifexist:23a:{{PAGENAME}}|{{avcolorlinks|23a:{{PAGENAME}}|v0.23.130.23a|{{NAMESPACE}}}}|<font style="font-size:95%">{{avbadlink|23a:{{PAGENAME}}|v0.23.130.23a}}</font>}}}}
+				</font>
+			</div>
+			
+			{{#switch:{{NAMESPACE}}|#default=Please, do not add information about newer game versions here. [[category:Obsolete|{{PAGENAME}}]]|Template=Namespace specific text will be here in the actual articles.|Dwarf Fortress Wiki=This article is in the DF wiki namespace.|{{df:current}}=Please, ''do not'' add old information to this page without first verifying it. [[category:Current|{{PAGENAME}}]]}}
+			
+			<br>
+			
+			<div style="float: right; font-size:75%; padding-right:2px; margin-top: -2px; margin-bottom:-7px;">
+				{{avcolorlinks|Template:ArticleVersion|More Info|{{NAMESPACE}}}}
+			</div>
+			
+			{{#ifexist:{{PAGENAME}}||<div style="div style="float: left; font-size:75%; padding-left:2px; margin-top: -2px; margin-bottom:-7px; color:#fbb; width:1px;">[[:Template:ArticleVersion#NoRedirect|<span style="text-decoration:none; color:#fbb;">NR</span>]]</div>[[Category:Missing Redirect]]}}
+		</td>
+	</tr>
+</table>
+</pre>

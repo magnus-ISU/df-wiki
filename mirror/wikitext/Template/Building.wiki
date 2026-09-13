@@ -1,0 +1,55 @@
+<includeonly>{{infostart|{{{name}}}}}
+{{infocell|{{key|b}}-{{key|{{{key}}}}}{{#if:{{{key2|}}}|-{{key|{{{key2}}}}}{{#if:{{{key3|}}}|-{{key|{{{key3}}}}}}}}}|style=text-align:center}}
+{{#switch:{{NAMESPACE}}
+ |23a|40d|v0.31|v0.34|DF2014 =
+{{infocell|{{Building/picture|name={{{name}}}}}}}
+ | = 
+{{infocell|}}
+<div style="display:flex; flex-wrap: wrap; width:100%; background-color:#eaecf0;"><!-- 
+
+-- Premium 
+--><div style="margin: auto;">{{#ifexist:File:{{{image|{{{name|}}}}}}.png|[[File:{{{image|{{{name|}}}}}}.png]]|[[File:Icons8 flat add image.svg|80px|link=File:{{{image|{{{name|}}}}}}.png]]}}</div><!-- 
+
+-- Classic 
+--><div style="margin: auto;">{{Picture {{#ifexist:Template:Picture {{NAMESPACE}} {{{name}}}|{{NAMESPACE}} {{{name}}}|{{#ifexist:Template:Picture {{{name}}}|{{{name}}}|Blank}}}}}}</div>
+</div>}}
+{{#if:{{{job|}}}|{{infoheader|Job Requirement}}
+{{infocell|{{{job|}}}}}}}
+{{infoheader|Construction}}
+|-
+! style="text-align: left; padding: 0.2em 0.25em 0; width: 50%; border-right: 1px solid #aaa" | Materials
+! style="text-align: left; padding: 0.2em 0.25em 0; width: 50%" | Jobs
+|-
+| style="padding: 0.1em 0.25em 0.25em; width: 50%; vertical-align: top; border-right: 1px solid #aaa" |
+{{{construction}}}
+| style="padding: 0.1em 0.25em 0.25em; width: 50%; vertical-align: top" |
+{{{construction_job}}}
+{{infoheader|Purpose}}
+{{infocell|{{{purpose}}}}}
+{{infoend}}{{Category|Buildings}}</includeonly><noinclude>
+
+== Usage ==
+
+This automatically includes the page in [[:Category:Buildings]].
+
+<pre><nowiki>
+{{Building|name=Vermin Catcher's Shop|key=o|key2=f|key3=v
+|job= 
+1 of
+* [[Animal training]]
+* [[Trapping]]
+|construction=
+* [[Building material]] (non-[[economic]])
+|construction_job=
+1 of
+* [[Animal training]]
+* [[Small animal dissection]]
+* [[Trapping]]
+|purpose=
+* Capture [[Vermin]]
+* [[Tame]] [[Vermin]]
+}}
+</nowiki></pre>
+
+[[Category:Building templates]]
+</noinclude>

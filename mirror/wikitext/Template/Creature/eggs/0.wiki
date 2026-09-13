@@ -1,0 +1,9 @@
+{{#if:{{tag|{{{{{ns|{{DF:Current}}}}}:{{{1|{{PAGENAME}}}}}/raw|}}|PET}}{{tag|{{{{{ns|{{DF:Current}}}}}:{{{1|{{PAGENAME}}}}}/raw|}}|PET_EXOTIC}}|{{#switch:{{{2|}}}|1|2={{#rsplit:{{tagvalue|{{{{{ns|{{DF:Current}}}}}:{{{1|{{PAGENAME}}}}}/raw|}}|CLUTCH_SIZE|notfound=0}}|:|{{#expr:{{{2}}}-1}}}}
+|#default={{tagvalue|{{{{{ns|{{DF:Current}}}}}:{{{1|{{PAGENAME}}}}}/raw|}}|CLUTCH_SIZE|notfound=0:0}}}}|{{#switch:{{{2}}}|1|2=0|#default=0:0}}}}<noinclude>
+
+This template extracts the minimum and/or maximum egg clutch size from a creature's raws.
+Usage: <pre>{{creature/eggs/0|Creature|n}}</pre>
+"Creature" defaults to the page name.
+
+"n" can be used to specify the first or second number. If any value other than "1" or "2" is passed, both values are returned, separated by ":"
+</noinclude>

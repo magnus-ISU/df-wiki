@@ -1,0 +1,139 @@
+<includeonly>{{#switch:{{{1}}}
+|DOMESTIC=[[Biome|<span style="padding: 1" title="Domestic">{{Raw Tile|D|7:0:1}}</span>]]
+|ALL_MAIN=[[Biome|<span style="padding: 1" title="All biomes excluding pools, rivers, and underground features">{{Raw Tile|ALL|#ddd}}</span>]]
+|ANY_LAND=[[Biome|<span style="padding: 1" title="All main biomes excluding oceans and lakes">{{Raw Tile|ALL|#2d3}}</span>]]
+|ANY_OCEAN=[[Biome|<span style="padding: 1" title="All ocean biomes">{{Raw Tile|ALL|#4af}}</span>]]
+|MOUNTAIN
+|MOUNTAINS
+|0=[[Biome|<span title="Mountain">{{Tile|▲|0:0:1}}</span>]]
+|GLACIER
+|1=[[Biome|<span title="Glacier">{{Tile|■|7:0:1}}</span>]]
+|TUNDRA
+|2=[[Biome|<span title="Tundra">{{Tile|≈|7:0:1}}</span>]]
+|SWAMP_TEMPERATE_SALTWATER
+|3=[[Wetland|<span title="Temperate saltwater swamp">{{Tile|≈|2:0:0}}{{Tile|S|7:0:1}}</span>]]
+|SWAMP_TEMPERATE_FRESHWATER
+|4=[[Wetland|<span title="Temperate freshwater swamp">{{Tile|≈|2:0:0}}{{Tile|F|#5ae}}</span>]]
+|ANY_TEMPERATE_SWAMP=[[Wetland|<span title="Temperate swamp">{{Tile|≈|2:0:0}}</span>]]
+|MARSH_TEMPERATE_SALTWATER
+|5=[[Wetland|<span title="Temperate saltwater marsh">{{Tile|~|4:0:0}}{{Tile|S|7:0:1}}</span>]]
+|MARSH_TEMPERATE_FRESHWATER
+|6=[[Wetland|<span title="Temperate freshwater marsh">{{Tile|~|4:0:0}}{{Tile|F|#5ae}}</span>]]
+|ANY_TEMPERATE_MARSH=[[Wetland|<span title="Temperate marsh">{{Tile|~|4:0:0}}</span>]]
+|SWAMP_TROPICAL_SALTWATER
+|7=[[Wetland|<span title="Tropical saltwater swamp">{{Tile|≈|2:0:1}}{{Tile|S|7:0:1}}</span>]]
+|SWAMP_TROPICAL_FRESHWATER
+|8=[[Wetland|<span title="Tropical freshwater swamp">{{Tile|≈|2:0:1}}{{Tile|F|#5ae}}</span>]]
+|SWAMP_MANGROVE
+|9=[[Wetland|<span title="Mangrove swamp">{{Tile|≈|#8f0}}{{Tile|S|7:0:1}}</span>]]
+|ANY_TROPICAL_SWAMP=[[Wetland|<span title="Tropical swamp">{{Tile|≈|2:0:1}}</span>]]
+|MARSH_TROPICAL_SALTWATER
+|10=[[Wetland|<span title="Tropical saltwater marsh">{{Tile|~|4:0:1}}{{Tile|S|7:0:1}}</span>]]
+|MARSH_TROPICAL_FRESHWATER
+|11=[[Wetland|<span title="Tropical freshwater marsh">{{Tile|~|4:0:1}}{{Tile|F|#5ae}}</span>]]
+|ANY_TROPICAL_MARSH=[[Wetland|<span title="Tropical marsh">{{Tile|~|4:0:1}}</span>]]
+|ANY_WETLAND=[[Wetland|<span title="All wetland biomes">{{Tile|~|4:0:1}}{{Tile|~|4:0:0}}{{Tile|≈|2:0:1}}{{Tile|≈|2:0:0}}{{Tile|≈|#8f0}}</span>]]
+|ANY_TROPICAL_WETLAND=[[Wetland|<span title="Tropical wetland">{{Tile|~|4:0:1}}{{Tile|≈|2:0:1}}</span>]]
+|FOREST_TAIGA
+|TAIGA
+|12=[[Biome|<span title="Taiga">{{Tile|╞|0:0:1}}</span>]]
+|FOREST_TEMPERATE_CONIFER
+|13=[[Biome|<span title="Temperate coniferous forest">{{Tile|♠|2:0}}</span>]]
+|FOREST_TEMPERATE_BROADLEAF
+|14=[[Biome|<span title="Temperate broadleaf forest">{{Tile|♣|2:0}}</span>]]
+|ANY_TEMPERATE_FOREST=[[Biome|<span title="Temperate forest">{{Tile|♠|2:0}}{{Tile|♣|2:0}}</span>]]
+|FOREST_TROPICAL_CONIFER
+|15=[[Biome|<span title="Tropical coniferous forest">{{Tile|♠|2:1}}</span>]]
+|FOREST_TROPICAL_DRY_BROADLEAF
+|16=[[Biome|<span title="Tropical dry broadleaf forest">{{Tile|♣|2:0:1}}</span>]]
+|FOREST_TROPICAL_MOIST_BROADLEAF
+|17=[[Biome|<span title="Tropical moist broadleaf forest">{{Tile|♣|2:1:1}}</span>]]
+|ANY_TROPICAL_FOREST=[[Biome|<span title="Tropical forest">{{Tile|♠|2:1}}{{Tile|♣|2:0:1}}{{Tile|♣|2:1:1}}</span>]]
+|GRASSLAND_TEMPERATE
+|18=[[Biome|<span title="Temperate grassland">{{Tile|n|2:0}}</span>]]
+|SAVANNA_TEMPERATE
+|19=[[Biome|<span title="Temperate savanna">{{Tile|n|6:0}}</span>]]
+|SHRUBLAND_TEMPERATE
+|20=[[Biome|<span title="Temperate shrubland">{{Tile|τ|2:0}}</span>]]
+|GRASSLAND_TROPICAL
+|21=[[Biome|<span title="Tropical grassland">{{Tile|n|2:1}}</span>]]
+|SAVANNA_TROPICAL
+|22=[[Biome|<span title="Tropical savanna">{{Tile|n|6:1}}</span>]]
+|SHRUBLAND_TROPICAL
+|23=[[Biome|<span title="Tropical shrubland">{{Tile|τ|2:1}}</span>]]
+|DESERT_BADLAND
+|24=[[Biome|<span title="Badlands">{{Tile|V|0:0:1}}</span>]]
+|DESERT_ROCK
+|25=[[Biome|<span title="Rocky wasteland">{{Tile|M|0:0:1}}</span>]]
+|DESERT_SAND
+|26=[[Biome|<span title="Sand desert">{{Tile|≈|6:0:1}}</span>]]
+|ANY_DESERT=[[Biome|<span title="All desert biomes">{{Tile|V|0:0:1}}{{Tile|M|0:0:1}}{{Tile|≈|6:0:1}}</span>]]
+|OCEAN_TROPICAL
+|27=[[Biome|<span title="Tropical ocean">{{Tile|≈|#0ef}}</span>]]
+|OCEAN_TEMPERATE
+|28=[[Biome|<span title="Temperate ocean">{{Tile|≈|#24f}}</span>]]
+|OCEAN_ARCTIC
+|29=[[Biome|<span title="Arctic ocean">{{Tile|≈|3:1}}</span>]]
+|POOL_TEMPERATE_FRESHWATER
+|30=[[Biome|<span title="Temperate freshwater lake">{{Tile|o|#08f}}{{Tile|F|#5ae}}</span>]]
+|POOL_TEMPERATE_BRACKISHWATER
+|31=[[Biome|<span title="Temperate freshwater lake">{{Tile|o|#08f}}{{Tile|B|#77f}}</span>]]
+|POOL_TEMPERATE_SALTWATER
+|32=[[Biome|<span title="Temperate freshwater lake">{{Tile|o|#08f}}{{Tile|S|7:0:1}}</span>]]
+|POOL_TROPICAL_FRESHWATER
+|33=[[Biome|<span title="Temperate freshwater lake">{{Tile|o|#0ef}}{{Tile|F|#5ae}}</span>]]
+|POOL_TROPICAL_BRACKISHWATER
+|34=[[Biome|<span title="Temperate freshwater lake">{{Tile|o|#0ef}}{{Tile|B|#77f}}</span>]]
+|POOL_TROPICAL_SALTWATER
+|35=[[Biome|<span title="Temperate freshwater lake">{{Tile|o|#0ef}}{{Tile|S|7:0:1}}</span>]]
+|ANY_POOL=[[Biome|<span title="All pool biomes">{{Tile|o|#0bf}}{{Tile|o|#0ef}}</span>]]
+|LAKE_TEMPERATE_FRESHWATER
+|36=[[Biome|<span title="Temperate freshwater lake">{{Tile|0|#08f}}{{Tile|F|#5ae}}</span>]]
+|LAKE_TEMPERATE_BRACKISHWATER
+|37=[[Biome|<span title="Temperate brackish lake">{{Tile|0|#08f}}{{Tile|B|#77f}}</span>]]
+|LAKE_TEMPERATE_SALTWATER
+|38=[[Biome|<span title="Temperate saltwater lake">{{Tile|0|#08f}}{{Tile|S|7:0:1}}</span>]]
+|ANY_TEMPERATE_LAKE=[[Biome|<span title="All temperate lake biomes">{{Tile|0|#08f}}</span>]]
+|LAKE_TROPICAL_FRESHWATER
+|39=[[Biome|<span title="Tropical freshwater lake">{{Tile|0|#0ef}}{{Tile|F|#5ae}}</span>]]
+|LAKE_TROPICAL_BRACKISHWATER
+|40=[[Biome|<span title="Tropical brackish lake">{{Tile|0|#0ef}}{{Tile|B|#77f}}</span>]]
+|LAKE_TROPICAL_SALTWATER
+|41=[[Biome|<span title="Tropical saltwater lake">{{Tile|0|#0ef}}{{Tile|S|7:0:1}}</span>]]
+|ANY_TROPICAL_LAKE=[[Biome|<span title="All tropical lake biomes">{{Tile|0|#0ef}}</span>]]
+|ANY_LAKE=[[Biome|<span title="All lake biomes">{{Tile|0|#0ef}}{{Tile|0|#08f}}</span>]]
+|RIVER_TEMPERATE_FRESHWATER
+|42=[[Biome|<span title="Temperate freshwater river">{{Tile|~|#08f}}{{Tile|F|#5ae}}</span>]]
+|RIVER_TEMPERATE_BRACKISHWATER
+|43=[[Biome|<span title="Temperate brackish river">{{Tile|~|#08f}}{{Tile|B|#77f}}</span>]]
+|RIVER_TEMPERATE_SALTWATER
+|44=[[Biome|<span title="Temperate saltwater river">{{Tile|~|#08f}}{{Tile|S|7:0:1}}</span>]]
+|ANY_TEMPERATE_RIVER=[[Biome|<span title="All temperate river biomes">{{Tile|~|#08f}}</span>]]
+|RIVER_TROPICAL_FRESHWATER
+|45=[[Biome|<span title="Tropical freshwater river">{{Tile|~|#0ef}}{{Tile|F|#5ae}}</span>]]
+|RIVER_TROPICAL_BRACKISHWATER
+|46=[[Biome|<span title="Tropical brackish river">{{Tile|~|#0ef}}{{Tile|B|#77f}}</span>]]
+|RIVER_TROPICAL_SALTWATER
+|47=[[Biome|<span title="Tropical saltwater river">{{Tile|~|#0ef}}{{Tile|S|7:0:1}}</span>]]
+|ANY_TROPICAL_RIVER=[[Biome|<span title="All tropical river biomes">{{Tile|~|#0ef}}</span>]]
+|ANY_RIVER=[[Biome|<span title="All river biomes">{{Tile|~|#0ef}}{{Tile|~|#08f}}</span>]]
+|SUBTERRANEAN_WATER
+|48=[[Biome|<span title="Underground caverns (in water)">{{Tile|C|0:1:1}}</span>]]
+|SUBTERRANEAN_CHASM
+|49=[[Biome|<span title="Underground caverns (out of water)">{{Tile|C|0:0:1}}</span>]]
+|SUBTERRANEAN_LAVA
+|50=[[Biome|<span title="Subterranean magma">{{Tile|≈|4:3:1}}</span>]]
+|S=[[Biome|<span title="Saltwater">{{Tile|S|7:0:1}}</span>]]
+|B=[[Biome|<span title="Brackish water">{{Tile|B|#77f}}</span>]]
+|F=[[Biome|<span title="Freshwater">{{Tile|F|#5ae}}</span>]]
+|VOLCANO=[[Biome|<span title="Volcano">{{Tile|^|4:0:1}}</span>]]
+|C1=[[Biome|<span title="Underground Depth: 1">{{Tile|1|5:0:1}}</span>]]
+|C2=[[Biome|<span title="Underground Depth: 2">{{Tile|2|5:0:1}}</span>]]
+|C3=[[Biome|<span title="Underground Depth: 3">{{Tile|3|5:0:1}}</span>]]
+|C5=[[Biome|<span title="Underground Depth: 5">{{Tile|5|5:0:1}}</span>]]
+|TO=[[Biome|<span>{{Tile|-|5:0:1}}</span>]]
+|N=[[Night creature|<span title="The night..">{{Tile|☽|2:0:1}}</span>]]
+|HFS=[[Hell|<span title="Hell">{{Tile|☿|4:0:1}}</span>]]
+|[[Biome|<span title="Unspecified">{{Tile|?|7:0:1}}</span>]]}}</includeonly><noinclude>
+{{documentation}}
+[[Category:Templates]]</noinclude>

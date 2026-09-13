@@ -1,0 +1,125 @@
+<div class="mw-parser-output"><div class="plainlinks" style="clear: both; margin: 1em 0 0 0; border: 1px solid #aaa; background-color: #f0f0f8; padding: 5px 1em; border-radius: .4em; -webkit-border-radius: .4em; -moz-border-radius: .4em; -o-border-radius: .4em; -ms-border-radius: .4em;">
+<h2><span id="(view_-_edit_-__history_-__purge)_Documentation"></span><span class="mw-headline" id=".28view_-_edit_-_.0Ahistory_-_.0Apurge.29_Documentation"><span style="float: right; font-size: small; font-family: sans-serif;">
+(<a href="/index.php/Template:C/doc" title="Template:C/doc"><span title="View this documentation">view</span></a> - <a rel="nofollow" class="external text" href="//dwarffortresswiki.org/index.php?title=Template:C/doc&amp;action=edit"><span title="Edit this documentation">edit</span></a> - 
+<a rel="nofollow" class="external text" href="//dwarffortresswiki.org/index.php?title=Template:C/doc&amp;action=history"><span title="Documentation history">history</span></a> - 
+<a rel="nofollow" class="external text" href="//dwarffortresswiki.org/index.php?title=Template:C&amp;action=purge"><span title="Purge this documentation (causes it to be updated; use only if it doesn&#39;t update after editing, NOT in a preview)">purge</span></a>)</span> Documentation</span></h2>
+<p><a class="mw-selflink selflink">Template:C</a> converts two case-insensitive hex digits into a style for the appropriate DF colors. The colors are:
+</p>
+<table cellspacing="0" cellpadding="2" style="color:#000;background-color:#fff;">
+
+<tbody><tr style="color:#fff;background-color:#000;">
+<td>0
+</td>
+<td>Black
+</td>
+<td>#000000
+</td></tr>
+<tr style="color:#fff;background-color:#000080;">
+<td>1
+</td>
+<td>Blue
+</td>
+<td>#000080
+</td></tr>
+<tr style="color:#fff;background-color:#008000;">
+<td>2
+</td>
+<td>Green
+</td>
+<td>#008000
+</td></tr>
+<tr style="color:#fff;background-color:#008080;">
+<td>3
+</td>
+<td>Cyan
+</td>
+<td>#008080
+</td></tr>
+<tr style="color:#fff;background-color:#800000;">
+<td>4
+</td>
+<td>Red
+</td>
+<td>#800000
+</td></tr>
+<tr style="color:#fff;background-color:#800080;">
+<td>5
+</td>
+<td>Magenta
+</td>
+<td>#800080
+</td></tr>
+<tr style="color:#fff;background-color:#808000;">
+<td>6
+</td>
+<td>Brown
+</td>
+<td>#808000
+</td></tr>
+<tr style="background-color:#c0c0c0;">
+<td>7
+</td>
+<td>Light Grey
+</td>
+<td>#c0c0c0
+</td></tr>
+<tr style="background-color:#808080;">
+<td>8
+</td>
+<td>Dark Grey
+</td>
+<td>#808080
+</td></tr>
+<tr style="color:#fff;background-color:#00f;">
+<td>9
+</td>
+<td>Light Blue
+</td>
+<td>#0000ff
+</td></tr>
+<tr style="background-color:#0f0;">
+<td>A
+</td>
+<td>Light Green
+</td>
+<td>#00ff00
+</td></tr>
+<tr style="background-color:#0ff;">
+<td>B
+</td>
+<td>Light Cyan
+</td>
+<td>#00ffff
+</td></tr>
+<tr style="color:#fff;background-color:#f00;">
+<td>C
+</td>
+<td>Light Red
+</td>
+<td>#ff0000
+</td></tr>
+<tr style="background-color:#f0f;">
+<td>D
+</td>
+<td>Light Magenta
+</td>
+<td>#ff00ff
+</td></tr>
+<tr style="background-color:#ff0;">
+<td>E
+</td>
+<td>Yellow
+</td>
+<td>#ffff00
+</td></tr>
+<tr style="background-color:#fff;">
+<td>F
+</td>
+<td>White
+</td>
+<td>#ffffff
+</td></tr></tbody></table>
+<p>For example, <b>{{c|f|3}}</b> produces <b>style="color:#fff;background-color:#008080;"</b>, <b>{{c|7}}</b> produces <b>style="color:#c0c0c0;"</b>, and <b>{{c||D}}</b> produces <b>style="background-color:#f0f;"</b>. Styles like this can be used in many places. In fact, this template was used to color the table rows above. <b>&lt;span {{c|f|0}}&gt;white text on a black background&lt;/span&gt;</b> can be used to color small amounts of text, but the major use is in coloring tables, table rows, and table cells for ASCII diagrams.
+</p><p>Additional style can be added as a third parameter. E.g., <b>{{c|8|0|font-family: Courier New, monospace}}</b>.
+</p>
+</div></div>

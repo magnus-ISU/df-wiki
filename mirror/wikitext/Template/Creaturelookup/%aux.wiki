@@ -1,0 +1,45 @@
+<includeonly>{{CreatureInfo {{#switch:{{NAMESPACE}}|DF2012=v0.34|#default=v0.31}}|
+name={{ucfirst:{{tagentry|{{{1}}}|NAME|1}}}}|
+symbol={{tagvalue|{{{1}}}|CREATURE_TILE}}|
+color={{tagvalue|{{{1}}}|COLOR}}|
+alignment={{#if:{{tag|{{{1}}}|GOOD}}|Good<br />}}{{#if:{{tag|{{{1}}}|EVIL}}|Evil<br />}}{{#if:{{tag|{{{1}}}|SAVAGE}}|Savage}}|
+biome={{#if:{{{biome|}}}|{{{biome}}}[[Category:Verify| ]]|{{biomelist/aux|{{{1}}}}}}}|
+pet={{tag|{{{1|}}}|PET}}|
+exotic={{tag|{{{1|}}}|PET_EXOTIC}}|
+petvalue={{tagvalue|{{{1|}}}|PETVALUE|notfound=0}}|
+train_hunt={{#expr:{{#if:{{tag|{{{1|}}}|TRAINABLE}}|1|0}} or {{#if:{{tag|{{{1|}}}|TRAINABLE_HUNTING}}|1|0}}}}|
+train_war={{#expr:{{#if:{{tag|{{{1|}}}|TRAINABLE}}|1|0}} or {{#if:{{tag|{{{1|}}}|TRAINABLE_WAR}}|1|0}}}}|
+valm={{tagvalue|{{#df_raw:{{{1}}}|SELECT_MATERIAL|ALL}}|MULTIPLY_VALUE|notfound=}}|
+size0={{#if:{{{size0|}}}|{{{size0|}}}|{{bodysize|{{{1}}}|0}}}}|
+size1={{#if:{{{size1|}}}|{{{size1|}}}|{{bodysize|{{{1}}}|1}}}}|
+size2={{#if:{{{size2|}}}|{{{size2|}}}|{{bodysize|{{{1}}}|2}}}}|
+death={{{death|}}}|
+item={{{item|}}}|
+meat={{{meat|}}}|
+fat={{{fat|}}}|
+brain={{{brain|}}}|
+gizzard={{{gizzard|}}}|
+heart={{{heart|}}}|
+lung={{{lung|}}}|
+intestine={{{intestine|}}}|
+liver={{{liver|}}}|
+kidney={{{kidney|}}}|
+tripe={{{tripe|}}}|
+sweetbread={{{sweetbread|}}}|
+eye={{{eye|}}}|
+spleen={{{spleen|}}}|
+bone={{{bone|}}}|
+skull={{{skull|}}}|
+ivory={{{ivory|}}}|
+tooth={{{tooth|}}}|
+hoof={{{hoof|}}}|
+horn={{{horn|}}}|
+shell={{{shell|}}}|
+skin={{{skin|}}}|
+wool={{{wool|}}}|
+gizzard_stone={{{gizzard_stone|}}}|
+contrib={{{contrib|}}}|
+wiki={{{wiki|}}}|
+}}{{interwiki|{{FULLPAGENAME}}}}</includeonly><noinclude>
+No longer active - content merged with [[Template:Creaturelookup/0]]
+[[category:raw templates]]</noinclude>

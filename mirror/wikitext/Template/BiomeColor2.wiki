@@ -1,0 +1,160 @@
+<includeonly>{{#if:{{{1|}}}|{{#switch:{{{1|}}}|#default={{{1|}}}
+|Mountain=<span style="color:gray">Mountain</span>
+|Mountains=<span style="color:gray">Mountains</span>
+|Glacier=<span style="color:#00BFBF">Glacier</span>
+|Tundra=<span style="color:#00BFBF">Tundra</span>
+|Temperate Freshwater Swamp=<span style="color:#246">Temperate Freshwater Swamp</span>
+|Temperate Saltwater Swamp=<span style="color:#246">Temperate Saltwater Swamp</span>
+|Temperate Freshwater Marsh=<span style="color:#246">Temperate Freshwater Marsh</span>
+|Temperate Saltwater Marsh=<span style="color:#246">Temperate Saltwater Marsh</span>
+|Tropical Freshwater Swamp=<span style="color:#369">Tropical Freshwater Swamp</span>
+|Tropical Saltwater Swamp=<span style="color:#369">Tropical Saltwater Swamp</span>
+|Mangrove Swamp=<span style="color:#369">Mangrove Swamp</span>
+|Tropical Freshwater Marsh=<span style="color:#369">Tropical Freshwater Marsh</span>
+|Tropical Saltwater Marsh=<span style="color:#369">Tropical Saltwater Marsh</span>
+|Taiga=<span style="color:green">Taiga</span>
+|Temperate Coniferous Forest=<span style="color:green">Temperate Coniferous Forest</span>
+|Temperate Broadleaf Forest=<span style="color:green">Temperate Broadleaf Forest</span>
+|Tropical Coniferous Forest=<span style="color:limegreen">Tropical Coniferous Forest</span>
+|Tropical Dry Broadleaf Forest=<span style="color:limegreen">Tropical Dry Broadleaf Forest</span>
+|Tropical Moist Broadleaf Forest=<span style="color:limegreen">Tropical Moist Broadleaf Forest</span>
+|Temperate Grassland=<span style="color:green">Temperate Grassland</span>
+|Temperate Savanna=<span style="color:green">Temperate Savanna</span>
+|Temperate Shrubland=<span style="color:green">Temperate Shrubland</span>
+|Tropical Grassland=<span style="color:limegreen">Tropical Grassland</span>
+|Tropical Savanna=<span style="color:limegreen">Tropical Savanna</span>
+|Tropical Shrubland=<span style="color:limegreen">Tropical Shrubland</span>
+|Badlands=<span style="color:maroon">Badlands</span>
+|Rocky Wasteland=<span style="color:maroon">Rocky Wasteland</span>
+|Sand Desert=<span style="color:maroon">Sand Desert</span>
+|Tropical Ocean=<span style="color:navy">Tropical Ocean</span>
+|Temperate Ocean=<span style="color:navy">Temperate Ocean</span>
+|Arctic Ocean=<span style="color:navy">Arctic Ocean</span>
+|Temperate Freshwater Pool=<span style="color:navy">Temperate Freshwater Pool</span>
+|Temperate Brackish Pool=<span style="color:navy">Temperate Brackish Pool</span>
+|Temperate Saltwater Pool=<span style="color:navy">Temperate Saltwater Pool</span>
+|Tropical Freshwater Pool=<span style="color:navy">Tropical Freshwater Pool</span>
+|Tropical Brackish Pool=<span style="color:navy">Tropical Brackish Pool</span>
+|Tropical Saltwater Pool=<span style="color:navy">Tropical Saltwater Pool</span>
+|Temperate Freshwater Lake=<span style="color:navy">Temperate Freshwater Lake</span>
+|Temperate Brackish Lake=<span style="color:navy">Temperate Brackish Lake</span>
+|Temperate Saltwater Lake=<span style="color:navy">Temperate Saltwater Lake</span>
+|Tropical Freshwater Lake=<span style="color:navy">Tropical Freshwater Lake</span>
+|Tropical Brackish Lake=<span style="color:navy">Tropical Brackish Lake</span>
+|Tropical Saltwater Lake=<span style="color:navy">Tropical Saltwater Lake</span>
+|Temperate Freshwater River=<span style="color:navy">Temperate Freshwater River</span>
+|Temperate Brackish River=<span style="color:navy">Temperate Brackish River</span>
+|Temperate Saltwater River=<span style="color:navy">Temperate Saltwater River</span>
+|Tropical Freshwater River=<span style="color:navy">Tropical Freshwater River</span>
+|Tropical Brackish River=<span style="color:navy">Tropical Brackish River</span>
+|Tropical Saltwater River=<span style="color:navy">Tropical Saltwater River</span>
+|Subterranean Water=<span style="color:olive">Subterranean Water</span>
+|Subterranean Chasm=<span style="color:olive">Subterranean Chasm</span>
+|Subterranean Lava=<span style="color:red">Subterranean Lava</span>
+|Any Ocean=<span style="color:navy">Any Ocean</span>
+|Any Lake=<span style="color:navy">Any Lake</span>
+|Any Temperate Lake=<span style="color:navy">Any Temperate Lake</span>
+|Any Tropical Lake=<span style="color:navy">Any Tropical Lake</span>
+|Any River=<span style="color:navy">Any River</span>
+|Any Temperate River=<span style="color:navy">Any Temperate River</span>
+|Any Tropical River=<span style="color:navy">Any Tropical River</span>
+|Any Pool=<span style="color:navy">Any Pool</span>
+|Any Temperate=<span style="color:green">Any Temperate</span>
+|Any Tropical=<span style="color:limegreen">Any Tropical</span>
+|Any Forest=<span style="color:green">Any Forest</span>
+|Any Shrubland=<span style="color:limegreen">Any Shrubland</span>
+|Any Grassland=<span style="color:limegreen">Any Grassland</span>
+|Any Savanna=<span style="color:limegreen">Any Savanna</span>
+|Any Temperate Forest=<span style="color:green">Any Temperate Forest</span>
+|Any Tropical Forest=<span style="color:limegreen">Any Tropical Forest</span>
+|Any Temperate Broadleaf=<span style="color:green">Any Temperate Broadleaf</span>
+|Any Tropical Broadleaf=<span style="color:limegreen">Any Tropical Broadleaf</span>
+|Any Wetland=<span style="color:#246">Any Wetland</span>
+|Any Temperate Wetland=<span style="color:#246">Any Temperate Wetland</span>
+|Any Tropical Wetland=<span style="color:#369">Any Tropical Wetland</span>
+|Any Tropical Marsh=<span style="color:#369">Any Tropical Marsh</span>
+|Any Temperate Marsh=<span style="color:#246">Any Temperate Marsh</span>
+|Any Tropical Swamp=<span style="color:#369">Any Tropical Swamp</span>
+|Any Temperate Swamp=<span style="color:#246">Any Temperate Swamp</span>
+|Any Desert=<span style="color:maroon">Any Desert</span>
+}}
+{{#if:{{{2|}}}|&nbsp;{{BiomeColor3|{{{2|}}}}}}}{{#if:{{{3|}}}|{{BiomeColor3|{{{3|}}}}}}}{{#if:{{{4|}}}|{{BiomeColor3|{{{4|}}}}}}}{{#if:{{{5|}}}|{{BiomeColor3|{{{5|}}}}}}}|''None''}}</includeonly><noinclude>See [[:Template:BiomeColor3]] for subtypes.
+
+{{BiomeColor|Mountain}}
+{{BiomeColor|Mountains}}
+{{BiomeColor|Glacier}}
+{{BiomeColor|Tundra}}
+{{BiomeColor|Temperate Freshwater Swamp}}
+{{BiomeColor|Temperate Saltwater Swamp}}
+{{BiomeColor|Temperate Freshwater Marsh}}
+{{BiomeColor|Temperate Saltwater Marsh}}
+{{BiomeColor|Tropical Freshwater Swamp}}
+{{BiomeColor|Tropical Saltwater Swamp}}
+{{BiomeColor|Mangrove Swamp}}
+{{BiomeColor|Tropical Freshwater Marsh}}
+{{BiomeColor|Tropical Saltwater Marsh}}
+{{BiomeColor|Taiga}}
+{{BiomeColor|Temperate Coniferous Forest}}
+{{BiomeColor|Temperate Broadleaf Forest}}
+{{BiomeColor|Tropical Coniferous Forest}}
+{{BiomeColor|Tropical Dry Broadleaf Forest}}
+{{BiomeColor|Tropical Moist Broadleaf Forest}}
+{{BiomeColor|Temperate Grassland}}
+{{BiomeColor|Temperate Savanna}}
+{{BiomeColor|Temperate Shrubland}}
+{{BiomeColor|Tropical Grassland}}
+{{BiomeColor|Tropical Savanna}}
+{{BiomeColor|Tropical Shrubland}}
+{{BiomeColor|Badlands}}
+{{BiomeColor|Rocky Wasteland}}
+{{BiomeColor|Sand Desert}}
+{{BiomeColor|Tropical Ocean}}
+{{BiomeColor|Temperate Ocean}}
+{{BiomeColor|Arctic Ocean}}
+{{BiomeColor|Temperate Freshwater Pool}}
+{{BiomeColor|Temperate Brackish Pool}}
+{{BiomeColor|Temperate Saltwater Pool}}
+{{BiomeColor|Tropical Freshwater Pool}}
+{{BiomeColor|Tropical Brackish Pool}}
+{{BiomeColor|Tropical Saltwater Pool}}
+{{BiomeColor|Temperate Freshwater Lake}}
+{{BiomeColor|Temperate Brackish Lake}}
+{{BiomeColor|Temperate Saltwater Lake}}
+{{BiomeColor|Tropical Freshwater Lake}}
+{{BiomeColor|Tropical Brackish Lake}}
+{{BiomeColor|Tropical Saltwater Lake}}
+{{BiomeColor|Temperate Freshwater River}}
+{{BiomeColor|Temperate Brackish River}}
+{{BiomeColor|Temperate Saltwater River}}
+{{BiomeColor|Tropical Freshwater River}}
+{{BiomeColor|Tropical Brackish River}}
+{{BiomeColor|Tropical Saltwater River}}
+{{BiomeColor|Subterranean Water}}
+{{BiomeColor|Subterranean Chasm}}
+{{BiomeColor|Subterranean Lava}}
+{{BiomeColor|Any Ocean}}
+{{BiomeColor|Any Lake}}
+{{BiomeColor|Any Temperate Lake}}
+{{BiomeColor|Any Tropical Lake}}
+{{BiomeColor|Any River}}
+{{BiomeColor|Any Temperate River}}
+{{BiomeColor|Any Tropical River}}
+{{BiomeColor|Any Pool}}
+{{BiomeColor|Any Temperate}}
+{{BiomeColor|Any Tropical}}
+{{BiomeColor|Any Forest}}
+{{BiomeColor|Any Shrubland}}
+{{BiomeColor|Any Grassland}}
+{{BiomeColor|Any Savanna}}
+{{BiomeColor|Any Temperate Forest}}
+{{BiomeColor|Any Tropical Forest}}
+{{BiomeColor|Any Temperate Broadleaf}}
+{{BiomeColor|Any Tropical Broadleaf}}
+{{BiomeColor|Any Wetland}}
+{{BiomeColor|Any Temperate Wetland}}
+{{BiomeColor|Any Tropical Wetland}}
+{{BiomeColor|Any Tropical Marsh}}
+{{BiomeColor|Any Temperate Marsh}}
+{{BiomeColor|Any Tropical Swamp}}
+{{BiomeColor|Any Temperate Swamp}}
+{{BiomeColor|Any Desert}}</noinclude>

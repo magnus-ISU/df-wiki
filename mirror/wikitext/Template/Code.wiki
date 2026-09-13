@@ -1,0 +1,26 @@
+{{#tag:syntaxhighlight|{{{code|{{{1|[token]}}}}}}|lang="BBCode"|class="code-raw"|style="border-left: 6px solid #a4a4a4;{{{style|}}}"}}<noinclude>
+
+Wrapper template that show syntax-highlighted text. The template uses the <code><nowiki><syntaxhighlight></nowiki></code> tag (see [https://www.mediawiki.org/wiki/Extension:SyntaxHighlight Extension:SyntaxHighlight]).
+
+==Usage==
+Simply wrapper the template around your code: {{t|code|<your code here>}} or {{t|code|<nowiki>code=<your code here></nowiki>}}
+<pre>
+{{{code|
+...
+Your code
+...
+}}
+</pre>
+
+Note: If the content includes an equals sign (=), you must specify the parameter explicitly: 
+
+<pre>
+{{{code|code=
+...
+Your code with = sign
+...
+}}
+</pre>
+
+[[Category:templates]]
+</noinclude>

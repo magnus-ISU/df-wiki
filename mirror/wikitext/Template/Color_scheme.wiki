@@ -1,0 +1,78 @@
+<div style="width: auto; margin:0px 20%"><table style="width:100%">
+<tr>
+<td style="background-color:{{#colorconvert:{{{black|000}}}|hex|hex}}" width="50%> <span style="color: {{#colorfg:{{{black|000}}}}}">BLACK {{{blackt|}}}</span></td>
+<td style="background-color:{{#colorconvert:{{{dgray|000}}}|hex|hex}}" width="50%> <span style="color: {{#colorfg:{{{dgray|000}}}}}">DGRAY {{{dgrayt|}}}</span></td>
+</tr><tr>
+<td style="background-color:{{#colorconvert:{{{blue|000}}}|hex|hex}}" width="50%> <span style="color: {{#colorfg:{{{blue|000}}}}}">BLUE {{{bluet|}}}</span></td>
+<td style="background-color:{{#colorconvert:{{{lblue|000}}}|hex|hex}}" width="50%> <span style="color: {{#colorfg:{{{lblue|000}}}}}">LBLUE {{{lbluet|}}}</span></td>
+</tr><tr>
+<td style="background-color:{{#colorconvert:{{{green|000}}}|hex|hex}}" width="50%> <span style="color: {{#colorfg:{{{green|000}}}}}">GREEN {{{greent|}}}</span></td>
+<td style="background-color:{{#colorconvert:{{{lgreen|000}}}|hex|hex}}" width="50%> <span style="color: {{#colorfg:{{{lgreen|000}}}}}">LGREEN {{{lgreent|}}}</span></td>
+</tr><tr>
+<td style="background-color:{{#colorconvert:{{{cyan|000}}}|hex|hex}}" width="50%> <span style="color: {{#colorfg:{{{cyan|000}}}}}">CYAN {{{cyant|}}}</span></td>
+<td style="background-color:{{#colorconvert:{{{lcyan|000}}}|hex|hex}}" width="50%> <span style="color: {{#colorfg:{{{lcyan|000}}}}}">LCYAN {{{lcyant|}}}</span></td>
+</tr><tr>
+<td style="background-color:{{#colorconvert:{{{red|000}}}|hex|hex}}" width="50%> <span style="color: {{#colorfg:{{{red|000}}}}}">RED {{{redt|}}}</span></td>
+<td style="background-color:{{#colorconvert:{{{lred|000}}}|hex|hex}}" width="50%> <span style="color: {{#colorfg:{{{lred|000}}}}}">LRED {{{lredt|}}}</span></td>
+</tr><tr>
+<td style="background-color:{{#colorconvert:{{{magenta|000}}}|hex|hex}}" width="50%> <span style="color: {{#colorfg:{{{magenta|000}}}}}">MAGENTA {{{magentat|}}}</span></td>
+<td style="background-color:{{#colorconvert:{{{lmagenta|000}}}|hex|hex}}" width="50%> <span style="color: {{#colorfg:{{{lmagenta|000}}}}}">LMAGENTA {{{lmagentat|}}}</span></td>
+</tr><tr>
+<td style="background-color:{{#colorconvert:{{{brown|000}}}|hex|hex}}" width="50%> <span style="color: {{#colorfg:{{{brown|000}}}}}">BROWN {{{brownt|}}}</span></td>
+<td style="background-color:{{#colorconvert:{{{yellow|000}}}|hex|hex}}" width="50%> <span style="color: {{#colorfg:{{{yellow|000}}}}}">YELLOW {{{yellowt|}}}</span></td>
+</tr><tr>
+<td style="background-color:{{#colorconvert:{{{lgray|000}}}|hex|hex}}" width="50%> <span style="color: {{#colorfg:{{{lgray|000}}}}}">LGRAY {{{lgrayt|}}}</span></td>
+<td style="background-color:{{#colorconvert:{{{white|000}}}|hex|hex}}" width="50%> <span style="color: {{#colorfg:{{{white|000}}}}}">WHITE {{{whitet|}}}</span></td>
+</tr>
+</table></div>
+{{gamedata|title=colors.txt|
+[BLACK_R:{{#colorconvert:{{{black|000}}}|hex|rgb1}}]
+[BLACK_G:{{#colorconvert:{{{black|000}}}|hex|rgb2}}]
+[BLACK_B:{{#colorconvert:{{{black|000}}}|hex|rgb3}}]
+[BLUE_R:{{#colorconvert:{{{blue|000}}}|hex|rgb1}}]
+[BLUE_G:{{#colorconvert:{{{blue|000}}}|hex|rgb2}}]
+[BLUE_B:{{#colorconvert:{{{blue|000}}}|hex|rgb3}}]
+[GREEN_R:{{#colorconvert:{{{green|000}}}|hex|rgb1}}]
+[GREEN_G:{{#colorconvert:{{{green|000}}}|hex|rgb2}}]
+[GREEN_B:{{#colorconvert:{{{green|000}}}|hex|rgb3}}]
+[CYAN_R:{{#colorconvert:{{{cyan|000}}}|hex|rgb1}}]
+[CYAN_G:{{#colorconvert:{{{cyan|000}}}|hex|rgb2}}]
+[CYAN_B:{{#colorconvert:{{{cyan|000}}}|hex|rgb3}}]
+[RED_R:{{#colorconvert:{{{red|000}}}|hex|rgb1}}]
+[RED_G:{{#colorconvert:{{{red|000}}}|hex|rgb2}}]
+[RED_B:{{#colorconvert:{{{red|000}}}|hex|rgb3}}]
+[MAGENTA_R:{{#colorconvert:{{{magenta|000}}}|hex|rgb1}}]
+[MAGENTA_G:{{#colorconvert:{{{magenta|000}}}|hex|rgb2}}]
+[MAGENTA_B:{{#colorconvert:{{{magenta|000}}}|hex|rgb3}}]
+[BROWN_R:{{#colorconvert:{{{brown|000}}}|hex|rgb1}}]
+[BROWN_G:{{#colorconvert:{{{brown|000}}}|hex|rgb2}}]
+[BROWN_B:{{#colorconvert:{{{brown|000}}}|hex|rgb3}}]
+[LGRAY_R:{{#colorconvert:{{{lgray|000}}}|hex|rgb1}}]
+[LGRAY_G:{{#colorconvert:{{{lgray|000}}}|hex|rgb2}}]
+[LGRAY_B:{{#colorconvert:{{{lgray|000}}}|hex|rgb3}}]
+[DGRAY_R:{{#colorconvert:{{{dgray|000}}}|hex|rgb1}}]
+[DGRAY_G:{{#colorconvert:{{{dgray|000}}}|hex|rgb2}}]
+[DGRAY_B:{{#colorconvert:{{{dgray|000}}}|hex|rgb3}}]
+[LBLUE_R:{{#colorconvert:{{{lblue|000}}}|hex|rgb1}}]
+[LBLUE_G:{{#colorconvert:{{{lblue|000}}}|hex|rgb2}}]
+[LBLUE_B:{{#colorconvert:{{{lblue|000}}}|hex|rgb3}}]
+[LGREEN_R:{{#colorconvert:{{{lgreen|000}}}|hex|rgb1}}]
+[LGREEN_G:{{#colorconvert:{{{lgreen|000}}}|hex|rgb2}}]
+[LGREEN_B:{{#colorconvert:{{{lgreen|000}}}|hex|rgb3}}]
+[LCYAN_R:{{#colorconvert:{{{lcyan|000}}}|hex|rgb1}}]
+[LCYAN_G:{{#colorconvert:{{{lcyan|000}}}|hex|rgb2}}]
+[LCYAN_B:{{#colorconvert:{{{lcyan|000}}}|hex|rgb3}}]
+[LRED_R:{{#colorconvert:{{{lred|000}}}|hex|rgb1}}]
+[LRED_G:{{#colorconvert:{{{lred|000}}}|hex|rgb2}}]
+[LRED_B:{{#colorconvert:{{{lred|000}}}|hex|rgb3}}]
+[LMAGENTA_R:{{#colorconvert:{{{lmagenta|000}}}|hex|rgb1}}]
+[LMAGENTA_G:{{#colorconvert:{{{lmagenta|000}}}|hex|rgb2}}]
+[LMAGENTA_B:{{#colorconvert:{{{lmagenta|000}}}|hex|rgb3}}]
+[YELLOW_R:{{#colorconvert:{{{yellow|000}}}|hex|rgb1}}]
+[YELLOW_G:{{#colorconvert:{{{yellow|000}}}|hex|rgb2}}]
+[YELLOW_B:{{#colorconvert:{{{yellow|000}}}|hex|rgb3}}]
+[WHITE_R:{{#colorconvert:{{{white|000}}}|hex|rgb1}}]
+[WHITE_G:{{#colorconvert:{{{white|000}}}|hex|rgb2}}]
+[WHITE_B:{{#colorconvert:{{{white|000}}}|hex|rgb3}}]
+}}
+<noinclude>{{documentation}}</noinclude>

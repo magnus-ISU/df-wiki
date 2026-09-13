@@ -1,0 +1,24 @@
+<includeonly>{{CreatureCurrent table row
+|symbol={{char|{{tagvalue|{{{{{namespace|{{NAMESPACE}}}}}:{{{name}}}/raw}}|CREATURE_TILE}}}}|
+|color={{tagvalue|{{{{{namespace|{{NAMESPACE}}}}}:{{{name}}}/raw}}|COLOR}}
+|name=[[{{{namespace|{{NAMESPACE}}}}}:{{{name}}}|{{{name}}}]]
+|hostile={{#if: {{tag|{{{{{namespace|{{NAMESPACE}}}}}:{{{name}}}/raw}}|PRONE_TO_RAGE}}|Yes|{{#if: {{tag|{{{{{namespace|{{NAMESPACE}}}}}:{{{name}}}/raw}}|LARGE_PREDATOR}}|Yes|{{#if: {{tag|{{{{{namespace|{{NAMESPACE}}}}}:{{{name}}}/raw}}|BENIGN}}|No|Variable}}}}}}
+|food={{#ifexpr:{{#if:{{tag|{{{{{namespace|{{NAMESPACE}}}}}:{{{name}}}/raw}}|INTELLIGENT}}|1|0}} or {{#if:{{tag|{{{{{namespace|{{NAMESPACE}}}}}:{{{name}}}/raw}}|CAN_LEARN}}|1|0}} or {{#if:{{tag|{{{{{namespace|{{NAMESPACE}}}}}:{{{name}}}/raw}}|NOT_BUTCHERABLE}}|1|0}}|No|Yes}}
+|size={{bodysize|{{{{{namespace|{{NAMESPACE}}}}}:{{{name}}}/raw}}}}
+|value={{#ifexpr:{{#if:{{tag|{{{{{namespace|{{NAMESPACE}}}}}:{{{name}}}/raw}}|PET}}|1|0}} or {{#if:{{tag|{{{{{namespace|{{NAMESPACE}}}}}:{{{name}}}/raw}}|PET_EXOTIC}}|1|0}}|{{tagvalue|{{{{{namespace|{{NAMESPACE}}}}}:{{{name}}}/raw}}|PETVALUE}}|Not tameable}}
+|biome={{#if:{{tag|{{{{{namespace|{{NAMESPACE}}}}}:{{{name}}}/raw}}|BIOME}}|{{#eval:{{#df_foreachtag:{{{{{namespace|{{NAMESPACE}}}}}:{{{name}}}/raw}}|BIOME|<nowiki></nowiki>
+* {{#delay:BiomeToken|\2}}}}}}|<nowiki></nowiki>
+* None}}
+|note={{{features|}}}}}</includeonly>
+<noinclude>Usage:
+
+<nowiki>{{CreatureCurrent table head}}</nowiki>
+
+<nowiki>{{Creature row|name=Dwarf|namespace=DF2012|features=Beards}}</nowiki>
+
+namespace is optional as long as the current page resides in the target namespace
+
+features is optional
+
+{{CreatureCurrent table head}}
+{{Creature row|name=Dwarf|namespace=DF2012|features=Beards}}</noinclude>

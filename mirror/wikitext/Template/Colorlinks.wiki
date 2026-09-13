@@ -1,0 +1,1 @@
+{{#rreplace:{{#rreplace:{{{2|}}}|\[\[([^]{{!}}]+)\]\]|[[$1|$1]]}}|\[\[([^{{!}}]+)\{{!}}([^]]+)\]\](\S*)|<span style="color:{{{1|#00f}}};">[[$1|<span style="color:{{{1|#00f}}};">$2$3</span>]]</span>}}<noinclude>{{documentation}}</noinclude>

@@ -1,0 +1,32 @@
+Used for linking to bugs on the [https://dwarffortressbugtracker.com/ Bug Tracker]
+
+See also [[:Category:References to fixed bugs]]
+
+==Usage==
+
+The first parameter is the number of the bug on the bug tracker. Leading 0's aren't necessary.
+<pre>{{bug|296}}</pre>
+{{bug|296|cat=nocat}}
+
+An optional parameter is a link to the workaround. This should be used temporarily, while the bug is '''not''' fixed. If the bug is fixed, remove it from the article. ([[Dwarf fortress wiki:Community Portal#T|Rule T]])
+
+Note that this parameter is '''named'''. You need to use <code><nowiki>workaround=http://...</nowiki></code>, not just the link as the second parameter.
+<pre>{{bug|6290|workaround=http://www.bay12forums.com/smf/index.php?topic=122782.0}}</pre>
+{{bug|6290|workaround=http://www.bay12forums.com/smf/index.php?topic=122782.0|cat=nocat}}
+
+If the workaround is listed in the comments of the bug report, use <pre>{{bug|number|workaround=comments}}</pre>
+
+{{bug|1|workaround=comments|cat=nocat}}
+
+===Linking to an article's "bugs" section===
+
+Some articles have a separate section for bugs. Using this template without a bug number will link to that section. For example, <pre>{{bug}}</pre> produces this: {{bug|cat=nocat}}
+
+If the section title containing bugs is something other than "Bugs", specify this in the <code>section</code> parameter. <pre>{{bug|section=Usage}}</pre> produces this: {{bug|section=Usage|cat=nocat}} (this should jump to the Usage section of this documentation, which does not actually contain bugs).
+
+==Bugs==
+This is a sample section, which would contain bugs in a real article. It is here to serve as an example for linking to the bugs section.
+
+<includeonly>[[Category:Inline formatting templates]]</includeonly>
+<includeonly>[[Category:Link processing templates]]</includeonly>
+<noinclude>[[Category:Template Documentation]]</noinclude>

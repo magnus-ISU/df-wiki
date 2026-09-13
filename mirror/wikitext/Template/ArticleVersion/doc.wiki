@@ -1,0 +1,21 @@
+This template is to be used on all pages that are game version specific.
+
+===Usage===
+To use this template simply add {{tl|av}} to the top of an article.
+
+==="There's a new version! What do I do?"===
+If the [[version]] is major enough to warrant a new namespace (this will have been determined by the community), then the most important thing to do is update [[df:current|this page]] with the newest namespace. This will cause all the templates to show the proper current/outdated message.
+
+The second thing to do is update the [[Template:ArticleVersion|ArticleVersion template]]. This template is widely used and quite complicated; please do not attempt to modify it unless you are very familiar with wiki template code. Instead, please post an update request on its [[Template talk:ArticleVersion|talk page]].
+
+A list of templates that need to be updated in each major version can be found [[DF:Major version checklist|here]].
+
+===Examples===
+{{av|DF2014:Cat}}
+
+{{av|v0.34:Cat}}
+
+{{av|Masterwork:Cat}}
+
+<includeonly>[[Category:Version templates]]</includeonly>
+<noinclude>[[Category:Template Documentation]]</noinclude>
