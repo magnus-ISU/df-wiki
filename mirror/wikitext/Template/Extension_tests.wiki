@@ -1,0 +1,12 @@
+ParserFunctions: <div style="display:none">{{#if:1|<{{#if:}}/div>{{Extension tests/Yes}}
+<!-- begin ParserFunctions-dependent tests -->
+
+Variables: {{#ifeq:{{#vardefineecho:a|b}}|b|{{Extension tests/Yes}}|{{Extension tests/No}}}}
+
+Loops: {{#ifeq:{{#while:|}}||{{Extension tests/Yes}}|{{Extension tests/No}}}}
+
+DFRawFunctions: {{#ifeq:{{#mreplace:a|a|b}}|b|{{Extension tests/Yes}}|{{Extension tests/No}}}}
+
+RegexFunctions: {{#ifeq:{{#rreplace:a|a|b}}|b|{{Extension tests/Yes}}|{{Extension tests/No}}}}
+<!-- end ParserFunctions-dependent tests -->
+<{{#if:}}div style="display:none">|</div>{{Extension tests/No}}<div style="display:none">}}</div>

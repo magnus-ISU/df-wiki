@@ -1,0 +1,17 @@
+Generates 3 optional parts:
+* A header (level 3) containing version information (to turn this off, pass <code>h=no</code> or <code>h=0</code> to the template)
+* A link to the corresponding release notes (at [[cv:Release information]]<nowiki>;</nowiki> to turn this off, pass <code>rn=no</code>
+* The list of download mirrors (to turn this off, pass <code>m=no</code>
+
+Examples:
+<pre>{{download|0.34.11}}</pre>
+{{download|0.34.11}}
+----
+<pre>{{download|0.34.10|m=no}}</pre>
+{{download|0.34.10|m=no}}
+----
+<pre>{{download|0.31.25|h=0}}</pre>
+{{download|0.31.25|h=0}}
+
+<includeonly>[[Category:Templates]]</includeonly>
+<noinclude>[[Category:Template Documentation]]</noinclude>

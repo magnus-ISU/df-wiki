@@ -1,0 +1,12 @@
+:''This template is intended for basic use on documentation. For more control over appearance, use [[Template:Docbox]]. ''
+
+This template displays documentation on templates. Pages using this template will automatically be added to [[:Category:Templates]], unless the <code>nocat=</code> parameter is specified with a non-blank value.
+
+===Usage===
+
+ Normal template contents'''{{tc|green|&lt;noinclude><nowiki>{{documentation}}</nowiki>&lt;/noinclude>}}'''
+
+Documentation goes on "Template:(template name)/doc"
+
+<includeonly>[[Category:Templates]]</includeonly>
+<noinclude>[[Category:Template Documentation]]</noinclude>

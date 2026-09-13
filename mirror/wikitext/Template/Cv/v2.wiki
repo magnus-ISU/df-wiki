@@ -1,0 +1,19 @@
+<noinclude>
+<!-- DO NOT edit this template unless you know very well what you are doing. This template is extremely easy to break. -->{{shortcut|template:cv}}</noinclude><includeonly>{{#vardefine:cv-page|{{PAGENAME}}}}{{
+#ifeq:{{NAMESPACE}}|Category|
+<!-- display -->{{#if:{{#rreplace:{{#var:cv-page}}|[^:]|}}|<!-- page name has : -->
+{{#vardefine:cv-ns|{{#rsplit:{{#var:cv-page}}|:|0}}}}{{
+#vardefine:cv-cn|{{#rsplit:{{#var:cv-page}}|:|1}}
+}}{{
+version links
+|theme={{#switch:{{#var:cv-ns}}|{{DF:Current}}=green|#default=orange}}
+|r1=
+[[{{#ifeq:{{#var:cv-ns}}|DF2012|*}}:Category:DF2012:{{#var:cv-cn}}|v{{current/version}}]]
+[[{{#ifeq:{{#var:cv-ns}}|V0.31|*}}:Category:V0.31:{{#var:cv-cn}}|v0.31.25]]
+[[{{#ifeq:{{#var:cv-ns}}|40d|*}}:Category:40d:{{#var:cv-cn}}|v0.28.181.40d]]
+[[{{#ifeq:{{#var:cv-ns}}|23a|*}}:Category:23a:{{#var:cv-cn}}|v0.23.130.23a]]
+|bottom={{version links/link|Template:cv|More Info}}
+|center={{#switch:{{#var:cv-ns}}|#default=This category is about an '''older version''' of DF.|Template=This category is in the template namespace.|{{df:current}}=This category is about the current version of DF.}}
+}}|<!-- errors -->
+<span class="error">Invalid category name! Name should be in format <tt>Category:''Namespace'':''Category Name''</tt>.</span>}}|
+<span class="error">This page is not in the Category namespace!</span>}}

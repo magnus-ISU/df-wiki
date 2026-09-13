@@ -1,0 +1,168 @@
+<div class="mw-parser-output"><p><i>You may be looking for <a href="/index.php/Template:Gametext" title="Template:Gametext">Template:Gametext</a>.</i>
+</p>
+<p><span style="color: #C0C0C0; font-size: 12.5px; font-family: &#39;fixedsys&#39;, &#39;IBM Plex Mono Medium&#39;, &#39;Consolas&#39;, monospace; background: #000000">{{{1}}}</span></p><div class="plainlinks" style="clear: both; margin: 1em 0 0 0; border: 1px solid #aaa; background-color: #f0f0f8; padding: 5px 1em; border-radius: .4em; -webkit-border-radius: .4em; -moz-border-radius: .4em; -o-border-radius: .4em; -ms-border-radius: .4em;">
+<h2><span id="(view_-_edit_-__history_-__purge)_Documentation"></span><span class="mw-headline" id=".28view_-_edit_-_.0Ahistory_-_.0Apurge.29_Documentation"><span style="float: right; font-size: small; font-family: sans-serif;">
+(<a href="/index.php/Template:DFtext/doc" title="Template:DFtext/doc"><span title="View this documentation">view</span></a> - <a rel="nofollow" class="external text" href="//dwarffortresswiki.org/index.php?title=Template:DFtext/doc&amp;action=edit"><span title="Edit this documentation">edit</span></a> - 
+<a rel="nofollow" class="external text" href="//dwarffortresswiki.org/index.php?title=Template:DFtext/doc&amp;action=history"><span title="Documentation history">history</span></a> - 
+<a rel="nofollow" class="external text" href="//dwarffortresswiki.org/index.php?title=Template:DFtext&amp;action=purge"><span title="Purge this documentation (causes it to be updated; use only if it doesn&#39;t update after editing, NOT in a preview)">purge</span></a>)</span> Documentation</span></h2>
+<p><span style="color: #C0C0C0; font-size: 12.5px; font-family: &#39;fixedsys&#39;, &#39;IBM Plex Mono Medium&#39;, &#39;Consolas&#39;, monospace; background: #000000">The DFtext template is designed to provide generally short preformatted text that resembles that of the game.</span>
+</p><p><code>{{DFtext|Outside}}</code> turns into <span style="color: #C0C0C0; font-size: 12.5px; font-family: &#39;fixedsys&#39;, &#39;IBM Plex Mono Medium&#39;, &#39;Consolas&#39;, monospace; background: #000000">Outside</span>.<br /><code>{{DFtext|Outside|3:1}}</code> turns into <span style="color: #12FECF; font-size: 12.5px; font-family: &#39;fixedsys&#39;, &#39;IBM Plex Mono Medium&#39;, &#39;Consolas&#39;, monospace; background: #000000">Outside</span><br /><code>{{DFtext|Outside|3:2:1}}</code> turns into <span style="color: #12FECF; font-size: 12.5px; font-family: &#39;fixedsys&#39;, &#39;IBM Plex Mono Medium&#39;, &#39;Consolas&#39;, monospace; background: #A2DC34">Outside</span>.
+</p><p><br />
+This template mimics the 16 <a href="/index.php/Color" title="Color">colors</a> available to <i>Dwarf Fortress</i>. The format differs between 2 or 3 numbers being used. The format of the template is as follows:<br />
+</p><p><code>{{DFtext|color:brightness}}</code> or...<br />
+<code>{{DFtext|color:background:brightness}}</code><br />
+</p><p>There are 8 colors available, though each one has a dark and bright variation (0 and 1), adding up to 16 possible colors. Looking at the chart below will show which number refers to which color. Not including any numbers in the template defaults to light grey text on a black background - the background will also default to black if a third number is not included.
+</p><p>Alternatively, there is another, more complex format you can use to achieve the same text formatting. This is only helpful if this template doesn't provide a text (or highlight) color that's in the game. A CSS span style syntax can be used:
+</p>
+<pre>&lt;span style="font-family:IBM Plex Mono Medium, Consolas, monospace; font-size:12.5px; background-color:#000; color:#91caff;"&gt;*TEXT GOES HERE*&lt;/span&gt;</pre>
+<p>The example would provide the following: <span style="font-family:IBM Plex Mono Medium, Consolas, monospace; font-size:12.5px; background-color:#000; color:#91caff;">*TEXT GOES HERE*</span>
+</p><p>This should only be a last resort, as this is a lot of text that can muddle up the flow of editing a page, therefore possibly adding more editing difficulty for other editors. Also, if there is a text color in the game that's very similar to a color this template can provide, it may be best to just use the next closest color from this template.
+</p>
+<h2><span class="mw-headline" id="Values">Values</span></h2>
+<table class="wikitable" cellpadding="3" width="130px">
+<caption>
+</caption>
+<tbody><tr>
+<th>Value
+</th>
+<th>Background
+</th>
+<th>Text
+</th>
+</tr></tbody><caption>
+</caption>
+<tbody><tr><td>0
+</td>
+<td><span style="color: #A0A0A0; font-size: 12.5px; font-family: &#39;fixedsys&#39;, &#39;IBM Plex Mono Medium&#39;, &#39;Consolas&#39;, monospace; background: #000000">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;</span>
+</td>
+<td><span style="color: #000000; font-size: 12.5px; font-family: &#39;fixedsys&#39;, &#39;IBM Plex Mono Medium&#39;, &#39;Consolas&#39;, monospace; background: #000000">&#160;Test&#160;</span>
+</td>
+</tr></tbody><caption>
+</caption>
+<tbody><tr><td>0:1
+</td>
+<td><span style="color: #A0A0A0; font-size: 12.5px; font-family: &#39;fixedsys&#39;, &#39;IBM Plex Mono Medium&#39;, &#39;Consolas&#39;, monospace; background: #000000">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;</span>
+</td>
+<td><span style="color: #A0A0A0; font-size: 12.5px; font-family: &#39;fixedsys&#39;, &#39;IBM Plex Mono Medium&#39;, &#39;Consolas&#39;, monospace; background: #000000">&#160;Test&#160;</span>
+</td>
+</tr></tbody><caption>
+</caption>
+<tbody><tr><td>1
+</td>
+<td><span style="color: #8C66FF; font-size: 12.5px; font-family: &#39;fixedsys&#39;, &#39;IBM Plex Mono Medium&#39;, &#39;Consolas&#39;, monospace; background: #207DF1">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;</span>
+</td>
+<td><span style="color: #207DF1; font-size: 12.5px; font-family: &#39;fixedsys&#39;, &#39;IBM Plex Mono Medium&#39;, &#39;Consolas&#39;, monospace; background: #000000">&#160;Test&#160;</span>
+</td>
+</tr></tbody><caption>
+</caption>
+<tbody><tr><td>1:1
+</td>
+<td><span style="color: #8C66FF; font-size: 12.5px; font-family: &#39;fixedsys&#39;, &#39;IBM Plex Mono Medium&#39;, &#39;Consolas&#39;, monospace; background: #207DF1">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;</span>
+</td>
+<td><span style="color: #8C66FF; font-size: 12.5px; font-family: &#39;fixedsys&#39;, &#39;IBM Plex Mono Medium&#39;, &#39;Consolas&#39;, monospace; background: #000000">&#160;Test&#160;</span>
+</td>
+</tr></tbody><caption>
+</caption>
+<tbody><tr><td>2
+</td>
+<td><span style="color: #13FD65; font-size: 12.5px; font-family: &#39;fixedsys&#39;, &#39;IBM Plex Mono Medium&#39;, &#39;Consolas&#39;, monospace; background: #A2DC34">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;</span>
+</td>
+<td><span style="color: #A2DC34; font-size: 12.5px; font-family: &#39;fixedsys&#39;, &#39;IBM Plex Mono Medium&#39;, &#39;Consolas&#39;, monospace; background: #000000">&#160;Test&#160;</span>
+</td>
+</tr></tbody><caption>
+</caption>
+<tbody><tr><td>2:1
+</td>
+<td><span style="color: #13FD65; font-size: 12.5px; font-family: &#39;fixedsys&#39;, &#39;IBM Plex Mono Medium&#39;, &#39;Consolas&#39;, monospace; background: #A2DC34">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;</span>
+</td>
+<td><span style="color: #13FD65; font-size: 12.5px; font-family: &#39;fixedsys&#39;, &#39;IBM Plex Mono Medium&#39;, &#39;Consolas&#39;, monospace; background: #000000">&#160;Test&#160;</span>
+</td>
+</tr></tbody><caption>
+</caption>
+<tbody><tr><td>3
+</td>
+<td><span style="color: #12FECF; font-size: 12.5px; font-family: &#39;fixedsys&#39;, &#39;IBM Plex Mono Medium&#39;, &#39;Consolas&#39;, monospace; background: #71BBB0">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;</span>
+</td>
+<td><span style="color: #71BBB0; font-size: 12.5px; font-family: &#39;fixedsys&#39;, &#39;IBM Plex Mono Medium&#39;, &#39;Consolas&#39;, monospace; background: #000000">&#160;Test&#160;</span>
+</td>
+</tr></tbody><caption>
+</caption>
+<tbody><tr><td>3:1
+</td>
+<td><span style="color: #12FECF; font-size: 12.5px; font-family: &#39;fixedsys&#39;, &#39;IBM Plex Mono Medium&#39;, &#39;Consolas&#39;, monospace; background: #71BBB0">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;</span>
+</td>
+<td><span style="color: #12FECF; font-size: 12.5px; font-family: &#39;fixedsys&#39;, &#39;IBM Plex Mono Medium&#39;, &#39;Consolas&#39;, monospace; background: #000000">&#160;Test&#160;</span>
+</td>
+</tr></tbody><caption>
+</caption>
+<tbody><tr><td>4
+</td>
+<td><span style="color: #FF7111; font-size: 12.5px; font-family: &#39;fixedsys&#39;, &#39;IBM Plex Mono Medium&#39;, &#39;Consolas&#39;, monospace; background: #FF113A">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;</span>
+</td>
+<td><span style="color: #FF113A; font-size: 12.5px; font-family: &#39;fixedsys&#39;, &#39;IBM Plex Mono Medium&#39;, &#39;Consolas&#39;, monospace; background: #000000">&#160;Test&#160;</span>
+</td>
+</tr></tbody><caption>
+</caption>
+<tbody><tr><td>4:1
+</td>
+<td><span style="color: #FF7111; font-size: 12.5px; font-family: &#39;fixedsys&#39;, &#39;IBM Plex Mono Medium&#39;, &#39;Consolas&#39;, monospace; background: #FF113A">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;</span>
+</td>
+<td><span style="color: #FF7111; font-size: 12.5px; font-family: &#39;fixedsys&#39;, &#39;IBM Plex Mono Medium&#39;, &#39;Consolas&#39;, monospace; background: #000000">&#160;Test&#160;</span>
+</td>
+</tr></tbody><caption>
+</caption>
+<tbody><tr><td>5
+</td>
+<td><span style="color: #E811FF; font-size: 12.5px; font-family: &#39;fixedsys&#39;, &#39;IBM Plex Mono Medium&#39;, &#39;Consolas&#39;, monospace; background: #A73CD5">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;</span>
+</td>
+<td><span style="color: #A73CD5; font-size: 12.5px; font-family: &#39;fixedsys&#39;, &#39;IBM Plex Mono Medium&#39;, &#39;Consolas&#39;, monospace; background: #000000">&#160;Test&#160;</span>
+</td>
+</tr></tbody><caption>
+</caption>
+<tbody><tr><td>5:1
+</td>
+<td><span style="color: #E811FF; font-size: 12.5px; font-family: &#39;fixedsys&#39;, &#39;IBM Plex Mono Medium&#39;, &#39;Consolas&#39;, monospace; background: #A73CD5">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;</span>
+</td>
+<td><span style="color: #E811FF; font-size: 12.5px; font-family: &#39;fixedsys&#39;, &#39;IBM Plex Mono Medium&#39;, &#39;Consolas&#39;, monospace; background: #000000">&#160;Test&#160;</span>
+</td>
+</tr></tbody><caption>
+</caption>
+<tbody><tr><td>6
+</td>
+<td><span style="color: #FFE111; font-size: 12.5px; font-family: &#39;fixedsys&#39;, &#39;IBM Plex Mono Medium&#39;, &#39;Consolas&#39;, monospace; background: #D79B2D">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;</span>
+</td>
+<td><span style="color: #D79B2D; font-size: 12.5px; font-family: &#39;fixedsys&#39;, &#39;IBM Plex Mono Medium&#39;, &#39;Consolas&#39;, monospace; background: #000000">&#160;Test&#160;</span>
+</td>
+</tr></tbody><caption>
+</caption>
+<tbody><tr><td>6:1
+</td>
+<td><span style="color: #FFE111; font-size: 12.5px; font-family: &#39;fixedsys&#39;, &#39;IBM Plex Mono Medium&#39;, &#39;Consolas&#39;, monospace; background: #D79B2D">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;</span>
+</td>
+<td><span style="color: #FFE111; font-size: 12.5px; font-family: &#39;fixedsys&#39;, &#39;IBM Plex Mono Medium&#39;, &#39;Consolas&#39;, monospace; background: #000000">&#160;Test&#160;</span>
+</td>
+</tr></tbody><caption>
+</caption>
+<tbody><tr><td>7
+</td>
+<td><span style="color: #FFFFFF; font-size: 12.5px; font-family: &#39;fixedsys&#39;, &#39;IBM Plex Mono Medium&#39;, &#39;Consolas&#39;, monospace; background: #C0C0C0">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;</span>
+</td>
+<td><span style="color: #C0C0C0; font-size: 12.5px; font-family: &#39;fixedsys&#39;, &#39;IBM Plex Mono Medium&#39;, &#39;Consolas&#39;, monospace; background: #000000">&#160;Test&#160;</span>
+</td>
+</tr></tbody><caption>
+</caption>
+<tbody><tr><td>7:1
+</td>
+<td><span style="color: #FFFFFF; font-size: 12.5px; font-family: &#39;fixedsys&#39;, &#39;IBM Plex Mono Medium&#39;, &#39;Consolas&#39;, monospace; background: #C0C0C0">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;</span>
+</td>
+<td><span style="color: #FFFFFF; font-size: 12.5px; font-family: &#39;fixedsys&#39;, &#39;IBM Plex Mono Medium&#39;, &#39;Consolas&#39;, monospace; background: #000000">&#160;Test&#160;</span>
+</td>
+</tr></tbody><caption>
+</caption>
+<tbody><tr><td>8+
+</td>
+<td><span style="color: 8:8:1; font-size: 12.5px; font-family: &#39;fixedsys&#39;, &#39;IBM Plex Mono Medium&#39;, &#39;Consolas&#39;, monospace; background:black">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;</span>
+</td>
+<td><span style="color: 8:0; font-size: 12.5px; font-family: &#39;fixedsys&#39;, &#39;IBM Plex Mono Medium&#39;, &#39;Consolas&#39;, monospace; background:black">&#160;Test&#160;</span>
+</td></tr></tbody></table>
+</div></div>

@@ -1,0 +1,13 @@
+{| style="font-size: 80%; width: 100%; text-align: center"
+|-
+{{#ifeq:{{{1|}}}|yes|
+{{!}} style="font-weight: bold; background:#cfc; border: 1px solid; color:#0b0" {{!}} Fire-safe
+|
+{{!}} style="font-weight: bold; background:#faa; border: 1px solid; color:#d00" {{!}} Not fire-safe
+}}
+{{#ifeq: {{{2|}}}|yes|
+{{!}} style="font-weight: bold; background:#cfc; border: 1px solid; color:#0b0" {{!}} Magma-safe {{category|magma safe materials}}
+|
+{{!}} style="font-weight: bold; background:#faa; border: 1px solid; color:#d00" {{!}} Not magma-safe
+}}
+|}

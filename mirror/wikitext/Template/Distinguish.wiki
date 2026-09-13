@@ -1,0 +1,54 @@
+<includeonly>:<div class="noprint relarticle mainarticle">''Not to be confused with{{#if:{{{2|}}}|}} [[{{{1}}}|{{{l1|{{{1}}}}}}]]{{#if:{{{2| }}}
+ |{{#if:{{{3|}}}|,&#32;|&#32;or&#32;}}[[{{{2}}}|{{{l2|{{{2}}}}}}]]}}{{#if:{{{3|}}}
+ |{{#if:{{{4|}}}|,&#32;|,&#32;or&#32;}}[[{{{3}}}|{{{l3|{{{3}}}}}}]]}}{{#if:{{{4|}}}
+ |{{#if:{{{5|}}}|,&#32;|,&#32;or&#32;}}[[{{{4}}}|{{{l4|{{{4}}}}}}]]}}{{#if:{{{5|}}}
+ |{{#if:{{{6|}}}|,&#32;|,&#32;or&#32;}}[[{{{5}}}|{{{l5|{{{5}}}}}}]]}}{{#if:{{{6|}}}
+ |{{#if:{{{7|}}}|,&#32;|,&#32;or&#32;}}[[{{{6}}}|{{{l6|{{{6}}}}}}]]}}{{#if:{{{7|}}}
+ |{{#if:{{{8|}}}|,&#32;|,&#32;or&#32;}}[[{{{7}}}|{{{l7|{{{7}}}}}}]]}}{{#if:{{{8|}}}
+ |{{#if:{{{9|}}}|,&#32;|,&#32;or&#32;}}[[{{{8}}}|{{{l8|{{{8}}}}}}]]}}{{#if:{{{9|}}}
+ |{{#if:{{{10|}}}|,&#32;|,&#32;or&#32;}}[[{{{9}}}|{{{l9|{{{9}}}}}}]]}}{{#if:{{{10|}}}
+ |, or [[{{{10}}}|{{{l10|{{{10}}}}}}]]}}.''{{#if:{{{11| }}}|&#32; (too many parameters in &#123;&#123;[[Template:distinguish|distinguish]]&#125;&#125;)}}</div></includeonly><noinclude>
+== Usage ==
+<pre>{{distinguish
+|Article 1
+}}</pre>
+
+You may also include additional links, up to ten in total:
+<pre>{{distinguish
+|Article 1
+|Article 2
+|Article 3
+|Article 4
+|Article 5
+|Article 6
+|Article 7
+|Article 8
+|Article 9
+|Article 10
+}}</pre>
+
+For each link, you may optionally specify a link appearance (this is for articles where a piped link would be used). Note that the extra parameters use a lower case 'L', eg. l1 <u>not</u> 11:
+<pre>{{distinguish
+|Article 1
+|Article 2
+|Article 3
+|Article 4
+|Article 5
+|Article 6
+|Article 7
+|Article 8
+|Article 9
+|Article 10
+|l1=Article 1 link appearance
+|l2=Article 2 link appearance
+|l3=Article 3 link appearance
+|l4=Article 4 link appearance
+|l5=Article 5 link appearance
+|l6=Article 6 link appearance
+|l7=Article 7 link appearance
+|l8=Article 8 link appearance
+|l9=Article 9 link appearance
+|l10=Article 10 link appearance
+}}</pre>
+[[Category:Templates]]
+</noinclude>

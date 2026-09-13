@@ -1,0 +1,5 @@
+<includeonly>{{#switch:{{{h}}}|no|0=|#default=<h3>{{{1}}}</h3>}}{{#switch:{{{rn}}}|no|0=|#default=[[{{ns|{{{1}}}}}:Release information/{{{1}}}|Release notes]]}}{{#switch:{{{m}}}|no|0=|#default={{News/Mirrors/{{{1}}}}}}}</includeonly><noinclude>
+Current version sample:
+{{Download|{{current/version}}}}
+{{documentation}}
+</noinclude>

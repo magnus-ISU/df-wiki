@@ -1,0 +1,12 @@
+Add {{tl|deletion}} or {{tl|del}} to the top of a page to mark it for deletion. The template will display a warning and add the page to [[:Category:Deletion]] for an admin to review.
+
+Adding a pipe (<code>|</code>) after either command will change the default text to appear instead 
+as the editor's "reasoning" for the deletion.<br>
+There is no need to type a period at the end of the reasoning, as a period is already provided in the template.
+
+For example, <code><nowiki>{{del|This is a sample deletion request}}</nowiki></code> will appear as...
+{{del|This is a sample deletion request|cat=nocat}}
+
+== Alternatives ==
+{{tl|Wrong namespace}}, for use on a page in an incorrect namespace
+<includeonly>[[Category:Message box templates]]</includeonly>

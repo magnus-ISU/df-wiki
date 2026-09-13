@@ -1,0 +1,4 @@
+<includeonly><table{{#if:{{{class|}}}|<nowiki/> class="{{{class}}}"}}{{#if:{{{style|}}}|<nowiki/> style="{{{style}}}"}}><tr><td>{{#rreplace:{{#rreplace:
+{{{1}}}
+|(\n)|</td></tr>\1<tr><td>}}
+|,|</td><td>}}</td></tr></table></includeonly><noinclude>{{documentation}}</noinclude>

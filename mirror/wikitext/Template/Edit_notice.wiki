@@ -1,0 +1,2 @@
+{{#ifexist:{{FULLPAGENAME}}/Edit notice|{{Edit notice/0|{{:{{FULLPAGENAME}}/Edit notice}}}}}}{{#ifexist:{{FULLROOTPAGENAME}}/Root edit notice|{{Edit notice/0|{{:{{FULLROOTPAGENAME}}/Root edit notice}}}}}}<noinclude>{{documentation}}</noinclude>
+{{#ifeq:{{#rreplace:{{FULLPAGENAME}}|[\s\S]*\/([^/]+)$|$1}}|Edit notice|{{Edit notice/0|'''Warning:''' this message will appear for all editors when editing "{{#tag:nowiki|{{#if:{{NAMESPACE}}|{{NAMESPACE}}:}}{{BASEPAGENAME}}}}". Please keep this in mind when creating or modifying this page.}}}}

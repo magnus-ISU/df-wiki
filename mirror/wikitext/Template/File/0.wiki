@@ -1,0 +1,10 @@
+<includeonly><tr><td style="padding-left:{{#expr:{{#var:File-level}}*8}}px;">
+{{#vardefine:File-level|{{#expr:{{#var:File-level}}+1}}}}
+{{#ifeq:{{uc:{{{1}}}}}|DF|
+[[File:Folder-orange.svg|18px]] Dwarf Fortress|
+{{#if:{{#rmatch:{{{1}}}|\.|1}}|
+[[File:Text-x-generic.svg|18px]] {{{1}}}|
+[[File:Folder.svg|18px]] {{{1}}}
+}}}}
+</td></tr>
+</includeonly>

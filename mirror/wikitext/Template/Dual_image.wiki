@@ -1,0 +1,43 @@
+<includeonly><!--
+
+--><div class="thumb tright"><!--
+  --><div class="thumbinner" style="width:{{{width|202px}}};><!--
+
+    --><div class="mw-collapsible" id="mw-customcollapsible-classicimage"><!--
+      -->[[{{{1|{{{premium}}}}}}|{{{width|200px}}}]]<!--
+    --></div><!--
+
+    --><div class="mw-collapsible mw-collapsed" id="mw-customcollapsible-classicimage"><!--
+      -->[[{{{2|{{{classic}}}}}}|{{{width|200px}}}]]<!--
+    --></div><!--
+
+    --><div class="thumbcaption"><span class="mw-customtoggle-classicimage mw-ui-button mw-ui-progressive" <!--
+                                  -->style="float:right; padding:0px; user-select: none;">Toggle</span>{{{caption|}}}</div><!--
+--></div></div></includeonly><noinclude>
+
+Template for creating an image with a premium and classic version.
+
+{{Dual image
+|premium=File:DFwiki5by53by3farm.png
+|classic=File:Quickstart_layout_3.png
+|width=100px
+|caption=Caption
+}}
+
+==Usage==
+
+<pre>
+{{Dual image
+|premium=File:premium.png
+|classic=File:classic.png
+}}
+
+{{Dual image
+|premium=File:premium.png
+|classic=File:classic.png
+|caption=My caption
+|width=100px
+}}
+</pre>
+
+[[category:templates]]</noinclude>

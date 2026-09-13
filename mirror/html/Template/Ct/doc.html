@@ -1,0 +1,34 @@
+<div class="mw-parser-output"><p>This template assists in the display of <a href="/index.php/Temperature" title="Temperature">temperatures</a>, measured in degrees Urist, by adding a hovertext which displays the temperature in degrees Celsius, rounded to the nearest one decimal point. It is actually quite flexible, being capable of parsing the number it needs out of entire lines of text, but it is stylistically recommended you restrict the template to the temperature itself:
+</p>
+<table class="wikitable">
+<tbody><tr>
+<th>Code</th>
+<th>Product
+</th></tr>
+<tr>
+<td><tt>[[Water]] freezes at {{ct|10000}}.</tt></td>
+<td><a href="/index.php/Water" title="Water">Water</a> freezes at <span style="border-bottom: 1px #0000CC dotted;cursor:help;" title="0&#160;°C (32&#160;°F)">10000&#160;°U</span><sup>    </sup>.
+</td></tr>
+<tr>
+<td><tt>{{ct|[[Water]] freezes at 10000 °U.}}</tt></td>
+<td><span style="border-bottom: 1px #0000CC dotted;cursor:help;" title="0&#160;°C (32&#160;°F)"><a href="/index.php/Water" title="Water">Water</a> freezes at 10000 °U.</span><sup>    </sup>
+</td></tr>
+<tr>
+<td><tt>The temperature of [[magma]] is {{ct|12000}}.</tt></td>
+<td>The temperature of <a href="/index.php/Magma" title="Magma">magma</a> is <span style="border-bottom: 1px #0000CC dotted;cursor:help;" title="1111.1&#160;°C (2032&#160;°F)">12000&#160;°U</span><sup>    </sup>.
+</td></tr></tbody></table>
+<p>The template can parse both numbers and NONE, the two temperature-related values most commonly used in the raws. You can give it a second argument (which defaults to "none") for a fallback if and only if the value given is precisely NONE. This is helpful for templates that use data directly derived from parsing <a href="/index.php/Raw_file" title="Raw file">raw files</a>.
+</p>
+<table class="wikitable">
+<tbody><tr>
+<th>Code</th>
+<th>Product
+</th></tr>
+<tr>
+<td><tt>The ignition point of [[slate]]: {{ct|NONE}}.</tt></td>
+<td>The ignition point of <a href="/index.php/Slate" title="Slate">slate</a>: none.
+</td></tr>
+<tr>
+<td><tt>The ignition point of [[slate]] is {{ct|NONE|nonexistent; it never ignites}}.</tt></td>
+<td>The ignition point of <a href="/index.php/Slate" title="Slate">slate</a> is nonexistent; it never ignites.
+</td></tr></tbody></table></div>

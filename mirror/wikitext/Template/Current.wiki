@@ -1,0 +1,14 @@
+{{version|{{<includeonly>subst:</includeonly>current/version}}}}<noinclude>
+
+
+Subst this template into a page to tag it with the current version.
+Last updated for {{current/version}}
+==Usage==
+
+<pre><nowiki>Example.{{subst:current}}</nowiki></pre>
+
+gives
+
+ Example.<small><sup>[[:Category:Version {{current/version}}|{{current/version}}]]</sup></small>
+[[category:Version {{current/version}}]][[Category:Version templates]]
+</noinclude>

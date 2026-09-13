@@ -1,0 +1,23 @@
+This template assists in the display of [[temperature]]s, measured in degrees Urist, by adding a hovertext which displays the temperature in degrees Celsius, rounded to the nearest one decimal point. It is actually quite flexible, being capable of parsing the number it needs out of entire lines of text, but it is stylistically recommended you restrict the template to the temperature itself:
+
+{| class="wikitable"
+! Code !! Product
+|-
+| {{tt|<nowiki>[[Water]] freezes at {{ct|10000}}.</nowiki>}} || [[Water]] freezes at {{ct|10000}}.
+|-
+| {{tt|<nowiki>{{ct|[[Water]] freezes at 10000 °U.}}</nowiki>}} || {{ct|[[Water]] freezes at 10000 °U.}}
+|-
+| {{tt|<nowiki>The temperature of [[magma]] is {{ct|12000}}.</nowiki>}} || The temperature of [[magma]] is {{ct|12000}}.
+|}
+
+The template can parse both numbers and NONE, the two temperature-related values most commonly used in the raws. You can give it a second argument (which defaults to "none") for a fallback if and only if the value given is precisely NONE. This is helpful for templates that use data directly derived from parsing [[raw file]]s.
+{| class="wikitable"
+! Code !! Product
+|-
+| {{tt|<nowiki>The ignition point of [[slate]]: {{ct|NONE}}.</nowiki>}} || The ignition point of [[slate]]: {{ct|NONE}}.
+|-
+| {{tt|<nowiki>The ignition point of [[slate]] is {{ct|NONE|nonexistent; it never ignites}}.</nowiki>}} || The ignition point of [[slate]] is {{ct|NONE|nonexistent; it never ignites}}.
+|}
+
+<includeonly>[[Category:Inline formatting templates]]</includeonly>
+<noinclude>[[Category:Template Documentation]]</noinclude>

@@ -1,0 +1,90 @@
+<div style="float: right; padding: 0.5em; margin: 0.25em; border: 1px solid #ccc; background: #eee">{{dwarf}}</div>
+
+'''Template:Dwarf''' can be used to display dwarves close to what they appear as in Dwarf Fortress. It can be used together with the [[:Template:Raw_Tile|raw tile template]], however it doesn't scale with the user's font size. This might lead to problems for users with uncommon settings.
+
+== Usage ==
+
+<pre><nowiki>
+{{Dwarf|1|2|3|type=}}
+</nowiki></pre>
+
+=== Parameters ===
+
+* <code>1</code> – Sets the [[color#Color values|color]] (<code>#:#</code>).
+* <code>2</code> – Sets the size. Defaults to <code>10px</code>.
+* <code>3</code> – Mouseover/Tooltip.
+* <code>type</code> – Sets the symbol to civilian {{Dwarf|7:1|type=c}} or military {{Dwarf|7:1|type=m}}. Defaults to civilian icon if the parameter is not defined.
+** {{Dwarf|7:1|type=c}} – Accepts <code>civilian</code>, <code>civ</code>, <code>c</code>, or <code>1</code>.
+** {{Dwarf|7:1|type=m}} – Accepts <code>military</code>, <code>mil</code>, <code>m</code>, or <code>2</code>.
+** {{Dwarf|7:1|type=a}} – Accepts <code>adventurer</code>, <code>merchant</code>, <code>diplomat</code>, <code>adv</code>,<code>merch</code>, <code>dip</code>, <code>a</code>, or <code>3</code>.
+
+=== Examples ===
+
+<pre><nowiki>
+{| style="color: #fff; background: #000"
+|-
+| {{Dwarf|7:0|20px|Miner}} || Miners
+|-
+| {{Dwarf|6:1}} || Woodworkers
+|-
+| {{Dwarf|7:1}} || Stoneworkers
+|-
+| {{Dwarf|2:0}} || Rangers
+|-
+| {{Dwarf|0:1}} || Metalsmiths
+|-
+| {{Dwarf|2:1}} || Jewelers
+|-
+| {{Dwarf|1:1}} || Craftsdwarves
+|-
+| {{Dwarf|5:0}} || Nobles/Admins
+|-
+| {{Dwarf|3:0}} || Peasants
+|-
+| {{Dwarf|4:0}} || Dwarven Children
+|-
+| {{Dwarf|1:0}} || Fishery Workers
+|-
+| {{Dwarf|6:0}} || Farmers
+|-
+| {{Dwarf|4:1}} || Engineers
+|-
+| {{Dwarf|7:0|type=m}} || Wrestlers
+|}
+</nowiki></pre>
+
+...gives:
+
+{| style="color: #fff; background: #000"
+|-
+| {{Dwarf|7:0|20px|Miner}} || Miners
+|-
+| {{Dwarf|6:1}} || Woodworkers
+|-
+| {{Dwarf|7:1}} || Stoneworkers
+|-
+| {{Dwarf|2:0}} || Rangers
+|-
+| {{Dwarf|0:1}} || Metalsmiths
+|-
+| {{Dwarf|2:1}} || Jewelers
+|-
+| {{Dwarf|1:1}} || Craftsdwarves
+|-
+| {{Dwarf|5:0}} || Nobles/Admins
+|-
+| {{Dwarf|3:0}} || Peasants
+|-
+| {{Dwarf|4:0}} || Dwarven Children
+|-
+| {{Dwarf|1:0}} || Fishery Workers
+|-
+| {{Dwarf|6:0}} || Farmers
+|-
+| {{Dwarf|4:1}} || Engineers
+|-
+| {{Dwarf|7:0|type=m}} || Wrestlers
+|}
+
+<includeonly>[[Category:Formatting Templates]]</includeonly>
+<noinclude>[[Category:Template Documentation]]</noinclude>

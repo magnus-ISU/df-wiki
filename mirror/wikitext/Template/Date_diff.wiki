@@ -1,0 +1,28 @@
+<includeonly>{{#iferror:{{#time:U|{{{1}}}}}{{#time:U|{{{2}}}}}|<span class="error">Invalid date provided!</span>|{{
+#vardefine:date-diff-res|{{#switch:{{{res|d}}}
+|s|sec|secs|second|seconds|5=4
+|m|min|mins|minute|minutes|4=3
+|h|hr|hrs|hour|hours|3=2
+|d|day|days|2=1
+|#default=0
+}}}}{{
+#vardefine:date-diff-res-x|{{#rreplace:{ {{#var:date-diff-res}} }|\s|}}}}{{
+#vardefine:date-diff|{{#expr:abs({{#time:U|{{{1}}}}}-{{#time:U|{{{2}}}}})}}}}{{
+#vardefine:date-diff-str|{{
+#expr:{{#expr:{{#var:date-diff}}/31536000}} round 0}}{{#vardefine:date-diff|{{#expr:{{#var:date-diff}} mod 31536000}}}},{{
+#expr:{{#expr:{{#var:date-diff}}/86400}} round 0}}{{#vardefine:date-diff|{{#expr:{{#var:date-diff}} mod 86400}}}},{{
+#expr:{{#expr:{{#var:date-diff}}/3600}} round 0}}{{#vardefine:date-diff|{{#expr:{{#var:date-diff}} mod 3600}}}},{{
+#expr:{{#expr:{{#var:date-diff}}/60}} round 0}}{{#vardefine:date-diff|{{#expr:{{#var:date-diff}} mod 60}}}},{{
+#expr:{{#expr:{{#var:date-diff}}/1}} round 0}}{{#vardefine:date-diff|{{#expr:{{#var:date-diff}} mod 1}}}}
+}}{{#rreplace:{{#rreplace:{{#rreplace:{{#rreplace:{{#eval:{{#rreplace:{{
+#var:date-diff-str
+}}|(\d+),(\d+),(\d+),(\d+),(\d+)|$1year{{#delay:#ifexpr:$1!=1|s}},$2day{{#delay:#ifexpr:$2!=1|s}},$3hour{{#delay:#ifexpr:$3!=1|s}},$4minute{{#delay:#ifexpr:$4!=1|s}},$5second{{#delay:#ifexpr:$5!=1|s}}
+}}}}|,0[a-z]+,|,
+}}|^([^,]+)((,[^,]+){{#var:date-diff-res-x}})[\w\W]*$|$1$2
+}}|(\d+)([a-z]+)(,)?|$1 $2$3 <nowiki/>
+}}|,([^,]+)$|<nowiki/>{{#if:{{{pcomma|}}}|,}} and $1}}}}</includeonly><noinclude>
+Takes a valid date for parameters 1 and 2 (nearly any format is acceptable).
+
+<pre>DF v{{current/version}} was released {{date diff|{{current/lastupdate}}|{{CURRENTDATE}}}} ago.</pre>
+DF v{{current/version}} was released {{date diff|{{current/lastupdate}}|{{CURRENTDATE}}}} ago.
+</noinclude>

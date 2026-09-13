@@ -1,0 +1,20 @@
+<includeonly>
+[[Category:Deletion]]
+</includeonly>
+{{Colored Notice Box|#FF0000|'''This page is marked for [[:Category:Deletion|deletion]].''' {{#if: {{{1|}}}|The reason given is '''{{{1}}}'''.|Reasons could include a nonsense title, superfluous information, irrelevant/lack of material or the article could be outdated/duplicated.}}''|{{{2|58}}}|#F9A}}
+<noinclude>
+<hr>
+=== Usage ===
+
+Add {{tl|deletion}} or {{tl|del}} to the top of a page
+
+Adding a pipe ( | ) after either command will change the default text to appear instead 
+as the editor's "reasoning" for the deletion.
+
+For example, <nowiki>{{del|This is a sample deletion request}}</nowiki> will appear as...
+{{del|This is a sample deletion request|cat=nocat}}Adding a second pipe, <nowiki>{{del|This is a sample deletion request.|40}}</nowiki>, will allow you to set a custom width...
+{{del|This is a sample deletion request.|40|cat=nocat}}
+
+</noinclude>
+
+<noinclude>[[Category:Templates]]</noinclude>

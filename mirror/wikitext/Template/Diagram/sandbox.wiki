@@ -1,0 +1,88 @@
+{| border=0 cellpadding=0 cellspacing=0 {{c|{{{color|8}}}|{{{bgcolor|0}}}|font-size:{{{size|135%}}};font-weight:bold;font-family:Courier New,monospace;line-height:1.0}}
+{{#rreplace: {{#rreplace: {{#rreplace: {{#rreplace: {{#rreplace: {{#rreplace: {{#rreplace: {{#rreplace: {{#rreplace: {{#rreplace: {{#rreplace: {{#rreplace: {{#rreplace: {{#rreplace: {{#rreplace: {{#rreplace: {{#rreplace: {{#rreplace: {{#rreplace: {{#rreplace: {{#rreplace: {{#rreplace: {{#rreplace: {{#rreplace: {{#rreplace: {{#rreplace:
+ {{{1|}}}
+ | /([!?])0/
+ | \1 000000
+}}
+ | /([!?])1/
+ | \1 000080
+}}
+ | /([!?])2/
+ | \1 008000
+}}
+ | /([!?])3/
+ | \1 008080
+}}
+ | /([!?])4/
+ | \1 800000
+}}
+ | /([!?])5/
+ | \1 800080
+}}
+ | /([!?])6/
+ | \1 808000
+}}
+ | /([!?])7/
+ | \1 c0c0c0
+}}
+ | /([!?])8/
+ | \1 808080
+}}
+ | /([!?])9/
+ | \1 0000ff
+}}
+ | /([!?])a/i
+ | \1 00ff00
+}}
+ | /([!?])b/i
+ | \1 00ffff
+}}
+ | /([!?])c/i
+ | \1 ff0000
+}}
+ | /([!?])d/i
+ | \1 ff00ff
+}}
+ | /([!?])e/i
+ | \1 ffff00
+}}
+ | /([!?])f/i
+ | \1 ffffff
+}}
+ | /(.)(?:(\! [0-9a-f]{6}))?(?:(\? [0-9a-f]{6}))?/ius
+ | ₧\1\2\3
+}}
+ | /(?:^₧[\\])?₧\n(?:\! ([0-9a-f]{6}))?(?:\? ([0-9a-f]{6}))?/iu
+ | {{!-}}style{{=}}color:#\1;background-color:#\2
+\9
+}}
+ | /₧█(?:\! ([0-9a-f]{6}))?(?:\? [0-9a-f]{6})?/iu
+ | {{!}}style{{=}}color:#\1;background-color:#\1{{!}}█
+\9
+}}
+ | /₧-(?:\! ([0-9a-f]{6}))?(?:\? ([0-9a-f]{6}))?/iu
+ | {{!}}style{{=}}color:#\1;background-color:#\2{{!}}&#45;
+\9
+}}
+ | /₧ (?:\! ([0-9a-f]{6}))?(?:\? ([0-9a-f]{6}))?/iu
+ | {{!}}style={{=}}color:#\1;background-color:#\2{{!}}&nbsp;
+\9
+}}
+ | /₧(.)(?:\! ([0-9a-f]{6}))?(?:\? ([0-9a-f]{6}))?/ius
+ | {{!}}style{{=}}color:#\2;background-color:#\3{{!}}\1
+\9
+}}
+ | /color:#;/
+ |
+}}
+ | /style{{=}}background-color:#\{{!}}█/u
+ | {{c|{{{color|8}}}|{{{color|8}}}}}{{!}}█
+}}
+ | /;?background-color:#(\n{{!}}\{{!}})/
+ | \1
+}}
+ | /style{{=}}(?:(\n){{!}}\{{!}})/
+ | \1
+}}
+|}
+<noinclude>Experimental variants of [[Template:Diagram]] go here. Test cases can be found at [[Template:Diagram/testcases]].</noinclude>

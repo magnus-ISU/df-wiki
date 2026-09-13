@@ -1,0 +1,3 @@
+{{#rreplace:{{#rreplace:{{#rreplace:{{{1|}}}| \n | `}}| / *(\[(#[A-Fa-f0-9]+)\])? *(\[(#[A-Fa-f0-9]+)\])? *([^` ]) */u | {{!}}style="padding:0;color:\2;background:\4"{{!}}\5
+\9}} | ` | {{!-}}
+\9}}<noinclude>[[Category:Formatting Templates]]</noinclude>

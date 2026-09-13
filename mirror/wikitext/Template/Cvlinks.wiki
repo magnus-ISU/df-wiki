@@ -1,0 +1,4 @@
+<includeonly>{{#rreplace:{{{1}}}|\[\[([^]]+)\]\]|[[cv:$1|$1]]}}</includeonly><noinclude>
+Prepends <tt>cv:</tt> to all links in {{{1}}}, that directs them all to current version namespace.
+[[Category:Link processing templates]]
+</noinclude>

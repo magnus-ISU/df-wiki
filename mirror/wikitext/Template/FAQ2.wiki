@@ -1,0 +1,10 @@
+<includeonly>|-
+| [[main:{{{1}}}|{{{2|{{{1}}}}}}]]</includeonly><noinclude>
+Adds an item to a FAQ list.
+
+Usage: <nowiki>{{ FAQ2 | ''name'' }}</nowiki> or <nowiki>{{ FAQ | ''link'' | ''name'' }}</nowiki>
+
+where ''link'' is the page name to be linked,
+and ''name'' is optional text to be used for the link
+
+(similar to standard <nowiki>[[ link | name ]]</nowiki> syntax)

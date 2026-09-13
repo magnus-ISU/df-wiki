@@ -1,0 +1,98 @@
+<includeonly>[[Category:Formatting Templates]]</includeonly>
+{{ambox|text=This has been superseded by &lt;diagram>. See [[DF:Diagram]] for more information.}}
+
+Easy to use diagram template.
+
+Newlines are converted to new table rows. Use [#color]x to change the color of a tile. Use [#color][#bgcolor]x to change both the color and background of a tile. The optional color and bgcolor parameters can be used to change the default colors. To preserve spaces, include a spaces=yes parameter. To prevent wiki template syntax from cropping leading spaces, include \ at the start of a diagram with leading spaces.
+
+
+Usage examples: 
+<pre><nowiki>
+
+ {{diagram|spaces=yes|\
+ ║WWW║.║   ║.║WWW║`
+ ║WWW║.╠═══╣.║WWW║`
+ ║WWW║.║WWW║.║WWW║`
+ ╩═══┼.║WWW║.┼═══╩═
+ ......║WWW║.......
+ ══════┼═╦═┼═══┼═══
+ WWWWWW║.O.║WWW║WWW
+ WWWWWW╠OXO╣WWW║WWW
+ WWWWWW║.O.║WWW║WWW
+ ══════┼═╩═┼═══┼═══
+ ......║WWW║.......
+ ╦═══┼.║WWW║.┼═══╦═
+ ║WWW║.║WWW║.║WWW║`
+ ║WWW║.╠═══╣.║WWW║`
+ ║WWW║.┼WWW┼.║WWW║`
+ ╚═══╣.║WWW║.╠═══╝`
+     ║.║WWW║.║
+     ║.╠═══╣.║}}</nowiki></pre>
+
+ {{diagram|spaces=yes|\
+ ║WWW║.║   ║.║WWW║`
+ ║WWW║.╠═══╣.║WWW║`
+ ║WWW║.║WWW║.║WWW║`
+ ╩═══┼.║WWW║.┼═══╩═
+ ......║WWW║.......
+ ══════┼═╦═┼═══┼═══
+ WWWWWW║.O.║WWW║WWW
+ WWWWWW╠OXO╣WWW║WWW
+ WWWWWW║.O.║WWW║WWW
+ ══════┼═╩═┼═══┼═══
+ ......║WWW║.......
+ ╦═══┼.║WWW║.┼═══╦═
+ ║WWW║.║WWW║.║WWW║`
+ ║WWW║.╠═══╣.║WWW║`
+ ║WWW║.┼WWW┼.║WWW║`
+ ╚═══╣.║WWW║.╠═══╝`
+     ║.║WWW║.║
+     ║.╠═══╣.║}}
+
+
+<pre><nowiki>
+ {{diagram|spaces=yes|\
+ ║WWW║.║   ║.║WWW║`
+ ║WWW║.╠═══╣.║WWW║`
+ ║WWW║.║WWW║.║WWW║`
+ ╩═══[#000][#c0c0c0]┼.║WWW║.[#000][#c0c0c0]┼═══╩═
+ ......║WWW║.......
+ ══════[#000][#c0c0c0]┼═╦═[#000][#c0c0c0]┼═══[#000][#c0c0c0]┼═══
+ WWWWWW║.O.║WWW║WWW
+ WWWWWW╠OXO╣WWW║WWW
+ WWWWWW║.O.║WWW║WWW
+ ══════[#000][#c0c0c0]┼═╩═[#000][#c0c0c0]┼═══[#000][#c0c0c0]┼═══
+ ......║WWW║.......
+ ╦═══[#000][#c0c0c0]┼.║WWW║.[#000][#c0c0c0]┼═══╦═
+ ║WWW║.║WWW║.║WWW║`
+ ║WWW║.╠═══╣.║WWW║`
+ ║WWW║.[#000][#c0c0c0]┼WWW[#000][#c0c0c0]┼.║WWW║`
+ ╚═══╣.║WWW║.╠═══╝`
+     ║.║WWW║.║
+     ║.╠═══╣.║}}</nowiki></pre>
+
+
+ {{diagram|spaces=yes|\
+ ║WWW║.║   ║.║WWW║`
+ ║WWW║.╠═══╣.║WWW║`
+ ║WWW║.║WWW║.║WWW║`
+ ╩═══[#000][#c0c0c0]┼.║WWW║.[#000][#c0c0c0]┼═══╩═
+ ......║WWW║.......
+ ══════[#000][#c0c0c0]┼═╦═[#000][#c0c0c0]┼═══[#000][#c0c0c0]┼═══
+ WWWWWW║.O.║WWW║WWW
+ WWWWWW╠OXO╣WWW║WWW
+ WWWWWW║.O.║WWW║WWW
+ ══════[#000][#c0c0c0]┼═╩═[#000][#c0c0c0]┼═══[#000][#c0c0c0]┼═══
+ ......║WWW║.......
+ ╦═══[#000][#c0c0c0]┼.║WWW║.[#000][#c0c0c0]┼═══╦═
+ ║WWW║.║WWW║.║WWW║`
+ ║WWW║.╠═══╣.║WWW║`
+ ║WWW║.[#000][#c0c0c0]┼WWW[#000][#c0c0c0]┼.║WWW║`
+ ╚═══╣.║WWW║.╠═══╝`
+     ║.║WWW║.║
+     ║.╠═══╣.║}}
+
+==Special Characters==
+Special characters can be copied from the [[Character table]].
+<includeonly>[[Category:Formatting Templates]]</includeonly>
+<noinclude>[[Category:Template Documentation]]</noinclude>

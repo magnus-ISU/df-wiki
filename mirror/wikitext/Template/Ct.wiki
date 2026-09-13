@@ -1,0 +1,9 @@
+<!-- Special case if "NONE": Just display "none" without any formatting. Needed for stone templates, since NONE is found in raws. -->{{#ifeq:{{uc:{{{1}}}}}|NONE|{{{2|none}}}|{{
+#vardefine:temp|{{#rmatch:{{{1|0}}}|\d+(\.\d+)?|$0}}
+}}<span style="border-bottom: 1px #0000CC dotted;cursor:help;" title="{{#expr:({{#var:temp}}-10000)*5/9 round 1}}&nbsp;°C  ({{#expr:({{#var:temp}}-10000)+32 round 1}}&nbsp;°F)">{{{1|0}}}{{#ifeq:{{#var:temp}}|{{{1}}}|&nbsp;°U}}</span><sup> {{
+#if:{{{1|}}}||{{ct/e|#c00|No temperature specified!}}}} {{
+#ifexpr:{{#var:temp|0}}-10000+32>-459.67||{{ct/e|#69f|Below absolute zero}}}} {{
+#ifexpr:{{#var:temp|0}}>60000|{{ct/e|#c60|Temperature too high!}}}} {{
+#ifexpr:{{#var:temp|0}}<0|{{ct/e|#00c|Temperature too low!}}}}</sup>}}<noinclude>
+{{documentation}}
+</noinclude>

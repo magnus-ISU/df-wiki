@@ -1,0 +1,1 @@
+{{#eval:{{#vardefine:dc-col|0}}{{#vardefine:dc-row|0}}{{#rreplace:{{#rreplace:{{Diagram/fontmap/{{{2|8x12}}}|{{{1|1}}}}}|[01]|{{#delay:diagram/char/pixel|fg={{{fg|white}}}|bg={{{bg|black}}}|$0}}{{#delay:#vardefine:dc-col|{{#delay:#expr:{{#delay:#var:dc-col}}+1}}}}}}|\n|{{#delay:#vardefine:dc-row|{{#delay:#expr:{{#delay:#var:dc-row}}+1}}}}{{#delay:#vardefine:dc-col|0}}}}}}

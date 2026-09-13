@@ -1,0 +1,24 @@
+{| 
+| {{#if:{{{image<includeonly>|</includeonly>}}}|style="padding: 0.5em 2em 0 0;" valign="top"|style="display:none;"}} | {{{image}}}
+| valign="top" |
+{|
+|- {{#if:{{{download link<includeonly>|</includeonly>}}}||style="display:none;"}}
+| style="padding-right: 1em;" | '''Download:'''
+| {{{download link}}}
+|- 
+| style="padding-right: 1em;" | '''Type:'''
+| {{{type|-}}}
+|- 
+| style="padding-right: 1em;" | '''Author:'''
+| {{{author|-}}}
+|- {{#if:{{{current version<includeonly>|</includeonly>}}}||style="display:none;"}}
+| style="padding-right: 1em;" | '''Current Version:'''
+| {{{current version}}}
+|- {{#if:{{{installation<includeonly>|</includeonly>}}}||style="display:none;"}}
+| style="padding-right: 1em;" | '''Installation:'''
+| {{{installation}}}
+|-
+| style="padding: 0.5em 1em 0 2em; " colspan="2" | {{{comments<includeonly>|&nbsp;</includeonly>}}}
+|}
+|}
+<noinclude>{{documentation}}</noinclude>

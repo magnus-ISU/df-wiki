@@ -1,0 +1,28 @@
+==Usage==
+<pre>{{csv table|
+cell 1, cell 2, cell 3
+cell 4,cell 5 , cell 6
+}}</pre>
+{{csv table|
+cell 1, cell 2, cell 3
+cell 4,cell 5 , cell 6
+}}
+(leading/trailing spaces don't matter)
+
+<pre>{{csv table|class=wikitable|
+cell 1, cell 2, cell 3
+cell 4, cell 5, cell 6
+}}</pre>
+{{csv table|class=wikitable|
+cell 1, cell 2, cell 3
+cell 4, cell 5, cell 6
+}}
+
+<pre>{{csv table|style=background-color: #bb0033; color:#abcdef;|
+cell 1, cell 2, cell 3
+cell 4, cell 5, cell 6
+}}</pre>
+{{csv table|style=background-color: #bb0033; color:#abcdef;|
+cell 1, cell 2, cell 3
+cell 4, cell 5, cell 6
+}}

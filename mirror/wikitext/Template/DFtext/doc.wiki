@@ -1,0 +1,95 @@
+{{DFtext|The DFtext template is designed to provide generally short preformatted text that resembles that of the game.}}
+
+<code><nowiki>{{DFtext|Outside}}</nowiki></code> turns into {{DFtext|Outside}}.<br><code><nowiki>{{DFtext|Outside|3:1}}</nowiki></code> turns into {{DFtext|Outside|3:1}}<br><code><nowiki>{{DFtext|Outside|3:2:1}}</nowiki></code> turns into {{DFtext|Outside|3:2:1}}.
+
+
+This template mimics the 16 [[cv:color|colors]] available to ''Dwarf Fortress''. The format differs between 2 or 3 numbers being used. The format of the template is as follows:<br />
+
+<code><nowiki>{{DFtext|color:brightness}}</nowiki></code> or...<br />
+<code><nowiki>{{DFtext|color:background:brightness}}</nowiki></code><br />
+
+There are 8 colors available, though each one has a dark and bright variation (0 and 1), adding up to 16 possible colors. Looking at the chart below will show which number refers to which color. Not including any numbers in the template defaults to light grey text on a black background - the background will also default to black if a third number is not included.
+
+Alternatively, there is another, more complex format you can use to achieve the same text formatting. This is only helpful if this template doesn't provide a text (or highlight) color that's in the game. A CSS span style syntax can be used:
+<pre><span style="font-family:IBM Plex Mono Medium, Consolas, monospace; font-size:12.5px; background-color:#000; color:#91caff;">*TEXT GOES HERE*</span></pre>
+The example would provide the following: <span style="font-family:IBM Plex Mono Medium, Consolas, monospace; font-size:12.5px; background-color:#000; color:#91caff;">*TEXT GOES HERE*</span>
+
+This should only be a last resort, as this is a lot of text that can muddle up the flow of editing a page, therefore possibly adding more editing difficulty for other editors. Also, if there is a text color in the game that's very similar to a color this template can provide, it may be best to just use the next closest color from this template.
+
+==Values==
+{| class="wikitable" cellpadding="3" width="130px"
+|+
+!Value
+!Background
+!Text
+|+
+| 0
+| {{DFtext|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|0:0:1}}
+| {{DFtext|&nbsp;Test&nbsp;|0:0}}
+|+
+| 0:1
+| {{DFtext|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|0:0:1}}
+| {{DFtext|&nbsp;Test&nbsp;|0:1}}
+|+
+| 1
+| {{DFtext|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|1:1:1}}
+| {{DFtext|&nbsp;Test&nbsp;|1:0}}
+|+
+| 1:1
+| {{DFtext|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|1:1:1}}
+| {{DFtext|&nbsp;Test&nbsp;|1:1}}
+|+ 
+| 2
+| {{DFtext|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|2:2:1}}
+| {{DFtext|&nbsp;Test&nbsp;|2:0}}
+|+ 
+| 2:1
+| {{DFtext|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|2:2:1}}
+| {{DFtext|&nbsp;Test&nbsp;|2:1}}
+|+ 
+| 3
+| {{DFtext|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|3:3:1}}
+| {{DFtext|&nbsp;Test&nbsp;|3:0}}
+|+ 
+| 3:1
+| {{DFtext|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|3:3:1}}
+| {{DFtext|&nbsp;Test&nbsp;|3:1}}
+|+ 
+| 4
+| {{DFtext|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|4:4:1}}
+| {{DFtext|&nbsp;Test&nbsp;|4:0}}
+|+ 
+| 4:1
+| {{DFtext|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|4:4:1}}
+| {{DFtext|&nbsp;Test&nbsp;|4:1}}
+|+ 
+| 5
+| {{DFtext|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|5:5:1}}
+| {{DFtext|&nbsp;Test&nbsp;|5:0}}
+|+ 
+| 5:1
+| {{DFtext|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|5:5:1}}
+| {{DFtext|&nbsp;Test&nbsp;|5:1}}
+|+ 
+| 6
+| {{DFtext|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|6:6:1}}
+| {{DFtext|&nbsp;Test&nbsp;|6:0}}
+|+ 
+| 6:1
+| {{DFtext|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|6:6:1}}
+| {{DFtext|&nbsp;Test&nbsp;|6:1}}
+|+ 
+| 7
+| {{DFtext|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|7:7:1}}
+| {{DFtext|&nbsp;Test&nbsp;|7:0}}
+|+
+| 7:1
+| {{DFtext|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|7:7:1}}
+| {{DFtext|&nbsp;Test&nbsp;|7:1}}
+|+ 
+| 8+
+| {{DFtext|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|8:8:1}}
+| {{DFtext|&nbsp;Test&nbsp;|8:0}}
+|}
+<includeonly>[[Category:Inline formatting templates]]</includeonly>
+<noinclude>[[Category:Template Documentation]]</noinclude>

@@ -1,0 +1,13 @@
+<div class="notice metadata plainlinks" id="disambig" style="margin: 1em 0px">
+{|style="background-color:#f6f6f6; border-color:#bbb; margin:0 2em; border-width:1px 0; border-style:solid;"
+|style="padding:0;padding-left:1em"|[[File:Disambig gray.svg|50px]]
+| style="padding-left: 1em" | ''This is a [[:Category:Disambiguation|disambiguation page]] &mdash; a navigational aid which lists other pages that might otherwise share the same title. If an [{{fullurl:Special:WhatLinksHere/{{FULLPAGENAME}}|hidetrans=1&hideredirs=1}} article link] referred you here, you might want to go back and fix it to point directly to the intended page.'' 
+|}
+</div>
+{{#if:{{{page|}}}|
+'''{{PAGENAME}}''' can refer to:
+}}{{#if:{{{title|}}}|
+'''{{{title}}}''' can refer to:
+}} {{#ifeq:{{{rate|no}}}|no|<div id="norate"></div> <!-- Prevents rating --> }}
+<includeonly>{{Category|Disambiguation}}</includeonly>
+<noinclude>[[Category:Templates]]{{doc}}</noinclude>

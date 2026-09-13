@@ -1,0 +1,3 @@
+<includeonly>{{#iferror:{{#expr:{{{1|0}}}>11000}}|yes|{{#ifexpr:{{{1|0}}}>11000|yes|no}}}}</includeonly><noinclude>
+Returns either yes or no based on if the input temperature (either a number value or NONE) is [[fire-safe]] (for standard fires).
+[[category:raw templates]]</noinclude>

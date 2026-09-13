@@ -1,0 +1,44 @@
+{{Distinguish|Template:Documentation}}
+This template displays a message that the current page is a documentation subpage.
+
+== Usage ==
+<nowiki>{{Documentation subpage}}</nowiki>
+or
+<nowiki>{{Documentation subpage|[[Page where the documentation transcluded]]}}</nowiki>
+
+<br><br>
+
+===Text customization===
+The parameters {{para|text1}} and {{para|text2}} can be used to set the text of, respectively, the template's first and second lines. If ''text1'' is set but not ''text2'', both lines' text will derive from ''text1'':
+{{Hidden begin |showhide=left |title=With ''text1'' and ''text2''}}
+<code><nowiki>{{Documentation subpage |text1='''''text1 appears here''''' |text2='''''text2 appears here'''''}}</nowiki></code>
+{{Documentation subpage |[''page''] |text1='''''text1 appears here''''' |text2='''''text2 appears here''''' |override={{lc:{{SUBPAGENAME}}<!-- Hack to allow example to appear, even when viewed from [[Template:Documentation subpage]] -->}}}}
+{{Hidden end}}
+{{Hidden begin |showhide=left |title=With ''text2'' only}}
+<code><nowiki>{{Documentation subpage |text2='''''text2 appears here'''''}}</nowiki></code>
+{{Documentation subpage |[''page''] |text2='''''text2 appears here''''' |override={{lc:{{SUBPAGENAME}}<!-- Hack to allow example to appear, even when viewed from [[Template:Documentation subpage]] -->}}}}
+{{Hidden end}}
+{{Hidden begin |showhide=left |title=With ''text1'' only}}
+<code><nowiki>{{Documentation subpage |text1='''''text1 appears here'''''}}</nowiki></code>
+{{Documentation subpage |[''page''] |text1='''''text1 appears here''''' |override={{lc:{{SUBPAGENAME}}<!-- Hack to allow example to appear, even when viewed from [[Template:Documentation subpage]] -->}}}}
+{{Hidden end}}
+
+===Other parameters===
+{{para|inhibit|yes}} will prevent this template from generating any categories. (By default, "''Namespace'' documentation pages" (usually [[:Category:Template documentation pages]]) is added, or [[:Category:Documentation subpages without corresponding pages]] if the main page doesn't exist.)
+
+== Display ==
+This template should normally be placed at the top of /doc pages. It changes output depending on where it is viewed:
+* On a /doc page, it displays a box explaining template documentation and links to the template page.
+* On other pages&nbsp;– i.e. pages transcluding the /doc page&nbsp;– the template will not show. The template page itself (which contains <code>{{Template link|Documentation}}</code>) will automatically note that the documentation is [[Help:Transclusion|transcluded]] from a subpage.
+
+== Functions ==
+In addition to its message, the template adds pages to [[:Category:Template documentation pages]], [[:Category:User documentation pages]], or similar (named after the subject space), but only for documentation pages in namespaces with the subpage feature. It defaults the [[m:Help:Categories#Sort order|sort key]] to the page name without namespace: Template:Foo, for example, would be sorted as "Foo", i.e. under "F".
+
+
+<includeonly>{{Sandbox other||<!-- Make sure only the template page is categorised. No subpages, and not after transclusion. This /doc page is reused, btw.
+ -->{{#switch:{{FULLPAGENAME}}
+|Template:Documentation subpage         = [[Category:Template documentation| ]]
+|Template:Userbox documentation subpage = [[Category:Template documentation| ]][[Category:Userboxes|Δ]]
+}}
+[[Category:Documentation header templates]]
+}}</includeonly>

@@ -1,0 +1,64 @@
+<includeonly>{{infostart|{{{name}}}}}
+{{infocell|{{Crop/picture|character={{{character|?}}}|color={{{color}}}|seed_color={{{seed_color|{{{color}}}}}}}}}}
+{{#if:{{{pref|}}}|{{infopref|{{{pref}}}}}}}
+{{infoheader|Seed}}
+{{inforow|{{{seed|{{{name}}} seed}}}|{{Raw Tile|·|{{{seed_color|{{{color}}}}}}}}}}
+{{infoheader|Seasons}}
+{{infocell|{{seasons|{{{spring|}}}|{{{summer|}}}|{{{autumn|}}}|{{{winter|}}}}}}}
+{{#if:{{{biome|}}}|{{infoheader|Biome}}
+{{infocell|{{{biome|}}}}}
+{{infocell|{{wetdry|{{{wet|}}}|{{{dry|}}}}}}}
+{{#if:{{{alignment|}}}|{{infoheader|Alignment}}
+{{infocell|{{{alignment}}}|style=text-align:center}}}}}}
+{{infoheader|Properties}}
+{{#if:{{{habitat|}}}|{{inforow|[[Biome|Habitat]]|{{{habitat}}}}}}}
+{{inforow|[[Food|Edible]]|{{{edible|No}}}}}
+{{inforow|[[Kitchen|Cookable]]|{{{cookable|No}}}}}
+{{inforow|[[Still|Alcohol]]|{{{alcohol|None}}}}}
+{{#if:{{{uses|}}}|{{infoheader|Uses}}
+{{infocell|{{{uses}}}}}}}
+{{#if:{{{other_products|}}}|{{infoheader|Other products}}
+{{infocell|{{{other_products}}}}}}}
+{{#ifexpr:{{#if:{{{wiki|}}}|1|0}} and {{#ifeq:{{{wiki|}}}|no|0|1}}|{{infocell|style=text-align:center; background-color: #eee; border-top: 1px solid #aaa|1=[[wikipedia:{{#ifeq:{{{wiki|}}}|yes|{{{name}}}|{{{wiki|}}}}}|Wikipedia article]]}}|{{!-}}}}
+{{infoend}}{{#switch:{{NAMESPACE}}|#default|23a|40d|v0.31|DF2012=
+{{Category|Crops}}
+{{#if:{{{spring|}}}|{{Category|Spring crops}}}}
+{{#if:{{{summer|}}}|{{Category|Summer crops}}}}
+{{#if:{{{autumn|}}}|{{Category|Autumn crops}}}}
+{{#if:{{{winter|}}}|{{Category|Winter crops}}}}
+{{#switch:{{NAMESPACE}}|40d|v0.31|DF2012=
+{{#ifeq:{{{habitat|}}}|Subterranean|{{Category|Subterranean crops}}|{{Category|Surface crops}}}}|23a={{Category|Cave crops}}}}
+{{#ifeq:{{{edible|!}}}{{{cookable|!}}}|!!|{{Category|Inedible plants}}}}
+{{#ifeq:{{{alcohol|!}}}|!|{{Category|Non-brewable plants}}}}
+|Template=}}</includeonly><noinclude>
+
+{{Crop|color=5:0|seed_color=4:1|character=♠|name=Plump Helmet|seed=Plump Helmet Spawn
+|edible=Yes
+|cookable=Yes
+|alcohol=[[Dwarven wine]]
+|rarity=Common
+|spring=1|summer=1|autumn=1|winter=1
+|habitat=Subterranean
+|uses=
+* [[Food]]
+* [[Alcohol]]
+|wiki=yes
+}}
+Usage:
+<pre><nowiki>
+{{Crop|color=5:0|seed_color=4:1|character=♠|name=Plump Helmet|seed=Plump Helmet Spawn
+|edible=Yes
+|cookable=Yes
+|alcohol=[[Dwarven wine]]
+|rarity=Common
+|spring=1|summer=1|autumn=1|winter=1
+|habitat=Subterranean
+|uses=
+* [[Food]]
+* [[Alcohol]]
+|wiki=yes
+}}
+</nowiki></pre>
+
+[[Category:Materials templates]]
+</noinclude>

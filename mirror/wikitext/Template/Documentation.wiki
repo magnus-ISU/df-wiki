@@ -1,0 +1,11 @@
+<div class="plainlinks" style=" clear: both; margin: 1em 0 0 0; border: 1px solid #aaa; background-color: #f0f0f8; padding: 5px 1em; {{border radius|.4em}}">
+<h2><span style="float: right; font-size: small; font-family: sans-serif;">
+([[{{{1|{{FULLPAGENAME}}/doc}}}|<span title="View this documentation">view</span>]] - {{
+#ifexist:{{{1|{{TALKSPACE}}:{{PAGENAME}}}}}/doc|[[{{{1|{{TALKSPACE}}:{{PAGENAME}}}}}/doc|<span title="Discuss this documentation">talk</span>]] -&nbsp;
+}}[{{fullurl:{{{1|{{FULLPAGENAME}}/doc}}}|action=edit}} <span title="Edit this documentation">edit</span>] - 
+[{{fullurl:{{{1|{{FULLPAGENAME}}/doc}}}|action=history}} <span title="Documentation history">history</span>] - 
+[{{fullurl:{{{1|{{FULLPAGENAME}}}}}|action=purge}} <span title="Purge this documentation (causes it to be updated; use only if it doesn't update after editing, NOT in a preview)">purge</span>])</span> Documentation</h2>
+__NOTOC__ __NOEDITSECTION__
+{{ {{{1|{{FULLPAGENAME}}/doc}}} }}
+</div>
+{{#if:{{{nocat|}}}||[[Category:Templates]]}}

@@ -1,0 +1,22 @@
+==Usage==
+<pre>
+{{CSizeInventory|<creature name>|<offset>}}
+</pre>
+Entering a valid creature name will return one of three values, depending on the offset.
+* child body size of the creature (1)
+* adolescent body size of the creature (2)
+* adult body size of the creature (3)
+
+
+:This is meant mainly for easy listing of creature size values in other templates.
+
+
+Examples:
+
+
+<nowiki>{{CSizeInventory|badger|2}}</nowiki><br>
+Yields:<br>
+{{CSizeInventory|badger|2}}  - equal to the size of an adolescent badger
+
+<includeonly>[[Category:Templates]]</includeonly>
+<noinclude>[[Category:Template Documentation]]</noinclude>

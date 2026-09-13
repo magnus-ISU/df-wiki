@@ -1,0 +1,5 @@
+<includeonly><div style="float:{{{float|right}}}; min-width:{{{width|12em}}};"><table style="width:100%; background-color:#f3f3f3; border: 1px solid #cccccc">
+<tr><th>{{catlink|Files|File}}</th></tr>
+{{#vardefine:File-level|0}}
+{{#eval:{{((}}file/0{{!}}{{#rreplace:{{{1|}}}|\/|{{))}}{{((}}file/0{{!}}}}{{))}}}}
+</table></div>{{#if:{{{section|}}}||{{title/file}}}}{{Category|Files}}</includeonly><noinclude>{{documentation}}</noinclude>
