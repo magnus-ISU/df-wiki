@@ -1,0 +1,87 @@
+{{Quality|Exceptional|23:54, 9 October 2013 (UTC)}}
+{{av}}
+
+{{quickstart|advanced=military}}
+
+This article will describe how to '''set up your very first squad''' for training and use in combat. We will assume that you know nothing about the [[military interface]]. In case you are starting this early in your fortress' development, we will assume that you're going to start with a squad of only '''five''' dwarves and that you may have just come here from the [[Quickstart guide]].
+
+Though these instructions are far from adequate for teaching you all aspects of Dwarf Fortress mode's complex military, hopefully they will get you started faster than you would otherwise. Note that the military configuration interface may be somewhat complex, so pay close attention to some of the details mentioned.
+
+
+==Finding Recruits==
+Look over all your dwarves. You are looking for any dwarves with [[combat skill]]s, or at the very least, without useful civilian skills. These dwarves will be your first [[squad]]. Starting with a bunch of otherwise useless dwarves with no combat skill isn't totally unreasonable, but it's best to get at least one with some combat skill so that they can teach the others. Note that peasants often arrive with military skills of competent or better.
+
+Using job titles can help you spot expendable dwarves. For example, if a dwarf is a "[[Fish cleaner|Fish Cleaner]]" then his most expert skill will be fish cleaning and he probably won't be very good at anything but that. Since super-efficient fish cleaning isn't likely to be that useful, even if you do have a fisherdwarf, your legendary fish cleaner would be an excellent candidate for the draft. If he manages to survive and gain some combat skill, he'll be able to clean fish and kick butt at the same time. If he dies, at least it won't impact civilian operations.
+
+Make sure to exercise judgement when selecting dwarves, however. If your fortress only has one fish cleaner, but has a large amount of fisherdwarves, drafting a fish cleaner may waste a lot of fish. Conversely, if the fortress has no animal or hunting industries, an otherwise precious [[butcher]] may be expendable.
+
+It is probably wise not to choose female dwarves for your primary fighting squad, and ''especially'' not married female dwarves, since they will carry [[children|babies]] around most of the time (they bear one child every year).  But ultimately it's up to you.  You can't see the sex or marital status of dwarves from within the military screen, so you need to look for these things in advance.
+
+<span id="invisible uniforms">Your recruits '''must not''' have the [[Mining]], [[wood cutter|Wood Cutting]] or [[ambusher|Hunting]] labors enabled. These labors create an invisible "uniform" that interferes with the military uniform.{{bug|1451}} Disable all of these labors on your recruits, if they're currently enabled.</span>
+
+==Creating a Squad==
+Open up your {{K|m}}ilitary screen. Press {{K|c}} to create a squad and choose whatever uniform is most appropriate for the type of equipment you have or plan to have. A "uniform" is essentially just a predefined specification for a set of equipment, and you can change all of this later, but for the sake of simplicity start with one of the default uniforms.
+
+Enjoy a hearty laugh at the delightful name your dwarves come up with for their squad. All tremble before the might of the fearsome Geared Warthogs! You can, of course, change the name of the squad if you wish with {{K|N}}.
+
+Press {{K|→}}{{K|→}} to move the menu selection over to the Candidates column and select the dwarf with the best fighting skills (or the best leadership ability) then hit {{K|Enter}}. Notice that as you scroll through dwarves that a few bits of relevant information about the currently selected dwarf will be shown in the upper-left part of the screen.
+
+This first dwarf will be either your militia commander or a militia captain depending on whether this is your first squad or not. (He will appear as such in the nobles screen.) Once you select a dwarf for the first position, the highlight will automatically move to the second position. You can then use {{K|↑}} and {{K|↓}} to select the dwarf for this next position with {{K|Enter}}, and so on. Pick four more dwarves for positions two through five.
+
+==Melee Training==
+Make sure at the very least you have a weapon for everyone in your squad. Ideally you should have at least a shield and helmet for everyone too. They will automatically go grab appropriate equipment as long as it is free for use.
+
+Axes ''cannot'' be shared between a woodcutter and an axedwarf.  Not even if it's the same dwarf.  Likewise, a marksdwarf and a hunter can't share a crossbow, and a miner can't share a pick with a military dwarf assigned to use a pick as a weapon. <u>Un</u>assign the civilian labor to free up the weapon for military use. (The dwarf holding it will dutifully drop it where they stand at the time.)
+
+===Barracks===
+Queue up an [[armor stand]] or a [[weapon rack]] of some sort if you don't already have one.
+
+Pick a location for your training grounds. It should definitely be placed in a defended area, and ideally it should be near the entrance. Training areas can be easily moved though so feel free to just dig out an area somewhere for now and you can move it to a better location later.
+
+Build your weapon rack or armor stand where you want your dwarves to train. Use {{K|q}} on the armor stand or weapon rack to define your training area as a [[barracks]]. Your squad should now be listed in the menu. Hit {{K|t}} to flag them to train there. You must flag them as being allowed to use the area for training or they will not use it.
+
+=== Alert Level ===
+Open the {{K|s}}quad menu from the "main menu". Press {{K|a}} to select your squad from the list. Notice that toward the bottom of the window it will say {{DFtext|t: Sched - Inactive}}. This is the squad's '''alert level''' which indicates which [[scheduling|schedule]] they will follow.
+
+The default schedule for "Inactive" basically says "do nothing". To tell them to use the "Active/Training" schedule, press {{K|t}} and this should change to {{DFtext|t: Sched - Active/Training}}. (You can also change the alert level on the military screen with {{K|m}}-{{K|a}}.)
+
+If you've done everything right, you should see some messages like "Urist McGoblinFodder has become a Recruit" and the named dwarves should report to the barracks you have set up.  This may not happen right away, but it should ''definitely'' happen when the month changes.
+
+Keep an eye on them using the {{K|u}}nits screen. Their tasks will initially be something like "Waiting for (something) demonstration" or "Organize (something) demonstration" but they should eventually start the session. The graphics won't look any different, but the units screen will change to show "Watching (something) demonstration" etc.
+
+After a while, your dwarves may start "Sparring".  This trains several combat skills, much more quickly than demonstrations.  You'll also get combat [[reports]] of the sparring (indicated by a cyan "S" on the left side of the screen).
+
+==Marksdwarf Training==
+Each marksdwarf requires a [[crossbow]], [[bolt]]s, and a [[quiver]].
+
+===Targets===
+For marksdwarves to train, you will need to build one or more [[archery target]]s using {{K|b}}-{{K|A}}, define them as archery range rooms with {{K|q}}, and assign squads to train at them. Make sure to properly set the shooting direction with {{k|w}}{{k|a}}{{k|s}}{{k|d}} or the target may not work. Also note that an "archery target" cannot be built at a workshop; you only need a piece of stone.
+
+You will need at least one target per dwarf that you want to train simultaneously.  There must be an unblocked path from the place the dwarf stands to the target; they won't shoot archery targets that are across a gap.
+
+===Equipment===
+Crossbows can be made of [[wood]] or [[bone]] at a [[bowyer's workshop]] by a dwarf with the crossbow making labor enabled, or at a [[metalsmith's forge]] by a dwarf with weaponsmithing enabled. While the material used for a crossbow doesn't matter for shooting purposes, it does matter when dwarves use crossbows to bash enemies in melee combat. So, making crossbows of iron, while being heavier, can give archers a little more of an advantage in melee combat should they be unfortunate enough to get into that situation.
+
+Bolts are also made from bone or wood at a [[craftsdwarf's workshop]], so make sure you've built one of those and then have your manager queue up some bolts. Wooden ammunition will do just fine for training purposes, but if you happen to have butchered any animals at this point you can also make bone bolts. (Metal bolts can also be made at a forge, but you wouldn't want to waste those on target practice.)
+
+Quivers are made of leather by a dwarf with leatherworking at a [[leather works]]. Quivers are required; marksdwarves will not fire a crossbow without one. If you just started your fort, and forgot to bring some with you, you may not be able to get enough leather to make quivers until the first trade caravan arrives unless you slaughter some animals.
+
+===Configuration===
+Once you have all of the needed equipment for an archer, the easiest way to set up an archer in the military is to create an archers-only squad and give them the archer's uniform. Then, assign one or more dwarves to the squad and set up their training schedule as described for melee training above. Make sure to set their squad to train at archery targets '''and''' the barracks (weapon or armor rack)--if you only use an archery range, your dwarves will not train.
+
+If you have done everything right here, eventually you will see them shooting and see broken bolts at the base of your archery targets.
+
+Please note however that even a squad of only marksdwarves still needs a barracks to train at as well as an archery range, so they can train their other non-ranged skills.  If they do not have a barracks assigned, they will spend quite a lot of time in the state "cannot follow order" and may not even use the archery range.
+
+==See also==
+Now that you have learned this much, you will probably want to read:
+*''[[Military interface]]''
+*''[[Squads]]''
+*''[[Military]]'' (overview)
+*''[[Scheduling]]'' (not covered on this page)
+
+{{Military}}
+{{Category|Military}}
+{{Category|Guides}}
+{{Category|Fortress mode}}
+[[ru:Military quickstart]]

@@ -1,0 +1,63 @@
+{{Quality|Superior|11:18, 18 May 2015 (UTC)}}
+{{av}}
+
+[[File:miasma_icon.png|130px|right]]'''Miasma''' is a cloud of purple stench that makes your [[dwarf|dwarves]] [[Thought|unhappy]]. It only occurs in subterranean areas - ([[Tile attributes|specifically]], {{DFtext|Dark |0:1}}{{DFtext|Subterranean|0:1}} [[tile]]s; whether a tile is {{DFtext|Inside|6:0}} or {{DFtext|Outside|3:1}} makes no difference), and is caused by rotting items. It does not pass through closed [[door]]s.
+
+Miasma completely blocks the view of things, even in its most dispersed form (though this doesn't interfere with {{key|k}}-looking).  However, it is planned to have it be translucent to a certain degree in the premium release. [http://www.bay12forums.com/smf//index.php?topic=169696.msg8341484#msg8341484] Miasma is not shown in [[Adventurer mode]], although it will be listed when {{key|l}}ooking, and can cause negative thoughts.
+
+== Rotten items ==
+[[File:miasma_preview.jpg|thumb|260px|right|On a scale from 1 to 10, it smells ''awful''.]]A '''rotten''' [[item]] is a [[corpse]], body part or an item of [[food]] that has spoiled, either from not being in a [[stockpile]] (if food) or just over time (if a corpse or body part).
+
+Often a job in a [[kitchen]], [[still]] or [[farmer's workshop]] will be canceled with the announcement {{DFtext|...needs '''unrotten''' (item)|4:1}}.  That doesn't mean you only have rotten ones, it means there was not an appropriate item available at that moment. Items that are involved in another task, [[forbid]]den, marked for [[dump]]ing, or that have no [[path]] will be disregarded for workshop tasks.
+
+Body parts of living dwarves may also be marked as rotten if they are affected by a [[syndrome]] that causes necrosis. The afflicted body part produces miasma from time to time.
+
+Prepared food will rot the same as [[meat]], [[cheese]], [[egg]]s, and prepared [[fish]], but [[plant]]s will wither instead of producing miasma. The only places where food will not rot are: in a stockpile, a [[trade depot]], the [[Wagon (embark)|embark wagon]], a [[minecart]], when used as a reaction component, or while being carried by a dwarf, caravan pack animal, or [[wagon]]. Additionally, eggs will not rot in a [[nest box]]. It does not matter if the food is in a [[container]]; a [[barrel]] or [[large pot]] full of meat left in a corridor will rot.  While you'd expect [[milk]], [[fat]], and [[tallow]] to rot also, it seems that they do not, nor do any of the other categories of food, including [[flour]], [[drink]]s, [[seed]]s, and [[rock nut]] paste. Raw fish will rot no matter where they're stored, which is why it's important to prepare fish as quickly as possible.
+
+== Miasma propagation ==
+
+Once miasma has been generated (there is a purple square), it will spread for a while, eventually disappearing. This is true even if the original source has been removed: you can still have a spreading cloud of miasma even after you've cleaned up the dead goblin or whatever. The spread of miasma is only north, south, east, west, up, or down. It will not pass through diagonal openings. It will pass through open doors, open floor hatches, and all grates.
+
+== Avoiding miasma ==
+
+To avoid miasma, either keep anything rotten above ground, submerged in 7/7 water, or alternatively have a subterranean [[refuse]] pile on its own in a room with several [[door]]s; this should halt the miasma's advance (although the room itself will still stink up). It will also not spread diagonally, so one possible solution is to have the only entrance be diagonal.
+
+Alternately, excavate the roof of your refuse pile/butcher's shop/fishery so that it is open to the surface, then build a floor over it. The tiles underneath will forever count as "Light Above Ground" and therefore will not generate miasma. (For style points use a transparent roof.) See [[Tile attributes|tile attributes]] for more information.
+
+Another option is to have a long garbage chute where refuse is [[dump]]ed down. If it is long enough, the miasma will not be able to reach all the way to the top, preventing your dwarves from getting unhappy thoughts.
+
+A creative way of constructing garbage chutes is to separate the garbage area and dumping area (where dwarves are) with [[hatch]]es linked to a [[pressure plate]]. That way garbage will land on the hatch, which will open (triggered by a dwarf returning to their duties stepping on a plate), letting it fall down and then close, keeping all the miasma inside. This allows one to construct a short, yet non-smelly chute.
+
+Another option for a short non-smelly chute is to let the chute be separated diagonally from the dumping square(s). Since miasma does not travel across corners, this allows a chute stretching across 2 z-levels to be completely miasma free, without needing additional mechanisms.
+
+ Example #1
+ 
+ WWWWWWW   W=Wall
+ WWWWWOW   .=Floor
+ ....-WW   O=Channel
+ WWWWWWW   -=Floor with dumping zone
+
+ Example #2
+ 
+ WWWWWWW   W=Regular Wall                         .=Regular floor
+ WWWWMQW   M=Wall with dumping zone
+ ....--W   Q=Channel with dumping zone
+ WWWWWWW   -=Floor with dumping zone
+
+Of course, if you have easy access to [[magma]], you can simply dump any unwanted garbage in there, destroying it before it has a chance to rot. Beware of [[magma mist]].
+
+If you do encounter miasma coming from a kitchen, you can stop more by deconstructing the kitchen and making the area the kitchen was in a food stockpile. Miasma from a kitchen is (likely) caused by cooked food being left inside the kitchen because of not having food containers to put it in. Butcher shops suffer from the same problem.
+
+[[File:Dwarf fort tut miasma.jpg|500px]]
+
+== Related bugs ==
+
+Note that dwarves interrupted in mid-meal will abandon their food. Food abandoned in this manner can never be interacted with (picked up, stored, or dumped) by any dwarf ever again, including the dwarf who abandoned it. {{Bug|1299}} If the food is abandoned underground, it will eventually rot and generate miasma. This is an especially frequent occurrence with soldiers, who will often be interrupted while consuming their rations when a training class begins.  One workaround for soldiers is to use the military supplies tab to prevent them from carrying food.
+
+The utility [[Utilities#DFHack|DFHack]] includes a command "cleanowned" to clear ownership and dump all owned items that are on the floor or rotting. This can help if you're dealing with miasma from this bug.
+
+{{Category|Fortress mode}}
+{{Category|Physics}}
+{{Category|Thoughts}}
+{{Category|World}}
+[[ru:Miasma]]

@@ -1,0 +1,26 @@
+{{Quality|Fine|11:20, 18 May 2015 (UTC)}}
+{{av}}
+{{migrated article|Multiply value|v0.34}}
+
+An animal's '''multiply_value''' affects the [[item value|value]] of animal products such as meat, raw hides, silk thread, and anything made from these raw materials, including leather or silk clothing. While it's possible for multiply_value to apply to only specific parts of a creature, all non-modded creatures use SELECT_MATERIAL:ALL, so all parts of the animal are multiplied.
+
+{| class="wikitable" border=1
+|-
+! multiply_value
+! Animal names
+|-
+|x15||[[Dragon]], [[Roc]]
+|-
+|x10||[[Hydra]]
+|-
+|x5||[[Elephant]], [[Sea serpent]], [[Sea monster]], [[Giraffe]], [[Rhinoceros]]
+|-
+|x4||[[Voracious cave crawler]], [[Jabberer]], [[Cave dragon]], [[Giant lion]], [[Giant leopard]], [[Giant jaguar]], [[Giant tiger]], [[Giant cheetah]], [[Giant desert scorpion]], [[Unicorn]], [[Cave crocodile]], [[Giant toad]], [[Giant olm]], [[Giant bat]], [[Giant cave spider]]
+|-
+|x3||[[Grizzly bear]], [[Alligator]], [[Lion]], [[Leopard]], [[Jaguar]], [[Tiger]], [[Cheetah]], [[Saltwater crocodile]], [[Polar bear]], [[Elk bird]], [[Green devourer]], [[Rutherer]], [[Draltha]], [[Blind cave bear]], [[Yeti]], [[Sasquatch]], [[Fire imp]], [[Gila monster]], [[Anaconda]], [[Lynx]]
+|-
+|x2||[[Black bear]], [[Cougar]], [[Wolf]], [[Muskox]], [[Elk]], [[Magma crab]], [[Helmet snake]], [[Giant earthworm]], [[Molemarian]], [[Ice wolf]], [[Beak dog]], [[Strangler]], [[Giant rat]], [[Giant mole]], [[Purring maggot]], [[Giant cave swallow]], [[Panda]], [[Capybara]], [[Coyote]], [[Adder]], [[Bobcat]], [[Rattlesnake]], [[Copperhead snake]], [[Dingo]], [[Hyena]], [[Monitor lizard]], [[King cobra]], [[Ocelot]], [[Jackal]], [[Black mamba]], [[Sloth bear]], [[Bushmaster]], [[Python]]
+|}
+
+The giant and animal man versions, if not listed, have the same multiply_value as the base animal.
+[[ru:Item_value#Коэффициенты ценности материалов]]
