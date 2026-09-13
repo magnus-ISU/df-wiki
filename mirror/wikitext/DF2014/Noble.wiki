@@ -1,0 +1,882 @@
+{{Quality|Exceptional|18:32, 21 November 2016 (UTC)}}
+{{av}}
+
+[[File:Jacques Callot, Noble Woman with Large Collar, c. 1620-1623, NGA 36864.jpg|thumb|250px|right|Jacques Callot, a human noble from times past.]]'''Nobles''' are <s>snotty, good-for-nothing parasites</s> [[Dwarf|dwarves]] elevated to a position of "rule" (or so ''they'' think) over your fortress. They provide a critical happiness bonus to unhappy and [[stress]]ed dwarves, who will yell at or cry on the nobles, and are also responsible for interacting with [[outpost liaison]]s. Nobles who can perform a useful, specific task or duty unique to their position, such as [[Manager|managing work orders]], [[Broker|trading with merchants]], [[Militia commander|commanding military positions]], or even [[bookkeeper|stocks recording]], are colloquially known as '''utility nobles'''. Certain nobles are automatically elected by your fortress's citizenry, rising to ranks mostly outside of the player's control, while others (the aforesaid utility nobles, mostly) can be directly appointed by the player, and can be promoted, demoted and replaced at any time. 
+
+Certain higher-rank nobles can make [[demand]]s and set [[mandate]]s, which, if not met, will upset the noble and result in punishments for your dwarves if the fortress has an active [[justice]] system. They are also well-aware of their social statuses and often want expensive, well-furnished [[room]]s and other personal goodies, such as [[cabinet]]s and [[armor stand]]s, and some of them are envious bastards and do not want a lesser dwarf to have a better room than them. If a noble is too much of a problem and cannot be fired, it may be possible to arrange an [[unfortunate accident]] for them. Be careful, though, the death of a noble, especially a popular one like a [[mayor]], may cause unhappy thoughts and stress among the general populace, and their replacement may be ''even worse''. Furthermore, a fortress lacking a noble ruler (such as a [[mayor]]) may be temporarily unable to appoint new nobles manually, including utility nobles, until a new dwarf takes office.
+
+It is possible for some of your dwarves to hold noble titles over other parts of the dwarven kingdom. These dwarves are still capable of issuing mandates in your fort, however, and demand the same sort of privileged treatment as any other non-utility noble. There is no benefit to having multiple of the same noble in the same fortress (except for [[militia captain]]s), so in the event you happen to have multiple [[baron]]s or similar, it is more productive to [[unfortunate accident|remove]] the noble whose title is not linked to your fortress in order to avoid the unnecessary hassle with mandates and demands. Note that nobles, whether elected or appointed, cannot be peacefully [[Emigration|exiled]], as they are presumably in charge of emigration orders in the first place.
+
+[[Human]]s, [[Elf|elves]] and [[goblin]]s have nobles of their own, with some of the positions of their [[civilization]]s being exclusive to them, such as human law-makers and elven [[druid]]s. While civilized, [[kobold]]s and subterranean [[animal people]] have no nobles.
+[[File:Noble Screen.png|thumb|right|500px|The {{k|n}}obles screen, displaying a variety of positions. Some have mandates and room requirements pending.]]
+== Triggers ==
+Landholding nobles have triggers defined in the "entity_default.txt" [[raws]]. Prior to v0.44.11, these triggers would activate the associated nobles directly; in the current version, these triggers allow the foundation of new [[holding]]s and the number of holdings activates the nobles instead.
+
+*'''Population''' - Minimum population required for this position to become available.
+*'''Created Wealth''' - Minimum created wealth for this position to become available.
+*'''Exported Wealth''' - Minimum exported wealth for this position to become available.
+*'''Holdings''' - Minimum number of fortress [[holding]]s for this position to become available.{{v|0.44.11}}
+
+{| class="sortable" border="1" style="margin:1em 1em 1em 0;text-align:center;border-collapse:collapse;"
+|- style="background:#F2F2F2;"
+| '''Land Holder'''
+| '''Population'''
+| '''Created Wealth'''
+| '''Exported Wealth'''
+| '''Holdings'''{{v|0.44.11}}
+|-
+! [[Baron]]
+| 20
+| 100k 
+| 10k
+| 1
+|-
+! [[Count]]
+| 20
+| 200k 
+| 20k
+| 4
+|-
+! [[Duke]]
+| 20
+| 300k 
+| 30k
+| 9
+|}
+
+== Needs ==
+Below are the room demands made by each position. For details on room values see: [[Room]]. It also lists the number of chests, cabinets, weapon racks, and armor stands they demand. Finally, it shows the maximum number of [[demand]]s and [[mandate]]s they can issue at any given point.
+
+<!-- Inactive nobles are commented out. -->
+<!-- Note the colour progression:
+<!-- Note the colour progression (parenthesis are former values):
+Meager (FFFFE0) -> FFFF00
+Modest (FFFFC0) -> FFEA00
+(blank) (FFFFA0) -> FFCC00
+Decent (FFFF80) -> FFBA00
+Fine (FFFF60) -> FFA200
+Great (FFFF40) -> FF9000
+Grand (FFFF20) -> FF7800
+Royal (FFFF00) -> FF4E00
+-->
+{| class="sortable" border="1" style="margin:1em 1em 1em 0;text-align:center;border-collapse:collapse;"
+|- style="background:#F2F2F2;"
+!Position!!Quarters!!Dining Room!!Office!!Tomb!!Chests!!Cabinets!!Racks!!Stands!!Demands!!Mandates
+
+|-
+![[Baron]]
+|bgcolor="#FFBA50"|<span style="display:none">4</span>Decent Quarters
+|bgcolor="#FFBA50"|<span style="display:none">4</span>Decent Dining Room
+|bgcolor="#FFBA50"|<span style="display:none">4</span>Decent Office
+|bgcolor="#FFBA50"|<span style="display:none">4</span>Tomb
+|2
+|1
+|1
+|1
+|2
+|1
+
+|-
+![[Bookkeeper]]
+|<span style="display:none">0</span>—
+|<span style="display:none">0</span>—
+|bgcolor="#FFFF50"|<span style="display:none">1</span>Meager Office
+|<span style="display:none">0</span>—
+|<span style="display:none">0</span>—
+|<span style="display:none">0</span>—
+|<span style="display:none">0</span>—
+|<span style="display:none">0</span>—
+|<span style="display:none">0</span>—
+|<span style="display:none">0</span>—
+
+|-
+![[Broker]]
+|<span style="display:none">0</span>—
+|<span style="display:none">0</span>—
+|<span style="display:none">0</span>—
+|<span style="display:none">0</span>—
+|<span style="display:none">0</span>—
+|<span style="display:none">0</span>—
+|<span style="display:none">0</span>—
+|<span style="display:none">0</span>—
+|<span style="display:none">0</span>—
+|<span style="display:none">0</span>—
+<!--
+|-
+![[Captain]]
+|bgcolor="#FFFF50"|<span style="display:none">1</span>Meager Quarters
+|bgcolor="#FFFF50"|<span style="display:none">1</span>Meager Dining Room
+|bgcolor="#FFFF50"|<span style="display:none">1</span>Meager Office
+|<span style="display:none">0</span>—
+|1
+|1
+|1
+|1
+|<span style="display:none">0</span>—
+|<span style="display:none">0</span>—
+-->
+|-
+![[Captain of the guard|Captain of the Guard]]
+|bgcolor="#FFCC50"|<span style="display:none">3</span>Quarters
+|bgcolor="#FFCC50"|<span style="display:none">3</span>Dining Room
+|bgcolor="#FFCC50"|<span style="display:none">3</span>Office
+|<span style="display:none">0</span>—
+|1
+|1
+|1
+|1
+|<span style="display:none">0</span>—
+|<span style="display:none">0</span>—
+
+|-
+![[Champion]]
+|<span style="display:none">0</span>—
+|<span style="display:none">0</span>—
+|<span style="display:none">0</span>—
+|<span style="display:none">0</span>—
+|<span style="display:none">0</span>—
+|<span style="display:none">0</span>—
+|<span style="display:none">0</span>—
+|<span style="display:none">0</span>—
+|1
+|<span style="display:none">0</span>—
+
+|-
+![[Chief medical dwarf]]
+|<span style="display:none">0</span>—
+|<span style="display:none">0</span>—
+|<span style="display:none">0</span>—
+|<span style="display:none">0</span>—
+|<span style="display:none">0</span>—
+|<span style="display:none">0</span>—
+|<span style="display:none">0</span>—
+|<span style="display:none">0</span>—
+|<span style="display:none">0</span>—
+|<span style="display:none">0</span>—
+
+|-
+![[Count]]
+|bgcolor="#FF9050"|<span style="display:none">6</span>Great Bedroom
+|bgcolor="#FF9050"|<span style="display:none">6</span>Great Dining Room
+|bgcolor="#FF9050"|<span style="display:none">6</span>Throne Room
+|bgcolor="#FF9050"|<span style="display:none">6</span>Mausoleum
+|3
+|2
+|2
+|2
+|3
+|2
+|-
+![[Diplomat]]
+|bgcolor="#FF9050"|<span style="display:none">6</span>Great Bedroom
+|bgcolor="#FF9050"|<span style="display:none">6</span>Great Dining Room
+|bgcolor="#FF9050"|<span style="display:none">6</span>Throne Room
+|<span style="display:none">0</span>—
+|3
+|2
+|2
+|2
+|3
+|<span style="display:none">0</span>—
+|-
+![[Duke]]
+|bgcolor="#FF7850"|<span style="display:none">7</span>Grand Bedroom
+|bgcolor="#FF7850"|<span style="display:none">7</span>Grand Dining Room
+|bgcolor="#FF7850"|<span style="display:none">7</span>Opulent Throne Room
+|bgcolor="#FF7850"|<span style="display:none">7</span>Grand Mausoleum
+|5
+|3
+|3
+|3
+|5
+|3
+|-
+
+![[Dungeon master]]
+|bgcolor="#FFCC50"|<span style="display:none">3</span>Quarters
+|bgcolor="#FFCC50"|<span style="display:none">3</span>Dining Room
+|bgcolor="#FFCC50"|<span style="display:none">3</span>Office
+|<span style="display:none">0</span>—
+|1
+|1
+|1
+|1
+|<span style="display:none">0</span>—
+|<span style="display:none">0</span>—
+
+|-
+![[Expedition leader]]
+|<span style="display:none">0</span>—
+|<span style="display:none">0</span>—
+|<span style="display:none">0</span>—
+|<span style="display:none">0</span>—
+|<span style="display:none">0</span>—
+|<span style="display:none">0</span>—
+|<span style="display:none">0</span>—
+|<span style="display:none">0</span>—
+|<span style="display:none">0</span>—
+|<span style="display:none">0</span>—
+<!--
+|-
+![[Forced administrator]]
+|<span style="display:none">0</span>—
+|<span style="display:none">0</span>—
+|<span style="display:none">0</span>—
+|<span style="display:none">0</span>—
+|<span style="display:none">0</span>—
+|<span style="display:none">0</span>—
+|<span style="display:none">0</span>—
+|<span style="display:none">0</span>—
+|3
+|2
+-->
+|-
+![[General]]
+|bgcolor="#FFCC50"|<span style="display:none">3</span>Quarters
+|bgcolor="#FFCC50"|<span style="display:none">3</span>Dining Room
+|bgcolor="#FFBA50"|<span style="display:none">4</span>Decent Office
+|bgcolor="#FFFF50"|<span style="display:none">1</span>Grave
+|2
+|1
+|3
+|3
+|2
+|<span style="display:none">0</span>—
+
+|-
+![[Hammerer]]
+|<span style="display:none">0</span>—
+|<span style="display:none">0</span>—
+|<span style="display:none">0</span>—
+|<span style="display:none">0</span>—
+|<span style="display:none">0</span>—
+|<span style="display:none">0</span>—
+|<span style="display:none">0</span>—
+|<span style="display:none">0</span>—
+|<span style="display:none">0</span>—
+|<span style="display:none">0</span>—
+<!--
+|-
+![[Lieutenant]]
+|bgcolor="#FFEA50"|<span style="display:none">2</span>Modest Quarters
+|bgcolor="#FFEA50"|<span style="display:none">2</span>Modest Dining Room
+|bgcolor="#FFEA50"|<span style="display:none">2</span>Modest Office
+|<span style="display:none">0</span>—
+|1
+|1
+|2
+|2
+|1
+|<span style="display:none">0</span>—
+-->
+|-
+![[Manager]]
+|<span style="display:none">0</span>—
+|<span style="display:none">0</span>—
+|bgcolor="#FFFF50"|<span style="display:none">1</span>Meager Office
+|<span style="display:none">0</span>—
+|<span style="display:none">0</span>—
+|<span style="display:none">0</span>—
+|<span style="display:none">0</span>—
+|<span style="display:none">0</span>—
+|<span style="display:none">0</span>—
+|<span style="display:none">0</span>—
+
+|-
+![[Mayor]]
+|bgcolor="#FFBA50"|<span style="display:none">4</span>Decent Quarters
+|bgcolor="#FFBA50"|<span style="display:none">4</span>Decent Dining Room
+|bgcolor="#FFBA50"|<span style="display:none">4</span>Decent Office
+|<span style="display:none">0</span>—
+|2
+|1
+|1
+|1
+|2
+|1
+
+|-
+![[Militia captain]]
+|<span style="display:none">0</span>—
+|<span style="display:none">0</span>—
+|<span style="display:none">0</span>—
+|<span style="display:none">0</span>—
+|<span style="display:none">0</span>—
+|<span style="display:none">0</span>—
+|<span style="display:none">0</span>—
+|<span style="display:none">0</span>—
+|<span style="display:none">0</span>—
+|<span style="display:none">0</span>—
+
+|-
+![[Militia commander]]
+|<span style="display:none">0</span>—
+|<span style="display:none">0</span>—
+|<span style="display:none">0</span>—
+|<span style="display:none">0</span>—
+|<span style="display:none">0</span>—
+|<span style="display:none">0</span>—
+|<span style="display:none">0</span>—
+|<span style="display:none">0</span>—
+|<span style="display:none">0</span>—
+|<span style="display:none">0</span>—
+
+|-
+![[Monarch]]
+|bgcolor="#FF5E40"|<span style="display:none">8</span>Royal Bedroom
+|bgcolor="#FF5E40"|<span style="display:none">8</span>Royal Dining Room
+|bgcolor="#FF5E40"|<span style="display:none">8</span>Royal Throne Room
+|bgcolor="#FF5E40"|<span style="display:none">8</span>Royal Mausoleum
+|<span style="display:none">9</span>10
+|5
+|5
+|5
+|<span style="display:none">9</span>10
+|5
+
+|-
+![[Outpost liaison]]
+|bgcolor="#FF9050"|<span style="display:none">6</span>Great Bedroom
+|bgcolor="#FF9050"|<span style="display:none">6</span>Great Dining Room
+|bgcolor="#FF9050"|<span style="display:none">6</span>Throne Room
+|<span style="display:none">0</span>—
+|3
+|2
+|2
+|2
+|3
+|<span style="display:none">0</span>—
+
+|-
+![[Sheriff]]
+|bgcolor="#FFEA50"|<span style="display:none">2</span>Modest Quarters
+|bgcolor="#FFEA50"|<span style="display:none">2</span>Modest Dining Room
+|bgcolor="#FFEA50"|<span style="display:none">2</span>Modest Office
+|<span style="display:none">0</span>—
+|1
+|1
+|1
+|1
+|<span style="display:none">0</span>—
+|<span style="display:none">0</span>—
+
+|}
+
+== Notes ==   
+This shows various notes for each position taken from the [[raws]].
+
+*'''#''' - lists whether one or more dwarves can have this position.  Duke/Count/Baron don't have a number listed, but each fortress can only have one.
+*'''Squad''' - Lists the number and type of dwarf that this position leads
+*'''Spouse''' - The noble's spouse is also considered a noble, being called "[noble] [[consort]]". No privileges are attached to them, except of course the fact that they share the rooms with their spouse.
+*'''Heir''' - Is this individual replaced by an heir when they die?
+*'''Appointed By''' - Which position appoints this person initially?  Note that the player actually controls all appointments via the noble screen; this is, in effect, only which dwarf is ''necessary'' before the player can make the appointment. Barons aren't directly appointed but elevated (presumably by the mountainhome) upon recommendation of the player. They cannot be replaced via the {{k|n}}obles screen. Once a baron/countess/duke dies, no new nobles can be created, either.
+*'''Replaced By''' - What position replaces this one?
+*'''Pop Req''' - Minimum population required for this position to become available.
+*'''Wealth Req''' - Minimum created & exported wealth (respectively) for this position to become available.
+*'''Elected''' - Is this dwarf elected?
+*'''Lazy''' - Such nobles won't do any regular [[labor]]s aside from pulling [[lever]]s, deconstructing [[wall]]s, and some other things. Currently non-functional, so "lazy" nobles can still be assigned to perform any labor.
+*'''Immunity''' - Immune dwarves aren't punished for any crimes.
+*'''Econ Exempt''' - These dwarves don't need money to pay for goods or rooms after the [[economy]] arrives. Due to the economy currently being disabled, this privilege goes unused for now.
+*'''Military Screen Only''' - This position is only listed on the military screen.
+*'''Jealous''' - These dwarves will become [[thought|upset]] if their rooms are not better than those of "lesser" dwarves. They don't have to see the rooms to become upset, since they somehow just know such rooms exist.
+
+{| class="sortable" border="1" style="margin:1em 1em 1em 0;text-align:center;border-collapse:collapse;"
+|- style="background:#F2F2F2;"
+| '''Position'''
+| width=5% | '''#'''
+| '''Squad'''
+| width=5% | '''Spouse'''
+| width=5% | '''Heir'''
+| '''Appointed By'''
+| '''Replaced By'''
+| width=5% | '''Pop Req'''
+| width=7% | '''Wealth Req'''
+| width=5% | '''Elected'''
+| '''Lazy'''
+| width=5% | '''Immunity'''
+| width=5% | '''Econ Exempt'''
+| width=5% | '''Military Screen Only'''
+| '''Jealous'''
+
+|-
+! Baron
+| -
+| -
+| Yes
+| Yes
+| Monarch
+| Count
+| 20
+| 100k / 10k
+| -
+| Yes
+| Yes
+| Yes
+| -
+| Yes
+
+|-
+! Bookkeeper
+| 1
+| -
+| -
+| -
+| Exp.Leader/Mayor
+| -
+| -
+| -
+| -
+| -
+| -
+| -
+| -
+| -
+
+|-
+! Broker
+| 1
+| -
+| -
+| -
+| Exp.Leader/Mayor
+| -
+| -
+| -
+| -
+| -
+| -
+| -
+| -
+| -
+<!--
+|-
+! Captain
+| 1+
+| 10:Soldier
+| -
+| -
+| General
+| -
+| -
+| -
+| -
+| -
+| -
+| -
+| Yes
+| -
+-->
+|-
+! Captain of the Guard
+| 1
+| 10:Fortress Guard
+| -
+| -
+| Exp.Leader/Mayor
+| -
+| 50
+| -
+| -
+| -
+| -
+| Yes
+| -
+| -
+
+|-
+! Champion
+| 1
+| -
+| -
+| -
+| Duke/Count/Baron
+| -
+| -
+| -
+| -
+| Yes
+| Yes
+| Yes
+| -
+| -
+
+|-
+! Chief Medical Dwarf
+| 1
+| -
+| -
+| -
+| Exp.Leader/Mayor
+| -
+| -
+| -
+| -
+| -
+| -
+| -
+| -
+| -
+
+|-
+! Count
+| -
+| -
+| Yes
+| Yes
+| Monarch
+| Duke
+| 20
+| 200k / 20k
+| -
+| Yes
+| Yes
+| Yes
+| -
+| Yes
+|-
+! Diplomat
+| 1
+| -
+| -
+| -
+| Monarch
+| -
+| -
+| -
+| -
+| Yes
+| Yes
+| Yes
+| -
+| Yes
+|-
+! Duke
+| -
+| -
+| Yes
+| Yes
+| Monarch
+| -
+| 20
+| 300k / 30k
+| -
+| Yes
+| Yes
+| Yes
+| -
+| Yes
+<!--
+|-
+! Dungeon Master*
+| 1
+| -
+| -
+| -
+| Duke/Count/Baron
+| -
+| -
+| -
+| -
+| Yes
+| Yes
+| Yes
+| -
+| Yes
+-->
+|-
+! Expedition Leader
+| 1
+| -
+| -
+| -
+| -
+| Mayor
+| -
+| -
+| -
+| -
+| -
+| Yes
+| -
+| -
+<!--
+|-
+! Forced Administrator*
+| 1
+| -
+| -
+| -
+| -
+| -
+| -
+| -
+| -
+| Yes
+| Yes
+| Yes
+| -
+| Yes
+-->
+|-
+! General
+| 1
+| 10:Soldier
+| -
+| -
+| Monarch
+| -
+| -
+| -
+| -
+| Yes
+| Yes
+| Yes
+| -
+| Yes
+
+|-
+! Hammerer
+| 1
+| -
+| -
+| -
+| Exp.Leader/Mayor
+| -
+| -
+| -
+| -
+| Yes
+| Yes
+| Yes
+| -
+| -
+<!--
+|-
+! Lieutenant
+| 1+
+| 10:Soldier
+| -
+| -
+| General
+| -
+| -
+| -
+| -
+| Yes
+| -
+| Yes
+| Yes
+| -
+-->
+|-
+! Manager
+| 1
+| -
+| -
+| -
+| Exp.Leader/Mayor
+| -
+| -
+| -
+| -
+| -
+| -
+| -
+| -
+| -
+
+|-
+! Mayor
+| 1
+| -
+| -
+| -
+| -
+| -
+| 50
+| -
+| Yes
+| -
+| -
+| Yes
+| -
+| -
+
+|-
+! Militia Captain
+| 1+
+| 10:Militia-dwarf
+| -
+| -
+| Militia Commander
+| -
+| -
+| -
+| -
+| -
+| -
+| -
+| Yes
+| -
+
+|-
+! Militia Commander
+| 1
+| 10:Militia-dwarf
+| -
+| -
+| Exp.Leader/Mayor
+| -
+| -
+| -
+| -
+| -
+| -
+| -
+| -
+| -
+
+|-
+! Monarch
+| 1
+| -
+| Yes
+| Yes
+| Armok himself
+| -
+| 140
+| [[Monarch|It's complicated]]
+| -
+| Yes
+| Yes
+| Yes
+| -
+| Yes
+
+|-
+! Outpost Liaison
+| 1
+| -
+| -
+| -
+| Monarch
+| -
+| -
+| -
+| -
+| Yes
+| Yes
+| Yes
+| -
+| Yes
+
+|-
+! Sheriff
+| 1
+| -
+| -
+| -
+| Exp.Leader/Mayor
+| Captain of the Guard
+| -
+| -
+| -
+| -
+| -
+| Yes
+| -
+| -
+<!--
+|-
+! Tax Collector*
+| 1
+| -
+| -
+| -
+| Duke/Count/Baron
+| -
+| -
+| -
+| -
+| Yes
+| Yes
+| Yes
+| -
+| Yes
+-->
+|}
+<!--''* Not currently implemented.''-->
+
+==Appointed noble selection==
+Appointed nobles are chosen by the player via the {{k|n}}oble menu (though technically, in-universe they are being appointed by higher-ranking nobles; see below). There are certain skills that are relevant for each appointed noble's job, and not all dwarves will gain experience in the given skill; some dwarves will never gain experience in certain skills, this is determined by each dwarf's personal traits, and it is therefore important to select the dwarf with the appropriate set of traits for each position.
+
+When choosing a dwarf to assign to a noble position, the list of choices is sorted by the skill relevant to the job. This is ''especially'' important when appointing utility nobles.
+
+*Military leaders ([[Captain of the guard|captains of the guard]], [[militia commander]]s, and [[militia captain]]s) use the [[leader]] and [[military tactics]] skills, among others.
+
+*[[Manager]]s use the [[organizer]] skill.
+
+*[[Chief medical dwarf|Chief medical dwarves]] are usually appointed based on their qualifications as a [[diagnostician]], though of course you need more than just diagnosis for a functional [[hospital]].
+
+*[[Broker]]s most critically use the [[judge of intent]] and [[appraiser]] skill, among other [[social skill]]s.
+
+*[[Bookkeeper]]s have their very own [[record keeper]] skill.
+
+In-universe, when you appoint a noble, the new orders don't just descend from on high. Instead, a higher-ranking noble will actually appoint someone to the position. All appointed noble positions aside from the militia captain are appointed by the [[expedition leader]], or the [[mayor]] that replaces them when your fort's population reaches a certain point. [[Militia captain]] positions are instead appointed by the [[militia commander]], and the commander must return from any [[mission]]s before any appointments can be made. If your fort doesn't have the relevant higher-ranking noble [[fun|for some reason]], you can't appoint certain positions until they are replaced.
+
+== Nobles in other civilizations ==
+
+There are two basic kinds of nobles: civ-level and site-level.  Positions with the [SITE] tag are site-level, those without it are civ-level.  These types of nobles can be regarded as completely separate systems; with the lone exception of LAND_HOLDER related appointments (which have their own specific rules), civ-level nobles cannot appoint, succeed, or be replaced by site-level positions, and vice versa.
+
+Outside of fort mode, the game will always attempt to assign nobles whenever possible (except for those with NUMBER:AS_NEEDED).  So the rules for when nobles appear are controlled by the tags which limit them.
+
+Nobles with [APPOINTED_BY:position] require a noble of the designated position.
+Nobles with [REQUIRES_POPULATION] require the population to have a specific size.
+Nobles with [REQUIRES_MARKET] will only appear in "large" sites (which may have different rules for different site types).  This tag has no effect in fort mode.
+
+Positions that have no requirements will automatically be assigned to a random civ member when a new site/civ is created.
+A position that requires a certain population will not appear in fort mode unless it has [APPOINTED_BY] or [ELECTED], probably due to a bug.  In worldgen, there is no functional difference between ELECTED and no appointment rule except that ELECTED nobles tend to have high social skills and/or skills related to the position, while non-elected ones are assigned randomly.
+If a noble dies or advances to a new position via succession, the position will be granted to another unit based on the [SUCCESSION] tag.  If they have an heir or the position exists, the unit will be assigned.  If not, a new one will be appointed according to the usual rules.
+It is possible to assign multiple levels of SUCCESSION:BY_POSITION, creating a line of positions where the death of one causes all those "below" them to advance.
+
+[REPLACED_BY:position] means that once the replacing position is available, the current position will disappear. As mentioned, site-level and civ-level positions are completely separate; a site position cannot be replaced by a civ-level one or vice versa.
+
+These rules are followed in worldgen.  It is possible to cause civs and individual sites to change their behavior substantially when they reach a certain size by controlling nobles.  For example, if a site can only appoint a position with [MILITARY_GOALS] after reaching a particular size, that site will not send armies on missions until the required size is reached.
+
+Another interesting point is that a civ-level LAW_MAKING position is required for the civilization to have any kind of cohesion.  Without it, sites will be constantly embroiled in territorial disputes and civil wars will be commonplace.
+
+== Landholders positions ==
+
+The way DF determines what positions will actually appear in your fortress is somewhat counter-intuitive and fairly limiting. This guide should help you understand what you can do to actually get your positions working properly.
+
+There are five tokens governing which positions appear in your fortress - LAND_HOLDER, REQUIRES_POPULATION, APPOINTED_BY, ELECTED, and REPLACED_BY. The first two determine when your fortress is eligible for a new position, the next two determine how a new position for which your fortress is eligible can be added, and the fifth allows you to clear up obsolete positions. Unfortunately, they also interact in some strange ways that makes creating interesting position structures difficult.
+
+When you start a new fortress, DF compiles a list of your initial positions. To do this, it looks at the requirements for each position - any position whose only requirement is less than seven dwarves (either because they have no requirement tokens, or because their only requirement tokens are [REQUIRES_POPULATION: =< 7] or [LAND_HOLDER:some trigger whose only requirement is some number of dwarves equal to or less than 7]). Most importantly, any position whose only requirement is a LAND_HOLDER requirement, regardless of what the trigger for that requirement is, will be added if another eligible starting position is REPLACED_BY it. A non-LAND_HOLDER position that is REPLACED_BY a LAND_HOLDER position will never appear. With this list compiled, the game culls all positions that are REPLACED_BY another eligible position, and then culls all positions that have the APPOINTED_BY token. You may not embark with any appointed positions. Any remaining positions are then filled by a dwarf chosen at random.
+
+Positions do not automatically appear when you reach their requirements. For example, if you remove the ELECTED token from the Mayor, then the Mayor will never appear, even once you reach their required number of dwarves. For a position that does not appear at embark to appear in your fortress, it must be APPOINTED_BY another position or ELECTED.
+
+Naturally, this is more complicated than it looks. APPOINTED_BY positions must be appointed by another position already in your fortress, or a civ-level position. Only LAND_HOLDER positions may be appointed by civ-level positions. LAND_HOLDER positions that are APPOINTED_BY civ-level positions are inherently tied to civ-level tokens with the ESTABLISH_COLONY_TRADE_AGREEMENTS responsibility. If a fortress meets the LAND_HOLDER_TRIGGER for a new LAND_HOLDER tier when a caravan leaves, then the next time the outpost liaison or equivalent arrives, they will offer to make you an official colony, which will allow you to select all positions for that LAND_HOLDER level. Each time they appear, the outpost liaison will only promote your fortress one tier up the LAND_HOLDER track. The biggest problem with this system is that you may set your LAND_HOLDER_TRIGGERS such that you are eligible for the first tier of LAND_HOLDER positions at embark. If you are eligible for the first tier of LAND_HOLDER positions at embark, then all first-tier positions will appear twice - once at embark, and again when the outpost liaison comes to appoint you to the first tier.
+
+==Bugs==
+Nobles may have impossible [[demand]]s, like cardinal leather items or metal beds. {{Bug|944}}
+(Feel free to arrange an [[unfortunate accident]] for the idiot in question) While no dwarves will get punished for not producing these items, it may enrage the noble.
+
+Since at least 0.34.01, if your fort is unable to find a replacement for a noble, that noble will never be reappointed. {{bug|5299}} As of 0.42, new mayors and expedition leaders will be elected / "appointed by the monarch" after some time... but it might take a while, and in the meantime, you won't be able to appoint certain nobles. (not really a bug?) {{bug|8129}}
+
+===Selecting Squads which contain Nobles===
+
+Here's a link to the DF forum, where some SCIENCE on Nobles in Squads has been conducted.
+http://www.bay12forums.com/smf/index.php?topic=113639.msg3467517#msg3467517
+
+{{D for Dwarf}}
+Although <s>many</s> all players <s>often</s> constantly get <s>angry</s> murderously mad at nobles, wiser players simply thank their lucky stars that [[main:Armok|Armok]] never created congressdwarves.
+
+{{Translation
+| dwarven = rîthol
+| elvish  = ramu
+| goblin  = dösta
+| human   = hal
+}}
+
+{{Nobles}}
+{{Category|Nobles}}
