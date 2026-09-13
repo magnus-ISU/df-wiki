@@ -1,0 +1,870 @@
+<div class="mw-parser-output"><div id="page-quality-rating" style="text-align: right;margin: 0.8em 0;font-size:75%">
+ <a href="/index.php/Dwarf_Fortress_Wiki:Quality#Tattered" title="Dwarf Fortress Wiki:Quality"><span id="stub-quality" style="text-decoration:none; color:#333333">xTATTEREDx</span></a> <span style="font-weight:bold;" class="dot">&#160;·</span> <a href="/index.php/Dwarf_Fortress_Wiki:Quality#Fine" title="Dwarf Fortress Wiki:Quality"><span id="fine-quality" style="text-decoration:none; color:#CA7A02;">+FINE+</span></a> <span style="font-weight:bold;" class="dot">&#160;·</span> <a href="/index.php/Dwarf_Fortress_Wiki:Quality#Superior" title="Dwarf Fortress Wiki:Quality"><span id="superior-quality" style="text-decoration:none; color:#8800cc;">*SUPERIOR*</span></a> <span style="font-weight:bold;" class="dot">&#160;·</span> <a href="/index.php/Dwarf_Fortress_Wiki:Quality#Exceptional" title="Dwarf Fortress Wiki:Quality"><span id="exceptional-quality" style="padding:0.2em; border:1px solid #9df; border-radius: 2px; -webkit-border-radius: 2px; -moz-border-radius: 2px; -o-border-radius: 2px; -ms-border-radius: 2px; background:#cce4ff; color:#0088CC;">≡EXCEPTIONAL≡</span></a> <span style="font-weight:bold;" class="dot">&#160;·</span> <a href="/index.php/Dwarf_Fortress_Wiki:Quality#Masterwork" title="Dwarf Fortress Wiki:Quality"><span id="masterwork-quality" style="text-decoration:none; color:#72A329;">☼MASTERWORK☼</span></a></div><table class="version-table" style="text-align: center; margin: 3px auto 5px; padding: 0.25em; border-radius: 3px; -webkit-border-radius: 3px; -moz-border-radius: 3px; -o-border-radius: 3px; -ms-border-radius: 3px;; border: 2px solid #ddbb88; background: #fff5ee; min-width:27em"><tbody><tr><td style="padding: 0.3em 0.3em; width: 100%;"><div style="margin-bottom:6px;" class="version-links-r1"><span style="font-size:100%"><span class="version-link"><a href="/index.php/Weight" title="Weight"><span style="text-decoration: none; color: #CA7A02;">v53.16</span></a></span><span style="font-weight:bold;" class="dot">&#160;·</span> <span class="version-link"><span style="text-decoration: none; color: #CA7A02; background-color: #FFE0CC; border-radius: 2px; -webkit-border-radius: 2px; -moz-border-radius: 2px; -o-border-radius: 2px; -ms-border-radius: 2px; border: 1px solid #ddbb88; padding: 0.2em;"><b>v0.47.05</b></span></span><span style="font-weight:bold;" class="dot">&#160;·</span> <span class="version-link"><a href="/index.php/v0.34:Weight" title="v0.34:Weight"><span style="text-decoration: none; color: #CA7A02;">v0.34</span></a></span><span style="font-weight:bold;" class="dot">&#160;·</span> <span class="version-link"><a href="/index.php/v0.31:Weight" title="v0.31:Weight"><span style="text-decoration: none; color: #CA7A02;">v0.31</span></a></span><span style="font-weight:bold;" class="dot">&#160;·</span> <span class="version-link"><a href="/index.php/40d:Weight" title="40d:Weight"><span style="text-decoration: none; color: #CA7A02;">v0.28</span></a></span><span style="font-weight:bold;" class="dot">&#160;·</span> <span class="version-link"><a href="/index.php/23a:Weight" title="23a:Weight"><span style="text-decoration: none; color: #CA7A02;">v0.23</span></a></span></span></div><span>This article is about an <b>older version</b> of DF.</span><br />
+<div style="float: right; font-size:75%; padding-right:2px; margin-top:-2px; margin-bottom:-7px;"><span class="version-link"><a href="/index.php/Dwarf_Fortress_Wiki:V" class="mw-redirect" title="Dwarf Fortress Wiki:V"><span style="text-decoration: none; color: #CA7A02;">More Info</span></a></span><span style="font-weight:bold;" class="dot">&#160;·</span> <span class="version-link"><a href="/index.php/Template:Av" class="mw-redirect" title="Template:Av"><span style="text-decoration: none; color: #CA7A02;">V</span></a></span></div></td></tr>
+</tbody></table>
+<p><b>Weight</b>, or sometimes more correctly termed <b>mass</b>, is an item property which is measured in the unit <i>Γ</i> (equal to the real-life <i>kilogram</i>).
+</p><p>Weight is largely used by the game to determine how fast someone or something should move, due to encumbrance effects and carry weight restrictions; to calculate damage, since object mass factors into impact momentum; and to some extent to make temperature calculations, as mass factors into heat capacity. Note that, for DF, weight and mass are currently indistinguishable because, as it stands, DF gravity is <a rel="nofollow" class="external text" href="http://www.bay12games.com/media/df_talk_8_transcript.html">uniform both across the whole universe and from world to world</a> and buoyancy isn't implemented.
+</p><p>Weight is displayed as a quantity associated with an item. Weight calculation is not entirely straightforward, since each item category &#8212; or sometimes even individual items &#8212; have their own formula for determining weight.
+</p>
+<h2><span class="mw-headline" id="Weight_Calculation">Weight Calculation</span></h2>
+<p>The general form for calculating weight in DF is to take the material <a href="/index.php/DF2014:Density" title="DF2014:Density">density</a> (as found in the raws) multiplied by the item's volume.
+</p>
+<dl><dd>Weight (in Γ) = Density (in kg/m<sup>3</sup>) * Volume (in cm<sup>3</sup>) / 1,000,000 (cm<sup>3</sup>/m<sup>3</sup>)</dd></dl>
+<p>Internally, all custom volume/capacity numbers are rounded <i>down</i> to the nearest multiple of 10 - thus, if you define a tool with [SIZE:15], it will actually behave as if you had specified [SIZE:10].
+</p><p>An item's volume is also used to determine workshop <a href="/index.php/DF2014:Clutter" title="DF2014:Clutter">clutter</a> as well as how many items can fit into a container.
+</p>
+<table class="sortable" border="1" cellpadding="4" cellspacing="0" style="margin: 1em 1em 1em 0; background: #f9f9f9; border: 1px #aaa solid; border-collapse: collapse;">
+
+<tbody><tr bgcolor="#999999">
+<th>Item Type
+</th>
+<th>Volume
+</th>
+<th>Capacity
+</th>
+<th>Notes
+</th></tr>
+<tr>
+<td><a href="/index.php/DF2014:Bar" title="DF2014:Bar">Bars</a>
+</td>
+<td>6000
+</td>
+<td>
+</td>
+<td>
+</td></tr>
+<tr>
+<td>Cut <a href="/index.php/DF2014:Gem" title="DF2014:Gem">gems</a>
+</td>
+<td>200
+</td>
+<td>
+</td>
+<td>
+</td></tr>
+<tr>
+<td><a href="/index.php/DF2014:Block" title="DF2014:Block">Blocks</a>
+</td>
+<td>6000
+</td>
+<td>
+</td>
+<td>
+</td></tr>
+<tr>
+<td>Rough <a href="/index.php/DF2014:Gem" title="DF2014:Gem">gems</a>
+</td>
+<td>2500
+</td>
+<td>
+</td>
+<td>
+</td></tr>
+<tr>
+<td>Mined <a href="/index.php/DF2014:Stone" title="DF2014:Stone">stone</a>
+</td>
+<td>100000
+</td>
+<td>
+</td>
+<td>
+</td></tr>
+<tr>
+<td>Wood <a href="/index.php/DF2014:Log" class="mw-redirect" title="DF2014:Log">logs</a>
+</td>
+<td>50000
+</td>
+<td>
+</td>
+<td>
+</td></tr>
+<tr>
+<td><a href="/index.php/DF2014:Door" title="DF2014:Door">Door</a>
+</td>
+<td>30000
+</td>
+<td>
+</td>
+<td>
+</td></tr>
+<tr>
+<td><a href="/index.php/DF2014:Floodgate" title="DF2014:Floodgate">Floodgate</a>
+</td>
+<td>30000
+</td>
+<td>
+</td>
+<td>
+</td></tr>
+<tr>
+<td><a href="/index.php/DF2014:Bed" title="DF2014:Bed">Bed</a>
+</td>
+<td>30000
+</td>
+<td>
+</td>
+<td>
+</td></tr>
+<tr>
+<td><a href="/index.php/DF2014:Chair" class="mw-redirect" title="DF2014:Chair">Chair</a>
+</td>
+<td>30000
+</td>
+<td>
+</td>
+<td>
+</td></tr>
+<tr>
+<td><a href="/index.php/DF2014:Chain" title="DF2014:Chain">Chain</a>
+</td>
+<td>5000
+</td>
+<td>
+</td>
+<td>
+</td></tr>
+<tr>
+<td><a href="/index.php/DF2014:Flask" title="DF2014:Flask">Flask</a>
+</td>
+<td>1000
+</td>
+<td>1800
+</td>
+<td>
+</td></tr>
+<tr>
+<td><a href="/index.php/DF2014:Finished_goods#Goblets" title="DF2014:Finished goods">Goblet</a>
+</td>
+<td>1000
+</td>
+<td>1800
+</td>
+<td>
+</td></tr>
+<tr>
+<td><a href="/index.php/DF2014:Instrument" title="DF2014:Instrument">Instrument</a>
+</td>
+<td>4000
+</td>
+<td>
+</td>
+<td>
+</td></tr>
+<tr>
+<td><a href="/index.php/DF2014:Finished_goods#Toys" title="DF2014:Finished goods">Toy</a>
+</td>
+<td>1000
+</td>
+<td>
+</td>
+<td>
+</td></tr>
+<tr>
+<td><a href="/index.php/DF2014:Window" title="DF2014:Window">Window</a>
+</td>
+<td>20000
+</td>
+<td>
+</td>
+<td>
+</td></tr>
+<tr>
+<td><a href="/index.php/DF2014:Cage" title="DF2014:Cage">Cage</a>
+</td>
+<td>30000
+</td>
+<td>60000
+</td>
+<td>
+</td></tr>
+<tr>
+<td><a href="/index.php/DF2014:Barrel" title="DF2014:Barrel">Barrel</a>
+</td>
+<td>20000
+</td>
+<td>60000
+</td>
+<td>
+</td></tr>
+<tr>
+<td><a href="/index.php/DF2014:Bucket" title="DF2014:Bucket">Bucket</a>
+</td>
+<td>3000
+</td>
+<td>6000
+</td>
+<td>
+</td></tr>
+<tr>
+<td><a href="/index.php/DF2014:Animal_trap" title="DF2014:Animal trap">Animal trap</a>
+</td>
+<td>3000
+</td>
+<td>30000
+</td>
+<td>
+</td></tr>
+<tr>
+<td><a href="/index.php/DF2014:Table" title="DF2014:Table">Table</a>
+</td>
+<td>30000
+</td>
+<td>
+</td>
+<td>
+</td></tr>
+<tr>
+<td><a href="/index.php/DF2014:Coffin" title="DF2014:Coffin">Coffin</a>
+</td>
+<td>30000
+</td>
+<td>60000
+</td>
+<td>
+</td></tr>
+<tr>
+<td><a href="/index.php/DF2014:Statue" title="DF2014:Statue">Statue</a>
+</td>
+<td>60000
+</td>
+<td>
+</td>
+<td>
+</td></tr>
+<tr>
+<td><a href="/index.php/DF2014:Corpse" title="DF2014:Corpse">Corpse</a>
+</td>
+<td>Special
+</td>
+<td>
+</td>
+<td>Based on the size of the corpse and what it's made of.
+</td></tr>
+<tr>
+<td><a href="/index.php/DF2014:Weapon" title="DF2014:Weapon">Weapon</a>
+</td>
+<td>SIZE<sup>1</sup>
+</td>
+<td>
+</td>
+<td>
+</td></tr>
+<tr>
+<td>Body <a href="/index.php/DF2014:Armor#Upper_Body" title="DF2014:Armor">armor</a>
+</td>
+<td>?
+</td>
+<td>
+</td>
+<td>Based on UBSTEP, LBSTEP, COVERAGE, LAYER_SIZE, and the race that crafted it.
+</td></tr>
+<tr>
+<td><a href="/index.php/DF2014:Armor#Footwear" title="DF2014:Armor">Shoes</a>
+</td>
+<td>?
+</td>
+<td>
+</td>
+<td>Based on UPSTEP, COVERAGE, LAYER_SIZE, and the race that crafted it.
+</td></tr>
+<tr>
+<td><a href="/index.php/DF2014:Armor#Shield" title="DF2014:Armor">Shields</a>
+</td>
+<td>?
+</td>
+<td>
+</td>
+<td>Based on UPSTEP and the race that crafted it.
+</td></tr>
+<tr>
+<td><a href="/index.php/DF2014:Armor#Headgear" title="DF2014:Armor">Helms</a>
+</td>
+<td>?
+</td>
+<td>
+</td>
+<td>Based on COVERAGE, LAYER_SIZE, and the race that crafted it.
+</td></tr>
+<tr>
+<td><a href="/index.php/DF2014:Armor#Hands" title="DF2014:Armor">Gloves</a>
+</td>
+<td>?
+</td>
+<td>
+</td>
+<td>Based on UPSTEP, COVERAGE, LAYER_SIZE, and the race that crafted it.
+</td></tr>
+<tr>
+<td><a href="/index.php/DF2014:Box" class="mw-redirect" title="DF2014:Box">Box</a>
+</td>
+<td>20000 or 1000
+</td>
+<td>60000
+</td>
+<td>Bags have a volume of 1000, boxes/chests/coffers have a volume of 20000.
+</td></tr>
+<tr>
+<td><a href="/index.php/DF2014:Bin" title="DF2014:Bin">Bin</a>
+</td>
+<td>15000
+</td>
+<td>60000
+</td>
+<td>
+</td></tr>
+<tr>
+<td><a href="/index.php/DF2014:Armor_stand" title="DF2014:Armor stand">Armor stand</a>
+</td>
+<td>10000
+</td>
+<td>60000
+</td>
+<td>
+</td></tr>
+<tr>
+<td><a href="/index.php/DF2014:Weapon_rack" title="DF2014:Weapon rack">Weapon rack</a>
+</td>
+<td>10000
+</td>
+<td>60000
+</td>
+<td>
+</td></tr>
+<tr>
+<td><a href="/index.php/DF2014:Cabinet" title="DF2014:Cabinet">Cabinet</a>
+</td>
+<td>30000
+</td>
+<td>60000
+</td>
+<td>
+</td></tr>
+<tr>
+<td><a href="/index.php/DF2014:Figurine" title="DF2014:Figurine">Figurine</a>
+</td>
+<td>1000
+</td>
+<td>
+</td>
+<td>
+</td></tr>
+<tr>
+<td><a href="/index.php/DF2014:Jewelry" title="DF2014:Jewelry">Amulet</a>
+</td>
+<td>500
+</td>
+<td>
+</td>
+<td>
+</td></tr>
+<tr>
+<td><a href="/index.php/DF2014:Finished_goods#Crafts" title="DF2014:Finished goods">Scepter</a>
+</td>
+<td>3000
+</td>
+<td>
+</td>
+<td>
+</td></tr>
+<tr>
+<td><a href="/index.php/DF2014:Ammo" class="mw-redirect" title="DF2014:Ammo">Ammo</a>
+</td>
+<td>SIZE<sup>1</sup>
+</td>
+<td>
+</td>
+<td>
+</td></tr>
+<tr>
+<td><a href="/index.php/DF2014:Jewelry" title="DF2014:Jewelry">Crown</a>
+</td>
+<td>1000
+</td>
+<td>
+</td>
+<td>
+</td></tr>
+<tr>
+<td><a href="/index.php/DF2014:Jewelry" title="DF2014:Jewelry">Ring</a>
+</td>
+<td>50
+</td>
+<td>
+</td>
+<td>
+</td></tr>
+<tr>
+<td><a href="/index.php/DF2014:Jewelry" title="DF2014:Jewelry">Earring</a>
+</td>
+<td>30
+</td>
+<td>
+</td>
+<td>
+</td></tr>
+<tr>
+<td><a href="/index.php/DF2014:Jewelry" title="DF2014:Jewelry">Bracelet</a>
+</td>
+<td>200
+</td>
+<td>
+</td>
+<td>
+</td></tr>
+<tr>
+<td><a href="/index.php/DF2014:Finished_goods#Large_gems" title="DF2014:Finished goods">Large gem</a>
+</td>
+<td>50
+</td>
+<td>
+</td>
+<td>
+</td></tr>
+<tr>
+<td><a href="/index.php/DF2014:Anvil" title="DF2014:Anvil">Anvil</a>
+</td>
+<td>10000
+</td>
+<td>
+</td>
+<td>
+</td></tr>
+<tr>
+<td><a href="/index.php/DF2014:Body_part" class="mw-redirect" title="DF2014:Body part">Body part</a>
+</td>
+<td>Special
+</td>
+<td>
+</td>
+<td>Based on the size of the body part and what it's made of.
+</td></tr>
+<tr>
+<td><a href="/index.php/DF2014:Remains" title="DF2014:Remains">Remains</a>
+</td>
+<td>2000
+</td>
+<td>
+</td>
+<td>
+</td></tr>
+<tr>
+<td><a href="/index.php/DF2014:Meat" title="DF2014:Meat">Meat</a>
+</td>
+<td>2000
+</td>
+<td>
+</td>
+<td>
+</td></tr>
+<tr>
+<td><a href="/index.php/DF2014:Fish" title="DF2014:Fish">Fish</a>
+</td>
+<td>2000
+</td>
+<td>
+</td>
+<td>
+</td></tr>
+<tr>
+<td>Unprepared <a href="/index.php/DF2014:Fish" title="DF2014:Fish">fish</a>
+</td>
+<td>2000
+</td>
+<td>
+</td>
+<td>
+</td></tr>
+<tr>
+<td>Live <a href="/index.php/DF2014:Vermin" title="DF2014:Vermin">vermin</a>
+</td>
+<td>Special
+</td>
+<td>
+</td>
+<td>Based on creature's adult size.
+</td></tr>
+<tr>
+<td>Tame <a href="/index.php/DF2014:Vermin" title="DF2014:Vermin">vermin</a>
+</td>
+<td>Special
+</td>
+<td>
+</td>
+<td>Based on creature's adult size.
+</td></tr>
+<tr>
+<td><a href="/index.php/DF2014:Seed" title="DF2014:Seed">Seeds</a>
+</td>
+<td>100
+</td>
+<td>
+</td>
+<td>
+</td></tr>
+<tr>
+<td><a href="/index.php/DF2014:Plant" title="DF2014:Plant">Plant</a>
+</td>
+<td>1000
+</td>
+<td>
+</td>
+<td>
+</td></tr>
+<tr>
+<td><a href="/index.php/DF2014:Leather" title="DF2014:Leather">Leather</a>
+</td>
+<td>5000
+</td>
+<td>
+</td>
+<td>
+</td></tr>
+<tr>
+<td><a href="/index.php/DF2014:Plant" title="DF2014:Plant">Plant</a> growths
+</td>
+<td>50
+</td>
+<td>
+</td>
+<td>
+</td></tr>
+<tr>
+<td><a href="/index.php/DF2014:Thread" title="DF2014:Thread">Thread</a>
+</td>
+<td>ceil(Dimension/50)<sup>1</sup>
+</td>
+<td>
+</td>
+<td>Freshly gathered/produced thread has a dimension of 15000 and thus has a volume of 300
+</td></tr>
+<tr>
+<td><a href="/index.php/DF2014:Cloth" title="DF2014:Cloth">Cloth</a>
+</td>
+<td>ceil(Dimension/50)<sup>1</sup>
+</td>
+<td>
+</td>
+<td>Freshly woven cloth has a dimension of 10000 and thus has a volume of 200
+</td></tr>
+<tr>
+<td><a href="/index.php/DF2014:Finished_goods#Totems" title="DF2014:Finished goods">Totem</a>
+</td>
+<td>5000
+</td>
+<td>
+</td>
+<td>
+</td></tr>
+<tr>
+<td><a href="/index.php/DF2014:Armor#Lower_Body" title="DF2014:Armor">Pants</a>
+</td>
+<td>?
+</td>
+<td>
+</td>
+<td>Based on LBSTEP, COVERAGE, LAYER_SIZE, and the race that crafted it
+</td></tr>
+<tr>
+<td><a href="/index.php/DF2014:Backpack" class="mw-redirect" title="DF2014:Backpack">Backpack</a>
+</td>
+<td>5000
+</td>
+<td>30000
+</td>
+<td>
+</td></tr>
+<tr>
+<td><a href="/index.php/DF2014:Quiver" class="mw-redirect" title="DF2014:Quiver">Quiver</a>
+</td>
+<td>3000
+</td>
+<td>12000
+</td>
+<td>
+</td></tr>
+<tr>
+<td><a href="/index.php/DF2014:Catapult_part" class="mw-redirect" title="DF2014:Catapult part">Catapult parts</a>
+</td>
+<td>20000
+</td>
+<td>
+</td>
+<td>
+</td></tr>
+<tr>
+<td><a href="/index.php/DF2014:Ballista_part" class="mw-redirect" title="DF2014:Ballista part">Ballista parts</a>
+</td>
+<td>20000
+</td>
+<td>
+</td>
+<td>
+</td></tr>
+<tr>
+<td><a href="/index.php/DF2014:Ballista_arrow" title="DF2014:Ballista arrow">Siege ammo</a>
+</td>
+<td>30000
+</td>
+<td>
+</td>
+<td>
+</td></tr>
+<tr>
+<td><a href="/index.php/DF2014:Ballista_arrow" title="DF2014:Ballista arrow">Ballista arrow</a> head
+</td>
+<td>10000
+</td>
+<td>
+</td>
+<td>
+</td></tr>
+<tr>
+<td><a href="/index.php/DF2014:Mechanism" title="DF2014:Mechanism">Mechanisms</a>
+</td>
+<td>20000
+</td>
+<td>
+</td>
+<td>
+</td></tr>
+<tr>
+<td><a href="/index.php/DF2014:Trap_component" title="DF2014:Trap component">Trap component</a>
+</td>
+<td>SIZE<sup>1</sup>
+</td>
+<td>
+</td>
+<td>
+</td></tr>
+<tr>
+<td><a href="/index.php/DF2014:Alcohol" title="DF2014:Alcohol">Drink</a>
+</td>
+<td>2000
+</td>
+<td>
+</td>
+<td>
+</td></tr>
+<tr>
+<td><a href="/index.php/DF2014:Mill" class="mw-redirect" title="DF2014:Mill">Powder</a>
+</td>
+<td>2000
+</td>
+<td>
+</td>
+<td>
+</td></tr>
+<tr>
+<td><a href="/index.php/DF2014:Cheese" title="DF2014:Cheese">Cheese</a>
+</td>
+<td>1000
+</td>
+<td>
+</td>
+<td>
+</td></tr>
+<tr>
+<td><a href="/index.php/DF2014:Prepared_meal" class="mw-redirect" title="DF2014:Prepared meal">Prepared meal</a>
+</td>
+<td>1000
+</td>
+<td>
+</td>
+<td>
+</td></tr>
+<tr>
+<td><a href="/index.php/DF2014:Extract" class="mw-redirect" title="DF2014:Extract">Misc. liquid</a>
+</td>
+<td>600
+</td>
+<td>
+</td>
+<td>
+</td></tr>
+<tr>
+<td><a href="/index.php/DF2014:Coin" class="mw-redirect" title="DF2014:Coin">Coin</a>
+</td>
+<td>10/16<sup>1</sup>
+</td>
+<td>
+</td>
+<td>
+</td></tr>
+<tr>
+<td><a href="/index.php/DF2014:Fat" title="DF2014:Fat">Glob</a>
+</td>
+<td>600
+</td>
+<td>
+</td>
+<td>
+</td></tr>
+<tr>
+<td>Small <a href="/index.php/DF2014:Rock" class="mw-redirect" title="DF2014:Rock">rock</a>
+</td>
+<td>2000
+</td>
+<td>
+</td>
+<td>As <a href="/index.php/DF2014:Thrower" title="DF2014:Thrower">thrown</a> by adventurers.
+</td></tr>
+<tr>
+<td><a href="/index.php/DF2014:Pipe_section" title="DF2014:Pipe section">Pipe section</a>
+</td>
+<td>30000
+</td>
+<td>
+</td>
+<td>
+</td></tr>
+<tr>
+<td><a href="/index.php/DF2014:Hatch_cover" title="DF2014:Hatch cover">Hatch cover</a>
+</td>
+<td>10000
+</td>
+<td>
+</td>
+<td>
+</td></tr>
+<tr>
+<td><a href="/index.php/DF2014:Grate" title="DF2014:Grate">Grate</a>
+</td>
+<td>10000
+</td>
+<td>
+</td>
+<td>
+</td></tr>
+<tr>
+<td><a href="/index.php/DF2014:Quern" title="DF2014:Quern">Quern</a>
+</td>
+<td>30000
+</td>
+<td>
+</td>
+<td>
+</td></tr>
+<tr>
+<td><a href="/index.php/DF2014:Millstone" title="DF2014:Millstone">Millstone</a>
+</td>
+<td>30000
+</td>
+<td>
+</td>
+<td>
+</td></tr>
+<tr>
+<td><a href="/index.php/DF2014:Splint" class="mw-redirect" title="DF2014:Splint">Splint</a>
+</td>
+<td>2000
+</td>
+<td>
+</td>
+<td>
+</td></tr>
+<tr>
+<td><a href="/index.php/DF2014:Crutch" title="DF2014:Crutch">Crutch</a>
+</td>
+<td>2000
+</td>
+<td>
+</td>
+<td>
+</td></tr>
+<tr>
+<td><a href="/index.php/DF2014:Traction_bench" class="mw-redirect" title="DF2014:Traction bench">Traction bench</a>
+</td>
+<td>30000
+</td>
+<td>
+</td>
+<td>
+</td></tr>
+<tr>
+<td>Orthopedic <a href="/index.php/DF2014:Cast" class="mw-redirect" title="DF2014:Cast">cast</a>
+</td>
+<td>2000
+</td>
+<td>
+</td>
+<td>
+</td></tr>
+<tr>
+<td><a href="/index.php/DF2014:Tool" title="DF2014:Tool">Tool</a>
+</td>
+<td>SIZE<sup>1</sup>
+</td>
+<td>CAPACITY<sup>1</sup>
+</td>
+<td>
+</td></tr>
+<tr>
+<td><a href="/index.php/DF2014:Slab" title="DF2014:Slab">Slab</a>
+</td>
+<td>60000
+</td>
+<td>
+</td>
+<td>
+</td></tr>
+<tr>
+<td><a href="/index.php/DF2014:Egg" title="DF2014:Egg">Egg</a>
+</td>
+<td>Special
+</td>
+<td>
+</td>
+<td>Presumably the caste's EGG_SIZE.
+</td></tr>
+<tr>
+<td><a href="/index.php/DF2014:Book" title="DF2014:Book">Book</a>
+</td>
+<td>1000
+</td>
+<td>
+</td>
+<td>
+</td></tr>
+<tr>
+<td><a href="/index.php/DF2014:Sheet" title="DF2014:Sheet">Sheet</a>
+</td>
+<td>10
+</td>
+<td>
+</td>
+<td>
+</td></tr></tbody></table>
+<dl><dd><sup>1</sup> - As noted above, all values are rounded <i>down</i> to the nearest multiple of 10, down to a minimum value of 1.</dd></dl>
+<h2><span class="mw-headline" id="See_also">See also</span></h2>
+<ul><li><a href="/index.php/DF2014:Size" title="DF2014:Size">Size</a></li></ul>
+<table class="wikitable floatright" style="text-align:center;">
+<tbody><tr>
+<td>"Weight" in other <b><a href="/index.php/DF2014:Language" title="DF2014:Language">Languages</a></b> <a href="/index.php/File:Story_tell_indicator.png" class="image"><img alt="Story tell indicator.png" src="/images/9/90/Story_tell_indicator.png" decoding="async" width="20" height="18" /></a>
+<table style="text-align:left;">
+
+
+
+<tbody><tr>
+<th><b><a href="/index.php/DF2014:Dwarven_language" title="DF2014:Dwarven language">Dwarven</a></b>:
+</th>
+<td>âl
+</td></tr>
+
+<tr>
+<th><b><a href="/index.php/DF2014:Elven_language" title="DF2014:Elven language">Elven</a></b>:
+</th>
+<td>eba
+</td></tr>
+
+<tr>
+<th><b><a href="/index.php/DF2014:Goblin_language" title="DF2014:Goblin language">Goblin</a></b>:
+</th>
+<td>deslo
+</td></tr>
+
+<tr>
+<th><b><a href="/index.php/DF2014:Human_language" title="DF2014:Human language">Human</a></b>:
+</th>
+<td>ketas
+</td></tr></tbody></table>
+</td></tr></tbody></table></div>

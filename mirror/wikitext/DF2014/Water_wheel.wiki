@@ -1,0 +1,447 @@
+{{Quality|Exceptional}}
+{{Machine_component|name=Water wheel|key=w
+|construction=
+* 3 [[Log]]s
+|construction_job=
+# [[Architecture]]
+# [[Carpenter]]
+|power=Needs 10 power. <br>Generates 100 power. <br>Net gain of 90 power.
+}}{{av}}
+
+A '''water wheel''' is a [[machine component]] that provides [[power]] via water [[flow]].* To build a water wheel, select {{key|b}}uild menu and choose {{key|M}}achine components. It requires 3 [[wood]] and generates 90 net power, which can be used for operating one or more [[Screw pump|pumps]] or [[mill]]s. You can use [[axle]]s and [[Gear assembly|gears]] to distribute the power produced by a water wheel, or connect the machinery directly.
+
+Waterwheels do ''not'' work with [[waterfall]]s, nor in magma — it takes water that is "[[flow]]ing" according to the DF use of the term.
+
+(* Dwarf Fortress' version of "flow" is not intuitive - read the article for a full understanding.)
+
+''For a basic overview of how the different machine parts work and work together, see [[machinery]].''
+
+== Construction ==
+The [[Building_designer|architecture]] and [[Carpenter|carpentry]] labors are needed for the construction.
+
+A water wheel occupies 3 adjacent tiles (N-S or E-W axis, no diagonals).  It is the [[Wood#Types|color]] of the <u>first</u> wood selected for it, so you could build a red wheel with one piece of [[goblin-cap]] and two of any other wood.
+
+Although it's ''possible'' to build a stable water wheel on solid ground, it won't provide any power.  A useful water wheel is built in an empty tile that does not contain a floor, allowing the wheel to be powered by water in the tiles one [[Z-axis|z-level]] below. Floorless tiles are typically made by [[channel|channel]]ling away the floor.  To support the water wheel, build it with its central tile orthogonally adjacent to a gear assembly, a horizontal axle, a screw pump, or the central tile of a pre-existing water wheel. Do not hang it from a gear assembly you wish to control with a switch, as a disconnected ("switched off") gear assembly can't support anything and will cause the waterwheel to deconstruct. 
+
+[[Power]] is generated from a water wheel as long as it has [[flow]]ing water at a depth of 4/7 or greater under at least one of its tiles. The easiest way to achieve this is by placing the water wheel over a [[river]] or [[brook]]. '''With a brook you must first channel through the surface''' since brooks have a floor of sorts over them. 
+
+Furthermore, the body of water beneath the water wheel must be flowing in the correct '''direction''' in order for it to work—for example, placing a N-S water wheel over water flowing straight east or west will have no effect. Since most water in Dwarf Fortress seems to flow diagonally, this is rarely an issue.
+
+==Designs==
+ '''Key:'''
+   
+   '''#'''    = '''Wall'''
+   <font color="#333">○</font>    = '''Millstone'''
+   <font color="#777">+</font>    = '''Floor'''
+   <font color="#07F">~</font>    = '''Water'''  
+   <font color="#970">W</font>    = '''Water Wheel'''
+   <font color="#777">*</font>    = '''Gear Assembly'''  
+   <font color="#970">═</font>    = '''Axle'''
+
+
+{|style="border: 1px solid #0b0; background: #dfd"
+|+'''Basic watermill design'''
+|- style="font-family: monospace; font-weight: bold; font-size: 135%"
+|style="color: #777; padding: 0"|#
+|style="color: #777; padding: 0"|+
+|style="color: #777; padding: 0"|+
+|style="color: #777; padding: 0"|+
+|style="color: #777; padding: 0"|+
+|style="color: #07F; padding: 0"|~
+|style="color: #777; padding: 0"|+
+|- style="font-family: monospace; font-weight: bold; font-size: 135%"
+|style="color: #777; padding: 0"|#
+|style="color: #777; padding: 0"|+
+|style="color: #777; padding: 0"|+
+|style="color: #777; padding: 0"|+
+|style="color: #777; padding: 0"|+
+|style="color: #07F; padding: 0"|~
+|style="color: #777; padding: 0"|+
+|- style="font-family: monospace; font-weight: bold; font-size: 135%"
+|style="color: #777; padding: 0"|#
+|style="color: #333; padding: 0"|○
+|style="color: #777; padding: 0"|+
+|style="color: #777; padding: 0"|+
+|style="color: #777; padding: 0"|+
+|style="color: #970; padding: 0"|W
+|style="color: #777; padding: 0"|+
+|- style="font-family: monospace; font-weight: bold; font-size: 135%"
+|style="color: #777; padding: 0"|#
+|style="color: #333; padding: 0"|*
+|style="color: #970; padding: 0"|═
+|style="color: #970; padding: 0"|═
+|style="color: #970; padding: 0"|═
+|style="color: #970; padding: 0"|W
+|style="color: #777; padding: 0"|+
+|- style="font-family: monospace; font-weight: bold; font-size: 135%"
+|style="color: #777; padding: 0"|#
+|style="color: #777; padding: 0"|+
+|style="color: #777; padding: 0"|+
+|style="color: #777; padding: 0"|+
+|style="color: #777; padding: 0"|+
+|style="color: #970; padding: 0"|W
+|style="color: #777; padding: 0"|+
+|- style="font-family: monospace; font-weight: bold; font-size: 135%"
+|style="color: #777; padding: 0"|#
+|style="color: #777; padding: 0"|+
+|style="color: #777; padding: 0"|+
+|style="color: #777; padding: 0"|+
+|style="color: #777; padding: 0"|+
+|style="color: #7FF; padding: 0"|~
+|style="color: #777; padding: 0"|+
+|- style="font-family: monospace; font-weight: bold; font-size: 135%"
+|style="color: #777; padding: 0"|#
+|style="color: #777; padding: 0"|+
+|style="color: #777; padding: 0"|+
+|style="color: #777; padding: 0"|+
+|style="color: #777; padding: 0"|+
+|style="color: #07F; padding: 0"|~
+|style="color: #777; padding: 0"|+
+|}
+{|style="border: 1px solid #0b0; background: #dfd"
+|+'''Dual watermill design'''
+|- style="font-family: monospace; font-weight: bold; font-size: 135%"
+|style="color: #777; padding: 0"|#
+|style="color: #777; padding: 0"|+
+|style="color: #777; padding: 0"|+
+|style="color: #777; padding: 0"|+
+|style="color: #777; padding: 0"|+
+|style="color: #07F; padding: 0"|~
+|style="color: #07f; padding: 0"|~
+|- style="font-family: monospace; font-weight: bold; font-size: 135%"
+|style="color: #777; padding: 0"|#
+|style="color: #777; padding: 0"|+
+|style="color: #777; padding: 0"|+
+|style="color: #777; padding: 0"|+
+|style="color: #777; padding: 0"|+
+|style="color: #07F; padding: 0"|~
+|style="color: #7FF; padding: 0"|~
+|- style="font-family: monospace; font-weight: bold; font-size: 135%"
+|style="color: #777; padding: 0"|#
+|style="color: #333; padding: 0"|○
+|style="color: #777; padding: 0"|+
+|style="color: #777; padding: 0"|+
+|style="color: #777; padding: 0"|+
+|style="color: #970; padding: 0"|W
+|style="color: #970; padding: 0"|W
+|- style="font-family: monospace; font-weight: bold; font-size: 135%"
+|style="color: #777; padding: 0"|#
+|style="color: #333; padding: 0"|*
+|style="color: #970; padding: 0"|═
+|style="color: #970; padding: 0"|═
+|style="color: #970; padding: 0"|═
+|style="color: #970; padding: 0"|W
+|style="color: #970; padding: 0"|W
+|- style="font-family: monospace; font-weight: bold; font-size: 135%"
+|style="color: #777; padding: 0"|#
+|style="color: #777; padding: 0"|+
+|style="color: #777; padding: 0"|+
+|style="color: #777; padding: 0"|+
+|style="color: #777; padding: 0"|+
+|style="color: #970; padding: 0"|W
+|style="color: #970; padding: 0"|W
+|- style="font-family: monospace; font-weight: bold; font-size: 135%"
+|style="color: #777; padding: 0"|#
+|style="color: #777; padding: 0"|+
+|style="color: #777; padding: 0"|+
+|style="color: #777; padding: 0"|+
+|style="color: #777; padding: 0"|+
+|style="color: #07F; padding: 0"|~
+|style="color: #07F; padding: 0"|~
+|- style="font-family: monospace; font-weight: bold; font-size: 135%"
+|style="color: #777; padding: 0"|#
+|style="color: #777; padding: 0"|+
+|style="color: #777; padding: 0"|+
+|style="color: #777; padding: 0"|+
+|style="color: #777; padding: 0"|+
+|style="color: #07F; padding: 0"|~
+|style="color: #07F; padding: 0"|~
+|}
+This is by no means the limit of water power from one location, depending on the width of your river/brook/channel you can stack many waterwheels side-by-side (really big assembles will need to be artificial as there's a limit to how wide the game created water flows get). Just remember to make sure there's a support structure in place before you place the next wheel.
+
+== Perpetual motion ==
+
+Due to the relatively low power draw of a [[screw pump]], a ''self-powering'' assembly can be made with a water wheel that still leaves plenty of excess power for other uses. This is undeniably an [[exploit]] and possibly a bug.
+
+To get it working, you must start the pump manually.*
+
+:''(* Exceptions are [[aquifer]]s, which can sometimes have naturally occurring [[flow]].  This is sometimes a good thing, because then a wheel simply works by itself - or a bad thing, if, for example, you want the wheel to '''not''' provide any power while you build a pump adjacent to it. It's not clear what causes an aquifer to have flow and then keep it - it's difficult to replicate reliably, and can be lost with additional [[channel]]ing, so designs will have to be adapted if such are found.)''
+
+It is good to have a ready source of water to refill the machine, as water tends to escape and evaporate.  As the water level decreases, the water wheel may intermittently stop providing power; when the level falls below 4/7, the wheel stops providing power altogether.
+
+'''*REMEMBER TO BUILD AN ORTHOGONAL PUMP, HORIZONTAL AXLE OR GEAR ASSEMBLY BEFORE THE WATER WHEEL*'''
+
+===Dwarven Water Reactor===
+{{projects}}
+====Key====
+:{{Raw Tile|║ ═ ╝ ╚ ╔ ╗ ╣ ╠ ╩ ╦ O|7:0:1}} = '''Wall'''
+:{{Raw Tile|+|7:0:0}} = '''Floor'''
+:{{Raw Tile|W|6:0:0}} = '''Water Wheel''' with floor underneath
+:{{Raw Tile|W|6:1:0}} = '''Water Wheel''' with water underneath
+:{{Raw Tile|≈|1:0:1}} = '''Water''' on current level
+:{{Raw Tile|≈|3:0:1}} = '''Water''' on level below
+:{{Raw Tile|X|2:0:0}}<br />{{Raw Tile|X|2:0:1}} = '''Screw Pump''' drawing from south
+
+This compact design, once started, produces 170 surplus power (less additional power train). While the water reactor provides a perpetual source of mechanical power in abundant amounts, the use of several reactors can cause performance issues. When building your water reactor, it is recommended that you include a method for stopping the reactor once started.
+
+<div style="float:right; margin:2ex 20ex;">    <!-- I wanted to float this on the left, but the wiki version of bulletpoints behave oddly with the margin. -->
+{|
+!'''Lower<br /> Level'''
+!    
+!'''Upper<br /> Level'''
+|-
+|
+{| style="border-spacing:0;"
+|-
+|{{RT|╔|7:0:1}}
+|{{RT|═|7:0:1}}
+|{{RT|╦|7:0:1}}
+|{{RT|═|7:0:1}}
+|{{RT|╗|7:0:1}}
+|-
+|{{RT|║|7:0:1}}
+|{{H2O}}
+|{{RT|║|7:0:1}}
+|{{H2O}}
+|{{RT|║|7:0:1}}
+|-
+|{{RT|║|7:0:1}}
+|{{H2O}}
+|{{RT|║|7:0:1}}
+|{{H2O}}
+|{{RT|║|7:0:1}}
+|-
+|{{RT|║|7:0:1}}
+|{{H2O}}
+|{{RT|O|7:0:1}}
+|{{H2O}}
+|{{RT|║|7:0:1}}
+|-
+|{{RT|╚|7:0:1}}
+|{{RT|╗|7:0:1}}
+|{{H2O}}
+|{{RT|╔|7:0:1}}
+|{{RT|╝|7:0:1}}
+|-
+|{{RTB|0:0:0}}
+|{{RT|╚|7:0:1}}
+|{{RT|═|7:0:1}}
+|{{RT|╝|7:0:1}}
+|{{RTB|0:0:0}}
+|}
+
+|
+    
+|
+{| style="border-spacing:0;"
+|-
+|{{RT|╔|7:0:1}}
+|{{RT|═|7:0:1}}
+|{{RT|═|7:0:1}}
+|{{RT|═|7:0:1}}
+|{{RT|╗|7:0:1}}
+|-
+|{{RT|║|7:0:1}}
+|{{RT|W|6:1:0}}
+|{{RT|+|7:0:0}}
+|{{RT|W|6:1:0}}
+|{{RT|║|7:0:1}}
+|-
+|{{RT|╝|7:0:1}}
+|{{RT|W|6:1:0}}
+|{{RT|X|2:0:0}}
+|{{RT|W|6:1:0}}
+|{{RT|╚|7:0:1}}
+|-
+|{{RT|+|7:0:0}}
+|{{RT|W|6:0:0}}
+|{{RT|X|2:0:1}}
+|{{RT|W|6:0:0}}
+|{{RT|+|7:0:0}}
+|-
+|{{RT|+|7:0:0}}
+|{{RT|+|7:0:0}}
+|{{RT|≈|3:0:1}}
+|{{RT|+|7:0:0}}
+|{{RT|+|7:0:0}}
+|-
+|{{RT|+|7:0:0}}
+|{{RT|+|7:0:0}}
+|{{RT|+|7:0:0}}
+|{{RT|+|7:0:0}}
+|{{RT|+|7:0:0}}
+|}
+|}
+</div>
+
+Dig the V-shaped channel and fill it with water (either from an outside source or by designating it as a [[pond]]).  On the top level, channel out two tiles under each wheel -- the ones under the center of the wheel and the ones by the pump output.  Construct the pump, pumping from the South.  Construct the two water wheels.  Start the pump manually ( {{k|q}}, {{k|Enter}} ) - if there is enough water*, the "reactor" will start immediately and the pump operator will leave.  The water from the north end of the pump will spill over the top-most floor tile, filling that to 7/7 and the two tiles east and west of it to ~5/7, but will not overflow back past the water wheel to the walkway area.  Note that for the upper level, no southern walls are shown as none are needed, unless you don't follow the design and do something to create water pressure.
+
+*''(* Estimated minimum depth to prime the reactor is 3/7 to 4/7, though this is not guaranteed.)''
+* The ideal amount of water in this design is apparently 63 units of water. In other words six tiles below in the V are full up to 7/7 and three more above are also full up to 7/7 which will generate reliable flow permanently without ever losing any of that water to evaporation. An easy way to do this is to simply leave your pond fill command on after the reactor activates. They will eventually fill it up to the optimal level and stop. 
+* When you first start the pump, you are likely to have at least some excess water splash out while the fluid level achieves equilibrium - don't locate this in an area that you don't want any mud in.
+* If the reactor is connected to a load totaling more than 100 power (including that used by the waterwheels and pump), it may sometimes fail to start. Using a gear assembly to disconnect the load from the reactor before starting it can fix this.
+
+The reactor can be safely halted either by blocking the tile the pump draws water from or "overloading" the reactor (since drawing more power than the reactor supplies will stop the pump that keeps the cycle going until the load is reduced and the pump is manually restarted by dwarf-power). An easy way to halt the reactor is to place a lever-linked hatch cover over the tile the pump draws from. When the cover is closed, the pump can't draw any water, and the reactor stops.  More drastically, the reactor will obviously be halted by deconstructing the pump.  Deconstructing one wheel will cause a flood (and almost immediately cancel any job order to deconstruct the other components), and deconstructing the pump will cause both wheels to collapse (unless they are attached to [[machinery]] outside them, not shown).
+
+[[Power]] can be routed up from the pump or off to the side from a wheel; the bottom of the pump is difficult to access without danger of water escaping.  Routing power from a wheel is typically safe in practice, but it's not impossible for a small amount of water to escape the reactor if it is temporarily overfilled.  Power can also be routed out of the reactor via a gear or horizontal axle over the pump's intake tile; while this does not interfere with the pump's operation or present a danger of flooding, it makes it more difficult to shut down the reactor.  In either case, it's typically wise to place a [[gear assembly]] linked to a [[lever]] early in the power train in order to allow disconnecting the power at that point, as opposed to needing to halt the entire reactor to stop the power supply.
+
+Expanded versions can produce more power, and can be added later with minimal advance planning; such extensibility is easily attainable by placing disengageable gears on either side of the two water wheels, then attaching minireactors at your leisure, or halting the original reactor by other means. Alternatively, it may be easier to simply produce a second reactor, then connect to the power train at another location.
+
+''Note: If created in an aquifer, there is a chance that the channeled tiles will have a natural [[flow|water flow]] - this will cause the pump to start the moment the first wheel is finished, flooding the work area for the second.''
+*This can be countered by connecting something that consumes >90 power while building the waterwheels -19 [[gear assembly|Gear assemblies]] works
+
+===Mini Water Reactor===
+
+This even more compact design is quite similar to the original Dwarven Water Reactor, but can be used in tight spots that do not need more than 80 surplus power.  This plan can also be considered an extension unit to the DWR, in that it can be added to one or the other side to provide an additional 80 power to the resulting powertrain.  Safely constructing a mini reactor to add to a previously built reactor without potential flooding and/or loss of power is possible only if you first turn off the original reactor.  Planning ahead is a much better option, so if you're going to need more than 170 power, build a larger reactor to start with.
+
+As stated previously, the design below produces 80 surplus power (less additional powertrain).
+
+{|
+|'''Lower<br /> Level'''
+|'''Upper<br /> Level'''
+|-
+|
+{| style="border-spacing:0;"
+|-
+|{{RT|╔|7:0:1}}
+|{{RT|═|7:0:1}}
+|{{RT|╗|7:0:1}}
+|{{RTB|0:0:0}}
+|-
+|{{RT|║|7:0:1}}
+|{{H2O}}
+|{{RT|║|7:0:1}}
+|{{RTB|0:0:0}}
+|-
+|{{RT|║|7:0:1}}
+|{{H2O}}
+|{{RT|║|7:0:1}}
+|{{RTB|0:0:0}}
+|-
+|{{RT|║|7:0:1}}
+|{{H2O}}
+|{{RT|╚|7:0:1}}
+|{{RT|╗|7:0:1}}
+|-
+|{{RT|╚|7:0:1}}
+|{{RT|╗|7:0:1}}
+|{{H2O}}
+|{{RT|║|7:0:1}}
+|-
+|{{RTB|0:0:0}}
+|{{RT|╚|7:0:1}}
+|{{RT|═|7:0:1}}
+|{{RT|╝|7:0:1}}
+|}
+
+|
+{| style="border-spacing:0;"
+|-
+|{{RT|╔|7:0:1}}
+|{{RT|═|7:0:1}}
+|{{RT|═|7:0:1}}
+|{{RT|╗|7:0:1}}
+|-
+|{{RT|║|7:0:1}}
+|{{RT|W|6:1:0}}
+|{{RT|+|7:0:0}}
+|{{RT|║|7:0:1}}
+|-
+|{{RT|╝|7:0:1}}
+|{{RT|W|6:1:0}}
+|{{RT|X|2:0:0}}
+|{{RT|╚|7:0:1}}
+|-
+|{{RT|+|7:0:0}}
+|{{RT|W|6:0:0}}
+|{{RT|X|2:0:1}}
+|{{RT|+|7:0:0}}
+|-
+|{{RT|+|7:0:0}}
+|{{RT|+|7:0:0}}
+|{{RT|≈|3:0:1}}
+|{{RT|+|7:0:0}}
+|-
+|{{RT|+|7:0:0}}
+|{{RT|+|7:0:0}}
+|{{RT|+|7:0:0}}
+|{{RT|+|7:0:0}}
+|}
+|}
+
+Construction of the mini reactor follows the same order as for the DWR, though the channel is slightly different and only one water wheel is needed.  If this is an addition to a full size reactor or set of reactors, all channels will need to be fairly full with water to start the reactor.
+
+===Micro Water Reactor===
+
+Replacing the pump with a dumping [[minecart]], the micro reactor is even more compact and produces up to 90 surplus power per waterwheel (less additional power drain).  
+
+
+<diagram>
+  z    z-1 
+ +++   ╔═╗
+ +[#0:0][@6:0]─[#@]+   ║[#0:0][@6:0]■[#@]║
+ +[#0:0][@6:0]─[#6:0][@]═[#@]   ║[#1:0]▲[#@]║
+ +[#0:0][@6:0]─[#@]+   ╚═╝
+ +++     
+
+</diagram>
+
+
+Channel two adjacent tiles to create a trench, remove the ramp from one trench tile and build a [[Minecart#Track_Stops|track stop]] dumping into the other trench tile. Optionally link a lever to the track stop (to disable and enable the reactor later). Add a minecart to the track stop, build a waterwheel over the trench, and use a pond [[zone]] to fill the ramp tile. The reactor requires 11 units of water for continuous operation; any excess will simply disappear. Once filled, the minecart will dump water into the ramp tile. The water will then flow back to the minecart tile, refilling the minecart and repeating the process endlessly.
+
+
+For more power, each trench can operate two waterwheels and multiple trenches can be arranged in a row to provide as much power as needed. (Each trench should remain isolated to avoid interference.) This example provides 356 surplus power with only 4 tiles of moving water:
+
+<diagram>
+   z     z-1 
+ +++++  
+ +[#0:0][@6:0]─[#@]+[#0:0][@6:0]─[#@]+ 
+ +[#0:0][@6:0]─[#6:0][@]═[#0:0][@6:0]─[#6:0][@]═[#@]  ╔═╦═╗
+ +[#0:0][@6:0]─[#@]+[#0:0][@6:0]─[#@]+  ║[#0:0][@6:0]■[#@]║[#0:0][@6:0]■[#@]║ 
+ +[#0:0][@6:0]─[#@]+[#0:0][@6:0]─[#@]+  ║[#1:0]▲[#@]║[#1:0]▲[#@]║ 
+ +[#0:0][@6:0]─[#6:0][@]═[#0:0][@6:0]─[#6:0][@]═[#@]  ╚═╩═╝
+ +[#0:0][@6:0]─[#@]+[#0:0][@6:0]─[#@]+   
+ +++++  
+
+</diagram> 
+
+
+For a more compact design, several trench rows can be staggered to produce a solid block of waterwheels, scaling to whatever size necessary. The example below provides 538 power with 8 tiles of moving water:
+
+<diagram>
+   z     z-1 
+ +++++   ╔═╗
+ ++[#1:0].[#@]++   ║[#0:0][@6:0]■[#@]║
+ +[#0:0][@6:0]───[#@]+   ║[#1:0]▲[#@]║
+ +[#0:0][@6:0]───[#6:0][@]═[#@]  ╔╩╦╩╗
+ +[#0:0][@6:0]───[#@]+  ║[#0:0][@6:0]■[#@]║[#0:0][@6:0]■[#@]║ 
+ +[#0:0][@6:0]───[#@]+  ║[#1:0]▲[#@]║[#1:0]▲[#@]║ 
+ +[#0:0][@6:0]───[#6:0][@]═[#@]  ╚╦╩╦╝
+ +[#0:0][@6:0]───[#@]+   ║[#0:0][@6:0]■[#@]║
+ ++[#1:0].[#@]++   ║[#1:0]▲[#@]║
+ +++++   ╚═╝
+
+</diagram>
+
+
+Note: To avoid access problems, large blocks of micro reactors should be built and filled one layer at a time.
+
+== Flowing Water ==
+Waterwheels require water which is flowing; the game will consider water to be flowing under two circumstances - the first is when water spreads, that is, when deeper water flows to an adjacent tile where the water is shallower. This could be called "gradient flow" because it requires the water be flowing from deeper to shallower. Water which doesn't have a gradient - such as stretches of water which are 7/7 deep - is generally not regarded by the game to be flowing even if water is technically being delivered through those tiles.
+
+The second kind of flow the game recognizes is when water flows off the map, either by going off the map edge or disappearing into an aquifer (water which enters an aquifer vanishes from the map, since an aquifer can never become full, even if it's only a single tile). This kind of flow propagates back from the map edge or aquifer sink and causes all or most of the connected water to gain the "Flowing" quality. Water which is flowing off the map counts as flowing even on stretches of 7/7 depth. This kind of flow is most readily observed in brooks, streams and rivers; however artificially constructed dwarf-made water channels function just as effectively, provided that they ultimately flow off the map.
+A tile which has been marked as flowing off the map will retain this quality even if water movement is later blocked. This is most readily observed in that a dammed river will continue to power waterwheels, even though the water is no longer flowing off the map. This works equally well for dwarf-made water channels, the flowing quality is so persistent that it will remain even if the area is completely drained and refilled, although while the tiles contain less than 4/7 water they won't power waterwheels regardless.
+
+=== Legitimate artificial rivers ===
+If one wishes, one can build an underground river containing 7/7 water which powers water wheels, by allowing water sourced from a river, lake, sea or aquifer to ultimately flow off the map edge in a cavern. This would require building an aqueduct to bring the river to the map edge, since, if the water spreads significantly before flowing off the map edge, the game won't regard it as flowing. Water flowing from a higher aquifer into a lower one will also have legitimate natural flow.
+
+=== Flowing Water Reactors ===
+It is possible to exploit the game's definition of flowing water and create patches of water which power waterwheels despite the complete absence of actual water movement. When a channel is dug into an aquifer, the channel will sometimes have "natural flow". However, if water is pumped into an aquifer channel, then that channel will then always have "natural flow". This is because water is regarded as disappearing from the map at that point, and the tiles are marked as flowing water, and will power water wheels - even if the pump is removed. 
+
+The other way to create water with natural flow is to allow the water to flow off of the map edge (most commonly through a fortification carved into the map edge, although the edge of the map on the surface or in a cavern can also be used). The body of water will then be marked as flowing, even if the map edge is subsequently blocked by a floodgate or raising bridge. This can even be done with finite water sources such as murky pools, for example digging out a channel next to the map edge, building a floodgate to seal the map edge drain, filling the channel with 4/7 water, opening the floodgate, then closing the floodgate and filling it back up to 4/7 water.
+
+The ethics of these reactors is not particularly different to perpetual motion machines, the conventional perpetual motion machine uses water wheels to generate power, and uses a fraction of that power to move the water with a screw pump. A waterwheel generates 100 power and consumes 10 power, presumably the 10 power consumed represents the energy the waterwheel requires to move the water in front of its blades. But if the water wheel moves water in and of itself, the pump actually becomes unnecessary. The water wheel itself both moves the water and is moved by the water.
+[[File:water_wheel_preview.png|thumb|340px|center|Circular versions works much better than the triangular one.]]
+{{Translation| dwarven = arel kol | elvish = alu rere | goblin = esp sost | human = thomo pobe}}
+
+{{buildings}}

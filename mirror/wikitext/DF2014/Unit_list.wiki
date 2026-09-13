@@ -1,0 +1,68 @@
+{{Quality|Superior|22:49, 30 March 2015 (UTC)}}
+{{av}}
+
+The '''unit list''' is a [[menu]] screen which lists [[creature]]s on the map. It is accessible with {{k|u}}, and is subdivided into four separate screens, whose individual counts are visible at the top of the screen. All have four options: {{k|v}}iewing the creature, zooming to the {{k|c}}reature location, opening the {{k|m}}[[manager|anager]], and {{k|r}}emoving a job order (although this is currently only usable for actual citizens).
+
+[[File:unit_list_preview.png|thumb|250px|right|Preview of the unit list.]]
+
+The first and primary screen is the Citizens screen, which lists your dwarves according to their [[profession]]. Dwarves are ordered by category: [[mining]], [[carpentry]], [[stoneworker|stoneworking]], [[ranger]]s, [[metalsmith]]s, [[jeweler]]s, [[craftsdwarf|craftsdwarves]], [[fishery worker]]s, [[farmer]]s, [[peasant]]s, active-duty [[soldier]]s, [[children]], and finally [[children#Babies|babies]]. It shows the current [[job]] of each dwarf, highlighted in light blue; repeating tasks are additionally reported with a "/R" at the end, and joblessness is reported with {{DFtext|No Job|6:1}}. Any [[administrator]]s will appear in purple where they would appear normally according to their profession. Position in the sublists is determined by the order in which the dwarves arrived. If the unit's name is flashing in this list, it means that they have attained [[legendary]] skill level.
+
+The second screen lists livestock. This is useful for quickly zooming to particular animals; most animal management actually happens in the animal [[status]] screen.
+
+The third screen lists any creatures that are neither dwarves nor dwarven livestock under "Other"; this means that the list is populated by ''visible'' local [[biome|wildlife]] (there may be unseen creatures underground), [[caravan]] traders and guards (as well as their pack animals and for-sale animals), exposed [[thief|thieves]] and [[ambush]]es, the contents of [[siege]]s, and anything [[megabeast|really]] [[titan|scary]]. This list is most useful for zooming on their location, and lists a few statuses:
+
+{| class=wikitable
+! Status
+! Description
+|-
+| {{DFtext|Wild animal|2:0}}
+| Wildlife.
+|-
+| {{DFtext|Merchant|7:0}}
+| [[Merchant]]s, as well as their pack animals and wagons.
+|-
+| {{DFtext|Diplomat|7:1}}
+| [[Diplomat]]s and [[outpost liaison]]s.
+|-
+| {{DFtext|Guest|2:1}}
+| Foreign [[visitor]]s.
+|-
+| {{DFtext|Friendly|2:1}}
+| All non-hostile creatures that do not fit into any of the categories above.
+|-
+| {{DFtext|Invader|4:0}}
+| [[Siege]]s and [[ambush]]es.
+|-
+| {{DFtext|Caged Prisoner|4:0}}
+| Caged invaders.
+|-
+| {{DFtext|Uninvited Guest|4:0}}
+| [[Megabeast]]s, [[semi-megabeast]]s, [[forgotten beast]]s and [[titan]]s.
+|-
+| {{DFtext|Caged Guest|4:0}}
+| Uninvited guests you managed to catch in a cage.
+|-
+| {{DFtext|Current Resident|4:0}}
+| All named beasts you encounter upon embark.
+|-
+| {{DFtext|Berserk|4:1}}
+| [[Werebeast]]s, [[Insanity|berserk]] dwarves and creatures with the [[Creature token|[CRAZED]]] token.
+|-
+| {{DFtext|Undead|0:1}}
+| Undead, such as [[zombie]]s and [[ghost]]s.
+|-
+| {{DFtext|Opposed to life|0:1}}
+| Creatures with the [[Creature token|[OPPOSED_TO_LIFE]]] token, hostile to all living creatures.
+|-
+| {{DFtext|Hostile|4:0}}
+| All other hostile creatures.
+|}
+
+This menu is important for keeping track of the local wildlife; regular looks may very well save you from a deadly [[giant lion]] attack.
+
+The final list/screen is the Dead/Missing list, which keeps tabs on everything that entered the map and didn't leave. This is the best record of your [[hunting]] returns, siege rebuffs, [[unfortunate accident|accident]] victims, and battle casualties. As a dead or missing list, it reports either {{DFtext|Deceased|5:1}} or {{DFtext|Missing|7:0}}; the missing status will be tacked on the moment a dwarf goes missing, not a week later as with the [[announcement]], making it extremely useful for checking for [[vampire]]s. For fortresses with long histories, this list may very well be hundreds or even thousands of units long. Note: cluttered unit lists can interfere with things like [[immigration]]; you can prune less interesting dead units with [[DFHack]]'s "fix/dead-units" command.
+
+
+
+{{Category|Interface}}
+[[ru:Unit list]]

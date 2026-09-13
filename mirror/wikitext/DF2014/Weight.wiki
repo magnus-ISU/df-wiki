@@ -1,0 +1,578 @@
+{{Quality|Exceptional}}{{av}}
+
+'''Weight''', or sometimes more correctly termed '''mass''', is an item property which is measured in the unit ''Γ'' (equal to the real-life ''kilogram'').
+
+Weight is largely used by the game to determine how fast someone or something should move, due to encumbrance effects and carry weight restrictions; to calculate damage, since object mass factors into impact momentum; and to some extent to make temperature calculations, as mass factors into heat capacity. Note that, for DF, weight and mass are currently indistinguishable because, as it stands, DF gravity is [http://www.bay12games.com/media/df_talk_8_transcript.html uniform both across the whole universe and from world to world] and buoyancy isn't implemented.
+
+Weight is displayed as a quantity associated with an item. Weight calculation is not entirely straightforward, since each item category &mdash; or sometimes even individual items &mdash; have their own formula for determining weight.
+ 
+==Weight Calculation==
+
+The general form for calculating weight in DF is to take the material [[density]] (as found in the raws) multiplied by the item's volume.
+
+:Weight (in Γ) = Density (in kg/m<sup>3</sup>) * Volume (in cm<sup>3</sup>) / 1,000,000 (cm<sup>3</sup>/m<sup>3</sup>)
+
+Internally, all custom volume/capacity numbers are rounded ''down'' to the nearest multiple of 10 - thus, if you define a tool with [SIZE:15], it will actually behave as if you had specified [SIZE:10].
+
+An item's volume is also used to determine workshop [[clutter]] as well as how many items can fit into a container.
+
+{| {{prettytable}} class="sortable"
+|- bgcolor="#999999"
+! Item Type
+! Volume
+! Capacity
+! Notes
+
+|-
+| [[Bar]]s
+| 6000
+|
+|
+
+|-
+| Cut [[gem]]s
+| 200
+|
+|
+
+|-
+| [[Block]]s
+| 6000
+|
+|
+
+|-
+| Rough [[gem]]s
+| 2500
+|
+|
+
+|-
+| Mined [[stone]]
+| 100000
+|
+|
+
+|-
+| Wood [[log]]s
+| 50000
+|
+|
+
+|-
+| [[Door]]
+| 30000
+|
+|
+|-
+| [[Floodgate]]
+| 30000
+|
+|
+
+|-
+| [[Bed]]
+| 30000
+|
+|
+
+|-
+| [[Chair]]
+| 30000
+|
+|
+
+|-
+| [[Chain]]
+| 5000
+|
+|
+
+|-
+| [[Flask]]
+| 1000
+| 1800
+| 
+
+|-
+| [[Finished_goods#Goblets|Goblet]]
+| 1000
+| 1800
+| 
+
+|-
+| [[Instrument]]
+| 4000
+|
+|
+
+|-
+| [[Finished_goods#Toys|Toy]]
+| 1000
+|
+|
+
+|-
+| [[Window]]
+| 20000
+|
+|
+
+|-
+| [[Cage]]
+| 30000
+| 60000
+| 
+
+|-
+| [[Barrel]]
+| 20000
+| 60000
+| 
+
+|-
+| [[Bucket]]
+| 3000
+| 6000
+| 
+
+|-
+| [[Animal trap]]
+| 3000
+| 30000
+| 
+
+|-
+| [[Table]]
+| 30000
+|
+|
+
+|-
+| [[Coffin]]
+| 30000
+| 60000
+|
+
+|-
+| [[Statue]]
+| 60000
+|
+|
+
+|-
+| [[Corpse]]
+| Special
+|
+| Based on the size of the corpse and what it's made of.
+
+|-
+| [[Weapon]]
+| SIZE<sup>1</sup>
+|
+|
+
+|-
+| Body [[Armor#Upper_Body|armor]]
+| ?
+|
+| Based on UBSTEP, LBSTEP, COVERAGE, LAYER_SIZE, and the race that crafted it.
+
+|-
+| [[Armor#Footwear|Shoes]]
+| ?
+|
+| Based on UPSTEP, COVERAGE, LAYER_SIZE, and the race that crafted it.
+
+|-
+| [[Armor#Shield|Shield]]s
+| ?
+|
+| Based on UPSTEP and the race that crafted it.
+
+|-
+| [[Armor#Headgear|Helm]]s
+| ?
+|
+| Based on COVERAGE, LAYER_SIZE, and the race that crafted it.
+
+|-
+| [[Armor#Hands|Gloves]]
+| ?
+|
+| Based on UPSTEP, COVERAGE, LAYER_SIZE, and the race that crafted it.
+
+|-
+| [[Box]]
+| 20000 or 1000
+| 60000
+| Bags have a volume of 1000, boxes/chests/coffers have a volume of 20000.
+
+|-
+| [[Bin]]
+| 15000
+| 60000
+|
+
+|-
+| [[Armor stand]]
+| 10000
+| 60000
+|
+
+|-
+| [[Weapon rack]]
+| 10000
+| 60000
+|
+
+|-
+| [[Cabinet]]
+| 30000
+| 60000
+|
+
+|-
+| [[Figurine]]
+| 1000
+|
+|
+
+|-
+| [[Jewelry|Amulet]]
+| 500
+|
+|
+
+|-
+| [[Finished_goods#Crafts|Scepter]]
+| 3000
+|
+|
+
+|-
+| [[Ammo]]
+| SIZE<sup>1</sup>
+|
+|
+
+|-
+| [[Jewelry|Crown]]
+| 1000
+|
+|
+
+|-
+| [[Jewelry|Ring]]
+| 50
+|
+|
+
+|-
+| [[Jewelry|Earring]]
+| 30
+|
+|
+
+|-
+| [[Jewelry|Bracelet]]
+| 200
+|
+|
+
+|-
+| [[Finished_goods#Large_gems|Large gem]]
+| 50
+|
+|
+
+|-
+| [[Anvil]]
+| 10000
+|
+|
+
+|-
+| [[Body part]]
+| Special
+|
+| Based on the size of the body part and what it's made of.
+
+|-
+| [[Remains]]
+| 2000
+|
+|
+
+|-
+| [[Meat]]
+| 2000
+|
+|
+
+|-
+| [[Fish]]
+| 2000
+|
+|
+
+|-
+| Unprepared [[fish]]
+| 2000
+|
+|
+
+|-
+| Live [[vermin]]
+| Special
+|
+| Based on creature's adult size.
+
+|-
+| Tame [[vermin]]
+| Special
+|
+| Based on creature's adult size.
+
+|-
+| [[Seed]]s
+| 100
+|
+|
+
+|-
+| [[Plant]]
+| 1000
+|
+|
+
+|-
+| [[Leather]]
+| 5000
+|
+|
+
+|-
+| [[Plant]] growths
+| 50
+|
+|
+
+|-
+| [[Thread]]
+| ceil(Dimension/50)<sup>1</sup>
+|
+| Freshly gathered/produced thread has a dimension of 15000 and thus has a volume of 300
+
+|-
+| [[Cloth]]
+| ceil(Dimension/50)<sup>1</sup>
+|
+| Freshly woven cloth has a dimension of 10000 and thus has a volume of 200
+
+|-
+| [[Finished_goods#Totems|Totem]]
+| 5000
+|
+|
+
+|-
+| [[Armor#Lower_Body|Pants]]
+| ?
+|
+| Based on LBSTEP, COVERAGE, LAYER_SIZE, and the race that crafted it
+
+|-
+| [[Backpack]]
+| 5000
+| 30000
+|
+
+|-
+| [[Quiver]]
+| 3000
+| 12000
+|
+
+|-
+| [[Catapult part]]s
+| 20000
+|
+|
+
+|-
+| [[Ballista part]]s
+| 20000
+|
+|
+
+|-
+| [[Ballista_arrow|Siege ammo]]
+| 30000
+|
+|
+
+|-
+| [[Ballista arrow]] head
+| 10000
+|
+|
+
+|-
+| [[Mechanism]]s
+| 20000
+|
+|
+
+|-
+| [[Trap component]]
+| SIZE<sup>1</sup>
+|
+|
+
+|-
+| [[Alcohol|Drink]]
+| 2000
+|
+|
+
+|-
+| [[Mill|Powder]]
+| 2000
+|
+|
+
+|-
+| [[Cheese]]
+| 1000
+|
+|
+
+|-
+| [[Prepared meal]]
+| 1000
+|
+|
+
+|-
+| [[Extract|Misc. liquid]]
+| 600
+|
+|
+
+|-
+| [[Coin]]
+| 10/16<sup>1</sup>
+|
+| 
+
+|-
+| [[Fat|Glob]]
+| 600
+|
+|
+
+|-
+| Small [[rock]]
+| 2000
+|
+| As [[Thrower|thrown]] by adventurers.
+
+|-
+| [[Pipe section]]
+| 30000
+|
+|
+
+|-
+| [[Hatch cover]]
+| 10000
+|
+|
+
+|-
+| [[Grate]]
+| 10000
+|
+|
+
+|-
+| [[Quern]]
+| 30000
+|
+|
+
+|-
+| [[Millstone]]
+| 30000
+|
+|
+
+|-
+| [[Splint]]
+| 2000
+|
+|
+
+|-
+| [[Crutch]]
+| 2000
+|
+|
+
+|-
+| [[Traction bench]]
+| 30000
+|
+|
+
+|-
+| Orthopedic [[cast]]
+| 2000
+|
+|
+
+|-
+| [[Tool]]
+| SIZE<sup>1</sup>
+| CAPACITY<sup>1</sup>
+| 
+
+|-
+| [[Slab]]
+| 60000
+|
+|
+
+|-
+| [[Egg]]
+| Special
+|
+| Presumably the caste's EGG_SIZE.
+
+|-
+| [[Book]]
+| 1000
+|
+|
+
+|-
+| [[Sheet]]
+| 10
+|
+|
+|}
+:<sup>1</sup> - As noted above, all values are rounded ''down'' to the nearest multiple of 10, down to a minimum value of 1.
+
+==See also==
+* [[Size]]
+
+{{Translation
+| dwarven = âl
+| elvish  = eba
+| goblin  = deslo
+| human   = ketas
+}}
+
+{{Category|Items}}
+[[Ru:Weight]]

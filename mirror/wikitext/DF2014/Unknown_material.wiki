@@ -1,0 +1,20 @@
+{{Quality|Unrated}}
+{{av}}
+
+:''Not to be confused with [[unknown substance]].
+
+'''Unknown material''' is a [[Hardcoded material|placeholder material]] that is not legitimately obtainable in-game. It appears as a light gray solid with no name, which is only referred to as "unknown material" in [[building]] descriptions. It has an internal [[material token|material ID]] of -1 or {{token|NONE|mat}}, the same as used in tasks that require items of any or unspecified material.
+
+Objects without a material can appear as the result of [[bug]]s. [[Door]]s and [[hatch cover]]s in [[dark pits]]{{bug|6776}} and [[Civilization#Dead and struggling civilizations|dead civilizations]]{{bug|3478}} are some examples.
+
+==Trivia==
+* Since the material ID of -1 is used as a placeholder value for any material, items made of the unknown material cannot be specifically requested as an ingredient even in [[modding|modded]] [[reaction]]s.
+* [[Box]]es made of unknown material are referred to as a "boxes and bag". This specific string is used in the [[preference]] "Urist McDwarf likes boxes and bags".
+
+==See also==
+* [[Lava]] ({{token|INORGANIC|mat|NONE}})
+* [[Unknown]] [[tile]]
+
+{{materials}}
+
+{{Category|Materials}}

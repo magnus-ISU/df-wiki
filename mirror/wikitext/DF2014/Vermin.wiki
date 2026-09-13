@@ -1,0 +1,159 @@
+{{av}}{{Quality|Exceptional|22:00, 9 June 2010 (UTC)}}
+[[File:mouse_outline.png|150px|right]]'''Vermin''' are small [[creature]]s such as [[rat]]s, [[bat]]s, and [[lizard]]s which are difficult to see, and also the type of [[fish]] which are caught by [[fisherdwarf|fisherdwarves]]. They are below 2 kg (4 lb) in size, much smaller than [[cat]]s. The presence of vermin can be noted if you are particularly observant, as they will occasionally blink into and out of view on the screen. The main distinctions between vermin and creatures are that vermin:
+# Cannot be engaged in [[combat]] or trigger [[trap]]s, save those specifically made to trap them, though some (such as the [[cave spider]]) can bite and inflict syndromes;
+# Do not usually provide [[meat]] or [[bone]]s. Exceptions are the [[creepy crawler]], which  can be butchered, and the [[purring maggot]] which can be milked;
+# Do not breed, but "spawn", spontaneously appearing in their natural environment or [[biome]].  Some types of vermin are inexhaustible and will always be able to spawn, regardless of how many are killed or captured;
+# Are sometimes "[[hateable]]", meaning dwarves can have an anti-[[preference]], which gives them a negative [[thought]] when they see the hated vermin.
+{{catbox}}
+Vermin can be problematic, as many types feed on [[stockpile]]s, thus making it more difficult to keep enough [[food]] and [[alcohol|drink]] to survive. Vermin can be hunted by [[cat]]s and [[peregrine falcon]]s to reduce this problem, though the [[remains]] will still need to be [[Activity zone#Garbage Dump|removed]]. Cats and falcons can be [[pasture]]d at the relevant stockpiles to further reduce the problem.
+
+Some vermin can be captured in [[animal trap]]s, but those with the {{token|VERMIN_NOTRAP|c}} token can only be caught with a "Capture a Live Land Animal" job, while those with the {{token|VERMIN_SOIL|c}} token will be ignored for that job. Once caught, some can be trained as [[pet]]s. A few particular captured vermin can be used to produce [[extract]]s using a glass [[vial]] and the [[animal dissector]] labor. Captured [[purring maggot]]s can also be [[milk]]ed at a farmer's workshop. Vermin don't die of old age at all - if you capture one, it should last forever. 
+
+Dwarves will eat vermin if no other [[food]] source is available, resulting in an unhappy [[thought]]. Most vermin cannot be spawned in the [[object testing arena]], as those are not able to engage in combat anyway.
+
+==Reading the Table==
+{{CreatureCurrent table head}}
+|}
+The above columns indicate, in order:
+
+*'''Tile:''' The symbol assigned to the vermin, how you will see it without a graphic set.
+*'''Name:''' The name of the vermin as it shows up in-game.
+*'''Playable:''' Whether the vermin is playable in any of the game modes. As of now, no vermin are playable.
+*'''Hostile:''' Whether the vermin is hostile to the player. As of now, no vermin are hostile to dwarves.
+*'''Food Source:''' If "Yes" then the vermin can be turned into food when processed in a [[fishery]].
+*'''Adult Body Size:''' The average size of the vermin when an adult. This can be anywhere from 1 for a [[fly]] to 2,000 for a [[fox squirrel]]. More or less equals the creature's weight in grams.
+*'''Pet Value:''' This is the value the vermin can be bought and sold for as a [[pet]] during [[trading]].
+*'''Biome:''' Where the vermin can be found.
+*'''Features:''' Any special features the vermin possesses, these can include alignment and special properties. The value after 'Eater' indicates the vermin's [[Creature_token#PENETRATEPOWER|container penetration value]].
+
+==Vermin==
+{{CreatureCurrent table head}}
+{{CreatureCurrent table row|name=[[Acorn fly]]|symbol=·|color=6:0:1|food=No|playable=No|hostile=N/A|size=20|value=0|biome=Any pool|note=Savage, no trap}}
+{{CreatureCurrent table row|name=[[Anchovy]]|symbol=α|color=7:0:1|food=Yes|playable=No|hostile=N/A|size=200|value=0|biome=Temperate oceans|note=No trap}}
+{{CreatureCurrent table row|name=[[Anole]]|symbol=∙|color=2:0:1|food=No|playable=No|hostile=N/A|size=90|value=10|biome=Any tropical forest|note=}}
+{{CreatureCurrent table row|name=[[Ant]]|symbol=∙|color=7:0:0|food=No|playable=No|hostile=N/A|size=1|value=0|biome=Not freezing|note=No trap}}
+{{CreatureCurrent table row|name=[[Axolotl]]|symbol=∙|color=5:0:0|food=No|playable=No|hostile=N/A|size=200|value=10|biome=Tropical saltwater, brackish and freshwater lakes|note=}}
+{{CreatureCurrent table row|name=[[Banded knifefish]]|symbol=α|color=6:0:0|food=Yes|playable=No|hostile=N/A|size=200|value=0|biome=Tropical freshwater lakes and rivers|note=No trap}}
+{{CreatureCurrent table row|name=[[Bark scorpion]]|symbol=∙|color=6:0:1|food=No|playable=No|hostile=N/A|size=3|value=0|biome=Tropical grasslands, savannas, shrublands, coniferous forests and any desert|note=Hateable}}
+{{CreatureCurrent table row|name=[[Bat]]|symbol=∙|color=0:0:1|food=No|playable=No|hostile=N/A|size=100|value=10|biome=Not freezing, subterranean chasms|note=Hateable}}
+{{CreatureCurrent table row|name=[[Bat ray]]|symbol=ò|color=7:0:0|food=Yes|playable=No|hostile=N/A|size=200|value=0|biome=Temperate and tropical oceans|note=No trap}}
+{{CreatureCurrent table row|name=[[Beetle]]|symbol=·|color=4:0:0|food=No|playable=No|hostile=N/A|size=1|value=0|biome=Not freezing|note=No trap, no capture}}
+{{CreatureCurrent table row|name=[[Black bullhead]]|symbol=α|color=6:0:0|food=Yes|playable=No|hostile=N/A|size=200|value=0|biome=Temperate brackish and freshwater lakes|note=No trap}}
+{{CreatureCurrent table row|name=[[Blood gnat]]|symbol=·|color=4:0:1|food=No|playable=No|hostile=N/A|size=1|value=0|biome=Any pool|note=Hateable, no trap, evil, rots food}}
+{{CreatureCurrent table row|name=[[Blue jay]]|symbol=∙|color=1:0:1|food=No|playable=No|hostile=N/A|size=100|value=30|biome=Temperate grasslands, savannas, shrublands, broadleaf and coniferous forests|note=}}
+{{CreatureCurrent table row|name=[[Brook lamprey]]|symbol=~|color=3:0:0|food=Yes|playable=No|hostile=N/A|size=200|value=0|biome=Temperate saltwater, brackish and freshwater lakes, tropical oceans|note=No trap}}
+{{CreatureCurrent table row|name=[[Brown bullhead]]|symbol=α|color=6:0:0|food=Yes|playable=No|hostile=N/A|size=200|value=0|biome=Temperate brackish and freshwater lakes|note=No trap}}
+{{CreatureCurrent table row|name=[[Brown recluse spider]]|symbol=∙|color=6:0:0|food=No|playable=No|hostile=N/A|size=1|value=0|biome=Temperate broadleaf forests|note=Hateable, produces [[web]]}}
+{{CreatureCurrent table row|name=[[Bumblebee]]|symbol=·|color=6:0:1|food=No|playable=No|hostile=N/A|size=1|value=0|biome=Not freezing|note=No trap}}
+{{CreatureCurrent table row|name=[[Bushtit]]|symbol=∙|color=6:0:0|food=No|playable=No|hostile=N/A|size=5|value=30|biome=Any temperate forest|note=}}
+{{CreatureCurrent table row|name=[[Cap hopper]]|symbol=∙|color=2:0:0|food=No|playable=No|hostile=N/A|size=200|value=10|biome=Subterranean water|note=}}
+{{CreatureCurrent table row|name=[[Cardinal]]|symbol=∙|color=4:0:1|food=No|playable=No|hostile=N/A|size=50|value=30|biome=Temperate grasslands, savannas, shrublands, broadleaf and coniferous forests|note=}}
+{{CreatureCurrent table row|name=[[Cave fish]]|symbol=α|color=7:0:1|food=Yes|playable=No|hostile=N/A|size=1000|value=0|biome=Subterranean water|note=No trap}}
+{{CreatureCurrent table row|name=[[Cave lobster]]|symbol=¥|color=7:0:1|food=Yes|playable=No|hostile=N/A|size=600|value=0|biome=Subterranean water|note=}}
+{{CreatureCurrent table row|name=[[Cave spider]]|symbol=∙|color=7:0:0|food=No|playable=No|hostile=N/A|size=50|value=0|biome=Subterranean water and chasm|note=Hateable, produces web}}
+{{CreatureCurrent table row|name=[[Cave swallow]]|symbol=∙|color=0:0:1|food=No|playable=No|hostile=N/A|size=100|value=30|biome=Subterranean chasm|note=}}
+{{CreatureCurrent table row|name=[[Chameleon]]|symbol=∙|color=2:0:1|food=No|playable=No|hostile=N/A|size=150|value=10|biome=Any tropical forest, tropical shrublands and savannas, any desert|note=}}
+{{CreatureCurrent table row|name=[[Char]]|symbol=α|color=0:0:1|food=Yes|playable=No|hostile=N/A|size=200|value=0|biome=Temperate freshwater rivers and lakes|note=No trap}}
+{{CreatureCurrent table row|name=[[Chipmunk]]|symbol=∙|color=6:0:0|food=No|playable=No|hostile=N/A|size=300|value=10|biome=Any temperate forest|note=}}
+{{CreatureCurrent table row|name=[[Clown loach]]|symbol=α|color=6:0:1|food=Yes|playable=No|hostile=N/A|size=200|value=0|biome=Tropical freshwater rivers and lakes|note=No trap}}
+{{CreatureCurrent table row|name=[[Clownfish]]|symbol=α|color=4:0:1|food=Yes|playable=No|hostile=N/A|size=200|value=0|biome=Tropical oceans|note=No trap}}
+{{CreatureCurrent table row|name=[[Cockatiel]]|symbol=∙|color=7:0:1|food=No|playable=No|hostile=N/A|size=90|value=30|biome=Any desert, temperate grasslands|note=}}
+{{CreatureCurrent table row|name=[[Creepy crawler]]|symbol=*|color=6:0:0|food=Yes|playable=No|hostile=N/A|size=1000|value=20|biome=Underground chasm|note=Evil, rots food}}
+{{CreatureCurrent table row|name=[[Crow]]|symbol=∙|color=0:0:1|food=No|playable=No|hostile=N/A|size=500|value=10|biome=Temperate forests, grasslands, savannas, shrublands and wetlands, taiga|note=}}
+{{CreatureCurrent table row|name=[[Cuttlefish]]|symbol=♂|color=6:0:0|food=Yes|playable=No|hostile=N/A|size=1000|value=10|biome=Any ocean|note=}}
+{{CreatureCurrent table row|name=[[Damselfly]]|symbol=∙|color=3:0:1|food=No|playable=No|hostile=N/A|size=1|value=0|biome=Any pool|note=No trap}}
+{{CreatureCurrent table row|name=[[Demon rat]]|symbol=∙|color=4:0:0|food=No|playable=No|hostile=N/A|size=300|value=20|biome=Not freezing|note=Evil, eater 3}}
+{{CreatureCurrent table row|name=[[Dragonfly]]|symbol=∙|color=3:0:1|food=No|playable=No|hostile=N/A|size=1|value=0|biome=Any pool|note=No trap}}
+{{CreatureCurrent table row|name=[[Fairy]]|symbol=∙|color=6:0:1|food=No|playable=No|hostile=N/A|size=100|value=10|biome=All except pools, rivers, and underground|note=No trap, good, [[fanciful]]}}
+{{CreatureCurrent table row|name=[[Fire snake]]|symbol=∙|color=6:0:1|food=No|playable=No|hostile=N/A|size=1000|value=10|biome=Subterranean lava|note=Hateable}}
+{{CreatureCurrent table row|name=[[Firefly]]|symbol=∙|color=2:0:1|food=No|playable=No|hostile=N/A|size=1|value=0|biome=Not freezing|note=No trap}}
+{{CreatureCurrent table row|name=[[Flounder]]|symbol=α|color=6:0:0|food=Yes|playable=No|hostile=N/A|size=200|value=0|biome=Temperate oceans|note=No trap}}
+{{CreatureCurrent table row|name=[[Fluffy wambler]]|symbol=∙|color=7:0:1|food=No|playable=No|hostile=N/A|size=2000|value=20|biome=Any land|note=Good, eater 1}}
+{{CreatureCurrent table row|name=[[Fly]]|symbol=·|color=0:0:1|food=No|playable=No|hostile=N/A|size=1|value=0|biome=Not freezing, any pool|note=Hateable, no trap}}
+{{CreatureCurrent table row|name=[[Flying squirrel]]|symbol=∙|color=6:0:0|food=No|playable=No|hostile=N/A|size=200|value=10|biome=Any temperate forest|note=}}
+{{CreatureCurrent table row|name=[[Fox squirrel]]|symbol=∙|color=6:0:0|food=No|playable=No|hostile=N/A|size=2000|value=100|biome=Any temperate forest|note=Savage}}
+{{CreatureCurrent table row|name=[[Glasseye]]|symbol=α|color=4:0:1|food=Yes|playable=No|hostile=N/A|size=200|value=0|biome=Tropical oceans|note=No trap}}
+{{CreatureCurrent table row|name=[[Grackle]]|symbol=∙|color=0:0:1|food=No|playable=No|hostile=N/A|size=120|value=30|biome=Temperate grasslands and savannas|note=}}
+{{CreatureCurrent table row|name=[[Grasshopper]]|symbol=·|color=2:0:1|food=No|playable=No|hostile=N/A|size=1|value=0|biome=Not freezing|note=No trap}}
+{{CreatureCurrent table row|name=[[Gray squirrel]]|symbol=∙|color=7:0:0|food=No|playable=No|hostile=N/A|size=300|value=10|biome=Any temperate forest|note=}}
+{{CreatureCurrent table row|name=[[Green tree frog]]|symbol=∙|color=2:0:1|food=No|playable=No|hostile=N/A|size=100|value=10|biome=Temperate freshwater lakes, pools, swamps and marshes|note=}}
+{{CreatureCurrent table row|name=[[Guppy]]|symbol=α|color=1:0:1|food=Yes|playable=No|hostile=N/A|size=200|value=0|biome=Tropical brackish, saltwater and freshwater lakes and rivers|note=No trap}}
+{{CreatureCurrent table row|name=[[Hagfish]]|symbol=~|color=6:0:0|food=Yes|playable=No|hostile=N/A|size=200|value=0|biome=Arctic and temperate oceans|note=No trap}}
+{{CreatureCurrent table row|name=[[Hake]]|symbol=α|color=7:0:1|food=Yes|playable=No|hostile=N/A|size=200|value=0|biome=Arctic and temperate oceans|note=No trap}}
+{{CreatureCurrent table row|name=[[Hamster]]|symbol=∙|color=7:0:0|food=No|playable=No|hostile=N/A|size=150|value=10|biome=Not freezing|note=Hateable, eater 2}}
+{{CreatureCurrent table row|name=[[Hedgehog]]|symbol=∙|color=6:0:0|food=No|playable=No|hostile=N/A|size=800|value=10|biome=Temperate shrublands and savannas|note=}}
+{{CreatureCurrent table row|name=[[Herring]]|symbol=α|color=3:0:1|food=Yes|playable=No|hostile=N/A|size=200|value=0|biome=Arctic and temperate oceans|note=No trap}}
+{{CreatureCurrent table row|name=[[Honey bee]]|symbol=·|color=6:0:1|food=No|playable=No|hostile=N/A|size=1|value=1|biome=Not freezing|note=Usable for [[beekeeping industry]], no trap}}
+{{CreatureCurrent table row|name=[[Jumping spider]]|symbol=·|color=0:0:1|food=No|playable=No|hostile=N/A|size=1|value=0|biome=Not freezing|note=Hateable}}
+{{CreatureCurrent table row|name=[[Knuckle worm]]|symbol=~|color=0:0:1|food=No|playable=No|hostile=N/A|size=1000|value=100|biome=Not freezing|note=Evil}}
+{{CreatureCurrent table row|name=[[Large roach]]|symbol=∙|color=6:0:0|food=No|playable=No|hostile=N/A|size=1|value=5|biome=Not freezing|note=Hateable, eater 2, no trap}}
+{{CreatureCurrent table row|name=[[Leech]]|symbol=~|color=0:0:1|food=No|playable=No|hostile=N/A|size=100|value=10|biome=Any lake and pool|note=Hateable, no trap, no capture}}
+{{CreatureCurrent table row|name=[[Leopard gecko]]|symbol=∙|color=6:0:1|food=No|playable=No|hostile=N/A|size=50|value=10|biome=Any desert|note=}}
+{{CreatureCurrent table row|name=[[Lion tamarin]]|symbol=∙|color=6:0:1|food=No|playable=No|hostile=N/A|size=620|value=10|biome=Tropical moist broadleaf forests|note=}}
+{{CreatureCurrent table row|name=[[Lizard]]|symbol=∙|color=6:0:0|food=No|playable=No|hostile=N/A|size=200|value=10|biome=Not freezing|note=Hateable, eater 1}}
+{{CreatureCurrent table row|name=[[Lorikeet]]|symbol=∙|color=4:0:1|food=No|playable=No|hostile=N/A|size=200|value=30|biome=Tropical moist broadleaf forests, mangrove swamps|note=}}
+{{CreatureCurrent table row|name=[[Louse]]|symbol=·|color=6:0:0|food=No|playable=No|hostile=N/A|size=1|value=0|biome=Not freezing|note=No trap, no capture}}
+{{CreatureCurrent table row|name=[[Lungfish]]|symbol=α|color=6:0:0|food=Yes|playable=No|hostile=N/A|size=200|value=0|biome=Tropical brackish, saltwater and freshwater lakes, rivers and pools|note=No trap}}
+{{CreatureCurrent table row|name=[[Mackerel]]|symbol=α|color=7:0:0|food=Yes|playable=No|hostile=N/A|size=200|value=0|biome=Arctic and temperate oceans|note=No trap}}
+{{CreatureCurrent table row|name=[[Magpie]]|symbol=∙|color=0:0:1|food=No|playable=No|hostile=N/A|size=200|value=30|biome=Temperate grasslands, savannas and shrublands|note=}}
+{{CreatureCurrent table row|name=[[Mantis]]|symbol=·|color=2:0:1|food=No|playable=No|hostile=N/A|size=1|value=0|biome=Not freezing|note=No trap}}
+{{CreatureCurrent table row|name=[[Masked lovebird]]|symbol=∙|color=2:0:1|food=No|playable=No|hostile=N/A|size=90|value=30|biome=Any tropical forest|note=}}
+{{CreatureCurrent table row|name=[[Moghopper]]|symbol=∙|color=6:0:0|food=No|playable=No|hostile=N/A|size=300|value=20|biome=Any pool|note=Savage, only usable creature for [[fish dissector]]s}}
+{{CreatureCurrent table row|name=[[Monarch butterfly]]|symbol=∙|color=4:0:1|food=No|playable=No|hostile=N/A|size=1|value=0|biome=Not freezing|note=No trap}}
+{{CreatureCurrent table row|name=[[Moon snail]]|symbol=∙|color=4:0:1|food=No|playable=No|hostile=N/A|size=200|value=10|biome=Temperate oceans|note=Hateable, no trap, no capture}}
+{{CreatureCurrent table row|name=[[Mosquito]]|symbol=·|color=0:0:1|food=No|playable=No|hostile=N/A|size=1|value=0|biome=Not freezing, any pool|note=Hateable, no trap}}
+{{CreatureCurrent table row|name=[[Moth]]|symbol=∙|color=6:0:0|food=No|playable=No|hostile=N/A|size=1|value=0|biome=Not freezing|note=No trap}}
+{{CreatureCurrent table row|name=[[Mussel]]|symbol=m|color=7:0:1|food=Yes|playable=No|hostile=N/A|size=200|value=10|biome=Any ocean, lake and river|note=Hateable, shell source}}
+{{CreatureCurrent table row|name=[[Nautilus]]|symbol=♂|color=4:0:1|food=Yes|playable=No|hostile=N/A|size=500|value=10|biome=Any ocean|note=shell source}}
+{{CreatureCurrent table row|name=[[Olm]]|symbol=∙|color=7:0:1|food=No|playable=No|hostile=N/A|size=200|value=10|biome=Subterranean water|note=}}
+{{CreatureCurrent table row|name=[[Oriole]]|symbol=∙|color=6:0:1|food=No|playable=No|hostile=N/A|size=40|value=30|biome=Temperate broadleaf forests|note=}}
+{{CreatureCurrent table row|name=[[Oyster]]|symbol=o|color=7:0:1|food=Yes|playable=No|hostile=N/A|size=200|value=10|biome=Any ocean|note=Hateable, shell source}}
+{{CreatureCurrent table row|name=[[Parakeet]]|symbol=∙|color=2:0:1|food=No|playable=No|hostile=N/A|size=120|value=30|biome=Tropical grasslands, savannas, shrublands and forests|note=}}
+{{CreatureCurrent table row|name=[[Peach-faced lovebird]]|symbol=∙|color=2:0:1|food=No|playable=No|hostile=N/A|size=60|value=30|biome=Temperate grasslands, savannas, shrublands and broadleaf forests|note=}}
+{{CreatureCurrent table row|name=[[Perch]]|symbol=α|color=7:0:1|food=Yes|playable=No|hostile=N/A|size=200|value=0|biome=Temperate freshwater rivers and lakes|note=No trap}}
+{{CreatureCurrent table row|name=[[Phantom spider]]|symbol=∙|color=7:0:1|food=No|playable=No|hostile=N/A|size=500|value=0|biome=Temperate and tropical forests|note=Evil, produces web}}
+{{CreatureCurrent table row|name=[[Pixie]]|symbol=·|color=3:0:1|food=No|playable=No|hostile=N/A|size=1|value=10|biome=All except pools, rivers, and underground|note=No trap, good, fanciful}}
+{{CreatureCurrent table row|name=[[Pond turtle]]|symbol=☼|color=2:0:0|food=Yes|playable=No|hostile=N/A|size=500|value=10|biome=Any pool|note=shell source}}
+{{CreatureCurrent table row|name=[[Purring maggot]]|symbol={|color=7:0:1|food=No|playable=No|hostile=N/A|size=1000|value=10|biome=Underground chasm|note=Hateable, produces [[milk]]}}
+{{CreatureCurrent table row|name=[[Rainbow trout]]|symbol=α|color=2:0:1|food=Yes|playable=No|hostile=N/A|size=200|value=0|biome=Temperate freshwater rivers and lakes|note=No trap}}
+{{CreatureCurrent table row|name=[[Rat]]|symbol=∙|color=0:0:1|food=No|playable=No|hostile=N/A|size=300|value=10|biome=Not freezing|note=Hateable, eater 2}}
+{{CreatureCurrent table row|name=[[Red squirrel]]|symbol=∙|color=6:0:0|food=No|playable=No|hostile=N/A|size=300|value=10|biome=Any temperate forest|note=}}
+{{CreatureCurrent table row|name=[[Red-winged blackbird]]|symbol=∙|color=0:0:1|food=No|playable=No|hostile=N/A|size=50|value=30|biome=Temperate salwater and freshwater marshes|note=}}
+{{CreatureCurrent table row|name=[[Sailfin molly]]|symbol=α|color=2:0:0|food=Yes|playable=No|hostile=N/A|size=200|value=0|biome=Temperate brackish, saltwater and freshwater lakes, rivers and pools|note=No trap}}
+{{CreatureCurrent table row|name=[[Salmon]]|symbol=α|color=4:0:1|food=Yes|playable=No|hostile=N/A|size=200|value=0|biome=Temperate brackish, saltwater and freshwater lakes, temperate oceans|note=No trap}}
+{{CreatureCurrent table row|name=[[Sea nettle jellyfish]]|symbol=Ω|color=6:0:0|food=Yes|playable=No|hostile=N/A|size=200|value=10|biome=Temperate oceans|note=No trap}}
+{{CreatureCurrent table row|name=[[Seahorse]]|symbol=α|color=2:0:0|food=Yes|playable=No|hostile=N/A|size=200|value=0|biome=Temperate and tropical oceans|note=No trap}}
+{{CreatureCurrent table row|name=[[Shad]]|symbol=α|color=3:0:1|food=Yes|playable=No|hostile=N/A|size=200|value=0|biome=Temperate brackish, saltwater and freshwater lakes, temperate and arctic oceans|note=No trap}}
+{{CreatureCurrent table row|name=[[Skink]]|symbol=∙|color=7:0:0|food=No|playable=No|hostile=N/A|size=500|value=10|biome=Any desert, temperate and tropical|note=}}
+{{CreatureCurrent table row|name=[[Slug]]|symbol=~|color=6:0:0|food=No|playable=No|hostile=N/A|size=1|value=10|biome=Not freezing|note=Hateable, no trap, no capture}}
+{{CreatureCurrent table row|name=[[Snail]]|symbol=∙|color=7:0:0|food=No|playable=No|hostile=N/A|size=1|value=10|biome=Not freezing|note=Hateable, no trap, no capture}}
+{{CreatureCurrent table row|name=[[Sole]]|symbol=α|color=6:0:0|food=Yes|playable=No|hostile=N/A|size=200|value=0|biome=Temperate and arctic oceans|note=No trap}}
+{{CreatureCurrent table row|name=[[Sparrow]]|symbol=∙|color=6:0:0|food=No|playable=No|hostile=N/A|size=30|value=30|biome=Any grassland, savanna, shrubland, temperate and tropical forest, desert and wetland|note=}}
+{{CreatureCurrent table row|name=[[Spotted ratfish]]|symbol=α|color=6:0:0|food=Yes|playable=No|hostile=N/A|size=200|value=0|biome=Temperate oceans|note=No trap}}
+{{CreatureCurrent table row|name=[[Squid]]|symbol=♂|color=7:0:1|food=Yes|playable=No|hostile=N/A|size=200|value=10|biome=Any ocean|note=}}
+{{CreatureCurrent table row|name=[[Steelhead trout]]|symbol=α|color=3:0:1|food=Yes|playable=No|hostile=N/A|size=200|value=0|biome=Temperate brackish, saltwater and freshwater lakes, temperate and arctic oceans|note=No trap}}
+{{CreatureCurrent table row|name=[[Termite]]|symbol=·|color=7:0:1|food=No|playable=No|hostile=N/A|size=1|value=0|biome=Not freezing|note=No trap}}
+{{CreatureCurrent table row|name=[[Thornback ray]]|symbol=ò|color=6:0:0|food=Yes|playable=No|hostile=N/A|size=200|value=0|biome=Temperate and tropical oceans|note=No trap}}
+{{CreatureCurrent table row|name=[[Thrips]]|symbol=·|color=7:0:1|food=No|playable=No|hostile=N/A|size=1|value=0|biome=Not freezing|note=No trap, no capture}}
+{{CreatureCurrent table row|name=[[Tick]]|symbol=·|color=0:0:1|food=No|playable=No|hostile=N/A|size=1|value=0|biome=Not freezing|note=No trap, no capture}}
+{{CreatureCurrent table row|name=[[Toad]]|symbol=∙|color=2:0:0|food=No|playable=No|hostile=N/A|size=200|value=10|biome=Any pool|note=Hateable}}
+{{CreatureCurrent table row|name=[[Two-legged rhino lizard]]|symbol=∙|color=7:0:0|food=No|playable=No|hostile=N/A|size=1000|value=20|biome=Any land|note=Savage, eater 2}}
+{{CreatureCurrent table row|name=[[White-spotted puffer]]|symbol=α|color=7:0:0|food=Yes|playable=No|hostile=N/A|size=200|value=0|biome=Tropical oceans|note=No trap}}
+{{CreatureCurrent table row|name=[[Worm]]|symbol=~|color=7:0:0|food=No|playable=No|hostile=N/A|size=100|value=10|biome=Any temperate, any tropical, taiga|note=Hateable, no trap, no capture}}
+{{CreatureCurrent table row|name=[[Wren]]|symbol=∙|color=6:0:0|food=No|playable=No|hostile=N/A|size=40|value=30|biome=Any grassland, savanna, shrubland, forest, desert and wetland|note=}}
+{{CreatureCurrent table row|name=[[Yellow bullhead]]|symbol=α|color=6:0:0|food=Yes|playable=No|hostile=N/A|size=200|value=0|biome=Temperate brackish and freshwater lakes|note=No trap}}
+|}
+
+Note: All vermin with 0 value in the above table don't have the [PET_VALUE:#] tag.
+
+{{Translation
+| dwarven = bomik
+| elvish  = nirica
+| goblin  = otod
+| human   = strilu
+}}
+
+{{Vermin}}
+{{Category|Vermin|0}}
+
+[[ru:DF2012:Vermin]]

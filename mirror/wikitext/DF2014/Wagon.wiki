@@ -1,0 +1,104 @@
+{{Quality|Masterwork|08:29, 13 June 2020 (UTC)}}
+{{creaturelookup/0|contrib=no|death=item|item=Wagon wood|wiki=yes}}
+{{av}}
+{{buggy}}
+:''This page is about the creature.  For the structure, see [[Wagon (embark)]]''
+
+{{creaturedesc}}
+'''Wagons''' are special "[[creatures]]" used by [[human]] and [[Dwarf|dwarven]] [[caravan]]s. Wagons have a much greater hauling capacity than pack animals, increasing the imported goods available to your fortress and the capacity for exported goods. Surprisingly, despite their capacity and being the only multi-tile creature, wagons are only 1/5th the size (volume) of a dwarf - no wonder they scuttle so easily. Unfortunately, wagons require specific accommodations to reach your fortress: wagon-accessible paths must be three tiles wide, extend from natural-land tiles at the screen border to your [[trade depot]], and cannot contain [[trap]]s or [[pressure plate]]s.  If wagons are unable to find a path to your trade depot (or if you have not built a depot at all), they will bypass your site and you will only be able to trade for what is available on the merchants' pack animals. 
+
+Wagons which are destroyed, abandoned, or scuttled will leave behind a unique type of [[wood]]: wagon wood. Since they count as creatures, dead wagons can be [[memorial]]ized (though a [[ghost]]ly wagon has not yet been observed).{{cite talk/this|Wagon death, list in deceased list and memorialization bug reproduction}}
+
+Dwarves will never have [[preferences|preference]] for wagons, as they possess no {{token|PREFSTRING}}. As stated by their raw files, they exist as creatures only temporarily until moving siege engines are added to the game.
+
+== Depot Accessibility ==
+[[File:Wagon access.png|thumb|260px|right|An accessible and an inaccessible wagon path. Below is how the paths are viewed with Depot Access turned on.]]
+
+In order to appear alongside caravans, wagons must have an appropriate place on the map edge to spawn and an unobstructed path to a [[trade depot]]. 
+
+After a trade depot is built, you can use {{K|D}}epot Access to check wagon accessibility. The decisive element is that you see the 'depot accessible' message on the right. Accessibility is calculated from your depot towards the map edges; even though you see a green area around your depot, it may not be accessible from outside. You need to make sure the path extends all the way to some edge of the map. The display is somewhat misleading, in that a one-tile wide green path is sufficient for the 3-tile wide wagons; the green {{Raw Tile|W|2:2:1}}s represent only the ''center'' of a wagon, although the whole 3x3 can fit around it - so a three-tile wide path, which can fit a wagon, will only show up as one-tile wide line of {{Raw Tile|W|2:2:1}}s. When the route they would take goes over hills (ramps), it's hard to eye whether it is continuous all the way to the edge of the map, so be sure you see the words "depot accessible" on the depot access screen.
+
+As long as you have a three-tile wide path to the depot that reaches ''any'' natural-land tiles at the edge of the map, wagons will be able to reach the depot. If there is only one path they can take, they will take that path.  You can force them to enter and exit the map in an exact spot -- preferably very near your depot -- by erecting walls or digging channels so that all paths but the one you want them to take are blocked. Note that all caravans will prefer to enter the map at a wagon-accessible point, so this can also be used for [[Elf|elven]] caravans as well.
+
+Wagons will not appear on non-natural surface tiles at a map edge (such as a "bridge to nowhere"), though they can sometimes be encouraged to leave the map edge in such a manner. Wagons will also delay appearing at the map edge if their intended location is currently blocked by any other creature, similar to [[migrant]]s.
+
+== Movement ==
+When determining movement, a wagon has a 3x3 "footprint" (9 squares). However, for many purposes, only the center square is considered. Animals drawing the wagon are not considered for purposes of determining movement.
+
+Wagons can move horizontally across/through:
+* Ordinary open ground
+* Small plants, e.g. [[grass]], [[shrub]]s 
+* Constructed [[road]]s or [[floor]]s
+* [[Bridge]]s
+* Closed [[hatch cover]]s, even if they are over open space
+* [[Ramp]]s (both "up" to the next z-level, and the empty hole over a ramp "down" to the next z-level below)
+* Passable tiles of [[workshop]]s and other buildings (e.g. [[restraint]]s)
+* [[Creature]]s, apart from other wagons
+* [[Gear assembly|Gear assemblies]] and horizontal [[axle]]s built on passable tiles
+ 
+
+Wagons '''cannot''' move horizontally across/through:
+* Open space below
+* [[Boulder]]s (can be [[smoothing|smoothed]] to make them passable)
+* [[Trap]]s
+* [[Pressure plate]]s
+* Any type of [[stairs|stair]] tile, apart from a down stair with a hatch cover on top
+* [[Impassable tile]]s of [[workshop]]s and other buildings (e.g. [[statue]]s)
+* [[Door]]s, even if they are operated by [[lever]] and left open
+* Drained [[murky pool]] or [[river]] tiles (constructing and, optionally, removing a floor or road on top will make them passable)
+
+Wagons can move up or down [[z-level]]s via ramps, provided they do not have hatch covers on top. Wagons use different rules for movement on ramps - namely, they are able to ascend a ramp to a raised floor over empty space, but cannot cross the line of ramps while remaining at the same level. With some careful design it is possible to make bridges that control depot accessibility without actually allowing anything to cross them, or paths that can be traversed only by wagons but not dwarves or ''vice versa''.
+
+== Wagon-only entrances ==
+
+Wagons are able to navigate through certain entrances which other (walking) creatures cannot. Specifically, wagons can climb ramps that walking creatures consider to be "unusable". By building a set of ramps which are exclusively unusable, you can send wagons on a direct route, while filtering all other traffic through your trap-covered route.
+
+Note: Pack animals with caravans will not follow the "wagon only" route. However, that means your trapped route to your Trade Depot can be only 1 tile wide. 
+
+An example: [http://www.bay12forums.com/smf/index.php?topic=125977.0]:
+{{diagram|spaces=yes|\
+[#0ff] [#0ff]Z[#0ff]{{=}}[#0ff]0    [#0ff]Z[#0ff]{{=}}[#0ff]+[#0ff]1
+▓+++▓  ▓▓▓▓▓
+▓+▲+▓  ▓+▼+▓
+▓+++▓  ▓+++▓
+▓▓▓▓▓  ▓+++▓
+▓+++▓  ▓+++▓
+▓+▲+▓  ▓+▼+▓
+▓+++▓  ▓▓▓▓▓
+}}
+
+Another example, which uses slightly less space (note: this particular entrance is ''not'' a wagon-only entrance and is usable by creatures able to [[jump]]).
+{{diagram|spaces=yes|\
+[#0ff] [#0ff]Z[#0ff]{{=}}[#0ff]-[#0ff]1   [#0ff]Z[#0ff]{{=}}[#0ff]0     
+▓▓▓▓▓  ▓+++▓ 
+▓+++▓  ▓+++▓  
+▓+▲+▓  ▓·▼·▓  
+▓+++▓  ▓+++▓  
+▓▓▓▓▓  ▓+++▓  
+}}
+
+Yet another example, which allow wagons to move between z-levels [http://www.bay12forums.com/smf/index.php?topic=175067.0]:
+{{diagram|spaces=yes|\
+[#0ff] [#0ff]Z[#0ff]{{=}}[#0ff]-[#0ff]4    [#0ff]Z[#0ff]{{=}}[#0ff]-[#0ff]3     [#0ff]Z[#0ff]{{=}}[#0ff]-[#0ff]2    [#0ff]Z[#0ff]{{=}}[#0ff]-[#0ff]1    [#0ff]Z[#0ff]{{=}}[#0ff]0     
+▓▓▓▓▓▓  ▓▓▓▓▓▓  ▓▓▓▓▓▓  ▓▓▓▓▓▓  ▓▓+++▓ 
+▓+++▓▓  ▓▓▓▓▓▓  ▓▓▓▓▓▓  ▓▓+++▓  ▓▓+++▓  
+▓+▲▼▓▓  ▓+▼+▓▓  ▓▓+++▓  ▓▓+▲+▓  ▓▓+▼+▓  
+▓+++▓▓  ▓+▲+▓▓  ▓▓▼▲+▓  ▓▓+▼+▓  ▓▓▓▓▓▓  
+▓▓▓▓▓▓  ▓+++▓▓  ▓▓+++▓  ▓▓▓▓▓▓  ▓▓▓▓▓▓  
+▓▓▓▓▓▓  ▓▓▓▓▓▓  ▓▓▓▓▓▓  ▓▓▓▓▓▓  ▓▓▓▓▓▓  
+}}
+
+
+[[File:wood_wagon.jpg|thumb|400px|center|"Now to get another wagon for NON-alcohol items."]]
+== Bugs ==
+* Wagons can become "stuck" in obstacles.{{bug|5418}}
+* Wagon pathing problems can result in caravan collisions.{{bug|5687}}
+* It's possible for a dwarf to have a preference for "wagon wood".{{Bug|3676}}
+* Wagons are listed as "deceased" after being scuttled.
+* Wagon despawns, becoming listed as "Missing" and causing the caravan to flee.
+
+== Trivia ==
+*If you happen to be playing as a wagon (presumably through some clever [[modding]]) in Adventurer mode, you can receive a message that you have been scuttled.
+
+{{gamedata}}
+{{Creatures}}
