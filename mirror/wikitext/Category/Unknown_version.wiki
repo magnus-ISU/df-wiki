@@ -1,0 +1,4 @@
+The pages in this category use [[template:version]] for a DF version unknown to this wiki.
+This could be because a the category page was not created yet for a new release.
+It could also be because the editor made a mistake or typo with the version.
+{{#ifeq: {{PAGESINCAT:Unknown version|R}} | 0 | [[Category:empty version pages]] | [[Category:version]] }}
