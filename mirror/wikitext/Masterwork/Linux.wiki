@@ -1,0 +1,60 @@
+{{Quality|Fine|13:16, 20 April 2013 (UTC)}}
+{{av}}
+
+This is a starter page for Linux users of the Masterwork mod.
+
+=== Prework ===
+==== Stonesense ====
+The bundled stonesense has old libjpg and libpng.  Create a softlink from Dwarf Fortress/stonesense/deplibs/libjpeg.so.62 to your system libjpg in /usr/lib.  You'll have to find a binary libpng12.so.0 on the 'net and put it in the same deplibs directory.  You may also have to adjust the library load path in the "dfhack" script:
+<pre>
+#export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:"./stonesense/deplibs":"./hack"
+export LD_LIBRARY_PATH="./stonesense/deplibs":"./hack:"$LD_LIBRARY_PATH
+</pre>
+YMMV.
+
+==== Wine ====
+To be able to run Settings.exe, install wine, then install the '''Windows''' version of Mono (not the linux version).  Download Mono installer here: [http://www.go-mono.com/mono-downloads/ Mono downloads]
+
+Run the mono installer with wine.  When it's done, you should be able to run "wine Settings.exe" from the top-level Masterwork directory.
+
+=== Make It Go ===
+Example script: from the Dwarf Fortress directory, start soundSense and Dwarf Therapist first:
+<pre>
+#!/bin/bash
+
+( cd ../MasterworkDwarfFortress/Utilities/soundSense ; ./soundSense.sh ../../../Dwarf\ Fortress/gamelog.txt ) &
+( cd ../MasterworkDwarfFortress/Utilities/DwarfTherapist ; ./DwarfTherapist ) &
+./dfhack
+</pre>
+
+You can also just run those from a command line, obviously.  If this is the first time you've run DF, soundSense may pop up a file window because gamelog.txt doesn't exist yet.  Either quit and run it after the game starts, or run the game once to create the file, quit, and restart.
+
+=== Easier Farming ===
+Farming is much harder by default in Masterwork - refer to the manual for details.  If you do not or cannot get Settings.exe to run, you must edit the raws to if you want easier farming, similar to vanilla DF.  There are two ways to do this:
+
+==== Temporarily Easier Farming ====
+You may edit a single region's raws to make farming easier just for that region, and not affecting any other generated region.
+This means a region must already exist to edit.  It's easiest to create a world to your liking, and edit before starting to play.  You can edit these in another window when DF returns to the main menu, before you Start Playing.
+
+From the Dwarf Fortress directory, edit data/save/regionX/raw/objects/plant_standard.txt (where "regionX" is the region you wish to edit) and search for "GROWDUR".  Change the number after each one to something less than 1000.
+
+==== Permanently Easier Farming ====
+You can also change the master raws, so that you don't need to modify every region generated thereafter.  From the Dwarf Fortress directory, follow the same procedure on  raw/objects/plant_standard.txt
+
+=== Easier Mining ===
+
+Mining is also more challenging by default.  If you do not or cannot get Settings.exe to run, remove raw/objects/inorganic_zwarpstone.txt to make mining easier.
+
+You must remove the master, that is, directly under the DF main, not from the region save directory.  (You should make a backup copy if you remove it permanently, just in case.)
+
+=== Useful dfhack keybinds ===
+Cut and paste (or simply place) this into dfhack.init:
+<pre>
+keybinding add Ctrl-K autodump-destroy-item
+keybinding add Ctrl-Shift-K autodump-destroy-here
+keybinding add Ctrl-V digv
+# workflow plugin keys
+keybinding add Ctrl-W@dwarfmode/QueryBuilding/Some "gui/workflow"
+keybinding add Ctrl-I "gui/workflow status"
+
+</pre>

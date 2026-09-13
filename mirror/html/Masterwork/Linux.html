@@ -1,0 +1,59 @@
+<div class="mw-parser-output"><div id="page-quality-rating" style="text-align: right;margin: 0.8em 0;font-size:75%">
+ <a href="/index.php/Dwarf_Fortress_Wiki:Quality#Tattered" title="Dwarf Fortress Wiki:Quality"><span id="stub-quality" style="text-decoration:none; color:#333333">xTATTEREDx</span></a> <span style="font-weight:bold;" class="dot">&#160;·</span> <a href="/index.php/Dwarf_Fortress_Wiki:Quality#Fine" title="Dwarf Fortress Wiki:Quality"><span id="fine-quality" style="padding:0.2em; border:1px solid #db8; border-radius: 2px; -webkit-border-radius: 2px; -moz-border-radius: 2px; -o-border-radius: 2px; -ms-border-radius: 2px; background:#FFE0CC; color:#CA7A02;">+FINE+</span></a> <span style="font-weight:bold;" class="dot">&#160;·</span> <a href="/index.php/Dwarf_Fortress_Wiki:Quality#Superior" title="Dwarf Fortress Wiki:Quality"><span id="superior-quality" style="text-decoration:none; color:#8800cc;">*SUPERIOR*</span></a> <span style="font-weight:bold;" class="dot">&#160;·</span> <a href="/index.php/Dwarf_Fortress_Wiki:Quality#Exceptional" title="Dwarf Fortress Wiki:Quality"><span id="exceptional-quality" style="text-decoration:none; color:#0088CC;">≡EXCEPTIONAL≡</span></a> <span style="font-weight:bold;" class="dot">&#160;·</span> <a href="/index.php/Dwarf_Fortress_Wiki:Quality#Masterwork" title="Dwarf Fortress Wiki:Quality"><span id="masterwork-quality" style="text-decoration:none; color:#72A329;">☼MASTERWORK☼</span></a></div>
+<table class="version-table" style="text-align: center; margin: 3px auto 5px; padding: 0.25em; padding-top:1em; border-radius: 3px; -webkit-border-radius: 3px; -moz-border-radius: 3px; -o-border-radius: 3px; -ms-border-radius: 3px;; border: 2px solid #bb88ff; background: #f5e5ff; min-width:27em"><tbody><tr><td style="padding: 0.3em 0.3em; width: 100%;"><span>This article is about a <b><a href="/index.php/Mod" title="Mod">mod</a></b>.</span><br />
+<div style="float: right; font-size:75%; padding-right:2px; margin-top:-2px; margin-bottom:-7px;"><span class="version-link"><a href="/index.php/Dwarf_Fortress_Wiki:V" class="mw-redirect" title="Dwarf Fortress Wiki:V"><span style="text-decoration: none; color: #80c;">More Info</span></a></span><span style="font-weight:bold;" class="dot">&#160;·</span> <span class="version-link"><a href="/index.php/Template:Av" class="mw-redirect" title="Template:Av"><span style="text-decoration: none; color: #80c;">V</span></a></span></div></td></tr>
+</tbody></table><table id="avtable" style="text-align: center; margin: 0 auto; padding: 0px; border-radius: 3px; -webkit-border-radius: 3px; -moz-border-radius: 3px; -o-border-radius: 3px; -ms-border-radius: 3px;; border: 2px solid #b8f; color:#85c; border-top:none; background: #f5e5ff; min-width:27em"><tbody><tr><td style="padding: 0px; width: 100%;">
+<p style="margin:0.2em"><b>MDF:</b> <a class="mw-selflink selflink">v1.31</a></p></td></tr></tbody></table>
+<p>This is a starter page for Linux users of the Masterwork mod.
+</p>
+
+<h3><span class="mw-headline" id="Prework">Prework</span></h3>
+<h4><span class="mw-headline" id="Stonesense">Stonesense</span></h4>
+<p>The bundled stonesense has old libjpg and libpng.  Create a softlink from Dwarf Fortress/stonesense/deplibs/libjpeg.so.62 to your system libjpg in /usr/lib.  You'll have to find a binary libpng12.so.0 on the 'net and put it in the same deplibs directory.  You may also have to adjust the library load path in the "dfhack" script:
+</p>
+<pre>#export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:"./stonesense/deplibs":"./hack"
+export LD_LIBRARY_PATH="./stonesense/deplibs":"./hack:"$LD_LIBRARY_PATH
+</pre>
+<p>YMMV.
+</p>
+<h4><span class="mw-headline" id="Wine">Wine</span></h4>
+<p>To be able to run Settings.exe, install wine, then install the <b>Windows</b> version of Mono (not the linux version).  Download Mono installer here: <a rel="nofollow" class="external text" href="http://www.go-mono.com/mono-downloads/">Mono downloads</a>
+</p><p>Run the mono installer with wine.  When it's done, you should be able to run "wine Settings.exe" from the top-level Masterwork directory.
+</p>
+<h3><span class="mw-headline" id="Make_It_Go">Make It Go</span></h3>
+<p>Example script: from the Dwarf Fortress directory, start soundSense and Dwarf Therapist first:
+</p>
+<pre>#!/bin/bash
+
+( cd ../MasterworkDwarfFortress/Utilities/soundSense&#160;; ./soundSense.sh ../../../Dwarf\ Fortress/gamelog.txt ) &amp;
+( cd ../MasterworkDwarfFortress/Utilities/DwarfTherapist&#160;; ./DwarfTherapist ) &amp;
+./dfhack
+</pre>
+<p>You can also just run those from a command line, obviously.  If this is the first time you've run DF, soundSense may pop up a file window because gamelog.txt doesn't exist yet.  Either quit and run it after the game starts, or run the game once to create the file, quit, and restart.
+</p>
+<h3><span class="mw-headline" id="Easier_Farming">Easier Farming</span></h3>
+<p>Farming is much harder by default in Masterwork - refer to the manual for details.  If you do not or cannot get Settings.exe to run, you must edit the raws to if you want easier farming, similar to vanilla DF.  There are two ways to do this:
+</p>
+<h4><span class="mw-headline" id="Temporarily_Easier_Farming">Temporarily Easier Farming</span></h4>
+<p>You may edit a single region's raws to make farming easier just for that region, and not affecting any other generated region.
+This means a region must already exist to edit.  It's easiest to create a world to your liking, and edit before starting to play.  You can edit these in another window when DF returns to the main menu, before you Start Playing.
+</p><p>From the Dwarf Fortress directory, edit data/save/regionX/raw/objects/plant_standard.txt (where "regionX" is the region you wish to edit) and search for "GROWDUR".  Change the number after each one to something less than 1000.
+</p>
+<h4><span class="mw-headline" id="Permanently_Easier_Farming">Permanently Easier Farming</span></h4>
+<p>You can also change the master raws, so that you don't need to modify every region generated thereafter.  From the Dwarf Fortress directory, follow the same procedure on  raw/objects/plant_standard.txt
+</p>
+<h3><span class="mw-headline" id="Easier_Mining">Easier Mining</span></h3>
+<p>Mining is also more challenging by default.  If you do not or cannot get Settings.exe to run, remove raw/objects/inorganic_zwarpstone.txt to make mining easier.
+</p><p>You must remove the master, that is, directly under the DF main, not from the region save directory.  (You should make a backup copy if you remove it permanently, just in case.)
+</p>
+<h3><span class="mw-headline" id="Useful_dfhack_keybinds">Useful dfhack keybinds</span></h3>
+<p>Cut and paste (or simply place) this into dfhack.init:
+</p>
+<pre>keybinding add Ctrl-K autodump-destroy-item
+keybinding add Ctrl-Shift-K autodump-destroy-here
+keybinding add Ctrl-V digv
+# workflow plugin keys
+keybinding add Ctrl-W@dwarfmode/QueryBuilding/Some "gui/workflow"
+keybinding add Ctrl-I "gui/workflow status"
+
+</pre></div>
