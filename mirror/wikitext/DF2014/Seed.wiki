@@ -1,0 +1,365 @@
+{{Quality|Superior|20:28, 29 May 2013 (UTC)}}
+{{av}}
+:''Looking for information on world generation seeds? See [[Advanced_world_generation#Seed_Values|Advanced world generation]].''
+:''For information on seed management, see [[How do I manage my seeds and crops]]?''
+[[File:India_-_Varanasi_green_peas_-_2714.jpg|thumb|250px|right|Some seeds are edible, either raw or cooked.]]'''Seeds''' are used in [[farming]] to grow [[crop]]s. They can be stored in [[bag]]s (100 seeds per bag), which can in turn be stored in [[barrel]]s or [[pot]]s (10 bags per barrel/pot). Different seeds generally can't be mixed within a bag, so storing seeds of 10 different types requires 10 (or more) different bags (though a bug does cause dwarves to combine seeds occasionally).
+
+Seeds can be brought on embark or obtained by [[trading]].  They can also be produced from plants (acquired by [[plant gathering]] or growing the respective [[crop]]s). When a plant is eaten or used in [[brewing]], [[milling]] or [[plant processing]], it leaves one or two plantable seeds (see below for details). The exceptions are [[valley herb]] and [[kobold bulb]], which will not leave behind seeds after processing. [[Cooking]] plants in a [[kitchen]] never produces seeds.
+
+[[Tree]] seeds cannot currently be planted, though a few varieties, such as macadamia nuts and walnuts, are edible or cookable.
+
+However, presently dwarves will rather starve than eat a seed raw.
+
+__TOC__
+==Seed List==
+
+{|  border = 1 cellspacing="0" cellpadding="5" class="wikitable sortable"
+|-
+! Seed type || Edible Raw || Cookable || Farmable || Vermin Edible || Oil Seed || Raws/Menu Order
+|-
+|[[Abaca]] seeds || No || No || No || Yes || No || 092
+|-
+|[[Acacia]] seeds || No || Yes || No || Yes || No || 153
+|-
+|[[Oak|Acorns]] || Yes || Yes || No || Yes || No || 152
+|-
+|[[Alfalfa]] seeds || No || Yes || Yes || Yes || No || 009
+|-
+|[[Almond]]s || Yes || Yes || No || Yes || No || 119
+|-
+|[[Apple]] seeds || No || No || No || Yes || No || 120
+|-
+|[[Apricot]] pits || No || No || No || Yes || No || 121
+|-
+|[[Artichoke]] seeds || No || Yes || Yes || Yes || No || 035
+|-
+|[[Asparagus]] seeds || No || Yes || Yes || Yes || No || 036
+|-
+|[[Avocado]] pits || No || No || No || Yes || No || 103
+|-
+|[[Bambara groundnut]] || Yes || Yes || Yes || Yes || No || 037
+|-
+|[[Banana]] seeds || No || No || No || Yes || No || 093
+|-
+|[[Barley]] seeds || No || Yes || Yes || Yes || No || 006
+|-
+|[[Bayberry]] seeds || No || No || No || Yes || No || 122
+|-
+|[[Beet]] seeds || No || No || Yes || No || No || 040
+|-
+|[[Bilberry]] seeds || No || No || Yes || No || No || 087
+|-
+|[[Bitter melon]] seeds || No || No || Yes || No || No || 041
+|-
+|[[Bitter orange]] seeds || No || No || No || Yes || No || 108
+|-
+|[[Bitter vetch]] seeds || No || Yes || Yes || Yes || No || 016
+|-
+|[[Blackberry]] seeds || No || No || Yes || No || No || 089
+|-
+|[[Blade weed]] seeds || No || Yes || Yes || Yes || No || 147
+|-
+|[[Bloated tuber]] seeds || No || No || Yes || No || No || 139
+|-
+|[[Blood amaranth]] seeds || No || Yes || Yes || Yes || No || 018
+|-
+|[[Blueberry]] seeds || No || No || Yes || No || No || 088
+|-
+|[[Broad bean]] || No || Yes || Yes || Yes || No || 039
+|-
+|[[Buckwheat]] seeds || No || Yes || Yes || Yes || No || 007
+|-
+|[[Cabbage]] seeds || No || No || Yes || No || No || 042
+|-
+|[[Cacao tree|Cacao]] beans || No || Yes || No || No || No || 157
+|-
+|[[Candlenut]]s || No || Yes || No || Yes || No || 155
+|-
+|[[Caper]] seeds || No || No || Yes || No || No || 043
+|-
+|[[Carambola]] seeds || No || No || No || Yes || No || 094
+|-
+|[[Wild carrot|Carrot]] seeds || No || Yes || Yes || Yes || No || 044
+|-
+|[[Cashew]]s || No || No || No || Yes || No|| 095
+|-
+|[[Cassava]] seeds || No || No || Yes || No || No || 045
+|-
+|[[Cave wheat]] seeds || No || Yes || Yes || Yes || No || 135
+|-
+|[[Celery]] seeds || No || No || Yes || No || No || 046
+|-
+|[[Cherry]] pits || No || No || No || Yes || No || 123
+|-
+|[[Chestnut]]s || Yes || Yes || No || Yes || No || 154
+|-
+|[[Chickpea]] || No || Yes || Yes || Yes || No || 047
+|-
+|[[Chicory]] seeds || No || No || Yes || No || No || 048
+|-
+|[[Citron]] seeds || No || No || No || Yes || No || 106
+|-
+|[[Coffee]] beans || No || No || No || No || No || 096
+|-
+|[[Cotton]] seeds || Yes || Yes || Yes || Yes || Yes || 031
+|-
+|[[Cowpea]] || No || Yes || Yes || Yes || No || 049
+|-
+|[[Cranberry]] seeds || No || No || Yes || No || No || 086
+|-
+|[[Cucumber]] seeds || No || No || Yes || No || No || 050
+|-
+|[[Custard-apple]] seeds || No || No || No || Yes || No || 113
+|-
+|[[Date palm]] seeds || No || No || No || Yes || No || 114
+|-
+|[[Desert lime]] seeds || No || No || No || Yes || No || 111
+|-
+|[[Dimple cup]] spawn || No || Yes || Yes || Yes || No || 146
+|-
+|[[Durian]] seeds || No || Yes || No || Yes || No || 097
+|-
+|[[Eggplant]] seeds || No || No || Yes || No || No || 051
+|-
+|[[Elephant-head amaranth]] seeds || No || Yes || Yes || Yes || No || 021
+|-
+|[[Finger lime]] seeds || No || No || No || Yes || No || 109
+|-
+|[[Finger millet]] || No || Yes || Yes || Yes || No || 024
+|-
+|[[Fisher berry]] seeds || No || Yes || Yes || Yes || No || 144
+|-
+|[[Flax]] seeds || Yes || Yes || Yes || Yes || Yes|| 028
+|-
+|[[Fonio]] || No || Yes || Yes || Yes || No || 026
+|-
+|[[Foxtail millet]] || No || Yes || Yes || Yes || No || 025
+|-
+|[[Garden cress]] seeds || No || No || Yes || No || No || 052
+|-
+|[[Garlic]] seeds || No || Yes || Yes || Yes || No || 053
+|-
+|[[Ginkgo]] seeds || Yes || Yes || No || Yes || No || 124
+|-
+|[[Grape]] seeds || No || No || Yes || No || No || 085
+|-
+|[[Guava]] seeds || No || No || No || Yes || No || 098
+|-
+|[[Hard wheat]] seeds || No || Yes || Yes || Yes || No || 004
+|-
+|[[Hazel]] nuts || Yes || Yes || No || Yes || No || 125
+|-
+|[[Hemp]] seeds || Yes || Yes || Yes || Yes || Yes || 030
+|-
+|[[Hide root]] seeds || No || Yes || Yes || Yes || No || 148
+|-
+|[[Horned melon]] seeds || No || No || Yes || No || No || 054
+|-
+|[[Jute]] seeds || No || No || Yes || No || No || 029
+|-
+|[[Kaniwa]] seeds || No || Yes || Yes || Yes || No || 015
+|-
+|[[Kenaf]] seeds || Yes || Yes || Yes || Yes || Yes || 033
+|-
+|[[Kumquat]] seeds || No || No || No || Yes || No || 112
+|-
+|[[Leek]] seeds || No || No || Yes || No || No || 055
+|-
+|[[Lentil]] || No || Yes || Yes || Yes || No || 056
+|-
+|[[Lesser yam]] seeds || No || No || Yes || No || No || 080
+|-
+|[[Lettuce]] seeds || No || No || Yes || No || No || 057
+|-
+|[[Lime]] seeds || No || No || No || Yes || No || 104
+|-
+|[[Long yam]] seeds || No || No || Yes || No || No || 081
+|-
+|[[Longland grass]] seeds || No || Yes || Yes || Yes || No || 142
+|-
+|[[Lychee]] seeds || No || No || No || Yes || No || 115
+|-
+|[[Macadamia]] nuts || Yes || Yes || No || Yes || No || 116
+|-
+|[[Maize]] || No || Yes || Yes || Yes || No || 013
+|-
+|[[Mango tree|Mango]] pits || No || No || No || Yes || No || 156
+|-
+|[[Muck root]] seeds || No || No || Yes || No || No || 138
+|-
+|[[Mung bean]] || No || Yes || Yes || Yes || No || 058
+|-
+|[[Muskmelon]] seeds || No || No || Yes || No || No || 059
+|-
+|[[Oats]] seeds || No || Yes || Yes || Yes || No || 008
+|-
+|[[Olive]] pits || No || No || No || Yes || No || 117
+|-
+|[[Onion]] seeds || No || No || Yes || No || No || 060
+|-
+|[[Orange]] seeds || No || No || No || Yes || No || 107
+|-
+|[[Papaya]] seeds || No || No || No || Yes || No || 099
+|-
+|[[Papyrus sedge]] seeds || No || No || Yes || No || No || 034
+|-
+|[[Paradise nut]]s || No || No || No || Yes || No || 100
+|-
+|[[Parsnip]] seeds || No || Yes || Yes || Yes || No || 061
+|-
+|[[Passion fruit]] seeds || No || No || Yes || No || No || 084
+|-
+|[[Pea]]s || No || Yes || Yes || Yes || No || 062
+|-
+|[[Peach]] pits || No || No || No || Yes || No || 126
+|-
+|[[Peanut|Peanuts]] || Yes || Yes || Yes || Yes || No || 063
+|-
+|[[Pear]] seeds || No || No || No || Yes || No || 127
+|-
+|[[Pearl millet]] || No || Yes || Yes || Yes || No || 022
+|-
+|[[Pecan]]s || Yes || Yes || No || Yes || No || 128
+|-
+|[[Pendant amaranth]] seeds || No || Yes || Yes || Yes || No || 017
+|-
+|[[Pepper]] seeds || Yes || Yes || Yes || Yes || No || 064
+|-
+|[[Persimmon]] seeds || No || No || No || Yes || No || 129
+|-
+|[[Pig tail]] seeds || No || Yes || Yes || Yes || No || 134
+|-
+|[[Pineapple]] seeds || No || No || Yes || Yes || No || 091
+|-
+|[[Plum]] pits || No || No || No || Yes || No || 130
+|-
+|[[Plump helmet]] spawn || No || Yes || Yes || Yes || No || 133
+|-
+|[[Pomegranate]] seeds || No || No || No || Yes || No || 118
+|-
+|[[Pomelo]] seeds || No || No || No || Yes || No || 105
+|-
+|[[Potato]] seeds || No || No || Yes || No || No || 065
+|-
+|[[Prickle berry]] seeds || No || Yes || Yes || Yes || No || 140
+|-
+|[[Purple amaranth]] seeds || No || Yes || Yes || Yes || No || 019
+|-
+|[[Purple yam]] seeds || No || No || Yes || No || No || 082
+|-
+|[[Quinoa]] seeds || No || Yes || Yes || Yes || No || 014
+|-
+|[[Radish]] seeds || No || No || Yes || No || No || 066
+|-
+|[[Rambutan]] seeds || No || Yes || No || Yes || No || 101
+|-
+|[[Ramie]] seeds || No || No || Yes || No || No || 032
+|-
+|[[Raspberry]] seeds || No || No || Yes || No || No || 090
+|-
+|[[Rat weed]] seeds || No || Yes || Yes || Yes || No || 143
+|-
+|[[Red bean]]s || No || Yes || Yes || Yes || No || 067
+|-
+|[[Red spinach]] seeds || No || Yes || Yes || Yes || No || 020
+|-
+|[[Rhubarb]] seeds || No || No || Yes || No || No || 068
+|-
+|[[Rice]] || No || Yes || Yes || Yes || No || 012
+|-
+|[[Quarry bush|Rock nuts]] || No || Yes || Yes || Yes || Yes || 137
+|-
+|[[Rope reed]] seeds || No || Yes || Yes || Yes || No || 145
+|-
+|[[Round lime]] seeds || No || No || No || Yes || No || 110
+|-
+|[[Rye]] seeds || No || Yes || Yes || Yes || No || 010
+|-
+|[[Sand pear]] seeds || No || No || No || Yes || No || 131
+|-
+|[[Single-grain wheat]] seeds || No || Yes || Yes || Yes || No || 001
+|-
+|[[Sliver barb]] seeds || No || Yes || Yes || Yes || No || 149
+|-
+|[[Soft wheat]] seeds || No || Yes || Yes || Yes || No || 003
+|-
+|[[Sorghum]] seeds || No || Yes || Yes || Yes || No || 011
+|-
+|[[Soybean]] || No || Yes || Yes || Yes || No || 069
+|-
+|[[Spelt]] seeds || No || Yes || Yes || Yes || No || 005
+|-
+|[[Spinach]] seeds || No || No || Yes || No || No || 070
+|-
+|[[Squash]] seeds || No || No || Yes || No || No || 071
+|-
+|[[Strawberry]] seeds || No || Yes || Yes || Yes || No || 141
+|-
+|[[String bean]] || No || Yes || Yes || Yes || No || 038
+|-
+|[[Sun berry]] seeds || No || Yes || Yes || Yes || No || 150
+|-
+|[[Sweet pod]] seeds || No || Yes || Yes || Yes || No || 136
+|-
+|[[Sweet potato]] seeds || No || No || Yes || No || No || 072
+|-
+|[[Taro]] seeds || No || No || Yes || No || No || 073
+|-
+|[[Tea]] seeds || No || No || No || Yes || No || 102
+|-
+|[[Teff]] || No || Yes || Yes || Yes || No || 027
+|-
+|[[Tomatillo]] seeds || No || Yes || Yes || Yes || No || 075
+|-
+|[[Tomato]] seeds || No || Yes || Yes || Yes || No || 074
+|-
+|[[Turnip]] seeds || No || No || Yes || No || No || 076
+|-
+|[[Two-grain wheat]] seeds || No || Yes || Yes || Yes || No || 002
+|-
+|[[Urad bean]]s || No || Yes || Yes || Yes || No || 077
+|-
+|[[Walnut]]s || Yes || Yes || No || Yes || No || 132
+|-
+|[[Watermelon]] seeds || No || No || Yes || No || No || 078
+|-
+|[[Whip vine]] seeds || No || Yes || Yes || Yes || No || 151
+|-
+|[[White millet]] || No || Yes || Yes || Yes || No || 023
+|-
+|[[White yam]] seeds || No || No || Yes || No || No || 083
+|-
+|[[Winter melon]] seeds || No || No || Yes || No || No || 079
+|}
+
+==Seed Production==
+
+Seeds are produced by [[brewing]] (at a [[still]]), [[milling]] (at a [[millstone]] or [[quern]]), [[Plant processing|processing]] (at a [[farmer's workshop]]), or by dwarves eating the plants raw (uncooked). For information on where to grow, gather, or process specific plants, consult the specific plant's page or the general [[crop]]s page.
+
+In order to prevent your fortress becoming cluttered with millions of seeds, there is a cap of 200 seeds for each plant type and a global cap of 3000 seeds. Seed-producing activities will only produce seeds if your fortress contains fewer than 200 seeds of that type. You can exceed the 200 seed cap by buying seeds from caravans, and seed production will restart when your stocks fall below 200. Seed production is not affected by the global cap; rather, the oldest seeds in the fortress will be periodically removed to remain at or around 3000. Note that this removal may affect "strategic seed stockpiles" (i.e. seeds forbidden for use in case of typical dwarven culinary stupidity), any crops that you grow only occasionally, and potentially any crops which have been prevented from producing seeds by the specific type cap. Both of these limits can be modified in the [[d_init.txt]] file. 
+
+'''Note:''' In case you are confused about getting spam of messages like "Urist McFarmer cancels Plant seeds: Needs [seed name]", while you are sure that you have enough seeds, no burrow restrictions or closed doors, the reason for this is most likely: the haulers see a seed somewhere and take the '''whole seed bag''' from stockpile to go pick it up, making the farmer cancel his job. The problem is exacerbated when barrels are used on the seed stockpile, because the dwarves will additionally store the seed bags inside barrels, blocking even more seeds during each hauling job and extending hauling jobs by first bringing the seed bag to the seed, then returning to the stockpile, picking up the barrel to bring it to the bag, storing the bag in the barrel and only then bringing the barrel bag to the stockpile. During all this time, the seed barrel and all its contents will be blocked from access by any other job.
+
+You can simply disallow barrels from the stockpile, which requires a somewhat larger stockpile but makes seed collection jobs much shorter and less disruptive. Bags will always be used to store seeds in stockpiles, you cannot forbid that. 
+
+Another way to deal with this problem is this: set up 2 seed stockpiles, with the larger (primary) one set to only accept items from links ({{k|a}}).  Set the secondary (smaller) pile to take from {{k|a}}nywhere and {{k|g}}ive to the main stockpile. Now, when a seed shows up in your dining room or brewery, the dwarves should try to put it into the secondary pile first, which shouldn't have anything in it for long (so no bag for world tour). Once the seed arrives in the secondary stockpile, a new job will be created, moving the seed over into the main stockpile.  Now the bag will be picked up to move that seed into it, but if the piles are next to each other it should only be in transit for a few seconds reducing the likelihood of cancellation spam. 
+
+As a workaround, you can finally make use of the peculiarities of stockpile commands: setting a stockpile to "take" from a mill, still or farmer's workshop will prevent the workshop from sending its products to any other stockpile. If the stockpile in question doesn't accept seeds, all seeds produced by the workshop will stay in the building, readily accessible to farmers. This can be handy if the workshop is directly adjacent to the farm plot, but can cause cluttering of the workshop if other products like barrels of booze aren't moved out of the shop regularly.
+
+{{Translation
+| dwarven = lenod
+| elvish  = are
+| goblin  = ösmosp
+| human   = ase
+}}
+
+==Bugs==
+
+*Dwarves compulsively store seeds in bags.{{bug|7869}}
+*Planted seeds removed from field by seed cap.{{bug|8107}}
+*Seeds carried by merchants count against fortress seed cap.{{bug|8108}}
+*Conflict between the two seed caps can remove an entire type of seed.{{bug|8091}}
+*Dye stored in barrels without bags.{{bug|9219}}  This bug is believed to apply to seeds as well, based on the [http://www.bay12games.com/dwarves/ 01/19/2016 dev-log note]: "stop dumping dye/flour/seed/etc. bags out into barrels improperly".
+{{gamedata}}
+{{materials}}
+[[ru:Seed]]

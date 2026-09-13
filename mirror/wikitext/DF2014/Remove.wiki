@@ -1,0 +1,118 @@
+{{Quality|Superior|18:36, 14 July 2014 (UTC)}}
+{{av}}
+
+It seems that half the time in [[Fortress mode]], when you aren't building something, you're '''removing''' something.  Whether that's [[dig|digging]] away part of the landscape, tearing down a [[wall]], ripping up a [[bridge]], or just rearranging the [[furniture]], if it needs to get done, then it needs to get done.  Although every specific article should have an explanation of how to remove that specific item or feature, if you're here you may need a more basic "how to".  
+
+Here's how to remove...
+
+==Dirt/stone==
+:''Main article: [[Mining]]''
+
+[[Digging]] may be the most basic action in ''Dwarf Fortress''. All you need is a dwarf with the [[mining]] [[labor]] activated, and access to a [[pick]].
+
+Then, designate an area to be mined. Do this by hitting the {{k|d}}esignate {{k|d}}ig keys. Then either left-click an area on the same z-level with the mouse, or use the cursor and {{k|Enter}} to establish one point, and move the cursor and repeat to select a rectangle to be dug out.
+
+If you want (or need, to get up/down) to create [[stair]]s or [[ramp]]s instead of a tunnel, it works similarly, but with some additional concerns - read those articles for details and command keys.
+
+===Dug ramps/stairs===
+Similar to the above, but to designate the removal of carved [[ramp]]s or natural [[slope|slope]]s (same thing), or carved [[stair]]s, use the {{k|d}}, {{k|z}} keys.
+
+===A digging "designation"===
+"Oops"?!  Didn't mean to mark that? If the action hasn't been completed yet, don't panic. Use {{k|d}}, {{k|x}} as above and click over the part you don't want marked.
+
+==Constructed walls, stairs, etc==
+:''Main Article: [[Construction]]''
+
+If you're trying to remove anything that is a [[construction]] (that is, anything that was built with the {{k|b}}, {{k|C}} keys), that's another designation, use {{k|d}} {{k|n}}, and mark the construction. Any dwarf will respond and (eventually) tear it down - which takes longer than it took to build.
+
+===Bridges===
+There are two types of [[bridge]]s - a retracting bridge / drawbridge, and just a long [[floor]] or a [[wall]] permanently spanning a gap.
+
+If it's the movable type, remove as you would furniture, with {{k|q}}, {{k|x}}.
+
+The latter is just a construction - remove the same as for a construction, above. Be sure, if it's a long floor or wall, that your dwarves won't be standing on one part while a critical part is removed - see [[cave-in]].
+
+===A "remove construction" order===
+"Oops"?! Cancel that removal the same as you would any designation, with {{k|d}}, {{k|x}}.
+
+== Furniture ==
+:''Main Article: [[Furniture]]''
+
+Use {{k|q}} (or {{k|t}}), move the cursor over the piece of furniture to be removed, and then hit {{k|x}}.  You'll also need a dwarf with the [[Hauling|furniture hauling]] [[labor]] activated, and then the patience to wait for one to respond.
+
+==Workshops==
+:''Main Article: [[Workshop]]''
+
+Similar to furniture, use {{k|q}} (or {{k|t}}), and then hit {{k|x}}. You'll need a dwarf with an appropriate [[labor]], depending on the exact workshop - this can be seen via {{k|q}} once the workshop has been marked for dismantling.
+
+===A "destroy" order for furniture or workshops===
+Oops?! Cancel an order to remove furniture or a workshop by using {{k|q}} (or {{k|t}}) then {{k|s}}top.
+
+==Trash==
+:''Main Articles: [[Stockpile]], [[Zone]], [[Refuse]]''
+
+This is trickier, and there are 2 different approaches.
+
+One is to create a [[refuse stockpile]] for that class of item ''(usually remains of [[vermin]] killed by a [[cat]], or items left after [[butcher|butchering]], but other items are possible)'', and wait for a dwarf with the [[Hauling|refuse hauling]] [[labor]] to find the free time to respond.
+
+A more aggressive and specific method is to create a [[dump|garbage dump]] (using the {{k|i}} menu) and then mark the items for [[dump|dumping]]. Again, this requires refuse hauling, but it can create a [[Exploit#Quantum_stockpiles|quantum dump]] for any type of item. ([[Stone]] is a popular choice.)
+
+==Stockpiles==
+:''Main Article: [[Stockpile]]''
+
+Stockpiles can be removed by pressing {{k|p}}, {{k|x}} and using the cursor keys and Enter to select the area where you don't want the stockpile to be anymore.
+
+==Activity zones==
+:''Main Article: [[Zone]]''
+
+==Stones==
+Stones are automatically removed by dwarves with the Stone Hauling labor activated, and placed in the stone stockpiles, or your garbage dump if so designated. <!-- Does this need Refuse Hauling, or Stone? -->
+
+==Water==
+:''Main Article: [[Water]]''
+
+Depending on the quantity and nature of the water in question and the surroundings of your fort, removing water can be performed in a number of ways:
+
+:The most direct method is to either drain it into a lower space, or [[pump]] it elsewhere.
+:In hot environments, standing water is likely to [[evaporation|evaporate]], especially in the summer.
+:Similarly, in [[Climate|freezing]] areas you may be able to wait for water to [[Ice|freeze]] and then [[mine]] it out.
+:Water in ponds or cisterns will evaporate if it reaches a [[Water#Water depth|depth]] of only 1/7 units. Spread it around by channeling a larger area for it to flow into.
+:With careful (and rather [[labor]]-intensive) use of water source and [[pond]] [[Zone|zones]] with [[Bucket|buckets]] you can have your dwarves move water from one location to another, out of your way.
+:If you've got a renewable source of water (a [[river]], for example), you'll have to get creative with engineering to [[dam]] or divert the flow.
+:An advanced method, with the potential for lots of [[Fun]], is to combine [[magma]] with your water. You can get a lot of valuable [[Obsidian|obsidian]] this way, though - see [[Obsidian farming]] for more information.
+
+'''Note:''' [[Murky pool|Murky pools]] will refill when it rains; you may need to take steps to prevent this if you want rid of a body of water permanently.
+
+===Muddy floor===
+After an area has water on it and dries, it will become [[mud|muddy]].  The best way to remove this is to have a dwarf with the [[stone detailing]] [[labor]] activated, and [[Designations Menu|designate]] the muddy area for "smoothing", via {{k|d}} + {{k|s}}.
+
+If the stone is already smooth (or if you don't want it to be smooth in the first place), simply place a piece of furniture (such as an [[armor stand]], [[statue]], or [[animal trap]]) on top of each muddy tile and the mud will be removed.
+
+==Magma==
+Magma is a very dangerous liquid, but it will [[evaporate]] exactly like water once it drains down to a depth of 1/7.  
+
+Alternately, the addition of water to the magma, even if only at a depth of 1/7, will create [[obsidian]].
+
+==Bodies==
+Bodies of your dwarves, and their body parts, or bones, will be put into your [[graveyard]], or into individual [[Tomb|tombs]] if that dwarf was assigned to it. Built [[Coffin|coffins]] which have been set to 'Use for burial' will  This requires the Burial labor enabled on a living dwarf.
+
+Bodies of everything else, from [[vermin]] to [[Titan|Titans]], will be placed in the Refuse Stockpile, by a dwarf with Refuse Hauling.  If these corpses are unrotten and butcherable, dwarves with Butchery enabled will take them to the Butcher's workshop and cut them into meat, fat, bones, a skull, and [[Butcher's shop|the other bodily stuff]]. Almost everything will be used as food, and delivered to that stockpile, a few other parts, like [[hair]], becomes refuse. [[Bone|Bones]], [[Skull|skulls]] and some other hard body parts can be made [[Bone carver|use]] of after this.
+
+==Miasma==
+
+
+Through the miasma will fade in time, you can assure it to be gone by making an upwards conduct
+(be sure to grate it or else who knows what could get in!)
+
+==Fire==
+Good luck removing [[fire]].  Water will only remove flames if the object is completely immersed in 7/7 water.  Obviously, this is problematic if a dwarf is burning.  Your best bet is to isolate the burning substances (clothing, dwarves, beer, etc.) and prevent any dwarves or animals from accessing the banned areas until all the flames burn out.
+
+Creating a [[cave-in]] can destroy the burning item completely, which is no loss since it's already burning. (Read up on cave-ins before doing this to avoid worse problems.)
+
+==Stuff via the init.txt file==
+{{stub}}
+===Cave ins===
+
+===Temperature===
+
+==Announcements==

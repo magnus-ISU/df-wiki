@@ -1,0 +1,31 @@
+{{release notes}}
+
+:Our second leap day release! Fixes old and new this time. From the new category, aside from crashes, marriages were being dissolved frequently and friendly visiting experiments were breaking too much furniture. Among the older bugs fixed, we've got the one where people could teleport through walls while fighting or sparring, a loyalty cascade civil war issue, and a creature/item duplication bugs that was corrupting saves.
+
+:Barring sudden issues, this will be the final bug-fix release before we get the code work started on the graphical version. There's a lot left to fix before that version is ready to be released, and we'll be doing parallel bug fix releases as the graphics stuff progresses.
+:&mdash;Toady One, February 29, 2020
+
+==Major bug fixes==
+
+*Fixed w.g. crash related to society infiltration
+*Fixed w.g. crash related to variable position creation
+*Fixed crash involving misbehaving roads
+*Fixed loyalty cascade due to death of questers etc. that had positive relationships with fort dwarves
+*Stopped charge collisions from teleporting people through walls
+*Fixed save corruption/duplication related to fort/adv retirement
+*Stopped dwarves from silently dissolving their marriages when they make a close friend
+*Stopped large visitors and residents from seeking and destroying buildings even if they do so as invaders
+*Stopped overwide shrines in npc forts from flooding the underground
+*Fixed issue causing broken castle maps
+
+==Other bug fixes/tweaks==
+
+*Stopped pantheons of mortal races from frequently having very high numbers of deities
+*Fixed summon effects for small-sized creatures
+*Removed building destroyer/trample/trapavoid from smaller procedural creatures
+*Made divorce thought appear properly
+*Added stone altar building job
+*Fixed broken reunion historical entry
+*Removed various forgotten beast traits from experiments
+*Corrected issue with rumor system
+*Made item creation interactions work harder to select a material if none is provided

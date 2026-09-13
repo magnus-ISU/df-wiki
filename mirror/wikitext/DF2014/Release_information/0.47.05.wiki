@@ -1,0 +1,28 @@
+{{release notes}}
+
+: Here's an interim release - this is a fixer-upper for the old version, and not related at all to the new graphical stuff. This isn't meant to address everything of course, or even most things, and we'll be cleaning up a lot more bugs and issues for the Premium release itself. This one gets rid of some long-standing crashes and also attempts to address most of what we learned from the stress discussion from the forum. There are still a few unmet needs (which don't contribute much to stress, but are an eyesore), and a few outstanding ideas related to winning sieges, ending wars and unattended children, but we'll need larger changes there that are better integrated with the Premium work.
+
+:It's always a little weird splitting the bug fixes into the two major/minor categories, but especially here, where the stress changes add up to a lot, so the division below is particularly arbitrary on that score.
+:&mdash;Toady One, January 28, 2021
+
+== Major bug fixes ==
+* Fixed w.g. crash related to dark fortress civs having fixed positions not held by demons
+* Fixed zero-size creature crash
+* Fixed off-site werebirth crash
+* Stopped visitors from siding against fort in any conflict where the fort's tame megabeasts are involved
+* Made cave adaption negative effects less frequent
+* Made people get used to seeing dead bodies
+* Stopped corpse raising, shapeshifting and non-living non-vampire visitors
+* Made basic friendships easier to form for slow-to-love people
+
+== Other bug fixes/tweaks ==
+* Made people that work outside a lot get used to bad weather
+* Made valuable food satisfy good meal thought in addition to preferences
+* Added some additional dwarf chat types to meet some other needs and reduce stress
+* Stopped many minor thoughts from forming memories
+* Removed stress from migrants (e.g. ones from old forts)
+* Vengefulness is no longer stressful (as it was mainly related to defending others from attacking animals)
+* Changed balance of migrant professions
+* Patched one form of military item corruption on load (root cause not identified)
+* Expulsion exception 'child not present' now only applies to minor children
+* Fixed MUNDANE and HAS_ANY_CAN_SWIM for interactions/transformations

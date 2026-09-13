@@ -1,6 +1,10 @@
 # DF2014/Release_information
 
-## Pages (48)
+## Sections
+
+- [List](List/)
+
+## Pages (53)
 
 - [DF2014:Release information/0.40.01](0.40.01.md)
 - [DF2014:Release information/0.40.02](0.40.02.md)
@@ -50,3 +54,8 @@
 - [DF2014:Release information/0.44.11](0.44.11.md)
 - [DF2014:Release information/0.44.12](0.44.12.md)
 - [DF2014:Release information/0.47.01](0.47.01.md)
+- [DF2014:Release information/0.47.02](0.47.02.md)
+- [DF2014:Release information/0.47.03](0.47.03.md)
+- [DF2014:Release information/0.47.04](0.47.04.md)
+- [DF2014:Release information/0.47.05](0.47.05.md)
+- [DF2014:Release information/List](List.md)
