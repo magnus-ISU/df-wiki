@@ -1,0 +1,465 @@
+{{Quality|Exceptional|18:02, 28 July 2017 (UTC)}}
+{{av}}
+
+''Dwarf Fortress'' uses [[tileset]]s to draw the game, including maps. This '''map legend''' explains what the [[character table|characters]] and [[color]]s represent in the pre-start embark (or [[adventure mode|adventure]]) map.
+
+== Tile colors ==
+
+The colors of a map tile may give information about that region's predominant [[biome]] and [[surroundings]]; its temperature, alignment, and other handy things. Generally, cyan and blue means the area is "good" aligned. Purple, gray, brown, and red areas have "evil" alignment. Light grey, brown, and yellow areas usually are dry and have sparse vegetation. Green tiles have vegetation and are usually moist. White and cyan tiles indicate snow or ice. The color of trees that change season to season can tell about a tree's current [[tree#Growths|growth]].
+
+== Biome/Region key ==
+
+Tiles are listed by alignment, with normal tiles first, then good-aligned tiles, and then evil tiles. Snow and ice-covered tiles are included next to their respective alignments.
+
+=== Forests ===
+
+In normal [[forest]]s, the color changes with the seasons.
+
+{| class="wikitable"
+! Biome/Region
+! Normal
+! Snow/Ice
+! Good
+! Evil
+! Evil snow/ice
+|-
+| Temperate broadleaf forest
+| {{Biome|♠|♣|7:1|5:1|altc}} {{Biome|♠|♣|2:0}} {{Biome|♠|♣|6:1|4:1|altc}} {{Biome|╞|╞|6:0}}
+| {{Biome|♠|♣|7:1}} {{Biome|╞|╞|7:1}}
+| {{Biome|♠|♣|2:0|7:1|altc}}
+| {{Biome|♠|♣|5:0|5:1}} {{Biome|♠|┤|0:1|4:0}}
+| {{Biome|♠|♣|7:0}} {{Biome|♠|┤|7:0}}
+|-
+| Tropical broadleaf forest
+| {{Biome|Γ|♠|2:0}}
+|
+| {{Biome|Γ|♣|2:0|7:1|altc}}
+| {{Biome|Γ|♠|5:0|5:1}} {{Biome|Γ|┤|0:1|4:0}}
+|
+|-
+| Coniferous forest
+| {{Biome|↑|↨|2:0}}
+| {{Biome|↑|↨|7:1}}
+| {{Biome|↑|♣|2:0|7:1|altc}}
+| {{Biome|↑|↨|5:0|5:1}} {{Biome|↑|┤|0:1|4:0}}
+| {{Biome|↑|↨|7:0}} {{Biome|↑|┤|7:0}}
+|}
+
+=== Hills and mountains/Plains ===
+
+Yellow hills or plains indicate dry vegetation.
+
+{| class="wikitable"
+! Biome/Region
+! Normal
+! Snow/Ice
+! Good
+! Evil
+! Evil snow/ice
+|-
+| [[Hills]]
+| {{Biome|n|∩|2:1}} {{Biome|n|∩|6:1}}
+| {{Biome|n|∩|7:1}}
+| {{Biome|n|∩|3:0|3:1}}
+| {{Biome|n|∩|5:0|5:1}} {{Biome|n|∩|0:1|4:0}}
+| {{Biome|n|∩|7:0}}
+|-
+| Low [[mountain]]s
+| {{Biome|⌂|⌂|7:0}}
+| {{Biome|⌂|⌂|7:1}}
+| {{Biome|⌂|⌂|6:1|6:1}}
+| {{Biome|⌂|⌂|5:0|5:1}}
+|
+|-
+| Medium mountains
+| {{Biome|▲|▲|0:1}}
+| {{Biome|▲|▲|7:1}}
+| {{Biome|▲|▲|6:1}}
+| {{Biome|▲|▲|5:0|5:1}}
+|
+|-
+| High mountains
+| {{Biome|▲|▲|7:0}}
+| {{Biome|▲|▲|3:1}}
+| {{Biome|▲|▲|6:1}}
+| {{Biome|▲|▲|5:0|5:1}}
+|
+|}
+
+
+{| class="wikitable"
+! Biome/Region
+! Normal
+! Snow/Ice
+! Good
+! Evil
+! Evil snow/ice
+|-
+| [[Grassland]]
+| {{Biome|.|ⁿ|2:1}} {{Biome|.|ⁿ|6:1}}
+| {{Biome|.|ⁿ|7:1}}
+| {{Biome|.|ⁿ|3:0|3:1}}
+| {{Biome|.|ⁿ|5:0|5:1}} {{Biome|.|ⁿ|0:1|4:0}}
+| {{Biome|.|ⁿ|7:0}}
+|-
+| [[Savanna]]
+| {{Biome|"|ⁿ|2:1}} {{Biome|"|ⁿ|6:1}}
+| {{Biome|"|ⁿ|7:1}}
+| {{Biome|"|ⁿ|3:0|3:1}}
+| {{Biome|"|ⁿ|5:0|5:1}} {{Biome|"|ⁿ|0:1|4:0}}
+| {{Biome|"|ⁿ|7:0}}
+|-
+| [[Shrubland]]
+| {{Biome|"|τ|2:1}} {{Biome|"|τ|6:1}}
+| {{Biome|"|τ|7:1}}
+| {{Biome|"|τ|3:0|3:1}}
+| {{Biome|"|τ|5:0|5:1}} {{Biome|"|τ|0:1|4:0}}
+| {{Biome|"|τ|7:0}}
+|}
+
+=== Deserts ===
+
+In normal sand [[desert]]s, the color depends on the type of [[sand]].
+
+{| class="wikitable"
+! Biome/Region
+! Normal
+! Snow/Ice
+! Good
+! Evil
+! Evil snow/ice
+|-
+| Sand desert
+| {{Biome|~|≈|6:1}} {{Biome|~|≈|0:1}} {{Biome|~|≈|4:1}} {{Biome|~|≈|7:1}}
+| {{Biome|~|≈|7:1}}
+| {{Biome|~|≈|3:0}}
+| {{Biome|~|≈|5:0|5:1}}
+| {{Biome|~|≈|7:0}}
+|-
+| Rocky wasteland
+| {{Biome|,|´|7:0|6:0|altc}} {{Biome|n|∩|7:0|6:0|altc}}
+| {{Biome|,|´|7:1}} {{Biome|n|∩|7:1}}
+| {{Biome|,|´|3:0|3:1}} {{Biome|n|∩|3:0|3:1}}
+| {{Biome|,|´|0:1|4:0}} {{Biome|n|∩|0:1|4:0}}
+| {{Biome|,|´|7:0}} {{Biome|n|∩|7:0}}
+|-
+| Badlands
+| {{Biome|V|√|6:0}}
+| {{Biome|V|√|7:1}}
+| {{Biome|V|√|3:0|3:1}}
+| {{Biome|V|√|0:1|4:0}}
+| {{Biome|V|√|7:0}}
+|}
+
+=== Wetlands ===
+
+{| class="wikitable"
+! Biome/Region
+! Normal
+! Snow/Ice
+! Good
+! Evil
+! Evil snow/ice
+|-
+| Swamp
+| {{Biome|"|⌠|2:0}}
+| {{Biome|"|⌠|7:1}}
+| {{Biome|"|⌠|1:0|1:1}}
+| {{Biome|"|⌠|5:0|5:1}} {{Biome|"|⌠|0:1|4:0}}
+| {{Biome|"|⌠|7:0}}
+|-
+| Marsh
+| {{Biome|"|ⁿ|2:0}}
+| {{Biome|"|ⁿ|7:1}}
+| {{Biome|"|ⁿ|1:0|1:1}}
+| {{Biome|"|ⁿ|5:0|5:1}} {{Biome|"|ⁿ|0:1|4:0}}
+| {{Biome|"|ⁿ|7:0}}
+|}
+
+=== Ice regions ===
+
+{| class="wikitable"
+! Biome/Region
+! Normal
+! Good
+! Evil
+|-
+| [[Tundra]]
+| {{Biome|∙|·|3:1}}
+| {{Biome|∙|·|3:0}}
+| {{Biome|∙|·|5:0|5:1}}
+|-
+| [[Glacier]]
+| {{Biome|▓|▒|3:1}}
+| {{Biome|▓|▒|3:0}}
+| {{Biome|▓|▒|5:0|5:1}}
+|}
+
+=== Bodies of water ===
+
+{| class="wikitable"
+! Biome/Region
+! Normal
+! Good
+! Evil
+|-
+| [[River]]
+| {{Raw Tile|•┬┴|3:1}} {{Raw Tile|┬┴|1:1}} {{Raw Tile|┬┴|1:0}} {{Raw Tile|╦╩◄|1:0}}
+| {{Raw Tile|•┬┴|3:1}} {{Raw Tile|┬┴|1:1}} {{Raw Tile|┬┴|1:0}} {{Raw Tile|╦╩◄|1:0}}
+| {{Raw Tile|•┬|6:0}}{{Raw Tile|┴|4:0}} {{Raw Tile|╦|6:0}}{{Raw Tile|╩◄|4:0}}
+|-
+| [[Ocean]]
+| {{Biome|≈|≈|1:0}} {{Biome|▒|░|3:1}}
+| {{Biome|≈|≈|3:1}} {{Biome|▒|░|3:1}}
+| {{Biome|≈|≈|6:0|4:0}} {{Biome|▒|░|6:0|4:0}}
+|-
+| [[Lake]]
+| {{Biome|~|~|1:1}}
+| {{Biome|~|~|3:1}}
+| {{Biome|~|~|6:0|4:0}}
+|}
+
+== Terrain feature key ==
+
+{| class="wikitable"
+! Terrain feature
+! Normal
+! Snow/Ice
+! Good
+! Evil
+|-
+| [[Peak]]
+| {{Raw Tile|^|7:0}}
+| {{Raw Tile|^|3:1}}
+| {{Raw Tile|^|6:1}}
+| {{Raw Tile|^|5:0}} {{Raw Tile|^|5:1}}
+|-
+| [[Volcano]]
+| {{Raw Tile|^|4:1}}
+|
+|
+|
+|}
+
+== Construction key ==
+
+{| class="wikitable"
+! Construction
+! Normal
+|-
+| [[Road#World gen roads|Road]]
+| {{Raw Tile|•┬┴•|6:0}} {{Raw Tile|•┬┴•|0:1}} {{Raw Tile|•┬┴•|7:0}} {{Raw Tile|•┬┴•|7:1}}
+|}
+
+== Tree key ==
+
+Forests and swamps will use the map tiles of the [[tree]]s they contain. The tiles below are used to specify generic forests, even if no trees that use that tile exist in that forest. Whether the game uses the generic tiles or the tile of the actual tree they contain is randomized on a tile-by-tile basis.
+
+Tiles can vary significantly in forests due to the variety of trees that can be generated.
+
+{| class="wikitable"
+|-
+! Tile !! Terrain 
+|-
+| {{Raw Tile|⌠|2:0}} || Swamp
+|-
+| {{Raw Tile|↑|2:0}} || Conifer Forest 
+|-
+| {{Raw Tile|♠|2:0}} || Broadleaf Forest
+|-
+| {{Raw Tile|Γ|2:0}} || Tropical Forest
+|}
+
+== Site key ==
+
+Site tiles are organized by columns, from left-to-right: normal populated sites, [[ruin]]ed sites, and sites captured by [[necromancer]]s or their [[night creature]] armies.
+
+=== Dwarven sites ===
+
+{| class="wikitable"
+! Site
+! Normal
+! Ruins
+! Night creature
+|-
+| [[Mountain halls]]
+| {{Raw Tile|Ω|0:1}}
+| {{Raw Tile|μ|0:1}}
+| {{Raw Tile|μ|5:0}}
+|-
+| [[Hillocks]]
+| {{Raw Tile|Ω|7:0}}
+| {{Raw Tile|μ|7:0}}
+| {{Raw Tile|μ|5:0}}
+|-
+| [[Fortress]]
+| {{Raw Tile|Ω|7:1}}
+| {{Raw Tile|μ|7:1}}
+| {{Raw Tile|μ|5:1}}
+|}
+
+=== Elven sites ===
+
+Forest retreats marked as ({{Raw Tile|¶|6:1}}) are [[market town]]s.
+
+{| class="wikitable"
+! Site
+! Normal
+! Ruins
+! Night creature
+|-
+| [[Forest retreat]]
+| {{Raw Tile|î|6:1}} {{Raw Tile|¶|6:1}}
+| {{Raw Tile|μ|6:1}} {{Raw Tile|₧|6:1}}
+| {{Raw Tile|μ|5:0}} {{Raw Tile|₧|5:0}}
+|}
+
+=== Goblin sites ===
+
+A light magenta dark fortress ({{Raw Tile|Π|5:1}}) indicates the presence of an [[underworld spire]].
+
+{| class="wikitable"
+! Site
+! Normal
+! Ruins
+! Night creature
+|-
+| [[Dark fortress]]
+| {{Raw Tile|Π|0:1}} {{Raw Tile|Π|5:1}}
+| {{Raw Tile|μ|0:1}} {{Raw Tile|μ|5:1}}
+| {{Raw Tile|μ|5:1}}
+|-
+| [[Dark pits]]
+| {{Raw Tile|º|5:0}}
+| {{Raw Tile|ª|0:1}}
+| {{Raw Tile|ª|5:0}}
+|}
+
+=== Human sites ===
+
+For towns, the tiles indicate a town's current population (increases from left to right). Hamlet tiles represent the region the hamlet is in (hills, plains, rivers, etc.).
+
+{| class="wikitable"
+! Site
+! Normal
+! Ruins
+! Night creature
+|-
+| [[Town]]
+| {{Raw Tile|+|7:0}} {{Raw Tile|*|7:0}} {{Raw Tile|#|7:0}} {{Raw Tile|☼|7:1}}
+| {{Raw Tile|μ|7:0}}
+| {{Raw Tile|μ|5:1}}
+|-
+| [[Hamlet]]
+| {{Raw Tile|&#61;|2:0}} {{Raw Tile|≡|2:0}} {{Raw Tile|æ|2:0}} {{Raw Tile|Æ|2:0}}
+
+{{Raw Tile|&#61;|3:1}} {{Raw Tile|≡|3:1}} {{Raw Tile|æ|3:1}} {{Raw Tile|Æ|3:1}}
+
+{{Raw Tile|&#61;|1:1}} {{Raw Tile|≡|1:1}} {{Raw Tile|æ|1:1}} {{Raw Tile|Æ|1:1}}
+
+{{Raw Tile|&#61;|1:0}} {{Raw Tile|≡|1:0}} {{Raw Tile|æ|1:0}} {{Raw Tile|Æ|1:0}}
+| style="vertical-align: text-top;" | {{Raw Tile|&#61;|6:0}} {{Raw Tile|≡|6:0}} {{Raw Tile|æ|6:0}} {{Raw Tile|Æ|6:0}}
+| style="vertical-align: text-top;" | {{Raw Tile|&#61;|5:0}} {{Raw Tile|≡|5:0}} {{Raw Tile|æ|5:0}} {{Raw Tile|Æ|5:0}}
+|-
+| [[Castle]]
+| {{Raw Tile|○|7:1}}
+|
+| {{Raw Tile|○|5:1}}
+|}
+
+=== Other sites ===
+
+{| class="wikitable"
+! Site
+! Normal
+! Night creature
+|-
+| [[Camp]]
+| {{Raw Tile|☼|6:1}}
+|
+|-
+| [[Cave]]
+| {{Raw Tile|•|0:1}}
+| {{Raw Tile|•|5:0}}
+|-
+| [[Fort]]
+| {{Raw Tile|◙|6:0}}
+| {{Raw Tile|◙|5:0}}
+|-
+| [[Labyrinth]]
+| {{Raw Tile|#|0:7:0}}
+|
+|-
+| [[Lair]]
+| {{Raw Tile|•|0:1}} {{Raw Tile|•|2:1}}
+|
+|-
+| [[Monastery]]
+| {{Raw Tile|○|7:0}}
+| {{Raw Tile|○|5:0}}
+|-
+| [[Shrine]]
+| {{Raw Tile|Å|7:0}}
+|
+|-
+| [[Tomb]]
+| {{Raw Tile|0|0:1}}
+|
+|-
+| [[Tower (necromancy)|Tower]]
+| {{Raw Tile|I|7:0}}
+| {{Raw Tile|I|5:0}}
+|-
+| [[Vault]]
+| {{Raw Tile|■|0:1}}
+|
+|-
+| [[Camp#Adventurer camp|Adventurer camp]]
+| {{Raw Tile|☼|6:0}}
+|
+|}
+
+=== Embark assistant added sites ===
+
+Shown when the [[DFHack]] plugin is active, list is from the in game plugin {{k|i}}nformation, see there for details.
+
+{| class="wikitable"
+! Site
+! Symbol
+|-
+| Camp
+| {{Raw Tile|C|6:1}}
+|-
+| Cave
+| {{Raw Tile|c|6:1}}
+|-
+| Lair
+| {{Raw Tile|m|6:1}} {{Raw Tile|b|6:1}} {{Raw Tile|l|6:1}}
+|-
+| Labyrinth
+| {{Raw Tile|L|6:1}}
+|-
+| Monument
+| {{Raw Tile|M|6:1}}
+|-
+| Shrine
+| {{Raw Tile|S|6:1}}
+|-
+| Vault
+| {{Raw Tile|V|6:1}}
+|}
+
+== Fast travel key ==
+
+{| class="wikitable"
+! Description
+! Symbol
+|-
+| Adventurer(s)
+| {{Raw Tile|@|7:0}}
+|-
+| Other traveling individual or group
+| {{Raw Tile|*|7:0}}
+|}
+
+{{World}}

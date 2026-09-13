@@ -1,0 +1,74 @@
+{{Quality|Superior|00:41, 8 May 2013 (UTC)}}
+{{Noble
+| noble= Mayor
+| office= Decent Office
+| quarters= Decent Quarters
+| dining= Decent Dining Room
+| chests=2
+| cabinets=1
+| racks=1
+| stands=1
+| mandates=1
+| demands=2
+| arrival=
+* 50 population
+* Elected
+| function=
+* Meet with foreign dignitaries
+* Talk with unhappy citizens
+}}
+{{av}}[[Image:Goblin_slaying_Mayor.png‎|thumb|left|A dwarven mayor conducting a "meeting" with some goblin "liaisons".]]
+The '''mayor''' is a [[noble]] whose job it is to speak with unhappy citizens, and (until a [[baron]] is appointed) entertain foreign [[diplomat]]s. They are automatically elected from the most social [[dwarf]], most likely the [[expedition leader]], once the population reaches 50. A new mayor may be elected from time to time as your dwarves' social skills change.
+
+== Mayoral nobility ==
+
+A mayor or expedition leader is required to appoint other nobles. Should your leader suffer an [[unfortunate accident]], you will have to wait for a new leader to be elected before appointing nobles.
+
+Mayors are classy individuals, who require certain living standards in their rooms and furniture. They may [[demand]] certain types of furniture in their rooms and will get unhappy if you don't comply. They can [[mandate]] the production of certain goods, and receive a happy thought if you comply. If the mandated items are not produced in time, the mayor will receive an unhappy thought and will order the [[Justice|punishment]] of whoever they consider responsible. Likewise, they can prohibit the export of certain goods instead of mandating their construction, resulting in dwarves being punished for trade violations.
+
+Mayors are not replaced by [[baron]]s, [[duke]]s, [[count]]s or [[monarch]]s; if one of these nobles arrives, or if a citizen of your fortress is promoted to one of these positions, the mayor will still issue mandates and require quarters.
+
+== Mayoral elections ==
+
+Mayors are elected for one year. Elections take place at exactly 4:00 PM on the 17th day of summer (specifically, 2000 season-ticks after the beginning of the season). If you don't have a mayor, then the election will happen at the beginning of ''every season'', rather than just summer.
+
+When an election happens, it's usually the dwarf with the highest social skills who gets elected. Since [[children]] have nothing to do but socialize, they gain lots of social skills which carry over when a child becomes an adult at age 12. Thus, it's not unusual for a 12-year-old to become mayor. Their chief competitors are [[vampire]]s (who also tend to have high social skills), tamed [[gremlin]]s, and other non-working citizens of your fortress, since they cannot be put to work either. The mayor doesn't actually need to be dwarven, any [[Citizenship|citizen]] can be elected - however, dwarves currently on a [[mission]] or otherwise absent from the fortress cannot.
+
+== Miscellaneous ==
+
+Curiously, a mayor is able to appoint replacements for elected positions, including their own.{{bug|2512}} If your mayor likes something unpleasant like [[Finished goods|puzzleboxes]], you can simply have them appoint their own replacement. This also creates a historical event, which makes for good [[statue]]s of dwarves rejecting the old mayor with which to brighten up the new mayor's office. Note that the ex-mayor may periodically win election back into the mayorship.
+
+<!-- Doesn't work; see bug 3047:  http://www.bay12games.com/dwarves/mantisbt/view.php?id=3047
+If you manually select a higher office noble like the monarch or duke to be your mayor, their mandates will all end when a new mayor is elected. Setting the game to pause and pop-up in announcements will help keep track of this whenever a new mayor is elected. This can provide a helpful relief from mandates on occasion.
+-->
+
+{{gamedata|	[POSITION:MAYOR]
+		[NAME:mayor:mayors]
+		[SITE]
+		[NUMBER:1]
+		[RESPONSIBILITY:MEET_WORKERS]
+		[RESPONSIBILITY:RECEIVE_DIPLOMATS]
+		[RESPONSIBILITY:MILITARY_GOALS]
+		[REQUIRES_POPULATION:50]
+		[RULES_FROM_LOCATION]
+		[ELECTED]
+		[PRECEDENCE:60]
+		[FLASHES]
+		[BRAG_ON_KILL]
+		[CHAT_WORTHY]
+		[DO_NOT_CULL]
+		[KILL_QUEST]
+		[COLOR:5:0:0]
+		[ACCOUNT_EXEMPT]
+		[DUTY_BOUND]
+		[DEMAND_MAX:2]
+		[MANDATE_MAX:1]
+		[REQUIRED_BOXES:2]
+		[REQUIRED_CABINETS:1]
+		[REQUIRED_RACKS:1]
+		[REQUIRED_STANDS:1]
+		[REQUIRED_OFFICE:500]
+		[REQUIRED_BEDROOM:500]
+		[REQUIRED_DINING:500]}}
+{{Nobles}}
+{{Category|Elected Nobles}}

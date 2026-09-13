@@ -1,0 +1,164 @@
+{{Quality|Exceptional|12:58, 8 April 2015 (UTC)}}
+{{av}}
+{{Noble
+|noble=Manager
+|office=Meager Office
+|function = *Allows large production orders.
+*Allows workshop profiles to be set.
+|arrival=Appointed on the [[nobles screen]].
+}}
+
+The '''manager''' is a [[noble]] that allows players to create multiple production orders, and also lets them set up profiles for workshops. This means that players can rapidly dispatch any number of jobs from a single screen, without having to add tasks to individual [[workshop]]s. 
+
+==Relevant Skills==
+A certain set of skills are relevant for any manager. Furthermore, certain [[personality trait]]s influence whether any experience is gained in the skill. There are [[Attribute#Soul_Attributes|soul attributes]] that affect the skills, and other skills that affect the same attributes' cross-training. The ones relevant for a manager are as follows:
+{| {{prettytable}}
+|- style="background:#ddd"
+! rowspan="2" colspan="2"                   | Skill (relevant for manager)
+! rowspan="2" colspan="2"                   | Personality Trait (needed to gain social skill)
+!             colspan="2"                   | Attribute (affected by social skill)
+|-
+!                         style="width:1em" | Body
+!                         style="width:1em" | Soul
+|-
+| rowspan="3"             style="width:5em" | Administrator
+| rowspan="3"             style="width:5em" | Organizer
+| rowspan="3" colspan="2"                   | 
+| rowspan="3"             style="width:1em" | 
+|                                             Analytical ability
+|-
+|                                             Creativity
+|-
+|                                             Social awareness
+|-
+| rowspan="6" | Social - Other
+| rowspan="3" | Consoler
+| rowspan="3" | Straightforwardness (Honesty)
+| rowspan="3" | > 39
+| rowspan="3" | 
+|               Linguistic ability
+|-
+|               Empathy
+|-
+|               Social awareness
+|-
+| rowspan="3" | Pacifier
+| rowspan="3" | Cooperation (Compromising)
+| rowspan="3" | > 39
+| rowspan="3" | 
+|               Linguistic ability
+|-
+|               Empathy
+|-
+|               Social awareness
+|}
+The better match with the skills, traits and attributes in the table above, the better of a manager a dwarf will be. Try to avoid traits that halt experience gain for a relevant skill, otherwise time will be lost training a dwarf who will never get better at that skill.
+
+==Office==
+A manager only performs their duties in their office, so it's absolutely necessary to assign them one - since only a meager office is required, a single chair in the [[dining room]] will suffice.
+
+To set up a dwarf to be the manager and give them an office:
+
+#Hit {{K|n}} to enter the Nobles screen
+#Select Manager and hit {{K|Enter}}. Assign a dwarf to be the manager. If nobody is particularly suited to the job, picking the Expedition Leader is a reasonable choice.
+#Build a [[chair]] somewhere, or locate an existing chair.
+#Use the {{K|q}} command and place the cursor on the chair. Select the option to make the area into an [[Office]] and assign your manager as the owner of the office. At this point, the red {{DFtext|[REQUIRE]|4:1}} under "Manager" should have disappeared from the {{K|n}}obles screen, and you should be able to queue up work orders.
+
+It is trivially easy for a manager to get experience in the [[organizer]] skill. Just queue a lot of jobs to produce 30 of something, such as [[loom|Collect Webs]], which appears first on the list.  The manager will gain experience when validating the order, not when the order is finished. You can cancel the order after it's validated, if you wish.
+
+{{a|The manager screen}}
+
+== Work orders ==
+Work orders are an advanced feature of [[Workshop#Management|Workshop Management]] that becomes available with a manager. It allows easier management, automation and/or fine control of the various activities needed to maintain a well-oiled fort. The manager screen lists all work orders in the fortress, shows their status and allows to modify them and place new general orders. It is accessed from the main screen through the {{K|j}}ob list and then the {{K|m}}anager menu.
+
+=== Validating orders ===
+A manager is required to coordinate work orders. The manager will need time to approve work orders before production begins. If there are at least 20 dwarves total, then the manager will need to go to their office to "validate" each work order before it is acted on. If they are somehow occupied with other things, then this might take a while, so in larger forts, you might want to make sure your manager is not overly-burdened with other labors (for example, disabling hauling and cleaning for the manager might be a good idea). The manager will also not perform their duties if socializing, drinking, eating, asleep or otherwise incapacitated (perhaps due to wounds). Managers don't require writing materials such as [[paper]] or [[scroll]]s to validate production orders.
+
+After a production order is validated and Active, corresponding tasks will be automatically added to applicable workshops until the production quota has been met. An [[announcement]] appears when each order is completed. For repeating orders, the order then becomes inactive and the manager checks at the selected time interval for the conditions to become true again before restarting the order.
+
+The status of orders can be checked in the manager screen — validated orders will have a green checkmark, while invalidated orders will have a red X. Job orders will remain enqueued until the manager is once again in his (or her) office. An order can have the prefix of 'Ready', 'Checking' or 'Active'. A 'Ready' order only needs to be validated by the manager to become 'Active'. A 'Checking' order is waiting for its conditions to be satisfied: it will then become 'Active'.
+
+=== Placing new orders ===
+Work orders can be placed either as general orders through the Manager screen (and will be automatically tasked to any suitable workshops) or linked to a specific workshop through the Workshop Profile screen. To create a general order:
+
+#Hit {{K|j}}-{{K|m}} or {{K|u}}-{{K|m}} to enter the Manager screen.
+#Press {{K|q}} to create a new work order
+#Start typing (part of) the name of the item you want to produce. This will cause menu options that don't match the string you type to disappear from the menu.
+#Use the directional keys to select the specific type of item you want.
+#Enter the quantity of items you want to produce (0 for a perpetual order).
+#Your work order will appear in the list.
+
+{{TipBox2|float=right|DFHack|
+The [[DFHack]] ``gui/workorder-details`` command (bound to {{k|d}} by default in the manager screen) provides control over any job's input items, such as which plant type gets milled by a "Mill Plants" job (which is otherwise impossible to specify in normal DF.)}}
+
+On creation of that order, it can be further customized; changing the {{K|c}}onditions for the order being fulfilled and repeated (see next sections) and adjusting the {{K|d}}etails of an order specifying type of material used in the making of the item (if applicable). As well as {{K|r}}emove it, raise its {{K|p}}riority, make it max ({{K|t}}op) priority, change its priority, or {{K|Enter}} limit the amount of workshops the order can be tasked to.
+
+Work orders are created as a one-time order. Unlike manual assignments in a workshop, these orders aren't limited to ten items, won't cancel until complete, will be automatically tasked to any available workshops, and will notify the player upon completion. Setting the max number of workshops that the order applies to can be especially useful to ensure that multiple orders for the same type of workshop (e.g. a Mason's Workshop) are worked on at the same time.
+
+; Repeating orders
+An order can be set as a One-time order, or a Repeating order that will restart when completed (checked daily, monthly, seasonally or yearly). Use {{K|+}}{{K|-}} to adjust condition check frequency. Without conditions (see below) this is similar to making an infinite batch (quantity 0) job, though a yearly batch may be less likely to overwhelm stockpiles.
+
+In repeating work orders, the quantity of items is treated as a batch size. The quantity is set when creating the work order, and cannot be changed without redoing the entire order. A repeating work order will not abort mid-batch due to job cancellation or failed conditions. It must wait until the end of the batch before stopping.
+
+=== Conditions ===
+Work order conditions can be added by pressing {{K|c}}ondition with relevant work order highlighted. This automatically sets the order to repeat (checked daily), set to activate based on the amount of an item in your fortress, or upon completion of other work orders. If multiple conditions exist, all must be satisfied for the job to start.
+
+Be forewarned that perpetual (quantity 0) orders ''only check their conditions the first time they become true'', since the (infinitely-sized) batch never completes. This can lead to confusion and frustration, as the order ''will '''never''' stop, regardless of failed conditions''! To reiterate, quantity 0 orders start as soon as all conditions are met, and will only spam failures (but not stop) when Urist runs out of e.g. logs to turn into barrels. Any other orders at a given shop will be ignored after starting a perpetual order.
+
+; Specified item
+
+Specified item conditions can be added using the {{K|r}}eagents and {{K|p}}roducts presets, which you can then tweak to your liking, or you can {{K|a}}dd them manually. Reagents add input conditions (e.g. keep 10 wood logs before making beds), while products limit outputs (e.g. stop once 10 beds are made). For each item entry the following conditions can be changed:
+
+* {{K|i}}tem type - Items base type, such as: 'beds', 'bolts', 'bars', 'Plant'(used for wood), 'Boxes and Bags', or just 'item' for any type.
+* {{K|m}}aterial - Specific material such as 'obsidian', 'Acacia', 'Feather wood', 'steel' etc.
+* {{K|t}}raits - Such as food-storage items, nearby items, empty items, unrotten etc.
+* {{K|n}}umber - Change the number of items required. The number of the items (though this does not count items that are forbidden, built into something, or owned) and the ine{{K|q}}uality, at least (>=), less than(<), at most(<=), greater than(>), exactly(==), not(!=)). 
+
+Some useful item conditions are tricky to specify:
+* "refined coal" is just simply item=bar, material=coal.
+* a specific flour is item=powder, material=''required flour name'' (not the ''plant name''), trait=cookable.
+* a specific alcohol is item=drink, material=''alcohol name'' (not the ''plant name'').
+* "empty bags" cannot be chosen manually, but can be duplicated with item=boxes and bags, trait=empty, trait=sewn-imageless.
+* trait=lye-containing item (not to be mistaken with trait=lye-bearing item which does nothing) is only available for the "make soap" job.
+* item=liquid, material=lye ignores lye in buckets, but does correctly track lye in barrels.
+* trait=unused cannot be chosen manually, only {{K|r}}eagents/materials key sets it for "make clothing" type of jobs.
+* trait=melt-designated does not work when chosen manually, only via {{K|r}}eagents/materials key.
+
+;Order conditions
+{{K|o}}rder adds an entry that checks for a different order status. Set a job to only activate when another order is being completed, or another order is becoming active. For example, if you have one order to make barrels and another to brew drinks, you can add an order condition that first makes 10 barrels and then continues the brew order to brew 10 drinks. See also: [[Steel#Automated steel production]].
+
+; Notes:
+* manager orders don't respect stockpile links, only workshop restrictions.
+* A guide to setting up functional work orders may be found in [http://www.bay12forums.com/smf/index.php?topic=158287.0 this thread].
+
+== Workshop profiles==
+The manager also allows players to change a [[workshop]]'s "Profile". To access a workshop's Profile, {{k|q}}uery a workshop, then look at the Workshop {{k|P}}rofile. This gives you three tabs to go through: Permitted Workers, Work Orders, and Labor Restrictions. Press the arrow keys to go between the tabs.
+
+* Permitted Workers tab allows to restrict the dwarves that can use it and the minimum and maximum [[skill]] level required to use the workshop. They can choose who specifically can use the workshop by pressing {{k|Enter}} on their name to permit/forbid their use of the workshop.
+* Work Orders tab allow place new orders specific to that workshop. Toggle whether or not the workshop will accept general work orders or adjust how many of them can be task to this workshop at a time. Additionally the Labor Restrictions tab allows to further restrict which general work orders the workshop can be tasked with. 
+
+Dwarves with strange moods seem to be able to claim a workshop, even if they do not meet the profile criteria.
+
+A note of caution: workshop profiles persist even if the manager is killed, which can lead to workshops becoming unusable if the manager is killed and the dwarves permitted into the workshop die or are reassigned. Furthermore, workshop profiles seem to be slightly buggy. Adequate (rusty) weaponsmiths have been seen using a forge with the skill min/max both set to "Dabbling". This may be somewhat irritating if peasants are undergoing training.
+
+==Disadvantages==
+One disadvantage of the work order system is that no work will be performed until the manager finishes validating the order. Work order validation appears to be fairly high priority, but it's best to ensure your manager has ample free time and isn't typically called far from the office for timely order validation.
+
+A second disadvantage is that if there is more than one workshop which can fulfill a particular job set (such as several ordinary [[glass furnace]]s dedicated to [[sand]] collection, plus several [[magma glass furnace]]s for actual glass production) then the manager will distribute the jobs amongst all those workshops. While this can be an advantage (for example, if you want to speed up the work orders by having multiple workshops), this will make it difficult to dedicate different workshops to different tasks. This can be prevented by entering the profile of specific workshops and moving to the Work Orders menu; setting "general work orders cannot task this shop" will prevent the manager from assigning tasks.
+
+{{gamedata|	[POSITION:MANAGER]
+		[NAME:manager:managers]
+		[SITE]
+		[REQUIRES_MARKET]
+		[NUMBER:1]
+		[RESPONSIBILITY:MANAGE_PRODUCTION]
+		[APPOINTED_BY:EXPEDITION_LEADER]
+		[APPOINTED_BY:MAYOR]
+		[PRECEDENCE:160]
+		[DO_NOT_CULL]
+		[COLOR:5:0:0]
+		[DUTY_BOUND]
+		[REQUIRED_OFFICE:1]}}
+{{Nobles}}
+{{Category|Appointed Nobles}}
+{{Category|Interface}}

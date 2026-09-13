@@ -1,0 +1,585 @@
+<div class="mw-parser-output"><div id="page-quality-rating" style="text-align: right;margin: 0.8em 0;font-size:75%">
+ <a href="/index.php/Dwarf_Fortress_Wiki:Quality#Tattered" title="Dwarf Fortress Wiki:Quality"><span id="stub-quality" style="text-decoration:none; color:#333333">xTATTEREDx</span></a> <span style="font-weight:bold;" class="dot">&#160;·</span> <a href="/index.php/Dwarf_Fortress_Wiki:Quality#Fine" title="Dwarf Fortress Wiki:Quality"><span id="fine-quality" style="text-decoration:none; color:#CA7A02;">+FINE+</span></a> <span style="font-weight:bold;" class="dot">&#160;·</span> <a href="/index.php/Dwarf_Fortress_Wiki:Quality#Superior" title="Dwarf Fortress Wiki:Quality"><span id="superior-quality" style="padding:0.2em; border:1px solid #b8f; border-radius: 2px; -webkit-border-radius: 2px; -moz-border-radius: 2px; -o-border-radius: 2px; -ms-border-radius: 2px; background:#e4ccff; color:#8800cc;">*SUPERIOR*</span></a> <span style="font-weight:bold;" class="dot">&#160;·</span> <a href="/index.php/Dwarf_Fortress_Wiki:Quality#Exceptional" title="Dwarf Fortress Wiki:Quality"><span id="exceptional-quality" style="text-decoration:none; color:#0088CC;">≡EXCEPTIONAL≡</span></a> <span style="font-weight:bold;" class="dot">&#160;·</span> <a href="/index.php/Dwarf_Fortress_Wiki:Quality#Masterwork" title="Dwarf Fortress Wiki:Quality"><span id="masterwork-quality" style="text-decoration:none; color:#72A329;">☼MASTERWORK☼</span></a></div>
+<table class="version-table" style="text-align: center; margin: 3px auto 5px; padding: 0.25em; border-radius: 3px; -webkit-border-radius: 3px; -moz-border-radius: 3px; -o-border-radius: 3px; -ms-border-radius: 3px;; border: 2px solid #ddbb88; background: #fff5ee; min-width:27em"><tbody><tr><td style="padding: 0.3em 0.3em; width: 100%;"><div style="margin-bottom:6px;" class="version-links-r1"><span style="font-size:100%"><span class="version-link"><a href="/index.php/Melt_item" title="Melt item"><span style="text-decoration: none; color: #CA7A02;">v53.16</span></a></span><span style="font-weight:bold;" class="dot">&#160;·</span> <span class="version-link"><span style="text-decoration: none; color: #CA7A02; background-color: #FFE0CC; border-radius: 2px; -webkit-border-radius: 2px; -moz-border-radius: 2px; -o-border-radius: 2px; -ms-border-radius: 2px; border: 1px solid #ddbb88; padding: 0.2em;"><b>v0.47.05</b></span></span><span style="font-weight:bold;" class="dot">&#160;·</span> <span class="version-link"><a href="/index.php/v0.34:Melt_item" title="v0.34:Melt item"><span style="text-decoration: none; color: #CA7A02;">v0.34</span></a></span><span style="font-weight:bold;" class="dot">&#160;·</span> <span class="version-link"><a href="/index.php/v0.31:Melt_item" title="v0.31:Melt item"><span style="text-decoration: none; color: #CA7A02;">v0.31</span></a></span><span style="font-weight:bold;" class="dot">&#160;·</span> <span class="version-link"><a href="/index.php/40d:Melt_item" title="40d:Melt item"><span style="text-decoration: none; color: #CA7A02;">v0.28</span></a></span><span style="font-weight:bold;" class="dot">&#160;·</span> <span class="version-link"><a href="/index.php/23a:Melt_item" title="23a:Melt item"><span style="text-decoration: none; color: #CA7A02;">v0.23</span></a></span></span></div><span>This article is about an <b>older version</b> of DF.</span><br />
+<div style="float: right; font-size:75%; padding-right:2px; margin-top:-2px; margin-bottom:-7px;"><span class="version-link"><a href="/index.php/Dwarf_Fortress_Wiki:V" class="mw-redirect" title="Dwarf Fortress Wiki:V"><span style="text-decoration: none; color: #CA7A02;">More Info</span></a></span><span style="font-weight:bold;" class="dot">&#160;·</span> <span class="version-link"><a href="/index.php/Template:Av" class="mw-redirect" title="Template:Av"><span style="text-decoration: none; color: #CA7A02;">V</span></a></span></div></td></tr>
+</tbody></table>
+<p>You can <b>melt</b> metal items at a <a href="/index.php/DF2014:Smelter" title="DF2014:Smelter">smelter</a> using the <a href="/index.php/DF2014:Furnace_operator" title="DF2014:Furnace operator">furnace operator</a> labor, to recover some of the <a href="/index.php/DF2014:Metal" title="DF2014:Metal">metal</a> they were made of.  <a href="/index.php/DF2014:Decoration" title="DF2014:Decoration">Decorations</a> of a different metal are not recovered or considered; the metal recovered is the specific metal that the basic item was listed as being made from. The percentile return is fixed and known for each item type, and ranges from 10%-150% (or more), depending on the item. Higher skill levels in furnace operator speed up the process, but have no effect on the percentile return.
+</p>
+
+<h2><span class="mw-headline" id="Return">Return</span></h2>
+<p>Recovered metal is measured in tenths (0.1) of a full <a href="/index.php/DF2014:Bar" title="DF2014:Bar">bar</a>, and those fractions of a bar of each separate metal are saved at the smelter where the item was melted.  Fractional bars are not "shared" between smelters, nor do they exist as usable objects as is.  When 10/10ths of a type of metal are accumulated at the same smelter, 1 bar of that metal is produced.  If the smelter is torn down or destroyed, all fractions are lost.
+</p>
+<dl><dd><i>Example:</i>
+<ul><li>If 2 items, worth .4 bars each, of the same metal are melted at the same smelter, that smelter now has .8 bars (2 x .4) of that specific metal waiting in it. Not enough to use - yet...</li>
+<li>If a similar item of a <i>different</i> metal is then melted there, that smelter would still have .8 bars of the first metal, and .4 bars of the second metal.</li>
+<li>If a similar item of the <i>first</i> metal is then melted at a <i>different</i> smelter, that other smelter will have .4 of that metal, and have no connection to the fractions in the first smelter.</li>
+<li>If <i>(finally!)</i> a 3rd, similar item of the first metal is melted at the first smelter, that adds another .4 bars to the .8 waiting there. This gives a total of 1.2 bars of that type of metal, meaning 1 <a href="/index.php/DF2014:Bar" title="DF2014:Bar">bar</a> of that metal is produced, ready for forging or other use, and .2 of a bar is waiting (plus the .4 of the second metal, also waiting).</li></ul></dd></dl>
+<p>It makes sense to designate one smelter as a "melting" smelter (or for one metal type), to guarantee that fractions will add up effectively. This becomes less important as you accumulate more bars of a particular metal.
+</p>
+<h2><span class="mw-headline" id="Designating_items_to_melt">Designating items to melt</span></h2>
+<p>You can designate metal items for melting from any interface that allows you to view the object's description screen, such as the <a href="/index.php/DF2014:Stocks" title="DF2014:Stocks">Stocks</a> page or the Loo<span style="white-space: nowrap;"><span class="keyboard-key nowrap" style="border: 1px solid #aaa; border-radius: 0.2em; -webkit-border-radius: 0.2em; -moz-border-radius: 0.2em; -o-border-radius: 0.2em; -ms-border-radius: 0.2em; -moz-box-shadow: 0.1em 0.2em 0.2em #ddd; -webkit-box-shadow: 0.1em 0.2em 0.2em #ddd; box-shadow: 0.1em 0.2em 0.2em #ddd; background-color: #f9f9f9; background-image: -moz-linear-gradient(top, #eee, #f9f9f9, #eee); background-image: -o-linear-gradient(top, #eee, #f9f9f9, #eee); background-image: -webkit-linear-gradient(top, #eee, #f9f9f9, #eee); background-image: linear-gradient(to bottom, #eee, #f9f9f9, #eee); padding: 0.1em 0.3em; font-family: inherit; font-size: 0.9em;" title="">k</span></span> interface. 
+</p><p>To bring up an individual object description screen when the object is:
+</p>
+<dl><dd><ul><li>On the <b>ground</b>:  Type <span style="white-space: nowrap;"><span class="keyboard-key nowrap" style="border: 1px solid #aaa; border-radius: 0.2em; -webkit-border-radius: 0.2em; -moz-border-radius: 0.2em; -o-border-radius: 0.2em; -ms-border-radius: 0.2em; -moz-box-shadow: 0.1em 0.2em 0.2em #ddd; -webkit-box-shadow: 0.1em 0.2em 0.2em #ddd; box-shadow: 0.1em 0.2em 0.2em #ddd; background-color: #f9f9f9; background-image: -moz-linear-gradient(top, #eee, #f9f9f9, #eee); background-image: -o-linear-gradient(top, #eee, #f9f9f9, #eee); background-image: -webkit-linear-gradient(top, #eee, #f9f9f9, #eee); background-image: linear-gradient(to bottom, #eee, #f9f9f9, #eee); padding: 0.1em 0.3em; font-family: inherit; font-size: 0.9em;" title="">k</span></span>, scroll to the object, select it from the list, and hit <span style="white-space: nowrap;"><span class="keyboard-key nowrap" style="border: 1px solid #aaa; border-radius: 0.2em; -webkit-border-radius: 0.2em; -moz-border-radius: 0.2em; -o-border-radius: 0.2em; -ms-border-radius: 0.2em; -moz-box-shadow: 0.1em 0.2em 0.2em #ddd; -webkit-box-shadow: 0.1em 0.2em 0.2em #ddd; box-shadow: 0.1em 0.2em 0.2em #ddd; background-color: #f9f9f9; background-image: -moz-linear-gradient(top, #eee, #f9f9f9, #eee); background-image: -o-linear-gradient(top, #eee, #f9f9f9, #eee); background-image: -webkit-linear-gradient(top, #eee, #f9f9f9, #eee); background-image: linear-gradient(to bottom, #eee, #f9f9f9, #eee); padding: 0.1em 0.3em; font-family: inherit; font-size: 0.9em;" title="">Enter</span></span>.</li>
+<li>In a <b>workshop</b>:  Type <span style="white-space: nowrap;"><span class="keyboard-key nowrap" style="border: 1px solid #aaa; border-radius: 0.2em; -webkit-border-radius: 0.2em; -moz-border-radius: 0.2em; -o-border-radius: 0.2em; -ms-border-radius: 0.2em; -moz-box-shadow: 0.1em 0.2em 0.2em #ddd; -webkit-box-shadow: 0.1em 0.2em 0.2em #ddd; box-shadow: 0.1em 0.2em 0.2em #ddd; background-color: #f9f9f9; background-image: -moz-linear-gradient(top, #eee, #f9f9f9, #eee); background-image: -o-linear-gradient(top, #eee, #f9f9f9, #eee); background-image: -webkit-linear-gradient(top, #eee, #f9f9f9, #eee); background-image: linear-gradient(to bottom, #eee, #f9f9f9, #eee); padding: 0.1em 0.3em; font-family: inherit; font-size: 0.9em;" title="">t</span></span>, highlight the workshop, select the object from the list, and hit <span style="white-space: nowrap;"><span class="keyboard-key nowrap" style="border: 1px solid #aaa; border-radius: 0.2em; -webkit-border-radius: 0.2em; -moz-border-radius: 0.2em; -o-border-radius: 0.2em; -ms-border-radius: 0.2em; -moz-box-shadow: 0.1em 0.2em 0.2em #ddd; -webkit-box-shadow: 0.1em 0.2em 0.2em #ddd; box-shadow: 0.1em 0.2em 0.2em #ddd; background-color: #f9f9f9; background-image: -moz-linear-gradient(top, #eee, #f9f9f9, #eee); background-image: -o-linear-gradient(top, #eee, #f9f9f9, #eee); background-image: -webkit-linear-gradient(top, #eee, #f9f9f9, #eee); background-image: linear-gradient(to bottom, #eee, #f9f9f9, #eee); padding: 0.1em 0.3em; font-family: inherit; font-size: 0.9em;" title="">Enter</span></span>.</li>
+<li><b>Held</b> by a dwarf:  Type <span style="white-space: nowrap;"><span class="keyboard-key nowrap" style="border: 1px solid #aaa; border-radius: 0.2em; -webkit-border-radius: 0.2em; -moz-border-radius: 0.2em; -o-border-radius: 0.2em; -ms-border-radius: 0.2em; -moz-box-shadow: 0.1em 0.2em 0.2em #ddd; -webkit-box-shadow: 0.1em 0.2em 0.2em #ddd; box-shadow: 0.1em 0.2em 0.2em #ddd; background-color: #f9f9f9; background-image: -moz-linear-gradient(top, #eee, #f9f9f9, #eee); background-image: -o-linear-gradient(top, #eee, #f9f9f9, #eee); background-image: -webkit-linear-gradient(top, #eee, #f9f9f9, #eee); background-image: linear-gradient(to bottom, #eee, #f9f9f9, #eee); padding: 0.1em 0.3em; font-family: inherit; font-size: 0.9em;" title="">v</span></span>, highlight the dwarf, type <span style="white-space: nowrap;"><span class="keyboard-key nowrap" style="border: 1px solid #aaa; border-radius: 0.2em; -webkit-border-radius: 0.2em; -moz-border-radius: 0.2em; -o-border-radius: 0.2em; -ms-border-radius: 0.2em; -moz-box-shadow: 0.1em 0.2em 0.2em #ddd; -webkit-box-shadow: 0.1em 0.2em 0.2em #ddd; box-shadow: 0.1em 0.2em 0.2em #ddd; background-color: #f9f9f9; background-image: -moz-linear-gradient(top, #eee, #f9f9f9, #eee); background-image: -o-linear-gradient(top, #eee, #f9f9f9, #eee); background-image: -webkit-linear-gradient(top, #eee, #f9f9f9, #eee); background-image: linear-gradient(to bottom, #eee, #f9f9f9, #eee); padding: 0.1em 0.3em; font-family: inherit; font-size: 0.9em;" title="">i</span></span> to show his inventory, select the object from the list, and hit <span style="white-space: nowrap;"><span class="keyboard-key nowrap" style="border: 1px solid #aaa; border-radius: 0.2em; -webkit-border-radius: 0.2em; -moz-border-radius: 0.2em; -o-border-radius: 0.2em; -ms-border-radius: 0.2em; -moz-box-shadow: 0.1em 0.2em 0.2em #ddd; -webkit-box-shadow: 0.1em 0.2em 0.2em #ddd; box-shadow: 0.1em 0.2em 0.2em #ddd; background-color: #f9f9f9; background-image: -moz-linear-gradient(top, #eee, #f9f9f9, #eee); background-image: -o-linear-gradient(top, #eee, #f9f9f9, #eee); background-image: -webkit-linear-gradient(top, #eee, #f9f9f9, #eee); background-image: linear-gradient(to bottom, #eee, #f9f9f9, #eee); padding: 0.1em 0.3em; font-family: inherit; font-size: 0.9em;" title="">Enter</span></span>.</li>
+<li>Inside another object:  Display the container's object description screen, navigate to the specific object you wish to see, and hit <span style="white-space: nowrap;"><span class="keyboard-key nowrap" style="border: 1px solid #aaa; border-radius: 0.2em; -webkit-border-radius: 0.2em; -moz-border-radius: 0.2em; -o-border-radius: 0.2em; -ms-border-radius: 0.2em; -moz-box-shadow: 0.1em 0.2em 0.2em #ddd; -webkit-box-shadow: 0.1em 0.2em 0.2em #ddd; box-shadow: 0.1em 0.2em 0.2em #ddd; background-color: #f9f9f9; background-image: -moz-linear-gradient(top, #eee, #f9f9f9, #eee); background-image: -o-linear-gradient(top, #eee, #f9f9f9, #eee); background-image: -webkit-linear-gradient(top, #eee, #f9f9f9, #eee); background-image: linear-gradient(to bottom, #eee, #f9f9f9, #eee); padding: 0.1em 0.3em; font-family: inherit; font-size: 0.9em;" title="">Enter</span></span>.</li>
+<li>In the <b>stocks</b> menu:  Type <span style="white-space: nowrap;"><span class="keyboard-key nowrap" style="border: 1px solid #aaa; border-radius: 0.2em; -webkit-border-radius: 0.2em; -moz-border-radius: 0.2em; -o-border-radius: 0.2em; -ms-border-radius: 0.2em; -moz-box-shadow: 0.1em 0.2em 0.2em #ddd; -webkit-box-shadow: 0.1em 0.2em 0.2em #ddd; box-shadow: 0.1em 0.2em 0.2em #ddd; background-color: #f9f9f9; background-image: -moz-linear-gradient(top, #eee, #f9f9f9, #eee); background-image: -o-linear-gradient(top, #eee, #f9f9f9, #eee); background-image: -webkit-linear-gradient(top, #eee, #f9f9f9, #eee); background-image: linear-gradient(to bottom, #eee, #f9f9f9, #eee); padding: 0.1em 0.3em; font-family: inherit; font-size: 0.9em;" title="">z</span></span>, hit right-direction a few times to select "stocks" and press return.  Scroll to the type of object you wish to melt, hit <span style="white-space: nowrap;"><span class="keyboard-key nowrap" style="border: 1px solid #aaa; border-radius: 0.2em; -webkit-border-radius: 0.2em; -moz-border-radius: 0.2em; -o-border-radius: 0.2em; -ms-border-radius: 0.2em; -moz-box-shadow: 0.1em 0.2em 0.2em #ddd; -webkit-box-shadow: 0.1em 0.2em 0.2em #ddd; box-shadow: 0.1em 0.2em 0.2em #ddd; background-color: #f9f9f9; background-image: -moz-linear-gradient(top, #eee, #f9f9f9, #eee); background-image: -o-linear-gradient(top, #eee, #f9f9f9, #eee); background-image: -webkit-linear-gradient(top, #eee, #f9f9f9, #eee); background-image: linear-gradient(to bottom, #eee, #f9f9f9, #eee); padding: 0.1em 0.3em; font-family: inherit; font-size: 0.9em;" title="">Tab</span></span> to show individual items (You have to have an exact number or this won't work.  See <a href="/index.php/DF2014:Bookkeeper" title="DF2014:Bookkeeper">Bookkeeper</a> for how to get this), scroll to the specific object, and type <span style="white-space: nowrap;"><span class="keyboard-key nowrap" style="border: 1px solid #aaa; border-radius: 0.2em; -webkit-border-radius: 0.2em; -moz-border-radius: 0.2em; -o-border-radius: 0.2em; -ms-border-radius: 0.2em; -moz-box-shadow: 0.1em 0.2em 0.2em #ddd; -webkit-box-shadow: 0.1em 0.2em 0.2em #ddd; box-shadow: 0.1em 0.2em 0.2em #ddd; background-color: #f9f9f9; background-image: -moz-linear-gradient(top, #eee, #f9f9f9, #eee); background-image: -o-linear-gradient(top, #eee, #f9f9f9, #eee); background-image: -webkit-linear-gradient(top, #eee, #f9f9f9, #eee); background-image: linear-gradient(to bottom, #eee, #f9f9f9, #eee); padding: 0.1em 0.3em; font-family: inherit; font-size: 0.9em;" title="">v</span></span> to view.</li></ul></dd></dl>
+<p>To designate the item, simply type <span style="white-space: nowrap;"><span class="keyboard-key nowrap" style="border: 1px solid #aaa; border-radius: 0.2em; -webkit-border-radius: 0.2em; -moz-border-radius: 0.2em; -o-border-radius: 0.2em; -ms-border-radius: 0.2em; -moz-box-shadow: 0.1em 0.2em 0.2em #ddd; -webkit-box-shadow: 0.1em 0.2em 0.2em #ddd; box-shadow: 0.1em 0.2em 0.2em #ddd; background-color: #f9f9f9; background-image: -moz-linear-gradient(top, #eee, #f9f9f9, #eee); background-image: -o-linear-gradient(top, #eee, #f9f9f9, #eee); background-image: -webkit-linear-gradient(top, #eee, #f9f9f9, #eee); background-image: linear-gradient(to bottom, #eee, #f9f9f9, #eee); padding: 0.1em 0.3em; font-family: inherit; font-size: 0.9em;" title="">m</span></span> to mark the object for melting.  If the item is designated for melting and <a href="/index.php/DF2014:Forbidden" class="mw-redirect" title="DF2014:Forbidden">forbidden</a> then the item will <b>not</b> be melted.
+</p><p>However, this only marks which items you want to be melted - you still have to place the job-order in a smelter...
+</p>
+<h2><span class="mw-headline" id="Melting_the_items">Melting the items</span></h2>
+<p>Items designated to be melted will be left alone until you queue a "Melt a metal object" job <span style="white-space: nowrap;"><span class="keyboard-key nowrap" style="border: 1px solid #aaa; border-radius: 0.2em; -webkit-border-radius: 0.2em; -moz-border-radius: 0.2em; -o-border-radius: 0.2em; -ms-border-radius: 0.2em; -moz-box-shadow: 0.1em 0.2em 0.2em #ddd; -webkit-box-shadow: 0.1em 0.2em 0.2em #ddd; box-shadow: 0.1em 0.2em 0.2em #ddd; background-color: #f9f9f9; background-image: -moz-linear-gradient(top, #eee, #f9f9f9, #eee); background-image: -o-linear-gradient(top, #eee, #f9f9f9, #eee); background-image: -webkit-linear-gradient(top, #eee, #f9f9f9, #eee); background-image: linear-gradient(to bottom, #eee, #f9f9f9, #eee); padding: 0.1em 0.3em; font-family: inherit; font-size: 0.9em;" title="">o</span></span> at a <a href="/index.php/DF2014:Smelter" title="DF2014:Smelter">Smelter</a>.  Melting down an object requires the <a href="/index.php/DF2014:Furnace_operator" title="DF2014:Furnace operator">Furnace operator</a> labor (and consumes a unit of <a href="/index.php/DF2014:Fuel" title="DF2014:Fuel">fuel</a> for a non-magma smelter).
+</p><p>The job gives the same experience to the <a href="/index.php/DF2014:Furnace_operator" title="DF2014:Furnace operator">furnace operator</a> skill, regardless of&#160;% yield of the item melted.
+</p><p>If there are items in a container that you are melting, the items will be placed inside the smelter when the container is destroyed.
+</p>
+<h2><span class="mw-headline" id="Yield">Yield</span></h2>
+<p>Testing is incomplete, but preliminary results show a yield of 0.3 bars*the object's material size for anything that has a material size, or 1 bar for most furniture (regardless of size).
+</p><p>Note that the Efficiency column is only accurate for ordinary metals - when using <a href="/index.php/DF2014:Adamantine" title="DF2014:Adamantine">adamantine</a>, the number of wafers required comes from the "Material size" column instead of "Bars to make", so if that number is larger, the efficiency will be reduced accordingly. For coins however, the number is accurate for adamantine, which only requires 1 wafers and returns 1.1 wafers when melted.
+</p><p>Note also that some items are always produced in twos (gauntlets, boots) or threes (flasks, goblets), or (in the case of ammo) stacks of 25 at a time, or (for coins) 500 at a time. In the case of crafts, from 1 to 3 are produced. These are shown as "1/x" below, although a single job will never use less than one bar, nor produce less than the pair/trio/etc. of items.
+</p>
+<table style="margin:1em 1em 1em 0;background:#F9F9F9;border:1px #AAA solid;border-collapse:collapse;" class="wikitable sortable">
+<tbody><tr>
+<th>Item</th>
+<th>Material size</th>
+<th>Bars to make</th>
+<th>Bars returned</th>
+<th>Efficiency
+</th></tr>
+<tr>
+<th colspan="5"><a href="/index.php/DF2014:Armor" title="DF2014:Armor">Armor</a> (Armorsmith)
+</th></tr>
+<tr>
+<td><a href="/index.php/DF2014:Armor#Headgear" title="DF2014:Armor">Cap</a></td>
+<td>1</td>
+<td>1</td>
+<td>0.3</td>
+<td>30%
+</td></tr>
+<tr>
+<td><a href="/index.php/DF2014:Armor#Headgear" title="DF2014:Armor">Helm</a></td>
+<td>2</td>
+<td>1</td>
+<td>0.6</td>
+<td>60%
+</td></tr>
+<tr>
+<td><a href="/index.php/DF2014:Armor#Hands" title="DF2014:Armor">Gauntlet</a></td>
+<td>2</td>
+<td>1/2</td>
+<td>0.6</td>
+<td><b>120%</b>
+</td></tr>
+<tr>
+<td><a href="/index.php/DF2014:Armor#Lower_Body" title="DF2014:Armor">Leggings</a></td>
+<td>5</td>
+<td>1</td>
+<td>1.5</td>
+<td><i><b>150%</b></i>
+</td></tr>
+<tr>
+<td><a href="/index.php/DF2014:Armor#Lower_Body" title="DF2014:Armor">Greaves</a></td>
+<td>6</td>
+<td>2</td>
+<td>1.8</td>
+<td>90%
+</td></tr>
+<tr>
+<td><a href="/index.php/DF2014:Armor#Footwear" title="DF2014:Armor">Low boot</a></td>
+<td>1</td>
+<td>1/2</td>
+<td>0.3</td>
+<td>60%
+</td></tr>
+<tr>
+<td><a href="/index.php/DF2014:Armor#Footwear" title="DF2014:Armor">High boot</a></td>
+<td>2</td>
+<td>1/2</td>
+<td>0.6</td>
+<td><b>120%</b>
+</td></tr>
+<tr>
+<td><a href="/index.php/DF2014:Buckler" class="mw-redirect" title="DF2014:Buckler">Buckler</a></td>
+<td>2</td>
+<td>1</td>
+<td>0.6</td>
+<td>60%
+</td></tr>
+<tr>
+<td><a href="/index.php/DF2014:Shield" class="mw-redirect" title="DF2014:Shield">Shield</a></td>
+<td>4</td>
+<td>1</td>
+<td>1.2</td>
+<td><b>120%</b>
+</td></tr>
+<tr>
+<td><a href="/index.php/DF2014:Armor#Upper_Body" title="DF2014:Armor">Mail shirt</a></td>
+<td>6</td>
+<td>2</td>
+<td>1.8</td>
+<td>90%
+</td></tr>
+<tr>
+<td><a href="/index.php/DF2014:Armor#Upper_Body" title="DF2014:Armor">Breastplate</a></td>
+<td>9</td>
+<td>3</td>
+<td>2.7</td>
+<td>90%
+</td></tr>
+<tr>
+<th colspan="5"><a href="/index.php/DF2014:Weapon" title="DF2014:Weapon">Weapons</a> (made by Weaponsmith)
+</th></tr>
+<tr>
+<td><a href="/index.php/DF2014:Crossbow" title="DF2014:Crossbow">Crossbow</a></td>
+<td>3</td>
+<td>1</td>
+<td>0.9</td>
+<td>90%
+</td></tr>
+<tr>
+<td><a href="/index.php/DF2014:Mace" title="DF2014:Mace">Mace</a></td>
+<td>3</td>
+<td>1</td>
+<td>0.9</td>
+<td>90%
+</td></tr>
+<tr>
+<td><a href="/index.php/DF2014:Spear" title="DF2014:Spear">Spear</a></td>
+<td>3</td>
+<td>1</td>
+<td>0.9</td>
+<td>90%
+</td></tr>
+<tr>
+<td><a href="/index.php/DF2014:Short_sword" title="DF2014:Short sword">Short sword</a></td>
+<td>3</td>
+<td>1</td>
+<td>0.9</td>
+<td>90%
+</td></tr>
+<tr>
+<td><a href="/index.php/DF2014:War_hammer" title="DF2014:War hammer">War hammer</a></td>
+<td>3</td>
+<td>1</td>
+<td>0.9</td>
+<td>90%
+</td></tr>
+<tr>
+<td><a href="/index.php/DF2014:Battle_axe" title="DF2014:Battle axe">Battle axe</a></td>
+<td>4</td>
+<td>1</td>
+<td>1.2</td>
+<td><b>120%</b>
+</td></tr>
+<tr>
+<td><a href="/index.php/DF2014:Pick" title="DF2014:Pick">Pick</a></td>
+<td>4</td>
+<td>1</td>
+<td>1.2</td>
+<td><b>120%</b>
+</td></tr>
+<tr>
+<td><a href="/index.php/DF2014:Ammo" class="mw-redirect" title="DF2014:Ammo">Ammo</a> (full stack of 25)</td>
+<td>(1)</td>
+<td>1</td>
+<td>0.3</td>
+<td>30%
+</td></tr>
+<tr>
+<td><a href="/index.php/DF2014:Ammo" class="mw-redirect" title="DF2014:Ammo">Ammo</a> (single bolt)</td>
+<td>(1)</td>
+<td>1/25</td>
+<td>0.1</td>
+<td><i><b>250%</b></i>
+</td></tr>
+<tr>
+<th colspan="5"><a href="/index.php/DF2014:Trap_component" title="DF2014:Trap component">Trap Components</a> (Weaponsmith)
+</th></tr>
+<tr>
+<td><a href="/index.php/DF2014:Trap_component#Giant_axe_blade" title="DF2014:Trap component">Giant Axe Blade</a></td>
+<td>5</td>
+<td>1</td>
+<td>1.5</td>
+<td><i><b>150%</b></i>
+</td></tr>
+<tr>
+<td><a href="/index.php/DF2014:Trap_component#Enormous_corkscrew" title="DF2014:Trap component">Enormous Corkscrew</a></td>
+<td>5</td>
+<td>1</td>
+<td>1.5</td>
+<td><i><b>150%</b></i>
+</td></tr>
+<tr>
+<td><a href="/index.php/DF2014:Trap_component#Spiked_ball" title="DF2014:Trap component">Spiked Ball</a></td>
+<td>4</td>
+<td>1</td>
+<td>1.2</td>
+<td><b>120%</b>
+</td></tr>
+<tr>
+<td><a href="/index.php/DF2014:Trap_component#Large.2C_serrated_disc" title="DF2014:Trap component">Large, Serrated Disc</a></td>
+<td>4</td>
+<td>1</td>
+<td>1.2</td>
+<td><b>120%</b>
+</td></tr>
+<tr>
+<td><a href="/index.php/DF2014:Trap_component#Menacing_spike" title="DF2014:Trap component">Menacing Spike</a></td>
+<td>5</td>
+<td>1</td>
+<td>1.5</td>
+<td><i><b>150%</b></i>
+</td></tr>
+<tr>
+<th colspan="5"><a href="/index.php/DF2014:Trap_component" title="DF2014:Trap component">Trap Components</a> (Mechanic)
+</th></tr>
+<tr>
+<td><a href="/index.php/DF2014:Mechanisms" class="mw-redirect" title="DF2014:Mechanisms">Mechanisms</a></td>
+<td>(3)</td>
+<td>1</td>
+<td>0.5</td>
+<td>50%
+</td></tr>
+<tr>
+<th colspan="5">Siege Equipment (Weaponsmith)
+</th></tr>
+<tr>
+<td><a href="/index.php/DF2014:Ballista_arrow" title="DF2014:Ballista arrow">Ballista arrow</a></td>
+<td>(4)</td>
+<td>3</td>
+<td>0.5</td>
+<td>17%
+</td></tr>
+<tr>
+<td><a href="/index.php/DF2014:Ballista_arrowhead" class="mw-redirect" title="DF2014:Ballista arrowhead">Ballista arrowhead</a></td>
+<td>(4)</td>
+<td>3</td>
+<td>0.5</td>
+<td>17%
+</td></tr>
+<tr>
+<th colspan="5"><a href="/index.php/DF2014:Tool" title="DF2014:Tool">Tools</a> (Metalcrafter)
+</th></tr>
+<tr>
+<td><a href="/index.php/DF2014:Nest_box" title="DF2014:Nest box">Nest box</a></td>
+<td>1</td>
+<td>1</td>
+<td>0.3</td>
+<td>30%
+</td></tr>
+<tr>
+<td><a href="/index.php/DF2014:Jug" title="DF2014:Jug">Jug</a></td>
+<td>1</td>
+<td>1</td>
+<td>0.3</td>
+<td>30%
+</td></tr>
+<tr>
+<td><a href="/index.php/DF2014:Pot" class="mw-redirect" title="DF2014:Pot">Pot</a></td>
+<td>1</td>
+<td>1</td>
+<td>0.3</td>
+<td>30%
+</td></tr>
+<tr>
+<td><a href="/index.php/DF2014:Hive" title="DF2014:Hive">Hive</a></td>
+<td>1</td>
+<td>1</td>
+<td>0.3</td>
+<td>30%
+</td></tr>
+<tr>
+<td><a href="/index.php/DF2014:Minecart" title="DF2014:Minecart">Minecart</a></td>
+<td>6</td>
+<td>2</td>
+<td>1.8</td>
+<td>90%
+</td></tr>
+<tr>
+<td><a href="/index.php/DF2014:Wheelbarrow" title="DF2014:Wheelbarrow">Wheelbarrow</a></td>
+<td>6</td>
+<td>2</td>
+<td>1.8</td>
+<td>90%
+</td></tr>
+<tr>
+<th colspan="5"><a href="/index.php/DF2014:Furniture" title="DF2014:Furniture">Furniture</a> (Blacksmith / Metalsmith)
+</th></tr>
+<tr>
+<td><a href="/index.php/DF2014:Anvil" title="DF2014:Anvil">Anvil</a></td>
+<td>(9)</td>
+<td>3</td>
+<td>1</td>
+<td>33%
+</td></tr>
+<tr>
+<td><a href="/index.php/DF2014:Armor_stand" title="DF2014:Armor stand">Armor stand</a></td>
+<td>(9)</td>
+<td>3</td>
+<td>1</td>
+<td>33%
+</td></tr>
+<tr>
+<td><a href="/index.php/DF2014:Barrel" title="DF2014:Barrel">Barrel</a></td>
+<td>(9)</td>
+<td>3</td>
+<td>1</td>
+<td>33%
+</td></tr>
+<tr>
+<td><a href="/index.php/DF2014:Bin" title="DF2014:Bin">Bin</a></td>
+<td>(9)</td>
+<td>3</td>
+<td>1</td>
+<td>33%
+</td></tr>
+<tr>
+<td><a href="/index.php/DF2014:Block" title="DF2014:Block">Blocks</a></td>
+<td>(4)</td>
+<td>1</td>
+<td>0.5</td>
+<td>50%
+</td></tr>
+<tr>
+<td><a href="/index.php/DF2014:Bucket" title="DF2014:Bucket">Bucket</a></td>
+<td>(3)</td>
+<td>1</td>
+<td>1</td>
+<td><b>100%</b>
+</td></tr>
+<tr>
+<td><a href="/index.php/DF2014:Cabinet" title="DF2014:Cabinet">Cabinet</a></td>
+<td>(9)</td>
+<td>3</td>
+<td>1</td>
+<td>33%
+</td></tr>
+<tr>
+<td><a href="/index.php/DF2014:Cage" title="DF2014:Cage">Cage</a></td>
+<td>(6)</td>
+<td>3</td>
+<td>1</td>
+<td>33%
+</td></tr>
+<tr>
+<td><a href="/index.php/DF2014:Chair" class="mw-redirect" title="DF2014:Chair">Chair</a></td>
+<td>(9)</td>
+<td>3</td>
+<td>1</td>
+<td>33%
+</td></tr>
+<tr>
+<td><a href="/index.php/DF2014:Chest" class="mw-redirect" title="DF2014:Chest">Chest</a></td>
+<td>(9)</td>
+<td>3</td>
+<td>1</td>
+<td>33%
+</td></tr>
+<tr>
+<td><a href="/index.php/DF2014:Coffin" title="DF2014:Coffin">Coffin</a></td>
+<td>(9)</td>
+<td>3</td>
+<td>1</td>
+<td>33%
+</td></tr>
+<tr>
+<td><a href="/index.php/DF2014:Crutch" title="DF2014:Crutch">Crutch</a></td>
+<td>(3)</td>
+<td>3</td>
+<td>0.5</td>
+<td>17%
+</td></tr>
+<tr>
+<td><a href="/index.php/DF2014:Door" title="DF2014:Door">Door</a></td>
+<td>(9)</td>
+<td>3</td>
+<td>1</td>
+<td>33%
+</td></tr>
+<tr>
+<td><a href="/index.php/DF2014:Floodgate" title="DF2014:Floodgate">Floodgate</a></td>
+<td>(9)</td>
+<td>3</td>
+<td>1</td>
+<td>33%
+</td></tr>
+<tr>
+<td><a href="/index.php/DF2014:Grate" title="DF2014:Grate">Grate</a></td>
+<td>(9)</td>
+<td>3</td>
+<td>1</td>
+<td>33%
+</td></tr>
+<tr>
+<td><a href="/index.php/DF2014:Hatch_cover" title="DF2014:Hatch cover">Hatch cover</a></td>
+<td>(9)</td>
+<td>3</td>
+<td>1</td>
+<td>33%
+</td></tr>
+<tr>
+<td><a href="/index.php/DF2014:Pipe_section" title="DF2014:Pipe section">Pipe section</a></td>
+<td>(9)</td>
+<td>3</td>
+<td>1</td>
+<td>33%
+</td></tr>
+<tr>
+<td><a href="/index.php/DF2014:Splint" class="mw-redirect" title="DF2014:Splint">Splint</a></td>
+<td>(2)</td>
+<td>3</td>
+<td>0.5</td>
+<td>17%
+</td></tr>
+<tr>
+<td><a href="/index.php/DF2014:Statue" title="DF2014:Statue">Statue</a></td>
+<td>(9)</td>
+<td>3</td>
+<td>1</td>
+<td>33%
+</td></tr>
+<tr>
+<td><a href="/index.php/DF2014:Table" title="DF2014:Table">Table</a></td>
+<td>(9)</td>
+<td>3</td>
+<td>1</td>
+<td>33%
+</td></tr>
+<tr>
+<td><a href="/index.php/DF2014:Traction_bench" class="mw-redirect" title="DF2014:Traction bench">Traction bench</a></td>
+<td>(9)</td>
+<td>3</td>
+<td>1</td>
+<td>33%
+</td></tr>
+<tr>
+<td><a href="/index.php/DF2014:Weapon_rack" title="DF2014:Weapon rack">Weapon rack</a></td>
+<td>(9)</td>
+<td>3</td>
+<td>1</td>
+<td>33%
+</td></tr>
+<tr>
+<th colspan="5"><a href="/index.php/DF2014:Furniture" title="DF2014:Furniture">Furniture</a> (Metalcrafter)
+</th></tr>
+<tr>
+<td><a href="/index.php/DF2014:Chain" title="DF2014:Chain">Chain</a></td>
+<td>(4)</td>
+<td>1</td>
+<td>1</td>
+<td><b>100%</b>
+</td></tr>
+<tr>
+<th colspan="5"><a href="/index.php/DF2014:Furniture" title="DF2014:Furniture">Furniture</a> (Trapper)
+</th></tr>
+<tr>
+<td><a href="/index.php/DF2014:Animal_trap" title="DF2014:Animal trap">Animal trap</a></td>
+<td>(3)</td>
+<td>1</td>
+<td>1</td>
+<td><b>100%</b>
+</td></tr>
+<tr>
+<th colspan="5">Other objects (Metalcrafter)
+</th></tr>
+<tr>
+<td><a href="/index.php/DF2014:Jewelry" title="DF2014:Jewelry">Amulet</a></td>
+<td>(1/3 to 1)</td>
+<td>1/3 to 1</td>
+<td>0.1</td>
+<td>10% to 30%
+</td></tr>
+<tr>
+<td><a href="/index.php/DF2014:Jewelry" title="DF2014:Jewelry">Bracelet</a></td>
+<td>(1/3 to 1)</td>
+<td>1/3 to 1</td>
+<td>0.1</td>
+<td>10% to 30%
+</td></tr>
+<tr>
+<td><a href="/index.php/DF2014:Coins" class="mw-redirect" title="DF2014:Coins">Coins</a> (stack of 500)</td>
+<td>(1)</td>
+<td>1</td>
+<td>1.1</td>
+<td><i><b>110%</b></i>
+</td></tr>
+<tr>
+<td><a href="/index.php/DF2014:Coins" class="mw-redirect" title="DF2014:Coins">Coins</a> (stack of 1)</td>
+<td>(1)</td>
+<td>1/500</td>
+<td>0.1</td>
+<td><i><b>5000%</b></i>
+</td></tr>
+<tr>
+<td><a href="/index.php/DF2014:Jewelry" title="DF2014:Jewelry">Crown</a></td>
+<td>(1/3 to 1)</td>
+<td>1/3 to 1</td>
+<td>0.1</td>
+<td>10% to 30%
+</td></tr>
+<tr>
+<td><a href="/index.php/DF2014:Jewelry" title="DF2014:Jewelry">Earring</a></td>
+<td>(1/3 to 1)</td>
+<td>1/3 to 1</td>
+<td>0.1</td>
+<td>10% to 30%
+</td></tr>
+<tr>
+<td><a href="/index.php/DF2014:Flask" title="DF2014:Flask">Flask</a></td>
+<td>(1/3)</td>
+<td>1/3</td>
+<td>0.2</td>
+<td>60%
+</td></tr>
+<tr>
+<td><a href="/index.php/DF2014:Figurine" title="DF2014:Figurine">Figurine</a></td>
+<td>(1/3 to 1)</td>
+<td>1/3 to 1</td>
+<td>0.2</td>
+<td>20% to 60%
+</td></tr>
+<tr>
+<td><a href="/index.php/DF2014:Goblet" class="mw-redirect" title="DF2014:Goblet">Goblet</a></td>
+<td>(1/3)</td>
+<td>1/3</td>
+<td>0.2</td>
+<td>60%
+</td></tr>
+<tr>
+<td><a href="/index.php/DF2014:Instrument" title="DF2014:Instrument">Instrument</a></td>
+<td>(1)</td>
+<td>1</td>
+<td>1</td>
+<td><b>100%</b>
+</td></tr>
+<tr>
+<td><a href="/index.php/DF2014:Toy" class="mw-redirect" title="DF2014:Toy">Toy</a></td>
+<td>(1)</td>
+<td>1</td>
+<td>0.2</td>
+<td>20%
+</td></tr>
+<tr>
+<td><a href="/index.php/DF2014:Ring" class="mw-redirect" title="DF2014:Ring">Ring</a></td>
+<td>(1/3 to 1)</td>
+<td>1/3 to 1</td>
+<td>0.1</td>
+<td>10% to 30%
+</td></tr>
+<tr>
+<td><a href="/index.php/DF2014:Finished_goods#Crafts" title="DF2014:Finished goods">Scepter</a></td>
+<td>(1/3 to 1)</td>
+<td>1/3 to 1</td>
+<td>0.2</td>
+<td>20% to 60%
+</td></tr></tbody></table>
+<p>All melting yields for items <i>not</i> specified in the raws (weapons, armor, tools, etc.) are hardcoded.
+</p><p>Metal bars are able to be melted and remade into half a bar at a smelter. (Melt 1 tin bar, return as 0.5 tin bar + experience.)
+</p>
+<h3><span class="mw-headline" id="Exploit">Exploit</span></h3>
+<p>Items that yield more than 100% can be used to increase the amount of a metal you have available by producing those items and then melting them down again, as many times as required.  This is generally considered to be an <a href="/index.php/DF2014:Exploit#Infinite_Adamantine_.2F_Metals" title="DF2014:Exploit">exploit</a> of an error in the game mechanics. However, using a dwarf with a high skill level to make the items will result in severe tantrums being thrown when all the ☼masterwork☼ creations start being melted, so you will need to utilize low-skill metalworkers and make sure their skill levels don't get too high to avoid masterwork items, or you will have tantrum spirals, fistfights, and/or lots of <s>useless junk</s> valuable trade goods lying around. (A <a href="/index.php/DF2014:Workshop_profile" class="mw-redirect" title="DF2014:Workshop profile">workshop profile</a> on the forge can be used to restrict production to dwarves below a certain skill level. You can also make a nearby stockpile for meltable items that doesn't allow Legendary or Master items.)
+For multiplying weapons/armor-grade metals, forging and melting giant axe blades, large serrated discs, and leggings will yield a 50% gain per item; *note that this does not work with adamantine, since adamantine goods require 3 times as many wafers, instead leading to a 70% loss per item.
+</p>
+<h2><span class="mw-headline" id="Bugs">Bugs</span></h2>
+<ul><li>A number of items produce more metal when melted than they cost to produce.<span class=""><sup><a href="#Bugs">Bug</a>:<a rel="nofollow" class="external text" href="https://dwarffortressbugtracker.com/view.php?id=6027">6027</a></sup></span></li>
+<li>Designating items to be melted from the <a href="/index.php/DF2014:Stocks" title="DF2014:Stocks">stocks</a> screen can cause a crash.<span class=""><sup><a href="#Bugs">Bug</a>:<a rel="nofollow" class="external text" href="https://dwarffortressbugtracker.com/view.php?id=6431">6431</a></sup></span></li></ul></div>

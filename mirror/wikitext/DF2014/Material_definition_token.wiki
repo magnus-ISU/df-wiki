@@ -1,0 +1,916 @@
+{{Quality|Fine|11:11, 18 May 2015 (UTC)}}
+{{av}}
+{{Modding}}
+
+The following [[token]]s can be used in [[material]] definitions (whether for inorganics or those within plants and creatures) as well as in [[material templates]].
+
+__TOC__
+{{clear}}
+
+==Material properties==
+{| {{prettytable}}
+|- bgcolor="#C0C0C0"
+! Token
+! Arguments
+! Description
+
+|-
+| {{text_anchor|USE_MATERIAL_TEMPLATE}}
+|
+* <template name>
+| Imports the properties of the specified preexisting material template. 
+
+|-
+| {{text_anchor|PREFIX}}
+|
+* <prefix> or NONE
+| Applies a prefix to all items made from the material. For PLANT and CREATURE materials, this defaults to the plant/creature name. '''Not permitted in material template definitions.'''
+
+|-
+| {{text_anchor|STONE_NAME}}
+|
+* <name>
+| Overrides the name of [[Item_token#BOULDER|BOULDER]] items (i.e. mined-out stones) made of the material (used for native copper/silver/gold/platinum to make them be called "nuggets" instead of "boulders").
+
+|-
+| {{text_anchor|IS_GEM}}
+|
+* <name>
+* <plural>
+* OVERWRITE_SOLID (optional)
+| Used to indicate that said material is a gemstone - when tiles are mined out, rough gems will be yielded instead of boulders. Plural can be "STP" to automatically append an "s" to the singular form, and OVERWRITE_SOLID will override the relevant STATE_NAME and STATE_ADJ values.
+
+|-
+| {{text_anchor|TEMP_DIET_INFO}}
+| 
+* <type>
+| Specifies what the material should be treated as when drinking water contaminated by it, for generating unhappy [[thought]]s. Valid values are BLOOD, SLIME, VOMIT, ICHOR, PUS, GOO, GRIME, and FILTH.
+
+|-
+| {{text_anchor|POWDER_DYE}}
+|
+*<[[Color#Color_tokens|color token]]>
+| Allows the material to be used as [[dye]], and defines color of dyed items.
+
+|-
+| {{text_anchor|TILE}}
+| 
+*<[[Main:Character table|tile value or character]]>
+| Specifies the tile that will be used to represent unmined tiles made of this material. Generally only used with stones. Defaults to 219 ('█').
+
+|-
+| {{text_anchor|ITEM_SYMBOL}}
+|
+*<[[Main:Character table|tile value or character]]>
+| Specifies the tile that will be used to represent [[Item_token#BOULDER|BOULDER]] items made of this material. Generally only used with stones. Defaults to 7 ('•').
+
+|-
+| {{text_anchor|DISPLAY_COLOR}}
+|
+*<[[Color#Color_values|foreground color]]>
+*<[[Color#Color_values|background color]]>
+*<[[Color#Color_values|foreground brightness]]>
+| The on-screen color of the material. Uses a standard 3-digit [[Color|color token]]. Equivalent to [TILE_COLOR:a:b:c], [BUILD_COLOR:b:a:X] (X = 1 if 'a' equals 'b', 0 otherwise), and [BASIC_COLOR:a:c]
+
+|-
+| {{text_anchor|BUILD_COLOR}}
+|
+*<[[Color#Color_values|foreground color]]>
+*<[[Color#Color_values|background color]]>
+*<[[Color#Color_values|foreground brightness]]>
+| The color of objects made of this material which use both the foreground and background color: [[door]]s, [[floodgate]]s, [[hatch cover]]s, [[bin]]s, [[barrel]]s, and [[cage]]s. Defaults to 7:7:1 (white).
+
+|-
+| {{text_anchor|TILE_COLOR}}
+|
+*<[[Color#Color_values|foreground color]]>
+*<[[Color#Color_values|background color]]>
+*<[[Color#Color_values|foreground brightness]]>
+| The color of unmined tiles containing this material (for stone and soil), as well as [[engraving]]s in this material. Defaults to 7:7:1 (white).
+
+|-
+| {{text_anchor|BASIC_COLOR}}
+|
+*<[[Color#Color_values|foreground color]]>
+*<[[Color#Color_values|foreground brightness]]>
+| The color of objects made of this material which use only the foreground color, including workshops, floors and boulders, and smoothed walls. Defaults to 7:1 (white).
+
+|-
+| {{text_anchor|STATE_COLOR}}
+|
+*<[[Material_definition_token#Material States|material state]]>
+*<[[Color#Color_tokens|color token]]>
+| Determines the color of the material at the specified state. See [[Material_definition_token#Material states|below]] for a list of valid material states. Color comes from descriptor_color_standard.txt. The nearest color value is used to display contaminants and body parts made of this material. Example:
+[STATE_COLOR:ALL_SOLID:GRAY]
+
+|-
+| {{text_anchor|STATE_NAME}}
+|
+*<[[Material_definition_token#Material States|material state]]>
+*<name>
+| Determines the name of the material at the specified state, as displayed in-game.
+[STATE_NAME:ALL_SOLID:stone]
+
+|-
+| {{text_anchor|STATE_ADJ}}
+|
+*<[[Material_definition_token#Material States|material state]]>
+*<adjective>
+| Like [[Material_definition_token#STATE_NAME|STATE_NAME]], but used in different situations. Equipment made from the material uses the state adjective and not the state name.
+
+|-
+| {{text_anchor|STATE_NAME_ADJ}}
+|
+*<[[Material_definition_token#Material States|material state]]>
+*<name>
+*<adjective>
+| Sets both [[Material_definition_token#STATE_NAME|STATE_NAME]] and [[Material_definition_token#STATE_ADJ|STATE_ADJ]] at the same time.
+
+|-
+| {{text_anchor|ABSORPTION}}
+|
+*<value>
+| The material's tendency to absorb liquids. Containers made of materials with nonzero absorption cannot hold liquids unless they have been [[glaze]]d. Defaults to 0.
+
+|-
+| {{text_anchor|IMPACT_YIELD}}
+|
+*<value>
+| Specifies how hard of an impact (in kilopascals) the material can withstand before it will start deforming permanently. Used for blunt-force combat. Defaults to 10000.
+
+|-
+| {{text_anchor|IMPACT_FRACTURE}}
+|
+*<value>
+| Specifies how hard of an impact the material can withstand before it will fail entirely. Used for blunt-force combat. Defaults to 10000.
+
+|-
+| {{text_anchor|IMPACT_STRAIN_AT_YIELD}} or {{text_anchor|IMPACT_ELASTICITY}}
+|
+*<value>
+| Specifies how much the material will have given (in parts-per-100000) when the yield point is reached. Used for blunt-force combat. Defaults to 0. Apparently affects in combat whether the corresponding tissue is bruised (value >= 50000), torn (value between 25000 and 49999), or fractured (value <= 24999)
+
+|-
+| {{text_anchor|COMPRESSIVE_YIELD}}
+|
+*<value>
+| Specifies how hard the material can be compressed before it will start deforming permanently. Determines a tissue's resistance to pinching and response to strangulation. Defaults to 10000.
+
+|-
+| {{text_anchor|COMPRESSIVE_FRACTURE}}
+|
+*<value>
+| Specifies how hard the material can be compressed before it will fail entirely. Determines a tissue's resistance to pinching and response to strangulation. Defaults to 10000.
+
+|-
+| {{text_anchor|COMPRESSIVE_STRAIN_AT_YIELD}} or {{text_anchor|COMPRESSIVE_ELASTICITY}}
+|
+*<value>
+| Specifies how much the material will have given when it has been compressed to its yield point. Determines a tissue's resistance to pinching and response to strangulation. Defaults to 0.
+
+|-
+| {{text_anchor|TENSILE_YIELD}}
+|
+*<value>
+| Specifies how hard the material can be stretched before it will start deforming permanently. Determines a tissue's resistance to a latching and tearing bite. Defaults to 10000.
+
+|-
+| {{text_anchor|TENSILE_FRACTURE}}
+|
+*<value>
+| Specifies how hard the material can be stretched before it will fail entirely. Determines a tissue's resistance to a latching and tearing bite. Defaults to 10000.
+
+|-
+| {{text_anchor|TENSILE_STRAIN_AT_YIELD}} or {{text_anchor|TENSILE_ELASTICITY}}
+|
+*<value>
+| Specifies how much the material will have given when it is stretched to its yield point. Determines a tissue's resistance to a latching and tearing bite. Defaults to 0.
+
+|-
+| {{text_anchor|TORSION_YIELD}}
+|
+*<value>
+| Specifies how hard the material can be twisted before it will start deforming permanently. Used for latching and shaking with a blunt attack (no default creature has such an attack, but they can be modded in).  Defaults to 10000.
+
+|-
+| {{text_anchor|TORSION_FRACTURE}}
+|
+*<value>
+| Specifies how hard the material can be twisted before it will fail entirely. Used for latching and shaking with a blunt attack (no default creature has such an attack, but they can be modded in).  Defaults to 10000.
+
+|-
+| {{text_anchor|TORSION_STRAIN_AT_YIELD}} or {{text_anchor|TORSION_ELASTICITY}}
+|
+*<value>
+| Specifies how much the material will have given when it is twisted to its yield point. Used for latching and shaking with a blunt attack (no default creature has such an attack, but they can be modded in).  Defaults to 0.
+
+|-
+| {{text_anchor|SHEAR_YIELD}}
+|
+*<value>
+| Specifies how hard the material can be sheared before it will start deforming permanently. Used for cutting calculations. Defaults to 10000.
+
+|-
+| {{text_anchor|SHEAR_FRACTURE}}
+|
+*<value>
+| Specifies how hard the material can be sheared before it will fail entirely. Used for cutting calculations. Defaults to 10000.
+
+|-
+| {{text_anchor|SHEAR_STRAIN_AT_YIELD}} or {{text_anchor|SHEAR_ELASTICITY}}
+|
+*<value>
+| Specifies how much the material will have given when sheared to its yield point. Used for cutting calculations. Defaults to 0.
+
+|-
+| {{text_anchor|BENDING_YIELD}}
+|
+*<value>
+| Specifies how hard the material can be bent before it will start deforming permanently. Determines a tissue's resistance to being mangled with a joint lock. Defaults to 10000.
+
+|-
+| {{text_anchor|BENDING_FRACTURE}}
+|
+*<value>
+| Specifies how hard the material can be bent before it will fail entirely. Determines a tissue's resistance to being mangled with a joint lock. Defaults to 10000.
+
+|-
+| {{text_anchor|BENDING_STRAIN_AT_YIELD}} or {{text_anchor|BENDING_ELASTICITY}}
+|
+*<value>
+| Specifies how much the material will have given when bent to its yield point. Determines a tissue's resistance to being mangled with a joint lock. Defaults to 0.
+
+|-
+| {{text_anchor|MAX_EDGE}}
+|
+*<value>
+| How sharp the material is. Used in cutting calculations. Does not allow an inferior metal to penetrate superior armor. Applying a value of at least 10000 to a stone will allow weapons to be made from that stone. Defaults to 10000.
+
+|-
+| {{text_anchor|MATERIAL_VALUE}}
+|
+*<value>
+| Value modifier for the material. Defaults to 1. This number can be made negative by placing a "-" in front, resulting in things that you are paid to buy and must pay to sell.
+
+|-
+| {{text_anchor|MULTIPLY_VALUE}}
+|
+*<value>
+| Multiplies the value of the material. '''Not permitted in material template definitions.'''
+
+|-
+| {{text_anchor|SPEC_HEAT}}
+|
+*<specific heat capacity>
+| Rate at which the material heats up or cools down (in joules/kilogram-kelvin). If set to NONE, the temperature will be fixed at its initial value. See [[Temperature]] for more information. Defaults to NONE.
+
+|-
+| {{text_anchor|HEATDAM_POINT}}
+|
+*<temperature>
+| Temperature above which the material takes damage from heat. May be set to NONE. If the material has an ignite point but no heatdam point, it will burn for a very long time (9 months and 16.8 days). Defaults to NONE.
+
+|-
+| {{text_anchor|COLDDAM_POINT}}
+|
+*<temperature>
+| Temperature below which the material takes damage from cold. Defaults to NONE.
+
+|-
+| {{text_anchor|IGNITE_POINT}}
+|
+*<temperature>
+| Temperature at which the material will catch fire. Defaults to NONE.
+
+|-
+| {{text_anchor|MELTING_POINT}}
+|
+*<temperature>
+| Temperature at which the material melts. Defaults to NONE.
+
+|-
+| {{text_anchor|BOILING_POINT}}
+|
+*<temperature>
+| Temperature at which the material boils. Defaults to NONE.
+
+|-
+| {{text_anchor|MAT_FIXED_TEMP}}
+|
+*<temperature>
+| Items composed of this material will initially have this temperature. Used in conjunction with <code>[SPEC_HEAT:NONE]</code> to make material's temperature fixed at the specified value. Defaults to NONE.
+
+|-
+| {{text_anchor|IF_EXISTS_SET_HEATDAM_POINT}}
+|
+*<temperature>
+| Changes a material's HEATDAM_POINT, but only if it was not set to NONE. '''Not permitted in material template definitions.'''
+
+|-
+| {{text_anchor|IF_EXISTS_SET_COLDDAM_POINT}}
+|
+*<temperature>
+| Changes a material's COLDDAM_POINT, but only if it was not set to NONE. '''Not permitted in material template definitions.'''
+
+|-
+| {{text_anchor|IF_EXISTS_SET_IGNITE_POINT}}
+|
+*<temperature>
+| Changes a material's IGNITE_POINT, but only if it was not set to NONE. '''Not permitted in material template definitions.'''
+
+|-
+| {{text_anchor|IF_EXISTS_SET_MELTING_POINT}}
+|
+*<temperature>
+| Changes a material's MELTING_POINT, but only if it was not set to NONE. '''Not permitted in material template definitions.'''
+
+|-
+| {{text_anchor|IF_EXISTS_SET_BOILING_POINT}}
+|
+*<temperature>
+| Changes a material's BOILING_POINT, but only if it was not set to NONE. '''Not permitted in material template definitions.'''
+
+|-
+| {{text_anchor|IF_EXISTS_SET_MAT_FIXED_TEMP}}
+|
+*<temperature>
+| Changes a material's MAT_FIXED_TEMP, but only if it was not set to NONE. '''Not permitted in material template definitions.'''
+
+|-
+| {{text_anchor|SOLID_DENSITY}}
+|
+*<density>
+| Specifies the density (in kilograms per cubic meter) of the material when in solid form. Also affects combat calculations; affects blunt-force damage and ability of edged weapons to pierce tissue layers{{verify}}. Defaults to NONE.
+
+|-
+| {{text_anchor|LIQUID_DENSITY}}
+|
+*<density>
+| Specifies the density of the material when in liquid form. Defaults to NONE.
+
+|-
+| {{text_anchor|MOLAR_MASS}}
+|
+*<value>
+| Supposedly not used{{verify}}. Theoretically, should determine density (at given pressure) in gas state, on which in turn would depend (together with weight of vaporized material) on the volume covered by spreading vapors. Defaults to NONE.
+
+|-
+| {{text_anchor|EXTRACT_STORAGE}}
+| * BARREL or FLASK
+| Specifies the type of container used to store the material. Used in conjunction with the [EXTRACT_BARREL], [EXTRACT_VIAL], or [EXTRACT_STILL_VIAL] [[plant token]]s. Defaults to BARREL.
+
+|-
+| {{text_anchor|BUTCHER_SPECIAL}}
+|
+*<[[item token]]>
+| Specifies the item type used for butchering results made of this material. Stock raws use GLOB:NONE for fat and MEAT:NONE for other meat materials.
+
+|-
+| {{text_anchor|MEAT_NAME}}
+|
+*<prefix>
+*<name>
+*<adjective>
+| When a creature is butchered, meat yielded from organs made from this material will be named via this token. If this token is not specified, meat objects will be called "chops" instead.
+
+|-
+| {{text_anchor|BLOCK_NAME}}
+|
+*<singular>
+*<plural>
+| Specifies the name of [[block]]s made from this material.
+
+|-
+| {{text_anchor|MATERIAL_REACTION_PRODUCT}}
+|
+*<reaction reference>
+*<[[material token]]>
+| Used with reaction raws to associate a reagent material with a product material. The first argument is used by HAS_MATERIAL_REACTION_PRODUCT and GET_MATERIAL_FROM_REAGENT in reaction raws. The remainder is a material reference, generally LOCAL_CREATURE_MAT:SUBTYPE or LOCAL_PLANT_MAT:SUBTYPE or INORGANIC:STONETYPE.
+[MATERIAL_REACTION_PRODUCT:TAN_MAT:LOCAL_CREATURE_MAT:LEATHER]
+
+|-
+| {{text_anchor|ITEM_REACTION_PRODUCT}}
+|
+*<item reference>
+*<[[item token]]>
+*<[[material token]]>
+| Used with reaction raws to associate a reagent material with a complete item.  The first argument is used by HAS_ITEM_REACTION_PRODUCT and GET_ITEM_DATA_FROM_REAGENT in reaction raws.  The rest refers to the type of item, then its material.
+[ITEM_REACTION_PRODUCT:BAG_ITEM:PLANT_GROWTH:LEAVES:LOCAL_PLANT_MAT:LEAF]
+
+|-
+| {{text_anchor|REACTION_CLASS}}
+|
+*<reaction class name>
+| Used to classify all items made of the material, so that reactions can use them as generic reagents.
+In default raws, the following are used:
+* FAT, TALLOW, SOAP, PARCHMENT, PAPER_PLANT, PAPER_SLURRY, MILK, CHEESE, WAX
+* CAN_GLAZE - items made from this material can be glazed.
+* FLUX - can be used as [[flux]] in pig iron and steel making.
+* GYPSUM - can be processed into [[gypsum plaster]].
+* CALCIUM_CARBONATE - can be used in production of [[quicklime]].{{version|0.42.01}}
+
+|-
+| {{text_anchor|HARDENS_WITH_WATER}}
+|
+* <[[material token]]>
+| Allows the material to be used to make [[healthcare|casts]].
+
+|-
+| {{text_anchor|SOAP_LEVEL}}
+|
+*<value>
+| [[Soap]] has [SOAP_LEVEL:2]. Effects unknown. Defaults to 0.
+
+|-
+| {{text_anchor|SYNDROME}}
+|
+| Begins defining a [[syndrome]] applied by the material. Multiple syndromes can be specified. See [[Syndrome token]].
+|}
+
+===Material states===
+
+The following is a list of valid material states:
+
+{| {{prettytable}}
+|-
+|'''SOLID'''
+|-
+|'''LIQUID'''
+|-
+|'''GAS'''
+|-
+|'''POWDER''' (or '''SOLID_POWDER''')
+|-
+|'''PASTE''' (or '''SOLID_PASTE''')
+|-
+|'''PRESSED''' (or '''SOLID_PRESSED''')
+|}
+
+The following can be specified within tokens such as [[Material_definition_token#STATE_NAME|STATE_NAME]], [[Material_definition_token#STATE_NAME_ADJ|STATE_NAME_ADJ]] and [[Material_definition_token#STATE_ADJ|STATE_ADJ]] to make them apply to several of the above material states simultaneously:
+
+{| {{prettytable}}
+|- bgcolor="#C0C0C0"
+!Value
+!Description
+|-
+|'''ALL'''
+|Denotes all possible material states.
+|-
+|'''ALL_SOLID'''
+|Denotes 'SOLID', 'POWDER', 'PASTE' and 'PRESSED'.
+|}
+
+==Material usage tokens==
+{| {{prettytable}}
+|- bgcolor="#C0C0C0"
+! Token
+! Arguments
+! Description
+
+|-
+| {{text_anchor|IMPLIES_ANIMAL_KILL}}
+|
+| Lets the game know that an animal was likely killed in the production of this item. Entities opposed to killing animals (which currently does '''not''' include [[elf|Elves]]) will refuse to accept these items in trade.
+
+|-
+| {{text_anchor|ALCOHOL_PLANT}}
+|
+| Classifies the material as plant-based alcohol, allowing its storage in food stockpiles under "Drink (Plant)".
+
+|-
+| {{text_anchor|ALCOHOL_CREATURE}}
+|
+| Classifies the material as animal-based alcohol, allowing its storage in food stockpiles under "Drink (Animal)".
+
+|-
+| {{text_anchor|ALCOHOL}}
+|
+| Classifies the material as generic alcohol. Implied by both ALCOHOL_PLANT and ALCOHOL_CREATURE. Exact behavior unknown, possibly vestigial.
+
+|-
+| {{text_anchor|CHEESE_PLANT}}
+|
+| Classifies the material as plant-based cheese,  allowing its storage in food stockpiles under "Cheese (Plant)".
+
+|-
+| {{text_anchor|CHEESE_CREATURE}}
+|
+| Classifies the material as animal-based cheese, allowing its storage in food stockpiles under "Cheese (Animal)".
+
+|-
+| {{text_anchor|CHEESE}}
+|
+| Classifies the material as generic cheese. Implied by both CHEESE_PLANT and CHEESE_CREATURE. Exact behavior unknown, possibly vestigial.
+
+|-
+| {{text_anchor|POWDER_MISC_PLANT}}
+|
+| Classifies the material as plant powder, allowing its storage in food stockpiles under "Milled Plant".
+
+|-
+| {{text_anchor|POWDER_MISC_CREATURE}}
+|
+| Classifies the material as creature powder, allowing its storage in food stockpiles under "Bone Meal". Unlike milled plants, such as sugar and flour, "Bone Meal" barrels or pots may not contain bags. Custom reactions using this product better use buckets or jugs instead.
+
+|-
+| {{text_anchor|POWDER_MISC}}
+|
+| Classifies the material as generic powder. Implied by both POWDER_MISC_PLANT and POWDER_MISC_CREATURE. Exact behavior unknown, possibly vestigial.
+
+|-
+| {{text_anchor|STOCKPILE_GLOB}} or {{text_anchor|STOCKPILE_GLOB_SOLID}}
+|
+| Permits globs of the material in solid form to be stored in food stockpiles under "Fat" - without it, dwarves will come by and "clean" the items, destroying them (unless [DO_NOT_CLEAN_GLOB] is also included).
+
+|-
+| {{text_anchor|STOCKPILE_GLOB_PASTE}}
+|
+| Classifies the material as milled paste, allowing its storage in food stockpiles under "Paste".
+
+|-
+| {{text_anchor|STOCKPILE_GLOB_PRESSED}}
+|
+| Classifies the material as pressed goods, allowing its storage in food stockpiles under "Pressed Material".
+
+|-
+| {{text_anchor|STOCKPILE_PLANT_GROWTH}}
+|
+| Classifies the material as a plant growth (e.g. fruits, leaves), allowing its storage in food stockpiles under Plant Growth/Fruit.
+
+|-
+| {{text_anchor|LIQUID_MISC_PLANT}}
+|
+| Classifies the material as a plant extract, allowing its storage in food stockpiles under "Extract (Plant)".
+
+|-
+| {{text_anchor|LIQUID_MISC_CREATURE}}
+|
+| Classifies the material as a creature extract, allowing its storage in food stockpiles under "Extract (Animal)".
+
+|-
+| {{text_anchor|LIQUID_MISC_OTHER}}
+|
+| Classifies the material as a miscellaneous liquid, allowing its storage in food stockpiles under "Misc. Liquid" along with lye.
+
+|-
+| {{text_anchor|LIQUID_MISC}}
+|
+| Classifies the material as a generic liquid. Implied by LIQUID_MISC_PLANT, LIQUID_MISC_CREATURE, and LIQUID_MISC_OTHER. Exact behavior unknown, possibly vestigial.
+
+|-
+| {{text_anchor|STRUCTURAL_PLANT_MAT}}
+|
+| Classifies the material as a plant, allowing its storage in food stockpiles under "Plants".
+
+|-
+| {{text_anchor|SEED_MAT}}
+|
+| Classifies the material as a plant seed, allowing its storage in food stockpiles under "Seeds".
+
+|-
+| {{text_anchor|BONE}}
+|
+| Classifies the material as bone, allowing its use for bone carvers and restriction from stockpiles by material.
+
+|-
+| {{text_anchor|WOOD}}
+|
+| Classifies the material as wood, allowing its use for carpenters and storage in wood stockpiles. Entities opposed to killing plants (i.e. [[Elf|Elves]]) will refuse to accept these items in trade.
+
+|-
+| {{text_anchor|THREAD_PLANT}}
+|
+| Classifies the material as plant fiber, allowing its use for clothiers and storage in cloth stockpiles under "Thread (Plant)" and "Cloth (Plant)".
+
+|-
+| {{text_anchor|TOOTH}}
+|
+| Classifies the material as tooth, allowing its use for bone carvers and restriction from stockpiles by material.
+
+|-
+| {{text_anchor|HORN}}
+|
+| Classifies the material as horn, allowing its use for bone carvers and restriction from stockpiles by material.
+
+|-
+| {{text_anchor|PEARL}}
+|
+| Classifies the material as pearl, allowing its use for bone carvers and restriction from stockpiles by material.
+
+|-
+| {{text_anchor|SHELL}}
+|
+| Classifies the material as shell, allowing its use for bone carvers and restriction from stockpiles by material.
+
+|-
+| {{text_anchor|LEATHER}}
+|
+| Classifies the material as leather, allowing its use for leatherworkers and storage in leather stockpiles.
+
+|-
+| {{text_anchor|SILK}}
+|
+| Classifies the material as silk, allowing its use for clothiers and storage in cloth stockpiles under "Thread (Silk)" and "Cloth (Silk)".
+
+|-
+| {{text_anchor|SOAP}}
+|
+| Classifies the material as soap, allowing it to be used as a bath detergent and stored in bar/block stockpiles under "Bars: Other Materials".{{verify}}
+
+|-
+| {{text_anchor|GENERATES_MIASMA}}
+|
+| Material generates miasma when it rots.
+
+|-
+| {{text_anchor|MEAT}}
+|
+| Classifies the material as edible meat.{{verify}}
+
+|-
+| {{text_anchor|ROTS}}
+|
+| Material will rot if not stockpiled appropriately. Currently only affects [[food]] and [[refuse]], other items made of this material will not rot.
+
+|-
+| {{text_anchor|BLOOD_MAP_DESCRIPTOR}}
+|
+| Tells the game to classify contaminants of this material as being "blood" in Adventurer mode tile descriptions ("Here we have a Dwarf in a slurry of blood.").
+
+|-
+| {{text_anchor|ICHOR_MAP_DESCRIPTOR}}
+|
+| Tells the game to classify contaminants of this material as being "ichor".
+
+|-
+| {{text_anchor|GOO_MAP_DESCRIPTOR}}
+|
+| Tells the game to classify contaminants of this material as being "goo".
+
+|-
+| {{text_anchor|SLIME_MAP_DESCRIPTOR}}
+|
+| Tells the game to classify contaminants of this material as being "slime".
+
+|-
+| {{text_anchor|PUS_MAP_DESCRIPTOR}}
+|
+| Tells the game to classify contaminants of this material as being "pus".
+
+|-
+| {{text_anchor|SWEAT_MAP_DESCRIPTOR}}
+|
+| Tells the game to classify contaminants of this material as being "sweat".
+
+|-
+| {{text_anchor|TEARS_MAP_DESCRIPTOR}}
+|
+| Tells the game to classify contaminants of this material as being "tears".
+
+|-
+| {{text_anchor|SPIT_MAP_DESCRIPTOR}}
+|
+| Tells the game to classify contaminants of this material as being "spit".
+
+|-
+| {{text_anchor|EVAPORATES}}
+|
+| Contaminants composed of this material evaporate over time, slowly disappearing from the map. Used internally by water.
+
+|-
+| {{text_anchor|ENTERS_BLOOD}}
+|
+| Used for materials which cause [[syndrome]]s, causes it to enter the creature's blood instead of simply spattering on the surface.
+
+|-
+| {{text_anchor|EDIBLE_VERMIN}}
+|
+| Can be eaten by vermin.
+
+|-
+| {{text_anchor|EDIBLE_RAW}}
+|
+| Can be eaten raw.
+
+|-
+| {{text_anchor|EDIBLE_COOKED}}
+|
+| Can be cooked and then eaten.
+
+|-
+| {{text_anchor|DO_NOT_CLEAN_GLOB}}
+|
+| Prevents globs made of this material from being cleaned up and destroyed.
+
+|-
+| {{text_anchor|NO_STONE_STOCKPILE}}
+|
+| Prevents the material from showing up in Stone stockpile settings.
+
+|-
+| {{text_anchor|ITEMS_METAL}}
+|
+| Allows the creation of metal furniture at the metalsmith's forge.
+
+|-
+| {{text_anchor|ITEMS_BARRED}}
+|
+| Equivalent to ITEMS_HARD. Given to [[bone]].
+
+|-
+| {{text_anchor|ITEMS_SCALED}}
+|
+| Equivalent to ITEMS_HARD. Given to [[shell]].
+
+|-
+| {{text_anchor|ITEMS_LEATHER}}
+|
+| Equivalent to ITEMS_SOFT. Given to [[leather]].
+
+|-
+| {{text_anchor|ITEMS_SOFT}}
+|
+| Random [[finished goods|crafts]] made from this material cannot be made into rings, crowns, scepters or figurines. Given to [[plant fiber]], [[silk]] and [[wool]].
+
+|-
+| {{text_anchor|ITEMS_HARD}}
+|
+| Random [[finished goods|crafts]] made from this material include all seven items. Given to [[stone]], [[wood]], [[bone]], [[shell]], [[chitin]], [[nail|claws]], [[tooth|teeth]], [[horn|horns]], [[horn|hooves]] and [[wax|beeswax]]. [[Hair]], [[pearl|pearls]] and eggshells also have the tag.
+
+|-
+| {{text_anchor|IS_STONE}}
+|
+| Used to define that the material is a stone. Allows its usage in [[masonry]] and [[stonecrafting]] and storage in stone stockpiles, among other effects.
+
+|-
+| {{text_anchor|UNDIGGABLE}}
+| 
+| Used for a stone that cannot be dug into.
+
+|-
+| {{text_anchor|DISPLAY_UNGLAZED}}
+|
+| Causes containers made of this material to be prefixed with "unglazed" if they have not yet been [[glaze]]d.
+
+|-
+| {{text_anchor|YARN}}
+|
+| Classifies the material as yarn, allowing its use for clothiers and its storage in cloth stockpiles under "Thread (Yarn)" and "Cloth (Yarn)".
+
+|-
+| {{text_anchor|STOCKPILE_THREAD_METAL}}
+|
+| Classifies the material as metal thread, permitting thread and cloth to be stored in cloth stockpiles under "Thread (Metal)" and "Cloth (Metal)".
+
+|-
+| {{text_anchor|IS_METAL}}
+|
+| Defines the material as being metal, allowing it to be used at forges.
+
+|-
+| {{text_anchor|IS_GLASS}}
+|
+| Used internally by green glass, clear glass, and crystal glass.
+
+|-
+| {{text_anchor|CRYSTAL_GLASSABLE}}
+|
+| Can be used in the production of crystal glass.
+
+|-
+| {{text_anchor|ITEMS_WEAPON}}
+| 
+| Melee [[Weapon#Manufactured weapons|weapons]] can be made out of this material.
+
+|-
+| {{text_anchor|ITEMS_WEAPON_RANGED}}
+|
+| Ranged weapons can be made out of this material.
+
+|-
+| {{text_anchor|ITEMS_ANVIL}}
+|
+| [[Anvil]]s can be made out of this material.
+
+|-
+| {{text_anchor|ITEMS_AMMO}}
+|
+| [[Weapon#Ammunition|Ammunition]] can be made out of this material.
+
+|-
+| {{text_anchor|ITEMS_DIGGER}}
+|
+| [[Weapon#Dwarf-manufactured weapons|Picks]] can be made out of this material.
+
+|-
+| {{text_anchor|ITEMS_ARMOR}}
+|
+| [[Armor]] can be made out of this material.
+
+|-
+| {{text_anchor|ITEMS_DELICATE}}
+|
+| Used internally by amber and coral. Functionally equivalent to ITEMS_HARD.
+
+|-
+| {{text_anchor|ITEMS_SIEGE_ENGINE}}
+|
+| Siege engine parts can be made out of this material. Does not appear to work.
+
+|-
+| {{text_anchor|ITEMS_QUERN}}
+|
+| Querns and millstones can be made out of this material.{{verify}}
+|}
+
+==Syndrome tokens==
+Below is a table with some of the tokens you can use when declaring a [SYNDROME] token. For all the tokens you can use, see the [[Syndrome token]] page.
+
+{| {{prettytable}}
+|- bgcolor="#C0C0C0"
+! Token
+! Arguments
+! Description
+
+|- 
+| {{text_anchor|SYN_NAME 
+| 
+* text 
+| Defines the name of the syndrome
+
+|-
+| {{text_anchor|SYN_INJECTED}}
+|  
+| Syndrome can be contracted by injection (by a creature)
+
+|- 
+| {{text_anchor|SYN_CONTACT}}
+|  
+| Syndrome can be contracted on contact (e.g. poison dust or liquid)
+
+|- 
+| {{text_anchor|SYN_INHALED}}
+|  
+| Syndrome can be contracted by inhalation (e.g. poison vapor or gas)
+
+|-
+| {{text_anchor|SYN_INGESTED}}
+|  
+| Syndrome can be contracted by ingestion (when the material is eaten in solid or liquid form)
+
+|- 
+| {{text_anchor|SYN_AFFECTED_CLASS}}
+| 
+* creature class name
+| Adds a class of creatures to those affected, such as CREATURE_CLASS:GENERAL_POISON
+
+|- 
+| {{text_anchor|SYN_IMMUNE_CLASS}}
+| 
+* creature class name
+| Makes the class of creatures immune to the syndrome
+
+|- 
+| {{text_anchor|SYN_AFFECTED_CREATURE}}
+| 
+* creature name
+* caste name or ALL
+| Adds a specific creature to those affected.
+
+|- 
+| {{text_anchor|SYN_IMMUNE_CREATURE}}
+| 
+* creature name
+* caste name or ALL
+| Makes the creature immune to the syndrome
+
+|- 
+| CE_PAIN<br />CE_SWELLING<br />CE_OOZING<br />CE_BRUISING<br />CE_BLISTERS<br />CE_NUMBNESS<br />CE_PARALYSIS<br />CE_FEVER<br />CE_BLEEDING<br />CE_COUGH_BLOOD<br />CE_VOMIT_BLOOD<br />CE_NAUSEA<br />CE_UNCONSCIOUSNESS<br />CE_NECROSIS<br />CE_IMPAIR_FUNCTION<br />CE_DROWSINESS<br />CE_DIZZINESS
+| 
+*SEV:<value>  (severity, higher is worse)
+*PROB:<value(1-100)> (probability)
+*RESISTABLE (optional) allows resistance
+*SIZE_DILUTES (optional) lessens effect based on size 
+Place affected:
+*LOCALIZED (optional)
+*VASCULAR_ONLY (optional)
+*MUSCULAR_ONLY (optional)
+*BP:BY_CATEGORY:category:tissue (optional)
+*BP:BY_TYPE:type:tissue (optional)
+*BP:BY_TOKEN:token:tissue (optional)
+Timeline:
+*Start:effect start time
+*Peak:effect peak time
+*End:effect end time
+| Specifies the way that a syndrome affects a creature -- more detail can be found on the [[Syndrome#Creature effect tokens|Syndromes page]]
+
+|}
+
+==See also==
+* [[Inorganic material definition token]]
+* [[Syndrome]]
+* [[Hardcoded material]]
+
+{{Category|Modding}}
+{{Category|Tokens}}
+[[ru:Material definition token]]

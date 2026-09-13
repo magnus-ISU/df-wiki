@@ -1,0 +1,505 @@
+{{Quality|Superior|11:17, 18 May 2015 (UTC)}}
+{{Projects}}
+{{av}}
+'''Magma pistons''' are used to move [[magma]] near the surface. This approach was developed by players as an alternative to [[screw pump#Pump stack|pump stack]]s. Magma pistons are used because they require less time and fewer precious materials to construct than pump stacks. However, magma pistons are a bit more complicated than pump stacks, so it takes more time to understand how to operate and build them.
+
+== The concept ==
+The piston method is based on a clever [[exploit|abuse]] of [[cave-in]] [[physics]]. The basic principle involves channeling out an area around a huge stone pillar, hundreds of z-levels tall, which will become the "piston" that drives magma to the top. Rest the piston on a single support, then carve out a tank at its base which will be filled with magma pumped from the magma sea. ('''Beware:''' building the piston directly over the magma sea will '''NOT''' work!) Once the tank has been filled, drop the piston by removing its support. Liquids displaced by a cave-in will "teleport" straight up to the nearest available space; here, the nearest available space will be the catchment area you thoughtfully prepared earlier atop the piston.
+
+A simple magma piston works as shown in the following diagram:
+
+ '''Key:'''
+   
+   '''#'''    = '''Wall'''
+   <font color="#F00">~</font>    = <font color="#F00">'''Magma'''</font>
+   <font color="#777">S</font>    = <font color="#777">'''Support'''</font>  
+   <font color="#970">_</font>    = <font color="#970">'''Floor hatch or bridge (your choice)'''</font>
+
+{|style="border: 1px solid #0b0; background: #dfd"
+|+'''Basic magma piston design (side view)'''
+|- style="font-family: monospace; font-weight: bold; font-size: 135%"
+|style="color: #000; padding: 0"|#
+|style="color: #970; padding: 0"|_
+|style="color: #000; padding: 0"|#
+|style="color: #000; padding: 0"|#
+|style="color: #000; padding: 0"|#
+|style="color: #970; padding: 0"|_
+|style="color: #000; padding: 0"|#
+|- style="font-family: monospace; font-weight: bold; font-size: 135%"
+|style="color: #000; padding: 0"|#
+|style="color: #000; padding: 0"| 
+|style="color: #000; padding: 0"|#
+|style="color: #000; padding: 0"|#
+|style="color: #000; padding: 0"|#
+|style="color: #000; padding: 0"| 
+|style="color: #000; padding: 0"|#
+|- style="font-family: monospace; font-weight: bold; font-size: 135%"
+|style="color: #000; padding: 0"|#
+|style="color: #000; padding: 0"| 
+|style="color: #000; padding: 0"|#
+|style="color: #000; padding: 0"|#
+|style="color: #000; padding: 0"|#
+|style="color: #000; padding: 0"| 
+|style="color: #000; padding: 0"|#
+|- style="font-family: monospace; font-weight: bold; font-size: 135%"
+|style="color: #000; padding: 0"|#
+|style="color: #F00; padding: 0"|~
+|style="color: #F00; padding: 0"|~
+|style="color: #777; padding: 0"|S
+|style="color: #F00; padding: 0"|~
+|style="color: #F00; padding: 0"|~
+|style="color: #000; padding: 0"|#
+|- style="font-family: monospace; font-weight: bold; font-size: 135%"
+|style="color: #000; padding: 0"|#
+|style="color: #000; padding: 0"|#
+|style="color: #000; padding: 0"|#
+|style="color: #000; padding: 0"|#
+|style="color: #000; padding: 0"|#
+|style="color: #000; padding: 0"|#
+|style="color: #000; padding: 0"|#
+|}
+
+When the support is destroyed, the wall sections in the middle will fall down into the magma. The magma will teleport to the top of the piston, as shown in the following diagram:
+
+{|style="border: 1px solid #0b0; background: #dfd"
+|- style="font-family: monospace; font-weight: bold; font-size: 135%"
+|style="color: #000; padding: 0"|#
+|style="color: #970; padding: 0"|_
+|style="color: #F00; padding: 0"|~
+|style="color: #F00; padding: 0"|~
+|style="color: #F00; padding: 0"|~
+|style="color: #970; padding: 0"|_
+|style="color: #000; padding: 0"|#
+|- style="font-family: monospace; font-weight: bold; font-size: 135%"
+|style="color: #000; padding: 0"|#
+|style="color: #000; padding: 0"| 
+|style="color: #000; padding: 0"|#
+|style="color: #000; padding: 0"|#
+|style="color: #000; padding: 0"|#
+|style="color: #000; padding: 0"| 
+|style="color: #000; padding: 0"|#
+|- style="font-family: monospace; font-weight: bold; font-size: 135%"
+|style="color: #000; padding: 0"|#
+|style="color: #000; padding: 0"| 
+|style="color: #000; padding: 0"|#
+|style="color: #000; padding: 0"|#
+|style="color: #000; padding: 0"|#
+|style="color: #000; padding: 0"| 
+|style="color: #000; padding: 0"|#
+|- style="font-family: monospace; font-weight: bold; font-size: 135%"
+|style="color: #000; padding: 0"|#
+|style="color: #F00; padding: 0"|~
+|style="color: #000; padding: 0"|#
+|style="color: #000; padding: 0"|#
+|style="color: #000; padding: 0"|#
+|style="color: #F00; padding: 0"|~
+|style="color: #000; padding: 0"|#
+|- style="font-family: monospace; font-weight: bold; font-size: 135%"
+|style="color: #000; padding: 0"|#
+|style="color: #000; padding: 0"|#
+|style="color: #000; padding: 0"|#
+|style="color: #000; padding: 0"|#
+|style="color: #000; padding: 0"|#
+|style="color: #000; padding: 0"|#
+|style="color: #000; padding: 0"|#
+|}
+
+== Construction ==
+A magma piston is composed of 4-5 parts: the catchment area, the magma reservoir, the support, the piston, and the obsidian caster (optional).
+
+=== Catchment area ===
+:The '''catchment area''' is located at the top of the piston. After the piston is dropped, the magma will spread out around the catchment area. In a repeating magma piston, some of the magma is used to cast obsidian on top of the piston, in order to reuse it. The volume and size of the catchment area must be carefully calculated to ensure that you won't have too much or too little magma above the piston for casting. Ideally, you want the depth of the magma above the piston to be 2. If the depth is 1, then the magma might evaporate and you won't be able to repair your piston. If the depth is greater than 2, then you're wasting magma if you cast it into obsidian. You can also make the catchment area multiple z-levels deep. If you need a catchment area smaller than possible with bridges or floodgates, you may use a floor-less [[Floodgate#Placement|floodgate]] to prevent the magma entering that square, while keeping the piston free to fall.
+
+=== Magma reservoir ===
+:The '''magma reservoir''' is dug out near the magma sea. You can't actually drop the piston directly into the magma sea because the bottom of the magma sea is [[semi-molten rock]], and it will completely destroy any piston dropped into it. The magma reservoir is artificial, so it won't have a floor made of semi-molten rock. This will allow the piston to rest on the floor of your reservoir. The magma reservoir needs three parts: a magma inlet, a magma drain, and an access corridor. After letting magma in, and dropping the piston, you'll want to dig out the bottom of the piston so you can drop it again. To do that, you need to drain any excess magma and let your workers in through the access corridor.
+
+=== Support ===
+:The '''support''' is what prevents your piston from dropping until you decide to pull the firing lever. The support can be located either at the bottom of the piston, as shown in the simplified diagram, or at the side of the piston (shown in the following diagram). If the support is at the bottom of the piston, then the support and the mechanism it uses must both be [[magma-safe]]. If it's at the side, then neither need to be magma-safe. Here's an example of a side-mounted support:
+
+: '''Key:'''
+   
+   '''#'''    = '''Wall'''
+   '''P'''    = '''Piston'''
+   '''X'''    = '''Up/Down stairs'''
+   <font color="#777">S</font>    = <font color="#777">'''Support'''</font>  
+   <font color="#970">_</font>    = <font color="#970">'''Floor hatch or bridge (your choice)'''</font>
+   <font color="#444">=</font>    = <font color="#444">'''Constructed floor'''</font>
+
+:{|style="border: 1px solid #0b0; background: #dfd"
+|+'''Side-mounted support'''
+|- style="font-family: monospace; font-weight: bold; font-size: 135%"
+|style="color: #000; padding: 0"|X
+|style="color: #000; padding: 0"|#
+|style="color: #000; padding: 0"|#
+|style="color: #970; padding: 0"|_
+|style="color: #000; padding: 0"|P
+|style="color: #000; padding: 0"|P
+|style="color: #000; padding: 0"|P
+|style="color: #970; padding: 0"|_
+|style="color: #000; padding: 0"|#
+|- style="font-family: monospace; font-weight: bold; font-size: 135%"
+|style="color: #000; padding: 0"|X
+|style="color: #000; padding: 0"|#
+|style="color: #000; padding: 0"|#
+|style="color: #000; padding: 0"|   
+|style="color: #000; padding: 0"|P
+|style="color: #000; padding: 0"|P
+|style="color: #000; padding: 0"|P
+|style="color: #000; padding: 0"|   
+|style="color: #000; padding: 0"|#
+|- style="font-family: monospace; font-weight: bold; font-size: 135%"
+|style="color: #000; padding: 0"|X
+|style="color: #970; padding: 0"|_
+|style="color: #444; padding: 0"|=
+|style="color: #444; padding: 0"|=   
+|style="color: #000; padding: 0"|P
+|style="color: #000; padding: 0"|P
+|style="color: #000; padding: 0"|P
+|style="color: #000; padding: 0"|   
+|style="color: #000; padding: 0"|#
+|- style="font-family: monospace; font-weight: bold; font-size: 135%"
+|style="color: #000; padding: 0"|X
+|style="color: #000; padding: 0"| 
+|style="color: #777; padding: 0"|S
+|style="color: #000; padding: 0"|   
+|style="color: #000; padding: 0"|P
+|style="color: #000; padding: 0"|P
+|style="color: #000; padding: 0"|P
+|style="color: #000; padding: 0"|   
+|style="color: #000; padding: 0"|#
+|- style="font-family: monospace; font-weight: bold; font-size: 135%"
+|style="color: #000; padding: 0"|X
+|style="color: #000; padding: 0"|#
+|style="color: #000; padding: 0"|#
+|style="color: #000; padding: 0"|   
+|style="color: #000; padding: 0"|P
+|style="color: #000; padding: 0"|P
+|style="color: #000; padding: 0"|P
+|style="color: #000; padding: 0"|   
+|style="color: #000; padding: 0"|#
+|}
+
+:In this diagram, you can see the catchment area at the top, and the piston in the middle of the shaft. The support structure is to the left. When the support element collapses, the two constructed floors will become unsupported, and then the piston will collapse. The stairs and hatch to the left of the constructed floors allows for convenient reconstruction of the support.
+
+=== Piston ===
+:The '''piston''' is the heart of the scheme. It may be 100-200 z-levels long, so it will take quite a while for your miners to dig it out. You may encounter trouble with caverns. Ideally, you should scout out the caverns and find a clear path straight down. If you can't find such a path, you can fix the problem as follows:
+
+:{|style="border: 1px solid #0b0; background: #dfd"
+|+'''Cavern problem'''
+|- style="font-family: monospace; font-weight: bold; font-size: 135%"
+|style="color: #000; padding: 0"|#
+|style="color: #000; padding: 0"|X
+|style="color: #000; padding: 0"|P
+|style="color: #000; padding: 0"|P
+|style="color: #000; padding: 0"|P
+|style="color: #000; padding: 0"|X
+|style="color: #000; padding: 0"|#
+|- style="font-family: monospace; font-weight: bold; font-size: 135%"
+|style="color: #000; padding: 0"|#
+|style="color: #000; padding: 0"|X
+|style="color: #000; padding: 0"|P
+|style="color: #000; padding: 0"|P
+|style="color: #000; padding: 0"|P
+|style="color: #000; padding: 0"|X
+|style="color: #000; padding: 0"|#
+|- style="font-family: monospace; font-weight: bold; font-size: 135%"
+|style="color: #000; padding: 0"|#
+|style="color: #000; padding: 0"|X
+|style="color: #000; padding: 0"|P
+|style="color: #000; padding: 0"|P
+|style="color: #dfd; padding: 0"|.
+|style="color: #dfd; padding: 0"|.
+|style="color: #dfd; padding: 0"|.
+|- style="font-family: monospace; font-weight: bold; font-size: 135%"
+|style="color: #000; padding: 0"|#
+|style="color: #000; padding: 0"|X
+|style="color: #000; padding: 0"|P
+|style="color: #dfd; padding: 0"|.
+|style="color: #dfd; padding: 0"|.
+|style="color: #dfd; padding: 0"|.
+|style="color: #dfd; padding: 0"|.
+|- style="font-family: monospace; font-weight: bold; font-size: 135%"
+|style="color: #dfd; padding: 0"|.
+|style="color: #dfd; padding: 0"|.
+|style="color: #dfd; padding: 0"|.
+|style="color: #dfd; padding: 0"|.
+|style="color: #dfd; padding: 0"|.
+|style="color: #dfd; padding: 0"|.
+|style="color: #dfd; padding: 0"|.
+|- style="font-family: monospace; font-weight: bold; font-size: 135%"
+|style="color: #dfd; padding: 0"|.
+|style="color: #000; padding: 0"|#
+|style="color: #000; padding: 0"|#
+|style="color: #000; padding: 0"|#
+|style="color: #dfd; padding: 0"|.
+|style="color: #dfd; padding: 0"|.
+|style="color: #dfd; padding: 0"|.
+|- style="font-family: monospace; font-weight: bold; font-size: 135%"
+|style="color: #000; padding: 0"|#
+|style="color: #000; padding: 0"|#
+|style="color: #000; padding: 0"|#
+|style="color: #000; padding: 0"|#
+|style="color: #000; padding: 0"|#
+|style="color: #000; padding: 0"|#
+|style="color: #000; padding: 0"|#
+|}
+
+:First, smooth the top and bottom, like so:
+
+:{|style="border: 1px solid #0b0; background: #dfd"
+|- style="font-family: monospace; font-weight: bold; font-size: 135%"
+|style="color: #000; padding: 0"|#
+|style="color: #000; padding: 0"|X
+|style="color: #000; padding: 0"|P
+|style="color: #000; padding: 0"|P
+|style="color: #000; padding: 0"|P
+|style="color: #000; padding: 0"|X
+|style="color: #000; padding: 0"|#
+|- style="font-family: monospace; font-weight: bold; font-size: 135%"
+|style="color: #000; padding: 0"|#
+|style="color: #000; padding: 0"|X
+|style="color: #000; padding: 0"|P
+|style="color: #000; padding: 0"|P
+|style="color: #000; padding: 0"|P
+|style="color: #000; padding: 0"|X
+|style="color: #000; padding: 0"|#
+|- style="font-family: monospace; font-weight: bold; font-size: 135%"
+|style="color: #dfd; padding: 0"|.
+|style="color: #dfd; padding: 0"|.
+|style="color: #dfd; padding: 0"|.
+|style="color: #dfd; padding: 0"|.
+|style="color: #dfd; padding: 0"|.
+|style="color: #dfd; padding: 0"|.
+|style="color: #dfd; padding: 0"|.
+|- style="font-family: monospace; font-weight: bold; font-size: 135%"
+|style="color: #dfd; padding: 0"|.
+|style="color: #dfd; padding: 0"|.
+|style="color: #dfd; padding: 0"|.
+|style="color: #dfd; padding: 0"|.
+|style="color: #dfd; padding: 0"|.
+|style="color: #dfd; padding: 0"|.
+|style="color: #dfd; padding: 0"|.
+|- style="font-family: monospace; font-weight: bold; font-size: 135%"
+|style="color: #dfd; padding: 0"|.
+|style="color: #dfd; padding: 0"|.
+|style="color: #dfd; padding: 0"|.
+|style="color: #dfd; padding: 0"|.
+|style="color: #dfd; padding: 0"|.
+|style="color: #dfd; padding: 0"|.
+|style="color: #dfd; padding: 0"|.
+|- style="font-family: monospace; font-weight: bold; font-size: 135%"
+|style="color: #dfd; padding: 0"|.
+|style="color: #dfd; padding: 0"|.
+|style="color: #dfd; padding: 0"|.
+|style="color: #dfd; padding: 0"|.
+|style="color: #dfd; padding: 0"|.
+|style="color: #dfd; padding: 0"|.
+|style="color: #dfd; padding: 0"|.
+|- style="font-family: monospace; font-weight: bold; font-size: 135%"
+|style="color: #000; padding: 0"|#
+|style="color: #000; padding: 0"|#
+|style="color: #000; padding: 0"|#
+|style="color: #000; padding: 0"|#
+|style="color: #000; padding: 0"|#
+|style="color: #000; padding: 0"|#
+|style="color: #000; padding: 0"|#
+|}
+
+:Now drop the top of the piston on to the floor of the cavern. You can use a cave-in to destroy the stairs quickly, if you remove all up-stairs first.
+
+:{|style="border: 1px solid #0b0; background: #dfd"
+|- style="font-family: monospace; font-weight: bold; font-size: 135%"
+|style="color: #000; padding: 0"|#
+|style="color: #000; padding: 0"|
+|style="color: #000; padding: 0"|P
+|style="color: #000; padding: 0"|P
+|style="color: #000; padding: 0"|P
+|style="color: #000; padding: 0"|
+|style="color: #000; padding: 0"|#
+|- style="font-family: monospace; font-weight: bold; font-size: 135%"
+|style="color: #000; padding: 0"|#
+|style="color: #000; padding: 0"|
+|style="color: #000; padding: 0"|P
+|style="color: #000; padding: 0"|P
+|style="color: #000; padding: 0"|P
+|style="color: #000; padding: 0"|
+|style="color: #000; padding: 0"|#
+|- style="font-family: monospace; font-weight: bold; font-size: 135%"
+|style="color: #dfd; padding: 0"|.
+|style="color: #dfd; padding: 0"|.
+|style="color: #000; padding: 0"|P
+|style="color: #000; padding: 0"|P
+|style="color: #000; padding: 0"|P
+|style="color: #dfd; padding: 0"|.
+|style="color: #dfd; padding: 0"|.
+|- style="font-family: monospace; font-weight: bold; font-size: 135%"
+|style="color: #dfd; padding: 0"|.
+|style="color: #dfd; padding: 0"|.
+|style="color: #000; padding: 0"|P
+|style="color: #000; padding: 0"|P
+|style="color: #000; padding: 0"|P
+|style="color: #dfd; padding: 0"|.
+|style="color: #dfd; padding: 0"|.
+|- style="font-family: monospace; font-weight: bold; font-size: 135%"
+|style="color: #dfd; padding: 0"|.
+|style="color: #dfd; padding: 0"|.
+|style="color: #000; padding: 0"|P
+|style="color: #000; padding: 0"|P
+|style="color: #000; padding: 0"|P
+|style="color: #dfd; padding: 0"|.
+|style="color: #dfd; padding: 0"|.
+|- style="font-family: monospace; font-weight: bold; font-size: 135%"
+|style="color: #dfd; padding: 0"|.
+|style="color: #dfd; padding: 0"|.
+|style="color: #000; padding: 0"|P
+|style="color: #000; padding: 0"|P
+|style="color: #000; padding: 0"|P
+|style="color: #dfd; padding: 0"|.
+|style="color: #dfd; padding: 0"|.
+|- style="font-family: monospace; font-weight: bold; font-size: 135%"
+|style="color: #000; padding: 0"|#
+|style="color: #000; padding: 0"|#
+|style="color: #000; padding: 0"|#
+|style="color: #000; padding: 0"|#
+|style="color: #000; padding: 0"|#
+|style="color: #000; padding: 0"|#
+|style="color: #000; padding: 0"|#
+|}
+
+=== Obsidian caster ===
+:The '''obsidian caster''' is what allows you to rebuild your piston and get more magma. It's an application of techniques drawn from [[obsidian farming]]. The caster just needs to precisely dump water into the catchment area in order to form obsidian. A caster is composed of two parts: a water inlet, and a retracting bridge. Here's a sample design:
+
+: '''Key:'''
+   
+   '''#'''    = '''Wall'''
+   '''P'''    = '''Piston'''
+   <font color="#970">F</font>    = <font color="#970">'''Closed floodgate'''</font>
+   <font color="#00F">±</font>    = <font color="#00F">'''Retracting bridge with water'''</font>
+   <font color="#F00">±</font>    = <font color="#F00">'''Retracting bridge with magma'''</font>
+   <font color="#F00">~</font>    = <font color="#F00">'''Magma'''</font>
+   <font color="#00F">~</font>    = <font color="#00F">'''Water'''</font>
+
+:{|style="border: 1px solid #0b0; background: #dfd"
+|+'''Obsidian caster'''
+|- style="font-family: monospace; font-weight: bold; font-size: 135%"
+|style="color: #000; padding: 0"|#
+|style="color: #00F; padding: 0"|~
+|style="color: #00F; padding: 0"|~
+|style="color: #00F; padding: 0"|~
+|style="color: #00F; padding: 0"|~
+|style="color: #00F; padding: 0"|~
+|style="color: #000; padding: 0"|#
+|- style="font-family: monospace; font-weight: bold; font-size: 135%"
+|style="color: #000; padding: 0"|#
+|style="color: #000; padding: 0"|#
+|style="color: #000; padding: 0"|#
+|style="color: #970; padding: 0"|F
+|style="color: #000; padding: 0"|#
+|style="color: #000; padding: 0"|#
+|style="color: #000; padding: 0"|#
+|- style="font-family: monospace; font-weight: bold; font-size: 135%"
+|style="color: #000; padding: 0"|#
+|style="color: #000; padding: 0"|#
+|style="color: #00F; padding: 0"|±
+|style="color: #00F; padding: 0"|±
+|style="color: #00F; padding: 0"|±
+|style="color: #000; padding: 0"|#
+|style="color: #000; padding: 0"|#
+|- style="font-family: monospace; font-weight: bold; font-size: 135%"
+|style="color: #000; padding: 0"|#
+|style="color: #000; padding: 0"|
+|style="color: #970; padding: 0"| 
+|style="color: #970; padding: 0"| 
+|style="color: #970; padding: 0"| 
+|style="color: #000; padding: 0"|
+|style="color: #000; padding: 0"|#
+|- style="font-family: monospace; font-weight: bold; font-size: 135%"
+|style="color: #000; padding: 0"|#
+|style="color: #F00; padding: 0"|±
+|style="color: #F00; padding: 0"|~
+|style="color: #F00; padding: 0"|~
+|style="color: #F00; padding: 0"|~
+|style="color: #F00; padding: 0"|±
+|style="color: #000; padding: 0"|#
+|- style="font-family: monospace; font-weight: bold; font-size: 135%"
+|style="color: #000; padding: 0"|#
+|style="color: #000; padding: 0"|
+|style="color: #000; padding: 0"|P
+|style="color: #000; padding: 0"|P
+|style="color: #000; padding: 0"|P
+|style="color: #000; padding: 0"|
+|style="color: #000; padding: 0"|#
+|}
+
+:When you retract the bridge at the top, the water will fall straight down, and you'll get the following result:
+
+:{|style="border: 1px solid #0b0; background: #dfd"
+|- style="font-family: monospace; font-weight: bold; font-size: 135%"
+|style="color: #000; padding: 0"|#
+|style="color: #00F; padding: 0"|~
+|style="color: #00F; padding: 0"|~
+|style="color: #00F; padding: 0"|~
+|style="color: #00F; padding: 0"|~
+|style="color: #00F; padding: 0"|~
+|style="color: #000; padding: 0"|#
+|- style="font-family: monospace; font-weight: bold; font-size: 135%"
+|style="color: #000; padding: 0"|#
+|style="color: #000; padding: 0"|#
+|style="color: #000; padding: 0"|#
+|style="color: #970; padding: 0"|F
+|style="color: #000; padding: 0"|#
+|style="color: #000; padding: 0"|#
+|style="color: #000; padding: 0"|#
+|- style="font-family: monospace; font-weight: bold; font-size: 135%"
+|style="color: #000; padding: 0"|#
+|style="color: #000; padding: 0"|#
+|style="color: #000; padding: 0"| 
+|style="color: #000; padding: 0"| 
+|style="color: #000; padding: 0"| 
+|style="color: #000; padding: 0"|#
+|style="color: #000; padding: 0"|#
+|- style="font-family: monospace; font-weight: bold; font-size: 135%"
+|style="color: #000; padding: 0"|#
+|style="color: #000; padding: 0"|
+|style="color: #970; padding: 0"| 
+|style="color: #970; padding: 0"| 
+|style="color: #970; padding: 0"| 
+|style="color: #000; padding: 0"|
+|style="color: #000; padding: 0"|#
+|- style="font-family: monospace; font-weight: bold; font-size: 135%"
+|style="color: #000; padding: 0"|#
+|style="color: #F00; padding: 0"|±
+|style="color: #000; padding: 0"|P
+|style="color: #000; padding: 0"|P
+|style="color: #000; padding: 0"|P
+|style="color: #F00; padding: 0"|±
+|style="color: #000; padding: 0"|#
+|- style="font-family: monospace; font-weight: bold; font-size: 135%"
+|style="color: #000; padding: 0"|#
+|style="color: #000; padding: 0"|
+|style="color: #000; padding: 0"|P
+|style="color: #000; padding: 0"|P
+|style="color: #000; padding: 0"|P
+|style="color: #000; padding: 0"|
+|style="color: #000; padding: 0"|#
+|}
+
+== Operation ==
+The general procedure for operating a repeatable magma piston is as follows:
+
+#Pull your firing lever to collapse the side support, thus dropping the piston into the magma.
+#In the magma reservoir, close the inlet and open the drain to empty the magma and allow workers in later.
+#Retract the bridge of the obsidian caster to drop water onto magma and rebuild the piston.
+#Extend the bridge of the obsidian caster and open the inlet floodgate, to refill your caster's water supply.
+#Reconstruct the side support and re-link it to your firing lever.
+#Pump/drain any magma you want to use out of the catchment area.
+#Allow workers into the magma reservoir when it's safe and empty, and dig out the bottom of the piston.
+#Get the workers out of the reservoir and lock the door.
+#In the magma reservoir, close the drain and open the inlet to fill it with magma.
+#Remember to close the inlet floodgate of your obsidian caster.
+#Make sure that your side-support is clear.
+#When the magma reservoir is full, use your firing lever to restart the process.
+
+== More information ==
+The original discussion of this trick, including how to make the piston reusable, can be found in [http://www.bay12forums.com/smf/index.php?topic=59894.0 this forum thread].
+[[ru:Magma piston]]
