@@ -1,6 +1,6 @@
 # Modification/Expanded_Plants/Plants
 
-## Pages (164)
+## Pages (172)
 
 - [Modification:Expanded Plants/Plants/Abaca](Abaca.md)
 - [Modification:Expanded Plants/Plants/Acacia](Acacia.md)
@@ -166,3 +166,11 @@
 - [Modification:Expanded Plants/Plants/Single-grain wheat](Single-grain_wheat.md)
 - [Modification:Expanded Plants/Plants/Soft wheat](Soft_wheat.md)
 - [Modification:Expanded Plants/Plants/Sorghum](Sorghum.md)
+- [Modification:Expanded Plants/Plants/Soybean](Soybean.md)
+- [Modification:Expanded Plants/Plants/Spelt](Spelt.md)
+- [Modification:Expanded Plants/Plants/Spinach](Spinach.md)
+- [Modification:Expanded Plants/Plants/Squash](Squash.md)
+- [Modification:Expanded Plants/Plants/Strawberry](Strawberry.md)
+- [Modification:Expanded Plants/Plants/Teff](Teff.md)
+- [Modification:Expanded Plants/Plants/Two-grain wheat](Two-grain_wheat.md)
+- [Modification:Expanded Plants/Plants/White millet](White_millet.md)

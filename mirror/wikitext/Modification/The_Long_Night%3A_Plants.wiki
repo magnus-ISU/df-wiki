@@ -1,0 +1,204 @@
+
+Updated to 4.41
+{{mod}}
+
+== Crops ==
+
+Crops in The Long Night come in several different categories. Depending on your civilization, you will only be able to embark with either surface or subterranean crops, but all civilizations can grow all crops if they obtain the appropriate seeds. Note that while they are not all plants from a lore perspective, for the purposes of game mechanics they are all "plants" and are grown at standard farm plots. Surface crops only grow in Summer and Spring, while subterranean crops grow year-round.
+
+=== Native Plants ===
+
+Native plants grow naturally on the surface, having evolved for the harsh conditions of the Megastructure. They grow in moist areas of the megastructure during the warmer months, and come in two varieties: moss plants which cling to life in the rare mossy areas of the megastructure, and the silicate plants that dot wastes and voids. They can be farmed, but have little value compared to their domesticated alternatives. Their main advantage is that unlike most plants, they are frequently found growing naturally. In addition, moss herbs are the only source of tea, a special drink that provides a stimulating effect rather than the usual intoxicating effect of alcohol.
+
+{| class="wikitable" border="border"
+! Crop Name
+! Biome
+! Wet/Dry
+! Value
+! Drink
+! Drink Value
+! Eat
+! Cook
+! Seed
+! Seed Value
+|-
+|Moss herb || grasslands, shrublands, savannas, and forests || Wet || 1 || tea || 1 || yes || yes || moss herb seeds || 1
+|-
+|Moss stalk || grasslands, shrublands, savannas, and forests || Wet || 1 || none || n/a || yes || yes || moss stalk seeds || 1
+|-
+|Moss frond || grasslands, shrublands, savannas, and forests || Wet || 1 || none || n/a || yes || yes || moss frond seeds || 1
+|-
+|Silicate bulb || deserts, mountains, tundras, and glaciers || Wet ||  1 || crude alcohol || 1 || yes || yes || silicate bulb samples || 1
+|-
+|Silicate stalk || deserts, mountains, tundras, and glaciers || Wet || 1 || none || n/a || yes || yes || silicate stalk samples || 1
+|-
+|Silicate tuft || deserts, mountains, tundras, and glaciers || Both || 1 || none || n/a || yes || yes || silicate tuft samples || 1
+|-
+|Silicate root || subterranean || Wet || 1 || none || n/a || yes || yes || silicate root samples || 1
+|}
+
+=== Farms ===
+Farms are a special type of "crop" that are cultivated in vats for consumption. Farm grubs, rats, and fish are animals which are raised in tiny spaces for protein, while compost fungus is a utility crop which is fed off of waste material to produce edible fruiting bodies which can then be processed into psychotropic drugs at a still. Farms are usually maintained by human operators, but in rare cases abandoned farming vats will be found in the wild with the organisms within somehow clinging to life.
+
+While not the most appetizing, the majority of pan-humanity relies on vat-farmed protein to survive. Many value vat protein for its affordability compared to other more palatable food sources. Farm grubs are sometimes even ground into protein slurry and drunk as a cheap alternative to alcohol.
+
+{| class="wikitable" border="border"
+! Farm Name
+! Biome
+! Value
+! Drink
+! Drink Value
+! Eat
+! Cook
+! "Seed"
+! Seed Value
+|-
+| Farm grubs || surface ||  2 || protein slurry || 2 || yes || yes || farm grub eggs || 1
+|-
+| Farm rats || surface || 2 || none || n/a || yes || yes || farm rat pups || 1
+|-
+| Farm fishes || surface || 5 || none || n/a || yes || yes || farm fish eggs || 10
+|-
+| Compost fungus || surface || 2 || psychotropics || 2 || yes || yes || compost fungus spawn || 10
+|-
+| Cloned meat || subterranean || 10 || none || n/a || yes || yes || cloned meat sample || 2
+|}
+
+=== Factories ===
+Factories are a special type of crop, simple machines that extract trace materials and convert them into useful resources. They come in two varieties: solar-powered factories which must be assembled on the surface, and the more advanced symbiotic factories which can be assembled underground in the relative safety of a bunker. As they are machines, none of them are edible or distillable.
+
+{| class="wikitable" border="border"
+! Factory Name
+! Biome
+! Value
+! Product
+! Product Value
+! "Seed"
+! Seed Value
+|-
+| Solar-powered polymer factory || surface || 1 || polymer fiber (thread) || 2 || solar-powered fabric factory kit || 2
+|-
+| Solar-powered laminate factory || surface || 20 || laminate paper || 20 || solar-powered laminate factory kit || 2
+|-
+| Solar-powered oil factory || surface || 2 || scrap-oil<br>synthesized scrap-soap || 2<br>5 || solar-powered oil factory kit || 2
+|-
+| Symbiotic smart-fabric factory || subterranean || 2 || smart-fiber (thread)<br>smart-sheet (paper) || 2<br>2 || symbiotic smart-fabric factory kit || 2
+|-
+| Symbiotic oil factory || subterranean || 2 || synthesized oil<br>synthesized soap || 5<br>10 || symbiotic oil factory kit || 2
+|}
+
+=== Hydroponic Plants ===
+
+In the devastated ecosphere of the Terran Megastructure, the only way to grow the plants that once covered the surface of earth is through the use of advanced hydroponics systems. Most hydroponics systems are advanced and delicate enough that they must be grown indoors, with the exception of hydroponic algae which instead uses a primitive system of hydroponics that *requires* being grown in natural light. Hydroponic food offers the best taste out of any plants, but its growth requirements means that most will never be able to afford it.
+
+{| class="wikitable" border="border"
+! Crop Name
+! Biome
+! Value
+! Growth
+! Growth Value
+! Drink
+! Drink Value
+! Eat
+! Cook
+! Seed
+! Seed Value
+|-
+| Hydroponic algae || surface || 2 || none || n/a || gin || 2 || yes || yes || algal bud || 1
+|-
+| Hydroponic fruit farm || subterranean || 2 || hydroponic fruit || 5 || wine || 20 || yes || yes || hydroponic fruit seed || 2
+|-
+| Hydroponic vegetable farm || subterranean || 2 || hydroponic vegetable || 10 || none || n/a || yes || yes || hydroponic vegetable seed || 2
+|-
+| Hydroponic grain farm || subterranean || 2 || none || n/a || beer || 10 || no || no (but can be ground into flour) || hydroponic grain seed || 2
+|}
+
+<!--{| class="wikitable" border="border"
+! Crop Name
+! Biome
+! Wet/Dry
+! Nat. Frequency
+! Seasons
+! Alignment
+! Value
+! Drink
+! Drink Value
+! Eat
+! Cook
+! Product
+! Product Value
+|-
+|Corn || Any land || wet || 1 || all || all || 2 || alcosoda || 2 || no || yes || corn flour<br>corn seed || 20<br>1
+|-
+|Wheat || Any land || wet || 1 || all || all || 2 || wheat beer || 2 || no || yes || wheat flour<br>wheat seed || 20<br>1
+|-
+|Moss bush || temperate grassland, shrubland, savanna || both || 100 || all || all || 2 || moonshine || 2 || no || yes || moss fiber<br>moss slurry<br>moss bush seed || 2<br>2<br>1
+|-
+|Brown mushroom || any land || wet || 10 || all || all || 2 || mushroom beer || 2 || yes || yes || brown mushroom spawn || 1
+|-
+|White mushroom || any land || wet || 10 || all || all || 2 || mushroom wine || 2 || yes || yes || white mushroom spawn || 1
+|-
+|Black mushroom || any land || wet || 10 || all || all || 2 || mushroom sake || 2 || yes || yes || black mushroom spawn || 1
+|-
+|Soybean || any land || wet || 1 || all || all || 2 || alcosoylent || 2 || yes || yes || soybeans || 1
+|-
+|Waterflower || any land || wet || 10 || all || all || 2 || sanitized water || 2 || yes || yes || waterflower seeds || 1
+|-
+|Potato || any land || wet || 1 || all || all || 2 || vodka || 2 || yes || yes || ? || 
+|-
+|Berry™ || not freezing || wet || 50 || all || good || 2 || trademarked wine || 2 || yes || yes || Berry™ seeds || 1
+|-
+|Glowing mushroom || subterranean 1-3 || wet || 10 || all || all || 2 || psychotropic ale || 2 || yes || yes || Glowing mushroom spawn || 1
+|}-->
+
+== Trees ==
+
+With true trees dying out long ago, their niche is filled in most of the world by towers, the haphazard outgrowths of the Megastructure itself which can be harvested for scrap. However, in rare corners of the Megastructure one will find that mosses and lichens have evolved to create a sort of tree in their own right. These trees provide a habitat for some of the last remnants of the Earth's ancient fauna.
+
+{| class="wikitable" border="border"
+! Tree Name
+! Biome
+! Wet/Dry
+! Nat. Frequency
+! "Wood" Type
+! "Wood" Density
+! "Wood" Value
+! 
+|-
+|Tower || any grassland, shrubland, savanna || both || 1 || scrap material || 600 || 1
+|-
+|Moss tree || any forest, taiga || dry || 100 || wood || 650 || 5
+|-
+|Lichen tree || any forest, taiga || wet || 100 || wood || 650 || 5
+|}
+
+== "Grasses" ==
+
+{| class="wikitable" border="border"
+! Grass Name
+! Biome
+! Wet/Dry
+! Alignment
+|-
+|Moss || any grassland, shrubland, savanna, forest, taiga || both || all
+|-
+|Lichen || any forest, taiga || both || all
+|-
+|Plastcrete tile || any desert, mountain || both || all
+|-
+|Plastcrete structural growth || any desert, mountain || both || all
+|-
+|Plastcrete tiling growth || subterranean || both || all
+|-
+|Nanoroot || any desert, taiga || both || savage
+|-
+|Nanomachine colony || any desert, taiga || both || savage
+|}
+
+= Related Pages =
+[[Modification:The Long Night|The Long Night: Lore]]<br>
+[[Modification:The Long Night: Civilizations|The Long Night: Civilizations]]<br>
+[[Modification:The Long Night: Weapons|The Long Night: Weapons]]<br>
+[[Modification:The Long Night: Armor|The Long Night: Armor]]<br>
+[[Modification:The Long Night: Materials|The Long Night: Materials]]<br>
+[[Modification:The Long Night: Creatures|The Long Night: Creatures]]<br>
