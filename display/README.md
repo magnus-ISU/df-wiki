@@ -16,4 +16,4 @@ source of every page is under [`mirror/`](../mirror).
 - [Tutorial](Tutorial/)
 - [Utility](Utility/)
 
-*Index generated 2026-09-13; 14177 of 16802 pages stored.*
+*Index generated 2026-09-13; 14377 of 16802 pages stored.*
