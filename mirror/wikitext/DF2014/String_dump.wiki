@@ -1,0 +1,12 @@
+{{av}}
+
+This '''string dump''' is generated with this shell script (using the Windows and OS X versions of DF 0.40.24):
+<pre>
+strings df_osx/dwarfort.exe > strings_osx.txt
+strings df_win/Dwarf\ Fortress.exe > strings_win.txt
+perl -ne 'print if ($seen{$_} .= @ARGV) =~ /10$/' strings_osx.txt strings_win.txt > strings.txt
+</pre>
+== String Dump ==
+{{minorspoiler}}
+{{gamedata}}
+[[ru:String dump]]

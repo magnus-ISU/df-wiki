@@ -1,0 +1,122 @@
+{{Quality|Fine|10:33, 8 May 2015 (UTC)}}
+{{av}}
+
+:''If you're looking for information on improving the performance of Dwarf Fortress on your computer, see [[Maximizing framerate|Maximizing Framerate]].  For installation instructions, see [[Installation]].''
+
+''Dwarf Fortress'' is a very complex game, but in ways that differ from most other complex games.  This leads to the game having a somewhat unusual set of requirements.
+
+Note that while the [http://bay12games.com/dwarves/ front page] displays only three builds, there also exist other builds [http://bay12games.com/dwarves/older_versions.html under the "All Versions" link].
+
+== OS ==
+
+* '''Windows''' requires XP SP3 or newer and an Intel/AMD CPU.
+* '''Linux''' runs natively on an Intel/AMD CPU (x86 or amd64) with the [[Installation#Linux|proper dependencies]] installed. Running the Windows build under Wine is an alternative, but introduces overhead that may be significant.
+* '''MacOS''' requires 10.5 (Leopard) or later and an Intel CPU. There is not an ARM build yet, but the existing macOS build may work under Rosetta.
+* Builds for other systems do not exist.  Depending on your system, it ''may'' be possible to run the other builds through some messing around.
+
+==GPU==
+
+''Dwarf Fortress'' is not particularly graphically intensive, even when using high-res [[tilesets]] and [[graphics set]]s. ''Dwarf Fortress'' also doesn't use technologies like [[wikipedia:OpenCL|OpenCL]] to make use of graphics cards anyway, so a top-of-the-line graphics card will generally not improve performance.
+
+==CPU==
+
+''Dwarf Fortress'' mostly operates on a single thread, so if you want to optimize for DF, you should probably optimize for single-core performance.  This is especially true if you want to do more laggy things, such as [[mist]] generators.  However, laggy circumstances are generally the exception, not the rule, and in those other circumstances, you generally don't need a ''particularly'' powerful CPU.
+
+=== Cache size ===
+
+As ''Dwarf Fortress''' bottlenecks are mostly due to [https://en.wikipedia.org/wiki/CPU_cache#Cache_miss cache misses], it has been [http://www.bay12forums.com/smf/index.php?topic=151121.msg6270374#msg6270374 speculated on the DF forums] that "a CPU with a positively giant L3/L4 cache (and I mean > 256 mb or GTFO)" would improve DF performance, as would using faster RAM with smaller [https://en.wikipedia.org/wiki/CAS_latency transfer times]—see the next section.
+
+== RAM ==
+
+During [[Fortress mode|regular]] [[Adventurer mode|gameplay]], ''Dwarf Fortress'' usually doesn't consume too much memory -  512MB is probably a bit tight, but 1GB is absolutely sufficient, though if you're short on RAM, you may want to quit other running processes.  What's particularly important during regular gameplay is RAM ''latency''—since the game uses the RAM ''every single frame'', it's important that your RAM be fast, lest you experience FPS death.
+
+However, [[world generation]] is known to eat up a lot more RAM than normal gameplay, especially if you generate worlds that are particularly large or have long histories - multiple gigabytes may be consumed.  To be safe, you should shut down any background processes when generating a world, and if you're particularly tight on RAM, consider reducing the size or history of the worlds you generate—the game is rich enough with content that you'll still have plenty of things to do, and you can always tweak the other, less RAM-hungry [[advanced world generation]] parameters.  (RAM latency is less of a problem here, since you'll only need to do this once every so often.)
+
+== SDL vs. Legacy ==
+[http://www.libsdl.org/ SDL] is a cross-platform application framework. The SDL version of DF runs on Windows, Mac OS X, and Linux. It includes Baughn's new OpenGL code, which is faster and has more features (including support for PNG tilesets and using scroll wheels).
+
+"Legacy" refers to the (Windows-only) framework Toady used before migrating to SDL. The legacy version is only necessary if the SDL version doesn't work for some reason.
+
+== Experiential reports ==
+=== Report format ===
+Please read [[System_requirements/Report_Template|the report template]] page before contributing any reports.
+
+=== Reports ===
+
+Configuration type: Self-built PC from 2008
+;Game info
+:Game version: v0.34.07
+:World size: Small
+:Embark size: 4×4
+:Age of fort: 1 year
+:Number of dwarves: 15
+:Average fps: 100
+:Default/nondefault raws: default
+:Tileset in use: Mayday
+:Amount of stone dug: ~3000
+:Amount of water and state: About 15 murky pools, no river or stream
+:Approximate amount of z-levels: 10
+:RAM usage of game: 622 Mb
+:Draw mode in init.txt: 2D
+
+;PC info
+:CPU: Intel Core2Quad Q6600 @ 2.4Ghz
+:MBO: Gigabyte P35-DS3L
+:RAM: 4GB DDR2 @ 800Mhz
+:GPU: Gigabyte Radeon HD5850
+:OS: Windows 7 Professional x64
+
+----
+
+Configuration type: Self-built PC from 2012
+;Game info
+:Game version: v0.34.11
+:World size: Small
+:Embark size: 4×4
+:Age of fort: 8 years
+:Number of dwarves: 232
+:Average fps: 78
+:Default/nondefault raws: default
+:Tileset in use: Mayday
+:Amount of stone dug: ~1100
+:Amount of water and state: Frozen river, frozen murky pools, two artifical-made underground rivers
+:Approximate amount of z-levels: 8
+:RAM usage of game: 765 Mb
+:Draw mode in init.txt: 2D
+
+;PC info
+:CPU: Intel Core i5 3570K @ 3.4 Ghz
+:MBO: ASUS P8Z77-M PRO
+:RAM: 8GB DDR3 @ 1600Mhz
+:GPU: Gigabyte Radeon HD5850
+:OS: Windows 7 Professional x64
+
+----
+
+Configuration type: Self-built PC from 2012
+;Game info
+:Game version: v0.34.11
+:World size: Small
+:Embark size: 4×4
+:Age of fort: 2 years
+:Number of dwarves: 98
+:Average fps: ~250
+:Default/nondefault raws: default
+:Tileset in use: Mayday
+:Amount of stone dug: ~1900
+:Amount of water and state: Frozen river, Frozen Pools
+:Approximate amount of z-levels: 9
+:RAM usage of game: 834 Mb
+:Draw mode in init.txt: 2D
+
+;PC info
+:CPU: Amd Fx-8350 @ 4.8 Ghz
+:MBO: Gigabyte GA-990FXA-UD5
+:RAM: 16GB DDR3 @ 1866 Mhz
+:GPU: Sapphire Hd 7970 Ghz Vapor X
+:OS: Windows 7 Professional x64
+
+{{Translation| dwarven = idith inem | elvish = eritha enotho | goblin = obsår eted | human = histek tikes}}
+
+{{Category|Game}}
+[[ru:System requirements]]

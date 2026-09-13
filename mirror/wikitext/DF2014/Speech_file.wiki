@@ -1,0 +1,436 @@
+{{av}}
+'''Speech files''' are text files that define sentences which can be spoken by people in [[adventure mode]]. They are found in the <code>data/speech</code> folder.
+
+== List of files ==
+
+{| class="wikitable"
+! File !! Uses !! Example
+|-
+| {{text anchor|ab_specific_hf_seeker}}
+|
+| seek out [CONTEXT:HIST_FIG:TRANS_NAME] at [CONTEXT:ABSTRACT_BUILDING:TRANS_NAME] over in [CONTEXT:SITE:TRANS_NAME]
+
+|-
+| {{text anchor|animal_slayer}}
+|
+| I have taken down [CONTEXT:NUMBER] [CONTEXT:RACE:NUMBERED_NAME] while stalking [CONTEXT:PLACE:TRANS_NAME].
+
+|-
+| {{text anchor|arch_info_justification}}
+|
+| It is said that the [CONTEXT:ARCH_ELEMENT] of [CONTEXT:ABSTRACT_BUILDING:TRANS_NAME] [CONTEXT:JUSTIFICATION] [CONTEXT:DEF_SPHERE] for the glory of [CONTEXT:HIST_FIG:TRANS_NAME].
+
+|-
+| {{text anchor|child_age_proclamation}}
+|
+| I'm [CONTEXT:NUMBER]!
+
+|-
+| {{text anchor|current_profession_no_year}}
+|
+| I am a [CONTEXT:UNIT_NAME].
+
+|-
+| {{text anchor|current_profession_year}}
+|
+| This is my [CONTEXT:ORDINAL] year as a [CONTEXT:UNIT_NAME].
+
+|-
+| {{text anchor|curse}}
+|
+| Who dares to enter my house?  I curse you!
+
+|-
+| {{text anchor|dwarf}}
+| Used when boasting about killing a [[dwarf]]. See also [[Creature token#SPEECH]].
+| whose hammer shattered on the anvil of my power
+
+|-
+| {{text anchor|elf}}
+| Used when boasting about killing an [[elf]]. See also [[Creature token#SPEECH]].
+| whose fragile bones shattered before the power of my contempt
+
+|-
+| {{text anchor|family_relationship_additional}}
+|
+| [CONTEXT:HIST_FIG:PRO_SUB] is also my [CONTEXT:FAMILY_RELATIONSHIP]
+
+|-
+| {{text anchor|family_relationship_additional_dead}}
+|
+| [CONTEXT:HIST_FIG:PRO_SUB] was also my [CONTEXT:FAMILY_RELATIONSHIP]
+
+|-
+| {{text anchor|family_relationship_no_spec}}
+|
+| I have [CONTEXT:INDEF_FAMILY_RELATIONSHIP] named [CONTEXT:HIST_FIG:TRANS_NAME]
+
+|-
+| {{text anchor|family_relationship_no_spec_dead}}
+|
+| I had [CONTEXT:INDEF_FAMILY_RELATIONSHIP] named [CONTEXT:HIST_FIG:TRANS_NAME]
+
+|-
+| {{text anchor|family_relationship_spec}}
+|
+| my [CONTEXT:FAMILY_RELATIONSHIP] is named [CONTEXT:HIST_FIG:TRANS_NAME]
+
+|-
+| {{text anchor|family_relationship_spec_dead}}
+|
+| my [CONTEXT:FAMILY_RELATIONSHIP] was named [CONTEXT:HIST_FIG:TRANS_NAME]
+
+|-
+| {{text anchor|general}}
+|
+| who lies dead, now only an embarrassing memory
+
+|-
+| {{text anchor|goodbye_worship_1}}
+|
+| upon arising in the mornings,
+
+|-
+| {{text anchor|goodbye_worship_2}}
+|
+| always remember to
+
+|-
+| {{text anchor|goodbye_worship_3}}
+|
+| speak the praises of [SPEAKER:HF_LINK:DEITY:RANDOM_DEF_SPHERE]
+
+|-
+| {{text anchor|greet}}
+| Used when greeting another person.
+| Greetings. My name is [SPEAKER:TRANS_NAME].
+
+|-
+| {{text anchor|greet_baby}}
+| Used when greeting a [[baby]].
+| A baby! How adorable!
+
+|-
+| {{text anchor|greet_reply}}
+| Used when replying to another person's greeting.
+| Ah, hello. I'm [SPEAKER:TRANS_NAME].
+
+|-
+| {{text anchor|greet_reply_after_hero}}
+| Used by NPCs when replying to the player character's greeting after becoming a [[hero]].
+| I am [SPEAKER:TRANS_NAME]. How can I be of service?
+
+|-
+| {{text anchor|greet_reply_diff_language}}
+| Used when replying to the greeting of a person who is of another race.
+| Hello, [AUDIENCE:RACE]. I am [SPEAKER:TRANS_NAME].
+
+|-
+| {{text anchor|greet_reply_unusual_first}}
+| Used when replying to the greeting of a person whose first name is unusual.{{verify|June 2015}}
+| You know, you don't meet many people with the name [AUDIENCE:FIRST_NAME]
+
+|-
+| {{text anchor|greet_worship}}
+| Used for greetings by [[priest]]s and faithful people.{{verify|June 2015}}
+| This servant of [SPEAKER:HF_LINK:DEITY:TRANS_NAME] greets you.
+
+|-
+| {{text anchor|guard_profession}}
+| Used by guards when you ask them about their profession. See also [[#soldier_profession|soldier_profession]].
+| I am a guard.
+
+|-
+| {{text anchor|guard_warning}}
+|
+| Don't start any trouble.
+
+|-
+| {{text anchor|hist_fig_slayer}}
+|
+| It is I that felled [CONTEXT:HIST_FIG:TRANS_NAME] the [CONTEXT:HIST_FIG:RACE].
+
+|-
+| {{text anchor|hunting_profession}}
+|
+| I hunt great beasts in [CONTEXT:PLACE:TRANS_NAME].
+
+|-
+| {{text anchor|hunting_profession_year}}
+|
+| I have hunted great beasts in [CONTEXT:PLACE:TRANS_NAME] for [CONTEXT:NUMBER] of my years.
+
+|-
+| {{text anchor|justification_antithetical}}
+|
+| can be thought of as the antithesis of
+
+|-
+| {{text anchor|justification_experience}}
+|
+| can allow one to experience
+
+|-
+| {{text anchor|justification_proximity}}
+|
+| can bring one near to
+
+|-
+| {{text anchor|justification_reminder}}
+|
+| can remind one of
+
+|-
+| {{text anchor|justification_representation}}
+|
+| can be thought of as a representation of
+
+|-
+| {{text anchor|lair_hunter_minotaur}}
+| Used by [[minotaur]]s while hunting adventures in their lairs. See also [[Creature token#LAIR_HUNTER_SPEECH]].
+| I'll eat you whole!
+
+|-
+| {{text anchor|mercenary_profession}}
+|
+| I seek fortune and glory by offering my skill at arms in [CONTEXT:PLACE:TRANS_NAME].
+
+|-
+| {{text anchor|mercenary_profession_year}}
+|
+| I have sought fortune and glory by offering my skill at arms in [CONTEXT:PLACE:TRANS_NAME] for [CONTEXT:NUMBER] of my years.
+
+|-
+| {{text anchor|no_family}}
+| Used by NPCs when you ask them about their [[family]], but they don't have any.
+| I have no family to speak of.
+
+|-
+| {{text anchor|past_hunting_profession}}
+|
+| In the past, I hunted great beasts.
+
+|-
+| {{text anchor|past_mercenary_profession}}
+|
+| In the past, I sought fortune and glory by offering my skill at arms.
+
+|-
+| {{text anchor|past_profession_no_year}}
+|
+| I was once a [CONTEXT:UNIT_NAME].
+
+|-
+| {{text anchor|past_profession_year}}
+|
+| I was a [CONTEXT:UNIT_NAME] for [CONTEXT:NUMBER] of the years of my life.
+
+|-
+| {{text anchor|past_scouting_profession}}
+|
+| At one time, I was a scout.
+
+|-
+| {{text anchor|past_snatcher_profession}}
+|
+| Once it was my calling to rescue lost children.
+
+|-
+| {{text anchor|past_thief_profession}}
+|
+| I once sought great treasures.
+
+|-
+| {{text anchor|past_wandering_profession}}
+|
+| I once wandered the wilds.
+
+|-
+| {{text anchor|positive}}
+| Used to express positive [[feeling]]s.
+| wonderful!<br/>fantastic!<br/>very good
+
+|-
+| {{text anchor|same_site_ab_specific_hf_seeker}}
+|
+| seek out [CONTEXT:HIST_FIG:TRANS_NAME] here in [CONTEXT:SITE:TRANS_NAME] at [CONTEXT:ABSTRACT_BUILDING:TRANS_NAME]
+
+|-
+| {{text anchor|same_site_specific_hf_seeker}}
+|
+| seek out [CONTEXT:HIST_FIG:TRANS_NAME] here in [CONTEXT:SITE:TRANS_NAME]
+
+|-
+| {{text anchor|scouting_profession}} (removed in 0.44.01)
+|
+| It is my duty to scout the area around [CONTEXT:PLACE:TRANS_NAME].
+
+|-
+| {{text anchor|scouting_profession_year}} (removed in 0.44.01)
+|
+| I have been scouting the area around [CONTEXT:PLACE:TRANS_NAME] for [CONTEXT:NUMBER] of my years.
+
+|-
+| {{text anchor|site_specific_hf_seeker}}
+|
+| seek out [CONTEXT:HIST_FIG:TRANS_NAME] over in [CONTEXT:SITE:TRANS_NAME]
+
+|-
+| {{text anchor|slayer}}
+|
+| bane<br/>death<br/>nemesis<br/>vanquisher
+
+|-
+| {{text anchor|snatcher_profession}}
+|
+| I rescue lost children and bring them back to [CONTEXT:PLACE:TRANS_NAME].
+
+|-
+| {{text anchor|snatcher_profession_year}}
+|
+| For [CONTEXT:NUMBER] of my years, I have been rescuing lost children and bringing them back to [CONTEXT:PLACE:TRANS_NAME].
+
+|-
+| {{text anchor|soldier_profession}}
+| Used by [[soldier]]s when you ask them about their profession. See also [[#guard_profession|guard_profession]].
+| I am a soldier.
+
+|-
+| {{text anchor|task_recommendation}}
+|
+| [CONTEXT:ANY:TRANS_NAME] might have a task for you
+
+|-
+| {{text anchor|temple_already_member}}
+|
+| your task is simple;<br/>all you need is to
+
+|-
+| {{text anchor|temple_become_member}}
+|
+| Welcome to [CONTEXT:ENTITY:TRANS_NAME].  Praise be to [CONTEXT:ENTITY:WORSHIP_HF:TRANS_NAME]!<br/>As a member of [CONTEXT:ENTITY:TRANS_NAME], you can now seek the higher mysteries of [CONTEXT:ENTITY:WORSHIP_HF:TRANS_NAME].
+
+|-
+| {{text anchor|thief_profession}}
+|
+| I seek treasures and bring them back to [CONTEXT:PLACE:TRANS_NAME].
+
+|-
+| {{text anchor|thief_profession_year}}
+|
+| I seek treasures and bring them back to [CONTEXT:PLACE:TRANS_NAME] and have done so for [CONTEXT:NUMBER] of the years of my life.
+
+|-
+| {{text anchor|threat}}
+| Used by NPC [[bandit]]s{{verify|June 2015}} before attacking you.
+| Prepare to die!
+
+|-
+| {{text anchor|unknown_hf_seeker}}
+|
+| seek out [CONTEXT:HIST_FIG:TRANS_NAME], wherever [CONTEXT:HIST_FIG:PRO_SUB] might be
+
+|-
+| {{text anchor|wandering_profession}}
+|
+| I wander [CONTEXT:PLACE:TRANS_NAME].
+
+|-
+| {{text anchor|wandering_profession_year}}
+|
+| I have wandered [CONTEXT:PLACE:TRANS_NAME] for [CONTEXT:NUMBER] of my years.
+|}
+
+== Adding custom files ==
+
+While any of the hardcoded speech files can be edited to customize the used phrases, it is also possible to add new files and associate them with custom creatures.
+
+{| class="wikitable"
+|+ [[Creature token]]s
+! Token !! Example uses
+
+|-
+| [[Creature token#CASTE_SPEECH|CASTE_SPEECH]]
+|
+
+|-
+| [[Creature token#LAIR_HUNTER_SPEECH|LAIR_HUNTER_SPEECH]]
+| [[minotaur]] ([[#lair_hunter_minotaur|lair_hunter_minotaur.txt]])
+
+|-
+| [[Creature token#SPEECH|SPEECH]]
+| [[dwarf]] ([[#dwarf|dwarf.txt]]), [[elf]] ([[#elf|elf.txt]])
+
+|-
+| [[Creature token#SPEECH_FEMALE|SPEECH_FEMALE]]
+|
+
+|-
+| [[Creature token#SPEECH_MALE|SPEECH_MALE]]
+|
+|}
+
+== Special tokens ==
+
+Speech files can contain tokens in square brackets (<code>[]</code>), which are replaced with context-specific strings before the speech is displayed.
+
+=== Context tokens ===
+
+These give special information about the background of the conversation.
+
+{| class="wikitable"
+! Token !! Type !! Meaning
+
+|-
+| [CONTEXT:ABSTRACT_BUILDING]
+| building
+|
+* [[#ab_specific_hf_seeker|ab_specific_hf_seeker]]: the building in which the historical figure that the speaker wants you to seek is
+
+|-
+| [CONTEXT:HIST_FIG]
+| creature
+|
+* [[#ab_specific_hf_seeker|ab_specific_hf_seeker]]: the historical figure the speaker wants you to seek
+
+|-
+| [CONTEXT:NUMBER]
+| number
+|
+* [[#animal_slayer|animal_slayer]]: number of animals slain
+* [[#child_age_proclamation|child_age_proclamation]]: age in years of the child
+
+|-
+| [CONTEXT:ORDINAL]
+| number
+|
+* [[#current_profession_year|current_profession_year]]: the number of years the speaker has had their profession
+
+|-
+| [CONTEXT:PLACE]
+| site
+|
+* [[#animal_slayer|animal_slayer]]: the place where the speaker slew the animals
+
+|-
+| [CONTEXT:RACE]
+| race
+|
+* [[#animal_slayer|animal_slayer]]: the race of the animals the speaker has slain
+
+|-
+| [CONTEXT:SITE]
+| site
+|
+* [[#ab_specific_hf_seeker|ab_specific_hf_seeker]]: the site where the historical figure the speaker wants you to seek is
+
+|-
+| [CONTEXT:UNIT_NAME]
+| text
+|
+* [[#current_profession_no_year|current_profession_no_year]]: the name of the speaker's profession
+|}
+
+
+[[Category:DF2014:Files]]
+[[Category:DF2014:Modding]]

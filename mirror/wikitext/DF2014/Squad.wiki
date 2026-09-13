@@ -1,0 +1,150 @@
+{{Quality|Exceptional|18:32, 23 August 2014 (UTC)}}
+{{av}}
+
+: ''For enemy squads, see [[ambush]] and/or [[siege]].''
+
+
+[[File:dwarf_army.jpg|thumb|300px|right|A dwarf squad ready to deliver permanent deaths.]]A '''squad''' is a group of [[military]] dwarves who share the same [[scheduling|schedule]] and active military orders. Squads are a fundamental part of your fortress' military &mdash; they are the units who carry out all the orders you give them. Your ability to manage these iron-blooded dwarves could spell the difference between a healthy fort's life and death.
+
+For quick reference: from the main menu the '''military''' screen is accessible through the {{k|m}} key and the '''squads''' screen is accessible through the {{k|s}} key. The military screen and all its tabs are mouse-compatible, and can be navigated through mouse clicks rather than strictly keys (when in windowed mode).
+
+For simple, ''very'' basic, unarmed and unarmored instructions on how to attack a creature, see [[attack]].
+
+==Forming Squads==
+
+Before you do anything with your military, you may want to go into the [[noble]]s screen ({{k|n}}) and designate a '''[[militia commander]]'''. Your fortress can only have one militia commander, who acts as the commander-in-chief of all squads. The militia commander also serves as the leader of your first squad.
+
+Each squad after the first will have its own [[militia captain]], who reports to the militia commander. Squad captains can be designated through the nobles screen, or by creating a new squad on the {{k|m}}ilitary screen and then assigning a dwarf to the first position of that squad.
+
+When you have designated a commander or captain, going to the military screen will show that dwarf under the "Squads/Leaders" heading and you'll notice an option to create a new squad. You can also create a new squad before you designate your militia commander; the first dwarf you choose will automatically be assigned that position.
+
+When you create a squad, you will be asked what uniform to give them.  The game creates three uniforms by default; if you aren't sure what to use, or if you want to customize their uniform, choose ''No uniform''.  (See [[#Equipping Soldiers|Equipping Soldiers]], below, for details.)
+
+Once the first squad has been created, you can then fill out the squad with any militarily-capable dwarves in your fort, of which no more than ten can be assigned to any one squad. When you add a dwarf to one squad they will be removed from another; for this reason you will always see the majority of your dwarves in the rightmost pane. Dwarves that are already in a military squad will have the name of that squad in the uppermost box, allowing you to skip them over if necessary.
+
+==Equipping Soldiers==
+
+In the military screen, press {{k|n}} to open the '''uniforms''' tab. Each listing under the 'Uniforms' header is essentially a pre-designed set of equipment that you can quickly apply to any individual soldier or entire squad, much like a template. You can create new uniforms if you want, and add or remove items from any uniform (even the standard ones). Uniforms are only ''created'' or ''modified'' in this tab, not applied.
+
+While still in the military screen, press {{k|e}} to open the '''equipment''' tab. The default sub-tab, {{k|V}}iew/Customize, will be open.  We'll come back to that in a moment. To apply one of your uniform templates, press {{k|U}} to open the Assign Uniforms sub-tab. Make sure the squad you want is highlighted under Squads/Leaders and then move the selector to the Position Uniform header. Pressing {{k|enter}} will apply the selected uniform to the individual dwarf of your choosing, and {{k|shift}}+{{k|enter}} will apply the selected uniform to the entire squad. If you edit a uniform after this, you will need to reapply the uniform for the dwarves to recognize the changes.
+
+In the {{k|V}}iew/Customize sub-tab, you can select individual dwarves (technically squad positions) and apply individual pieces of equipment to them - {{k|A}}rmor, {{k|L}}eggings, {{k|H}}elms, {{k|G}}loves, {{k|B}}oots, {{k|S}}hields, and {{k|W}}eapons.  You can also specify {{k|M}}aterial and {{k|C}}olor depending on the piece of equipment highlighted.  Finally, there are two settings that can be toggled for each dwarf: ''Ove{{k|r}} clothing'' and ''Partial {{k|m}}atches''.  These are both on (highlighted) by default.  ''Over clothing'' means the dwarf will do his best to wear his uniform in addition to his civilian [[clothing]]; if toggled, it becomes ''Replace clothing'', and the dwarf will strip naked before donning his military gear.  ''Partial matches'' means that if a dwarf cannot satisfy an equipment assignment, he'll substitute it with something close; if toggled to ''Exact matches'', he'll go without rather than making do with a substitute.
+
+To select a specific piece of equipment (such as an artifact), select 'specific _____' under that equipment type (e.g. 'specific armor' in the Armor field); for your convenience, highest-quality equipment is listed first.
+
+You have the option to wear equipment over clothing or to replace clothing using the {{k|r}} key on the equipment screen. Wearing armor over clothing can cause problems as some civilian clothing (caps, gloves, and shoes) will conflict with their military counterparts (helms, gauntlets, and boots).  Even though the '''equipment''' tab will show that these items have been assigned to a solider they will not actually wear them.  To avoid this use the ''Replace clothing'' option.  As armor counts as clothing, dwarves will not get bad thoughts if only wearing armor.
+
+For ranged soldiers, open the '''ammunition''' tab ({{k|f}}) to assign [[ammunition]] to your dwarves. If you chose the ''Archer'' uniform when you created the squad, then the game has already assigned 250 bolts to this squad. Otherwise, you must assign them some ammo (Important: The assigned amount of ammunition refers to the total amount which is carried by the whole squad--you'll generally want about 30 bolts per soldier). If you don't care what type of bolts they use, just pick "bolts" and they will use any bolts they can find. Also note that [[quiver]]s must be available for marksdwarves to equip bolts/arrows. They are not assigned under the '''equipment''' tab and are automatically retrieved by dwarves that require them.
+
+If you want them to train at an [[archery target]], you may want to assign lower-quality [[wood]] or [[bone]] bolts for training use. By default, both training and combat use are allowed for all assigned ammunition; use {{k|C}} and {{k|T}} to toggle these settings. If the letter is present next to the ammunition the use is turned on.
+
+Soldiers who have more than one item to put on will not use distance to determine which of the remaining items will be equipped next. Therefore it is best to keep all dwarf-usable equipment within a small area, ideally near your [[barracks]].
+
+The {{k|m}}ilitary-{{k|e}}quipment screen can also be used to ''see'' what equipment has been assigned, without changing it.  A green checkmark will appear next to each equipment that has successfully been assigned to a dwarf (which doesn't necessarily mean the dwarf has actually picked it up yet).  For example, if your 9th and 10th squad members don't have a checkmark next to their gauntlets, then you may want to make some more. Pressing {{k|P}} lets you see ''precisely'' what items the dwarf has been assigned.
+
+Dwarves do not share weapons and armor even if in the same squad and even if the equipment is currently unused by another squadmate who is off duty. This means, for example, that you cannot have one set of armor for a squad of four dwarves who share guard duty one at a time. When one dwarf is relieved from duty, he may take off his armor (if set to wear civilian clothes) but the new dwarf going on duty will not then pick it up and wear it. Each dwarf in a squad needs his own uniform.
+
+===Changing Equipment===
+Let's suppose you started with the ''Leather armor '' uniform and then smithed some metal armor, and now you want to change your squads to the metal armor. From the military screen {{k|m}}, access the '''equipment''' view {{k|e}}. Then open the uniforms sub-view {{k|U}} which will show the standard Leather, Metal, and Archer uniforms on the right (if you haven't deleted them). To change a full squad, select the squad on the left, then select the uniform (metal) on the right, and hit {{k|shift}}-{{k|enter}} (if you only hit {{k|enter}} it will only apply the change to the lone selected squad member). Just hope you have enough metal armor and that Urist goes and picks it up!
+
+Dwarves will not always pick up their military equipment immediately.  An off-duty dwarf will sometimes prefer to perform one of his civilian jobs rather than putting on armor.  Giving squads an [[#Orders|order]] will put them on duty and force them to gather their equipment with a bit more hustle.
+
+===Equipping Bone and Shell Armor===
+One peculiarity for equipping [[bone]] and [[shell]] armor is that, for the purposes of the '''equipment''' and '''uniforms''' tabs, bone is white and shell is dark green.  Further, they are not explicitly listed in the {{k|M}}aterial of the {{k|V}}iew/Customize sub-tab.  A workaround for this problem is that bone and shell are the only materials of their respective colors that can be used to make armor by default.  So, to add bone or shell armor items to a preset uniform template, you need to add a specific type of armor (a helm, for instance) with the modifiers of {{k|C}}olour "white" or "dark green" (thus, e.g., a "white helm").  This workaround is ONLY effective if you also have no unique artifact armor made out of a white metal (such as an Aluminum Breastplate, Platinum Helm, or Silver Low Boot).  It also requires that the armor template be for "Exact matches" (not "Partial matches") using the {{k|m}} in the Uniforms tab.
+
+===Equipping Leather Shields===
+[[Leather]] is not a selectable material in the uniform screen. However, its uniformly brown colour means that you can order dwarves to use only brown-coloured [[shield]]s and be reasonably confident that they will choose only leather shields. Leather and wood are quite similar as shield materials, but if your leatherworkers make better shields than your carpenters you may want to use their products instead. [[Highwood]] shields are also an option with this uniform setting, and will be chosen if their value is appropriately high.
+
+==Orders==
+
+Getting your military to actually ''do'' something is the second step.  Squads receive '''passive orders''' through [[scheduling]], and you can give '''direct orders''' to '''attack''' one or more specific targets or to '''move''' to a specific location at will through the {{k|s}}quads menu.
+[[Image:SquadsMenu2010.png|right]]
+Passive orders are programming that a squad will follow in the absence of direct orders.  Passive orders are typically used for training and defense, while direct orders are used for taking the fight to the enemy. The ''squads'' menu is predominantly used for direct orders, and the ''Alerts'' and ''Schedule'' tabs of the ''military'' menu are used for passive orders. This article will focus on active commands; for more information on passive orders, see [[scheduling]].
+
+A squad that is following a direct command is free to go wherever it is ordered to go, unhindered by any [[burrow]] restrictions.
+
+===Selecting Squads/Soldiers===
+
+When needed, soldiers can be sent to do specific tasks to <strike>satiate the blood god</strike> defend your fortress. Once these orders have been canceled, your dwarves will return to their passive orders (if on duty), or their civilian lives (if off duty). Note, however, that your dwarves may continue to move towards their prior objective and mill about for some time afterwards. For this reason (and because canceling orders causes your dwarves to immediately drop any [[wear|worn-out]] clothing) it is best to order your dwarves back to a safe area '''before''' canceling their orders.
+
+In the {{k|s}}quad menu, you can press {{k|a}}/{{k|b}}/{{k|c}}/etc to select the squad that will execute an order, or hold {{k|shift}} to select multiple at once. You may press {{k|p}} if you want to toggle between having an individual dwarf or the squad perform the order.
+
+If a squad is off duty when you give them an order, they will switch to on-duty status before carrying out the order.  This may mean they need to pick up new equipment before they will carry out their orders.
+
+There are two types of active orders that can be given to your dwarves: a move order or an attack order.
+
+===Nobles in Squads ===
+Here's a link to the DF forum, with some not always correct speculation on if you should put any nobles in the military:
+http://www.bay12forums.com/smf/index.php?topic=113639.msg3467517#msg3467517
+
+===Move Order===
+
+From the {{k|s}}quad menu, a '''move order''' (also known as a ''Station'' order) is issued by selecting a squad, pressing {{k|m}}, choosing an area, and pressing {{k|enter}}.
+
+Each dwarf in the squad will select a random ([[path|reachable]]) point within 3 tiles of the spot you specify, somewhere in that 7x7 box, and will move directly to that point.  This can mean that, if they have a path, dwarves may obediently move to the "wrong" side of a wall or other barrier if those tiles are within the 7x7 box. Dwarves in the squad will stand there until you cancel the order, give a new order, or an enemy comes within sight. Also, if one is overcome by [[hunger]], [[thirst]], or [[exhaustion]], that dwarf will take care of their [[need]] and then return to their squad's current assignment.
+
+On-duty soldiers will pursue and attack any hostile targets they see, either en route to their station point, or after arriving.  Hostile targets may include certain wild animals that are deemed dangerous.  If the dwarf loses sight of the enemy, he will return to his chosen station point.
+
+===Attack Order===
+
+The '''attack order''', sometimes referred to as the '''kill command''', instructs your squad to pursue and attack one or more specific targets. It is a very unsubtle way of beating into your dwarves' booze-addled minds that they are to kill your target or be killed in the attempt. An attack order can be used to chase a kobold thief or goblin snatcher who is running away with your precious loot, or it may very well be your last command to your dwarves if things are getting desperate.
+
+After selecting which squad will execute the kill command, press {{k|k}} to Attack. You now have several options: you can move the cursor to what you want to attack and press {{k|enter}}, press {{k|l}}ist and select what you want to attack from a list, or {{k|r}}ectangle to select an area of things you want dead. Upon pressing {{k|enter}} your dwarves will happily run off to execute the order by executing the target.
+
+Each dwarf in the squad will attempt to move toward the target until they are within striking distance.  Ranged attackers will not do anything clever, like climbing up to the top of your archery tower - if you want them to fire from a specific position, use a move order instead. If they're already somewhere they can fire from safely, one can also cut off access to the intended targets and THEN issue a kill order. If they're stationed in an archery tower and ordered to kill something they can path to, they might charge the enemy even if they have a clear shot from their current position.
+
+This order will automatically be cancelled once the intended victim is killed. If the target is caught in a [[trap|cage trap]], though, your squad will stand over the cage waiting for new orders; when the caged target is hauled to the animal stockpile, the dwarves given the orders to kill it will follow the cage as it is hauled and wait around it once it is stockpiled until the kill command is canceled.
+
+Dwarves go about this with a little more vigor than required and will also attack any other creatures nearby. As a result, it is very difficult to attack members of an enemy group with any sort of precision, and if your dwarves cannot take down their target, there is no real way to get them out of combat; it's do-or-die. It is unknown whether this is a bug or a feature {{version|0.34.07}}.
+
+===Cancelling Orders===
+
+Pressing the {{k|o}} key in the {{k|s}}quad screen will '''cancel''' the selected dwarves' active orders, sending them back to their civilian or pre-scheduled military lives. It appears that this does not always work properly; as a result, your over-eager dwarves may get themselves into some trouble. Take caution when sending them deep into unfamiliar territory.
+
+==Order Scheduling==
+
+''Full article: [[Scheduling]]''
+
+From the squad menu you can cycle through any alerts you have defined quite quickly by pressing {{k|t}}. This will set the order schedule for the entire squad even if you only have a single dwarf selected. 
+
+To edit an existing order schedule or create a new one you need to visit the military schedule screen. This can be done directly from the squad menu by pressing {{k|s}} or alternatively you can back out of the squad menu and use {{k|m}}-{{k|s}} to get to the schedule page from the military screen. The details of setting up an order schedule are described on the [[scheduling]] page.
+
+==Bugs==
+* When selecting new dwarves to place in a squad the cursor always returns to the first available dwarf instead of remaining where it is.
+* Dwarves handle equipment conflicts poorly, often resulting in an ill-equipped military.{{bug|535}}
+* Military dwarves may constantly perform "pickup equipment" jobs {{Bug|2687}}
+* Military equipment interferes with civilian equipment (picks/axes/crossbows/quivers).{{bug|1451}}
+
+==Troubleshooting==
+Getting dwarves to collect and wear their assigned equipment can be a challenge. Here are some known issues:
+
+*Dwarves take forever to pick up their assigned equipment
+**Issuing a "station" order near your equipment dump should motivate dwarves to collect their equipment before reporting for duty. If they are still not fully equipped then check the problems listed below.
+
+*Some types of civilian clothing conflict with armor (caps and shoes are common culprits).
+**Toggle "Replace clothing" to force dwarves to wear the assigned armor. (You can toggle it back after they are equipped and your dwarves will add back any non-conflicting clothing.)
+
+*Dwarves don't equip hands and/or feet completely.
+**Remove duplicate assignments. A single "Metal footwear" entry will assign a *pair* of boots; dwarves with two entries are assigned two *pair*, which cause conflicts and prevent the second pair from being equipped by another dwarf.
+
+*Dwarves drop their assigned equipment.
+**Make sure they are ordered to wear their uniform when inactive, and disable all mining, hunting, and woodcutting labors (these labors conflict with military uniforms).
+
+*Dwarves keep complaining of "[[equipment mismatch]]".
+**This is an "informative" message that doesn't generally indicate a problem; ignore it.
+
+*Dwarves have tattered clothing equipped.
+**Assigned clothing will generally not be swapped for new replacements, leading to stress. Remove clothing from the dwarf's uniform, and optionally toggle "over clothing" to allow the dwarf to collect, wear, and replace civilian clothing automatically.
+
+*Dwarves don't pick up bolts.
+**Make sure you have enough quivers and bolts. Hunters are assigned 100 bolts by default, which remain reserved whether you have any hunters or not. There have been unconfirmed reports that bolts stored in bins may also be problematic.
+
+*Dwarves have the wrong bolts stuck in inventory.
+**Using separate bolts for combat and training does not currently work due to a [[#Bugs|bug]]. Assign one type of bolt for both.
+
+*Dwarves move extremely slowly after equipping themselves.
+**This is due the weight of the armor - most metal armor is heavy. The best way to prevent this is the [[armor user]] skill, which reduces encumbrance penalties from worn armor, as even stronger dwarves can be slowed by a full set of armor. [[barracks|Combat training]] will increase a dwarf's armor user skill and [[main:strength|strength]] (as will training [[Attribute#Attributes_trained_by_skills|some other skills]]). The increase in strength will allow them to carry more weight, but it is a very slow process.
+
+{{Military}}
+{{Category|Military}}
+[[ru:Squad]]
