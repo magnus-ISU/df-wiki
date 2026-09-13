@@ -1,0 +1,18 @@
+<noinclude>
+{{storage table head}}
+</noinclude>
+|-
+|{{{container|}}}
+|{{{stockpile|}}}
+|style="background:{{#switch:{{{furniture|n}}}|y=rgb(204, 255, 204)|n=rgb(255, 204, 204)|#default=rgb(255, 255, 170)}}"|{{#switch:{{{furniture|n}}}|y=Yes|n=No|#default={{{furniture|}}}}}{{#if:{{{sup_furn|}}}|<sup>{{{sup_furn|}}}</sup>|}}
+|{{#if:{{{solidcap|}}}|{{{solidcap|}}}|—}}
+|{{#if:{{{liquidcap|}}}|{{{liquidcap|}}}|—}}
+|{{{stores|}}}
+|style="text-align:center;"|{{{graphic|}}}
+|style="background:{{#switch:{{{stone|n}}}|y=rgb(204, 255, 204)|n=rgb(255, 204, 204)|#default=rgb(255, 255, 170)}}"|{{#switch:{{{stone|n}}}|y=Yes|n=No|#default={{{stone|}}}}}{{#if:{{{sup_stonewood|}}}|<sup>{{{sup_stonewood|}}}</sup>|}}
+|style="background:{{#switch:{{{wood|n}}}|y=rgb(204, 255, 204)|n=rgb(255, 204, 204)|#default=rgb(255, 255, 170)}}"|{{#switch:{{{wood|n}}}|y=Yes|n=No|#default={{{wood|}}}}}{{#if:{{{sup_stonewood|}}}|<sup>{{{sup_stonewood|}}}</sup>|}}
+|style="background:{{#switch:{{{glass|n}}}|y=rgb(204, 255, 204)|n=rgb(255, 204, 204)|#default=rgb(255, 255, 170)}}"|{{#switch:{{{glass|n}}}|y=Yes|n=No|#default={{{glass|}}}}}
+|style="background:{{#switch:{{{metal|n}}}|y=rgb(204, 255, 204)|n=rgb(255, 204, 204)|#default=rgb(255, 255, 170)}}"|{{#switch:{{{metal|n}}}|y=Yes|n=No|#default={{{metal|}}}}}
+|style="background:{{#switch:{{{cloth|n}}}|y=rgb(204, 255, 204)|n=rgb(255, 204, 204)|#default=rgb(255, 255, 170)}}"|{{#switch:{{{cloth|n}}}|y=Yes|n=No|#default={{{cloth|}}}}}{{#if:{{{sup_cloth|}}}|<sup>{{{sup_cloth|}}}</sup>|}}
+|style="background:{{#switch:{{{leather|n}}}|y=rgb(204, 255, 204)|n=rgb(255, 204, 204)|#default=rgb(255, 255, 170)}}"|{{#switch:{{{leather|n}}}|y=Yes|n=No|#default={{{leather|}}}}}
+|style="background:{{#switch:{{{ceramic|n}}}|y=rgb(204, 255, 204)|n=rgb(255, 204, 204)|#default=rgb(255, 255, 170)}}"|{{#switch:{{{ceramic|n}}}|y=Yes|n=No|#default={{{ceramic|}}}}}

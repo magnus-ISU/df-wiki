@@ -1,0 +1,162 @@
+<div class="mw-parser-output"><div style="float: right; padding: 0.5em; margin: 0.25em; border: 1px solid #ccc; background: #eee">style="padding: 0; line-height: 1;"|<div style="color: #000; background: &#123;&#123;&#123;1&#125;&#125;&#125;; position:relative; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace;"><b>█</b></div></div>
+<p><br />
+Flexible template for building complex diagrams with wiki tables.
+</p>
+<h2><span class="mw-headline" id="Usage">Usage</span></h2>
+<pre>
+
+{| style="border-spacing: 0;"
+|-
+|{{RTL|&lt;character-color&gt;|&lt;character&gt;|&lt;background-color&gt;|&lt;superior&gt;|&lt;superior-color&gt;|&lt;superior-align&gt;|&lt;inferior&gt;|&lt;inferior-color&gt;|&lt;inferior-align&gt;}}
+|}
+
+Default:
+* character-color:#000
+* character:█
+* background-color:transparent
+* superior:
+* superior-color:#000
+* superior-align:right (left|center|right|justify)
+* inferior:
+* inferior-color:#000
+* inferior-align:right (left|center|right|justify)
+</pre>
+<h3><span class="mw-headline" id="Usage_2">Usage</span></h3>
+<p>
+{{RTL}}
+
+</p>
+<table style="border-spacing: 0;">
+
+<tbody><tr>
+<td style="padding: 0; line-height: 1;"><div style="color: #000; background: &#123;&#123;&#123;1&#125;&#125;&#125;; position:relative; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace;"><b>█</b></div>
+</td></tr></tbody></table>
+<p>
+{{RTL|#FF0}}
+
+</p>
+<table style="border-spacing: 0;">
+
+<tbody><tr>
+<td style="padding: 0; line-height: 1;"><div style="color: #FF0; background: #FF0; position:relative; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace;"><b>█</b></div>
+</td></tr></tbody></table>
+<p>
+{{RTL|#FF0|▬}}
+
+</p>
+<table style="border-spacing: 0;">
+
+<tbody><tr>
+<td style="padding: 0; line-height: 1;"><div style="color: #FF0; background: transparent; position:relative; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace;"><b>▬</b></div>
+</td></tr></tbody></table>
+<p>
+{{RTL|#FF0|▬|#CCC}}
+
+</p>
+<table style="border-spacing: 0;">
+
+<tbody><tr>
+<td style="padding: 0; line-height: 1;"><div style="color: #FF0; background: #CCC; position:relative; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace;"><b>▬</b></div>
+</td></tr></tbody></table>
+<p>
+{{RTL|#FF0|▬|#CCC|1}}
+
+</p>
+<table style="border-spacing: 0;">
+
+<tbody><tr>
+<td style="padding: 0; line-height: 1;"><div style="color: #FF0; background: #CCC; position:relative; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace;"><b>▬</b><div style="position: absolute; left: 0em; top: -1ex; color:#000; font-size: 60%; font-family: &#39;Helvetica&#39;; text-align: right; width: 100%;">1</div></div>
+</td></tr></tbody></table>
+<p>
+{{RTL|#FF0|▬|#CCC|1|#F00}
+
+</p>
+<table style="border-spacing: 0;">
+
+<tbody><tr>
+<td style="padding: 0; line-height: 1;"><div style="color: #FF0; background: #CCC; position:relative; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace;"><b>▬</b><div style="position: absolute; left: 0em; top: -1ex; color:#F00; font-size: 60%; font-family: &#39;Helvetica&#39;; text-align: right; width: 100%;">1</div></div>
+</td></tr></tbody></table>
+<p>
+{{RTL|#FF0|▬|#CCC|1|#F00|left}}
+
+</p>
+<table style="border-spacing: 0;">
+
+<tbody><tr>
+<td style="padding: 0; line-height: 1;"><div style="color: #FF0; background: #CCC; position:relative; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace;"><b>▬</b><div style="position: absolute; left: 0em; top: -1ex; color:#F00; font-size: 60%; font-family: &#39;Helvetica&#39;; text-align: left; width: 100%;">1</div></div>
+</td></tr></tbody></table>
+<p>
+{{RTL|#FF0|▬|#CCC|1|#F00|left|7}}
+
+</p>
+<table style="border-spacing: 0;">
+
+<tbody><tr>
+<td style="padding: 0; line-height: 1;"><div style="color: #FF0; background: #CCC; position:relative; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace;"><b>▬</b><div style="position: absolute; left: 0em; top: -1ex; color:#F00; font-size: 60%; font-family: &#39;Helvetica&#39;; text-align: left; width: 100%;">1</div><div style="position: absolute; left: 0em; top: 1ex; color:#000; font-size: 60%; font-family: &#39;Helvetica&#39;; text-align: right; width: 100%;">7</div></div>
+</td></tr></tbody></table>
+<p>
+{{RTL|#FF0|▬|#CCC|1|#F00|left|7|#0F0}}
+
+</p>
+<table style="border-spacing: 0;">
+
+<tbody><tr>
+<td style="padding: 0; line-height: 1;"><div style="color: #FF0; background: #CCC; position:relative; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace;"><b>▬</b><div style="position: absolute; left: 0em; top: -1ex; color:#F00; font-size: 60%; font-family: &#39;Helvetica&#39;; text-align: left; width: 100%;">1</div><div style="position: absolute; left: 0em; top: 1ex; color:#0F0; font-size: 60%; font-family: &#39;Helvetica&#39;; text-align: right; width: 100%;">7</div></div>
+</td></tr></tbody></table>
+<p>
+{{RTL|#FF0|▬|#CCC|1|#F00|left|7|#0F0|left}}
+
+</p>
+<table style="border-spacing: 0;">
+
+<tbody><tr>
+<td style="padding: 0; line-height: 1;"><div style="color: #FF0; background: #CCC; position:relative; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace;"><b>▬</b><div style="position: absolute; left: 0em; top: -1ex; color:#F00; font-size: 60%; font-family: &#39;Helvetica&#39;; text-align: left; width: 100%;">1</div><div style="position: absolute; left: 0em; top: 1ex; color:#0F0; font-size: 60%; font-family: &#39;Helvetica&#39;; text-align: left; width: 100%;">7</div></div>
+</td></tr></tbody></table>
+<p><br />
+</p>
+<h3><span class="mw-headline" id="Examples">Examples</span></h3>
+<p><br />
+</p>
+<table style="border-spacing: 0;">
+
+<tbody><tr>
+<td style="padding: 0; line-height: 1;"><div style="color: #444; background: #CCC; position:relative; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace;"><b>÷</b><div style="position: absolute; left: 0em; top: -1ex; color:#F00; font-size: 60%; font-family: &#39;Helvetica&#39;; text-align: right; width: 100%;">─</div></div>
+</td>
+<td style="padding: 0; line-height: 1;"><div style="color: #444; background: #CCC; position:relative; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace;"><b>÷</b><div style="position: absolute; left: 0em; top: -1ex; color:#F00; font-size: 60%; font-family: &#39;Helvetica&#39;; text-align: left; width: 100%;">&gt;</div></div>
+</td></tr></tbody></table>
+<p><br />
+</p>
+<table style="border-spacing: 0;">
+
+<tbody><tr>
+<td style="padding: 0; line-height: 1;"><div style="color: #222; background: #222; position:relative; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace;"><b>█</b></div>
+</td>
+<td style="padding: 0; line-height: 1;"><div style="color: #444; background: #AAA; position:relative; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace;"><b>┼</b><div style="position: absolute; left: 0em; top: -1ex; color:#FF0; font-size: 60%; font-family: &#39;Helvetica&#39;; text-align: right; width: 100%;">1</div></div>
+</td>
+<td style="padding: 0; line-height: 1;"><div style="color: #222; background: #222; position:relative; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace;"><b>█</b></div>
+</td>
+<td style="padding: 0; line-height: 1;"><div style="color: #444; background: #AAA; position:relative; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace;"><b>┼</b><div style="position: absolute; left: 0em; top: -1ex; color:#FF0; font-size: 60%; font-family: &#39;Helvetica&#39;; text-align: right; width: 100%;">2</div></div>
+</td>
+<td style="padding: 0; line-height: 1;"><div style="color: #222; background: #222; position:relative; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace;"><b>█</b></div>
+</td>
+<td style="padding: 0; line-height: 1;"><div style="color: #444; background: #AAA; position:relative; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace;"><b>┼</b><div style="position: absolute; left: 0em; top: -1ex; color:#FF0; font-size: 60%; font-family: &#39;Helvetica&#39;; text-align: right; width: 100%;">3</div></div>
+</td>
+<td style="padding: 0; line-height: 1;"><div style="color: #222; background: #222; position:relative; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace;"><b>█</b></div>
+</td></tr></tbody></table>
+<p><br />
+</p>
+<table style="border-spacing: 0;">
+
+<tbody><tr>
+<td style="padding: 0; line-height: 1;"><div style="color: #222; background: transparent; position:relative; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace;"><b>█</b><div style="position: absolute; left: 0em; top: 1ex; color:#F00; font-size: 60%; font-family: &#39;Helvetica&#39;; text-align: right; width: 100%;">1</div></div>
+</td>
+<td style="padding: 0; line-height: 1;"><div style="color: #222; background: transparent; position:relative; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace;"><b>█</b><div style="position: absolute; left: 0em; top: 1ex; color:#F00; font-size: 60%; font-family: &#39;Helvetica&#39;; text-align: right; width: 100%;">2</div></div>
+</td>
+<td style="padding: 0; line-height: 1;"><div style="color: #222; background: #222; position:relative; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace;"><b>█</b><div style="position: absolute; left: 0em; top: 1ex; color:#F00; font-size: 60%; font-family: &#39;Helvetica&#39;; text-align: right; width: 100%;">3</div></div>
+</td>
+<td style="padding: 0; line-height: 1;"><div style="color: #222; background: transparent; position:relative; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace;"><b>█</b><div style="position: absolute; left: 0em; top: 1ex; color:#F00; font-size: 60%; font-family: &#39;Helvetica&#39;; text-align: right; width: 100%;">4</div></div>
+</td>
+<td style="padding: 0; line-height: 1;"><div style="color: #222; background: transparent; position:relative; font-size: 135%; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace;"><b>█</b><div style="position: absolute; left: 0em; top: 1ex; color:#F00; font-size: 60%; font-family: &#39;Helvetica&#39;; text-align: right; width: 100%;">5</div></div>
+</td></tr></tbody></table>
+<p><br />
+</p></div>

@@ -1,0 +1,20 @@
+{{sidebar|name=Template:Release notes
+|title=Release notes
+|style=width:auto;
+|heading1=[[Version history|(full version history)]]
+|contentstyle=font-size:1.1em; text-align:center;
+|content1=
+{{{!}}
+{{!}}-
+! Eras !! Releases
+{{!}}- style="vertical-align:top;text-align:left"
+{{!}} style="border-right:1px solid gray;padding:0 0.4em" {{!}}
+{{for-each-version|$(selected-value)[[$(ns):Release_information|v$(version)]] </b><br>|selected-ns={{{ns|{{NAMESPACE}}}}}|selected-value=<b>}}
+{{!}} {{{{#mreplace: :{{#param:ns|{{NAMESPACE}}}}:|::|:}}Release information/List}}
+{{!}}}
+|content2=<small>* Broke save-compatibility</small>
+|below=
+[[{{{ns|{{NAMESPACE}}}}}:Release information/List|List]]
+|belowstyle=text-align:right
+}}<includeonly>{{Category|Release information}}</includeonly><noinclude>
+{{clear}}{{doc}}</noinclude>

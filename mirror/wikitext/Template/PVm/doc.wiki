@@ -1,0 +1,29 @@
+== Usage ==
+Input value -> a (default 50)<br>
+Max value -> b (default 100)<br>
+Filled square color -> y (default #ff5)<br>
+Half-filled square color -> z (default #dd0)<br>
+Other parameters include advStyle (default empty), height (default 6) and stretch (default 35).<br>
+  <nowiki>{{PVm|a|b|y|z}}</nowiki> 
+
+
+{| style="margin:1em 1em 1em 0;background:#F9F9F9;border:1px #AAA solid;border-collapse:collapse;" class="unsortable"
+|- style="background:#F2F2F2;"
+!style="border:1px #AAA solid;padding:0em;background:#77aaee"|Input
+!style="border:1px #AAA solid;padding:0em;"|Output (On black background)
+|-
+|style="border:1px #AAA solid;padding:0.2em; background:lightblue;text-align:center;font-size: 130%;"|<nowiki>{{PVm}}</nowiki>
+|style="border:1px #AAA solid;padding:0em;font-size: 50%;font-family: 'Century', monospace; background: black;text-align:center;width:45%;"|{{PVm}}
+|-
+|style="border:1px #AAA solid;padding:0.2em; background:lightblue;text-align:center;font-size: 130%;"|<nowiki>{{PVm|25|100|#fff|#ddd|height=12}}</nowiki>
+|style="border:1px #AAA solid;padding:0em;font-size: 50%;font-family: 'Century', monospace; background: black;text-align:center;width:45%;"|{{PVm|25|100|#fff|#ddd|height=12}}
+|-
+|style="border:1px #AAA solid;padding:0.2em; background:lightblue;text-align:center;font-size: 130%;"|<nowiki>{{PVm}}</nowiki><br><nowiki>{{PVm|3550|10000|advStyle=height:6px;}}</nowiki><br><nowiki>{{PVm|1550|10000|advStyle=height:12px;}}</nowiki>
+|style="border:1px #AAA solid;padding:0em;font-size: 50%;font-family: 'Century', monospace; background: black;text-align:center;width:45%;"|{{PVm}}{{PVm|3550|10000|advStyle=height:6px;}}{{PVm|1550|10000|advStyle=height:12px;}}
+|-
+|style="border:1px #AAA solid;padding:0.2em; background:lightblue;text-align:center;font-size: 130%;"|<nowiki>{{PVm|45|100|#000|#f00|height=15}}</nowiki>
+|style="border:1px #AAA solid;padding:0em;font-size: 50%;font-family: 'Century', monospace; background: black;text-align:center;width:45%;"|{{PVm|45|100|0:0:1|#f00|height=15}}
+|}
+
+<includeonly>[[Category:Templates]]</includeonly>
+<noinclude>[[Category:Template Documentation]]</noinclude>

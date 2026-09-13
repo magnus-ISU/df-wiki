@@ -1,0 +1,109 @@
+<noinclude><div style="float: right; padding: 0.5em; margin: 0.25em; border: 1px solid #ccc; background: #eee"></noinclude>style="padding: 0; line-height: 1;"|<code style="color: {{fgcolor|{{{2}}}}}; background: {{bgcolor|{{{2}}}|{{{3|#000}}}}}; font-size: 135%; font-family: 'Courier New', 'Quicktype Mono', 'Bitstream Vera Sans Mono', 'Lucida Console', 'Lucida Sans Typewriter', monospace; font-weight:bold; border: none; border-radius: 0px; padding: 0;">{{{1}}}</code><noinclude></div>
+
+'''Template:RT''' is a version of Template:Raw Tile with the cell padding parameter incorporated to minimize the number of bytes it uses.  See [[:Template:Raw Tile]] for further usage notes.
+
+[[:Template:RT0]] is the same template with a black background color hard-coded.
+
+[[:Template:RTC]] is the same template with a black background color and a gray foreground color hard-coded.
+
+[[:Template:RTF]] is the same template with a black background color and a white foreground color hard-coded.
+
+[[:Template:RTB]] is a blank tile of any color.
+
+[[:Template:000]] is a blank black tile.
+
+[[:Template:CCC]] is a blank grey tile, used for grey stone walls.
+
+[[:Template:FFF]] is a blank white tile, used for light stone walls.
+
+[[:Template:888]] is a blank dark grey tile, used for dark stone walls.
+
+[[:Template:C.C]] is a grey cavern floor tile, used for plain cavern floors.
+
+[[:Template:H2O]] is a blue ≈ on a black background, used for water tiles.
+
+[[:Template:RTS]] is a teal ▓ on a black background, used for sky tiles.
+
+[[:Template:RTL]] is a template for maximized flexibility and features.
+
+== Usage ==
+
+<pre><nowiki>
+{{RT|<character>|<color>|<background>}}
+{{RT0|<character>|<color>}}
+{{RTC|<character>}}
+{{RTB|<color>}}
+{{000}}, {{888}}, {{CCC}}, {{FFF}}, {{C.C}}
+{{RTL|<character-color>|<character>|<background-color>|<superior>|<superior-color>|<superior-align>}}
+</nowiki></pre>
+
+=== Examples ===
+
+{| style="border-spacing: 0"
+|-
+|{{RTC|═}}
+|{{RT0|═|#CCC}}
+|{{RT|┼|#888|#CCC}}
+|{{RTL|#888|┼|#CCC|1|#000}}
+|{{RT0|═|#CCC}}
+|{{RT0|═|7:0}}
+|-
+|{{RT|&#61;|#888|#000}}
+|{{RT|&#61;|0:0:1}}
+|{{RTB|#CFF}}
+|{{RTB|#CCF}}
+|{{RTB|#6CF}}
+|{{RTB|#66C}}
+|-
+|{{RT|&divide;|#000|#990}}
+|{{RT|&divide;|0:6:0}}
+|{{RTL|#444|&divide;|#CCC|─}}
+|{{RTL|#444|&divide;|#CCC|>||left}}
+|{{H2O}}
+|{{H2O}}
+|-
+|{{RTF|.}}
+|{{C.C}}
+|{{FFF}}
+|{{CCC}}
+|{{888}}
+|{{000}}
+|}
+
+...can be made with:
+
+<pre><nowiki>
+{| style="border-spacing: 0"
+|-
+|{{RTC|═}}
+|{{RT0|═|#CCC}}
+|{{RT|┼|#888|#CCC}}
+|{{RTL|#888|┼|#CCC|1|#000}}
+|{{RT0|═|#CCC}}
+|{{RT0|═|7:0}}
+|-
+|{{RT|&#61;|#888|#000}}
+|{{RT|&#61;|0:0:1}}
+|{{RTB|#CFF}}
+|{{RTB|#CCF}}
+|{{RTB|#6CF}}
+|{{RTB|#66C}}
+|-
+|{{RT|&divide;|#000|#990}}
+|{{RT|&divide;|0:6:0}}
+|{{RTL|#444|&divide;|#CCC|─}}
+|{{RTL|#444|&divide;|#CCC|>||left}}
+|{{H2O}}
+|{{H2O}}
+|-
+|{{RTF|.}}
+|{{C.C}}
+|{{FFF}}
+|{{CCC}}
+|{{888}}
+|{{000}}
+|}
+</nowiki></pre>
+[[Category:Formatting Templates]]
+
+</noinclude>

@@ -1,0 +1,105 @@
+<includeonly>{{Block Header|}}
+|-
+| style="vertical-align: top" |
+{| style="position: absolute; table-layout: fixed; border-spacing: 0; margin: -2px 0 0 -2px; border-collapse: collapse"
+|-
+| style="vertical-align: top; padding: 0; width: 3.4em; height: 3.4em" |
+{{Arrow Block Part North {{{3}}}|{{{4}}}}}
+| style="vertical-align: top; padding: 0; width: 3.4em; height: 3.4em" |
+|-
+{{Arrow Block Part West {{{7}}}|{{{8}}}}}
+| style="vertical-align: top; padding: 0; width: 1.4em; height: 1.4em; background: {{{10}}}" |
+{| style="position: absolute; width: 4.5em; height: 3em; margin-top: -0.8em; margin-left: -2em; border: 1px solid; border-spacing: 0; table-layout: fixed"
+|-
+| style="background: #000; width: 1.25em" | {{Dwarf|{{{color}}}|13px}}
+| style="background: {{{10}}}; width: 3.25em" | <span style="font-size: 90%; line-height: 1.2">{{{skill}}}</span>
+|}
+{{Arrow Block Part East {{{11}}}|{{{12}}}}}
+|-
+| style="vertical-align: top; padding: 0; width: 3.4em; height: 3.4em" |
+{{Arrow Block Part South {{{15}}}|{{{16}}}}}
+|}
+|}</includeonly><noinclude>
+
+Usage:
+<pre>
+{| style="border-spacing: 0; width: 41em"
+|-
+
+{{Skill Block|skill=Mining
+  |color=7:0|
+  |      |A|#ccc|      |
+  |E|    |C|#ccc|L|#ccc|
+  |      |A|#ccc|      |
+}}
+
+{{Skill Block|skill=Mining
+  |color=7:0|
+  |      |E|    |      |
+  |L|#ccc|C|#ccc|L|#ccc|
+  |      |E|    |      |
+}}
+
+{{Skill Block|skill=Mining
+  |color=7:0|
+  |      |E|    |      |
+  |L|#ccc|C|#ccc|L|#ccc|
+  |      |E|    |      |
+}}
+
+{{Skill Block|skill=Mining
+  |color=7:0|
+  |      |E|    |      |
+  |L|#ccc|C|#ccc|L|#ccc|
+  |      |E|    |      |
+}}
+
+{{Skill Block|skill=Mining
+  |color=7:0|
+  |      |A|#ccc|      |
+  |L|#ccc|C|#ccc|E|    |
+  |      |A|#ccc|      |
+}}
+|}
+</pre>
+gives
+{| style="border-spacing: 0; width: 41em"
+|-
+
+{{Skill Block|skill=Mining
+  |color=7:0|
+  |      |A|#ccc|      |
+  |E|    |C|#ccc|L|#ccc|
+  |      |A|#ccc|      |
+}}
+
+{{Skill Block|skill=Mining
+  |color=7:0|
+  |      |E|    |      |
+  |L|#ccc|C|#ccc|L|#ccc|
+  |      |E|    |      |
+}}
+
+{{Skill Block|skill=Mining
+  |color=7:0|
+  |      |E|    |      |
+  |L|#ccc|C|#ccc|L|#ccc|
+  |      |E|    |      |
+}}
+
+{{Skill Block|skill=Mining
+  |color=7:0|
+  |      |E|    |      |
+  |L|#ccc|C|#ccc|L|#ccc|
+  |      |E|    |      |
+}}
+
+{{Skill Block|skill=Mining
+  |color=7:0|
+  |      |A|#ccc|      |
+  |L|#ccc|C|#ccc|E|    |
+  |      |A|#ccc|      |
+}}
+|}
+
+[[category:Flowchart templates]]</noinclude>

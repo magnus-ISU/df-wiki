@@ -1,0 +1,9 @@
+{| class="wikitable" style="float:right; margin-left: 10px;"
+|+ {{{title}}}
+|-
+! scope="row" | Current Version
+| {{#if: {{{version|}}} | {{{version}}} | {{{{NAMESPACE}}:{{PAGENAME}}/version}} }}
+|-
+! scope="row" | Last Update
+| {{{updated}}}
+|}

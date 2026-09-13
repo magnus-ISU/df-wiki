@@ -1,0 +1,441 @@
+{{#ifeq:{{{child|}}}|yes||<table class="vertical-navbox {{#ifeq:{{{wraplinks|}}}|true||nowraplinks}} {{{bodyclass|{{{class|}}}}}}" <!--
+    -->cellspacing="{{#if:{{{cellspacing|}}} |{{{cellspacing}}} |5}}" <!--
+    -->cellpadding="{{#if:{{{cellpadding|}}} |{{{cellpadding}}} |0}}" <!--
+    -->style="float:{{#if:{{{float|}}} |{{{float}}} |right}};<!--
+           -->clear:{{#ifeq:{{{float|}}}|none |both |{{#if:{{{float|}}} |{{{float}}} |right}}}};<!--
+           -->width:{{#if:{{{width|}}} |{{{width}}} |22.0em}};<!--
+             (margins:)-->{{#switch:{{{float|}}} |left=margin:0 1.0em 1.0em 0; |none|right|#default=margin:0 0 1.0em 1.0em;}}<!--
+           -->background:#f9f9f9;border:1px solid #aaa;padding:0.2em;border-spacing:0.4em 0;text-align:center;line-height:1.4em;font-size:88%;{{{bodystyle|{{{style|}}}}}}">}}<!--
+
+ -->{{#ifeq:{{{child|}}}|yes||{{#if:{{{outertitle|}}}
+     |<caption class="{{{outertitleclass|}}}" style="padding-bottom:0.2em;font-size:125%;line-height:1.2em;font-weight:bold;{{{outertitlestyle|}}}">{{{outertitle}}}</caption><!--
+ -->}}}}<!--
+
+ -->{{#ifeq:{{{child|}}}|yes||{{#if:{{{topimage|}}}
+     |<tr><td class="{{{topimageclass|}}}" style="padding:0.4em 0;{{{topimagestyle|}}}">{{{topimage}}}<!--
+           -->{{#if:{{{topcaption|}}} |<div style="padding-top:0.2em;line-height:1.2em;{{{topcaptionstyle|}}}">{{{topcaption}}}</div>}}</td>
+      </tr>
+    }}}}<!--
+
+ -->{{#ifeq:{{{child|}}}|yes||{{#if:{{{pretitle|}}}
+     |<tr><td class="{{{pretitleclass|}}}" style="{{{basestyle|}}};{{#if:{{{topimage|}}} |padding-top:0.2em |padding-top:0.4em}};line-height:1.2em;{{{pretitlestyle|}}}">{{{pretitle}}}</td>
+      </tr>
+    }}}}<!--
+
+ -->{{#if:{{{title|}}}
+     |{{#ifeq:{{{child|}}}|yes||<tr><th class="{{{titleclass|}}}" style="{{{basestyle|}}};padding:0.2em 0.4em 0.2em;{{#if:{{{pretitle|}}} |padding-top:0}};font-size:145%;line-height:1.2em;{{{titlestyle|}}}">}}{{{title}}}</th>
+      </tr>
+    }}<!--
+
+ -->{{#if:{{{image|}}}
+     |<tr><td class="{{{imageclass|}}}" style="padding:0.2em 0 0.4em;{{{imagestyle|}}}">{{{image}}}<!--
+           -->{{#if:{{{caption|}}} |<div style="padding-top:0.2em;line-height:1.2em;{{{captionstyle|}}}">{{{caption}}}</div>}}</td>
+      </tr>
+    }}<!--
+
+ -->{{#if:{{{above|}}}
+     |<tr><td class="{{{aboveclass|}}}" style="padding:0.3em 0.4em 0.3em;font-weight:bold;{{{abovestyle|}}}"><!--newline required for bullet-points to work:-->
+{{{above}}}</td>
+      </tr>
+    }}<!--
+
+ heading#/content# starts here:
+
+ -->{{#if: {{{heading1|}}}|
+<tr>
+<th class="{{{headingclass|}}}" style="padding:0.1em;{{{basestyle|}}};{{{headingstyle|}}};{{{heading1style|}}}">
+{{{heading1}}}</th>
+</tr>
+}}{{#if:
+{{{content1|}}}|
+<tr>
+<td class="{{{contentclass|}}}" style="padding:0 0.1em 0.4em;{{{contentstyle|}}};{{{content1style|}}}"><!-- newline required before contents# for bullets to work -->
+{{{content1}}}</td>
+</tr>
+}}{{#if: {{{heading2|}}}|
+<tr>
+<th class="{{{headingclass|}}}" style="padding:0.1em;{{{basestyle|}}};{{{headingstyle|}}};{{{heading2style|}}}">
+{{{heading2}}}</th>
+</tr>
+}}{{#if:
+{{{content2|}}}|
+<tr>
+<td class="{{{contentclass|}}}" style="padding:0 0.1em 0.4em;{{{contentstyle|}}};{{{content2style|}}}">
+{{{content2}}}</td>
+</tr>
+}}{{#if: {{{heading3|}}}|
+<tr>
+<th class="{{{headingclass|}}}" style="padding:0.1em;{{{basestyle|}}};{{{headingstyle|}}};{{{heading3style|}}}">
+{{{heading3}}}</th>
+</tr>
+}}{{#if:
+{{{content3|}}}|
+<tr>
+<td class="{{{contentclass|}}}" style="padding:0 0.1em 0.4em;{{{contentstyle|}}};{{{content3style|}}}">
+{{{content3}}}</td>
+</tr>
+}}{{#if: {{{heading4|}}}|
+<tr>
+<th class="{{{headingclass|}}}" style="padding:0.1em;{{{basestyle|}}};{{{headingstyle|}}};{{{heading4style|}}}">
+{{{heading4}}}</th>
+</tr>
+}}{{#if:
+{{{content4|}}}|
+<tr>
+<td class="{{{contentclass|}}}" style="padding:0 0.1em 0.4em;{{{contentstyle|}}};{{{content4style|}}}">
+{{{content4|}}}</td>
+</tr>
+}}{{#if: {{{heading5|}}}|
+<tr>
+<th class="{{{headingclass|}}}" style="padding:0.1em;{{{basestyle|}}};{{{headingstyle|}}};{{{heading5style|}}}">
+{{{heading5}}}</th>
+</tr>
+}}{{#if:
+{{{content5|}}}|
+<tr>
+<td class="{{{contentclass|}}}" style="padding:0 0.1em 0.4em;{{{contentstyle|}}};{{{content5style|}}}">
+{{{content5}}}</td>
+</tr>
+}}{{#if: {{{heading6|}}}|
+<tr>
+<th class="{{{headingclass|}}}" style="padding:0.1em;{{{basestyle|}}};{{{headingstyle|}}};{{{heading6style|}}}">
+{{{heading6}}}</th>
+</tr>
+}}{{#if:
+{{{content6|}}}|
+<tr>
+<td class="{{{contentclass|}}}" style="padding:0 0.1em 0.4em;{{{contentstyle|}}};{{{content6style|}}}">
+{{{content6}}}</td>
+</tr>
+}}{{#if: {{{heading7|}}}|
+<tr>
+<th class="{{{headingclass|}}}" style="padding:0.1em;{{{basestyle|}}};{{{headingstyle|}}};{{{heading7style|}}}">
+{{{heading7}}}</th>
+</tr>
+}}{{#if:
+{{{content7|}}}|
+<tr>
+<td class="{{{contentclass|}}}" style="padding:0 0.1em 0.4em;{{{contentstyle|}}};{{{content7style|}}}">
+{{{content7}}}</td>
+</tr>
+}}{{#if: {{{heading8|}}}|
+<tr>
+<th class="{{{headingclass|}}}" style="padding:0.1em;{{{basestyle|}}};{{{headingstyle|}}};{{{heading8style|}}}">
+{{{heading8}}}</th>
+</tr>
+}}{{#if:
+{{{content8|}}}|
+<tr>
+<td class="{{{contentclass|}}}" style="padding:0 0.1em 0.4em;{{{contentstyle|}}};{{{content8style|}}}">
+{{{content8}}}</td>
+</tr>
+}}{{#if: {{{heading9|}}}|
+<tr>
+<th class="{{{headingclass|}}}" style="padding:0.1em;{{{basestyle|}}};{{{headingstyle|}}};{{{heading9style|}}}">
+{{{heading9}}}</th>
+</tr>
+}}{{#if:
+{{{content9|}}}|
+<tr>
+<td class="{{{contentclass|}}}" style="padding:0 0.1em 0.4em;{{{contentstyle|}}};{{{content9style|}}}">
+{{{content9}}}</td>
+</tr>
+}}{{#if: {{{heading10|}}}|
+<tr>
+<th class="{{{headingclass|}}}" style="padding:0.1em;{{{basestyle|}}};{{{headingstyle|}}};{{{heading10style|}}}">
+{{{heading10}}}</th>
+</tr>
+}}{{#if:
+{{{content10|}}}|
+<tr>
+<td class="{{{contentclass|}}}" style="padding:0 0.1em 0.4em;{{{contentstyle|}}};{{{content10style|}}}">
+{{{content10}}}</td>
+</tr>
+}}{{#if: {{{heading11|}}}|
+<tr>
+<th class="{{{headingclass|}}}" style="padding:0.1em;{{{basestyle|}}};{{{headingstyle|}}};{{{heading11style|}}}">
+{{{heading11}}}</th>
+</tr>
+}}{{#if:
+{{{content11|}}}|
+<tr>
+<td class="{{{contentclass|}}}" style="padding:0 0.1em 0.4em;{{{contentstyle|}}};{{{content11style|}}}">
+{{{content11}}}</td>
+</tr>
+}}{{#if: {{{heading12|}}}|
+<tr>
+<th class="{{{headingclass|}}}" style="padding:0.1em;{{{basestyle|}}};{{{headingstyle|}}};{{{heading12style|}}}">
+{{{heading12}}}</th>
+</tr>
+}}{{#if:
+{{{content12|}}}|
+<tr>
+<td class="{{{contentclass|}}}" style="padding:0 0.1em 0.4em;{{{contentstyle|}}};{{{content12style|}}}">
+{{{content12}}}</td>
+</tr>
+}}{{#if: {{{heading13|}}}|
+<tr>
+<th class="{{{headingclass|}}}" style="padding:0.1em;{{{basestyle|}}};{{{headingstyle|}}};{{{heading13style|}}}">
+{{{heading13}}}</th>
+</tr>
+}}{{#if:
+{{{content13|}}}|
+<tr>
+<td class="{{{contentclass|}}}" style="padding:0 0.1em 0.4em;{{{contentstyle|}}};{{{content13style|}}}">
+{{{content13}}}</td>
+</tr>
+}}{{#if: {{{heading14|}}}|
+<tr>
+<th class="{{{headingclass|}}}" style="padding:0.1em;{{{basestyle|}}};{{{headingstyle|}}};{{{heading14style|}}}">
+{{{heading14}}}</th>
+</tr>
+}}{{#if:
+{{{content14|}}}|
+<tr>
+<td class="{{{contentclass|}}}" style="padding:0 0.1em 0.4em;{{{contentstyle|}}};{{{content14style|}}}">
+{{{content14}}}</td>
+</tr>
+}}{{#if: {{{heading15|}}}|
+<tr>
+<th class="{{{headingclass|}}}" style="padding:0.1em;{{{basestyle|}}};{{{headingstyle|}}};{{{heading15style|}}}">
+{{{heading15}}}</th>
+</tr>
+}}{{#if:
+{{{content15|}}}|
+<tr>
+<td class="{{{contentclass|}}}" style="padding:0 0.1em 0.4em;{{{contentstyle|}}};{{{content15style|}}}">
+{{{content15}}}</td>
+</tr>
+}}{{#if: {{{heading16|}}}|
+<tr>
+<th class="{{{headingclass|}}}" style="padding:0.1em;{{{basestyle|}}};{{{headingstyle|}}};{{{heading16style|}}}">
+{{{heading16}}}</th>
+</tr>
+}}{{#if:
+{{{content16|}}}|
+<tr>
+<td class="{{{contentclass|}}}" style="padding:0 0.1em 0.4em;{{{contentstyle|}}};{{{content16style|}}}">
+{{{content16}}}</td>
+</tr>
+}}{{#if: {{{heading17|}}}|
+<tr>
+<th class="{{{headingclass|}}}" style="padding:0.1em;{{{basestyle|}}};{{{headingstyle|}}};{{{heading17style|}}}">
+{{{heading17}}}</th>
+</tr>
+}}{{#if:
+{{{content17|}}}|
+<tr>
+<td class="{{{contentclass|}}}" style="padding:0 0.1em 0.4em;{{{contentstyle|}}};{{{content17style|}}}">
+{{{content17}}}</td>
+</tr>
+}}{{#if: {{{heading18|}}}|
+<tr>
+<th class="{{{headingclass|}}}" style="padding:0.1em;{{{basestyle|}}};{{{headingstyle|}}};{{{heading18style|}}}">
+{{{heading18}}}</th>
+</tr>
+}}{{#if:
+{{{content18|}}}|
+<tr>
+<td class="{{{contentclass|}}}" style="padding:0 0.1em 0.4em;{{{contentstyle|}}};{{{content18style|}}}">
+{{{content18}}}</td>
+</tr>
+}}{{#if: {{{heading19|}}}|
+<tr>
+<th class="{{{headingclass|}}}" style="padding:0.1em;{{{basestyle|}}};{{{headingstyle|}}};{{{heading19style|}}}">
+{{{heading19}}}</th>
+</tr>
+}}{{#if:
+{{{content19|}}}|
+<tr>
+<td class="{{{contentclass|}}}" style="padding:0 0.1em 0.4em;{{{contentstyle|}}};{{{content19style|}}}">
+{{{content19}}}</td>
+</tr>
+}}{{#if: {{{heading20|}}}|
+<tr>
+<th class="{{{headingclass|}}}" style="padding:0.1em;{{{basestyle|}}};{{{headingstyle|}}};{{{heading20style|}}}">
+{{{heading20}}}</th>
+</tr>
+}}{{#if:
+{{{content20|}}}|
+<tr>
+<td class="{{{contentclass|}}}" style="padding:0 0.1em 0.4em;{{{contentstyle|}}};{{{content20style|}}}">
+{{{content20}}}</td>
+</tr>
+}}{{#if: {{{heading21|}}}|
+<tr>
+<th class="{{{headingclass|}}}" style="padding:0.1em;{{{basestyle|}}};{{{headingstyle|}}};{{{heading21style|}}}">
+{{{heading21}}}</th>
+</tr>
+}}{{#if:
+{{{content21|}}}|
+<tr>
+<td class="{{{contentclass|}}}" style="padding:0 0.1em 0.4em;{{{contentstyle|}}};{{{content21style|}}}">
+{{{content21}}}</td>
+</tr>
+}}{{#if: {{{heading22|}}}|
+<tr>
+<th class="{{{headingclass|}}}" style="padding:0.1em;{{{basestyle|}}};{{{headingstyle|}}};{{{heading22style|}}}">
+{{{heading22}}}</th>
+</tr>
+}}{{#if:
+{{{content22|}}}|
+<tr>
+<td class="{{{contentclass|}}}" style="padding:0 0.1em 0.4em;{{{contentstyle|}}};{{{content22style|}}}">
+{{{content22}}}</td>
+</tr>
+}}{{#if: {{{heading23|}}}|
+<tr>
+<th class="{{{headingclass|}}}" style="padding:0.1em;{{{basestyle|}}};{{{headingstyle|}}};{{{heading23style|}}}">
+{{{heading23}}}</th>
+</tr>
+}}{{#if:
+{{{content23|}}}|
+<tr>
+<td class="{{{contentclass|}}}" style="padding:0 0.1em 0.4em;{{{contentstyle|}}};{{{content23style|}}}">
+{{{content23}}}</td>
+</tr>
+}}{{#if: {{{heading24|}}}|
+<tr>
+<th class="{{{headingclass|}}}" style="padding:0.1em;{{{basestyle|}}};{{{headingstyle|}}};{{{heading24style|}}}">
+{{{heading24}}}</th>
+</tr>
+}}{{#if:
+{{{content24|}}}|
+<tr>
+<td class="{{{contentclass|}}}" style="padding:0 0.1em 0.4em;{{{contentstyle|}}};{{{content24style|}}}">
+{{{content24}}}</td>
+</tr>
+}}{{#if: {{{heading25|}}}|
+<tr>
+<th class="{{{headingclass|}}}" style="padding:0.1em;{{{basestyle|}}};{{{headingstyle|}}};{{{heading25style|}}}">
+{{{heading25}}}</th>
+</tr>
+}}{{#if:
+{{{content25|}}}|
+<tr>
+<td class="{{{contentclass|}}}" style="padding:0 0.1em 0.4em;{{{contentstyle|}}};{{{content25style|}}}">
+{{{content25}}}</td>
+</tr>
+}}{{#if: {{{heading26|}}}|
+<tr>
+<th class="{{{headingclass|}}}" style="padding:0.1em;{{{basestyle|}}};{{{headingstyle|}}};{{{heading26style|}}}">
+{{{heading26}}}</th>
+</tr>
+}}{{#if:
+{{{content26|}}}|
+<tr>
+<td class="{{{contentclass|}}}" style="padding:0 0.1em 0.4em;{{{contentstyle|}}};{{{content26style|}}}">
+{{{content26}}}</td>
+</tr>
+}}{{#if: {{{heading27|}}}|
+<tr>
+<th class="{{{headingclass|}}}" style="padding:0.1em;{{{basestyle|}}};{{{headingstyle|}}};{{{heading27style|}}}">
+{{{heading27}}}</th>
+</tr>
+}}{{#if:
+{{{content27|}}}|
+<tr>
+<td class="{{{contentclass|}}}" style="padding:0 0.1em 0.4em;{{{contentstyle|}}};{{{content27style|}}}">
+{{{content27}}}</td>
+</tr>
+}}{{#if: {{{heading28|}}}|
+<tr>
+<th class="{{{headingclass|}}}" style="padding:0.1em;{{{basestyle|}}};{{{headingstyle|}}};{{{heading28style|}}}">
+{{{heading28}}}</th>
+</tr>
+}}{{#if:
+{{{content28|}}}|
+<tr>
+<td class="{{{contentclass|}}}" style="padding:0 0.1em 0.4em;{{{contentstyle|}}};{{{content28style|}}}">
+{{{content28}}}</td>
+</tr>
+}}{{#if: {{{heading29|}}}|
+<tr>
+<th class="{{{headingclass|}}}" style="padding:0.1em;{{{basestyle|}}};{{{headingstyle|}}};{{{heading29style|}}}">
+{{{heading29}}}</th>
+</tr>
+}}{{#if:
+{{{content29|}}}|
+<tr>
+<td class="{{{contentclass|}}}" style="padding:0 0.1em 0.4em;{{{contentstyle|}}};{{{content29style|}}}">
+{{{content29}}}</td>
+</tr>
+}}{{#if: {{{heading30|}}}|
+<tr>
+<th class="{{{headingclass|}}}" style="padding:0.1em;{{{basestyle|}}};{{{headingstyle|}}};{{{heading30style|}}}">
+{{{heading30}}}</th>
+</tr>
+}}{{#if:
+{{{content30|}}}|
+<tr>
+<td class="{{{contentclass|}}}" style="padding:0 0.1em 0.4em;{{{contentstyle|}}};{{{content30style|}}}">
+{{{content30}}}</td>
+</tr>
+}}{{#if: {{{heading31|}}}|
+<tr>
+<th class="{{{headingclass|}}}" style="padding:0.1em;{{{basestyle|}}};{{{headingstyle|}}};{{{heading31style|}}}">
+{{{heading31}}}</th>
+</tr>
+}}{{#if:
+{{{content31|}}}|
+<tr>
+<td class="{{{contentclass|}}}" style="padding:0 0.1em 0.4em;{{{contentstyle|}}};{{{content31style|}}}">
+{{{content31}}}</td>
+</tr>
+}}{{#if: {{{heading32|}}}|
+<tr>
+<th class="{{{headingclass|}}}" style="padding:0.1em;{{{basestyle|}}};{{{headingstyle|}}};{{{heading32style|}}}">
+{{{heading32}}}</th>
+</tr>
+}}{{#if:
+{{{content32|}}}|
+<tr>
+<td class="{{{contentclass|}}}" style="padding:0 0.1em 0.4em;{{{contentstyle|}}};{{{content32style|}}}">
+{{{content32}}}</td>
+</tr>
+}}{{#if: {{{heading33|}}}|
+<tr>
+<th class="{{{headingclass|}}}" style="padding:0.1em;{{{basestyle|}}};{{{headingstyle|}}};{{{heading33style|}}}">
+{{{heading33}}}</th>
+</tr>
+}}{{#if:
+{{{content33|}}}|
+<tr>
+<td class="{{{contentclass|}}}" style="padding:0 0.1em 0.4em;{{{contentstyle|}}};{{{content33style|}}}">
+{{{content33}}}</td>
+</tr>
+}}{{#if: {{{heading34|}}}|
+<tr>
+<th class="{{{headingclass|}}}" style="padding:0.1em;{{{basestyle|}}};{{{headingstyle|}}};{{{heading34style|}}}">
+{{{heading34}}}</th>
+</tr>
+}}{{#if:
+{{{content34|}}}|
+<tr>
+<td class="{{{contentclass|}}}" style="padding:0 0.1em 0.4em;{{{contentstyle|}}};{{{content34style|}}}">
+{{{content34}}}</td>
+</tr>
+}}{{#if: {{{heading35|}}}|
+<tr>
+<th class="{{{headingclass|}}}" style="padding:0.1em;{{{basestyle|}}};{{{headingstyle|}}};{{{heading35style|}}}">
+{{{heading35}}}</th>
+</tr>
+}}{{#if:
+{{{content35|}}}|
+<tr>
+<td class="{{{contentclass|}}}" style="padding:0 0.1em 0.4em;{{{contentstyle|}}};{{{content35style|}}}">
+{{{content35}}}</td>
+</tr>
+}}<!--
+
+ -->{{#if: {{{below|}}}
+     |<tr><td class="{{{belowclass|}}}" style="padding:0.3em 0.4em 0.3em;font-weight:bold;{{{belowstyle|}}}">
+{{{below}}}</td>
+     </tr>
+    }}<!--
+
+ -->{{#ifeq:{{{child|}}}|yes||{{#switch:{{{navbar|{{{tnavbar|<noinclude>off</noinclude>}}}}}}
+     |none |off=
+     |#default=<tr><td style="text-align:right;font-size:115%;{{{navbarstyle|{{{tnavbarstyle|}}}}}}">{{navbar|{{{name|{{PAGENAME}}}}}|mini=1|fontstyle={{{navbarfontstyle|{{{tnavbarfontstyle|}}}}}}}}</td></tr><!--
+ -->}}
+</table>}}<noinclude>{{documentation}}<!-- Please add categories and interwikis to the bottom of Template:Sidebar/doc, not here --></noinclude>

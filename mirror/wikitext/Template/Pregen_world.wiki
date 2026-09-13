@@ -1,0 +1,139 @@
+<center>
+{| class="collapsible infobox" style="background-color: #f9f9f9; border: 1px solid #aaa; font-size: 90%; margin: 1em 0em 0em; padding: 2px; text-align: center; width: 60%;"
+! colspan="8" style="border: 1px solid #aaa; font-weight:bold; background-color: #ccf; padding-left: 1em; padding-right: 1em;" | {{#if:{{{seed|}}}|Seed number: {{{seed|}}} }} - {{{name|}}}
+|-
+| style="font-weight:bold; background-color: #ccf; padding-left: 1em; padding-right: 1em;" | {{#if:{{{rejects|}}}|Rejects:
+{{!}} {{{rejects|}}}|Download:
+{{!}} {{{link|}}} }}
+| style="font-weight:bold; background-color: #ccf; padding-left: 1em; padding-right: 1em;" | DF version:
+| {{{version|}}}
+|
+| style="font-weight:bold; background-color: #ccf; padding-left: 1em; padding-right: 1em;" | World size:
+| {{{World size|}}}
+|-
+{| class="collapsible collapsed infobox" style="background-color: #f9f9f9; border: 1px solid #aaa; font-size: 90%; margin: 1em 0em 0em; padding: 2px; text-align: center; width: 60%;"
+! colspan="12" style="border: 1px solid #aaa; font-weight:bold; background-color: #ccf; padding-left: 1em; padding-right: 1em;" style="font-weight:bold; background-color: #ccf; padding-left: 1em; padding-right: 1em;" colspan="8"|Location:
+|-
+| colspan="4" style="text-align: center"|{{{image1|}}}
+|-
+| style="font-weight:bold; background-color: #ccf; padding-left: 1em; padding-right: 1em;" | Comment:
+| colspan="3"|{{{comment1|}}}
+|-
+| style="font-weight:bold; background-color: #ccf; padding-left: 1em; padding-right: 1em;" | Features present:
+| colspan="3"|{{#ifeq: {{{Magma1|}}}|Yes|[[Magma]]|No [[Magma]]}} {{#ifeq: {{{Sand1|}}}|Yes|[[Sand]]|No [[Sand]]}}  {{#Switch: {{{River1|}}}|River|Yes=[[River]]|Cave river=[[Cave river]]|Brook=[[Brook]]|No River}} {{#ifeq: {{{Adamantine1|}}}|Yes|[[Adamantine]]|No [[Adamantine]]}} {{#ifeq: {{{Chasm1|}}}|Yes|[[Chasm]]|No [[Chasm]]}} {{#ifeq: {{{Cave lake1|}}}|Yes|[[Cave lake]]|No [[Cave lake]]}} {{#Switch:{{{Trees1}}}|None=[[Regions#Trees|None]]|Scarce=[[Regions#Trees|Scarce]]|Sparse=[[Regions#Trees|Sparse]]|Woodland=[[Regions#Trees|Woodland]]|Heavily Forested=[[Regions#Trees|Heavily Forested]]|{{{Trees1|}}} }} {{#ifeq: {{{Iron1|}}}|Yes|[[Iron]]|No [[Iron]]}} {{#ifeq: {{{Flux1|}}}|Yes|[[Flux]]|No [[Flux]]}} {{#ifeq: {{{Fuel1|}}}|Yes|[[Fuel]]|No [[Fuel]]}} {{#ifeq: {{{Bauxite1|}}}|Yes|[[Bauxite]]|No [[Bauxite]]}} {{#ifeq: {{{Obsidian1|}}}|Yes|[[Obsidian]]|No [[Obsidian]]}} {{#ifeq: {{{Aquifer1|}}}|Yes|[[Aquifer]]|No [[Aquifer]]}}
+|-
+| style="font-weight:bold; background-color: #ccf; padding-left: 1em; padding-right: 1em;" | Regions:
+| colspan="3"|{{{Biomes1|}}}   {{{Temperature1|}}}   {{{Vegetation1|}}}   {{{Surroundings1|}}}
+| style="font-weight:bold; background-color: #ccf; padding-left: 1em; padding-right: 1em;" | Neighboring civilization:
+| colspan="3"|{{{Neighbor civ1|}}} }
+|- 
+{| class="collapsible collapsed infobox" style="background-color: #f9f9f9; border: 1px solid #aaa; font-size: 90%; margin: 1em 0em 0em; padding: 2px; text-align: center; width: 60%;"
+! colspan="12" style="border: 1px solid #aaa; font-weight:bold; background-color: #ccf; padding-left: 1em; padding-right: 1em;" style="font-weight:bold; background-color: #ccf; padding-left: 1em; padding-right: 1em;" colspan="8"|Location:
+|-
+| colspan="4" style="text-align: center"|{{{image2|}}}
+|-
+| style="font-weight:bold; background-color: #ccf; padding-left: 1em; padding-right: 1em;" | Comment:
+| colspan="3"|{{{comment2|}}}
+|-
+| style="font-weight:bold; background-color: #ccf; padding-left: 1em; padding-right: 1em;" | Features present:
+| colspan="3"|{{#ifeq: {{{Magma2|}}}|Yes|[[Magma]]|No [[Magma]]}} {{#ifeq: {{{Sand2|}}}|Yes|[[Sand]]|No [[Sand]]}}  {{#Switch: {{{River2|}}}|River|Yes=[[River]]|Cave river=[[Cave river]]|Brook=[[Brook]]|No River}} {{#ifeq: {{{Adamantine2|}}}|Yes|[[Adamantine]]|No [[Adamantine]]}} {{#ifeq: {{{Chasm2|}}}|Yes|[[Chasm]]|No [[Chasm]]}} {{#ifeq: {{{Cave lake2|}}}|Yes|[[Cave lake]]|No [[Cave lake]]}} {{#Switch:{{{Trees2}}}|None=[[Regions#Trees|None]]|Scarce=[[Regions#Trees|Scarce]]|Sparse=[[Regions#Trees|Sparse]]|Woodland=[[Regions#Trees|Woodland]]|Heavily Forested=[[Regions#Trees|Heavily Forested]]|{{{Trees2|}}} }} {{#ifeq: {{{Iron2|}}}|Yes|[[Iron]]|No [[Iron]]}} {{#ifeq: {{{Flux2|}}}|Yes|[[Flux]]|No [[Flux]]}} {{#ifeq: {{{Fuel2|}}}|Yes|[[Fuel]]|No [[Fuel]]}} {{#ifeq: {{{Bauxite2|}}}|Yes|[[Bauxite]]|No [[Bauxite]]}} {{#ifeq: {{{Obsidian2|}}}|Yes|[[Obsidian]]|No [[Obsidian]]}} {{#ifeq: {{{Aquifer2|}}}|Yes|[[Aquifer]]|No [[Aquifer]]}}
+|-
+| style="font-weight:bold; background-color: #ccf; padding-left: 1em; padding-right: 1em;" | Regions:
+| colspan="3"|{{{Biomes2|}}}   {{{Temperature2|}}}   {{{Vegetation2|}}}   {{{Surroundings2|}}}
+| style="font-weight:bold; background-color: #ccf; padding-left: 1em; padding-right: 1em;" | Neighboring civilization:
+| colspan="3"|{{{Neighbor civ2|}}}  }}
+|
+|} } }
+</center>
+<noinclude>
+
+[[Category:Templates]]
+== Note ==
+
+This is my attempt at modifying [[Template:Seeded World]], Any suggestions would be greatly appreciated as I struggle through this :)
+  
+== Usage ==
+
+<pre><nowiki>
+{{Pregen world
+|seed      =               ! Seed used to generate world
+|name      =               ! The name assigned to the world by the game
+|rejects   = 	 
+|version   =
+|World size=               ! Name provided at world generation, if any (probably RANDOM)
+|link      =               ! Link to downloadable file (should be conditional N/A)
+|comment   =               ! Your comment (ad lib., e.g. operative system, architechture) 
+|image     =               ! Image of starting location
+|features  =               ! List of features of starting location
+|missing   =               ! List of missing features
+}}
+</nowiki></pre>
+
+== Example ==
+Writing This:
+<pre><nowiki>
+{{Pregen world
+|seed      = 4265985437
+|name      = The Legendary Ever-Realm
+|rejects   = 51           
+|version   = .33f
+|World size= RANDOM
+|link      = http://hyperfileshare.com/d/f91fae26
+|comment   = This is just a test of concept, the real thing should have some conditional #ifs, and include some show/hideable sections to the different starting locations of the world in question, maybe with the starting location being a template in itself?
+|image     = [[Image:4265985437.PNG|thumb|500px]]
+|features  = [[Magma]], cave river, chasm, adamantine, sand, trees, flux and iron.
+|missing   = Giant cave spiders??
+}}
+</nowiki></pre>
+Gives:
+{{Pregen world
+|seed      = 4265985437
+|name      = The Legendary Ever-Realm
+|rejects   = 51           
+|version   = .33f
+|World size= RANDOM
+|link      = http://hyperfileshare.com/d/f91fae26
+|comment1   = This is just a test of concept, the real thing should have some conditional #ifs, and include some show/hideable sections to the different starting locations of the world in question, maybe with the starting location being a template in itself?
+|image1     = [[Image:4265985437.PNG|thumb|500px]]
+|features1  =cave river, chasm, adamantine, sand, trees, flux and iron.
+|Biomes1   = Mountain
+|Temperature1 = Warm
+|Vegetation1 =
+|Surroundings1 = Untamed Wilds
+|Neighbor civ1 = All
+|Magma1=Yes
+|Sand1=Yes
+|River1=Cave river
+|Adamantine1=Yes
+|Chasm1=Yes
+|Cave lake1=No
+|Trees1=Yes
+|Iron1=Yes
+|Flux1=Yes
+|Fuel1=No
+|Bauxite1=No
+|Aquifer1=No
+|Obsidian1=No
+|image2     = [[Image:4265985437.PNG|thumb|500px]]
+|features2  =cave river, chasm, adamantine, sand, trees, flux and iron.
+|Biomes2   = Mountain
+|Temperature2 = Warm
+|Vegetation2 =
+|Surroundings2 = Untamed Wilds
+|Neighbor civ2 = All
+|Magma2=Yes
+|Sand2=Yes
+|River2=Cave river
+|Adamantine2=Yes
+|Chasm2=Yes
+|Cave lake2=No
+|Trees2=Yes
+|Iron2=Yes
+|Flux2=Yes
+|Fuel2=No
+|Bauxite2=No
+|Aquifer2=No
+|Obsidian2=No
+}}
+
+</noinclude>

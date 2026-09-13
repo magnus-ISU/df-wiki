@@ -1,0 +1,54 @@
+<div class="mw-parser-output"><p>Essentially {{<a href="/index.php/Template:Str/len" title="Template:Str/len">str/len</a>}}, but counts the number of times {{{1}}} appears in {{{2}}}.
+</p><p>Note that {{{1}}} can be any <a href="http://en.wikipedia.org/wiki/regular_expression" class="extiw" title="wikipedia:regular expression">regular expression</a>.
+</p>
+<h2><span class="mw-headline" id="Examples">Examples</span></h2>
+<pre>{{str/count|a|abca}}</pre>
+<p>&#8594; 2
+</p>
+<pre>{{str/count|\d|abc 123}}</pre>
+<p>&#8594; 3
+</p>
+<pre>{{str/count|\D|abc 123}}</pre>
+<p>&#8594; 4
+</p>
+<pre>{{str/count|\w+|this is an example}}</pre>
+<p>&#8594; 4 (<code>\w+</code> matches one or more "word" characters, but not spaces)
+</p>
+<pre>  {{str/count|\[\[[^]]+\]\]|This is text with a [[link]] and [[another link]].}}</pre>
+<p>&#8594; 2
+</p><p>Breakdown of regular expression:
+</p>
+<table class="wikitable">
+<tbody><tr>
+<th>Section</th>
+<th>Meaning</th>
+<th>Explanation
+</th></tr>
+<tr>
+<td><code>\[\[</code>
+</td>
+<td><code>[[</code>
+</td>
+<td>Two <i>literal</i> <code>[</code> characters (note that <code>[</code> and <code>]</code> have a special meaning in regular expressions).
+</td></tr>
+<tr>
+<td><code>[^]]</code>
+</td>
+<td>Any character that is not <code>]</code>
+</td>
+<td>A character class -- matches all characters listed between the brackets. The <code>^</code> is the negation operator, causing all characters <i>not</i> listed to be matched instead. In this case, the first <code>]</code> is the only character matched, since the second is the closing bracket. The first bracket is not treated as the closing bracket, since an empty character class is invalid.
+</td></tr>
+<tr>
+<td><code>+</code>
+</td>
+<td>Allows one or more matches of the previous expression
+</td>
+<td>(in this case, it allows the non-<code>]</code> characters to be repeated)
+</td></tr>
+<tr>
+<td><code>\]\]</code>
+</td>
+<td><code>]]</code>
+</td>
+<td>Matches two literal <code>]</code> characters.
+</td></tr></tbody></table></div>

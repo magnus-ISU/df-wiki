@@ -1,0 +1,15 @@
+{{#vardefine:qd-major|{{#strsplit:{{{1|{{current/version}}}}}|.|2}}}}{{#vardefine:qd-minor|{{#strsplit:{{{1|{{current/version}}}}}|.|3}}}}<div style="{{#if:{{{inline|}}}||background-color: #f0fff0; color:#353; border: 1px solid #eee; padding:0.5em;}}{{{style|}}}"><!--
+
+-->'''Download{{#if:{{{premium|}}}|&nbsp;Premium}}:''' {{#if:{{{premium|}}}|<!--
+
+-->[https://steamcommunity.com/app/975370/ Steam]{{dot}} <!--
+-->[https://kitfoxgames.itch.io/dwarf-fortress Itch.io]<!--
+-->{{#if:{{{premium|}}}|<br>'''Download Classic: '''}}[https://www.bay12games.com/dwarves/older_versions.html all versions]|<!--
+
+-->[https://www.bay12games.com/dwarves/df_{{#var:qd-major}}_{{#var:qd-minor}}_linux.tar.bz2 Linux]{{dot}} <!--
+-->{{#ifexpr:{{#var:qd-major}} < 50|[https://www.bay12games.com/dwarves/df_{{#var:qd-major}}_{{#var:qd-minor}}_osx.tar.bz2 Mac OS X]{{dot}} }}<!--
+-->[https://www.bay12games.com/dwarves/df_{{#var:qd-major}}_{{#var:qd-minor}}_win.zip Windows]{{dot}} <!--
+-->[https://www.bay12games.com/dwarves/older_versions.html all versions]{{dot}} <!--
+-->[[Utility:Lazy_Newb_Pack#Where_do_I_get_a_Pack.3F|starter packs]]<!--
+
+-->}}</div>

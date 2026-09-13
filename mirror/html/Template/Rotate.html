@@ -1,0 +1,46 @@
+<div class="mw-parser-output"><p><br />
+</p><p><span style="position:relative;"><span style="position:absolute;transform:rotate(-90deg);-ms-transform:rotate(-90deg);-moz-transform: rotate(-90deg);-webkit-transform: rotate(-90deg);-o-transform: rotate(-90deg);transform-origin:0% 0%;-ms-transform-origin:0% 0%;-moz-transform-origin:0% 0%;-webkit-transform-origin:0% 0%;-o-transform-origin:0% 0%;">{{{1}}}</span></span>
+</p>
+<div class="plainlinks" style="clear: both; margin: 1em 0 0 0; border: 1px solid #aaa; background-color: #f0f0f8; padding: 5px 1em; border-radius: .4em; -webkit-border-radius: .4em; -moz-border-radius: .4em; -o-border-radius: .4em; -ms-border-radius: .4em;">
+<h2><span id="(view_-_edit_-__history_-__purge)_Documentation"></span><span class="mw-headline" id=".28view_-_edit_-_.0Ahistory_-_.0Apurge.29_Documentation"><span style="float: right; font-size: small; font-family: sans-serif;">
+(<a href="/index.php/Template:Rotate/doc" title="Template:Rotate/doc"><span title="View this documentation">view</span></a> - <a rel="nofollow" class="external text" href="//dwarffortresswiki.org/index.php?title=Template:Rotate/doc&amp;action=edit"><span title="Edit this documentation">edit</span></a> - 
+<a rel="nofollow" class="external text" href="//dwarffortresswiki.org/index.php?title=Template:Rotate/doc&amp;action=history"><span title="Documentation history">history</span></a> - 
+<a rel="nofollow" class="external text" href="//dwarffortresswiki.org/index.php?title=Template:Rotate&amp;action=purge"><span title="Purge this documentation (causes it to be updated; use only if it doesn&#39;t update after editing, NOT in a preview)">purge</span></a>)</span> Documentation</span></h2>
+<p>Rotate content (requires CSS3, not supported on old browsers)
+</p><p>Note: content will be rotated around upper-left corner; left-aligned text is recommended.
+</p>
+<h2><span class="mw-headline" id="Usage">Usage</span></h2>
+<p>{{ rotate | [content] | deg = X | style = CSS_string }}
+</p>
+<dl><dd>where:
+<dl><dd>[content] is the content to be rotated</dd>
+<dd>X is an optional clockwise rotation angle in degrees (default is -90 degrees)</dd>
+<dd>CSS_string is any optional CSS styling to be applied to the rotating container</dd></dl></dd></dl>
+<h2><span class="mw-headline" id="Examples">Examples</span></h2>
+<pre>{{rotate| text }}</pre>
+<p><span style="position:relative;"><span style="position:absolute;transform:rotate(-90deg);-ms-transform:rotate(-90deg);-moz-transform: rotate(-90deg);-webkit-transform: rotate(-90deg);-o-transform: rotate(-90deg);transform-origin:0% 0%;-ms-transform-origin:0% 0%;-moz-transform-origin:0% 0%;-webkit-transform-origin:0% 0%;-o-transform-origin:0% 0%;"> text </span></span>
+</p><p>That example demonstrates how rotated text can overlap content around it. Care should be taken to ensure enough empty space for the rotated text.  
+</p>
+<pre>
+
+
+{{rotate|text}}
+</pre>
+<p>This example should not overlap, due to the extra newlines:
+</p><p><br />
+<span style="position:relative;"><span style="position:absolute;transform:rotate(-90deg);-ms-transform:rotate(-90deg);-moz-transform: rotate(-90deg);-webkit-transform: rotate(-90deg);-o-transform: rotate(-90deg);transform-origin:0% 0%;-ms-transform-origin:0% 0%;-moz-transform-origin:0% 0%;-webkit-transform-origin:0% 0%;-o-transform-origin:0% 0%;">text</span></span>
+</p><p>Rotating text may also cause the text to extend out of the standard wiki page layout; this should generally be avoided.
+</p>
+<pre>{{rotate | text | deg = 180 | style = font-size:25px; }}</pre>
+<p><span style="position:relative;"><span style="position:absolute;transform:rotate(180deg);-ms-transform:rotate(180deg);-moz-transform: rotate(180deg);-webkit-transform: rotate(180deg);-o-transform: rotate(180deg);transform-origin:0% 0%;-ms-transform-origin:0% 0%;-moz-transform-origin:0% 0%;-webkit-transform-origin:0% 0%;-o-transform-origin:0% 0%;font-size:25px;"> text </span></span>
+</p><p><br />
+Complex content may also be rotated:
+</p>
+<pre>&lt;div style="height:250px;"&gt;
+:::{{rotate | [[Image:jt_screwpump.png|thumb|A rotated [[screw pump]]]] | deg=27 }}
+&lt;/div&gt;</pre>
+<div style="height:250px;">
+<dl><dd><dl><dd><dl><dd><span style="position:relative;"><span style="position:absolute;transform:rotate(27deg);-ms-transform:rotate(27deg);-moz-transform: rotate(27deg);-webkit-transform: rotate(27deg);-o-transform: rotate(27deg);transform-origin:0% 0%;-ms-transform-origin:0% 0%;-moz-transform-origin:0% 0%;-webkit-transform-origin:0% 0%;-o-transform-origin:0% 0%;"> <div class="thumb tright"><div class="thumbinner" style="width:302px;"><a href="/index.php/File:Jt_screwpump.png" class="image"><img alt="" src="/images/thumb/e/ec/Jt_screwpump.png/300px-Jt_screwpump.png" decoding="async" width="300" height="206" class="thumbimage" srcset="/images/thumb/e/ec/Jt_screwpump.png/450px-Jt_screwpump.png 1.5x, /images/e/ec/Jt_screwpump.png 2x" /></a>  <div class="thumbcaption"><div class="magnify"><a href="/index.php/File:Jt_screwpump.png" class="internal" title="Enlarge"></a></div>A rotated <a href="/index.php/Screw_pump" title="Screw pump">screw pump</a></div></div></div> </span></span></dd></dl></dd></dl></dd></dl>
+</div>
+</div>
+</div>

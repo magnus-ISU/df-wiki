@@ -1,0 +1,135 @@
+<noinclude><div style="float: right; padding: 0.5em; margin: 0.25em; border: 1px solid #ccc; background: #eee"></noinclude>style="padding: 0; line-height: 1;"|<div style="color: {{{1|#000}}}; background: {{#if:{{{3|}}}|{{{3}}}|{{#if:{{{2|}}}|transparent|{{{1}}}}}}}; position:relative; font-size: 135%; font-family: 'Courier New', 'Quicktype Mono', 'Bitstream Vera Sans Mono', 'Lucida Console', 'Lucida Sans Typewriter', monospace;">{{#if:{{{2|}}}|'''{{{2}}}'''|'''█'''}}{{#if:{{{4|}}}|<div style="position: absolute; left: 0em; top: -1ex; color:{{{5|#000}}}; font-size: 60%; font-family: 'Helvetica'; text-align: {{{6|right}}}; width: 100%;">{{{4}}}</div>|}}{{#if:{{{7|}}}|<div style="position: absolute; left: 0em; top: 1ex; color:{{{8|#000}}}; font-size: 60%; font-family: 'Helvetica'; text-align: {{{9|right}}}; width: 100%;">{{{7}}}</div>|}}</div><noinclude></div>
+
+<!-- Warning: {{#if:{{{3|}}}|{{{3}}}|{{#if:{{{2|}}}|transparent|{{{1}}}}}}} does not behave like {{{3|{{#if:{{{2|}}}|transparent|{{{1}}}}}}}} and {{#if:{{{2|}}}|'''{{{2}}}'''|'''█'''}} does not behave like {{{2|█}}} when this template is used in another template like the wiki table. Several examples using the default value will be broken: {{RTL|#222||||||3|#F00}}
+http://www.mediawiki.org/wiki/Help:Parser_functions_in_templates -->
+
+Flexible template for building complex diagrams with wiki tables.
+
+== Usage ==
+
+<pre>
+<nowiki>
+{| style="border-spacing: 0;"
+|-
+|{{RTL|<character-color>|<character>|<background-color>|<superior>|<superior-color>|<superior-align>|<inferior>|<inferior-color>|<inferior-align>}}
+|}
+</nowiki>
+Default:
+* character-color:#000
+* character:█
+* background-color:transparent
+* superior:
+* superior-color:#000
+* superior-align:right (left|center|right|justify)
+* inferior:
+* inferior-color:#000
+* inferior-align:right (left|center|right|justify)
+</pre>
+
+=== Usage ===
+<nowiki>
+{{RTL}}
+</nowiki>
+{| style="border-spacing: 0;"
+|-
+|{{RTL}}
+|}
+<nowiki>
+{{RTL|#FF0}}
+</nowiki>
+{| style="border-spacing: 0;"
+|-
+|{{RTL|#FF0}}
+|}
+<nowiki>
+{{RTL|#FF0|▬}}
+</nowiki>
+{| style="border-spacing: 0;"
+|-
+|{{RTL|#FF0|▬}}
+|}
+<nowiki>
+{{RTL|#FF0|▬|#CCC}}
+</nowiki>
+{| style="border-spacing: 0;"
+|-
+|{{RTL|#FF0|▬|#CCC}}
+|}
+<nowiki>
+{{RTL|#FF0|▬|#CCC|1}}
+</nowiki>
+{| style="border-spacing: 0;"
+|-
+|{{RTL|#FF0|▬|#CCC|1}}
+|}
+<nowiki>
+{{RTL|#FF0|▬|#CCC|1|#F00}
+</nowiki>
+{| style="border-spacing: 0;"
+|-
+|{{RTL|#FF0|▬|#CCC|1|#F00}}
+|}
+<nowiki>
+{{RTL|#FF0|▬|#CCC|1|#F00|left}}
+</nowiki>
+{| style="border-spacing: 0;"
+|-
+|{{RTL|#FF0|▬|#CCC|1|#F00|left}}
+|}
+<nowiki>
+{{RTL|#FF0|▬|#CCC|1|#F00|left|7}}
+</nowiki>
+{| style="border-spacing: 0;"
+|-
+|{{RTL|#FF0|▬|#CCC|1|#F00|left|7}}
+|}
+<nowiki>
+{{RTL|#FF0|▬|#CCC|1|#F00|left|7|#0F0}}
+</nowiki>
+{| style="border-spacing: 0;"
+|-
+|{{RTL|#FF0|▬|#CCC|1|#F00|left|7|#0F0}}
+|}
+<nowiki>
+{{RTL|#FF0|▬|#CCC|1|#F00|left|7|#0F0|left}}
+</nowiki>
+{| style="border-spacing: 0;"
+|-
+|{{RTL|#FF0|▬|#CCC|1|#F00|left|7|#0F0|left}}
+|}
+<br />
+=== Examples ===
+<br />
+{| style="border-spacing: 0;"
+|-
+|{{RTL|#444|÷|#CCC|─|#F00}}
+|{{RTL|#444|÷|#CCC|>|#F00|left}}
+|}
+<br />
+{| style="border-spacing: 0;"
+|-
+|{{RTL|#222}}
+|{{RTL|#444|┼|#AAA|1|#FF0}}
+|{{RTL|#222}}
+|{{RTL|#444|┼|#AAA|2|#FF0}}
+|{{RTL|#222}}
+|{{RTL|#444|┼|#AAA|3|#FF0}}
+|{{RTL|#222}}
+|}
+<br />
+{| style="border-spacing: 0;"
+|-
+|{{RTL|#222|█|||||1|#F00}}
+|{{RTL|#222|█|||||2|#F00}}
+|{{RTL|#222||||||3|#F00}}<!-- Test -->
+|{{RTL|#222|█|||||4|#F00}}
+|{{RTL|#222|█|||||5|#F00}}
+|}
+<br />
+<!-- <br /><table style="border-spacing: 0"><tr><td style="padding: 0;"><div style="color: #888; background: #CCC; position:relative; font-size: 135%; font-family: 'Courier New', 'Quicktype Mono', 'Bitstream Vera Sans Mono', 'Lucida Console', 'Lucida Sans Typewriter', monospace"><b>÷</b></div></td><td style="padding: 0;"><div style="color: #888; background: #CCC; position:relative; font-size: 135%; font-family: 'Courier New', 'Quicktype Mono', 'Bitstream Vera Sans Mono', 'Lucida Console', 'Lucida Sans Typewriter', monospace"><b>÷</b><div style="position: absolute; left: 0em; top: 1ex; color: red; font-size: 60%; font-family: Helvetica; text-align:right; width:100%;"><font color="{{{5}}}">─></font></div></div></td></tr></table>
+<br /><table style="border-spacing: 0"><tr><td style="padding: 0;"><div style="color: #888; background: #CCC; position:relative; font-size: 135%; font-family: 'Courier New', 'Quicktype Mono', 'Bitstream Vera Sans Mono', 'Lucida Console', 'Lucida Sans Typewriter', monospace"><b>÷÷</b><div style="position: absolute; left: 0em; top: 1ex; color: red; font-size: 60%; font-family: Helvetica; text-align:right; width:100%;"><font color="{{{5}}}">─></font></div></div></td></tr></table>
+<br /><table style="border-spacing: 0"><tr><td style="padding: 0;"><div style="color: #888; background: #CCC; position:relative; font-size: 135%; font-family: 'Courier New', 'Quicktype Mono', 'Bitstream Vera Sans Mono', 'Lucida Console', 'Lucida Sans Typewriter', monospace"><b>ó</b><div style="position: absolute; left: 0em; top: 1ex; color: red; font-size: 60%; font-family: Helvetica; text-align:right; width:100%;"><font color="{{{5}}}">&nbsp;2</font></div></div></td></tr></table>
+<br /><table style="border-spacing: 0"><tr><td style="padding: 0;"><div style="color: #888; background: #CCC; position:relative; font-size: 135%; font-family: 'Courier New', 'Quicktype Mono', 'Bitstream Vera Sans Mono', 'Lucida Console', 'Lucida Sans Typewriter', monospace"><b>^</b><div style="position: absolute; left: 0em; top: 1ex; color: red; font-size: 60%; font-family: Helvetica; text-align:right; width:100%;"><font color="{{{5}}}">3&nbsp;</font></div></div></td></tr></table>
+<br /><table style="border-spacing: 0"><tr><td style="padding: 0;"><div style="color: #888; background: #CCC; position:relative; font-size: 135%; font-family: 'Courier New', 'Quicktype Mono', 'Bitstream Vera Sans Mono', 'Lucida Console', 'Lucida Sans Typewriter', monospace"><b>┼</b><div style="position: absolute; left: 0em; top: 1ex; color: red; font-size: 60%; font-family: Helvetica; text-align:right; width:100%;"><font color="{{{5}}}">44</font></div></div></td></tr></table>
+<br /><table style="border-spacing: 0"><tr><td style="padding: 0;"><div style="color: #888; background: #CCC; position:relative; font-size: 135%; font-family: 'Courier New', 'Quicktype Mono', 'Bitstream Vera Sans Mono', 'Lucida Console', 'Lucida Sans Typewriter', monospace"><b>÷</b><div style="position: absolute; left: 0em; top: 1ex; color: red; font-size: 60%; font-family: Helvetica; text-align:right; width:100%;"><font color="{{{5}}}">5</font></div></div></td></tr></table> -->
+</noinclude>

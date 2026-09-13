@@ -1,0 +1,62 @@
+Displays [[:Category:Lua script pages|scripts]] from the ''Page name/script'' directory.
+
+Derived from [[Template:Gamedata]], with a few changes specific to displaying syntax highlighting.
+
+Can be given a custom script to display instead:
+
+* ``|script=`` defines the content of the custom entry.
+
+* ``|title=`` parameter functions in the same way [[Template:Gamedata]] does so.
+
+*Automatically applies ``<syntaxhighlight lang="lua">`` to entries.
+
+<!--* ``|line=`` changes the starting line (defaults to 1).-->
+
+Example of a custom script that uses all parameters:
+
+ <nowiki>{{Scriptdata
+|title=Identity language
+|script=
+languages.GEN_IDENTITY=function()
+    -- just to demonstrate the absolute most basic method of generating one of these
+    -- also so that you can just mod stuff to use GEN_IDENTITY
+    local tbl={}
+    local unempty = function(str1, str2) 
+        return str1=='' and str2 or str1
+    end
+    for k,v in ipairs(world.language.word) do
+        local str=''
+        str=unempty(str,v.NOUN_SING)
+        str=unempty(str,v.ADJ)
+        str=unempty(str,v.VERB_FIRST_PRES)
+        str=unempty(str,string.lower(v.token))
+        tbl[v.token]=str
+    end
+    return tbl
+end
+}}</nowiki>
+
+{{Scriptdata
+|title=Identity language
+|line=12
+|script=
+languages.GEN_IDENTITY=function()
+    -- just to demonstrate the absolute most basic method of generating one of these
+    -- also so that you can just mod stuff to use GEN_IDENTITY
+    local tbl={}
+    local unempty = function(str1, str2) 
+        return str1=='' and str2 or str1
+    end
+    for k,v in ipairs(world.language.word) do
+        local str=''
+        str=unempty(str,v.NOUN_SING)
+        str=unempty(str,v.ADJ)
+        str=unempty(str,v.VERB_FIRST_PRES)
+        str=unempty(str,string.lower(v.token))
+        tbl[v.token]=str
+    end
+    return tbl
+end
+}}
+
+Preliminary scripts have been provided by [[User:Putnam3145]].

@@ -1,0 +1,67 @@
+<includeonly>{{infostart|{{{name}}}}}
+{{infocell|{{{{#if:{{{seed|}}}|Crop|Shrub}}/picture|character={{{character|?}}}|color={{{color}}}|seed_color={{{seed_color|{{{color}}}}}}}}}}
+{{#if:{{{pref|}}}|{{infopref|{{{pref}}}}}}}
+{{#if:{{{seed|}}}|{{infoheader|Seed}}
+{{infocell|{{Raw Tile|·|{{{seed_color|{{{color}}}}}}}} {{#if:{{{seedimage|}}}| / [[File:{{{seedimage}}}]]|}} {{{seed|{{{name}}} seed}}}}}}}
+{{infoheader|Graphic}}
+{{infocell|{{#if:{{{graphic|}}}|[[File:{{{graphic}}}|center]]|No graphic}}}}
+{{infoheader|Seasons}}
+{{infocell|{{seasons|{{{spring|}}}|{{{summer|}}}|{{{autumn|}}}|{{{winter|}}}}}}}
+{{#if:{{{biome|}}}|{{infoheader|Biome}}
+{{infocell|{{{biome|}}}}}
+{{infocell|{{wetdry|{{{wet|}}}|{{{dry|}}}}}}}
+{{#if:{{{alignment|}}}|{{infoheader|Alignment}}
+{{infocell|{{{alignment}}}|style=text-align:center}}}}}}
+{{infoheader|Products}}
+{{#if:{{{alcohol|}}}|{{inforow|[[Alcohol]]|{{{alcohol}}}{{Category|Brewable}}|}}|{{!-}}}}
+{{#if:{{{bud|}}}|{{inforow|[[Flower|Bud]]|{{{bud}}}}}{{Category|Flowers}}|{{!-}}}}
+{{#if:{{{bulb|}}}|{{inforow|[[Bulb]]|{{{bulb}}}}}{{Category|Bulbs}}|{{!-}}}}
+{{#if:{{{extract|}}}|{{inforow|[[Extract]]|[[{{{extract}}}]]}}{{Category|Extractable}}|{{!-}}}}
+{{#if:{{{flower|}}}|{{inforow|[[Flower]]|{{{flower}}}}}{{Category|Flowers}}|{{!-}}}}
+{{#if:{{{fruit|}}}|{{inforow|[[Fruit]]|{{{fruit}}}}}{{Category|Fruit}}|{{!-}}}}
+{{#if:{{{heart|}}}|{{inforow|[[Flower|Heart]]|{{{heart}}}}}{{Category|Flowers}}|{{!-}}}}
+{{#if:{{{leaf|}}}|{{inforow|[[Leaf]]|{{{leaf}}}}}{{Category|Leaves}}|{{!-}}}}
+{{#if:{{{oil|}}}|{{inforow|[[Oil]]|{{{oil}}}}}{{Category|Pressable}}|{{!-}}}}
+{{#if:{{{paper|}}}|{{inforow|[[Paper]]|{{{paper}}}}}{{Category|Papers}}|{{!-}}}}
+{{#if:{{{pod|}}}|{{inforow|[[Pod]]|{{{pod}}}}}{{Category|Pods}}|{{!-}}}}
+{{#if:{{{mill|}}}|{{inforow|[[Powder]]|{{{mill}}}|}}{{Category|Millable}}|{{!-}}}}
+{{#if:{{{process|}}}|{{inforow|[[Thresher|Processed to]]|[[{{{process}}}]]|}}{{Category|Processable}}|{{!-}}}}
+{{#if:{{{other_products|}}}|{{infocell|{{{other_products}}}}}{{Category|Other products}}|{{!-}}}}
+{{infoheader|Plant Properties}}
+{{#if:{{{habitat|}}}|{{inforow|[[Biome|Habitat]]|{{{habitat}}}}}}}
+{{inforow|[[Food|Edible]]|{{{edible|No}}}}}
+{{#if:{{{cookable|}}}|{{inforow|[[Kitchen|Cookable]]|{{{cookable|No}}}}}}}
+{{#if:{{{leaf|}}}|{{infoheader|Leaf Properties}}
+{{#if:{{{leaf_edible|}}}|{{inforow|[[Food|Edible]]|{{{leaf_edible}}}}}}}
+{{#if:{{{leaf_cookable|}}}|{{inforow|[[Kitchen|Cookable]]|{{{leaf_cookable}}}}}}}|{{!-}}}}
+{{#if:{{{flower|}}}|{{infoheader|Flower Properties}}
+{{#if:{{{flower_edible|}}}|{{inforow|[[Food|Edible]]|{{{flower_edible}}}}}}}
+{{#if:{{{flower_cookable|}}}|{{inforow|[[Kitchen|Cookable]]|{{{flower_cookable}}}}}}}|{{!-}}}}
+{{#if:{{{bud|}}}|{{infoheader|Bud Properties}}
+{{#if:{{{bud_edible|}}}|{{inforow|[[Food|Edible]]|{{{bud_edible}}}}}}}
+{{#if:{{{bud_cookable|}}}|{{inforow|[[Kitchen|Cookable]]|{{{bud_cookable}}}}}}}|{{!-}}}}
+{{#if:{{{bulb|}}}|{{infoheader|Bulb Properties}}
+{{#if:{{{bulb_edible|}}}|{{inforow|[[Food|Edible]]|{{{bulb_edible}}}}}}}
+{{#if:{{{bulb_cookable|}}}|{{inforow|[[Kitchen|Cookable]]|{{{bulb_cookable}}}}}}}|{{!-}}}}
+{{#if:{{{fruit|}}}|{{infoheader|Fruit Properties}}
+{{#if:{{{fruit_edible|}}}|{{inforow|[[Food|Edible]]|{{{fruit_edible}}}}}}}
+{{#if:{{{fruit_cookable|}}}|{{inforow|[[Kitchen|Cookable]]|{{{fruit_cookable}}}}}}}|{{!-}}}}
+{{#if:{{{heart|}}}|{{infoheader|Heart Properties}}
+{{#if:{{{heart_edible|}}}|{{inforow|[[Food|Edible]]|{{{heart_edible}}}}}}}
+{{#if:{{{heart_cookable|}}}|{{inforow|[[Kitchen|Cookable]]|{{{heart_cookable}}}}}}}|{{!-}}}}
+{{#if:{{{seed|}}}|{{infoheader|Seed Properties}}
+{{#if:{{{seed_edible|}}}|{{inforow|[[Food|Edible]]|{{{seed_edible}}}}}}}
+{{#if:{{{seed_cookable|}}}|{{inforow|[[Kitchen|Cookable]]|{{{seed_cookable}}}}}}}|{{!-}}}}
+{{#if:{{{uses|}}}|{{infoheader|Uses}}
+{{infocell|{{{uses}}}}}}}
+{{#ifeq:{{{wiki|}}}|no|{{!-}}|{{infocell|style=text-align:center; background-color: #eee; border-top: 1px solid #aaa|1=[[wikipedia:{{#if:{{{wiki|}}}|{{{wiki|}}}|{{{name}}}}}|Wikipedia article]]}}|{{!-}}}}
+{{infoend}}
+{{#if:{{{seed|}}}|{{Category|Crops}}|{{Category|Shrubs}}}}
+{{#if:{{{spring|}}}|{{Category|Spring plants}}}}
+{{#if:{{{summer|}}}|{{Category|Summer plants}}}}
+{{#if:{{{autumn|}}}|{{Category|Autumn plants}}}}
+{{#if:{{{winter|}}}|{{Category|Winter plants}}}}
+{{#if:{{{underground|}}}|{{Category|Subterranean plants}}|{{Category|Surface plants}}}}
+</includeonly><noinclude>
+[[Category:Infobox templates]]
+</noinclude>

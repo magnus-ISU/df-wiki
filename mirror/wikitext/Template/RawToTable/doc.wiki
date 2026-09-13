@@ -1,0 +1,30 @@
+Usage:<br>
+<pre>
+  {{ RawToTable | <single creature raw file> | mode=<table mode>}}</pre><br>
+This template will automatically fill in most values of the creature table, reading the raws and then providing you with a preview and source. This should not actually be used outside of preview.
+
+
+'''Warning:''' May be somewhat inaccurate in the meat column. Adult body size cannot be found from a raw file, as multiple body size tags exist and it is impossible to automatically distinguish between them.
+
+
+Ex:
+* <nowiki>{{RawToTable|{{v0.31:Cow/raw}}|mode=1}}</nowiki>
+
+
+{{RawToTable|{{v0.31:Cow/raw}}|mode=1}}
+
+
+* <nowiki>{{RawToTable|{{v0.31:Dragon/raw}}|mode=2}}</nowiki>
+
+
+{{RawToTable|{{v0.31:Dragon/raw}}|mode=2}}
+
+
+
+* <nowiki>{{RawToTable|{{v0.31:Longfin mako shark/raw}}}}</nowiki>
+
+
+{{RawToTable|{{v0.31:Longfin mako shark/raw}}}}
+
+<includeonly>[[Category:Templates]]</includeonly>
+<noinclude>[[Category:Template Documentation]]</noinclude>

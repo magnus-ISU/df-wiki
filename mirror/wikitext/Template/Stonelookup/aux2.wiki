@@ -1,0 +1,16 @@
+<includeonly>* [[Material value]] {{tagvalue|{{{1|}}}|MATERIAL_VALUE|notfound=1}}☼{{
+#vardefine:melt|{{tagvalue|{{{1|}}}|MELTING_POINT|notfound={{#ifeq:{{tagvalue|{{{1}}}|USE_MATERIAL_TEMPLATE}}|STONE_TEMPLATE|11500|NONE}} }} }}{{
+#vardefine:boil|{{tagvalue|{{{1|}}}|BOILING_POINT|notfound={{#ifeq:{{tagvalue|{{{1}}}|USE_MATERIAL_TEMPLATE}}|STONE_TEMPLATE|14000|NONE}} }} }}{{
+#vardefine:burn|{{tagvalue|{{{1|}}}|IGNITE_POINT|notfound=NONE}} }}{{
+#vardefine:firesafe|{{#ifeq:{{firesafe/test|{{#var:melt}}}} {{firesafe/test|{{#var:boil}}}} {{firesafe/test|{{#var:burn}}}}|yes yes yes|yes|no}} }}{{
+#vardefine:magmasafe|{{#ifeq:{{magmasafe/test|{{#var:melt}}}} {{magmasafe/test|{{#var:boil}}}} {{magmasafe/test|{{#var:burn}}}}|yes yes yes|yes|no}} }}
+{{ #vardefine:colortoken|{{tagentry|{{{1|}}}|STATE_COLOR|2|ALL_SOLID||notfound={{#ifeq:{{tagvalue|{{{1}}}|USE_MATERIAL_TEMPLATE}}|STONE_TEMPLATE|gray}}}} }}
+{{firemagmasafe|{{#var:firesafe}}|{{#var:magmasafe}} }}
+* [[Melting point]] {{magmasafe|{{#var:melt}}}}
+* [[Boiling point]] {{magmasafe|{{#var:boil}}}}
+* [[Ignition point]] {{magmasafe|{{#var:burn}}}}
+* [[Solid density]] {{tagvalue|{{{1|}}}|SOLID_DENSITY|notfound={{#ifeq:{{tagvalue|{{{1}}}|USE_MATERIAL_TEMPLATE}}|STONE_TEMPLATE|2670|unknown}}}} kg/m³
+* [[Specific heat]] {{tagvalue|{{{1|}}}|SPEC_HEAT|notfound={{#ifeq:{{tagvalue|{{{1}}}|USE_MATERIAL_TEMPLATE}}|STONE_TEMPLATE|800|infinite}}}} J/kg·K
+{{ #if: {{#var:colortoken}}|
+* [[Color]] {{tagvalue|{{raw|v50:descriptor_color_standard.txt|COLOR|{{#var:colortoken}}}}|NAME}} }}
+</includeonly><noinclude>[[category:raw templates]]</noinclude>

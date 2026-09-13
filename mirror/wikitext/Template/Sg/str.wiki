@@ -1,0 +1,8 @@
+{{#ifexpr:{{{1|1}}}>{{sg/cat}}||
+{{#vardefine:sg-s-image|{{#rsplit:{{#rsplit:{{sg/list}}|\n|{{#expr:{{{1|1}}}-1}}}}|---|0}}}}{{#vardefine:sg-s-caption|{{#rsplit:{{#rsplit:{{sg/list}}|\n|{{#expr:{{{1|1}}}-1}}}}|---|1}}}}
+
+{{#ifexpr:{{{1|1}}} mod 6 = 1|</tr><tr>}}
+<td>
+[[Image:{{#var:sg-s-image}}|120x180px|{{#var:sg-s-caption}}]]
+</td>
+}}

@@ -1,0 +1,11 @@
+<div style="text-align:center;"> <!-- EDITORS: THE HEADER COMES SECOND, NOT FIRST! Make sure you edit the correct part! -->
+<div class="{{#if:{{{collapsible|{{{collapse|}}}}}}|mw-collapsible {{#if:{{{collapsed|}}}|mw-collapsed}}}}" style="position: relative; overflow:auto; color: {{{color|black}}}; background-color: {{{bgcolor|#eef5ff}}}; border: 1px solid {{{bordercolor|#0088CC}}}; font-size: 90%; margin: 1em 0em 0em; text-align: {{{align|center}}}; width: auto; {{border radius|4px}} {{{style|}}}">
+<div style="color: {{{hcolor|black}}}; border-bottom: 1px solid {{{bordercolor|#0088CC}}}; font-weight:bold; background-color: {{{hbgcolor|#8ce}}}; padding-left: 1em; padding-right: 1em; padding-top: 1px; text-align: {{{halign|center}}}; box-shadow: 2px 2px 12px 0px {{{hshadowcolor|{{{hbgcolor|#8ce}}}}}}; {{{hstyle|}}}"> '''{{{1|&nbsp;}}}'''</div>
+<div class="{{#if:{{{collapsible|{{{collapse|}}}}}}|mw-collapsible-content}}" style="padding: 2px;">
+{{{2|&nbsp;}}}
+</div>
+</div></div><noinclude>
+<!-- Please do not add in includeonly tags; they are left out so the empty template can serve as a preview for editors. -->
+{{documentation}}
+[[Category:Rounded info box templates]]
+</noinclude>

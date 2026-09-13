@@ -1,0 +1,13 @@
+{{Colored Notice Box|type=orange|image=[[file:Announce_era_icon.png|32px]]
+|text=This {{#if:{{{section|}}}|section|page}} refers to a ''[[main:Dwarf Fortress|Dwarf Fortress]]'' feature that no longer exists {{#if:{{{version|}}}|as of v{{{version}}}|in v{{current/version/ns|{{NAMESPACE}}}}}}. {{#if:{{{section|}}}||To see this page as it existed in previous versions, use the versioned links above.}}
+{{#if:{{{1|}}}|<br/><br/>{{{1}}}}}
+}}{{#ifeq:{{NAMESPACE}}|{{ns:main}}|[[category:Obsolete features|{{PAGENAME}}]]}}<noinclude>
+
+----
+
+This Template marks obsolete/removed feature. It should be placed at the very top of the page. It adds the page to the [[:Category:Obsolete features]]
+
+Usage: {{tl|removed feature}}.
+
+[[Category:Message box templates]]
+</noinclude>

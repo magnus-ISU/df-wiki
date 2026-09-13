@@ -1,0 +1,425 @@
+<div class="mw-parser-output"><table class="wikitable sortable">
+<tbody><tr>
+<th class="unsortable">Tile
+</th>
+<th class="unsortable">Graphic
+</th>
+<th>Name
+</th>
+<th><a href="/index.php/Biome" title="Biome">Biome</a><br />&amp; <a href="/index.php/Season" class="mw-redirect" title="Season">seasons</a>
+</th>
+<th><a href="/index.php/Surroundings" title="Surroundings">Align</a>
+</th>
+<th>Value
+</th>
+<th><a href="/index.php/Alcohol" title="Alcohol">Drink</a>
+</th>
+<th>Drink<br />value<sup>1</sup>
+</th>
+<th>Eat
+</th>
+<th>Cook<sup>2</sup>
+</th>
+<th class="unsortable">Product(s)<sup>5</sup><br />&amp; value
+</th></tr>
+<tr>
+<td style="background:black;text-align:center;"><code style="color: #FFFFFF; border: none; border-radius: 0px; background: #000000; font-size:135%; font-weight: bold; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; padding: 0.05em 0.15em; font-weight: bold">?</code>
+</td>
+<td style="text-align:center;">
+</td>
+<td style="font-size:85%;">[[|]]<sup></sup>
+</td>
+<td>
+<table align="center" width="100%">
+<tbody><tr>
+<td style="font-size:85%;">
+<p><i>None</i>
+</p>
+</td></tr>
+<tr>
+<td>
+<table style="font-size: 80%; width: 100%; text-align: center">
+
+<tbody><tr>
+<td style="font-weight: bold; background:#eee; border: 1px solid; color:#ccc">Wet
+</td>
+<td style="font-weight: bold; background:#eee; border: 1px solid; color:#ccc">Dry
+</td></tr></tbody></table>
+</td></tr>
+<tr>
+<td>
+<table style="font-size: 80%; width: 100%; text-align: center">
+
+<tbody><tr>
+<td style="font-weight:bold; border:1px solid; background:#afa; color:#000">Spring
+</td>
+<td style="font-weight:bold; border:1px solid; background:#ffa; color:#000">Summer
+</td>
+<td style="font-weight:bold; border:1px solid; background:#faa; color:#000">Autumn
+</td>
+<td style="font-weight:bold; border:1px solid; background:#fff; color:#000">Winter
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+</td>
+<td style="font-size:85%;"><span style="">All</span>
+</td>
+<td>2☼
+</td>
+<td style="font-size:85%;background:rgb(255, 144, 144)" data-sort-value="—"><i>None</i>
+</td>
+<td style="font-size:85%;">—
+</td>
+<td style="font-size:85%;background:rgb(255, 144, 144)">No
+</td>
+<td style="font-size:85%;background:rgb(255, 144, 144);">No
+</td>
+<td>
+<table style="width:100%;font-size:85%;">
+<tbody><tr>
+<td><i>None</i>
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+<h2><span class="mw-headline" id="Use">Use</span></h2>
+<pre>name=Plant article link
+graphic=Sprite (v50 only)
+alt=Alternate label of link
+super=superscript next to name (optional)
+tile=plant tile
+color=tile color
+seasons={{seasons|1|1|1|1}} ({{seasons|spring|summer|autmn|winter}}, 1=active season; optional if plant is all-season)
+biome=Biome Name (see Biome tokens)
+biome2=,biome3=,biome4=,...,biome9= (for multiple biomes)
+dry=wet/dry (y=dry, n=wet, b=both, not included=none)
+align=Good/Evil/Savage (not included if All)
+value=plant value
+drink=Plant alcohol (optional)
+drinkv=drink value×5 (optional)
+eat=eat raw (y=yes, not included=no)
+cook=eat cooked (y=yes, p=processed, not included=no)
+p1={{tile||0:0:0}} product 1
+p2=,p3=,p4=,...,p9= (for multiple products)
+pv1=product 1's value (if none, leave empty)
+pv2=,pv3=,pv4=,...,pv9=
+
+Example:
+
+{{plant table head}}
+{{plant table row|name=Plump helmet|tile=♠|color=5:0|biome=Wet Cavern|dry=b|value=4
+  |drink=Dwarven wine|drinkv=10|eat=y|cook=y
+  |p1={{tile|·|4:0:1}} plump helmet spawn|pv1=1
+  }}
+{{plant table row|name=Rope reed|super=11|tile=ƒ|color=2:0|biome=Not Freezing|dry=n|value=4
+  |drink=River spirits
+  |p1={{tile|·|6:0:0}} rope reed seed|pv1=1
+  |p2={{tile|φ|7:0:0}} rope reed thread (p)|pv2=12
+  |p3={{tile|≈|7:0:0}} rope reed slurry (h)|pv3=2
+  }}
+{{plant table row|name=Whip vine|tile=§|color=3:1|biome=Not Freezing|dry=y|align=Savage|value=1
+  |drink=Whip wine|drinkv=15|cook=p
+  |p1={{tile|·|0:0:1}} whip vine seed|pv1=1
+  |p2={{tile|·|3:0:1}} whip vine flour (m)|pv2=25
+  }}
+{{plant table row|name=Blueberry|alt=Blueberries|tile=:|color=2:0:1|biome=Any Temperate|biome2=Tundra|biome3=Taiga|dry=y|value=2
+  |drink=Blueberry wine|drinkv=10|eat=y|cook=y
+  |p1={{tile|♠|2:0:0}} leaf|pv1=
+  |p2={{tile|%|1:0:1}} fruit|pv2=2
+  |p3={{tile|♣|7:0:1}} flower|pv3=
+  |p4={{tile|·|0:0:1}} seed|pv4=1
+  }}
+|}
+
+↓</pre>
+<table class="wikitable sortable">
+<tbody><tr>
+<th class="unsortable">Tile
+</th>
+<th class="unsortable">Graphic
+</th>
+<th>Name
+</th>
+<th><a href="/index.php/Biome" title="Biome">Biome</a><br />&amp; <a href="/index.php/Season" class="mw-redirect" title="Season">seasons</a>
+</th>
+<th><a href="/index.php/Surroundings" title="Surroundings">Align</a>
+</th>
+<th>Value
+</th>
+<th><a href="/index.php/Alcohol" title="Alcohol">Drink</a>
+</th>
+<th>Drink<br />value<sup>1</sup>
+</th>
+<th>Eat
+</th>
+<th>Cook<sup>2</sup>
+</th>
+<th class="unsortable">Product(s)<sup>5</sup><br />&amp; value
+</th></tr>
+<tr>
+<td style="background:black;text-align:center;"><code style="color: #A73CD5; border: none; border-radius: 0px; background: #000000; font-size:135%; font-weight: bold; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; padding: 0.05em 0.15em; font-weight: bold">♠</code>
+</td>
+<td style="text-align:center;">
+</td>
+<td style="font-size:85%;"><a href="/index.php/Plump_helmet" title="Plump helmet">Plump helmet</a><sup></sup>
+</td>
+<td>
+<table align="center" width="100%">
+<tbody><tr>
+<td style="font-size:85%;">
+<p><span style="color:olive">Subterranean Water</span>
+</p>
+</td></tr>
+<tr>
+<td>
+<table style="font-size: 80%; width: 100%; text-align: center">
+
+<tbody><tr>
+<td style="font-weight: bold; background:#aaf; border: 1px solid; color:#000">Wet
+</td>
+<td style="font-weight: bold; background:#ffa; border: 1px solid; color:#000">Dry
+</td></tr></tbody></table>
+</td></tr>
+<tr>
+<td>
+<table style="font-size: 80%; width: 100%; text-align: center">
+
+<tbody><tr>
+<td style="font-weight:bold; border:1px solid; background:#afa; color:#000">Spring
+</td>
+<td style="font-weight:bold; border:1px solid; background:#ffa; color:#000">Summer
+</td>
+<td style="font-weight:bold; border:1px solid; background:#faa; color:#000">Autumn
+</td>
+<td style="font-weight:bold; border:1px solid; background:#fff; color:#000">Winter
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+</td>
+<td style="font-size:85%;"><span style="">All</span>
+</td>
+<td>4☼
+</td>
+<td style="font-size:85%;background:rgb(144, 255, 144)">Dwarven wine
+</td>
+<td style="font-size:85%;">10☼
+</td>
+<td style="font-size:85%;background:rgb(144, 255, 144)">Yes
+</td>
+<td style="font-size:85%;background:rgb(144, 255, 144);">Yes
+</td>
+<td>
+<table style="width:100%;font-size:85%;">
+<tbody><tr>
+<td><code style="color: #FF7111; border: none; border-radius: 0px; background: #000000; font-size:135%; font-weight: bold; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; padding: 0.05em 0.15em; font-weight: bold">·</code> plump helmet spawn
+</td>
+<td style="padding-left:1em;text-align:right;">1☼
+</td></tr></tbody></table>
+</td></tr>
+<tr>
+<td style="background:black;text-align:center;"><code style="color: #A2DC34; border: none; border-radius: 0px; background: #000000; font-size:135%; font-weight: bold; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; padding: 0.05em 0.15em; font-weight: bold">ƒ</code>
+</td>
+<td style="text-align:center;">
+</td>
+<td style="font-size:85%;"><a href="/index.php/Rope_reed" title="Rope reed">Rope reed</a><sup>11</sup>
+</td>
+<td>
+<table align="center" width="100%">
+<tbody><tr>
+<td style="font-size:85%;">
+<p>Not Freezing
+</p>
+</td></tr>
+<tr>
+<td>
+<table style="font-size: 80%; width: 100%; text-align: center">
+
+<tbody><tr>
+<td style="font-weight: bold; background:#aaf; border: 1px solid; color:#000">Wet
+</td>
+<td style="font-weight: bold; background:#eee; border: 1px solid; color:#ccc">Dry
+</td></tr></tbody></table>
+</td></tr>
+<tr>
+<td>
+<table style="font-size: 80%; width: 100%; text-align: center">
+
+<tbody><tr>
+<td style="font-weight:bold; border:1px solid; background:#afa; color:#000">Spring
+</td>
+<td style="font-weight:bold; border:1px solid; background:#ffa; color:#000">Summer
+</td>
+<td style="font-weight:bold; border:1px solid; background:#faa; color:#000">Autumn
+</td>
+<td style="font-weight:bold; border:1px solid; background:#fff; color:#000">Winter
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+</td>
+<td style="font-size:85%;"><span style="">All</span>
+</td>
+<td>4☼
+</td>
+<td style="font-size:85%;background:rgb(144, 255, 144)">River spirits
+</td>
+<td style="font-size:85%;">10☼
+</td>
+<td style="font-size:85%;background:rgb(255, 144, 144)">No
+</td>
+<td style="font-size:85%;background:rgb(255, 144, 144);">No
+</td>
+<td>
+<table style="width:100%;font-size:85%;">
+<tbody><tr>
+<td><code style="color: #D79B2D; border: none; border-radius: 0px; background: #000000; font-size:135%; font-weight: bold; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; padding: 0.05em 0.15em; font-weight: bold">·</code> rope reed seed
+</td>
+<td style="padding-left:1em;text-align:right;">1☼
+</td></tr>
+<tr>
+<td><code style="color: #C0C0C0; border: none; border-radius: 0px; background: #000000; font-size:135%; font-weight: bold; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; padding: 0.05em 0.15em; font-weight: bold">φ</code> rope reed thread (p)
+</td>
+<td style="padding-left:1em;text-align:right;">12☼
+</td></tr>
+<tr>
+<td><code style="color: #C0C0C0; border: none; border-radius: 0px; background: #000000; font-size:135%; font-weight: bold; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; padding: 0.05em 0.15em; font-weight: bold">≈</code> rope reed slurry (h)
+</td>
+<td style="padding-left:1em;text-align:right;">2☼
+</td></tr></tbody></table>
+</td></tr>
+<tr>
+<td style="background:black;text-align:center;"><code style="color: #12FECF; border: none; border-radius: 0px; background: #000000; font-size:135%; font-weight: bold; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; padding: 0.05em 0.15em; font-weight: bold">§</code>
+</td>
+<td style="text-align:center;">
+</td>
+<td style="font-size:85%;"><a href="/index.php/Whip_vine" title="Whip vine">Whip vine</a><sup></sup>
+</td>
+<td>
+<table align="center" width="100%">
+<tbody><tr>
+<td style="font-size:85%;">
+<p>Not Freezing
+</p>
+</td></tr>
+<tr>
+<td>
+<table style="font-size: 80%; width: 100%; text-align: center">
+
+<tbody><tr>
+<td style="font-weight: bold; background:#eee; border: 1px solid; color:#ccc">Wet
+</td>
+<td style="font-weight: bold; background:#ffa; border: 1px solid; color:#000">Dry
+</td></tr></tbody></table>
+</td></tr>
+<tr>
+<td>
+<table style="font-size: 80%; width: 100%; text-align: center">
+
+<tbody><tr>
+<td style="font-weight:bold; border:1px solid; background:#afa; color:#000">Spring
+</td>
+<td style="font-weight:bold; border:1px solid; background:#ffa; color:#000">Summer
+</td>
+<td style="font-weight:bold; border:1px solid; background:#faa; color:#000">Autumn
+</td>
+<td style="font-weight:bold; border:1px solid; background:#fff; color:#000">Winter
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+</td>
+<td style="font-size:85%;"><span style="color:red">Savage</span>
+</td>
+<td>1☼
+</td>
+<td style="font-size:85%;background:rgb(144, 255, 144)">Whip wine
+</td>
+<td style="font-size:85%;">15☼
+</td>
+<td style="font-size:85%;background:rgb(255, 144, 144)">No
+</td>
+<td style="font-size:85%;background:rgb(238, 220, 130);">Pr<sup>3</sup>
+</td>
+<td>
+<table style="width:100%;font-size:85%;">
+<tbody><tr>
+<td><code style="color: #A0A0A0; border: none; border-radius: 0px; background: #000000; font-size:135%; font-weight: bold; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; padding: 0.05em 0.15em; font-weight: bold">·</code> whip vine seed
+</td>
+<td style="padding-left:1em;text-align:right;">1☼
+</td></tr>
+<tr>
+<td><code style="color: #12FECF; border: none; border-radius: 0px; background: #000000; font-size:135%; font-weight: bold; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; padding: 0.05em 0.15em; font-weight: bold">·</code> whip vine flour (m)
+</td>
+<td style="padding-left:1em;text-align:right;">25☼
+</td></tr></tbody></table>
+</td></tr>
+<tr>
+<td style="background:black;text-align:center;"><code style="color: #13FD65; border: none; border-radius: 0px; background: #000000; font-size:135%; font-weight: bold; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; padding: 0.05em 0.15em; font-weight: bold">:</code>
+</td>
+<td style="text-align:center;">
+</td>
+<td style="font-size:85%;"><a href="/index.php/Blueberry" title="Blueberry">Blueberries</a><sup></sup>
+</td>
+<td>
+<table align="center" width="100%">
+<tbody><tr>
+<td style="font-size:85%;">
+<p><span style="color:green">Any Temperate</span><br />
+<span style="color:#00BFBF">Tundra</span><br />
+<span style="color:green">Taiga</span>
+</p>
+</td></tr>
+<tr>
+<td>
+<table style="font-size: 80%; width: 100%; text-align: center">
+
+<tbody><tr>
+<td style="font-weight: bold; background:#eee; border: 1px solid; color:#ccc">Wet
+</td>
+<td style="font-weight: bold; background:#ffa; border: 1px solid; color:#000">Dry
+</td></tr></tbody></table>
+</td></tr>
+<tr>
+<td>
+<table style="font-size: 80%; width: 100%; text-align: center">
+
+<tbody><tr>
+<td style="font-weight:bold; border:1px solid; background:#afa; color:#000">Spring
+</td>
+<td style="font-weight:bold; border:1px solid; background:#ffa; color:#000">Summer
+</td>
+<td style="font-weight:bold; border:1px solid; background:#faa; color:#000">Autumn
+</td>
+<td style="font-weight:bold; border:1px solid; background:#fff; color:#000">Winter
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+</td>
+<td style="font-size:85%;"><span style="">All</span>
+</td>
+<td>2☼
+</td>
+<td style="font-size:85%;background:rgb(144, 255, 144)">Blueberry wine
+</td>
+<td style="font-size:85%;">10☼
+</td>
+<td style="font-size:85%;background:rgb(144, 255, 144)">Yes
+</td>
+<td style="font-size:85%;background:rgb(144, 255, 144);">Yes
+</td>
+<td>
+<table style="width:100%;font-size:85%;">
+<tbody><tr>
+<td><code style="color: #A2DC34; border: none; border-radius: 0px; background: #000000; font-size:135%; font-weight: bold; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; padding: 0.05em 0.15em; font-weight: bold">♠</code> leaf
+</td>
+<td style="padding-left:1em;text-align:right;">—
+</td></tr>
+<tr>
+<td><code style="color: #8C66FF; border: none; border-radius: 0px; background: #000000; font-size:135%; font-weight: bold; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; padding: 0.05em 0.15em; font-weight: bold">%</code> fruit
+</td>
+<td style="padding-left:1em;text-align:right;">2☼
+</td></tr>
+<tr>
+<td><code style="color: #FFFFFF; border: none; border-radius: 0px; background: #000000; font-size:135%; font-weight: bold; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; padding: 0.05em 0.15em; font-weight: bold">♣</code> flower
+</td>
+<td style="padding-left:1em;text-align:right;">—
+</td></tr>
+<tr>
+<td><code style="color: #A0A0A0; border: none; border-radius: 0px; background: #000000; font-size:135%; font-weight: bold; font-family: &#39;Courier New&#39;, &#39;Quicktype Mono&#39;, &#39;Bitstream Vera Sans Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, monospace; padding: 0.05em 0.15em; font-weight: bold">·</code> seed
+</td>
+<td style="padding-left:1em;text-align:right;">1☼
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+<h2><span class="mw-headline" id="See_also">See also</span></h2>
+<ul><li><a href="/index.php/Template:Plant_table_head" title="Template:Plant table head">Template:Plant table head</a></li></ul></div>

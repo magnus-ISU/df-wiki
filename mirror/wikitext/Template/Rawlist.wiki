@@ -1,0 +1,10 @@
+<includeonly>{{#switch:{{{1}}}|
+CREATURE={{#df_makelist:{{{{{2}}}}}|CREATURE|\2:::{{{2}}}:::creature:::CREATURE:::\1]|CREATURE:1:-1|NAME:1:-1}}|
+INORGANIC={{#eval:{{#df_makelist:{{{{{2}}}}}|INORGANIC|{{#delay:#if:\3|\3|\2}}:::{{{2}}}:::inorganic:::INORGANIC:::\1]|INORGANIC:1:-1|STATE:NAME:SOLID|IS_GEM:1:-2}}}}|
+PLANT={{#eval:{{#df_makelist:{{{{{2}}}}}|PLANT|{{#delay:#if:\3|\3|\2}}:::{{{2}}}:::plant:::PLANT:::\1]|PLANT:1:-1|NAME:1:-2|ALL_NAMES:1:-2}}}}}}</includeonly><noinclude>
+
+Format: <nowiki>{{rawlist|OBJTYPE|filename}}</nowiki>
+
+See [[Template talk:Rawlist|talk page]] for example usage.
+[[Category:Templates]]
+</noinclude>

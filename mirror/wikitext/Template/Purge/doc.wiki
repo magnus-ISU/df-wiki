@@ -1,0 +1,22 @@
+'''In general this template should not be used. If you find yourself needing to purge pages often for your own editing purposes, you are encouraged to use a user script, like [[User:Lethosor/purge link.js]], to add the feature just for yourself.'''
+
+This template produces a small icon that, if clicked, clears the page cache and reloads the page to show any changes.
+
+The alt text is in the solitarian dialect of Dwarven: ''"Orsharkôn thetust-zilir Sebïretost"'' which means "purge cache" or "Webmaster clear hidden container."
+
+==Purpose==
+For efficiency in service, MediaWiki [[wikipedia:Cache (computing)|cache]]s pages. Depending on the exact sequence of actions editors follow, one may view an out-of-date version of a given page. This happens most often on heavily-edited pages and on pages which contain an instance of [[Wikipedia:Transclusion costs and benefits|transclusion]]. 
+
+Purge adds to any page a link that, when clicked, not only reloads the page, but clears the server cache, forcing the page to be completely rendered "from scratch". This is not a one-time solution; generally, editing a page is itself sufficient to purge cache. Rather, it is a measure taken in anticipation of the frequent need to purge.
+
+==Usage==
+<nowiki>{{Purge}}</nowiki>
+
+== Output ==
+''The code above produces the following, aligned to the far right:''
+
+<span class="noprint plainlinks purgelink"><small>[[File:Oxygen480-actions-edit-clear.svg|link={{fullurl:{{{page|{{FULLPAGENAME}}}}}|action=purge}}|24px|frameless|right|thetust-zilir Sebïretost]]</small></span>
+
+== Credit ==
+
+Icon via ''The Oxygen Team, KDE;, LGPL <https://www.gnu.org/copyleft/lgpl.html>, via Wikimedia Commons''

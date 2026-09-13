@@ -1,0 +1,9 @@
+<includeonly>{{subst:#if:{{subst:#df_tag:{{subst:{{subst:FULLPAGENAME}}/raw|1}}|VERMIN_FISH}}{{subst:#df_tag:{{subst:{{subst:FULLPAGENAME}}/raw|1}}|VERMIN_SOIL}}{{subst:#df_tag:{{subst:{{subst:FULLPAGENAME}}/raw|1}}|VERMIN_GROUNDER}}
+|{{subst:vermin/new}}
+|{{subst:creature/new}}
+}}</includeonly><noinclude>
+*'''This template should be substituted (e.g. <code>{{<nowiki/>subst:{{PAGENAME}}}}</code> ).'''
+*'''This template requires the /raw subpage to exist first!'''
+
+This template includes {{tl|creature/new}} or {{tl|vermin/new}}, based on the creature's raws.
+</noinclude>

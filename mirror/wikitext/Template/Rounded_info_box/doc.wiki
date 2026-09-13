@@ -1,0 +1,64 @@
+{{documentation subpage}}
+This template is used on the [[Main page]]. Be careful when editing (test on your user page first!)
+
+==Examples==
+<pre>
+{{Rounded info box|Header|Text}}
+</pre>
+
+{{Rounded info box|Header|Text}}
+
+===Existing shortcuts===
+See [[:Category:Rounded info box templates]] for a list of existing templates.
+
+<pre>
+{{Red rounded info box|Header|Text}}
+</pre>
+{{Red rounded info box|Header|Text}}
+
+<pre>
+{{Grey rounded info box|Header|Text}}
+</pre>
+{{Grey rounded info box|Header|Text}}
+
+<pre>
+{{Orange rounded info box|Header|Text}}
+</pre>
+{{Orange rounded info box|Header|Text}}
+
+<pre>
+{{Green rounded info box|Header|Text}}
+</pre>
+{{Green rounded info box|Header|Text}}
+
+===Custom colors===
+<pre>
+{{Rounded info box|Header|Text|bordercolor=red|hbgcolor=yellow|hcolor=#090}}
+</pre>
+{{Rounded info box|Header|Text|bordercolor=red|hbgcolor=yellow|hcolor=#090}}
+
+<pre>
+{{Rounded info box|Header|Text|hcolor=purple|hbgcolor=red|bgcolor=lime|color=rgb(255,150,10)|bordercolor=hsl(0, 100%, 0%)}}
+</pre>
+
+{{Rounded info box|Header|Text|hcolor=purple|hbgcolor=red|bgcolor=lime|color=rgb(255,150,10)|bordercolor=hsl(0, 100%, 0%)}}
+
+==Parameters (optional)==
+
+===Colors===
+
+* '''color''': The text color of the body
+* '''hcolor''': The text color of the header
+* '''bordercolor''': Border color of the infobox
+* '''bgcolor''': Background color of the body
+* '''hbgcolor''': Background color of the header
+
+Multiple formats are acceptable. 
+{{Color help}}
+
+===Layout===
+* '''align''': The alignment of the body (defaults to "center")
+* '''halign''': The alignment of the header (defaults to "center")
+
+<includeonly>[[Category:Templates]]</includeonly>
+<noinclude>[[Category:Template Documentation]]</noinclude>

@@ -1,0 +1,17 @@
+<div class="df-major-spoiler" style="min-height:{{#if:{{{nospace<includeonly>|</includeonly>}}}|50px|800px}}">
+{| style="margin: 0 10%; border-collapse: collapse; background: #fbfbfb; border: 1px solid #aaa; border-left: 10px solid #ff0000; width:80%;"
+|-
+| style="padding: 0.5em 0 0.5em 0.5em; text-align: center;" | [[File:Spoiler2010.png|link=]]
+| style="padding: 0.25em 0.5em; width: 100%;" | This article contains '''massive spoilers'''.  If you do not wish to have your game experience spoiled, '''do not {{#if:{{{redirect|}}}|follow the link below|scroll down}}'''!
+|}{{{filler|}}}{{Category|Spoilers}}</div><noinclude>
+
+== Usage == 
+
+<code><nowiki>{{spoiler}}</nowiki></code> - Tags the page as spoiler and adds it to [[:Category:Spoilers]] per namespace version.
+
+<code><nowiki>{{spoiler|nospace=whatever}}</nowiki></code> - Same but without the gap.
+
+==See also==
+* [[Template:Minorspoiler]]
+
+[[Category:Templates]][[Category:Warnings]]</noinclude>

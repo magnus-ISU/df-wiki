@@ -1,0 +1,42 @@
+<includeonly>{{infostart|{{{name}}}}}
+{{infocell|{{Shrub/picture|character={{{character|"}}}|color={{{color}}}}}}}
+{{#if:{{{pref|}}}|{{infopref|{{{pref}}}}}}}
+{{infoheader|Seasons}}
+{{infocell|{{seasons|{{{spring|}}}|{{{summer|}}}|{{{autumn|}}}|{{{winter|}}}}}}}
+{{#if:{{{biome|}}}|{{infoheader|Biome}}
+{{infocell|{{{biome|}}}}}
+{{infocell|{{wetdry|{{{wet|}}}|{{{dry|}}}}}}}
+{{#if:{{{alignment|}}}|{{infoheader|Alignment}}
+{{infocell|{{{alignment}}}|style=text-align:center}}}}}}
+{{infoheader|Properties}}
+{{#if:{{{habitat|}}}|{{inforow|[[Biome|Habitat]]|{{{habitat}}}}}}}
+{{inforow|[[Food|Edible]]|{{{edible|No}}}}}
+{{inforow|[[Kitchen|Cookable]]|{{{cookable|No}}}}}
+{{inforow|[[Still|Alcohol]]|{{{alcohol|None}}}}}
+{{#if:{{{uses|}}}|{{infoheader|Uses}}
+{{infocell|{{{uses|}}}}}}}
+{{#if:{{{other_products|}}}|{{infoheader|Other products}}
+{{infocell|{{{other_products}}}}}}}
+{{#ifexpr:{{#if:{{{wiki|}}}|1|0}} and {{#ifeq:{{{wiki|}}}|no|0|1}}|{{infocell|style=text-align:center; background-color: #eee; border-top: 1px solid #aaa|1=[[wikipedia:{{#ifeq:{{{wiki|}}}|yes|{{{name}}}|{{{wiki|}}}}}|Wikipedia article]]}}|{{!-}}}}
+{{infoend}}{{#switch:{{NAMESPACE}}|#default|23a|40d|v0.31|DF2012=
+{{Category|Crops}}
+{{#switch:{{NAMESPACE}}|#default|23a|40d|v0.31|DF2012={{Category|Seedless plants}}|23a={{Category|Outdoor plants}}}}
+{{#ifeq:{{{edible|!}}}{{{cookable|!}}}|!!|{{Category|Inedible plants}}}}
+{{#ifeq:{{{alcohol|!}}}|!|{{Category|Non-brewable plants}}}}
+|Template=}}</includeonly><noinclude>
+
+Usage:
+<pre><nowiki>
+{{Shrub|color=0:0:1|character=τ|name=Muck root|edible=Yes|cookable=Yes|alcohol=[[Swamp whiskey]]|spring=1|summer=1|autumn=1|winter=1|habitat=Wetland (Wet)|uses=
+* [[Food]]
+* [[Alcohol]]
+}}
+</nowiki></pre>
+
+{{Shrub|color=0:0:1|character=τ|name=Muck root|edible=Yes|cookable=Yes|alcohol=[[Swamp whiskey]]|spring=1|summer=1|autumn=1|winter=1|habitat=Wetland (Wet)|uses=
+* [[Food]]
+* [[Alcohol]]
+}}
+
+[[Category:Materials templates]]
+</noinclude>

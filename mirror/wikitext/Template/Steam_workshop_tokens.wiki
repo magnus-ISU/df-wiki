@@ -1,0 +1,80 @@
+<includeonly>
+== Steam Workshop tokens ==
+
+These tokens are required for the mod to function properly on Steam Workshop.
+
+{| {{prettytable}}
+|- bgcolor="#DCCF99"
+! Token
+! Type
+! Req?
+! Description
+! Example
+! External Doc
+
+|-
+| {{text anchor|STEAM_TITLE}}
+| single string
+| {{tc|red|Req}}
+| The title of the mod on Steam Workshop.
+| ''<nowiki>[STEAM_TITLE:Imani's Tweaks]</nowiki>''
+| [https://partner.steamgames.com/doc/api/ISteamUGC#SetItemTitle SetItemTitle]
+
+|-
+| {{text anchor|STEAM_DESCRIPTION}}
+| single string
+|
+| The description of the mod on Steam Workshop. Maximum size is 8000 bytes (about 400 words).
+Will overwrite the existing description of the mod on the workshop, can be omitted to avoid this behavior.
+| ''<nowiki>[STEAM_DESCRIPTION:This is my collection of small changes and additional content.]</nowiki>''
+| [https://partner.steamgames.com/doc/api/ISteamUGC#SetItemDescription SetItemDescription]
+
+|-
+| {{text anchor|STEAM_TAG}}
+| multi string
+|
+| Any number can be used. Use a separate STEAM_TAG for each one. Each string must be under 255 chars. 
+| ''<nowiki>[STEAM_TAG:ui][STEAM_TAG:tweak]</nowiki>''
+| [https://partner.steamgames.com/doc/api/ISteamUGC#SetItemTags SetItemTags]
+
+|-
+| {{text anchor|STEAM_KEY_VALUE_TAG}}
+| multi string1, string2
+|
+| Any number can be used. 
+|
+| [https://partner.steamgames.com/doc/api/ISteamUGC#SetReturnKeyValueTags SetReturnKeyValueTags]
+
+|-
+| {{text anchor|STEAM_METADATA}}
+| multi string
+|
+| Sets arbitrary metadata for an item. This metadata can be returned from queries without having to download and install the actual content. Toady doesn't know what it does [http://www.bay12forums.com/smf/index.php?topic=169696.msg8431542#msg8431542].
+|
+|[https://partner.steamgames.com/doc/api/ISteamUGC#SetItemMetadata SetItemMetadata]
+
+|-
+| {{text anchor|STEAM_CHANGELOG}}
+| single string
+|
+| A brief description of the changes made. (Optional, set to NULL for no change note). The log message is only for the version you're uploading. This should be different each time you update a mod, and only include the changes in the new version. Steam Workshop congregates all version changelogs, so a full changelog can be seen there. 
+| Initial example: ''<nowiki>[STEAM_CHANGELOG:Initial release]</nowiki>''
+Update example: ''<nowiki>[STEAM_CHANGELOG:Update the mod compatible with...]</nowiki>''
+|
+
+|-
+| {{text anchor|STEAM_FILE_ID}}
+| uint64
+| {{tc|red|Req, autogen}}
+| Connects the mod to an entry on the Steam Workshop. 
+
+Generated automatically the first time you upload a mod to Workshop, '''do not include it manually'''. If you upload a mod with an existing STEAM_FILE_ID token, it will update the Workshop entry connected to the ID. (Presumably only if you're the original uploader of said mod.)
+|
+|
+
+|}
+</includeonly><noinclude>
+{{Documentation}}
+{{Category|Modding}}
+[[Category:Tokens]]
+</noinclude>

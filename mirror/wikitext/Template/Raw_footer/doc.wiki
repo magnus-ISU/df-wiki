@@ -1,0 +1,17 @@
+{{documentation subpage}}
+=== Description===
+
+Footer template for /raw subpages to make them more readable (and automatically categorize them).
+
+=== Usage ===
+* <nowiki><noinclude>{{raw header|symbol|DOMESTIC}}</noinclude>{{raw|v50:language_SYM.txt|SYMBOL|DOMESTIC}}<noinclude>{{raw footer|symbol|DOMESTIC}}</noinclude></nowiki>
+
+or
+
+* <nowiki><noinclude>{{raw header|foo|BAR}}</noinclude>{{raw|v50:file.txt|FOO|BAR}}<noinclude></nowiki>'''<nowiki>{{raw footer|foo|BAR}}</nowiki>'''<nowiki></noinclude></nowiki>
+
+=== Output===
+=== See Also ===
+* [[Template:Raw header]]
+
+<includeonly>[[Category:Raw templates]]</includeonly>

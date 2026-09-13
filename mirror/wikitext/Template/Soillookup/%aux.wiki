@@ -1,0 +1,13 @@
+<includeonly>{{Mineral|name={{ucfirst:{{#df_statedesc:{{{1|}}}|NAME|SOLID}}}}
+|tile={{Char|{{tagentry|{{{1|}}}|TILE|1}}}}
+|graphic={{{graphic|}}}
+|icon={{#if:{{tag|{{{1}}}|SOIL_SAND}}|≈|.}}
+|color={{tagvalue|{{{1|}}}|DISPLAY_COLOR}}
+|properties=* [[{{ucfirst:{{Layername|{{Layertype|{{{1}}}}}}}}}]] layer{{#if:{{tag|{{{1}}}|AQUIFER}}|<nowiki></nowiki>
+* [[Aquifer]]}}{{#if:{{tag|{{{1}}}|SOIL_SAND}}|<nowiki></nowiki>
+* [[Sand]]}}{{#ifeq:{{tagentry|{{{1}}}|MATERIAL_REACTION_PRODUCT|1}}|FIRED_MAT|<nowiki></nowiki>
+* [[Clay]]}}
+|contains=* All minerals common to [[{{Layername|{{Layertype|{{{1}}}}}}} layer]]s
+{{stonelookup/contains|id={{tagentry|{{{1|}}}|INORGANIC|1}}}}
+|wiki={{{wiki|}}}
+}}{{Category|Soil Layers}}{{interwiki|{{FULLPAGENAME}}}}</includeonly><noinclude>[[category:raw templates]]</noinclude>

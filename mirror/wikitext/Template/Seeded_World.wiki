@@ -1,0 +1,80 @@
+<center>
+{| class="collapsible collapsed infobox" style="background-color: #f9f9f9; border: 1px solid #aaa; font-size: 90%; margin: 1em 0em 0em; padding: 2px; text-align: center; width: 60%;"
+! colspan="4" style="border: 1px solid #aaa; font-weight:bold; background-color: #ccf; padding-left: 1em; padding-right: 1em;" | Seed number: {{{seed|}}} - {{{name|}}}
+|-
+| style="font-weight:bold; background-color: #ccf; padding-left: 1em; padding-right: 1em;" | Rejects:
+| {{{rejects|}}}
+| style="font-weight:bold; background-color: #ccf; padding-left: 1em; padding-right: 1em;" | DF version:
+| {{{version|}}}
+|-
+| style="font-weight:bold; background-color: #ccf; padding-left: 1em; padding-right: 1em;" | World-gen name:
+| {{{genname|}}}
+| style="font-weight:bold; background-color: #ccf; padding-left: 1em; padding-right: 1em;" | Download:
+| {{{link|}}}
+|-
+| style="font-weight:bold; background-color: #ccf; padding-left: 1em; padding-right: 1em;" | Comment:
+| colspan="3"|{{{comment|}}}
+|-
+| style="font-weight:bold; background-color: #ccf; padding-left: 1em; padding-right: 1em;" colspan="4"|Location(s):
+|-
+| colspan="4" style="text-align: center"|{{{image|}}}
+|-
+| style="font-weight:bold; background-color: #ccf; padding-left: 1em; padding-right: 1em;" | Features present:
+| colspan="3"|{{{features|}}}
+|-
+| style="font-weight:bold; background-color: #ccf; padding-left: 1em; padding-right: 1em;" | Features missing:
+| colspan="3"|{{{missing|}}}
+|}
+</center>
+<noinclude>
+
+[[Category:Templates]]
+
+== Usage ==
+
+<pre><nowiki>
+{{Seeded World
+|seed     =               ! Seed used to generate world
+|name     =               ! The name assigned to the world by the game
+|rejects  = 	 
+|version  =
+|genname  =               ! Name provided at world generation, if any (probably RANDOM)
+|link     =               ! Link to downloadable file (should be conditional N/A)
+|comment  =               ! Your comment (ad lib., e.g. operative system, architechture) 
+|image    =               ! Image of starting location
+|features =               ! List of features of starting location
+|missing  =               ! List of missing features
+}}
+</nowiki></pre>
+
+== Example ==
+Writing This:
+<pre><nowiki>
+{{Seeded World
+|seed     = 4265985437
+|name     = The Legendary Ever-Realm
+|rejects  = 51           
+|version  = .33f
+|genname  = RANDOM
+|link     = http://hyperfileshare.com/d/f91fae26
+|comment  = This is just a test of concept, the real thing should have some conditional #ifs, and include some show/hideable sections to the different starting locations of the world in question, maybe with the starting location being a template in itself?
+|image    = [[Image:4265985437.PNG|thumb|500px]]
+|features = [[Magma]], cave river, chasm, adamantine, sand, trees, flux and iron.
+|missing  = Giant cave spiders??
+}}
+</nowiki></pre>
+Gives:
+{{Seeded World
+|seed     = 4265985437
+|name     = The Legendary Ever-Realm
+|rejects  = 51           
+|version  = .33f
+|genname  = RANDOM
+|link     = http://hyperfileshare.com/d/f91fae26
+|comment  = This is just a test of concept, the real thing should have some conditional #ifs, and include some show/hideable sections to the different starting locations of the world in question, maybe with the starting location being a template in itself?
+|image    = [[Image:4265985437.PNG|thumb|500px]]
+|features = [[Magma]], cave river, chasm, adamantine, sand, trees, flux and iron.
+|missing  = Giant cave spiders??
+}}
+
+</noinclude>

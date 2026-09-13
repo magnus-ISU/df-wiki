@@ -1,0 +1,44 @@
+Rotate content (requires CSS3, not supported on old browsers)
+
+Note: content will be rotated around upper-left corner; left-aligned text is recommended.
+
+==Usage==
+
+<nowiki>{{ rotate | [content] | deg = X | style = CSS_string }}</nowiki>
+
+:where:
+::[content] is the content to be rotated
+::X is an optional clockwise rotation angle in degrees (default is -90 degrees)
+::CSS_string is any optional CSS styling to be applied to the rotating container
+
+==Examples==
+<pre>{{rotate| text }}</pre>
+{{rotate| text }}
+
+That example demonstrates how rotated text can overlap content around it. Care should be taken to ensure enough empty space for the rotated text.  
+
+<pre>
+
+
+{{rotate|text}}
+</pre>
+This example should not overlap, due to the extra newlines:
+
+
+{{rotate|text}}
+
+Rotating text may also cause the text to extend out of the standard wiki page layout; this should generally be avoided.
+ 
+<pre>{{rotate | text | deg = 180 | style = font-size:25px; }}</pre>
+{{rotate | text | deg = 180 | style = font-size:25px; }}
+
+
+Complex content may also be rotated:
+<pre><div style="height:250px;">
+:::{{rotate | [[Image:jt_screwpump.png|thumb|A rotated [[screw pump]]]] | deg=27 }}
+</div></pre>
+<div style="height:250px;">
+:::{{rotate | [[Image:jt_screwpump.png|thumb|A rotated [[screw pump]]]] | deg=27 }}
+</div>
+<includeonly>[[Category:Templates]]</includeonly>
+<noinclude>[[Category:Template Documentation]]</noinclude>

@@ -1,0 +1,1 @@
+{{rand|{{#expr:{{str/count|\n|{{#rreplace:{{sg/list}}|(\n)\n+|$1}}}}+1}}}}

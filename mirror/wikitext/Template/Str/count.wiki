@@ -1,0 +1,3 @@
+<includeonly>{{#vardefine:strcount|0}}{{#rreplace:{{#eval:{{#rreplace:{{{2|}}}|{{{1|[\w\W]}}}|{{#delay:#vardefine:strcount|{{#delay:#expr:{{#delay:#var:strcount}}+1}}}}}}}}|[\w\W]|}}{{#var:strcount}}</includeonly><noinclude>
+{{documentation}}
+</noinclude>

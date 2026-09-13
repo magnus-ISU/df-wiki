@@ -1,0 +1,3 @@
+This page links to every file used in {{tl|sg}} so they don't appear to be orphaned.
+
+{{#rreplace:{{#rreplace:{{#rreplace:{{#rreplace:@@@{{sg/list}}@@@|\n|$0*}}|@@@|}}|\*([\w\W]+?)---[^\n]+(\n)|#[[:File:$1]]$2}}|\*$|}}

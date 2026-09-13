@@ -1,0 +1,6 @@
+<includeonly>{{#eval:{{#df_foreachtag:{{{1}}}|ENVIRONMENT|<nowiki></nowiki>
+* Found in [[{{#delay:layername|\2}} layer]]s as {{#delay:inclusion|\3}}}}
+{{#df_foreachtag:{{{1}}}|ENVIRONMENT_SPEC|<nowiki></nowiki>
+* Found within [[{{#delay:inorganicname|\2}}]] as {{#delay:inclusion|\3}}}}}}
+{{#if:{{tag|{{{1}}}|DEEP}}{{tag|{{{1}}}|DEEP_SURFACE}}{{tag|{{{1}}}|DEEP_SPECIAL}}|<nowiki></nowiki>
+* The depths}}</includeonly><noinclude>[[category:raw templates]]</noinclude>

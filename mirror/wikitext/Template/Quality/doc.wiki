@@ -1,0 +1,21 @@
+{{documentation subpage}}
+
+=== Description===
+
+:''See [[Dwarf Fortress Wiki:Quality]]''
+
+Rating timestamps can be either be updated with the rating script or by replacing the current timestamp with 5 tildes (<code><nowiki>~~~~~</nowiki></code>).
+
+'''Note:''' this is a high-use template and rebuilding pages that use it can take a long time. Avoid making more edits than necessary (if possible), and allow time for cache regeneration. <!-- or whatever it's called --> To rebuild a certain page, you can add <code>?action=purge</code> after its URL or make a [[wikipedia:Help:Purge#Null edit|null edit]] to that page. Ideally, wait until server load is low -- you can check how many jobs are waiting to be processed [http://dwarffortresswiki.org/api.php?action=query&meta=siteinfo&siprop=statistics&format=yamlfm here]. If the number is high, you should wait until the server is less busy. (The server could currently be regenerating pages).
+
+=== Usage ===
+To mark an item "Fine": <pre><nowiki>{{Quality|Fine}}</nowiki></pre>
+
+To mark an item "Superior": <pre><nowiki>{{Quality|Superior}}</nowiki></pre>
+
+=== Feedback ===
+
+It would be nice if a mere T, F, S, E, M, or U was sufficient as argument. :) [[User:Jerimee|Jerimee]] ([[User talk:Jerimee|talk]]) 21:05, 1 May 2023 (UTC)
+
+<includeonly>[[Category:Templates]]</includeonly>
+<noinclude>[[Category:Template Documentation]]</noinclude>

@@ -1,0 +1,22 @@
+<includeonly>{{Mineral|name={{ucfirst:{{#df_statedesc:{{{1|}}}|NAME|SOLID}}}}
+|sample=[[File:{{FULLPAGENAME}}Sample.png|center]]
+<!--|sprite=[[File:{{FULLPAGENAME}} sprite.png|left]]-->
+|tile={{Char|{{tagentry|{{{1|}}}|TILE|1}}}}
+|graphic={{{graphic|}}}
+|icon={{#tag:nowiki|{{Char|{{#mreplace:{{tagentry|{{{1|}}}|ITEM_SYMBOL|1|notfound='•'}}|=|&#61;}}}}}}
+|color={{tagvalue|{{{1|}}}|DISPLAY_COLOR}}
+|itemcolor={{tagvalue|{{{1|}}}|BASIC_COLOR|notfound=}}
+|uses={{{uses|}}}{{#eval:{{#df_foreachtag:{{{1|}}}|METAL_ORE|<nowiki></nowiki>
+* Ore of [[{{#delay:inorganicname|\2}}]] (\3%)}}{{#df_foreachtag:{{{1|}}}|THREAD_METAL|<nowiki></nowiki>
+* Extract [[{{#delay:inorganicname|\2}}]] strands (\3%)}}}}{{#if:{{tag|{{{1}}}|IS_STONE}}|<nowiki></nowiki>
+* [[mason's workshop|Masonry]]
+* [[craftsdwarf's workshop|Stone crafting]]}}
+* [[Construction]]{{#if:{{tag|{{{1}}}|REACTION_CLASS|1|FLUX}}|<nowiki></nowiki>
+* [[Flux]]}}{{#if:{{tag|{{{1}}}|REACTION_CLASS|1|GYPSUM}}|<nowiki></nowiki>
+* Make [[plaster]]}}{{#if:{{tag|{{{1}}}|REACTION_CLASS|1|CALCIUM_CARBONATE}}|<nowiki></nowiki>
+* Make [[quicklime]]}}
+|location={{Stonelookup/location|{{{1}}}}}
+|properties={{{properties|{{Stonelookup/aux2|{{{1}}}}}}}}
+|contains={{stonelookup/contains|id={{tagentry|{{{1|}}}|INORGANIC|1}}}}
+|wiki={{{wiki|}}}
+}}{{interwiki|{{FULLPAGENAME}}}}</includeonly><noinclude>[[category:raw templates]]</noinclude>

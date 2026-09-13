@@ -1,0 +1,40 @@
+<includeonly>{{Mineral
+|name={{{name|}}}
+|tile={{{tile|}}}
+|icon={{{icon|•}}}
+|color={{{color|}}}
+|uses={{{uses|}}}
+* [[Mason's workshop|Masonry]]
+* [[Craftsdwarf's workshop|Stone crafting]]
+* [[Construction]]
+|location={{{location|}}}
+|properties={{{properties|}}}
+|contains={{{contains|}}}
+}}</includeonly><noinclude>
+==Example usage==
+{{Stone|name=Calcite|tile="|color=7:7:1|
+|uses =
+* [[Flux]]
+|location =
+* [[Limestone]]
+* [[Marble]]
+* Found as small clusters
+|properties =
+* [[Economic stone]]
+* [[Material value]] 1}}
+
+<pre style="width: auto;"><nowiki>
+{{Stone|name=Calcite|tile="|color=7:7:1|
+|uses =
+* [[Flux]]
+|location =
+* [[Limestone]]
+* [[Marble]]
+* Found as small clusters
+|properties =
+* [[Economic stone]]
+* [[Material value]] 1}}
+</nowiki></pre>
+
+[[Category:Materials templates]]
+</noinclude>

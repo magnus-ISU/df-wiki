@@ -1,0 +1,8 @@
+{{#ifeq:{{{noclear}}}|no||{{clear}}}}
+<table class="collapsible collapsed infobox gamedata" style="background: #fdfdfd; border: 1px solid #aaa; font-size: 88%; margin: 0 auto -1px; vertical-align: middle; width: 100%; max-width: 100em; table-layout: fixed; {{{bodystyle|}}}">
+<tr style="line-height: 1.5em;"><th scope="col" style="background: #cce6b3; padding: 0.25em 1em; text-align: center; display: table-cell; {{{basestyle|}}}; {{{titlestyle|}}}"><div style="font-size: 114%; margin: 0 9em;">{{#if:{{{script|}}}|{{{title|Script}}}|[[{{NAMESPACE}}:{{PAGENAME}}/script|{{{title|Script}}}]]}}</div></th></tr>
+<tr style="line-height: 1.5em; text-align: left; display: table-cell;"><td><div style="overflow: auto;"><span class="gamedata-content" style="font-family: monospace; font-size:1.25em; white-space:{{{whitespace|pre}}};">{{#if:{{{script|}}}|{{#tag:syntaxhighlight|{{{script}}}|start={{{line|1}}}|lang="lua"|copy=true}}|
+	{{#ifexist:{{NAMESPACE}}:{{PAGENAME}}/script|
+		{{{{#if:{{NAMESPACE}}|:}}{{NAMESPACE}}:{{PAGENAME}}/script|1}}|
+		{{edit|{{NAMESPACE}}:{{PAGENAME}}/script|Edit}}{{Category|Missing scripts}}}}
+}}</span></div></td></tr></table><noinclude>{{documentation}}[[Category:Templates]]</noinclude>

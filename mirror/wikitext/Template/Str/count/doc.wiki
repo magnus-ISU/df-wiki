@@ -1,0 +1,42 @@
+Essentially {{tl|str/len}}, but counts the number of times {{{<nowiki/>1}}} appears in {{{<nowiki/>2}}}.
+
+Note that {{{<nowiki/>1}}} can be any [[Wikipedia:regular expression|regular expression]].
+
+==Examples==
+<pre>{{str/count|a|abca}}</pre>
+&rarr; {{str/count|a|abca}}
+
+<pre>{{str/count|\d|abc 123}}</pre>
+&rarr; {{str/count|\d|abc 123}}
+
+<pre>{{str/count|\D|abc 123}}</pre>
+&rarr; {{str/count|\D|abc 123}}
+
+<pre>{{str/count|\w+|this is an example}}</pre>
+&rarr; {{str/count|\w+|this is an example}} (<code>\w+</code> matches one or more "word" characters, but not spaces)
+
+<pre>  {{str/count|\[\[[^]]+\]\]|This is text with a [[link]] and [[another link]].}}</pre>
+&rarr; {{str/count|\[\[[^]]+\]\]|This is text with a [[link]] and [[another link]].}}
+
+Breakdown of regular expression:
+{| class="wikitable"
+! Section || Meaning || Explanation
+|-
+| <code>\[\[</code>
+| <code>[[</code>
+| Two ''literal'' <code>[</code> characters (note that <code>[</code> and <code>]</code> have a special meaning in regular expressions).
+|-
+| <code>[^]]</code>
+| Any character that is not <code>]</code>
+| A character class -- matches all characters listed between the brackets. The <code>^</code> is the negation operator, causing all characters ''not'' listed to be matched instead. In this case, the first <code>]</code> is the only character matched, since the second is the closing bracket. The first bracket is not treated as the closing bracket, since an empty character class is invalid.
+|-
+| <code>+</code>
+| Allows one or more matches of the previous expression
+| (in this case, it allows the non-<code>]</code> characters to be repeated)
+|-
+| <code>\]\]</code>
+| <code>]]</code>
+| Matches two literal <code>]</code> characters.
+|}
+<includeonly>[[Category:Templates]]</includeonly>
+<noinclude>[[Category:Template Documentation]]</noinclude>

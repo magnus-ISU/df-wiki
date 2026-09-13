@@ -1,0 +1,1 @@
+{{#ifeq:{{str/len|{{{1|}}}}}|0|{{{empty}}}|{{#rsplit:{{#rreplace:{{{1}}}|(\n)\n+|$1}}|\n|{{#expr:{{rand|{{#expr:{{str/count|\n|{{#rreplace:{{{1}}}|(\n)\n+|$1}}}}+1}}}}-1}}}}}}

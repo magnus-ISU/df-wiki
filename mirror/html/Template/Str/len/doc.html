@@ -1,0 +1,18 @@
+<div class="mw-parser-output"><p>Calculates length of {{{1}}}.
+</p>
+<h2><span class="mw-headline" id="Examples">Examples</span></h2>
+<pre>{{str/len|abc}}</pre>
+<p>&#8594; 3
+</p>
+<pre>{{str/len|Dwarf Fortress}}</pre>
+<p>&#8594; 14
+</p>
+<pre>{{str/len|a
+b}}</pre>
+<p>&#8594; 3
+</p>
+<h2><span class="mw-headline" id="Caveats">Caveats</span></h2>
+<pre>{{str/len|&lt;nowiki/&gt;}}</pre>
+<p>&#8594; 34
+</p><p>This is due to MediaWiki's implementation of &lt;nowiki&gt; &#8212; &lt;nowiki&gt; tags are replaced with an identifier when parsed. For example, <code>&lt;nowiki&gt;text&lt;/nowiki&gt;</code> becomes <code><span></span><span>'</span><span>"</span><span>`</span><span>U</span><span>N</span><span>I</span><span>Q</span><span>-</span><span>-</span><span>n</span><span>o</span><span>w</span><span>i</span><span>k</span><span>i</span><span>-</span><span>0</span><span>0</span><span>0</span><span>0</span><span>0</span><span>0</span><span>0</span><span>6</span><span>-</span><span>Q</span><span>I</span><span>N</span><span>U</span><span>`</span><span>"</span><span>'</span><span></span></code>. (Note that <span class="plainlinks"><a rel="nofollow" class="external text" href="//dwarffortresswiki.org/index.php?title=Template:Str/len/doc&amp;action=purge">purging this page</a></span> will display a different token, despite the contents being the same.)
+</p></div>

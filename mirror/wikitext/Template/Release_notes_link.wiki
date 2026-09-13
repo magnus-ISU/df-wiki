@@ -1,0 +1,3 @@
+{{#if:{{{inline|}}}
+|[[{{ns|{{{1}}}}}:Release information/{{{1}}}|{{{1}}}]]
+|{{#vardefine:rnl-page|{{ns|{{{1}}}}}:Release information/{{{1}}}}}*{{#ifexist:{{#var:rnl-page}}|[[{{#var:rnl-page}}|{{{1}}}]]|{{{1}}} ([{{fullurl:{{#var:rnl-page}}|action=edit&preload=Template:Release_notes/preload&summary={{urlencode:Creating release notes for v{{{1}}}}}}} create])}}{{#ifeq:{{{compat|yes}}}|no|&nbsp;*}}}}

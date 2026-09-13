@@ -1,0 +1,131 @@
+<noinclude>
+{{plant table head}}
+</noinclude>
+|-
+|style="background:black;text-align:center;"|{{tile|{{{tile|?}}}|{{{color|7:0:1}}}}}
+|style="text-align:center;"|{{{graphic|}}}
+|style="font-size:85%;"|[[{{{name|}}}|{{{alt|{{{name|}}}}}}]]<sup>{{{super|}}}</sup>
+|
+{|align="center" width="100%"
+|style="font-size:85%;"|{{BiomeColor|{{{biome|}}}}}{{#if:{{{biome2|}}}|<br />{{BiomeColor|{{{biome2|}}}}}{{#if:{{{biome3|}}}|<br />{{BiomeColor|{{{biome3|}}}}}{{#if:{{{biome4|}}}|<br />{{BiomeColor|{{{biome4|}}}}}{{#if:{{{biome5|}}}|<br />{{BiomeColor|{{{biome5|}}}}}{{#if:{{{biome6|}}}|<br />{{BiomeColor|{{{biome6|}}}}}{{#if:{{{biome7|}}}|<br />{{BiomeColor|{{{biome7|}}}}}{{#if:{{{biome8|}}}|<br />{{BiomeColor|{{{biome8|}}}}}{{#if:{{{biome9|}}}|<br />{{BiomeColor|{{{biome9|}}}}}}}}}}}}}}}}}}}}}
+|-
+|{{#switch:{{{dry}}}|yes|y={{wetdry||dry}}|no|n={{wetdry|wet|}}|both|b={{wetdry|wet|dry}}|{{wetdry||}}}}
+|-
+|
+{{{seasons|{{seasons|1|1|1|1}}}}}
+|}
+|style="font-size:85%;"|{{aligncolor|{{{align|All}}}}}
+|{{{value|2}}}☼
+|style="font-size:85%;background:{{#if:{{{drink|}}}|rgb(144, 255, 144)|rgb(255, 144, 144)}}" {{#if:{{{drink|}}}||data-sort-value="—"}}|{{{drink|''None''}}}
+|style="font-size:85%;"|{{#if:{{{drink|}}}|{{{drinkv|10}}}☼|—}}
+|style="font-size:85%;background:{{#switch:{{{eat|n}}}|y=rgb(144, 255, 144)|n=rgb(255, 144, 144)|#default=rgb(238, 220, 130)}}"|{{#switch:{{{eat|n}}}|y=Yes|n=No|p=Pr<sup>3</sup>|#default={{{eat|}}}}}
+|style="font-size:85%;background:{{#switch:{{{cook|n}}}|y=rgb(144, 255, 144)|n=rgb(255, 144, 144)|#default=rgb(238, 220, 130)}};"|{{#switch:{{{cook|n}}}|y=Yes|n=No|p=Pr<sup>3</sup>|{{{cook|}}}}}
+|
+{|style="width:100%;font-size:85%;"
+|{{#if:{{{p1|}}}|{{{p1|}}}
+{{!}}style="padding-left:1em;text-align:right;"{{!}}{{#if:{{{pv1|}}}|{{{pv1|}}}☼|—}}
+{{#if:{{{p2|}}}|{{!}}-
+{{!}}{{{p2|}}}
+{{!}}style="padding-left:1em;text-align:right;"{{!}}{{#if:{{{pv2|}}}|{{{pv2|}}}☼|—}}
+{{#if:{{{p3|}}}|{{!}}-
+{{!}}{{{p3|}}}
+{{!}}style="padding-left:1em;text-align:right;"{{!}}{{#if:{{{pv3|}}}|{{{pv3|}}}☼|—}}
+{{#if:{{{p4|}}}|{{!}}-
+{{!}}{{{p4|}}}
+{{!}}style="padding-left:1em;text-align:right;"{{!}}{{#if:{{{pv4|}}}|{{{pv4|}}}☼|—}}
+{{#if:{{{p5|}}}|{{!}}-
+{{!}}{{{p5|}}}
+{{!}}style="padding-left:1em;text-align:right;"{{!}}{{#if:{{{pv5|}}}|{{{pv5|}}}☼|—}}
+{{#if:{{{p6|}}}|{{!}}-
+{{!}}{{{p6|}}}
+{{!}}style="padding-left:1em;text-align:right;"{{!}}{{#if:{{{pv6|}}}|{{{pv6|}}}☼|—}}
+{{#if:{{{p7|}}}|{{!}}-
+{{!}}{{{p7|}}}
+{{!}}style="padding-left:1em;text-align:right;"{{!}}{{#if:{{{pv7|}}}|{{{pv7|}}}☼|—}}
+{{#if:{{{p8|}}}|{{!}}-
+{{!}}{{{p8|}}}
+{{!}}style="padding-left:1em;text-align:right;"{{!}}{{#if:{{{pv8|}}}|{{{pv8|}}}☼|—}}
+{{#if:{{{p9|}}}|{{!}}-
+{{!}}{{{p9|}}}
+{{!}}style="padding-left:1em;text-align:right;"{{!}}{{#if:{{{pv9|}}}|{{{pv9|}}}☼|—}}|}}|}}|}}|}}|}}|}}|}}|}}|''None''}}
+|}<noinclude>
+|}
+
+==Use==
+<pre>
+name=Plant article link
+graphic=Sprite (v50 only)
+alt=Alternate label of link
+super=superscript next to name (optional)
+tile=plant tile
+color=tile color
+seasons={{seasons|1|1|1|1}} ({{seasons|spring|summer|autmn|winter}}, 1=active season; optional if plant is all-season)
+biome=Biome Name (see Biome tokens)
+biome2=,biome3=,biome4=,...,biome9= (for multiple biomes)
+dry=wet/dry (y=dry, n=wet, b=both, not included=none)
+align=Good/Evil/Savage (not included if All)
+value=plant value
+drink=Plant alcohol (optional)
+drinkv=drink value×5 (optional)
+eat=eat raw (y=yes, not included=no)
+cook=eat cooked (y=yes, p=processed, not included=no)
+p1={{tile||0:0:0}} product 1
+p2=,p3=,p4=,...,p9= (for multiple products)
+pv1=product 1's value (if none, leave empty)
+pv2=,pv3=,pv4=,...,pv9=
+
+Example:
+
+{{plant table head}}
+{{plant table row|name=Plump helmet|tile=♠|color=5:0|biome=Wet Cavern|dry=b|value=4
+  |drink=Dwarven wine|drinkv=10|eat=y|cook=y
+  |p1={{tile|·|4:0:1}} plump helmet spawn|pv1=1
+  }}
+{{plant table row|name=Rope reed|super=11|tile=ƒ|color=2:0|biome=Not Freezing|dry=n|value=4
+  |drink=River spirits
+  |p1={{tile|·|6:0:0}} rope reed seed|pv1=1
+  |p2={{tile|φ|7:0:0}} rope reed thread (p)|pv2=12
+  |p3={{tile|≈|7:0:0}} rope reed slurry (h)|pv3=2
+  }}
+{{plant table row|name=Whip vine|tile=§|color=3:1|biome=Not Freezing|dry=y|align=Savage|value=1
+  |drink=Whip wine|drinkv=15|cook=p
+  |p1={{tile|·|0:0:1}} whip vine seed|pv1=1
+  |p2={{tile|·|3:0:1}} whip vine flour (m)|pv2=25
+  }}
+{{plant table row|name=Blueberry|alt=Blueberries|tile=:|color=2:0:1|biome=Any Temperate|biome2=Tundra|biome3=Taiga|dry=y|value=2
+  |drink=Blueberry wine|drinkv=10|eat=y|cook=y
+  |p1={{tile|♠|2:0:0}} leaf|pv1=
+  |p2={{tile|%|1:0:1}} fruit|pv2=2
+  |p3={{tile|♣|7:0:1}} flower|pv3=
+  |p4={{tile|·|0:0:1}} seed|pv4=1
+  }}
+|}
+
+↓</pre>
+{{plant table head}}
+{{plant table row|name=Plump helmet|tile=♠|color=5:0|biome=Subterranean Water|dry=b|value=4
+  |drink=Dwarven wine|drinkv=10|eat=y|cook=y
+  |p1={{tile|·|4:0:1}} plump helmet spawn|pv1=1
+  }}
+{{plant table row|name=Rope reed|super=11|tile=ƒ|color=2:0|biome=Not Freezing|dry=n|value=4
+  |drink=River spirits
+  |p1={{tile|·|6:0:0}} rope reed seed|pv1=1
+  |p2={{tile|φ|7:0:0}} rope reed thread (p)|pv2=12
+  |p3={{tile|≈|7:0:0}} rope reed slurry (h)|pv3=2
+  }}
+{{plant table row|name=Whip vine|tile=§|color=3:1|biome=Not Freezing|dry=y|align=Savage|value=1
+  |drink=Whip wine|drinkv=15|cook=p
+  |p1={{tile|·|0:0:1}} whip vine seed|pv1=1
+  |p2={{tile|·|3:0:1}} whip vine flour (m)|pv2=25
+  }}
+{{plant table row|name=Blueberry|alt=Blueberries|tile=:|color=2:0:1|biome=Any Temperate|biome2=Tundra|biome3=Taiga|dry=y|value=2
+  |drink=Blueberry wine|drinkv=10|eat=y|cook=y
+  |p1={{tile|♠|2:0:0}} leaf|pv1=
+  |p2={{tile|%|1:0:1}} fruit|pv2=2
+  |p3={{tile|♣|7:0:1}} flower|pv3=
+  |p4={{tile|·|0:0:1}} seed|pv4=1
+  }}
+|}
+
+==See also==
+*[[:Template:Plant table head]]</noinclude>

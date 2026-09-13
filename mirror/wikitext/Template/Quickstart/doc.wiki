@@ -1,0 +1,16 @@
+Use this on pages that are part of the [[Quickstart guide]].
+
+Usage:
+<pre>{{Quickstart}}</pre>
+
+Advanced usage:
+<pre>
+{{Quickstart
+ |advanced=(Page title)
+ |advanced_title=(Text to be displayed in link)
+}}
+</pre>
+
+Both "advanced" parameters are optional. The <code>advanced_title</code> parameter requires the <code>advanced</code> parameter.
+<includeonly>[[Category:Message box templates]]</includeonly>
+<noinclude>[[Category:Template Documentation]]</noinclude>

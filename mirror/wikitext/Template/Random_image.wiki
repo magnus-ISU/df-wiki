@@ -1,0 +1,16 @@
+This template returns a random image from a gallery subpage (by default "/gallery"). To add an image to the rotation, edit the appropriate gallery subpage, not this page.
+
+
+Usage: 
+
+:<nowiki>{{random image}}</nowiki>
+
+Adds a random image from "/gallery", size 140x200px.
+
+
+
+:<nowiki>{{random image | dragonpics | size=400x400px | location=right | link=dragon }}</nowiki>
+
+Adds a random image from "dragonpics", size 400x400px, aligned on the right, and link it to "dragon".
+
+<onlyinclude><includeonly>[[{{#splitrand:{{{{{1|/gallery}}}}}}}{{dot}} [[{{{1|/gallery}}}|More]]|{{{type|thumb}}}|{{{location|center}}}|{{{size|140x200px}}}|{{#if:{{{link|}}}|link={{{link}}}|border}}]]</includeonly></onlyinclude>

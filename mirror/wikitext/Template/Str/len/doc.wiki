@@ -1,0 +1,22 @@
+Calculates length of {{{<nowiki/>1}}}.
+
+==Examples==
+<pre>{{str/len|abc}}</pre>
+&rarr; {{str/len|abc}}
+
+<pre>{{str/len|Dwarf Fortress}}</pre>
+&rarr; {{str/len|Dwarf Fortress}}
+
+<pre>{{str/len|a
+b}}</pre>
+&rarr; {{str/len|a
+b}}
+
+==Caveats==
+<pre>{{str/len|<nowiki/>}}</pre>
+&rarr; {{str/len|<nowiki/>}}
+
+This is due to MediaWiki's implementation of &lt;nowiki> &mdash; &lt;nowiki> tags are replaced with an identifier when parsed. For example, <code>&lt;nowiki>text&lt;/nowiki></code> becomes {{wikisrc|<nowiki>text</nowiki>}}. (Note that {{action|purge||purging this page}} will display a different token, despite the contents being the same.)
+
+<includeonly>[[Category:Templates]]</includeonly>
+<noinclude>[[Category:Template Documentation]]</noinclude>

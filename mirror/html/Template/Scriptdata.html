@@ -1,0 +1,64 @@
+<div class="mw-parser-output"><div style="clear:both;"></div>
+<table class="collapsible collapsed infobox gamedata" style="background: #fdfdfd; border: 1px solid #aaa; font-size: 88%; margin: 0 auto -1px; vertical-align: middle; width: 100%; max-width: 100em; table-layout: fixed;">
+<tbody><tr style="line-height: 1.5em;"><th scope="col" style="background: #cce6b3; padding: 0.25em 1em; text-align: center; display: table-cell;&#32;;"><div style="font-size: 114%; margin: 0 9em;"><a href="/index.php?title=Template:Scriptdata/script&amp;action=edit&amp;redlink=1" class="new" title="Template:Scriptdata/script (page does not exist)">Script</a></div></th></tr>
+<tr style="line-height: 1.5em; text-align: left; display: table-cell;"><td><div style="overflow: auto;"><span class="gamedata-content" style="font-family: monospace; font-size:1.25em; white-space:pre;"><span class="database plainlinks"><a rel="nofollow" class="external text" href="//dwarffortresswiki.org/index.php?title=Template:Scriptdata/script&amp;action=edit">Edit</a></span></span></div></td></tr></tbody></table><div class="plainlinks" style="clear: both; margin: 1em 0 0 0; border: 1px solid #aaa; background-color: #f0f0f8; padding: 5px 1em; border-radius: .4em; -webkit-border-radius: .4em; -moz-border-radius: .4em; -o-border-radius: .4em; -ms-border-radius: .4em;">
+<h2><span id="(view_-_edit_-__history_-__purge)_Documentation"></span><span class="mw-headline" id=".28view_-_edit_-_.0Ahistory_-_.0Apurge.29_Documentation"><span style="float: right; font-size: small; font-family: sans-serif;">
+(<a href="/index.php/Template:Scriptdata/doc" title="Template:Scriptdata/doc"><span title="View this documentation">view</span></a> - <a rel="nofollow" class="external text" href="//dwarffortresswiki.org/index.php?title=Template:Scriptdata/doc&amp;action=edit"><span title="Edit this documentation">edit</span></a> - 
+<a rel="nofollow" class="external text" href="//dwarffortresswiki.org/index.php?title=Template:Scriptdata/doc&amp;action=history"><span title="Documentation history">history</span></a> - 
+<a rel="nofollow" class="external text" href="//dwarffortresswiki.org/index.php?title=Template:Scriptdata&amp;action=purge"><span title="Purge this documentation (causes it to be updated; use only if it doesn&#39;t update after editing, NOT in a preview)">purge</span></a>)</span> Documentation</span></h2>
+<p>Displays <a href="/index.php/Category:Lua_script_pages" title="Category:Lua script pages">scripts</a> from the <i>Page name/script</i> directory.
+</p><p>Derived from <a href="/index.php/Template:Gamedata" title="Template:Gamedata">Template:Gamedata</a>, with a few changes specific to displaying syntax highlighting.
+</p><p>Can be given a custom script to display instead:
+</p>
+<ul><li><code>|script=</code> defines the content of the custom entry.</li></ul>
+<ul><li><code>|title=</code> parameter functions in the same way <a href="/index.php/Template:Gamedata" title="Template:Gamedata">Template:Gamedata</a> does so.</li></ul>
+<ul><li>Automatically applies <code>&lt;syntaxhighlight lang="lua"&gt;</code> to entries.</li></ul>
+<p><br />
+Example of a custom script that uses all parameters:
+</p>
+<pre>{{Scriptdata
+|title=Identity language
+|script=
+languages.GEN_IDENTITY=function()
+    -- just to demonstrate the absolute most basic method of generating one of these
+    -- also so that you can just mod stuff to use GEN_IDENTITY
+    local tbl={}
+    local unempty = function(str1, str2) 
+        return str1=='' and str2 or str1
+    end
+    for k,v in ipairs(world.language.word) do
+        local str=''
+        str=unempty(str,v.NOUN_SING)
+        str=unempty(str,v.ADJ)
+        str=unempty(str,v.VERB_FIRST_PRES)
+        str=unempty(str,string.lower(v.token))
+        tbl[v.token]=str
+    end
+    return tbl
+end
+}}
+</pre>
+<div style="clear:both;"></div>
+<table class="collapsible collapsed infobox gamedata" style="background: #fdfdfd; border: 1px solid #aaa; font-size: 88%; margin: 0 auto -1px; vertical-align: middle; width: 100%; max-width: 100em; table-layout: fixed;">
+<tbody><tr style="line-height: 1.5em;"><th scope="col" style="background: #cce6b3; padding: 0.25em 1em; text-align: center; display: table-cell;&#32;;"><div style="font-size: 114%; margin: 0 9em;">Identity language</div></th></tr>
+<tr style="line-height: 1.5em; text-align: left; display: table-cell;"><td><div style="overflow: auto;"><span class="gamedata-content" style="font-family: monospace; font-size:1.25em; white-space:pre;"><div class="mw-highlight mw-highlight-lang-lua mw-content-ltr" dir="ltr"><pre><span></span><span class="n">languages</span><span class="p">.</span><span class="n">GEN_IDENTITY</span><span class="o">=</span><span class="kr">function</span><span class="p">()</span>
+    <span class="c1">-- just to demonstrate the absolute most basic method of generating one of these</span>
+    <span class="c1">-- also so that you can just mod stuff to use GEN_IDENTITY</span>
+    <span class="kd">local</span> <span class="n">tbl</span><span class="o">=</span><span class="p">{}</span>
+    <span class="kd">local</span> <span class="n">unempty</span> <span class="o">=</span> <span class="kr">function</span><span class="p">(</span><span class="n">str1</span><span class="p">,</span> <span class="n">str2</span><span class="p">)</span> 
+        <span class="kr">return</span> <span class="n">str1</span><span class="o">==</span><span class="s1">&#39;&#39;</span> <span class="ow">and</span> <span class="n">str2</span> <span class="ow">or</span> <span class="n">str1</span>
+    <span class="kr">end</span>
+    <span class="kr">for</span> <span class="n">k</span><span class="p">,</span><span class="n">v</span> <span class="kr">in</span> <span class="nb">ipairs</span><span class="p">(</span><span class="n">world</span><span class="p">.</span><span class="n">language</span><span class="p">.</span><span class="n">word</span><span class="p">)</span> <span class="kr">do</span>
+        <span class="kd">local</span> <span class="n">str</span><span class="o">=</span><span class="s1">&#39;&#39;</span>
+        <span class="n">str</span><span class="o">=</span><span class="n">unempty</span><span class="p">(</span><span class="n">str</span><span class="p">,</span><span class="n">v</span><span class="p">.</span><span class="n">NOUN_SING</span><span class="p">)</span>
+        <span class="n">str</span><span class="o">=</span><span class="n">unempty</span><span class="p">(</span><span class="n">str</span><span class="p">,</span><span class="n">v</span><span class="p">.</span><span class="n">ADJ</span><span class="p">)</span>
+        <span class="n">str</span><span class="o">=</span><span class="n">unempty</span><span class="p">(</span><span class="n">str</span><span class="p">,</span><span class="n">v</span><span class="p">.</span><span class="n">VERB_FIRST_PRES</span><span class="p">)</span>
+        <span class="n">str</span><span class="o">=</span><span class="n">unempty</span><span class="p">(</span><span class="n">str</span><span class="p">,</span><span class="nb">string.lower</span><span class="p">(</span><span class="n">v</span><span class="p">.</span><span class="n">token</span><span class="p">))</span>
+        <span class="n">tbl</span><span class="p">[</span><span class="n">v</span><span class="p">.</span><span class="n">token</span><span class="p">]</span><span class="o">=</span><span class="n">str</span>
+    <span class="kr">end</span>
+    <span class="kr">return</span> <span class="n">tbl</span>
+<span class="kr">end</span>
+</pre></div></span></div></td></tr></tbody></table>
+<p>Preliminary scripts have been provided by <a href="/index.php/User:Putnam3145" title="User:Putnam3145">User:Putnam3145</a>.
+</p>
+</div></div>

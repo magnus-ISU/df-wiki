@@ -1,0 +1,24 @@
+<includeonly>{{{{#if:{{tag|{{{1}}}|SEED}}|Crop|Shrub}}|
+color={{tagvalue|{{{1}}}|PICKED_COLOR|notfound=2:0:0}}|
+pref={{prefstring|{{{1}}}}}|
+seed_color={{tagentry|{{{1}}}|SEED|3:5}}|
+graphic={{{graphic|}}}|
+seedimage={{{seedimage}}}|
+character={{char|{{tagvalue|{{{1}}}|PICKED_TILE|notfound=τ}}}}|
+name={{ucfirst:{{tagvalue|{{{1}}}|NAME|notfound={{tagvalue|{{{1}}}|ALL_NAMES}}}}}}|
+seed={{ucfirst:{{tagentry|{{{1}}}|SEED|2}}}}|
+edible={{#if:{{tag|{{#df_raw:{{{1}}}|USE_MATERIAL_TEMPLATE|STRUCTURAL:STRUCTURAL_PLANT_TEMPLATE}}|EDIBLE_RAW}}|Yes|No}}|
+cookable={{#if:{{tag|{{#df_raw:{{{1}}}|USE_MATERIAL_TEMPLATE|STRUCTURAL:STRUCTURAL_PLANT_TEMPLATE}}|EDIBLE_COOKED}}|Yes|{{#if:{{tag|{{#df_raw:{{{1}}}|USE_MATERIAL_TEMPLATE|STRUCTURAL:STRUCTURAL_PLANT_TEMPLATE}}|EDIBLE_RAW}}|Yes|No}}}}|
+alcohol={{#if:{{tag|{{{1}}}|DRINK}}|[[{{ucfirst:{{#df_statedesc:{{#df_raw:{{{1}}}|USE_MATERIAL_TEMPLATE|{{tagentry|{{{1}}}|DRINK|2}}:PLANT_ALCOHOL_TEMPLATE}}|NAME|LIQUID}}}}]]|None}}|
+mill={{#if:{{tag|{{{1}}}|MILL}}|{{ucfirst:{{#df_statedesc:{{#df_raw:{{{1}}}|USE_MATERIAL_TEMPLATE|{{tagentry|{{{1}}}|MILL|2}}:PLANT_POWDER_TEMPLATE}}|NAME|POWDER}}}}|None}}|
+spring={{tag|{{{1}}}|SPRING}}|
+summer={{tag|{{{1}}}|SUMMER}}|
+autumn={{tag|{{{1}}}|AUTUMN}}|
+winter={{tag|{{{1}}}|WINTER}}|
+alignment={{#if:{{tag|{{{1}}}|GOOD}}|Good<br />}}{{#if:{{tag|{{{1}}}|EVIL}}|Evil<br />}}{{#if:{{tag|{{{1}}}|SAVAGE}}|Savage}}|
+biome={{biomelist/aux|{{{1}}}}}|
+wet={{tag|{{{1}}}|WET}}|
+dry={{tag|{{{1}}}|DRY}}|
+uses={{{uses|}}}|
+other_products={{{other_products|}}}|
+wiki={{#param:wiki|wp|wikipedia|}}}}{{interwiki|{{PAGENAME}}}}</includeonly><noinclude>[[Category:raw templates]]</noinclude>

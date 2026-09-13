@@ -1,0 +1,3 @@
+<includeonly>{{#eval:{{#df_makelist:{{#ifeq:{{NAMESPACE}}||v50|{{NAMESPACE}}}}:inorganic_stone_mineral.txt|INORGANIC|<nowiki></nowiki>
+* [[{{#delay:ucfirst:\2}}]] ({{#delay:inclusion|\1}})|ENVIRONMENT_SPEC:2:1:{{{id}}}|STATE:NAME:SOLID}}{{#df_makelist:{{#ifeq:{{NAMESPACE}}||v50|{{NAMESPACE}}}}:inorganic_stone_gem.txt|INORGANIC|<nowiki></nowiki>
+* [[{{#delay:ucfirst:\2}}]] ({{#delay:inclusion|\1}})|ENVIRONMENT_SPEC:2:1:{{{id}}}|IS_GEM:1:-1}}}}</includeonly><noinclude>[[category:raw templates]]</noinclude>

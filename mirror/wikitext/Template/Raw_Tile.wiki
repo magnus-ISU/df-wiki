@@ -1,0 +1,88 @@
+<noinclude><div style="float: right; padding: 0.5em; margin: 0.25em; border: 1px solid #ccc; background: #eee"></noinclude><span style="color: {{fgcolor|{{{2}}}}}; background: {{bgcolor|{{{2}}}|{{{3|#000}}}}}; font-size: 135%; font-family: 'Courier New', 'Quicktype Mono', 'Bitstream Vera Sans Mono', 'Lucida Console', 'Lucida Sans Typewriter', monospace; font-weight:bold; padding: 0; line-height: 1;">{{{1}}}</span><noinclude></div>
+
+'''Template:Raw Tile''' can be used to display tiles close to what they appear as in Dwarf Fortress. It is designed to be used in grids. There is a [[:Template:Tile|variant with padding]] for free-standing use. The [[:Template:Dwarf|Dwarf template]] can be used to insert dwarf faces.
+
+== Usage ==
+
+*<nowiki>{{Raw Tile|<character>|a:b:c}}</nowiki>
+**where "a:b:c" is a [[Color|COLOR token]] value specifying both foreground and background color
+*<nowiki>{{Raw Tile|<character>|a:b}}</nowiki>
+**where "a:b" is a COLOR token value specifying foreground color only; background will be defaulted to black
+*<nowiki>{{Raw Tile|<character>|#xxx|#yyy}}</nowiki>
+**where #xxx is the foreground color and #yyy is the (optional, default black) background color
+
+=== Special characters ===
+
+Special characters can be copied from the [[character table]]. Characters used in the template syntax (e.g. | or =) need to be escaped (| can be written <code><nowiki>{{!}}</nowiki></code>, = can be written <code><nowiki>{{=}}</nowiki></code>).
+
+=== Examples ===
+
+{| style="border-spacing: 0"
+|-
+|style="padding: 0"|{{Raw Tile|═|#CCC}}
+|style="padding: 0"|{{Raw Tile|═|#CCC}}
+|style="padding: 0"|{{Raw Tile|┼|#888|#CCC}}
+|style="padding: 0"|{{Raw Tile|┼|#888|#CCC}}
+|style="padding: 0"|{{Raw Tile|═|#CCC}}
+|style="padding: 0"|{{Raw Tile|═|#CCC}}
+|-
+|style="padding: 0"|{{Raw Tile|÷|#0000000|#808000}}
+|style="padding: 0"|{{Raw Tile|{{=}}|#808080|#000000}}
+|style="padding: 0"|{{Raw Tile|÷|#000000|#808000}}
+|style="padding: 0"|{{Raw Tile|÷|#000000|#808000}}
+|style="padding: 0"|{{Raw Tile|÷|#000000|#808000}}
+|style="padding: 0"|{{Raw Tile|÷|#000000|#808000}}
+|-
+|style="padding: 0"|{{Raw Tile|÷|0:6:0}}
+|style="padding: 0"|{{Raw Tile|÷|0:6:0}}
+|style="padding: 0"|{{Raw Tile|÷|0:6:0}}
+|style="padding: 0"|{{Raw Tile|÷|0:6:0}}
+|style="padding: 0"|{{Raw Tile|÷|0:6:0}}
+|style="padding: 0"|{{Raw Tile|÷|0:6:0}}
+|-
+|style="padding: 0"|{{Raw Tile|÷|0:6:0}}
+|style="padding: 0"|{{Raw Tile|÷|0:6:0}}
+|style="padding: 0"|{{Raw Tile|÷|0:6:0}}
+|style="padding: 0"|{{Raw Tile|{{=}}|0:1}}
+|style="padding: 0"|{{Raw Tile|÷|0:6:0}}
+|style="padding: 0"|{{Raw Tile|{{=}}|0:1}}
+|}
+
+...can be made with:
+
+<pre><nowiki>
+{| style="border-spacing: 0"
+|-
+|style="padding: 0"|{{Raw Tile|═|#CCC}}
+|style="padding: 0"|{{Raw Tile|═|#CCC}}
+|style="padding: 0"|{{Raw Tile|┼|#888|#CCC}}
+|style="padding: 0"|{{Raw Tile|┼|#888|#CCC}}
+|style="padding: 0"|{{Raw Tile|═|#CCC}}
+|style="padding: 0"|{{Raw Tile|═|#CCC}}
+|-
+|style="padding: 0"|{{Raw Tile|÷|#0000000|#808000}}
+|style="padding: 0"|{{Raw Tile|{{=}}|#808080|#000000}}
+|style="padding: 0"|{{Raw Tile|÷|#000000|#808000}}
+|style="padding: 0"|{{Raw Tile|÷|#000000|#808000}}
+|style="padding: 0"|{{Raw Tile|÷|#000000|#808000}}
+|style="padding: 0"|{{Raw Tile|÷|#000000|#808000}}
+|-
+|style="padding: 0"|{{Raw Tile|÷|0:6:0}}
+|style="padding: 0"|{{Raw Tile|÷|0:6:0}}
+|style="padding: 0"|{{Raw Tile|÷|0:6:0}}
+|style="padding: 0"|{{Raw Tile|÷|0:6:0}}
+|style="padding: 0"|{{Raw Tile|÷|0:6:0}}
+|style="padding: 0"|{{Raw Tile|÷|0:6:0}}
+|-
+|style="padding: 0"|{{Raw Tile|÷|0:6:0}}
+|style="padding: 0"|{{Raw Tile|÷|0:6:0}}
+|style="padding: 0"|{{Raw Tile|÷|0:6:0}}
+|style="padding: 0"|{{Raw Tile|{{=}}|0:1}}
+|style="padding: 0"|{{Raw Tile|÷|0:6:0}}
+|style="padding: 0"|{{Raw Tile|{{=}}|0:1}}
+|}
+</nowiki></pre>
+
+[[Category:Formatting Templates]]
+
+</noinclude>

@@ -1,0 +1,18 @@
+== Usage ==
+
+<nowiki>{{quote}}</nowiki> adds a quotation '''box''' to an article page. The main difference between Quote and [[Template:Quote Box|Quote Box]] is that Quote creates a centered box that encompasses the whole page, while Quote Box creates a smaller, left-aligned box.
+
+This is easier to type and more wiki-like than the equivalent HTML <nowiki><blockquote></nowiki>, and has additional pre-formatted attribution and source parameters.
+
+=== Synopsis ===
+
+;Parameters
+<code><nowiki>{{quote|text}}</nowiki></code>
+
+=== Example ===
+
+;Wikitext:
+<code><nowiki>{{quote|Cry "Havoc" and let slip the dogs of war.}}</nowiki></code>
+
+;Result:
+{{quote|Cry "Havoc" and let slip the dogs of war.}}

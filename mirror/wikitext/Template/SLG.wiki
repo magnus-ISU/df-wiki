@@ -1,0 +1,30 @@
+<includeonly>
+{{Colored Notice Box|text=
+'''{{{FortName}}}'''<sup>{{#if:{{{WikiLink|}}}| [[Bloodline:{{{WikiLink}}}|Wiki Page]]}}&nbsp;&nbsp;{{#if:{{{ForumLink|}}}| [{{{ForumLink}}} Forum Topic]}}</sup>
+*'''Host:''' {{{Host}}}
+{{#if:{{{Type|}}}|*Type: {{{Type}}}  }}
+*{{{Description}}}
+}}
+</includeonly>
+<noinclude>
+{{SLG
+|FortName=Example
+|Host=[[User:Briess|Briess]]
+|WikiLink=Example
+|ForumLink=http://www.bay12games.com/forum
+|Description=Example}}
+
+[[Bloodline:Succession League Games]]
+
+Usage:
+<pre>
+{{SLG
+|FortName=your fort name
+|Host=~~~ (3 tildes, not 4!)
+|WikiLink=Title of the Wiki Page (no Bloodline: prefix needed, optional)
+|ForumLink=Full forum link address (ie http://www.bay12games.com/forum/)
+|Description=Your game description.
+|Type=The type of game.  Optional.
+}}
+</pre>
+[[Category:Formatting Templates]] </noinclude>
