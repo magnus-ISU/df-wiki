@@ -1,0 +1,9 @@
+{{#switch:{{lc:{{{1|{{{type|}}}}}}}}
+  |speedy|xred = speedy
+  |delete|red = delete
+  |content|orange|warn|warning = content
+  |style|yellow = style
+  |move|purple = move
+  |protection|grey = protection
+  |notice|blue|#default = notice
+}}

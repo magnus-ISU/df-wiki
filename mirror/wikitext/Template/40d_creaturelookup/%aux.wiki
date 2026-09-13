@@ -1,0 +1,30 @@
+<includeonly>{{CreatureInfo 40d|
+name={{ucfirst:{{tagentry|{{{1}}}|NAME|1}}}}|
+symbol={{tagvalue|{{{1}}}|TILE}}|
+wagon={{#if:{{tag|{{/raw}}|EQUIPMENT_WAGON}}|1}}|
+color={{tagvalue|{{{1}}}|COLOR}}|
+alignment={{#if:{{tag|{{{1}}}|GOOD}}|Good<br />}}{{#if:{{tag|{{{1}}}|EVIL}}|Evil<br />}}{{#if:{{tag|{{{1}}}|SAVAGE}}|Savage}}|
+biome={{biomelist/aux|{{{1}}}}}|
+bldgdest={{tagvalue|{{{1}}}|BUILDINGDESTROYER|notfound=0}}|
+attribs={{attrib_proc|{{{1}}}|{{PAGENAME}}}}|
+tame_attribs={{tame_attrib_proc/{{NAMESPACE}}|{{{1}}}}}|
+pet={{tag|{{{1}}}|PET}}|
+exotic={{tag|{{{1}}}|PET_EXOTIC}}|
+petvalue={{tagvalue|{{{1}}}|PETVALUE|notfound=0}}|
+train_hunt={{#if:{{tag|{{{1}}}|TRAINABLE}}|1|0}}|
+train_war={{#if:{{tag|{{{1}}}|TRAINABLE}}|1|0}}|
+childage={{tagvalue|{{{1}}}|BABY|notfound=}}|
+adultage={{tagvalue|{{{1}}}|CHILD|notfound=Birth}}|
+maxage={{#mreplace:{{tagvalue|{{{1}}}|MAXAGE|notfound=Immortal}}|:|-}}|
+item={{{item|}}}|
+butcher={{#if:{{tag|{{{1}}}|NOT_BUTCHERABLE}}{{tag|{{{1}}}|EQUIPMENT_WAGON}}|no|{{{butcher|yes}}}}}|
+size={{tagvalue|{{{1}}}|SIZE|notfound=6}}|
+bones={{#if:{{tag|{{{1}}}|NOBONES}}{{tag|{{{1}}}|EQUIPMENT_WAGON}}|None|{{tagvalue|{{{1}}}|SIZE|notfound=6}}}}|
+chunks={{#if:{{tag|{{{1}}}|NOMEAT}}{{tag|{{{1}}}|EQUIPMENT_WAGON}}|None|{{tagvalue|{{{1}}}|SIZE|notfound=6}}}}|
+meat={{#if:{{tag|{{{1}}}|NOMEAT}}{{tag|{{{1}}}|EQUIPMENT_WAGON}}|None|{{tagvalue|{{{1}}}|SIZE|notfound=6}}}}|
+fat={{tagvalue|{{{1}}}|FAT|notfound=None}}|
+skulls={{#if:{{tag|{{{1}}}|NOSKULL}}{{tag|{{{1}}}|EQUIPMENT_WAGON}}|None|1}}|
+skin={{#if:{{tag|{{{1}}}|NOSKIN}}{{tag|{{{1}}}|EQUIPMENT_WAGON}}|None|{{#if:{{tag|{{{1}}}|CHITIN}}|Chitin|Leather}}}}|
+modvalue={{tagvalue|{{{1}}}|MODVALUE|notfound=}}|
+wiki={{{wiki|}}}|
+}}</includeonly><noinclude>[[category:raw templates]]</noinclude>

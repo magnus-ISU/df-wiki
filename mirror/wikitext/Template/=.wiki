@@ -1,0 +1,18 @@
+=<noinclude>
+----
+
+Most templates bork when an equals sign is included directly in an ordered parameter; with this template, now if you use <nowiki>{{=}}</nowiki> instead of = you'll be fine.
+
+Compare the following:
+
+{| class="wikitable" border="1" cellspacing="0"  cellpadding="5" align="center" width="50%"
+ ! Code !! Result 
+ |-
+ || <pre>{{Colored Notice Box|#f00|2+2=5}}</pre> || {{Colored Notice Box|#f00|2+2=5}}
+ |-
+ || <pre>{{Colored Notice Box|#f00|1=2+2=5}}</pre> || {{Colored Notice Box|#f00|2+2{{=}}5}}
+ |-
+ || <pre>{{Colored Notice Box|#f00|2+2{{=}}5}}</pre> || {{Colored Notice Box|#f00|2+2{{=}}5}}
+ |}
+
+[[Category:Templates]]

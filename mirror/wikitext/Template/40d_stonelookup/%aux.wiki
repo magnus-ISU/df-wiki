@@ -1,0 +1,19 @@
+<includeonly>{{Mineral|name={{ucfirst:{{tagvalue|{{{1|}}}|NAME}}}}
+|tile={{Char|{{tagentry|{{{1|}}}|TILE|1}}}}
+|icon={{#tag:nowiki|{{Char|{{#mreplace:{{tagentry|{{{1|}}}|ITEM_SYMBOL|1|notfound='•'}}|=|&#61;}}}}}}
+|color={{tagvalue|{{{1|}}}|COLOR}}
+|itemcolor={{tagvalue|{{{1|}}}|BASIC_COLOR|notfound=}}
+|uses={{{uses|}}}{{#eval:{{#df_foreachtag:{{{1|}}}|METAL_ORE|<nowiki></nowiki>
+* Ore of [[{{#delay:inorganicname|\2}}]] (\3%)}}{{#df_foreachtag:{{{1|}}}|THREAD_METAL|<nowiki></nowiki>
+* Extract [[{{#delay:inorganicname|\2}}]] strands (\3%)}}}}
+* [[mason's workshop|Masonry]]
+* [[craftsdwarf's workshop|Stone crafting]]
+* [[Construction]]{{#if:{{tag|{{{1}}}|REACTION_CLASS|1|FLUX}}|<nowiki></nowiki>
+* [[Flux]]}}
+|location={{Stonelookup/location|{{{1}}}}}
+|properties={{#if:{{{economic|}}}{{tag|{{{1}}}|METAL_ORE}}{{tag|{{{1}}}|THREAD_METAL}}{{tag|{{{1}}}|REACTION_CLASS}}|<!---->
+* [[Economic stone]]{{Category|Economic Stone}}}}{{#if:{{tag|{{{1}}}|METAL_ORE}}{{tag|{{{1}}}|THREAD_METAL}}|{{Category|Ore}}}}
+{{40d stonelookup/aux2|{{{1}}}}}
+|contains={{40d stonelookup/contains|id={{tagentry|{{{1|}}}|MATGLOSS_STONE|1}}}}
+|wiki={{{wiki|}}}
+}}{{interwiki|{{FULLPAGENAME}}}}</includeonly><noinclude>[[category:raw templates]]</noinclude>

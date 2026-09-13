@@ -1,0 +1,11 @@
+<includeonly>{{TreeInfo v0.34|
+name={{ucfirst:{{tagvalue|{{{1}}}|NAME}}}}|
+symbol={{char|{{tagvalue|{{{1}}}|TILE}}}}|
+color={{tagvalue|{{{1}}}|COLOR|notfound=2:0:0}}|
+alignment={{#if:{{tag|{{{1}}}|GOOD}}|Good<br />}}{{#if:{{tag|{{{1}}}|EVIL}}|Evil<br />}}{{#if:{{tag|{{{1}}}|SAVAGE}}|Savage}}|
+biome={{biomelist/aux|{{{1}}}}}|
+wet={{tag|{{{1}}}|WET}}|
+dry={{tag|{{{1}}}|DRY}}|
+autumncolor={{#if:{{tag|{{{1}}}|AUTUMNCOLOR}}|Yes|No}}|
+density={{tagvalue|{{{1}}}|SOLID_DENSITY|notfound={{#ifeq:{{NAMESPACE}}|40d|500|N/A}}}}|
+wiki={{{wiki|}}}}}</includeonly><noinclude>[[Category:raw templates]]</noinclude>

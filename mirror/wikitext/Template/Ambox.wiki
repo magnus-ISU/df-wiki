@@ -1,0 +1,31 @@
+{{Ambox/{{#ifeq:{{{small}}}|left|small|core}}
+ |type = {{ambox/type|{{{type}}}}}
+ |image = {{{image|}}}
+ |imagestyle = {{{imagestyle|}}}
+ |smallimage = {{#if:{{{smallimage|}}}|{{{smallimage}}}|{{{image|}}}}}
+ |imageright = {{{imageright|}}}
+ |smallimageright = {{#if:{{{smallimageright|}}}|{{{smallimageright}}}|{{{imageright|}}}}}
+ |class = ambox-{{ambox/type|{{{type}}}}} {{{class|}}}
+ |style = {{#if:{{{bordercolor|}}}|border-left: 10px solid {{{bordercolor}}};}} {{{style|}}}
+ |textstyle  = {{{textstyle|}}}
+ |smalltext  = {{{smalltext|}}}
+ |talk = {{#switch:{{{talk|¬}}}
+  |¬        = <!-- No talk link used -->
+  |         = {{#ifeq:{{FULLROOTPAGENAME}}|Template:{{PAGENAME:{{{name}}}}}|#}}
+  |#default = {{{talk}}}
+ }}
+ |issue = {{#switch:{{{sect|¬}}}
+  |¬ = <!-- No section parameter used -->
+  |  = This article
+  |This {{{sect}}}
+ }} {{{issue|}}} {{{text<includeonly>|</includeonly>}}}
+ |fix = {{{fix<includeonly>|</includeonly>}}}
+ |date = {{#switch:{{{date|¬}}}
+  |¬        = <!-- No date used -->
+  |         = {{#ifeq:{{FULLROOTPAGENAME}}|Template:{{PAGENAME:{{{name}}}}}|{{CURRENTMONTHNAME}} {{CURRENTYEAR}}}}
+  |#default = {{{date}}}
+ }}
+ |info = {{{info|}}}
+}}<noinclude>
+{{documentation}}
+</noinclude>

@@ -1,0 +1,16 @@
+<div class="mw-parser-output"><p>This is an extended version of {{<a href="/index.php/Template:Edit" title="Template:Edit">edit</a>}}, supporting other actions (history, purge, etc.). It essentially removes the arrow by an internal link that appears as external (for example, links to edit an article).
+</p><p>For more information, see <a class="external text" href="http://www.mediawiki.org/wiki/Manual:Parameters_to_index.php#Actions">the MediaWiki manual</a>.
+</p><p>Note that, when updating pages, "purge" should be used on the <i>including</i> page, not the page being transcluded.
+</p><p>Usage:
+</p>
+<pre>{{Action|action|page|link title|pl=yes/no}}</pre>
+<p>Where 
+</p>
+<ul><li>"action" is a valid action</li>
+<li>"page" is <b>optional</b> - to skip this, just use a double bar, like this: <code>{{action|edit||...}}</code></li>
+<li>"link title", the text displayed for the link, is also optional - if it is not specified, it defaults to the "action"</li>
+<li>Adding <code>|pl=no</code> will show an arrow next to the link. Only use this if you're sure you need it.</li></ul>
+<p>Note: if you need more options specified in the URL, simply specify them in the first parameter. You may need to use {{<a href="/index.php/Template:%3D" title="Template:=">=</a>}} to escape = characters. 
+</p><p>
+Example: </p><pre>{{action|edit&amp;section{{=}}new|Template talk:Action|New talk section}}</pre> <p><span class="plainlinks"><a rel="nofollow" class="external text" href="//dwarffortresswiki.org/index.php?title=Template_talk:Action&amp;action=edit&amp;section=new">New talk section</a></span>
+</p></div>

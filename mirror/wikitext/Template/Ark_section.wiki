@@ -1,0 +1,23 @@
+<includeonly>{| style="margin: 0 10%; border-collapse: collapse; background: #F8F8F8; border: 1px solid #aaa; border-left: 15px solid #{{#switch: {{{status}}}
+ | 1 = FF0000
+ | 2 = FF8800
+ | 3 = 009900
+ | #default = 000000
+}}; width:80%; margin-bottom: 10px"
+|-
+| style="padding: 1.0em 0.5em 0.5em; width: 10%; height: 100%; text-align: center" | '''<span style="vertical-align: middle; font-family: verdana"><span style="font-size: 210%">ARK</span><br>PROJECT</span>'''
+| style="padding: 0.5em 0.5em; width: 90%; " | This section of the [[:Modification:Ark Project|Ark Project]] is {{#switch: {{{status}}}
+ | 1 = in  the <span style="color: red; font-weight: bold">listing phase.</span>  Creatures are being added to this section's list.
+
+Asterisks denote animals that must be renamed for inclusion in DF.
+ | 2 = in the <span style="color: #FF8800; font-weight: bold">implementation phase.</span>  The listed creatures are being implemented.  
+ | 3 = <span style="color: #009900; font-weight: bold">ready.</span>  Creatures have been listed and implemented.  
+ | #default = <span style="font-weight: bold">Invalid status; please make sure you're using this template correctly.</span>
+}}
+|}
+{{#switch: {{{status}}}
+ | 1 = [[Category:Ark Project animals (listing phase)]]
+ | 2 = [[Category:Ark Project animals (implementation phase)]]
+ | 3 = [[Category:Ark Project animals (ready)]]
+}}
+</includeonly><noinclude>[[Category:Ark Project templates]]</noinclude>

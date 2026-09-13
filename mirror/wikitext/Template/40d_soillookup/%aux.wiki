@@ -1,0 +1,11 @@
+<includeonly>{{Mineral|name={{ucfirst:{{tagvalue|{{{1|}}}|NAME}}}}
+|tile={{Char|{{tagentry|{{{1|}}}|TILE|1}}}}
+|icon={{#if:{{tag|{{{1}}}|SOIL_SAND}}|≈|.}}
+|color={{tagvalue|{{{1|}}}|COLOR}}
+|properties=* [[{{ucfirst:{{Layername|{{Layertype|{{{1}}}}}}}}}]] layer{{#if:{{tag|{{{1}}}|AQUIFER}}|<nowiki></nowiki>
+* [[Aquifer]]}}{{#if:{{tag|{{{1}}}|SOIL_SAND}}|<nowiki></nowiki>
+* [[Sand]]}}
+|contains=* All minerals common to [[{{Layername|{{Layertype|{{{1}}}}}}} layer]]s
+{{40d stonelookup/contains|id={{tagentry|{{{1|}}}|MATGLOSS_STONE|1}}}}
+|wiki={{{wiki|}}}
+}}{{Category|Soil Layers}}{{interwiki|{{FULLPAGENAME}}}}</includeonly><noinclude>[[category:raw templates]]</noinclude>

@@ -1,0 +1,83 @@
+<span><!--
+-->{{#if:{{{num|}}}|<!-- case for "num" defined where user wants to display only the last num icons
+  -->{{#ifexpr:{{{num|4}}}-{{#if:{{{4|}}}|1|0}}-{{#if:{{{3|}}}|1|0}}-{{#if:{{{2|}}}|1|0}} > 0 |<!--
+    --><span style="display: inline-flex;"><!--
+    -->[[File:Adv ui {{{1|<noinclude>b</noinclude>}}}.png]]<span style="align-self: flex-end; margin-left: -3px; margin-bottom: 0px;">{{k|{{{1|<noinclude>b</noinclude>}}}}}</span></span><!--
+    -->{{#ifexpr: {{#if:{{{2|}}}|1|0}} and {{{num|4}}}-{{#if:{{{4|}}}|1|0}}-{{#if:{{{3|}}}|1|0}} > 0 | {{{sep|}}}}}<!--draw sep if icon exists above and below
+  -->}}<!--
+    
+  -->{{#ifexpr: {{#if:{{{2|}}}|1|0}} and {{{num|4}}}-{{#if:{{{4|}}}|1|0}}-{{#if:{{{3|}}}|1|0}} > 0 |<!--
+    --><span style="display: inline-flex;"><!--
+    -->[[File:Adv ui {{{1}}}{{{2}}}.png]]<span style="align-self: flex-end; margin-left: -3px; margin-bottom: 0px;">{{k|{{{2}}}}}</span></span><!--
+    -->{{#ifexpr: {{#if:{{{3|}}}|1|0}} and {{{num|4}}}-{{#if:{{{4|}}}|1|0}} > 0 | {{{sep|}}}}}<!--draw sep if icon exists above and below
+  -->}}<!--
+
+  -->{{#ifexpr: {{#if:{{{3|}}}|1|0}} and {{{num|4}}}-{{#if:{{{4|}}}|1|0}} > 0 |<!--
+    --><span style="display: inline-flex;"><!--
+    -->[[File:Adv ui {{{1}}}{{{2}}}{{{3}}}.png]]<span style="align-self: flex-end; margin-left: -3px; margin-bottom: 0px;">{{k|{{{3}}}}}</span></span><!--
+    -->{{#if:{{{4|}}} | {{{sep|}}}}}<!--draw sep if icon exists above and below
+  -->}}<!--
+
+  -->{{#if:{{{4|}}}|<!--
+    --><span style="display: inline-flex;"><!--
+    -->[[File:Adv ui {{{1}}}{{{2}}}{{{3}}}{{{4}}}.png]]<span style="align-self: flex-end; margin-left: -3px; margin-bottom: 0px;">{{k|{{{4}}}}}</span></span>}}<!--
+
+
+  -->|<!--simpler case for "num" undefined where user wants to display all icons
+    --><span style="display: inline-flex;"><!--
+    -->[[File:Adv ui {{{1|<noinclude>b</noinclude>}}}.png]]<span style="align-self: flex-end; margin-left: -3px; margin-bottom: 0px;">{{k|{{{1|<noinclude>b</noinclude>}}}}}</span></span><!--
+
+  -->{{#if:{{{2|}}}|<!--
+    -->{{{sep|}}}<!--
+    --><span style="display: inline-flex;"><!--
+    -->[[File:Adv ui {{{1}}}{{{2}}}.png]]<span style="align-self: flex-end; margin-left: -3px; margin-bottom: 0px;">{{k|{{{2}}}}}</span></span>}}<!--
+
+  -->{{#if:{{{3|}}}|<!--
+    -->{{{sep|}}}<!--
+    --><span style="display: inline-flex;"><!--
+    -->[[File:Adv ui {{{1}}}{{{2}}}{{{3}}}.png]]<span style="align-self: flex-end; margin-left: -3px; margin-bottom: 0px;">{{k|{{{3}}}}}</span></span>}}<!--
+
+  -->{{#if:{{{4|}}}|<!--
+    -->{{{sep|}}}<!--
+    --><span style="display: inline-flex;"><!--
+    -->[[File:Adv ui {{{1}}}{{{2}}}{{{3}}}{{{4}}}.png]]<span style="align-self: flex-end; margin-left: -3px; margin-bottom: 0px;">{{k|{{{4}}}}}</span></span>}}<!--
+-->}}<!--
+
+--></span><noinclude>
+----
+
+===Examples of Appearance===
+
+Selected from the {{Adv menu icon|T}} travel menu.
+
+===Usage===
+
+Functions as [[Template:Menu icon]], but based on adventure icons. Compare {{Adv menu icon|b}} (Adventure) and {{Menu icon|b}} (Fortress)
+
+<pre><nowiki>{{Adv menu icon|b}}</nowiki></pre>
+
+Multiple keys can be passed as separate parameters to this template, with the "sep" parameter determining the separator (the default is an empty string), and the number of icons to display, counting from the end, as the "num" parameter (the default displays 4 icons).
+
+<pre><nowiki>{{Menu icon|key|sep=separator>|num=number}}</nowiki></pre>
+
+{|class="wikitable"
+|-
+|``<nowiki>{{Adv menu icon|T|d}}</nowiki>`` || {{Adv menu icon|T|d}}
+|-
+|``<nowiki>{{Adv menu icon|num=1|T|d}}</nowiki>`` || {{Adv menu icon|num=1|T|d}}
+|-
+|``<nowiki>{{Adv menu icon|T|d|sep=,}}</nowiki>`` || {{Adv menu icon|T|d|sep=,}}
+|-
+|``<nowiki>{{Adv menu icon|T|sep=+|d|}}</nowiki>`` || {{Adv menu icon|T|sep=+|d|}}
+|-
+|``<nowiki>{{Adv menu icon|T|d|sep=-}}</nowiki>`` || {{Adv menu icon|T|d|sep=-}}
+|-
+|``<nowiki>{{Adv menu icon|T|d|sep=&amp;rarr;|num=2}}</nowiki>`` || {{Adv menu icon|T|d|sep=&rarr;|num=2}}
+|-
+|``<nowiki>{{Adv menu icon|<}}</nowiki>`` || {{Adv menu icon|<}}
+|}
+----
+See also: {{t|key}}
+[[Category:Inline formatting templates]]
+{{documentation}}
+</noinclude>

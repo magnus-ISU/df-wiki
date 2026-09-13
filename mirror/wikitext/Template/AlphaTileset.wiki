@@ -1,0 +1,50 @@
+<table style="margin: 0 0 0.5em 0.5em; border-spacing: 0;">
+<tr>
+<th style="background:#666666; width:270px; padding-top:0.5em;" "valign="top"> {{{image}}} </th>
+<td valign="top">
+
+<table>
+<tr>
+<th style="text-align:left; padding:0 2em 0 1em;"> Author
+</th><td> {{{author}}} </td>
+</tr>
+<tr>
+<th style="text-align:left; padding:0 2em 0 1em;"> Tile Size
+</th><td> {{{size}}} </td>
+</tr>
+<tr>
+<th style="text-align:left; padding:0 2em 0 1em;"> Resolution
+</th><td> {{{resolution}}} </td>
+</tr>
+<tr>
+<th style="text-align:left; padding:0 2em 0 1em;" valign="top"> Comments
+</th><td> {{{comments}}} </td>
+</tr>
+</table>
+
+</td>
+</tr>
+</table><noinclude>
+Usage:
+<pre><nowiki>
+{{AlphaTileset|
+|image=[[Image:Lucon_aa_txt_16x16.png]]
+|author=Winterwing
+|size=16x16
+|resolution=1280x400
+|comments=A clean square blended png font for use with the [http://www.bay12games.com/forum/index.php?topic=18959.0 Special Blend Patch].
+}}</nowiki></pre>
+
+Output:
+
+
+{{AlphaTileset|
+|image=[[Image:Lucon_aa_txt_16x16.png]]
+|author=Winterwing
+|size=16x16
+|resolution=1280x400
+|comments=A clean square blended png font for use with the [http://www.bay12games.com/forum/index.php?topic=18959.0 Special Blend Patch].
+}}
+
+[[Category:Templates]]
+</noinclude>

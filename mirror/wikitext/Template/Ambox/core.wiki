@@ -1,0 +1,33 @@
+<table class="metadata plainlinks ambox {{{class|}}}" style="{{{style|}}}" role="presentation">
+<tr>{{#switch:{{{image|}}}
+ |blank
+ |none = <td class="mbox-empty-cell"></td>
+ |#default = <td class="mbox-image"><div style="width: 52px; {{{imagestyle|}}}">{{#if:{{{image|}}}
+  |{{{image}}}
+  |[[File:{{#switch:{{{type|}}}
+   |speedy = Ambox speedy deletion.png
+   |delete = Ambox deletion.png
+   |content|warning = Ambox content.png
+   |style = Edit-clear.svg
+   |move = Ambox move.png
+   |protection = Ambox protection.png
+   |notice|info|#default = Ambox notice.png
+  }}|40x40px|link=|alt=]]
+ }}</div></td>
+}}<td class="mbox-text" style="{{{textstyle|}}}"><span class="mbox-text-span">{{{issue|}}}<span class="hide-when-compact"> {{#if:{{{talk|}}}
+ |{{#ifexist:{{#ifeq:{{TALKPAGENAME:{{{talk}}}}}|{{FULLPAGENAME:{{{talk}}}}}
+   |{{{talk}}}
+   |{{TALKPAGENAME}}
+  }}
+  |&#32;Relevant discussion may be found on {{#ifeq:{{TALKPAGENAME:{{{talk}}}}}|{{FULLPAGENAME:{{{talk}}}}}
+   |[[{{{talk}}}|{{FULLPAGENAME:{{{talk}}}}}]]
+   |the [[{{TALKPAGENAME}}#{{{talk}}}|talk page]]
+  }}.
+ }}
+}} {{{fix|}}}</span>{{#if:{{{date|}}}
+ |&#32;<small>''({{{date}}})''</small>
+}}<span class="hide-when-compact"> {{{info|}}}</span></span></td>{{#switch:{{{imageright|}}}
+ |none = 
+ |=
+ |#default = <td class="mbox-imageright"><div style="width: 52px;">{{{imageright}}}</div></td>
+}}</tr></table>

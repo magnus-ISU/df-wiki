@@ -1,0 +1,6 @@
+<abbr {{#if:{{{class|}}}|class="{{{class}}}"}} {{#if:{{{id|}}}|id="{{{id}}}"}} title="{{#tag:nowiki|{{{2|}}}}}">{{#switch: {{{3|}}}
+    | u | unicode | Unicode = {{ unicode |{{{1|}}}}}
+    | i | IPA = {{ IPA |{{{1|}}}}}
+    | {{{1|}}} }}</abbr><noinclude>
+{{Documentation}}
+</noinclude>

@@ -1,0 +1,19 @@
+<includeonly>{{Mineral|name={{ucfirst:{{tagvalue|{{{1|}}}|NAME}}}}
+|tile={{Char|{{tagentry|{{{1|}}}|TILE|1}}}}
+|icon={{#tag:nowiki|{{Char|{{#mreplace:{{tagentry|{{{1|}}}|ITEM_SYMBOL|1|notfound='•'}}|=|&#61;}}}}}}
+|color={{tagvalue|{{{1|}}}|COLOR}}
+|itemcolor={{tagvalue|{{{1|}}}|BASIC_COLOR|notfound=}}
+|uses={{{uses|}}}
+* [[mason's workshop|Masonry]]
+* [[craftsdwarf's workshop|Stone crafting]]
+* [[Construction]]{{#if:{{tag|{{{1}}}|REACTION_CLASS|1|FLUX}}|<nowiki></nowiki>
+* [[Flux]]}}
+|properties=* [[{{ucfirst:{{Layername|{{Layertype|{{{1}}}}}}}}} layer]]{{#if:{{tag|{{{1}}}|AQUIFER}}|<nowiki></nowiki>
+* [[Aquifer]]}}{{#if:{{tag|{{{1}}}|SEDIMENTARY_OCEAN_SHALLOW}}|<nowiki></nowiki>
+* Covers shallow [[ocean]] floors}}{{#if:{{tag|{{{1}}}|SEDIMENTARY_OCEAN_DEEP}}|<nowiki></nowiki>
+* Covers deep [[ocean]] floors}}{{#if:{{tag|{{{1}}}|REACTION_CLASS}}|<nowiki></nowiki>
+* [[Economic stone]]{{Category|Economic Stone}}}}{{40d stonelookup/aux2|{{{1}}}}}
+|contains=* All minerals common to [[{{Layername|{{Layertype|{{{1}}}}}}} layer]]s
+{{40d stonelookup/contains|id={{tagentry|{{{1|}}}|MATGLOSS_STONE|1}}}}
+|wiki={{{wiki|}}}
+}}{{Category|{{Layername/upper|{{Layertype|{{{1}}}}}}} Stone Layers}}{{interwiki|{{FULLPAGENAME}}}}</includeonly><noinclude>[[category:raw templates]]</noinclude>

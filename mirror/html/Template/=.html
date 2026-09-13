@@ -1,0 +1,26 @@
+<div class="mw-parser-output"><p>=
+</p>
+<hr />
+<p>Most templates bork when an equals sign is included directly in an ordered parameter; with this template, now if you use {{=}} instead of = you'll be fine.
+</p><p>Compare the following:
+</p>
+<table class="wikitable" border="1" cellspacing="0" cellpadding="5" align="center" width="50%">
+<tbody><tr>
+<th>Code</th>
+<th>Result
+</th></tr>
+<tr>
+<td><pre>{{Colored Notice Box|#f00|2+2=5}}</pre></td>
+<td><table class="metadata plainlinks ambox ambox-notice" style="" role="presentation">
+<tbody><tr><td class="mbox-empty-cell"></td><td class="mbox-text" style=""><span class="mbox-text-span">Message<span class="hide-when-compact">  </span><span class="hide-when-compact"> </span></span></td></tr></tbody></table>
+</td></tr>
+<tr>
+<td><pre>{{Colored Notice Box|#f00|1=2+2=5}}</pre></td>
+<td><table class="metadata plainlinks ambox ambox-notice" style="" role="presentation">
+<tbody><tr><td class="mbox-empty-cell"></td><td class="mbox-text" style=""><span class="mbox-text-span">2+2=5<span class="hide-when-compact">  </span><span class="hide-when-compact"> </span></span></td></tr></tbody></table>
+</td></tr>
+<tr>
+<td><pre>{{Colored Notice Box|#f00|2+2{{=}}5}}</pre></td>
+<td><table class="metadata plainlinks ambox ambox-notice" style="" role="presentation">
+<tbody><tr><td class="mbox-empty-cell"></td><td class="mbox-text" style=""><span class="mbox-text-span">2+2=5<span class="hide-when-compact">  </span><span class="hide-when-compact"> </span></span></td></tr></tbody></table>
+</td></tr></tbody></table></div>

@@ -1,0 +1,21 @@
+<includeonly><span class="{{#ifeq:{{{pl|yes}}}|no||plainlinks}}">[{{fullurl:{{#if:{{{2|}}}|{{{2}}}|{{FULLPAGENAME}}}}|action={{{1|view}}}}} {{{3|{{{2|{{FULLPAGENAME}}}}}}}}]</span></includeonly><noinclude>
+This is an extended version of {{tl|edit}}, supporting other actions (history, purge, etc.). It essentially removes the arrow by an internal link that appears as external (for example, links to edit an article).
+
+For more information, see [http://www.mediawiki.org/wiki/Manual:Parameters_to_index.php#Actions the MediaWiki manual].
+
+Note that, when updating pages, "purge" should be used on the ''including'' page, not the page being transcluded.
+
+Usage:
+<pre>{{Action|action|page|link title|pl=yes/no}}</pre>
+Where 
+*"action" is a valid action
+*"page" is '''optional''' - to skip this, just use a double bar, like this: <code><nowiki>{{action|edit||...}}</nowiki></code>
+*"link title", the text displayed for the link, is also optional - if it is not specified, it defaults to the "action"
+*Adding <code>|pl=no</code> will show an arrow next to the link. Only use this if you're sure you need it.
+
+Note: if you need more options specified in the URL, simply specify them in the first parameter. You may need to use {{tl|{{=}}}} to escape = characters. 
+
+Example: <pre>{{action|edit&section{{=}}new|Template talk:Action|New talk section}}</pre> {{action|edit&section{{=}}new|Template talk:Action|New talk section}}
+
+[[Category:Templates]]
+</noinclude>

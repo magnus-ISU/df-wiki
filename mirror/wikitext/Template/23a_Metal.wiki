@@ -1,0 +1,57 @@
+<includeonly>{{infostart|{{{name}}}}}
+{{infocell|{{23a Metal/picture|
+ingredients={{#if:{{{ore3|}}}|3|{{#if:{{{ore2|}}}|2|1}}}}|color={{{color}}}|fcolor={{{fcolor}}}|
+ore1={{{ore1}}}|ore1color={{{ore1color}}}|ore1tile={{{ore1tile}}}|ore1tilecolor={{{ore1tilecolor}}}|
+ore2={{{ore2}}}|ore2color={{{ore2color}}}|ore2tile={{{ore2tile}}}|ore2tilecolor={{{ore2tilecolor}}}|
+ore3={{{ore3}}}|ore3color={{{ore3color}}}|ore3tile={{{ore3tile}}}|ore3tilecolor={{{ore3tilecolor}}}}}}}
+{{infoheader|Uses}}
+{{infocell|{{{uses|}}}}}
+{{infoheader|[[Ore]]}}
+{{infocell|{{{ore|}}}}}
+{{infoheader|Properties}}
+{{infocell|{{{properties|}}}}}
+{{#ifeq:{{{wiki}}}|no||{{infocell|style=text-align:center; background-color: #eee; border-top: 1px solid #aaa|1=[[wikipedia:{{#if:{{{wiki|}}}|{{{wiki}}}|{{{name}}}}}|Wikipedia article]]}}|{{!-}}}}
+{{infoend}}{{Category|Metals}}</includeonly><noinclude>
+Usage:
+<pre><nowiki>
+{{23a Metal|color=7:0|fcolor=0:7:1|name=Steel|ore1=£|ore2=█|ore3=☼|ore1tile=*|ore2tile=•|ore3tile=☼|
+ore1color=4:7:0|ore2color=7:7:1|ore3color=0:7:1|ore1tilecolor=4:0|ore2tilecolor=7:1|ore3tilecolor=0:1|
+|ore=
+* [[Hematite]]
+* [[Coal]]
+* [[Limestone]]
+|properties=
+* [[Weapon damage]]% 133
+* [[Material value]] 30
+|uses=
+* [[Anvil]]s
+* [[Armor]]
+* [[Bolts]]
+* [[Craft]]s
+* [[Coins]]
+* [[Furniture]]
+* [[Weapon]]s
+}}
+</nowiki></pre>
+
+{{23a Metal|color=7:0|fcolor=0:7:1|name=Steel|ore1=£|ore2=█|ore3=☼|ore1tile=*|ore2tile=•|ore3tile=☼|
+ore1color=4:7:0|ore2color=7:7:1|ore3color=0:7:1|ore1tilecolor=4:0|ore2tilecolor=7:1|ore3tilecolor=0:1|
+|ore=
+* [[Hematite]]
+* [[Coal]]
+* [[Limestone]]
+|properties=
+* [[Weapon damage]]% 133
+* [[Material value]] 30
+|uses=
+* [[Anvil]]s
+* [[Armor]]
+* [[Bolts]]
+* [[Craft]]s
+* [[Coins]]
+* [[Furniture]]
+* [[Weapon]]s
+}}
+
+[[category:materials templates]]
+</noinclude>

@@ -1,0 +1,14 @@
+<includeonly>{{VerminInfo|
+name={{ucfirst:{{tagentry|{{{1}}}|NAME|1}}}}|
+symbol={{tagvalue|{{{1}}}|TILE}}|
+color={{tagvalue|{{{1}}}|COLOR}}|
+alignment={{#if:{{tag|{{{1}}}|GOOD}}|Good<br />}}{{#if:{{tag|{{{1}}}|EVIL}}|Evil<br />}}{{#if:{{tag|{{{1}}}|SAVAGE}}|Savage}}|
+biome={{biomelist/aux|{{{1}}}}}|
+spring={{#if:{{tag|{{{1}}}|NO_SPRING}}|0|1}}|
+summer={{#if:{{tag|{{{1}}}|NO_SUMMER}}|0|1}}|
+autumn={{#if:{{tag|{{{1}}}|NO_AUTUMN}}|0|1}}|
+winter={{#if:{{tag|{{{1}}}|NO_WINTER}}|0|1}}|
+attribs={{vermin_attrib_proc|{{{1}}}|{{PAGENAME}}}}|
+petvalue={{tagvalue|{{{1}}}|PETVALUE|notfound=0}}|
+wiki={{{wiki|}}}|
+}}</includeonly><noinclude>[[category:raw templates]]</noinclude>

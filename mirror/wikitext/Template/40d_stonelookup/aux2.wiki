@@ -1,0 +1,11 @@
+<includeonly>* [[Material value]] {{tagvalue|{{{1|}}}|VALUE|notfound=1}}{{#ifeq:{{magmasafe/test|{{tagvalue|{{{1|}}}|MELTING_POINT|notfound=11500}}}}|no||
+{{#ifeq:{{magmasafe/test|{{tagvalue|{{{1|}}}|BOILING_POINT|notfound=14000}}}}|no||
+{{#ifeq:{{magmasafe/test|{{tagvalue|{{{1|}}}|IGNITE_POINT|notfound=NONE}}}}|no||<!---->
+* [[Magma safe]] {{category|magma safe materials}}
+}}}}}}
+* [[Melting point]] {{lc:{{magmasafe|{{tagvalue|{{{1|}}}|MELTING_POINT|notfound=11500}}}}}}
+* [[Boiling point]] {{lc:{{magmasafe|{{tagvalue|{{{1|}}}|BOILING_POINT|notfound=14000}}}}}}
+* [[Ignition point]] {{lc:{{magmasafe|{{tagvalue|{{{1|}}}|IGNITE_POINT|notfound=NONE}}}}}}
+* [[Solid density]] {{tagvalue|{{{1|}}}|SOLID_DENSITY|notfound=2670}}
+* [[Specific heat]] {{tagvalue|{{{1|}}}|SPEC_HEAT|notfound=800}}
+</includeonly><noinclude>[[category:raw templates]]</noinclude>

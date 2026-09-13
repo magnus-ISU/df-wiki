@@ -1,0 +1,21 @@
+<includeonly>{| class="messagebox" style="border: 1px solid #ddd; background: #eee; width: 15em; margin: 1em 0 1em 1em; float: right"
+|-
+| style="padding: 0.5em 0.5em 0; text-align: center" | [[Image:Crystal_Clear_app_file-manager.png|50px|Archive]]
+|-
+| style="padding: 0 0.5em 0.5em; text-align: center; border-bottom: 1px solid #ddd" | '''Archives'''
+|-
+| style="padding: 0.5em" |
+{{{1}}}
+|}</includeonly><noinclude>
+
+Usage:
+<pre>{{Archive|
+# [[Talk:Foo/bar|oldest talk on Foo]]
+# [[Talk:Foo/archive2|description2]]
+# [[Talk:Foo/name3|Foo about bar]]
+# [[Talk:Foo/etc|etc]]
+}}</pre>
+
+Also see [[Template:Is Archive]], which is used in pages that ''are'' archives.
+
+</noinclude>

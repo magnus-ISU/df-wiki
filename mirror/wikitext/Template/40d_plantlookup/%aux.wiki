@@ -1,0 +1,37 @@
+<includeonly>{{#if:{{tag|{{{1}}}|SEED}}|
+{{Crop|
+color={{tagvalue|{{{1}}}|COLOR}}|
+seed_color={{tagvalue|{{{1}}}|SEED}}|
+character={{char|{{tagvalue|{{{1}}}|TILE}}}}|
+name={{ucfirst:{{tagvalue|{{{1}}}|NAME}}}}|
+seed={{ucfirst:{{tagvalue|{{{1}}}|SEEDNAME|notfound={{tagvalue|{{{1}}}|NAME}} seeds}}}}|
+edible={{#if:{{tag|{{{1}}}|EDIBLE_RAW}}|Yes|No}}|
+cookable={{#if:{{tag|{{{1}}}|EDIBLE_COOKED}}|Yes|{{#if:{{tag|{{{1}}}|EDIBLE_RAW}}|Yes|No}}}}|
+alcohol={{#if:{{tag|{{{1}}}|DRINK}}|[[{{ucfirst:{{tagentry|{{{1}}}|DRINK|1}}}}]]|None}}|
+spring={{tag|{{{1}}}|SPRING}}|
+summer={{tag|{{{1}}}|SUMMER}}|
+autumn={{tag|{{{1}}}|AUTUMN}}|
+winter={{tag|{{{1}}}|WINTER}}|
+alignment={{#if:{{tag|{{{1}}}|GOOD}}|Good<br />}}{{#if:{{tag|{{{1}}}|EVIL}}|Evil<br />}}{{#if:{{tag|{{{1}}}|SAVAGE}}|Savage}}|
+biome={{biomelist/aux|{{{1}}}}}|
+wet={{tag|{{{1}}}|WET}}|
+dry={{tag|{{{1}}}|DRY}}|
+uses={{{uses|}}}|
+other_products={{{other_products|}}}}}|
+{{Shrub|
+color={{tagvalue|{{{1}}}|COLOR}}|
+character={{char|{{tagvalue|{{{1}}}|TILE}}}}|
+name={{ucfirst:{{tagvalue|{{{1}}}|NAME}}}}|
+edible={{#if:{{tag|{{{1}}}|EDIBLE_RAW}}|Yes|No}}|
+cookable={{#if:{{tag|{{{1}}}|EDIBLE_WHENCOOKED}}|Yes|{{#if:{{tag|{{{1}}}|EDIBLE_RAW}}|Yes|No}}}}|
+alcohol={{#if:{{tag|{{{1}}}|DRINK}}|[[{{ucfirst:{{tagentry|{{{1}}}|DRINK|1}}}}]]}}|
+spring={{tag|{{{1}}}|SPRING}}|
+summer={{tag|{{{1}}}|SUMMER}}|
+autumn={{tag|{{{1}}}|AUTUMN}}|
+winter={{tag|{{{1}}}|WINTER}}|
+alignment={{#if:{{tag|{{{1}}}|GOOD}}|Good<br />}}{{#if:{{tag|{{{1}}}|EVIL}}|Evil<br />}}{{#if:{{tag|{{{1}}}|SAVAGE}}|Savage}}|
+biome={{biomelist/aux|{{{1}}}}}|
+wet={{tag|{{{1}}}|WET}}|
+dry={{tag|{{{1}}}|DRY}}|
+uses={{{uses|}}}|
+other_products={{{other_products|}}}}}}}</includeonly><noinclude>[[Category:raw templates]]</noinclude>

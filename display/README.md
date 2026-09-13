@@ -13,7 +13,8 @@ source of every page is under [`mirror/`](../mirror).
 - [Main](Main/)
 - [Masterwork](Masterwork/)
 - [Modification](Modification/)
+- [Template](Template/)
 - [Tutorial](Tutorial/)
 - [Utility](Utility/)
 
-*Index generated 2026-09-13; 15377 of 16802 pages stored.*
+*Index generated 2026-09-13; 15577 of 16802 pages stored.*
