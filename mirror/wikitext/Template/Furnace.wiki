@@ -1,0 +1,44 @@
+<includeonly>{{infostart|{{{name}}}}}
+{{infocell|{{key|b}}-{{key|e}}-{{key|{{{key}}}}}|style=text-align:center}}
+{{infocell|{{Building/picture|name={{{name}}}}}}}
+{{#if:{{{job|}}}|{{infoheader|Job Requirement}}
+{{infocell|{{{job|}}}}}}}
+{{infoheader|Construction}}
+|-
+! style="text-align: left; padding: 0.2em 0.25em 0; width: 50%; border-right: 1px solid #aaa" | Materials
+! style="text-align: left; padding: 0.2em 0.25em 0; width: 50%" | Jobs
+|-
+| style="padding: 0.1em 0.25em 0.25em; width: 50%; vertical-align: top; border-right: 1px solid #aaa" |
+{{{construction}}}
+| style="padding: 0.1em 0.25em 0.25em; width: 50%; vertical-align: top" |
+{{{construction_job}}}
+{{infoheader|Materials Used}}
+{{infocell|{{{use}}}}}
+{{infoheader|Goods Created}}
+{{infocell|{{{production}}}}}
+{{infoend}}{{Category|Furnaces}}</includeonly><noinclude>
+
+== Usage ==
+
+This automatically includes the page in [[:Category:Furnaces]].
+
+<pre><nowiki>
+{{Furnace|name=Smelter|key=s|job=[[Furnace operator]]
+|construction=
+1 of
+* [[Stone]]
+* [[Wood]]
+* [[Block]]
+|construction_job=
+* [[Architecture]]
+|use=
+* Metal [[Ore]]
+* [[Coke]] or [[Charcoal]]
+* Meltable metal item
+|production=
+* Metal [[Bar]]s
+}}
+</nowiki></pre>
+
+[[Category:Building templates]]
+</noinclude>

@@ -1,0 +1,49 @@
+<includeonly>{{Block Header|position: relative; z-index: 2; margin: 1px; border: 3px double; background: {{{background}}}}}
+|-
+! style="padding: 0.5em" | {{#ifeq:{{NAMESPACE}}|Template|[[cv:{{{industry}}}|{{{industry}}}]]|[[{{{industry}}}]]}}
+|}</includeonly><noinclude>
+
+Usage:
+<pre>
+{| style="border-spacing: 0; width: 41em"
+|-
+
+{{Empty Block}}
+
+{{Empty Block}}
+
+{{Industry Block|industry=Wood industry
+  |background=#fff
+}}
+
+{{Empty Block}}
+
+{{Empty Block}}
+
+|}</pre>
+
+gives:
+
+{| style="border-spacing: 0; width: 41em"
+|-
+
+{{Empty Block}}
+
+{{Empty Block}}
+
+{{Industry Block|industry=Wood industry
+  |background=#fff
+}}
+
+{{Empty Block}}
+
+{{Empty Block}}
+
+|}
+
+
+
+
+
+
+[[category:Flowchart templates]]</noinclude>

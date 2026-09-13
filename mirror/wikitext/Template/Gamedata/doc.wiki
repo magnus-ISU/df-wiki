@@ -1,0 +1,45 @@
+Displays the [[raw file|raws]] from the ''Page name''/raw directory.
+
+Can be given custom raws to display instead:
+
+ <nowiki>{{gamedata|[ITEM_WEAPON:ITEM_WEAPON_HAMMER_WAR]
+[NAME:war hammer:war hammers]
+[SIZE:400]
+[SKILL:HAMMER]
+[TWO_HANDED:37500]
+[MINIMUM_SIZE:32500]
+[MATERIAL_SIZE:3]
+[ATTACK:BLUNT:10:200:bash:bashes:NO_SUB:2000]
+	[ATTACK_PREPARE_AND_RECOVER:3:3]
+}}</nowiki>
+
+{{gamedata|[ITEM_WEAPON:ITEM_WEAPON_HAMMER_WAR]
+[NAME:war hammer:war hammers]
+[SIZE:400]
+[SKILL:HAMMER]
+[TWO_HANDED:37500]
+[MINIMUM_SIZE:32500]
+[MATERIAL_SIZE:3]
+[ATTACK:BLUNT:10:200:bash:bashes:NO_SUB:2000]
+	[ATTACK_PREPARE_AND_RECOVER:3:3]
+}}
+
+
+It is preferred to use the {{t|raw}} template to pull the raws directly from the game files instead of copying and pasting them manually:
+
+ <nowiki>{{gamedata|{{raw|DF2014:creature_domestic.txt|CREATURE|CAT}}}}</nowiki>
+
+{{gamedata|{{raw|DF2014:creature_domestic.txt|CREATURE|CAT}}}}
+
+
+You can customize the title using the <code>title=</code> argument:
+
+ <nowiki>{{gamedata
+|title=Raws of [[Cat|a certain invasive species]]
+|{{raw|DF2014:creature_domestic.txt|CREATURE|CAT}}
+}}</nowiki>
+
+{{gamedata
+|title=Raws of [[Cat|a certain invasive species]]
+|{{raw|DF2014:creature_domestic.txt|CREATURE|CAT}}
+}}

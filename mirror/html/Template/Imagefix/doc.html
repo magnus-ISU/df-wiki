@@ -1,0 +1,18 @@
+<div class="mw-parser-output"><p>The <b>imagefix</b> template is a very simplistic CSS-based template that simply bumps images down by a few pixels. The purpose of the template is to make images better align with the text right next to them, instead of looking like the image is slightly higher than the text. It moves the image down by 4 pixels by default, but this value can be customized by adding a second value. There is padding-right value in the template that is 8 by default (which pushes the text right of the image to be pushed further right), but this can also be customized by adding a third value.
+</p><p>This template is meant to be used only on left-aligned images, as using it with right-aligned images will likely break the page's format.
+</p>
+<h2><span class="mw-headline" id="Syntax">Syntax</span></h2>
+<p>The syntax of the template is typed out like this: <code>{{imagefix|[[File:IMAGE_FILE.png]]|MARGIN|PADDING}}</code><br />
+The "margin" and "padding" values are optional, and one or both can be left completely blank.
+</p><p><i><b>Note:</b> The "px" does not need to be added into the template's values. Just the numbers themselves.</i>
+</p>
+<h2><span class="mw-headline" id="Examples">Examples</span></h2>
+<div class="floatleft"><a href="/index.php/File:Dog_sprite.png" class="image"><img alt="Dog sprite.png" src="/images/3/39/Dog_sprite.png" decoding="async" width="26" height="25" /></a></div><p><span style="color:#c80000">Template unused</span>. Notice how this very text does not align with the image.
+</p><p><br />
+However, using the template with this syntax: <code>{{imagefix|[[File:dog_sprite.png]]}}</code> will produce this...<br /><br />
+</p>
+<div id="imagefix" style="margin-top: 4px; float: left; padding-right: 8px;"><a href="/index.php/File:Dog_sprite.png" class="image"><img alt="Dog sprite.png" src="/images/3/39/Dog_sprite.png" decoding="async" width="26" height="25" /></a></div><p><span style="color:Green">Template used</span>. Now the top pixels of the same image align properly with the text.
+</p><p><br />
+However, using the template with this syntax: <code>{{imagefix|[[File:dog_sprite.png]]|10|20}}</code> will produce this...<br /><br />
+</p>
+<div id="imagefix" style="margin-top: 15px; float: left; padding-right: 20px;"><a href="/index.php/File:Dog_sprite.png" class="image"><img alt="Dog sprite.png" src="/images/3/39/Dog_sprite.png" decoding="async" width="26" height="25" /></a></div><p><span style="color:#584ab7">Template modified</span>. Now the image is much farther down, which in this example, is 15 pixels, while the text is pushed further to the right by 20 pixels. Again, the "margin" and "padding" values can be left blank.</p></div>

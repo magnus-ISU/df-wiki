@@ -1,0 +1,29 @@
+<includeonly>{| style='border: 1px solid #000; width: 17em; border-spacing: 0; margin: 0 0 1em 1em; float: right'
+! '''{{{labor|Labor}}}'''
+|-
+! style="border-top: 1px solid #aaa; border-bottom: 1px solid #aaa; background: #eee; padding: 0.1em 0.25em" | [[Skill]]s used
+|-
+|
+{{{skill|<div style='text-align: center'>&mdash;</div>}}}
+|-
+! style="border-top: 1px solid #aaa; border-bottom: 1px solid #aaa; background: #eee; padding: 0.1em 0.25em" | Tasks 
+|-
+|
+{{{tasks|<div style='text-align: center; padding: 0.2em 0'>''None''</div>}}}
+|}{{Category|Labors}}{{interwiki|{{FULLPAGENAME}}}}</includeonly><noinclude>
+{{Labor
+| labor      = Architecture
+| skill      = * [[Building designer]]
+| tasks      = * Design buildings
+}}
+Usage:
+ <nowiki>
+{{Labor
+| labor      = Architecture
+| skill      = * [[Building designer]]
+| tasks      = * Design buildings
+}}
+</nowiki>
+[[Category:Templates]]
+[[Category:Infobox templates]]
+</noinclude>

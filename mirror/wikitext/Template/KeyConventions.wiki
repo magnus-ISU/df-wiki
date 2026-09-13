@@ -1,0 +1,23 @@
+{{padleft:|{{{1|2}}}|=}} About key symbols {{padleft:|{{{1|2}}}|=}}
+
+This wiki uses symbols that look like {{K|t}} or {{Menu icon|t}} to indicate what keys or [[interface]] buttons are used for an operation. Note that keys are '''case sensitive''' and to save space, {{K|Shift|t|sep=+}} is shown as {{K|T}}. So {{K|t}} means "press the 't' key without the shift key" and {{K|T}} means "hold down shift and press the 't' key". Lowercase and uppercase keys will often perform different functions, so it is important to use the correct key. Sequences of keys will be in separate boxes, so {{K|a|b|C}} means "press 'a', then press 'b', then hold shift and press 'c'"; while {{Menu icon|b|T}} means "press 'b', then hold shift and press 'T'. A plus sign '+' between the boxes means to press them all together, so {{K|Shift|Enter|sep=+}} means to hold shift and press 'Enter'. Other separators, such as ',' or '-', might be used but mean the same as no separator: to press the keys in sequence.
+
+Keybindings can be seen and changed on the [[Settings#Keybindings|Keybindings]] tab in the [[Settings]] menu.
+
+{{padleft:|{{{1|2}}}|=}} Menu navigation and selection {{padleft:|{{{1|2}}}|=}}
+{| class="wikitable"
+|-
+| {{K|Esc}} or {{K|right mouse}}
+| Go back to the previous screen/menu
+|-
+| {{K|Mouse wheel}}
+| Scroll menu one line
+|-
+| {{K|Shift|mouse wheel|sep=+}}
+| Scroll menu one page
+|-
+| {{K|Left mouse}}
+| Select menu option
+|}
+
+{{K|Esc}} or {{K|right mouse}} will almost always return to the previous screen until you get to the top level of the UI, at which point {{k|Esc}} will display the options menu.

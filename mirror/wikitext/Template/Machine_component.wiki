@@ -1,0 +1,47 @@
+<includeonly>{{infostart|{{{name}}}}}
+{{infocell|{{k|b}}-{{k|M}}-{{k|{{{key}}}}}|style=text-align:center}}
+{{infocell|{{Building/picture|name={{{name}}}}}}}
+{{#if:{{{job|}}}|{{infoheader|Job Requirement}}
+{{infocell|{{{job|}}}}}}}
+{{infoheader|Construction}}
+|-
+! style="text-align: left; padding: 0.2em 0.25em 0; width: 50%; border-right: 1px solid #aaa" | Materials
+! style="text-align: left; padding: 0.2em 0.25em 0; width: 50%" | Jobs
+|-
+| style="padding: 0.1em 0.25em 0.25em; width: 50%; vertical-align: top; border-right: 1px solid #aaa" |
+{{{construction}}}
+| style="padding: 0.1em 0.25em 0.25em; width: 50%; vertical-align: top" |
+{{{construction_job}}}
+{{infoheader|Power}}
+{{infocell|{{{power|}}}}}
+{{infoend}}{{Category|Machine components}}</includeonly><noinclude>
+
+== Usage ==
+ <nowiki>
+{{Machine_component|name=Screw pump|key=s|job=[[Pump operator]]
+|construction=
+* [[Enormous corkscrew]]
+* [[Pipe]]
+* [[Block]]
+|construction_job=
+* [[Architecture]]
+* 1 of
+** [[Carpentry]]
+** [[Masonry]]
+|power=Needs 10 power.
+}}
+</nowiki>
+{{Machine_component|name=Screw pump|key=s|job=[[Pump operator]]
+|construction=
+* [[Enormous corkscrew]]
+* [[Pipe]]
+* [[Block]]
+|construction_job=
+* [[Architecture]]
+* 1 of
+** [[Carpentry]]
+** [[Masonry]]
+|power=Needs 10 power.
+}}
+[[Category:Building templates]]
+</noinclude>

@@ -1,0 +1,15 @@
+<includeonly>[[{{{1}}}{{#if:{{{2|}}}|{{{2}}}}}{{#if:{{{3|}}}|{{{3}}}}}{{#if:{{{4|}}}|{{{4}}}}}{{#if:{{{5|}}}|{{{5}}}}}{{#if:{{{6|}}}|{{{6}}}}}{{#if:{{{7|}}}|{{{7}}}}}{{#if:{{{8|}}}|{{{8}}}}}{{#if:{{{9|}}}|{{{9}}}}}{{#if:{{{10|}}}|{{{10}}}}}{{#if:{{{t|}}}|{{!}}{{{t}}}}}]]<!-- Template:Link --></includeonly><noinclude>
+Experimental link template, which might reduce spam on pages linked to from high-traffic pages (especially the announcements).
+
+==Usage==
+This template accepts up to 10 (ordered) parameters, as well as an optional parameter for a displayed title (<code>t=</code>). Note that '''leading and trailing spaces are stripped from template arguments''' &mdash; that is, spaces in a parameter should have at least one non-whitespace character on each side.
+<pre>{{link|Ma|in P|ag|e}}</pre>
+{{link|Ma|in P|ag|e}}
+
+<pre>{{link|Ma|in |Pag|e}}</pre>
+{{link|Ma|in |Pag|e}} (trailing spaces are stripped from argument 2)
+
+<pre>{{link|Ma|in P|ag|e|t=Link to main page}}</pre>
+{{link|Ma|in P|ag|e|t=Link to main page}}
+
+</noinclude>

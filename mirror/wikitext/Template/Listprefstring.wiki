@@ -1,0 +1,32 @@
+<includeonly><!-- 
+// This first part locates the content of the raw file:
+-->{{#vardefine:LISTPREFSTRING_RAWTEXT|{{#if:{{{1|}}}|{{#ifexist:{{{1|}}}|{{:{{{1|}}}}}|{{{1|}}}}}|{{:{{FULLPAGENAME}}/raw}}}}}}<!--
+// Then check that there is a PREFSTRING tag (also that LISTPREFSTRING_RAWTEXT is not empty):
+-->{{#if: {{tag|{{#var:LISTPREFSTRING_RAWTEXT}}|PREFSTRING}}|<!--
+// Write the initial part
+-->Some dwarves [[Preferences|like]] {{tagentry|{{#var:LISTPREFSTRING_RAWTEXT}}|NAME|2|notfound={{tagvalue|{{#var:LISTPREFSTRING_RAWTEXT}}|NAME_PLURAL}}}} for their <!--
+// Now we need a list. This finds if the number of PREFSTRING tags is 1, 2, or more (for list grammar) then does different things for each:
+-->{{#switch:{{#strlen:{{#df_foreachtag:{{#var:LISTPREFSTRING_RAWTEXT}}|PREFSTRING|p}}}}
+|1=''{{tagvalue|{{#var:LISTPREFSTRING_RAWTEXT}}|PREFSTRING|0}}''
+|2=''{{tagvalue|{{#var:LISTPREFSTRING_RAWTEXT}}|PREFSTRING|0}}'' and ''{{tagvalue|{{#var:LISTPREFSTRING_RAWTEXT}}|PREFSTRING|1}}''
+|#default=<!--
+// For a list, it's more complicated. First, LISTPREFSTRING_LISTSTR is generated, which looks like ONE, TWO, THREE but doesn't have an 'and' in it.
+-->{{#vardefine:LISTPREFSTRING_LISTSTR|{{#substr:{{#df_foreachtag:{{#var:LISTPREFSTRING_RAWTEXT}}|PREFSTRING|, ''\2''}}|2}}}}<!--
+// Then, add the ', and' to complete the list (with Oxford comma, of course).
+       -->{{#substr:{{#var:LISTPREFSTRING_LISTSTR}}|0|{{#strrpos:{{#var:LISTPREFSTRING_LISTSTR}}|,}}}}, and {{#substr:{{#var:LISTPREFSTRING_LISTSTR}}|{{#expr:1+{{#strrpos:{{#var:LISTPREFSTRING_LISTSTR}}|,}}}}}}
+}}.}}</includeonly><!--
+
+
+--><noinclude>Lists all the reasons dwarves like something. For example: 
+* <code><nowiki>{{listprefstring|DF2014:Eagle/raw}}</nowiki></code> → {{listprefstring|DF2014:Eagle/raw}}
+* <code><nowiki>{{listprefstring|DF2014:Eagle/raw}}</nowiki></code> → {{listprefstring|DF2014:Roc/raw}}
+* <code><nowiki>{{listprefstring|DF2014:Nightwing/raw}}</nowiki></code> → {{listprefstring|DF2014:Nightwing/raw}}
+* <code><nowiki>{{listprefstring|{{DF2014:Nightwing/raw}}}}</nowiki></code> → {{listprefstring|{{DF2014:Nightwing/raw}}}}
+
+''Note that the reason for using DF2014 examples is merely that the raws for later version(s) have not been added at the time of writing''
+
+Argument can be any of the following:
+* Location of the raw file. e.g. <code>DF2014:Nightwing/raw</code>
+* Full text of the raw file.
+* None (Uses <code><nowiki>{{FULLPAGENAME}}/raw</nowiki></code>)
+</noinclude>

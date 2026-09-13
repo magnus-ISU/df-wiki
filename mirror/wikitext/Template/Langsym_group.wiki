@@ -1,0 +1,17 @@
+<includeonly>__NOEDITSECTION__
+==SYMBOL{{colon}}{{uc:{{SUBPAGENAME}}}}==
+
+This is the '''{{!(}}SYMBOL{{colon}}{{uc:{{SUBPAGENAME}}}}{{!)}}''' section of the [[Language_SYM.txt|language_SYM.txt]] raw file. The file defines categories of words, for use with [SELECT_SYMBOL] and [CULL_SYMBOL] arguments in the corresponding entity file to create various pool of words available for procedural generation of game content (for example, Dwarf names). See [[Language#language_SYM.txt]] and [[Entity_token]] for more details. 
+
+=== Examples ===
+
+* {{!(}}SELECT_SYMBOL{{colon}}{{uc:{{SUBPAGENAME}}}}{{!)}}
+* {{!(}}CULL_SYMBOL{{colon}}{{uc:{{SUBPAGENAME}}}}{{!)}}
+
+=== Accented characters ===
+
+The language files are saved in [http://en.wikipedia.org/wiki/Code_page_437 code page 437] encoding.  The accented characters in the language files look like nonsense when interpreted as ASCII or ISO 8859-1, which are often the default.  On Windows, viewing the language file with the Terminal font is an easy way to see it correctly.
+
+{{Gamedata}}{{Language symbol}}{{Language}}{{purge}}
+</includeonly><noinclude>
+{{Documentation}}

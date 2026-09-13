@@ -1,0 +1,14 @@
+<div class="mw-parser-output"><p><br />
+This template repeats a user-provided string once for each DF version era while substituting variables. In pseudocode:
+</p>
+<pre>  for each DF version era:
+    replace $(ns) with the associated namespace, like "40d"
+    replace $(version) with the associated version, like "0.28"
+    if the selected-ns argument was provided, and selected-ns is equal to $(ns):
+      replace $(selected-value) with the selected-value argument
+</pre>
+<p>For example, to list all versions and their namespaces, while highlighting v0.28 in particular, you can use 
+</p>
+<pre>{{for-each-version|Version "v$(version)" has namespace "$(ns)" $(selected-value)&lt;br&gt;|selected-ns=40d|selected-value=&lt;--selected--}}</pre>
+<p>Version "v50" has namespace "Main" <br />Version "v0.47" has namespace "DF2014" <br />Version "v0.34" has namespace "v0.34" <br />Version "v0.31" has namespace "v0.31" <br />Version "v0.28" has namespace "40d" &lt;--selected--<br />Version "v0.23" has namespace "23a" <br />
+</p></div>

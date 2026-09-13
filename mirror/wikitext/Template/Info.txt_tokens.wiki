@@ -1,0 +1,87 @@
+==Info.txt Tokens==
+{| {{prettytable}}
+|- bgcolor="#DCCF99"
+! Token
+! Arguments
+! Usage
+! Description
+
+|-
+| {{text anchor|ID}}
+| id
+| {{tc|red|Required}}
+| The ID of the mod. This should be unique, with no two mods sharing the same ID. IDs starting with "vanilla_" are reserved for vanilla raws.
+
+|-
+| {{text anchor|NUMERIC_VERSION}}
+| integer
+| {{tc|red|Required}}
+| An '''integer''' version number for the mod. Must be greater than or equal to EARLIEST_COMPATIBLE_NUMERIC_VERSION. "Integer" here means 0, 1, 2, and so on. Negatives are allowed. Anything that is not an integer will not work; 0.2 will be read as "0".
+
+|-
+| {{text anchor|DISPLAYED_VERSION}}
+| string
+| {{tc|red|Required}}
+| The version of the mod, as displayed in-game. This is only a display, and will have no effect.
+
+|-
+| {{text anchor|EARLIEST_COMPATIBLE_NUMERIC_VERSION}}
+| integer
+| {{tc|red|Required}}
+| The earliest compatible numeric version of the mod. Installed mods are automatically updated, if a later compatible version is available. '''This must be at most the same as NUMERIC_VERSION, and doing otherwise will result in an error.'''
+
+|-
+| {{text anchor|EARLIEST_COMPATIBLE_DISPLAYED_VERSION}}
+| string
+| {{tc|red|Required}}
+| The earliest compatible numeric version, as displayed in-game.
+
+|-
+| {{text anchor|AUTHOR}}
+| string
+| {{tc|red|Required{{verify}}}}
+| The name of the author (usually you).
+
+|-
+| {{text anchor|NAME}}
+| string
+| {{tc|red|Required{{verify}}}}
+| The name of the mod.
+|-
+
+|-
+| {{text anchor|DESCRIPTION}}
+| string
+| 
+| A description of the mod, shown in the mod loading screen.
+|-
+
+|-
+| {{text anchor|REQUIRES_ID}}
+| string
+| 
+| Mod cannot be used unless mod with given ID is also loaded.
+|-
+
+|-
+| {{text anchor|REQUIRES_ID_BEFORE_ME}}
+| string
+| 
+| Mod cannot be used unless mod with given ID is earlier in the mod load list.
+|-
+
+|-
+| {{text anchor|REQUIRES_ID_AFTER_ME}}
+| string
+| 
+| Mod cannot be used unless mod with given ID is later in the mod load list.
+|-
+
+|-
+| {{text anchor|CONFLICTS_WITH_ID}}
+| string
+| 
+| Mod cannot be used if mod with given ID is also loaded.
+|-
+
+|}

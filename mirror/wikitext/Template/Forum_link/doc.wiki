@@ -1,0 +1,9 @@
+This template is useful for quickly inserting plainlink-styled links to the [http://www.bay12forums.com/smf/ Bay 12 Forums]. It takes two parameters: the link number which is required, and the link name, which is optional but probably a good idea (default behavior is to use "link"). To access this template more easily (less typing) use {{tl|Forum}} or better yet, {{tl|F}}. You can redirect the user to specific messages within the thread, too, by linking to that header - this is provided for within the first parameter. Adding another parameter for it would probably be less ugly, but would also make more work out of filling out this template.
+
+* {{tl|F|128298}} &rarr; {{F|128298}}
+* {{tl|F|128298.msg4388413#msg4388413}} &rarr; {{F|128298.msg4388413#msg4388413}}
+* {{tl|F|128298/msg4388413}} &rarr; {{F|128298/msg4388413}}
+* {{tl|F|128298/4388413}} &rarr; {{F|128298/4388413}}
+* {{tl|F|128298|Beak dogs are vicious}} &rarr; {{F|128298|Beak dogs are vicious}}
+<includeonly>[[Category:Inline formatting templates]]</includeonly>
+<noinclude>[[Category:Template Documentation]]</noinclude>

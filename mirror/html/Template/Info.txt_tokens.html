@@ -1,0 +1,132 @@
+<div class="mw-parser-output"><h2><span class="mw-headline" id="Info.txt_Tokens">Info.txt Tokens</span></h2>
+<table class="prettytable anchortable" border="1" cellpadding="4" cellspacing="0" style="margin: 1em 1em 1em 0; background: #f9f9f9; border: 1px #aaa solid; border-collapse: collapse;">
+
+<tbody><tr bgcolor="#DCCF99">
+<th>Token
+</th>
+<th>Arguments
+</th>
+<th>Usage
+</th>
+<th>Description
+</th></tr>
+<tr>
+<td><span id="ID" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#ID">ID</a></span>
+</td>
+<td>id
+</td>
+<td><span style="color:red">Required</span>
+</td>
+<td>The ID of the mod. This should be unique, with no two mods sharing the same ID. IDs starting with "vanilla_" are reserved for vanilla raws.
+</td></tr>
+<tr>
+<td><span id="NUMERIC_VERSION" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#NUMERIC_VERSION">NUMERIC_VERSION</a></span>
+</td>
+<td>integer
+</td>
+<td><span style="color:red">Required</span>
+</td>
+<td>An <b>integer</b> version number for the mod. Must be greater than or equal to EARLIEST_COMPATIBLE_NUMERIC_VERSION. "Integer" here means 0, 1, 2, and so on. Negatives are allowed. Anything that is not an integer will not work; 0.2 will be read as "0".
+</td></tr>
+<tr>
+<td><span id="DISPLAYED_VERSION" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#DISPLAYED_VERSION">DISPLAYED_VERSION</a></span>
+</td>
+<td>string
+</td>
+<td><span style="color:red">Required</span>
+</td>
+<td>The version of the mod, as displayed in-game. This is only a display, and will have no effect.
+</td></tr>
+<tr>
+<td><span id="EARLIEST_COMPATIBLE_NUMERIC_VERSION" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#EARLIEST_COMPATIBLE_NUMERIC_VERSION">EARLIEST_COMPATIBLE_NUMERIC_VERSION</a></span>
+</td>
+<td>integer
+</td>
+<td><span style="color:red">Required</span>
+</td>
+<td>The earliest compatible numeric version of the mod. Installed mods are automatically updated, if a later compatible version is available. <b>This must be at most the same as NUMERIC_VERSION, and doing otherwise will result in an error.</b>
+</td></tr>
+<tr>
+<td><span id="EARLIEST_COMPATIBLE_DISPLAYED_VERSION" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#EARLIEST_COMPATIBLE_DISPLAYED_VERSION">EARLIEST_COMPATIBLE_DISPLAYED_VERSION</a></span>
+</td>
+<td>string
+</td>
+<td><span style="color:red">Required</span>
+</td>
+<td>The earliest compatible numeric version, as displayed in-game.
+</td></tr>
+<tr>
+<td><span id="AUTHOR" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#AUTHOR">AUTHOR</a></span>
+</td>
+<td>string
+</td>
+<td><span style="color:red">Required<sup style="font-size: 80%;">&#91;<a href="/index.php?title=Template_talk:Info.txt_tokens&amp;action=edit&amp;redlink=1" class="new" title="Template talk:Info.txt tokens (page does not exist)"><span title="The material near this tag is possibly inaccurate or nonfactual.">Verify</span></a>&#93;</sup></span>
+</td>
+<td>The name of the author (usually you).
+</td></tr>
+<tr>
+<td><span id="NAME" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#NAME">NAME</a></span>
+</td>
+<td>string
+</td>
+<td><span style="color:red">Required<sup style="font-size: 80%;">&#91;<a href="/index.php?title=Template_talk:Info.txt_tokens&amp;action=edit&amp;redlink=1" class="new" title="Template talk:Info.txt tokens (page does not exist)"><span title="The material near this tag is possibly inaccurate or nonfactual.">Verify</span></a>&#93;</sup></span>
+</td>
+<td>The name of the mod.
+</td></tr>
+
+
+<tr>
+<td><span id="DESCRIPTION" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#DESCRIPTION">DESCRIPTION</a></span>
+</td>
+<td>string
+</td>
+<td>
+</td>
+<td>A description of the mod, shown in the mod loading screen.
+</td></tr>
+
+
+<tr>
+<td><span id="REQUIRES_ID" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#REQUIRES_ID">REQUIRES_ID</a></span>
+</td>
+<td>string
+</td>
+<td>
+</td>
+<td>Mod cannot be used unless mod with given ID is also loaded.
+</td></tr>
+
+
+<tr>
+<td><span id="REQUIRES_ID_BEFORE_ME" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#REQUIRES_ID_BEFORE_ME">REQUIRES_ID_BEFORE_ME</a></span>
+</td>
+<td>string
+</td>
+<td>
+</td>
+<td>Mod cannot be used unless mod with given ID is earlier in the mod load list.
+</td></tr>
+
+
+<tr>
+<td><span id="REQUIRES_ID_AFTER_ME" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#REQUIRES_ID_AFTER_ME">REQUIRES_ID_AFTER_ME</a></span>
+</td>
+<td>string
+</td>
+<td>
+</td>
+<td>Mod cannot be used unless mod with given ID is later in the mod load list.
+</td></tr>
+
+
+<tr>
+<td><span id="CONFLICTS_WITH_ID" class="text-anchor-id">&#160;</span><span class="text-anchor"><a href="#CONFLICTS_WITH_ID">CONFLICTS_WITH_ID</a></span>
+</td>
+<td>string
+</td>
+<td>
+</td>
+<td>Mod cannot be used if mod with given ID is also loaded.
+</td></tr>
+
+</tbody></table></div>

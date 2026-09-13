@@ -1,0 +1,15 @@
+{{#vardefine:arc_cpage|{{#if:{{{1|}}}|{{#rsplit:{{{1}}}|:|1}}|{{BASEPAGENAME}}}}}}{{
+#vardefine:arc_ns|{{#if:{{{1|}}}|{{#rsplit:{{{1}}}|:|0}}|{{TALKSPACE}}}}
+}}{| class="messagebox" style="border: 1px solid #ddd; background: #eee; width: 80%; margin: 0 auto 1em"
+|-
+| style="padding: 0.5em" | [[Image:Crystal_Clear_app_file-manager.png|50px|Archive]]
+| style="padding: 0.5em" | This is an '''archive''' of old discussions. Please do not edit this page &ndash; instead, add new comments to the [[{{#var:arc_ns}}:{{#var:arc_cpage}}|current talk page]].
+|}<noinclude>
+
+To be used on pages that are archives.
+
+Example: <pre><nowiki>{{Is Archive|Talk:Trading}}</nowiki></pre>
+Makes: {{Is Archive|Talk:Trading}}
+
+Also, see [[Template:Archive]].
+[[Category:Message box templates]]</noinclude>

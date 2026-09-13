@@ -1,0 +1,25 @@
+<includeonly><!--
+-->{{#mreplace: {{#mreplace: {{#mreplace: {{{1}}}|$(ns)|Main}}|$(version)|50}}|$(selected-value)|{{#ifeq: {{{selected-ns}}}||{{{selected-value}}}|}}}}<!--
+-->{{#mreplace: {{#mreplace: {{#mreplace: {{{1}}}|$(ns)|DF2014}}|$(version)|0.47}}|$(selected-value)|{{#ifeq: {{{selected-ns}}}|DF2014|{{{selected-value}}}|}}}}<!--
+-->{{#mreplace: {{#mreplace: {{#mreplace: {{{1}}}|$(ns)|v0.34}}|$(version)|0.34}}|$(selected-value)|{{#ifeq: {{{selected-ns}}}|v0.34|{{{selected-value}}}|}}}}<!--
+-->{{#mreplace: {{#mreplace: {{#mreplace: {{{1}}}|$(ns)|v0.31}}|$(version)|0.31}}|$(selected-value)|{{#ifeq: {{{selected-ns}}}|v0.31|{{{selected-value}}}|}}}}<!--
+-->{{#mreplace: {{#mreplace: {{#mreplace: {{{1}}}|$(ns)|40d}}|$(version)|0.28}}|$(selected-value)|{{#ifeq: {{{selected-ns}}}|40d|{{{selected-value}}}|}}}}<!--
+-->{{#mreplace: {{#mreplace: {{#mreplace: {{{1}}}|$(ns)|23a}}|$(version)|0.23}}|$(selected-value)|{{#ifeq: {{{selected-ns}}}|23a|{{{selected-value}}}|}}}}<!--
+--></includeonly>
+<noinclude>
+This template repeats a user-provided string once for each DF version era while substituting variables. In pseudocode:
+
+   for each DF version era:
+     replace $(ns) with the associated namespace, like "40d"
+     replace $(version) with the associated version, like "0.28"
+     if the selected-ns argument was provided, and selected-ns is equal to $(ns):
+       replace $(selected-value) with the selected-value argument
+
+For example, to list all versions and their namespaces, while highlighting v0.28 in particular, you can use 
+
+<pre><nowiki>{{for-each-version|Version "v$(version)" has namespace "$(ns)" $(selected-value)<br>|selected-ns=40d|selected-value=<--selected--}}</nowiki></pre>
+
+{{for-each-version|Version "v$(version)" has namespace "$(ns)" $(selected-value)<br>|selected-ns=40d|selected-value=<--selected--}}
+
+[[Category:Version templates]]
+</noinclude>

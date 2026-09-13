@@ -1,0 +1,36 @@
+<div class="mw-parser-output"><div class="plainlinks" style="clear: both; margin: 1em 0 0 0; border: 1px solid #aaa; background-color: #f0f0f8; padding: 5px 1em; border-radius: .4em; -webkit-border-radius: .4em; -moz-border-radius: .4em; -o-border-radius: .4em; -ms-border-radius: .4em;">
+<h2><span id="(view_-_edit_-__history_-__purge)_Documentation"></span><span class="mw-headline" id=".28view_-_edit_-_.0Ahistory_-_.0Apurge.29_Documentation"><span style="float: right; font-size: small; font-family: sans-serif;">
+(<a href="/index.php/Template:Langsym_raw/doc" title="Template:Langsym raw/doc"><span title="View this documentation">view</span></a> - <a rel="nofollow" class="external text" href="//dwarffortresswiki.org/index.php?title=Template:Langsym_raw/doc&amp;action=edit"><span title="Edit this documentation">edit</span></a> - 
+<a rel="nofollow" class="external text" href="//dwarffortresswiki.org/index.php?title=Template:Langsym_raw/doc&amp;action=history"><span title="Documentation history">history</span></a> - 
+<a rel="nofollow" class="external text" href="//dwarffortresswiki.org/index.php?title=Template:Langsym_raw&amp;action=purge"><span title="Purge this documentation (causes it to be updated; use only if it doesn&#39;t update after editing, NOT in a preview)">purge</span></a>)</span> Documentation</span></h2>
+<p><br />
+</p><p>Note that this template is fussy and likely to behave strangely if it's assumptions aren't met. 
+</p><p>Template assumes you want to display a raw, and are on a raw subpage of page that is itself a subpage of <a href="/index.php/Language_SYM.txt" title="Language SYM.txt">language SYM.txt</a>. In otherwords, <a href="/index.php/Category:Symbol_raw_pages" title="Category:Symbol raw pages">a grandchild of language SYM.txt</a>. And assumes subst will be used.
+</p><p>It looks for an ALL CAPS symbol and caps parts of the page title....
+</p>
+<h2><span class="mw-headline" id="Usage">Usage</span></h2>
+<p>{{subst:Langsym raw}}
+
+</p><p>See <a rel="nofollow" class="external free" href="https://en.wikipedia.org/wiki/Help:Substitution#The_safesubst:_modifier">https://en.wikipedia.org/wiki/Help:Substitution#The_safesubst:_modifier</a> for details on subst
+</p>
+<h2><span class="mw-headline" id="Output">Output</span></h2>
+<p>This outputs something like 
+</p><p><i>&lt;noinclude&gt;{{raw header|symbol|DOMESTIC}}&lt;/noinclude&gt;{{raw|v50:language_SYM.txt|SYMBOL|DOMESTIC}}&lt;noinclude&gt;{{raw footer|symbol|DOMESTIC}}&lt;/noinclude&gt;</i>
+</p><p>or
+</p><p><i>{{raw header|symbol|DARKNESS}}&lt;/noinclude&gt;{{raw|v50:language_SYM.txt|SYMBOL|DARKNESS}}&lt;noinclude&gt;{{raw footer|symbol|DARKNESS}}</i>
+</p>
+<h3><span class="mw-headline" id="Limitation">Limitation</span></h3>
+<p>It won't output this:
+</p><p>{{raw header|text_set|CURSE}}&lt;/noinclude&gt;{{raw|v50:text_curse.txt|TEXT_SET|CURSE}}&lt;noinclude&gt;{{raw footer|text_set|CURSE}}
+</p><p>or this:
+</p><p>&lt;noinclude&gt;{{raw header}}&lt;/noinclude&gt;{{raw|v50:text_book_instruction.txt|TEXT_SET|BOOK_INSTRUCTION}}&lt;noinclude&gt;{{raw footer}}&lt;/noinclude&gt;
+</p>
+<h2><span class="mw-headline" id="Notes">Notes</span></h2>
+<p>It uses <a href="/index.php/Template:Raw_header" title="Template:Raw header">Template:Raw_header</a> and <a href="/index.php/Template:Raw" title="Template:Raw">Template:Raw</a> among other tpls
+</p><p>snippet
+</p><p>{{uc:{{#titleparts: {{FULLPAGENAMEE}} | -1 | -2 }}}}
+</p>
+<h2><span class="mw-headline" id="See_Also">See Also</span></h2>
+<ul><li><a href="/index.php/Category:Symbol_raw_pages" title="Category:Symbol raw pages">Category:Symbol raw pages</a></li></ul>
+</div>
+</div>

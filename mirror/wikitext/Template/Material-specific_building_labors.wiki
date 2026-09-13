@@ -1,0 +1,13 @@
+<noinclude>
+Previously, certain buildings required [[Architecture]] and a material-specific labor. Now only the latter is required. These labor requirements are reused in the infoboxes for many buildings.
+
+Include all: <code><nowiki>{{Material-specific building labors}}</nowiki></code>
+
+Include some: <code><nowiki>{{Material-specific building labors|stone,metal}}</nowiki></code>
+</noinclude>{{
+#if:{{#stripos:{{{1|stone,wood,metal}}}|stone}} |* Stone: [[Masonry]]
+|}}{{
+#if:{{#stripos:{{{1|stone,wood,metal}}}|wood}}  |* Wood: [[Carpentry]]
+|}}{{
+#if:{{#stripos:{{{1|stone,wood,metal}}}|metal}} |* Metal: [[Blacksmithing]], [[Weaponsmithing]], [[Armoring]], or [[Metalcrafting]]
+|}}

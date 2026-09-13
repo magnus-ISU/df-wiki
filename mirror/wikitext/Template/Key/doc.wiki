@@ -1,0 +1,46 @@
+{{shortcut|Template:K}}
+
+===Example of Appearance===
+
+E{{key|x}}ample.
+
+Single uppercase letters provide a tooltip when hovered over: {{k|A}} is {{k-|Shift|a}}
+
+===Usage===
+
+<pre><nowiki>E{{key|x}}ample.</nowiki></pre>
+
+{{tl|k}} redirects here, for quicker access to this command, and should be used as a shortcut.
+
+<pre><nowiki>E{{k|x}}ample.</nowiki></pre>
+
+Multiple keys can be passed as separate parameters to this template, with the ``sep`` parameter determining the separator (the default is an empty string). {{tl|k-}} can be used as a shortcut for {{tl|k|sep{{=}}-}}:
+
+{|class="wikitable"
+|-
+|``<nowiki>{{k|a|b}}</nowiki>`` || {{k|a|b}}
+|-
+|``<nowiki>{{k|a|b|sep=,}}</nowiki>`` || {{k|a|b|sep=,}}
+|-
+|``<nowiki>{{k|sep=+|a|b|c}}</nowiki>`` || {{k|sep=+|a|b|c}}
+|-
+|``<nowiki>{{k|a|b|c|sep=-}}</nowiki>`` || {{k|a|b|c|sep=-}}
+|-
+|``<nowiki>{{k-|a|b|c}}</nowiki>`` || {{k-|a|b|c}}
+|-
+|``<nowiki>{{k|a|b|c|sep=&amp;rarr;}}</nowiki>`` || {{k|a|b|c|sep=&rarr;}}
+|}
+
+===Tests for special characters that sometimes break===
+* test {{k|*}} test
+* test {{k|{{=}}}} test
+* test {{k|;}} test
+* test {{k|:}} test
+* test {{k|'}} test
+* test {{k|''}} test
+* test {{k|<}} test
+* test {{k|>}} test
+
+
+<includeonly>[[Category:Inline formatting templates]]</includeonly>
+<noinclude>[[Category:Template Documentation]]</noinclude>

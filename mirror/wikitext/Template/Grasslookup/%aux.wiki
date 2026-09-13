@@ -1,0 +1,15 @@
+<includeonly>{{Grass|name={{ucfirst:{{tagentry|{{{1|}}}|ALL_NAMES|1|notfound={{tagentry|{{{1|}}}|NAME|1}}}}}}
+|char1={{char|{{tagentry|{{{1|}}}|GRASS_TILES|1}}}}
+|char2={{char|{{tagentry|{{{1|}}}|GRASS_TILES|2}}}}
+|char3={{char|{{tagentry|{{{1|}}}|GRASS_TILES|3}}}}
+|char4={{char|{{tagentry|{{{1|}}}|GRASS_TILES|4}}}}
+|color1={{tagentry|{{{1|}}}|GRASS_COLORS|1:3}}
+|color2={{tagentry|{{{1|}}}|GRASS_COLORS|4:6}}
+|flowerchar1={{char|{{#df_tagentry:{{#rreplace:{{{1|}}}|[\w\W]*GROWTH:FLOWER|}}|GROWTH_PRINT|0|2|}}}}
+|flowercolor1={{#df_tagentry:{{#rreplace:{{{1|}}}|[\w\W]*GROWTH:FLOWER|}}|GROWTH_PRINT|0|3:5|}}
+|biome={{biomelist/aux|{{{1|}}}}}
+|alignment={{#if:{{tag|{{{1}}}|GOOD}}|Good<br />}}{{#if:{{tag|{{{1}}}|EVIL}}|Evil<br />}}{{#if:{{tag|{{{1}}}|SAVAGE}}|Savage}}
+|wet={{#if:{{tag|{{{1}}}|WET}}|1|0}}
+|dry={{#if:{{tag|{{{1}}}|DRY}}|1|0}}
+|wiki={{{wiki|}}}
+}}{{interwiki|{{FULLPAGENAME}}}}</includeonly><noinclude>[[category:raw templates]]</noinclude>

@@ -1,0 +1,25 @@
+<noinclude>
+Template used for the table on the [[Flour]] page. Takes the following parameters:
+
+* '''name''': Name of the crop.
+* '''tile''': Tile character.
+* '''colour''': Colour of the tile.
+* '''cprice''': Price of the raw crop. Defaults to 2, by far the most common value.
+* '''fname''': Name of the processed flour. Defaults to the name value followed by "flour".
+* '''fprice''': Price of the processed flour. Defaults to 20, by far the most common value.
+
+{| class="wikitable sortable"
+|-
+! Crop name
+! 
+! Crop value
+! Flour
+! Flour value
+{{flour table row|name=Whip vine|tile=§|colour=3:1|cprice=1|fprice=25}}
+</noinclude>
+|-
+| [[{{{name| }}}]]
+| style="background:black;"|{{Tile|{{{tile|?}}}|{{{colour|0:0}}}}}
+| {{{cprice|2}}}☼
+| {{{fname|{{{name|???}}} flour}}}
+| {{{fprice|20}}}☼<noinclude>|}</noinclude>

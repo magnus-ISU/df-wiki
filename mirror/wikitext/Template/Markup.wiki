@@ -1,0 +1,28 @@
+<includeonly>{| style="table-layout: fixed; width: {{{width|100%}}}; border-width: medium; margin-left: {{{margin|0em}}};{{{style|}}}"
+{{#if: {{{title|}}} | {{!}}+ '''{{{title}}}'''}}
+{{#if: {{{notitle|}}} || ! style="width:50%" scope="col" {{!}} {{{t1|Markup}}}}}
+{{#if: {{{notitle|}}} || !  style="width:50%" scope="col" {{!}} {{{t2|Renders as}}}}}<!--
+-->{{#if: {{{1|}}}|{{Markup/row|cell1={{{1|}}}|cell2={{{2|}}}}}}}<!--
+-->{{#if: {{{3|}}}|{{Markup/row|cell1={{{3|}}}|cell2={{{4|}}}}}}}<!--
+-->{{#if: {{{5|}}}|{{Markup/row|cell1={{{5|}}}|cell2={{{6|}}}}}}}<!--
+-->{{#if: {{{7|}}}|{{Markup/row|cell1={{{7|}}}|cell2={{{8|}}}}}}}<!--
+-->{{#if: {{{9|}}}|{{Markup/row|cell1={{{9|}}}|cell2={{{10|}}}}}}}<!--
+-->{{#if: {{{11|}}}|{{Markup/row|cell1={{{11|}}}|cell2={{{12|}}}}}}}<!--
+-->{{#if: {{{13|}}}|{{Markup/row|cell1={{{13|}}}|cell2={{{14|}}}}}}}<!--
+-->{{#if: {{{15|}}}|{{Markup/row|cell1={{{15|}}}|cell2={{{16|}}}}}}}<!--
+-->{{#if: {{{17|}}}|{{Markup/row|cell1={{{17|}}}|cell2={{{18|}}}}}}}<!--
+-->{{#if: {{{19|}}}|{{Markup/row|cell1={{{19|}}}|cell2={{{20|}}}}}}}<!--
+-->{{#if: {{{21|}}}|{{Markup/row|cell1={{{21|}}}|cell2={{{22|}}}}}}}<!--
+-->{{#if: {{{23|}}}|{{Markup/row|cell1={{{23|}}}|cell2={{{24|}}}}}}}<!--
+-->{{#if: {{{25|}}}|{{Markup/row|cell1={{{25|}}}|cell2={{{26|}}}}}}}<!--
+-->{{#if: {{{27|}}}|{{Markup/row|cell1={{{27|}}}|cell2={{{28|}}}}}}}<!--
+-->{{#if: {{{29|}}}|{{Markup/row|cell1={{{29|}}}|cell2={{{30|}}}}}}}<!--
+-->{{#if: {{{31|}}}|{{Markup/row|cell1={{{31|}}}|cell2={{{32|}}}}}}}<!--
+-->{{#if: {{{33|}}}|{{Markup/row|cell1={{{33|}}}|cell2={{{34|}}}}}}}<!--
+-->{{#if: {{{35|}}}|{{Markup/row|cell1={{{35|}}}|cell2={{{36|}}}}}}}<!--
+-->{{#if: {{{37|}}}|{{Markup/row|cell1={{{37|}}}|cell2={{{38|}}}}}}}<!--
+-->{{#if: {{{39|}}}|{{Markup/row|cell1={{{39|}}}|cell2={{{40|}}}}}}}
+|-
+|  style="width:50%; border-width: 1px; padding: 5px; border-style: solid none none none; border-color: #ddd; vertical-align:text-top;" | 
+|  style="width:50%; border-width: 1px; padding: 5px; border-style: solid none none none; border-color: #ddd; vertical-align:text-top;" |
+|}</includeonly><noinclude>{{documentation}}</noinclude>

@@ -1,0 +1,14 @@
+<div class="usermessage" style="border-color:red; background:#fcc;">
+{{#ifeq:{{DF:Current/mw}}|{{{1}}}|
+<span class="error">You need to provide the last version of MDF that this page is correct for, not the current version.</span>|
+{{#ifeq:{{BASEPAGENAME}}|{{PAGENAME}}|
+{{#if:{{{1|}}}|
+{{#if:{{#rmatch:{{{1}}}|^v[2-4][a-z]$|$0|}}|
+This page is about an ''old version'' of MDF ({{{1}}}). Please migrate this page by doing the following:
+# Click [{{fullurl:{{FULLPAGENAME}}/{{{1}}}|action=edit&preload={{urlencode:{{FULLPAGENAME}}}}&editintro={{urlencode:Template:MDF Migrate/Instructions}}}} this link] and follow the given instructions.
+# Click [{{fullurl:{{FULLPAGENAME}}|action=edit&editintro={{urlencode:Template:MDF Migrate/Instructions}}}} this link] and follow the given instructions (these may appear to be identical, but are in fact different pages).
+|<span class="error">Incorrectly-formatted version! Version should be formatted like this: <tt>{{DF:Current/mw}}</tt></span>}}
+|<span class="error">No version provided! Use <tt>{{<nowiki/>MDF Migrate|''VERSION''}}</tt>.</span>}}
+|<span class="error">This page is a sub-page and cannot be migrated! Please [{{fullurl:{{FULLPAGENAME}}|action=edit&editintro={{urlencode:Template:MDF Migrate/Instructions}}}} click this link] and follow the instructions given.</span>}}
+}}
+</div>

@@ -1,0 +1,106 @@
+<includeonly>{| 
+| style="padding: 0.5em 2em 0 0;" valign="top" | {{{image|}}}
+| valign="top" |
+{| 
+|- {{#if:{{{download link|}}}||style="display:none;"}}
+| style="padding-right: 1em;" | '''Download:'''
+| {{{download link|}}}
+|- 
+| style="padding-right: 1em;" | '''Author:'''
+| {{{author|-}}}
+|-
+| style="padding-right: 1em;" | '''Tile Size:'''
+| {{{sprite|-}}}
+|- {{#if:{{{resolution|}}}||style="display:none;"}}
+| style="padding-right: 1em;" | '''Resolution:'''
+| {{{resolution|}}}
+|- {{#if:{{{current version|}}}||style="display:none;"}}
+| style="padding-right: 1em;" | '''Current Version:'''
+| {{{current version|}}}
+|-
+| style="padding-right: 1em;" | '''DF Compatibility:'''
+| {{#if:{{{compatible-max|{{{df compatible|}}}}}}|{{#ifeq:{{{compatible-max|{{{df compatible|}}}}}}|{{Current/version}}|style="color: #0a0;"|style="color: #a00;"}}|}} | {{#if:{{{compatible-min|}}}{{{compatible-max|}}}| {{{compatible-min|}}} &ndash; {{{compatible-max|}}} |{{{df compatible|Unspecified}}}}}
+|- {{#if:{{{installation|}}}||style="display:none;"}}
+| style="padding-right: 1em;" | '''Installation:'''
+| {{{installation|}}}
+|-
+| style="padding: 0.5em 1em 0 2em;" colspan="2" | ''{{{comments| }}}''
+|}
+|}</includeonly><noinclude>
+==Usage==
+===Copy & Paste Code===
+<pre style="overflow: auto;"><nowiki>
+{{GraphicsSet
+| image           = 
+| download link   = 
+| author          = 
+| sprite          = 
+| resolution      = 
+| current version = 
+| compatible-min  =
+| compatible-max  =
+| installation    = 
+| comments        = 
+}}
+</nowiki></pre>
+
+===Examples===
+====Using "compatible-min" and "compatible-max" params====
+<pre style="overflow: auto;"><nowiki>
+{{GraphicsSet
+| image           = [[Image:DFG13.png|270px]]
+| download link   = [http://www.bay12forums.com/smf/index.php?topic=53649.0 Official Forum Thread]
+| author          = [[User:Mikemayday|Mikemayday]]
+| sprite          = 16&times;16
+| resolution      = 1280 horizontal
+| current version = 31_25_a
+| compatible-min  = 0.28.181.40d
+| compatible-max  = 0.31.25
+| installation    = All things pre-packed, just edit init.txt to enter your desired vertical resolution and number of tiles
+| comments        = Combined with a customized main tileset. Just follow the link, download and enjoy, no need to mess around with files. Credits go to Beefmo, Sphr, DR, Tocky, Herrbdog, Bane18, Dragon Warrior games and me (although I did much more organizing and editing than actually creating).
+}}
+</nowiki></pre>
+
+=====Output=====
+
+{{GraphicsSet
+| image           = [[Image:DFG13.png|270px]]
+| download link   = [http://www.bay12forums.com/smf/index.php?topic=53649.0 Official Forum Thread]
+| author          = [[User:Mikemayday|Mikemayday]]
+| sprite          = 16&times;16
+| resolution      = 1280 horizontal
+| current version = 31_25_a
+| compatible-min  = 0.28.181.40d
+| compatible-max  = 0.31.25
+| installation    = All things pre-packed, just edit init.txt to enter your desired vertical resolution and number of tiles
+| comments        = Combined with a customized main tileset. Just follow the link, download and enjoy, no need to mess around with files. Credits go to Beefmo, Sphr, DR, Tocky, Herrbdog, Bane18, Dragon Warrior games and me (although I did much more organizing and editing than actually creating).
+}}
+
+====Using "df compatible" parameter====
+<pre style="overflow: auto;"><nowiki>
+{{GraphicsSet
+| image           = [[Image:Dorfs_800x300.png]]
+| download link   = http://zarawesome.googlepages.com/dorfs_800x300.png
+| author          = [[User:Zaratustra|Zaratustra]]
+| sprite          = 10x12
+| resolution      = 800x300
+| df compatible   = 0.28.181.40d
+| installation    = 1. Change it to .bmp instead of .png.<br/>2. Put it in your \raw\graphics\example folder.
+| comments        = For those oldschool people.
+}}
+</nowiki></pre>
+
+=====Output=====
+
+{{GraphicsSet
+| image           = [[Image:Dorfs_800x300.png]]
+| download link   = http://zarawesome.googlepages.com/dorfs_800x300.png
+| author          = [[User:Zaratustra|Zaratustra]]
+| sprite          = 10x12
+| resolution      = 800x300
+| df compatible   = 0.28.181.40d
+| installation    = 1. Change it to .bmp instead of .png.<br/>2. Put it in your \raw\graphics\example folder.
+| comments        = For those oldschool people.
+}}
+[[Category:Formatting_Templates]]
+</noinclude>

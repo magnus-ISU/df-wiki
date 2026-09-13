@@ -1,0 +1,75 @@
+<noinclude><div style="float: right; padding: 0.5em; margin: 0.25em; border: 1px solid #ccc; background: #eee"></noinclude><span style="background: {{fgcolor|{{{1}}}}}">[[Image: Dwarf2.png|{{{2}}}]]</span><noinclude></div>
+
+'''Template:mdwarf''' can be used to display dwarves close to what they appear as in Dwarf Fortress. It can be used together with the [[:Template:Raw_Tile|raw tile template]], however it doesn't scale with the user's font size. This might lead to problems for users with uncommon settings.
+
+== Usage ==
+
+<pre><nowiki>
+{{mdwarf|<color>|<size>}}
+</nowiki></pre>
+
+=== Examples ===
+
+<pre><nowiki>
+{| style="color: #fff; background: #000"
+|-
+| {{mdwarf|7:0|10px}} || Wrestlers
+|-
+| {{mdwarf|6:1|10px}} || Spearmasters
+|-
+| {{mdwarf|7:1|10px}} || Elite Wrestlers
+|-
+| {{mdwarf|2:0|10px}} || Marksdwarves
+|-
+| {{mdwarf|0:1|10px}} || Recruits
+|-
+| {{mdwarf|2:1|10px}} || Elite Crossbowdwarves
+|-
+| {{mdwarf|1:1|10px}} || Axe Lords
+|-
+| {{mdwarf|5:0|10px}} || Hammerdwarves
+|-
+| {{mdwarf|3:0|10px}} || Swordsdwarves
+|-
+| {{mdwarf|4:0|10px}} || Macedwarves
+|-
+| {{mdwarf|1:0|10px}} || Axedwarves
+|-
+| {{mdwarf|6:0|10px}} || Speardwarves
+|-
+| {{mdwarf|4:1|10px}} || Mace Lords
+|}
+</nowiki></pre>
+
+...gives:
+
+{| style="color: #fff; background: #000"
+|-
+| {{mdwarf|7:0|10px}} || Wrestlers
+|-
+| {{mdwarf|6:1|10px}} || Spearmasters
+|-
+| {{mdwarf|7:1|10px}} || Elite Wrestlers
+|-
+| {{mdwarf|2:0|10px}} || Marksdwarves
+|-
+| {{mdwarf|0:1|10px}} || Recruits
+|-
+| {{mdwarf|2:1|10px}} || Elite Crossbowdwarves
+|-
+| {{mdwarf|1:1|10px}} || Axe Lords
+|-
+| {{mdwarf|5:0|10px}} || Hammerdwarves
+|-
+| {{mdwarf|3:0|10px}} || Swordsdwarves
+|-
+| {{mdwarf|4:0|10px}} || Macedwarves
+|-
+| {{mdwarf|1:0|10px}} || Axedwarves
+|-
+| {{mdwarf|6:0|10px}} || Speardwarves
+|-
+| {{mdwarf|4:1|10px}} || Mace Lords
+|}
+[[Category:Templates]]
+</noinclude>

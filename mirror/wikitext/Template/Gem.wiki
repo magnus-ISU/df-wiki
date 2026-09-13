@@ -1,0 +1,39 @@
+<includeonly>
+{{Mineral
+|name={{{name|}}}
+|tile={{{tile|☼}}}
+|graphic={{{graphic|}}}
+|graphic2={{{graphic2|}}}
+|icon=☼
+|color={{{color|}}}
+|contains={{{contains|}}}
+|itemcolor={{{itemcolor|{{{color|}}}}}}
+|uses={{{uses|}}}
+* [[Jeweler's workshop|Gemcrafting]]
+* [[Encrust|Encrusting]]
+|location={{{location|}}}
+|properties={{{properties|}}}
+|wiki={{{wiki|}}}}}
+</includeonly>
+<noinclude>
+Usage:
+<pre><nowiki>
+{{Gem|name=Rock crystal|color=7:7:1
+|uses =
+* Crystal [[glass]] at [[glass furnace]]
+|graphic = Filename (e.g. "cut_emerald_sprite.png")
+|location =
+* All stone
+* Found as small clusters
+|value = 2}}
+</nowiki></pre>
+{{Gem|name=Rock crystal|color=7:7:1
+|uses =
+* Crystal [[glass]] at [[glass furnace]]
+|graphic = cut_rock_crystal_sprite.png
+|location =
+* All stone
+* Found as small clusters
+|value = 2}}
+[[Category:Materials templates]]
+</noinclude>

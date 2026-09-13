@@ -1,0 +1,13 @@
+<includeonly>{{#iferror:{{#expr:{{{1|0}}}>12000}}|yes|{{#ifexpr:{{{1|0}}}>12000|yes|no}}}}</includeonly><noinclude>
+Returns either yes or no based on if the input temperature (either a number value or NONE) is safe to dump in magma.
+
+For example:
+
+<code>{<!-- -->{Magmasafe/test|10000}}</code> → <code>{{Magmasafe/test|10000}}</code>
+
+<code>{<!-- -->{Magmasafe/test|12000}}</code> → <code>{{Magmasafe/test|12000}}</code>
+
+<code>{<!-- -->{Magmasafe/test|14000}}</code> → <code>{{Magmasafe/test|14000}}</code>
+
+<code>{<!-- -->{Magmasafe/test|NONE}}</code> → <code>{{Magmasafe/test|NONE}}</code>
+[[category:raw templates]]</noinclude>

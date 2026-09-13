@@ -1,0 +1,17 @@
+The '''imagefix''' template is a very simplistic CSS-based template that simply bumps images down by a few pixels. The purpose of the template is to make images better align with the text right next to them, instead of looking like the image is slightly higher than the text. It moves the image down by 4 pixels by default, but this value can be customized by adding a second value. There is padding-right value in the template that is 8 by default (which pushes the text right of the image to be pushed further right), but this can also be customized by adding a third value.
+
+This template is meant to be used only on left-aligned images, as using it with right-aligned images will likely break the page's format.
+
+==Syntax==
+The syntax of the template is typed out like this: <code><nowiki>{{imagefix|[[File:IMAGE_FILE.png]]|MARGIN|PADDING}}</nowiki></code><br>
+The "margin" and "padding" values are optional, and one or both can be left completely blank.
+
+'''''Note:''' The "px" does not need to be added into the template's values. Just the numbers themselves.''
+==Examples==
+[[File:dog_sprite.png|left]]{{colortext|#c80000|Template unused}}. Notice how this very text does not align with the image.
+<br>
+However, using the template with this syntax: <code><nowiki>{{imagefix|[[File:dog_sprite.png]]}}</nowiki></code> will produce this...<br><br>
+{{imagefix|[[File:dog_sprite.png]]}}{{colortext|Green|Template used}}. Now the top pixels of the same image align properly with the text.
+<br>
+However, using the template with this syntax: <code><nowiki>{{imagefix|[[File:dog_sprite.png]]|10|20}}</nowiki></code> will produce this...<br><br>
+{{imagefix|[[File:dog_sprite.png]]|15|20}}{{colortext|#584ab7|Template modified}}. Now the image is much farther down, which in this example, is 15 pixels, while the text is pushed further to the right by 20 pixels. Again, the "margin" and "padding" values can be left blank.

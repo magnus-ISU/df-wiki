@@ -1,0 +1,38 @@
+<table class="infobox" style="border: 1px solid #a2a9b1; border-spacing: 3px; background-color: #f8f9fa;<!--
+                          -->color: black; margin: 0.5em 0 0.5em 1em; padding: 0.2em; float: right; clear: right; <!--
+                          -->font-size: 88%; line-height: 1.5em; width: 200px; {{{style|}}}"><!--
+  --><caption colspan="2" style="{{{titlestyle|}}}">'''{{{name|{{PAGENAME}}}}}'''</caption><!--
+  --><tr><td colspan="2">[[{{{image|File:DFDefault.png}}}|200px]]</td></tr><!--
+  --><tr><th colspan="2" class="{{{class|}}}" style="text-align:center;">'''Information'''</th></tr><!--
+  -->{{#if:{{{developer<includeonly>|</includeonly>}}}|<!--
+    --><tr><td>Developer(s)</td><td>{{{developer}}}}}</td></tr><!--
+  -->{{#if:{{{homepage<includeonly>|</includeonly>}}}|<!--
+    --><tr><td>Home Page(s)</td><td>{{{homepage}}}}}</td></tr><!--
+  -->{{#if:{{{download<includeonly>|</includeonly>}}}|<!--
+    --><tr><td>Download</td><td>{{{download}}}}}</td></tr><!--
+  -->{{#if:{{{forum<includeonly>|</includeonly>}}}|<!--
+    --><tr><td>Forum</td><td>{{{forum}}}}}</td></tr><!--
+  -->{{#if:{{{1|}}}{{{misc|}}}|<!--
+    --><tr><td colspan=2>
+{{{misc|}}}}}{{{1|}}}</td></tr>
+</table><noinclude>
+
+==Usage==
+All parameters are optional. Empty template:
+<pre>{{Infobox utility
+| image     = 
+| developer =
+| homepage  =
+| download  =
+| forum     =
+}}</pre>
+
+For example:
+<pre>{{Infobox utility
+| image     = File:SomeImage.png
+| developer = name/names
+| homepage  = [www.me.site name]
+| download  = [https://dffd.bay12games.com/something dfdfd] 
+| forum     = [http://www.bay12forums.com/smf/index.php?topic=140808 Bay 12 Forum]
+}}</pre>
+[[Category:Infobox templates]]</noinclude>

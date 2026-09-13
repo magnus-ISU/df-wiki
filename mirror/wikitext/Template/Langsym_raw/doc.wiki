@@ -1,0 +1,46 @@
+{{documentation subpage}}
+
+Note that this template is fussy and likely to behave strangely if it's assumptions aren't met. 
+
+Template assumes you want to display a raw, and are on a raw subpage of page that is itself a subpage of [[language SYM.txt]]. In otherwords, [[:Category:Symbol raw pages|a grandchild of language SYM.txt]]. And assumes subst will be used.
+
+It looks for an ALL CAPS symbol and caps parts of the page title....
+
+== Usage ==
+<nowiki>{{subst:Langsym raw}}
+</nowiki>
+
+See https://en.wikipedia.org/wiki/Help:Substitution#The_safesubst:_modifier for details on subst
+
+== Output ==
+
+This outputs something like 
+
+''<nowiki><noinclude>{{raw header|symbol|DOMESTIC}}</noinclude>{{raw|v50:language_SYM.txt|SYMBOL|DOMESTIC}}<noinclude>{{raw footer|symbol|DOMESTIC}}</noinclude></nowiki>''
+
+or
+
+''<nowiki>{{raw header|symbol|DARKNESS}}</noinclude>{{raw|v50:language_SYM.txt|SYMBOL|DARKNESS}}<noinclude>{{raw footer|symbol|DARKNESS}}</nowiki>''
+
+=== Limitation ===
+
+It won't output this:
+
+<nowiki>{{raw header|text_set|CURSE}}</noinclude>{{raw|v50:text_curse.txt|TEXT_SET|CURSE}}<noinclude>{{raw footer|text_set|CURSE}}</nowiki>
+
+or this:
+
+<nowiki><noinclude>{{raw header}}</noinclude>{{raw|v50:text_book_instruction.txt|TEXT_SET|BOOK_INSTRUCTION}}<noinclude>{{raw footer}}</noinclude></nowiki>
+
+== Notes==
+
+It uses [[Template:Raw_header]] and [[Template:Raw]] among other tpls
+
+snippet
+
+<nowiki>{{uc:{{#titleparts: {{FULLPAGENAMEE}} | -1 | -2 }}}}</nowiki>
+
+== See Also ==
+* [[:Category:Symbol raw pages]]
+
+<includeonly>[[Category: Language]][[Category:Raw templates]]</includeonly>

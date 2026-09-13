@@ -1,0 +1,113 @@
+<includeonly>
+
+<div class="NavFrame {{#if:{{{expanded|}}}||collapsed}} {{{class|}}}" style="border:none; {{{style|{{{css|}}}}}}"><div class="NavHead" 
+style="font-weight:{{{fw1|bold}}}; background:{{{bg1|transparent}}}; 
+text-align:{{{ta1|center}}}; {{{headercss|{{{headerstyle|}}}}}}">{{{header|{{{1}}}}}} </div>
+<div class="NavContent" style="font-weight:{{{fw2|normal}}}; 
+background-color:{{{bg2|transparent}}}; text-align:{{{ta2|left}}}; 
+{{{contentcss|{{{contentstyle|}}}}}}">
+{{{content|{{{contents|{{{2}}}}}}}}}
+</div></div>{{#if:{{{bg1|}}}{{{bg2|}}}{{{ta1|}}}{{{ta2|}}}{{{fw1|}}}{{{fw2|}}}|{{NAMESPACE}}{{PAGENAME}}]]}}
+
+</includeonly>
+<noinclude>
+Borrowed from [http://en.wikipedia.org/wiki/Template:Hidden| The Other Wiki] Documentation is located there. Reproduced here on July 27, 2012. Huge thanks to everyone over there who helped make this possible.
+<br>
+'''None of the below text is my own. It is more a place holder now than anything.. Change at will! :)'''
+<br>
+<br>
+This template creates a [[Wikipedia:NavFrame|dynamic navigation box]] using style sheet declarations in [[MediaWiki:Common.css]] and Javascript code in [[MediaWiki:Common.js]]. It displays the first parameter (the heading) with a [show] link on the right.  If [show] is clicked by the user, the second parameter (the body) is displayed below the heading and the [show] link becomes [hide].  Clicking on [hide] then hides the body again and the [hide] link becomes [show] again.
+
+The template does '''not''' provide an argument to designate the initial state of the show/hide control.  In the nested case, show/hide controls in hidden content retain their state.  There is no facility for ''collapse all'' or ''reveal all''.  
+
+==Usage==
+===Syntax===
+<pre style="overflow:auto;">
+{{Hidden
+|header=
+|content=
+|style=
+|headerstyle=
+|contentstyle=
+|fw1=
+|fw2=
+|bg1=
+|bg2=
+|ta1=
+|ta2=
+}}
+</pre>
+
+===Parameters===
+Only two parameters are required for this template:
+;header : text for header (or title); alternative to using unnamed parameter <nowiki>{{{1}}}</nowiki>
+;content : text for content (or body); alternative to using unnamed parameter <nowiki>{{{2}}}</nowiki>
+
+====Optional====
+;style : add [[w:Cascading Style Sheets|CSS]] to the main div.
+;headerstyle : add [[w:Cascading Style Sheets|CSS]] to the header.
+;contentstyle : add [[w:Cascading Style Sheets|CSS]] to the content box.
+;expanded: any nonblank value will cause the template to be initially expanded by default.
+
+'''Note:''' This template will not respect the user preference "justify paragraphs".
+
+==Examples==
+===Basic===
+In this example only the two required parameters are specified.
+{| class="wikitable"
+| Code
+| <pre>{{hidden|Title text here|Body text line 1<br/>Body text line 2}}</pre>
+|-
+| Result
+| {{hidden|Title text here|Body text line 1<br/>Body text line 2}}
+|}
+
+===Header background===
+{| class="wikitable"
+| Code
+| <pre style="overflow:auto;">
+{{hidden
+|Title text here
+|Body text line 1<br/>Body text line 2
+|headerstyle=background:#ccccff
+|style=text-align:center;
+}}
+</pre>
+|-
+| Result
+| {{hidden|Title text here|Body text line 1<br/>Body text line 2|headerstyle=background:#ccccff|style=text-align:center;}}
+|}
+
+===CSS===
+{| class="wikitable"
+| Code
+| 
+<pre>
+{{hidden
+| style = border:1px dashed red; width: 50%;
+| headerstyle = background: #ccccff; font-size: 110%;
+| contentstyle = text-align: center; color:green;
+| header = Title text here
+| content = Body text line 1<br />Body text line 2<br />Body text line 3
+}}</pre>
+|-
+ | Result
+| 
+{{hidden
+| style = border:1px dashed red; width: 50%;
+| headerstyle = background: #ccccff; font-size: 110%;
+| contentstyle = text-align: center; color:green;
+| header = Title text here
+| content = Body text line 1<br />Body text line 2<br />Body text line 3
+}}
+|}
+==Please See==
+[http://en.wikipedia.org/wiki/Template:Hidden/doc Here] for the source and the list of contributors in the templates ''History'' page.
+
+==Creators==
+[[Wikipedia:User:AzaToth]]<br>
+[[Wikipedia:User:Patrick]]<br>
+[http://en.wikipedia.org/w/index.php?title=Template:Hidden&action=history And many who helped keep it up to date]
+
+[[Category:Formatting_Templates]] 
+</noinclude>

@@ -1,0 +1,13 @@
+<includeonly>{{infostart|{{{name}}}}}
+{{infocell|{{Grass/picture|char1={{{char1|?}}}|char2={{{char2|?}}}|char3={{{char3|?}}}|char4={{{char4|?}}}|color1={{{color1}}}|color2={{{color2}}}|flowerchar1={{{flowerchar1|}}}|flowercolor1={{{flowercolor1|}}}}}}}
+{{infoheader|[[Biome]]}}
+{{infocell|{{{biome|?}}}}}
+{{#if:{{{alignment|}}}|{{infoheader|Alignment}}
+{{infocell|{{{alignment}}}|style=text-align:center}}}}
+{{infoheader|Location}}
+{{infocell|{{wetdry|{{{wet|}}}|{{{dry|}}}}}}}
+{{#ifeq:{{{wiki}}}|no||{{infocell|style=text-align:center; background-color: #eee; border-top: 1px solid #aaa|1=[[wikipedia:{{#if:{{{wiki|}}}|{{{wiki}}}|{{{name}}}}}|Wikipedia article]]}}|{{!-}}}}
+{{infoend}}
+{{Category|Grass}}</includeonly><noinclude>
+[[Category:Materials templates]]
+</noinclude>

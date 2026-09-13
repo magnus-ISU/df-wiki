@@ -1,0 +1,56 @@
+<includeonly>{{infostart|{{{name}}}}}
+{{infocell|{{{sample|}}}}}
+{{infocell|{{Metal/picture|ingredients={{#if:{{{color3|}}}|3|{{#if:{{{color2|}}}|2|1}}}}|color={{{color}}}|
+tile1={{{tile1|≡}}}|color1={{{color1}}}|
+tile2={{{tile2|≡}}}|color2={{{color2}}}|
+tile3={{{tile3|≡}}}|color3={{{color3}}}}}}}
+{{infoheader|Uses}}
+{{infocell|{{{uses|}}}
+* [[Construction]]}}
+{{infoheader|Graphic}}
+{{infocell|{{#if:{{{graphic|}}}|[[File:{{{graphic}}}|center]]|No graphic.}}}}
+{{#if:{{{ore|}}}|{{infoheader|[[Ore]]}}
+{{infocell|{{{ore|}}}}}}}
+{{#if:{{{recipe|}}}|{{infoheader|Recipe}}
+{{infocell|{{{recipe|}}}}}}}
+{{infoheader|Properties}}
+{{infocell|{{{properties|}}}}}
+{{#ifeq:{{{wiki}}}|no||{{infocell|style=text-align:center; background-color: #eee; border-top: 1px solid #aaa|1=[[wikipedia:{{#if:{{{wiki|}}}|{{{wiki}}}|{{{name}}}}}|Wikipedia article]]}}|{{!-}}}}
+{{infoend}}</includeonly><noinclude>
+Usage:
+<pre><nowiki>
+{{Metal|name=Silver|
+|sample=
+|graphic=
+|graphic2
+[[File:SilverSample.png|256px|center|frameless]]
+|color=7:7:1
+|ore=
+* [[Silver nuggets]]
+* [[Horn silver]]
+|properties=
+* [[Damage]]% 50
+* [[Material value]] 10
+|uses=
+* [[Bolts]]
+* [[Weapon|Melee weapons]]
+}}
+</nowiki></pre>
+
+{{Metal|name=Silver|
+|sample=
+[[File:SilverSample.png|256px|center|frameless]]
+|color=7:7:1
+|ore=
+* [[Silver nuggets]]
+* [[Horn silver]]
+|properties=
+* [[Damage]]% 50
+* [[Material value]] 10
+|uses=
+* [[Bolts]]
+* [[Weapon|Melee weapons]]
+}}
+
+[[category:materials templates]]
+</noinclude>

@@ -1,0 +1,82 @@
+<span><!--
+-->{{#if:{{{num|}}}|<!-- case for "num" defined where user wants to display only the last num icons
+  -->{{#ifexpr:{{{num|4}}}-{{#if:{{{4|}}}|1|0}}-{{#if:{{{3|}}}|1|0}}-{{#if:{{{2|}}}|1|0}} > 0 |<!--
+    --><span style="display: inline-flex;"><!--
+    -->[[File:Ui {{{1|<noinclude>b</noinclude>}}}.png]]<span style="align-self: flex-end; margin-left: -3px; margin-bottom: 0px;">{{k|{{{1|<noinclude>b</noinclude>}}}}}</span></span><!--
+    -->{{#ifexpr: {{#if:{{{2|}}}|1|0}} and {{{num|4}}}-{{#if:{{{4|}}}|1|0}}-{{#if:{{{3|}}}|1|0}} > 0 | {{{sep|}}}}}<!--draw sep if icon exists above and below
+  -->}}<!--
+    
+  -->{{#ifexpr: {{#if:{{{2|}}}|1|0}} and {{{num|4}}}-{{#if:{{{4|}}}|1|0}}-{{#if:{{{3|}}}|1|0}} > 0 |<!--
+    --><span style="display: inline-flex;"><!--
+    -->[[File:Ui {{{1}}}{{{2}}}.png]]<span style="align-self: flex-end; margin-left: -3px; margin-bottom: 0px;">{{k|{{{2}}}}}</span></span><!--
+    -->{{#ifexpr: {{#if:{{{3|}}}|1|0}} and {{{num|4}}}-{{#if:{{{4|}}}|1|0}} > 0 | {{{sep|}}}}}<!--draw sep if icon exists above and below
+  -->}}<!--
+
+  -->{{#ifexpr: {{#if:{{{3|}}}|1|0}} and {{{num|4}}}-{{#if:{{{4|}}}|1|0}} > 0 |<!--
+    --><span style="display: inline-flex;"><!--
+    -->[[File:Ui {{{1}}}{{{2}}}{{{3}}}.png]]<span style="align-self: flex-end; margin-left: -3px; margin-bottom: 0px;">{{k|{{{3}}}}}</span></span><!--
+    -->{{#if:{{{4|}}} | {{{sep|}}}}}<!--draw sep if icon exists above and below
+  -->}}<!--
+
+  -->{{#if:{{{4|}}}|<!--
+    --><span style="display: inline-flex;"><!--
+    -->[[File:Ui {{{1}}}{{{2}}}{{{3}}}{{{4}}}.png]]<span style="align-self: flex-end; margin-left: -3px; margin-bottom: 0px;">{{k|{{{4}}}}}</span></span>}}<!--
+
+
+  -->|<!--simpler case for "num" undefined where user wants to display all icons
+    --><span style="display: inline-flex;"><!--
+    -->[[File:Ui {{{1|<noinclude>b</noinclude>}}}.png]]<span style="align-self: flex-end; margin-left: -3px; margin-bottom: 0px;">{{k|{{{1|<noinclude>b</noinclude>}}}}}</span></span><!--
+
+  -->{{#if:{{{2|}}}|<!--
+    -->{{{sep|}}}<!--
+    --><span style="display: inline-flex;"><!--
+    -->[[File:Ui {{{1}}}{{{2}}}.png]]<span style="align-self: flex-end; margin-left: -3px; margin-bottom: 0px;">{{k|{{{2}}}}}</span></span>}}<!--
+
+  -->{{#if:{{{3|}}}|<!--
+    -->{{{sep|}}}<!--
+    --><span style="display: inline-flex;"><!--
+    -->[[File:Ui {{{1}}}{{{2}}}{{{3}}}.png]]<span style="align-self: flex-end; margin-left: -3px; margin-bottom: 0px;">{{k|{{{3}}}}}</span></span>}}<!--
+
+  -->{{#if:{{{4|}}}|<!--
+    -->{{{sep|}}}<!--
+    --><span style="display: inline-flex;"><!--
+    -->[[File:Ui {{{1}}}{{{2}}}{{{3}}}{{{4}}}.png]]<span style="align-self: flex-end; margin-left: -3px; margin-bottom: 0px;">{{k|{{{4}}}}}</span></span>}}<!--
+-->}}<!--
+
+--></span><noinclude>
+----
+
+===Examples of Appearance===
+
+Selected from the {{Menu icon|b}} build menu.
+
+===Usage===
+
+
+<pre><nowiki>{{Menu icon|b}}</nowiki></pre>
+
+Multiple keys can be passed as separate parameters to this template, with the "sep" parameter determining the separator (the default is an empty string), and the number of icons to display, counting from the end, as the "num" parameter (the default displays 4 icons).
+
+<pre><nowiki>{{Menu icon|key|sep=separator>|num=number}}</nowiki></pre>
+
+{|class="wikitable"
+|-
+|``<nowiki>{{Menu icon|b|o}}</nowiki>`` || {{Menu icon|b|o}}
+|-
+|``<nowiki>{{Menu icon|num=1|b|o}}</nowiki>`` || {{Menu icon|num=1|b|o}}
+|-
+|``<nowiki>{{Menu icon|b|o|sep=,}}</nowiki>`` || {{Menu icon|b|o|sep=,}}
+|-
+|``<nowiki>{{Menu icon|b|sep=+|o|f|}}</nowiki>`` || {{Menu icon|b|sep=+|o|f|}}
+|-
+|``<nowiki>{{Menu icon|b|o|b|sep=-}}</nowiki>`` || {{Menu icon|b|o|b|sep=-}}
+|-
+|``<nowiki>{{Menu icon|b|o|l|y|sep=&amp;rarr;|num=2}}</nowiki>`` || {{Menu icon|b|o|l|y|sep=&rarr;|num=2}}
+|-
+|``<nowiki>{{Menu icon|Esc}}</nowiki>`` || {{Menu icon|Esc}}
+|}
+----
+See also: {{t|key}}
+[[Category:Inline formatting templates]]
+{{documentation}}
+</noinclude>

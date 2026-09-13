@@ -1,0 +1,38 @@
+<div class="mw-parser-output"><table class="plainlinks ombox ambox-notice" style="margin-bottom:1.0em;">
+<tbody><tr>
+<td class="mbox-image">
+  <img alt="" src="https://thumb.wikimedia.org/wikipedia/commons/thumb/1/15/Edit-copy_green.svg/40px-Edit-copy_green.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=imageinfo&amp;utm_content=thumbnail" decoding="async" width="40" height="40" srcset="https://thumb.wikimedia.org/wikipedia/commons/thumb/1/15/Edit-copy_green.svg/60px-Edit-copy_green.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=imageinfo&amp;utm_content=thumbnail 1.5x, https://thumb.wikimedia.org/wikipedia/commons/thumb/1/15/Edit-copy_green.svg/120px-Edit-copy_green.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=imageinfo&amp;utm_content=thumbnail 2x" /></td>
+<td class="mbox-text" style=""> This is a documentation subpage for <a href="/index.php/Template:Langsym_raw" title="Template:Langsym raw">Template:Langsym raw</a>.<br />It contains usage information, <a href="http://en.wikipedia.org/wiki/Categorization" class="extiw" title="wikipedia:Categorization">categories</a> and other content that is not part of the original template page. </td>
+</tr>
+</tbody></table>
+<p>Note that this template is fussy and likely to behave strangely if it's assumptions aren't met. 
+</p><p>Template assumes you want to display a raw, and are on a raw subpage of page that is itself a subpage of <a href="/index.php/Language_SYM.txt" title="Language SYM.txt">language SYM.txt</a>. In otherwords, <a href="/index.php/Category:Symbol_raw_pages" title="Category:Symbol raw pages">a grandchild of language SYM.txt</a>. And assumes subst will be used.
+</p><p>It looks for an ALL CAPS symbol and caps parts of the page title....
+</p>
+
+<h2><span class="mw-headline" id="Usage">Usage</span></h2>
+<p>{{subst:Langsym raw}}
+
+</p><p>See <a rel="nofollow" class="external free" href="https://en.wikipedia.org/wiki/Help:Substitution#The_safesubst:_modifier">https://en.wikipedia.org/wiki/Help:Substitution#The_safesubst:_modifier</a> for details on subst
+</p>
+<h2><span class="mw-headline" id="Output">Output</span></h2>
+<p>This outputs something like 
+</p><p><i>&lt;noinclude&gt;{{raw header|symbol|DOMESTIC}}&lt;/noinclude&gt;{{raw|v50:language_SYM.txt|SYMBOL|DOMESTIC}}&lt;noinclude&gt;{{raw footer|symbol|DOMESTIC}}&lt;/noinclude&gt;</i>
+</p><p>or
+</p><p><i>{{raw header|symbol|DARKNESS}}&lt;/noinclude&gt;{{raw|v50:language_SYM.txt|SYMBOL|DARKNESS}}&lt;noinclude&gt;{{raw footer|symbol|DARKNESS}}</i>
+</p>
+<h3><span class="mw-headline" id="Limitation">Limitation</span></h3>
+<p>It won't output this:
+</p><p>{{raw header|text_set|CURSE}}&lt;/noinclude&gt;{{raw|v50:text_curse.txt|TEXT_SET|CURSE}}&lt;noinclude&gt;{{raw footer|text_set|CURSE}}
+</p><p>or this:
+</p><p>&lt;noinclude&gt;{{raw header}}&lt;/noinclude&gt;{{raw|v50:text_book_instruction.txt|TEXT_SET|BOOK_INSTRUCTION}}&lt;noinclude&gt;{{raw footer}}&lt;/noinclude&gt;
+</p>
+<h2><span class="mw-headline" id="Notes">Notes</span></h2>
+<p>It uses <a href="/index.php/Template:Raw_header" title="Template:Raw header">Template:Raw_header</a> and <a href="/index.php/Template:Raw" title="Template:Raw">Template:Raw</a> among other tpls
+</p><p>snippet
+</p><p>{{uc:{{#titleparts: {{FULLPAGENAMEE}} | -1 | -2 }}}}
+</p>
+<h2><span class="mw-headline" id="See_Also">See Also</span></h2>
+<ul><li><a href="/index.php/Category:Symbol_raw_pages" title="Category:Symbol raw pages">Category:Symbol raw pages</a></li></ul>
+<p><br />
+</p></div>
