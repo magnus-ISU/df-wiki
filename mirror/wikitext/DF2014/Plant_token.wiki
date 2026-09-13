@@ -1,0 +1,695 @@
+{{Quality|Fine|11:40, 18 May 2015 (UTC)}}
+{{av}}
+{{Modding}}
+The <code>[OBJECT:PLANT]</code> [[token]] defines the properties of [[plant]]s; this being a full list of all known plant tokens.
+
+__TOC__
+{{clear}}
+
+==Basic tokens==
+These tokens are specified for all plants and define their most basic characteristics.
+
+{| {{prettytable}}
+|- style='background-color:#ddd'
+! width="20%" | Token
+! width="20%" | Arguments
+! width="60%" | Description
+
+|-
+| {{text anchor|NAME}}
+| 
+*name
+| The singular form of the plant's name as seen in-game.
+
+|-
+| {{text anchor|NAME_PLURAL}}
+| 
+*name
+| The plural form of the plant's name as seen in-game.
+
+|-
+| {{text anchor|ADJ}}
+| 
+*adjective
+| The word or phrase used to describe items made from this plant.
+
+|-
+| {{text anchor|ALL_NAMES}}
+| 
+*name
+| Sets the NAME, NAME_PLURAL, and ADJ to the specified string.
+
+|-
+| {{text anchor|PREFSTRING}}
+| 
+*reason
+| What dwarves can like this object for (e.g. "Urist likes plump helmets for their rounded tops.")
+
+|-
+| {{text anchor|MATERIAL}}
+| 
+*material_name
+| Starts defining a new local plant material with the given name and '''no''' properties. A maximum of 200 materials can be defined on any given plant.
+
+|-
+| {{text anchor|USE_MATERIAL}}
+| 
+*material_name
+*old_material
+| Starts defining a new local plant material with the given name and using the properties of another local plant material. A maximum of 200 materials can be defined on any given plant.
+
+|-
+| {{text anchor|USE_MATERIAL_TEMPLATE}}
+| 
+*material_name
+*template_name
+| Starts defining a new local plant material with the given name and using the properties of the specified material template. A maximum of 200 materials can be defined on any given plant.
+
+|-
+| {{text anchor|BASIC_MAT}}
+| 
+* [[Material token|material]]
+| Sets the basic material of the plant. According to Toady, you can use other materials (for instance, iron) but the game may hiccup on plants that aren't structurally plants. For crops, said material should have [STRUCTURAL_PLANT_MAT] to permit proper stockpiling. Generally, this should be "LOCAL_PLANT_MAT:material_name", using a material defined using MATERIAL, USE_MATERIAL, or USE_MATERIAL_TEMPLATE.
+|}
+
+==Environment tokens==
+These tokens, also applicable to all plants, specify where the plants grow.
+
+{| {{prettytable}}
+|- style='background-color:#ddd'
+! width="20%" | Token
+! width="20%" | Arguments
+! width="60%" | Description
+
+|-
+| {{text anchor|UNDERGROUND_DEPTH}}
+| 
+*minimum
+*maximum
+| Designates the highest and lowest cavern levels that the plant can appear in if its [[biome token|biome]] is subterranean.  Dwarven civilizations will only export (via the embark screen or caravans) things that are available at depth 1. Defaults to 0:0 (surface only).
+
+|-
+| {{text anchor|GOOD}}
+|  
+| Restricts the plant to growing in Good regions. Cannot be combined with [EVIL].
+
+|-
+| {{text anchor|EVIL}}
+|  
+| Restricts the plant to growing in Evil regions. Cannot be combined with [GOOD].
+
+|-
+| {{text anchor|SAVAGE}}
+|  
+| Restricts the plant to growing in Savage regions (regardless of alignment).
+
+|-
+| {{text anchor|FREQUENCY}}
+| 
+*freq (0-100)
+| How frequently this plant is generated in a particular area. Defaults to 50.  Plants with valid [[biome token]]s and [FREQUENCY:0] will not grow in the wild, but will still be available for entity use and farm plots.
+
+|-
+| {{text anchor|WET}}
+|  
+| Restricts the plant to grow near natural water features. A plant with [WET] may be very common or very rare in an area, depending on how many water features that area has. Note that they will not grow next to dwarf-filled channels, since it explicitly checks if the tile type is "River", "River Slope", "River Source", "Waterfall" (used back in 40d for underground rivers), "Brook", "Murky Pool", or "Murky Pool Slope".
+
+|-
+| {{text anchor|DRY}}
+|  
+| Allows the plant to grow away from water features.
+
+|-
+| {{text anchor|BIOME}}
+| 
+*biome
+| What [[biome token|biome]] this plant appears in.
+
+|}
+
+==Growth tokens==
+These tokens are used for all plants and specify growths growing on a plant.  
+
+Edible or otherwise usable growths should have [STOCKPILE_PLANT_GROWTH] in their [[material definition token|material definitions]] for proper stockpiling.  This also lets them be collected from plant gathering and farming jobs.
+
+{| {{prettytable}}
+|- style='background-color:#ddd'
+! width="20%" | Token
+! width="20%" | Arguments
+! width="60%" | Description
+
+|-
+| {{text anchor|GROWTH}}
+| 
+*name
+| Defines a plant growth.  Takes the below tokens as arguments.  
+
+|-
+| {{text anchor|GROWTH_NAME}}
+|  
+*singular
+*plural (STP for standard plural)
+| The name of a plant growth.
+
+|-
+| {{text anchor|GROWTH_ITEM}}
+|  
+* [[item token]]
+* [[material token]]
+| Specifies what item this growth is and what it is made of.  Generally, the item type should be PLANT_GROWTH:NONE.
+
+|-
+| {{text anchor|GROWTH_HOST_TILE}}
+| 
+*plant part
+| Specifies on which part of the plant or tree the growth appears, usually for multi-tile [[tree]]s.  Valid tokens are:
+*TWIGS
+*BRANCHES_AND_TWIGS / LIGHT_BRANCHES_AND_TWIGS
+*BRANCHES / LIGHT_BRANCHES
+*ALL_BRANCHES_AND_TWIGS
+*HEAVY_BRANCHES / DIRECTED_BRANCHES
+*HEAVY_BRANCHES_AND_TRUNK / DIRECTED_BRANCHES_AND_TRUNK
+*TRUNK
+*ROOTS
+*CAP
+*SAPLING
+
+|-
+| {{text anchor|GROWTH_TRUNK_HEIGHT_PERC}}
+|  
+*integer:integer
+| Controls the height on the trunk at which the growth begins to appear. The first integer is the percent of the trunk height where the growth begins appearing: 0 will cause growths to appear along the entire trunk above the first tile; 100 will cause growths to appear only at the topmost trunk tile.
+
+The second integer currently ''must'' be -1, but might be intended to control whether it counts height starting from the bottom or top.
+
+|-
+| {{text anchor|GROWTH_DENSITY}}
+|  
+*integer
+| Currently has no effect.
+
+|-
+| {{text anchor|GROWTH_TIMING}}
+|  
+*[[time]] start:end (0-403200)
+| Specifies at which part of the year the growth appears.  Default is all year round.
+
+A single growth can only have one GROWTH_TIMING tag. If multiple are declared, the last one will be used. To make a growth appear multiple times during the year, you need to create a different growth for every GROWTH_TIMING interval. By using the same material for all of the duplicate growths, all of them will be stockpiled together and be eligible for the same reactions. Edible/brewable growths will have separate entries in the kitchen menu, though.
+
+There is no known way to declare a growth timing that lasts from winter into spring. Including numbers below 0 or above 403200 in the range will make the growth available at all times, as though you hadn't defined a growth timing at all. So will including a range for which the start time is later than the end time.
+
+This has no effect on farmed growths; all eligible growths that have [STOCKPILE_PLANT_GROWTH] in their materials will be harvested, regardless of if they are currently within their growth timing or not.
+
+|-
+| {{text anchor|GROWTH_PRINT}}
+|  
+*overworld tile
+*item tile
+*color
+*time (0-403200) start:end, ALL, or NONE
+*priority
+| Specifies the appearance of the growth.  Can be specified more than once, for example for autumn leaves. Transitions between different timing periods will happen gradually over the course of 2000 ticks. Priority seems to control what to display when there would be multiple symbols on a tile.{{verify}}
+
+The GROWTH_PRINT tile will only be displayed when the growth in question is actually present, even if its timing parameter is ALL.
+
+|-
+| {{text anchor|GROWTH_HAS_SEED}}
+|  
+| The growth drops a seed if eaten raw.
+
+|-
+| {{text anchor|GROWTH_DROPS_OFF}}
+|  
+| Growths drop from the plant, producing a cloud of items which fall on the ground, which [[herbalist]]s can collect.
+|-
+| {{text anchor|GROWTH_DROPS_OFF_NO_CLOUD}}
+|  
+| Growths drop collectable items from the plant without producing item clouds.
+
+|}
+
+==Tree tokens==
+These tokens are used only for trees.
+
+{| {{prettytable}}
+|- style='background-color:#ddd'
+! width="20%" | Token
+! width="20%" | Arguments
+! width="60%" | Description
+
+|-
+| {{text anchor|TREE}}
+| 
+* [[Material token|material]] or NONE
+| Makes the plant into a [[tree]]. Cutting down the tree will yield logs made of this material.  Setting the material to NONE will give no wood from this tree.
+
+|-
+| {{text anchor|TRUNK_NAME}}
+| 
+*name
+| What the trunk of the tree is named.
+
+|-
+| {{text anchor|MAX_TRUNK_HEIGHT}}
+| 
+*1-8
+| The maximum z-level height of a mature tree's trunk, starting from about two z-levels above ground and going up.
+
+|-
+| {{text anchor|MAX_TRUNK_DIAMETER}}
+| 
+*1-3
+| Upper limit of trunk thickness, in tiles. Counted separately for all branching trunks. Has a geometric effect on log yield.
+
+|-
+| {{text anchor|TRUNK_PERIOD}}
+| 
+*integer
+| The number of years the trunk takes to grow one Z-level upward.
+
+|-
+| {{text anchor|TRUNK_WIDTH_PERIOD}}
+| 
+*integer
+| The number of years the trunk takes to grow another tile wider.
+
+|-
+| {{text anchor|LIGHT_BRANCHES_NAME}}
+| 
+*name
+| What thin branches of the tree are named.
+
+|-
+| {{text anchor|BRANCH_DENSITY}} / {{text anchor|LIGHT_BRANCHES_DENSITY}}
+| 
+*integer
+| How dense the branches grow on this tree. 
+
+|-
+| {{text anchor|BRANCH_RADIUS}} / {{text anchor|LIGHT_BRANCH_RADIUS}} 
+| 
+*integer
+| The radius to which branches can reach.  Appears to never reach further than seven tiles from the centre.  Does not depend on the trunk branching amount or where trunks are. The values used in the game go from 0-3. Higher values than that can cause crashes. {{bug|10419}}
+
+|-
+| {{text anchor|HEAVY_BRANCHES_NAME}} / {{text anchor|DIRECTED_BRANCHES_NAME}}
+| 
+*name
+| What thick branches of the tree are named.
+
+|-
+| {{text anchor|HEAVY_BRANCH_DENSITY}} / {{text anchor|DIRECTED_BRANCH_DENSITY}}
+| 
+*integer
+| Similar to [[Plant_token#BRANCH_DENSITY|BRANCH_DENSITY]] for thick branches. Values outside 0-3 can cause crashes. {{bug|10419}}
+
+|-
+| {{text anchor|HEAVY_BRANCH_RADIUS}} / {{text anchor|DIRECTED_BRANCH_RADIUS}}
+| 
+*integer
+| Similar as [[Plant_token#BRANCH_RADIUS|BRANCH_DENSITY]] for thick branches.
+
+|-
+| {{text anchor|TRUNK_BRANCHING}}
+| 
+*integer
+| How much the trunk branches out.  0 makes the trunk straight.
+
+|-
+| {{text anchor|ROOT_NAME}} / {{text anchor|ROOTS_NAME}}
+| 
+*name
+| What the roots of the tree are named.
+
+|-
+| {{text anchor|ROOT_DENSITY}}
+| 
+*integer
+| Density of the root growth.
+
+|-
+| {{text anchor|ROOT_RADIUS}}
+| 
+*integer
+| How wide the roots reach out.
+
+|-
+| {{text anchor|TWIGS_NAME}}
+| 
+*name
+| What the twigs of the tree are named.
+
+|-
+| {{text anchor|TWIGS_SIDE_BRANCHES}}
+| 
+*boolean (0 or 1)
+| Twigs appear on the side of branches.  Defaults to 1.
+
+|-
+| {{text anchor|TWIGS_ABOVE_BRANCHES}}
+| 
+*boolean (0 or 1)
+| Twigs appear above branches.  Defaults to 1.
+
+|-
+| {{text anchor|TWIGS_BELOW_BRANCHES}}
+| 
+*boolean (0 or 1)
+| Twigs appear below branches.  Defaults to 0.
+
+|-
+| {{text anchor|TWIGS_SIDE_HEAVY_BRANCHES}}
+| 
+*boolean (0 or 1)
+| Twigs appear on the side of heavy branches.  Defaults to 0.
+
+|-
+| {{text anchor|TWIGS_ABOVE_HEAVY_BRANCHES}}
+| 
+*boolean (0 or 1)
+| Twigs appear above heavy branches.  Defaults to 0.
+
+|-
+| {{text anchor|TWIGS_BELOW_HEAVY_BRANCHES}}
+| 
+*boolean (0 or 1)
+| Twigs appear below heavy branches.  Defaults to 0.
+
+|-
+| {{text anchor|TWIGS_SIDE_TRUNK}}
+| 
+*boolean (0 or 1)
+| Twigs appear on the side of the trunk.  Defaults to 0.
+
+|-
+| {{text anchor|TWIGS_ABOVE_TRUNK}}
+| 
+*boolean (0 or 1)
+| Twigs appear above the trunk.  Defaults to 0.
+
+|-
+| {{text anchor|TWIGS_BELOW_TRUNK}}
+| 
+*boolean (0 or 1)
+| Twigs appear below the trunk.  Defaults to 0.
+
+|-
+| {{text anchor|TREE_HAS_MUSHROOM_CAP}}
+| 
+| The tree has a rounded cap-hood like a giant mushroom. This severely stunts a tree's maximum height - see the [http://www.bay12games.com/dwarves/mantisbt/view.php?id=7313#c26413 bug report.] 
+
+|-
+| {{text anchor|CAP_NAME}}
+| 
+*name
+| What this mushroom-cap is called.  Only makes sense with TREE_HAS_MUSHROOM_CAP.
+
+|-
+| {{text anchor|CAP_PERIOD}}
+| 
+*integer
+| Similar to the other PERIOD tags, influences the rate of the mushroom cap growth.  Only makes sense with TREE_HAS_MUSHROOM_CAP.
+
+|-
+| {{text anchor|CAP_RADIUS}}
+| 
+*integer
+| The radius of a mushroom cap.  Only makes sense with TREE_HAS_MUSHROOM_CAP.
+
+|-
+| {{text anchor|STANDARD_TILE_NAMES}}
+| 
+| Uses the standard names for the tree components (roots, trunk, branches, etc.)
+
+|-
+| {{text anchor|TREE_TILE}}
+| 
+*tile
+| The tile used for trees of this type on the world map. Defaults to 24 (↑).
+
+|-
+| {{text anchor|DEAD_TREE_TILE}}
+| 
+*tile
+| The tile used for (un)dead trees and deciduous trees (generally in winter) of this type.  Defaults to 198 (╞).
+
+|-
+| {{text anchor|SAPLING_TILE}}
+| 
+*tile
+| The tile used for saplings of this tree. Defaults to 231 (τ).
+
+|-
+| {{text anchor|DEAD_SAPLING_TILE}}
+| 
+*tile
+| The tile used for dead saplings of this tree. Defaults to 231 (τ).
+
+|-
+| {{text anchor|TREE_COLOR}}
+| 
+*foreground
+*background
+*bright
+| The [[color]] of the tree on the map. Defaults to 2:0:0 (dark green).
+
+|-
+| {{text anchor|DEAD_TREE_COLOR}}
+| 
+*foreground
+*background
+*bright
+| The [[color]] of the tree on the map when (un)dead. Defaults to 0:0:1 (dark gray).
+
+|-
+| {{text anchor|SAPLING_COLOR}}
+| 
+*foreground
+*background
+*bright
+| The [[color]] of saplings of this tree. Defaults to 2:0:0 (dark green).
+
+|-
+| {{text anchor|DEAD_SAPLING_COLOR}}
+| 
+*foreground
+*background
+*bright
+| The [[color]] of dead saplings of this tree. Defaults to 0:0:1 (dark gray).
+
+|-
+| {{text anchor|SAPLING_DROWN_LEVEL}}
+| 
+*depth
+| The sapling of this tree will drown once the water on its tile reaches this level. Defaults to 4.
+
+|-
+| {{text anchor|TREE_DROWN_LEVEL}}
+| 
+*depth
+| The water depth at which this tree will drown. Exact behavior is unknown. Defaults to 7.
+
+|-
+| {{text anchor|SAPLING}}
+|  
+| Makes young versions of the tree be called "[tree name] sapling"; otherwise, they are called "young [tree name]".
+
+|}
+
+==Shrub tokens==
+These tokens are used for non-grass, non-tree plants.
+
+{| {{prettytable}}
+|- style='background-color:#ddd'
+! width="20%" | Token
+! width="20%" | Arguments
+! width="60%" | Description
+
+|-
+| {{text anchor|SPRING}}, {{text anchor|SUMMER}}, {{text anchor|AUTUMN}}, {{text anchor|WINTER}}
+|  
+| Allows the plant to grow in farm plots during the given season.
+
+If the plant is a surface plant, allows it to grow in the wild during this season; wild surface plants without this token will disappear at the beginning of the season. Underground plants grow wild in all seasons, regardless of their season tokens.
+
+|-
+| {{text anchor|GROWDUR}}
+| 
+*time
+| How long the plant takes to grow to harvest in a farm plot. Unit hundreds of ticks, See [[Time]]. There are 1008 GROWDUR units in a season. Defaults to 300.
+
+|-
+| {{text anchor|VALUE}}
+| 
+*value
+| Has no known effect. Previously set the value of the harvested plant.
+
+|-
+| {{text anchor|PICKED_TILE}}
+| 
+*tile
+| The tile used when the plant is harvested whole, or is ready to be picked from a farm plot. May either be a cp437 tile number, or a character between single quotes. See [[Main:character table|character table]]. Defaults to 231 (τ).
+
+|-
+| {{text anchor|DEAD_PICKED_TILE}}
+| 
+*tile
+| The tile used when a plant harvested whole has wilted. Defaults to 169 (⌐).
+
+|-
+| {{text anchor|SHRUB_TILE}}
+| 
+*tile
+| The tile used to represent this plant when it is wild, alive, and has no growths. Defaults to 34 (").
+
+|-
+| {{text anchor|DEAD_SHRUB_TILE}}
+| 
+*tile
+| The tile used to represent this plant when it is dead in the wild. Defaults to 34 (").
+
+|-
+| {{text anchor|CLUSTERSIZE}}
+| 
+*size
+| The maximum stack size collected when gathered via herbalism (but ''not'' farm plots). Defaults to 5.
+
+|-
+| {{text anchor|PICKED_COLOR}}
+| 
+*foreground
+*background
+*bright
+| The color of the plant when it has been picked whole, or when it is ready for harvest in a farm plot. Defaults to 2:0:0 (dark green).
+
+|-
+| {{text anchor|DEAD_PICKED_COLOR}}
+| 
+*foreground
+*background
+*bright
+| The [[color]] of the plant when it has been picked whole, but has wilted. Defaults to 0:0:1 (dark gray).
+
+|-
+| {{text anchor|SHRUB_COLOR}}
+| 
+*foreground
+*background
+*bright
+| The [[color]] of the plant when it is alive, wild, and has no growths. Defaults to 2:0:0 (dark green).
+
+|-
+| {{text anchor|DEAD_SHRUB_COLOR}}
+| 
+*foreground
+*background
+*bright
+|The [[color]] of the plant when it is dead in the wild. Defaults to 6:0:0 (brown).
+
+|-
+| {{text anchor|SHRUB_DROWN_LEVEL}}
+| 
+*depth
+| The shrub will drown once the water on its tile reaches this level. Defaults to 4.
+
+|-
+| {{text anchor|DRINK}}
+| 
+* [[Material token|material]]
+| Names a [[alcohol|drink]] made from the plant, allowing it to be used in entity resources.  Previously also permitted brewing the plant into [[alcohol]] made of this material.  Now, a MATERIAL_REACTION_PRODUCT of type DRINK_MAT should be used on the proper plant material.
+
+|-
+| {{text anchor|MILL}}
+| 
+* [[Material token|material]]
+| Permits milling the plant at a [[quern]] or [[millstone]] into a powder made of this material and allows its use in entity resources. Said material should have [POWDER_MISC_PLANT] to permit proper stockpiling.
+
+|-
+| {{text anchor|THREAD}}
+| 
+* [[Material token|material]]
+| Permits processing the plant at a [[farmer's workshop]] to yield threads made of this material and allows its use in entity resources. Said material should have [THREAD_PLANT] to permit proper stockpiling.
+
+|-
+| {{text anchor|SEED}}
+| 
+*name
+*name_plural
+*foreground
+*background
+*bright
+*[[Material token|material]]
+| Causes the plant to yield plantable seeds made of this material and having these properties. Said material should have [SEED_MAT] to permit proper stockpiling.
+
+|-
+| {{text anchor|EXTRACT_STILL_VIAL}}
+| 
+* [[Material token|material]]
+| Permits processing the plant into a [[vial]] at a [[still]] to yield extract made of this material. Said material should have [EXTRACT_STORAGE:FLASK].
+
+|-
+| {{text anchor|EXTRACT_VIAL}}
+| 
+*[[Material token|material]]
+| Permits processing the plant into a [[vial]] at a [[farmer's workshop]] to yield extract made of this material. Said material should have [EXTRACT_STORAGE:FLASK].
+
+|-
+| {{text anchor|EXTRACT_BARREL}}
+| 
+* [[Material token|material]]
+| Permits processing the plant into a [[barrel]] at a [[farmer's workshop]] to yield extract made of this material. Said material should have [EXTRACT_STORAGE:BARREL].
+
+|}
+
+==Grass tokens==
+These tokens are used only for [[grass]]es.
+
+{| {{prettytable}}
+|- style='background-color:#ddd'
+! width="20%" | Token
+! width="20%" | Arguments
+! width="60%" | Description
+
+|-
+| {{text anchor|GRASS}}
+| 
+| Makes the plant behave as a type of grass. This allows animals to graze on it, and prevents it and its growths from being picked by herbalists. (Grass growths can still be picked in adventure mode, however.)
+
+|-
+| {{text anchor|GRASS_TILES}}
+|
+*tile
+*tile
+*tile
+*tile
+| Specifies the 4 tiles used to represent grass of this type. If VARIED_GROUND_TILES is disabled in d_init.txt, these are seemingly ignored. Defaults to 46:44:96:39 (.,`').
+
+|-
+| {{text anchor|ALT_PERIOD}}
+|
+*period
+*offset
+| How often the grass switches between its main tiles and alternate tiles. The "period" value determines how quickly (in frames) the grass animates, and the "offset" value specifies how much of that time is spent displaying the alternate tiles.  If the "offset" value is greater than or equal to the "period" value, the grass will only display using the alternate tiles.{{verify}} Defaults to 0:0.
+
+|-
+| {{text anchor|ALT_GRASS_TILES}}
+|
+*tile
+*tile
+*tile
+*tile
+| When used with ALT_PERIOD, specifies the 4 alternate tiles used to represent grass of this type. Defaults to 46:44:96:39 (.,`'). Dead grass does not animate.
+
+|-
+| {{text anchor|GRASS_COLORS}}
+|
+*color 1 (fore:back:bright)
+*color 2 (fore:back:bright)
+*dry color (fore:back:bright)
+*dead color (fore:back:bright)
+| Specifies the color of this grass. Defaults to 2:0:1:2:0:0:6:0:1:6:0:0 (light green, dark green, yellow, brown).
+|}
+
+{{Category|Modding}}
+{{Category|Tokens}}
+[[ru:Plant token]]
