@@ -1,0 +1,51 @@
+For those who haven't noticed, the announcements previously located at the top of each page have been removed (around a month ago, in fact). This was due to a couple reasons:
+* Few people who read the wiki care about the announcements, since most of them apply to editors (with the exception of reporting vandalism).
+* The announcements change so rarely that people who do read them get tired of constantly seeing them everywhere ("'''Report vandalism at [[DF:AIV]]'''")
+* The announcements took up a lot of space - even though they were supposed to auto-hide, sometimes it could take a while before the script to hide them loaded.
+However, it's still nice to have announcements ''somewhere'' so people know what's going on around the wiki. My suggestion is that they go on [[Special:RecentChanges]], which is essentially the equivalent of Wikipedia's watchlist (there is little enough activity that hardly anyone needs to check their watchlist on this wiki).
+
+The announcements are currently located [[DF:Announcements|here]], and I recently added a link to them on the sidebar.
+
+A couple proposals (they aren't all mutually exclusive - more than one location for announcements would be fine):
+* Link to the announcements from the sidebar, and have a "new" indicator appear when there are new announcements (similar to how the old announcements box wouldn't auto-hide after being updated until you clicked "hide" again).
+* Include announcements at the top of [[Special:RecentChanges]], which most editors check regularly.
+** Optional: Don't link to announcements in the sidebar, but include the "new" indicator next to the recent changes link instead.
+* Allow users to choose where the announcements indicator should go in their preferences (which would be complicated, but could work).
+** Optional: Also allow users to choose where the ''announcements'' should appear. This would be prone to slow loading times, which means that, for a few seconds while the page is loading, the announcements could appear in undesired locations or not show up where they should.
+** Note that this only applies to logged-in users, so there would still need to be a default location for announcements.
+
+Also, another question is the placement of active discussions ([[DF:Centralized Discussion]]). Most recent discussions there have been small and didn't attract much attention. I already set up the announcements to include a list of active discussions (the [[DF:ANNC|second box]]). Any thoughts on this?
+
+(The main reason I added the sidebar link was to draw attention to this discussion. I can certainly change things if people strongly object to the way it's set up currently.)
+
+&mdash;[[User:Lethosor|<span style="color:#074">Lethosor</span>]] ([[User talk:Lethosor|<span style="color:#092">talk</span>]]) 16:46, 20 February 2014 (UTC)
+: I like the announcements side bar option, personally, but I'm not sure overall where we should head with this. --[[User:Briess|Briess]] ([[User talk:Briess|talk]]) 04:09, 21 February 2014 (UTC)
+::Do you mean things like centralized discussion? It just occurred to me that we could use a separate sidebar indicator for new announcements and new discussions (which I would like better than having everything in the same place) &mdash;[[User:Lethosor|<span style="color:#074">Lethosor</span>]] ([[User talk:Lethosor|<span style="color:#092">talk</span>]]) 04:37, 21 February 2014 (UTC)
+:::I've barely edited since 2011, but for whatever it's worth, I think sidebar + red NEW box is an excellent idea.  I used to check RecentChanges, but it's so full of spammers it's hardly worth it. [[User:Bognor|Bognor]] ([[User talk:Bognor|talk]]) 12:19, 22 February 2014 (UTC)
+:::: +1 [[user:Emi|<span style="color:#8a4e4e">Emi</span>]] [[user_talk:Emi|<span style="color:#6a3e4e">[T]</span>]] 05:33, 24 February 2014 (UTC)
+
+----
+Since people seem to like the sidebar indicator, here's a way I'm considering implementing it:
+* Announcements would be stored in a Mediawiki page somewhere, e.g. [[Mediawiki:Announcements]], which would be loaded by client-side Javascript (this would require integration with Mediawiki - I'm debating whether to make a separate extension or include it in the rating script, but that doesn't really make a difference). The page would be formatted like this (samples from [[DF:Announcements]]):
+<pre>
+<!-- aiv:1 -->*'''Please report vandalism at [[DF:AIV]]'''
+<!-- centralized:1 -->*View [[DF:Centralized Discussion|Centralized discussion]] - A place to find any wiki-related discussion and get involved.
+<!-- pagerequest:1 -->*Need a page made? [[DF:PR|Make a page request]]!
+<!-- rater:1 -->*A new rating script is available to {{tooltip|autoconfirmed users|Logged-in users with at least 3 edits}} &mdash; click the "rate" tab above for more information.
+</pre>
+The comments would be used to specify an announcement's ID and version, which would be used to display appropriate "new" or "updated" flags in the sidebar and for each announcement when viewed.
+
+The reason I'm suggesting a Mediawiki page is that they're easy to load with Javascript - centralized discussion can be transcluded to allow non-admins to add discussions (although there may need to be restrictions to prevent vandalism, like only allowing autoconfirmed users).
+
+One potential issue here is how to deal with anonymous users. Suddenly displaying a "{{tc|red|NEW}}" indicator to everyone viewing the wiki when this is enabled could be confusing (although the lack of confused "omg is there a new DF release?" posts resulting from the current sidebar link implies that few casual readers check the sidebar). These are a few ways we could handle anons:
+* Treat them the same way as logged-in users: they get sidebar notifications until they check the relevant page. (This would be on a per-browser basis, so changing IP's shouldn't affect it.)
+* Allow anons to choose whether or not to receive announcements (probably by setting a separate cookie). The problem with this method is that some people will be confused if it's implemented on an opt-out basis, and others won't know about announcements if it's implemented on an opt-in basis.
+** An extension of this idea: automatically enable notifications when the anon edits a page, since the announcements mostly apply to editors.
+* Don't display any notifications for anonymous users whatsoever.
+(I'm assuming most people who bother to register an account on this wiki care about what's happening on it, so logged-in users would always get notifications. If there are people that object, I can find a way to hide them.)
+
+Thoughts? &mdash;[[User:Lethosor|<span style="color:#074">Lethosor</span>]] ([[User talk:Lethosor|<span style="color:#092">talk</span>]]) 01:54, 28 February 2014 (UTC)
+
+It turns out that transclusions don't occur when accessing the raw content of a page, and parsing removes all comments. I'll see if I can find a workaround to allow transcluding part of the announcements list. Otherwise, we could try to come up with an appropriate protection level that isn't too restrictive or prone to vandalism. &mdash;[[User:Lethosor|<span style="color:#074">Lethosor</span>]] ([[User talk:Lethosor|<span style="color:#092">talk</span>]]) 01:57, 28 February 2014 (UTC)
+
+...and it just occurred to me that HTML attributes (e.g. <nowiki><li data-annc="aiv:1">'''Please report vandalism at [[DF:AIV]]'''</li></nowiki>) would work. It's a little less simple than using the "*" notation for lists, but it works. &mdash;[[User:Lethosor|<span style="color:#074">Lethosor</span>]] ([[User talk:Lethosor|<span style="color:#092">talk</span>]]) 02:11, 28 February 2014 (UTC)

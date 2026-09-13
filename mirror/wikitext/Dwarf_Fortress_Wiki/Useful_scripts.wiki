@@ -1,0 +1,14 @@
+== Hide Site Announcements ==
+You can autohide the announcements automatically by including<pre>importScript('User:Briess/hideAnnouncements.js');</pre>
+in your [[Special:MyPage/common.js|common.js]] page.
+
+Note that it needs to read User:Briess/, and not whatever your username is.
+
+== Live UTC Clock ==
+To add a live clock in the upper right corner (near 'log out') add <pre>importScript('User:Emi/clock.js');</pre>to your [[Special:MyPage/common.js|common.js]] page.
+
+== New Page Patrol ==
+This script will add a box just above the search bar, that when enabled, will show a live feed of new pages, and whether or not they've been patrolled. To use, please add <pre>importScript('User:Emi/newpages.js');</pre>to your [[Special:MyPage/common.js|common.js]] page.
+
+== Colored Contributions ==
+This script will color code user contribution pages to make it easier to see whether they have the top edit, or not. To use, please add <pre>importScript('User:Emi/colorcontrib.js');</pre>to your [[Special:MyPage/common.js|common.js]] page.

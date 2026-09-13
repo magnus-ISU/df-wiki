@@ -1,0 +1,46 @@
+__TOC__
+== Local Mediawiki instance ==
+
+Ok so im mostly just dumping my process here in the hopes that it gets picked up and cleaned/formatted to fit the rest of the wiki
+
+The basic idea is that you aim a script at a mediawiki and have it create a dump of the XML and images in a format thats compatible with the standard MediaWiki import utilities. Once its dumped to file, you import it into a local MediaWiki instance that can be started on-demand.
+
+
+=== Step 1: Get a Mediawiki dump ===
+
+I did this by using the scripts provided by [https://github.com/WikiTeam/wikiteam wikiteam]. 
+In my case, my command is as follows:
+
+<code>python dumpgenerator.py --api http://dwarffortresswiki.org/api.php --index http://dwarffortresswiki.org/index.php --xml --images --curonly --path dfwiki </code>
+
+The arguments are mostly self-explanatory, and there are many, many more. The most useful of which is the <code>--resume</code> option, that will let you restart a stalled/killed/stopped dump operation
+
+This process may take very, very long. While the <code>--curonly</code> flag will make it skip histories, the default namespace options mean it will still download ALL pages, including file definitions and talk pages. To avoid this, you can apply the <code>--exnamespaces</code> flag, together with a comma-seperated list of namespaces to skip. To get a list of current namespaces on the Wiki, check the [[Special:RandomByNamespace]] page, and tick the box at the top to display the namespace numbers
+
+=== Step 2: Get a Mediawiki install going. ===
+
+I used a very simple XAMPP + mediawiki stack provided by [https://bitnami.com/stack/mediawiki/installer Bitnami]
+
+=== Step 3: Import your pages ===
+
+I used the maintenance scripts. The special page might work, but i had issues getting the file uploaded due to its size. Best is to use the [https://www.mediawiki.org/wiki/Manual:Importing_XML_dumps importDump.php] script, but even that took its time.
+
+If you used the XAMPP stack, the script you want will be located at <code><i><XAMPP base></I>/apps/mediawiki/htdocs/maintenance/importDump.php</code>
+
+In my case, where XAMPP is run from its default <code>/opt/lampp</code> location, the import command looks like this:
+
+<code>/opt/lampp/bin/php /opt/lampp/apps/mediawiki/htdocs/maintenance/importDump.php --conf /opt/lampp/apps/mediawiki/htdocs/LocalSettings.php < <i><path to your export file></i>/dwarffortresswikiorg-<i>date</i>-current.xml</code>
+
+=== Step 4: Import your images ===
+
+I used the [http://www.mediawiki.org/wiki/Manual:ImportImages.php MediaWiki importImages.php] maintenance script.
+
+If you used the XAMPP stack, the script you want will be located at <code><i><XAMPP base></i>/apps/mediawiki/htdocs/maintenance/importImages.php</code>
+In my case, where XAMPP is run from its default <code>/opt/lampp</code> location, the import command looks like this:
+
+<code>/opt/lampp/bin/php /opt/lampp/apps/mediawiki/htdocs/maintenance/importImages.php <i><path to your export dir></i>/images/</code>
+
+----
+
+
+Once you have your files imported, you should be able to navigate to <code>http://127.0.0.1/mediawiki/</code> to get going. Note that the export/import process will not retain things like the index.php page fancyness and will not apply the wonderful plugins that make the current wiki pretty, but you will get the full teext, linking and searching in your local copy.

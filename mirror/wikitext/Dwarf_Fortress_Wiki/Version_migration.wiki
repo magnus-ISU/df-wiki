@@ -1,0 +1,19 @@
+{{Template:Migration progress}}
+
+[[:Category:Migrated pages with sections needing review|List of partially migrated articles]]
+
+[[:Category:Migrated pages needing review|List of articles needing review]]
+
+= Basic instructions =
+* Check an article to see if it is accurate
+** If it is, remove the {{tl|migrated article}} template
+** If not, update it!
+*** Use [[:Category:citation templates|citation templates]] to help keep track of sources, if possible
+*** If an article is too long to update in one edit, use {{tl|migrated section}} to mark sections needing review.
+* For the v50 migration, things to keep in mind:
+** Keybinds have changed, so replace the old keybind template ({{k|i}} via <code><nowiki>{{k|i}}</nowiki></code>) with the new one ({{Menu icon|z}} {{Adv menu icon|z}} via <code><nowiki>{{Menu icon|z}}</nowiki></code>/<code><nowiki>{{Adv menu icon|z}}</nowiki></code>) if possible.
+** Some skills have changed: [[Building designer]] is gone, and [[Doctor]] skills/occupations work differently now. Mentions of them may need removal or verification.
+** Some features have been removed. Up-to-date articles shouldn't generally link to anything in [[:Category:Obsolete features]].
+** There's generally no need to mention "as of v50" or "unlike in v0.47". That's implied by the article's version.
+** There's no need to necessarily delete images of the old interface; however, pages should have new versions of any interface images before being marked as up-to-date. When adding an image of the new interface, the {{tl|Dual image}} template can be used to allow switching between old and new.
+* For a list of tagged articles, see [[:Category:Migrated pages needing review]] and [[:Category:Migrated pages with sections needing review]]

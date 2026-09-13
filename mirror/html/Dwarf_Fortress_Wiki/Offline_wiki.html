@@ -1,0 +1,32 @@
+<div class="mw-parser-output">
+<h2><span class="mw-headline" id="Local_Mediawiki_instance">Local Mediawiki instance</span></h2>
+<p>Ok so im mostly just dumping my process here in the hopes that it gets picked up and cleaned/formatted to fit the rest of the wiki
+</p><p>The basic idea is that you aim a script at a mediawiki and have it create a dump of the XML and images in a format thats compatible with the standard MediaWiki import utilities. Once its dumped to file, you import it into a local MediaWiki instance that can be started on-demand.
+</p><p><br />
+</p>
+<h3><span class="mw-headline" id="Step_1:_Get_a_Mediawiki_dump">Step 1: Get a Mediawiki dump</span></h3>
+<p>I did this by using the scripts provided by <a rel="nofollow" class="external text" href="https://github.com/WikiTeam/wikiteam">wikiteam</a>. 
+In my case, my command is as follows:
+</p><p><code>python dumpgenerator.py --api <a rel="nofollow" class="external free" href="http://dwarffortresswiki.org/api.php">http://dwarffortresswiki.org/api.php</a> --index <a rel="nofollow" class="external free" href="http://dwarffortresswiki.org/index.php">http://dwarffortresswiki.org/index.php</a> --xml --images --curonly --path dfwiki </code>
+</p><p>The arguments are mostly self-explanatory, and there are many, many more. The most useful of which is the <code>--resume</code> option, that will let you restart a stalled/killed/stopped dump operation
+</p><p>This process may take very, very long. While the <code>--curonly</code> flag will make it skip histories, the default namespace options mean it will still download ALL pages, including file definitions and talk pages. To avoid this, you can apply the <code>--exnamespaces</code> flag, together with a comma-seperated list of namespaces to skip. To get a list of current namespaces on the Wiki, check the <a href="/index.php/Special:RandomByNamespace" title="Special:RandomByNamespace">Special:RandomByNamespace</a> page, and tick the box at the top to display the namespace numbers
+</p>
+<h3><span class="mw-headline" id="Step_2:_Get_a_Mediawiki_install_going.">Step 2: Get a Mediawiki install going.</span></h3>
+<p>I used a very simple XAMPP + mediawiki stack provided by <a rel="nofollow" class="external text" href="https://bitnami.com/stack/mediawiki/installer">Bitnami</a>
+</p>
+<h3><span class="mw-headline" id="Step_3:_Import_your_pages">Step 3: Import your pages</span></h3>
+<p>I used the maintenance scripts. The special page might work, but i had issues getting the file uploaded due to its size. Best is to use the <a class="external text" href="https://www.mediawiki.org/wiki/Manual:Importing_XML_dumps">importDump.php</a> script, but even that took its time.
+</p><p>If you used the XAMPP stack, the script you want will be located at <code><i>&lt;XAMPP base&gt;</i>/apps/mediawiki/htdocs/maintenance/importDump.php</code>
+</p><p>In my case, where XAMPP is run from its default <code>/opt/lampp</code> location, the import command looks like this:
+</p><p><code>/opt/lampp/bin/php /opt/lampp/apps/mediawiki/htdocs/maintenance/importDump.php --conf /opt/lampp/apps/mediawiki/htdocs/LocalSettings.php &lt; <i>&lt;path to your export file&gt;</i>/dwarffortresswikiorg-<i>date</i>-current.xml</code>
+</p>
+<h3><span class="mw-headline" id="Step_4:_Import_your_images">Step 4: Import your images</span></h3>
+<p>I used the <a class="external text" href="http://www.mediawiki.org/wiki/Manual:ImportImages.php">MediaWiki importImages.php</a> maintenance script.
+</p><p>If you used the XAMPP stack, the script you want will be located at <code><i>&lt;XAMPP base&gt;</i>/apps/mediawiki/htdocs/maintenance/importImages.php</code>
+In my case, where XAMPP is run from its default <code>/opt/lampp</code> location, the import command looks like this:
+</p><p><code>/opt/lampp/bin/php /opt/lampp/apps/mediawiki/htdocs/maintenance/importImages.php <i>&lt;path to your export dir&gt;</i>/images/</code>
+</p>
+<hr />
+<p><br />
+Once you have your files imported, you should be able to navigate to <code><a rel="nofollow" class="external free" href="http://127.0.0.1/mediawiki/">http://127.0.0.1/mediawiki/</a></code> to get going. Note that the export/import process will not retain things like the index.php page fancyness and will not apply the wonderful plugins that make the current wiki pretty, but you will get the full teext, linking and searching in your local copy.
+</p></div>

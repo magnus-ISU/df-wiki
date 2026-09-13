@@ -1,0 +1,46 @@
+This wiki has a new extension: [https://github.com/lethosor/DFDiagram DFDiagram]!
+
+This is an expanded (and possibly more efficient) replacement for {{tl|diagram}}. Features include:
+* An unlimited number of diagrams per page ({{tl|diagram}} depends on RegexFunctions, so it is limited by the Regex functions limit)
+* Basic tileset support (transparency and creature graphics don't work, but all of the non-transparent tilesets in the [[tileset repository]] should work)
+* Z-levels
+* A variety of new syntax features:
+** Variables
+** Special characters
+** DF-style colors (e.g. 7:0 for light grey)
+
+There are a couple differences between this and {{tl|diagram}}:
+* Colors persist until explicitly changed (use [#] to reset the foreground color):
+{| class="wikitable"
+|-
+! Code !! {{tl|diagram}} !! &lt;diagram>
+|-
+| [#f00]red text
+| {{diagram|[#f00]red text}}
+| <diagram>[#f00]red text</diagram>
+|}
+
+See the [https://github.com/lethosor/DFDiagram/wiki wiki] for more in-depth help.
+
+An example:
+<diagram>
+<frame type="level" level="0">
+[#2:0][@ffffd0]This is a sample diagram[#@]
+This diagram has multiple z-levels! Press
+< to go up one z-level.
+</frame>
+<frame type=level level=1>
+[$cat=c]
+This is z-level 1.
+Here is a dwarf: [%01]
+Here are a lot of dwarves: [%01][%01][%01][%01][%02][%01][%01][%01][%02][%01][%01][%02][%02][%01][%01]
+Here is a cat: [#0:1][$cat][#]
+Here is a green cat: [#2:1][$cat][#]
+Press < to go up one more z-level.
+</frame>
+<frame type=level level=2>
+This is z-level 2.
+Notice how the diagram size changes depending on the content of each z-level.
+</frame>
+</diagram>
+&mdash;[[User:Lethosor|<span style="color:#074">Lethosor</span>]] ([[User talk:Lethosor|<span style="color:#092">talk</span>]]) 19:43, 27 April 2014 (UTC)

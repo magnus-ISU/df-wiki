@@ -1,0 +1,21 @@
+= Food page 404s = 
+* Does not work: https://dwarffortresswiki.org/index.php/Food  
+* This works: https://www.dwarffortresswiki.org/index.php/Food  
+* This works: https://dwarffortresswiki.org/index.php?title=Food  
+* This works: https://dwarffortresswiki.org/index.php/Hunger  
+
+Clicking on the first Food link 404s, but clicking on Hunger redirects to Food without a 404 (with the URL that will 404 if Back/Forward navigate to it!).  
+
+[[Special:Contributions/99.159.84.92|99.159.84.92]]
+
+= Confirmation/Notification Mails =
+When I created my account May 10, 2015, I got the error:
+<pre>Dwarf Fortress Wiki could not send your confirmation mail. Please check your e-mail address for invalid characters.
+Mailer returned: Unknown error in PHP's mail() function.</pre>
+<small>&ndash; [[template:unsigned|unsigned]] comment by [[User:Ejtttje|Ejtttje]]</small>
+
+:There are some known issues with the email features on the wiki at the moment. [[User:Briess|Briess]] is looking into it, but contact either of us if you need something that would ordinarily require working email features (e.g. a password reset). &mdash;[[User:Lethosor|<span style="color:#074">Lethosor</span>]] ([[User talk:Lethosor|<span style="color:#092">talk</span>]]) 20:39, 10 May 2015 (UTC)
+
+:This is still a problem as of today. [[User:Chikinn|Chikinn]] ([[User talk:Chikinn|talk]]) 21:29, 18 November 2015 (UTC)
+:: I am still getting this issue today (just signed up and tried to verify my email) [[User:Bradlee|Bradlee]] ([[User talk:Bradlee|talk]]) 16:46, 1 February 2018 (UTC)
+::: Also reCaptcha plugin says the version this wiki is using is no longer supported (presented w/ captcha when editing this page) [[User:Bradlee|Bradlee]] ([[User talk:Bradlee|talk]]) 16:47, 1 February 2018 (UTC)

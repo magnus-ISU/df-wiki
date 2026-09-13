@@ -1,0 +1,135 @@
+{{shortcut|DF:CP}}
+
+:''See the [[Help]] page for technical information. See the [[Frequently Asked Questions#Using DF Wiki (Editing_policies)|Wiki Introduction and Editing FAQ]] for an introduction to editing this wiki.''
+
+This page is for organizing the war effort against entropy.__NOTOC__ Also, please check out the [[Dwarf_Fortress_Wiki:Improvement_Drive|Dwarf Fortress Wiki Improvement Drive]]!
+
+{| id="toc"
+|
+* [[#We are doing this! Let us do it right.|We are doing this! Let us do it right.]]
+** [[#A|A]] [[#B|B]] [[#C|C]] [[#D|D]] [[#E|E]] [[#F|F]] [[#G|G]] [[#H|H]] [[#I|I]] [[#J|J]] [[#K|K]] [[#L|L]] [[#M|M]]
+** [[#N|N]] [[#O|O]] [[#P|P]] [[#Q|Q]] [[#R|R]] [[#S|S]] [[#T|T]] [[#U|U]] [[#V|V]] [[#W|W]] [[#X|X]] [[#Y|Y]] [[#Z|Z]]
+** [[#More rules|More]]
+* [[#Notice Templates|Notice Templates]]
+|}
+
+== We are doing this! Let us do it right. ==
+
+=====A=====
+* '''A'''lphabet: Okay, the first rule is that there must be a rule for each letter of the alphabet. Thanks to the community, we now have all twenty-six rules (plus [[#More rules|a few more]])! (Inspired by [[User:Peristarkawan|Peristarkawan]]'s [[wikipedia:nomic|nomic]] instincts)
+
+=====B=====
+* '''B'''e bold! So says Wikipedia. If you see a mistake, be it a fact or a typo, change it. Don't leave it to someone else to clean up mistakes. Feel free to make changes. If you think an article needs a major rewrite, and you think you can do it, go ahead and do it! You can also use the discussion (talk) page to post suggestions.
+* For help getting started, see the [[Frequently Asked Questions#Using DF Wiki (Editing_policies)|Wiki Introduction and Editing FAQ]].
+
+=====C=====
+* '''C'''ategories: When editing a page, stop to think about what categories it should be included in, and add them if necessary. Don't forget to consider categories that don't yet exist. Capitalize the tag like <tt><nowiki>[[Category:Stub]]</nowiki></tt>. (However, if the page and category are version-specific, you should use <tt><nowiki>{{Category|CategoryName}}</nowiki></tt> instead).
+* See also [[Help:Categories|Categories Help]] and [[Special:AllPages/Category:|List of All Existing Categories]]
+
+=====D=====
+* '''D'''iscussion: Use the discussion page to voice suggestions and to ask questions. Try to limit inline comments. Before editing, check the discussion page to see if there are any changes being planned. The [[DF:CD|centralized discussion]] page is being used to announce such discussions to the general population, so as to make them findable for those who do not religiously keep up with Recent Changes. Please add your own discussions to it. 
+* See [[Help:Talk pages]] and [[wikipedia:WP:TPG|Wikipedia:Talk page guidelines]] for talk page conventions and a more in-depth explanation.
+
+=====E=====
+* '''E'''liminate fluff. This includes redirects that aren't linked to and wouldn't be typed in the search box. The {{[[Template:deletion|deletion]]}} or {{[[Template:deletion|del]]}} template is your friend. (See also the [[Dwarf Fortress Wiki:Deletion Policy|Deletion Policy]].)
+
+=====F=====
+* '''F'''acts: Keep your information factual. If you haven't confirmed something, post it on the discussion page. Don't create linkless one-liner pages. Add as much pertinent information as you can and avoid conjecture (possibly, maybe, could be, likely) by providing concrete examples from the game or links to other parts of the wiki.<!-- redundant with V? --><!-- aye, tis semi-redundant: they need to be merged. Personally, I like facts better than verify -->
+
+=====G=====
+* '''G'''ameterms: To avoid confusion, use the terms the game uses whenever possible. For example, the game refers to "armor" and "aluminum" rather than "armour" or "aluminium", and the plural forms of "dwarf" and "bronze colossus" should be "dwarves" and "bronze colossuses" rather than "dwarfs" or "bronze colossi".
+
+=====H=====
+* '''H'''eadings: Organize the content of each page into sections of related information. After the introduction, use appropriate headings for each section, and follow the '''N'''aming style of this guide. Keep headings to a minimum; consider a list or a table if you have many repetitive facts.
+
+=====I=====
+* '''I'''mages: Images and [[screenshot]]s should clearly depict the subject. Small diagrams can be constructed with &lt;[[DF:Diagram|diagram]]> or {{tl|RT}}, for easy editing, and to save on space. When uploading images, give them a name that is descriptive and unlikely to be duplicated. Names like "1", "screenshot", and "untitled" should be avoided. PNG images are preferred over JPEG where possible, as they don't lose visual quality during compression (and tend to be smaller anyways).
+
+=====J=====
+* '''J'''ealousy: Don't be shocked if someone rewrites or removes your article; your hard work is not lost. Post suggestions on the discussion page and talk about the issue. All versions are stored in the history, so your material can be reused or merged with existing content if the rewriter left something out.
+
+=====K=====
+* '''K'''eys: The original version of the game uses 100% keyboard input, so we have a template to improve the display of keys: {{tl|k}} (abbreviation of {{tl|key}}). For example, the syntax <code><nowiki>{{k|q}}</nowiki></code> will generate {{k|q}}, a standardized and visually pleasing representation of the "q" key. The enter key should be done as <code><nowiki>{{k|Enter}}</nowiki></code> ({{k|Enter}}), for example, and the arrow keys use arrow characters, found in the second row of [[CP437|this handy code page]]. The right arrow key, for example, appears as {{k|→}}. {{tl|k-}} can be used for sequences of keys - for example, <code><nowiki>{{k-|a|b}}</nowiki></code> produces {{k-|a|b}}.
+
+=====L=====
+* '''L'''osing is [[fun]]! <!-- If something made you lose, include information about it. Others may want to try it out, or you may help someone avoid flooding their ☼fortress☼. -->
+<!-- personally, I think that this will encourage people to add more pointless than useful --Savok -->
+=====M=====
+* '''M'''ore people should use the [[raw file]]s (found in ``data/vanilla/`` in the current version, ``raw/objects/`` in versions [[DF2014:Release_information/0.47.05|0.47.05]] and [[Version history|earlier]], or mirrored [[:Category:Raws|on this wiki]] [https://github.com/DF-Wiki/DFRawFunctions/tree/master/raws]) to get information about creatures and objects. They have loads of good information that the game actually uses.
+
+=====N=====
+* '''N'''aming: The titles of new pages should be <u>singular</u> nouns, with <u>only the first word capitalized</u>. Example: [[Screw pump]], [[Metalsmith's forge]], [[Gear assembly]]. Exceptions are proper nouns and terms that are always plural. Getting the wrong name can mean extra redirects and always means a page move. Screw pump is not the same as Screw Pump. Exceptions may be made in cases where two very different things would otherwise have the same page name, such as [[bar]] versus [[bars]]. Do not put question marks in the names of articles: due to the way they are handled in URLs it messes things up, though not irreversibly.
+
+=====O=====
+* '''O'''riginal research is good! Forget what you've seen on That Other Wiki; personal experience is perfectly fine here. Without original research, this wiki would be a tiny fraction of its current self &ndash; so if you see something that seems wrong, needs verification, or just lacks information, load up the current edition and check for yourself (but please, say you've done so on the talk page).
+
+=====P=====
+* '''P'''review: Use the preview button to check for typos. Avoid cluttering the history of a page with multiple edits. Mark small changes as 'minor' so they can be (optionally) hidden from the recent changes page.
+
+=====Q=====
+* '''Q'''ueue: Check the special pages for work still to be done! There are lists of [[Special:Deadendpages|dead end pages]], [[Special:Uncategorizedcategories|uncategorized categories]], [[Special:BrokenRedirects|broken redirects]], and [[Special:Specialpages|others]] that all need work occasionally. Or try looking up pages by [[Dwarf_Fortress_Wiki:Quality|quality]] and trying to improve lower-quality ones to a higher quality level.
+* If you feel more like writing content than maintaining the wiki, the list of [[:Category:Stubs|stub pages]] is a good place for you to start, followed by the [[Special:ShortPages|short pages]] that exist.
+* If you feel like doing research about how the game works, have a look at [[#V|Rule V]].
+
+=====R=====
+* '''R'''edundancy: Before creating a new page, do a search to find out if the topic is already discussed in detail somewhere else. If you find that redundant pages already exist, merge their content and have one redirect to the other. This rule also refers to redundant material inside pages.
+
+=====S=====
+* '''S'''tyle: In general, try to follow the [http://en.wikipedia.org/wiki/Wikipedia:Manual_of_Style Wikipedia Manual of Style] when writing articles. For example, introduce keyword articles by highlighting the first keyword in bold, such as '''Rules'''.
+* Also see [[DF:Manual of Style]] for information specific to this wiki.
+
+=====T=====
+* '''T'''imelessness: The wiki is intended as a guide for all players, even new ones. As such, references to differences from or similarities to old major versions of DF should be moved to the appropriate version page. Avoid phrases like "now marble can be used to make steel" or "before, farms required two floodgates", etc. Specific references to minor versions in the same namespace are acceptable - for example, "minecarts were added in v0.34.08", or "creatures do not breed by spores as of v0.40.19". For facts that are likely to change in the future, or placeholder features, use the {{tl|Version}} template, and for bugs that have yet to be fixed, use the {{tl|Bug}} template.
+* Note that this only applies to describing ''old'' versions - if you are adding content to an article which is specifically for an older major release, it may be acceptable to describe how it differs from ''newer'' versions, since players might otherwise assume that certain features have always worked the way they currently do.
+
+=====U=====
+* '''U'''ser pages: Introduce yourself, let the community know who you are. If you have a comment on someone's actions on the wiki, praise or otherwise, post it on their talk page, and they'll get notified next time they log in. Avoid editing other users' user pages unless it's absolutely necessary (for example, removing a user page from an inappropriate category). Keep this place civilized; avoid flame wars, personal attacks and insults.
+
+=====V=====
+* '''V'''erify: Many loosely based assumptions are floating around. Verify your information and check [[:Category:Articles needing further verification]] if you think you can help verify others. If you have something that is not verified, use the <code><nowiki>{{verify}}</nowiki></code> tag right after it.
+
+=====W=====
+*'''W'''it can be hard to recognise once it has been written down. It is best if it is used on clearly humour/story-related pages, talk pages, or user pages, but kept to a minimum in fact-based articles like [[Dwarf]] or [[Summer]]. Use an appropriate template such as {{tl|D for Dwarf}} if there might be confusion.
+
+=====X=====
+* '''X'''eniality: Be nice to people who are new to ''Dwarf Fortress''.
+
+=====Y=====
+* '''Y'''e Olde Info: It's outdated - update it. Keep the wiki up to date. Remember, sieges were only buggy in a few old versions! Also make sure you're looking at the correct version of a page, especially when editing - if you're playing the latest released version, the information present in the "v0.34", "v0.31", "40d", or "23a" pages is likely to be outdated and incorrect for you, but people playing those old versions will want information that is accurate for them.
+
+=====Z=====
+* '''Z''': the mark of '''Z'''orro. Sign each of your 'Talk' entries with your own --<nowiki>~~~~</nowiki>.
+
+==== More rules ====
+* '''[[DF:REDIR|Redirects]]:''' Redirects should almost always be created in a versioned namespace (e.g. {{DF:Current}}). For example, instead of creating a redirect from [[Kitten]] to [[Cat]], create a redirect from [[{{DF:Current}}:Kitten]] to [[{{DF:Current}}:Cat]]. Doing this makes links to [[Kitten]] work from both {{DF:Current}} pages and pages in the main namespace. Redirects should almost never be created in the main namespace. See [[DF:REDIR]] for more information.
+* '''[[DF:MOS|Spelling]]:''' American and British spellings are both acceptable, unless they violate [[#G|Rule G]].
+
+== Notice Templates ==
+
+There are templates available for marking pages needing improvement. Ideally, you should make appropriate changes and move on, but if you are unable to access the required information, post a notice to flag an issue up. Using template notices provides a consistent way of flagging a page. Notices in use can be tracked through category pages. Notices based on rules from this page should all use the [[:Category:Pages that break Community Portal rules]] category.
+
+This section is far from complete.
+
+=== Template for Notice Templates ===
+
+{{Colored Notice Box|#0000FF|Contents of the message.
+Second value is sidebar colour in HTML hex, RR GG BB, e.g. #FF0000 (red), #009900 (dark green), #0088FF, (light blue), #000000 (black)}}
+<nowiki>{{Colored Notice Box|#FF00FF|Contents of the message}}</nowiki>
+
+'''UPDATED 2026-7-31:''' The sidebar colour is no longer controllable.
+
+=== Image Rules Notice ===
+
+{{Image Rules Notice|cat=no}}
+{{tl|Image Rules Notice}}
+
+=== Timelessness Notice ===
+
+{{Timelessness Notice|cat=no}}
+{{tl|Timelessness Notice}}
+
+=== New Notices ===
+
+If several pages arise that break the same rule, create a new template based off one of the above templates. Remember to include the [[:Category:Pages that break Community Portal rules]] tag at the bottom, or some other appropriate category so that other users can track pages that need reworking. To create a new template, type <nowiki>[[Template:Rule name notice]]</nowiki> into an article, or directly into the address bar of your browser.
+
+[[category:wikiprojects]]

@@ -1,0 +1,54 @@
+{{shortcut|DF:V|DF:VER}}
+[[category:Wikiprojects]]
+These are the methods we use to organize versions on the wiki. Please bring any questions to the [[Dwarf Fortress Wiki Talk:Versions|talk page]]. 
+
+== Goal ==
+
+The goal of this effort is to effectively mark articles according to the version they are about.  Ultimately there are two goals:
+
+*Allow users to know what major version (23a, 40d, etc...) an article pertains to. 
+*Allow editors to easily find topics for which a current version article is not complete.
+
+'''This is not intended to''':
+*Remove all information about older versions. These articles have been moved to appropriate namespaces (ex. 40d:, 23a:), and the {{tl|ArticleVersion}} template (which should be added to every version specific page) links between the various versions, noting clearly (through color and message) whether it is the current version.
+
+== Approach ==
+
+=== Per topic ===
+Each feature or idea that has an article will feature the "up to date" version and "old" versions: (note, if an article is version independent these points do not apply)
+
+*The mainspace article will contain content for the latest DF version ({{DF:Current}}).
+*There are namespaces for major historical versions: "DF2014", "v0.34", "v0.31", "40d", and "23a".
+*The cv: alias will redirect to the current version, ie. "{{DF:Current}}".
+
+=== Version articles ===
+There is a template that should be placed on all version-specific pages. It looks like this (though it looks different on actual articles):
+{{av}}
+
+An example of this template on a real page can be seen at "milk": [[{{DF:Current}}:Milk]], [[v0.31:Milk]], [[40d:Milk]], [[23a:Milk]].
+
+This template is added by placing {{tl|av}} (or {{tl|ArticleVersion}}) at the top of an article.
+
+The template will check the namespace of the article and use that to determine if the article pertains to the current version or not.
+
+It will also place an article into a category based on whether or not it pertains to the current version.
+
+One version will be considered "current", and articles in that namespace with the version template will be placed into a category marking it as such, all other articles will be put into a category marking them as Obsolete, and also placing them into a category based off of their version (from the article namespace).
+
+With very little effort (read the [[template:av|documentation]]) every page's version template can be automatically updated when a new version arrives. This process automatically changes what namespace shows up as current on each page and what categories pages are put into. This makes it wonderfully easy the next time a new version comes around.
+
+=== Redirects ===
+{{shortcut|DF:R|DF:REDIR}}
+Redirects should always point to a page in the same namespace as the redirect (e.g. [[DF2014:Dodging]], [[v0.31:Drink]]). Do not use the "cv:" alias.
+
+Pages in the main namespace should only redirect to an older versioned page if that content no longer exists in the current version of the game (e.g. [[Cave river]], [[Chunk]]). In these cases the cv: alias cannot be used.  
+
+=== Premium/Classic ===
+Current articles cover both the Premium and Classic builds of DF. This means that, whenever possible, content should be available for both versions. This includes graphics - for instance, if adding a premium graphic, do not remove an existing classic graphic/diagram (but do update it if it is out of date).
+
+==== Premium graphics ====
+We have permission from Kitfox to upload premium screenshots and sprites. Please ''do not'' upload complete sprite sheets, or anything that would enable recreating Premium DF.
+
+----
+
+Although a lot of this is already underway, you should still feel free to make suggestions or bring up any comments on the [[Dwarf Fortress Wiki Talk:Versions|talk page]].

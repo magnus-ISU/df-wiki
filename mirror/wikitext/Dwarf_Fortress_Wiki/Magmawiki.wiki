@@ -1,0 +1,249 @@
+magmawiki was a web development project to replace the mediaWiki engine. It has not been updated since 2010.
+
+magmawiki is the project to replace the mediaWiki engine.
+
+Source code is hosted on [http://www.github.com/locriani/magmawiki Github].
+
+IRC channel for '''software development''' ('''[[IRC|NOT dwarf fortress questions / discussions, check here for those channels!]]''') is [http://irc.freenode.org/#magmawiki #magmawiki on freenode.org]
+
+Discussion of the magmawiki project on the forums is [http://www.bay12forums.com/smf/index.php?topic=55613.0 here]
+== Versioning ==
+{| style='width: 35em; margin: 1em auto; border-spacing: 0; text-align: center'
+|-
+| colspan='4' |
+| colspan='2' width='1%' style='font-size: 200%; padding: 0.2em; border-bottom: 3px solid #999; background: #eeeeee' | 0
+| colspan='2' width='1%' style='font-size: 200%; padding: 0' | .
+| colspan='2' width='1%' style='font-size: 200%; padding: 0.2em; border-bottom: 3px solid #9df; background: #eef5ff' | 0
+| colspan='2' width='1%' style='font-size: 200%; padding: 0' | .
+| colspan='2' width='1%' style='font-size: 200%; padding: 0.2em; border-bottom: 3px solid #db8; background: #fff5ee' | 17
+| colspan='2' width='1%' style='font-size: 200%; padding: 0' | .
+| colspan='2' width='1%' style='font-size: 200%; padding: 0.2em; border-bottom: 3px solid #bd8; background: #f5ffee' | 0
+| colspan='1' width='1%' style='font-size: 200%; padding: 0' | .
+| colspan='2' width='1%' style='font-size: 200%; padding: 0.2em; border-bottom: 3px solid #999; background: #eeeeee' | 246
+| colspan='4' |
+|-
+| style='height: 1em' |
+| style='border-bottom: 1px solid #999' |
+| style='width: 1em; border-bottom: 1px solid #999' |
+| style='width: 15em' style='border-bottom: 1px solid #999' |
+| width='1%' style='border-right: 1px solid #999; border-bottom: 1px solid #999' |
+| width='1%' style='border-left: 1px solid #999' |
+| width='1%' style='border-bottom: 1px solid #9df' |
+| width='1%' style='border-bottom: 1px solid #9df' |
+| width='1%' style='border-right: 1px solid #9df; border-bottom: 1px solid #9df' |
+| width='1%' style='border-left: 1px solid #9df' |
+||
+||
+| width='1%' style='border-right: 1px solid #db8' |
+| width='1%' style='border-left: 1px solid #db8' |
+||
+||
+| width='1%' style='border-right: 1px solid #bd8' |
+| width='1%' style='border-left: 1px solid #bd8; border-bottom: 1px solid #bd8' |
+| width='1%' style='border-bottom: 1px solid #bd8' |
+| style='border-right: 1px solid #999' |
+| width='1%' style='border-bottom: 1px solid #999; border-left: 1px solid #999' |
+| style='width: 3em; border-bottom: 1px solid #999'|
+| style='width: 3em; border-bottom: 1px solid #999' |
+| style='border-bottom: 1px solid #999' |
+| style='height: 1em' |
+|-
+| style='height: 1em; border-right: 1px solid #999' |
+| style='border-left: 1px solid #999; border-top: 1px solid #999' |
+| style='border-top: 1px solid #999' |
+| style='border-top: 1px solid #999' |
+| style='border-top: 1px solid #999' |
+| style='border-right: 1px solid #9df' |
+| style='border-left: 1px solid #9df; border-top: 1px solid #9df' |
+| style='border-top: 1px solid #9df' |
+| width='1%' style='border-top: 1px solid #9df' |
+| width='1%' |
+||
+||
+| width='1%' style='border-right: 1px solid #db8' |
+| width='1%' style='border-left: 1px solid #db8' |
+||
+||
+||
+| width='1%' style='border-top: 1px solid #bd8' |
+| width='1%' style='border-right: 1px solid #bd8; border-top: 1px solid #bd8' |
+| width='1%' style='border-left: 1px solid #bd8' |
+| width='1%' style='border-top: 1px solid #999' |
+| style='border-top: 1px solid #999' |
+| style='border-top: 1px solid #999' |
+| style='border-right: 1px solid #999; border-top: 1px solid #999' |
+| width='40' style='border-left: 1px solid #999' |
+|-
+| colspan='2' style='padding: 0.25em; border: 2px solid #999; background: #eeeeee' | Major version number.
+| colspan='1' | <div style='width: 1.5em'></div>
+| colspan='5' style='padding: 0.25em; border: 2px solid #9df; background: #eef5ff' | Level of magma (0-6/7), new major version when it reaches 7.
+| colspan='1' | <div style='width: 0.5em'></div>
+| colspan='8' style='padding: 0.25em; border: 2px solid #db8; background: #fff5ee' | Minor feature version.
+| colspan='1' | <div style='width: 0.5em'></div>
+| colspan='4' style='padding: 0.25em; border: 2px solid #bd8; background: #f5ffee' | Bug/security fixes on current "major.magma.minor" version combo.
+| colspan='1' | <div style='width: 1.5em'></div>
+| colspan='2' style='padding: 0.25em; border: 2px solid #999; background: #eeeeee' | Number of expletives uttered during development. 
+|}
+
+== Conceptual screenshots / sketches ==
+[[File:Screen_shot_2010-05-11_at_5.08.20_PM.png]] loginbox design (modal dialogs)
+THE FONT SIZE IS BUGGING ME AUGH THE PAIN
+
+==Planned Versions ==
+=== Version 0.1 Features ===
+{{progress_bar|17|total=34}}
+*Header
+**Tabs
+***<s>Article Actions (Read / Edit / History)</s>
+***Talk
+***Menu
+***Favorite
+***Special tabs
+**User Bar
+*Articles
+**<s>Optimistic Locking</s>
+**Actions
+***<s>Create (New)</s>
+***<s>Read (Show)</s>
+****<s>Parser (Mediawiki)</s>
+*****<s>Article Links</s>
+***<s>Update (Edit)</s>
+**<s>Named URIs (slugs)</s>
+***<s>Immutable until page move (NYI)</s>
+***<s>Mutable titles, as long as same slug is generated</s>
+**Revisions
+***<s>Counter cache</s>
+***<s>History</s>
+***Differences view
+*<s>Missing unit tests</s>
+*Users
+**<s>Account creation</s>
+**<s>Login / Logout (sessions)</s>
+**Account management
+***<s>Localization options</s>
+***Change password
+***Change email
+**IP Tracking
+**Revision / Article edit tied to user
+*<s>Localization backend stuff</s>
+
+=== Version 0.2 Features ===
+{{progress_bar|0|total=1}}
+*Articles
+**Actions
+***Delete
+**Optimistic Locking Merges (<s>I don't remember what I meant by this</s> page merge screen for changes when changes are blocked by optimistic locking)
+**Page moves
+**Namespaces
+**Page level protection
+**Redirects
+*Users
+**Captcha
+**User Permissions
+**User Permission Levels
+*Search
+**Basic article name search
+
+=== Version 0.3 Features ===
+{{progress_bar|0|total=1}}
+*Articles
+**Parser (Textile / Markdown?)
+**Templates
+***Mediawiki
+***Python
+**Subpages
+**Fulltext search
+
+=== Version 0.4 Features ===
+{{progress_bar|0|total=1}}
+*Articles
+**Live edit preview
+**Mediawiki Import functionality
+**Sandboxes
+***Sandbox merging
+== Points of discussion ==
+*Mass deletion of a users contribs (perhaps ranges and checkbox methods?)
+*Talk forums -- see [[DF: Magmawiki/Emmys Talk Forum Mockup|this page]]
+*Article ratings
+*Line / Word comments (post it notes / discussion thread reference points?)
+*Alternative url implementations (RESTful state w/o /[new, edit, create, etc])
+*Side by side rendering
+<pre>
+[09:17am] epitron: side-by-side markup/rendered-html
+[09:17am] epitron: you click "preview" and it re-renders it
+[09:18am] epitron: and if you scroll, it scrolls both windows in synch
+[09:18am] epitron: like the way MELD does
+[09:18am] locriani: that's good
+[09:18am] epitron: the preview will scroll a lot less sometimes
+[09:18am] epitron: like for your version number table monstrousity
+[09:18am] locriani: and the cursor position in the markup window
+[09:18am] locriani: or in the html window
+[09:18am] locriani: will highlight the appropriate element in the other window
+[09:18am] epitron: yeah!
+[09:18am] epitron: cursor position would be harder
+[09:18am] epitron: but it would be slick
+</pre>
+*AUGH PASSWORDS (Mediawiki: <code>":B:"+ salt (31 bit, hex between 0 and 7fff ffff inclusive) + ":" + md5(salt + "-" + md5(password))</code> )
+*file uploads, html5 display methods, etc (video, <code><canvas></code> tags, media, acceptable formats, etc)
+*Document management stuffs
+
+*Inline-comments
+<pre>
+12:00 <@epitron> i think i just solved the marking problem
+12:01 <@epitron> 1) the match is saved as plaintext with an integer
+12:02 <@epitron>   1.a) the integer represents which occurance of that match you've marked
+12:02 <@epitron> 2) html can be stripped to find the same position in the markup doc
+12:03 <@epitron> 3) to deal with new edits, the integer can increment when a diff
+                 contains the plaintext match
+12:03 <@epitron> (a diff before the marked area)
+12:03 <@epitron> (we can ignore diffs afterwards)
+12:03 <@epitron> sound good?
+12:04 <@epitron> it gets around the round-tripping problem by reducing everything to
+                 good old plaintext :D
+12:04 <@epitron> i believe that's a reliable 1:1 mapping
+12:05 <@epitron> just gotta normalize it by doing gsub(/\s+/, ' ')
+13:27 <@epitron> the only piece remaining is how to persist the inline comments across
+                 revisions
+13:28 <@epitron> the marked area will be active on a revision up until it's overwritten
+13:29 <@epitron> (there's a little edge case where a marking is overwritten, then a
+                 few revisions down the road you revert back to an earlier copy with
+                 the marking... it should be re-connected to that document)
+13:29 <@epitron> s/document/revision/
+</pre>
+
+----
+
+== Considered Features ==
+
+Items are color coded. Green means very important, yellow means fairly important, and red means near feature, but we need to get the other stuff done first.
+
+*{{ryg|0|Categories}}
+*{{ryg|2|Templates}}
+**{{ryg|2|Clone some mediawiki parser functionality}}
+**{{ryg|1|Python and Ruby}}
+***{{ryg|1|"Restricted Python":http://pypi.python.org/pypi/RestrictedPython/}}
+***{{ryg|1|"Ruby Taint":http://ruby-doc.org/docs/ProgrammingRuby/html/taint.html}}
+*{{ryg|1|Talk forums}} (could temporarily use article system as stop-gap)
+*{{ryg|1|User accounts}}
+**{{ryg|2|Permission levels}}
+**{{ryg|2|Blocking}}
+**{{ryg|0|Per-user JS}}
+**{{ryg|0|Per-user CSS}}
+*{{ryg|2|Search}}
+*{{ryg|2|Articles}}
+**{{ryg|2|History}}
+**{{ryg|1|Diff view}}
+**{{ryg|2|Redirects}}
+**{{ryg|0|Per-page JS}}
+**{{ryg|0|Per-page CSS}}
+*{{ryg|2|Namespaces}}
+**{{ryg|2|Aliases}}
+*{{ryg|0|User Preferences}}
+**{{ryg|0|Default search namespace}}
+**{{ryg|1|Change password}} (if there are users)
+**{{ryg|0|Signature? (with forums not really needed)}}
+*{{ryg|0|Maintenance}}
+**{{ryg|0|API for bots}}
+**{{ryg|0|Disabling edits to large categories of pages}}
+**{{ryg|0|Automated spam filtering}}
+[[Category:Wikiprojects]][[Category:Wiki]]

@@ -1,0 +1,46 @@
+<div class="mw-parser-output"><table class="shortcutbox noprint" style="float: right; border: 1px solid #aaa; background: #fff; margin: .3em .3em .3em 1em; padding: 3px; text-align: center;"><tbody><tr><th style="border: none; background: transparent;"><span id="DF:V"></span><span id="DF:VER"></span><small><a href="/index.php/Template:Shortcut" title="Template:Shortcut">Shortcuts</a>: <br /> <a href="/index.php/Dwarf_Fortress_Wiki:V" class="mw-redirect" title="Dwarf Fortress Wiki:V">DF:V</a><br /> <a href="/index.php/Dwarf_Fortress_Wiki:VER" class="mw-redirect" title="Dwarf Fortress Wiki:VER">DF:VER</a></small></th></tr></tbody></table>
+<p>These are the methods we use to organize versions on the wiki. Please bring any questions to the <a href="/index.php/Dwarf_Fortress_Wiki_talk:Versions" title="Dwarf Fortress Wiki talk:Versions">talk page</a>. 
+</p>
+
+<h2><span class="mw-headline" id="Goal">Goal</span></h2>
+<p>The goal of this effort is to effectively mark articles according to the version they are about.  Ultimately there are two goals:
+</p>
+<ul><li>Allow users to know what major version (23a, 40d, etc...) an article pertains to.</li>
+<li>Allow editors to easily find topics for which a current version article is not complete.</li></ul>
+<p><b>This is not intended to</b>:
+</p>
+<ul><li>Remove all information about older versions. These articles have been moved to appropriate namespaces (ex. 40d:, 23a:), and the {{<a href="/index.php/Template:ArticleVersion" title="Template:ArticleVersion">ArticleVersion</a>}} template (which should be added to every version specific page) links between the various versions, noting clearly (through color and message) whether it is the current version.</li></ul>
+<h2><span class="mw-headline" id="Approach">Approach</span></h2>
+<h3><span class="mw-headline" id="Per_topic">Per topic</span></h3>
+<p>Each feature or idea that has an article will feature the "up to date" version and "old" versions: (note, if an article is version independent these points do not apply)
+</p>
+<ul><li>The mainspace article will contain content for the latest DF version (cv).</li>
+<li>There are namespaces for major historical versions: "DF2014", "v0.34", "v0.31", "40d", and "23a".</li>
+<li>The cv: alias will redirect to the current version, ie. "cv".</li></ul>
+<h3><span class="mw-headline" id="Version_articles">Version articles</span></h3>
+<p>There is a template that should be placed on all version-specific pages. It looks like this (though it looks different on actual articles):
+</p>
+<table class="version-table" style="text-align: center; margin: 3px auto 5px; padding: 0.25em; padding-top:1em; border-radius: 3px; -webkit-border-radius: 3px; -moz-border-radius: 3px; -o-border-radius: 3px; -ms-border-radius: 3px;; border: 2px solid #99ddff; background: #eef5ff; min-width:27em"><tbody><tr><td style="padding: 0.3em 0.3em; width: 100%;"><span>This article is in the DF wiki namespace.</span><br />
+<div style="float: right; font-size:75%; padding-right:2px; margin-top:-2px; margin-bottom:-7px;"><span class="version-link"><a href="/index.php/Dwarf_Fortress_Wiki:V" class="mw-redirect" title="Dwarf Fortress Wiki:V"><span style="text-decoration: none; color: #0088CC;">More Info</span></a></span><span style="font-weight:bold;" class="dot">&#160;·</span> <span class="version-link"><a href="/index.php/Template:Av" class="mw-redirect" title="Template:Av"><span style="text-decoration: none; color: #0088CC;">V</span></a></span></div></td></tr>
+</tbody></table>
+<p>An example of this template on a real page can be seen at "milk": <a href="/index.php/Milk" title="Milk">cv:Milk</a>, <a href="/index.php/v0.31:Milk" title="v0.31:Milk">v0.31:Milk</a>, <a href="/index.php/40d:Milk" title="40d:Milk">40d:Milk</a>, <a href="/index.php/23a:Milk" title="23a:Milk">23a:Milk</a>.
+</p><p>This template is added by placing {{<a href="/index.php/Template:Av" class="mw-redirect" title="Template:Av">av</a>}} (or {{<a href="/index.php/Template:ArticleVersion" title="Template:ArticleVersion">ArticleVersion</a>}}) at the top of an article.
+</p><p>The template will check the namespace of the article and use that to determine if the article pertains to the current version or not.
+</p><p>It will also place an article into a category based on whether or not it pertains to the current version.
+</p><p>One version will be considered "current", and articles in that namespace with the version template will be placed into a category marking it as such, all other articles will be put into a category marking them as Obsolete, and also placing them into a category based off of their version (from the article namespace).
+</p><p>With very little effort (read the <a href="/index.php/Template:Av" class="mw-redirect" title="Template:Av">documentation</a>) every page's version template can be automatically updated when a new version arrives. This process automatically changes what namespace shows up as current on each page and what categories pages are put into. This makes it wonderfully easy the next time a new version comes around.
+</p>
+<h3><span class="mw-headline" id="Redirects">Redirects</span></h3>
+<table class="shortcutbox noprint" style="float: right; border: 1px solid #aaa; background: #fff; margin: .3em .3em .3em 1em; padding: 3px; text-align: center;"><tbody><tr><th style="border: none; background: transparent;"><span id="DF:R"></span><span id="DF:REDIR"></span><small><a href="/index.php/Template:Shortcut" title="Template:Shortcut">Shortcuts</a>: <br /> <a href="/index.php/Dwarf_Fortress_Wiki:R" class="mw-redirect" title="Dwarf Fortress Wiki:R">DF:R</a><br /> <a href="/index.php/Dwarf_Fortress_Wiki:REDIR" class="mw-redirect" title="Dwarf Fortress Wiki:REDIR">DF:REDIR</a></small></th></tr></tbody></table>
+<p>Redirects should always point to a page in the same namespace as the redirect (e.g. <a href="/index.php/DF2014:Dodging" class="mw-redirect" title="DF2014:Dodging">DF2014:Dodging</a>, <a href="/index.php/v0.31:Drink" class="mw-redirect" title="v0.31:Drink">v0.31:Drink</a>). Do not use the "cv:" alias.
+</p><p>Pages in the main namespace should only redirect to an older versioned page if that content no longer exists in the current version of the game (e.g. <a href="/index.php/Cave_river" class="mw-redirect" title="Cave river">Cave river</a>, <a href="/index.php/Chunk" class="mw-redirect" title="Chunk">Chunk</a>). In these cases the cv: alias cannot be used.  
+</p>
+<h3><span id="Premium/Classic"></span><span class="mw-headline" id="Premium.2FClassic">Premium/Classic</span></h3>
+<p>Current articles cover both the Premium and Classic builds of DF. This means that, whenever possible, content should be available for both versions. This includes graphics - for instance, if adding a premium graphic, do not remove an existing classic graphic/diagram (but do update it if it is out of date).
+</p>
+<h4><span class="mw-headline" id="Premium_graphics">Premium graphics</span></h4>
+<p>We have permission from Kitfox to upload premium screenshots and sprites. Please <i>do not</i> upload complete sprite sheets, or anything that would enable recreating Premium DF.
+</p>
+<hr />
+<p>Although a lot of this is already underway, you should still feel free to make suggestions or bring up any comments on the <a href="/index.php/Dwarf_Fortress_Wiki_talk:Versions" title="Dwarf Fortress Wiki talk:Versions">talk page</a>.
+</p></div>

@@ -1,0 +1,32 @@
+The dwarf fortress wiki is undeniable almost the best resource for reference to the game, seeing that I was often without internet connection, I found myself struggling without its reference materials.
+
+I was able to finally get an offline version by exploring the murky depths of the forums, but it isn't quite the most pleasant place
+
+Considering it's utility, I would wish to propose a page for users providing simple instructions or guidelines to setting up a version of the wiki for themselves for when the internet is cut off.
+
+Outlining my steps for my personal version, which I did under windows.
+
+1) Download [http://www.wikitaxi.org/ Wikitaxi.]
+
+2) Download a [http://dwarffortresswiki.org/images/dump.xml.bz2 dump of the wiki].
+
+3) Extract the dump file.
+4) Open notepad or other editing software and using the find/replace function to replace <blockquote>
+"#REDIRECT [[cv" 
+with 
+"#REDIRECT [[DF2012"
+</blockquote>
+without the quotes.
+
+5) Using a compression software, recompress it into a bz2 archive. 
+
+6) Import the new bz2 archive using the "importer" tool in the Wikitrack folder into a database.
+
+7) Open Wikitrack, and open the database you just created.
+
+This will need to be updated to appropiate Mac, Windows, and Linux versions, and some peculiarities may be fixed with other software.
+
+Thanks. [[User:Visionsofamber|Visionsofamber]] ([[User talk:Visionsofamber|talk]]) 20:31, 22 October 2013 (UTC)
+
+:I support this, since information about offline wikis is useful (there are always people asking about it, and it would be nice to have some centralized information). I'm debating where to put this, though - [[DF:Offline wiki]] or [[Utility:Offline wiki]] both seem appropriate, although I'm leaning towards a Utility-namespace article. I think information about other methods would be useful as well (there are other programs besides WikiTaxi, even one specifically written for the DF wiki). --[[User:Lethosor|<span style="color:#074">Lethosor</span>]] ([[User talk:Lethosor|<span style="color:#092">talk</span>]]) 01:48, 23 October 2013 (UTC)
+::I forgot this was still active, so maybe I shouldn't have moved it here. :) I created this at [[DF:Offline wiki]]. --[[User:Lethosor|<span style="color:#074">Lethosor</span>]] ([[User talk:Lethosor|<span style="color:#092">talk</span>]]) 00:20, 1 December 2013 (UTC)

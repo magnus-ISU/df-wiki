@@ -1,0 +1,31 @@
+This is a guide to using redirects, of sorts.  This guide is very badly written for the present time.
+==How to make your redirects with our new namespaces==
+
+Use <nowiki>[[CV:Article Name]]</nowiki> to redirect to the '''C'''urrent '''V'''ersion of the article.<br />
+Use <nowiki>[[23a:Article Name]]</nowiki> to redirect to the 2D game version ('''23a''') of the article.<br />
+Use <nowiki>[[40d:Article Name]]</nowiki> to redirect to the 3D game version ('''40d''') of the article.<br />
+
+For versioned articles, stick {{tl|av}} at the top of the page and it will insert automatic links to the other article versions present.
+
+{| class="wikitable" border="1" cellspacing = "0"
+|-
+! Namespace
+! Version
+! Notes
+|-
+| '''CV'''
+| Namespace alias for '''{{:DF:Current}}''' <!-- yes, I know it says DF2010, and it redirects to 40d, this will be fixed as soon as DF2010 releases -->
+| When a new version is released, all CV links will be updated automatically to point to the newest version.
+|-
+| '''DF2010'''
+| DF2010
+| 
+|-
+| '''40d'''
+| 40d (3D version)
+| 
+|-
+| '''23a'''
+| 23a (2D version)
+| 
+|}

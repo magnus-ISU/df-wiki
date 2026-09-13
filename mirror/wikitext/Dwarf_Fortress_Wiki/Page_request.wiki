@@ -1,0 +1,24 @@
+{{page request header|Page requests|
+[[DF talk:Page request/Help|<span style="color:green;">help</span>]] {{dot}} [[DF talk:Page request|discuss]] {{dot}} [[DF:Page request/List|list]]
+}} Welcome! This page allows users without the necessary permissions to request the creation of new pages.
+
+===A few notes:===
+* This is intended for ''new users'' (or IP's) &mdash; after 3 edits, users are able to create pages on their own. IP's wanting to create pages (particularly content pages) may want to consider [[Special:CreateAccount|creating an account]].
+* Please keep in mind that a new request may not be noticed immediately. If a request goes unnoticed for a long period of time, you may want to contact another user (checking the [[Special:RecentChanges|recent changes]] should give you an idea of the most recently active users).
+* '''Please link to the page you would like created''' (this makes it easier for editors to create pages, as well as spot created pages). Links should be formatted like this: <code>[<nowiki/>[''Namespace'':Name]]</code> (or just <code>[<nowiki/>[Name]]</code> for articles in the main namespace).
+
+
+
+To begin, select the type of page you want to create:
+
+{{page request type|I want to create an ''article''|DF:Page request/Article|2}}
+{{page request type|I want to create an ''talk page'' for an article that already exists|DF:Page request/Talk|3}}
+{{page request type|I want to create a ''redirect'' to an existing page|DF:Page request/Redirect|5}}
+{{page request type|I want to create a ''user page'' or a subpage (for example, a sandbox)|DF:Page request/User|4}}
+{{page request type|I want to create a different type of page|DF:Page request/Other|6}}
+
+== Recently created pages ==
+{{Special:RecentChangesLinked/Template:Newpage|showlinkedto=1}}
+
+{{clear}}
+{{page request footer|r=0|b=0}}
