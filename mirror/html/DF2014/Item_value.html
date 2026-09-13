@@ -1,0 +1,781 @@
+<div class="mw-parser-output"><div id="page-quality-rating" style="text-align: right;margin: 0.8em 0;font-size:75%">
+ <a href="/index.php/Dwarf_Fortress_Wiki:Quality#Tattered" title="Dwarf Fortress Wiki:Quality"><span id="stub-quality" style="text-decoration:none; color:#333333">xTATTEREDx</span></a> <span style="font-weight:bold;" class="dot">&#160;·</span> <a href="/index.php/Dwarf_Fortress_Wiki:Quality#Fine" title="Dwarf Fortress Wiki:Quality"><span id="fine-quality" style="text-decoration:none; color:#CA7A02;">+FINE+</span></a> <span style="font-weight:bold;" class="dot">&#160;·</span> <a href="/index.php/Dwarf_Fortress_Wiki:Quality#Superior" title="Dwarf Fortress Wiki:Quality"><span id="superior-quality" style="text-decoration:none; color:#8800cc;">*SUPERIOR*</span></a> <span style="font-weight:bold;" class="dot">&#160;·</span> <a href="/index.php/Dwarf_Fortress_Wiki:Quality#Exceptional" title="Dwarf Fortress Wiki:Quality"><span id="exceptional-quality" style="padding:0.2em; border:1px solid #9df; border-radius: 2px; -webkit-border-radius: 2px; -moz-border-radius: 2px; -o-border-radius: 2px; -ms-border-radius: 2px; background:#cce4ff; color:#0088CC;">≡EXCEPTIONAL≡</span></a> <span style="font-weight:bold;" class="dot">&#160;·</span> <a href="/index.php/Dwarf_Fortress_Wiki:Quality#Masterwork" title="Dwarf Fortress Wiki:Quality"><span id="masterwork-quality" style="text-decoration:none; color:#72A329;">☼MASTERWORK☼</span></a></div>
+<table class="version-table" style="text-align: center; margin: 3px auto 5px; padding: 0.25em; border-radius: 3px; -webkit-border-radius: 3px; -moz-border-radius: 3px; -o-border-radius: 3px; -ms-border-radius: 3px;; border: 2px solid #ddbb88; background: #fff5ee; min-width:27em"><tbody><tr><td style="padding: 0.3em 0.3em; width: 100%;"><div style="margin-bottom:6px;" class="version-links-r1"><span style="font-size:100%"><span class="version-link"><a href="/index.php/Item_value" title="Item value"><span style="text-decoration: none; color: #CA7A02;">v53.16</span></a></span><span style="font-weight:bold;" class="dot">&#160;·</span> <span class="version-link"><span style="text-decoration: none; color: #CA7A02; background-color: #FFE0CC; border-radius: 2px; -webkit-border-radius: 2px; -moz-border-radius: 2px; -o-border-radius: 2px; -ms-border-radius: 2px; border: 1px solid #ddbb88; padding: 0.2em;"><b>v0.47.05</b></span></span><span style="font-weight:bold;" class="dot">&#160;·</span> <span class="version-link"><a href="/index.php/v0.34:Item_value" title="v0.34:Item value"><span style="text-decoration: none; color: #CA7A02;">v0.34</span></a></span><span style="font-weight:bold;" class="dot">&#160;·</span> <span class="version-link"><a href="/index.php/v0.31:Item_value" title="v0.31:Item value"><span style="text-decoration: none; color: #CA7A02;">v0.31</span></a></span><span style="font-weight:bold;" class="dot">&#160;·</span> <span class="version-link"><a href="/index.php/40d:Item_value" title="40d:Item value"><span style="text-decoration: none; color: #CA7A02;">v0.28</span></a></span><span style="font-weight:bold;" class="dot">&#160;·</span> <span class="version-link"><a href="/index.php/23a:Item_value" title="23a:Item value"><span style="text-decoration: none; color: #CA7A02;">v0.23</span></a></span></span></div><span>This article is about an <b>older version</b> of DF.</span><br />
+<div style="float: right; font-size:75%; padding-right:2px; margin-top:-2px; margin-bottom:-7px;"><span class="version-link"><a href="/index.php/Dwarf_Fortress_Wiki:V" class="mw-redirect" title="Dwarf Fortress Wiki:V"><span style="text-decoration: none; color: #CA7A02;">More Info</span></a></span><span style="font-weight:bold;" class="dot">&#160;·</span> <span class="version-link"><a href="/index.php/Template:Av" class="mw-redirect" title="Template:Av"><span style="text-decoration: none; color: #CA7A02;">V</span></a></span></div></td></tr>
+</tbody></table>
+<dl><dd><i>For value optimization, see <a href="/index.php/DF2014:Maximizing_value" title="DF2014:Maximizing value">Maximizing value</a>.</i></dd>
+<dd><i>For cultural values, see <a href="/index.php/DF2014:Personality_trait" title="DF2014:Personality trait">Personality trait</a>.</i></dd>
+<dd><i>For room values, see <a href="/index.php/DF2014:Room#Quality" title="DF2014:Room">Room/Quality</a>.</i></dd></dl>
+<div class="floatright"><a href="/index.php/File:Value_icon.png" class="image"><img alt="Value icon.png" src="/images/thumb/f/fd/Value_icon.png/100px-Value_icon.png" decoding="async" width="100" height="100" srcset="/images/thumb/f/fd/Value_icon.png/150px-Value_icon.png 1.5x, /images/thumb/f/fd/Value_icon.png/200px-Value_icon.png 2x" /></a></div><p><b>Item value</b> is determined by a number of factors: the form of the item, the material it is made out of, the <a href="/index.php/DF2014:Quality" class="mw-redirect" title="DF2014:Quality">quality</a> of its creation, and any <a href="/index.php/DF2014:Decoration" title="DF2014:Decoration">decorations</a> on it.
+</p><p>The <b>final value</b> of an item is the <b>base value</b> of the form of the item (e.g. <a href="/index.php/DF2014:Block" title="DF2014:Block">block</a> <i>or</i> <a href="/index.php/DF2014:Statue" title="DF2014:Statue">statue</a>) multiplied by the <b>material multiplier</b> (e.g. <a href="/index.php/DF2014:Granite" title="DF2014:Granite">granite</a> <i>or</i> <a href="/index.php/DF2014:Gold" title="DF2014:Gold">gold</a>), multiplied by the <b>quality modifier</b> (e.g. fine <i>or</i> masterful) if any, then summed with the final value of all <b><a href="/index.php/DF2014:Decoration" title="DF2014:Decoration">decorations</a></b>.
+</p>
+
+<h1><span class="mw-headline" id="Base_values_of_items">Base values of items</span></h1>
+<p>The <b>base value</b> of an item is determined by the form of the item, not what it is made out of. For example, a <a href="/index.php/DF2014:Wood" title="DF2014:Wood">wood</a> <a href="/index.php/DF2014:Block" title="DF2014:Block">block</a> uses the <b>base value</b> for a block; a native gold block uses the <i>same</i> <b>base value</b>, since it too is in the form of a "block". In both cases, the <b>final value</b> is then determined by adjusting the base value with the appropriate modifiers.
+</p>
+<h2><span class="mw-headline" id="Items_without_quality_levels">Items without quality levels</span></h2>
+<table style="border-spacing: 0">
+
+<tbody><tr style="background-color: #EEE">
+<th>Base Value
+</th>
+<th>Items
+</th></tr>
+<tr>
+<td>0</td>
+<td><a href="/index.php/DF2014:Body_parts" title="DF2014:Body parts">Body part</a>, <a href="/index.php/DF2014:Corpse" title="DF2014:Corpse">Corpse</a>, <a href="/index.php/DF2014:Remains" title="DF2014:Remains">Remains</a>, small rock
+</td></tr>
+<tr style="background-color: #EEE">
+<td>1</td>
+<td><a href="/index.php/DF2014:Fat" title="DF2014:Fat">glob</a>, <a href="/index.php/DF2014:Seed" title="DF2014:Seed">seed</a>, <a href="/index.php/DF2014:Alcohol" title="DF2014:Alcohol">alcohol</a>, powder, extract
+</td></tr>
+<tr>
+<td>2</td>
+<td><a href="/index.php/DF2014:Fish" title="DF2014:Fish">Fish</a>, unprepared fish, <a href="/index.php/DF2014:Meat" title="DF2014:Meat">Meat</a>, <a href="/index.php/DF2014:Egg" title="DF2014:Egg">Egg</a>, <a href="/index.php/DF2014:Plant" title="DF2014:Plant">Plant</a>, <a href="/index.php/DF2014:Quarry_bush" title="DF2014:Quarry bush">Leaves</a>
+</td></tr>
+<tr style="background-color: #EEE">
+<td>3</td>
+<td><a href="/index.php/DF2014:Gem" title="DF2014:Gem">Gem</a> (rough), <a href="/index.php/DF2014:Log" class="mw-redirect" title="DF2014:Log">Log</a>, <a href="/index.php/DF2014:Stone" title="DF2014:Stone">Stone</a>
+</td></tr>
+<tr>
+<td>5</td>
+<td><a href="/index.php/DF2014:Bar" title="DF2014:Bar">Bar</a>, <a href="/index.php/DF2014:Block" title="DF2014:Block">Block</a>, <a href="/index.php/DF2014:Gem" title="DF2014:Gem">Gem</a> (cut), <a href="/index.php/DF2014:Leather" title="DF2014:Leather">Leather</a>
+</td></tr>
+<tr style="background-color: #EEE">
+<td>6</td>
+<td><a href="/index.php/DF2014:Thread" title="DF2014:Thread">Thread</a>
+</td></tr>
+<tr>
+<td>10</td>
+<td><a href="/index.php/DF2014:Ballista_arrowhead" class="mw-redirect" title="DF2014:Ballista arrowhead">Ballista arrowhead</a>, <a href="/index.php/DF2014:Cheese" title="DF2014:Cheese">cheese</a>, <a href="/index.php/DF2014:Honeycomb" title="DF2014:Honeycomb">Honeycomb</a>
+</td></tr>
+<tr style="background-color: #EEE">
+<td>Varies</td>
+<td>live vermin, tame vermin
+</td></tr></tbody></table>
+<h2><span class="mw-headline" id="Items_with_quality_levels">Items with quality levels</span></h2>
+<h3><span class="mw-headline" id="Misc._items">Misc. items</span></h3>
+<table style="border-spacing: 0">
+
+<tbody><tr style="background-color: #EEE">
+<th>Base Value
+</th>
+<th>Items
+</th></tr>
+<tr>
+<td>1/50</td>
+<td><a href="/index.php/DF2014:Coin" class="mw-redirect" title="DF2014:Coin">Coin</a><sup>1</sup>
+</td></tr>
+<tr style="background-color: #EEE">
+<td>1</td>
+<td><a href="/index.php/DF2014:Die" title="DF2014:Die">Die</a>, Orthopedic <a href="/index.php/DF2014:Cast" class="mw-redirect" title="DF2014:Cast">cast</a>
+</td></tr>
+<tr>
+<td>5</td>
+<td><a href="/index.php/DF2014:Paper" class="mw-redirect" title="DF2014:Paper">Paper</a> &amp; <a href="/index.php/DF2014:Papyrus" class="mw-redirect" title="DF2014:Papyrus">Papyrus</a> sheets
+</td></tr>
+<tr style="background-color: #EEE">
+<td>7</td>
+<td><a href="/index.php/DF2014:Cloth" title="DF2014:Cloth">Cloth</a><sup>2</sup>
+</td></tr>
+<tr>
+<td>10</td>
+<td>
+<p><a href="/index.php/DF2014:Animal_trap" title="DF2014:Animal trap">Animal trap</a>,  <a href="/index.php/DF2014:Temple#Shrines" title="DF2014:Temple">Altar</a>, <a href="/index.php/DF2014:Jewelry" title="DF2014:Jewelry">Amulet</a>, <a href="/index.php/DF2014:Anvil" title="DF2014:Anvil">Anvil</a>, <a href="/index.php/DF2014:Armor_stand" title="DF2014:Armor stand">Armor stand</a>, <a href="/index.php/DF2014:Backpack" class="mw-redirect" title="DF2014:Backpack">Backpack</a>, <a href="/index.php/DF2014:Barrel" title="DF2014:Barrel">Barrel</a>, <a href="/index.php/DF2014:Bed" title="DF2014:Bed">Bed</a>, <a href="/index.php/DF2014:Bin" title="DF2014:Bin">Bin</a>, <a href="/index.php/DF2014:Book" title="DF2014:Book">Book</a>, <a href="/index.php/DF2014:Bookcase" title="DF2014:Bookcase">Bookcase</a>, <a href="/index.php/DF2014:Tool" title="DF2014:Tool">Bowl</a>, <a href="/index.php/DF2014:Container" title="DF2014:Container">Box</a>, <a href="/index.php/DF2014:Jewelry" title="DF2014:Jewelry">Bracelet</a>, <a href="/index.php/DF2014:Bucket" title="DF2014:Bucket">Bucket</a>, <a href="/index.php/DF2014:Cabinet" title="DF2014:Cabinet">Cabinet</a>, <a href="/index.php/DF2014:Cage" title="DF2014:Cage">Cage</a>, <a href="/index.php/DF2014:Chain" title="DF2014:Chain">Chain</a>, <a href="/index.php/DF2014:Chair" class="mw-redirect" title="DF2014:Chair">Chair</a>, <a href="/index.php/DF2014:Tool" title="DF2014:Tool">Cleaver</a>, <a href="/index.php/DF2014:Coffin" title="DF2014:Coffin">Coffin</a>, <a href="/index.php/DF2014:Jewelry" title="DF2014:Jewelry">Crown</a>, <a href="/index.php/DF2014:Crutch" title="DF2014:Crutch">Crutch</a>, <a href="/index.php/DF2014:Decoration" title="DF2014:Decoration">Decoration</a><sup>3</sup>, <a href="/index.php/DF2014:Display_case" class="mw-redirect" title="DF2014:Display case">Display Case</a>, <a href="/index.php/DF2014:Door" title="DF2014:Door">Door</a>, <a href="/index.php/DF2014:Jewelry" title="DF2014:Jewelry">Earring</a>, <a href="/index.php/DF2014:Figurine" title="DF2014:Figurine">Figurine</a>, <a href="/index.php/DF2014:Flask" title="DF2014:Flask">Flask</a>, <a href="/index.php/DF2014:Floodgate" title="DF2014:Floodgate">Floodgate</a>, <a href="/index.php/DF2014:Tool" title="DF2014:Tool">Fork</a>, <a href="/index.php/DF2014:Goblet" class="mw-redirect" title="DF2014:Goblet">Goblet/mug/cup</a>, <a href="/index.php/DF2014:Grate" title="DF2014:Grate">Grate</a>, <a href="/index.php/DF2014:Hatch_cover" title="DF2014:Hatch cover">Hatch cover</a>, <a href="/index.php/DF2014:Tool" title="DF2014:Tool">Helve</a>, <a href="/index.php/DF2014:Hive" title="DF2014:Hive">Hive</a>, <a href="/index.php/DF2014:Instrument" title="DF2014:Instrument">Instrument</a> <i>(non-main components)</i>,  <a href="/index.php/DF2014:Jug" title="DF2014:Jug">Jug</a>, <a href="/index.php/DF2014:Tool" title="DF2014:Tool">Knives</a>, <a href="/index.php/DF2014:Tool" title="DF2014:Tool">Ladle</a>, <a href="/index.php/DF2014:Gem" title="DF2014:Gem">Large gem</a>, <a href="/index.php/DF2014:Large_pot" title="DF2014:Large pot">Large pot</a>, <a href="/index.php/DF2014:Millstone" title="DF2014:Millstone">Millstone</a>, <a href="/index.php/DF2014:Tool" title="DF2014:Tool">Mortar</a>, <a href="/index.php/DF2014:Nest_box" title="DF2014:Nest box">Nest box</a>, <a href="/index.php/DF2014:Pedestal" class="mw-redirect" title="DF2014:Pedestal">Pedestal</a>, <a href="/index.php/DF2014:Tool" title="DF2014:Tool">Pestle</a>, <a href="/index.php/DF2014:Pipe_section" title="DF2014:Pipe section">Pipe section</a>, <a href="/index.php/DF2014:Tool" title="DF2014:Tool">Pouch</a>, <a href="/index.php/DF2014:Prepared_meal" class="mw-redirect" title="DF2014:Prepared meal">Prepared meal</a><sup>4</sup>, <a href="/index.php/DF2014:Quiver" class="mw-redirect" title="DF2014:Quiver">Quiver</a>, <a href="/index.php/DF2014:Quern" title="DF2014:Quern">Quern</a>, <a href="/index.php/DF2014:Jewelry" title="DF2014:Jewelry">Ring</a>, <a href="/index.php/DF2014:Craft" class="mw-redirect" title="DF2014:Craft">Scepter</a>, <a href="/index.php/DF2014:Book" title="DF2014:Book">Scroll Roller</a>, <a href="/index.php/DF2014:Slab" title="DF2014:Slab">Slab</a>, <a href="/index.php/DF2014:Tool" title="DF2014:Tool">Stone axe</a>, <a href="/index.php/DF2014:Health_care" title="DF2014:Health care">Splint</a>, <a href="/index.php/DF2014:Table" title="DF2014:Table">Table</a>, <a href="/index.php/DF2014:Totem" class="mw-redirect" title="DF2014:Totem">Totem</a>, <a href="/index.php/DF2014:Toy" class="mw-redirect" title="DF2014:Toy">Toy</a>,  <a href="/index.php/DF2014:Weapon_rack" title="DF2014:Weapon rack">Weapon rack</a>
+</p>
+</td></tr>
+<tr style="background-color: #EEE">
+<td>20</td>
+<td><a href="/index.php/DF2014:Book" title="DF2014:Book">Quire/Scroll</a>, <a href="/index.php/DF2014:Siege_engine" title="DF2014:Siege engine">Siege ammo</a>, <a href="/index.php/DF2014:Health_care" title="DF2014:Health care">Traction bench</a>
+</td></tr>
+<tr>
+<td>25</td>
+<td><a href="/index.php/DF2014:Window" title="DF2014:Window">Window</a>, <a href="/index.php/DF2014:Statue" title="DF2014:Statue">Statue</a>
+</td></tr>
+<tr style="background-color: #EEE">
+<td>30</td>
+<td><a href="/index.php/DF2014:Siege_engine" title="DF2014:Siege engine">Ballista part</a>, <a href="/index.php/DF2014:Siege_engine" title="DF2014:Siege engine">Catapult part</a>, <a href="/index.php/DF2014:Mechanism" title="DF2014:Mechanism">Mechanism</a>
+</td></tr>
+<tr>
+<td>50</td>
+<td><a href="/index.php/DF2014:Tool" title="DF2014:Tool">Cauldron</a>, <a href="/index.php/DF2014:Instrument" title="DF2014:Instrument">Instrument</a> <i>(main part)</i>, <a href="/index.php/DF2014:Minecart" title="DF2014:Minecart">Minecart</a>, <a href="/index.php/DF2014:Parchment" class="mw-redirect" title="DF2014:Parchment">Parchment</a> sheet, <a href="/index.php/DF2014:Stepladder" title="DF2014:Stepladder">Stepladder</a>, <a href="/index.php/DF2014:Wheelbarrow" title="DF2014:Wheelbarrow">Wheelbarrow</a>
+</td></tr>
+<tr style="background-color: #EEE">
+<td>200</td>
+<td>Parchment <a href="/index.php/DF2014:Book" title="DF2014:Book">Quire/Scroll</a>
+</td></tr>
+<tr>
+<td><i>variable</i><sup>5</sup></td>
+<td><a href="/index.php/DF2014:Weapon" title="DF2014:Weapon">Weapon</a>, <a href="/index.php/DF2014:Armor" title="DF2014:Armor">Armor</a>, <a href="/index.php/DF2014:Clothing" title="DF2014:Clothing">Shoe</a>, <a href="/index.php/DF2014:Shield" class="mw-redirect" title="DF2014:Shield">Shield</a>, <a href="/index.php/DF2014:Armor" title="DF2014:Armor">Helm</a>, <a href="/index.php/DF2014:Clothing" title="DF2014:Clothing">Glove</a>, <a href="/index.php/DF2014:Ammunition" title="DF2014:Ammunition">Ammo</a>, <a href="/index.php/DF2014:Clothing" title="DF2014:Clothing">Pants</a>, <a href="/index.php/DF2014:Trap_component" title="DF2014:Trap component">Trap component</a> <i>(see below)</i>
+</td></tr></tbody></table>
+<dl><dd><i>Notes</i>:
+<ul><li>1) Coins minted at a forge are always of base quality</li>
+<li>2) Goods made out of <a href="/index.php/DF2014:Cloth" title="DF2014:Cloth">cloth</a> get the following built in as decorations: the cloth (with quality mod) and the <a href="/index.php/DF2014:Thread" title="DF2014:Thread">thread</a> (without quality). <a href="/index.php/DF2014:Dye" title="DF2014:Dye">Dyes</a> are added separately (with quality), as a powder, not a decoration.</li>
+<li>3) "<a href="/index.php/DF2014:Decoration" title="DF2014:Decoration">Decorations</a>" include "It is decorated with &lt;material&gt;", "It is encircled with bands of &lt;material&gt;", "It is adorned with hanging rings of &lt;material&gt;", "This object menaces with spikes of &lt;material&gt;", "On this object is an image of &lt;description&gt; in &lt;material&gt;", "It is studded with &lt;metal&gt;". Decorations of <a href="/index.php/DF2014:Bolt" title="DF2014:Bolt">bolts</a> have a 1/3 base value instead.</li>
+<li>4) Prepared meals always have a base value of 10, with a quality modifier. Each ingredient is calculated separately, with its own base value and "minced" quality modifier. The total value of a meal stack is the sum of the above values multiplied by the total quantity, regardless of the proportion of ingredients. A more thorough explanation and example exists at the <a href="/index.php/v0.34:Cook#Prepared_Meal_Value" title="v0.34:Cook">Cook</a> page.</li>
+<li>5) These items have their value based on their properties - see categories below:</li></ul></dd></dl>
+<h3><span class="mw-headline" id="Weapons">Weapons</span></h3>
+<dl><dd>The base value of a melee weapon is (SIZE / 50) + 1; if the weapon has any EDGE attacks, its value is doubled. Ranged weapons simply have a value of 10.</dd></dl>
+<dl><dd><dl><dd><table class="collapsible collapsed" style="border-spacing: 1">
+
+<tbody><tr style="background-color:#ccf">
+<th colspan="2">Weapon values
+</th></tr>
+<tr style="text-align:left">
+<th style="padding-right:1em">Base Value
+</th>
+<th>Weapon
+</th></tr>
+<tr style="background-color: #EEE">
+<td>3</td>
+<td><a href="/index.php/DF2014:Whip" title="DF2014:Whip">Whip</a>
+</td></tr>
+<tr>
+<td>7</td>
+<td><a href="/index.php/DF2014:Training_weapon" title="DF2014:Training weapon">Training sword</a>
+</td></tr>
+<tr style="background-color: #EEE">
+<td>9</td>
+<td><a href="/index.php/DF2014:Training_weapon" title="DF2014:Training weapon">Training spear</a>, <a href="/index.php/DF2014:War_hammer" title="DF2014:War hammer">War hammer</a>
+</td></tr>
+<tr>
+<td>10</td>
+<td><a href="/index.php/DF2014:Crossbow" title="DF2014:Crossbow">Crossbow</a>, <a href="/index.php/DF2014:Blowgun" title="DF2014:Blowgun">Blowgun</a>, <a href="/index.php/DF2014:Bow" title="DF2014:Bow">Bow</a>, <a href="/index.php/DF2014:Dagger" title="DF2014:Dagger">Large dagger</a>
+</td></tr>
+<tr style="background-color: #EEE">
+<td>11</td>
+<td><a href="/index.php/DF2014:Flail" title="DF2014:Flail">Flail</a>
+</td></tr>
+<tr>
+<td>14</td>
+<td><a href="/index.php/DF2014:Scourge" title="DF2014:Scourge">Scourge</a>, <a href="/index.php/DF2014:Scimitar" title="DF2014:Scimitar">Scimitar</a>, <a href="/index.php/DF2014:Short_sword" title="DF2014:Short sword">Short sword</a>
+</td></tr>
+<tr style="background-color: #EEE">
+<td>17</td>
+<td><a href="/index.php/DF2014:Training_weapon" title="DF2014:Training weapon">Training axe</a>, <a href="/index.php/DF2014:Mace" title="DF2014:Mace">Mace</a>
+</td></tr>
+<tr>
+<td>18</td>
+<td><a href="/index.php/DF2014:Spear" title="DF2014:Spear">Spear</a>
+</td></tr>
+<tr style="background-color: #EEE">
+<td>22</td>
+<td><a href="/index.php/DF2014:Pick" title="DF2014:Pick">Pick</a>, <a href="/index.php/DF2014:Morningstar" title="DF2014:Morningstar">Morningstar</a>
+</td></tr>
+<tr>
+<td>27</td>
+<td><a href="/index.php/DF2014:Maul" title="DF2014:Maul">Maul</a>
+</td></tr>
+<tr style="background-color: #EEE">
+<td>30</td>
+<td><a href="/index.php/DF2014:Long_sword" title="DF2014:Long sword">Long sword</a>
+</td></tr>
+<tr>
+<td>34</td>
+<td><a href="/index.php/DF2014:Battle_axe" title="DF2014:Battle axe">Battle axe</a>, <a href="/index.php/DF2014:Pike" class="mw-redirect" title="DF2014:Pike">Pike</a>
+</td></tr>
+<tr style="background-color: #EEE">
+<td>38</td>
+<td><a href="/index.php/DF2014:Two-handed_sword" title="DF2014:Two-handed sword">Two-handed sword</a>
+</td></tr>
+<tr>
+<td>50</td>
+<td><a href="/index.php/DF2014:Halberd" title="DF2014:Halberd">Halberd</a>
+</td></tr>
+<tr style="background-color: #EEE">
+<td>54</td>
+<td><a href="/index.php/DF2014:Great_axe" title="DF2014:Great axe">Great axe</a>
+</td></tr></tbody></table></dd></dl></dd></dl>
+<h4><span class="mw-headline" id="Ammo">Ammo</span></h4>
+<dl><dd>The base value of a single unit of ammo is (SIZE / 200) + 1.</dd></dl>
+<dl><dd><dl><dd><table class="collapsible collapsed" style="border-spacing: 1">
+
+<tbody><tr style="background-color:#ccf">
+<th colspan="2">Ammo values
+</th></tr>
+<tr style="text-align:left">
+<th style="padding-right:1em">Base Value
+</th>
+<th>Ammo
+</th></tr>
+<tr style="background-color: #EEE">
+<td>1</td>
+<td><a href="/index.php/DF2014:Blowdart" title="DF2014:Blowdart">Blowdart</a>, <a href="/index.php/DF2014:Bolt" title="DF2014:Bolt">Bolt</a>, <a href="/index.php/DF2014:Arrow" title="DF2014:Arrow">Arrow</a>
+</td></tr></tbody></table></dd></dl></dd></dl>
+<p>Value listed is for a single bolt, not stacks of bolts. Multiply the single value by the stack size for total value of a stack. (e.g. 1 <a href="/index.php/DF2014:Bar" title="DF2014:Bar">bar</a> of metal = stack of 25 bolts, etc.)
+</p>
+<h3><span class="mw-headline" id="Shields">Shields</span></h3>
+<dl><dd>The base value of a shield is (UPSTEP * 3) + BLOCKCHANCE + 1.
+<ul><li>UPSTEP cannot be greater than 3</li>
+<li>BLOCKCHANCE cannot be greater than 100</li></ul></dd></dl>
+<dl><dd><dl><dd><table class="collapsible collapsed" style="border-spacing: 1">
+
+<tbody><tr style="background-color:#ccf">
+<th colspan="2">Shield values
+</th></tr>
+<tr style="text-align:left">
+<th style="padding-right:1em">Base Value
+</th>
+<th>Shields
+</th></tr>
+<tr style="background-color: #EEE">
+<td>14</td>
+<td>Buckler
+</td></tr>
+<tr>
+<td>27</td>
+<td>Shield
+</td></tr></tbody></table></dd></dl></dd></dl>
+<h3><span class="mw-headline" id="Headwear">Headwear</span></h3>
+<dl><dd>The base value of a helm is (LAYER_SIZE / 5) + (COVERAGE / 20) + 1.</dd></dl>
+<ul><li>LAYER_SIZE and COVERAGE cannot be greater than 100</li></ul>
+<dl><dd><dl><dd><table class="collapsible collapsed" style="border-spacing: 1">
+
+<tbody><tr style="background-color:#ccf">
+<th colspan="2">Helm values
+</th></tr>
+<tr style="text-align:left">
+<th style="padding-right:1em">Base Value
+</th>
+<th>Helm
+</th></tr>
+<tr style="background-color: #EEE">
+<td>5</td>
+<td>Cap, Head Veil, Face Veil, Headscarf
+</td></tr>
+<tr>
+<td>7</td>
+<td>Mask, Turban
+</td></tr>
+<tr style="background-color: #EEE">
+<td>8</td>
+<td>Hood
+</td></tr>
+<tr>
+<td>12</td>
+<td>Helm
+</td></tr></tbody></table></dd></dl></dd></dl>
+<h3><span id="Armor_/_torso"></span><span class="mw-headline" id="Armor_.2F_torso">Armor / torso</span></h3>
+<p><i>(Note - When DF speaks of clothing, "armor" refers to anything worn on the torso, i.e.  shirts, vests, togas, robes, etc., which all do provide some small protection, as well as breastplates and chain shirts. Combat-quality "<a href="/index.php/DF2014:Armor" title="DF2014:Armor">armor</a>" pieces are listed here by their location.)</i>
+</p>
+<dl><dd>The base value of a piece of armor is ((UBSTEP + LBSTEP) * 3) + (LAYER_SIZE / 5) + (COVERAGE / 10) + 1.
+<ul><li>UBSTEP and LBSTEP cannot be greater than 3</li>
+<li>LAYER_SIZE and COVERAGE cannot be greater than 100</li></ul></dd></dl>
+<dl><dd><dl><dd><table class="collapsible collapsed" style="border-spacing: 1">
+
+<tbody><tr style="background-color:#ccf">
+<th colspan="2">Armor values
+</th></tr>
+<tr style="text-align:left">
+<th style="padding-right:1em">Base Value
+</th>
+<th>Armor
+</th></tr>
+<tr>
+<td>8</td>
+<td>Cape, Vest
+</td></tr>
+<tr style="background-color: #EEE">
+<td>15</td>
+<td>Breastplate
+</td></tr>
+<tr>
+<td>16</td>
+<td>Tunic
+</td></tr>
+<tr style="background-color: #EEE">
+<td>20</td>
+<td>Mail shirt
+</td></tr>
+<tr>
+<td>21</td>
+<td>Leather armor
+</td></tr>
+<tr style="background-color: #EEE">
+<td>22</td>
+<td>Shirt
+</td></tr>
+<tr>
+<td>23</td>
+<td>Toga
+</td></tr>
+<tr style="background-color: #EEE">
+<td>26</td>
+<td>Cloak
+</td></tr>
+<tr>
+<td>27</td>
+<td>Coat
+</td></tr>
+<tr style="background-color: #EEE">
+<td>31</td>
+<td>Dress
+</td></tr>
+<tr>
+<td>33</td>
+<td>Robe
+</td></tr></tbody></table></dd></dl></dd></dl>
+<h3><span class="mw-headline" id="Legwear">Legwear</span></h3>
+<dl><dd>The base value of a pair of pants is (LBSTEP * 3) + (LAYER_SIZE / 5) + (COVERAGE / 10) + 1
+<ul><li>LBSTEP cannot be greater than 3</li>
+<li>LAYER_SIZE and COVERAGE cannot be greater than 100</li></ul></dd></dl>
+<dl><dd><dl><dd><table class="collapsible collapsed" style="border-spacing: 1">
+
+<tbody><tr style="background-color:#ccf">
+<th colspan="2">Pants values
+</th></tr>
+<tr style="text-align:left">
+<th style="padding-right:1em">Base Value
+</th>
+<th>Pants
+</th></tr>
+<tr style="background-color: #EEE">
+<td>5</td>
+<td>Thong
+</td></tr>
+<tr>
+<td>8</td>
+<td>Loincloth
+</td></tr>
+<tr style="background-color: #EEE">
+<td>13</td>
+<td>Short skirt
+</td></tr>
+<tr>
+<td>16</td>
+<td>Skirt, Braies
+</td></tr>
+<tr style="background-color: #EEE">
+<td>22</td>
+<td>Long skirt
+</td></tr>
+<tr>
+<td>23</td>
+<td>Trouser, Leggings, Greaves
+</td></tr></tbody></table></dd></dl></dd></dl>
+<p><br />
+</p>
+<h3><span id="Hand-_&amp;_footwear"></span><span class="mw-headline" id="Hand-_.26_footwear">Hand- &amp; footwear</span></h3>
+<dl><dd>The base value of a shoe or glove is (UPSTEP * 3) + (LAYER_SIZE / 5) + (COVERAGE / 30) + 1.
+<ul><li>UPSTEP cannot be greater than 3</li>
+<li>LAYER_SIZE and COVERAGE cannot be greater than 100</li></ul></dd></dl>
+<dl><dd><dl><dd><table class="collapsible collapsed" style="border-spacing: 1">
+
+<tbody><tr style="background-color:#ccf">
+<th colspan="2">Glove values
+</th></tr>
+<tr style="text-align:left">
+<th style="padding-right:1em">Base Value
+</th>
+<th>Gloves
+</th></tr>
+<tr style="background-color: #EEE">
+<td>6</td>
+<td>Gloves
+</td></tr>
+<tr>
+<td>7</td>
+<td>Mittens
+</td></tr>
+<tr style="background-color: #EEE">
+<td>11*</td>
+<td>Gauntlets
+</td></tr></tbody></table></dd></dl></dd></dl>
+<dl><dd><dl><dd><table class="collapsible collapsed" style="border-spacing: 1">
+
+<tbody><tr style="background-color:#ccf">
+<th colspan="2">Shoe values
+</th></tr>
+<tr style="text-align:left">
+<th style="padding-right:1em">Base Value
+</th>
+<th>Shoes
+</th></tr>
+<tr style="background-color: #EEE">
+<td>6</td>
+<td>Socks
+</td></tr>
+<tr>
+<td>8</td>
+<td>Shoes
+</td></tr>
+<tr style="background-color: #EEE">
+<td>9</td>
+<td>Sandals, low boots*
+</td></tr>
+<tr>
+<td>12</td>
+<td>High boots*
+</td></tr>
+<tr style="background-color: #EEE">
+<td>15</td>
+<td>Chausses
+</td></tr></tbody></table></dd></dl></dd></dl>
+<dl><dd><dl><dd><dl><dd>* Gauntlets and boots are made 2 at a time from a single bar, effectively doubling the total value of the final items.</dd></dl></dd></dl></dd></dl>
+<h3><span class="mw-headline" id="Trap_component">Trap component</span></h3>
+<dl><dd>The base value of a trap component is ((SIZE / 50) + 1) * HITS; if it has any EDGE attacks, its value is doubled.</dd></dl>
+<dl><dd><dl><dd><table class="collapsible collapsed" style="border-spacing: 1">
+
+<tbody><tr style="background-color:#ccf">
+<th colspan="2">Trap component values
+</th></tr>
+<tr style="text-align:left">
+<th style="padding-right:1em">Base Value
+</th>
+<th>Trap Component
+</th></tr>
+<tr style="background-color: #EEE">
+<td>66</td>
+<td><a href="/index.php/DF2014:Trap_component" title="DF2014:Trap component">Giant axe blade</a>, <a href="/index.php/DF2014:Trap_component" title="DF2014:Trap component">Enormous corkscrew</a>, <a href="/index.php/DF2014:Trap_component" title="DF2014:Trap component">Menacing spike</a>
+</td></tr>
+<tr style="background-color: #EEE">
+<td>126</td>
+<td><a href="/index.php/DF2014:Trap_component" title="DF2014:Trap component">Large, serrated disc</a>, <a href="/index.php/DF2014:Trap_component" title="DF2014:Trap component">Spiked ball</a>
+</td></tr>
+</tbody></table></dd></dl></dd></dl>
+<h2><span class="mw-headline" id="Material_multipliers">Material multipliers</span></h2>
+<p><span style="margin-top:5px">
+</span></p>
+<table class="vertical-navbox nowraplinks" cellspacing="5" cellpadding="0" style="float:right;clear:right;width:22.0em;margin:0 0 1.0em 1.0em;background:#f9f9f9;border:1px solid #aaa;padding:0.2em;border-spacing:0.4em 0;text-align:center;line-height:1.4em;font-size:88%;"><tbody><tr><td class="" style=";padding-top:0.4em;line-height:1.2em;"><big><b><a href="/index.php/DF2014:Material_science" title="DF2014:Material science">Material properties</a></b></big><br />
+<hr /></td>
+      </tr><tr>
+<td class="" style="padding:0 0.1em 0.4em;font-size:12px; padding-left:5px; text-align:center;;">
+<b>Defined</b>: <a href="/index.php/DF2014:Item_value#Material_multipliers" title="DF2014:Item value">Value</a> •  <a href="/index.php/DF2014:Color#Material_By_Color" title="DF2014:Color">Color</a> • <a href="/index.php/DF2014:Density" title="DF2014:Density">Density</a> • <a href="/index.php/DF2014:Strain_at_yield" title="DF2014:Strain at yield">Strain at yield</a> • <a href="/index.php/DF2014:Temperature#Material_values" title="DF2014:Temperature">Temperature values</a></td>
+</tr><tr>
+<td class="" style="padding:0 0.1em 0.4em;font-size:12px; padding-left:5px; text-align:center;;">
+<b>Derived</b>: <a href="/index.php/DF2014:Magma-safe" title="DF2014:Magma-safe">Magma safety</a> • <a href="/index.php/DF2014:Fire-safe" title="DF2014:Fire-safe">Fire safety</a></td>
+</tr><tr>
+<td class="" style="padding:0 0.1em 0.4em;font-size:12px; padding-left:5px; text-align:center;;">
+<b>Fluids</b>: <a href="/index.php/DF2014:Depth" class="mw-redirect" title="DF2014:Depth">Depth</a> • <a href="/index.php/DF2014:Flow" title="DF2014:Flow">Flow</a> • <a href="/index.php/DF2014:Pressure" title="DF2014:Pressure">Pressure</a></td>
+</tr></tbody></table>
+<p>
+The material multiplier for an item is found from the [MATERIAL_VALUE:#] tag in the raws for the material it is made out of, and can be further augmented using [MULTIPLY_VALUE:#]. A wood block uses the same material multiplier as a wood <a href="/index.php/DF2014:Log" class="mw-redirect" title="DF2014:Log">log</a> or a wooden <a href="/index.php/DF2014:Box" class="mw-redirect" title="DF2014:Box">chest</a> -  that is the material value for wood, which is 1.
+</p>
+<table class="collapsible collapsed" style="width:80%; border-spacing: 1">
+
+<tbody><tr style="background-color:#ccf">
+<th colspan="2"><a href="/index.php/DF2014:Stone" title="DF2014:Stone">Stones</a>
+</th></tr>
+<tr style="text-align:left">
+<th style="padding-right:1em">Multiplier
+</th>
+<th>Stone
+</th></tr>
+<tr style="background-color: #EEE">
+<td>×1</td>
+<td><a href="/index.php/DF2014:Bismuthinite" title="DF2014:Bismuthinite">Bismuthinite</a>, <a href="/index.php/DF2014:Bituminous_coal" title="DF2014:Bituminous coal">Bituminous coal</a>, <a href="/index.php/DF2014:Lignite" title="DF2014:Lignite">Lignite</a>, <a href="/index.php/DF2014:Stone" title="DF2014:Stone">Common stone</a>
+</td></tr>
+<tr>
+<td>×2</td>
+<td><a href="/index.php/DF2014:Cassiterite" title="DF2014:Cassiterite">Cassiterite</a>, <a href="/index.php/DF2014:Garnierite" title="DF2014:Garnierite">Garnierite</a>, <a href="/index.php/DF2014:Malachite" title="DF2014:Malachite">Malachite</a>, <a href="/index.php/DF2014:Native_copper" title="DF2014:Native copper">Native copper</a>, <a href="/index.php/DF2014:Sphalerite" title="DF2014:Sphalerite">Sphalerite</a>, <a href="/index.php/DF2014:Calcite" title="DF2014:Calcite">Calcite</a>, <a href="/index.php/DF2014:Chalk" title="DF2014:Chalk">Chalk</a>, <a href="/index.php/DF2014:Dolomite" title="DF2014:Dolomite">Dolomite</a>, <a href="/index.php/DF2014:Limestone" title="DF2014:Limestone">Limestone</a>, <a href="/index.php/DF2014:Marble" title="DF2014:Marble">Marble</a>
+</td></tr>
+<tr style="background-color: #EEE">
+<td>×3</td>
+<td><a href="/index.php/DF2014:Tetrahedrite" title="DF2014:Tetrahedrite">Tetrahedrite</a>, <a href="/index.php/DF2014:Obsidian" title="DF2014:Obsidian">Obsidian</a>
+</td></tr>
+<tr>
+<td>×5</td>
+<td><a href="/index.php/DF2014:Galena" title="DF2014:Galena">Galena</a>
+</td></tr>
+<tr style="background-color: #EEE">
+<td>×8</td>
+<td><a href="/index.php/DF2014:Hematite" title="DF2014:Hematite">Hematite</a>, <a href="/index.php/DF2014:Limonite" title="DF2014:Limonite">Limonite</a>, <a href="/index.php/DF2014:Magnetite" title="DF2014:Magnetite">Magnetite</a>
+</td></tr>
+<tr>
+<td>×10</td>
+<td><a href="/index.php/DF2014:Horn_silver" title="DF2014:Horn silver">Horn silver</a>, <a href="/index.php/DF2014:Native_silver" title="DF2014:Native silver">Native silver</a>
+</td></tr>
+<tr style="background-color: #EEE">
+<td>×30</td>
+<td><a href="/index.php/DF2014:Native_gold" title="DF2014:Native gold">Native gold</a>
+</td></tr>
+<tr>
+<td>×40</td>
+<td><a href="/index.php/DF2014:Native_aluminum" title="DF2014:Native aluminum">Native aluminum</a>, <a href="/index.php/DF2014:Native_platinum" title="DF2014:Native platinum">Native platinum</a>
+</td></tr>
+<tr style="background-color: #EEE">
+<td>×250</td>
+<td><a href="/index.php/DF2014:Raw_adamantine" title="DF2014:Raw adamantine">Raw adamantine</a>
+</td></tr></tbody></table>
+<table class="collapsible collapsed" style="width:80%; border-spacing: 1">
+
+<tbody><tr style="background-color:#ccf">
+<th colspan="2"><a href="/index.php/DF2014:Gem" title="DF2014:Gem">Gems</a>
+</th></tr>
+<tr style="text-align:left">
+<th style="padding-right:1em">Multiplier
+</th>
+<th>Gem
+</th></tr>
+<tr style="background-color: #EEE">
+<td>×2</td>
+<td><a href="/index.php/DF2014:Banded_agate" title="DF2014:Banded agate">Banded agate</a>, <a href="/index.php/DF2014:Bloodstone" title="DF2014:Bloodstone">Bloodstone</a>, <a href="/index.php/DF2014:Blue_jade" title="DF2014:Blue jade">Blue jade</a>, <a href="/index.php/DF2014:Brown_jasper" title="DF2014:Brown jasper">Brown jasper</a>, <a href="/index.php/DF2014:Carnelian" title="DF2014:Carnelian">Carnelian</a>, <a href="/index.php/DF2014:Chrysocolla" title="DF2014:Chrysocolla">Chrysocolla</a>, <a href="/index.php/DF2014:Chrysoprase" title="DF2014:Chrysoprase">Chrysoprase</a>, <a href="/index.php/DF2014:Citrine" title="DF2014:Citrine">Citrine</a>, <a href="/index.php/DF2014:Dendritic_agate" title="DF2014:Dendritic agate">Dendritic agate</a>, <a href="/index.php/DF2014:Fire_agate" title="DF2014:Fire agate">Fire agate</a>, <a href="/index.php/DF2014:Fortification_agate" title="DF2014:Fortification agate">Fortification agate</a>, <a href="/index.php/DF2014:Gray_chalcedony" title="DF2014:Gray chalcedony">Gray chalcedony</a>, <a href="/index.php/DF2014:Lace_agate" title="DF2014:Lace agate">Lace agate</a>, <a href="/index.php/DF2014:Lapis_lazuli" title="DF2014:Lapis lazuli">Lapis lazuli</a>, <a href="/index.php/DF2014:Lavender_jade" title="DF2014:Lavender jade">Lavender jade</a>, <a href="/index.php/DF2014:Milk_quartz" title="DF2014:Milk quartz">Milk quartz</a>, <a href="/index.php/DF2014:Moonstone" title="DF2014:Moonstone">Moonstone</a>, <a href="/index.php/DF2014:Morion" title="DF2014:Morion">Morion</a>, <a href="/index.php/DF2014:Moss_agate" title="DF2014:Moss agate">Moss agate</a>, <a href="/index.php/DF2014:Onyx" title="DF2014:Onyx">Onyx</a>, <a href="/index.php/DF2014:Pink_jade" title="DF2014:Pink jade">Pink jade</a>, <a href="/index.php/DF2014:Plume_agate" title="DF2014:Plume agate">Plume agate</a>, <a href="/index.php/DF2014:Prase" title="DF2014:Prase">Prase</a>, <a href="/index.php/DF2014:Pyrite" title="DF2014:Pyrite">Pyrite</a>, <a href="/index.php/DF2014:Rock_crystal" title="DF2014:Rock crystal">Rock crystal</a>, <a href="/index.php/DF2014:Sard" title="DF2014:Sard">Sard</a>, <a href="/index.php/DF2014:Sardonyx" title="DF2014:Sardonyx">Sardonyx</a>, <a href="/index.php/DF2014:Schorl" title="DF2014:Schorl">Schorl</a>, <a href="/index.php/DF2014:Smoky_quartz" title="DF2014:Smoky quartz">Smoky quartz</a>, <a href="/index.php/DF2014:Sunstone" title="DF2014:Sunstone">Sunstone</a>, <a href="/index.php/DF2014:Tiger_iron" title="DF2014:Tiger iron">Tiger iron</a>, <a href="/index.php/DF2014:Tigereye" title="DF2014:Tigereye">Tigereye</a>, <a href="/index.php/DF2014:Tube_agate" title="DF2014:Tube agate">Tube agate</a>, <a href="/index.php/DF2014:Turquoise" title="DF2014:Turquoise">Turquoise</a>, <a href="/index.php/DF2014:Variscite" title="DF2014:Variscite">Variscite</a>, <a href="/index.php/DF2014:White_chalcedony" title="DF2014:White chalcedony">White chalcedony</a>, <a href="/index.php/DF2014:White_jade" title="DF2014:White jade">White jade</a>, <a href="/index.php/DF2014:Yellow_jasper" title="DF2014:Yellow jasper">Yellow jasper</a>
+</td></tr>
+<tr>
+<td>×3</td>
+<td><a href="/index.php/DF2014:Aventurine" title="DF2014:Aventurine">Aventurine</a>, <a href="/index.php/DF2014:Picture_jasper" title="DF2014:Picture jasper">Picture jasper</a>, <a href="/index.php/DF2014:Rose_quartz" title="DF2014:Rose quartz">Rose quartz</a>
+</td></tr>
+<tr style="background-color: #EEE">
+<td>×10</td>
+<td><a href="/index.php/DF2014:Amber_opal" title="DF2014:Amber opal">Amber opal</a>, <a href="/index.php/DF2014:Bone_opal" title="DF2014:Bone opal">Bone opal</a>, <a href="/index.php/DF2014:Cherry_opal" title="DF2014:Cherry opal">Cherry opal</a>, <a href="/index.php/DF2014:Gold_opal" title="DF2014:Gold opal">Gold opal</a>, <a href="/index.php/DF2014:Jasper_opal" title="DF2014:Jasper opal">Jasper opal</a>, <a href="/index.php/DF2014:Milk_opal" title="DF2014:Milk opal">Milk opal</a>, <a href="/index.php/DF2014:Moss_opal" title="DF2014:Moss opal">Moss opal</a>, <a href="/index.php/DF2014:Onyx_opal" title="DF2014:Onyx opal">Onyx opal</a>, <a href="/index.php/DF2014:Pineapple_opal" title="DF2014:Pineapple opal">Pineapple opal</a>, <a href="/index.php/DF2014:Pipe_opal" title="DF2014:Pipe opal">Pipe opal</a>, <a href="/index.php/DF2014:Prase_opal" title="DF2014:Prase opal">Prase opal</a>, <a href="/index.php/DF2014:Resin_opal" title="DF2014:Resin opal">Resin opal</a>, <a href="/index.php/DF2014:Shell_opal" title="DF2014:Shell opal">Shell opal</a>, <a href="/index.php/DF2014:Wax_opal" title="DF2014:Wax opal">Wax opal</a>, <a href="/index.php/DF2014:Wood_opal" title="DF2014:Wood opal">Wood opal</a>, <a href="/index.php/DF2014:Clear_tourmaline" title="DF2014:Clear tourmaline">Clear tourmaline</a>
+</td></tr>
+<tr>
+<td>×15</td>
+<td><a href="/index.php/DF2014:Fire_opal" title="DF2014:Fire opal">Fire opal</a>, <a href="/index.php/DF2014:Jelly_opal" title="DF2014:Jelly opal">Jelly opal</a>, <a href="/index.php/DF2014:Melanite" title="DF2014:Melanite">Melanite</a>, <a href="/index.php/DF2014:Pink_tourmaline" title="DF2014:Pink tourmaline">Pink tourmaline</a>, <a href="/index.php/DF2014:Red_tourmaline" title="DF2014:Red tourmaline">Red tourmaline</a>
+</td></tr>
+<tr style="background-color: #EEE">
+<td>×20</td>
+<td><a href="/index.php/DF2014:Alexandrite" title="DF2014:Alexandrite">Alexandrite</a>, <a href="/index.php/DF2014:Almandine" title="DF2014:Almandine">Almandine</a>, <a href="/index.php/DF2014:Amethyst" title="DF2014:Amethyst">Amethyst</a>, <a href="/index.php/DF2014:Aquamarine" title="DF2014:Aquamarine">Aquamarine</a>, <a href="/index.php/DF2014:Bandfire_opal" title="DF2014:Bandfire opal">Bandfire opal</a>, <a href="/index.php/DF2014:Black_pyrope" title="DF2014:Black pyrope">Black pyrope</a>, <a href="/index.php/DF2014:Black_zircon" title="DF2014:Black zircon">Black zircon</a>, <a href="/index.php/DF2014:Brown_zircon" title="DF2014:Brown zircon">Brown zircon</a>, <a href="/index.php/DF2014:Cat%27s_eye" title="DF2014:Cat&#39;s eye">Cat's eye</a>, <a href="/index.php/DF2014:Chrysoberyl" title="DF2014:Chrysoberyl">Chrysoberyl</a>, <a href="/index.php/DF2014:Cinnamon_grossular" title="DF2014:Cinnamon grossular">Cinnamon grossular</a>, <a href="/index.php/DF2014:Claro_opal" title="DF2014:Claro opal">Claro opal</a>, <a href="/index.php/DF2014:Clear_garnet" title="DF2014:Clear garnet">Clear garnet</a>, <a href="/index.php/DF2014:Crystal_opal" title="DF2014:Crystal opal">Crystal opal</a>, <a href="/index.php/DF2014:Golden_beryl" title="DF2014:Golden beryl">Golden beryl</a>, <a href="/index.php/DF2014:Goshenite" title="DF2014:Goshenite">Goshenite</a>, <a href="/index.php/DF2014:Green_jade" title="DF2014:Green jade">Green jade</a>, <a href="/index.php/DF2014:Green_tourmaline" title="DF2014:Green tourmaline">Green tourmaline</a>, <a href="/index.php/DF2014:Green_zircon" title="DF2014:Green zircon">Green zircon</a>, <a href="/index.php/DF2014:Harlequin_opal" title="DF2014:Harlequin opal">Harlequin opal</a>, <a href="/index.php/DF2014:Heliodor" title="DF2014:Heliodor">Heliodor</a>, <a href="/index.php/DF2014:Honey_yellow_beryl" title="DF2014:Honey yellow beryl">Honey yellow beryl</a>, <a href="/index.php/DF2014:Kunzite" title="DF2014:Kunzite">Kunzite</a>, <a href="/index.php/DF2014:Levin_opal" title="DF2014:Levin opal">Levin opal</a>, <a href="/index.php/DF2014:Morganite" title="DF2014:Morganite">Morganite</a>, <a href="/index.php/DF2014:Peridot" title="DF2014:Peridot">Peridot</a>, <a href="/index.php/DF2014:Pinfire_opal" title="DF2014:Pinfire opal">Pinfire opal</a>, <a href="/index.php/DF2014:Pink_garnet" title="DF2014:Pink garnet">Pink garnet</a>, <a href="/index.php/DF2014:Precious_fire_opal" title="DF2014:Precious fire opal">Precious fire opal</a>, <a href="/index.php/DF2014:Purple_spinel" title="DF2014:Purple spinel">Purple spinel</a>, <a href="/index.php/DF2014:Red_beryl" title="DF2014:Red beryl">Red beryl</a>, <a href="/index.php/DF2014:Red_flash_opal" title="DF2014:Red flash opal">Red flash opal</a>, <a href="/index.php/DF2014:Red_grossular" title="DF2014:Red grossular">Red grossular</a>, <a href="/index.php/DF2014:Red_pyrope" title="DF2014:Red pyrope">Red pyrope</a>, <a href="/index.php/DF2014:Red_spinel" title="DF2014:Red spinel">Red spinel</a>, <a href="/index.php/DF2014:Red_zircon" title="DF2014:Red zircon">Red zircon</a>, <a href="/index.php/DF2014:Rhodolite" title="DF2014:Rhodolite">Rhodolite</a>, <a href="/index.php/DF2014:Rubicelle" title="DF2014:Rubicelle">Rubicelle</a>, <a href="/index.php/DF2014:Tanzanite" title="DF2014:Tanzanite">Tanzanite</a>, <a href="/index.php/DF2014:Topaz" title="DF2014:Topaz">Topaz</a>, <a href="/index.php/DF2014:Topazolite" title="DF2014:Topazolite">Topazolite</a>, <a href="/index.php/DF2014:Violet_spessartine" title="DF2014:Violet spessartine">Violet spessartine</a>, <a href="/index.php/DF2014:White_opal" title="DF2014:White opal">White opal</a>, <a href="/index.php/DF2014:Yellow_grossular" title="DF2014:Yellow grossular">Yellow grossular</a>, <a href="/index.php/DF2014:Yellow_spessartine" title="DF2014:Yellow spessartine">Yellow spessartine</a>, <a href="/index.php/DF2014:Yellow_zircon" title="DF2014:Yellow zircon">Yellow zircon</a>
+</td></tr>
+<tr>
+<td>×25</td>
+<td><a href="/index.php/DF2014:Clear_zircon" title="DF2014:Clear zircon">Clear zircon</a>, <a href="/index.php/DF2014:Indigo_tourmaline" title="DF2014:Indigo tourmaline">Indigo tourmaline</a>
+</td></tr>
+<tr style="background-color: #EEE">
+<td>×30</td>
+<td><a href="/index.php/DF2014:Demantoid" title="DF2014:Demantoid">Demantoid</a>, <a href="/index.php/DF2014:Light_yellow_diamond" title="DF2014:Light yellow diamond">Light yellow diamond</a>, <a href="/index.php/DF2014:Blue_garnet" title="DF2014:Blue garnet">Blue garnet</a>, <a href="/index.php/DF2014:Black_opal" title="DF2014:Black opal">Black opal</a>, <a href="/index.php/DF2014:Tsavorite" title="DF2014:Tsavorite">Tsavorite</a>
+</td></tr>
+<tr>
+<td>×40</td>
+<td><a href="/index.php/DF2014:Faint_yellow_diamond" title="DF2014:Faint yellow diamond">Faint yellow diamond</a>, <a href="/index.php/DF2014:Emerald" title="DF2014:Emerald">Emerald</a>, <a href="/index.php/DF2014:Ruby" title="DF2014:Ruby">Ruby</a>, <a href="/index.php/DF2014:Sapphire" title="DF2014:Sapphire">Sapphire</a>
+</td></tr>
+<tr style="background-color: #EEE">
+<td>×60</td>
+<td><a href="/index.php/DF2014:Black_diamond" title="DF2014:Black diamond">Black diamond</a>, <a href="/index.php/DF2014:Blue_diamond" title="DF2014:Blue diamond">Blue diamond</a>, <a href="/index.php/DF2014:Clear_diamond" title="DF2014:Clear diamond">Clear diamond</a>, <a href="/index.php/DF2014:Green_diamond" title="DF2014:Green diamond">Green diamond</a>, <a href="/index.php/DF2014:Red_diamond" title="DF2014:Red diamond">Red diamond</a>, <a href="/index.php/DF2014:Yellow_diamond" title="DF2014:Yellow diamond">Yellow diamond</a>, <a href="/index.php/DF2014:Star_ruby" title="DF2014:Star ruby">Star ruby</a>, <a href="/index.php/DF2014:Star_sapphire" title="DF2014:Star sapphire">Star sapphire</a>
+</td></tr></tbody></table>
+<table class="collapsible collapsed" style="width:80%; border-spacing: 1">
+
+<tbody><tr style="background-color:#ccf">
+<th colspan="2"><a href="/index.php/DF2014:Metal" title="DF2014:Metal">Metals</a>
+</th></tr>
+<tr style="text-align:left">
+<th style="padding-right:1em">Multiplier
+</th>
+<th>Metal
+</th></tr>
+<tr style="background-color: #EEE">
+<td>×2</td>
+<td><a href="/index.php/DF2014:Bismuth" title="DF2014:Bismuth">Bismuth</a>, <a href="/index.php/DF2014:Copper" title="DF2014:Copper">Copper</a>, <a href="/index.php/DF2014:Lead" title="DF2014:Lead">Lead</a>, <a href="/index.php/DF2014:Nickel" title="DF2014:Nickel">Nickel</a>, <a href="/index.php/DF2014:Tin" title="DF2014:Tin">Tin</a>, <a href="/index.php/DF2014:Zinc" title="DF2014:Zinc">Zinc</a>
+</td></tr>
+<tr>
+<td>×3</td>
+<td><a href="/index.php/DF2014:Lay_pewter" title="DF2014:Lay pewter">Lay pewter</a>, <a href="/index.php/DF2014:Nickel_silver" title="DF2014:Nickel silver">Nickel silver</a>
+</td></tr>
+<tr style="background-color: #EEE">
+<td>×4</td>
+<td><a href="/index.php/DF2014:Trifle_pewter" title="DF2014:Trifle pewter">Trifle pewter</a>
+</td></tr>
+<tr>
+<td>×5</td>
+<td><a href="/index.php/DF2014:Bronze" title="DF2014:Bronze">Bronze</a>, <a href="/index.php/DF2014:Fine_pewter" title="DF2014:Fine pewter">Fine pewter</a>
+</td></tr>
+<tr style="background-color: #EEE">
+<td>×6</td>
+<td><a href="/index.php/DF2014:Billon" title="DF2014:Billon">Billon</a>, <a href="/index.php/DF2014:Bismuth_bronze" title="DF2014:Bismuth bronze">Bismuth bronze</a>
+</td></tr>
+<tr>
+<td>×7</td>
+<td><a href="/index.php/DF2014:Brass" title="DF2014:Brass">Brass</a>
+</td></tr>
+<tr style="background-color: #EEE">
+<td>×8</td>
+<td><a href="/index.php/DF2014:Sterling_silver" title="DF2014:Sterling silver">Sterling silver</a>
+</td></tr>
+<tr>
+<td>×10</td>
+<td><a href="/index.php/DF2014:Iron" title="DF2014:Iron">Iron</a>, <a href="/index.php/DF2014:Pig_iron" title="DF2014:Pig iron">Pig iron</a>, <a href="/index.php/DF2014:Silver" title="DF2014:Silver">Silver</a>
+</td></tr>
+<tr style="background-color: #EEE">
+<td>×11</td>
+<td><a href="/index.php/DF2014:Black_bronze" title="DF2014:Black bronze">Black bronze</a>
+</td></tr>
+<tr>
+<td>×20</td>
+<td><a href="/index.php/DF2014:Electrum" title="DF2014:Electrum">Electrum</a>
+</td></tr>
+<tr style="background-color: #EEE">
+<td>×23</td>
+<td><a href="/index.php/DF2014:Rose_gold" title="DF2014:Rose gold">Rose gold</a>
+</td></tr>
+<tr>
+<td>×30</td>
+<td><a href="/index.php/DF2014:Gold" title="DF2014:Gold">Gold</a>, <a href="/index.php/DF2014:Steel" title="DF2014:Steel">Steel</a>
+</td></tr>
+<tr style="background-color: #EEE">
+<td>×40</td>
+<td><a href="/index.php/DF2014:Aluminum" title="DF2014:Aluminum">Aluminum</a>, <a href="/index.php/DF2014:Platinum" title="DF2014:Platinum">Platinum</a>
+</td></tr>
+<tr>
+<td>×300</td>
+<td><a href="/index.php/DF2014:Adamantine" title="DF2014:Adamantine">Adamantine</a>
+</td></tr></tbody></table>
+<table class="collapsible collapsed" style="width:80%; border-spacing: 1">
+
+<tbody><tr style="background-color:#ccf">
+<th colspan="2"><a href="/index.php/DF2014:Animal" class="mw-redirect" title="DF2014:Animal">Animals</a>
+</th></tr>
+<tr style="text-align:left">
+<th style="padding-right:1em">Multiplier
+</th>
+<th>Animal
+</th></tr>
+<tr style="background-color: #EEE">
+<td>×1</td>
+<td>all <a href="/index.php/DF2014:Animal" class="mw-redirect" title="DF2014:Animal">animals</a> not listed below
+</td></tr>
+<tr>
+<td>×2</td>
+<td><a href="/index.php/DF2014:Adder" title="DF2014:Adder">adder</a>, <a href="/index.php/DF2014:Beak_dog" title="DF2014:Beak dog">beak dog</a>, <a href="/index.php/DF2014:Black_bear" title="DF2014:Black bear">black bear</a>, <a href="/index.php/DF2014:Black_mamba" title="DF2014:Black mamba">black mamba</a>, <a href="/index.php/DF2014:Bobcat" title="DF2014:Bobcat">bobcat</a>, <a href="/index.php/DF2014:Bushmaster" title="DF2014:Bushmaster">bushmaster</a>, <a href="/index.php/DF2014:Capybara" title="DF2014:Capybara">capybara</a>, <a href="/index.php/DF2014:Copperhead_snake" title="DF2014:Copperhead snake">copperhead snake</a>, <a href="/index.php/DF2014:Cougar" title="DF2014:Cougar">cougar</a>, <a href="/index.php/DF2014:Coyote" title="DF2014:Coyote">coyote</a>, <a href="/index.php/DF2014:Dingo" title="DF2014:Dingo">dingo</a>, <a href="/index.php/DF2014:Elk" title="DF2014:Elk">elk</a>, <a href="/index.php/DF2014:Giant_cave_swallow" title="DF2014:Giant cave swallow">giant cave swallow</a>, <a href="/index.php/DF2014:Giant_dingo" title="DF2014:Giant dingo">giant dingo</a>, <a href="/index.php/DF2014:Giant_earthworm" title="DF2014:Giant earthworm">giant earthworm</a>, <a href="/index.php/DF2014:Giant_mole" title="DF2014:Giant mole">giant mole</a>, <a href="/index.php/DF2014:Giant_rat" title="DF2014:Giant rat">giant rat</a>, <a href="/index.php/DF2014:Helmet_snake" title="DF2014:Helmet snake">helmet snake</a>, <a href="/index.php/DF2014:Hyena" title="DF2014:Hyena">hyena</a>, <a href="/index.php/DF2014:Ice_wolf" title="DF2014:Ice wolf">ice wolf</a>, <a href="/index.php/DF2014:Jackal" title="DF2014:Jackal">jackal</a>, <a href="/index.php/DF2014:King_cobra" title="DF2014:King cobra">king cobra</a>, <a href="/index.php/DF2014:Magma_crab" title="DF2014:Magma crab">magma crab</a>, <a href="/index.php/DF2014:Molemarian" title="DF2014:Molemarian">molemarian</a>, <a href="/index.php/DF2014:Monitor_lizard" title="DF2014:Monitor lizard">monitor lizard</a>, <a href="/index.php/DF2014:Muskox" title="DF2014:Muskox">muskox</a>, <a href="/index.php/DF2014:Ocelot" title="DF2014:Ocelot">ocelot</a>, <a href="/index.php/DF2014:Panda" title="DF2014:Panda">panda</a>, <a href="/index.php/DF2014:Python" title="DF2014:Python">python</a>, <a href="/index.php/DF2014:Rattlesnake" title="DF2014:Rattlesnake">rattlesnake</a>, <a href="/index.php/DF2014:Sloth_bear" title="DF2014:Sloth bear">sloth bear</a>, <a href="/index.php/DF2014:Strangler" title="DF2014:Strangler">strangler</a>, <a href="/index.php/DF2014:Wolf" title="DF2014:Wolf">wolf</a>, all <a href="/index.php/DF2014:Giant_animal" title="DF2014:Giant animal">giant</a> variants of the creatures in this category
+</td></tr>
+<tr style="background-color: #EEE">
+<td>×3</td>
+<td><a href="/index.php/DF2014:Alligator" title="DF2014:Alligator">alligator</a>, <a href="/index.php/DF2014:Anaconda" title="DF2014:Anaconda">anaconda</a>, <a href="/index.php/DF2014:Blind_cave_bear" title="DF2014:Blind cave bear">blind cave bear</a>, <a href="/index.php/DF2014:Cheetah" title="DF2014:Cheetah">cheetah</a>, <a href="/index.php/DF2014:Draltha" title="DF2014:Draltha">draltha</a>, <a href="/index.php/DF2014:Elk_bird" title="DF2014:Elk bird">elk bird</a>, <a href="/index.php/DF2014:Fire_imp" title="DF2014:Fire imp">fire imp</a>, <a href="/index.php/DF2014:Gila_monster" title="DF2014:Gila monster">gila monster</a>, <a href="/index.php/DF2014:Green_devourer" title="DF2014:Green devourer">green devourer</a>, <a href="/index.php/DF2014:Grizzly_bear" title="DF2014:Grizzly bear">grizzly bear</a>, <a href="/index.php/DF2014:Jaguar" title="DF2014:Jaguar">jaguar</a>, <a href="/index.php/DF2014:Leopard" title="DF2014:Leopard">leopard</a>, <a href="/index.php/DF2014:Lion" title="DF2014:Lion">lion</a>, <a href="/index.php/DF2014:Lynx" title="DF2014:Lynx">lynx</a>, <a href="/index.php/DF2014:Polar_bear" title="DF2014:Polar bear">polar bear</a>, <a href="/index.php/DF2014:Rutherer" title="DF2014:Rutherer">rutherer</a>, <a href="/index.php/DF2014:Saltwater_crocodile" title="DF2014:Saltwater crocodile">saltwater crocodile</a>, <a href="/index.php/DF2014:Sasquatch" title="DF2014:Sasquatch">sasquatch</a>, <a href="/index.php/DF2014:Tiger" title="DF2014:Tiger">tiger</a>, <a href="/index.php/DF2014:Yeti" title="DF2014:Yeti">yeti</a>, all <a href="/index.php/DF2014:Giant_animal" title="DF2014:Giant animal">giant</a> variants of the creatures in this category
+</td></tr>
+<tr>
+<td>×4</td>
+<td><a href="/index.php/DF2014:Cave_crocodile" title="DF2014:Cave crocodile">cave crocodile</a>, <a href="/index.php/DF2014:Cave_dragon" title="DF2014:Cave dragon">cave dragon</a>, <a href="/index.php/DF2014:Giant_bat" title="DF2014:Giant bat">giant bat</a>, <a href="/index.php/DF2014:Giant_cave_spider" title="DF2014:Giant cave spider">giant cave spider</a>, <a href="/index.php/DF2014:Giant_olm" title="DF2014:Giant olm">giant olm</a>, <a href="/index.php/DF2014:Giant_cave_toad" title="DF2014:Giant cave toad">giant cave toad</a>, <a href="/index.php/DF2014:Jabberer" title="DF2014:Jabberer">jabberer</a>, <a href="/index.php/DF2014:Unicorn" title="DF2014:Unicorn">unicorn</a>, <a href="/index.php/DF2014:Voracious_cave_crawler" title="DF2014:Voracious cave crawler">voracious cave crawler</a>
+</td></tr>
+<tr style="background-color: #EEE">
+<td>×5</td>
+<td><a href="/index.php/DF2014:Elephant" title="DF2014:Elephant">elephant</a>, <a href="/index.php/DF2014:Sea_monster" title="DF2014:Sea monster">sea monster</a>, <a href="/index.php/DF2014:Sea_serpent" title="DF2014:Sea serpent">sea serpent</a>, <a href="/index.php/DF2014:Giraffe" title="DF2014:Giraffe">giraffe</a>, <a href="/index.php/DF2014:Rhinoceros" title="DF2014:Rhinoceros">rhinoceros</a>, all <a href="/index.php/DF2014:Giant_animal" title="DF2014:Giant animal">giant</a> variants of the creatures in this category
+</td></tr>
+<tr>
+<td>×10</td>
+<td><a href="/index.php/DF2014:Hydra" title="DF2014:Hydra">hydra</a>
+</td></tr>
+<tr style="background-color: #EEE">
+<td>×15</td>
+<td><a href="/index.php/DF2014:Dragon" title="DF2014:Dragon">dragon</a>, <a href="/index.php/DF2014:Roc" title="DF2014:Roc">roc</a>
+</td></tr></tbody></table>
+<table class="collapsible collapsed" style="width:80%; border-spacing: 1">
+
+<tbody><tr style="background-color:#ccf">
+<th colspan="2"><a href="/index.php/DF2014:Plant" title="DF2014:Plant">Plants</a>
+</th></tr>
+<tr style="text-align:left">
+<th style="padding-right:1em">Multiplier
+</th>
+<th>Plant
+</th></tr>
+<tr style="background-color: #EEE">
+<td>×1</td>
+<td><a href="/index.php/DF2014:Hide_root" title="DF2014:Hide root">hide root</a>, <a href="/index.php/DF2014:Kobold_bulb" title="DF2014:Kobold bulb">kobold bulb</a>, <a href="/index.php/DF2014:Muck_root" title="DF2014:Muck root">muck root</a>, <a href="/index.php/DF2014:Prickle_berry" title="DF2014:Prickle berry">prickle berry</a>, <a href="/index.php/DF2014:Rat_weed" title="DF2014:Rat weed">rat weed</a>, <a href="/index.php/DF2014:Sliver_barb" title="DF2014:Sliver barb">sliver barb</a>, <a href="/index.php/DF2014:Whip_vine" title="DF2014:Whip vine">whip vine</a><br />all <a href="/index.php/DF2014:Tree" title="DF2014:Tree">trees</a> and plant <a href="/index.php/DF2014:Seed" title="DF2014:Seed">seeds</a>
+</td></tr>
+<tr>
+<td>×2</td>
+<td><a href="/index.php/DF2014:Blade_weed" title="DF2014:Blade weed">blade weed</a>, <a href="/index.php/DF2014:Bloated_tuber" title="DF2014:Bloated tuber">bloated tuber</a>, <a href="/index.php/DF2014:Cave_wheat" title="DF2014:Cave wheat">cave wheat</a>, <a href="/index.php/DF2014:Dimple_cup" title="DF2014:Dimple cup">dimple cup</a>, <a href="/index.php/DF2014:Fisher_berry" title="DF2014:Fisher berry">fisher berry</a>, <a href="/index.php/DF2014:Longland_grass" title="DF2014:Longland grass">longland grass</a>, <a href="/index.php/DF2014:Pig_tail" title="DF2014:Pig tail">pig tail</a>, <a href="/index.php/DF2014:Plump_helmet" title="DF2014:Plump helmet">plump helmet</a>, <a href="/index.php/DF2014:Quarry_bush" title="DF2014:Quarry bush">quarry bush</a>, <a href="/index.php/DF2014:Rope_reed" title="DF2014:Rope reed">rope reed</a>, <a href="/index.php/DF2014:Sweet_pod" title="DF2014:Sweet pod">sweet pod</a>, <a href="/index.php/DF2014:Strawberry" title="DF2014:Strawberry">strawberry</a><br />tuber beer (<a href="/index.php/DF2014:Bloated_tuber" title="DF2014:Bloated tuber">bloated tuber</a> drink)
+</td></tr>
+<tr style="background-color: #EEE">
+<td>×3</td>
+<td><a href="/index.php/DF2014:Sun_berry" title="DF2014:Sun berry">sun berry</a><br />whip wine (<a href="/index.php/DF2014:Whip_vine" title="DF2014:Whip vine">whip vine</a> drink)
+</td></tr>
+<tr>
+<td>×5</td>
+<td><a href="/index.php/DF2014:Valley_herb" title="DF2014:Valley herb">valley herb</a><br /><a href="/index.php/DF2014:Quarry_bush" title="DF2014:Quarry bush">quarry bush</a> leaf, rock nut oil (<a href="/index.php/DF2014:Quarry_bush" title="DF2014:Quarry bush">quarry bush</a> oil), rock nut soap (<a href="/index.php/DF2014:Quarry_bush" title="DF2014:Quarry bush">quarry bush</a> soap), sunshine (<a href="/index.php/DF2014:Sun_berry" title="DF2014:Sun berry">sun berry</a> drink)
+</td></tr>
+<tr style="background-color: #EEE">
+<td>×10</td>
+<td>redroot dye (<a href="/index.php/DF2014:Hide_root" title="DF2014:Hide root">hide root</a> powder)
+</td></tr>
+<tr>
+<td>×20</td>
+<td>cave wheat flour (<a href="/index.php/DF2014:Cave_wheat" title="DF2014:Cave wheat">cave wheat</a> powder), dimple dye (<a href="/index.php/DF2014:Dimple_cup" title="DF2014:Dimple cup">dimple cup</a> powder), dwarven sugar (<a href="/index.php/DF2014:Sweet_pod" title="DF2014:Sweet pod">sweet pod</a> powder), dwarven syrup (<a href="/index.php/DF2014:Sweet_pod" title="DF2014:Sweet pod">sweet pod</a> extract), emerald dye (<a href="/index.php/DF2014:Blade_weed" title="DF2014:Blade weed">blade weed</a> powder), longland flour (<a href="/index.php/DF2014:Longland_grass" title="DF2014:Longland grass">longland grass</a> powder), sliver dye (<a href="/index.php/DF2014:Sliver_barb" title="DF2014:Sliver barb">sliver barb</a> powder)
+</td></tr>
+<tr style="background-color: #EEE">
+<td>×25</td>
+<td>whip vine flour (<a href="/index.php/DF2014:Whip_vine" title="DF2014:Whip vine">whip vine</a> powder)
+</td></tr>
+<tr>
+<td>×100</td>
+<td>gnomeblight (<a href="/index.php/DF2014:Kobold_bulb" title="DF2014:Kobold bulb">kobold bulb</a> extract), golden salve (<a href="/index.php/DF2014:Valley_herb" title="DF2014:Valley herb">valley herb</a> extract)
+</td></tr>
+<tr style="background-color: #EEE">
+<td>Note</td>
+<td>Plants are made of various materials - the predominant material (usually STRUCTURAL) is listed for each individual plant, and other materials are listed separately when they differ.
+</td></tr></tbody></table>
+<table class="collapsible collapsed" style="width:80%; border-spacing: 1">
+
+<tbody><tr style="background-color:#ccf">
+<th colspan="2">Miscellaneous
+</th></tr>
+<tr style="text-align:left">
+<th style="padding-right:1em">Multiplier
+</th>
+<th>Material
+</th></tr>
+<tr style="background-color: #EEE">
+<td>×1</td>
+<td><a href="/index.php/DF2014:Ash" title="DF2014:Ash">Ash</a>
+</td></tr>
+<tr>
+<td>×2</td>
+<td><a href="/index.php/DF2014:Amber" title="DF2014:Amber">Amber</a>, <a href="/index.php/DF2014:Coral" title="DF2014:Coral">Coral</a>, <a href="/index.php/DF2014:Coal" class="mw-redirect" title="DF2014:Coal">Coal</a>, <a href="/index.php/DF2014:Glass" title="DF2014:Glass">Green glass</a>, <a href="/index.php/DF2014:Lye" title="DF2014:Lye">Lye</a>
+</td></tr>
+<tr style="background-color: #EEE">
+<td>×3</td>
+<td><a href="/index.php/DF2014:Potash" title="DF2014:Potash">Potash</a>, <a href="/index.php/DF2014:Earthenware" title="DF2014:Earthenware">Earthenware</a>
+</td></tr>
+<tr>
+<td>×4</td>
+<td><a href="/index.php/DF2014:Pearlash" title="DF2014:Pearlash">Pearlash</a>, <a href="/index.php/DF2014:Stoneware" title="DF2014:Stoneware">Stoneware</a>
+</td></tr>
+<tr style="background-color: #EEE">
+<td>×5</td>
+<td><a href="/index.php/DF2014:Clear_glass" class="mw-redirect" title="DF2014:Clear glass">Clear glass</a>
+</td></tr>
+<tr>
+<td>×10</td>
+<td><a href="/index.php/DF2014:Crystal_glass" class="mw-redirect" title="DF2014:Crystal glass">Crystal glass</a>, <a href="/index.php/DF2014:Porcelain" title="DF2014:Porcelain">Porcelain</a>, <a href="/index.php/DF2014:Salt" title="DF2014:Salt">Salt</a>
+</td></tr></tbody></table>
+<h2><span class="mw-headline" id="Quality">Quality</span></h2>
+<p>Item value is further increased by applying the <a href="/index.php/DF2014:Item_quality" title="DF2014:Item quality">quality</a> multiplier.
+</p>
+<table>
+<tbody><tr>
+<th style="padding-right: 35px;"><b>Designation</b></th>
+<th style="text-align: left;"><b>Description</b></th>
+<th style="padding-right: 20px; padding-left: 15px; text-align: center;"><b>Value <br />Modifier</b></th>
+<th>
+</th></tr>
+<tr>
+<td>&#160;Item Name</td>
+<td style="text-align: center;">&#8212;&#160;&#160;&#160;&#160;</td>
+<td style="text-align: center;">&#215;1&#160;</td>
+<td>
+</td></tr>
+<tr>
+<td>-Item Name-</td>
+<td>Well-crafted</td>
+<td style="text-align: center;">&#215;2&#160;</td>
+<td>
+</td></tr>
+<tr>
+<td>+Item Name+</td>
+<td>Finely-crafted</td>
+<td style="text-align: center;">&#215;3&#160;</td>
+<td>
+</td></tr>
+<tr>
+<td>*Item Name*</td>
+<td>Superior quality</td>
+<td style="text-align: center;">&#215;4&#160;</td>
+<td>
+</td></tr>
+<tr>
+<td>≡Item Name≡</td>
+<td>Exceptional</td>
+<td style="text-align: center;">&#215;5&#160;</td>
+<td>
+</td></tr>
+<tr>
+<td>☼Item Name☼</td>
+<td>Masterful</td>
+<td style="text-align: center;">&#215;12&#160;</td>
+<td>
+</td></tr>
+<tr>
+<td>Unique Name</td>
+<td><a href="/index.php/DF2014:Artifact" class="mw-redirect" title="DF2014:Artifact">Artifact</a></td>
+<td style="text-align:center;">&#215;120&#160;</td>
+<td>
+</td></tr></tbody></table></div>

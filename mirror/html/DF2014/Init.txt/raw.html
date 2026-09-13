@@ -1,0 +1,90 @@
+<div class="mw-parser-output"><p>WARNING: Do NOT copy over the init.txt from an earlier version of DF.
+Always read the file carefully, including the comments.
+</p><p>In general, you can copy savegames and tilesets from older DF
+versions, but you should not copy anything else.  You should not, under any
+circumstances, unpack a new DF on top of an older one.
+</p><p><br />
+Change this to turn sound off.
+</p><p>[SOUND:YES]
+</p><p>The sound volume runs from 0 (off) to 255 (full).  You can set the volume from the ESC options menu as well.
+</p><p>[VOLUME:255]
+</p><p>Change this to skip the wonderful intro movies.
+</p><p>[INTRO:YES]
+</p><p>This lets you set the starting windowed/fullscreen setting.  Can be YES, NO or PROMPT.
+</p><p>[WINDOWED:YES]
+</p><p>This is the size and font for windowed mode.  Changing to the 800x600 font might make you happier.
+If set below 256x256 it specifies the grid size instead, with a minimum of 80x25.
+</p><p>[WINDOWEDX:80]
+[WINDOWEDY:25]
+[FONT:curses_640x300.png]
+</p><p>You may disable window resizing if you wish.
+[RESIZABLE:YES]
+</p><p>Full screen info.  The 0s below mean that the game will choose a resolution for you, but you can set it yourself as well.
+</p><p>[FULLSCREENX:0]
+[FULLSCREENY:0]
+[FULLFONT:curses_800x600.png]
+</p><p>If this is set to NO, tiles will be stretched to fit the screen if there is a resolution mismatch.
+If this is set to YES, the tiles will not be stretched, but rather the game view will be centralized, surrounded by black space.  Tiles that are too large will always be compressed rather than running off the screen.
+</p><p>[BLACK_SPACE:YES]
+</p><p>Graphics info, most of it as above.  Set GRAPHICS to YES to turn it all on.  This will use the "raw/graphics" folder for tile information.  Currently this is limited to whatever creature graphics you have downloaded.  The game comes with a few pictures to demonstrate.  As of February 2020, the Dwarf Fortress Wiki has custom tilesets available at <a rel="nofollow" class="external free" href="http://dwarffortresswiki.org/index.php/Tileset_repository">http://dwarffortresswiki.org/index.php/Tileset_repository</a> and creature graphics at <a rel="nofollow" class="external free" href="http://dwarffortresswiki.org/index.php/Graphics_set_repository">http://dwarffortresswiki.org/index.php/Graphics_set_repository</a>.
+</p><p>[GRAPHICS:NO]
+[GRAPHICS_WINDOWEDX:0]
+[GRAPHICS_WINDOWEDY:0]
+[GRAPHICS_FONT:curses_square_16x16.png]
+[GRAPHICS_FULLSCREENX:0]
+[GRAPHICS_FULLSCREENY:0]
+[GRAPHICS_FULLFONT:curses_square_16x16.png]
+[GRAPHICS_BLACK_SPACE:YES]
+</p><p>These settings can have a significant impact on frame rate, especially for people that have slow frame rates on the title screen.  Available modes are 2D, 2DSW, 2DASYNC, STANDARD, PARTIAL:&lt;number&gt;, ACCUM_BUFFER, FRAME_BUFFER and VBO. The number after PARTIAL refers to how many frames it will redo a printed tile before skipping it, so you might try increasing it a bit if you have flickering when PARTIAL is set.  Please note that any of these combinations might cause frame rates to drop significantly or cause unpleasant side effects like flickering.
+</p><p>By and large, 2D should be the most reliable, while STANDARD has a good combination of speed and reliability. However, all 2D modes are normally far slower than even STANDARD, which may be the slowest OpenGL mode.
+</p><p>On a multi-core machine none of this is very likely to matter; stick to 2D.
+</p><p>2DASYNC may be slightly more responsive than 2D on a multi-core machine, but this has recently become doubtful due to improvements to the other modes.
+</p><p>Linux/OS X users may also use PRINT_MODE:TEXT for primitive ncurses output.
+</p><p>[PRINT_MODE:2D]
+	Mode examples:
+	 PRINT_MODE:2D
+	 PRINT_MODE:TEXT
+	 PRINT_MODE:FRAME_BUFFER
+	 PRINT_MODE:PARTIAL:0
+[SINGLE_BUFFER:NO]
+</p><p>Switches truetype on whenever the vertical tile size is this many pixels or larger.  You may also use YES/NO to force it on/off.  Turning it off may provide a minor speed boost (using font small enough that it doesn't activate won't).
+</p><p>[TRUETYPE:24]
+</p><p>Change this to YES to keep the DF window on top of your other windows.
+</p><p>[TOPMOST:NO]
+</p><p>Change this to YES if you want to see an FPS counter at the top left.
+</p><p>[FPS:NO]
+</p><p>Use this to set the maximum frame rate during play.  The movies are always capped at 100.  A frame in this case is not graphical but related to the movement speed of a creature.  A healthy, unencumbered dwarven peasant takes one step every 10 frames.
+</p><p>You may set FPS_CAP to 0 to make it uncapped.
+</p><p>[FPS_CAP:100]
+</p><p>Use this to set the maximum graphical frame refresh rate during play.
+</p><p>[G_FPS_CAP:50]
+</p><p>On cards that support the OpenGL ARB_sync extension, turning this on can improve framerates in GPU overload conditions. It defaults to NO, as many cards that claim to support this will crash if asked to do so.
+</p><p>[ARB_SYNC:NO]
+</p><p>This sets the applications vertical synchronization behavior.  Changing this to YES can impact your FPS if your G_FPS is high. ARB_SYNC is a better option, if your system supports it.
+</p><p>[VSYNC:NO]
+</p><p>Change this to NEAREST if you want the texture values to use the nearest pixel without averaging.
+Change this to LINEAR if you want the texture values to be averaged over the adjacent pixels.
+</p><p>[TEXTURE_PARAM:LINEAR]
+</p><p>Change this to make the dwarfort.exe process have a different priority.  From highest to lowest, the options are REALTIME, HIGH, ABOVE_NORMAL, NORMAL, BELOW_NORMAL and IDLE.
+</p><p>[PRIORITY:NORMAL]
+</p><p>Use this to set how fast the game zooms.  The default corresponds to
+increasing grid size by 10 units each time you zoom.
+</p><p>[ZOOM_SPEED:10]
+</p><p>Change this to NO if you don't want to have the mouse involved at all.
+</p><p>[MOUSE:YES]
+</p><p>Change this to YES if you'd like to use a BMP for the mouse cursor.  The image currently lags when the game is lagging however.
+</p><p>[MOUSE_PICTURE:NO]
+</p><p>This controls the number of milliseconds that must pass before a held key sends an initial repeat press to the game.  You might need to adjust this.
+</p><p>[KEY_HOLD_MS:250]
+</p><p>This controls the number of milliseconds that must pass before a held key sends a repeat press to the game after the repeat process has begun.
+</p><p>[KEY_REPEAT_MS:150]
+</p><p>If you set KEY_REPEAT_ACCEL_LIMIT above one, then after KEY_REPEAT_ACCEL_START repetitions the repetition delay will smoothly decrease until repetition is this number of times faster than at the start.
+</p><p>[KEY_REPEAT_ACCEL_LIMIT:8]
+[KEY_REPEAT_ACCEL_START:10]
+</p><p>This controls the number of milliseconds between macro instructions.
+</p><p>[MACRO_MS:15]
+</p><p>This controls the number of milliseconds that must pass before input works again after the view recenters on an event in dwarf mode.
+</p><p>[RECENTER_INTERFACE_SHUTDOWN_MS:0]
+</p><p>Change this to NO if you want to leave save uncompressed (you might want to do this if you are experience save corruption).
+</p><p>[COMPRESSED_SAVES:YES]
+</p></div>

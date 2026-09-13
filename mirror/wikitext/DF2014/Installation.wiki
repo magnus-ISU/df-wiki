@@ -1,0 +1,489 @@
+{{Quality|Exceptional|12:06, 26 January 2015 (UTC)}}
+{{av}}
+{{TOC right}}
+In order to install [[Dwarf Fortress]], simply download the latest version, extract its contents, and play. 
+{{quick download|{{current/version/ns}}}}
+
+= Download =
+
+''Dwarf Fortress Classic'' is freely available directly from the developers, Bay 12 Games, at http://www.bay12games.com/dwarves/ . Simply find the version that matches your operating system and click the link.  You will be prompted to save an archive file, do so and follow the installation instructions bellow.
+
+: The three downloads linked at the top of the main page are 64-bit versions of DF for Windows, macOS, and Linux. "All versions" links to a page with additional choices, including 32-bit builds for all platforms, "small" builds for Windows (which lack sound files), and "legacy" builds for Windows. Generally, the SDL builds for Windows should be preferred, although the Legacy builds may be necessary on some older computers. 
+
+''[[Dwarf Fortress|Dwarf Fortress Premium]]'' can be download and installed from [https://store.steampowered.com/app/975370/Dwarf_Fortress/ Steam] and [https://kitfoxgames.itch.io/dwarf-fortress itch.io] platforms like you would install any other game there.  
+
+== Third-Party Packages ==
+
+{{main|Utility:Lazy Newb Pack}}
+
+There are several packages which bundle the game with several utilities and graphics sets, usually configurable with an included launcher. These are listed on the [[Utility:Lazy Newb Pack|Lazy Newb Pack]] page.
+
+The ''Dwarf Fortress'' community often creates custom [[Graphics set repository|graphics sets]], [[Tileset repository|tilesets]] and [[Color_scheme#Custom_color_schemes|color schemes]]. They're like graphical mods that make DF look prettier or just different. A lot of people pack the game folder with the tileset installed and everything already set up, so all you have to do is extract and play. Among the most popular of these are [http://www.bay12forums.com/smf/index.php?topic=53180.0 Ironhand's Graphics Set] and [http://www.bay12forums.com/smf/index.php?topic=57557.0 Phoebus' Graphic Set].  Most notable graphics sets are included in the packs mentioned above.
+
+= Installation =
+:''Also see: [[System requirements]]''
+
+== Windows ==
+
+There is no installer for the game. Simply right-click the zip archive you downloaded and choose <code>Extract All...</code>, then choose a destination folder, and click <code>Extract</code> (or maybe <code>Unzip</code> or <code>Next</code> on older versions of Windows). By default Windows uses the name of the archive as the folder name, in the folder the archive is in, so something like <code>C:\Users\yourusername\Downloads\df_47_05_win</code>. You should change that to something like <code>C:\Users\yourusername\Desktop\Dwarf Fortress</code> or <code>C:\games\Dwarf Fortress</code>. After the files have been extracted, double-click the <code>Dwarf Fortress.exe</code> file within the folder you chose to start the game.
+
+* Make sure to actually ''extract'' the archive; do not just double-click the archive and run the game from the window that appears. If you do this, then it may appear to work, but your save game data will get discarded - the cause of many "my saved games keep getting deleted" complaints. 
+* The game needs to be able to write to its own folder, choose a game folder your user has write access to without requiring administrator rights for example: your <code>Downloads</code> folder, <code>Desktop</code>, or <code>C:\games\..</code>; do '''not''' install it in <code>C:\Program Files\..</code> if you are running Windows Vista or later.
+
+Troubleshooting: 
+
+* If you have an error stating that MSVCP140.dll is missing, it can be obtained by downloading [https://www.microsoft.com/en-us/download/details.aspx?id=48145 Visual C++ Redistributable for Visual Studio 2015]. When prompted choose the x64 version for 64-bit DF, or the x86 version for 32-bit DF.
+* If Windows is set to scale the display, you may need to disable that for DF. Right-click the ''Dwarf Fortress.exe'' icon, select '''Properties''', select the '''Compatibility''' tab, and then activate the '''Disable display scaling on high DPI settings''' (or '''Override high DPI scaling behavior, scaling performed by: Application''') check box.[https://support.microsoft.com/en-us/help/3025083/windows-scaling-issues-for-high-dpi-devices]
+
+Creating shortcuts:
+
+* Right-click the <code>Dwarf Fortress.exe</code> file and choose any of <code>Pin to Start</code>, <code>Pin to taskbar</code>, or <code>Send To > Desktop (create shortcut)</code>. (The availability of these options may vary depending on the version of Windows.)
+
+== Mac ==
+
+The Mac version is not an application bundle. Like the Windows version, it consists of a folder containing the application and data files; there is no installer. The entire folder can be dragged into the Applications folder or placed elsewhere. As with the Windows version, the game must be able to write to its own folder.
+
+To start the game, execute the launch script "df". Launching "dwarfort.exe" by itself will ''not'' work (since the "df" script sets up [[wikipedia:environment variables|environment variables]] pointing to DF's libraries).
+
+There are alternative installation options, such as [[Utility:Lazy newb pack|pre-packaged bundles]] and [https://github.com/Bachsau/DF-Mac-Launcher this third-party app launcher], that may make the game easier to start and fix some of the issues listed below.
+
+=== Fixes for common issues ===
+
+Changing the ``PRINT_MODE`` setting in data/init/[[init.txt]] from ``2D`` to ``STANDARD`` is necessary on some systems, particularly macOS 11+ (see below) and machines with Retina displays {{bug|6031}}. Doing this on any macOS system can improve performance significantly {{bug|10052}}. Other values for this setting, like ``FRAME_BUFFER``, may also help.
+
+On macOS 10.15 (Catalina) and above, if you encounter gatekeeper security-related warnings that prevent DF from starting, one solution (from [https://github.com/DFHack/dfhack/issues/1465 here]) is to run the following command from the terminal in the folder containing <code>dwarfort.exe</code>:
+* <code>find . -print0 | xargs -0 xattr -d com.apple.quarantine</code>
+
+On macOS 11 (Big Sur) and above, if you see a blank white window when starting the game, you will need to change ``[PRINT_MODE:2D]`` to ``[PRINT_MODE:STANDARD]`` in [[init.txt]]. {{bug|11680}}
+
+On case-sensitive filesystems, a freshly-installed version of the game will not launch. {{bug|11136}}
+* Rename "libs/SDL_ttf.framework/Versions/A/Frameworks/FreeType.framework" to "libs/SDL_ttf.framework/Versions/A/Frameworks/freetype.framework" to fix this.
+
+If you are using Parallels Desktop, you might need to change the file association for ``*.exe`` files to prevent the script from opening Parallels automatically. To do this:
+* Right click ``dwarfort.exe`` then click "Get Info"
+* Then click on "Open with:", select "Other..."
+* Then select "Finder"
+* Change "Enable: Recommended Applications" to "Enabled: All Applications"
+* Select "Finder" and then click "Add"
+
+== Linux ==
+
+You may want to check if the package manager for the Linux distribution you are using has a ''Dwarf Fortress'' package. A package will get the correct build of DF for your system, handle all the dependencies and configuration, make any necessary system-specific fixes, probably add an entry to the system application launcher or menu, and handle updates. Note that in some cases, these packages can lag behind official DF releases, and they typically only support a single system-wide installation of DF. If you want a version of DF newer than what your package manager provides, or if you want a portable installation, follow the instructions in the rest of this section instead.
+
+As of 0.43.05, both 64-bit and 32-bit compiled builds of ''Dwarf Fortress'' are available for Linux. Note, to get the 32-bit edition, click the All Versions button on the ''Dwarf Fortress'' download page. Older 32-bit only versions can possibly run on a 64-bit system if the system has the required (32-bit) shared libraries, see below.
+
+''Dwarf Fortress'' for Linux is expected to be run from a terminal (command-line) interface, and so the instructions here will assume you know how to log in and get to a command prompt. By default, however, ''Dwarf Fortress'' is a graphical desktop program (an X client), so you should be in a terminal emulator (inside an X session) before starting the game. (See [[Installation#TEXT mode]] for an alternative.) ''Dwarf Fortress'' will create a new window outside of the terminal window by default, so don't worry about the size of the terminal.
+
+When you installed Linux, you chose either a 32-bit (i386, x86) or 64-bit (amd64, x86_64) architecture. Some systems are able to run programs for either, but it is best to use a version of DF compiled for the same architecture. If you've forgotten which one you have, you can check by running the command <code>uname -m</code> in a terminal. A result of <code>x86_64</code> and <code>i686</code> would indicate 64-bit or 32-bit respectively.
+
+'''Downloading''': Either download it from the [http://www.bay12games.com/dwarves/ Dwarf Fortress Homepage] with a web browser, or with one of these terminal commands, replacing "XX_YY" with the numbers in the desired ''Dwarf Fortress'' file version, found on the [http://www.bay12games.com/dwarves/ site]:
+ wget http://www.bay12games.com/dwarves/df_XX_YY_linux.tar.bz2
+or, for the 32-bit version:
+ wget http://www.bay12games.com/dwarves/df_XX_YY_linux32.tar.bz2
+
+'''Unpacking''': ''Dwarf Fortress'' is shipped as a (bzip2) compressed tar archive. It will extract into a new directory called '''df_linux'''.  So, <code>cd</code> to wherever you want the game to be unpacked, perhaps <code>~/games</code>, and then run
+ tar -xjf /path/to/df_XX_YY_linux.tar.bz2
+where /path/to/df_XX_YY_linux.tar.bz2 is the path and filename of the actual file you downloaded.
+
+(note: <code>tar -xjvf ./df_XX_YY_linux.tar.bz2</code> may be needed in some cases. [what cases? all this does is add verbosity and assume the file is in the current dir])
+
+'''Running''': First, change to the new directory
+ cd df_linux
+then execute the launcher script.
+ ./df
+
+Now you need to ensure that the required dependencies are installed. If you try to run the game and get errors about missing SDL_image libraries (etc.) then you need to install them. Use your distribution's package manager for this - details will be extremely distribution-specific. Specific installation commands for some distributions are in the sections below. You don't need the development versions of the packages with the headers (although that won't hurt) - you just need the runtime versions, with the actual shared libraries.
+
+If you see any errors related to libstdc++ when starting DF (for example, "version `CXXABI_1.3.8' not found"), try removing libstdc++.so.6 and libgcc_s.so.1 from the "libs" folder. This will cause DF to use the system version of these libraries, which are more up-to-date on many modern systems than the libraries that DF includes.
+
+Since ''Dwarf Fortress'' 0.43.05 and later are compiled for both architectures, running natively shouldn't be an issue. However if you're wanting to run an older version of ''Dwarf Fortress'' on a 64-bit system, things get a bit trickier. Since older DF is only a 32-bit application, it will need 32-bit versions of the shared libraries. Some Linux distributions provide these in one or more packages that you can download. For example, in Debian, you'll need to enable the 32bit architecture in your package manager and install the relevant 32-bit libraries like libSDL. If your distribution does not include these, then you may have to supply them manually. Though, at that point it may just be easier to run the old windows version of DF in Wine.
+
+
+=== Debian-based ===
+
+Installing the dependencies for ''Dwarf Fortress'' is simple, but varies slightly depending on whether you're running a 32-bit OS, a 64-bit OS, or a 32-bit version of ''Dwarf Fortress'' on a 64-bit OS.
+
+==== 64-bit (recent version of ''Dwarf Fortress'', most modern machines) ====
+
+===== Install dependencies =====
+
+  $ sudo apt install libsdl1.2debian libsdl-image1.2 libsdl-ttf2.0-0 libgtk2.0-0 libopenal1 libsndfile1 libncursesw5
+
+This will install the SDL image and font libraries necessary, as well as libopenal and libsndfile, which are needed to get the sound working. It will also install libncursesw5, which is needed if you want to run ''Dwarf Fortress'' in ''TEXT'' mode.
+
+===== Fix sound issues =====
+
+In some old versions, ''Dwarf Fortress'' does not quite look in the correct place for the sound libraries it needs to play the wonderful music. This is easily fixed.
+
+Switch to the ''Dwarf Fortress'' folder and add some symlinks to the correct location:
+
+  $ cd ~/df_linux    # or other location, depending on where you installed ''Dwarf Fortress''
+  $ ln -s /usr/lib/x86_64-linux-gnu/libopenal.so.1 libs/libopenal.so
+  $ ln -s /usr/lib/x86_64-linux-gnu/libsndfile.so.1 libs/libsndfile.so
+
+Sometimes OpenAL uses PulseAudio instead of ALSA as the output device breaking the sound.
+
+  $ sudo echo "drivers = alsa," > .alsoftrc
+
+==== Running 32-bit ''Dwarf Fortress'' on 64-bit Debian ====
+
+===== Install dependencies =====
+
+If you're trying to run a version of ''Dwarf Fortress'' older than 0.43.05, you'll need to install the 32-bit versions of the libraries. You can do this with:
+
+  $ sudo dpkg --add-architecture i386
+  $ sudo apt-get update
+  $ sudo apt-get install libsdl1.2debian:i386 libsdl-image1.2:i386 libsdl-ttf2.0-0:i386 libgtk2.0-0:i386 libopenal1:i386 libsndfile1:i386 libncursesw5:i386
+
+===== Fix sound issues =====
+
+Almost the same as above, but the libraries will be in a different location as you're looking for the 32-bit versions:
+
+  $ cd ~/df_linux    # or other location, depending on where you installed ''Dwarf Fortress''
+  $ ln -s /usr/lib/i386-linux-gnu/libopenal.so.1 libs/libopenal.so
+  $ ln -s /usr/lib/i386-linux-gnu/libsndfile.so.1 libs/libsndfile.so
+
+Just as above sometimes OpenAL uses PulseAudio instead of ALSA as the output device breaking the sound.
+
+  $ sudo echo "drivers = alsa," > .alsoftrc
+
+==== 32-bit ====
+
+===== Install dependencies =====
+
+  $ sudo apt-get install libsdl1.2debian libsdl-image1.2 libsdl-ttf2.0-0 libopenal1 libsndfile1 libncursesw5
+
+As above, this will install the SDL image and font libraries, sound libraries, and text libraries.
+
+===== Fix sound issues =====
+
+Switch to the ''Dwarf Fortress'' folder and add some symlinks to the correct location:
+
+  $ cd ~/df_linux    # or other location, depending on where you installed ''Dwarf Fortress''
+  $ ln -s /usr/lib/libopenal.so.1 libs/libopenal.so
+  $ ln -s /usr/lib/libsndfile.so.1 libs/libsndfile.so
+
+==== Standard package ====
+
+''Dwarf Fortress'' is also available as a package in the (non-free) Debian repositories. You can install it (with all dependencies) with a simple
+
+  $ sudo apt-get install dwarf-fortress
+
+=== Fedora ===
+
+''Dwarf Fortress'' has been packaged in [https://rpmfusion.org/ RPM Fusion Nonfree], using a similar method as it is done in Arch Linux (see below). After [https://rpmfusion.org/Configuration installing RPM Fusion] you can simply run the following commands to install and run ''Dwarf Fortress'', which will pull in all the required dependencies:
+
+  $ sudo dnf install dwarffortress
+  $ dwarffortress
+
+The Fedora package is configured to use <code>~/.dwarffortress</code> for per user configuration. Most importantly, your saves and configuration files are in the <code>~/.dwarffortress/data</code> folder. 
+
+Some other tools are provided by the same packager in the [https://mars.arosser.com/fedora/dwarffortress/dwarffortress.repo "Dwarf Fortress for Fedora"] repository. For more information please [http://www.bay12forums.com/smf/index.php?topic=158289.msg7009116#msg7009116 see this forum thread].
+
+If you want to install 64-bit ''Dwarf Fortress'' manually, you can run the following:
+
+  $ sudo dnf install SDL SDL_image SDL_ttf gtk2-devel openal-soft alsa-lib alsa-plugins-pulseaudio mesa-dri-drivers
+
+On 64-bit Fedora installations, to install 32-bit ''Dwarf Fortress'' you can install 32-bit libraries by appending ".i686" to the package name:
+
+  $ sudo dnf install SDL.i686 SDL_image.i686 SDL_ttf.i686 gtk2-devel.i686 openal-soft.i686 alsa-lib.i686 alsa-plugins-pulseaudio.i686 mesa-dri-drivers.i686
+
+Fedora installs all 32-bit libraries to /usr/lib and 64-bit libraries to /usr/lib64 (with /lib and /lib64 being links to these two directories), so if you need to install stuff manually, look in there.
+
+=== Arch Linux ===
+A 64-bit ''Dwarf Fortress'' package is available in the [https://wiki.archlinux.org/index.php/Official_repositories#community community repository]. There are also [https://aur.archlinux.org/packages/?O=0&K=dwarffortress other packages] available in the Arch User Repository ([https://wiki.archlinux.org/index.php/Arch_User_Repository AUR]).
+
+==== Official package installation ====
+Install the official package like any other
+  # pacman -Syu dwarffortress
+Any required dependencies will be installed, too.
+
+You can then launch ''Dwarf Fortress'' by running 'dwarffortress' in your terminal emulator. The package also includes a .desktop file so the game should appear in whatever application launcher or menu you might use.
+
+The first time a user launches the game, the directory .dwarffortress will be created in that user's home directory. Game settings and files can be changed there. Note that some of the directories in there are links to common directories and changes to them will effect all users. Also, any changes to common files should be backed up since they will be overwritten when the package updates. You can find the locations of files installed by the package with the command
+  $ pacman -Ql dwarffortress
+
+If you use tools like dfhack you might want to [https://wiki.archlinux.org/index.php/Pacman#Skip_package_from_being_upgraded configure pacman to not update] ''Dwarf Fortress'' until the tools are updated.
+
+==== AUR package installation ====
+Install an AUR package [https://wiki.archlinux.org/index.php/Arch_User_Repository#Installing_packages manually] or using an [https://wiki.archlinux.org/index.php/AUR_helpers AUR helper]. The different AUR packages may or may not install the game similarly to the official package - use the previous pacman command to check game file locations.
+
+==== Manual or multiple installations ====
+You can also manually install ''Dwarf Fortress'' in case you want to try other versions or with and without mods. Just follow the generic Linux instructions above with a different directory for each install. If you've installed one of the above packages, all the dependencies should already be installed, except maybe GTK2. The package in the official repositories patches ``libgraphics.so`` to remove the GTK2 dependency. If you get an error that ``libgtk-x11-2.0.so.0`` cannot be opened, you can either use the ``libgraphics.so`` from the official package, by copying it to the ``libs`` folder in the new install or linking to it from there, or install GTK2.
+
+To launch this version: in a terminal emulator, ``cd`` to that directory, and run ``./df``. If you get a permission error, you may need to mark the script and executable as being executable with:
+  $ chmod u+x df libs/Dwarf_Fortress
+Once you get an install working you can create a [https://wiki.archlinux.org/index.php/Desktop_entries custom .desktop file] to launch it.
+
+If you want to install a 32-bit version of ''Dwarf Fortress'' you will have to enable the [https://wiki.archlinux.org/index.php/Official_repositories#multilib multilib repository], install the 32-bit system libraries, and install the 32-bit game dependencies manually (check the Arch wiki for more information).
+
+=== CentOS 7 ===
+
+''Dwarf Fortress'' is now 64-bit, so simply run:
+
+  sudo yum install SDL SDL_image SDL_ttf openal
+
+Note that CentOS 7 ships with glibc 2.17, but ''Dwarf Fortress'' by default would like 2.18. [http://www.bay12games.com/dwarves/mantisbt/view.php?id=9893 This bug] has a fix, simply copy the [http://pastebin.com/jX4Wf062 Pastebin script], then move the libraries into a new folder.
+
+  cd df_linux
+  curl -L http://pastebin.com/raw/jX4Wf062 > df
+  mkdir c_libs
+  mv libs/libgcc_s.so.1 libs/libstdc++.so.6 c_libs/
+  chmod a+x df
+
+Then run it!
+  ./df
+
+=== Gentoo ===
+
+There is a ''Dwarf Fortress'' [https://packages.gentoo.org/package/games-roguelike/dwarf-fortress ebuild] in the main Gentoo's portage tree compatible with the new multilib support.
+
+  # emerge -av games-roguelike/dwarf-fortress
+
+=== Solus ===
+
+Download ''Dwarf Fortress'' from the Bay 12 Games website. If you encounter the following error upon launch:
+
+  ./libs/Dwarf_Fortress: error while loading shared libraries: libSDL_ttf-2.0.so.0: cannot open shared object file: No such file or directory
+
+then simply run the following command to install the missing libraries:
+
+  sudo eopkg install sdl-ttf
+
+If you are running a 32bit version of ''Dwarf Fortress'', simply replace <code>sdl-ttf</code> with <code>sdl-ttf-32bit</code> in the above command. You're all set!
+
+=== OpenSuse Tumbleweed ===
+These instructions should work for OpenSuse Leap as well, they just haven't been tested yet.
+==== Dependencies ====
+   $ sudo zypper in libGLU1 libSDL_image-1_2-0 libSDL_ttf-2_0-0
+==== Remove the included c++ library ====
+The included library isn't compatible with OpenSuse's <code>libGLU1</code> package
+   $ cd path/to/df_linux/libs
+   $ rm libstdc++.so.6
+
+cd back to df_linux/ and run the game!
+   $ cd ../
+   $ ./df
+
+=== SteamOS / Steam Deck ===
+
+SteamOS is an Arch Linux-based Linux distribution that comes preinstalled on the Steam Deck.
+
+The latest version of ''Dwarf Fortress'' is available on the Steam Store and runs on most Linux distributions without much difficulty. It is also Steam Deck compatible. You can also download older versions of ''Dwarf Fortress'' from the Bay12 Games and install them directly on the Steam Deck.
+
+==== Non-Steam Install ====
+
+To install and run a non-Steam version of ''Dwarf Fortress'' you first need to switch to ''Desktop Mode'' on your Steam Deck by selecting ''Steam'' > ''Power'' > ''Switch to Desktop''. We are going to assume that you have a working keyboard for everything at this point.
+
+If you've already installed Firefox or some other browser then go to the site and download the Linux version. Otherwise, open the Konsole terminal emulator and use the following commands (or something like it):
+
+ $ mkdir Apps; cd Apps                                             # Create a folder for our downloaded games and apps
+ $ wget https://www.bay12games.com/dwarves/df_47_05_linux.tar.bz2  # We want 47.05 :)
+ $ bunzip2 df_47_05_linux.tar.bz2                                  # Unzip the file
+ $ tar xvf df_47_05_linux.tar                                      # Extract the files
+ $ mv df_linux DwarfFortress                                       # Give it a friendly name
+ $ cd DwarfFortress                                                # Change directory
+ $ mkdir -p libs/old                                               # Create a dir for some old files
+ $ mv libs/libgcc_s.so.1 libs/libstdc++.so.6 libs/old              # Stash these old libraries
+
+==== Application Launcher and Runtime Configuration====
+
+At this point we're ready to configure our Launcher. Open the Steam client and choose ''Add a Game'' > ''Add a Non-Steam Game ...'' from the bottom left. Then ''Browse'' to open a file selection menu and browse to the ''df'' executable in the <code>~/Apps/DwarfFortress</code> folder. You will need to change the filter to ''All Files''. After that choose ''Add Selected Programs''. You should now have a new Steam Game called ''df'' in your Game Library.
+
+Let's clean that up that name. Choose the ''df'' game and select its ''Settings'' icon and choose ''Properties''. Rename it something like ''Dwarf Fortress Legacy''.
+
+Next we need to tell Steam to run the game with its older runtime. Click the ''Compatibility'' tab and choose ''Force the use of a specific Steam Play compatibility tool'' then choose ''Steam Linux Runtime 1.0 (Scout)''. This is also the runtime that's used with when you run newer Classic and Premium versions.
+
+That's it! You should now have a nicely running version of ''Dwarf Fortress'' on your Steam Deck. At this point you can switch back to Gaming Mode and everything should work. But, there are a couple quality-of-life settings you might want to do first.
+
+==== Extra Settings ====
+
+You probably want to update the Controller settings for the game. By default it will choose ''Gamepad with Joystick Trackpad'' so you want to change that to something like ''Keyboard (WASD) and Mouse''.
+
+Next, you should edit the <code>~/Apps/DwarfFortress/data/init/init.txt</code> file and force fullscreen on startup. You can also download a nice [[Tileset]] (16x16 seems to work pretty well). But for now you can run these commands in your <Code>DwarfFortress</code> folder and it will update the screen and use the default <code>curses_square_16x16.png</code> tileset.
+
+ $ cd data/init                                                     # Go to init folder
+ $ cp init.txt init.txt.orig                                        # Make a backup!
+ $ sed -i 's/WINDOWED:YES/WINDOWED:NO/g' init.txt                   # Go fullscreen (1280x800)
+ $ sed -i 's/curses_800x600.png/curses_square_16x16.png/g` init.txt # Better font
+
+Obviously there are lots of additional Dwarf Fortress and Steam Deck configurations but this should get you started.
+
+=== Wine ===
+Downloading the windows version and running it with Wine works fine ([https://appdb.winehq.org/objectManager.php?sClass=version&iId=32503 platinum] on 1.7.47 as of .4x.xx, which means the program runs flawlessly without any initial user configuration). This also avoids any issues with 32-bit versus 64-bit mode.
+
+=== Troubleshooting ===
+If you get errors, it is likely that others will have had the same problem; Try searching the bay12games forum with the error message.
+==== Sound ====
+
+After installing, DF will run, but will complain that it cannot find the OpenAL library and cannot play sounds, even when OpenAL (i386) has been installed. This is due to a bug/feature in which there is no link from the name of the library that DF is looking for ("libopenal.so") to its implementation ("libopenal.so.1" - technically another link). To fix this, simply provide the necessary links in DF's own ''libs'' directory:
+
+  $ cd df_linux/libs
+  $ ln -s /usr/lib/i386-linux-gnu/libopenal.so.1 ./libopenal.so
+  $ ln -s /usr/lib/i386-linux-gnu/libsndfile.so.1 ./libsndfile.so
+
+==== TEXT mode ====
+In this mode - which can be activated in [[init.txt]] - DF uses a terminal as its display, much like classic roguelikes such as Rogue, Moria, and Nethack originally did. There are some caveats for using this mode.
+
+Some key combinations in the default DF configuration will not work. These can be changed in game by pressing {{k|ESC}} then choosing the Key Bindings option or out of the game by editing the [[interface.txt]] file. This is due to the way terminal emulators handle input, the [https://en.wikipedia.org/wiki/Ncurses ncurses] library, and the way DF interfaces with them.{{bug|5494}} Some examples are the keypad keys with modifiers or {{k|Shift+Enter}}.
+
+DF uses the CP437 [[Character_table|character set]] and TEXT mode translates those to UTF-8. Characters will only be displayed correctly if the font the terminal emulator is using has glyphs for all of the set. A UTF-8 encoded text file to test glyph coverage can be found [http://www.orenwatson.be/cp437.htm here]. Download the text file, view it in the terminal (using more, less, cat, etc.), and check if the font the terminal is using includes all the characters shown on the HTML version. Some terminals may be configured to use a [https://en.wikipedia.org/wiki/Fallback_font fallback font] if the main one lacks a glyph - that may result in different sized glyphs being used.
+
+There is a [http://www.bay12forums.com/smf/index.php?topic=59983.0 utility] to convert a DF [[tileset]] to a TTF file. That thread also has downloads for some already converted sets. This does not work for graphics sets. This is one way to get a square font that includes all the characters. [https://www.kreativekorp.com/software/fonts/ksquare.shtml Kreative Square] is another though it has many more glyphs than are needed.
+
+DF's [[colors.txt]] file will have no effect. However, many terminal emulators have settings to change the colors they display. See the terminal emulator's man page for details. Note that the order of the [[Color#Color_values|colors]] is different - the position of the blues and reds are switched as are the cyans and brown/yellow. So, when copying DF color schemes into terminal emulator settings, be sure to change them to the correct order or you'll get yellow "sky", red water, and blue blood.
+
+Many terminal emulators have a setting to treat bright colored text as bold instead. This will cause dark grey text to be "displayed" as bold, black text - usually on a black background - making it unreadable. See the terminal emulator's man page for an option to disable this behavior. (Note that LXTerminal's disallowbold option does not currently seem to work.)
+
+If the [[intro movie]] is enabled, DF will not use the full terminal size unless it receives a resize event. If the intro movie is disabled, DF will use the full size from the start. Note, however, that some DF screens do not use the full size of the window under any circumstance.
+
+==== Upgrading ====
+
+Since every new version of ''Dwarf Fortress'' unpacks in a directory named '''df_linux''' you have to manage upgrades yourself - or use the [http://dffd.wimbli.com/file.php?id=9639 Linux Updater Script]. As on all systems, you should '''not''' unpack a new version of DF on top of an old version's directory -- this will cause things to break, usually in subtle and mysterious ways.  Instead, you should either delete or rename the old '''df_linux''' directory first, before extracting the new version.
+
+==== Manually installing 32-bit libraries ====
+
+If you do need to manually install the libraries, then the first step is to figure out where you will be putting them.  Check to see where your other 32-bit libraries are already installed; for example, on Debian, some are in /lib32 and others are in /usr/lib32.  Since libSDL is in /usr/lib32 on a Debian system, that's where we'll want to put libSDL_image and libSDL_ttf.  On other distributions, the path could be different.
+
+The second step is to get the 32-bit libraries.  You can typically do this by downloading them directly from your distribution's 32-bit package repository.  Again using Debian as our example, we can perform a search at http://packages.debian.org/ for files containing the word libSDL_image for the Intel x86 architecture.  This takes us to [http://packages.debian.org/search?searchon=contents&keywords=libSDL_image&mode=filename&suite=stable&arch=i386 a results page] from which we can proceed to [http://packages.debian.org/squeeze/libsdl-image1.2 the libsdl-image1.2 package page] with a list of download links arranged by architecture.  Grab the i386 package from here, and repeat this for the libSDL_ttf package, and whatever other library you are missing.  Store these package files somewhere convenient.
+
+The third step is to extract the libraries from the packages and get them in the proper location.  You probably ''won't'' be able simply to install the packages using your package manager, because they are for the wrong architecture.  Instead, you'll probably have to extract them by hand.  The steps for doing this are distribution-specific, so when in doubt consult your distribution's help resources. Here are the steps for a .deb package.
+
+* cd into some temporary working directory such as /tmp
+* Extract the files from the .deb archive, which is in ar(1) format:
+  tar x /path/to/libsdl-image1.2*_i386.deb
+: This creates three files: debian-binary, control.tar.gz and data.tar.gz.  We only care about data.tar.gz.
+* Extract data.tar.gz:
+  tar xzf data.tar.gz
+: This creates a subdirectory named usr with various files inside it.  We only care about usr/lib/libSDL_image-1.2.so.0.8.2 (or whatever precise version yours has).
+* Move the shared library into place:
+  sudo mv usr/lib/libSDL_image-1.2.so.* /usr/lib32/
+* Create a symlink to it:
+  cd /usr/lib32
+  sudo ln -s libSDL_image-1.2.so.0.* libSDL_image-1.2.so.0
+  cd -
+
+Repeat this for libSDL_ttf and whatever other libraries are required.
+
+'''NOTE''': If you get the error that libsndfile.so is not found, you must use the following:
+  find */libsndfile.so*
+cd to the correct directory, then use ln as shown above.
+
+
+==== "Not found: /data/art/mouse.png" ====
+===== Fix 1: Preload zlib=====
+Due to incompatibilities between DF's included zlib and newer versions of zlib, libpng can fail on newer systems. A solution is to add this line to the beginning of <code>/your/path/df_linux/df</code> (or <code>/your/path/df_linux/dfhack</code> if you use [[DFHack]]):
+ export LD_PRELOAD=/usr/lib/libz.so.1
+Note that this path can vary - be sure that it is referring to a '''32-bit''' zlib.
+===== Fix 2: Use bmp instead =====
+Another solution (if preloading zlib doesn't work) is to force DF to use the BMP versions of image files. You must first edit the ''/data/init/init.txt'' file and change all occurrences of "png" to "bmp". This should solve all the error messages except for one: "''Not found: data/art/mouse.png''" since there is no setting in the init files to change it. The workaround for this is to edit the ''Dwarf_Fortress'' file found in the ''/your/path/df_linux/libs'' folder which contains the setting for the mouse cursor.
+If you don't know how to do that, you can try this:
+* cd to the ''/df_linux/libs'' folder
+* open ''Dwarf_Fortress'' in ''vi'' or any other editor of your choise:
+  vi ./Dwarf_Fortress
+: This opens the file for editing (text mode). If you are not familiar with ''vi'', it would be a good idea to follow these steps exactly and not press any other keys since they all activate specific commands. If you do press a key though, you can press the ''ESC key'' a few times to cancel the command.
+* With vi open, write the following string and press ''Enter'':
+  /mouse
+: This will search for all the strings that contain the word "mouse" and place the cursor on the first match. Pressing the ''n key'' will cycle through all the matches.
+* Press the ''n'' key until the cursor moves to the desired string, which is "''data/art/mouse.png''". If you accidentally move past the string, you can cycle back through the matched strings using the ''N key'' (shift + n).
+* Once you find the right string, you will have to move the cursor over the "p" in "[..]/mouse.<b>p</b>ng". You do that by pressing the ''l key'' which will move the cursor to the right. There is also the ''h key'' to move the cursor to the left, in case you move past it.
+* With the cursor in the right position press the following key sequence:
+  xxxibmp
+: This will replace the ''.png'' extension with the ''.bmp'' one which solves the problem of the missing ''/data/art/mouse.png'' error.
+* All there is left to do is to save the modifications to the file and quit ''vi''. For that, press the ''ESC key'' once or twice and then press the following key sequence after which you press ''Enter'':
+  :wq
+: This saves the changes and quits 'vi'
+
+Now the game should work properly. Have fun!
+
+==== libGL error ====
+
+''libGL error: MESA-LOADER: failed to open i965''
+
+''libGL error: failed to load driver: swrast''
+
+This can be caused by incompatible libgcc_s.so.1
+
+===== Fix 1: change print mode =====
+
+* Go to /data/init/init.txt
+* Edit PRINT_MODE to be any of the 2D modes or TEXT instead of openGL-based modes like STANDARD, VBO or TWBT.
+
+===== Fix 2: change library =====
+
+* Open df_linux/libs folder
+* Rename  libgcc_s.so.1 to libgcc_s.so.1.bak so that DF will be unable to find it and will default to system libraries.
+* If DF still doesn't launch, find and install suitable libgcc with your package manager.
+* If you have multiple libgccs, you may need to make a shortcut like with libopenal and libsndfile above.
+
+==FreeBSD==
+
+Although there is no official version ported to FreeBSD, ''Dwarf Fortress'' can nevertheless be run using either Wine or FreeBSD's compatibility with Linux. There is now an [https://www.freshports.org/games/linux-dwarffortress/ official port] and installing it can be done the following way (with ports):
+
+  cd /usr/ports/games/linux-dwarffortress/ && make install clean
+
+or, with pkg:
+
+  pkg install linux-dwarffortress
+
+You may also wish to download and run it manually. However, attempting to run the Linux version out of the blue will result in an error about missing library files. Such files must be downloaded from special linux-compatible packages or ports; using your preferred installation method, install the following:
+
+===linux-c6===
+  sudo pkg install linux-c6-gtk2 linux-c6-sdl linux-c6-sdl_image linux-c6-sdl_ttf linux-c6-libGLU \
+  linux-c6-openal-soft linux-c6-libsndfile linux-c6-alsa-plugins-oss
+
+===linux-f10===
+If you don't have the linux-c6 ports available in your system, you can still run ''Dwarf Fortress'' (albeit without sound) using the following packages:
+  sudo pkg install linux-f10-alsa-lib linux-f10-atk linux-f10-cairo linux-f10-expat linux-f10-fontconfig \
+  linux-f10-gtk2 linux-f10-jpeg linux-f10-pango linux-f10-png linux-f10-sdl linux-f10-sdl_image linux-f10-tiff \
+  linux-f10-xorg-libs linux-sdl_ttf linux_base-f10 linux_dri linux-f10-libGLU
+linux_dri might be optional if you have the NVIDIA driver. Note that due to the lack of a linux-f10-libsndfile port, the sound will not work. Requests are being made to [http://lists.freebsd.org/pipermail/freebsd-ports-bugs/2013-January/247698.html port] it, as well as a [https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=178474 DF] port itself.
+
+
+After you install the required packages, copy (or symlink) DF's own library files to the linux-compatible directory:
+  cd dwarf_fortress_directory
+  sudo cp libs/lib* /compat/linux/usr/lib/
+Or
+  cd dwarf_fortress_directory
+  sudo ln -s libs/lib* /compat/linux/usr/lib/
+
+You can then run DF normally. Although it will likely display a bunch of warnings and errors about fonts, it should work.
+
+If you want to avoid polluting your linux-compatible directory, you can always just set LD_LIBRARY_PATH when running df:
+  LD_LIBRARY_PATH=libs:$LD_LIBRARY_PATH ./df
+
+== Chrome OS (Crostini) ==
+
+It is possible to add ''Dwarf Fortress'' to Chrome OS using the Linux (Beta), to add Linux to Chrome OS, [https://support.google.com/chromebook/answer/9145439?p=chromebook_linuxapps check here to enable it]
+You will need to edit the sources list to include the "non-free" repository, this is done by adding "non-free" to the end of the main sources file found at /etc/apt/sources.list
+
+e.g.
+  # Generated by distrobuilder
+  deb https://deb.debian.org/debian buster main non-free
+  deb https://deb.debian.org/debian-security buster/updates main non-free
+Followed by running
+  sudo apt-get update
+Then just follow the Debian instructions above
+
+== Android ==
+
+There is no Android version, but the Windows version can be run on it using ExaGear, Eltech's Windows emulator (which is essentially Wine for Android), as documented [http://www.bay12forums.com/smf/index.php?topic=174983.0 here]. The app isn't free though.
+
+== iOS ==
+
+There is no iOS version, but you may remotely connect to a computer running DF through an app called [https://mifki.com/df/ Dwarf Fortress Remote]. This requires a special version of [[DFHack]] to be run on the target computer which you may download at the same time. It also provides a subscription where you connect to an already set up remote server.
+
+= Documentation =
+
+Fortunately, the documentation on this wiki is very detailed and extensive. You may want to start out with:
+* [[Tutorials]]
+* [[Quickstart_guide|Fortress Mode Quickstart Guide]]
+* [[Adventure mode quick start|Adventure Mode Quickstart Guide]]
+
+Then move on to:
+* [[Dwarf fortress mode|Fortress Mode reference]]
+* [[Adventure mode|Adventure Mode reference]]
+* [[Special:Search|Searching]] the wiki
+
+{{Getting Started}}
+[[ru:Installation]][[zh:Installation]]

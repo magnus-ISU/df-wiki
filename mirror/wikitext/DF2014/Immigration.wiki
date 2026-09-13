@@ -1,0 +1,193 @@
+{{Quality|Exceptional|22:13, 16 November 2019 (UTC)}}
+{{av}}
+:''"Migration" redirects here. This article is about people migrating into your fortress, for the opposite see [[emigration]].''
+
+
+:{{Dftext|Some migrants have arrived.|7:0}}
+
+[[File:immigration_preview.png|thumb|300px|right|Immigrants from the Colonial Era.]]'''Immigration''' is the process of people from another [[site]] of your home [[civilization]] moving into your [[fortress]]. As the fortress prospers, migrants will be attracted in larger numbers, these will arrive in groups once per [[season]]. In the early seasons after establishing the outpost, a smaller migrant group of 2-10 arrives, followed by a large group in the low double digits in the second spring one year after embark. A notification will be received upon arrival, the migrant group will spawn at the edge of the map and proceed to march into your fortress and to the nearest meeting hall. 
+
+Migrants come from all walks of life; from historical figures and skilled craftsdwarves, to unwashed refugees fleeing the horrors of the land. Each group will often include such things as [[child]]ren and domestic animals, including both [[pet]]s and stray livestock - be prepared with adequate [[food]], [[alcohol|drink]], and [[bed]]s, among other things. 
+
+The player can also initiate immigration by requesting workers from their [[holding]]s, and by accepting [[petition]]s for residency from [[visitors]] from nearby civilizations. Note that the migrant [[population]] must be managed carefully, as if it's too low, there might not be enough people available to maintain the fortress and its defenses, and if it's too high, the fortress may not be able to support your population, leaving them to the mercy of hunger, marauding raiders, and worse. However, migration waves are generally a good thing &mdash; if you're prepared for them.
+
+== Skills and [[labor]] preferences ==
+
+Each migrant can arrive with a wide collection of often unrelated skills, far greater than possible with one of the [[starting build|starting 7 dwarves]], and [[experience]] levels as high as Legendary. Any and all skills might be represented, including obscure military skills (like [[blowgunner]]), high levels of one or more [[social skill]]s, [[crutch walker]], [[concentration]] and others - it's even possible to have dwarves with skills that may not be obtainable in fortress mode, like [[tracker|tracking]] or [[Pike_(weapon)|pikedwarf]]. However, Immigrant skills are influenced by your fortress' needs &mdash; migrants with skills your fortress uses a lot, or that your fortress doesn't have at all, are more likely to show up at your gates. Important skills (mining, food production, and basic crafting, according to Toady) are weighed more heavily than other skills.<sup>[http://www.bay12games.com/media/df_talk_12_transcript.html Source] {{dot}} [http://www.bay12games.com/media/Dwarf_Fortress_Talk_12.mp3 MP3]</sup>
+
+Migrants may also arrive with equipment matching their skills; for example, a miner migrant may bring a [[pick]] with them. Migrants may arrive with all labors except [[hauling]], [[cleaning]], recovering wounded, and caring for wounded disabled, depending on the settings one has entered into [[d_init.txt]].
+
+Some immigrants are [[historical figure]]s.  These immigrants come to your fortress with skills representing their history, or wounds that they have suffered during [[world generation]]. They may even be [[vampire]]s or [[werebeast]]s.
+
+==Limiting/preventing immigration==
+In v0.40.05 and above, the [[d_init.txt]] POPULATION_CAP setting immediately prevents further immigration once the desired number is achieved, bypassing the two hardcoded migrant waves. There is also a STRICT_POPULATION_CAP setting, which prevents both immigration and babies when reached (although both can be violated by a few special cases, such as the arrival of a [[monarch]]).  Keep in mind that your population must be at least 80 to get a king and 100 to obtain the current game features.
+
+The number of migrants depends on the [[wealth|created wealth]] of your fortress and so is affected by your dwarves' activities. Note that if your fortress should ever become a mountainhome, you will receive an additional migration wave with the promotion, regardless of your population cap. The number of migrants is affected by how far below the population cap your fortress is. If your fortress is one dwarf short of the cap, you will receive a single migrant (if any). Also note that population cap will not remove dwarves from an existing fortress but will prevent new ones from immigrating or being born.
+
+It is worth noting that you need a certain minimum population size before any of your dwarves will experience [[strange mood]]s.  Additionally, POPULATION_CAP affects only migration,and has no effect on pregnancies - you will need to alter STRICT_POPULATION_CAP, in order to limit births.
+
+To reiterate, the population cap is a (mostly) hard limit on the number of dwarves in your fortress. If you want a fortress with 50 dwarves, simply set the POPULATION_CAP and STRICT_POPULATION_CAP to 50.
+
+==Immigration mechanics==
+The date on which immigrants appear is fixed at the start of that season, and it will be within 2000–7000 game ticks (~16-58 days). The number of immigrants and their skills are determined when the migrant wave arrives. Migration is never originally scheduled in winter - not even a message is displayed.
+
+Migrant skill levels seem to depend on the size of the home civilization; a difference will be noticed if you picked a dwarven civilization that was not well-established (few towns or none) compared to a well-established one.
+
+The two hardcoded waves may not show up for a while if the fort doesn't start on the 15th day of Granite. Note that there may be various reasons for a hardcoded migrant wave to not show up at all, such as if it was blocked by a siege, or if it is not the first fort in the world.{{Cite talk/this}}
+
+Migration waves blocked by sieges will be postponed to the next season, on the same day. This can in theory push autumn migration to winter. The game will skip scheduling a migration wave if there is already one, so there is normally only one migration wave per season.
+
+In rare cases, your civilization may undergo a [[War#Civil_war| civil war]]. If this is the case, no immigrants will join your fort after the two hardcoded waves.
+
+===Migrant wave sizes===
+The first two migrant waves have a minimum size of 1, if a wave member has a relative in your group already, and a maximum size of 10. The size of these waves are unaffected by fortress wealth, danger, or even the extinction of their home civilization.
+
+The third migrant wave and on are influenced by the [[wealth|created wealth]] of the fortress, with more wealth attracting more immigrants - specifically, influenced by the fortress wealth and population as reported by the last outgoing dwarven [[caravan]].  Wealth created after the caravan leaves has no influence until the next year's caravan leaves.  If the caravan fails to make it out then the fortress' wealth and population are not reported. The dwarven [[liaison]] does not report fortress' wealth and population even if they make it out.
+
+The game tries to bring up current population to desired level, which is calculated as:
+
+    desired = last_reported_created_wealth/1000 + deaths[0]/32 - fear - last_reported_pop
+
+where fear is calculated over 5 year fort history ([0] = this year, [1] = previous year, etc):
+
+    fear = (deaths[0] + insanities[0] + noble_deaths[0])/32
+         + (deaths[1] + insanities[1])/2
+         + (deaths[2] + insanities[2])/4
+         + (deaths[3] + insanities[3])/8
+         + (deaths[4] + insanities[4])/16
+
+where deaths are only of living, non-insane citizens; insanities are incremented when a dwarf becomes [[insanity|insane]], or if an intelligent undead (opposed to life) fort member dies.
+
+One factor which is known to affect migrant wave size is the total size of your fortress's {{k|u}}nits list (all 4 categories), which consists of dwarves, invaders, merchants, and animals which either died or currently live at your fortress. As this number increases, the maximum size of migrant waves will be reduced: starting at a local population of 1000, migrant wave sizes are limited to 10, and at subsequent levels of 1300, 1600, 1800, 2000, 2200, 2400, 2600, 2800, and 2900, the limit is decreased by 1, and once you reach a local population of 3000 you will cease to get migrants at all.
+
+The DFHack command <b>fix/dead-units</b> can clear uninteresting (unnamed) dead units from the units list and allow migrants to arrive again, if this is what is keeping them away.
+
+The maximum wave size reported to date is [http://www.reddit.com/r/dwarffortress/comments/q580c/hole_shit  77] <sup>[https://archive.is/Wbp37/a5dc158a51bc238bc9441f06c10a3540eac8124c.png archive]</sup>
+
+==Fortress Failure Migration==
+If a fortress is abandoned during [[unhappy]], [[insanity|stark raving mad]] times, the citizens can migrate to your new fortress ''still'' stark raving mad (berserk possibly, further looking into required). Likewise, if your fortress happened to have any [[husk]]s around when it was abandoned, some of them may also migrate to your new fortress.
+
+==Deterring migrants==
+
+The message for migrant arrivals will be chosen based on your fortress' above-mentioned "fear" value. 0-9 is normal, 10+ is "dangerous", and 50+ is "cursed death trap".
+
+Several immigration messages are possible:
+{| class=wikitable
+! Message
+! Circumstances
+|-
+|''A migrant has arrived.'' / ''Some migrants have arrived.''
+|This is the normal message.
+|-
+|''A migrant has arrived, despite the danger.'' / ''Some migrants have arrived, despite the danger.''
+|This occurs if there is 10-49 fear.
+|-
+|''A migrant has decided to brave this terrifying place.'' / ''Some migrants have decided to brave this terrifying place, knowing it may be their tomb.''
+|This occurs if there is 50+ fear.
+|-
+|''The fortress attracted no migrants this season.''
+|No migrants, desired population is non-negative.
+|-
+|''Migrants were too nervous to make the journey this season.''
+|No migrants (desired population is negative), 0-9 fear.
+|-
+|''Migrants refused to journey to such a dangerous fortress this season''
+|No migrants (desired population is negative), 10-49 fear.
+|-
+|''No one even considered making the journey to such a cursed death-trap this season.''
+|No migrants (desired population is negative), 50+ fear. So many dwarves have died at your fortress (whether due to invasions, [[hidden fun stuff]], or death-traps gone horribly wrong) that nobody wants to come anywhere near your fortress.
+|-
+|''Others were too nervous to make the journey.''
+|[[Monarch]]'s entourage has arrived, no other migrants due to negative desired population, 0-9 fear.
+|-
+|''Others refused to journey to this dangerous fortress.''
+|[[Monarch]]'s entourage has arrived, no other migrants due to negative desired population, 10-49 fear.
+|-
+|''No one else even considered making the journey to this cursed death-trap.''
+|[[Monarch]]'s entourage has arrived, no other migrants due to negative desired population, 50+ fear.
+|}
+
+==Expelling migrants==
+Undesirable migrants can be targeted for "[[emigration]]" from their individual preferences screen. To do this: Select the dwarf through the citizen list, view their Preferences, and press e to Expel. You will be prompted to confirm, and they will leave the fortress.
+
+==Adventure mode==
+In certain locations in [[adventure mode]], you may come across a [[Army|Migrating Group]] - for instance, near any recently [[abandon]]ed [[fortress]]; choosing to travel to the group will allow you to talk to the members of the former fortress as they travel back to dwarven civilization.
+
+==Bugs==
+Some migrants will be incorrectly listed as babies or children, when they are not in the expected age range for those categories.  This will automatically fix itself when they have their next birthday. {{verify| Is still a bug? Can't find an entry for it on mantis}} 
+
+If your fortress does not have a meeting hall, you might have a situation where a single migrant can't find the fort and just stands at the edge of the map, not moving at all. You may notice that, even if more migrants are part of the wave, they cannot enter the map (and do not show up on the units screen) until this migrant moves out of the square, as all migrants in a single wave must enter the map through this square.
+
+==The Migrant Tier List==
+{{D for Dwarf}}
+
+When a migrant wave arrives, players should stop what they are doing and check the migrants' skills to see what they may offer to their fortress. 
+
+Here, migrants are sorted into tiers, roughly ordered by usefulness to a mid-to-high-level fort. Do note that even F-tier migrants can be useful if a player decides to make them so, and of course, any migrant can find employment as a [[haul]]er or a [[soldier]], or may train useful skills over time.
+
+"Valuable" skills can be sorted into three categories - those that produce better-[[quality]] items, those that perform tasks faster or more efficiently, and those that simply ''cannot'' be done unskilled, such as medical tasks. Remember that, when the dust clears, the most valuable skill a dwarf can have is the one that your fortress needs the most. 
+
+==== Valued Migrants (A) ====
+Some skills are central to most fortresses, either by improving the quality of critical items or by providing irreplaceable services. These migrants can improve a fort simply by showing up. ''Also known as "can I give them a [[mood]], please?"''.
+
+*[[Weaponsmith]]s: Speak softly, but carry a [[war hammer|big stick]]. If you have an excess of [[weapon]]s, weaponsmiths can also be used to make extremely high-value [[trap components]].
+*[[Armorsmith]]s: Perhaps even more useful than weaponsmiths.
+*[[Soldier]]s: Who doesn't need extra <s>meat shields</s> dwarfpower? If you don't have any soldiers yet, you can form a militia, and if your militia is already well-developed, they can act as reservists, in case something [[Fun]] happens to the militia.
+*[[Grower]]s: Skilled growers can improve farm efficiency exponentially, as one skilled grower can easily outperform more than a dozen unskilled laborers (see the article for more information), freeing them for other tasks. A true force multiplier.
+*[[Mechanic]]s: High-quality [[mechanism]]s are more accurate in traps, and they make great trade goods.
+*[[Cook]]s: Will quickly boost your fortress's value, and dwarves just adore fine meals, keeping up morale.
+
+==== Good Migrants (B) ====
+Put these dwarves to work, they have much to contribute. ''Also known as "stalwarts of the fort"''.
+
+*[[Miner]]s: Always helpful, unless your fortress is ''very'' well developed - a high mining skill can also be useful in combat.
+*[[Carpenter]]s:  Like blacksmiths, but they use [[wood]] instead of metal. Only source of quality [[bed]]s and some newer items, like [[display case]]s and [[Instrument|musical instrument]]s.  Also, only leather shields are lighter than wood. Wooden [[trap components]] can also be useful as a trade good if other industries haven't been developed yet.
+*[[Mason]]s: Most fortresses can't afford to make every piece of furniture out of metal or wood - stone is the traditional dwarven option, though it is a bit lacking in value as a material.
+*[[Stonecrafter]]s: Making [[finished goods|trade goods]] for the caravan out of [[stone]] is a great way to kick-start trade, since [[metal]] and [[wood]] are often needed elsewhere. And real dwarves drink out of [[goblet|≡stone mugs≡]], not glass goblets or wooden cups or whatever.
+*[[Engraver]]s: Engraving isn't usually needed in a new fort, but is a huge boost in value and good thoughts in a mature one.  A good engraver can smooth and detail a large [[room]] in ''minutes'', shooting its [[Room#Quality|quality]] sky-high, while a novice might take hours. Novice engravers also can take quite a while to train.
+*[[Brewer]]s: Should be obvious. Alcohol doesn't have a quality level, but the increase in production speed skilled brewers provide is never unwelcome.
+*[[Healthcare]]: Skilled medical dwarves are irreplaceable for trying to save that one beloved soldier.
+*[[Furnace operator]]s: While bars do not have quality levels, highly skilled furnace operators are essential for producing enough metal for your metal industry.
+*[[Wood burner]]s: Similarly, unless your map has coal or you zipline the 100+ z-levels to magma, your furnaces are going to need a lot of charcoal.
+*[[Leatherworker]]s: [[Leather]] can craft certain items that cannot be created sensibly with any other material, such as [[backpack]]s, [[quiver]]s, [[flask|waterskins]], and lightweight [[shield]]s (for all) and [[armor]] (for Hunters). Unless, of course, you're using [[adamantine]].
+
+==== Niche Migrants (C) ====
+These migrants can be useful, but usually only in very specific cases, or for only a few tasks - if your fortress is focusing in that area, they fit in the above category, but if not, then they are just as valuable as peasants (see next category). ''Also known as "it ain't much, but it's honest work"''.
+
+*[[Blacksmith]]s: These dwarves make [[metal]] (not just [[iron]]) [[furniture]] and other large products, including valuable metal [[statue]]s, which can boost the value of rooms and improve morale-how else are you going to immortalize your militia's valiant battle against that ferocious [[Titan|forest titan]]?
+*[[Metalcrafter]]s: You may not want to fill the next caravan with *[[silver]] mugs* and other metal [[finished goods]], but making ≡gold [[chain]]s≡ for your guard animals and exotic pets is pretty dwarfy.
+*[[Weaver]]s, [[Clothier]]s: the textile industry is needed to supply your fort with [[thread]], [[cloth]] and [[clothes]], producing essential bags and ropes, materials for bandages and suturing, and preventing bad thoughts from dwarves whose clothes rot off their bodies (and cannot be reliably replaced with what the caravans bring).
+*[[Miller]]s, [[Shearer]]s, [[Thresher]]s: none of these labors have quality levels, but the increase in production speed can be highly profitable for a [[flour]] or [[textile industry]].
+*[[Glassmaker]]s, [[Potter]]s, and [[Glazer]]s: You've either got sand/clay (and care about it), or you don't. Glassmakers can produce a wide variety of products, such as [[crafts]], [[furniture]], [[trap component|large weapons for traps]] and [[screw pump]]s, out of glass, and these products are often worth much more than their stone/wood counterparts. Potters are less versatile, but can also make valuable products for a decently low manufacturing price. Glazers complement potters, and are needed to make their pots airtight and waterproof, allowing for liquid storage, and a good glaze job can add a lot of value to a product.  Note that glassmakers and potters require [[sand]] or [[clay]] (respectively) in large quantities to be truly effective, but these resources are basically infinite on embarks that contain them. 
+*[[Gem cutter]]s and [[Gem setter]]s: They just don't produce as much value as you'd expect, unless the gem cutter is of a high enough skill level. Training gem cutters so they don't waste your rough valuable gems with poor cuts is also quite tedious. Even then, [[gem]]s are only useful for moods, decorations, or as a trade good. As for gem setters, [[encrust]]ing is notoriously finicky, since the item to be decorated cannot be specified. So your gem setter will probably end up slapping your Masterwork cabochon cut [[diamond]]s on a [[barrel]], or something. 
+*[[Herbalist]]s: Herbology can be a great way to kick-start an above-ground farm, or at least keep your food and booze supply nice and varied. Even dwarves can get sick of drinking the same old [[plump helmet|mushroom]] wine.
+*[[Beekeeper]]s, [[Wax worker]]s, and [[Presser]]s: Beekeeping is [[Beekeeping industry|interesting]], but it isn't possible in [[biome]]s that lack [[honey bee]]s (and note that [[bumblebee]]s cannot be<s>e</s> domesticated). If you do get a beekeeping business going, wax workers and pressers become viable as well, since they use the products of beekeeping in their labors; otherwise, they're basically useless. 
+*[[Hunter]]s: They usually come with a good [[marksdwarf]] skill, but immediately go hunting as soon as they're able to, causing possible [[fun]]. They can be useful if handled properly, and are definitely entertaining to watch, but it may be advantageous to just rely on your [[military]] for hunting game, since [[squad]]s can be controlled more finely than hunters, and are probably less likely to get themselves injured in the process. 
+*[[Fisherdwarf|Fisherdwarves]], [[Fish cleaner]]s: Fishing is a decent source of food, and it's a great source of the elusive [[shell]]s if your site contains [[pond turtle]]s, but it runs the risk of [[crocodile]] accidents and [[carp|other perils]]. Or, if you're unlucky, you'll get absolutely nothing. Fisherdwarves can also only catch [[vermin]] fish; [[sperm whale|larger sea creatures]] require [[drowning chamber]]s or other tactics.
+*[[Siege engineer]]s and [[Siege operator]]s: Would be useful, but [[siege engine]]s aren't very effective, dealing much less damage than you'd expect, and they're often extremely dangerous to your own citizens when they do work as intended.
+*[[Bone carver]]s: [[Bone]] is neither valuable (unless the creature was a [[megabeast]] or was [[elephant|very exotic]]), nor does it fulfill a particular niche, but it is a rather common alternative to wood, especially for practice bolts for [[marksdwarf|marksdwarves]].
+*[[Dyer]]s: Skilled Dyers can add extra value to dyed cloth, as it does have a quality level, but unless your fort is dependent on its [[textile industry]], when was the last time you dyed cloth? 
+* [[Butcher]]s, [[Tanner]]s, [[Gelder]]s, [[Animal trainer]]s: While these labors can be pivotal to a fort's usage of animals, you really won't need more than one of these dwarves unless your meat industry is truly booming, and very often one dwarf can cover multiple of these jobs.
+* [[Potash maker]]s, [[Lye maker]]s, [[Soaper]]s, [[Pump operator]]s, [[Woodcutter]]s, [[Milker]]s, [[Cheesemaker]]s: The products of these labors do not have quality levels, so the only difference between an unskilled laborer and a highly skilled one is production speed, which is really only critical if said products are the backbone of your industry ([[Stupid dwarf trick|and who specializes in ''soapmaking''?]]). Note that many of these products cannot be sourced from [[caravan]]s, which makes domestic production a necessity, but still is not something needed "full time", or even close.
+* [[Woodcrafter]]s: Not to be confused with [[carpenter]]s, these dwarves mostly just make [[useless crap]] and [[Instrument|musical instrument]]s out of [[wood]]. Show the elves what we think of their wood! 
+* [[Bookbinder]]s, [[Papermaker]]s: It's often much easier just to obtain [[codex]]es and [[paper]] from the caravan and migrants instead of producing them yourself, since that industry takes a while to setup, while producing limited benefits.
+* [[Strand extractor]]s: Skilled strand extractors are quick, and unskilled strand extraction is ''agonizingly'' slow. They're only useful after [[raw adamantine]] has been discovered and mined, and the strands do not have quality levels.
+
+==== Useless Migrants (F)====
+Yes, "F" - they're that bad. ''Also known as either "free military conscripts" or "can I toss them in the [[volcano]] now, please?", depending''.
+
+*[[Peasant]]s are not ''entirely'' useless, they're more like blank slates. Peasants can be trained in a [[mood]]able skill to control the [[artifact]]s your fortress will produce, and they make perfectly good [[haul]]ers or [[military]] trainees, if you just ignore those pointless peasantish skills.
+*[[Animal dissector]]s and [[fish dissector]]s: They make animal [[extract]]s, which currently are some of the most useless items in the game.
+*[[Bowyer]]s: Bowyers make [[crossbow]]s out of wood and bone... that's all. Weaponsmiths can do everything bowyers can do, except better, because heavier metallic crossbows are superior as blunt weapons in close-quarters.
+*[[Trapper]]s: These dwarves make [[animal trap]]s, not [[cage]]s, which can only be used to trap [[vermin]], not large [[creature]]s. You're better off relying on [[cat]]s instead if vermin are threatening your stockpiles. These migrants often also have the marksdwarf or animal trainer skill, so their true value may lie elsewhere, unless you are seeking to trap vermin for a [[pet]]. Might be useful if you want to mass produce [[purring maggot|dwarven cheese]].
+*[[Administrator]]s: By the time migrant waves start arriving, you should already have these positions covered and filled; there is very little advantage to having more than one dwarf with these skills. (The sole exception may be a new lead dwarf without any "item" preferences, so they issue no [[mandate]]s, to replace a less-appropriate/desirable leader, if you are lucky enough to find the right skill set.)   Also see [[unfortunate accident]].
+*[[Animal caretaker]]s: Bugged at the moment, and may become more useful when the bug is fixed.
+*[[Children]]: Cannot perform any labors. At least you'll have a [[peasant]]...in about 12 years.
+
+=== Other ===
+*[[Pilgrim]]s, [[Peddler]]s, [[Prophet]]s, [[Poet]]s, [[Monk]]s, [[Criminal]]s, and others: These individuals are [[agent]]s from your home [[civilization]] under a false identity due to a recently-patched bug, and are usually completely benign. Determining their usefulness may require closer inspection of their skills, and killing them will reveal who they truly are.
+*[[Monarch]]s and their entourages: Serving as a major endgame goal, inviting these members of dwarven society comes with its own requirements and caveats, requiring a large amount of investment, labor, and time. The player can choose to never pursue this goal if they wish.
+
+{{Category|Dwarves}}
+{{Category|World}}
+[[ru:Immigration]]

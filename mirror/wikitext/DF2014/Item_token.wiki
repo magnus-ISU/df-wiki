@@ -1,0 +1,259 @@
+{{Quality|Superior}}
+{{av}}
+{{Modding}}
+
+Item tokens are the first part in defining the target item in [[reaction]]s, containing the item type and subtype. They determine the most basic form of the item, made more specific by [[material token]]s.  Most item tokens do not have a subtype; for these, either NO_SUBTYPE or NONE '''must''' be specified.
+
+Nearly all items are made of a [[Material token|material]], though several types expect a creature ID and caste ID (e.g. [[Ant|ANT:SOLDIER]]) instead.
+
+Actually defining an item in the item raws is done with [[item definition token]]s.
+
+__TOC__
+{{clear}}
+
+==Standard item tokens==
+
+{| {{prettytable}} class="sortable"
+|- style='background-color:#ddd'
+! # !! Token !! Subtype !! Description
+|-
+| 0 || {{text anchor|BAR}} || NONE || [[Bar]]s, such as [[metal]], [[fuel]], or [[soap]]. Standard dimension = 150.
+|-
+| 1 || {{text anchor|SMALLGEM}} || NONE || Cut [[gem]]stones usable in the [[jeweler's workshop]]
+|-
+| 2 || {{text anchor|BLOCKS}} || NONE || [[Block]]s of any kind.
+|-
+| 3 || {{text anchor|ROUGH}} || NONE || Rough [[gem]]stones or raw [[glass]].
+|-
+| 4 || {{text anchor|BOULDER}} / {{text anchor|STONE}} || NONE || Raw mined [[stone]].
+|-
+| 5 || {{text anchor|WOOD}} || NONE || Wooden [[log]]s.
+|-
+| 6 || {{text anchor|DOOR}} || NONE || [[Door]]s and glass portals.
+|-
+| 7 || {{text anchor|FLOODGATE}} || NONE || [[Floodgate]]s.
+|-
+| 8 || {{text anchor|BED}} || NONE || [[Bed]]s.
+|-
+| 9 || {{text anchor|CHAIR}} || NONE || [[Chair]]s and thrones.
+|-
+| 10 || {{text anchor|CHAIN}} || NONE || [[Chain]]s and [[rope]]s.
+|-
+| 11 || {{text anchor|FLASK}} || NONE || [[Flask]]s, vials, and waterskins.
+|-
+| 12 || {{text anchor|GOBLET}} || NONE || [[Goblet]]s, mugs, and cups.
+|-
+| 13 || {{text anchor|INSTRUMENT}} || item_instrument.txt || Musical [[instrument]]s.
+|-
+| 14 || {{text anchor|TOY}} || item_toy.txt || [[Toy]]s.
+|-
+| 15 || {{text anchor|WINDOW}} || NONE || Glass [[window]]s.
+|-
+| 16 || {{text anchor|CAGE}} || NONE || [[Cage]]s and terrariums.
+|-
+| 17 || {{text anchor|BARREL}} || NONE || [[Barrel]]s.
+|-
+| 18 || {{text anchor|BUCKET}} || NONE || [[Bucket]]s.
+|-
+| 19 || {{text anchor|ANIMALTRAP}} || NONE || [[Animal trap]]s.
+|-
+| 20 || {{text anchor|TABLE}} || NONE || [[Table]]s.
+|-
+| 21 || {{text anchor|COFFIN}} || NONE || [[Coffin]]s, caskets, and sarcophagi.
+|-
+| 22 || {{text anchor|STATUE}} || NONE || [[Statue]]s.
+|-
+| 23 || {{text anchor|CORPSE}} || NONE || [[Corpse]]s. Does not have a material that can be specified for reactions, but GET_MATERIAL_FROM_REAGENT will return the "dominant" material (normally flesh).
+|-
+| 24 || {{text anchor|WEAPON}} || item_weapon.txt || [[Weapon]]s.
+|-
+| 25 || {{text anchor|ARMOR}} || item_armor.txt || [[Armor]] and clothing worn on the upper body.
+|-
+| 26 || {{text anchor|SHOES}} || item_shoes.txt || Armor and clothing worn on the feet.
+|-
+| 27 || {{text anchor|SHIELD}} || item_shield.txt || [[Shield]]s and bucklers.
+|-
+| 28 || {{text anchor|HELM}} || item_helm.txt || Armor and clothing worn on the head.
+|-
+| 29 || {{text anchor|GLOVES}} || item_gloves.txt || Armor and clothing worn on the hands.
+|-
+| 30 || {{text anchor|BOX}} || NONE || [[Container|Chest]]s (wood), coffers (stone), boxes (glass, default), and bags (cloth or leather).
+|-
+| 31 || {{text anchor|BIN}} || NONE || [[Bin]]s.
+|-
+| 32 || {{text anchor|ARMORSTAND}} || NONE || [[Armor stand]]s.
+|-
+| 33 || {{text anchor|WEAPONRACK}} || NONE || [[Weapon rack]]s.
+|-
+| 34 || {{text anchor|CABINET}} || NONE || [[Cabinet]]s.
+|-
+| 35 || {{text anchor|FIGURINE}} || NONE || [[Figurine]]s.
+|-
+| 36 || {{text anchor|AMULET}} || NONE || [[Jewelry|Amulet]]s.
+|-
+| 37 || {{text anchor|SCEPTER}} || NONE || [[Finished_goods#Crafts|Scepter]]s.
+|-
+| 38 || {{text anchor|AMMO}} || item_ammo.txt || [[Ammunition]] for hand-held weapons.
+|-
+| 39 || {{text anchor|CROWN}} || NONE || [[Jewelry|Crown]]s.
+|-
+| 40 || {{text anchor|RING}} || NONE || [[Jewelry|Ring]]s.
+|-
+| 41 || {{text anchor|EARRING}} || NONE || [[Jewelry|Earring]]s.
+|-
+| 42 || {{text anchor|BRACELET}} || NONE || [[Jewelry|Bracelet]]s.
+|-
+| 43 || {{text anchor|GEM}} || NONE || Large [[gem]]s.
+|-
+| 44 || {{text anchor|ANVIL}} || NONE || [[Anvil]]s.
+|-
+| 45 || {{text anchor|CORPSEPIECE}} || NONE || [[Body part]]s. Does not have a material that can be specified for reactions, but GET_MATERIAL_FROM_REAGENT will return the "dominant" material.
+|-
+| 46 || {{text anchor|REMAINS}} || NONE || Dead [[vermin]] bodies. Material is CREATURE_ID:CASTE.
+|-
+| 47 || {{text anchor|MEAT}} || NONE || Butchered [[meat]].
+|-
+| 48 || {{text anchor|FISH}} || NONE || Prepared [[fish]]. Material is CREATURE_ID:CASTE.
+|-
+| 49 || {{text anchor|FISH_RAW}} || NONE || Freshly-caught [[fish]]. Material is CREATURE_ID:CASTE.
+|-
+| 50 || {{text anchor|VERMIN}} || NONE || Live [[vermin]]. Material is CREATURE_ID:CASTE.
+|-
+| 51 || {{text anchor|PET}} || NONE || Tame [[vermin]]. Material is CREATURE_ID:CASTE.
+|-
+| 52 || {{text anchor|SEEDS}} || NONE || [[Seed]]s from plants.
+|-
+| 53 || {{text anchor|PLANT}} || NONE || [[Plant]]s.
+|-
+| 54 || {{text anchor|SKIN_TANNED}} || NONE || [[Leather]].
+|-
+| 55 || {{text anchor|PLANT_GROWTH}} || growth ID || Plant growths.  Subtype is the GROWTH's identifier within the [[plant token|plant raws]] (e.g. "LEAVES" or "FLOWERS" for most trees)
+|-
+| 56 || {{text anchor|THREAD}} || NONE || [[Thread]] (made at the [[farmer's workshop]]), [[web]]s (collected or undisturbed), and [[strand extactor|strands extracted]] from [[raw adamantine|suitable stones]]. Standard dimension = 15000.
+|-
+| 57 || {{text anchor|CLOTH}} || NONE || [[Cloth]] made at the [[loom]]. Standard dimension = 10000.
+|-
+| 58 || {{text anchor|TOTEM}} || NONE || Skull [[totem]]s.
+|-
+| 59 || {{text anchor|PANTS}} || item_pants.txt || Armor and clothing worn on the legs.
+|-
+| 60 || {{text anchor|BACKPACK}} || NONE || [[Backpack]]s.
+|-
+| 61 || {{text anchor|QUIVER}} || NONE || [[Quiver]]s.
+|-
+| 62 || {{text anchor|CATAPULTPARTS}} || NONE || [[Catapult]] parts.
+|-
+| 63 || {{text anchor|BALLISTAPARTS}} || NONE || [[Ballista]] parts.
+|-
+| 64 || {{text anchor|SIEGEAMMO}} || item_siegeammo.txt || Siege engine ammunition.
+|-
+| 65 || {{text anchor|BALLISTAARROWHEAD}} || NONE || Ballista arrow heads.
+|-
+| 66 || {{text anchor|TRAPPARTS}} || NONE || [[Mechanism]]s.
+|-
+| 67 || {{text anchor|TRAPCOMP}} || item_trapcomp.txt || [[Trap component]]s.
+|-
+| 68 || {{text anchor|DRINK}} || NONE || [[Alcohol]]ic drinks. Standard dimension = 150.
+|-
+| 69 || {{text anchor|POWDER_MISC}} || NONE || Powders such as [[flour]], [[dye]], [[sand]], or [[gypsum plaster]]. Standard dimension = 150.
+|-
+| 70 || {{text anchor|CHEESE}} || NONE || Pieces of [[cheese]].
+|-
+| 71 || {{text anchor|FOOD}} || item_food.txt || [[Prepared meal]]s.
+|-
+| 72 || {{text anchor|LIQUID_MISC}} || NONE || Liquids such as [[water]], [[lye]], and extracts. Standard dimension = 150.
+|-
+| 73 || {{text anchor|COIN}} || NONE || [[Coin]]s.
+|-
+| 74 || {{text anchor|GLOB}} || NONE || [[Fat]], [[tallow]], pastes/pressed objects, and small bits of molten rock/metal. Standard dimension = 150.
+|-
+| 75 || {{text anchor|ROCK}} || NONE || Small rocks (usually [[Knapper|sharpened]] and/or [[Thrower|thrown]] in [[adventurer mode]]).
+|-
+| 76 || {{text anchor|PIPE_SECTION}} || NONE || [[Pipe section]]s and glass tubes.
+|-
+| 77 || {{text anchor|HATCH_COVER}} || NONE || [[Hatch cover]]s.
+|-
+| 78 || {{text anchor|GRATE}} || NONE || [[Grate]]s.
+|-
+| 79 || {{text anchor|QUERN}} || NONE || [[Quern]]s.
+|-
+| 80 || {{text anchor|MILLSTONE}} || NONE || [[Millstone]]s.
+|-
+| 81 || {{text anchor|SPLINT}} || NONE || [[Splint]]s.
+|-
+| 82 || {{text anchor|CRUTCH}} || NONE || [[Crutch]]es.
+|-
+| 83 || {{text anchor|TRACTION_BENCH}} || NONE || [[Traction bench]]es.
+|-
+| 84 || {{text anchor|ORTHOPEDIC_CAST}} || NONE || [[Cast]]s.
+|-
+| 85 || {{text anchor|TOOL}} || item_tool.txt || [[Tool]]s.
+|-
+| 86 || {{text anchor|SLAB}} || NONE || [[Slab]]s, memorials, and shop signs.
+|-
+| 87 || {{text anchor|EGG}} || NONE || [[Egg]]s. Material is CREATURE_ID:CASTE.
+|-
+| 88 || {{text anchor|BOOK}} || NONE || [[Book]]s.
+|-
+| 89 || {{text anchor|SHEET}} || NONE || [[Sheet]]s. Paper, papyrus, or parchment. Used for making [[quire]]s and [[scroll]]s.
+|-
+| 90 || {{text anchor|BRANCH}} || NONE || Branches plucked from trees, used for making stone axes in [[adventurer mode]].
+|}
+
+==Special use item tokens==
+
+In several specific locations, the values below can be substituted for the item type and subtype (and be followed directly by the [[material token]]).
+
+{| {{prettytable}}
+|- style='background-color:#ddd'
+! Token
+! Subtype
+! Valid Uses
+! Description
+
+|-
+| {{text anchor|ANY_CRAFT}}
+| NONE
+| [[Reaction]] [REAGENT]
+| Matches FIGURINE, AMULET, SCEPTER, CROWN, RING, EARRING, or BRACELET.
+
+|-
+| {{text anchor|ANY_RAW_MATERIAL}}
+| NONE
+| [[Reaction]] [REAGENT]
+| Matches POWDER_MISC, BAR, BOULDER, or GLOB.
+
+|-
+| {{text anchor|CRAFTS}}
+| NONE
+| [[Reaction]] [PRODUCT]
+| Produces 1-3 items of any type possible to make with the specified material, normally the types FIGURINE, AMULET, SCEPTER, CROWN, RING, EARRING, or BRACELET, however GEM is also possible for some materials and there may be other possible results. The output depends entirely on the material used, and incredibly unusual materials may produce nothing at all, although most vanilla materials will produce GEMs at the very least.
+
+|}
+
+==Related tokens==
+
+These tokens are not Item Tokens at all, but can take the place of them in some circumstances.
+
+{| {{prettytable}}
+|- style='background-color:#ddd'
+! Token
+! Subtype
+! Valid Uses
+! Description
+
+|-
+| {{text anchor|METAL_ORE}}
+| Metal   
+| [[Reaction]] [REAGENT]   
+| Matches a BOULDER item made of a material having [METAL_ORE:<Metal>:###].
+
+|}
+
+==See also==
+*[[Material token]]
+*[[Reactions]]
+
+{{Category|Tokens}}
+{{Category|Modding}}
+[[ru:Item token]]

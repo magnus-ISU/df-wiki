@@ -1,0 +1,464 @@
+{{Quality|Exceptional|20:07, 19 December 2016 (UTC)}}
+{{av}}
+
+{{for/see|value optimization|[[Maximizing value]]}}
+{{for/see|cultural values|[[Personality trait]]}}
+{{for/see|room values|[[Room#Quality|Room/Quality]]}}
+
+[[File:value_icon.png|100px|right]]'''Item value''' is determined by a number of factors: the form of the item, the material it is made out of, the [[quality]] of its creation, and any [[decoration]]s on it.
+
+The '''final value''' of an item is the '''base value''' of the form of the item (e.g. [[block]] ''or'' [[statue]]) multiplied by the '''material multiplier''' (e.g. [[granite]] ''or'' [[gold]]), multiplied by the '''quality modifier''' (e.g. fine ''or'' masterful) if any, then summed with the final value of all '''[[decoration]]s'''.
+
+=Base values of items=
+The '''base value''' of an item is determined by the form of the item, not what it is made out of. For example, a [[wood]] [[block]] uses the '''base value''' for a block; a native gold block uses the ''same'' '''base value''', since it too is in the form of a "block". In both cases, the '''final value''' is then determined by adjusting the base value with the appropriate modifiers.
+
+==Items without quality levels==
+{| style="border-spacing: 0"
+|- style="background-color: #EEE"
+! Base Value
+! Items
+|-
+|0||[[Body parts|Body part]], [[Corpse]], [[Remains]], small rock
+|- style="background-color: #EEE"
+|1||[[fat|glob]], [[seed]], [[alcohol]], powder, extract
+|-
+|2||[[Fish]], unprepared fish, [[Meat]], [[Egg]], [[Plant]], [[Quarry bush|Leaves]]
+|- style="background-color: #EEE"
+|3||[[Gem]] (rough), [[Log]], [[Stone]]
+|-
+|5||[[Bar]], [[Block]], [[Gem]] (cut), [[Leather]]
+|- style="background-color: #EEE"
+|6||[[Thread]]
+|-
+|10||[[Ballista arrowhead]], [[cheese]], [[Honeycomb]]
+|- style="background-color: #EEE"
+|Varies||live vermin, tame vermin
+|}
+
+==Items with quality levels==
+=== Misc. items ===
+{| style="border-spacing: 0"
+|- style="background-color: #EEE"
+! Base Value
+! Items
+|-
+|1/50||[[Coin]]<sup>1</sup>
+|- style="background-color: #EEE"
+|1||[[Die]], Orthopedic [[cast]]
+|-
+|5||[[Paper]] & [[Papyrus]] sheets
+|- style="background-color: #EEE"
+|7||[[Cloth]]<sup>2</sup>
+|-
+|10||
+[[Animal trap]],  [[Temple#Shrines|Altar]], [[Jewelry|Amulet]], [[Anvil]], [[Armor stand]], [[Backpack]], [[Barrel]], [[Bed]], [[Bin]], [[Book]], [[Bookcase]], [[Tool|Bowl]], [[Container|Box]], [[Jewelry|Bracelet]], [[Bucket]], [[Cabinet]], [[Cage]], [[Chain]], [[Chair]], [[Tool|Cleaver]], [[Coffin]], [[Jewelry|Crown]], [[Crutch]], [[Decoration]]<sup>3</sup>, [[Display case|Display Case]], [[Door]], [[Jewelry|Earring]], [[Figurine]], [[Flask]], [[Floodgate]], [[Tool|Fork]], [[Goblet|Goblet/mug/cup]], [[Grate]], [[Hatch cover]], [[Tool|Helve]], [[Hive]], [[Instrument]] ''(non-main components)'',  [[Jug]], [[Tool|Knives]], [[Tool|Ladle]], [[Gem|Large gem]], [[Large pot]], [[Millstone]], [[Tool|Mortar]], [[Nest box]], [[Pedestal]], [[Tool|Pestle]], [[Pipe section]], [[Tool|Pouch]], [[Prepared meal]]<sup>4</sup>, [[Quiver]], [[Quern]], [[Jewelry|Ring]], [[Craft|Scepter]], [[Book|Scroll Roller]], [[Slab]], [[Tool|Stone axe]], [[Health care|Splint]], [[Table]], [[Totem]], [[Toy]],  [[Weapon rack]]
+|- style="background-color: #EEE"
+|20|| [[Book|Quire/Scroll]], [[Siege engine|Siege ammo]], [[Health care|Traction bench]]
+|-
+|25||[[Window]], [[Statue]]
+|- style="background-color: #EEE"
+|30||[[Siege engine|Ballista part]], [[Siege engine|Catapult part]], [[Mechanism]]
+|-
+|50|| [[Tool|Cauldron]], [[Instrument]] ''(main part)'', [[Minecart]], [[Parchment]] sheet, [[Stepladder]], [[Wheelbarrow]]
+|- style="background-color: #EEE"
+|200||Parchment [[Book|Quire/Scroll]]
+|-
+|''variable''<sup>5</sup> ||[[Weapon]], [[Armor]], [[Clothing|Shoe]], [[Shield]], [[Armor|Helm]], [[Clothing|Glove]], [[Ammunition|Ammo]], [[Clothing|Pants]], [[Trap component]] ''(see below)''
+|}
+: ''Notes'':
+:* 1) Coins minted at a forge are always of base quality
+:* 2) Goods made out of [[cloth]] get the following built in as decorations: the cloth (with quality mod) and the [[thread]] (without quality). [[Dye]]s are added separately (with quality), as a powder, not a decoration.
+:* 3) "[[Decoration]]s" include "It is decorated with <material>", "It is encircled with bands of <material>", "It is adorned with hanging rings of <material>", "This object menaces with spikes of <material>", "On this object is an image of <description> in <material>", "It is studded with <metal>". Decorations of [[bolt]]s have a 1/3 base value instead.
+:* 4) Prepared meals always have a base value of 10, with a quality modifier. Each ingredient is calculated separately, with its own base value and "minced" quality modifier. The total value of a meal stack is the sum of the above values multiplied by the total quantity, regardless of the proportion of ingredients. A more thorough explanation and example exists at the [[DF2012:Cook#Prepared_Meal_Value|Cook]] page.
+:* 5) These items have their value based on their properties - see categories below:
+
+=== Weapons ===
+: The base value of a melee weapon is (SIZE / 50) + 1; if the weapon has any EDGE attacks, its value is doubled. Ranged weapons simply have a value of 10.
+
+:: {| class="collapsible collapsed" style="border-spacing: 1"
+|- style=background-color:#ccf
+! colspan=2|Weapon values
+|- style=text-align:left
+! style=padding-right:1em|Base Value
+! Weapon
+|- style="background-color: #EEE"
+|3||[[Whip]]
+|-
+|7||[[Training weapon|Training sword]]
+|- style="background-color: #EEE"
+|9||[[Training weapon|Training spear]], [[War hammer]]
+|-
+|10||[[Crossbow]], [[Blowgun]], [[Bow]], [[dagger|Large dagger]]
+|- style="background-color: #EEE"
+|11||[[Flail]]
+|-
+|14||[[Scourge]], [[Scimitar]], [[Short sword]]
+|- style="background-color: #EEE"
+|17||[[Training weapon|Training axe]], [[Mace]]
+|-
+|18||[[Spear]]
+|- style="background-color: #EEE"
+|22||[[Pick]], [[Morningstar]]
+|-
+|27||[[Maul]]
+|- style="background-color: #EEE"
+|30||[[Long sword]]
+|-
+|34||[[Battle axe]], [[Pike]]
+|- style="background-color: #EEE"
+|38||[[Two-handed sword]]
+|-
+|50||[[Halberd]]
+|- style="background-color: #EEE"
+|54||[[Great axe]]
+|}
+
+==== Ammo ====
+: The base value of a single unit of ammo is (SIZE / 200) + 1.
+
+:: {| class="collapsible collapsed" style="border-spacing: 1"
+|- style=background-color:#ccf
+! colspan=2|Ammo values
+|- style=text-align:left
+! style=padding-right:1em|Base Value
+! Ammo
+|- style="background-color: #EEE"
+|1 ||[[Blowdart]], [[Bolt]], [[Arrow]]
+|}
+Value listed is for a single bolt, not stacks of bolts. Multiply the single value by the stack size for total value of a stack. (e.g. 1 [[bar]] of metal = stack of 25 bolts, etc.)
+
+=== Shields ===
+: The base value of a shield is (UPSTEP * 3) + BLOCKCHANCE + 1.
+:* UPSTEP cannot be greater than 3
+:* BLOCKCHANCE cannot be greater than 100
+
+:: {| class="collapsible collapsed" style="border-spacing: 1"
+|- style=background-color:#ccf
+! colspan=2|Shield values
+|- style=text-align:left
+! style=padding-right:1em|Base Value
+! Shields
+|- style="background-color: #EEE"
+| 14 || Buckler
+|-
+| 27 || Shield
+|}
+
+=== Headwear ===
+: The base value of a helm is (LAYER_SIZE / 5) + (COVERAGE / 20) + 1.
+* LAYER_SIZE and COVERAGE cannot be greater than 100
+
+:: {| class="collapsible collapsed" style="border-spacing: 1"
+|- style=background-color:#ccf
+! colspan=2|Helm values
+|- style=text-align:left
+! style=padding-right:1em|Base Value
+! Helm
+|- style="background-color: #EEE"
+| 5 || Cap, Head Veil, Face Veil, Headscarf
+|-
+| 7 || Mask, Turban
+|- style="background-color: #EEE"
+| 8 || Hood
+|-
+| 12 || Helm
+|}
+=== Armor / torso ===
+''(Note - When DF speaks of clothing, "armor" refers to anything worn on the torso, i.e.  shirts, vests, togas, robes, etc., which all do provide some small protection, as well as breastplates and chain shirts. Combat-quality "[[armor]]" pieces are listed here by their location.)''
+: The base value of a piece of armor is ((UBSTEP + LBSTEP) * 3) + (LAYER_SIZE / 5) + (COVERAGE / 10) + 1.
+:* UBSTEP and LBSTEP cannot be greater than 3
+:* LAYER_SIZE and COVERAGE cannot be greater than 100
+
+:: {| class="collapsible collapsed" style="border-spacing: 1"
+|- style=background-color:#ccf
+! colspan=2|Armor values
+|- style=text-align:left
+! style=padding-right:1em|Base Value
+! Armor
+|-
+| 8 || Cape, Vest
+|- style="background-color: #EEE"
+| 15 || Breastplate
+|-
+| 16 || Tunic
+|- style="background-color: #EEE"
+| 20 || Mail shirt
+|-
+| 21 || Leather armor
+|- style="background-color: #EEE"
+| 22 || Shirt
+|-
+| 23 || Toga
+|- style="background-color: #EEE"
+| 26 || Cloak
+|-
+| 27 || Coat
+|- style="background-color: #EEE"
+| 31 || Dress
+|-
+| 33 || Robe
+|}
+
+=== Legwear ===
+: The base value of a pair of pants is (LBSTEP * 3) + (LAYER_SIZE / 5) + (COVERAGE / 10) + 1
+:* LBSTEP cannot be greater than 3
+:* LAYER_SIZE and COVERAGE cannot be greater than 100
+
+:: {| class="collapsible collapsed" style="border-spacing: 1"
+|- style=background-color:#ccf
+! colspan=2|Pants values
+|- style=text-align:left
+! style=padding-right:1em|Base Value
+! Pants
+|- style="background-color: #EEE"
+| 5 || Thong
+|-
+| 8 || Loincloth
+|- style="background-color: #EEE"
+| 13 || Short skirt
+|-
+| 16 || Skirt, Braies
+|- style="background-color: #EEE"
+| 22 || Long skirt
+|-
+| 23 || Trouser, Leggings, Greaves
+|}
+
+
+
+=== Hand- & footwear ===
+: The base value of a shoe or glove is (UPSTEP * 3) + (LAYER_SIZE / 5) + (COVERAGE / 30) + 1.
+:* UPSTEP cannot be greater than 3
+:* LAYER_SIZE and COVERAGE cannot be greater than 100
+
+:: {| class="collapsible collapsed" style="border-spacing: 1"
+|- style=background-color:#ccf
+! colspan=2|Glove values
+|- style=text-align:left
+! style=padding-right:1em|Base Value
+! Gloves
+|- style="background-color: #EEE"
+| 6 || Gloves
+|-
+| 7 || Mittens
+|- style="background-color: #EEE"
+| 11* || Gauntlets
+|}
+
+:: {| class="collapsible collapsed" style="border-spacing: 1"
+|- style=background-color:#ccf
+! colspan=2|Shoe values
+|- style=text-align:left
+! style=padding-right:1em|Base Value
+! Shoes
+|- style="background-color: #EEE"
+| 6 || Socks
+|-
+| 8 || Shoes
+|- style="background-color: #EEE"
+| 9 || Sandals, low boots*
+|-
+| 12 || High boots*
+|- style="background-color: #EEE"
+| 15 || Chausses
+|}
+::: * Gauntlets and boots are made 2 at a time from a single bar, effectively doubling the total value of the final items.
+
+=== Trap component ===
+: The base value of a trap component is ((SIZE / 50) + 1) * HITS; if it has any EDGE attacks, its value is doubled.
+
+:: {| class="collapsible collapsed" style="border-spacing: 1"
+|- style=background-color:#ccf
+! colspan=2|Trap component values
+|- style=text-align:left
+! style=padding-right:1em|Base Value
+! Trap Component
+|- style="background-color: #EEE"
+|66||[[Trap component|Giant axe blade]], [[Trap component|Enormous corkscrew]], [[Trap component|Menacing spike]]
+|- style="background-color: #EEE"
+|126||[[Trap component|Large, serrated disc]], [[Trap component|Spiked ball]]
+|- style="background-color: #EEE"
+|}
+
+==Material multipliers==
+{{Material properties}}
+The material multiplier for an item is found from the [MATERIAL_VALUE:#] tag in the raws for the material it is made out of, and can be further augmented using [MULTIPLY_VALUE:#]. A wood block uses the same material multiplier as a wood [[log]] or a wooden [[Box|chest]] -  that is the material value for wood, which is 1.
+
+{| class="collapsible collapsed" style="width:80%; border-spacing: 1"
+|- style=background-color:#ccf
+! colspan=2|[[Stone]]s
+|- style=text-align:left
+! style=padding-right:1em|Multiplier
+! Stone
+|- style="background-color: #EEE"
+|×1||[[Bismuthinite]], [[Bituminous coal]], [[Lignite]], [[Stone|Common stone]]
+|-
+|×2||[[Cassiterite]], [[Garnierite]], [[Malachite]], [[Native copper]], [[Sphalerite]], [[Calcite]], [[Chalk]], [[Dolomite]], [[Limestone]], [[Marble]]
+|- style="background-color: #EEE"
+|×3||[[Tetrahedrite]], [[Obsidian]]
+|-
+|×5||[[Galena]]
+|- style="background-color: #EEE"
+|×8||[[Hematite]], [[Limonite]], [[Magnetite]]
+|-
+|×10||[[Horn silver]], [[Native silver]]
+|- style="background-color: #EEE"
+|×30||[[Native gold]]
+|-
+|×40||[[Native aluminum]], [[Native platinum]]
+|- style="background-color: #EEE"
+|×250||[[Raw adamantine]]
+|}
+
+{| class="collapsible collapsed" style="width:80%; border-spacing: 1"
+|- style=background-color:#ccf
+! colspan=2|[[Gem]]s
+|- style=text-align:left
+! style=padding-right:1em|Multiplier
+! Gem
+|- style="background-color: #EEE"
+|×2||[[Banded agate]], [[Bloodstone]], [[Blue jade]], [[Brown jasper]], [[Carnelian]], [[Chrysocolla]], [[Chrysoprase]], [[Citrine]], [[Dendritic agate]], [[Fire agate]], [[Fortification agate]], [[Gray chalcedony]], [[Lace agate]], [[Lapis lazuli]], [[Lavender jade]], [[Milk quartz]], [[Moonstone]], [[Morion]], [[Moss agate]], [[Onyx]], [[Pink jade]], [[Plume agate]], [[Prase]], [[Pyrite]], [[Rock crystal]], [[Sard]], [[Sardonyx]], [[Schorl]], [[Smoky quartz]], [[Sunstone]], [[Tiger iron]], [[Tigereye]], [[Tube agate]], [[Turquoise]], [[Variscite]], [[White chalcedony]], [[White jade]], [[Yellow jasper]]
+|-
+|×3||[[Aventurine]], [[Picture jasper]], [[Rose quartz]]
+|- style="background-color: #EEE"
+|×10||[[Amber opal]], [[Bone opal]], [[Cherry opal]], [[Gold opal]], [[Jasper opal]], [[Milk opal]], [[Moss opal]], [[Onyx opal]], [[Pineapple opal]], [[Pipe opal]], [[Prase opal]], [[Resin opal]], [[Shell opal]], [[Wax opal]], [[Wood opal]], [[Clear tourmaline]]
+|-
+|×15||[[Fire opal]], [[Jelly opal]], [[Melanite]], [[Pink tourmaline]], [[Red tourmaline]]
+|- style="background-color: #EEE"
+|×20||[[Alexandrite]], [[Almandine]], [[Amethyst]], [[Aquamarine]], [[Bandfire opal]], [[Black pyrope]], [[Black zircon]], [[Brown zircon]], [[Cat's eye]], [[Chrysoberyl]], [[Cinnamon grossular]], [[Claro opal]], [[Clear garnet]], [[Crystal opal]], [[Golden beryl]], [[Goshenite]], [[Green jade]], [[Green tourmaline]], [[Green zircon]], [[Harlequin opal]], [[Heliodor]], [[Honey yellow beryl]], [[Kunzite]], [[Levin opal]], [[Morganite]], [[Peridot]], [[Pinfire opal]], [[Pink garnet]], [[Precious fire opal]], [[Purple spinel]], [[Red beryl]], [[Red flash opal]], [[Red grossular]], [[Red pyrope]], [[Red spinel]], [[Red zircon]], [[Rhodolite]], [[Rubicelle]], [[Tanzanite]], [[Topaz]], [[Topazolite]], [[Violet spessartine]], [[White opal]], [[Yellow grossular]], [[Yellow spessartine]], [[Yellow zircon]]
+|-
+|×25||[[Clear zircon]], [[Indigo tourmaline]]
+|- style="background-color: #EEE"
+|×30||[[Demantoid]], [[Light yellow diamond]], [[Blue garnet]], [[Black opal]], [[Tsavorite]]
+|-
+|×40||[[Faint yellow diamond]], [[Emerald]], [[Ruby]], [[Sapphire]]
+|- style="background-color: #EEE"
+|×60||[[Black diamond]], [[Blue diamond]], [[Clear diamond]], [[Green diamond]], [[Red diamond]], [[Yellow diamond]], [[Star ruby]], [[Star sapphire]]
+|}
+
+{| class="collapsible collapsed" style="width:80%; border-spacing: 1"
+|- style=background-color:#ccf
+! colspan=2|[[Metal]]s
+|- style=text-align:left
+! style=padding-right:1em|Multiplier
+! Metal
+|- style="background-color: #EEE"
+|×2||[[Bismuth]], [[Copper]], [[Lead]], [[Nickel]], [[Tin]], [[Zinc]]
+|-
+|×3||[[Lay pewter]], [[Nickel silver]]
+|- style="background-color: #EEE"
+|×4||[[Trifle pewter]]
+|-
+|×5||[[Bronze]], [[Fine pewter]]
+|- style="background-color: #EEE"
+|×6||[[Billon]], [[Bismuth bronze]]
+|-
+|×7||[[Brass]]
+|- style="background-color: #EEE"
+|×8||[[Sterling silver]]
+|-
+|×10||[[Iron]], [[Pig iron]], [[Silver]]
+|- style="background-color: #EEE"
+|×11||[[Black bronze]]
+|-
+|×20||[[Electrum]]
+|- style="background-color: #EEE"
+|×23||[[Rose gold]]
+|-
+|×30||[[Gold]], [[Steel]]
+|- style="background-color: #EEE"
+|×40||[[Aluminum]], [[Platinum]]
+|-
+|×300||[[Adamantine]]
+|}
+
+{| class="collapsible collapsed" style="width:80%; border-spacing: 1"
+|- style=background-color:#ccf
+! colspan=2|[[Animal]]s
+|- style=text-align:left
+! style=padding-right:1em|Multiplier
+! Animal
+|- style="background-color: #EEE"
+|×1||all [[animal]]s not listed below
+|-
+|×2||[[adder]], [[beak dog]], [[black bear]], [[black mamba]], [[bobcat]], [[bushmaster]], [[capybara]], [[copperhead snake]], [[cougar]], [[coyote]], [[dingo]], [[elk]], [[giant cave swallow]], [[giant dingo]], [[giant earthworm]], [[giant mole]], [[giant rat]], [[helmet snake]], [[hyena]], [[ice wolf]], [[jackal]], [[king cobra]], [[magma crab]], [[molemarian]], [[monitor lizard]], [[muskox]], [[ocelot]], [[panda]], [[python]], [[rattlesnake]], [[sloth bear]], [[strangler]], [[wolf]], all [[giant animal|giant]] variants of the creatures in this category
+|- style="background-color: #EEE"
+|×3||[[alligator]], [[anaconda]], [[blind cave bear]], [[cheetah]], [[draltha]], [[elk bird]], [[fire imp]], [[gila monster]], [[green devourer]], [[grizzly bear]], [[jaguar]], [[leopard]], [[lion]], [[lynx]], [[polar bear]], [[rutherer]], [[saltwater crocodile]], [[sasquatch]], [[tiger]], [[yeti]], all [[giant animal|giant]] variants of the creatures in this category
+|-
+|×4||[[cave crocodile]], [[cave dragon]], [[giant bat]], [[giant cave spider]], [[giant olm]], [[giant cave toad]], [[jabberer]], [[unicorn]], [[voracious cave crawler]]
+|- style="background-color: #EEE"
+|×5||[[elephant]], [[sea monster]], [[sea serpent]], [[giraffe]], [[rhinoceros]], all [[giant animal|giant]] variants of the creatures in this category
+|-
+|×10||[[hydra]]
+|- style="background-color: #EEE"
+|×15||[[dragon]], [[roc]]
+|}
+
+{| class="collapsible collapsed" style="width:80%; border-spacing: 1"
+|- style=background-color:#ccf
+! colspan=2|[[Plant]]s
+|- style=text-align:left
+! style=padding-right:1em|Multiplier
+! Plant
+|- style="background-color: #EEE"
+|×1||[[hide root]], [[kobold bulb]], [[muck root]], [[prickle berry]], [[rat weed]], [[sliver barb]], [[whip vine]]<br />all [[tree]]s and plant [[seed]]s
+|-
+|×2||[[blade weed]], [[bloated tuber]], [[cave wheat]], [[dimple cup]], [[fisher berry]], [[longland grass]], [[pig tail]], [[plump helmet]], [[quarry bush]], [[rope reed]], [[sweet pod]], [[strawberry]]<br />tuber beer ([[bloated tuber]] drink)
+|- style="background-color: #EEE"
+|×3||[[sun berry]]<br />whip wine ([[whip vine]] drink)
+|-
+|×5||[[valley herb]]<br />[[quarry bush]] leaf, rock nut oil ([[quarry bush]] oil), rock nut soap ([[quarry bush]] soap), sunshine ([[sun berry]] drink)
+|- style="background-color: #EEE"
+|×10||redroot dye ([[hide root]] powder)
+|-
+|×20||cave wheat flour ([[cave wheat]] powder), dimple dye ([[dimple cup]] powder), dwarven sugar ([[sweet pod]] powder), dwarven syrup ([[sweet pod]] extract), emerald dye ([[blade weed]] powder), longland flour ([[longland grass]] powder), sliver dye ([[sliver barb]] powder)
+|- style="background-color: #EEE"
+|×25||whip vine flour ([[whip vine]] powder)
+|-
+|×100||gnomeblight ([[kobold bulb]] extract), golden salve ([[valley herb]] extract)
+|- style="background-color: #EEE"
+|Note||Plants are made of various materials - the predominant material (usually STRUCTURAL) is listed for each individual plant, and other materials are listed separately when they differ.
+|}
+
+{| class="collapsible collapsed" style="width:80%; border-spacing: 1"
+|- style=background-color:#ccf
+! colspan=2|Miscellaneous
+|- style=text-align:left
+! style=padding-right:1em|Multiplier
+! Material
+|- style="background-color: #EEE"
+|×1||[[Ash]]
+|-
+|×2||[[Amber]], [[Coral]], [[Coal]], [[Glass|Green glass]], [[Lye]]
+|- style="background-color: #EEE"
+|×3||[[Potash]], [[Earthenware]]
+|-
+|×4||[[Pearlash]], [[Stoneware]]
+|- style="background-color: #EEE"
+|×5||[[Clear glass]]
+|-
+|×10||[[Crystal glass]], [[Porcelain]], [[Salt]]
+|}
+
+== Quality ==
+Item value is further increased by applying the [[Item quality|quality]] multiplier.
+
+{|
+! style="padding-right: 35px;" | '''Designation''' || style="text-align: left;" | '''Description''' || style="padding-right: 20px; padding-left: 15px; text-align: center;" | '''Value <br>Modifier''' || 
+|-
+| &nbsp;Item Name || style="text-align: center;" | &mdash;&nbsp;&nbsp;&nbsp;&nbsp; || style="text-align: center;" | &times;1&nbsp; ||
+|-
+| -Item Name- || Well-crafted || style="text-align: center;" | &times;2&nbsp; || 
+|-
+| +Item Name+ || Finely-crafted || style="text-align: center;" | &times;3&nbsp; ||
+|-
+| *Item Name* || Superior quality || style="text-align: center;" | &times;4&nbsp; || 
+|-
+| ≡Item Name≡ || Exceptional || style="text-align: center;" | &times;5&nbsp; || 
+|-
+| ☼Item Name☼ || Masterful || style="text-align: center;" | &times;12&nbsp; || 
+|-
+| Unique Name || [[Artifact]] || style="text-align:center;" | &times;120&nbsp; ||
+|}
+
+{{Category|Items|*}}

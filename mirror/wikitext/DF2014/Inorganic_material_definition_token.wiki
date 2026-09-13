@@ -1,0 +1,110 @@
+{{Quality|Superior|07:33, 17 May 2015 (UTC)}}
+{{av}}
+{{Modding}}
+
+The following tokens can be used in inorganic material definitions, generally for stones, gems, and metals, but not with materials attached to plants or creatures.
+{{clear}}
+
+{| {{prettytable}}
+|- style='background-color:#ddd'
+! Token
+! Arguments
+! Description
+|-
+| {{text anchor|WAFERS}}|| ||Used on metals, causes the metal to be made into wafers instead of [[bar]]s.
+|-
+| {{text anchor|DEEP_SPECIAL}}|| || Causes the stone to form hollow tubes leading to the [[Underworld]]. Used for [[raw adamantine]]. When mined, stone has a 100% yield. If no material with this token exists, hollow veins will instead be made of the first available inorganic, usually [[iron]].
+|-
+| {{text anchor|METAL_ORE}}|| metal:chance || Allows the ore to be [[smelter|smelted]] into metal in the smelter. Each token with a non-zero chance causes the game to roll d100 four times, each time creating one bar of the type requested on success.
+|-
+| {{text anchor|THREAD_METAL}}|| metal:chance ||Allows strands to be extracted from the metal at a [[craftsdwarf's workshop]].
+|-
+| {{text anchor|DEEP_SURFACE}}|| ||Causes the stone to line the landscape of the [[Underworld]]. Used for [[slade]]. When mined (if it's mineable), stone has a 100% yield. If no material with this token exists, other materials will be used in place of slade. Underworld spires will still be referred to as a "spire of slade" in the world's history.
+|-
+| {{text anchor|AQUIFER}}|| ||Allows the stone to support an [[aquifer]].
+|-
+| {{text anchor|METAMORPHIC}}|| ||Causes the material to form [[metamorphic layer]]s.
+|-
+| {{text anchor|SEDIMENTARY}}|| ||Causes the material to form [[sedimentary layer]]s.
+|-
+| {{text anchor|SOIL}}|| ||Causes the material to form [[soil]] layers, allowing it to appear in (almost) any biome. Mining is faster and produces no stones.
+|-
+| {{text anchor|SOIL_OCEAN}}|| ||Causes the material to form [[soil|pelagic sediment]] layers beneath deep oceans. Mining is faster and produces no stones.
+|-
+| {{text anchor|SOIL_SAND}}|| ||Causes the material to form [[sand]] layers, allowing it to appear in [[sand desert]]s and shallow [[ocean]]s. Mining is faster and produces no stones. Sand layers can also be used for making [[glass]]. Can be combined with [SOIL].
+|-
+| {{text anchor|SEDIMENTARY_OCEAN_SHALLOW}}|| ||Permits an already [SEDIMENTARY] stone layer to appear underneath shallow ocean regions.
+|-
+| {{text anchor|SEDIMENTARY_OCEAN_DEEP}}|| ||Permits an already [SEDIMENTARY] stone layer to appear underneath deep ocean regions.
+|-
+| {{text anchor|IGNEOUS_INTRUSIVE}}|| || Causes the material to form [[igneous intrusive layer]]s.
+|-
+| {{text anchor|IGNEOUS_EXTRUSIVE}}|| || Causes the material to form [[igneous extrusive layer]]s.
+|-
+| {{text anchor|ENVIRONMENT}}|| class:type:freq ||Specifies what types of layers will contain this mineral. Multiple instances of the same token segment will cause the rock type to occur more frequently, but won't increase its abundance in the specified environment. See below.
+|-
+| {{text anchor|ENVIRONMENT_SPEC}}|| stone:type:freq ||Specifies which specific minerals will contain this mineral. See below.
+|-
+| {{text anchor|LAVA}}|| ||Specifies that the stone is created when combining [[water]] and [[magma]], also causing it to line the edges of [[magma]] pools and volcanoes. If multiple minerals are marked as lava stones, a different one will be used in each biome or geological region.
+|-
+| {{text anchor|SPECIAL}}|| ||Prevents the material from showing up in certain places. AI-controlled entities won't use the material to make items and don't bring it in caravans, though the player can use it as normal. Also, inorganic generated creatures (forgotten beasts, titans, demons) will never be composed of this material. Explicitly set by all [[evil weather]] materials and implied by [DEEP_SURFACE] and [DEEP_SPECIAL].
+|-
+| {{text anchor|GENERATED}}|| ||Indicates that this is a generated material. Cannot be specified in user-defined raws.
+|-
+| {{text anchor|DIVINE}}|| ||Found on random-generated metals and cloth.  Marks this material as usable by [[Deity]]-created generated entities.
+|-
+| {{text anchor|SPHERE}}|| [[sphere]] ||Found on divine materials.  Presumably links the material to a god of the same sphere.
+|}
+
+==ENVIRONMENT and ENVIRONMENT_SPEC==
+
+Format:
+* [ENVIRONMENT:<class>:<inclusion type>:<frequency>]
+
+Possible values for class:
+{| {{prettytable}}
+|- style='background-color:#ddd'
+! Environment class token
+! Description
+|-
+| {{text anchor|ALL_STONE}}||Will appear in every stone.
+|-
+| {{text anchor|IGNEOUS_ALL}}, {{text anchor|IGNEOUS_INTRUSIVE}}, {{text anchor|IGNEOUS_EXTRUSIVE}}||Will appear in igneous layers, either [[igneous intrusive]], [[igneous extrusive]], or both.
+|-
+| {{text anchor|SOIL}}, {{text anchor|SOIL_OCEAN}}, {{text anchor|SOIL_SAND}}||Will appear in soil. SOIL_OCEAN is oceans specifically and SOIL_SAND is sand specifically.
+|-
+| {{text anchor|METAMORPHIC}}||Will appear in [[metamorphic]] layers.
+|-
+| {{text anchor|SEDIMENTARY}}||Will appear in [[sedimentary]] layers.
+|-
+| {{text anchor|ALLUVIAL}}||Will appear in [[alluvial]] layers. 
+|}
+
+Possible values for inclusion type:
+{| {{prettytable}}
+|- style='background-color:#ddd'
+! Inclusion type token
+! Description
+|-
+| {{text anchor|CLUSTER}}||Large ovoids that occupy their entire 48x48 embark tile. [[Microcline]] is an example. When mined, stone has a 25% yield (as with layer stones).
+|-
+| {{text anchor|CLUSTER_SMALL}}||Blobs of 3-9 tiles. Will always be successfully mined. [[Red pyrope]]s are an example. When mined, stone has a 100% yield.
+|-
+| {{text anchor|CLUSTER_ONE}}||Single tiles. Will always be successfully mined. [[Clear diamond]]s are an example. When mined, stone has a 100% yield.
+|-
+| {{text anchor|VEIN}}||Large streaks of stone. [[Native gold]] is an example. When mined, stone has a 33% yield instead of the usual 25%.
+|}
+
+An inclusion may be contained within a larger inclusion.  For example, diamond small clusters are found within kimberlite veins.
+
+The frequency number varies from 1 to 100 and determines the relative frequency at which the stone will be chosen to appear - if all frequency values are the same, then all stones will be equally likely to appear.
+
+
+ENVIRONMENT_SPEC follows much the same format, but takes a specific stone material ID where ENVIRONMENT would take a class token. What you can use will depend on what inorganic raws are around.
+
+==See also==
+* [[Material definition token]]
+
+{{Category|Modding}}
+{{Category|Tokens}}
+[[ru:Inorganic material definition token]]
