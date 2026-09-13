@@ -1,0 +1,79 @@
+This page has been made to explain how one should create a report for inclusion into the [[v0.31:System_requirements | system requirements]] reports.
+
+__TOC__
+
+== Report template explained ==
+''Configuration type'': The type of your configuration, aka is it a full desktop PC, a laptop, a netbook or anything else.
+;Game info
+:Game version: Which version of DF are you using.
+:World size: What size world are you using. 
+:Embark size: What is your embark size (2x2, 3x3, 4x4, anything inbetween, whichever it is, make sure to post it.
+:Age of fort: How old is your fort ingame?
+:Number of dwarves: Self explanatory.
+:Average fps: What is the fps at which your game runs over at least a period of half an hour of observation.
+:Default/nondefault raws: Have you modified the game's default files? (init files are not covered here)
+:Tileset in use: If you are using any modified/custom tileset, make sure to enter it here.
+:Amount of stone dug: The amount of stone that your miners have dug out can have a massive effect on your FPS. Take care to report what your stocks screen tells you.
+:Amount of water and state: The approximate amount of water, is it a brook, river, ocean, some artificial construction, and is it mostly moving, or mostly staying put.
+:Approximate amount of z-levels: Amount of z-levels which you have dug downwards and approximate z levels that the landscape itself takes up.
+:RAM usage of game: Self explanatory, your OS provides you with tools to monitor memory useage of applications running on it.
+:Draw mode in init.txt: Enter here which draw mode you have set up in your init.txt (located in the dwarf fortress directory, under the data/init folder)
+
+;PC info
+:CPU: Which processor does your computer use?
+:MBO: Which motherboard does your computer use?
+:RAM: How much Random Access Memory does your computer have, and which speed?
+:GPU: Which graphics card does your computer use?
+:OS: Which OS are you using to play Dwarf Fortress?
+
+== Report template ==
+
+<pre>
+Configuration type:
+;Game info
+:Game version:
+:World size:
+:Embark size:
+:Age of fort:
+:Number of dwarves:
+:Average fps:
+:Default/nondefault raws:
+:Tileset in use:
+:Amount of stone dug:
+:Amount of water and state:
+:Approximate amount of z-levels:
+:RAM usage of game:
+:Draw mode in init.txt:
+
+;PC info
+:CPU:
+:MBO:
+:RAM:
+:GPU:
+:OS:
+</pre>
+
+== Example report ==
+
+Configuration type: AMD based, full desktop PC
+;Game info
+:Game version: 31.08 - graphics
+:World size: Medium region (default, nonmodified)
+:Embark size: 5x5
+:Age of fort: 6 years
+:Number of dwarves: 140
+:Average fps: 6-14
+:Default/nondefault raws: nondefault, dwarven speed modified, some smelting recipes modified.
+:Tileset in use: Phoebus prebuilt version
+:Amount of stone dug: 8693 at the moment of measure
+:Amount of water and state: A brook, dammed and diverted into big cisterns for trap use, mostly static and pressurised.
+:Approximate amount of z-levels: Beyond 200 below the ground level, around 5 upwards from ground.
+:RAM usage of game: Around 1.25 GB when playing
+:Draw mode in init.txt: VBO
+
+;PC info
+:CPU: AMD 7750x2 BE @ 2.7GHz
+:MBO: Gigabyte GA-MA78G-DS3h
+:RAM: 4GB DDR2 800
+:GPU: XFX GTX260
+:OS: Windows 7 x64 Ultimate

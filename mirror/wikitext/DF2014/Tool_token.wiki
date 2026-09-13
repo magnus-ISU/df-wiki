@@ -1,0 +1,295 @@
+{{Quality|Superior|12:23, 18 May 2015 (UTC)}}
+{{av}}
+{{Modding}}
+
+{{clear}}
+
+==Tokens==
+{| {{prettytable}}
+|- bgcolor="#999999"
+! Token
+! Arguments
+! Description
+
+|-
+| {{text anchor|NAME}}
+| 
+*singular
+*plural
+| Name of the tool. <font color="red">Required.</font>
+
+|-
+| {{text anchor|BONE_MAT}}{{version|0.42.01}}
+|
+| Permits the tool to be made from any bone.
+
+|-
+| {{text anchor|CERAMIC_MAT}}{{version|0.42.01}}
+|
+| Permits the tool to be made from any ceramic material.
+
+|-
+| {{text anchor|DESCRIPTION}}{{version|0.42.01}}
+|
+| Allows a string to describe the tool when {{key|v}}iewed. The text box can accommodate up to 325 characters until it cuts off, but the spacing of actual sentences puts the realistic limit closer to 300.  Multiple DEFINITION tokens can be used in the same tool definition, with each appearing on a new line.
+
+|-
+| {{text anchor|GLASS_MAT}}{{version|0.42.01}}
+|
+| Permits the tool to be made from any glass.
+
+|-
+| {{text anchor|HARD_MAT}}
+|
+| Permits the tool to be made from anything with the [ITEMS_HARD] token, such as wood, stone or metal.
+
+|-
+| {{text anchor|LEATHER_MAT}}{{version|0.42.01}}
+|
+| Permits the tool to be made from any leather.
+
+|-
+| {{text anchor|METAL_MAT}}
+|
+| Permits the tool to be made from anything with the [IS_METAL] token.
+
+|-
+| {{text anchor|METAL_WEAPON_MAT}}
+|
+| Permits the tool to be made from any metal with the [ITEMS_WEAPON] token.
+
+|-
+| {{text anchor|SHEET_MAT}}{{version|0.42.01}}
+|
+| Permits the tool to be made from any "sheet" material, such as papyrus, paper, and parchment. Connected to the PAPER_SLURRY/PAPER_PLANT reaction classes?{{verify}}
+
+|-
+| {{text anchor|SHELL_MAT}}{{version|0.42.01}}
+|
+| Permits the tool to be made from any shell.
+
+|-
+| {{text anchor|SILK_MAT}}{{version|0.42.01}}
+|
+| Permits the tool to be made from any silk.
+
+|-
+| {{text anchor|SOFT_MAT}}
+|
+| Permits the tool to be made from any material with the [ITEMS_SOFT] token, such as leather or textiles.
+
+|-
+| {{text anchor|STONE_MAT}}{{version|0.42.01}}
+|
+| Permits the tool to be made from any stone. Presumably connected to the [IS_STONE] token.
+
+|-
+| {{text anchor|THREAD_PLANT_MAT}}{{version|0.42.01}}
+|
+| Permits the tool to be made from any plant fiber, such as pig tails.
+
+|-
+| {{text anchor|WOOD_MAT}}
+|
+| Permits the tool to be made from any wood.
+
+|-
+| {{text anchor|INCOMPLETE_ITEM}}{{version|0.42.01}}
+|
+| According to Toady, "Won't be used in world gen libraries (to differentiate scrolls from quires). Also put it on bindings, rollers, instr. pieces for completeness/future use".  Used on scroll rollers, book bindings, and quires.
+
+|-
+| {{text anchor|DEFAULT_IMPROVEMENT}}{{version|0.42.01}}
+|
+*improvement type and subtype (latter only really applicable to SPECIFIC)
+*tool material flag like HARD_MAT or SILK_MAT
+| Items that appear in the wild come standard with this kind of improvement. Used on scrolls: [DEFAULT_IMPROVEMENT:SPECIFIC:ROLLERS:HARD_MAT]
+Currently bugged, the effect is also applied to everything made in-game. This causes scrolls to have two sets of rollers, for example.
+
+|-
+| {{text anchor|UNIMPROVABLE}}
+|
+| Prevents the tool from being improved.  Used on honeycombs, (scroll rollers, book bindings, and quires.){{version|0.42.01}}
+
+|-
+| {{text anchor|VALUE}}
+|
+*num
+| Defines the item value of the tool. <font color="red">Required.</font>
+
+|-
+| {{text anchor|TILE}}
+|
+*num
+| Defines the tile used to represent the tool. <font color="red">Required.</font>
+
+|-
+| {{text anchor|INVERTED_TILE}}
+|
+| The background of the tile will be colored, instead of the foreground.
+
+|-
+| {{text anchor|NO_DEFAULT_JOB}}{{version|0.42.01}}
+| 
+| According to Toady, "only custom reactions are used to make this item". Found on [[scroll]]s and [[quire]]s. 
+
+|-
+| {{text anchor|TOOL_USE}}
+| 
+*tool use, see below
+| Defines the task performed using the tool.
+
+|-
+| {{text anchor|FURNITURE}}
+|
+| Allows item to be stored in a furniture stockpile.
+
+|-
+| {{text anchor|SHAPE_CATEGORY}}{{version|0.47.01}}
+|
+*shape category
+| Category of shapes to choose from for the tool as defined by the [[Descriptor shape token#CATEGORY|CATEGORY]] token in descriptor_shape_standard.txt or a custom descriptor definition.
+
+|-
+| {{text anchor|USES_FACE_IMAGE_SET}}{{version|0.47.01}}
+|
+| Used on dice.
+
+|-
+| {{text anchor|ADJECTIVE}}
+| 
+*adjective
+| Adjective preceding the material name (e.g. "large copper dagger")
+
+|-
+| {{text anchor|SIZE}} / {{text anchor|WEIGHT}}
+| 
+*size
+| Volume of tool in mL or cubic centimeters. <font color="red">Required.</font>
+
+|-
+| {{text anchor|CONTAINER_CAPACITY}}
+|
+*amount
+| How much the item can contain. Defaults to 0.
+
+|-
+| {{text anchor|SHOOT_FORCE}}
+| 
+*value
+| <font color="red">Required for weapons.</font>
+
+|-
+| {{text anchor|SHOOT_MAXVEL}}
+| 
+*value
+| <font color="red">Required for weapons.</font>
+
+|-
+| {{text anchor|SKILL}}
+| 
+*Skill token
+| The skill to determine effectiveness in melee with this tool. <font color="red">Required for weapons.</font>
+
+|-
+| {{text anchor|RANGED}}
+| 
+*Skill token
+*Ammo item token
+| Makes this tool a ranged weapon that uses the specified ammo. The specified skill determines accuracy in ranged combat.
+
+|-
+| {{text anchor|TWO_HANDED}}
+| 
+*size
+| Creatures under this size (in cm^3) must use the tool two-handed. <font color="red">Required for weapons.</font>
+
+|-
+| {{text anchor|MINIMUM_SIZE}}
+| 
+*size
+| Minimum body size (in cm^3) to use the tool at all (multigrasp required until TWO_HANDED value) <font color="red">Required for weapons.</font>
+
+|-
+| {{text anchor|MATERIAL_SIZE}}
+| 
+*value
+| Number of bar units needed for forging, as well as the amount gained from melting. <font color="red">Required for weapons.</font>
+
+|-
+| {{text anchor|ATTACK}}
+| 
+*attacktype:BLUNT or EDGE
+*contact_area:value
+*penetration_size:value
+*verb2nd:string
+*verb3rd:string
+*noun:string
+*velocity_multiplier:value
+| You can have many ATTACK tags and one will be randomly selected for each attack, with EDGE attacks 100 times more common than BLUNT attacks. <font color="red">Required for weapons.</font>
+|}
+
+Valid tool uses (and the default tools used for these tasks) are as follows:
+{| class="wikitable sortable"
+|- bgcolor="#999999"
+! ID
+! Token
+! Usage
+|-
+| 0 || LIQUID_COOKING || cauldron || adventure mode decoration / weapon
+|-
+| 1 || LIQUID_SCOOP || ladle || adventure mode decoration / weapon
+|-
+| 2 || GRIND_POWDER_RECEPTACLE || mortar || adventure mode decoration / weapon
+|-
+| 3 || GRIND_POWDER_GRINDER || pestle || adventure mode decoration / weapon
+|-
+| 4 || MEAT_CARVING || carving knife || adventure mode decoration / weapon
+|-
+| 5 || MEAT_BONING || boning knife || adventure mode decoration / weapon
+|-
+| 6 || MEAT_SLICING || slicing knife || adventure mode decoration / weapon
+|-
+| 7 || MEAT_CLEAVING || meat cleaver || adventure mode decoration / weapon
+|-
+| 8 || HOLD_MEAT_FOR_CARVING || carving fork || adventure mode decoration / weapon
+|-
+| 9 || MEAL_CONTAINER || bowl || adventure mode decoration / weapon
+|-
+| 10 || LIQUID_CONTAINER || [[jug]] || can store honey or oil
+|-
+| 11 || FOOD_STORAGE || [[large pot]] || can store beer
+|-
+| 12 || HIVE || [[hive]] || can make honey
+|-
+| 13 || NEST_BOX || [[nest box]] || for your birds to lay eggs
+|-
+| 14 || SMALL_OBJECT_STORAGE || [[pouch]] || adventure mode coin purse
+|-
+| 15 || TRACK_CART || [[minecart]] || item hauling / weapon
+|-
+| 16 || HEAVY_OBJECT_HAULING || [[wheelbarrow]] || allows hauling items faster
+|-
+| 17 || STAND_AND_WORK_ABOVE || [[stepladder]] || allows gathering fruit from trees
+|-
+| 18 || ROLL_UP_SHEET{{version|0.42.01}} || scroll rollers{{version|0.42.01}} || 
+|-
+| 19 || PROTECT_FOLDED_SHEETS{{version|0.42.01}} || book binding{{version|0.42.01}} ||
+|-
+| 20 || CONTAIN_WRITING{{version|0.42.01}} || scroll & quire{{version|0.42.01}} ||
+|-
+| 21 || BOOKCASE{{version|0.42.01}} || [[bookcase]]{{version|0.42.01}} ||
+|-
+| 22 || DISPLAY_OBJECT{{version|0.44.01}} || [[pedestal]] & [[display case]]{{version|0.44.01}} || for museums
+|-
+| 23 || PLACE_OFFERING{{version|0.47.01}} || [[altar]]{{version|0.47.01}} || for (eventually) offering sacrifices
+|-
+| 24 || DIVINATION{{version|0.47.01}} || [[dice]]{{version|0.47.01}} || 
+|-
+| 25 || GAMES_OF_CHANCE{{version|0.47.01}} || dice{{version|0.47.01}} || 
+
+|}
+
+{{Category|Modding}}
+{{Category|Tokens}}
+[[ru:Tool token]]

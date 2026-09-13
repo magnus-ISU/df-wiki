@@ -1,0 +1,1992 @@
+{{For/see|user-created graphic sets|[[Graphics set repository]]}}
+{{av}}
+{{Mod}}
+
+A character set, or simply [[tilesets|tileset]], is an image in BMP or PNG format that contains the 256 different tiles, corresponding to the [[Main:Character table|IBM Code Page 437]] (sometimes called Extended ASCII). They are used to display the main graphics. This page serves as a repository for custom tilesets made by users, including instructions on how to install them.
+
+==Background==
+
+The default tilesets (640×300 and 800×600) render 8×12 and 10×12 characters respectively, with majuscule latin letters occupying a 7×9 box, and appear broadly similar to the IBM MDA font based on the shape of the "0", "g", and "f" characters (but with slight differences including the "0", "W", and "y"). The exact origin of the DF font is unknown.
+
+==Installation==
+
+To use a specific tileset with ''Dwarf Fortress'', you must perform the following steps:
+
+# Download the tileset to your computer. Each tileset is just an image, so there is no separate download link. ('''Right-Click''' on the tileset image and '''Save-As'''.)
+# If necessary, convert the tileset to the correct image format for the version of DF you are using:
+## ''For [[40d:Release information/0.28.181.40d|DF 0.28.181.40d]] or older:'' open the file in an image editor and save it as a '''24-bit bitmap''' (BMP) if it isn't already in that format.
+## ''For [[v0.31:Release information/0.31.01|DF 0.31.01]] or newer:'' open the file in an image editor and save it as a '''PNG'''  with ''transparency'' if it isn't already in that format.
+# Move/Copy the file to the DF art directory ({{tt|.../data/art}}).
+# Edit the initialization configuration file ({{tt|.../data/init/init.txt}}) to specify the tileset file to use. There are four locations that can be changed:
+## Specify the tileset for a windowed display by setting the filename in the '''[FONT:''<filename>'']''' tag.
+## Specify the tileset for a full-screen display by setting the filename in the '''[FULLFONT:''<filename>'']''' tag.
+## Specify the tileset for a windowed graphical display by setting the filename in the '''[GRAPHICS_FONT:''<filename>'']''' tag.
+## Specify the tileset for a full-screen graphical display by setting the filename in the '''[GRAPHICS_FULLFONT:''<filename>'']''' tag.
+## Once you have made the changes you need to remember to save the file.
+
+If the selected tileset requires modifications to the Raws, you will have to make those edits.  What those changes are will depend on the tileset itself.
+
+Once the file is saved and the required changes are made, you are ready to play DF with your new tileset!
+
+=Square tilesets=
+
+==1&times;1==
+
+{{Tileset|
+|image=[[Image:Monoscii_Lite.png]]
+|author=Loud Whispers
+|dated=2015-03-30
+|size=1&times;1
+|resolution=80&times;25
+|comments=So on suggestion I made the new version of Monoscii which has every tile be 1 pixel, the entire map nearly fits into the screen just fine. Monoscii Lite is superior in every way, the information is denser, crisper and cleaner. pUrists will finally be one step closer to the most pUrist DF possible. ([http://www.bay12forums.com/smf/index.php?topic=149759.msg6131651#msg6131651 forum post link])
+|demo=[[Image:Monoscii lite large world screenshot.png|thumb|right|Monoscii Lite]]
+}}
+
+==5&times;5==
+
+{{Tileset|
+|filename=Kein_400x125.png
+|author=[[User:Kein|Kein]]
+|dated=2008-8-7
+|size=5&times;5
+|resolution=400&times;125
+|comments=A large 257x257 DFMA world gen map can be found [http://mkv25.net/dfma/map-3278-5x5largeworldmap here.]Updated 08/06/08. Changed most text characters as well as some others to 4x4 with blackspace to avoid tiling. Most characters have been revised to be spaced out to be more distinguishable in such a small set. After seeing the dev update earlier today about increasing your view size I decided to create this small font. This has been built completely from scratch, mostly while at work today. I may be making a shaded version in the future. The first image to the right is from the Abbeyverse succession game.
+|demo=[[Image:Kein_400x125.gif|thumb|right|Kein's 5x5]]
+}}
+
+{{Tileset|
+|filename=Zaratustra_custom_5x5.png
+|author=[[User:Zaratustra|Zaratustra]]
+|dated=2008-11-20
+|size=5&times;5
+|resolution=400&times;125, 800&times;250, 800&times;500
+|comments=
+}}
+
+==6&times;6==
+
+{{Tileset|
+|filename=Geti_custom_6x6.png
+|author=[[User:Geti|Geti]]
+|dated=2010-08-04
+|size=6&times;6
+|resolution=480&times;150, 960times;300
+|comments=A 6x6 Tileset optimised for legibility through personal use. Not shaded on most glyphs, aiming for a crisper look. Best at 2x2 pixels.
+}}
+
+{{Tileset|
+|filename=Lord Nightmare 6x6font01.png
+|author=Lord Nightmare
+|dated=2007-11-5
+|size=6&times;6
+|resolution=480&times;150
+|comments=Made in 5 hours on 11/5/07 (I was bored and dissatisfied with other fonts). Most glyphs are really 5&times;6, with a separator column.
+}}
+
+{{Tileset|
+|filename=Lord Nightmare 6x6font02.png
+|author=Lord Nightmare
+|dated=2007-11-12
+|size=6&times;6
+|resolution=480&times;150
+|comments=Version 2.05. Updated 11/12/07 to de-fuzz uppercase letters, added serifs and clarified lowercase letters, made horizontal spacing consistent throughout character set, fixed one error in the double horizontal-left-right, single-vertical-up-down character, made exclamation points consistent, thinned out question mark and inverse question mark, sharpened sideways stemless arrows, clarified international characters, and clarified some Greek letters. Since v2.0: fixed 'i' 'g', fixed Yen symbol, fixed smiley 0x01 to not have an extra line to its right, lowered the period and colon characters, fixed position of 'x'. Thanks to Markavian for ideas on how to improve the font, as well as an occasional character glyph.
+|demo=[[Image:Nightmare_6x6_v2.jpg|thumb|right|Lord Nightmare's 6x6 v2]]
+}}
+
+{{Tileset|
+|filename=Mkv_curses_480x150.png
+|author=[[User:Markavian|Markavian]]
+|dated=2007-10-30
+|size=6&times;6
+|resolution=480&times;150
+|comments=The first version of the tiny tileset, superseded by the version below.
+}}
+
+{{Tileset|
+|filename=Mkv_curses_480x150_v2.png
+|author=[[User:Markavian|Markavian]]
+|dated=2007-10-30
+|size=6&times;6
+|resolution=480&times;150
+|comments=My second version of the tiny tileset, for uber small resolution DF, with improved visibility of several symbols.
+Available in [http://mkv25.net/showcase/df/mkv_curses%2012x12%20and%206x6%20v2.zip mkv curses 12&times;12 and 6&times;6 v2.zip].
+|demo=[[Image:mark_6x6_v2.jpg|thumb|right|Markavian's 6x6 v2]]
+}}
+
+{{Tileset|
+|filename=nobbins6x6.png
+|author=[[User:Nobbins|Nobbins]]
+|dated=2010-01-10
+|size=6&times;6
+|resolution=480&times;150, 960&times;300
+|comments=Tiny tileset for small screens, with experimental colour blending and pseudo-curved walls.
+}}
+
+{{Tileset|
+|filename=nobbin_ts_v2.png
+|author=[[User:Nobbins|Nobbins]]
+|dated=2010-06-28
+|size=6&times;6
+|resolution=480&times;150, 960&times;300
+|comments=Tiny tileset for small screens/large projects, using slightly Monaco-styled serifs. Transparency-supporting version needed. [http://www.bay12games.com/forum/index.php?topic=47680 Forum thread.]
+}}
+
+==7&times;7==
+
+{{Tileset|
+filename=Herrbdog_7x7_tileset.gif
+|author=[[User:herrbdog|herrbdog]]
+|dated=2007-10-30
+|size=7&times;7
+|resolution=560&times;175
+|comments=
+|demo=[[Image:Herrbdog_7x7.jpg|thumb|right|herrbdog's 7x7 tileset]]
+}}
+
+{{Tileset|
+|filename=terbert_7x7.png
+|author=[[User:Terbert|Terbert]]
+|dated=2009-6-30
+|size=7&times;7
+|resolution=560&times;175
+|comments=This is a 7x7 tileset made for overseeing large constructions 
+}}
+
+==8&times;8==
+
+{{Tileset|
+|filename=Anikki_square_8x8.png
+|author=[[User:Anikki|Anikki]]
+|dated=2008-7-27
+|size=8&times;8
+|resolution=640&times;200 native.
+|comments=Based on the original IBM CGA Character set with a lot of tweaks. The characters remain as descriptive yet universal as possible. I chose the CGA set because it is in my opinion the square set with the best readability. This set is for those who like the basic ASCII look where every pixel has meaning or (multiple meanings). [http://www.anikki.com/share/df/Anikki_square_8x8.bmp Download the BMP]
+
+There is also an upscaled [[#Anikki_square_16x16.png|16x16 version]] of this set available for fullscreen use below.
+|demo=[[Image:df_anikki_2.png|thumb|right]]
+}}
+
+{{Tileset|
+|title=cheepicus_8x8
+|filename=cheepicus_8x8.png
+|author=[[User:Cheepicus|Cheepicus]]
+|dated=2014-4-3
+|size=8&times;8
+|resolution=640&times;200
+|comments=An 8x8 tileset I made. Hand-made, mostly ASCII, with just a few special characters, like my other tilesets.
+|demo=[[Image:cheepicus_8x8_ss.png|thumb|right|cheepicus_8x8 sample]]
+}}
+
+{{Tileset|
+|filename=Jdpage_8x8.png
+|author=[[User:Jdpage|Jdpage]]
+|dated=2010-09-15
+|size=8&times;8
+|resolution=640&times;200 native.
+|comments=Modified version of the [[#Anikki_square_8x8.png|Anikki 8x8 tileset]]. Just prettifies it a bit; some characters are tweaked to make them work slightly better for one of their jobs without disturbing the rest. Others are redesigned entirely. Most importantly, dwarves were given beards.
+}}
+
+{{Tileset|
+|filename=CGA8x8thick.png
+|author=Lord Nightmare/IBM
+|dated=2007-10-30
+|size=8&times;8
+|resolution=640&times;400
+|comments=The original IBM CGA Character set, thick variant, dumped from addresses 0x1800-0x1fff the 5788005 IBM Character Generator ROM. This is the far more common 'thick' variant. Best viewed at 8:5 aspect ratio.
+}}
+
+{{Tileset|
+|filename=CGA8x8thin.png
+|author=Lord Nightmare/IBM
+|dated=2008-6-6
+|size=8&times;8
+|resolution=640&times;400
+|comments=The original IBM CGA Character set, thin variant, dumped from addresses 0x1000-0x17ff the 5788005 IBM Character Generator ROM. This is the less common 'thin' variant, which required soldering on two pins and jumpering them on the CGA card to use. Best viewed at 8:5 aspect ratio.
+|demo=[[Image:Nightmare_cga_8x8.jpg|thumb|right|Lord Nightmare's 8&times;8 CGA tileset]]
+}}
+
+{{Tileset|
+|filename=LN_EGA8x8.png
+|author=Lord Nightmare/IBM
+|dated=2007-10-30
+|size=8&times;8
+|resolution=640&times;400
+|comments=The IBM EGA 8&times;8 Character set, dumped from the 6277356 IBM EGA BIOS ROM. This is ALMOST 100% IDENTICAL to the CGA thick font, but has minor modifications (23 pixels total) done to four characters: the capital 'S', the club sign, the spade sign, and the large asterisk (the one with a hole in the middle, char 0x0f, not the shift-8 one which is char 0x2a). There is no thin variant of this font. Best viewed at 8:5 aspect ratio.
+}}
+
+{{Tileset|
+|filename=RDE_8x8.png
+|author=[[User:RedDeadElite|RedDeadElite]]
+|dated=2018-08-17
+|size=8&times;8
+|resolution=640&times;200
+|comments=Meant to resemble the vanilla curses tileset, which itself is similar to Microsoft's 8x12 Terminal font. Glyphs sourced from various bitmap fonts and/or modified by hand.
+|demo=[[Image:RDE_8x8_screencap.png|thumb|right|RedDeadElite's 8x8 tileset with [[Graphics_set_repository#Phoebus.27_Graphics_Set|Phoebus's color scheme]].]]
+}}
+
+{{Tileset|
+|filename=Pastiche_8x8.png
+|author=[[User:Tejón|tejón]]
+|dated=2012-6-12
+|size=8&times;8
+|resolution=640&times;200 @ 80&times;25.
+|comments=A mishmash of the CGA, Acorn and C64 character fonts (and just a hint of Fixedsys), with a few pixels nudged here and there and several symbols shifted to make world maps look nicer.
+}}
+
+{{Tileset|
+|filename=Potash_8x8.png
+|author=[[User:Tejón|tejón]]
+|dated=2012-6-12
+|size=8&times;8
+|resolution=640&times;200 @ 80&times;25.
+|comments=I like packing as much on the screen as I can, but 8&times;8 is just too crowded for 1920&times;1080 fullscreen. I intended to make a 10&times;10 version of Pastiche, but I had to make countless little changes to maintain visual consistency between the two sizes. I finally gave up, called it a new font, and changed some more stuff just because! Like Pastiche, Potash is a pure ASCII/CP437 font, suitable for use outside of ''Dwarf Fortress'' should you happen to find yourself stuck in 1985.
+}}
+
+{{Tileset|
+|filename=Acorntileset8x8.png
+|author=[[User:Xenomorph|Xenomorph]]
+|dated=2008-8-9
+|size=8&times;8
+|resolution=640&times;200
+|comments=This is the tileset used by Acorn computers, starting with the BBC Micro.  This version is as it would have appeared in 40-column modes (and shuffled a little to adapt it to CP437).  It also looks nice at double resolution. [http://dffd.bay12games.com/file.php?id=407 Download the BMP.]
+}}
+
+{{Tileset|
+|filename=yayo_c64_640x200.png
+|author=[[User:Yayo|Yayo]]
+|dated=2007-10-30
+|size=8&times;8
+|resolution=640&times;200
+|comments=Name: Yayo's C64; Based on the charset of the Commodore 64. It's a flat style, but it's clean and also highly readable. I recreated all the missing chars like letters with accents and symbols, trying to get a c64 style as much as possible. If it's too small, use the 16&times;16 version [[#Yayo_c64_1280x400_83b157.png|below]]. :)
+|demo=[[Image:yayo_c64_640x200_screenshot.png|thumb|right|yayo's c64 Tileset]]
+}}
+
+{{Tileset|
+|filename=Zaratustra_msx.png
+|author=[[User:Zaratustra|Zaratustra]]
+|dated=2007-10-30
+|size=8&times;8
+|resolution=640&times;200 or 640&times;400
+|comments= The MSX and MSX2 font, shuffled around to fit the char set. Double lines were added.
+|demo=[[Image:Zara_8x8.jpg|thumb|right|Zaratustra's 8&times;8 tileset]]
+}}
+
+==9&times;9==
+
+{{Tileset|
+|filename=720x225_SmoothWalls.PNG
+|author=[[User:Dorten|Dorten]]
+|dated=2009-2-13
+|size=9&times;9
+|resolution=720&times;225
+|comments=It's improved Savok's tileset, which is changed to make walls look smooth. Plus another little differences.
+|demo=[[Image:Snap.PNG|thumb|right|Dorten's smooth-walled version of Savok's tileset. (Without fix for 7s)]]
+}}
+
+{{Tileset|
+|filename=720x225_SmoothWalls7.png
+|author=[[User:Dorten|Dorten]]
+|dated=2009-2-13
+|size=9&times;9
+|resolution=720&times;225
+|comments=Minor tweak so the 7's don't look like question marks.
+}}
+
+{{Tileset|
+|filename=Nostalgia_720x225.png
+|author=[[User:Maus|maus]]
+|dated=2007-10-30
+|size=9&times;9
+|resolution=720&times;225
+|comments=Another square tileset that's usable on low resolutions, modelled after a common font used on the Nintendo Entertainment System. I also made a [[:Image:Nostalgia_1440x450_3e4a08.png|18x18 version]] to fit my 1440x900 screen, back when the aspect ratio of DF was locked. If you like your set a bit more graphical, check out [[:Image:Teeto_K_18x18.PNG|Teeto_K's version]].
+}}
+
+{{Tileset|
+|filename=DortenSolid.png
+|author=[[User:Qjet|Qjet]]
+|dated=2009-2-13
+|size=9&times;9
+|resolution=720&times;225
+|comments=Mod of Dortens super sexy 9*9 tileset, this time to provide solid backgrounds to tiles, avoids designation problems by using PNG transparency.
+|demo=[[Image:DortenSolidex1.png|thumb|right|Qjet's solid-background mod of Dorten's smooth-walled edit of Savok's tileset.]]
+}}
+
+{{Tileset|
+|filename=Curses_720x225_8d6752.png
+|author=[[User:Savok|Savok]]
+|dated=2007-10-30
+|size=9&times;9
+|resolution=720&times;225
+|comments=There is no doubt that this tileset is old. This must be distinctly understood if anything wonderful is to come of your use of it. You may like [[#720x225_SmoothWalls.PNG|Dorten's revision]] more. The following is the original description:<br>I dislike curses_640x300.bmp due to its lack of any kind of graphics for things like a bed or a barrel and the fact that it distorts my beautiful circles, so I made a similarish tileset to fix those.
+|demo=[[Image:Screenshot_41ea57.png|thumb|right|Savok's tiny, non-updated tileset.]]
+}}
+
+==10&times;10==
+
+{{Tileset|
+|filename=Anikki_square_10x10.png
+|author=[[User:Anikki|Anikki]]
+|dated=2008-7-27
+|size=10&times;10
+|resolution=800&times;250 native.
+|comments=Based primarily on Tocky and Plac1d's sets (which are brilliant). The characters remain as descriptive as possible with some tweaks to the font for better readability and some changes to symbols for more consistency. This set is for those who like the basic ASCII look where every pixel has meaning or (multiple meanings). [http://www.anikki.com/share/df/Anikki_square_10x10.bmp Download the BMP]
+(Note: The up and down ramps are reversed.)
+|demo=[[Image:df_anikki_1.png|thumb|right]]
+}}
+
+{{Tileset|
+|filename=buddy.png
+|author=buddy
+|dated=2014-07-12
+|size=10&times;10
+|comments=I wanted every character in this set to be the very best text symbol it could possibly be, while still looking good in-game.
+
+A hidden feature of this tileset is that the border around the white tile only has its red color-component changed, which means that a nice clear grid shows up over (brown) designations, while (blue) ice walls still look perfectly smooth.
+
+[PILLAR_TILE:10]
+}}
+
+{{Tileset|
+|filename=buddy--graphical.png
+|author=buddy
+|dated=2014-07-16
+|size=10&times;10
+|comments=The graphical version of my tileset.
+
+data/init/d_init.txt:<br/>
+[PILLAR_TILE:10]<br/>
+[TREE_BRANCHES:171]
+
+raw/objects/creature_standard.txt:<br/>
+[CREATURE:GOBLIN] ... [CREATURE_TILE:255]
+}}
+
+{{Tileset|
+|filename=ddw.png
+|author=[[User:Ddw|Ddw]]
+|dated=2011-03-10
+|size=10&times;10
+|resolution=800&times;250 native
+|comments=Based on [[#Anikki_square_10x10.png|Anikki]], with some simplifications and modifications. I like Markavian's walls, so I did something similar. The bottom right tile, number 255, I use for pillars. You can set that in your d_init.txt, the line should look like [PILLAR_TILE:255] 
+[http://www.dougwhiteley.co.uk/images/ddw_shot.png Example].
+}}
+
+{{Tileset|
+|filename=Paul_10x10.png
+|author=[[User:Paul|Paul]]
+|dated=2008-9-5
+|size=10&times;10
+|resolution=800&times;250 for 80&times;25 grid size, others just multiply grid by 10.
+|comments=Custom tileset I made for my own use when the adjustable grid sizes were released for DF. Some accented letters cut slightly to allow for larger letter display. Contains several of Tocky's tiles (barrels, some trees, dimple cups, coins, slightly modified armor stand). Others are either made by me or adjusted from curses_800x600 tiles.
+}}
+
+{{Tileset|
+|filename=Potash_10x10.png
+|author=[[User:Tejón|tejón]]
+|dated=2012-6-12
+|size=10&times;10
+|resolution=800&times;250 @ 80&times;25.
+|comments=The "full size" version of Potash. I insist on using a square font to maintain sanity when judging sizes and distances, but I'm not a fan of how text usually looks with square glyphs -- the letters are either too wide, or spaced too far apart. I've tried balance those two flaws against each other as much as possible, and I think this font is very readable as a result. Nearly all the 10&times;10 glyphs have empty borders on all four sides, to prevent confusing (or just ugly) connections between adjacent tiles.
+}}
+
+{{Tileset|
+|filename=Taffer 10x10.png
+|author=[[User:Taffer|Taffer]]
+|dated=2017-01-10
+|size=10&times;10
+|resolution=Looks decent at almost any resolution.
+|comments=A sharp looking, vanilla styled tileset that strives to strike a good balance between nice, attractive graphics, while avoiding graphical oddities.  I find the cumulative differences from the ASCII add to the game. Feel free to leave me a [http://dwarffortresswiki.org/index.php/User_talk:Taffer note]. This has turned into a [http://www.bay12forums.com/smf/index.php?topic=107924.0], and includes alternate walls, fonts, and racial graphics.
+|demo=[[Image:Taffer.png|thumb|right]]
+}}
+
+{{Tileset|
+|filename=Terbert_10x10.png
+|author=[[User:Terbert|Terbert]]
+|dated=2009-6-30
+|size=10&times;10
+|resolution=800&times;250
+|comments=This is Terbert's First tileset
+}}
+
+{{Tileset|
+|filename=Tocky_square_10x10.png
+|author=[[User:Tocky|Tocky]]
+|dated=2007-11-15
+|size=10&times;10
+|resolution=800&times;250 native, 800&times;500 for fullscreen.
+|comments=I tried to make all the pictographic symbols as descriptive as possible: the only ones I've spotted that show up in odd places are the staircase symbols, '<' and '>', which are used as tags on barrel descriptions, and don't match -- but I'm willing to live with that in order to be able to tell up-stairs from down-ones. With everything else, I just tried to maximize clarity and readability and to keep them consistent. I'm really very pleased with how this set turned out. 
+|demo=[[Image:Df_tock10_1.PNG|thumb|right]]
+}}
+
+==11&times;11==
+
+{{Tileset|
+|filename=terminus.png
+|author=[[User:Gekz|Gekz]]
+|dated=2010-1-08
+|size=11&times;11
+|resolution=880&times;275
+|comments=This works great on my EeePCs shoddy resolution of 1024x600, and this is why I made it. This is basically the [http://www.is-vn.bg/hamster/ Terminus font] converted for use on DF. I chose this font due to its readability at a low resolutions, and soon I'll convert some of the non-letter characters into actually objects like beds and dwarves, so keep a look out for an updated version that I'll add below.
+
+[http://www.bay12games.com/forum/index.php?topic=47570.0 This forum thread] has the slightly 'graphical' test version. Quite amusing. Check there for updates.
+|demo=[[Image:terminus-sc.png|thumb|right|Terminus Tileset]]
+}}
+
+==12&times;12==
+
+{{Tileset|
+|filename=Alloy_curses_12x12.png
+|author=[[User:Alloy|Alloy]]
+|dated=2010-12-3 - v1.1
+|size=12&times;12
+|resolution=960&times;300 native.
+|comments=Much like [[Tileset_repository#Hanuman|Hanuman's conversion]], this is based on the default curses_640x300 tileset, converted to 12x12. There are no significant modifications to the tiles, smoothing, etc - just some cosmetic changes mostly to take advantage of 4 extra horizontal pixels. For people who like the original tileset's look and size but want a square version of it.
+}}
+
+{{Tileset|
+|title=cheepicus_12x12
+|filename=cheepicus_12x12.png
+|author=[[User:Cheepicus|Cheepicus]]
+|dated=2010-8-4
+|size=12&times;12
+|resolution=960&times;300
+|comments=I wanted a 12x12 ASCII graphics set, sharp, with pleasant text, so I wound up making one myself from scratch. It's a little influenced by Guybrush, which I love, but after awhile the blurriness got to me.
+
+(This tileset is not entirely ASCII; I changed the equals sign to a pattern, so that stockpiles would look the way I like.)
+|demo=[[Image:cheepicus_12x12_ss.png|thumb|right|cheepicus_12x12 sample]]
+}}
+
+{{Tileset|
+|filename=Unknown curses 12x12 & Markvii Walls.png
+|author=DDR & Others
+|dated=2010-9-3
+|size=12&times;12
+|resolution=960&times;300 native
+|comments=A remix of the Unknown 12x12 curses with Markvii's diagonal walls. Works quite nicely together.
+|demo=[[Image:Unknown curses 12x12 & Markvii Walls example screenshot.jpeg|thumb|right|A dwarf practicing archery. He died later.]]
+}}
+
+{{Tileset|
+|filename=Haberdash_curses_12x12.png
+|author=[[User:Haberdash|Haberdash]]
+|dated=2014-07-24
+|size=12&times;12
+|resolution=960&times;300
+|comments=Similar to [[Tileset_repository#Alloy|Alloy's conversion]], this is based on the default curses_800x600 tileset, converted to 12x12. I wrote a GIMP python plugin to add padding to bring each tile up to the required size, and then I manually tidied up the places where the images no longer went all the way to the edge of the tile. This ensures that the positioning of each image within each tile stays exactly the same as in the original tileset, but with a single pixel column added on both sides of the tile to bring it up to size. For people who like the 800x600 original tileset's look and size but want a square version of it.
+}}
+
+{{Tileset|
+|filename=DB_curses_12x12.PNG
+|author=[[User:Hanuman|Hanuman]]
+|dated=2008-7-23
+|size=12&times;12
+|resolution=900&times;300
+|comments=This is basically the curses_800x600.bmp file converted to 12x12. It may be slightly different but it is close enough for me. [http://dffd.wimbli.com/file.php?id=318 Get the .BMP here.]
+Note: If the tileset doesn't look right played at 900x300, try changing the resolution to 966x325.
+}}
+
+{{Tileset|
+|filename=Herrbdog_144.png
+|author=Herrbdog
+|dated=2007-10-30
+|size=12&times;12
+|resolution=960&times;300
+|comments=A larger version of this tileset is available [[#Herrbdog_16x16_tileset.gif|below]].
+}}
+
+{{Tileset|
+|filename=Dullard_Exponent_12x12.png
+|author=Lord Dullard/Exponent
+|dated=2009-3-30
+|size=12&times;12
+|resolution=960&times;300 native
+|comments=Adjusted by Exponent, and with new dwarf characters added. A version of the Unknown 12×12 tileset with smoothed walls. Example: [http://mkv25.net/dfma/map-5243-wiltedblight Wiltedblight].
+}}
+
+{{Tileset|
+|filename=mkv_solidcurses_stairs_960x300.png
+|author=[[User:Markavian|Markavian]]
+|dated=2007-12-4
+|size=12&times;12
+|resolution=960&times;300
+|comments=This revision is designed to work with DF version 0.27.169.33a with special tiles for [[stair]]s and [[ramp]]s, as well as the changes present in the earlier version such as bones, walls, trees and swords.<br> Available in [http://mkv25.net/showcase/df/mkv_curses%2012x12%20and%206x6%20v2.zip mkv curses 12&times;12 and 6x6 v2.zip]. As seen in the fortress of [http://mkv25.net/dfma/map-1329-axegear Axegear].
+}}
+
+{{Tileset|
+|filename=Mkv_solidcurses_960x300.png
+|author=[[User:Markavian|Markavian]]
+|dated=2007-10-30
+|size=12&times;12
+|resolution=960&times;300
+|comments=An older revision of my square tileset, featuring more detailed symbols, with alterations to certain text characters to look more like ingame items. The walls are infilled now.<br> 
+Available in [http://mkv25.net/showcase/df/mkv_curses%2012x12%20and%206x6%20v2.zip mkv curses 12&times;12 and 6x6 v2.zip]. As seen in the fortress of [http://mkv25.net/dfma/map-800-inflew. Inkflew].
+}}
+
+{{Tileset|
+|filename=Markvii.png
+|author=[[User:Turnip|Turnip]]
+|dated=2009-7-9
+|size=12&times;12
+|resolution=960&times;300
+|comments=My revision of Markavian's tileset, made to be more "curvy"
+|demo=[[Image:Rev7.PNG|thumb|right]]
+}}
+
+{{Tileset|
+|filename=Tileset_unknown_960x300_02.png
+|author=Unknown
+|dated=2007-10-30
+|size=12&times;12
+|resolution=960&times;300
+|comments=This is a tileset submitted by an unknown user from the IP address 86.43.81.125. <!-- no need to say that for the default characters -->
+}}
+
+{{Tileset|
+|filename=Unknown_curses_12x12.png
+|author=Unknown
+|dated=2007-11-24
+|size=12&times;12
+|resolution=960&times;300
+|comments=This is very similar to the above tileset, but has some noticeable differences. I have no idea where I got it from. It's great on a 1024x768 CRT monitor in windowed mode. I use it in a 1000x500 window with [BLACKSPACE:YES]. --[[User:JT|JT]]
+|demo=[[Image:Unknown_12x12.jpg|thumb|right|Unknown 12&times;12 v2]]
+}}
+
+{{Tileset|
+|filename=nice_curses_12x12.png
+|author=[[User:Vidumec|Vidumec]]
+|dated=2013-01-30
+|size=12&times;12
+|resolution=960&times;300 native
+|comments=This tileset is a square version of Plac1d's tileset with some modifications, like duller ground tiles and other.
+|demo=[[Image:Screenshot_nice_curses_12x12.png|thumb|right]]
+}}
+
+{{Tileset|
+|filename=zesty_curses_12x12.png
+|author=[[User:ZesT|ZesT]]
+|dated=2022-11-3
+|size=12&times;12
+|resolution=960&times;300 native
+|comments= A fresh spin on Vidumec's "nice curses" tileset - includes a couple different graphics that both keep the ASCII feel and provide better visual representations while preventing text artefacts, including new graphics for sheets, plus a Moai statue since making the statue specifically humanoid didn't feel generalisable enough.<br>A [[Tileset repository#zesty_curses_24x24.png|24x24 version]] is available.
+}}
+
+==13&times;13==
+
+{{Tileset|
+|filename=Kren_13x13.png
+|author=[[User:Krenshala|krenshala]]
+|dated=2015-12-27 (Updated 2017-08-27)
+|size=13&times;13
+|comments=I wanted a tileset smaller than 15x15 that would still display nicely on a netbook (e.g. 1366&times;768), but still be clearly legible.  I think I have succeeded in that goal.  On a 1680&times;1050 display the resolution is 129&times;80 with this tileset.
+}}
+
+{{Tileset|
+|filename=yayo_tunur_1040x325.png
+|author=[[User:Yayo|Yayo]]
+|dated=2007-10-30
+|size=13&times;13
+|resolution=1040&times;325
+|comments=Name: Yayo's Tunur; According to the language files of DF, Tunur means "style" in dwarf language. It may require a bit to get used to some symbols, but it's a very clean tileset. (It's just a bit weird. :P)
+|demo=[[Image:yayo_tunur_1040x325_screenshot.png|thumb|right|yayo's Tunur Tileset]]
+}}
+
+==14&times;14==
+
+{{Tileset|
+|title=cheepicus_14x14
+|filename=cheepicus_14x14.png
+|author=[[User:Cheepicus|Cheepicus]]
+|dated=2018-11-28
+|size=14&times;14
+|resolution=1120&times;350
+|comments=Back on my bullshit. I made this because I wanted a bold, low-eyestrain tileset.
+|demo=[[Image:cheepicus_14x14_ss2.png|thumb|right|cheepicus_14x14 sample]]
+|demo2=[[Image:cheepicus_14x14_ss1.png|thumb|right|cheepicus_14x14 sample]]
+}}
+
+==15&times;15==
+
+{{Tileset|
+|title=cheepicus_15x15
+|filename=cheepicus_15x15.png
+|author=[[User:Cheepicus|Cheepicus]]
+|dated=2012-5-6
+|size=15&times;15
+|resolution=1200&times;375
+|comments=I find the text hard to read in most other tilesets, so I made a new one.  Mostly ASCII with a few graphical nods.  Lower right char is for PILLAR:255 in df_init.
+|demo=[[Image:cheepicus_15x15_ss1.png|thumb|right|cheepicus_15x15 sample]]
+}}
+
+{{Tileset|
+|filename=Talryth_square_15x15.png
+|author=[[User:Talryth|Talryth]]
+|dated=2010-06-18
+|size=15&times;15
+|resolution=1440&times;900 (96&times;60 grid size)<br/>1680&times;1050 (112&times;70 grid size)
+|comments=Built from scratch, this ASCII tileset is made with two common 16:10 resolutions in mind. The odd tile size fills the above resolutions without artifacts and it gives an advantage in design, making for sharp features and equal spacing between characters. The manual anti-aliasing gives the set a nice and clean look. Transparent PNG support is needed for this one.
+}}
+
+{{Tileset|
+|filename=Vidumec_15x15.png
+|author=[[User:Vidumec|Vidumec]]
+|dated=2011-09-05
+|size=15&times;15
+|resolution=1440&times;900 (96&times;60 grid size)<br/>1680&times;1050 (112&times;70 grid size)<br/>Actually looks good on any resolution
+|comments=I liked the great Talryth square 15x15 very much! However dwarves tiles were a litlle bit out of the style, so I changed them to default-like ones. Also added background so the there is no more black background which with bright ASCII was hard to my eyes. Again thanks to Talryth for his amazing job!
+|demo=[[Image:Df_screen1.png|thumb|right]]
+}}
+
+==16&times;16==
+
+{{Tileset|
+|filename=Anno_16x16.png
+|author=[[User:AbuDhabi|AbuDhabi]]
+|dated=2011-03-19
+|size=16&times;16
+|resolution=1280&times;400 native.
+|comments=Based on [[#Anikki_square_16x16.png|Anikki's 16x16 tileset]], but smoothed/enhanced and with the dwarf images reworked.
+}}
+
+{{Tileset|
+|filename=Aesomatica_16x16.png
+|author=[[User:Aesomatica|Aesomatica]]
+|dated=2008-11-29
+|size=16&times;16
+|resolution=1280&times;400 native.
+|comments=Tileset intended to build upon [[User:Sphr|Sphr's]] and [[User:Jackard|Jackard's]] work, as well as others. Some tiles are original, some are variants and most are copied from various sets the author found pleasing. Notable originals include the broken bolt/ashes tiles, the ballista heads/large hills, the small hills, the ore (gear animation is pleasing, though axle animation is unimproved), ground tiles, and vermin. Also, bins look decent and up/down stairs look okay. This set looks its best with Sphr's graphics.
+}}
+
+{{Tileset|
+|filename=LCD_Tileset.png
+|author=[[User:Agm|Agm]]
+|dated=2020-02-07
+|size=16&times;16
+|resolution=1280&times;400
+|comments=Semi-graphical ASCII tileset, original work. Font used is Kelora. Suggested that you set [PILLAR_TILE:255] in d_init.txt.
+}}
+
+{{Tileset|
+|filename=16x16-RogueYun-AgmEdit.png
+|author=[[User:Agm|Agm]]
+|dated=2017-10-21
+|size=16&times;16
+|resolution=1280&times;400
+|comments=ASCII Edit of [[User:RogueYun|Rogue Yun]]'s tileset with diagonal walls and other edited tiles. Suggested that you set [PILLAR_TILE:255] in d_init.txt.
+}}
+
+{{Tileset|
+|filename=Anikki_square_16x16.png
+|author=[[User:Anikki|Anikki]]
+|dated=2008-7-27
+|size=16&times;16
+|resolution=1280&times;400 native.
+|comments=Based on the original IBM CGA Character set with a lot of tweaks. The characters remain as descriptive yet universal as possible. I chose the CGA set because it is in my opinion the square set with the best readability. This set is for those who like the basic ASCII look where every pixel has meaning or (multiple meanings). This is a scaled up version for fullscreen use. [http://www.anikki.com/share/df/Anikki_square_16x16.bmp Download the BMP]
+|demo=[[Image:df_anikki_2.png|thumb|right]]
+}}
+
+{{Tileset|
+|filename=Bisasam_16x16.png
+|author=Bisasam
+|dated=2010-01-11
+|size=16&times;16
+|resolution=1280&times;400
+|comments=This is the 16x16 version of my 24x24 tileset. A DF version supporting transparent PNGs must be used. In order to use unscaled tiles, horizontal resolution must be at least 1280.
+|demo=[[Image:Bisasam_16x16_preview.png|thumb|right]]
+|demo2=[[Image:Bisasam_16x16_preview_stocks.png|thumb|right]]
+}}
+
+{{Tileset|
+|title=cheepicus_8x8x2
+|filename=cheepicus_8x8x2.png
+|author=[[User:Cheepicus|Cheepicus]]
+|dated=2014-4-3
+|size=16&times;16 (doubled 8x8)
+|resolution=1280&times;400 native.
+|comments=I liked the font on my 8x8 tileset, but it was too small to use every day. So I doubled it and the result has a nice 8-bit feel.  Hand-made, mostly ASCII.
+|demo=[[Image:cheepicus_8x8x2_ss.png|thumb|right|cheepicus_8x8x2 sample]]
+}}
+
+{{Tileset|
+|title=cheepicus_16x16
+|filename=cheepicus_16x16.png
+|author=[[User:Cheepicus|Cheepicus]]
+|dated=2014-5-10
+|size=16&times;16
+|resolution=1280&times;400 native.
+|comments=Mostly ASCII 16x16 with an art deco/Nixie tube inspired kind of font.
+|demo=[[Image:cheepicus_18x18_ss01.png|thumb|right|cheepicus_16x16 sample]]
+|demo2=[[Image:cheepicus_16x16_ss02.png|thumb|right|cheepicus_16x16 sample]]
+}}
+
+{{Tileset|
+|filename=Cooz_curses_square_16x16.png
+|author=[[User:Cooz|Cooz]]
+|dated=2009-2-28
+|size=16&times;16
+|resolution=1280&times;400 native.
+|comments=v1.1 - 3px wide walls and some other tweaks. Based on Klokjammer and Marble Dice tilesets. Some tiles were taken from other sets, some were made from scratch. The aim was to keep feel of default curses font in 16&times;16 tileset. There's also [http://i.imgur.com/rKRKz.png version without shading].
+|demo=[[Image:Cooz_Tileset_Screenshot.png|thumb|right|Cooz's Tileset]]
+}}
+
+{{Tileset|
+filename=Guybrush_square_16x16.png
+|author=[[User:Guybrush|Guybrush]]
+|dated=2007-11-15
+|size=16&times;16
+|resolution=1280&times;400
+|comments=A 16&times;16 tileset based on the very nice Herrbdog's one, and for use with the superb [[40d:Graphics_set_repository#Dystopian_Rhetoric|Dystopian Rhetoric objects]]. A slightly modified version of Herrbdog's tileset is available below if you want to keep the original ASCII symbols for some objects (just do some cut & paste). It's just a little brighter and with some very slight changes. The tileset shown is a tileset with graphic objects added, for use with Fortress Mode.
+
+I recommend to have a look at the [[color schemes|color schemes page]] to find your favorite color settings. The color scheme I used for the screenshots is [[Color_Schemes#.28Yet.29_Another_scheme|this one]].
+|demo=[[Image:GuybrushScreenshot1.PNG|thumb|right|Guybrush Tileset]]
+|demo2=[[Image:GuybrushScreenshot2.PNG|thumb|right|the wilderness...]]
+}}
+
+{{Tileset|
+filename=GuybrushASCII_curses_square_16x16.png
+|author=Herrbdog, modified by [[User:Guybrush|Guybrush]]
+|dated=2007-10-30
+|size=16&times;16
+|resolution=1280&times;400
+|comments=Here is the slightly modified version of Herrbdog's tileset which still has all the ASCII characters intact
+}}
+
+{{Tileset|
+|filename=Herrbdog_16x16_tileset.gif
+|author=Herrbdog
+|dated=2007-10-30
+|size=16&times;16
+|resolution=1280&times;400
+|comments=The 16&times;16 version of Herrbdog's tileset.
+}}
+
+{{Tileset|
+|filename=Oddball_16x16.png
+|author=[[User:HexaBlu|HexaBlu]]
+|title=Oddball-16
+|dated=2021-07-05
+|size=16&times;16
+|resolution=1280&times;400
+|comments="A silly and whimsical 16x16 Tileset focused on unique graphics, Made completely from scratch. The font is designed off of my bad handwriting. "[http://www.bay12forums.com/smf/index.php?topic=178707 Forum Page]
+|demo=[[Image:Oddball_16x16_Gameplay.png|thumb|right|A screenshot of what the landscape looks like using Oddball-16.]]
+}}
+
+{{Tileset|
+|filename=MRC_square_16x16.png
+|author=Inquisitor Saturn
+|dated=2008-5-18
+|size=16&times;16
+|resolution=1280&times;400
+|comments=Another 16 by 16 tileset. This one is notable because of the subtle shadowing and a completely original, hand-made font.
+}}
+
+{{Tileset|
+filename=Redjack17.png
+|author=[[User:Jackard|Jackard]]
+|dated=2008-7-22
+|size=16x16
+|resolution=1280x400
+|comments=This combines content from other tilesets with Nintendo sprites to give the game a classic dungeon look.  ''Note: Bins are hard to see using this tileset because the "bin" tile is also used as the "up/down staircase" tile.  [[Tileset_repository#Aesomatica |Aesomatica]] and [[Tileset_repository#Martin|Martin]] improve upon this tileset making the bin tile easier to see.''
+
+[http://dffd.wimbli.com/file.php?id=7 You may download all variations of this tileset here.]
+}}
+
+{{Tileset|
+|filename=Kai-1280x400-v2 7512b5.png
+|author=Kaishaku
+|dated=2007-10-30
+|size=16&times;16
+|resolution=1280&times;400
+|comments=A square 1280&times;400 font. Simple and legible. Converted from roarl's 16&times;16 nethack font, on top of super foul egg's template, extended manually and with ideas from lucida console. This is version 1, created in one morning. Screenshots available [http://kaishaku.org/dwarfort here].
+}}
+
+{{Tileset|
+|filename=Kelora_16x16_diagonal.png
+|author=[[User:Kelora|Kelora]]
+|dated=2009-7-26
+|size=16&times;16
+|resolution=
+|comments=A square tileset using the diagonal wall concept from Belal and others but simplified drastically to improve the appearance. All the walls line up correctly and have consistent widths.
+I did not use much of the pretty but confusing art I see in many of the other sets. I tried for a while to incorporate many of these but found that with the multiple uses for most characters they were just wrong far too often to be useful. The only ones that seem to work are the dwarves which I took from Flying Mage / Guybrush. The pretty 3Dish fonts as well just seem to look muddier and be less legible. I love it and my husband has been happily playing it for months.
+}}
+
+{{Tileset|
+|filename=Kelora_16x16_diagonal-clouds.png
+|author=[[User:Kelora|Kelora]]
+|size=16&times;16
+|resolution=
+|comments=A square tileset using the diagonal wall concept from Belal and others but simplified drastically to improve the appearance. All the walls line up correctly and have consistent widths.
+I did not use much of the pretty but confusing art I see in many of the other sets. I tried for a while to incorporate many of these but found that with the multiple uses for most characters they were just wrong far too often to be useful. The only ones that seem to work are the dwarves which I took from Flying Mage / Guybrush. The pretty 3Dish fonts as well just seem to look muddier and be less legible. This tileset is a copy of my first with more realistic clouds I hope.
+}}
+
+{{Tileset|
+|filename=Kenran.png
+|author=[[User:Kenran|Kenran]]
+|size=16&times;16
+|resolution=
+|comments=This tileset is for the most part identical to the great one by Kelora above. I fixed an error with the single lines and curves (used for instance for rivers on the world map) where two tiles didn't connect correctly. I also adjusted the diagonal walls a bit.
+}}
+
+{{Tileset|
+|filename=Kjammer square 16x16 v02.png
+|author=[[User:Klokjammer|Klokjammer]]
+|dated=2007-10-30
+|size=16&times;16
+|resolution=1280&times;400
+|comments=Name: ''"Masked Adventurer"'' - after tile (0,4), where '@' used to be. A somewhat abstract version of the original curses square tileset, but with the alpha numeric characters shaped so as not to look distorted. Other symbols are either borrowed from or improved from curses, and some (including the dwarves) were created from the ground up. Alternate variations, are available [[User:Klokjammer#My Tilesets|here]].
+}}
+
+{{Tileset|
+|filename=Kjammer square 16x16 v00.png
+|author=[[User:Klokjammer|Klokjammer]]
+|dated=2007-10-31
+|size=16&times;16
+|resolution=1280&times;400
+|comments=A "clean" version of the above set, one without any fancy tiles (except for the dwarves).
+}}
+
+{{Tileset|
+|filename=Md_curses_16x16.png
+|author=[[User:Marble Dice|Marble Dice]]
+|dated=2007-10-30
+|size=16&times;16
+|resolution=1280&times;400
+|comments=This tileset attempts to modify the size and aspect ratio of the classic 8x12 terminal/curses font employed by many roguelikes without sacrificing the distinctive character.
+}}
+
+{{Tileset|
+|filename=Runeset_16x16.png
+|author=monkeyfritz
+|dated=2018-3-23
+|size=16&times;16
+|resolution=256&times;256
+|comments= Runeset is an RSCII (Runic Standard Code for Information Interchange) font pack for ''Dwarf Fortress''. Much more dwarfy than that American standards stuff. Best used with [[Color_scheme#Runeset Mapmaker|Runeset Mapmaker]] or [[Color_scheme#Runeset|Runeset]] color schemes.
+|demo=[[Image:Runeset Example.jpg|thumb|right|Runeset Maps]]
+}}
+
+{{Tileset|
+|filename=PTTGV2tiles.png
+|author=[[User:PTTG|PTTG]]
+|dated=2007-11-21
+|size=16&times;16
+|resolution=1280&times;400
+|comments=A new version! Clean, sharp, and clear. All-original, and large size for big screens! Also features coloured indicators for levers, helping to remove the guesswork. It is good stand-alone, or with my [[List of user graphics sets#PTTG|graphics set]].
+}}
+
+{{Tileset|
+|filename=Fnord 16x16.png
+|author=PopTart
+|dated=2016-5-08
+|size=16&times;16
+|resolution=1280&times;400 native.
+|comments="FnordSet contributes a bold Roman font that takes advantage of the square tile. Baskerville served as the main model. This set was also inspired by (and borrows from) the bold geometry of Rogue Yun's Simple Mood and the seriffed grace of the Duerer set. It also draws inspiration from the Ishmeria tileset, which I think complements it nicely as text in TWBT. (Nowadays I use the nicely contrasting sans serif tileset Jecfox for the text font.)" [http://www.bay12forums.com/smf/index.php?topic=158009 Forum thread]
+|demo=[[Image:Fnordgameplay.png|thumb|right]]
+}}
+
+{{Tileset|
+|filename=Msgothic.png
+|author=[[User:Random832]]
+|dated=2009-4-22
+|size=16&times;16
+|resolution=1280&times;800 etc
+|comments=Based on the ＭＳ ゴシック (MS Gothic) japanese font, with some gaps filled in from the VGA 8x16 font, and some other characters tweaked by hand.
+}}
+
+{{Tileset|
+|filename=Raving_1280x400.png
+|author=[[User:RavingManiac|RavingManiac]]
+|dated=2010-3-13
+|size=16&times;16
+|resolution=1280&times;400
+|comments=A heavily modified version of Tyrving's tileset, with smoothed walls based on those from Tahin's. This tileset was made to retain the feel of the original curses in a square tileset with smoothed walls.
+[http://dffd.wimbli.com/file.php?id=1920 Download the BMP.]
+}}
+
+{{Tileset|
+|filename=16x16_sm.png
+|author=[[User:RogueYun|Rogue Yun]]
+|dated=2015-06-09
+|size=16&times;16
+|resolution=1280&times;400
+|comments=I recommend setting all the pillar tiles in d_init.txt to tile 10. Possible updates may be on [http://www.bay12forums.com/smf/index.php?topic=144897.0 this thread].
+}}
+
+
+{{Tileset|
+|filename=16x16_sb_ascii.png
+|author=[[User:RogueYun|Rogue Yun]]
+|dated=2018-11-04
+|size=16&times;16
+|resolution=1280&times;400
+|comments=A good solid ASCII Tileset. See the [http://www.bay12forums.com/smf/index.php?topic=172536.0 Something Boxy] thread for more information and updates.
+}}
+
+{{Tileset|
+|filename=Sapphos_square_16x16.png
+|author=Sappho
+|dated=2007-10-30
+|size=16&times;16
+|resolution=1280&times;400
+|comments=Another square font, target resolution 1280&times;400. This one is exactly the same as the default font except it has been made square, painstakingly edited to ensure that nothing looks squished.
+}}
+
+{{Tileset|
+|filename=Savok_curses_1280x400_517caa.png
+|author=[[User:Savok|Savok]]
+|dated=2008-6-16
+|size=16&times;16
+|resolution=1280&times;400
+|comments=Unsatisfied with any existing tileset, I decided to go about creating my own. Since I can't create from scratch, I had to take tiles from other tilesets and modify them, in an evolution-like manner, until they became how I wanted them. Since most are dramatically different from the tileset I took them from, I believe I can call them original.<br>In the raws, change the tag [TILE:'U'] for humans to [TILE:172]. This changes both the image and corpse of humans to a unique image, which creature graphics cannot do. The elves also get a different tile, [TILE:171]. I plan to make a separate goblin symbol.<br>If you use it and like it, please leave a message for at [[User talk:Savok|my talk page]] or at [http://dffd.wimbli.com/file.php?id=201 the DFFD page]. This will greatly speed progress, since I won't be doing it just for myself.<br>Note: The [http://dffd.wimbli.com/file.php?id=201 DFFD version] is updated more frequently and has the changelist.
+}}
+
+{{Tileset|
+|filename=SFE_Curses_square_16x16.png
+|author=Super Foul Egg
+|dated=2007-10-30
+|size=16&times;16
+|resolution=1280&times;400
+|comments=The font is rough as hell and some of the characters still need attention, but it'll do for now. Since this tileset is for graphics mode I'd rather wait for more complete object support than hack in pictures and gum up the UI. Uppercase from [http://www.zee-3.com/pickfordbros/archive/bitmapfonts.php this site]
+}}
+
+{{Tileset|
+|filename=Tahin_16x16_rounded.png
+|author=[[User:Tahin|Tahin]]
+|dated=2007-12-28
+|size=16&times;16
+|resolution=1280&times;400
+|comments=Based on Marble Dice's tileset, above. Smoothed corners are "rounded", which takes some getting used to but look quite nice, in my opinion. I have managed to get all of the standard "L" tiles to fit together nicely, but "T" and "+" don't quite match up. It's not a problem that comes up often, and it still doesn't look that bad, but I'll get to it eventually.
+}}
+
+{{Tileset|
+|filename=DF-Nordic_v1.png
+|author=[[User:Techhead|Techhead]]
+|dated=2009-3-26
+|size=16&times;16
+|resolution=1280&times;400
+|comments=My first attempt at a unique curses-style tileset with a Nordic Theme. Some characters have been altered.
+}}
+
+{{Tileset|
+|filename=Markx.png
+|author=[[User:TurnipII|TurnipII]]
+|dated=2018-8-2
+|size=16&times;16
+|resolution=1280&times;400
+|comments=Descended from the original MarkVII tileset. Has Markavian inspired walls, and many of Anikki's characters.
+}}
+
+{{Tileset|
+|filename=Tyr_1280x400.PNG
+|author=[[User:Tyrving|Tyrving]]
+|dated=2008-2-15
+|size=16&times;16
+|resolution=1280&times;400
+|comments=None of the existing modifications of curses_square satisfied me, so I made my own. The bulk of it is from Klokjammer's set, with the dwarf symbols and @ taken from Sappho's. Quite a few minor alterations have been made, and I feel that it's become distinct enough to release it.
+}}
+
+{{Tileset|
+|filename=Winterwing_Curses_16x16_lucon.png
+|author=[[User:Winterwing|Winterwing]]
+|dated=2007-10-30
+|size=16&times;16
+|resolution=1280&times;400
+|comments=Like usual, lucida console with cleartype. Creative, huh. :)
+|demo=[[Image:Winterwing_Dfort-tiles-lucon.png|thumb|right|Lucida Console with Dystopian Rhetoric objects]]
+}}
+
+{{Tileset|
+|filename=Yayo_c64_1280x400_83b157.png
+|author=[[User:Yayo|Yayo]]
+|dated=2007-10-30
+|size=16&times;16
+|resolution=1280&times;400
+|comments=Name: Yayo's C64; The 16&times;16 version of Yayo's tileset.
+}}
+
+{{Tileset|
+|filename=Zaratustra_16x16.png
+|author=[[User:Zaratustra|Zaratustra]]
+|dated=2007-11-10
+|size=16&times;16
+|resolution=1280&times;400
+|comments=Because everyone is making one.
+}}
+
+{{Tileset|
+|filename=Zilk_16x16.png
+|author=[[User:Zilk|Zilk]]
+|dated=2015-7-15
+|size=16&times;16
+|resolution=1280&times;400
+|comments=This tileset is based on Lord Nightmare's IBM CGA character set. I made a lot of minor modifications to clean the tiles up and give them symmetry in all directions. The result is a wide tileset that looks relatively similar to the default 8x12 curses tileset.
+|demo=[[Image:Zilk_16x16_screenshot.png|thumb|right|Preview with a high-contrast [[Color_scheme#Solarized|Solarized]] color scheme]]
+}}
+
+==18&times;18==
+
+{{Tileset|
+|filename=Haowan_Curses_1440x450.png
+|author=Haowan
+|dated=2007-11-2
+|size=18&times;18
+|resolution=1440&times;450
+|comments=An enlarged version of a square version of the default set.
+}}
+
+{{Tileset|
+|filename=Teeto_K_18x18.PNG
+|author=[[User:Teeto_K|Teeto_K]]
+|dated=2008-10-24
+|size=18&times;18
+|resolution=1440&times;450
+|comments=A tileset based on [[:Image:Nostalgia_1440x450_3e4a08.png|Maus's 18x18 version of his "Nostalgia" tileset]], however, it has been heavily revised. The entire font has been "smoothed over", and many of the symbols changed to more "graphical" representations of the items they represent. An attempt to fill the void of "graphic heavy" tilesets in the 18x18 tile-size. A special emphasis is placed on maximizing the text's readability, while still providing a "graphics enhanced" play area. Special thanks to Maus for the font, and Guybrush for the inspiration.
+}}
+
+==20&times;20==
+
+{{Tileset|
+|filename=Anikki_square_20x20.png
+|author=[[User:Anikki|Anikki]]
+|dated=2008-7-27
+|size=20&times;20
+|resolution=1600&times;500 native.
+|comments=Based primarily on Tocky and Plac1d. This is a scaled-up version of [[#Anikki_square_10x10.png|the 10x10 tileset]] for fullscreen use. [http://www.anikki.com/share/df/Anikki_square_20x20.bmp Download the BMP]
+(Note: The up and down ramps are reversed.)
+}}
+
+{{Tileset|
+|filename=Bisasam_20x20.png
+|author=Bisasam
+|dated=2010-05-15
+|size=20&times;20
+|resolution=1600&times;500 (80x25 grid size); 1600&times;1000 (80x50 grid size)
+|comments=This is the 20x20 version of my 24x24 tileset. A DF version supporting transparent PNGs must be used. In order to use unscaled tiles, horizontal resolution must be at least 1600.
+|demo=[[Image:Bisasam_20x20_preview.png|thumb|right]]
+|demo2=[[Image:Bisasam_20x20_preview_stocks.png|thumb|right]]
+}}
+
+{{Tileset|
+|filename=Bisasam_20x20_ascii.png
+|author=Bisasam
+|dated=2010-05-15
+|size=20&times;20
+|resolution=1600&times;500 (80x25 grid size); 1600&times;1000 (80x50 grid size)
+|comments=This is the 20x20 version of my 24x24 tileset. Graphical tiles have been replaced by ASCII ones. A DF version supporting transparent PNGs must be used. In order to use unscaled tiles, horizontal resolution must be at least 1600.
+|demo=[[Image:Bisasam_20x20_ascii_preview.png|thumb|right]]
+|demo2=[[Image:Bisasam_20x20_ascii_preview_stocks.png|thumb|right]]
+}}
+
+{{Tileset|
+|filename=Rose_20x20.png
+|author=[[User:Japa|Rose]]
+|dated=2019-04-29
+|size=20&times;20
+|resolution=1600&times;500 (80x25 grid size); 1600&times;1000 (80x50 grid size)
+|comments=This is the 20x20 version of the default curses_800x600 tileset, hand-tweaked to give as similar a feel to the original as possible, while still being square and larger, without any resizing artifacts. 
+}}
+
+{{Tileset|
+|filename=Taffer_20x20.png
+|author=[[User:Taffer|Taffer]]
+|dated=2017-01-10
+|size=20&times;20
+|resolution=Looks best at high resolutions, or on very large monitors.
+|comments=A sharp looking, vanilla styled tileset that strives to strike a good balance between nice, attractive graphics, while avoiding graphical oddities.  I find the cumulative differences from the ASCII add to the game. Feel free to leave me a [http://dwarffortresswiki.org/index.php/User_talk:Taffer note]. This has turned into a [http://www.bay12forums.com/smf/index.php?topic=107924.0], and includes alternate walls, fonts, and racial graphics.
+}}
+
+{{Tileset|
+|filename=Oreslam_1920x1200_20x20.png
+|author=[[User:Yayo|Yayo]]
+|dated=2009-09-12
+|size=20&times;20
+|resolution=1920&times;1200
+|comments=Name: Yayo's Oreslam; Just like the previous one, this tileset is named according to the dwarf language: or-es-lam means "Large Clear Stone". I decided to create this tileset to fit my usual screen resolution (1920x1200). I tried giving it a clean look. To use it in windowed mode try these settings in the init file: WINDOWEDX:1900, WINDOWEDY:1160, GRID:95:58.
+|demo=[[Image:Oreslam_1900x1200_20x20_screenshot.png|thumb|right|yayo's Oreslam Tileset]]
+}}
+
+{{Tileset|
+|filename=Bisasam_20x20_mod_T.png
+|author=yobbo
+|dated=2014-07-13
+|size=20&times;20
+|resolution=1600&times;500 (80x25 grid size); 1600&times;1000 (80x50 grid size)
+|comments=A modified version of Bisasam's 20x20 tileset above. Walls were changed to make smooth curves and circles, broken arrows were changed to look broken, periods and commas were raised to center more closely on the tile, the seed tile was changed to help distinguish the current level and the one below, and a leaf / root tile was added for the new trees. There may have been a couple other minor changes, but the feel of the tileset should still be the same.
+|demo=[[Image:Bisasam_20x20_mod_T_preview.png|thumb|right]]
+}}
+
+==24&times;24==
+
+{{Tileset|
+|filename=Curses square 24.png
+|author=DragonDePlatino
+|dated=2015-06-01
+|size=24&times;24
+|resolution=1920&times;600
+|comments=A larger hand-drawn version of curses_square_16. This was created to be as faithful as possible to the original tileset while taking advantage of the larger resolution.
+}}
+
+{{Tileset|
+|filename=Bisasam_24x24.png
+|author=Bisasam
+|dated=2010-01-01
+|size=24&times;24
+|resolution=1920&times;600 (80x25 grid size); 1920&times;1200 (80x50 grid size)
+|comments=Inspired by the Terminus24 tileset, I created this square 24x24 tileset. Almost all symbols have been redrawn antialiased; so a DF version supporting transparent PNGs must be used. In order to use unscaled tiles, horizontal resolution must be at least 1920.
+|demo=[[Image:Bisasam_24x24_preview.png|thumb|right]]
+|demo2=[[Image:Bisasam_24x24_preview_stocks.png|thumb|right]]
+}}
+
+{{Tileset|
+|filename=Nagidal24x24shade.png
+|author=[[User:Nagidal|Nagidal]]
+|dated=2012-06-07
+|size=24&times;24
+|resolution=1920&times;600 (80&times;25 grid size); 1920&times;1080 (80&times;45 grid size)
+|comments=I love the original curses_640x300, but could not find anything like it for full HD gameplay, so I made this. There is also a [[:Image:Nagidal24x24.png|non-shaded version]], [[:Image:Nagidal24x24Beards.png|non-shaded bearded version]], and [[:Image:Nagidal24x24shadeBeards.png|shaded and bearded version]].
+For further info see [http://www.bay12forums.com/smf/index.php?topic=101657.0 this forum thread].
+|demo=[[Image:Nagidal_classic_24x24.png|thumb|right|Nagidal's 24&times;24 tileset]]
+}}
+
+{{Tileset|
+|filename=Runeset_24x24.png
+|author=monkeyfritz
+|dated=2018-3-23
+|size=24&times;24
+|resolution=384&times;384
+|comments= Runeset is an RSCII (Runic Standard Code for Information Interchange) font pack for ''Dwarf Fortress''. Much more dwarfy than that American standards stuff. Best used with [[Color_scheme#Runeset Mapmaker|Runeset Mapmaker]] or [[Color_scheme#Runeset|Runeset]] color schemes.
+|demo=[[Image:Runeset Example.jpg|thumb|right|Runeset Maps]]
+|demo2=[[Image:Runeset Gameplay.jpg|thumb|right|Runeset Example]]
+}}
+
+{{Tileset|
+|filename=zesty_curses_24x24.png
+|author=[[User:ZesT|ZesT]]
+|dated=2022-11-3
+|size=12&times;12
+|resolution=960&times;300 native
+|comments= An upscaled alternative to [[Tileset_repository#zesty_curses_12x12.png|my 12x12 tileset]].<br>'''Original description:''' A fresh spin on Vidumec's "nice curses" tileset - includes a couple different graphics that both keep the ASCII feel and provide better visual representations while preventing text artefacts, including new graphics for sheets, plus a Moai statue since making the statue specifically humanoid didn't feel generalisable enough.
+}}
+
+==32&times;32==
+
+{{Tileset|
+|filename=Runeset_32x32.png
+|image=[[:Image:Runeset_32x32.png|Not shown due to size]]
+|author=monkeyfritz
+|dated=2018-3-23
+|size=32&times;32
+|resolution=512&times;512
+|comments= Runeset is an RSCII (Runic Standard Code for Information Interchange) font pack for ''Dwarf Fortress''. Much more dwarfy than that American standards stuff. Best used with [[Color_scheme#Runeset Mapmaker|Runeset Mapmaker]] or [[Color_scheme#Runeset|Runeset]] color schemes.
+|demo=[[Image:Runeset Example.jpg|thumb|right|Runeset Maps]]
+|demo2=[[Image:Runeset Gameplay.jpg|thumb|right|Runeset Example]]
+}}
+
+{{Tileset|
+|filename=Sir_Henry's_32x32.png
+|image=[[:Image:Sir_Henry's_32x32.png|Not shown due to size]]
+|author=Sir Henry
+|dated=2009-8-19
+|size=32&times;32
+|resolution=2560&times;800
+|comments=Recently I learned of a monitor displaying 2560 pixels horizontally, and I decided it needed a tileset to put to use. Taking the tileset I use (Kelora 16x16 diagonal) and doubling it, I was able to get a decent tileset. Smoothing the edges, and redoing some glyphs to get a better look (or just messing up some to bad to fix), I was able to achieve this. 
+}}
+
+==48&times;48==
+
+{{Tileset|
+|filename=RDE_vector_48x48.png
+|image=[[:Image:RDE_vector_48x48.png|Not shown due to size]]
+|author=[[User:RedDeadElite|RedDeadElite]]
+|dated=2021-04-21
+|size=48&times;48
+|resolution=3840&times;1200
+|comments=A render of a vectorized version of [[:File:RDE_8x8.png|RDE_8x8]], with ASCII smileys substituting bearded dwarves.</br>Original vector image and additional renders available at the [https://dffd.bay12games.com/file.php?id=15509 DF File Depot].
+}}
+
+==64&times;64==
+
+{{Tileset|
+|filename=hack_square_64x64.png
+|image=[[:Image:hack_square_64x64.png|Not shown due to size]]
+|author=Taywee
+|dated=2016-06-21
+|size=64&times;64
+|resolution=1024&times;1024
+|comments=Built this from the fantastic [https://github.com/chrissimpkins/Hack Hack] font, as I have a high-dpi monitor and wanted a good-looking text tileset of a decent resolution.
+}}
+
+=Square tilesets for edited raws=
+
+:''If you cannot find the altered raws of a tileset for your version of ''Dwarf Fortress'' have a look at the [[Raw tile selector]] tool.''
+
+These tilesets require modified [[raws]] to work properly. Specifically, the tile numbers assigned to some objects (critters, stones, plants) need to be changed and accented characters usually need to be removed from all languages.
+
+==8&times;8==
+
+{{Tileset|
+|filename=Crazy 8x8s.png
+|author=PigtailLlama
+|dated=2012-6-14
+|size=8&times;8
+|resolution=640&times;200 or 640&times;400
+|comments= They're a collaboration of 8x8 tiles I made, in the standard monotone style - They're great if you want to give your game a bit of a Commodore 64 feel to it, or if you're tired of vanilla dimensions. You also get a boatload of extra tiles to customize and personalize your own set!
+:''See [http://www.bay12forums.com/smf/index.php?topic=126363.0 Forum Thread] for download and installation details.''
+|demo=[[Image:Crazy 8x8s earlyfort.png|thumb|right|PigtailLlama's Crazy 8x8s tileset]]
+}}
+
+==12&times;12==
+
+{{Tileset|
+|filename=Jolly12x12.png
+|author=Alexander Ocias
+|dated=2012-3-11
+|size=12&times;12 (also available in 9&times;12)
+|resolution=1024&times;768
+|comments= Dwarf Fortress looks too serious and gritty, especially when it's filled with so much fun, ☼Fun☼ and comedy. There are four main handy-dandy aspects of this mod: Injecting some more personality and brightness into the visuals; Making important stuff easier to see, smoothing over unimportant things (9x12 or 12x12 ASCII!); Delicious icon :D
+:''See  [http://www.bay12forums.com/smf/index.php?topic=104261.0 Official Forum Page] for download and installation details.''
+|demo=[[Image:Jolly Bastion Screenies2-1.png|thumb|right|Jolly Bastion screenshot]]
+}}
+
+{{Tileset|
+|filename=Grim Fortress sample tileset.png
+|author=Lightrow
+|dated=2013-2-3
+|size=12&times;12 (also available in 9&times;12
+|resolution=1024&times;768
+|comments= I always liked the simplicity and feeling of ASCII tilesets but at the same time i really missed solid backgrounds and some interesting tiles from graphical tilesets. So my first try was to apply a solid background to all tiles of Talryth square tileset ( except few ones ), but it came out looking like a bunch of vermins swimming in a goblin's vomit... anyway i tried further and began to experiment with different base tilesets and finally made my own, using elements from tilesets of other authors ( mainly Tocky's one, big thanks to him! ). Then i have spotted Alexander's Jolly Bastion and took some ideas from him ( big thanks to Alexander too! ) like sky tiles and color. Then i applied Lee's Natural Color Scheme with modified "BLACK" value and here it is! Grim Fortress. It is pretty dark, kinda foggy and i think the name "Grim Fortress" fits well. 
+:''See  [http://www.bay12forums.com/smf/index.php?topic=122421.0 Official Forum Page] for download and installation details.''
+|demo=[[Image:Grim Fortress Logo.png|thumb|right]]
+}}
+
+==16&times;16==
+
+{{Tileset|
+|filename=Belal_Smooth_Walls.png
+|author=[[User:Belal|Belal]]
+|dated=2009-1-9
+|size=16&times;16
+|resolution=1280&times;400 native.
+|comments=Based on the Mike Mayday tileset and using angled smoothed walls as in [[User:Dorten|Dorten's]] Tileset.  I like the look of the walls for doing near circular or honeycomb layouts. [http://mkv25.net/dfma/poi-9935-seethewallshere Example Fort] 
+|demo=[[Image:Belal_Example.png|thumb|right]]
+}}
+
+{{Tileset|
+|filename=DarkondDigsDeeper_16x16.png 
+|author=[[User:Darkond2100|Darkond2100]]
+|dated=2010-3-6
+|size=16&times;16
+|resolution=1280&times;400 native.
+|comments=I like Dig Dwarfier, but I don't like their tileset so much. I fused DigDeeperNEW_16x16 with Aesomatica_16x16 to make this. I just took what I liked and put it in. I hope that others like it too! This will work with Dig Dwarfier v0.85, I am not yet aware of whether or not it will work with Dig Deeper put into vanilla.  
+}}
+
+{{Tileset|
+|filename=Gold_plated_16x16_v2.png
+|title = '''Gold Plated'''
+|author=[[User:DrD_AVEL|DrD_AVEL]]
+|dated=2010-Jun-17 
+|size=16&times;16
+|resolution=1280&times;400 native.
+|comments=Gold Plated is updated. Improvements complete. Some tiles were redrawn and corrected.
+This tileset contains the best graphic tiles (in my opinion) that were collected from many other tilesets and other games; I took [[User:Lemunde|Lemunde's]] tileset as a basis (thanx a lot, Lemunde). Some of tiles were drawn by me. Many tiles were reworked and improved with some additional colours. I hope you enjoy with this tiles. ;)
+
+[http://dffd.wimbli.com/file.php?id=2021 Graphical version of DF2010 v0.31.08 with Gold Plated tileset]
+[http://www.bay12games.com/forum/index.php?topic=49479.0 Discussion of this tileset is here]
+|demo=[[Image:Gold_Plated_preview.png|thumb|right|Presentation of Gold Plated (v.1)]]
+|demo2=[[Image:Gold_Plated_text_preview.png|thumb|right|Text preview(v.1)]]
+}}
+
+{{Tileset|
+|filename=Gold-plated-bmp-16x16.png
+|title = '''Gold Plated (bmp-version)'''
+|author=[[User:DrD_AVEL|DrD_AVEL]]
+|dated=2010-Apr-02 
+|size=16&times;16
+|resolution=1280&times;400 native.
+|comments=Gold Plated is redrawn to magenta BMP. So you can use it with versions of DF2010, that don't understand .png (v31.01). This is a preliminary version for DF2010, but it works well. Don't forget to convert this image to '''.bmp''' before use in new version. Enjoy! ;) 
+|demo=[[Image:Scrdf01.png|thumb|right|Preview of Gold Plated (bmp-version)]]
+}}
+
+{{Tileset|
+|filename=Synergy.png
+|author=[[User:Dvorovic|Dvorovic]]
+|dated=2010-10-8
+|size=16&times;16
+|resolution=1280&times;400
+|comments=Tileset based on DrD_AVEL's, Phoebus', Ironhand's projects. [http://dffd.wimbli.com/file.php?id=2983 Download] [http://mkv25.net/dfma/map-9553-ardentdikes Demo Fortress Map on the DFMA]
+}}
+
+{{Tileset|
+filename=Flying_Mage_square_16x16.png
+|author=[[User:Flying Mage|Flying Mage]]
+|dated=2008-4-12
+|size=16&times;16
+|resolution=1280&times;400
+|comments=A 16&times;16 tileset based on several other tilesets by various authors. I did some changes because I like some things in different ways, but the base for tileset was made by another users and for this I thankful. List of major and minor changes you can see below. And I hope you'll enjoy this. There is some tiles I really proud of :)<br>
+*[[:Image:Flying_Mage_square_16x16_Major_Changes.png|Major changes]]<br>
+*[[:Image:Flying_Mage_square_16x16_Minor_Changes.png|Minor changes]]
+*[[:Image:Flying_Mage_square_16x16_Stone_Type.png|Some ''rough/smoothed/engraved stone'' improvement]]
+}}
+
+{{Tileset|
+|filename=Hermano.png
+|author=[[User:hermano|hermano]]
+|dated=2010-2-6
+|size=16&times;16
+|resolution=1280&times;400 native.
+|comments=A tileset with colored backgrounds that keeps texts readable. It uses tiles from belal and ranting rodent. 
+A Package for 0.31.16 (df2010) can be downloaded [http://dffd.wimbli.com/file.php?id=2031 here].
+The altered raws for 40d# can be downloaded [http://dffd.wimbli.com/file.php?id=1838 here].
+|demo=[[Image:Hermano example.png|thumb|right|example]]
+}}
+
+{{Tileset|
+|filename=16x16_isenhertz_v2.png
+|author=[[User:Isenhertz|Isenhertz]]
+|dated=2008-7-14
+|size=16&times;16
+|resolution=1280&times;400
+|comments=Impressed with the genius of using sprites as tiles, I cobbled together this tileset of my own. It uses Super Foul Egg's superb font as a base, with several sprites also found in other users' sets. Because a lot of letters are used for graphics, I suggest that you [[User:Jackard|remove accented letters from names]] with this set. I also suggest you shift some items to other icons, such as the coniferous trees (change Pine, Cedar, Larch from 024 to 147), the turtle (change 15 to 151), and Quarry Bush leaves (change from 006 to 003).
+V2 now with new graphics for walls and liquids, as well as some other tweaks here and there and a first attempt at using dual-color sprites using a cyan base instead of simple greyscale. (Right now implemented for beds, wood and statues.)
+V1 can still be found [[:Image:16x16_isenhertz_v1.png|here]].
+|demo=[[Image:isenhertz_v2_screenshot.png|thumb|right|Isenhertz's tileset in action.]]
+}}
+
+{{Tileset|
+|filename=Lemunde_16x16.png
+|author=[[User:Lemunde|Lemunde]]
+|dated=2010-6-11
+|size=16&times;16
+|resolution=1280&times;400
+|comments=This is a modified version of Mike Mayday's/Herrbdog's tileset. It has a more textured feel to the walls and makes heavy use of the new transparency features to make some of the tiles a little more dynamic.  You can view a preview map [http://mkv25.net/dfma/map-7000-dragonskull here].  I recommend changing the sky settings in the init.txt file to [SKY:249:1:0:0] for a more natural look.
+
+Update June 11, 2010: Updated to work with the 31.xx versions of Mike Mayday's set.  It will probably not look right using it with vanilla Dwarf Fortress.
+|demo=[[Image:LemundeTilesetPreview2.png|thumb|right|Lemunde's Tileset.]]
+}}
+
+{{Tileset|
+filename=DwarfletterGothic.PNG
+|author=LordZorinthrox
+|dated=2009-7-20
+|size=16&times;16
+|resolution=1280&times;400
+|comments=[http://dffd.wimbli.com/file.php?id=1205|Download here]<br />
+;see also 
+:[[:File:Dwarfletter2.png|Status screen - Font]]
+:[[:File:Dwarfletter3.png|Foliage]]
+:[[:File:Dwarfletter4.png|Ballista]]
+|demo=[[Image:Dwarfletter1.png|thumb|right|Dwarfletter - Stockpile]]
+<!--|demo2=[[Image:Dwarfletter2.png|thumb|right|Dwarfletter - Status screen - font]]
+|demo3=[[Image:Dwarfletter3.png|thumb|right|Foliage]]
+|demo4=[[Image:Dwarfletter4.png|thumb|right|Ballista]]-->
+}}
+
+{{Tileset|
+|filename=Martin_16x16.png
+|author=[[User:Martin|Martin]]
+|dated=2009-8-8
+|size=16&times;16
+|resolution=1280&times;400
+|comments=This is a 16x16 tileset based on Redjack and Flying Mage sets (and possible tiles taken from others that I've since lost track of - apologies). Some tiles are original or have been tweaked, mainly to provide a much more subtle background than most. A completely new character set is used to improve legibility, tweaked and anti-aliased for dark backgrounds. 
+
+[http://dffd.wimbli.com/file.php?id=1316 Download]
+[http://mkv25.net/dfma/map-6239-lashedwines Demo fortress at DFMA]
+|demo=[[Image:Martin_16x16_sample.png|thumb|right]]
+}}
+
+{{Tileset|
+|filename=Phoebus_16x16.png
+|download link=[http://www.bay12forums.com/smf/index.php?topic=137096.0]
+|author=[[User:Phoebus|Phoebus]]
+|dated=2011-04-04
+|size=16&times;16
+|resolution=1280&times;400
+|comments=For more information, and to download the full package, see the thread on the official forums: [http://www.bay12forums.com/smf/index.php?topic=137096.0 Phoebus' Graphic Set]
+}}
+
+{{Tileset|
+|filename=Phssthpok_16x16.png
+|author=[[User:Phssthpok|Phssthpok]]
+|dated=2010-03-07
+|size=16&times;16, 24&times;24, 32&times;32
+|resolution=2560&times;800
+|comments=A high resolution tileset with a focus on readable text, simple shaded shapes, and plenty of negative space. Uses PNG transparency features in 40d16 and newer. Requires [http://dffd.wimbli.com/file.php?id=794 RantingRodent's edited raws].
+
+[[:Image:Phssthpok 32x32.png|32x32 version]]
+
+[[:Image:Phssthpok 24x24.png|24x24 version]]
+
+[[:Image:Phssthpok 16x16.png|16x16 version]]
+
+[http://mkv25.net/dfma/map-8189-blockadewhips Sample Fortress]
+}}
+
+{{Tileset|
+filename=SL_square_16x16.png
+|author=[[User:SL]]
+|dated=2008-8-3
+|size=16&times;16
+|resolution=1280&times;400
+|comments=(Requires a download, not just the image) Art based on Flying Mage's, Guybrush's, and previous tilesets in that lineage. Uses ModBase to relocate relocatable art and de-accentify certain accented letters to reduce graphical bizarreness while still improving some art. [http://www.bay12games.com/forum/index.php?topic=22154.0 Forum Thread] [http://dffd.wimbli.com/file.php?id=370 Download] [http://mkv25.net/dfma/map-3203-flamespear Demo Fortress Map on the DFMA]
+}}
+
+{{Tileset|
+|filename=Autonomous_Font.png
+|author=Spreggo
+|dated=2009-2-2
+|size=16&times;16
+|resolution=1280&times;400
+|comments=Started off inspired by Belal's diagonal support, and ended up doing almost every tile from scratch. Added different tiles for each type of stone, and new ones for ore, but the matgloss files need to be edited for that functionality(see image details).
+|demo=[[Image:Autonomous_Font_example.png|thumb|right|The Autonomous Font in action.]]
+}}
+
+{{Tileset|
+|filename=Moons_square_16x16.PNG
+|author=[[User:The-Moon|The-Moon]]
+|dated=2008-3-24
+|size=16&times;16
+|resolution=1280&times;400
+|comments=Edited Character set of [[User:mikemayday|mikemayday]] and [[User:Jackard|Jackard]]
+|demo=[[Image:SS_moons_square_16x16.PNG|thumb|right]]
+}}
+
+{{Tileset|
+|filename=tigrex3d.PNG
+|author=[[User:Tigrex|Tigrex]]
+|dated=2009-2-22
+|size=16&times;16
+|resolution=1280&times;400
+|comments=This is my tileset, modified from Dorten's 2d diagonal wall set.  It incorporates many original creations of mine, and I hope you like it.
+}}
+
+{{Tileset|
+|filename=tigrex3drunes.PNG
+|author=[[User:Tigrex|Tigrex]]
+|dated=2009-4-10
+|size=16&times;16
+|resolution=1280&times;400
+|comments=This is a modification of the above, that takes advantage of Norse runes for a more authentic Dwarven experience.  CAUTION!  This tileset has little practical value, and may induce myopia, blindness, or death.
+}}
+
+{{Tileset|
+|filename=Tims_16x16.png
+|author=[[User:Timmeh|Timmeh]]
+|dated=2009-8-12
+|size=16&times;16
+|resolution=1280&times;400
+|comments=A tileset using heavily modified versions of the diagonal walls from Belal's set, a modified version of the floor from Spreggo's set, most of the furniture and objects are from Flying Mage's set, and some various other bits and pieces from other sets.  Replaces the black box that normally surrounds the walls with a copy of the floor tile.  [http://mkv25.net/dfma/map-5740-foresthold Example Fort]
+|demo=[[Image:example_tims.png|thumb|right]]
+}}
+
+=Non-Square Tilesets=
+
+==1&times;1.1875==
+
+{{Tileset|
+|filename=analfabetico_80x60.png
+|author=Fitmoos
+|dated=2021-01-01
+|size=1&times;1.1875
+|resolution=80x60 (at 80x50 window size)
+|comments= [http://www.bay12forums.com/smf/index.php?topic=177855.0 Based on the idea] of Monoscii, this is a blank tileset, with an analphabetic aspect ratio.
+See [[#Analfabetico_640x300.png]] for a large version as well.
+}}
+
+==4&times;6==
+
+{{Tileset|
+|filename=Lord-Nightmare-Terminal-4x6.png
+|author=Lord Nightmare/Microsoft
+|dated=2008-1-27
+|size=4&times;6
+|resolution=320&times;150
+|comments=A DF conversion of the 4x6 variant of Microsoft's 'Terminal' Font. Note that I have left the font entirely alone other than converting it, so several glyphs are indistinguishable from one another!
+}}
+
+{{Tileset|
+|filename=Zaratustra_custom_4x6.png
+|author=[[User:Zaratustra|Zaratustra]]
+|dated=2007-10-30
+|size=4&times;6
+|resolution=320&times;150
+|comments=
+|demo=[[Image:Zara_4x6.jpg|thumb|right|Zaratustra's 4x6]]
+}}
+
+==5&times;6==
+
+{{Tileset|
+|filename=Zaratustra_custom_5x6.png
+|author=[[User:Zaratustra|Zaratustra]]
+|dated=2007-10-30
+|size=5&times;6
+|resolution=400&times;150, 800&times;300, 800&times;600
+|comments=
+|demo=[[Image:Zara_5x6.jpg|thumb|right|Zaratustra's 5x6]]
+}}
+
+==6&times;8==
+
+{{Tileset|
+|filename=Ti84.png
+|author=[[User:Agm|Agm]]
+|dated=2018-01-12
+|size=6&times;8
+|resolution=480&times;200, 960&times;400, 1152&times;864
+|comments=Based on Texas Instruments graphing calculators TI83/TI84/+. [https://pastebin.com/EWuDXjbg Color scheme] [https://pastebin.com/YhgiP0kq Inverted (dark) color scheme)]
+|demo=[[Image:Ti84-demo-BothColorSchemes.png|thumb|right|6x8 tileset based on the TI84 graphing calculator.]]
+}}
+
+{{Tileset|
+|filename=Font6x8.png
+|author=[[User:Thief^|Thief^]]
+|dated=2011-04-05
+|size=6&times;8
+|resolution=480&times;200, 960&times;400, 1152&times;864
+|comments=A 6x8 tileset I originally created for an LCD electronics project, expanded to extended ASCII for DF. [http://mkv25.net/dfma/map-10274-mistmatched Example]
+}}
+
+==6&times;9==
+
+{{Tileset|
+|filename=Curses6x9.png
+|author=Madk
+|dated=2010-6-21
+|size=6&times;9
+|resolution=480&times;225
+|comments=Check the [http://www.bay12forums.com/smf/index.php?topic=59851.0 original thread] for more info.
+}}
+
+==6&times;10==
+
+{{Tileset|
+|filename=Bedstead-10-df.png
+|author=[[User:Bjh21|Ben Harris]]
+|dated=2013-11-24, updated 2020-03-29
+|size=6&times;10
+|resolution=480&times;250
+|comments=This is generated from my font [http://bjh21.me.uk/bedstead/ Bedstead], which in turn is based on the Mullard SAA5050 teletext character generator, with lots of extra glyphs of my own design.  There is a larger version below.
+}}
+
+==8&times;12==
+
+{{Tileset|
+|filename=Andux_cp866ish.png
+|author=[[User:Andux|Andux]]
+|dated=2011-05-03
+|size=8&times;12
+|resolution=640&times;480
+|comments=A [http://en.wikipedia.org/wiki/Code_page_866 CP866]-based version of the default curses_640x300 tileset. Note that characters 240-255 were not all updated, in order to preserve tiles required by hard-coded stuff.
+}}
+
+{{Tileset|
+|filename=Andux_sleipnir_8x12_tf.png
+|author=[[User:Andux|Andux]]
+|dated=2012-08-07
+|size=8&times;12
+|resolution=640&times;480
+|comments=A modified version of the default curses_640x300 tileset, partly inspired by the font [http://www.myfonts.com/fonts/facetype/loki/ Loki] by Marcus Sterz/FaceType.
+}}
+
+{{Tileset|
+|filename=DF+Tileset.png
+|author=[[User:Coaldiamond|Coaldiamond]]
+|dated=2010-6-18
+|size=8&times;12
+|resolution=640&times;300
+|comments= An update of [[user:Plac1d|Plac1d's]] tile set, now updated for DF2010. This tileset also presents an elegant solution for modifying the {{K|%}} tile to get good pumps, rocks, and meals. This tileset was made to serve three purposes; a) To always make text understandable, b) to make DF games more visually interesting, and c) to keep symbols simple so that the player can imagine multiple meanings for the same symbol. 
+See the [[user:Coaldiamond|screencaps]] or just get the whole [http://dffd.wimbli.com/file.php?id=2533 DF+graphics] repack.
+}}
+
+{{Tileset|
+|filename=Analfabetico_640x300.png
+|author=Fitmoos
+|dated=2021-01-01
+|size=8&times;12
+|resolution=640&times;300
+|comments= [http://www.bay12forums.com/smf/index.php?topic=177855.0 Based on the idea] of Monoscii, this is a blank tileset, with an analphabetic aspect ratio.
+See [[#analfabetico_80x60.png]] for a tiny version as well.
+}}
+
+{{Tileset|
+|filename=Kein_640x300.png
+|author=Kein
+|dated=2008-8-9
+|size=8&times;12
+|resolution=640&times;300
+|comments=Updated 08/09/09. Updated most characters, the biggest change is the 3d style walls. If you use my set I'd highly recommend [[40d:Graphics set repository#Plac1d's graphics set|Plac1d's character graphic set]]. My 640&times;300, everything completely shaded.
+|demo=[[Image:Kein-curs.gif|thumb|right|Kein's Tileset]]
+}}
+
+{{Tileset|
+|filename=Plac1d_640x300tileset.png
+|author=[[User:Plac1d|Plac1d]]
+|dated=2008-3-13
+|size=8&times;12
+|resolution=640&times;300
+|comments=A tweaked version of [[#Tocky_square_10x10.png|Tocky's 10&times;10 tileset]] converted to 8&times;12. Try using this with my [[40d:Graphics set repository#Plac1d's graphics set|graphics set]]!
+
+[http://dffd.wimbli.com/file.php?id=63 Download the .BMP]
+|demo=[[Image:Plac1d_640x300EZ_1.png|thumb|right|Plac1d's Tileset]]
+}}
+
+{{Tileset|
+|filename=Curses 640x300diag.png
+|author=Taritus
+|dated=2009-03-23
+|size=8&times;12
+|resolution=640&times;300
+|comments=Yuppers.  I requested it a long time ago when everyone else was requesting different sized square tilesets with diagonal walls, and nobody ever fulfilled the request.  I decided, "Oh, it's not like I have some menial and huge English project that's due tomorrow to work on, I'm going to make that." And I did.--[[User:Taritus|Taritus]] 20:53, 22 March 2009 (UTC)
+}}
+
+==8&times;14==
+
+{{Tileset|
+|filename=MDA8x14.png
+|author=Lord Nightmare/IBM
+|dated=2007-10-30
+|size=8&times;14
+|resolution=640&times;350
+|comments=The original IBM MDA character set, dumped from addresses 0x0000-0x0fff the 5788005 IBM Character Generator ROM. This font is as would be displayed on an EGA/VGA with the 9-pixel-width mode disabled. Best for a 64:35 aspect ratio. The required resolution is strange, so run fullscreen with BLACK_SPACE:YES and resolution at 640x480. The MDA card did not actually support displaying the font in 8x14, but ONLY 9x14 mode, see below. Theoretically, you CAN upload this font into EGA video memory though and use it.
+}}
+
+{{Tileset|
+|filename=EGA8x14.png
+|author=Lord Nightmare/IBM
+|dated=2007-10-30
+|size=8&times;14
+|resolution=640&times;350
+|comments=The IBM EGA character set, dumped from the 6277356 IBM EGA BIOS ROM. This font is as would be displayed on an EGA/VGA with the 9-pixel-width mode disabled. Best for a 64:35 aspect ratio. The required resolution is strange, so run fullscreen with BLACK_SPACE:YES and resolution at 640x480. This font is different from the MDA version in that many characters are slightly narrower to avoid 'running into' each other, and many characters have been shifted slightly to the left.
+Thanks to Zaratustra for poking me into getting this done, and for related help.
+}}
+
+{{Tileset|
+|filename=CP850.png
+|author=Tae/IBM
+|dated=2009-9-06
+|size=8&times;14
+|resolution=640&times;350
+|comments=Play the Dwarf Fortress game in CP 850.
+}}
+
+{{Tileset|
+|filename=Zaratustra_megazeux2.png
+|author=[[User:Zaratustra|Zaratustra]]
+|dated=2007-10-30
+|size=8&times;14
+|resolution=640&times;350
+|comments=EGA font with added Megazeux modifications.
+}}
+
+==8&times;15==
+
+{{Tileset|
+|filename=Lord_Nightmare-Fixedsys-02.png
+|author=Lord Nightmare/Microsoft
+|dated=2007-12-20
+|size=8&times;15
+|resolution=640&times;375
+|comments=v2.2 - (v1.0 is [[:Image:Lord_Nightmare-Fixedsys.png|here]]) - Based on Microsoft's Fixedsys font (which dates back to Windows 1.0!), Many glyphs needed redoing by hand since they were absent from the font, since it is an 'ansi' character set and not a code-page 437 one like DF expects. v2.0 Based on Microsoft's Fixedsys font. Updated new glyphs to be more consistent with the Fixedsys style. - v2.1 - update a few more glyphs, namely the integral, the infinity symbol, and the spade, and a few others I'm forgetting. - v2.2 - update the club and spade, and the music notes - v2.3 - fix the fact that 0xF9 and 0xFA were inadvertently swapped.
+}}
+
+==8&times;16==
+
+{{Tileset|
+|filename=VGA8x16.png
+|author=Lord Nightmare/IBM?
+|dated=2007-10-30
+|size=8&times;16
+|resolution=640&times;400
+|comments=The original? IBM VGA 8x16 character set, (from http://madscientistroom.org/fpga/default-8x16-bram.html) as would be displayed on a VGA card with the 9-pixel-width disabled. Best for an 8:5 aspect ratio. The required resolution is strange, so run fullscreen with BLACK_SPACE:YES and resolution at 640x480. This rom has not yet been dumped from a real VGA card, and is coming from a secondary source, so it may be replaced later if I find the real font is different.
+}}
+
+{{Tileset|
+|filename=Lord_Nightmare-Fixedsys-03.png
+|author=Lord Nightmare/Microsoft
+|dated=2007-12-20
+|size=8&times;16
+|resolution=640&times;400
+|comments=v3.0 - changed font size to 8x16, altered glyphs to respect this. - v3.1 - fix the fact that 0xF9 and 0xFA were inadvertently swapped.
+}}
+
+{{Tileset|
+|filename=Acorntileset.png
+|author=[[User:Xenomorph|Xenomorph]]
+|dated=2008-8-9
+|size=8&times;16
+|resolution=640&times;400
+|comments=This is the tileset used by Acorn computers, starting with the BBC Micro.  This version is as it would have appeared in 80-column modes (albeit adapted to CP437). [http://dffd.wimbli.com/file.php?id=408 Download the BMP.]
+}}
+
+==9&times;12==
+
+{{Tileset|
+|filename=Yoshis_island.png
+|author=[[User:Nobbins|Nobbins]]
+|dated=2011-03-20
+|size=9&times;12
+|resolution=720&times;300, 720&times;600 (non-recommended)
+|comments=Heavily based on the text style from Yoshi's Island, with most letters being direct copies]. 
+}}
+
+==9&times;14==
+
+{{Tileset|
+|filename=MDA9x14.png
+|author=Lord Nightmare/IBM
+|dated=2007-10-30
+|size=9&times;14
+|resolution=720&times;350
+|comments=The original IBM MDA character set, dumped from addresses 0x0000-0x0fff the 5788005 IBM Character Generator ROM. This font is as would be displayed on a real MDA card (use a black/dkgreen/ltgreen palette for full monochrome effect) or on an EGA/VGA card with the 9-pixel-width mode enabled. Best for a 72:35 aspect ratio. The required resolution is strange, so run fullscreen with BLACK_SPACE:YES and resolution at 720x480.
+}}
+
+{{Tileset|
+|filename=EGA9x14.png
+|author=Lord Nightmare/IBM
+|dated=2007-10-30
+|size=9&times;14
+|resolution=720&times;350
+|comments=The IBM EGA character set, dumped from the 6277356 IBM EGA BIOS ROM. This font is as would be displayed on an EGA/VGA with the 9-pixel-width mode enabled. Best for a 72:35 aspect ratio. The required resolution is strange, so run fullscreen with BLACK_SPACE:YES and resolution at 640x480. This font is actually different from the 8x14 version in that 20 characters have been replaced with the original MDA wide versions. These 'extra' wide characters are sandwiched in between the end of the 8x14 and beginning of the 8&times;8 font in the EGA BIOS ROM. The changed characters, in ASCII order, are: arrow-left-and-right, '"', '+', '-', 'M', 'T', 'V', 'W', 'X', 'Y', 'Z', 'm', 'v', 'w', 'ae', cent sign, yen, peseta, plus-minus, and division sign. Other than these characters, all characters are the same, with rightmost-row duplicated on the C and D rows like the MDA (though I don't actually know if this is technically correct).
+}}
+
+==9&times;16==
+
+{{Tileset|
+|filename=VGA9x16.png
+|author=Quietust/IBM?
+|dated=2009-7-24
+|size=9&times;16
+|resolution=720&times;400
+|comments=The original? IBM VGA 9x16 character set, as would be displayed on a VGA card with the 9-pixel-width enabled.
+}}
+
+==10&times;12==
+
+{{Tileset|
+|filename=Curses_800x600_shade.png
+|author=[[User:Chinkeeyong|Chinkeeyong]]
+|dated=2009-6-11
+|size=10&times;12
+|resolution=800&times;600
+|comments=Partially inspired by Eagle of Fire's tiles, below. Essentially, this is the default tileset with a little bevel-style shading around the edges to make it look neater. Also, I fixed the accented 'e' tails to look closer to the standard 'e'.
+}}
+
+{{Tileset|
+|filename=eofshaded800x600pb9_f64ded.png
+|author=[[User:Eagle of Fire|Eagle of Fire]]
+|dated=2007-10-30
+|size=10&times;12
+|resolution=800&times;600
+|comments=Designed for fullscreen. Inspired by Herrbdog's tileset, I created a shaded tileset targeting the default fullscreen 800x600 resolution. Basicaly, you have the exact same "curses" default tileset but with some shading done to the lower right of each letters and items. I've left alone everything which was related to mining or was meant to be plain, for example the smoothered tiles and the plain tiles in the demo. The reason behind that is that I didn't find much logic to have those graphics shaded as they could possibly connect on any direction on the screen, which would make the shading a little strange. Please note that this tileset is only a "beta". I might work on it again if there is enough people who like it and would like improvements. You can discuss the matter [http://www.bay12games.com/cgi-local/ultimatebb.cgi?ubb=get_topic&f=11&t=000645 here].
+}}
+
+{{Tileset|
+|filename=Sleroux_800x300.png
+|author=Sergius
+|dated=2007-10-30
+|size=10&times;12
+|resolution=800&times;300
+|comments=Mostly vanilla tileset, dwarves have graphic from intro [[Utilities#CMVPlayer|Movie]], with some tweaks (for soldiers). I find it helpful for playing (instead of happy faces).
+}}
+
+{{Tileset|
+|filename=Kyzers_thin.png
+|author=[[User:KyzerB|KyzerB]]
+|dated=2018-11-11
+|size=10&times;12
+|resolution=853&times;480, 1280&times;720, 1920&times;1080, 3840&times;2160; looks fine at most others, legible down to 240p (for the most part).
+|comments=Tileset designed to be a little easier to read and crisp. Very useful for lower resolutions, as it stays crisp down to 480p. 98% of the sprites have been changed, many received changes to their white-space, and the Dwarves have new and easily distinguishable sprites. Took about a week to make.
+|demo=[[Image:Kyzers_thin_medmap.png|thumb|right|Kyzer's Thin Tileset]]
+}}
+
+{{Tileset|
+|filename=UncleSporky_curses_800x600.png
+|author=UncleSporky
+|dated=2007-10-30
+|size=10&times;12
+|resolution=800&times;300
+|comments=
+|demo=[[Image:UncleSporky_DFTiles1.png|thumb|right|UncleSporky Tileset]] 
+|demo2=[[Image:UncleSporky_DFTiles2.png|thumb|right|UncleSporky Tileset]]
+}}
+
+{{Tileset|
+|filename=nice_curses_10x12.png
+|author=[[User:Vidumec|Vidumec]]
+|dated=2013-01-31
+|size=10&times;12
+|resolution=800&times;300 
+|comments=Non-square version of my 12x12 tileset, based on Plac1d's one with some additional features and modifications.
+}}
+
+{{Tileset|
+|filename=Zaratustra_custom800x300ca3.png
+|author=[[User:Zaratustra|Zaratustra]]
+|dated=2007-10-30
+|size=10&times;12
+|resolution=800&times;300, 800&times;600 (non-recommended)
+|comments=Has an appropriate [http://archive.dwarffortresswiki.net/index.php/Object_Tilesets#10x12_version object tileset for v0.23.130.23a (now outdated)]. 
+}}
+
+==10&times;16==
+
+{{Tileset|
+|filename=Lord_Nightmare_Freehand_10x16.png
+|author=Lord Nightmare
+|dated=2007-12-23
+|size=10&times;16
+|resolution=800&times;400
+|comments=v1.0 - A character set drawn entirely in freehand on the tablet PC... with MINIMAL EDITING! Yes, its SUPPOSED to look like that. v1.1 - fixed character 0x02 background (filled smiley), filled in the card suits, minor touch up to the comma, fix black instead of magenta on the greyscale blocks and other tweaks to them, redrew the square block (was 'too clean' before) v1.1a - fixed spade by adding 1 pixel at tip so it doesn't look like another club
+|demo=[[Image:Lord_Nightmare_Freehand_screenshot_2b7d67.png|thumb|right|Freehand screenie... ooh, neat! Unreadable.]]
+}}
+
+{{Tileset|
+|filename=Lord_Nightmare_Freehand^2_10x16.png
+|author=Lord Nightmare
+|dated=2008-3-28
+|size=10&times;16
+|resolution=800&times;400
+|comments=Freehand^2, v1.2 - A heavily edited version of Freehand, now hopefully less unreadable. V1.2 is the current version, see the image link changelog/older versions.
+|demo=[[Image:Lord_Nightmare_Freehand_screenshot_2_05c04b.png|thumb|right|Freehand^2 screenie... ooh, neat! Readable. But ugly.]]
+}}
+
+{{Tileset|
+|filename=Vintl01.png
+|author=Lord Nightmare/Victor-Sirius
+|dated=2007-12-19
+|size=10&times;16
+|resolution=800&times;400
+|comments=The Victor 9000/Sirius 1 computer character set, extracted from vintl01.chr.
+}}
+
+==12&times;20==
+
+{{Tileset|
+|filename=Bedstead-20-df.png
+|author=[[User:Bjh21|Ben Harris]]
+|dated=2013-11-24, updated 2020-03-29
+|size=12&times;20
+|resolution=960&times;500
+|comments=This is generated from my font [http://bjh21.me.uk/bedstead/ Bedstead], which in turn is based on the Mullard SAA5050 teletext character generator, with lots of extra glyphs of my own design.  There's a smaller version above.
+}}
+
+==14&times;16==
+
+{{Tileset|
+|filename=Cooz_curses_14x16.png
+|author=Anonymous/[[User:Cooz|Cooz]]
+|dated=2017-05-12
+|size=14&times;16
+|resolution=1120&times;400
+|comments=I was looking for a narrower, more readable tileset with the aesthetic of Cooz's shaded square 16x16 one and didn't see one, so I made this from it. Like the original, it's just rounded ASCII characters with no special glyphs.
+}}
+
+==16&times;20==
+
+{{Tileset|
+|filename=Shizzle_1280x500.png
+|author=[[User:MasterShizzle|MasterShizzle]]
+|dated=2012-12-10
+|size=16&times;20
+|resolution=1280&times;500
+|comments=Couldn't find a 16x20 set, so I made my own: a good compromise between form and function. Completely original font adapted by hand from the standard curses with minimal shading, designed to run natively on HD monitors.
+|demo=[[Image:Shizzle16x20Screenshot.png|thumb|right|MasterShizzle's 16x20 tileset]]
+}}
+
+==16&times;24==
+
+{{Tileset|
+|filename=MRC_1280x600.png
+|author=[[User:InquisitorSaturn|Inquisitor Saturn]]
+|dated=2008-2-28
+|size=16&times;24
+|resolution=1280&times;600
+|comments=Designed for a double-sized window mode. Based on the default set, but more detailed and with a few custom characters. Good for those who want larger characters but enjoy the aesthetics of the default set.
+}}
+
+{{Tileset|
+|filename=Bmac smooth 16x24.png
+|author=[[User:BMacZero|BMacZero]]
+|dated=2020-11-07
+|size=16&times;24
+|resolution=1280&times;600
+|comments=A smaller version of [[:File:Kyzsmooth.png]] (24x32), with standard curses dwarf icons. Effectively, curses_640x300.png at 200% and smoothed.
+}}
+
+==16&times;32==
+
+{{Tileset|
+|filename=Lumin_Graphical_1280x800.png
+|author=Lumin
+|dated=2007-10-30
+|size=16&times;32
+|resolution=1280&times;800
+|comments=Ideas used from several others on this page. I've also added more detail and color to some objects.
+}}
+
+==20&times;32==
+
+{{Tileset|
+|filename=Curses_24pt_cleartype_ThomModifications.PNG
+|author=Herrbdog
+|dated=2007-10-30
+|size=20&times;32
+|resolution=1600&times;800
+|comments=Hi res won't slow the game as it doesn't use graphics, so if your monitor can display it, go for it, really...<br>I strongly recommend to enable blackspace in the init: [BLACK_SPACE:YES]<br>Made from the 24pts cleartype lucida console above (from winterwing). I added some stuff (some original, some ideas taken from others tilesets). Basically I try to avoid symbols that are often seen in menus, etc. The main "problem" is the bag, because its the male symbol, but it was too good looking to not put it ;) Hope you enjoy :) <br><font color=white>. . .
+}}
+
+{{Tileset|
+|filename=TerminusAliased_handedit_gal.png
+|author=[[User:Shaja|Shaja]]
+|dated=2008-3-27
+|size=20&times;32
+|resolution=1600&times;800
+|comments=Alphanumerics based on Dimitar Zhekov's [http://www.is-vn.bg/hamster/jimmy-en.html Terminus] font with light antialias shading added, walls and some symbols redrawn, others carried over from Thom's 20x32 tileset.
+|demo=[[Image:Shaja_10-27-09.png|thumb|right|TerminusAliased text]]
+|demo2=[[Image:Shaja_10-13-09.png|thumbnail|right|Terminus24 text]]
+}}
+
+==24&times;32==
+
+{{Tileset|
+|filename=Terminus24.png
+|author=[[User:Shaja|Shaja]]
+|dated=2008-5-19
+|size=24&times;32
+|resolution=1920&times;800
+|comments=Revised version of my earlier Terminus 20x32 character set for 1920x800 display.
+}}
+
+==24&times;36==
+
+{{Tileset|
+|filename=Curses_1920x900.png
+|author=IBM, I think
+|dated=2017-02-28
+|size=24&times;36
+|resolution=1920&times;900 (80&times;25 grid size); 1920&times;1080 (80&times;30 grid size, double for 4k)
+|comments=Original curses_640x300.png enlarged to 300%. Good for FullHD displays.
+}}
+
+{{Tileset|
+|filename=Kyzsmooth.png
+|author=KyzerB
+|dated=2019-07-02
+|size=24&times;36
+|resolution=1920&times;900 (80&times;25 grid size); 1920&times;1080 (80&times;30 grid size, double for 4k)
+|comments=Original curses_640x300.png enlarged to 300%, intricately smoothed for readability and a lack of chunkiness.
+}}
+
+==48&times;72==
+
+{{Tileset|
+|filename=Vector square 48x72.png
+|image=[[:Image:Vector square 48x72.png|Not shown due to size]]
+|author=[[User:DragonDePlatino|DragonDePlatino]]
+|dated=2016-11-22
+|size=48&times;72
+|resolution=3820&times;1920 (4k)
+|comments=A resolution-independent tileset based off of curses_640x300.bmp. The tileset was hand-vectorized in Inkscape then exported in multiple resolutions up to 4k. More information and resolutions can be found at the forum thread [http://www.bay12forums.com/smf/index.php?topic=161328.0 here].
+}}
+
+[[Category:Mods]]
+[[Category:Interface]]
+[[ru:Tileset repository]]

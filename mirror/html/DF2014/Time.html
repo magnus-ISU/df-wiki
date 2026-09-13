@@ -1,0 +1,169 @@
+<div class="mw-parser-output"><table class="version-table" style="text-align: center; margin: 3px auto 5px; padding: 0.25em; border-radius: 3px; -webkit-border-radius: 3px; -moz-border-radius: 3px; -o-border-radius: 3px; -ms-border-radius: 3px;; border: 2px solid #ddbb88; background: #fff5ee; min-width:27em"><tbody><tr><td style="padding: 0.3em 0.3em; width: 100%;"><div style="margin-bottom:6px;" class="version-links-r1"><span style="font-size:100%"><span class="version-link"><a href="/index.php/Time" title="Time"><span style="text-decoration: none; color: #CA7A02;">v53.16</span></a></span><span style="font-weight:bold;" class="dot">&#160;·</span> <span class="version-link"><span style="text-decoration: none; color: #CA7A02; background-color: #FFE0CC; border-radius: 2px; -webkit-border-radius: 2px; -moz-border-radius: 2px; -o-border-radius: 2px; -ms-border-radius: 2px; border: 1px solid #ddbb88; padding: 0.2em;"><b>v0.47.05</b></span></span><span style="font-weight:bold;" class="dot">&#160;·</span> <span class="version-link"><a href="/index.php/v0.34:Time" title="v0.34:Time"><span style="text-decoration: none; color: #CA7A02;">v0.34</span></a></span><span style="font-weight:bold;" class="dot">&#160;·</span> <span class="version-link"><a href="/index.php/v0.31:Time" title="v0.31:Time"><span style="text-decoration: none; color: #CA7A02;">v0.31</span></a></span><span style="font-weight:bold;" class="dot">&#160;·</span> <span class="version-link"><a href="/index.php/40d:Time" title="40d:Time"><span style="text-decoration: none; color: #CA7A02;">v0.28</span></a></span><span style="font-weight:bold;" class="dot">&#160;·</span> <span class="version-link"><a href="/index.php/23a:Time" title="23a:Time"><span style="text-decoration: none; color: #CA7A02;">v0.23</span></a></span></span></div><span>This article is about an <b>older version</b> of DF.</span><br />
+<div style="float: right; font-size:75%; padding-right:2px; margin-top:-2px; margin-bottom:-7px;"><span class="version-link"><a href="/index.php/Dwarf_Fortress_Wiki:V" class="mw-redirect" title="Dwarf Fortress Wiki:V"><span style="text-decoration: none; color: #CA7A02;">More Info</span></a></span><span style="font-weight:bold;" class="dot">&#160;·</span> <span class="version-link"><a href="/index.php/Template:Av" class="mw-redirect" title="Template:Av"><span style="text-decoration: none; color: #CA7A02;">V</span></a></span></div></td></tr>
+</tbody></table><div id="page-quality-rating" style="text-align: right;margin: 0.8em 0;font-size:75%">
+ <a href="/index.php/Dwarf_Fortress_Wiki:Quality#Tattered" title="Dwarf Fortress Wiki:Quality"><span id="stub-quality" style="text-decoration:none; color:#333333">xTATTEREDx</span></a> <span style="font-weight:bold;" class="dot">&#160;·</span> <a href="/index.php/Dwarf_Fortress_Wiki:Quality#Fine" title="Dwarf Fortress Wiki:Quality"><span id="fine-quality" style="text-decoration:none; color:#CA7A02;">+FINE+</span></a> <span style="font-weight:bold;" class="dot">&#160;·</span> <a href="/index.php/Dwarf_Fortress_Wiki:Quality#Superior" title="Dwarf Fortress Wiki:Quality"><span id="superior-quality" style="text-decoration:none; color:#8800cc;">*SUPERIOR*</span></a> <span style="font-weight:bold;" class="dot">&#160;·</span> <a href="/index.php/Dwarf_Fortress_Wiki:Quality#Exceptional" title="Dwarf Fortress Wiki:Quality"><span id="exceptional-quality" style="padding:0.2em; border:1px solid #9df; border-radius: 2px; -webkit-border-radius: 2px; -moz-border-radius: 2px; -o-border-radius: 2px; -ms-border-radius: 2px; background:#cce4ff; color:#0088CC;">≡EXCEPTIONAL≡</span></a> <span style="font-weight:bold;" class="dot">&#160;·</span> <a href="/index.php/Dwarf_Fortress_Wiki:Quality#Masterwork" title="Dwarf Fortress Wiki:Quality"><span id="masterwork-quality" style="text-decoration:none; color:#72A329;">☼MASTERWORK☼</span></a></div>
+<dl><dd><i>For a discussion on the greater passage of time as measured in days/weeks/months/years/ages, see <a href="/index.php/DF2014:Calendar" title="DF2014:Calendar">Calendar</a></i></dd></dl>
+<p><b>Time</b>, in the lower-level "unit-based" sense, is an integral part of any simulation, nonetheleast in one as complex as <i>Dwarf Fortress</i>. Time is measured internally in units which the Adventurer key bindings menus call "instants", but are commonly dubbed "ticks" by the community. Each tick represents one step in the <i>Dwarf Fortress</i> program, requiring calculations related to <a href="/index.php/DF2014:Speed" title="DF2014:Speed">unit movement</a>, <a href="/index.php/DF2014:Flow" title="DF2014:Flow">fluid movement</a>, <a href="/index.php/DF2014:Temperature" title="DF2014:Temperature">temperature transfer</a>, various event checks, <a href="/index.php/DF2014:Combat" title="DF2014:Combat">combat checks</a>, <a href="/index.php/DF2014:Path" title="DF2014:Path">pathing checks</a>, <a href="/index.php/DF2014:Labor" title="DF2014:Labor">job changes</a>, <a href="/index.php/DF2014:Skill" title="DF2014:Skill">experience ticks</a> - basically everything required to run the program, broken up between individual lumps of time. These ticks are then bundled up against days, months, seasons, and then years under the dwarven <a href="/index.php/DF2014:Calendar" title="DF2014:Calendar">calendar</a>, which are then further engrossed within individual, context-sensitive <a href="/index.php/DF2014:Calendar#Ages" title="DF2014:Calendar">ages</a>. 
+</p>
+
+<h2><span class="mw-headline" id="Basic_mechanics">Basic mechanics</span></h2>
+<div class="floatleft"><a href="/index.php/File:Clock_icon.png" class="image"><img alt="Clock icon.png" src="/images/3/3d/Clock_icon.png" decoding="async" width="90" height="86" /></a></div><p>As explained above, in-game <a href="/index.php/DF2014:Calendar" title="DF2014:Calendar">calendar</a> time is amongst the many things that are processed over the course of a <b>tick</b>. The passage of ticks in <a href="/index.php/DF2014:Dwarf_fortress_mode" title="DF2014:Dwarf fortress mode">fortress mode</a> can easily be observed by pausing the game and pressing <span style="white-space: nowrap;"><span class="keyboard-key nowrap" style="border: 1px solid #aaa; border-radius: 0.2em; -webkit-border-radius: 0.2em; -moz-border-radius: 0.2em; -o-border-radius: 0.2em; -ms-border-radius: 0.2em; -moz-box-shadow: 0.1em 0.2em 0.2em #ddd; -webkit-box-shadow: 0.1em 0.2em 0.2em #ddd; box-shadow: 0.1em 0.2em 0.2em #ddd; background-color: #f9f9f9; background-image: -moz-linear-gradient(top, #eee, #f9f9f9, #eee); background-image: -o-linear-gradient(top, #eee, #f9f9f9, #eee); background-image: -webkit-linear-gradient(top, #eee, #f9f9f9, #eee); background-image: linear-gradient(to bottom, #eee, #f9f9f9, #eee); padding: 0.1em 0.3em; font-family: inherit; font-size: 0.9em;" title="">.</span></span>, which causes exactly 1 tick to pass by. The <a href="/index.php/DF2014:Adventurer_mode" title="DF2014:Adventurer mode">adventurer mode</a> equivalent is achieved simply by pressing <span style="white-space: nowrap;"><span class="keyboard-key nowrap" style="border: 1px solid #aaa; border-radius: 0.2em; -webkit-border-radius: 0.2em; -moz-border-radius: 0.2em; -o-border-radius: 0.2em; -ms-border-radius: 0.2em; -moz-box-shadow: 0.1em 0.2em 0.2em #ddd; -webkit-box-shadow: 0.1em 0.2em 0.2em #ddd; box-shadow: 0.1em 0.2em 0.2em #ddd; background-color: #f9f9f9; background-image: -moz-linear-gradient(top, #eee, #f9f9f9, #eee); background-image: -o-linear-gradient(top, #eee, #f9f9f9, #eee); background-image: -webkit-linear-gradient(top, #eee, #f9f9f9, #eee); background-image: linear-gradient(to bottom, #eee, #f9f9f9, #eee); padding: 0.1em 0.3em; font-family: inherit; font-size: 0.9em;" title="">,</span></span> (as opposed to <span style="white-space: nowrap;"><span class="keyboard-key nowrap" style="border: 1px solid #aaa; border-radius: 0.2em; -webkit-border-radius: 0.2em; -moz-border-radius: 0.2em; -o-border-radius: 0.2em; -ms-border-radius: 0.2em; -moz-box-shadow: 0.1em 0.2em 0.2em #ddd; -webkit-box-shadow: 0.1em 0.2em 0.2em #ddd; box-shadow: 0.1em 0.2em 0.2em #ddd; background-color: #f9f9f9; background-image: -moz-linear-gradient(top, #eee, #f9f9f9, #eee); background-image: -o-linear-gradient(top, #eee, #f9f9f9, #eee); background-image: -webkit-linear-gradient(top, #eee, #f9f9f9, #eee); background-image: linear-gradient(to bottom, #eee, #f9f9f9, #eee); padding: 0.1em 0.3em; font-family: inherit; font-size: 0.9em;" title="">.</span></span>, which results in the passage of 10 ticks).
+</p><p>Every tick causes the in-game clock to advance by a specific quantity of time that varies depending on the game mode. In adventurer mode, 1 tick moves time forward by 0.5 seconds, whereas in fortress mode this causes 72 seconds to pass by. Thus, the simulation of time runs 144 times faster in fortress mode on a per-tick basis <a rel="nofollow" class="external autonumber" href="http://www.bay12forums.com/smf/index.php?topic=169696.msg8185557#msg8185557">[1]</a>. This disparity is a game design choice, with the faster pacing enabling fortress mode players to more easily observe their fort over the years, witnessing events that'd take an immense amount of real-life time to unfold if the adventurer mode scale were to be used instead.
+</p>
+<table style="width:300px; float:left; border-right:1px dotted black;margin:0px 10px;">
+<caption><b>Calendar time in fortress mode</b>
+</caption>
+<tbody><tr>
+<td>1 second</td>
+<td>= <sup>1</sup>⁄<sub>72</sub> tick</td>
+<td>
+</td></tr>
+<tr>
+<td>1 minute</td>
+<td>= 60 seconds</td>
+<td>= <sup>5</sup>⁄<sub>6</sub> tick
+</td></tr>
+<tr>
+<td>1 hour</td>
+<td>= 60 minutes</td>
+<td>= 50 ticks
+</td></tr>
+<tr>
+<td>1 day</td>
+<td>= 24 hours</td>
+<td>= 1200 ticks
+</td></tr>
+<tr>
+<td>1 week</td>
+<td>= 7 days</td>
+<td>= 8400 ticks
+</td></tr>
+<tr>
+<td>1 month</td>
+<td>= 4 weeks</td>
+<td>= 33600 ticks
+</td></tr>
+<tr>
+<td>1 season</td>
+<td>= 3 months</td>
+<td>= 100800 ticks
+</td></tr>
+<tr>
+<td>1 year</td>
+<td>= 4 seasons</td>
+<td>= 403200 ticks
+</td></tr></tbody></table>
+<table style="width:300px; float:left;">
+<caption><b>Calendar time in adventurer mode</b>
+</caption>
+<tbody><tr>
+<td>1 second</td>
+<td>= 2 ticks</td>
+<td>
+</td></tr>
+<tr>
+<td>1 minute</td>
+<td>= 60 seconds</td>
+<td>= 120 ticks
+</td></tr>
+<tr>
+<td>1 hour</td>
+<td>= 60 minutes</td>
+<td>= 7200 ticks
+</td></tr>
+<tr>
+<td>1 day</td>
+<td>= 24 hours</td>
+<td>= 172800 ticks
+</td></tr>
+<tr>
+<td>1 week</td>
+<td>= 7 days</td>
+<td>= 1209600 ticks
+</td></tr>
+<tr>
+<td>1 month</td>
+<td>= 4 weeks</td>
+<td>= 4838400 ticks
+</td></tr>
+<tr>
+<td>1 season</td>
+<td>= 3 months</td>
+<td>=  14515200 ticks
+</td></tr>
+<tr>
+<td>1 year</td>
+<td>= 4 seasons</td>
+<td>= 58060800 ticks
+</td></tr></tbody></table><div style="clear:both;"></div>
+<h4><span class="mw-headline" id="Framerate">Framerate</span></h4>
+<p>How quickly time <i>appears</i> to pass in your game, especially in fortress mode, has as much to do with your hardware as with the number of ticks in a year. The number of <a href="/index.php/DF2014:Frames_per_second" title="DF2014:Frames per second">frames per second</a> is a direct reflection of how many ticks a second your processor is working through. This should be distinguished from the frame <i>refresh</i> rate, which is how many frames appear on your <i>screen</i> per second. You can set your FPS to be visible by changing <tt>[FPS:NO]</tt> to <tt>[FPS:YES]</tt> in your <a href="/index.php/DF2014:Init.txt" title="DF2014:Init.txt">Init.txt</a> file, which will display two numbers in the top-right corner of your game window, the first being the frames per second and the second being the refresh rate (which is capped at a lower value by default). By default the framerate is capped at 100 FPS, but this setting can be changed or even removed: see <a href="/index.php/DF2014:Frames_per_second#Controlling_FPS" title="DF2014:Frames per second">here</a> for a technical discussion. For tips on maximizing framerate, see the (topically named) <a href="/index.php/DF2014:Maximizing_framerate" title="DF2014:Maximizing framerate">Maximizing framerate</a> article.
+</p><p><i>Dwarf Fortress</i> is an <i>extremely</i> processor-intensive game, and so how many frames you actually get per second will depend on the strength of your machine, how far into the game and how much clutter there is in it, whether or not you are taking any fps-saving measures, what mods or other programs you are running, and so on. Regardless of mode, there are 28 days in a month and 12 months in a year. Assuming an FPS of 100, not counting pauses an hour of fortress mode gameplay will translate into a year in-game.
+</p>
+<ul><li>At 100 FPS:</li></ul>
+<dl><dd><dl><dd>1 day = 12 sec&#160;; 1 month = 5 min 36 sec&#160;;  1 year = 1 hour 7 minutes 12 seconds</dd></dl></dd></dl>
+<ul><li>At 60 FPS:</li></ul>
+<dl><dd><dl><dd>1 day  = 20 sec&#160;;  1 month = 9 min 20 sec&#160;;  1 year = 1 hour 52 min</dd></dl></dd></dl>
+<ul><li>At 30 FPS:</li></ul>
+<dl><dd><dl><dd>1 day = 40 sec  ; 1 month = 18 min 40 sec&#160;;  1 year = 3 hour 44 min</dd></dl></dd></dl>
+<p>In dwarf mode, the game starts with some announcement checks and considers autosaves, etc.  A lot of the rest doesn't happen every tick.  Every hundred ticks, for instance, it'll check job assignments and strange moods. Armies are <a href="/index.php/DF2014:World_activities" title="DF2014:World activities">moved on the world map</a>.  Every hundred ticks (staggered from the job check), it handles job applications by dwarves, a kind of invisible auction that it uses to manage the various competing priorities.  Every ten ticks it advances the seasons, which actually does all kinds of things with the weather and map (both locally and in the world), and it also does a check for certain plot element advances (diplomats, sieges, etc.), and it checks whether your fort is still alive.
+</p><p>Then it hits some things that it does every tick.  Fluids and other map tile information is advanced (though there are various optimizations here so that not every tile is necessarily checked every turn, and there are various flags so that entire sections of the map can be skipped if nothing has happened.)  Vermin running around are updated.  Other 'events' on the map, like active fires, are handled.
+</p><p>If a flag is set, wounded/thirsty/hungry dwarves that can't care for themselves get an update, and every so often, dead dwarves 'think' about their burial arrangements so that jobs can be set.  Caged and chained creatures update their thoughts and situation periodically. Then, creatures leave the map if they are set to at the edges.
+</p><p>Every fifty ticks, staggered from other updates, all of the taverns, temples, libraries, etc. get their information updated.  Stockpiles, staggered on a different tick, also work this way.  Similarly with storage job creation, though that process is complicated with various optimizations and lengthening ping times and so forth, and it's still slow, since at some point, 50,000+ boulders will cause trouble.
+</p><p>Every thousand ticks, objects that have been marked for deletion and removed from the game are actually deleted and freed.  This happens more often with items, every fifty ticks, along with a building use check (mostly updates for wells and some other flags that often need checking.)
+</p><p>We hit another every-tick update at this point.  Projectiles are moved.  Activities (which range from dances to martial training to storytelling) get updated as needed.  Dwarves and other creatures decide on and advance their immediate actions (movement to an adjacent tile, working at a workshop, etc.) -- the bulk of their AI (outside of job selection) is here.
+</p><p>Every hundred ticks, items are rotted.  Every tick, vegetation is advanced (though there are various staggers and flags here.)  Building states are updated every tick as needed, and minecarts are moved.  Hauling routes are advanced.  Temperature is updated (there are various optimization flags here, but this is still an unfortunately slow process.)
+</p><p>Finally, the camera is updated to follow the creature you are following, if any.
+</p>
+<h2><span class="mw-headline" id="Physics">Physics</span></h2>
+<p>For projectile physics, such as dwarves being thrown from a bridge, ticks use an assumed duration of 1/10 seconds, together with an assumed tile size of 2m wide by 2.8m tall.
+This is derived by monitoring the internal memory for thrown dwarves, which have a vertical speed that reduces by 0.035 tiles per second, and the fixed point math works in units that assume a tile to be 100,000 units wide by 140,000 tall. Using a gravity value of 9.8m/s<sup>2</sup> and a tile size of 2x2x2.8m results in exactly 10 ticks per second with no rounding needed, so it's safe to assume that this is the unit value intended by Toady.
+</p><p>Using this value for ticks results in a day being a very short 2 minutes, and a year being 46 days and 16 hours.
+</p>
+<h2><span class="mw-headline" id="Applied_mechanics">Applied mechanics</span></h2>
+<h3><span class="mw-headline" id="Syndrome_effects">Syndrome effects</span></h3>
+<p><a href="/index.php/DF2014:Syndrome" title="DF2014:Syndrome">Syndrome</a> effects are defined by <a href="/index.php/DF2014:Syndrome#Creature_effect_tokens" title="DF2014:Syndrome">creature effect tokens</a>, which use ticks as a basal unit. This value always operates at the same rate as fortress mode ticks, even when playing in adventure mode (meaning in the latter mode, 1 syndrome tick passes every 144 ticks). An example token would be <span style="border-bottom:1px #0000CC dotted;cursor:help;" title="As interpreted by the game, this syndrome will causes infallible but resistible mild targeted necrosis of vascular tissue."><tt>[CE_NECROSIS:SEV:300:PROB:100:LOCALIZED:VASCULAR_ONLY:RESISTABLE:START:50:PEAK:1000:END:2000]</tt></span>, of which the <tt>START:50:PEAK:1000:END:2000</tt> end-line defines the timeline of the syndrome's effects. On a timer, <tt>START</tt> tells you how many ticks will pass before the poison starts to take effect, <tt>PEAK</tt> will tell you when it will peak, and <tt>END</tt> will tell you after how many ticks it will end. A syndrome that lists its effect as starting at "5" means that for all but the <a href="/index.php/DF2014:Elf" title="DF2014:Elf">fastest characters</a>, you will begin feeling the effects as soon as you take a step. "50" means 50 time units (or about five steps), and "500" reliably suggests that you'll be able to stagger all the way back to the hospital before your <a href="/index.php/DF2014:Giant_desert_scorpion" title="DF2014:Giant desert scorpion">brain starts pouring out of your ears</a>. Syndrome effects are stacked, and can cause short-term, medium-term, <i>and</i> long-term damage; for specifics see <a href="/index.php/DF2014:Syndrome" title="DF2014:Syndrome">Syndrome</a>.
+</p>
+<h3><span class="mw-headline" id="Plant_growth">Plant growth</span></h3>
+<p>Plants use a <tt>[GROWDUR:#]</tt> <a href="/index.php/DF2014:Plant_token" title="DF2014:Plant token">plant token</a> to constrain their growth times. Each <tt>GROWDUR</tt> unit (short for "grow duration) is equivalent to a hundred ticks. The default value is 300 and it is usually set to 300 or 500 (30,000 or 50,000 ticks) for <a href="/index.php/DF2014:Crop" title="DF2014:Crop">crops</a>; there are 1,008 <tt>GROWDUR</tt> units per <a href="/index.php/DF2014:Calendar" title="DF2014:Calendar">season</a>.
+</p><p>Additionally, plant growths such as leaves, flowers, and fruits express their time ranges in ticks - a flower that blooms on the first day of Summer would have a start tick value of 100,800.
+</p>
+<h3><span class="mw-headline" id="Hive_harvesting_time">Hive harvesting time</span></h3>
+<p><a href="/index.php/DF2014:Vermin" title="DF2014:Vermin">Vermin</a> in <a href="/index.php/DF2014:Hive" title="DF2014:Hive">hives</a> which produce items  (currently only <a href="/index.php/DF2014:Honey_bee" title="DF2014:Honey bee">honey bees</a>, which produce <a href="/index.php/DF2014:Honeycomb" title="DF2014:Honeycomb">honeycombs</a> and <a href="/index.php/DF2014:Royal_jelly" title="DF2014:Royal jelly">royal jelly</a>) have the <tt>[HIVE_PRODUCT:#:#:I]</tt> <a href="/index.php/DF2014:Creature_token" title="DF2014:Creature token">creature token</a>. The first variable is the number of the item produced, the second is the time in ticks that it takes for the item to be produced, and the third is an <a href="/index.php/DF2014:Item_token" title="DF2014:Item token">item token</a> for the item produced. When multiple products are expected, multiple such tokens are used.
+</p>
+<h3><span class="mw-headline" id="Aging_and_lifespan">Aging and lifespan</span></h3>
+<dl><dd><div class="noprint relarticle mainarticle"><i>Main article: <a href="/index.php/DF2014:Age" title="DF2014:Age">Age</a></i></div></dd></dl>
+<h2><span class="mw-headline" id="Clocks">Clocks</span></h2>
+<p>Based on the fact that <a href="/index.php/DF2014:Pressure_plate" title="DF2014:Pressure plate">pressure plates</a> take 100 ticks to reset, some people have built various time-keeping devices to do various things around the fort, like flooding a trap once a month, or just for fun.
+</p>
+<table class="wikitable floatright" style="text-align:center;">
+<tbody><tr>
+<td>"Time" in other <b><a href="/index.php/DF2014:Language" title="DF2014:Language">Languages</a></b> <a href="/index.php/File:Story_tell_indicator.png" class="image"><img alt="Story tell indicator.png" src="/images/9/90/Story_tell_indicator.png" decoding="async" width="20" height="18" /></a>
+<table style="text-align:left;">
+
+
+
+<tbody><tr>
+<th><b><a href="/index.php/DF2014:Dwarven_language" title="DF2014:Dwarven language">Dwarven</a></b>:
+</th>
+<td>ashok
+</td></tr>
+
+<tr>
+<th><b><a href="/index.php/DF2014:Elven_language" title="DF2014:Elven language">Elven</a></b>:
+</th>
+<td>nela
+</td></tr>
+
+<tr>
+<th><b><a href="/index.php/DF2014:Goblin_language" title="DF2014:Goblin language">Goblin</a></b>:
+</th>
+<td>aspsa
+</td></tr>
+
+<tr>
+<th><b><a href="/index.php/DF2014:Human_language" title="DF2014:Human language">Human</a></b>:
+</th>
+<td>atir
+</td></tr></tbody></table>
+</td></tr></tbody></table></div>

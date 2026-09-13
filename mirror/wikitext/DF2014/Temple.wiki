@@ -1,0 +1,109 @@
+{{Quality|Masterwork|19:47, 9 November 2020 (UTC)}}
+{{av}}
+{{new in v0.42}}
+
+[[File:dwarf_temple.jpg|thumb|320px|right|A real life temple.]]A '''temple''' is a structure devoted to an object of worship, which, typically, is any [[sphere]]-aligned being, such as a [[deity]], [[megabeast]], or [[titan]]. 
+
+==Fortress mode==
+In [[fortress mode]], temples are [[locations]] ({{K|l}}) that can be created from [[Activity zone#Meeting area|meeting area]]s ({{K|i}} - {{K|m}}). Temples can be dedicated either to any deity worshipped by at least one of your [[dwarves]] (not necessarily from the world's dwarven pantheon), or to "no particular deity", making it a place for anyone to meditate or to worship whomever they want. However, some dwarves* seem to need specific rather than generic temples to avoid [[unhappy]] thoughts{{Verify}}.
+
+: ''(* If you read the thoughts of certain dwarves, you can note that some have been "unable to pray to (x deity)". If you designate a temple to that specific deity, they will then go pray or meditate with purple text and satisfy their religious needs.  This mechanic needs more research. In some cases a dwarf who worships multiple deities may not ever pray to them all. Using burrows to force these dwarves to pray only in generic temples will usually make them eventually (sequentially) satisfy all their needs to pray, given no other tasks.)''
+
+Temples require [[instrument]]s for their music and, thus, also [[container]]s to store them, although a temple created with no instruments will still be used by citizens and visitors. Temples also require an empty floor space (called ''dance floor'') with a minimum surface of 25 tiles{{verify}}, the same as [[tavern]]s. [[Performer]]s can also be assigned to temples to perform sacred dances. Beyond being religious activity, dances and poetry in temples fulfil the same functions as they do in tavern, with the caveat of being limited to followers of said faith.
+
+Being able to commune with their deity or meditate gives a serious ''enraptured'' [[stress]] decrease to the dwarves. Not having a designated place to pray, on the other hand, makes them sad or [[Need|distracted]]. Thus, making a temple early on might be a good investment for your fortress, even more so if you're going through difficult times. Simply designating any meeting area as a place to pray is enough to initially satisfy most of your dwarves, you do not need to provide instruments or containers for your dwarves to pray.
+
+When one of your fortress's religious organisations (sects) has sufficient (10 by default in d_init.txt) members, they may [[petition]] for the creation of a temple specific to their faith. Once established, these worshippers may congregate at the new temple, though it does not stop them from using temples to no particular deity; the temple dedicated to their deity existing at all is sufficient to please them. If the petition is ignored for too long, it is eventually abandoned, and the petitioners will receive unhappy thoughts.{{version|0.47.01}} The petition is satisfied when the temple has a minimum value of 2000 and when [[priest]]hood is recognised. A temple with a value lower than 2000 is called a '''shrine''', but with a value of 10000 or higher, it becomes a '''temple complex''', which is needed to recognise [[priest|high priesthood]]
+
+'''REMINDER:''' Write down the petitioners' request for the specific deity and/or religious sect, because it's often not accessible from the UI after you accept the petition. Although, if you have [[DFHack]], you can use the command <code>list-agreements</code> to find it. Once a location is designated you can verify the current value & level as well as the agreed on level via the [[locations]] ({{K|l}}) menu and selecting to the location.
+
+[[Pilgrim]]s will visit fortresses specifically to hang out in temples. Other [[visitor]]s may pass by the temple and socialize with the dwarves there, if they came to visit a tavern or [[library]].
+
+As in adventure mode, worshippers of the temple's deity that topple a [[statue]] (or anything else that's been {{k|b}}uilt) in a temple will be cursed as a [[vampire]] or [[werebeast]] {{cite forum|160118/7144627}}{{cite reddit|8l8x7i}}.
+
+==Adventure mode==
+World-generated temples are visitable in [[adventurer mode]]. They are located in [[human]] towns and [[goblin]] fortresses, with smaller temples in [[monastery|monasteries]] and [[fort]]s, and are build when a given [[religion]] has enough followers in said site, or the site is dedicated to the religion. [[Priest]]s can be found in temples, and will allow you to join the local sect of their religion with the conversation topic 'Service'. In the current version, it is not possible to join a temple.
+
+On first joining a sect dedicated to a particular object of worship, that entity will be added to the character's record. An adventurer can then converse ({{K|k}}) anywhere with any deific object of worship. Though the deity's only response is silence, repeated conversations can change the deity's 'object of worship' status from 'dubious' to 'casual', 'object', 'devoted' and 'ardent'. It's unknown whether conversing with other objects of worship can increase their worship status; megabeasts tend to be uniformly hostile, though titans may be flagged 'benign'{{verify}}.
+
+Temples can have basements, sometimes extensive [[catacombs]], which may be crawling with enemies. These range from the typical [[kobold]]s and [[goblin]]s, to the occasional lurking [[mummy]] (with assorted [[Undead|skeletal]] minions). [[Pedestal]]s will be found in these lower levels, and will sometimes contain holy [[artifact]]s.
+
+You can defile a temple of your deity by toppling a [[statue]], which leads to being cursed by the patron deity with either [[vampire|vampirism]] or becoming a [[werebeast]]. For this, the temple must be actively used (i.e. not an old ruin).
+
+=== Architecture ===
+Each temple found in procedurally-generated towns will have its own architecture, where certain architectural elements are chosen depending on the spheres to which the temple belongs. A temple can use a certain architectural element because of its likeness to their worshipped spheres, but also because of an antithetical relationship to said spheres. A complete list of architectural elements, as well as their connection to different spheres, is given in the table below. Since the introduction of institutionalized [[religion]]s, this seems to have changed somewhat, with most such temples having a wide array of architectural elements.
+[[File:Df temple.png|300px|thumb|6 level temple, showing water pool, detailed surfaces, paved indoor areas, lower floors, upper floors, pillars on the perimeter, and a paved outdoor area, with doors leading to the catacombs. Dedicated to the Bejeweled Creed, a religion worshipping Ñor, deity of Birth and Youth. ]]
+{| class="wikitable" cellspacing="0" border="1" cellpadding="5"
+|-
+! Architectural element
+! Justification
+! Related spheres
+! Disallowed spheres
+
+|-
+|rowspan=2|Detailed surfaces||Experience||Art, Depravity||
+|-
+|Representation||Painting||
+|-
+|[[Magma|Lava]] pool||Representation||Volcanos||
+|-
+|rowspan=2|Lower floors||Representation||Caverns||
+|-
+|Experience||Darkness, Earth||
+|-
+|rowspan=2|Open structure||Experience||Dawn, Day, Dusk, Light, Lightning,<br/>Mist, Moon, Nature, Night, Rain,<br/>Rainbows, Seasons, Sky, Stars, Storms,<br/>Sun, Thunder, Twilight, Weather, Wind||
+|-
+|Representation||Freedom||
+|-
+|rowspan=3|Paved indoor areas||Representation||Fortresses||Caverns
+|-
+|Experience|| ||Earth, Plants
+|-
+|Antithetical|| ||Nature, Trees
+|-
+|rowspan=3|Paved outdoor area||Representation||Fortresses||
+|-
+|Experience|| || Earth, Plants
+|-
+|Antithetical|| ||Nature, Trees
+|-
+|Pillars on the perimeter||Representation||Boundaries, Fortresses||
+|-
+|rowspan=2|Square of pillars||Representation||Balance, Discipline, Laws, Order||
+|-
+|Antithetical|| ||Chaos, Deformity
+|-
+|Stagnant pool||Experience||Disease, Muck||
+|-
+|Uneven pillars||Representation||Chaos, Deformity||
+|-
+|rowspan=2|Upper floors||Representation||Fortresses, Mountains||
+|-
+|Experience||Dawn, Day, Dusk, Lightning, Moon,<br/>Rainbows, Sky, Stars, Storms, Sun,<br/>Thunder, Weather, Wind||
+|-
+|rowspan=3|Water pool||Representation||Coasts, Lakes, Oceans, Rivers||
+|-
+|Experience||Water||
+|-
+|Reminder||Fish, Fishing||
+|}
+
+=== Shrines ===
+
+Before a temple is built in a site, there will be shrines dedicated to a given religion, consisting of a small garden, a [[statue]], and either a [[pedestal]] or an [[altar]]. If the religion has a divination tradition, divination [[dice]] can be found in these shrines. '''(Not to be confused with the lairs of [[titan]]s, also called [[Shrine (megabeast)|shrine]]s.)'''
+[[File:Df town shrines.png|thumb|800px|center|A selection of shrines in a town in adventure mode, from left to right: a shrine in a townplot, a shrine with a garden, a statue at crossroads and a shrine with dice.]]
+
+=== Razing ===
+Occasionally during worldgen, a site government may choose to raze an old temple, and build a new one in its stead. The ruins of the old temple, as well as any catacombs it was connected to, will still be explorable in adventure mode.  Interestingly, the construction of the new temple will always coincide with the formation of a new religious order to utilize it - the order belonging to the old temple will remain on the site, but will move their offices to the keep. Due to this, leaders of "archaic" orders are often found in the keep.
+
+{{Translation
+| dwarven = rath
+| elvish  = fothi
+| goblin  = spôgmuk
+| human   = olum
+}}
+
+{{world}}
+{{Category|Locations}}
+{{Category|Adventurer mode}}
+{{Category|Religion}}

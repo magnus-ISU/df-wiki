@@ -1,0 +1,1523 @@
+{{Quality|Exceptional}}{{av}}
+:''(For an overview of graphics in DF, see [[Graphics|Graphics]])''
+:''(For a chart with the default ASCII characters, see [[Main:Character table|Character table]].)''
+:''(For user-created creature tilesets, see [[Main:Tileset repository|Tileset repository]].)''
+:''(For information about Graphic sets, see [[Graphic set|Graphic set]])''
+:''(For information on how tilesets get colored, see [[Color]])''
+----
+
+'''Tilesets''' are images the game uses to display its graphics; each tile is used to show text and represent things. Users create custom tilesets for a number of reasons, including increased visibility, aesthetics, or small size. Tilesets come in two flavors: "'''character sets'''" (or simply "tilesets") and "'''graphics sets'''". This article is only about tilesets.
+
+== Overview ==
+
+A character set (or 'tileset') is an image in BMP or PNG format that contains the 256 different tiles (numbered 0-255), corresponding to the [[Main:Character table|IBM Code Page 437]] (sometimes called Extended ASCII), which are used to display all graphics. The tiles are always arranged in a 16x16 grid, but its dimensions can be varied. You can have both square and non-square tiles, with 16x16 pixels being the most common size. 
+
+As the tileset is limited to only 256 tiles, some objects share the same tile. Some of those can be changed in the raws and init files, and creatures can have separate graphics, but in most cases they are hardcoded. Below is a detailed list.
+
+== Installation and creation of custom tilesets ==
+=== Installation ===
+[[Main:Tileset repository|Here is the list]] of user-made standard tilesets. To install any of these tilesets, follow these steps:
+
+# Download the tileset via right-click-save-as on the tileset.  The tileset is just an image, so there's no separate download link. (The list is [[Main:Tileset repository|here]])
+# Verify that the tileset is a 24-bit BMP file<sup>V0.28.181.40d</sup> with magenta-colored background or 24-bit PNG file<sup>v0.31.06</sup> with transparent background. In case you need to convert it, do NOT just change the extension to .bmp or .png; you must use a program like MS paint to save it properly.
+# Put it in the data/art directory of your ''Dwarf Fortress'' installation.
+# Open data/init/init.txt
+# There are 4 values you can change: [FULLFONT], [FONT], [GRAPHICS_FONT], and [GRAPHICS_FULLFONT]*. Usually you just set all 4 to the same filename of the tileset you just downloaded ('''[FONT:mytileset.png]''' for example).
+# [FULLSCREENX:800] and [FULLSCREENY:600] set your resolution, but it is recommended to let the game decide that automatically by setting it to 0; Similarly, [WINDOWEDX:800] and [WINDOWEDY:600] denote your windowed resolution in pixels (but in tiles if set below a value of 256).
+# It is also recommended you keep [BLACK_SPACE:YES] to prevent stretching of the graphics.
+# Save the .txt file, then you're ready to play!
+
+<small>*They're used for the tileset used in fullscreen and windowed mode and the two GRAPHICS_ values are for tilesets used together with [[graphic_set]]s when [GRAPHICS] is set to YES. You can set them to different file names, if you want to use different tilesets for each.</small>
+
+=== Creating a custom tileset ===
+The default (and minimum) gameplay viewport is 80 characters wide, and 25 characters tall. Therefore, a tileset's target resolution will be TILE_X_LENGTH * 80 by TILE_Y_LENGTH * 25. Since the tileset is arranged into a 16x16 grid of tiles (256 tiles total), the tileset image size will be TILE_X_LENGTH * 16 by TILE_Y_LENGTH * 16. Here are some common tile sizes:
+
+* A tileset with 10x12 tiles will be 160x192 pixels large, and the target resolution will be 800x300.
+* A tileset with 16x16 tiles will be 256x256 pixels large, and the target resolution will be 1280x400.
+
+When creating a custom tileset, it's often easiest to start with an existing one, and edit it to your liking. Tilesets generally fall into two categories: rectangular tilesets and square tilesets. Rectangular tilesets have tiles that are taller than they are wide. The text in these tilesets is generally easier to read, but the map appears squished horizontally. Square tilesets usually provide more attractive graphics, but are slightly less readable. The graphics in Dwarf Fortress can be enhanced through the use of [[graphics set|creature graphics]], which allow creatures to have unique graphics without using up space on the main tilesheet. Mifki created a [http://mifki.com/df/fontgen/ tool] to make a tileset from any font, which can be used as starting point or as is.{{cite forum|140250}}
+
+Many tiles are used by the game in multiple ways, and this makes customizing the graphics difficult. The same icon is used for chairs and the north end of one-tile-wide vertical bridges. Ashes and broken arrows look the same, and many game entities (such as levers, floodgates, bags, and bins) share characters that are also used in Dwarven names or other bits of text in the interface.
+
+Some of these issues can be fixed by the third-party [[Text Will Be Text]] (TWBT) plugin for the [[DFHack]] modding API. In addition to many other features, TWBT allows many items and building tiles to be moved to separate "overrides" tilesheets, so that fewer objects need to share tiles. TWBT also allows the use of a dedicated tilesheet just for text. TWBT still might not be very stable in adventure mode, though, so be cautious when using TWBT with adventure mode.
+
+=== Generating a custom tileset from a font in Linux ===
+
+While TrueType fonts can be used directly in ''Dwarf Fortress'', it may be desirable to generate a tileset image instead (for example, when using TWBT). In Linux, it is possible to do this programmatically in the terminal. The following command will open a terminal window with your desired font, rendered appropriately for ''Dwarf Fortress'', and screenshots it. It requires xterm, the screenshot utility xwd, and a text file containing the code page 437 characters in the appropriate order.
+
+<pre>xterm -fa "FONTFAMILY:pixelsize:SIZE:antialias=false" -bg magenta -geometry 16x16 -e "setterm -cursor off && printf '%s' \"\$(<PATH/TO/CODE437.txt)\" && sleep 0.1 && xwd -id \$WINDOWID | xwdtopnm | pnmtopng > \"FONTFAMILY-SIZE.png\""</pre>
+
+This will generate an image in your current directory, so it might be a good idea to cd into your /data/art directory beforehand.
+
+'''This works ''much'' better for bitmap fonts, in their native size.''' For a list of such fonts on your system and their sizes, you can run 
+
+<pre>fc-list :scalable=false:spacing=mono family pixelsize</pre>
+
+<!--=== How colors other than white and magenta work ===
+
+When the game draws a tile, it will select a foreground color, a background color, and a tile based on the item being drawn.  The background color will be used in place of magenta (Hex code #FF00FF or RGB 255 0 255).  All other colors in the tile will be treated as a mask against the foreground color.  Pure white (#FFFFFF) will always show the foreground color, while light grey (#CCCCCC) will be a slightly darker version of the foreground color, and dark grey (#888888) will be a dark version of the foreground color.  Black (#000000) will always be black.  It is impossible to use different shades of the background color.
+
+As of the current version of the game (v0.43.04), alpha values are supported in png fonts, allowing for better transparency, and partial transparency, enabling anti-aliased tilesets and other interesting tricks.
+
+In general, just remember these rules:
+
+* Bright magenta (#FF00FF) is the background.
+* Bright white (#FFFFFF) is the foreground.
+* Darker shades of white and grey (#C0C0C0, #808080, etc) will display darker shades of the foreground color.  It is possible to use any shade of grey, including ones like #333333 and #C2C2C2.
+* Black (#000000) will always be black.
+* It's probably best to avoid color in normal tilesets.
+
+For an example, the game is drawing an exposed turquoise cluster with color <span style="color:#00F;">bright blue</span> (#0000FF).  While loading the tile image, it encounters the color <span style="color:#CCC;">light grey</span> (#CCCCCC).  The color used in its place will be:
+
+{| style="margin-bottom:20px; text-align:left; width:90%"
+|-
+! Color component || Foreground color || Color mask from tile || Calculation in hex || Calculation in decimal
+|-
+| Red   || #<span style="color:#F00;">00</span>00FF || #<span style="color:#F00;">CC</span>CCCC || <span style="color:#F00;">00</span><sub>16</sub> * <span style="color:#F00;">CC</span><sub>16</sub> / 100<sub>16</sub> = <span style="color:#900;">00</span><sub>16</sub> || <span style="color:#F00;">0</span> * <span style="color:#F00;">204</span> / 256 = <span style="color:#900;">0</span>
+|-
+| Green || #00<span style="color:#0F0;">00</span>FF || #CC<span style="color:#0F0;">CC</span>CC ||<span style="color:#0F0;">00</span><sub>16</sub> * <span style="color:#0F0;">CC</span><sub>16</sub> / 100<sub>16</sub> = <span style="color:#090;">00</span><sub>16</sub> || <span style="color:#0F0;">0</span> * <span style="color:#0F0;">204</span> / 256 = <span style="color:#090;">0</span>
+|-
+| Blue  || #0000<span style="color:#00F">FF</span>  || #CCCC<span style="color:#00F;">CC</span> || <span style="color:#00F;">FF</span><sub>16</sub> * <span style="color:#00F;">CC</span><sub>16</sub> / 100<sub>16</sub> = <span style="color:#009;">CB</span><sub>16</sub> || <span style="color:#00F;">255</span> * <span style="color:#00F;">204</span> / 256 = <span style="color:#009;">203</span>
+|-
+| <span style="color:#0000CB">Final Color</span> || || || #<span style="color:#900;">00</span><span style="color:#090;">00</span><span style="color:#009;">CB</span> || <span style="color:#900;">0</span> <span style="color:#090;">0</span> <span style="color:#009;">203</span>
+|}
+
+Color masks with unequal amounts of R, G and B are calculated in the same fashion.  The game is now drawing a speardwarf with color <span style="color:#C0C000;">brown</span> (#C0C000).  It encounters the color <span style="color:#008080;">cyan</span> while loading the tile (#008080).  The color used instead of cyan will be:
+
+{| style="margin-bottom:20px; text-align:left; width:90%"
+|-
+! Color component || Foreground color || Color mask from tile || Calculation in hex || Calculation in decimal
+|-
+| Red   || #<span style="color:#F00;">C0</span>C000 || #<span style="color:#F00;">00</span>8080 || <span style="color:#F00;">C0</span><sub>16</sub> * <span style="color:#F00;">00</span><sub>16</sub> / 100<sub>16</sub> = <span style="color:#900;">00</span><sub>16</sub> || <span style="color:#F00;">192</span> * <span style="color:#F00;">0</span> / 256 = <span style="color:#900;">0</span>
+|-
+| Green || #C0<span style="color:#0F0;">C0</span>00 || #00<span style="color:#0F0;">80</span>80 ||<span style="color:#0F0;">C0</span><sub>16</sub> * <span style="color:#0F0;">80</span><sub>16</sub> / 100<sub>16</sub> = <span style="color:#090;">60</span><sub>16</sub> || <span style="color:#0F0;">192</span> * <span style="color:#0F0;">128</span> / 256 = <span style="color:#090;">96</span>
+|-
+| Blue  || #C0C0<span style="color:#00F">00</span>  || #0080<span style="color:#00F;">80</span> || <span style="color:#00F;">00</span><sub>16</sub> * <span style="color:#00F;">80</span><sub>16</sub> / 100<sub>16</sub> = <span style="color:#009;">00</span><sub>16</sub> || <span style="color:#00F;">0</span> * <span style="color:#00F;">128</span> / 256 = <span style="color:#009;">0</span>
+|-
+| <span style="color:#006000">Final Color</span> || || || #<span style="color:#900;">00</span><span style="color:#090;">60</span><span style="color:#009;">00</span> || <span style="color:#900;">0</span> <span style="color:#090;">96</span> <span style="color:#009;">0</span>
+|}
+
+As illustrated by this example, colors in the tileset can result in colors that aren't in the foreground color or the tile graphic.  In this case, a brown foreground color with a cyan pixel color in the tileset results in a final color of green.
+
+Theoretically, the way the game handles color masks could be used to display different graphics for items that use the same tile (but whose respective colors use different color component channels).  For example, if a bright red object and a bright blue object use the same tile, the tile can use bright red for all pixels that only the red object uses, bright blue for all pixels only the blue object uses, and bright magenta (but NOT #FF00FF, it would have to be #FE00FE or something similar) for all pixels both objects use.  In this fashion the two objects that share a tile would look completely different.  In practice however, this is probably impossible because so many objects share the same tile, the chances of the potential foreground colors sharing a red, green, or blue color component are too great.-->
+
+== What tiles are used for what ==
+
+* Items marked with * can have their tile changed in the [[modding|raw data]] files.
+* Items marked with <sup>#</sup> can have their tile replaced by a [[graphic set]] image, in addition to having their tile changed in the raw data.
+* Items marked with <sup>$</sup> can be changed in the [[d_init.txt]] file.
+* Items marked with <sup>¢</sup> use dual colors.
+* Items marked with <sup>÷</sup> use inverted tile
+
+For a graphical table, go to the [[Main:Character Table|Character Table]].
+
+====Row 01 (000-015)====
+{|
+|-
+|<small>000</small>&nbsp;{{TST|&nbsp;}}
+| Used for background tiles in the intro CMV and background tiles of interface screens
+|-
+|<small>001</small> {{TST|☺}}
+| Civilian dwarves<sup>#</sup>, [[Status icon|various status indicators]]
+|-
+|<small>002</small> {{TST|☻}}
+| [[Military]] dwarves<sup>#</sup>
+|-
+|<small>003</small> {{TST|♥}}
+| [[Dimple cup]]s*
+|-
+|<small>004</small> {{TST|♦}}
+| [[gem|Cut gem]]s, large [[gem]]s
+|-
+|<small>005</small> {{TST|♣}}
+| [[Quarry bush]] leaves*, blossoms*, [[Tilesets#Trees_on_map|various forest trees]]*
+|-
+|<small>006</small> {{TST|♠}}
+| [[Forest|Broadleaf forest]], [[Tilesets#Trees_on_map|various forest trees]]*, various leaf items*, [[Plump helmet]]s*
+|-
+|<small>007</small> {{TST|•}}
+| Mined-out [[stone]]*, solid [[workshop]] tile for several workshops like the [[magma smelter]], filled [[nest box]] building, [[river]] sources on world map, [[cave]]s on world map, [[lair]]s on world map, moon on travel map, flower buds*
+|-
+|<small>008</small> {{TST|◘}}
+| Solid workshop tile for several other workshops like the [[magma forge]], [[tanner's shop]], [[catapult]] cup, [[nest box]] tool*, empty [[nest box]] building, [[codex|codices]], [[die|dice]]
+|-
+|<small>009</small> {{TST|○}}
+| [[Well]], [[vermin]] colony, [[millstone]], [[quern]], vertical [[axle]], fortress walls on travel map, sun behind clouds on travel map, [[castle]]s on world map, [[monastery|monasteries]] on world map, [[creeping eye]] out of view (adventure mode)*, [[staring eyeball]]*, [[bubble bulb]]*
+|-
+|<small>010</small> {{TST|◙}}
+| trunk interior<sup>$</sup>, [[fort|forts]] on world map
+|-
+|<small>011</small> {{TST|♂}}
+| [[Gender|Male]] sign, [[bag]]s, [[Tilesets#Creatures|various cephalopods]]<sup>#</sup>
+|-
+|<small>012</small> {{TST|♀}}
+| [[Gender|Female]] sign, [[Finished goods#Crafts|amulet]]
+|-
+|<small>013</small> {{TST|♪}}
+| [[Tool|Ladle]]s*, [[dancer]]s dancing
+|-
+|<small>014</small> {{TST|♫}}
+| [[Armor stand]]s, playing [[instrument]]s
+|-
+|<small>015</small> {{TST|☼}}
+| Masterpiece [[Item quality|quality]] tags, unmined [[Gem|gem]] cluster*, Rough [[Gem|gem]]s and Raw [[Glass|glass]], unmined [[bituminous coal]]*, mined [[bituminous coal]]*, [[currency]] symbol, spider [[web]]s, [[pond turtle]]*, sun, [[gear assembly|gear assemblies]], paralyzed [[Status icon|indicator]], fireballs, bandit camps on travel map, towns on world map, night creature senses, artifact gem [[door]]s<sup>¢</sup>
+|-
+|}
+
+====Row 02 (016-031)====
+{|
+|-
+|<small>016</small> {{TST|►}}
+| Head of [[Ballista arrow]] facing east, [[manta ray]]<sup>#</sup>
+|-
+|<small>017</small> {{TST|◄}}
+| Head of [[Ballista arrow]] facing west
+|-
+|<small>018</small> {{TST|↕}}
+|
+|-
+|<small>019</small> {{TST|‼}}
+| [[Cage]]s<sup>¢</sup>, on-[[fire]] tags, vertical [[bars]]
+|-
+|<small>020</small> {{TST|¶}}
+| [[Finished_goods#Goblets|Mug]]s, [http://www.bay12forums.com/smf/index.php?topic=161047.msg7660465#msg7660465 drinking] in-progress, largest forest retreats, cumulonimbus clouds on travel map, [[Highwood]] forests*
+|-
+|<small>021</small> {{TST|§}}
+| [[Restraint]]s, [[whip vine]]*
+|-
+|<small>022</small> {{TST|&#x25AC;}}
+| [[Log]]s, [[hive]] tool*, [[hive]] building
+|-
+|<small>023</small> {{TST|↨}}
+| [[Cedar]] forest*
+|-
+|<small>024</small> {{TST|↑}}
+| Interface text ([[bridge]] direction), conifer forests, [[Tilesets#Trees_on_map|various forest trees]]*
+|-
+|<small>025</small> {{TST|↓}}
+| Interface text (bridge direction), [[Status icon|Various status indicators]]
+|-
+|<small>026</small> {{TST|→}}
+| Interface text (bridge direction)
+|-
+|<small>027</small> {{TST|←}}
+| Interface text (bridge direction)
+|-
+|<small>028</small> {{TST|∟}}
+|
+|-
+|<small>029</small> {{TST|↔}}
+|
+|-
+|<small>030</small> {{TST|▲}}
+| Head of [[Ballista arrow]] facing north, [[ramp]], [[Minecart|track]] ramp up<sup>$</sup>, mountain on world map
+|-
+|<small>031</small> {{TST|▼}}
+| Head of [[Ballista arrow]] facing south, [[ramp]] on level below, [[Minecart|track]]ramp on level below<sup>$</sup>
+|-
+|}
+
+====Row 03 (032-047)====
+{|
+|-
+|<small>032</small>&nbsp;{{TST|&nbsp;}}
+| Spaces in text messages, Unexplored underground, black background on the title screen and interface menu
+|-
+|<small>033</small> {{TST|!}}
+| Text, [[Status icon|various status icons]], sound indicator in sneaking mode, tracks (footprints) in sneaking mode
+|-
+|<small>034</small> {{TST|"}}
+| Text, [[shrub]]*, [[Status icon|various status icons]], quotation marks, Carpenter's workshop tile, [[kobold]] out of view*, [[goblin]] out of view*, [[blizzard man]] out of view*, tracks (bent vegetation) in sneaking mode, [[Tilesets#Stones|various stones]]*, savanna, swamp, shrubland, marsh
+|-
+|<small>035</small> {{TST|#}}
+| Text, [[Grate#Floor_Grate|floor grates]], [[Tilesets#Stones|various stones]]*, smoothed branches in elven forest retreats, labyrinths on travel map, towns on world map
+|-
+|<small>036</small> {{TST|$}}
+| [[Coin]]s
+|-
+|<small>037</small> {{TST|%}}
+| [[Prepared meal]], unexplored underground, [[screw pump]] in action, footprints in sneaking mode, various fruits*,  various buds*, [[Tilesets#Stones|various stones]]*, [[Bismuthinite]]*, [[Floating guts]]<sup>#</sup>
+|-
+|<small>038</small> {{TST|&}}
+| [[Demon]]s<sup>#</sup>
+|-
+|<small>039</small> {{TST|&#39;}}
+| Text, rough [[floor]]s, unexplored underground, [[Tilesets#Stones|various stones]], one eyed creatures with GLOWTILE " (kobold, goblins, and blizzard in vanilla), various [[grass|grasses]]*
+|-
+|style="white-space:nowrap"|<small>040</small> {{TST|(}}
+| Text, foreign object opening tag, tile in [[bowyer's workshop]], waning moon on travel map
+|-
+|<small>041</small> {{TST|)}}
+| Text, foreign object closing tag, waxing moon on travel map
+|-
+|<small>042</small> {{TST|*}}
+| Interface text, superior [[Item quality|quality]] tags, Unmined [[ore]]*, [[Hell|glowing pits]], key reference, working [[gear assembly]], [[gem]] [[floodgate]], [[Tilesets#Stones|various stones]]*, chestnut fruit*, other fruits and flowers*, moving armies on quick travel map, towns on world map
+|-
+|<small>043</small> {{TST|+}}
+| Text, finely-crafted [[Item quality|quality]] tags, Smooth/constructed [[floor]]s, [[block]]/[[bar]] [[bridge]] or [[road]], [[Bauxite]]*, [[wound|injury]] [[Status icon|indicator]], towns on world map, mining designation
+|-
+|<small>044</small> {{TST|,}}
+| Text, rough [[floor]]s, [[Claystone]]*, unexplored underground, various [[grass|grasses]]*
+|-
+|<small>045</small> {{TST|-}}
+| Text, well-crafted [[Item quality|quality]] tags, [[Finished_goods#Crafts|Scepters]], keyboard reference, [[Tilesets#Stones|various stones]]*, [[Status icon|overlapping creatures animation]]
+|-
+|<small>046</small> {{TST|.}}
+| Text, rough [[floor]]s, [[Tilesets#Stones|various stones]]*, unexplored underground, various [[grass|grasses]]*
+|-
+|<small>047</small> {{TST|/}}
+| Text, [[weapon]]s, [[bolt]]s, [[Ballista]] tile, [[Tool|Pestle]], [[Status icon|overlapping creatures animation]], [[Tool#Tools_Usable_as_Weapons|stone axe]]{{version|0.43.01}}, active [[Windmill|windmill]] blade
+|-
+|}
+
+====Row 04 (048-063)====
+{|
+|-
+|<small>048</small> {{TST|0}}
+| Text, [[coffin]]s, tombs on world map
+|-
+|<small>049</small> {{TST|1}}
+| Text, designation priorities, adventurer mode conversation targets, fluids if [[Technical_tricks#Tiles|SHOW_FLOW_AMOUNTS]] is YES in d_init.txt
+|-
+|<small>050</small> {{TST|2}}
+| Text, designation priorities, adventurer mode conversation targets, fluids if SHOW_FLOW_AMOUNTS is YES in d_init.txt
+|-
+|<small>051</small> {{TST|3}}
+| Text, designation priorities, adventurer mode conversation targets, fluids if SHOW_FLOW_AMOUNTS is YES in d_init.txt
+|-
+|<small>052</small> {{TST|4}}
+| Text, designation priorities, adventurer mode conversation targets, fluids if SHOW_FLOW_AMOUNTS is YES in d_init.txt
+|-
+|<small>053</small> {{TST|5}}
+| Text, designation priorities, adventurer mode conversation targets, fluids if SHOW_FLOW_AMOUNTS is YES in d_init.txt
+|-
+|<small>054</small> {{TST|6}}
+| Text, designation priorities, adventurer mode conversation targets, fluids if SHOW_FLOW_AMOUNTS is YES in d_init.txt
+|-
+|<small>055</small> {{TST|7}}
+| Text, designation priorities, adventurer mode conversation targets, fluids if SHOW_FLOW_AMOUNTS is YES in d_init.txt
+|-
+|<small>056</small> {{TST|8}}
+| Text, Fortress gates on travel map
+|-
+|<small>057</small> {{TST|9}}
+| Text
+|-
+|<small>058</small> {{TST|:}}
+| Interface text, [[strawberry]]*, [[prickle berry]]*, [[fisher berry]]*, [[sun berry]]*, snowstorms, underground shrubs*
+|-
+|<small>059</small> {{TST|;}}
+| Interface text (command menu [[CMV|Movies]] key), [[Mason's workshop]], [[Kitchen]], [[Selenite]]*, twigs<sup>$</sup>
+|-
+|<small>060</small> {{TST|<}}
+| Interface text (trading screen "Less than 1 unit weight"), brackets around squad names, [[Stairs]] up, west move indicator (adventure mode)
+|-
+|<small>061</small> {{TST|&#61;}}
+| Empty [[Stockpile]]s, hamlets on world map, [[Tilesets#Stones|various stones]]*, middle-left tile of [[Furnace|Furnaces]], up-right tile of [[Carpenter's workshop]]
+|-
+|<small>062</small> {{TST|>}}
+| Brackets around squad names, [[Stairs]] down, east move indicator (adventure mode)
+|-
+|<small>063</small> {{TST|?}}
+| Text, [[Status icon|various status icons]]
+|-
+|}
+
+====Row 05 (064-079)====
+{|
+|-
+|<small>064</small>&nbsp;{{TST|@}}
+| berserk dwarf<sup>#</sup>, adventurer<sup>#</sup>, dwarven [[merchant]]s<sup>#</sup>, dwarven [[caravan]] guards<sup>#</sup>, dwarven [[diplomat]]<sup>#</sup>, adventurer's location on map
+|-
+|<small>065</small>&nbsp;{{TST|A}}
+| Text, [[Tilesets#Creatures|various creatures]]<sup>#</sup>, Tile in Farm Workshop
+|-
+|<small>066</small>&nbsp;{{TST|B}}
+| Text, [[Tilesets#Creatures|various creatures]]<sup>#</sup>
+|-
+|<small>067</small>&nbsp;{{TST|C}}
+| Text, [[Tilesets#Creatures|various creatures]]<sup>#</sup>, construction designations
+|-
+|<small>068</small>&nbsp;{{TST|D}}
+| Text, [[Tilesets#Creatures|various creatures]]<sup>#</sup>, Depot Access Display
+|-
+|<small>069</small>&nbsp;{{TST|E}}
+| Text, [[Tilesets#Creatures|various creatures]]<sup>#</sup>
+|-
+|<small>070</small>&nbsp;{{TST|F}}
+| Text, [[Tilesets#Creatures|various creatures]]<sup>#</sup>
+|-
+|<small>071</small>&nbsp;{{TST|G}}
+| Text, [[Tilesets#Creatures|various creatures]]<sup>#</sup>
+|-
+|<small>072</small>&nbsp;{{TST|H}}
+| Text, [[Tilesets#Creatures|various creatures]]<sup>#</sup>, high traffic designation
+|-
+|<small>073</small>&nbsp;{{TST|I}}
+| Text, [[Tilesets#Creatures|various creatures]]<sup>#</sup>, [[support]], [[Tower (necromancy)|Necromancer's tower]] on world map
+|-
+|<small>074</small>&nbsp;{{TST|J}}
+| Text, [[Tilesets#Creatures|various creatures]]<sup>#</sup>
+|-
+|<small>075</small>&nbsp;{{TST|K}}
+| Text, [[Tilesets#Creatures|various creatures]]<sup>#</sup>
+|-
+|<small>076</small>&nbsp;{{TST|L}}
+| Text, [[Tilesets#Creatures|various creatures]]<sup>#</sup>, low traffic designation
+|-
+|<small>077</small>&nbsp;{{TST|M}}
+| Text, [[Tilesets#Creatures|various creatures]]<sup>#</sup>
+|-
+|<small>078</small>&nbsp;{{TST|N}}
+| Text, [[Tilesets#Creatures|various creatures]]<sup>#</sup>
+|-
+|<small>079</small>&nbsp;{{TST|O}}
+| Text, [[Tilesets#Creatures|various creatures]]<sup>#</sup>, [[trade depot]] post, glass portal, Tile in Farm Workshop, column<sup>$</sup>, wall construction, full moon on travel map and dwarf mode, trunk<sup>$</sup>, [[staring eyeball]]*, [[bubble bulb]]*, [[Windmill|windmill]] hub
+|-
+|}
+
+====Row 06 (080-095)====
+{|
+|-
+|<small>080</small>&nbsp;{{TST|P}}
+| Text, [[Tilesets#Creatures|various creatures]]<sup>#</sup>
+|-
+|<small>081</small>&nbsp;{{TST|Q}}
+| Text
+|-
+|<small>082</small>&nbsp;{{TST|R}}
+| Text, [[Tilesets#Creatures|various creatures]]<sup>#</sup>, restricted traffic designation
+|-
+|<small>083</small>&nbsp;{{TST|S}}
+| Text, [[Tilesets#Creatures|various creatures]]<sup>#</sup>
+|-
+|<small>084</small>&nbsp;{{TST|T}}
+| Text, [[Tilesets#Creatures|various creatures]]<sup>#</sup>
+|-
+|<small>085</small>&nbsp;{{TST|U}}
+| Text, [[Tilesets#Creatures|various creatures]]<sup>#</sup>
+|-
+|<small>086</small>&nbsp;{{TST|V}}
+| Text, Badlands on map
+|-
+|<small>087</small>&nbsp;{{TST|W}}
+| Text, [[Tilesets#Creatures|various creatures]]<sup>#</sup>, Depot Access Display
+|-
+|<small>088</small>&nbsp;{{TST|X}}
+| Text, [[wear]] tags, keyboard cursor, [[Bin]]<sup>¢</sup>, [[floodgate]]<sup>¢</sup>, shop post, building footprint, Depot Access Display, up/down stairs, Tile in Ashery, [[Archery target]], [[Status icon|various status indicators]]
+|-
+|<small>089</small>&nbsp;{{TST|Y}}
+| Text, [[Yak]]<sup>#</sup>, [[Yeti]]<sup>#</sup>
+|-
+|<small>090</small>&nbsp;{{TST|Z}}
+| Text, Sleep [[Status icon|indicator]]
+|-
+|<small>091</small>&nbsp;{{TST|[}}
+| Text, Floor tile in [[workshop]]s, [[Clothing]], [[armor]], item stack opening tag, moon on travel map, tracks (bootprints) in sneaking mode
+|-
+|<small>092</small>&nbsp;{{TST|\}}
+| [[Status icon|Overlapping creatures animation]], [[Ballista]] tile, [[Tool#Other_Tools|helves]]*{{version|0.43.01}}, active [[Windmill|windmill]] blade
+|-
+|<small>093</small>&nbsp;{{TST|]}}
+| Text, Floor tile in [[workshop]]s and [[furnace]]s, item stack closing tag
+|-
+|<small>094</small>&nbsp;{{TST|^}}
+| [[Trap]], [[Alabaster]]*, [[Aluminum]]*, [[Volcano]] on world map, north move indicator (adventure mode), Mechanic Workshop center-south tile (in light cyan)
+|-
+|<small>095</small>&nbsp;{{TST|_}}
+| Text, [[Channel]] [[designation]]
+|-
+|}
+
+====Row 07 (096-111)====
+{|
+|-
+| <small>096</small>&nbsp;{{TST|`}}
+| Rough floors, unexplored underground*, [[Tilesets#Stones|various stones]]*, various [[grass|grasses]]*
+|-
+| <small>097</small>&nbsp;{{TST|a}}
+| Text, [[Tilesets#Creatures|various creatures]]<sup>#</sup>
+|-
+| <small>098</small>&nbsp;{{TST|b}}
+| Text, [[Tilesets#Creatures|various creatures]]<sup>#</sup>
+|-
+| <small>099</small>&nbsp;{{TST|c}}
+| Text, [[Tilesets#Creatures|various creatures]]<sup>#</sup>
+|-
+|<small>100</small>&nbsp;{{TST|d}}
+| Text, [[Tilesets#Creatures|various creatures]]<sup>#</sup>
+|-
+|<small>101</small>&nbsp;{{TST|e}}
+| Text, [[Tilesets#Creatures|various creatures]]<sup>#</sup>
+|-
+|<small>102</small>&nbsp;{{TST|f}}
+| Text, [[Tilesets#Creatures|various creatures]]<sup>#</sup>
+|-
+|<small>103</small>&nbsp;{{TST|g}}
+| Text, [[Tilesets#Creatures|various creatures]]<sup>#</sup>
+|-
+|<small>104</small>&nbsp;{{TST|h}}
+| Text, [[Tilesets#Creatures|various creatures]]<sup>#</sup>
+|-
+|<small>105</small>&nbsp;{{TST|i}}
+| Text, [[Tilesets#Creatures|various creatures]]<sup>#</sup>
+|-
+|<small>106</small>&nbsp;{{TST|j}}
+| Text, [[Tilesets#Creatures|various creatures]]<sup>#</sup>
+|-
+|<small>107</small>&nbsp;{{TST|k}}
+| Text, [[Tilesets#Creatures|various creatures]]<sup>#</sup>
+|-
+|<small>108</small>&nbsp;{{TST|l}}
+| Text, [[Tilesets#Creatures|various creatures]]<sup>#</sup>
+|-
+|<small>109</small>&nbsp;{{TST|m}}
+| Text, [[Tilesets#Creatures|various creatures]]<sup>#</sup>
+|-
+|<small>110</small>&nbsp;{{TST|n}}
+| Text, [[Tilesets#Creatures|various creatures]]<sup>#</sup>, [[Hills]] on map
+|-
+|<small>111</small>&nbsp;{{TST|o}}
+| Text, [[Tilesets#Creatures|various creatures]]<sup>#</sup>, [[Graphite]]*, well construction, bridge construction, [[millstone]] in action, vertical axle in action, floor tile in magma [[furnace]]s, [[staring eyeball]]*, [[bubble bulb]]*, [[winter melon]]*, [[watermelon]]*
+|-
+|}
+
+====Row 08 (112-127)====
+{|
+|-
+|<small>112</small> {{TST|p}}
+| Text, [[Tilesets#Creatures|various creatures]]<sup>#</sup>
+|-
+|<small>113</small> {{TST|q}}
+| Text
+|-
+|<small>114</small> {{TST|r}}
+| Text, [[Tilesets#Creatures|various creatures]]<sup>#</sup>
+|-
+|<small>115</small> {{TST|s}}
+| Text, [[Tilesets#Creatures|various creatures]]<sup>#</sup>
+|-
+|<small>116</small> {{TST|t}}
+| Text, [[Tilesets#Creatures|various creatures]]<sup>#</sup>
+|-
+|<small>117</small> {{TST|u}}
+| Text
+|-
+|<small>118</small> {{TST|v}}
+| Text, [[Tilesets#Creatures|various creatures]]<sup>#</sup>, [[Tilesets#Stones|various stones]]*, south move indicator (adventure mode)
+|-
+|<small>119</small> {{TST|w}}
+| Text, [[Tilesets#Creatures|various creatures]]<sup>#</sup>
+|-
+|<small>120</small> {{TST|x}}
+| Text, [[wear]] tags, [[Saltpeter]]*
+|-
+|<small>121</small> {{TST|y}}
+| Text
+|-
+|<small>122</small> {{TST|z}}
+| Text
+|-
+|<small>123</small> {{TST|&#123;}}
+| [[Forbidden]] opening tag, tile in [[Jeweler's workshop]], vermin, [[purring maggot]]<sup>#</sup>
+|-
+|<small>124</small> {{TST|&#124;}}
+| [[Talc]]*, pipe sections, [[Status icon|overlapping creatures animation]]
+|-
+|<small>125</small> {{TST|&#125;}}
+| [[Forbidden]] closing tag, vermin, [[purring maggot]] alternate*
+|-
+|<small>126</small> {{TST|~}}
+| Unfinished rough stone [[road]], flowing [[water]], dirt [[road]], [[Farming|farm plot]] under construction, [[sand]], furrowed soil, [[blood]] smear, guts, [[Tilesets#Creatures|Various creatures]]<sup>#</sup>, [[Magnetite]]*
+|-
+|<small>127</small> {{TST|⌂}}
+| [[Animal trap]], low [[mountain]]s on world map, part of [[mechanic's workshop]], trunk<sup>$</sup>
+|-
+|}
+
+====Row 09 (128-143)====
+{|
+|-
+|<small>128</small> {{TST|Ç}}
+| Text, [[Mechanism]]s
+|-
+|<small>129</small> {{TST|ü}}
+| Text
+|-
+|<small>130</small> {{TST|é}}
+| Text
+|-
+|<small>131</small> {{TST|â}}
+| Text
+|-
+|<small>132</small> {{TST|ä}}
+| Text, [[Angel]]s
+|-
+|<small>133</small> {{TST|à}}
+| Text
+|-
+|<small>134</small> {{TST|å}}
+| Text
+|-
+|<small>135</small> {{TST|ç}}
+| Text, [[Finished_goods#Totems|Totem]]s
+|-
+|<small>136</small> {{TST|ê}}
+| Text
+|-
+|<small>137</small> {{TST|ë}}
+| Text, military elves
+|-
+|<small>138</small> {{TST|è}}
+| Text
+|-
+|<small>139</small> {{TST|ï}}
+| Text, [[Pedestal]]*
+|-
+|<small>140</small> {{TST|î}}
+| Text, Elven forest retreat
+|-
+|<small>141</small> {{TST|ì}}
+| Text
+|-
+|<small>142</small> {{TST|Ä}}
+| Text, [[Angel]]s
+|-
+|<small>143</small> {{TST|Å}}
+| Text, [[Figurine]]s, shrines on travel map
+|-
+|}
+
+====Row 10 (144-159)====
+{|
+|-
+|<small>144</small> {{TST|É}}
+| Text, [[altar]]s
+|-
+|<small>145</small> {{TST|æ}}
+| [[Finished_goods#Toys|Toy]]s, hamlets on world map
+|-
+|<small>146</small> {{TST|Æ}}
+| [[Container#Cabinets_and_.22chests.22|Coffer]]s, [[quiver]]s, [[backpack]]s, hamlets on world map
+|-
+|<small>147</small> {{TST|ô}}
+| Text, [[Tool|Cauldrons]]*
+|-
+|<small>148</small> {{TST|ö}}
+| Text, [[Jewelry|Ring]]s
+|-
+|<small>149</small> {{TST|ò}}
+| Text, Unactivated [[lever]]s, [[Tilesets#Creatures|Various creatures]]<sup>#</sup>
+|-
+|<small>150</small> {{TST|û}}
+| Text, [[Bucket]]s
+|-
+|<small>151</small> {{TST|ù}}
+| Text
+|-
+|<small>152</small> {{TST|ÿ}}
+| Text, [[Valley herb]]*
+|-
+|<small>153</small> {{TST|Ö}}
+| [[Jewelry|Bracelet]]s, [[Wheelbarrow|wheelbarrows]]*
+|-
+|<small>154</small> {{TST|Ü}}
+| Military Humans
+|-
+|<small>155</small> {{TST|¢}}
+| [[Hatch cover]]s<sup>¢</sup>, musical [[instrument]] pieces{{version|0.42.01}}
+|-
+|<small>156</small> {{TST|£}}
+| [[Tilesets#Stones|Various stones]]*, [[Tilesets#Ores|most unmined ores]]*,
+|-
+|<small>157</small> {{TST|¥}}
+| [[Cave lobster]]*
+|-
+|<small>158</small> {{TST|₧}}
+| [[Stepladder]]*, largest forest retreat ruins
+|-
+|<small>159</small> {{TST|ƒ}}
+| [[Rope reed]]*, [[Health_care#Splints|splint]]s, [[arrow bamboo]]*, [[golden bamboo]]*, [[hedge bamboo]]*
+|
+|-
+|}
+
+====Row 11 (160-175)====
+{|
+|-
+|<small>160</small> {{TST|á}}
+| Text
+|-
+|<small>161</small> {{TST|í}}
+| Text
+|-
+|<small>162</small> {{TST|ó}}
+| Text, Activated [[lever]]s
+|-
+|<small>163</small> {{TST|ú}}
+| Text
+|-
+|<small>164</small> {{TST|ñ}}
+| Text, [[Bogeyman]]
+|-
+|<small>165</small> {{TST|Ñ}}
+| [[Night creature]]s
+|-
+|<small>166</small> {{TST|ª}}
+| dark pit ruins
+|-
+|<small>167</small> {{TST|º}}
+| [[Cloth]], [[dark pit]]
+|-
+|<small>168</small> {{TST|¿}}
+| Musical [[Finished_goods#Instruments|Instruments]]
+|-
+|<small>169</small> {{TST|⌐}}
+| Withered [[plant]]s*, [[wormy tendril]]*
+|-
+|<small>170</small> {{TST|¬}}
+| [[wormy tendril]]*
+|-
+|<small>171</small> {{TST|½}}
+|
+|-
+|<small>172</small> {{TST|¼}}
+| [[Roc]] nests, roots<sup>$</sup>, branches<sup>$</sup>
+|-
+|<small>173</small> {{TST|¡}}
+| [[Flask]], [[Flask|waterskin]], [[Container|Pouch]]
+|-
+|<small>174</small> {{TST|«}}
+| Tail of [[Ballista arrow]] facing west, item with [[decoration]] tags
+|-
+|<small>175</small> {{TST|»}}
+| Tail of [[Ballista arrow]] facing east, item with [[decoration]] tags
+|-
+|}
+
+====Row 12 (176-191)====
+{|
+|-
+|<small>176</small>&nbsp;{{TST|░}}
+| Partially dug rock, various flows ([[miasma]], [[cave-in]] dust, [[steam]], smoke, etc.), [[Fishery]], fog on travel map, [[Semi-molten_rock|Semi-molten Rock]], [[Tilesets#Stones|various stones]]*, [[Tilesets#Soil|various soils]]*,  Workshop wall tiles (craftdwarf's, bowyer's, mason's, mechanic's, jeweler's, clothier's, [[kitchen]], and leather works), fallen leaves, vermin swarm
+|-
+|<small>177</small>&nbsp;{{TST|▒}}
+| Partially dug rock, various flows ([[miasma]], [[cave-in]] dust, [[steam]], smoke, etc.), side tiles for catapult, [[window]], fog on travel map, [[Tilesets#Stones|various stones]]*, [[Tilesets#Soil|various kinds of soil]]*, fallen leaves, vermin swarm
+|-
+|<small>178</small>&nbsp;{{TST|▓}}
+| Partially dug rock, various flows ([[miasma]], [[cave-in]] dust, [[steam]], smoke, etc.), floor tile for ice, [[tanner's shop]], [[butcher's shop]], [[Wagon]] body, fog on travel map, [[Tilesets#Stones|various kinds of stones]]*, [[Tilesets#Soil|various kinds of soil]]*, sky<sup>$</sup>, fallen leaves
+|-
+|<small>179</small>&nbsp;{{TST|│}}
+| Overworld [[river]]s, [[well]] [[Restraint|chain/rope]], [[bolt]]s in flight, rotating horizontal [[axle]]s, branches<sup>$</sup>, active EW [[Water_wheel|water wheel]], active [[Windmill|windmill]] blade, upright weapon trap
+|-
+|<small>180</small>&nbsp;{{TST|┤}}
+| Overworld [[river]]s, top-right tile for [[Loom]], branches<sup>$</sup>, [[Glumprong]] forests*
+|-
+|<small>181</small>&nbsp;{{TST|╡}}
+| [[Blood thorn]] trees*, [[bridge]]s, [[catapult]] tile, tracks<sup>$</sup>
+|-
+|<small>182</small>&nbsp;{{TST|╢}}
+| Branches<sup>$</sup>, east [[Roller|roller]]
+|-
+|<small>183</small>&nbsp;{{TST|╖}}
+| Ends of smooth walls
+|-
+|<small>184</small>&nbsp;{{TST|╕}}
+| Ends of smooth walls
+|-
+|<small>185</small>&nbsp;{{TST|╣}}
+| Smooth/constructed walls, tracks<sup>$</sup>, trunk<sup>$</sup>
+|-
+|<small>186</small>&nbsp;{{TST|║}}
+| Smooth/constructed walls, [[bridge]]s, wooden [[door]]s<sup>¢</sup>, center [[catapult]] tile, center [[Ballista]] tile, [[axle]]s, tracks<sup>$</sup>, fortress walls on travel map, trunk<sup>$</sup>, NS [[Water_wheel|water wheel]], [[Windmill|windmill]] blade
+|-
+|<small>187</small>&nbsp;{{TST|╗}}
+| Smooth/constructed walls, bridges, tracks<sup>$</sup>, trunk<sup>$</sup>
+|-
+|<small>188</small>&nbsp;{{TST|╝}}
+| Smooth/constructed walls, bridges, tracks<sup>$</sup>, trunk<sup>$</sup>
+|-
+|<small>189</small>&nbsp;{{TST|╜}}
+| Ends of smooth walls
+|-
+|<small>190</small>&nbsp;{{TST|╛}}
+| Ends of smooth walls
+|-
+|<small>191</small>&nbsp;{{TST|┐}}
+| Overworld [[river]]s, branches<sup>$</sup>, northeast move indicator (adventure mode)
+|-
+|}
+
+====Row 13 (192-207)====
+{|
+|-
+|<small>192</small>&nbsp;{{TST|└}}
+| Overworld rivers/Roads, branches<sup>$</sup>, southwest move indicator (adventure mode)
+|-
+|<small>193</small>&nbsp;{{TST|┴}}
+| Overworld rivers/Roads, branches<sup>$</sup>
+|-
+|<small>194</small>&nbsp;{{TST|┬}}
+| Overworld rivers/Roads, [[crutch]]es, branches<sup>$</sup>
+|-
+|<small>195</small>&nbsp;{{TST|├}}
+| Overworld rivers/Roads, top-left tile for [[Loom]], branches<sup>$</sup>
+|-
+|<small>196</small>&nbsp;{{TST|─}}
+| Overworld rivers/Roads, [[bolt]]s in flight, rotating [[axle]]s, branches<sup>$</sup>, active NS [[Water_wheel|water wheel]], active [[Windmill|windmill]] blade
+|-
+|<small>197</small>&nbsp;{{TST|┼}}
+| [[Door]]s<sup>¢</sup>, overworld rivers/Roads, floor [[Stone detailing|detailing]]/[[engraving]] in progress, branches<sup>$</sup>
+|-
+|<small>198</small>&nbsp;{{TST|╞}}
+| Bridges, trees in winter, (un)dead trees*, [[Saguaro]]*, [[catapult]] tile, tracks<sup>$</sup>, branches<sup>$</sup>
+|-
+|<small>199</small>&nbsp;{{TST|╟}}
+| branches<sup>$</sup>, west [[Roller|roller]]
+|-
+|<small>200</small>&nbsp;{{TST|╚}}
+| Smooth/constructed walls, bridges, tracks<sup>$</sup>, fortress walls on travel map, trunk<sup>$</sup>
+|-
+|<small>201</small>&nbsp;{{TST|╔}}
+| Smooth/constructed walls, bridges, tracks<sup>$</sup>, fortress walls on travel map, trunk<sup>$</sup>
+|-
+|<small>202</small>&nbsp;{{TST|╩}}
+| Smooth/constructed walls, tracks<sup>$</sup>, trunk<sup>$</sup>
+|-
+|<small>203</small>&nbsp;{{TST|╦}}
+| Smooth/constructed walls, tracks<sup>$</sup>, fortress walls on travel map, trunk<sup>$</sup>
+|-
+|<small>204</small>&nbsp;{{TST|╠}}
+| Smooth/constructed walls, tracks<sup>$</sup>, trunk<sup>$</sup>
+|-
+|<small>205</small>&nbsp;{{TST|═}}
+| Smooth/constructed walls, bridges, planted [[crop]]s, center [[catapult]] tile, center [[Ballista]] tile, [[axle]]s, tracks<sup>$</sup>, fortress walls on travel map, trunk<sup>$</sup>, EW [[Water_wheel|water wheel]], [[Windmill|windmill]] blade
+|-
+|<small>206</small>&nbsp;{{TST|╬}}
+| Smooth/constructed walls, bridges, [[fortification]]s, (flashing) wall [[Stone detailing|detailing]]/[[engraving]]/fortifying in progress, tracks<sup>$</sup>, trunk<sup>$</sup>
+|-
+|<small>207</small>&nbsp;{{TST|╧}}
+| Tail of [[Ballista arrow]] facing north, [[screw press]] building, branches<sup>$</sup>, south [[Roller|roller]]
+|-
+|}
+
+====Row 14 (208-223)====
+{|
+|-
+|<small>208</small> {{TST|╨}}
+| Bridges, [[catapult]] tile, tracks<sup>$</sup>
+|-
+|<small>209</small> {{TST|╤}}
+| [[Table]], tail of [[Ballista arrow]] facing south, branches<sup>$</sup>, north [[Roller|roller]]
+|-
+|<small>210</small> {{TST|╥}}
+| [[Chair]]s, bridges, [[catapult]] tile, farmer's workshop bottom-middle tile, tracks<sup>$</sup>
+|-
+|<small>211</small> {{TST|╙}}
+| Ends of smooth walls
+|-
+|<small>212</small> {{TST|╘}}
+| Ends of smooth walls
+|-
+|<small>213</small> {{TST|╒}}
+| Ends of smooth walls
+|-
+|<small>214</small> {{TST|╓}}
+| Ends of smooth walls
+|-
+|<small>215</small> {{TST|╫}}
+| Wooden floodgates, bone floodgates, wall grates
+|-
+|<small>216</small> {{TST|╪}}
+| Door designation
+|-
+|<small>217</small> {{TST|┘}}
+| Overworld [[river]]s, branches<sup>$</sup>, southeast move indicator (adventure mode)
+|-
+|<small>218</small> {{TST|┌}}
+| Overworld rivers, branches<sup>$</sup>, northwest move indicator (adventure mode)
+|-
+|<small>219</small> {{TST|█}}
+| Interface window border, trade depot tile, ice wall and dig-designated tiles, [[Mist]]
+|-
+|<small>220</small> {{TST|▄}}
+| [[Ballista]] tile, [[Siege engine]] parts
+|-
+|<small>221</small> {{TST|▌}}
+| [[Ballista]] tile
+|-
+|<small>222</small> {{TST|▐}}
+| [[Ballista]] tile
+|-
+|<small>223</small> {{TST|▀}}
+| [[Ballista]] tile
+|-
+|}
+
+====Row 15 (224-239)====
+{|
+|-
+|<small>224</small>&nbsp;{{TST|α}}
+| Various [[fish]]<sup>#</sup>, top-center [[fishery]] tile, [[meat]], altocumulus clouds on travel map
+|-
+|<small>225</small>&nbsp;{{TST|ß}}
+| [[Leather]], cumulus clouds on travel map
+|-
+|<small>226</small>&nbsp;{{TST|Γ}}
+| [[Weight]] symbol, [[Tilesets#Trees_on_map|various forest trees]], [[forest|tropical forests]]
+|-
+|<small>227</small>&nbsp;{{TST|π}}
+| [[Cabinet]], [[Display case]]s<sup>÷</sup>*, [[goblin|dark fortress]]es
+|-
+|<small>228</small>&nbsp;{{TST|Σ}}
+| [[Trap component]]
+|-
+|<small>229</small>&nbsp;{{TST|σ}}
+| [[Anvil]], metalsmith's and magma forge bottom-middle tile, [[jug]]s*
+|-
+|<small>230</small>&nbsp;{{TST|µ}}
+| [[Finished_goods#Crafts|Crown]], [[ruin]]s on world map, shop signs (adventure mode)
+|-
+|<small>231</small>&nbsp;{{TST|τ}}
+| [[Tree]] sapling*, [[pig tail]]*, [[cave wheat]]*, [[Longland grass]]*, [[rat weed]]*, [[hide root]]*, [[muck root]]*, [[blade weed]]*, [[sliver barb]]*, [[shrubland]], [[arrow bamboo]]*, [[golden bamboo]]*, [[hedge bamboo]]*
+|-
+|<small>232</small>&nbsp;{{TST|Φ}}
+| [[Sweet pod]]*, [[bloated tuber]]*, [[kobold bulb]]*, [[Health_care#Traction_Benches|traction benches]], (Large) [[pot]]s*
+|-
+|<small>233</small>&nbsp;{{TST|Θ}}
+| [[Bed]]s, [[Puddingstone]]*
+|-
+|<small>234</small>&nbsp;{{TST|Ω}}
+| [[Statue]]s, dwarven cities on map, [[sea nettle jellyfish]]*
+|-
+|<small>235</small>&nbsp;{{TST|δ}}
+| [[Finished_goods#Crafts|Earring]]s, [[kennel]] tile
+|-
+|<small>236</small>&nbsp;{{TST|∞}}
+| [[Boulder]], dry [[brook]], middle-right [[butcher's shop]] tile, [[Tilesets#Stones|various stones]]*, sea foam, images of clouds, fortress gates on travel map, [[honeycomb]]*, [[scroll|scrolls]]*{{version|0.42.01}}
+|-
+|<small>237</small>&nbsp;{{TST|φ}}
+| [[Thread]], [[loom]] bottom left tile, farmer's workshop bottom right tile
+|-
+|<small>238</small>&nbsp;{{TST|ε}}
+| [[Bowyer's workshop]] middle-right tile
+|-
+|<small>239</small>&nbsp;{{TST|∩}}
+| [[Hills]] on world map, [[slab]] building
+|-
+|}
+
+====Row 16 (240-255)====
+{|
+|-
+|<small>240</small>&nbsp;{{TST|≡}}
+| [[Bar]]s, exceptional [[Item quality|quality]] tags, [[activity zone]]s, metal [[door]]s<sup>¢</sup>, floor [[bars]], track stops, cirrus clouds on travel map, hamlets on world map, [[quire]]*{{version|0.42.01}}, [[bookcase]]*<sup>÷</sup>{{version|0.42.01}}
+|-
+|<small>241</small>&nbsp;{{TST|±}}
+| Unfinished [[road]]
+|-
+|<small>242</small>&nbsp;{{TST|≥}}
+| Debris (spent ammo, ballista bolts, and catapult stones), [[fire#Origins|ashes]], [[wormy tendril]]*
+|-
+|<small>243</small>&nbsp;{{TST|≤}}
+| Debris (spent ammo, ballista bolts, and catapult stones), [[fire#Origins|ashes]], [[wormy tendril]]*
+|-
+|<small>244</small>&nbsp;{{TST|⌠}}
+| swamps on world map, [[Willow]] forest/swamp*
+|-
+|<small>245</small>&nbsp;{{TST|⌡}}
+| [[sheet]]s{{version|0.42.01}}
+|-
+|<small>246</small>&nbsp;{{TST|÷}}
+| [[Barrel]]<sup>¢</sup>, [[screw pump]], upper left tile of [[still]], center tile of [[ashery]], upper left tile of [[kitchen]], [[scroll rollers]]*{{version|0.42.01}}, [[book binding]]*{{version|0.42.01}}
+|-
+|<small>247</small>&nbsp;{{TST|≈}}
+| Rough stone [[road]] or [[bridge]], [[water]], [[magma]], snow, glob ([[fat]]/[[tallow]]), [[Farming|farm plot]], furrowed soil, [[vomit]], [[blood]] pools, sea foam, sand, [[Tilesets#Stones|various stones]]*
+|-
+|<small>248</small>&nbsp;{{TST|°}}
+| Sea foam, [[egg]]s, [[staring eyeball]]*, [[bubble bulb]]*, [[Tool|Bowl]], [[Tool|Mortar]], dark pits on world map
+|-
+|<small>249</small>&nbsp;{{TST|∙}}
+| [[Vermin]]*, Boulders at lower elevation, trees at lower elevation, tundra on world map, move indicator frame 2 (adventure mode)
+|-
+|<small>250</small>&nbsp;{{TST|·}}
+| [[Seed]]s, micro-vermin, open space, terrain at lower elevation, plants at lower elevation, tundra on world map, move indicator frame 1 (adventure mode)
+|-
+|<small>251</small>&nbsp;{{TST|√}}
+| [[Weapon rack]]s, [[Desert#Badlands|badlands]] in main map, check mark (selecting production materials, confirmed items on manager window)
+|-
+|<small>252</small>&nbsp;{{TST|ⁿ}}
+| [[Savanna]], [[marsh]], [[grassland]], [[Desert#Badlands|badlands]]
+|-
+|<small>253</small>&nbsp;{{TST|²}}
+| Body parts, vermin remains
+|-
+|<small>254</small>&nbsp;{{TST|■}}
+| [[Block]]s, [[minecart]]s*<sup>÷</sup>, [[vault]]s on world map, human houses/shops on travel map, progress bars, move indicator frame 3 (adventure mode)
+|-
+|<small>255</small>&nbsp;{{TST|&nbsp;}}
+|
+|}
+
+== Detailed use list by type ==
+=== Creatures ===
+==== Main creature tiles ====
+This is a list of tiles used by [[creature]]s. In all cases the tile can be changed in the raws, and a graphic can be assigned.
+
+<small>001</small> {{TST|☺}}
+(Civilian) [[dwarves]]
+
+<small>011</small> {{TST|♂}}
+[[Cuttlefish]] [[Nautilus]], [[Squid]]
+
+<small>015</small> {{TST|☼}}
+[[Pond turtle]]
+
+<small>016</small> {{TST|►}}
+[[manta ray]]
+
+<small>037</small> {{TST|%}}
+[[Floating guts]]
+
+<small>042</small> {{TST|*}}
+[[Creepy crawler]]
+
+<small>064</small> {{TST|@}}
+berserk dwarf, adventurer, dwarven [[merchant]]s, dwarven [[caravan]] guards, dwarven [[diplomat]]
+
+<small>065</small> {{TST|A}}
+[[Alligator]], [[Alligator man]], [[Anaconda]], [[Anaconda man]], [[Giant aardvark]], [[Giant adder]], [[Giant albatross]], [[Giant alligator]], [[Giant anaconda]], [[Giant anole]], [[Giant armadillo]], [[Giant axolotl]], [[Giant aye-aye]]
+
+<small>066</small> {{TST|B}}
+[[Beak dog]], [[Black bear]], [[Black bear man]], [[Blind cave bear]], [[Giant badger]], [[Giant barn owl]], [[Giant bat]], [[Giant beaver]], [[Giant beetle]], [[Giant black bear]], [[Giant bluejay]], [[Giant bobcat]], [[Giant bushtit]], [[Giant buzzard]], [[Giant grizzly bear]], [[Giant honey badger]], [[Giant monarch butterfly]], [[Giant polar bear]], [[Giant sloth bear]], [[Giant wild boar]], [[Grizzly bear]], [[Grizzly bear man]], [[Polar bear]], [[Polar bear man]], [[Sloth bear]], [[Sloth bear man]], [[Wild boar]], [[Wild boar man]]
+
+<small>067</small> {{TST|C}}
+[[Bronze colossus]], [[Cave crocodile]], [[Centaur]], [[Chimera]], [[Coelacanth]], [[Cow]], [[Cyclops]], [[Giant capuchin]], [[Giant capybara]], [[Giant cardinal]], [[Giant cassowary]], [[Giant cave swallow]], [[Giant chameleon]], [[Giant cheetah]], [[Giant chinchilla]], [[Giant chipmunk]], [[Giant coati]], [[Giant cockatiel]], [[Giant cougar]], [[Giant coyote]], [[Giant crab]], [[Giant crow]], [[Giant cuttlefish]], [[Giant horseshoe crab]], [[Giant one-humped camel]], [[Giant saltwater crocodile]], [[Giant two-humped camel]], [[Magma crab]], [[One-humped camel]], [[One-humped camel man]], [[Saltwater crocodile]], [[Saltwater crocodile man]], [[Two-humped camel]], [[Two-humped camel man]], [[Voracious cave crawler]]
+
+<small>068</small> {{TST|D}}
+[[Cave dragon]], [[Deer]], [[Donkey]], [[Dragon]], [[Draltha]], [[Giant deer]], [[Giant dingo]], [[Giant dragonfly]]
+
+<small>069</small> {{TST|E}}
+[[Elephant]], [[Elephant man]], [[Elk]], [[Elk bird]], [[Elk man]], [[Emu]], [[Emu man]], [[Ettin]], [[Giant eagle]], [[Giant echidna]], [[Giant elephant]], [[Giant elk]], [[Giant emu]]
+
+<small>070</small> {{TST|F}}
+[[Giant firefly]], [[Giant fly]], [[Giant fox]], [[Giant green tree frog]]
+
+<small>071</small> {{TST|G}}
+[[Giant]], [[Giant gazelle]], [[Giant gila monster]], [[Giant giraffe]], [[Giant grackle]], [[Giant grasshopper]], [[Giant groundhog]], [[Giant grouper]], [[Giant leopard gecko]], [[Giant mountain goat]], [[Giraffe]], [[Giraffe man]], [[Gorilla]], [[Green devourer]], [[Griffon]]
+
+<small>072</small> {{TST|H}}
+[[Giant hamster]], [[Giant hare]], [[Giant harp seal]], [[Giant hedgehog]], [[Giant hippo]], [[Giant hornbill]], [[Giant hyena]], [[Harp seal]], [[Hippo]], [[Hippo man]], [[Horse]], [[Hydra]]
+
+<small>073</small> {{TST|I}}
+[[Giant ibex]], [[Giant iguana]], [[Giant impala]]
+
+<small>074</small> {{TST|J}}
+[[Giant jackal]], [[Giant jaguar]], [[Giant jumping spider]], [[Jabberer]], [[Jaguar]], [[Jaguar man]]
+
+<small>075</small> {{TST|K}}
+[[Giant kakapo]], [[Giant kangaroo]], [[Giant kea]], [[Giant kestrel]], [[Giant king cobra]], [[Giant kingsnake]], [[Giant kiwi]], [[Giant koala]], [[Kangaroo]], [[Kangaroo man]]
+
+<small>076</small> {{TST|L}}
+[[Giant gray langur]], [[Giant leech]], [[Giant leopard]], [[Giant leopard seal]], [[Giant lion]], [[Giant lion tamarin]], [[Giant lizard]], [[Giant loon]], [[Giant lorikeet]], [[Giant louse]], [[Giant lynx]], [[Giant masked lovebird]], [[Giant peach-faced lovebird]], [[Leopard seal]], [[Leopard seal man]], [[Lion]], [[Lion man]], [[Llama]]
+
+<small>077</small> {{TST|M}}
+[[Amethyst man]], [[Blizzard man]], [[Blood man]], [[Fire man]], [[Gabbro man]], [[Giant hoary marmot]], [[Giant magpie]], [[Giant mandrill]], [[Giant mantis]], [[Giant mink]], [[Giant mongoose]], [[Giant monitor lizard]], [[Giant moose]], [[Giant mosquito]], [[Giant moth]], [[Giant muskox]], [[Giant rhesus macaque]], [[Giant spider monkey]], [[Iron man]], [[Magma man]], [[Merperson]], [[Minotaur]], [[Molemarian]], [[Monitor lizard]], [[Monitor lizard man]], [[Moose]], [[Moose man]], [[Mud man]], [[Mule]], [[Muskox]], [[Muskox man]], [[Sea monster]]
+
+<small>078</small> {{TST|N}}
+[[Giant narwhal]], [[Giant nautilus]], [[Narwhal]], [[Narwhal man]], [[Nightwing]]
+
+<small>079</small> {{TST|O}}
+[[Blind cave ogre]], [[Giant great horned owl]], [[Giant ocelot]], [[Giant octopus]], [[Giant olm]], [[Giant opossum]], [[Giant orca]], [[Giant oriole]], [[Giant osprey]], [[Giant ostrich]], [[Giant otter]], [[Giant snowy owl]], [[Ogre]], [[Orangutan]], [[Orca]], [[Orca man]], [[Ostrich]], [[Ostrich man]]
+
+<small>080</small> {{TST|P}}
+[[Giant grey parrot]], [[Giant pangolin]], [[Giant parakeet]], [[Giant penguin]], [[Giant peregrine falcon]], [[Giant platypus]], [[Giant porcupine]], [[Giant puffin]], [[Giant red panda]], [[Gigantic panda]], [[Panda]], [[Panda man]]
+
+<small>082</small> {{TST|R}}
+[[Giant raccoon]], [[Giant rat]], [[Giant raven]], [[Giant red-winged blackbird]], [[Giant rhinoceros]], [[Giant roach]], [[Reacher]], [[Reindeer]], [[Rhinoceros]], [[Rhinoceros man]], [[Roc]], [[Rutherer]]
+
+<small>083</small> {{TST|S}}
+[[Basking shark]], [[Blue shark]], [[Bull shark]], [[Elephant seal]], [[Elephant seal man]], [[Giant bark scorpion]], [[Giant black mamba]], [[Giant brown recluse spider]], [[Giant bushmaster]], [[Giant cave spider]], [[Giant copperhead snake]], [[Giant elephant seal]], [[Giant flying squirrel]], [[Giant gray squirrel]], [[Giant moon snail]], [[Giant python]], [[Giant rattlesnake]], [[Giant red squirrel]], [[Giant skink]], [[Giant skunk]], [[Giant sloth]], [[Giant slug]], [[Giant snail]], [[Giant sparrow]], [[Giant sponge]], [[Giant stoat]], [[Giant swan]], [[Giant white stork]], [[Gigantic squid]], [[Great white shark]], [[Hammerhead shark]], [[Longfin mako shark]], [[Nurse shark]], [[Python]], [[Python man]], [[Sasquatch]], [[Sea serpent]], [[Shortfin mako shark]], [[Spotted wobbegong]], [[Tiger shark]]
+
+<small>084</small> {{TST|T}}
+[[Alligator snapping turtle]], [[Giant cave toad]], [[Giant desert tortoise]], [[Giant pond turtle]], [[Giant snapping turtle]], [[Giant tapir]], [[Giant thrips]], [[Giant tick]], [[Giant tiger]], [[Giant toad]], [[Giant tortoise]], [[Giant tortoise man]], [[Gigantic tortoise]], [[Tapir]], [[Tapir man]], [[Tiger]], [[Tiger man]], [[Troll]]
+
+<small>085</small> {{TST|U}}
+[[Human]], [[Unicorn]]
+
+<small>086</small> {{TST|V}}
+[[Giant vulture]]
+
+<small>087</small> {{TST|W}}
+[[Giant earthworm]], [[Giant sperm whale]], [[Giant walrus]], [[Giant warthog]], [[Giant weasel]], [[Giant wolf]], [[Giant wolverine]], [[Giant wombat]], [[Giant wren]], [[Sperm whale]], [[Sperm whale man]], [[Wagon]], [[Walrus]], [[Walrus man]], [[Warthog]], [[Warthog man]], [[Water buffalo]], [[Whale shark]]
+
+<small>089</small> {{TST|Y}}
+[[Yak]], [[Yeti]]
+
+<small>097</small> {{TST|a}}
+[[Aardvark]], [[Aardvark man]], [[Adder]], [[Adder man]], [[Albatross]], [[Albatross man]], [[Alpaca]], [[Amphibian man]], [[Anole man]], [[Antman]], [[Armadillo]], [[Armadillo man]], [[Axolotl man]], [[Aye-aye]], [[Aye-aye man]]
+
+<small>098</small> {{TST|b}}
+[[Badger]], [[Badger man]], [[Barn owl]], [[Barn owl man]], [[Bat man]], [[Beaver]], [[Beaver man]], [[Beetle man]], [[Bluejay man]], [[Bobcat]], [[Bobcat man]], [[Bonobo]], [[Bugbat]], [[Bushtit man]], [[Buzzard]], [[Buzzard man]], [[Foul blendec]], [[Great barracuda]], [[Honey badger]], [[Honey badger man]], [[Monarch butterfly man]]
+
+<small>099</small> {{TST|c}}
+[[Capuchin]], [[Capuchin man]], [[Capybara]], [[Capybara man]], [[Cardinal man]], [[Cassowary]], [[Cassowary man]], [[Cat]], [[Cavy]], [[Chameleon man]], [[Cheetah]], [[Cheetah man]], [[Chicken]], [[Chimpanzee]], [[Chinchilla]], [[Chinchilla man]], [[Chipmunk man]], [[Coati]], [[Coati man]], [[Cockatiel man]], [[Cougar]], [[Cougar man]], [[Coyote]], [[Coyote man]], [[Crab]], [[Crab man]], [[Crow man]], [[Crundle]], [[Cuttlefish man]], [[Horseshoe crab]], [[Horseshoe crab man]]
+
+<small>100</small> {{TST|d}}
+[[Damselfly man]], [[Deer man]], [[Dingo]], [[Dingo man]], [[Dog]], [[Dragonfly man]], [[Drunian]], [[Duck]]
+
+<small>101</small> {{TST|e}}
+[[Creeping eye]], [[Eagle]], [[Eagle man]], [[Echidna]], [[Echidna man]], [[Elf]]
+
+<small>102</small> {{TST|f}}
+[[Cave fish man]], [[Cave floater]], [[Firefly man]], [[Fly man]], [[Fox]], [[Fox man]], [[Green tree frog man]]
+
+<small>103</small> {{TST|g}}
+[[Bilou]], [[Black-crested gibbon]], [[Black-handed gibbon]], [[Dark gnome]], [[Gazelle]], [[Gazelle man]], [[Gila monster]], [[Gila monster man]], [[Goat]], [[Goblin]], [[Goose]], [[Gorlak]], [[Grackle man]], [[Grasshopper man]], [[Gray gibbon]], [[Gremlin]], [[Grimeling]], [[Groundhog]], [[Groundhog man]], [[Guineafowl]], [[Leopard gecko man]], [[Longnose gar]], [[Mountain gnome]], [[Mountain goat]], [[Mountain goat man]], [[Pileated gibbon]], [[Silvery gibbon]], [[White-browed gibbon]], [[White-handed gibbon]]
+
+<small>104</small> {{TST|h}}
+[[Hamster man]], [[Hare]], [[Hare man]], [[Harp seal man]], [[Harpy]], [[Hedgehog man]], [[Hornbill]], [[Hornbill man]], [[Hungry head]], [[Hyena]], [[Hyena man]]
+
+<small>105</small> {{TST|i}}
+[[Fire imp]], [[Ibex]], [[Ibex man]], [[Iguana]], [[Iguana man]], [[Impala]], [[Impala man]]
+
+<small>106</small> {{TST|j}}
+[[Jackal]], [[Jackal man]], [[Jumping spider man]]
+
+<small>107</small> {{TST|k}}
+[[Kakapo]], [[Kakapo man]], [[Kea]], [[Kea man]], [[Kestrel]], [[Kestrel man]], [[King cobra]], [[King cobra man]], [[Kingsnake]], [[Kingsnake man]], [[Kiwi]], [[Kiwi man]], [[Koala]], [[Koala man]], [[Kobold]]
+
+<small>108</small> {{TST|l}}
+[[Gray langur]], [[Gray langur man]], [[Leech man]], [[Leopard]], [[Leopard man]], [[Lion tamarin man]], [[Lizard man]], [[Loon]], [[Loon man]], [[Lorikeet man]], [[Louse man]], [[Lynx]], [[Lynx man]], [[Masked lovebird man]], [[Peach-faced lovebird man]]
+
+<small>109</small> {{TST|m}}
+[[Giant mole]], [[Hoary marmot]], [[Hoary marmot man]], [[Magpie man]], [[Mandrill]], [[Mandrill man]], [[Manera]], [[Mantis man]], [[Mink]], [[Mink man]], [[Mongoose]], [[Mongoose man]], [[Mosquito man]], [[Moth man]], [[Mussel]], [[Plump helmet man]], [[Rhesus macaque]], [[Rhesus macaque man]], [[Spider monkey]], [[Spider monkey man]]
+
+<small>110</small> {{TST|n}}
+[[Naked mole dog]], [[Nautilus man]]
+
+<small>111</small> {{TST|o}}
+[[Cave blob]], [[Flesh ball]], [[Great horned owl]], [[Great horned owl man]], [[Ocelot]], [[Ocelot man]], [[Octopus]], [[Octopus man]], [[Olm man]], [[Opossum]], [[Opossum man]], [[Oriole man]], [[Osprey]], [[Osprey man]], [[Otter man]], [[Oyster]], [[River otter]], [[Sea otter]], [[Snowy owl]], [[Snowy owl man]]
+
+<small>112</small> {{TST|p}}
+[[Blue peafowl]], [[Emperor penguin]], [[Grey parrot]], [[Grey parrot man]], [[Little penguin]], [[Pangolin]], [[Pangolin man]], [[Parakeet man]], [[Penguin]], [[Penguin man]], [[Peregrine falcon]], [[Peregrine falcon man]], [[Pig]], [[Platypus]], [[Platypus man]], [[Pond grabber]], [[Porcupine]], [[Porcupine man]], [[Puffin]], [[Puffin man]], [[Red panda]], [[Red panda man]]
+
+<small>114</small> {{TST|r}}
+[[Large rat]], [[Rabbit]], [[Raccoon]], [[Raccoon man]], [[Rat man]], [[Raven]], [[Raven man]], [[Red-winged blackbird man]], [[Reptile man]], [[Roach man]], [[Rodent man]]
+
+<small>115</small> {{TST|s}}
+[[Angelshark]], [[Bark scorpion man]], [[Black mamba]], [[Black mamba man]], [[Blacktip reef shark]], [[Brown recluse spider man]], [[Bushmaster]], [[Bushmaster man]], [[Cave swallow man]], [[Copperhead snake]], [[Copperhead snake man]], [[Flying squirrel man]], [[Frill shark]], [[Gray squirrel man]], [[Helmet snake]], [[Moon snail man]], [[Rattlesnake]], [[Rattlesnake man]], [[Red squirrel man]], [[Satyr]], [[Serpent man]], [[Sheep]], [[Siamang]], [[Skink man]], [[Skunk]], [[Skunk man]], [[Sloth]], [[Sloth man]], [[Slug man]], [[Snail man]], [[Sparrow man]], [[Spiny dogfish]], [[Sponge]], [[Sponge man]], [[Squid man]], [[Stoat]], [[Stoat man]], [[Strangler]], [[Swan]], [[Swan man]], [[White stork]], [[White stork man]], [[Whitetip reef shark]]
+
+<small>116</small> {{TST|t}}
+[[Common snapping turtle]], [[Desert tortoise]], [[Desert tortoise man]], [[Pond turtle man]], [[Snapping turtle man]], [[Thrips man]], [[Tick man]], [[Toad man]], [[Troglodyte]], [[Turkey]]
+
+<small>118</small> {{TST|v}}
+[[Vulture]], [[Vulture man]]
+
+<small>119</small> {{TST|w}}
+[[Ice wolf]], [[Weasel]], [[Weasel man]], [[Wolf]], [[Wolf man]], [[Wolverine]], [[Wolverine man]], [[Wombat]], [[Wombat man]], [[Worm man]], [[Wren man]]
+
+<small>123</small> {{TST|&#123;}}
+[[Purring maggot]]
+
+<small>126</small> {{TST|~}}
+[[Brook lamprey]], [[Conger eel]], [[Hagfish]], [[Knuckle worm]], [[Leech]], [[Sea lamprey]], [[Slug]], [[Worm]]
+
+<small>149</small> {{TST|ò}}
+[[Bat ray]], [[Common skate]], [[Stingray]], [[Thornback ray]]
+
+<small>157</small> {{TST|¥}}
+[[Cave lobster]]
+
+<small>224</small> {{TST|α}}
+[[Anchovy]], [[Banded knifefish]], [[Black bullhead]], [[Bluefin tuna]], [[Bluefish]], [[Brown bullhead]], [[Carp]], [[Cave fish]], [[Char]], [[Clown loach]], [[Clownfish]], [[Cod]], [[Flounder]], [[Glasseye]], [[Guppy]], [[Hake]], [[Halibut]], [[Herring]], [[Lungfish]], [[Mackerel]], [[Marlin]], [[Milkfish]], [[Ocean sunfish]], [[Opah]], [[Perch]], [[Pike]], [[Rainbow trout]], [[Sailfin molly]], [[Salmon]], [[Seahorse]], [[Shad]], [[Sole]], [[Spotted ratfish]], [[Steelhead trout]], [[Sturgeon]], [[Swordfish]], [[Tigerfish]], [[White-spotted puffer]], [[Yellow bullhead]]
+
+<small>234</small> {{TST|Ω}}
+[[Sea nettle jellyfish]]
+==== Vermin ====
+These creatures are classified as "vermin" and cannot have their tiles changed.
+
+<small>249</small> {{TST|∙}}
+[[Anole]], [[Ant]], [[Axolotl]], [[Bark scorpion]], [[Bat]], [[Blue jay]], [[Brown recluse spider]], [[Bushtit]], [[Cap hopper]], [[Cardinal]], [[Cave spider]], [[Cave swallow]], [[Chameleon]], [[Chipmunk]], [[Cockatiel]], [[Crow]], [[Damselfly]], [[Demon rat]], [[Dragonfly]], [[Fairy]], [[Fire snake]], [[Firefly]], [[Fluffy wambler]], [[Flying squirrel]], [[Fox squirrel]], [[Giant damselfly]], [[Grackle]], [[Gray squirrel]], [[Green tree frog]], [[Hamster]], [[Hedgehog]], [[Large roach]], [[Leopard gecko]], [[Lion tamarin]], [[Lizard]], [[Lorikeet]], [[Magpie]], [[Masked lovebird]], [[Moghopper]], [[Moon snail]], [[Olm]], [[Oriole]], [[Parakeet]], [[Peach-faced lovebird]], [[Phantom spider]], [[Rat]], [[Red squirrel]], [[Red-winged blackbird]], [[Skink]], [[Snail]], [[Sparrow]], [[Toad]], [[Two-legged rhino lizard]], [[Wren]]
+
+<small>250</small> {{TST|·}}
+[[Acorn fly]], [[Beetle]], [[Blood gnat]], [[Bumblebee]], [[Fly]], [[Grasshopper]], [[Honey bee]], [[Jumping spider]], [[Louse]], [[Mantis]], [[Mosquito]], [[Pixie]], [[Termite]], [[Thrips]], [[Tick]]
+
+==== Additional Tiles Used by Creatures ====
+Some creature raw specify secondary tiles. They are listed here
+{| class="wikitable"
+|-
+! Tile !! Usage !! Change Properties
+|-
+|<small>002</small> {{TST|☻}}
+|Military [[dwarves]]
+|can be removed, reassigned, or overridden by graphics
+|-
+|<small>009</small> {{TST|○}}
+|[[creeping eye]] glowing eye
+|can be reassigned
+|-
+|<small>034</small> {{TST|"}}
+|[[kobold]], [[goblin]], and [[blizzard man]] glowing eyes
+|cannot be removed or reassigned without changing behavior
+|-
+|<small>039</small> {{TST|&#39;}}
+|one eyed creatures with GLOWTILE " ([[kobold]], [[goblin]]s, and [[blizzard man|blizzard men]])
+|tile cannot be changed
+|-
+|<small>125</small> {{TST|&#125;}}
+|[[purring maggot]] alternate
+|can be removed or reassigned
+|-
+|<small>137</small> {{TST|ë}}
+|military [[elf|elves]]
+|can be removed, reassigned, or overridden by graphics
+|-
+|<small>154</small> {{TST|Ü}}
+| Military Humans
+|can be removed, reassigned, or overridden by graphics
+|}
+
+=== Plants ===
+==== Trees on map ====
+The tiles can all be changed in the raws.
+
+<small>005</small>&nbsp;{{TST|♣}}
+[[Acacia]], [[Alder]], [[Apple]], [[Apricot]], [[Birch]], [[Cherry]], [[Feather tree]], [[Mangrove]], [[Maple]], [[Peach]], [[Pear]], [[Tea]], [[Sand pear]], [[Plum]]
+
+<small>006</small>&nbsp;{{TST|♠}}
+[[Almond]], [[Hazel]], [[Oak]], [[Mahogany]], [[Chestnut]], [[Ash_(tree)|Ash]], [[Kumquat]], [[Custard-apple]], [[Orange]], [[Desert lime]], [[Finger lime]], [[Round lime]], [[Walnut]], [[Pomelo]], [[Citron]], [[Olive]] , [[Macadamia]], [[Coffee]], [[Bayberry]], [[Bitter orange]], [[Lime]], [[Lychee]], [[Pecan]], [[Persimmon]]
+
+<small>020</small>&nbsp;{{TST|¶}}
+[[Highwood]]
+
+<small>023</small>&nbsp;{{TST|↨}}
+[[Cedar]]
+
+<small>024</small>&nbsp;{{TST|↑}}
+[[Pine]], [[Ginkgo]], [[Larch]]
+
+<small>180</small>&nbsp;{{TST|┤}}
+[[Glumprong]]
+
+<small>181</small>&nbsp;{{TST|╡}}
+[[Blood thorn]]
+
+<small>198</small>&nbsp;{{TST|╞}}
+[[Saguaro]]
+
+<small>226</small>&nbsp;{{TST|Γ}}
+[[abaca]], [[candlenut]], [[mango tree]], [[rubber tree]], [[cacao tree]], [[Coconut palm]], [[kapok]], [[Avocado]], [[Banana]], [[Carambola]], [[Cashew]], [[Date palm]], [[Durian]], [[Guava]], [[Papaya]], [[Paradise nut]], [[Pomegranate]], [[Rambutan]]
+
+<small>244</small>&nbsp;{{TST|⌠}}
+[[Willow]]
+
+==== Trees in game ====
+{|
+|-
+|<small>035</small> {{TST|#}}
+| smoothed branches in elven forest retreats
+|-
+|<small>037</small>&nbsp;{{TST|%}}
+| various fruits,  various buds
+|-
+|<small>042</small>&nbsp;{{TST|*}}
+| chestnut fruit, catkins
+|-
+|<small>059</small> {{TST|;}}
+| twigs
+|-
+|<small>127</small>&nbsp;{{TST|⌂}}
+| trunk cap
+|-
+|<small>172</small>&nbsp;{{TST|¼}}
+| roots, branches with leaves
+|-
+|<small>231</small>&nbsp;{{TST|τ}}
+| [[Tree]] sapling
+|-
+|}
+{|
+|-
+|trunk
+|<small>010</small>&nbsp;{{TST|◙}}
+|<small>079</small>&nbsp;{{TST|O}}
+|<small>185</small>&nbsp;{{TST|╣}}
+|<small>186</small>&nbsp;{{TST|║}}
+|<small>187</small>&nbsp;{{TST|╗}}
+|<small>188</small>&nbsp;{{TST|╝}}
+|<small>200</small>&nbsp;{{TST|╚}}
+|<small>201</small>&nbsp;{{TST|╔}}
+|<small>202</small>&nbsp;{{TST|╩}}
+|<small>203</small>&nbsp;{{TST|╦}}
+|<small>204</small>&nbsp;{{TST|╠}}
+|<small>205</small>&nbsp;{{TST|═}}
+|<small>206</small>&nbsp;{{TST|╬}}
+|-
+|branches
+|<small>179</small>&nbsp;{{TST|│}}
+|<small>180</small>&nbsp;{{TST|┤}}
+|<small>182</small>&nbsp;{{TST|╢}}
+|<small>191</small>&nbsp;{{TST|┐}}
+|<small>192</small>&nbsp;{{TST|└}}
+|<small>193</small>&nbsp;{{TST|┴}}
+|<small>194</small>&nbsp;{{TST|┬}}
+|<small>195</small>&nbsp;{{TST|├}}
+|<small>196</small>&nbsp;{{TST|─}}
+|<small>197</small>&nbsp;{{TST|┼}}
+|<small>198</small>&nbsp;{{TST|╞}}
+|<small>199</small>&nbsp;{{TST|╟}}
+|<small>207</small>&nbsp;{{TST|╧}}
+|<small>209</small>&nbsp;{{TST|╤}}
+|<small>217</small>&nbsp;{{TST|┘}}
+|<small>218</small>&nbsp;{{TST|┌}}
+|-
+|}
+
+==== Crops ====
+{|
+|-
+|<small>003</small>&nbsp;{{TST|♥}}
+| [[Dimple cup]]s
+|-
+|<small>005</small>&nbsp;{{TST|♣}}
+| [[Quarry bush]]es
+|-
+|<small>006</small>&nbsp;{{TST|♠}}
+| [[Plump helmet]]s,
+|-
+|<small>058</small>&nbsp;{{TST|:}}
+| [[strawberry]], [[prickle berry]], [[fisher berry]], [[sun berry]]
+|-
+|<small>152</small>&nbsp;{{TST|ÿ}}
+| [[Valley herb]]
+|-
+|<small>159</small>&nbsp;{{TST|ƒ}}
+| [[Rope reed]]
+|-
+|<small>231</small>&nbsp;{{TST|τ}}
+| [[pig tail]], [[cave wheat]], [[Longland grass]], [[rat weed]], [[hide root]], [[muck root]], [[blade weed]], [[sliver barb]]
+|-
+|<small>232</small>&nbsp;{{TST|Φ}}
+| [[Sweet pod]], [[bloated tuber]], [[kobold bulb]]
+|-
+|}
+
+==== Garden plants ====
+{|
+|-
+|<small>005</small>&nbsp;{{TST|♣}}
+| blossoms
+|-
+|<small>006</small>&nbsp;{{TST|♠}}
+| leaves
+|-
+|<small>037</small>&nbsp;{{TST|%}}
+| [[crop|all kinds of berries]]
+|-
+|<small>058</small>&nbsp;{{TST|:}}
+| [[crop|all kinds of berries]]
+|-
+|<small>111</small>&nbsp;{{TST|o}}
+| [[winter melon]], [[watermelon]]
+|-
+|}
+
+==== Grasses ====
+Grass tiles can be changed in the plant raws. Most grasses have 4 tiles that are alternatively used.
+
+{|
+|-
+|<small>005</small> {{TST|♣}}
+| flowers on [[baby toes succulent]], [[cloudberry]], [[cottongrass]], [[marsh thistle]], [[meadowsweet]]. [[mountain avens]], [[pebble plant]], and [[rush]].
+|-
+|<small>009</small> {{TST|○}}
+|[[staring eyeball]], [[bubble bulb]]
+|-
+|<small>039</small> {{TST|&#39;}}
+| all other [[grass|grasses]]
+|-
+|<small>044</small> {{TST|,}}
+| all other [[grass|grasses]]
+|-
+|<small>046</small> {{TST|.}}
+| all other [[grass|grasses]]
+|-
+|<small>079</small>&nbsp;{{TST|O}}
+| [[bubble bulb]], [[staring eyeball]]
+|-
+| <small>096</small>&nbsp;{{TST|`}}
+| all other [[grass|grasses]]
+|-
+|<small>111</small>&nbsp;{{TST|o}}
+| [[bubble bulb]], [[staring eyeball]]
+|-
+|<small>159</small>&nbsp;{{TST|ƒ}}
+| [[arrow bamboo]], [[golden bamboo]], [[hedge bamboo]]
+|-
+|<small>169</small> {{TST|⌐}}
+|[[wormy tendril]]
+|-
+|<small>170</small> {{TST|¬}}
+|[[wormy tendril]]
+|-
+|<small>231</small>&nbsp;{{TST|τ}}
+| [[arrow bamboo]], [[golden bamboo]], [[hedge bamboo]]
+|-
+|<small>242</small>&nbsp;{{TST|≥}}
+| [[wormy tendril]]
+|-
+|<small>243</small>&nbsp;{{TST|≤}}
+|[[wormy tendril]]
+|-
+|<small>248</small>&nbsp;{{TST|°}}
+|[[staring eyeball]], [[bubble bulb]]
+|-
+|}
+
+=== Unmined inorganic material ===
+The tiles can all be changed in the raws.
+==== Stones ====
+{|
+|-
+|<small>015</small> {{TST|☼}}
+| [[Bituminous coal]]
+|-
+|<small>034</small> {{TST|"}}
+|[[Calcite]], [[Hornblende]]
+|-
+|<small>035</small> {{TST|#}}
+| [[Sandstone]], [[Rock salt]], [[Basalt]], [[Gypsum]]
+|-
+|<small>037</small> {{TST|%}}
+| [[Siltstone]], [[Slate]], [[Brimstone]], [[Kimberlite]], [[Bismuthinite]], [[Realgar]], [[Stibnite]], [[Marcasite]], [[Olivine]], [[Orthoclase]], [[Microcline]], [[Petrified wood]], [[Brimstone]], [[Pyrolusite]]
+|-
+|<small>039</small> {{TST|&#39;}}
+| [[Claystone]], [[Rhyolite]], [[Periclase]]
+|-
+|<small>042</small> {{TST|*}}
+| [[Lignite]], [[Pitchblende]]
+|-
+|<small>043</small> {{TST|+}}
+| [[Bauxite]]
+|-
+|<small>045</small> {{TST|-}}
+| [[Cryolite]], [[Orpiment]], [[Satinspar]], [[Phyllite]], [[Quartzite]]
+|-
+|<small>046</small> {{TST|.}}
+| [[Dacite]], [[Ilmenite]], [[Shale]]
+|-
+|<small>059</small> {{TST|;}}
+| [[Selenite]]
+|-
+|<small>061</small> {{TST|&#61;}}
+| [[Chert]], [[Gneiss]], [[Sylvite]], [[Chromite]], [[Kaolinite]]
+|-
+|<small>094</small> {{TST|^}}
+| [[Alabaster]]
+|-
+| <small>096</small> {{TST|`}}
+| [[Dolomite]], [[Schist]], [[Alunite]], [[Rutile]], [[Borax]]
+|-
+|<small>111</small> {{TST|o}}
+| [[Graphite]]
+|-
+|<small>118</small> {{TST|v}}
+| [[Anhydrite]], [[Mica]]
+|-
+|<small>120</small> {{TST|x}}
+| [[Saltpeter]]
+|-
+|<small>124</small> {{TST|&#124;}}
+| [[Talc]]
+|-
+|<small>156</small> {{TST|£}}
+| [[Cinnabar]], [[Cobaltite]]
+|-
+|<small>176</small>&nbsp;{{TST|░}}
+| [[Jet]], [[Chalk]], [[Diorite]]
+|-
+|<small>177</small>&nbsp;{{TST|▒}}
+| [[Gabbro]], [[Obsidian]]
+|-
+|<small>178</small>&nbsp;{{TST|▓}}
+| [[Marble]], [[Limestone]], [[Granite]]
+|-
+|<small>233</small>&nbsp;{{TST|Θ}}
+| [[Puddingstone]]
+|-
+|<small>236</small>&nbsp;{{TST|∞}}
+| [[Andesite]], [[Conglomerate]]
+|-
+|<small>247</small> {{TST|≈}}
+| [[Mudstone]], [[Serpentine]]
+|-
+|}
+
+==== Ores ====
+{|
+|-
+|<small>037</small> {{TST|%}}
+| [[Bismuthinite]]
+|-
+|<small>094</small> {{TST|^}}
+| [[Native aluminum]]
+|-
+|<small>126</small> {{TST|~}}
+| [[Magnetite]]
+|-
+|<small>156</small> {{TST|£}}
+| [[Adamantine]], [[Cassiterite]], [[Galena]], [[Garnierite]], [[Hematite]], [[Horn silver]], [[Limonite]], [[Malachite]], [[Native copper]], [[Native gold]], [[Native platinum]], [[Native silver]], [[Sphalerite]], [[Tetrahedrite]]
+|-
+|}
+
+==== Gems ====
+<small>015</small> {{TST|☼}} is used by all [[gem]]s
+
+====Soil ====
+{|
+|-
+|<small>176</small>&nbsp;{{TST|░}}
+| [[Loam]], [[Peat]], [[Sandy clay loam]], [[Sandy loam]], [[Silty clay loam]], [[Pelagic clay]], [[Red sand]], [[Sand (tan)]]
+|-
+|<small>177</small>&nbsp;{{TST|▒}}
+| [[Loamy sand]], [[Silt loam]], [[Siliceous ooze]], [[Calcareous ooze]], [[Clay loam]], [[Sandy clay]]
+|-
+|<small>178</small>&nbsp;{{TST|▓}}
+| [[Silt]], [[Black sand]], [[White sand]], [[Yellow sand]], [[Clay]], [[Silty clay]], [[Fire clay]]
+|-
+|}
+
+=== Characters used in text and interface ===
+Changes to these may make text look strange or be difficult to understand, unless you are using the TrueType font feature.
+
+* " ! _ + , - . 0 1 2 3 4 5 6 7 8 9 /
+* A B C D E F G H I J K L M N O P Q R S T U V W X Y Z
+* a b c d e f g h i j k l m n o p q r s t u v w x y z
+* 32 (Space); 219█; 254■; ↑ ↓ → ← (Bridge direction indicators); ♂ ♀ ☼ Γ √;
+* [[Item quality|Quality]]: - + ≡ * ☼ « »
+* Brackets: ( ) < > { } [ ]
+
+==== Alphabets ====
+Accented characters are used for names.
+
+Dwarven: aáàâäåbcdeéèêëfghiíìîïklmnoóòôörstuúùûvz
+
+Elven: abcçdeéèfghiíìklmnoóòpqrstuúùvwyz
+
+Human: aábcdefghijklmnñopqrstuvwxyz
+
+Goblin: aâäåbdeêëghklmnoôöprstuûxz
+
+In total, the accented characters used are: áàâäåçéèêëíìîïñóòôöúùûÿ
+
+=== No known use ===
+These are ideal for using to change tiles in the raw data or init.txt.
+
+↕ ∟ ↔ ½ 255
+
+<!-- ☺ ☻ ♥ ♦ ♣ ♠ • ◘ ○ ◙ ♂ ♀ ♪ ♫ ☼ ► ◄ ↕ ‼ ¶ § ▬ ↨ ↑ ↓ → ← ∟ ↔ ▲ ▼ ! " # $ % & ' ( ) * + , - . / 0 1 2 3 4 5 6 7 8 9 : ; < = > ? @ A B C D E F G H I J K L M N O P Q R S T U V W X Y Z [ \ ] ^ _ ` a b c d e f g h i j k l m n o p q r s t u v w x y z { | } ~ ⌂ Ç ü é â ä à å ç ê ë è ï î ì Ä Å É æ Æ ô ö ò û ù ÿ Ö Ü ¢ £ ¥ ₧ ƒ á í ó ú ñ Ñ ª º ¿ ⌐ ¬ ½ ¼ ¡ « » ░ ▒ ▓ │ ┤ ╡ ╢ ╖ ╕ ╣ ║ ╗ ╝ ╜ ╛ ┐ └ ┴ ┬ ├ ─ ┼ ╞ ╟ ╚ ╔ ╩ ╦ ╠ ═ ╬ ╧ ╨ ╤ ╥ ╙ ╘ ╒ ╓ ╫ ╪ ┘ ┌ █ ▄ ▌ ▐ ▀ α ß Γ π Σ σ µ τ Φ Θ Ω δ ∞ φ ε ∩ ≡ ± ≥ ≤ ⌠ ⌡ ÷ ≈ ° ∙ · √ ⁿ ² ■ -->
+
+{{Category|Modding}}
+{{Category|Interface}}
+[[ru:Tilesets]]

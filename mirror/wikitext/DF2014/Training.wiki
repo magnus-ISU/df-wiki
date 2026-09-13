@@ -1,0 +1,67 @@
+{{Quality|Exceptional|14:39, 29 July 2018 (UTC)}}
+{{av}}
+:''This article is about training the dwarven military in fortress mode.''
+:* ''For information on training [[creature|animals]], see [[Animal trainer]]. '' 
+:* ''For information on training [[attribute]]s, see [[Cross-training]].''
+:* ''For information on training [[skill]]s, see [[Experience]].''
+
+Outside of actual mortal combat, '''training''' is how you improve the [[combat skill]]s of your [[soldier]]s in [[fortress mode]].  Training takes many forms, from a solo practice to group sparring, from individual instruction to actual live combat in a controlled, (hopefully) non-dangerous environment.
+
+== Organized squad training ==
+Military training takes place in [[barracks]] in the form of group demonstrations, individual training and sparring, and in [[archery range]]s for [[Advanced marksdwarf training guide|Archery training]]. 
+
+* '''Demonstrations''' are group training sessions for a specific skill, led by a teacher with experience in that skill and observed by one or more squad members. Demonstrations need to be [[organizer|organized]] and require that all are students present for the demonstration to begin, those already present will wait or do individual training until that happens. In addition to the skill demonstrated, dwarves gain some [[teacher]] and [[student]] experience, causing future demonstrations to become more effective.
+
+: Dwarves will only attend a demonstration if it teaches a fighting skill or the weapon they're currently equipped with (that is to say, if you have a squad of two dwarves, one with a spear, and one with an axe, you'll never get axe or spear demonstrations). Ranged dwarves will attend demonstrations for their weapons base skill; so marksdwarves will attend hammer demonstrations. They will however start and attend wrestling demonstrations as all dwarves can wrestle; this is also why wrestling levels up as fast as it does via demonstrations; a dwarf can always wrestle.[http://www.bay12forums.com/smf/index.php?topic=150534.0] 
+
+: When a squad leader completes a demonstration, it fulfils the "help somebody" [[need]].
+
+* '''Sparring''' is a form of practice melee [[combat]] performed by two or more members of a squad, and possibly others choosing to watch the match. Sparring is a mostly-safe way to get experienced soldiers. Sparring appears to train every usable combat skill (weapon, Fighting, Wrestling, Discipline, etc.) even when dwarves have weapons equipped. Sparring tends to confer skill increases faster than Demonstrations.
+
+: Dwarves will only begin sparring when there are at least 2 dwarves with at least 'novice' skill level in their weapons skill. It appears that Dwarves with unequal skill levels *will* spar, but not frequently. If two dwarves are very close in skill levels, they spar much more frequently, this may be maximized by using position assigning.[http://www.bay12forums.com/smf/index.php?topic=150534.0] It is currently believed that the best way to encourage sparring (rather than demonstrations) is to use 2 (or 3)-dwarf squads for training. Both dwarves should have the same weapon, to minimize useless cross-weapon teaching. It appears that the more experienced the training military dwarves are, the more likely they are to spar. However, sparring management is still a poorly understood science. 
+
+* '''Individual Training''' slowly improves one skill at time through self-training. Squad members may choose to conduct individual training ("Individual Combat Drill") when there is no one else to train with or on their spare time when there are no [[schedule]]d orders. The latter might be tied to [[Personality_trait|motivated]]{{verify}} dwarves.
+
+Building a barracks and designating a squad to train in it will allow squad members to train there individually instead of going idle, but they will never spar/demonstrate. In order to make them spar/demonstrate you need to activate the squad, either via the {{k|s}} menu and then hitting {{k|t}}, or by the {{k|m}}-{{k|a}} menu.
+
+=== Setup Walkthrough===
+You cannot directly assign a soldier to train. Instead, you need to [[schedule]] his or her squad to train. This is accomplished by opening the {{k|m}}[[military interface|ilitary screen]]. Open the {{k|a}}lerts panel, then assign the squad to Active/Training (or establish a more complex schedule of alerts). 
+Now {{k|q}}uery a [[bed]], [[weapon rack]], and/or [[armor stand]] to designate a [[barracks]]. Highlight which squad you wish to train and press {{k|t}}. A {{Tile|T|3:0:1}} should appear on the right side of the screen beside that squad's name. Now your squad is set to be training, and has a place to train in.
+A squad set to the default Active/Training alert level (or a more complicated schedule using the advanced calendar system) will train in their assigned barracks. A squad with active orders delivered through the squad menu will carry out those orders, taking breaks to eat or sleep, but will not train.
+
+#[[Squad#Forming_Squads|Form a squad]] with members (equip with whatever armor and weapons you like)
+#Designate a [[barracks]] and have the squad set to train there.
+#Using the [[military interface|{{K|m}}ilitary]] {{K|a}}lerts system, assign the squad to 'active training'
+
+See also: [[Military F.A.Q.|Military frequent asked questions]].
+
+=== Equipment ===
+The weapons you wish your soldiers to use can be chosen through the {{K|m}}ilitary screen, and then the {{K|e}}quip selection. When soldiers spar or perform weapon drills, they practice (and thereby gain experience) with whatever [[weapon]] (plus [[armor]] and [[shield]] in the case of sparring) they currently have equipped. Your soldiers will ''eventually'' pick up the equipment assigned in the military screen, though it is not uncommon to find them wandering around weaponless and half-armored when first drafted. Aside from a few specific circumstances, [[wood]]en [[training weapon]]s are not necessary for training, and can actually be counterproductive.
+
+==Other Notes==
+=== Injury===
+Dwarves do not hurt each other directly while sparring with any type of weapon. They can however have accidents due to certain Wrestling move(s), namely throwing. A thrown dwarf may skid along the ground and sustain injury. It can be lethal to a dwarf if his head skids on the ground, so have your sparring dwarves wear helmets.{{verify}}<!-- Verify if helmets help protect them from skidding damage--> '''Note:''' ''all'' sparring dwarves may decide to do a bit of Wrestling, even if they have weapons equipped.
+
+Also make sure they have a safe environment to train in. Avoid having your barracks near high cliffs or open water, because dwarves have a habit of dodging off of cliffs and injuring themselves or dodging into water and becoming stunned, which leads to drowning.  Also, dwarves can dodge up one level if they are next to a wall. Make sure they can walk back down or build a roof, because otherwise you risk a military dwarf trapping himself and starving to death.
+
+Due to a bug, dwarves can teleport through at least two solid wall tiles when using charge attacks.{{bug|7444}} To avoid problems, barracks should not be located close to cisterns, pits, magma reservoirs, sealed-off areas, or any other potential danger. 
+
+===Default Schedule===
+The default Active/Training alert tells the full squad to train. This can be changed from the [[Scheduling]] menu, if for some reason you only want part of a squad to train, or only to train during certain months, etc.
+
+===Happy Soldiers===
+Be kind to your soldiers. Civilians with no military experience will get bad [[thought]]s from going on duty. Soldiers will get a bad thought when going ''off'' duty if they don't have any civilian skills (if their title becomes "peasant"). In either case, [[cross-training]] can raise attributes while providing a larger and more flexible military.
+
+=== [[Live training]] on disarmed prisoners ===
+A very effective way to train your dwarves is to equip them with [[training weapon]]s and full armor and let them fight unarmed prisoners. This allows your dwarves to be "attacked" in real combat with relative safety, increasing their defensive skills rapidly. In other words: if you're interested in having your dwarves quickly train as Dodgers, Armor Users and Shield Users, it'll be worth the effort to set up some [[live training]] exercises.
+
+See [[Cage#Remotely_Opening_Cages|Remotely Opening Cages]] for information on how to arrange for the training.
+
+== See also==
+* [[Archery]]
+* [[Military]]
+* [[Danger room]]
+
+{{Military FAQ}}
+{{Category|Jobs}}
+[[ru:Training]]

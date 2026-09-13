@@ -1,0 +1,26 @@
+{{Quality|Exceptional|19:15, 25 June 2010 (UTC)}}{{Workshop|name=Tanner's shop|key=n|job=Tanning
+|construction=
+* [[Building material]] (non-[[economic]])
+|construction_job=
+* [[Tanner|Tanning]]
+|use=
+* [[Skin|Hide]]
+* [[Milk of lime]]{{version|0.42.01}}
+|production=
+* [[Leather]]
+* [[Parchment]]{{version|0.42.01}}
+}}{{av}}
+
+A '''tanner's shop''' is used to make [[leather]] from a [[Butcher's shop|butchered]] animal skin and [[parchment]] from animal skin with [[milk of lime]]{{version|0.42.01}}.  A tanner's shop is operated by any dwarf with the 'tanning' [[labor]] enabled. Each butchering job yields a single hide, and each unrotten hide yields one piece of leather - regardless of whether the animal is a kitten or an elephant{{bug|3732}}.
+
+==Menu==
+'''Tanner's Shop'''
+
+*{{k|t}} Tan a hide.
+*{{k|p}} Make parchment.
+
+==Notes==
+*The 'tan a hide' job is automatically triggered after the game notices that there is a skin to be tanned within a certain distance of the tanner's shop.  The player can turn off this behaviour by going into the {{K|o}}rders menu, choosing {{K|W}}orkshop Orders, and then turning Auto {{K|t}}an off.
+*If you have turned Auto Tan off, your [[manager]] ({{K|u}}nits, {{K|m}}anager) can manually queue "Tan a Hide" jobs. This is also useful if for some reason Auto Tan ignores a skin.
+
+{{Workshops}}

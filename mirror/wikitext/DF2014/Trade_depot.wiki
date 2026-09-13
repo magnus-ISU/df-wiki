@@ -1,0 +1,68 @@
+{{Quality|Superior|18:33, 23 August 2014 (UTC)}}
+
+{{Building|name=Trade depot|key=D
+|job= 
+* [[Broker]] noble (optional)
+|construction=
+* 3 [[Building material]]s (non-[[economic]])
+|construction_job=
+* [[Architecture]]
+* and 1 of:
+** [[Metalsmithing]]
+** [[Masonry]]
+** [[Carpentry]]
+|purpose=
+Trade goods with [[caravan|merchants]].
+}}{{av}}{{buggy}}
+
+A '''trade depot''' is a [[building]] that allows you to engage in [[trading]] with [[caravan]]s that arrive at your fortress. Trade depots can be created from almost any building material, and construction requires the [[architecture]] [[skill]] along with the appropriate craft labor ([[carpentry]], [[masonry]], or [[metalsmithing]]). Three materials must be used to build the trade depot, with the oldest* material chosen serving as the main material to determine color and "material" as labeled; the color is visible immediately upon confirming the construction order. 
+
+(* i.e. the first material created or imported on your map, by chronological order.{{cite forum|134816/4867108}})
+
+There must be at least 10 spaces between the depot and the edge of the map. They can be built on top of [[construction|constructed]] floors and walls, allowing you to make a trade depot which is elevated above the surrounding land. Should they be deconstructed, the depot itself generates an implied walkable floor.
+
+== Depot accessibility ==
+
+Hitting {{K|D}} will tell you if the depot is accessible via a [[wagon]], which requires a three tile wide path from the depot to the edge of the map. Note that this path is measured outward from the depot, so it requires a functional depot to display. For a tile to be “Wagon accessible” (marked in green) it must be navigable between both the tile and the depot *and* the tile and the map edge. If you are trying to constrain wagons to a certain path, ''only'' the desired path should be marked in green ''anywhere'' on the map. ''Warning:'' If the map has an extremely large amount of [[tree]]s (Heavily Forested) there may not be any way for the caravan to get to your depot, unless you chop down a path for the wagons.
+
+Also note that [[trap]]s will block [[wagon]] access (although not merchants with pack animals), so you cannot easily use them to defend your depot.
+
+[[Boulder]]s (the natural kind) and [[minecart|track]]s also block wagons. Boulders can be removed by [[engraving|smooth]]ing ({{k|d}}-{{k|s}}) or constructing and removing a [[wall]]. [[Bridge]]s can serve as an alternative for tracks.
+
+Forbidding the trade depot (by forbidding any material used to construct it) will make it inaccessible to traders. If inaccessible during the arrival of the caravan, it will cause the wagons to bypass your location.
+
+== Depot building UI options ==
+
+Press {{K|b}}-{{K|D}} to build a depot. Depots occupy a 5x5 area. Once built, press {{K|q}} and move your cursor over the depot to gain access to the following options:
+
+=== Move Goods to/from Depot ===
+{{K|g}}: This command becomes active when a caravan arrives on your map.  This screen menu is similar to the [[stocks]] menu ({{K|z}} - Stocks).  This is where you select what items you want to trade with the caravan.  If you have particular items you want to sell to the caravan, you can {{K|s}}earch for it. This is convenient if you want to export all your prepared meals or finished goods. Also shown is the culling on {{K|m}}andate option.  The move to depot screen will not show things that violate an export [[mandate]].  By pressing {{K|m}}, it will change to Ignoring {{K|m}}andates, and you can select banned items for export. For example, if your [[mayor]] has a mandate banning the export of iron, this screen will hide bins that contain iron items.  By changing this option, all iron items will be shown.
+
+After selecting items and exiting the screen, [[job]]s will be queued to move the items to the depot.  All adult dwarves, regardless of [[labor]] settings, can move goods to the depot. Items that have not been moved will show [PENDING], while those that have been brought to the depot and are ready for trade and will be marked as [TRADING].
+
+Items selected for trading will remain at the depot until the caravan leaves. Alternatively you can select the item again. Once no longer required at the depot, items will be available for use or hauling to stockpiles as normal. If you don't want all the items to be returned to their stockpiles, you can optionally {{K|f}}orbid them by looking at the [[Controls_guide#View_items_in_buildings.2C_t|i{{K|t}}ems]] in the depot.
+
+(Note that the "Move goods to depot" screen allows mouse controls, including controls like right-clicking on a list to scroll down, and double-clicking on a tab to select all items in that tab.)
+
+=== No trader needed at depot ''or'' Trader requested at depot ===
+{{K|r}}: This requests a dwarf to come to the depot. To conduct trades with caravans, a trader must be present at the Trade Depot.  Once requested, a job will be created for a dwarf to make their way to the depot and remain there until released with this setting, or the job is interrupted, such as by the dwarf deciding to drink, sleep, or eat.  The Trade at Depot job is fairly low-priority, so [[labor]]s may have to be disabled in order to get the broker to begin the job, or the broker can be temporarily added to a burrow which covers only the depot.
+
+=== Only broker may trade ''or'' Anyone may trade ===
+{{K|b}}: This setting determines who will perform the trade.  If '''Only broker may trade''' is active, then only the [[broker]] [[noble]] will respond to the trader request. This can become a problem when the broker is sleeping or otherwise occupied, but dwarves with low [[appraisal]] skill will receive poorer deals when trading. If '''anyone may trade''' is selected, and someone other than the broker becomes a better appraiser than the broker, the broker's appraisal skill is still used.
+
+=== Trade ===
+{{K|t}}: This option becomes available once the caravan unloading their goods at the depot and your trader is at the depot; it begins [[trading]]. If more than one set of merchants is using the trade depot, you will be given the option of who you want to trade with.
+
+== Adventure mode ==
+In [[adventure mode]], a trade depot can be found in the surface structure of procedurally generated [[fortress]]es. It is usually filled with trade goods and people like [[noble]]s, [[farmer]]s, [[Craftsdwarf|craftsdwarves]], and a [[broker]], though in ruined fortresses there might not be any people. The player can talk to the people in the depot and then select the "Trade and settle debt" option to trade with them. Usually [[food]], copper/iron [[armor]], cut [[gem]]s, and [[clothing]] can be [[Trade|purchased]] in large quantities in these trade depots.
+
+== Bugs ==
+* Setting a [[Activity zone#Meeting area|meeting area]] over a depot, then removing it, will cause dwarves to act as though it were still a meeting area. This is irreversible.
+* Merchants in a trade depot who are accosted by hostile creatures may then refuse to trade. If any merchant is unable to make it to the depot, all the other merchants will similarly refuse to trade.
+* Dumping items belonging to the merchants will result in the depot thinking the merchants are gone, when they are actually hanging around.
+* [[Forbid]]ding a depot, or slating it for removal immediately after causing the caravan trader to be unwilling to do business with your dwarves (e.g. trading wood to the elves) will cause the caravan to leave all their items and embark on their journey, leaving you to claim the items for yourself. This is treated by the game as seizing the items and will incur diplomatic penalties on the player, unless done to a dwarven caravan (as you cannot have bad relations with your own civilization).
+* The game behaves poorly when multiple trade depots are available. Merchants with wagons may path to one depot, while those with pack animals path to the other; then both groups will insist on waiting for the rest of their party to arrive.
+* If you slate a depot for removal while merchants are in the process of leaving, the wagons will never leave and eventually the animals and remaining traders will go mad.
+
+{{Buildings}}
+{{Workshops}}
