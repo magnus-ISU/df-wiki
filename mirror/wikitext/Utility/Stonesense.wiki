@@ -1,0 +1,129 @@
+{{Quality|Superior|01:14, 29 September 2013 (UTC)}}
+{{uv|multiple}}
+{{Infobox utility
+| image = File:stonesense_screen.png
+| misc  =
+* [http://www.bay12forums.com/smf/index.php?topic=106497 Bay12Forum Thread] 
+* [https://docs.dfhack.org/en/latest/docs/tools/stonesense.html Documentation]
+* [[Utility:Stonesense/Content_repository|Content Repository]]
+* [https://github.com/peterix/stonesense Github page]
+}}
+
+'''Stonesense''' is a 3D visualizer [[utility]] for ''Dwarf Fortress'', implemented as a [[Utility:DFHack|DFHack]] plugin, that lets you view your ''Dwarf Fortress'' world in a classic isometric perspective. 
+
+There is an [http://www.bay12forums.com/smf/index.php?topic=106497 official thread] for feedback, questions, requests or bug reports.  There is also [http://www.bay12forums.com/smf/index.php?topic=48172.0 a thread dedicated to screenshots] taken using Stonesense.  
+
+==For Users==
+
+Stonesense is distributed as part of [[Utility:DFHack|DFHack]]. The command <code>stonesense</code> opens a separate viewer window, which has read-only access to the game.  It can follow the game view, or be moved independently.
+
+===Overlay===
+
+In DF2014 up to v47.0, it was also possible to use Stonesense as a live overlay of the map in the main ''Dwarf Fortress'' window, replacing the usual 2D tiles. The DFHack command for this is <code>stonesense overlay</code>, but print mode must not be set to "TWBT" for this to run.  For best results, edit [segmentsize_z:2] in init.txt, and if you are unable to see the edges of the map with the overlay active, try also decreasing or increasing the [segmentsize_XY] - normal values are 50 to 80 depending on screen resolution. The overlay is not working in v50 Steam/Premium. 
+
+Stonsense was part of the [[Utility:Lazy_Newb_Pack|Lazy Newb Pack]].
+
+===Controls===
+
+These lists of key bindings are not exhaustive. The most up-to-date and complete list can be found at the [https://github.com/DFHack/stonesense/blob/master/resources/keybinds.txt Stonesense Github page]. The <code>keybindings.txt</code> file may also be edited to change or add additional keybindings to Stonesense. Mouse controls are hard-coded and cannot be changed. 
+
+{| class="wikitable collapsible collapsed" style="width:700px;"
+! colspan="2"| Mouse Controls
+|-
+| '''Left click'''
+| Move debug cursor (if available)
+|-
+| '''Scrollwheel'''
+| Move up and down
+|-
+| '''Right click'''
+| Recenter screen
+|-
+| '''Ctrl-Scroll'''
+| Increase/decrease Z depth shown
+|}
+{|class="wikitable collapsible collapsed"  style="width:700px;"
+! colspan="4"| Keyboard controls
+|-
+! colspan="2"| Movement controls
+! colspan="2"| View Filters
+|-
+| '''F'''
+| Cycle Tracking Mode
+| '''F2'''
+| Toggle OSD overlay
+|-
+| '''Enter'''
+| Rotate view 90 degrees
+| style="width: 30pt;" | '''D'''
+| Toggle Designations
+|-
+| '''R'''
+| Reload segment
+| '''I'''
+| Toggle Stocks
+|-
+| '''C'''
+| Chop walls
+| '''U'''
+| Toggle Zones
+|-
+| '''S'''
+| Toggle single layer
+| '''M'''
+| Toggle Creature Moods
+|-
+| '''. (Period)'''
+| Zoom in
+| '''P'''
+| Cycle Professions (off/icons/names)
+|-
+| ''', (Comma)'''
+| Zoom out
+| '''J'''
+| Cycle Jobs (off/icon/description)
+|-
+| '''Alt+(Arrow Key)'''
+| Offset view
+| '''N'''
+| Toggle Creatures Names
+|-
+| '''9'''
+|Decrease Z-layer 
+| '''B'''
+| Toggle hidden tile transparency
+|-
+| '''0''' 
+| Increase Z-layer
+| '''H'''
+| Toggle revealing hidden tiles (cheater! :P)
+|-
+| 
+| 
+| '''/'''
+| Toggle hotkey overlay
+|}
+
+==For modders and developers==
+
+* If you just want to '''add existing content''': The [[Utility:Stonesense/Content_repository|Stonesense Content Repository]] contains content packs that allow you to extend Stonesense functionality. These packs are made by members of the DF community.
+* If you want to '''create your own content''': You can learn how to create custom content for Stonesense at [[Utility:Stonesense/Adding_Content]]
+* If you want to '''tweak Stonesense's source code''' : Stonesense is one of the many DFHack plugins. It comes with DFHack's source code, and if you manage to compile DFHack, then you've managed to compile Stonesense.
+
+==Credits==
+* Stonesense was written by Jonask, peterix, kaypy and Japa.
+* Lead graphic development was done by Solifuge.
+* Dfhack library was written by peterix.
+* Additional Graphics and code were contributed by many many people, including (in alphabetical order):
+** 7¢ Nickel, BatCountry, Belal, DeKaFu, Dante, Deon, dyze, Errol, fifth angel, frumpton, IDreamOfGiniCoeff, Impaler, Japa, jarathor, Jiri Petru, Lord Nightmare, McMe, Mike Mayday, Nexii Malthus, peterix, Seuss, soup, Talvara, winner, Xandrin.
+(This list is not rigorously updated)
+
+==Gallery==
+<gallery widths=200px>
+File:Roadtruss.jpg|Roadtruss, a tower [[megaproject]] by Crossroads Inc.
+File:Stonesense prev.jpg|...
+File:STV1.png|Example of Seuss's Tweaked Vegetation
+</gallery>
+
+[[Category:Utilities]][[Category:Stonesense]]
+[[ru:Stonesense]]

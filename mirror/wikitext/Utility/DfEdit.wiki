@@ -1,0 +1,51 @@
+{{uv|40d}}
+You may find it at [http://bartabox.banquise.net/df/dfedit.py this link], and you'll need pydbg (comes with paimai) and probably python 2.4 for windows. Here is what is does.
+
+In order to use it, you must have [[Dwarf Fortress]] running. Here are the commandline arguments:
+
+No arguments : list dwarves
+listcreatures : list all creatures (redirect into a file to read it !)
+
+The output will look like:
+
+<pre>
+dwarven ral kivishmamot 2899 [0 0 0] [Pa:0 Fa:0 Hu:7a0a Th:3cbf Dr:9b33] (0xd4e9750) GUEST? 80004001 12000070 65535 4d/a1
+dwarven �zum geshudunib 289a [1 0 0] [Pa:0 Fa:0 Hu:6210 Th:4c26 Dr:a659] (0xd4e9dc0) GUEST? 80004000 12000070 65535 3e/a7
+dwarven dod�k k�buksosh 289b [0 1 0] [Pa:0 Fa:0 Hu:7d49 Th:49b0 Dr:a12b] (0x9c56de8) GUEST? 80004000 12000070 65535 3c/9c
+dwarven s�kzul kasbentulon      289c [0 0 0] [Pa:0 Fa:0 Hu:79d4 Th:400e Dr:9e36] (0x9c57458) GUEST? 80004000 12000070 65535 48/9c
+dwarven zulban cogothsin        289d [0 1 0] [Pa:0 Fa:0 Hu:7681 Th:5140 Dr:afaf] (0x9c57ac8) GUEST? 80004000 12000070 65535 33/a5
+dwarven at�r othsinducim        289e [1 1 0] [Pa:0 Fa:0 Hu:69af Th:9fe Dr:9119] (0xd611d58) GUEST? 80004001 12000070 65535 46/9e
+dwarven rith vumoml�r   289f [0 0 0] [Pa:0 Fa:0 Hu:72a5 Th:2537 Dr:9d74] (0xd6123c8) GUEST? 80004000 12000040 65535 45/a1
+</pre>
+
+The following fields are displayed, in order:
+* race name
+* dwarf name (not the proper race name, will soon be fixed)
+* ID (persistent, used in legends, used by other commands!)
+* str / agi / tough
+* pain, tiredness, hungryness, thristyness, drownsiness
+* ptr to the structure
+* tentative flag interpretation
+* flags @fe4 & @fe8
+* mood (65535 == no mood)
+* stuff for my own use :)
+
+healall : heals all dwarves
+maim racename : maims all creatures with this race name!
+
+There are other options, but here are the two mood related options:
+* detail id : will print details about creature id. This will include the MOOD vector! (and the skill that will be advanced)
+* mood id skilltype main_metal secondary_metal :
+** you must select the creature id corresponding to the moody dwarf
+** skilltype refers to the skill that will be advanced
+** main_metal is the what the item main metal will be
+** secondary metal is what the other items will be
+
+It's quite crude and you'll want to use it like that:
+<pre>
+dfedit.py 2899 weaponsmith steel aluminum
+</pre>
+
+This will change your dwarf requirement to a bar of [[steel]] and several bars of [[aluminum]], he'll create a legendary weapon and become master [[weaponsmith]].
+
+[[Category:Utilities]]

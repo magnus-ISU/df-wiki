@@ -1,0 +1,44 @@
+[[Category:Tweak Modules]][[Category:Utilities]]
+=Tile Edit=
+
+[[Image:Dwarf Fortress Tweak Tile Edit.png|right]]
+
+Tile Edit is a powerful module for [[User:Rick/Tweak|Gibbed's Dwarf Fortress Tweak]] that allows editing of nearly every property related to a specific tile.
+
+There are three tabs, General, Designation, and Occupancy.
+
+==Download==
+
+Tile Edit comes packaged with Tweak as a core module.
+
+==Detailed information on values==
+
+*The heading above the tabs is X, Y, Z (@ BlockAddress BlockX,BlockY).
+*Type - [[User:Mithaldu/Tile_types_in_DF_memory|An incomplete and possibly out of date list of tile types]] and [[User:Valarnin|A definitely incomplete list for v0.27.176.38c]].
+*Pathfinding - This is an ID assigned to the tile for pathfinding lookup. A value of 0 means unassigned / recaculate.
+
+==Common Operations==
+
+Feel free to add any non-obvious edits you can do with Tile Edit here.
+
+===Add water or lava / magma to a tile===
+
+On the designation tab, change the following:
+*Increase '''Liquid Depth''' to 7
+*Check '''Has Liquid''' in the flags list.
+*Check or uncheck '''Liquid is Lava / Magma''' in the flags list, depending on what kind of liquid you want.
+
+Click OK to write this tile information to Dwarf Fortress.
+
+To get the fluid to actually flow, place a construction next to the tile with liquid in it, and then remove it. It should then begin to flow.
+
+===Engrave a constructed floor===
+
+On the designation tab, change the followign:
+*Check '''08 - Engrave Stone / Smooth Stone'''
+
+Click OK to write this tile information to Dwarf Fortress. A dwarf should then eventually engrave it.
+
+''Thanks to Mori in #bay12games for discovering you could do this.''
+
+[[Category:Hacking|Tweak]]

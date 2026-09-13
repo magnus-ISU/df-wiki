@@ -1,0 +1,40 @@
+<div class="mw-parser-output"><div id="page-quality-rating" style="text-align: right;margin: 0.8em 0;font-size:75%">
+ <a href="/index.php/Dwarf_Fortress_Wiki:Quality#Tattered" title="Dwarf Fortress Wiki:Quality"><span id="stub-quality" style="text-decoration:none; color:#333333">xTATTEREDx</span></a> <span style="font-weight:bold;" class="dot">&#160;·</span> <a href="/index.php/Dwarf_Fortress_Wiki:Quality#Fine" title="Dwarf Fortress Wiki:Quality"><span id="fine-quality" style="padding:0.2em; border:1px solid #db8; border-radius: 2px; -webkit-border-radius: 2px; -moz-border-radius: 2px; -o-border-radius: 2px; -ms-border-radius: 2px; background:#FFE0CC; color:#CA7A02;">+FINE+</span></a> <span style="font-weight:bold;" class="dot">&#160;·</span> <a href="/index.php/Dwarf_Fortress_Wiki:Quality#Superior" title="Dwarf Fortress Wiki:Quality"><span id="superior-quality" style="text-decoration:none; color:#8800cc;">*SUPERIOR*</span></a> <span style="font-weight:bold;" class="dot">&#160;·</span> <a href="/index.php/Dwarf_Fortress_Wiki:Quality#Exceptional" title="Dwarf Fortress Wiki:Quality"><span id="exceptional-quality" style="text-decoration:none; color:#0088CC;">≡EXCEPTIONAL≡</span></a> <span style="font-weight:bold;" class="dot">&#160;·</span> <a href="/index.php/Dwarf_Fortress_Wiki:Quality#Masterwork" title="Dwarf Fortress Wiki:Quality"><span id="masterwork-quality" style="text-decoration:none; color:#72A329;">☼MASTERWORK☼</span></a></div>
+<table class="version-table" style="text-align: center; margin: 3px auto 5px; padding: 0.25em; padding-top:1em; border-radius: 3px; -webkit-border-radius: 3px; -moz-border-radius: 3px; -o-border-radius: 3px; -ms-border-radius: 3px;; border: 2px solid #ddbb88; background: #fff5ee; min-width:27em"><tbody><tr><td style="padding: 0.3em 0.3em; width: 100%;"><span>This utility page is about v0.34.11, an <b>older version</b> of DF.</span><br />
+<div style="float: right; font-size:75%; padding-right:2px; margin-top:-2px; margin-bottom:-7px;"><span class="version-link"><a href="/index.php/Template:Uv" class="mw-redirect" title="Template:Uv"><span style="text-decoration: none; color: #CA7A02;">More Info</span></a></span></div></td></tr>
+</tbody></table>
+<p><a rel="nofollow" class="external text" href="http://www.bay12forums.com/smf/index.php?topic=50643.0"><b>Dfterm2</b></a> is a remote Dwarf Fortress playing software for multiple users through telnet. It has been replaced by <a href="/index.php/Utility:Dfterm3" title="Utility:Dfterm3">Dfterm3</a>, which has similar functions through an easier-to-use web interface.  
+</p>
+<h3><span class="mw-headline" id="On_linux">On linux</span></h3>
+<p>You need to compile the program directly from source. To do so you need to install the following packages:
+</p>
+<ul><li>ICU development libraries</li>
+<li>Boost development libraries (at least version 1.42)</li>
+<li>OpenSSL development libraries</li>
+<li>CMake</li>
+<li>PCRE development libraries</li>
+<li>g++ and usual development tools</li>
+<li>lua ( &gt; 5.1 Doesn't work) (use 5.0)</li>
+<li>git</li></ul>
+<p>First, you need to obtain the source code, using the following commands in git:
+</p>
+<pre>$ git clone git://genodeen.net/dfterm2
+$ cd dfterm2
+$ git submodule init
+$ git submodule update
+</pre>
+<p>Next, you have to use CMake to configure the building system:
+</p>
+<pre>$ cmake .</pre>
+<p>Thirdly, use this command to start the compiling:
+</p>
+<pre>$ make</pre>
+<p><i>If compilation failed, <a rel="nofollow" class="external text" href="http://www.bay12forums.com/smf/index.php?topic=50643.0">visit the DFterm2 page on the Bay12 forums</a> for support.</i>
+</p><p>The final step is to add an administrator account using 
+</p>
+<pre>$ ./dfterm2_configure --adduser (username) (password) admin 
+$ ./dfterm2
+</pre>
+<p>To connect to the server from a linux machine, you need to use the following command:
+</p>
+<pre>$ telnet 127.0.0.1 8000</pre></div>

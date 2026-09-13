@@ -1,0 +1,339 @@
+This is a list of <code>createitem</code> commands for [[Utility:DFHack|DFHack]].
+
+(Not to be confused with <code>gui/create-item</code>, an interactive Lua script.)
+= Usage =
+
+'''Format:'''
+ createitem {{tc|green|'''[Item token]'''}} {{tc|blue|'''[Material]'''}} {{tc|red|'''[Quantity (optional)]'''}}
+
+* If you select a unit, then that unit will be named (''or, as it would be, used'') as the crafter, otherwise, the first unit in the fortress will be automatically selected ''if'' the keyboard cursor is active. Clothing and armor items will be sized for that unit's creature type.
+* By default, items will be placed on the floor, either at the feet of the selected unit or beneath the cursor.
+** If you select a container (such as a barrel, backpack, or minecart) and type <code>createitem item</code>, or a building (such as a workshop, chest, or weapon rack) and type <code>createitem building</code>, all subsequently created items will be placed inside that container or building.
+** Typing <code>createitem floor</code> will switch it back to placing created items on the floor. This will also happen automatically if the previously-selected container or building is destroyed. A list of valid item tokens can be found [[item token|here]]: Note that CORPSE, CORPSEPIECE, and FOOD are not supported by DFHack.
+* You can create multiple items at once by appending a number to the createitem command (e.g. <code>createitem BOULDER INORGANIC:HEMATITE 20</code>). Note that certain item types will be created in stacks, while others will be created as individual items - see the [[Reactions#quantity_2|Reactions]] page for more information.
+* Text in ''italics'' should be replaced with the ID from the relevant raw page on this wiki. For example, to make goblin-cap logs, visit the [[goblin-cap]] page and view the raws. The ID is found in the first token, separated from the item type with a colon - for example, the ID for goblin-caps is <code>GOBLIN_CAP</code>, retrieved from <code>[PLANT:GOBLIN_CAP]</code>.
+** Some IDs contain a space which needs to be quoted, for example <code>createitem ROUGH "INORGANIC:LAPIS LAZULI"</code>.
+** All ID values are ''case sensitive'', so make sure you capitalize them correctly - in vanilla raws, they are typically all uppercase, but mixed-case IDs may be encountered when using mods.
+
+__TOC__
+
+= Items =
+== Inorganic items ==
+Most of these can be obtained from the [[item token|list of item tokens]].
+=== Stone ===
+* Boulders (i.e. mined stones):
+ BOULDER INORGANIC:''stone''
+* Blocks
+ BLOCKS INORGANIC:''stone''
+
+=== Wood ===
+* Logs
+ WOOD PLANT_MAT:''tree'':WOOD
+* Blocks
+ BLOCKS PLANT_MAT:''tree'':WOOD
+
+=== Metal ===
+* [[Bar]]s (or [[wafer]]s)
+ BAR INORGANIC:''metal''
+
+=== Gems ===
+* Rough gems
+ ROUGH INORGANIC:''gem''
+* Small cut gems
+ SMALLGEM INORGANIC:''gem''
+* Large cut gems
+ GEM INORGANIC:''gem''
+
+=== Glass ===
+Raw glass:
+ ROUGH ''glass'':NONE
+{| class="wikitable"
+|-
+! Glass !! Material token ("''<code>glass</code>''")
+|-
+| Green glass || GLASS_GREEN
+|-
+| Clear glass || GLASS_CLEAR
+|-
+| Crystal glass || GLASS_CRYSTAL
+|}
+
+(Items made of glass, e.g. furniture, use these names as well)
+
+== Fuel ==
+* Coke
+ BAR COAL:COKE
+* Charcoal
+ BAR COAL:CHARCOAL
+
+== Misc ==
+* Ash bars
+ BAR ASH
+* Liquids (non-DRINK but including milk)
+ LIQUID_MISC ''material''
+* Quires
+ TOOL:ITEM_TOOL_QUIRE ''material''
+* Pipe sections
+ PIPE_SECTION ''material''
+
+== Armor ==
+* Gauntlets (will automatically be created in pairs)
+ GLOVES:ITEM_GLOVES_GAUNTLETS ''material''
+* Gloves (will automatically be created in pairs)
+ GLOVES:ITEM_GLOVES_GLOVES ''material''
+* Helm
+ HELM:ITEM_HELM_HELM ''material''
+* Cap
+ HELM:ITEM_HELM_CAP ''material''
+* Breastplate
+ ARMOR:ITEM_ARMOR_BREASTPLATE ''material''
+* Mail shirt
+ ARMOR:ITEM_ARMOR_MAIL_SHIRT ''material''
+* Greaves
+ PANTS:ITEM_PANTS_GREAVES ''material''
+* Leggings
+ PANTS:ITEM_PANTS_LEGGINGS ''material''
+* High boots (will automatically be created in pairs)
+ SHOES:ITEM_SHOES_BOOTS ''material''
+* Low boots (will automatically be created in pairs)
+ SHOES:ITEM_SHOES_SHOES ''material''
+* Shoes (will automatically be created in pairs)
+ SHOES:ITEM_SHOES_BOOTS_LOW ''material''
+* Cloak
+ ARMOR:ITEM_ARMOR_CLOAK ''material''
+* Shield
+ SHIELD:ITEM_SHIELD_SHIELD ''material''
+* Buckler
+ SHIELD:ITEM_SHIELD_BUCKLER ''material''
+* Skirt (long)
+ PANTS:ITEM_PANTS_SKIRT_LONG ''material''
+* Skirt (short)
+ PANTS:ITEM_PANTS_SKIRT_SHORT ''material''
+* Skirt
+ PANTS:ITEM_PANTS_SKIRT ''material''
+
+== Weapons ==
+*Whip:
+ WEAPON:ITEM_WEAPON_WHIP ''material''
+*Battle axe:
+ WEAPON:ITEM_WEAPON_AXE_BATTLE ''material''
+*War hammer:
+ WEAPON:ITEM_WEAPON_HAMMER_WAR ''material''
+*Short sword:
+ WEAPON:ITEM_WEAPON_SWORD_SHORT ''material''
+*Spear:
+ WEAPON:ITEM_WEAPON_SPEAR ''material''
+*Mace:
+ WEAPON:ITEM_WEAPON_MACE ''material''
+*Crossbow:
+ WEAPON:ITEM_WEAPON_CROSSBOW ''material''
+*Pick:
+ WEAPON:ITEM_WEAPON_PICK ''material''
+*Bow:
+ WEAPON:ITEM_WEAPON_BOW ''material''
+*Blowgun:
+ WEAPON:ITEM_WEAPON_BLOWGUN ''material''
+*Pike:
+ WEAPON:ITEM_WEAPON_PIKE ''material''
+*Halberd:
+ WEAPON:ITEM_WEAPON_HALBERD ''material''
+*Two-handed sword:
+ WEAPON:ITEM_WEAPON_SWORD_2H ''material''
+*Long sword:
+ WEAPON:ITEM_WEAPON_SWORD_LONG ''material''
+*Maul:
+ WEAPON:ITEM_WEAPON_MAUL ''material''
+*Great axe:
+ WEAPON:ITEM_WEAPON_AXE_GREAT ''material''
+*Dagger:
+ WEAPON:ITEM_WEAPON_DAGGER_LARGE ''material''
+*Scourge:
+ WEAPON:ITEM_WEAPON_SCOURGE ''material''
+*Flail:
+ WEAPON:ITEM_WEAPON_FLAIL ''material''
+*Morningstar:
+ WEAPON:ITEM_WEAPON_MORNINGSTAR ''material''
+*Scimitar:
+ WEAPON:ITEM_WEAPON_SCIMITAR ''material''
+*Training axe:
+ WEAPON:ITEM_WEAPON_AXE_TRAINING ''material''
+*Training sword:
+ WEAPON:ITEM_WEAPON_SWORD_SHORT_TRAINING ''material''
+*Training spear:
+ WEAPON:ITEM_WEAPON_SPEAR_TRAINING ''material''
+== Ammo ==
+*Bolts:
+ AMMO:ITEM_AMMO_BOLTS ''material''
+ AMMO:ITEM_AMMO_BOLTS PLANT:GOBLIN_CAP:WOOD
+
+== Trap components ==
+* Menacing spike
+ TRAPCOMP:ITEM_TRAPCOMP_MENACINGSPIKE ''material''
+* Large, serrated disc
+ TRAPCOMP:ITEM_TRAPCOMP_LARGESERRATEDDISC ''material''
+* Spiked ball
+ TRAPCOMP:ITEM_TRAPCOMP_SPIKEDBALL ''material''
+* Enormous corkscrew
+ TRAPCOMP:ITEM_TRAPCOMP_ENORMOUSCORKSCREW ''material''
+* Giant axe blade
+ TRAPCOMP:ITEM_TRAPCOMP_GIANTAXEBLADE ''material''
+
+== Tools ==
+* Nest box
+ TOOL:ITEM_TOOL_NEST_BOX ''material''
+
+== Furniture ==
+Format:
+ createitem {{tc|green|'''Item token (from list below)'''}} {{tc|blue|'''Material'''}}
+"Material" is the same as the material used to create basic items (e.g. logs, boulders, bars, etc.)
+{| class="wikitable sortable" style="min-width:50%"
+|-
+! Item !! Item token
+|-
+| Armor stand || ARMORSTAND
+|-
+| Bag || BAG
+|-
+| Bed || BED
+|-
+| Box || BOX
+|-
+| Cabinet || CABINET
+|-
+| Cage || CAGE
+|-
+| Chair || CHAIR
+|-
+| Chest ||rowspan=2| BOX
+|-
+| Coffer <!-- box (from above) -->
+|-
+| Coffin || COFFIN
+|-
+| Door || DOOR
+|-
+| Floodgate || FLOODGATE
+|-
+| Grate || GRATE
+|-
+| Hatch cover || HATCH_COVER
+|-
+| Mechanisms || TRAPPARTS
+|-
+| Slab || SLAB
+|-
+| Statue || STATUE
+|-
+| Table || TABLE
+|-
+| Traction bench || TRACTION_BENCH
+|-
+| Weapon rack || WEAPONRACK
+|}
+
+== Animal products ==
+=== Cloth/leather/milk ===
+* Yarn (creature must be able to produce wool):
+ CLOTH CREATURE_MAT:''creature'':HAIR
+* Silk (creature must be able to produce silk):
+ CLOTH CREATURE_MAT:''creature'':SILK
+* Plant fiber (only works with appropriate plants):
+ CLOTH PLANT_MAT:''plant'':THREAD
+(Example: createitem CLOTH PLANT_MAT:GRASS_TAIL_PIG:THREAD 1)
+* Leather (tanned):
+ SKIN_TANNED CREATURE_MAT:''creature'':LEATHER
+* Milk (creature must be able to produce milk):
+ LIQUID_MISC CREATURE_MAT:''creature'':MILK
+
+=== Shells ===
+* Shells (when demanded for [[mood]]s, for example) are body parts and cannot be created directly. But it is possible to create a raw fish, then process it in a fishery:
+ FISH_RAW ''creature'':''caste''
+Example:
+ createitem FISH_RAW POND_TURTLE:MALE
+
+== Plant products ==
+
+=== Drinks ===
+* Drink made from the specified plant:
+ DRINK PLANT_MAT:''plant'':DRINK
+Example: createitem DRINK PLANT_MAT:MUSHROOM_HELMET_PLUMP:DRINK
+
+Spawning drinks on the ground will create an undrinkable puddle. You may wish to select an empty barrel with the cursor and run "createitem item" first before selecting a creature to run the command to create the beverages.
+
+=== Mill Products ===
+* Flour, dyes, and sugar:
+ POWDER_MISC PLANT_MAT:''plant'':MILL
+Example: createitem POWDER_MISC PLANT_MAT:MUSHROOM_CUP_DIMPLE:MILL
+
+Note that powders will only be usable if you create them into a bag by selecting a bag and running the "createitem item" command before selecting a creature again to run the command to create the milled powder.
+
+=== Seeds ===
+* Seeds for farming:
+ SEEDS PLANT_MAT:''plant'':SEED
+
+=== Growths ===
+* Growths being FRUIT, LEAVES, FLOWERS, etc:
+ PLANT_GROWTH PLANT:''plant'':''growth''
+
+== Equipment ==
+* Flask/Waterskin/Vial:
+ FLASK:NONE ''material''
+* Backpack:
+ BACKPACK:NONE ''material''
+
+= Materials =
+Unusual materials that work for most items above
+== Body parts ==
+Format:
+ ''item'' CREATURE_MAT:''creature'':{{tc|green|''material''}}
+Valid materials:
+* Edible (e.g. for MEAT items)
+** MUSCLE
+** EYE<sup>4</sup>
+** BRAIN
+** LUNG
+** HEART
+** LIVER
+** GUT
+** STOMACH
+** GIZZARD
+** PANCREAS
+** SPLEEN
+** KIDNEY
+* Craftable
+** BONE<sup>1,4</sup>
+** SHELL<sup>3</sup>
+** HOOF<sup>3</sup>
+** HORN<sup>3</sup>
+** IVORY<sup>3</sup>
+** TOOTH<sup>1</sup>
+** SILK<sup>3</sup>
+** HAIR<sup>1,4</sup> (sometimes)
+* Processable
+** SKIN<sup>1,4</sup>
+*** LEATHER
+** FAT
+*** TALLOW
+**** SOAP
+** MILK<sup>3</sup>
+*** CHEESE
+* Useless
+** CHITIN<sup>2</sup>
+** CARTILAGE<sup>1,4</sup>
+** SPINE<sup>3</sup>
+** NERVE
+** SINEW<sup>3</sup>
+** BLOOD<sup>3</sup>
+** PUS<sup>3</sup>
+** ICHOR<sup>3</sup>
+** GOO<sup>3</sup>
+** FEATHER<sup>3</sup>
+** SCALE<sup>3</sup>
+** CLAW<sup>3</sup>
+** NAIL<sup>3</sup>
+** TALON<sup>3</sup>
+
+:<sup>1</sup> - only present on standard creatures
+:<sup>2</sup> - only present on chitinous creatures
+:<sup>3</sup> - only present on some creatures
+:<sup>4</sup> - missing from some creatures

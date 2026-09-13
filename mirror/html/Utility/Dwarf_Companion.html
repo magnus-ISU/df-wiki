@@ -1,0 +1,142 @@
+<div class="mw-parser-output"><table class="version-table" style="text-align: center; margin: 3px auto 5px; padding: 0.25em; padding-top:1em; border-radius: 3px; -webkit-border-radius: 3px; -moz-border-radius: 3px; -o-border-radius: 3px; -ms-border-radius: 3px;; border: 2px solid #ddbb88; background: #fff5ee; min-width:27em"><tbody><tr><td style="padding: 0.3em 0.3em; width: 100%;"><span>This utility page is about v0.28.121.40d, an <b>older version</b> of DF.</span><br />
+<div style="float: right; font-size:75%; padding-right:2px; margin-top:-2px; margin-bottom:-7px;"><span class="version-link"><a href="/index.php/Template:Uv" class="mw-redirect" title="Template:Uv"><span style="text-decoration: none; color: #CA7A02;">More Info</span></a></span></div></td></tr>
+</tbody></table>
+<div class="thumb tright"><div class="thumbinner" style="width:302px;"><a href="/index.php/File:Dfcompanion1.png" class="image"><img alt="" src="/images/thumb/8/8b/Dfcompanion1.png/300px-Dfcompanion1.png" decoding="async" width="300" height="188" class="thumbimage" srcset="/images/thumb/8/8b/Dfcompanion1.png/450px-Dfcompanion1.png 1.5x, /images/thumb/8/8b/Dfcompanion1.png/600px-Dfcompanion1.png 2x" /></a>  <div class="thumbcaption"><div class="magnify"><a href="/index.php/File:Dfcompanion1.png" class="internal" title="Enlarge"></a></div>This is a preliminary screenshot of the prototype.</div></div></div>
+
+<h1><span id="What?"></span><span class="mw-headline" id="What.3F">What?</span></h1>
+<p>This project is about having a helper utility for dwarf fortress, hopefully filling gaps in the user interface. It will also allow some cool cheating, so that it would be possible to play with the engine. For example, you can now mark your nobles as butcherable! Ain't that cool?
+</p><p>For now, a <b>PROTOTYPE</b> utility is available, for testings. It uses python and requires many dependencies. It will end up as a standard .exe tool once features are ironed out.
+</p><p>It supports version 40d16, supposedly. The latest screenshot is at <a rel="nofollow" class="external text" href="http://bartabox.banquise.net/df/screen1.png">this place</a>.
+</p>
+<h1><span class="mw-headline" id="Important_warning">Important warning</span></h1>
+<p>When fiddling with DF memory, you might get crashes. Here are two important advices:
+</p>
+<ul><li>when writing into memory (like updating a creature's data), pause the game, load the data, update it, save it and then unpause the game</li>
+<li>do not teleport creatures that are hauling</li></ul>
+<h1><span class="mw-headline" id="Self-packaged_executables">Self-packaged executables</span></h1>
+<p>There is an executable version by <a href="/index.php/User:Valdemar" title="User:Valdemar">Valdemar</a> available that does not require Python or any of the other of the dependencies to be installed. Unzip it and run "dfcompanion_prototype.exe" to bring up the core companion window. The scripts available in the pure python version also have exe equivalents:
+</p>
+<ul><li>revealVeins.exe - run with no arguments to reveal all vein tiles</li>
+<li>reveal.exe - run with no arguments to reveal the whole map (very slow, a C utility like Tweak is recommended for this task)</li>
+<li>designator.exe - see <a href="/index.php/User:Bartavelle/DesignatorTiles" title="User:Bartavelle/DesignatorTiles">User:Bartavelle/DesignatorTiles</a></li>
+<li>changeProfession.exe - run through command prompt like "changeProfession [id] [profession]" where id is the ID of the dwarf you want to change (find this through core companion; pull up the profile of a dwarf and look in the window title) and profession is the profession to change to (Mason, Peasant, Speardwarf, etc.)</li></ul>
+<p><a rel="nofollow" class="external text" href="http://www.pindi.us/files/df/dfcompanion-0.16-exe.zip">Download (Version 0.16)</a>.
+<a rel="nofollow" class="external text" href="http://www.pindi.us/files/df/dfcompanion-0.17c-exe.zip">Download (Version 0.17c)</a>.
+</p>
+<h1><span class="mw-headline" id="How_to_install_and_run_it">How to install and run it</span></h1>
+<p>You need to install several things first. Do it right, or it will not work.
+</p>
+<ul><li><a rel="nofollow" class="external text" href="http://www.python.org/download/">Python</a> (should work with any version)</li>
+<li>from <a rel="nofollow" class="external text" href="http://sourceforge.net/projects/gladewin32/files/">this page</a>, the latest "Gtk+/Win32 Runtime Environment Installer" (the files that is named like that&#160;: gtk-2.12.9-win32-2.exe, scroll down a bit).</li></ul>
+<ul><li>For users of the -any versions, or python 2.4 users, you must:
+<ul><li>Install the three modules from <a rel="nofollow" class="external text" href="http://www.pygtk.org/downloads.html">this page</a> (PyCairo, PyGObject, PyGTK)</li>
+<li>Grab the software, v0.17d, at <a rel="nofollow" class="external text" href="http://bartabox.banquise.net/df/companion-0.17d-any.zip">this place</a>.</li></ul></li></ul>
+<ul><li>Reboot your computer. Although the software doesn't demand it, if you don't do so Python won't know where to find modules, leading to errors.</li>
+<li>Double click on "dfcompanion_prototype.py"!</li></ul>
+<h1><span id="Problems?"></span><span class="mw-headline" id="Problems.3F">Problems?</span></h1>
+<ul><li>Some black window flashes and nothing happens!</li></ul>
+<p>You should run it from the command line. Start / run / cmd.exe. Then type
+</p>
+<hr />
+<p>cd c:\where\companion\is\located\
+</p><p>dfcompanion_prototype.py
+</p>
+<hr />
+<p>You can copy by clicking on the top-right icon, and click copy in the Edit submenu. Then select with mouse, and press enter to copy.
+</p>
+<ul><li>The error message is something about a not finding pygtk, pycairo or pygobject</li></ul>
+<p>You didn't install properly the 3 modules at the pygtk site (see link in the how section).
+</p>
+<ul><li>The error messages says it can't find a dll</li></ul>
+<p>The GTK runtime environment is not properly installed.
+</p>
+<ul><li>The error messages says something like "g_assert_warning not found in libglib-2.0.0.dll"</li></ul>
+<p>There is a DLL conflict. You should reinstall the GTK runtime environment. If this fails, you have to find the old DLL that is staying somewhere on your system and remove it. Probably in c:\windows\system32\
+</p>
+<ul><li>No-one responds when I ask questions on the talk page.</li></ul>
+<p>Have everyone look at the discussion page on the off chance that they might know something.
+</p>
+<h1><span id="Usage_-_what_can_you_do?"></span><span class="mw-headline" id="Usage_-_what_can_you_do.3F">Usage - what can you do?</span></h1>
+<p>First run Dwarf Fortress, and load your game. It won't work otherwise.
+</p><p>The general idea is to have the main window open next to your DF windows. It should help you play the game by providing useful hints while playing. Order dwarves using the column "alerts" so that most important stuff is on top&#160;: hungry, unhappy, moody, hurt dwarves. You can play with creatures and view detailed views of their attributes by double clicking them. Right now, you can interact by:
+</p>
+<ul><li>clicking "heal", heals creature</li>
+<li>clicking "hurt", hurts creature</li>
+<li>clicking "apply", saves the following changes:
+<ul><li>position X,Y,Z</li>
+<li>strength, agility, toughness</li>
+<li>all flags (the checkbox stuff), most being unknown, please let us know about their use if you get it!</li>
+<li>pain, exhaustion, hunger, thirst, drowsiness</li>
+<li>race (still needs to be tested!)</li>
+<li>mood type (fey, macabre, ...), and mood skill increased</li></ul></li></ul>
+<p>Interesting effects are <a rel="nofollow" class="external text" href="http://mkv25.net/dfma/movie-236-lazydwarvesmustdie">butcherable dwarves</a> and <a rel="nofollow" class="external text" href="http://img184.imageshack.us/img184/7919/straydognz6.jpg">Corbine's crazy dogs</a>. Oh, and skeletal legendary miners that turn against your fortress.
+</p>
+<h1><span class="mw-headline" id="Random_questions">Random questions</span></h1>
+<ul><li>How to prevent a dwarf from bleeding to death&#160;? Turn him zombie. It will make him hostile, but cure his bleeding. Turn him back when happy.</li>
+<li>Reveal like tools and discovering the underground features&#160;: you have to uncover a tile belonging to an underground feature for it to be officially found. Just unreveal some tiles and dig through them.</li></ul>
+<h1><span class="mw-headline" id="dwarfdbg_scripts">dwarfdbg scripts</span></h1>
+<p>Here is a collection of scripts that wouldn't fit in DC but might be useful. Copy them in the DC folder and run them.
+</p>
+<ul><li><a rel="nofollow" class="external text" href="http://bartabox.banquise.net/df/butchercats.py">butchercats.py</a>&#160;: marks all "unintersted" cats and kitten as ready for slaughter.</li>
+<li>Soon, the "designator", with a list of cool stuff&#160;: <a href="/index.php/User:Bartavelle/DesignatorTiles" title="User:Bartavelle/DesignatorTiles">User:Bartavelle/DesignatorTiles</a></li></ul>
+<h1><span class="mw-headline" id="Changelog">Changelog</span></h1>
+<ul><li>utils.zip&#160;: initial test, some bugs with accents</li>
+<li>utils.0.1.zip&#160;: corrected problem with bad characters</li>
+<li>utils.0.2.zip&#160;: corrected problem with long strings</li>
+<li>utils.0.3.zip&#160;: corrected problem with creatures not in legends</li>
+<li>utils.0.4.zip&#160;: quick (untested) upgrade to v0.27.169.33g</li>
+<li>companion.0.5-any.zip - 07/01/2008
+<ul><li>Skill edition</li>
+<li>Removed the dependency on pydbg, should now work with python 2.x</li>
+<li>Incomplete linux support, for those people who go on holiday with only their linux laptops ...</li>
+<li>More details in the flags names</li>
+<li>Disabled the regular refreshes for now</li>
+<li>Body part name is resolved when showing damages</li>
+<li>Right-click popup with quick features&#160;: heal, hurt, tame, make war animal, rest and restore</li>
+<li>Civilization altering (steal that merchant swordsman!)</li></ul></li>
+<li>companion.0.6-any.zip - 22/01/2008
+<ul><li>Better error handling for Window users, should help debugging ...</li>
+<li>Firstname and nickname editor (finally)</li>
+<li>Money warnings, and money cheat</li>
+<li>Combat reports in DF mode</li>
+<li>Bleeding/Paralysis/ ... can be tweaked</li>
+<li>"Opinion poll"</li>
+<li>More details</li>
+<li>Instamood!</li></ul></li>
+<li>companion.0.7-any.zip - 07/02/2008
+<ul><li>Couples list</li>
+<li>Name editor</li>
+<li>Right click / zoom now works</li>
+<li>Support for 38a</li></ul></li>
+<li>companion.0.8-any.zip - 13/02/2008
+<ul><li>Removal of the couple list, should hopefully fix bugs</li>
+<li>Several scripts for more fun</li>
+<li>Better support for stuff</li>
+<li>Should be "final" of the prototype, next step will probably involve working on a standalone .exe, and the occasionnal fun script</li></ul></li>
+<li>companion.0.9-any.zip - 18/02/2008
+<ul><li>Quick update to fix for the new DF version.</li></ul></li>
+<li>companion.0.9-any.zip - 26/02/2008
+<ul><li>Another quick fix for 38b</li></ul></li>
+<li>companion.0.12-any.zip - 18/07/2008
+<ul><li>tons of changes, this specific version just keeps up with DF</li></ul></li>
+<li>companion.0.13-any.zip - 18/08/2008
+<ul><li>compatibility with 39f, should not work with previous versions</li>
+<li>zoom feature is disabled, because of UI changes</li>
+<li>added bugged slow reveal script&#160;:)</li></ul></li>
+<li>companion.0.14-any.zip - 14/09/2008
+<ul><li>zoom is back</li>
+<li>custom alerts are easier to add</li>
+<li>corrected the map offsets, added a "revealVein.py" script</li></ul></li>
+<li>companion.0.15-any.zip
+<ul><li>linux support is back</li>
+<li>and now, it is fast</li></ul></li>
+<li>companion.0.16-any.zip - 05/10/2009
+<ul><li>solves bug with additional languages</li></ul></li>
+<li>companion.0.17-any.zip - 27/11/2009
+<ul><li>d16 support</li>
+<li>ASLR support</li></ul></li></ul>
+<h1><span class="mw-headline" id="thanks">thanks</span></h1>
+<ul><li>the memory hackers!</li>
+<li>Phil, for the clever python tricks</li>
+<li>Corbine, for early testings, bug discovery, and flags discovery</li>
+<li>sinoth, for early testings, bug discovery</li></ul></div>

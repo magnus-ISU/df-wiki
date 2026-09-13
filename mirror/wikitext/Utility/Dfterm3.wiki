@@ -1,0 +1,22 @@
+{{Quality|Fine|01:21, 29 September 2013 (UTC)}}
+{{uv|DF2012}}
+'''Dfterm3''' is a remote Dwarf Fortress playing software for multiple users through a web interface. It is a successor to [[Utility:Dfterm2|Dfterm2]] ([http://www.bay12forums.com/smf/index.php?topic=50643.0]), which does exactly the same on telnet instead of a web browser.
+
+DFTerm3 is no longer actively developed, but alternatives exist such as [http://www.bay12forums.com/smf/index.php?topic=139975 DF Everywhere].
+== Setup ==
+* [http://www.bay12forums.com/smf/index.php?topic=129995.0 Download dfterm3] (currently only Windows builds are provided) or [https://github.com/Noeda/dfterm3/blob/master/README.md compile it from source].
+* Obtain the dfhack plugin, either from the [http://www.bay12forums.com/smf/index.php?topic=129995.0 forum thread] or by [https://github.com/Noeda/dfhack compiling it from source].
+* Set the initial administrator password (in the directory where the dfterm3 executable is located):
+Linux/OS X:
+ ./dfterm3 --admin-password
+Windows:
+ dfterm3.exe --admin-password
+Note that the password will not be visible, but will still be readable by dfterm3.
+
+== External links ==
+* [http://www.bay12forums.com/smf/index.php?topic=129995.0 Dfterm3 Forum thread]
+* [https://github.com/Noeda/dfterm3 GitHub repository]
+** [https://github.com/Noeda/dfterm3/blob/master/README.md README], with compilation/installation instructions
+** [https://github.com/Noeda/dfterm3/issues Issue tracker]
+[[Category:Utilities]]
+[[ru:Utility:Dfterm3]]

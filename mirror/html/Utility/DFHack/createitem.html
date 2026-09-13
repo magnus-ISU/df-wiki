@@ -1,0 +1,452 @@
+<div class="mw-parser-output"><p>This is a list of <code>createitem</code> commands for <a href="/index.php/Utility:DFHack" title="Utility:DFHack">DFHack</a>.
+</p><p>(Not to be confused with <code>gui/create-item</code>, an interactive Lua script.)
+</p>
+<h1><span class="mw-headline" id="Usage">Usage</span></h1>
+<p><b>Format:</b>
+</p>
+<pre>createitem <span style="color:green"><b>[Item token]</b></span> <span style="color:blue"><b>[Material]</b></span> <span style="color:red"><b>[Quantity (optional)]</b></span>
+</pre>
+<ul><li>If you select a unit, then that unit will be named (<i>or, as it would be, used</i>) as the crafter, otherwise, the first unit in the fortress will be automatically selected <i>if</i> the keyboard cursor is active. Clothing and armor items will be sized for that unit's creature type.</li>
+<li>By default, items will be placed on the floor, either at the feet of the selected unit or beneath the cursor.
+<ul><li>If you select a container (such as a barrel, backpack, or minecart) and type <code>createitem item</code>, or a building (such as a workshop, chest, or weapon rack) and type <code>createitem building</code>, all subsequently created items will be placed inside that container or building.</li>
+<li>Typing <code>createitem floor</code> will switch it back to placing created items on the floor. This will also happen automatically if the previously-selected container or building is destroyed. A list of valid item tokens can be found <a href="/index.php/Item_token" title="Item token">here</a>: Note that CORPSE, CORPSEPIECE, and FOOD are not supported by DFHack.</li></ul></li>
+<li>You can create multiple items at once by appending a number to the createitem command (e.g. <code>createitem BOULDER INORGANIC:HEMATITE 20</code>). Note that certain item types will be created in stacks, while others will be created as individual items - see the <a href="/index.php/Reactions#quantity_2" class="mw-redirect" title="Reactions">Reactions</a> page for more information.</li>
+<li>Text in <i>italics</i> should be replaced with the ID from the relevant raw page on this wiki. For example, to make goblin-cap logs, visit the <a href="/index.php/Goblin-cap" title="Goblin-cap">goblin-cap</a> page and view the raws. The ID is found in the first token, separated from the item type with a colon - for example, the ID for goblin-caps is <code>GOBLIN_CAP</code>, retrieved from <code>[PLANT:GOBLIN_CAP]</code>.
+<ul><li>Some IDs contain a space which needs to be quoted, for example <code>createitem ROUGH "INORGANIC:LAPIS LAZULI"</code>.</li>
+<li>All ID values are <i>case sensitive</i>, so make sure you capitalize them correctly - in vanilla raws, they are typically all uppercase, but mixed-case IDs may be encountered when using mods.</li></ul></li></ul>
+
+<h1><span class="mw-headline" id="Items">Items</span></h1>
+<h2><span class="mw-headline" id="Inorganic_items">Inorganic items</span></h2>
+<p>Most of these can be obtained from the <a href="/index.php/Item_token" title="Item token">list of item tokens</a>.
+</p>
+<h3><span class="mw-headline" id="Stone">Stone</span></h3>
+<ul><li>Boulders (i.e. mined stones):</li></ul>
+<pre>BOULDER INORGANIC:<i>stone</i>
+</pre>
+<ul><li>Blocks</li></ul>
+<pre>BLOCKS INORGANIC:<i>stone</i>
+</pre>
+<h3><span class="mw-headline" id="Wood">Wood</span></h3>
+<ul><li>Logs</li></ul>
+<pre>WOOD PLANT_MAT:<i>tree</i>:WOOD
+</pre>
+<ul><li>Blocks</li></ul>
+<pre>BLOCKS PLANT_MAT:<i>tree</i>:WOOD
+</pre>
+<h3><span class="mw-headline" id="Metal">Metal</span></h3>
+<ul><li><a href="/index.php/Bar" title="Bar">Bars</a> (or <a href="/index.php/Wafer" class="mw-redirect" title="Wafer">wafers</a>)</li></ul>
+<pre>BAR INORGANIC:<i>metal</i>
+</pre>
+<h3><span class="mw-headline" id="Gems">Gems</span></h3>
+<ul><li>Rough gems</li></ul>
+<pre>ROUGH INORGANIC:<i>gem</i>
+</pre>
+<ul><li>Small cut gems</li></ul>
+<pre>SMALLGEM INORGANIC:<i>gem</i>
+</pre>
+<ul><li>Large cut gems</li></ul>
+<pre>GEM INORGANIC:<i>gem</i>
+</pre>
+<h3><span class="mw-headline" id="Glass">Glass</span></h3>
+<p>Raw glass:
+</p>
+<pre>ROUGH <i>glass</i>:NONE
+</pre>
+<table class="wikitable">
+
+<tbody><tr>
+<th>Glass</th>
+<th>Material token ("<i><code>glass</code></i>")
+</th></tr>
+<tr>
+<td>Green glass</td>
+<td>GLASS_GREEN
+</td></tr>
+<tr>
+<td>Clear glass</td>
+<td>GLASS_CLEAR
+</td></tr>
+<tr>
+<td>Crystal glass</td>
+<td>GLASS_CRYSTAL
+</td></tr></tbody></table>
+<p>(Items made of glass, e.g. furniture, use these names as well)
+</p>
+<h2><span class="mw-headline" id="Fuel">Fuel</span></h2>
+<ul><li>Coke</li></ul>
+<pre>BAR COAL:COKE
+</pre>
+<ul><li>Charcoal</li></ul>
+<pre>BAR COAL:CHARCOAL
+</pre>
+<h2><span class="mw-headline" id="Misc">Misc</span></h2>
+<ul><li>Ash bars</li></ul>
+<pre>BAR ASH
+</pre>
+<ul><li>Liquids (non-DRINK but including milk)</li></ul>
+<pre>LIQUID_MISC <i>material</i>
+</pre>
+<ul><li>Quires</li></ul>
+<pre>TOOL:ITEM_TOOL_QUIRE <i>material</i>
+</pre>
+<ul><li>Pipe sections</li></ul>
+<pre>PIPE_SECTION <i>material</i>
+</pre>
+<h2><span class="mw-headline" id="Armor">Armor</span></h2>
+<ul><li>Gauntlets (will automatically be created in pairs)</li></ul>
+<pre>GLOVES:ITEM_GLOVES_GAUNTLETS <i>material</i>
+</pre>
+<ul><li>Gloves (will automatically be created in pairs)</li></ul>
+<pre>GLOVES:ITEM_GLOVES_GLOVES <i>material</i>
+</pre>
+<ul><li>Helm</li></ul>
+<pre>HELM:ITEM_HELM_HELM <i>material</i>
+</pre>
+<ul><li>Cap</li></ul>
+<pre>HELM:ITEM_HELM_CAP <i>material</i>
+</pre>
+<ul><li>Breastplate</li></ul>
+<pre>ARMOR:ITEM_ARMOR_BREASTPLATE <i>material</i>
+</pre>
+<ul><li>Mail shirt</li></ul>
+<pre>ARMOR:ITEM_ARMOR_MAIL_SHIRT <i>material</i>
+</pre>
+<ul><li>Greaves</li></ul>
+<pre>PANTS:ITEM_PANTS_GREAVES <i>material</i>
+</pre>
+<ul><li>Leggings</li></ul>
+<pre>PANTS:ITEM_PANTS_LEGGINGS <i>material</i>
+</pre>
+<ul><li>High boots (will automatically be created in pairs)</li></ul>
+<pre>SHOES:ITEM_SHOES_BOOTS <i>material</i>
+</pre>
+<ul><li>Low boots (will automatically be created in pairs)</li></ul>
+<pre>SHOES:ITEM_SHOES_SHOES <i>material</i>
+</pre>
+<ul><li>Shoes (will automatically be created in pairs)</li></ul>
+<pre>SHOES:ITEM_SHOES_BOOTS_LOW <i>material</i>
+</pre>
+<ul><li>Cloak</li></ul>
+<pre>ARMOR:ITEM_ARMOR_CLOAK <i>material</i>
+</pre>
+<ul><li>Shield</li></ul>
+<pre>SHIELD:ITEM_SHIELD_SHIELD <i>material</i>
+</pre>
+<ul><li>Buckler</li></ul>
+<pre>SHIELD:ITEM_SHIELD_BUCKLER <i>material</i>
+</pre>
+<ul><li>Skirt (long)</li></ul>
+<pre>PANTS:ITEM_PANTS_SKIRT_LONG <i>material</i>
+</pre>
+<ul><li>Skirt (short)</li></ul>
+<pre>PANTS:ITEM_PANTS_SKIRT_SHORT <i>material</i>
+</pre>
+<ul><li>Skirt</li></ul>
+<pre>PANTS:ITEM_PANTS_SKIRT <i>material</i>
+</pre>
+<h2><span class="mw-headline" id="Weapons">Weapons</span></h2>
+<ul><li>Whip:</li></ul>
+<pre>WEAPON:ITEM_WEAPON_WHIP <i>material</i>
+</pre>
+<ul><li>Battle axe:</li></ul>
+<pre>WEAPON:ITEM_WEAPON_AXE_BATTLE <i>material</i>
+</pre>
+<ul><li>War hammer:</li></ul>
+<pre>WEAPON:ITEM_WEAPON_HAMMER_WAR <i>material</i>
+</pre>
+<ul><li>Short sword:</li></ul>
+<pre>WEAPON:ITEM_WEAPON_SWORD_SHORT <i>material</i>
+</pre>
+<ul><li>Spear:</li></ul>
+<pre>WEAPON:ITEM_WEAPON_SPEAR <i>material</i>
+</pre>
+<ul><li>Mace:</li></ul>
+<pre>WEAPON:ITEM_WEAPON_MACE <i>material</i>
+</pre>
+<ul><li>Crossbow:</li></ul>
+<pre>WEAPON:ITEM_WEAPON_CROSSBOW <i>material</i>
+</pre>
+<ul><li>Pick:</li></ul>
+<pre>WEAPON:ITEM_WEAPON_PICK <i>material</i>
+</pre>
+<ul><li>Bow:</li></ul>
+<pre>WEAPON:ITEM_WEAPON_BOW <i>material</i>
+</pre>
+<ul><li>Blowgun:</li></ul>
+<pre>WEAPON:ITEM_WEAPON_BLOWGUN <i>material</i>
+</pre>
+<ul><li>Pike:</li></ul>
+<pre>WEAPON:ITEM_WEAPON_PIKE <i>material</i>
+</pre>
+<ul><li>Halberd:</li></ul>
+<pre>WEAPON:ITEM_WEAPON_HALBERD <i>material</i>
+</pre>
+<ul><li>Two-handed sword:</li></ul>
+<pre>WEAPON:ITEM_WEAPON_SWORD_2H <i>material</i>
+</pre>
+<ul><li>Long sword:</li></ul>
+<pre>WEAPON:ITEM_WEAPON_SWORD_LONG <i>material</i>
+</pre>
+<ul><li>Maul:</li></ul>
+<pre>WEAPON:ITEM_WEAPON_MAUL <i>material</i>
+</pre>
+<ul><li>Great axe:</li></ul>
+<pre>WEAPON:ITEM_WEAPON_AXE_GREAT <i>material</i>
+</pre>
+<ul><li>Dagger:</li></ul>
+<pre>WEAPON:ITEM_WEAPON_DAGGER_LARGE <i>material</i>
+</pre>
+<ul><li>Scourge:</li></ul>
+<pre>WEAPON:ITEM_WEAPON_SCOURGE <i>material</i>
+</pre>
+<ul><li>Flail:</li></ul>
+<pre>WEAPON:ITEM_WEAPON_FLAIL <i>material</i>
+</pre>
+<ul><li>Morningstar:</li></ul>
+<pre>WEAPON:ITEM_WEAPON_MORNINGSTAR <i>material</i>
+</pre>
+<ul><li>Scimitar:</li></ul>
+<pre>WEAPON:ITEM_WEAPON_SCIMITAR <i>material</i>
+</pre>
+<ul><li>Training axe:</li></ul>
+<pre>WEAPON:ITEM_WEAPON_AXE_TRAINING <i>material</i>
+</pre>
+<ul><li>Training sword:</li></ul>
+<pre>WEAPON:ITEM_WEAPON_SWORD_SHORT_TRAINING <i>material</i>
+</pre>
+<ul><li>Training spear:</li></ul>
+<pre>WEAPON:ITEM_WEAPON_SPEAR_TRAINING <i>material</i>
+</pre>
+<h2><span class="mw-headline" id="Ammo">Ammo</span></h2>
+<ul><li>Bolts:</li></ul>
+<pre>AMMO:ITEM_AMMO_BOLTS <i>material</i>
+AMMO:ITEM_AMMO_BOLTS PLANT:GOBLIN_CAP:WOOD
+</pre>
+<h2><span class="mw-headline" id="Trap_components">Trap components</span></h2>
+<ul><li>Menacing spike</li></ul>
+<pre>TRAPCOMP:ITEM_TRAPCOMP_MENACINGSPIKE <i>material</i>
+</pre>
+<ul><li>Large, serrated disc</li></ul>
+<pre>TRAPCOMP:ITEM_TRAPCOMP_LARGESERRATEDDISC <i>material</i>
+</pre>
+<ul><li>Spiked ball</li></ul>
+<pre>TRAPCOMP:ITEM_TRAPCOMP_SPIKEDBALL <i>material</i>
+</pre>
+<ul><li>Enormous corkscrew</li></ul>
+<pre>TRAPCOMP:ITEM_TRAPCOMP_ENORMOUSCORKSCREW <i>material</i>
+</pre>
+<ul><li>Giant axe blade</li></ul>
+<pre>TRAPCOMP:ITEM_TRAPCOMP_GIANTAXEBLADE <i>material</i>
+</pre>
+<h2><span class="mw-headline" id="Tools">Tools</span></h2>
+<ul><li>Nest box</li></ul>
+<pre>TOOL:ITEM_TOOL_NEST_BOX <i>material</i>
+</pre>
+<h2><span class="mw-headline" id="Furniture">Furniture</span></h2>
+<p>Format:
+</p>
+<pre>createitem <span style="color:green"><b>Item token (from list below)</b></span> <span style="color:blue"><b>Material</b></span>
+</pre>
+<p>"Material" is the same as the material used to create basic items (e.g. logs, boulders, bars, etc.)
+</p>
+<table class="wikitable sortable" style="min-width:50%">
+
+<tbody><tr>
+<th>Item</th>
+<th>Item token
+</th></tr>
+<tr>
+<td>Armor stand</td>
+<td>ARMORSTAND
+</td></tr>
+<tr>
+<td>Bag</td>
+<td>BAG
+</td></tr>
+<tr>
+<td>Bed</td>
+<td>BED
+</td></tr>
+<tr>
+<td>Box</td>
+<td>BOX
+</td></tr>
+<tr>
+<td>Cabinet</td>
+<td>CABINET
+</td></tr>
+<tr>
+<td>Cage</td>
+<td>CAGE
+</td></tr>
+<tr>
+<td>Chair</td>
+<td>CHAIR
+</td></tr>
+<tr>
+<td>Chest</td>
+<td rowspan="2">BOX
+</td></tr>
+<tr>
+<td>Coffer
+</td></tr>
+<tr>
+<td>Coffin</td>
+<td>COFFIN
+</td></tr>
+<tr>
+<td>Door</td>
+<td>DOOR
+</td></tr>
+<tr>
+<td>Floodgate</td>
+<td>FLOODGATE
+</td></tr>
+<tr>
+<td>Grate</td>
+<td>GRATE
+</td></tr>
+<tr>
+<td>Hatch cover</td>
+<td>HATCH_COVER
+</td></tr>
+<tr>
+<td>Mechanisms</td>
+<td>TRAPPARTS
+</td></tr>
+<tr>
+<td>Slab</td>
+<td>SLAB
+</td></tr>
+<tr>
+<td>Statue</td>
+<td>STATUE
+</td></tr>
+<tr>
+<td>Table</td>
+<td>TABLE
+</td></tr>
+<tr>
+<td>Traction bench</td>
+<td>TRACTION_BENCH
+</td></tr>
+<tr>
+<td>Weapon rack</td>
+<td>WEAPONRACK
+</td></tr></tbody></table>
+<h2><span class="mw-headline" id="Animal_products">Animal products</span></h2>
+<h3><span id="Cloth/leather/milk"></span><span class="mw-headline" id="Cloth.2Fleather.2Fmilk">Cloth/leather/milk</span></h3>
+<ul><li>Yarn (creature must be able to produce wool):</li></ul>
+<pre>CLOTH CREATURE_MAT:<i>creature</i>:HAIR
+</pre>
+<ul><li>Silk (creature must be able to produce silk):</li></ul>
+<pre>CLOTH CREATURE_MAT:<i>creature</i>:SILK
+</pre>
+<ul><li>Plant fiber (only works with appropriate plants):</li></ul>
+<pre>CLOTH PLANT_MAT:<i>plant</i>:THREAD
+</pre>
+<p>(Example: createitem CLOTH PLANT_MAT:GRASS_TAIL_PIG:THREAD 1)
+</p>
+<ul><li>Leather (tanned):</li></ul>
+<pre>SKIN_TANNED CREATURE_MAT:<i>creature</i>:LEATHER
+</pre>
+<ul><li>Milk (creature must be able to produce milk):</li></ul>
+<pre>LIQUID_MISC CREATURE_MAT:<i>creature</i>:MILK
+</pre>
+<h3><span class="mw-headline" id="Shells">Shells</span></h3>
+<ul><li>Shells (when demanded for <a href="/index.php/Mood" class="mw-redirect" title="Mood">moods</a>, for example) are body parts and cannot be created directly. But it is possible to create a raw fish, then process it in a fishery:</li></ul>
+<pre>FISH_RAW <i>creature</i>:<i>caste</i>
+</pre>
+<p>Example:
+</p>
+<pre>createitem FISH_RAW POND_TURTLE:MALE
+</pre>
+<h2><span class="mw-headline" id="Plant_products">Plant products</span></h2>
+<h3><span class="mw-headline" id="Drinks">Drinks</span></h3>
+<ul><li>Drink made from the specified plant:</li></ul>
+<pre>DRINK PLANT_MAT:<i>plant</i>:DRINK
+</pre>
+<p>Example: createitem DRINK PLANT_MAT:MUSHROOM_HELMET_PLUMP:DRINK
+</p><p>Spawning drinks on the ground will create an undrinkable puddle. You may wish to select an empty barrel with the cursor and run "createitem item" first before selecting a creature to run the command to create the beverages.
+</p>
+<h3><span class="mw-headline" id="Mill_Products">Mill Products</span></h3>
+<ul><li>Flour, dyes, and sugar:</li></ul>
+<pre>POWDER_MISC PLANT_MAT:<i>plant</i>:MILL
+</pre>
+<p>Example: createitem POWDER_MISC PLANT_MAT:MUSHROOM_CUP_DIMPLE:MILL
+</p><p>Note that powders will only be usable if you create them into a bag by selecting a bag and running the "createitem item" command before selecting a creature again to run the command to create the milled powder.
+</p>
+<h3><span class="mw-headline" id="Seeds">Seeds</span></h3>
+<ul><li>Seeds for farming:</li></ul>
+<pre>SEEDS PLANT_MAT:<i>plant</i>:SEED
+</pre>
+<h3><span class="mw-headline" id="Growths">Growths</span></h3>
+<ul><li>Growths being FRUIT, LEAVES, FLOWERS, etc:</li></ul>
+<pre>PLANT_GROWTH PLANT:<i>plant</i>:<i>growth</i>
+</pre>
+<h2><span class="mw-headline" id="Equipment">Equipment</span></h2>
+<ul><li>Flask/Waterskin/Vial:</li></ul>
+<pre>FLASK:NONE <i>material</i>
+</pre>
+<ul><li>Backpack:</li></ul>
+<pre>BACKPACK:NONE <i>material</i>
+</pre>
+<h1><span class="mw-headline" id="Materials">Materials</span></h1>
+<p>Unusual materials that work for most items above
+</p>
+<h2><span class="mw-headline" id="Body_parts">Body parts</span></h2>
+<p>Format:
+</p>
+<pre><i>item</i> CREATURE_MAT:<i>creature</i>:<span style="color:green"><i>material</i></span>
+</pre>
+<p>Valid materials:
+</p>
+<ul><li>Edible (e.g. for MEAT items)
+<ul><li>MUSCLE</li>
+<li>EYE<sup>4</sup></li>
+<li>BRAIN</li>
+<li>LUNG</li>
+<li>HEART</li>
+<li>LIVER</li>
+<li>GUT</li>
+<li>STOMACH</li>
+<li>GIZZARD</li>
+<li>PANCREAS</li>
+<li>SPLEEN</li>
+<li>KIDNEY</li></ul></li>
+<li>Craftable
+<ul><li>BONE<sup>1,4</sup></li>
+<li>SHELL<sup>3</sup></li>
+<li>HOOF<sup>3</sup></li>
+<li>HORN<sup>3</sup></li>
+<li>IVORY<sup>3</sup></li>
+<li>TOOTH<sup>1</sup></li>
+<li>SILK<sup>3</sup></li>
+<li>HAIR<sup>1,4</sup> (sometimes)</li></ul></li>
+<li>Processable
+<ul><li>SKIN<sup>1,4</sup>
+<ul><li>LEATHER</li></ul></li>
+<li>FAT
+<ul><li>TALLOW
+<ul><li>SOAP</li></ul></li></ul></li>
+<li>MILK<sup>3</sup>
+<ul><li>CHEESE</li></ul></li></ul></li>
+<li>Useless
+<ul><li>CHITIN<sup>2</sup></li>
+<li>CARTILAGE<sup>1,4</sup></li>
+<li>SPINE<sup>3</sup></li>
+<li>NERVE</li>
+<li>SINEW<sup>3</sup></li>
+<li>BLOOD<sup>3</sup></li>
+<li>PUS<sup>3</sup></li>
+<li>ICHOR<sup>3</sup></li>
+<li>GOO<sup>3</sup></li>
+<li>FEATHER<sup>3</sup></li>
+<li>SCALE<sup>3</sup></li>
+<li>CLAW<sup>3</sup></li>
+<li>NAIL<sup>3</sup></li>
+<li>TALON<sup>3</sup></li></ul></li></ul>
+<dl><dd><sup>1</sup> - only present on standard creatures</dd>
+<dd><sup>2</sup> - only present on chitinous creatures</dd>
+<dd><sup>3</sup> - only present on some creatures</dd>
+<dd><sup>4</sup> - missing from some creatures</dd></dl></div>

@@ -1,0 +1,24 @@
+{{Infobox utility
+| update= 18 Apr, 2021
+| image = File:DF_Storyteller_Logo.svg
+| misc  =
+* [https://dfstoryteller.com/ Offical Website] 
+* [https://gitlab.com/df_storyteller/df-storyteller Gitlab Project]
+* [https://docs.dfstoryteller.com/ Documentation]
+* [https://gitlab.com/df_storyteller/df-storyteller/-/blob/master/docs/paintings.md List of visualizers]
+* [https://gitlab.com/df_storyteller/df-storyteller/-/releases Download]
+}}
+
+Dwarf Fortress Storyteller (DF Storyteller, DF ST) is an [[utility|application]] that parses ''Dwarf Fortress'' [[legends]] files, stores them internally and makes them queryable using API's. Providing a uniform interface to query the legends of Dwarf Fortress allows other applications to use this interface so they do not have to parse the (large) data files in order to display some simple information.
+
+DF Storyteller is written to be used by other applications so it might be included in the visualizer you want to use. Look here for a
+[https://gitlab.com/df_storyteller/df-storyteller/-/blob/master/docs/paintings.md list of visualizers (painters)]. To get started, download the executable from the [https://gitlab.com/df_storyteller/df-storyteller/-/releases release page] (cross platform: Windows, Linux, macOS)
+
+==Gallery==
+An example of a visualizer is [https://gitlab.com/df_storyteller/the-bard The Bard] created in DF ST.
+<gallery widths=200px>
+File:DF_Storyteller_explain_workings.png|Explains how DF Storyteller works
+File:The_Bard_historical_figure_screenshot.png|Screenshot of Historical Figure in The Bard visualizer
+</gallery>
+[[Category:Utilities]]
+[[ru:Utility:DF Storyteller]]

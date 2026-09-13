@@ -1,0 +1,36 @@
+[[Category:Tweak]][[Category:Tweak Modules]]
+=Adjust Start=
+
+[[Image:Dwarf Fortress Tweak Adjust Start.png|right]]
+Allows editing of starting dwarf count and starting points. Dwarf count can be 1 to 2147483647 (though I would suggest no more than 20), and points can be 0 to 32767.
+
+=<div style="clear:both">Enable Magma Buildings</div>=
+
+Enables magma buildings. This is a port of [[User:0x517A5D|0x517A5D]]'s Enable Magma Buildings tool.
+
+=Heal=
+
+[[Image:Tweak heal.png|right]]
+
+Heals or hurts creature body parts.
+
+When hurting a creature, if that creature does not ignore pain or wounds it will quickly die due to it.
+
+=<div style="clear:both">Resume</div>=
+
+Resumes a suspended (frozen) process. ''This does not unfreeze games that have frozen due to instability or crashing, only if it was suspended by a Tweak module incorrectly.''
+
+This shouldn't happen if a module crashes out, but it is here as a helper just in case it does happen.
+
+Run multiple times if one run didn't unfreeze the game.
+
+This module is hidden by default.
+
+=Reveal=
+
+Reveals all allocated tiles on the map. If you want to reveal the entire map, the easiest way all tiles on the map is to go to the lowest Z level possible, then designate (and undesignate) the entire level for mining.
+
+=Warp=
+
+[[Image:Dwarf Fortress Tweak Warp.png|right]]
+Allows warping (teleporting) of creatures, with various options.

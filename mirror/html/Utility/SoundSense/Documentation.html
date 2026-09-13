@@ -1,0 +1,237 @@
+<div class="mw-parser-output"><p>SoundSense is a sound-engine tool which replaces the single background guitar with a collection of sounds and music that play depending on context.  
+</p><p>SoundSense has a <a rel="nofollow" class="external text" href="http://www.bay12forums.com/smf/index.php?topic=60287">bay12 forum thread</a>, an <a rel="nofollow" class="external text" href="http://df.zweistein.cz/soundsense/">official website</a>, and is open source <a rel="nofollow" class="external text" href="https://code.google.com/p/df-soundsense/">here</a>.  
+</p><p>This page is for technical documentation, advanced instructions, advice for modders, and so on.  
+</p><p><a href="/index.php/Utility:SoundSense" title="Utility:SoundSense">Here's the main page for this utility</a>
+</p>
+<div style="width: 40%"></div>
+<h2><span class="mw-headline" id="Installation">Installation</span></h2>
+<p>SoundSense is included and preconfigured in <a href="/index.php/Utility:Lazy_Newb_Pack" title="Utility:Lazy Newb Pack">the Lazy Newb Pack</a> and requires no setup.  For manual installation, continue...
+</p><p>Installing and configuring software can be intimidating if you are not an IT nerd. And this
+is no exception with SoundSense. But bear with me and it can actually be pretty easy.
+</p><p><b>Non-scary instructions:</b>
+</p>
+<ul><li>Install the java runtime 7. Get it <a rel="nofollow" class="external text" href="http://www.oracle.com/technetwork/java/javase/downloads/jre-7u3-download-1501631.html">here</a>.</li>
+<li>Download and extract SoundSense (It does not matter where.)</li>
+<li>Download soundpack.zip and extract the "packs" folder to SoundSense directory</li>
+<li>Run soundsense.cmd or soundsense.exe</li></ul>
+<p>First, you need to have the java runtime installed. It can be downloaded from the java 
+homepage. To determine if your computer already has the correct installation of java, go 
+to the Start button, left click "Run..." from the bottom of the menu, type in "cmd" in the 
+dialog that opens, and press the [OK] button. A dark windows pops up and you will be at a 
+command prompt. Type in "java -version" and press [Enter].
+</p><p>A few lines starting with [java version "1.7.0_03"] or something similar should appear. If 
+that case is the case, you are good to go. But if you see [java version "1.6.x_xx" or an 
+earlier version (lower number), you will need to download and install the latest java.
+</p><p>If something similar to ['java' is not recognized as an internal or external command] 
+appears, either java has not been installed yet or it was not installed correctly. If 
+your case is the latter, it may be possible to work around the problem by editing the 
+soundSense.cmd (in your SoundSense directory). Open it with Notepad and find line line 
+starting with "java -Dja..." and replace the "java" part with the full path for your java 
+installation. For example: "C:\Program Files\Java\jdk1.6.0_20\bin\java.exe"
+</p><p>That was the hard part.
+</p><p>Now, where to install it? SoundSense expects to be in a sub-directory that is inside your 
+Dwarf Fortress directory. So, for example, if you have Dwarf Fortress in F:/df_31_18_win/,
+you should unpack the contents of SoundSense zip to F:/df_31_18_win/soundsense/. By 
+default, you want to make sure that the .cmd file you use to launch SoundSense is inside a 
+sub-directory of (i.e., below) the DF folder where gamelog.txt is located.
+</p><p>If you want to install to a different location, you need to edit configuration.xml and 
+edit the &lt;gamelog path="../gamelog.txt"/&gt; line. Replace "../gamelog.txt" with the path to 
+where Dwarf Fortress is located. For example: "F:/df_31_18_win/gamelog.txt"
+</p><p>SoundSense is now all set up and ready to run. But you still need the actual sounds and 
+music that it will play. So download soundpack.zip and unzip the "packs" directory and all 
+the contents inside that to the SoundSense directory.
+</p><p>You can start SoundSense by launching (double left-clicking) either soundSense.cmd or 
+soundSenseExe.cmd. (Using the latter should give you clearer error messages regarding a 
+bad java installation.) If you like, you can create a shortcut to soundSense.cmd, rename 
+it "SoundSense" and move it to your desktop for easy access.
+</p><p>Finally, remember that SoundSense needs to run in the background. Ideally, you should 
+start SoundSense BEFORE you start Dwarf Fortress.
+</p>
+<h2><span class="mw-headline" id="Known_Issues">Known Issues</span></h2>
+<h3><span class="mw-headline" id="Moments_of_Silence">Moments of Silence</span></h3>
+<p>Occasionally, the music in SoundSense will stop for a short period (10, 20, or 30 seconds) 
+before resuming. This is not a bug - it is intentional. This was done to let ears rest a 
+bit between tracks. (Research shows that ears which get a rest have time to recover and 
+are less likely to be damaged.) Also, a few tracks have a silent start and, at low volume, 
+may take a minute or longer to become audible. If in doubt, you can see what is currently 
+playing in GUI under the volume slider. During periods of silence, this will typically 
+show "10s silence" or similar.
+</p>
+<h3><span class="mw-headline" id="Game_Loads_and_the_Music_is_Random">Game Loads and the Music is Random</span></h3>
+<p>When a game is loaded, SoundSense picks a random seasonal music track to play. This is not a bug - it is intentional. There is no way for SoundSense to detect what season it is when a game is loaded, so a random soundtrack is chosen. But when the season next changes, it will choose the correct soundtrack.
+</p><p>This can be fixed using a dfhack plugin (soundsense-season) which writes the season to the gamelog when a world is loaded.  This plugin is included with recent versions of soundsense.
+</p>
+<h3><span class="mw-headline" id="Adventure_Mode_-_A_Bit_Lacking">Adventure Mode - A Bit Lacking</span></h3>
+<p>Adventure Mode kind of works. The battle sounds function quite well because they are 
+mostly the same as those in Fortress Mode. But SoundSense is still a bit lacking in other 
+adventure sounds. The problem is that Adventure Mode does not log many other useful 
+events. For example, encountering a megabeast or a quest mob is resolved in chat, leaving 
+no message in the game log to trigger SoundSense.
+</p><p>Improvements in how DF handles logging could benefit both SoundSense and DF as a whole. 
+Such suggestions have already been posted in the official Dwarf Fortress forums: 
+<a rel="nofollow" class="external free" href="http://www.bay12forums.com/smf/index.php?topic=64834.0">http://www.bay12forums.com/smf/index.php?topic=64834.0</a>
+</p>
+<h3><span id="Event_Detection:_Better_Late_Than_Never?"></span><span class="mw-headline" id="Event_Detection:_Better_Late_Than_Never.3F">Event Detection: Better Late Than Never?</span></h3>
+<p>In some cases, by the time SoundSense detects conditions to trigger an alert, it may be 
+too late to react to the situation. For example, a "Tantrum Spiral" might already be over 
+before the player can be alerted.
+</p><p>Part of this is a balance between detecting too many false positives and ignoring events 
+until it is too late to do anything. For example, a soldier might lose a pet and report 
+feeling like blowing off some steam... but instead of throwing a tantrum they calm down.
+</p><p>Another problem is FPS sensitivity. A specific sequence of events may trigger certain 
+alert sounds in a high FPS situation, but it might not trigger with low FPS. The sequence 
+of events might "time out". Also, pausing the game could cause similar problems.
+</p>
+<h3><span id="Compatible_With_DF_Mods_-_Should_Work,_But_NO_PROMISES"></span><span class="mw-headline" id="Compatible_With_DF_Mods_-_Should_Work.2C_But_NO_PROMISES">Compatible With DF Mods - Should Work, But NO PROMISES</span></h3>
+<p>SoundSense was mainly designed for "vanilla" (unmodified) Dwarf Fortress. It should work 
+fine with most mods. However, I can not guarantee compatibility. Some mods, especially 
+"major" or "full conversions", may create unusual behavior and involve dangerous events 
+that SoundSense was not designed to detect.
+</p><p>Another words, SoundSense may lack sounds for certain mod-specific events. (E.g.; you 
+should NOT expect SoundSense to include gunshot sounds for mods that add guns! But you CAN 
+modify SoundSense yourself to do this.) Conversely, some events that work normally in 
+vanilla DF may trigger so frequently with a mod as to be very annoying.
+</p>
+<h3><span class="mw-headline" id="On_some_Linux">On some Linux</span></h3>
+<h4><span id="Error_on_'soundSense.sh'_call:_&quot;/bin/sh^M_:_wrong_interpret&quot;"></span><span class="mw-headline" id="Error_on_.27soundSense.sh.27_call:_.22.2Fbin.2Fsh.5EM_:_wrong_interpret.22">Error on 'soundSense.sh' call: "/bin/sh^M&#160;: wrong interpret"</span></h4>
+<p>File "soundSense.sh" has CR+LF characters at lines ending.
+Convert these characters to a more suitable form, with a tool like "<a rel="nofollow" class="external text" href="http://en.wikipedia.org/wiki/Unix2dos">dos2unix</a>":
+</p>
+<pre> dos2unix soundSense.sh
+</pre>
+<p>Shell script should then be run without previous error.
+</p><p>Also using sed you can try this:
+</p>
+<pre> # IN UNIX ENVIRONMENT: convert DOS newlines (CR/LF) to Unix format.
+ sed -i -e 's/\r$//' ./soundSense.sh
+</pre>
+<p>IF launching .sh file after that, says that something is wrong on the last line, when you try to launch sh. Just check, if "fi" is present there instead of "f" or smth like that.
+</p>
+<h4><span id="Error_at_playing_any_MP3_file:_&quot;javax.sound.sampled.UnsupportedAudioFileException:_could_not_get_audio_input_stream_from_input_file:_could_not_get_audio_input_stream_from_input_file&quot;"></span><span class="mw-headline" id="Error_at_playing_any_MP3_file:_.22javax.sound.sampled.UnsupportedAudioFileException:_could_not_get_audio_input_stream_from_input_file:_could_not_get_audio_input_stream_from_input_file.22">Error at playing any MP3 file: "javax.sound.sampled.UnsupportedAudioFileException: could not get audio input stream from input file: could not get audio input stream from input file"</span></h4>
+<p>Your Java virtual machine failed at reading MP3 files as audio stream. This could fix by adding to JVM an extra plugin: <a rel="nofollow" class="external text" href="http://www.oracle.com/technetwork/java/javase/download-137625.html">JMF MP3 Plugin</a>.
+Download plugin, and put *.jar files into your JVM "lib/ext/" directory.
+</p>
+<h4><span id="Error_at_playing_any_MP3_file:_&quot;javax.sound.sampled.LineUnavailableException:_Audio_Device_Unavailable&quot;"></span><span class="mw-headline" id="Error_at_playing_any_MP3_file:_.22javax.sound.sampled.LineUnavailableException:_Audio_Device_Unavailable.22">Error at playing any MP3 file: "javax.sound.sampled.LineUnavailableException: Audio Device Unavailable"</span></h4>
+<p>Whereas your JVM succeeded in reading MP3 file as audio stream, it failed to access to an audio device. If your audio system uses <a rel="nofollow" class="external text" href="http://fr.wikipedia.org/wiki/Advanced_Linux_Sound_Architecture">Alsa</a>, you could install "aoss" utility, and "soundSense.sh" will call it. On Debian, package "alsa-oss" provides this utility. <b>Note: if you are on Ubuntu see below</b>. Ubuntu uses PulseAudio backend, therefore toying with aoss is a waste of time.
+</p><p>On a MacOS (snow leopard), this problem has been solved by changing the format of all the sound files to ogg.
+</p>
+<h4><span id="I'm_using_PulseAudio_and_I_still_can't_hear_anything!"></span><span class="mw-headline" id="I.27m_using_PulseAudio_and_I_still_can.27t_hear_anything.21">I'm using PulseAudio and I still can't hear anything!</span></h4>
+<p>First, <b>be sure that you are using OpenJDK 7</b>; you can't use OpenJDK 6 as it has quite a serious bug in its ALSA backend<a rel="nofollow" class="external autonumber" href="http://bugs.sun.com/bugdatabase/view_bug.do?bug_id=6271108">[1]</a>. You can check what java you have installed by typing
+</p>
+<pre> java -version
+</pre>
+<p>in the terminal. You can install OpenJDK like this in Ubuntu:
+</p>
+<pre> sudo apt-get install openjdk-7-jdk
+ sudo update-alternatives --set java /usr/lib/jvm/java-7-openjdk-amd64/jre/bin/java
+</pre>
+<p>(<b>The "update-alternatives" command will only work on 64bit Ubuntu</b>; for 32bit version you need to replace the "amd64" with "i386" or something like that<b>.)</b>
+</p><p>Now, check the
+</p>
+<pre> /etc/java-7-openjdk/sound.properties
+</pre>
+<p>file for this:
+</p>
+<pre> # OpenJDK on Ubuntu is configured to use PulseAudio by default
+ javax.sound.sampled.Clip=org.classpath.icedtea.pulseaudio.PulseAudioMixerProvider
+ javax.sound.sampled.Port=org.classpath.icedtea.pulseaudio.PulseAudioMixerProvider
+ javax.sound.sampled.SourceDataLine=org.classpath.icedtea.pulseaudio.PulseAudioMixerProvider
+ javax.sound.sampled.TargetDataLine=org.classpath.icedtea.pulseaudio.PulseAudioMixerProvider
+ 
+ # PulseAudio not running? Please give feedback on LP: #407299.
+ #javax.sound.sampled.Clip=com.sun.media.sound.DirectAudioDeviceProvider
+ #javax.sound.sampled.Port=com.sun.media.sound.PortMixerProvider
+ #javax.sound.sampled.SourceDataLine=com.sun.media.sound.DirectAudioDeviceProvider
+ #javax.sound.sampled.TargetDataLine=com.sun.media.sound.DirectAudioDeviceProvider
+</pre>
+<p><b>This will not work</b>, as OpenJDK's PulseAudio backend is buggy as hell. What you need to do is to comment out the PulseAudio and turn back on the old backend:
+</p>
+<pre> # OpenJDK on Ubuntu is configured to use PulseAudio by default
+ #javax.sound.sampled.Clip=org.classpath.icedtea.pulseaudio.PulseAudioMixerProvider
+ #javax.sound.sampled.Port=org.classpath.icedtea.pulseaudio.PulseAudioMixerProvider
+ #javax.sound.sampled.SourceDataLine=org.classpath.icedtea.pulseaudio.PulseAudioMixerProvider
+ #javax.sound.sampled.TargetDataLine=org.classpath.icedtea.pulseaudio.PulseAudioMixerProvider
+ 
+ # PulseAudio not running? Please give feedback on LP: #407299.
+ javax.sound.sampled.Clip=com.sun.media.sound.DirectAudioDeviceProvider
+ javax.sound.sampled.Port=com.sun.media.sound.PortMixerProvider
+ javax.sound.sampled.SourceDataLine=com.sun.media.sound.DirectAudioDeviceProvider
+ javax.sound.sampled.TargetDataLine=com.sun.media.sound.DirectAudioDeviceProvider
+</pre>
+<p>This should make the sound work. (If you don't know how to edit this then try typing "sudo nano /etc/java-7-openjdk/sound.properties" in the terminal.)
+</p><p>If you're using Sun/Oracle's JRE then switch to OpenJDK. If you don't want to do that (not recommended) then you might try to use the padsp wrapper or install osspd. If the padsp wrapper will not work properly for you then osspd daemon might just do the trick. (<i><a rel="nofollow" class="external text" href="https://wiki.archlinux.org/index.php/Pulseaudio#OSS">Archlinux Pulseaudio user</a></i>)
+</p>
+<h3><span id="Any_Other_Issues?_Post_Feedback"></span><span class="mw-headline" id="Any_Other_Issues.3F_Post_Feedback">Any Other Issues? Post Feedback</span></h3>
+<p>There is a thread at the official Dwarf Fortress forums. Feel free to post any issues, 
+suggestions, and contributions there:
+<a rel="nofollow" class="external free" href="http://www.bay12forums.com/smf/index.php?topic=60287.0">http://www.bay12forums.com/smf/index.php?topic=60287.0</a>
+</p><p>When providing feedback about your experience with SoundSense, please specify which mods 
+(if any) you are using. If SoundSense seems to behave weirdly only for you, it just might 
+be from using certain mods.
+</p>
+<h2><span class="mw-headline" id="Customization">Customization</span></h2>
+<p>You can insert additional sounds and music into SoundSense by adding entries to an .xml 
+configuration file. logPattern="regexp" is a regular expression which, if matched, will 
+cause a random soundFile from a list to be played. (Details on how java uses regular 
+expressions: <a rel="nofollow" class="external free" href="http://download.oracle.com/javase/1.4.2/docs/api/java/util/regex/Pattern.html">http://download.oracle.com/javase/1.4.2/docs/api/java/util/regex/Pattern.html</a> )
+</p>
+<h3><span class="mw-headline" id="Sound_element_attributes:">Sound element attributes:</span></h3>
+<ul><li><i>logPattern</i> - regular expression matching log line (see link above)</li>
+<li><i>channel</i> - string; Specifies a channel on which sound is played. Sounds played on a channel can be looped or stopped prematurely.</li>
+<li><i>loop</i> - string; Specifying "start" will start looping a sound on a channel until an expression with "stop" is triggered or until a different loop sound is played on the same channel. (If a non-looped sound is triggered on the same channel, this loop will resume when the non-looped is done playing.)</li>
+<li><i>concurency</i> - number; The number of concurrent (i.e., simultaneous) sounds allowed to be played besides this sound. If SoundSense is currently playing more than this, the sound is ignored. The default is unlimited.</li>
+<li><i>timeout</i> - number; This initiates a time out during which this particular sound is prevented from playing again. This is measured in milliseconds and the default is 0.</li>
+<li><i>delay</i> - number; Adds a delay before the sound is played. This is measured in milliseconds and the default is 0.</li>
+<li><i>haltOnMatch</i> - boolean; If this is set to True and more than one equivalent logPattern exists, SoundSense will only process the first logPattern expression. If it is False, it will continue to process matching (e.g., identical) logPatterns. The default is True.</li>
+<li><i>speech</i> - boolean; If this is set to True, SoundSense will echo the gamelog text line (containing the logPattern) with a speech synthesizer instead of playing a sound. The default is False.</li>
+<li><i>playbackThreshhold</i> - number, 0-4, defines level of filter which is applied to this sound.</li></ul>
+<h3><span class="mw-headline" id="SoundFile_element_attributes:">SoundFile element attributes:</span></h3>
+<ul><li><i>fileName</i> - the path to and name of the sound/music file</li>
+<li><i>weight</i> - number; This controls the likelihood of a sound being chosen. Default is 100.</li>
+<li><i>volumeAdjustment</i> - number; This can be used to adjust the volume of the sample. The value can range from -40 to +6 decibles and the default is 0.</li>
+<li><i>randomBalance</i> - boolean, if set to true will randomply distribute sound between stereo channels.</li>
+<li><i>balanceAdjustment</i> - number, adjusts stereo channel, can range for -1 (full left) to 1 (full right).</li></ul>
+<p>SoundSense supports these audio formats for soundFiles:
+</p>
+<ul><li>mp3   (SoundSense can normalize the sound volume with this format)</li>
+<li>ogg   (works, but SoundSense can not normalize the sound volume)</li>
+<li>wav   (See note below. SoundSense only supports "Windows PCM" encoded .wav files)</li>
+<li>aiff</li>
+<li>au</li></ul>
+<p>Note: Not all .wav files are supported...
+</p><p>SoundSense supports .wav encoded in the "Windows PCM" format. However, some files with the 
+.wav extension are actually encoded in some other proprietary format. A sound format 
+conversion utility (such as FormatFactory) could be used to fix them.
+</p>
+<h3><span class="mw-headline" id="Some_Tips:">Some Tips:</span></h3>
+<dl><dt>Control of Randomness</dt>
+<dd>Each logPattern expression can contain several soundFile elements. When it is triggered, one of them is randomly chosen to play. You can control the probability of each sound being chosen by adding the weight="number" attribute.</dd>
+<dt>Simultaneous Sounds</dt>
+<dd>By default, only one sound will play for a given logPattern, even if there are several expression using identical logPatterns. (Only the first expression is processed.) But you can allow more than one sound to be played for same pattern by giving the first one the haltOnMatch="false" attribute. They will all start at same time (unless one or more of them also has a delay). An example is in Seasons.</dd>
+<dt>Sequential Sounds</dt>
+<dd>Two (or more) sounds can be played sequentially (one after the other) for the same logPattern by using the haltOnMatch="false" tip above and including a delay attribute for one of them with a delay that surpasses the length of the other.</dd></dl>
+<h3><span class="mw-headline" id="Helpful_files:">Helpful files:</span></h3>
+<ul><li>packSkeletons.zip ( <a rel="nofollow" class="external free" href="http://df.zweistein.cz/soundsense/packSkeletons.zip">http://df.zweistein.cz/soundsense/packSkeletons.zip</a> ) - This contains .xml files for all known gamelog lines currently without sounds. You can use this as a starting point to expand SoundSense.</li>
+<li>missingMessages.cmd - Run this program to parse your gamelog.txt file and output all lines your sound packs will not recognize.</li>
+<li>logging.properties - Edit this file to enable more debug messages from SoundSense. Set ".level = ALL" to view a very verbose output.</li></ul>
+<h3><span id="Sources_of_sound_&amp;_music:"></span><span class="mw-headline" id="Sources_of_sound_.26_music:">Sources of sound &amp; music:</span></h3>
+<p>The following are some sites of interest, should you want additional sounds/music.
+(Websites with free, creative commons, public domain, and/or GNU GPL licensed audio):
+</p>
+<ul><li><a rel="nofollow" class="external free" href="http://soundbible.com/">http://soundbible.com/</a></li>
+<li><a rel="nofollow" class="external free" href="http://www.freesound.org/searchText.php">http://www.freesound.org/searchText.php</a></li>
+<li><a rel="nofollow" class="external free" href="http://www.musopen.org/">http://www.musopen.org/</a></li>
+<li><a rel="nofollow" class="external free" href="http://opengameart.org/browse/audio">http://opengameart.org/browse/audio</a></li>
+<li><a rel="nofollow" class="external free" href="http://www.incompetech.com/m/c/royalty-free/">http://www.incompetech.com/m/c/royalty-free/</a></li>
+<li><a rel="nofollow" class="external free" href="http://ccmixter.org">http://ccmixter.org</a></li>
+<li><a rel="nofollow" class="external free" href="http://free-loops.com/">http://free-loops.com/</a></li>
+<li><a rel="nofollow" class="external free" href="http://www.pdsounds.org/">http://www.pdsounds.org/</a></li>
+<li><a rel="nofollow" class="external free" href="http://commons.wikimedia.org/wiki/Category:Sound">http://commons.wikimedia.org/wiki/Category:Sound</a></li>
+<li><a rel="nofollow" class="external free" href="http://www.archive.org/details/opensource_audio">http://www.archive.org/details/opensource_audio</a></li>
+<li><a rel="nofollow" class="external free" href="http://publicdomainaudiovideo.blogspot.com/">http://publicdomainaudiovideo.blogspot.com/</a></li></ul>
+<h3><span class="mw-headline" id="How_to_add_music_to_seasonal_playlist:">How to add music to seasonal playlist:</span></h3>
+<p>It is rather easy. Locate <b>seasons.xml</b> in <i>soundpack/seasons</i> directory.
+</p><p>This file contains definition of two sets of sounds: First, there are four definitions for playing voiced announcements (<i>&lt;sound logPattern="Spring has arrived!" haltOnMatch="false" playbackThreshhold="3"&gt;</i>) which are not interesting and should be left alone.
+</p><p>Seccond are main definitions of season music which start with <i>&lt;sound logPattern="(Spring has arrived!)|(Spring has arrived on the calendar\.)" loop="start" channel="music" playbackThreshhold="0"&gt;</i>.
+</p><p>You can simply add new <i>&lt;soundFile fileName="<b>Name of your.mp3</b>"/&gt;</i> and put it in seasons directory.
+</p></div>

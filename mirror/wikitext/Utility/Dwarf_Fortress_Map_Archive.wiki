@@ -1,0 +1,46 @@
+{{uv|web}}
+{|class=wikitable style="float:right;"
+| <!--[[File:dfma logo.png]]-->
+;Links:
+* [http://mkv25.net/dfma/ '''D'''warf '''F'''ortress '''M'''ap '''A'''rchive]
+* [https://github.com/df-map-archive Project page on github]
+* [http://www.bay12forums.com/smf/index.php?topic=176276.0 Future of the DFMA thread]
+|}
+{{Colored Notice Box|text=At the end of 2020, Adobe Flash Player was discontinued, rendering the site functions inoperable. However, an alpha HTML5 viewer is [http://www.bay12forums.com/smf/index.php?topic=179740 now available].}}
+
+The '''D'''warf '''F'''ortress '''M'''ap '''A'''rchive (shorthand '''DFMA''') is a repository and online viewer for player created maps and movies exported from ''Dwarf Fortress'' (it also provides some fairly interesting imaging tools for maps). The map archive serves as the most efficient way to serve maps and in-game videos to other players of the game. Uploads to the site can be commented on and tiles on the maps can be tagged as "points of interest" by both uploaders and viewers.
+
+While an account is not necessary to contribute to the site, registering allows users to reserve a username and manage their submissions, and also bumps up the contribution size cap from 628 KB to 1 MB.
+
+Viewing items on the site requires flash or HTML5 - you can also download the files directly onto your computer.
+
+== Uploading a map ==
+Map images are exported out of the game as regular old bitmaps, which leads to hugely unnecessary file sizes. These maps can be ''greatly'' compressed into a lossless compressed file format optimized for the game's repetitious tileset, {{tt|.FDF-MAP}}, creating files are 1500 to 2000 times smaller than equivalent 28-[[z-level|layer]] bitmaps and 20 to 50 times smaller than equivalent {{tt|PNG}} files. This makes them small enough to upload and transfer across the web without chewing up bandwidth; a 150MB output file can be delivered for as little as ~100kb.
+
+# If you wish to export your local map:
+## Load your fortress, then press {{k|Esc}} and scroll down to the "Export Local Image" option.
+## The game's algorithm selects all [[z-level]]s with units or buildings on them for export; depending on what you want, you can toggle which layers to export to your liking. Once you are ready, {{k|e}}xport. This will create a number of {{tt|BMP}} files in your ''Dwarf Fortress'' root install folder (the same one that the game's main {{tt|EXE}} is located in), with each image representing a layer.
+# If you wish to export the world map:
+## Unfortunately it is not possible to export the world map while you have a fortress saved in that world. An easy workaround is to duplicate the [[Saved game folder|save file]] and [[abandon]] the fortress. After you have exported the world map, you can simply move the save file back into its folder, and your fort will be playable again.
+##Press {{k|p}} to "Export image/info" at either the [[world generation]] acceptance screen or the main [[Legends mode]] screen. Legends mode also provides you with the ability to export detailed maps showcasing certain map features, which you can also do.
+# Download {{dffd|997|Shadowlord's DF Map Compressor}} (version 3.3.4). The program can be run remotely, but you will need an unzipper because it comes in {{tt|ZIP}} format. This is actually a pretty comprehensive tool, and allows lossless compression to and from a number of formats, but for our purposes the archive only reads {{tt|.FDF-MAP}} files. {{k|Compress image(s) to .fdf-map file}}, then navigate to an image and select it. The program will ask you where you want to place the resultant file, then find all related image files and collate them into one file. You may wish to check "Delete images after compressing" to get rid of the original {{tt|BMP}} files; you can also {{k|Preview .fdf-map file (before uploading)}}..<br/>'''Troubleshooting''': The map compressor ''should'' work with all [[tileset]]s, graphic or otherwise, but if it is giving you trouble try reverting to the game's basic character set. Games running on [[version]] 0.23.130.23a and earlier will '''not''' work properly because they are missing file definitions that the program needs.
+#Once you have a working {{tt|.FDF-MAP}} file, {{k|Visit Markavian's DF Map Archive}} (or just [http://www.mkv25.net/dfma/ navigate there yourself] on the web) and hit Upload Map ([http://mkv25.net/dfma/addmap.php direct link]). Fill out the form, hit {{k|Upload Map}}, and your file should appear on the site's server shortly.
+[[File:mkv-dfma_instructions_v2.png|500px|center]]
+
+== Uploading a movie ==
+''Dwarf Fortress'' movies can be recorded in-game and stored in the [[CMV]] format, created by [[Main:Toady One|Toady One]] for precisely that purpose. This format is efficient, but still uncompressed, and improvements to the algorithm have led to the creation of the {{tt|CCMV}} and then the {{tt|FCMV}} format. For instance, the original <span class=plainlinks>[http://mkv25.net/dfma/movie-1-tragicmule tragedy mule]</span> demonstration file is 1637 KB in {{tt|CMV}} format, 616 KB in {{tt|CCMV}} format, and 292 KB in {{tt|FCMV}} format. The DF Map Compressor can also compress {{tt|CMV}} files into {{tt|CCMV}} and {{tt|FCMV}} ones, but as the Archive only accepts {{tt|CMV}}s and compresses them into {{tt|CCMV}} form itself, this is mostly for show.
+
+# If you have a graphic tileset enabled, '''disable it'''. Unlike {{tt|.FDF-MAP}}s, the CMV movie format will '''not''' play nice with these, and will cause all sorts of strange output.
+# Record a movie. This is done with the {{k|;}} key: once in the menu you can start a recording with {{k|r}}, continue the game as normal, and then once you are done you can {{k|p}}lay it back and {{k|s}}ave it (you will be prompted for a filename). You can also {{k|l}}oad old movies. Given a default install, the movies will be saved in the {{tt|Data > Movies}} subfolder of your main ''Dwarf Fortress'' directory.
+# Navigate to the Upload Movie section of the Archive ([http://mkv25.net/dfma/addmovie.php direct link]), fill out the form, and hit {{k|Upload Movie}}. Voila! It should appear on the site.
+
+== CMV Movie Editor ==
+The site also hosts a [http://mkv25.net/dfma/cmveditor/ standalone CMV movie editor] with some basic movie composition features - frame-to-frame cutting, cropping, copying, deleting, and pasting, a paint tool to edit frames, and the ability to create new CMV files from scratch. The [https://github.com/Markavian/CMV-Editor source code] is available on GitHub.
+
+== Key facts ==
+* Web address: http://mkv25.net/dfma/
+* Created and maintained by [[User:Markavian|Markavian]]
+* [http://shadowlord13.googlepages.com/dfmap-index.html Map Compressor] was created by '''SL (ShadowLord)'''
+* Online CMV player created by '''Gonbon''' for ingame movies ([[CMV]]) created by players.
+
+[[Category:Utilities]]

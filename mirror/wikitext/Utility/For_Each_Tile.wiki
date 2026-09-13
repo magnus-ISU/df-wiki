@@ -1,0 +1,353 @@
+{{uv|40d}}
+[[Category:Tweak Modules]][[Category:Utilities]]
+
+[[Image:Exponent_For_Each_Tile_Screenshot_00.png|right]]
+
+This is a module for [[User:Rick/Tweak|Gibbed's Dwarf Fortress Tweak]] utility that can conditionally alter tiles of the map.  By supplying a condition and a set of operations, the program is able to evaluate the condition for each tile, and if the condition is true, then the operations are executed, altering that particular tile is some fashion.  This flexibility potentially provides numerous uses.  This utility was originally designed to be a smarter version of Reveal, but grew to become much more.  Not only can this utility show or hide tiles, but it can change whether or not they are outside, inside, light, dark, subterranean, or above ground.  It can alter water and magma levels, mining designations, and in some cases substantially alter tile types, such as when creating a river source tile.
+
+==Installation==
+
+===Required Components===
+
+*[http://dffd.wimbli.com/file.php?id=404 Exponent.DwarfFortress.Tools.ForEachTile.zip] (extract this into the tweak/plugins/ subfolder)
+*[[User:Rick/Tweak|Gibbed's Dwarf Fortress Tweak]]
+*[http://www.microsoft.com/downloads/details.aspx?FamilyID=333325FD-AE52-4E35-B531-508D977D32A6 .NET 3.5 Runtime]
+
+===Memory XML File Values===
+
+Below is a list of all the required and optional memory addresses and offsets for each version of Dwarf Fortress on which this utility has been tested.  Most of them are not necessary for limited operation of the program, but certain functions will be unavailable if the needed memory locations are not available.
+
+====v0.28.181.40d====
+
+Version Hash Code:  2c686c26307dcccd7c36cc79737ebe4f
+
+ <address name="menu_state" value="0x01393260" />
+ <address name="view_state" value="0x009FC368" />
+ <address name="mouse_x" value="0x009FC294" />
+ <address name="mouse_y" value="0x009FC298" />
+ <address name="mouse_z" value="0x009FC29C" />
+ <address name="viewport_x" value="0x00D457F4" />
+ <address name="viewport_y" value="0x00D73868" />
+ <address name="viewport_z" value="0x00D73844" />
+ <address name="window_grid_x" value="0x01706D4C" />
+ <address name="window_grid_y" value="0x01706D50" />
+ <address name="map_data" value="0x015C4D58"/>
+ <address name="map_x_count" value="0x015C4D70"/>
+ <address name="map_y_count" value="0x015C4D74"/>
+ <address name="map_z_count" value="0x015C4D78"/>
+ <offset name="map_data_type_offset" value="0x0062"/>
+ <offset name="map_data_designation_offset" value="0x0264"/>
+ <offset name="map_data_occupancy_offset" value="0x0664"/>
+ <offset name="map_data_temperature1_offset" value="0x1564"/>
+ <offset name="map_data_temperature2_offset" value="0x1764"/>
+
+====v0.28.181.40c====
+
+ <address name="menu_state" value="0x01392268" />
+ <address name="view_state" value="0x009FB368" />
+ <address name="mouse_x" value="0x009FB294" />
+ <address name="mouse_y" value="0x009FB298" />
+ <address name="mouse_z" value="0x009FB29C" />
+ <address name="viewport_x" value="0x00D447FC" />
+ <address name="viewport_y" value="0x00D72870" />
+ <address name="viewport_z" value="0x00D7284C" />
+ <address name="window_grid_x" value="0x01705D44" />
+ <address name="window_grid_y" value="0x01705D48" />
+ <address name="map_data" value="0x015C3D60"/>
+ <address name="map_x_count" value="0x015C3D78"/>
+ <address name="map_y_count" value="0x015C3D7C"/>
+ <address name="map_z_count" value="0x015C3D80"/>
+ <offset name="map_data_type_offset" value="0x0062"/>
+ <offset name="map_data_designation_offset" value="0x0264"/>
+ <offset name="map_data_occupancy_offset" value="0x0664"/>
+ <offset name="map_data_temperature1_offset" value="0x1564"/>
+ <offset name="map_data_temperature2_offset" value="0x1764"/>
+ 
+====v0.28.181.40b====
+
+ <address name="menu_state" value="0x01392268" />
+ <address name="view_state" value="0x009FB368" />
+ <address name="mouse_x" value="0x009FB294" />
+ <address name="mouse_y" value="0x009FB298" />
+ <address name="mouse_z" value="0x009FB29C" />
+ <address name="viewport_x" value="0x00D447FC" />
+ <address name="viewport_y" value="0x00D72870" />
+ <address name="viewport_z" value="0x00D7284C" />
+ <address name="window_grid_x" value="0x01705D44" />
+ <address name="window_grid_y" value="0x01705D48" />
+ <address name="map_data" value="0x015C3D60"/>
+ <address name="map_x_count" value="0x015C3D78"/>
+ <address name="map_y_count" value="0x015C3D7C"/>
+ <address name="map_z_count" value="0x015C3D80"/>
+ <offset name="map_data_type_offset" value="0x0062"/>
+ <offset name="map_data_designation_offset" value="0x0264"/>
+ <offset name="map_data_occupancy_offset" value="0x0664"/>
+ <offset name="map_data_temperature1_offset" value="0x1564"/>
+ <offset name="map_data_temperature2_offset" value="0x1764"/>
+ 
+====v0.28.181.40a====
+
+ <address name="menu_state" value="0x01392268" />
+ <address name="view_state" value="0x009FB368" />
+ <address name="mouse_x" value="0x009FB294" />
+ <address name="mouse_y" value="0x009FB298" />
+ <address name="mouse_z" value="0x009FB29C" />
+ <address name="viewport_x" value="0x00D447FC" />
+ <address name="viewport_y" value="0x00D72870" />
+ <address name="viewport_z" value="0x00D7284C" />
+ <address name="window_grid_x" value="0x01704ECC" />
+ <address name="window_grid_y" value="0x01704ED0" />
+ <address name="map_data" value="0x015C3D60"/>
+ <address name="map_x_count" value="0x015C3D78"/>
+ <address name="map_y_count" value="0x015C3D7C"/>
+ <address name="map_z_count" value="0x015C3D80"/>
+ <offset name="map_data_type_offset" value="0x0062"/>
+ <offset name="map_data_designation_offset" value="0x0264"/>
+ <offset name="map_data_occupancy_offset" value="0x0664"/>
+ <offset name="map_data_temperature1_offset" value="0x1564"/>
+ <offset name="map_data_temperature2_offset" value="0x1764"/>
+ 
+====Dwarf Fortress v0.28.181.39f====
+
+ <address name="menu_state" value="0x01386260" />
+ <address name="view_state" value="0x009EF368" />
+ <address name="mouse_x" value="0x009EF294" />
+ <address name="mouse_y" value="0x009EF298" />
+ <address name="mouse_z" value="0x009EF29C" />
+ <address name="viewport_x" value="0x00D387FC" />
+ <address name="viewport_y" value="0x00D66870" />
+ <address name="viewport_z" value="0x00D6684C" />
+ <address name="window_grid_x" value="0x016F8A7C" />
+ <address name="window_grid_y" value="0x016F8A80" />
+ <address name="map_data" value="0x015B7920"/>
+ <address name="map_x_count" value="0x015B7938"/>
+ <address name="map_y_count" value="0x015B793C"/>
+ <address name="map_z_count" value="0x015B7940"/>
+ <offset name="map_data_type_offset" value="0x0062"/>
+ <offset name="map_data_designation_offset" value="0x0264"/>
+ <offset name="map_data_occupancy_offset" value="0x0664"/>
+ <offset name="map_data_temperature1_offset" value="0x1564"/>
+ <offset name="map_data_temperature2_offset" value="0x1764"/>
+
+====Dwarf Fortress v0.28.181.39e====
+
+ <address name="menu_state" value="0x0132FDB0" />
+ <address name="view_state" value="0x009E3358" />
+ <address name="mouse_x" value="0x009E3284" />
+ <address name="mouse_y" value="0x009E3288" />
+ <address name="mouse_z" value="0x009E328C" />
+ <address name="viewport_x" value="0x00CE23C4" />
+ <address name="viewport_y" value="0x00D103C0" />
+ <address name="viewport_z" value="0x00D1039C" />
+ <address name="map_data" value="0x01561470"/>
+ <address name="map_x_count" value="0x01561488"/>
+ <address name="map_y_count" value="0x0156148C"/>
+ <address name="map_z_count" value="0x01561490"/>
+ <offset name="map_data_type_offset" value="0x0062"/>
+ <offset name="map_data_designation_offset" value="0x0264"/>
+ <offset name="map_data_occupancy_offset" value="0x0664"/>
+ <offset name="map_data_temperature1_offset" value="0x1564"/>
+ <offset name="map_data_temperature2_offset" value="0x1764"/>
+
+==Change Log==
+
+===Version 0.6 Beta (2008/08/18 21:32 CST)===
+
+* added bodily fluid functions (blood, pus, ichor, goo, slime) in the Occupancy categories, along with related constants in the Constants category
+* renamed <tt>is_vomit</tt> to <tt>has_vomit</tt>, and moved it and <tt>set_vomit</tt> to the Occupancy categories
+* renamed <tt>is_snow_covered</tt> to <tt>has_snow</tt>, and <tt>set_snow_covered</tt> to <tt>set_snow</tt>, and moved them to the Occupancy categories
+* added support for the string type, including a <tt>to_string</tt> function and the concatenation operator (+)
+* added <tt>print</tt> and <tt>print_line</tt> functions for writing to the output panel
+* added the <tt>is_allocated</tt> function
+* added a new Experimental category, including functions for reading/writing type, matgloss id, and biome id
+* provided a variation for most query functions to accept specific x, y, z coordinates, instaed of just defaulting to the current tile's x, y, z coordinates
+* fixed various bugs with the functions in the Raw category, and added mask_and_set_ versions of each
+* various small improvements to the interface
+* updated viewport calculation code to properly handle changes in the latest DF version (0.28.181.40a)
+
+===Version 0.5 Beta (2008/08/15 18:18 CST)===
+
+* <tt>set_liquid_type_to_water</tt> was not working, now it is
+
+===Version 0.4 Beta (2008/08/15 16:29 CST)===
+
+* general interface improvements
+* fixed undo bug, when the maximum undo/redo depth was infinite
+* added <tt>z_distance_to_surface</tt>
+* renamed <tt>is_ramp</tt> to <tt>is_upward_ramp</tt>
+* added <tt>is_ramp</tt>, <tt>is_downward_ramp</tt>, <tt>is_above_upward_ramp</tt> and <tt>make_downward_ramp</tt>
+* renamed <tt>is_lava</tt> to <tt>is_magma_source</tt>, and <tt>make_lava</tt> to <tt>make_magma_source</tt>
+* added traffic designation queries, which had erroneously been left out
+* added a few additional example operation sets to the included file
+
+==Usage==
+
+===General===
+
+====Menus and Toolbar Buttons====
+
+=====File=====
+
+Items under the file menu are used to work with files that contain operation sets.  A file can contain any number of operation sets.  Generally, you will only need to keep one file, and a default is provided with some basic operation sets already defined.  The standard actions of saving, opening, or creating a new file exist, as well as the option to refresh from the current file.  This is for situations where the file that is currently open within the utility was edited by an external program, and you wish to bring these changes in without having to go through the Open File dialog.
+
+=====Edit=====
+
+The items in the edit menu allow you to work with the list of operation sets for the file that is currently open.  Creating a new operation set will add a blank item at the bottom of the list and select it, so that you can edit its details in the text boxes below.  Duplicating an item will make a copy of the selected item immediately below that item.  Deleting the selected item will remove that item from the list completely.
+
+Items can also be rearranged, so that you can place more frequently used operation sets near the top, and less frequently used ones near the bottom.  Moving the selected item up or down will simply cause it to swap locations with the item that is immediately above or below it, respectively.
+
+=====Insert=====
+
+=====Execute=====
+
+====List of Operation Sets====
+
+====Operation Set Text====
+
+===Expressions===
+
+Expressions use standard in-fix notation, complete with parentheses, operator precedence, and so forth. Individual items in an expression fall under one of five categories:  constants, operators, general functions, queries, and modifiers.  A description of each of these categories, along with some basic examples, are given below.
+
+====Constants====
+
+Constants are just specific values that are given an easy-to-remember name.  Some of them are boolean, which means that they are either true or false, and some are doubles, which means that they represent real numbers.
+
+=====Boolean Constants=====
+
+While the two boolean values are represented internally as 0 (false) or 1 (true), you will use the actual text "false" or "true" in order to use these values in the program.
+
+=====Double Constants=====
+
+Some common mathematical constants are available, as well as some constants specific either to the Dwarf Fortress universe or to some particular function in this program.  Standard mathematical constants are those such as [http://en.wikipedia.org/wiki/Pi pi] and [http://en.wikipedia.org/wiki/E_(mathematical_constant) e].  Constants specific to Dwarf Fortress are those such as water_freezing_temperature and water_boiling_temperature, which refer to Dwarf Fortress-specific temperature values.  Finally, constants such as euclidean_distance and manhattan_distance are used by certain functions to indicate how they should function.  These two in particular are used to tell certain functions how to calculate distances between pairs of tiles.
+
+====Operators====
+
+Basic mathematical, boolean, and comparison operators are available, as well as parentheses to control the order of evaluation.  Boolean operators do not use symbols, but rather use the text "and", "or", and "not".  All arguments to a boolean operator ("and" and "or" expect two arguments, "not" expects one) must be boolean, and the result is also boolean.  Mathematical operators require doubles, and return doubles.  Comparison operators require doubles (except for equal (=) and not-equal (!=), which can take either booleans or doubles) and return booleans.
+
+====General Functions====
+
+Some general functions are available for performing various generic tasks.  Standard mathematical functions exist, such as the trigonometric sin(), cos(), and tan(), as well as the power/exponents functions sqrt(), pow() and log().  Random values are also available with random_bool() and random_double().  Other functions exist as well, which I will describe in the advanced section below.
+
+====Queries====
+
+Queries are functions that ask something about the current state of the game, and return some result as the answer.  There are a variety of subcategories that queries fall under.  For example, map queries ask something about the map:  How big it is, which tile is currently being tested/modified, where the viewport is located, or where the cursor is located.  Property queries ask something about basic properties of the current tile:  if it is light or dark, above ground or subterranean, muddy or not, and so on.  Other categories include physical, occupancy, designation, and area queries.
+
+====Modifiers====
+
+Modifiers are functions that alter the current tile in some way, and do not return any value (which is often indicated by saying that they return void).  All modifiers have corresponding queries, though not all queries have corresponding modifiers.  For example, you cannot modify the viewport width even though you can query it.  Technical limitations also prevent many physical queries from having matching modifiers, modifying a tile to become a tree, for example.
+
+There is still a lot that can be modified, however.  The light/dark, inside/outside/ above ground/subterranean values mentioned above can all be changed.  The level and type of liquid in a tile can be changed.  Digging designations can be altered.  And even certain physical states can be modified, such as turning a tile into a river source or a bottomless pit.
+
+===Operation Sets===
+
+The function portion of an operation set consists of a condition expression, and one or more operation statements.  A statement is merely an expression that has its return value ignored, if it has one.  When an operation set is executed, the condition is evaluated for each tile, and if the condition is true, then the operations are executed, one at a time.  If the condition is false, no operations are executed.
+
+====Basic Examples====
+
+=====Reveal=====
+
+The most straightforward example is an unconditional reveal, which performs precisely the same function as [[User:Rick/Tweak#Core_Modules|Rick's basic reveal module]].  It applies to every tile regardless of each tile's state, and modifies each tile to be shown.  In this program, it would therefore look like:
+
+Condition:
+ true
+
+Operations:
+ show();
+
+The semicolon at the end of the operation is optional.  If you were to have more than one operation, as I will show later, then you would need a semicolon between each statement.
+
+=====Hide Radius=====
+
+Once you use reveal, you may want to hide things like magma and UG rivers so you can dig into them "naturally" and trigger their effects.
+Note the use of the "<" comparison operator.
+
+Condition:
+ xy_distance_to_cursor<40
+
+Operations:
+ hide
+
+=====Remove Aquifers=====
+
+And finally, do away with those inconvenient aquifers forever.
+Note that in this example we are passing a variable to the set_aquifer function. Hover the mouse over a function in the "insert" menu to see what variables you can use with it.
+
+Condition:
+ is_aquifer
+
+Operations:
+ set_aquifer(false)
+
+=====Water Ball=====
+
+And now, just to demonstrate an important shortcoming of all DF cheating utilities:
+
+Condition:
+ distance_to_cursor<6
+
+Operations:
+ set_liquid_type_to_water;
+ set_water_level 7;
+
+This will create a floating sphere of water 6 tiles in radius around your cursor. The important thing to note is that the water won't flow. In fact, any liquid created with a cheating utility will remain in suspended animation, probably forever.
+The usual way to bring created liquids to life is to build some sort of construction adjacent to them, after which they will flow normally. Other methods may exist, add them if you find them.
+
+====Advanced Examples====
+
+=====Vein Miner=====
+Mine out a vein of minerals all at once. 
+Designate the first tile to be mined then just keep running it until nothing else gets designated.
+I put some limits on it to keep it from designating tiles that aren't near the cursor so you have to be in look mode. Some tiles other than ores are considered minerals so be careful.
+
+Conditions:
+ (cursor_z = z) and (xy_distance_to_cursor < 10) and is_mineral and is_wall and
+ (x > 0) and (x < map_width) and 
+ (y > 0) and (y < map_height) and (
+ (is_designated_for_mining(x - 1, y - 1, z)) or
+ (is_designated_for_mining(x - 1, y    , z)) or
+ (is_designated_for_mining(x - 1, y + 1, z)) or
+ (is_designated_for_mining(x    , y - 1, z)) or 
+ (is_designated_for_mining(x    , y + 1, z)) or
+ (is_designated_for_mining(x + 1, y - 1, z)) or
+ (is_designated_for_mining(x + 1, y    , z)) or
+ (is_designated_for_mining(x + 1, y + 1, z))
+ )
+
+
+Operations:
+ designate_for_mining
+
+====Mass editing map tiles====
+'''WARNING!''' Altering map tiles is not an exact science. Backup your save file just in case you run into nasty surprises.
+
+=====Get Tile Info=====
+Provides all the information you need to turn one type of tile into another.
+
+Condition:
+ at_cursor
+
+Operations:
+ print_line(get_type);
+ print_line(to_string(get_matgloss_id));
+
+Once you have the information, use it to create a custom operations set like the one below:
+
+=====Set Tile Info=====
+Once you get the information from a tile (See previous example), you can apply it to another tile using "at_cursor", or many tiles using something like "xy_distance_to_cursor", or "is_designated_as_low_traffic"
+
+This particular example creates red loamy sand walls.
+
+Note that the argument for set_type is a ''string'', and must be enclosed in quotations.
+
+Condition:
+ at_cursor
+
+Operations:
+ set_type("SoilWall");
+ set_matgloss_id(3);
+
+Things to be aware of:
+
+-Walls created in this way will not naturally have a floor above them, so depending on the situation you might need to add floors manually using the same technique as you did for walls.
+
+-Anecdotal evidence indicates that dwarves can remain imprisoned indefinitely in a created wall until it is removed, or they die of thirst/hunger. The effects on other items are unknown, and possibly undesirable.

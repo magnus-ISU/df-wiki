@@ -1,0 +1,30 @@
+{{uv|v0.31}}
+=Obsidian=
+[[File:obsidianicon.png|thumb|right]]
+
+'''Please note this tool is not complete and cannot render dwarf fortress. It is in development.'''
+
+Obsidian is a toolset for converting DF maps into a renderable scene, manipulating the result, and displaying it directly in 3D or exporting to 3rd party renderers and raytracers.
+
+Its a modular Lua framework, using Open Scene Graph for rendering and DFHack for talking with Dwarf Fortress.
+
+This [http://www.bay12forums.com/smf/index.php?topic=57920.0 forum thread] has more detail.
+
+=Screen shots=
+[[File:obsidian_v_0.01.png|100px|Obsidian V0.01]] 
+[[File:obsidian_v_0.02.png|100px|Obsidian V0.02]] 
+[[File:obsidian_v_0.03.png|100px|Obsidian V0.03]]
+[[File:obsidian_v_0.04.png|100px|Obsidian V0.04]]
+
+=[[Utility:Obsidian/Art | Art]]=
+Obsidian's art will be contributed by the community. Follow the section title to a page with more details on how you can contribute.
+
+=Credits=
+* Technical lead programmer - Skeggox
+* Art Director - GFXiNXS
+* 3D artists - Djohaal, opsneakie, Crunch
+* Icon design - Janus
+
+=Technical Info=
+==[[Utility:Obsidian/Cell definition files | Cell Engine]]==
+This is a structured representation of a DF fortress (technically a cellular automaton with metadata) in C++. It provides XML and binary serializers by default, as well as Lua bindings. All of the code is generated from XML definition files, which represents all of the information we know about Dwarf Fortress

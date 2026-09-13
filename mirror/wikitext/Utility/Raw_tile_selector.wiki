@@ -1,0 +1,21 @@
+{{Quality|Fine|01:25, 29 September 2013 (UTC)}}
+{{uv|v0.31}}
+=== Raw tile selector ===
+
+The raw tile selector is a tool that allows you to select which tiles should be used to represent certain [[Tilesets|objects]] in the game. 
+It is intended to ease the creation of tilesets with edited raws. This tool will also be useful if you want to use a tileset and cannot find altered raws for your version of dwarf fortress.
+
+[http://dffd.bay12games.com/file.php?id=2113 Download] (Windows only, for usage with Dwarf Fortress 0.31.xx and 0.28.181.40d after exchanging a definitions file)
+
+The tool should be pretty easy to use: Use your mouse or keyboard to select a file, then select a tile and which element of the tileset should be used. Save afterwards, only the tile data of the raw files will be altered.
+:Run the setup first and select the raw/objects folder you want to work on and the tileset you want to use. Have a look at readme.txt for more information.
+:Use the [http://www.bay12forums.com/smf/index.php?topic=54669.0 official forums thread] to comment or ask questions.
+
+
+[[File:Raw_tile_selector_example.png|Image from a recent version (using ironhand set and a natural color scheme)]]
+
+
+
+The tool uses a definitions file to determine which files may be edited, and how the tile and color data is represented in those files. It is also possible to select some tags of the objects to be displayed in the raw tile selector (the value of a gem, for example). Edit the definitions file if there are objects with tile data that are missing in the raw tile selector.
+
+[[Category:Utilities]]

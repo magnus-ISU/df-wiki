@@ -1,0 +1,119 @@
+<div class="mw-parser-output"><p>This page contains technical information about the <a href="/index.php/Utility:Obsidian" title="Utility:Obsidian"> Obsidian visualizer</a>
+</p><p>This list of files define the internal representation of the Cell engine, to be exposed to Lua and used by other modules (like the geometry generator or terrain exporters)
+</p>
+<h2><span class="mw-headline" id="Fortress">Fortress</span></h2>
+<p>This describes the top level object that holds all of the components like terrain, creatures, etc., as well as static information about the fortress.
+</p>
+<pre>	&lt;class name="Fortress" api="yes"&gt;
+		&lt;ctor/&gt;
+		
+		&lt;!-- TODO: Need a good default fortress size. How many tiles is the default 4x4 embark? --&gt;
+
+		&lt;property name="SizeX" type="Int32" default="16"&gt;
+			&lt;get/&gt;
+		&lt;/property&gt;
+
+		&lt;property name="SizeY" type="Int32" default="16"&gt;
+			&lt;get/&gt;
+		&lt;/property&gt;
+
+		&lt;property name="SizeZ" type="Int32" default="16"&gt;
+			&lt;get/&gt;
+		&lt;/property&gt;
+
+		&lt;vector name="Maps" type="Map"&gt;
+			&lt;note&gt;A fortress can have multiple maps, to represent timestamps of the fortress terrain over time&lt;/note&gt;
+			&lt;get_index/&gt;
+			&lt;size/&gt;
+			&lt;push_back/&gt;
+		&lt;/vector&gt;
+
+		&lt;vector name="Materials" type="Material"&gt;
+			&lt;get_index/&gt;
+		&lt;/vector&gt;
+
+		&lt;method name="LoadFromDF"&gt;
+			&lt;return type="Void"/&gt;
+		&lt;/method&gt;
+	&lt;/class&gt;
+</pre>
+<h2><span class="mw-headline" id="Map">Map</span></h2>
+<p>This just a collection of cells that describes the current map. Maps have a timestamp, so a fortress can hold multiple map instances to represent the development of the fortress over time
+</p>
+<pre>	&lt;class name="Map" api="yes"&gt;
+		&lt;ctor/&gt;
+
+		&lt;reference name="Fortress" type="Fortress"&gt;
+			&lt;get/&gt;
+		&lt;/reference&gt;
+
+		&lt;property name="TimeStamp" type="ROString"&gt;
+			&lt;get/&gt;
+		&lt;/property&gt;
+
+		&lt;array name="Cells" type="Cell"&gt;
+			&lt;dimension name="x" size="Fortress.SizeX"/&gt;
+			&lt;dimension name="y" size="Fortress.SizeY"/&gt;
+			&lt;dimension name="z" size="Fortress.SizeZ"/&gt;
+			&lt;get_index/&gt;
+			&lt;set_index/&gt;
+		&lt;/array&gt;
+
+		&lt;property name="OpenSpace" type="Cell"&gt;
+			&lt;note&gt;This is a readonly cell representing the default OpenSpace cell&lt;/note&gt;
+			&lt;get/&gt;
+		&lt;/property&gt;
+	&lt;/class&gt;
+</pre>
+<h2><span class="mw-headline" id="Cell">Cell</span></h2>
+<p>Each cell holds everything that you need to know about a specific tile in the fortress, including a reference to the terrain type, a reference to any building or construction that occupies that space, as well as lists of items, contaminants, liquids and creatures in that tile.
+</p>
+<pre>	&lt;class name="Cell" api="yes"&gt;
+		&lt;ctor/&gt;
+
+		&lt;reference name="Map" type="Map"&gt;
+			&lt;get/&gt;
+		&lt;/reference&gt;
+
+		&lt;property name="PosX" type="Int32" default="-1"&gt;
+			&lt;get/&gt;
+		&lt;/property&gt;
+
+		&lt;property name="PosY" type="Int32" default="-1"&gt;
+			&lt;get/&gt;
+		&lt;/property&gt;
+
+		&lt;property name="PosZ" type="Int32" default="-1"&gt;
+			&lt;get/&gt;
+		&lt;/property&gt;
+
+		&lt;reference name="Terrain" type="Terrain"&gt;
+			&lt;note&gt;I'm assuming that the all of the terrain information can be encapsulated in a terrain type. Changing the terrain will be done through the Map object&lt;/note&gt;
+			&lt;get/&gt;
+		&lt;/property&gt;
+
+		&lt;reference name="Construction" type="Construction"&gt;
+			&lt;note&gt;I'm assuming only one construction can exist in a cell at a time. Changing the construction will be done through the Map object&lt;/note&gt;
+			&lt;get/&gt;
+		&lt;/list&gt;
+
+		&lt;list name="Items" type="Item" reference="yes"&gt;
+			&lt;note&gt;Should the cell own the items, or just reference them?&lt;/note&gt;
+			&lt;get/&gt;
+		&lt;/list&gt;
+
+		&lt;reference name="Building" type="Building"&gt;
+			&lt;note&gt;Placing/removing buildings via the Map object will handle attaching/detaching themselves from the cell&lt;/note&gt;
+			&lt;get/&gt;
+		&lt;/reference&gt;
+
+		&lt;internal&gt;
+			&lt;reference name="Top" type="Cell"/&gt;
+			&lt;reference name="Bottom" type="Cell"/&gt;
+			&lt;reference name="Left" type="Cell"/&gt;
+			&lt;reference name="Right" type="Cell"/&gt;
+			&lt;reference name="Up" type="Cell"/&gt;
+			&lt;reference name="Down" type="Cell"/&gt;
+		&lt;/internal&gt;
+	&lt;/class&gt;
+</pre></div>

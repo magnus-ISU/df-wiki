@@ -1,0 +1,124 @@
+{{uv|40d}}
+[[Category:Tweak Modules]][[Category:Utilities]]
+
+[[Image:ViewportShifter.png|right]]
+
+This is a module for [[User:Rick/Tweak|Gibbed's Dwarf Fortress Tweak]] utility that allows flexible movement of the game's viewport.  It's primary purpose is to overcoming the limitation of the standard ten tile movement amount, allowing one to shift the viewport a single tile at a time.  This will allow perfect centering of the view on any feature of the fortress.  For convenience, the hotkeys are also available for interaction.  Aside from being able to move the viewport to a hotkey's stored location and being able to set a hotkey's location to the current view, one can also reset a hotkey to it's default unassigned state.  Finally, viewport rectangle and cursor location coordinates are also provided at the bottom of the window.
+
+==Basic Navigation==
+
+The grid of arrows on the left side of the window are for basic horizontal navigation.  Buttons with a single arrow will move the view one tile at a time, while buttons with two arrows will move in increments of ten.  The button in the center of these arrows is used to move the cursor to the center of the viewport, if the cursor is visible at the time.  The two buttons in the center of the window are used move up or down a single z level at a time.
+
+==Hotkeys==
+
+On the right side of the window are two columns of hotkeys.  They are labeled by the key(s) used to activate them.  Next to each label are three buttons.  The first, an arrow, is used to move the view to the location associated with the hotkey, just as if you had pressed the hotkey while in-game.  The second button, a floppy disc, saves the current view for that hotkey.  The third button, a crossed out circle, resets the hotkey's location to its default unassigned state.
+
+==Coordinates==
+
+At the bottom of the window, the viewport's rectangle coordinates and the cursor's location coordinates are displayed.  The viewport rectangle is described by its top-left corner and its bottom right corner.  Both these points represent the corner cells ''within'' the rectangle.  These two points are followed by the viewport's size.  The cursor location will only be shown when the cursor itself is visible.  Additionally, due to some technical difficulties, even if the cursor is visible, the location will not always be displayed.  The cursor location is guaranteed to be displayed while in the following menus:  look ({{k|k}}), squads ({{k|x}}), designations ({{k|d}}), stockpiles ({{k|p}}), and zones ({{k|i}}).
+
+Tweak is a utility for Dwarf Fortress created by [[User:Rick|Rick]] which can load modules that provide different functionality to the user for tweaking, or editing Dwarf Fortress memory. It will attempt to automatically identify the version of the running Dwarf Fortress process and automatically load data related to that version.
+
+==Installation==
+
+===Required Components===
+
+*[http://dffd.wimbli.com/file.php?id=357 Exponent.DwarfFortress.Tools.ViewportShifter.zip] (extract this into the tweak/plugins/ subfolder)
+*[[User:Rick/Tweak|Gibbed's Dwarf Fortress Tweak]]
+*[http://www.microsoft.com/downloads/details.aspx?FamilyID=333325FD-AE52-4E35-B531-508D977D32A6 .NET 3.5 Runtime]
+
+===Memory XML File Addition===
+
+Below is a list of all the required memory addresses and offsets for each version of Dwarf Fortress on which this utility has been tested.  You will need to make sure that they all exist within the xml files under the appropriate subfolder in tweak/versions.
+
+====v0.28.181.40d====
+
+Version Hash Code:  2c686c26307dcccd7c36cc79737ebe4f
+
+ <address name="menu_state" value="0x01393260" />
+ <address name="view_state" value="0x009FC368" />
+ <address name="mouse_x" value="0x009FC294" />
+ <address name="mouse_y" value="0x009FC298" />
+ <address name="mouse_z" value="0x009FC29C" />
+ <address name="viewport_x" value="0x00D457F4" />
+ <address name="viewport_y" value="0x00D73868" />
+ <address name="viewport_z" value="0x00D73844" />
+ <address name="window_grid_x" value="0x01706D4C" />
+ <address name="window_grid_y" value="0x01706D50" />
+ <address name="hotkeys" value="0x01392FA8" />
+ <offset name="hotkeys_offset_enabled" value="0x0000" />
+ <offset name="hotkeys_offset_x" value="0x0004" />
+ <offset name="hotkeys_offset_y" value="0x0008" />
+ <offset name="hotkeys_offset_z" value="0x000C" />
+ <offset name="hotkey_offset" value="0x002C" />
+ <address name="map_data" value="0x015C4D58"/>
+ <address name="map_x_count" value="0x015C4D70"/>
+ <address name="map_y_count" value="0x015C4D74"/>
+ <address name="map_z_count" value="0x015C4D78"/>
+
+====v0.28.181.40a====
+
+ <address name="menu_state" value="0x01392268" />
+ <address name="view_state" value="0x009FB368" />
+ <address name="mouse_x" value="0x009FB294" />
+ <address name="mouse_y" value="0x009FB298" />
+ <address name="mouse_z" value="0x009FB29C" />
+ <address name="viewport_x" value="0x00D447FC" />
+ <address name="viewport_y" value="0x00D72870" />
+ <address name="viewport_z" value="0x00D7284C" />
+ <address name="window_grid_x" value="0x01704ECC" />
+ <address name="window_grid_y" value="0x01704ED0" />
+ <address name="hotkeys" value="0x01391FB0" />
+ <offset name="hotkeys_offset_enabled" value="0x0000" />
+ <offset name="hotkeys_offset_x" value="0x0004" />
+ <offset name="hotkeys_offset_y" value="0x0008" />
+ <offset name="hotkeys_offset_z" value="0x000C" />
+ <offset name="hotkey_offset" value="0x002C" />
+ <address name="map_data" value="0x015C3D60"/>
+ <address name="map_x_count" value="0x015C3D78"/>
+ <address name="map_y_count" value="0x015C3D7C"/>
+ <address name="map_z_count" value="0x015C3D80"/>
+
+====v0.28.181.39f====
+
+ <address name="menu_state" value="0x01386260" />
+ <address name="view_state" value="0x009EF368" />
+ <address name="mouse_x" value="0x009EF294" />
+ <address name="mouse_y" value="0x009EF298" />
+ <address name="mouse_z" value="0x009EF29C" />
+ <address name="viewport_x" value="0x00D387FC" />
+ <address name="viewport_y" value="0x00D66870" />
+ <address name="viewport_z" value="0x00D6684C" />
+ <address name="window_grid_x" value="0x016F8A7C" />
+ <address name="window_grid_y" value="0x016F8A80" />
+ <address name="hotkeys" value="0x01385FA8" />
+ <offset name="hotkeys_offset_enabled" value="0x0000" />
+ <offset name="hotkeys_offset_x" value="0x0004" />
+ <offset name="hotkeys_offset_y" value="0x0008" />
+ <offset name="hotkeys_offset_z" value="0x000C" />
+ <offset name="hotkey_offset" value="0x002C" />
+ <address name="map_data" value="0x015B7920"/>
+ <address name="map_x_count" value="0x015B7938"/>
+ <address name="map_y_count" value="0x015B793C"/> 
+ <address name="map_z_count" value="0x015B7940"/>
+
+====v0.28.181.39e====
+
+ <address name="menu_state" value="0x0132FDB0" />
+ <address name="view_state" value="0x009E3358" />
+ <address name="mouse_x" value="0x009E3284" />
+ <address name="mouse_y" value="0x009E3288" />
+ <address name="mouse_z" value="0x009E328C" />
+ <address name="viewport_x" value="0x00CE23C4" />
+ <address name="viewport_y" value="0x00D103C0" />
+ <address name="viewport_z" value="0x00D1039C" />
+ <address name="hotkeys" value="0x0132FAF8" />
+ <offset name="hotkeys_offset_enabled" value="0x0000" />
+ <offset name="hotkeys_offset_x" value="0x0004" />
+ <offset name="hotkeys_offset_y" value="0x0008" />
+ <offset name="hotkeys_offset_z" value="0x000C" />
+ <offset name="hotkey_offset" value="0x002C" />
+ <address name="map_data" value="0x01561470"/>
+ <address name="map_x_count" value="0x01561488"/>
+ <address name="map_y_count" value="0x0156148C"/>
+ <address name="map_z_count" value="0x01561490"/>

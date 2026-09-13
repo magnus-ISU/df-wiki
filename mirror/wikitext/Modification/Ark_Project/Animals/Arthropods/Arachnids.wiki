@@ -1,0 +1,846 @@
+=Arachnida (arachnids)=
+
+{{ark body|token=ARK_ARACHNID_CEPHALOTHORAX_LEGS_FEET|status=2
+|raws=
+[BP:UB:cephalothorax:cephalothoraxes][HEAD][UPPERBODY][CATEGORY:BODY_UPPER]
+	[DEFAULT_RELSIZE:20]
+[BP:LB:abdomen:STP][CON:UB][LOWERBODY][CATEGORY:BODY_LOWER]
+	[DEFAULT_RELSIZE:30]
+[BP:LP:left palp:STP][CON:UB][LIMB][LEFT][CATEGORY:ARM_UPPER]
+	[DEFAULT_RELSIZE:2]
+[BP:RP:right palp:STP][CON:UB][LIMB][RIGHT][CATEGORY:ARM_UPPER]
+	[DEFAULT_RELSIZE:2]
+[BP:RA1:right first leg:STP][CON:UB][LIMB][RIGHT][CATEGORY:LEG_FRONT]
+	[DEFAULT_RELSIZE:20]
+[BP:LA1:left first leg:STP][CON:UB][LIMB][LEFT][CATEGORY:LEG_FRONT]
+	[DEFAULT_RELSIZE:20]
+[BP:RF1:right first foot:right first feet][CON:RA1][STANCE][RIGHT][CATEGORY:FOOT_FRONT]
+	[DEFAULT_RELSIZE:4]
+[BP:LF1:left first foot:left first feet][CON:LA1][STANCE][LEFT][CATEGORY:FOOT_FRONT]
+	[DEFAULT_RELSIZE:4]
+[BP:RA2:right second leg:STP][CON:UB][LIMB][RIGHT][CATEGORY:LEG_FRONT]
+	[DEFAULT_RELSIZE:20]
+[BP:LA2:left second leg:STP][CON:UB][LIMB][LEFT][CATEGORY:LEG_FRONT]
+	[DEFAULT_RELSIZE:20]
+[BP:RF2:right second foot:right second feet][CON:RA2][STANCE][RIGHT][CATEGORY:FOOT_FRONT]
+	[DEFAULT_RELSIZE:4]
+[BP:LF2:left second foot:left second feet][CON:LA2][STANCE][LEFT][CATEGORY:FOOT_FRONT]
+	[DEFAULT_RELSIZE:4]
+[BP:RA3:right third leg:STP][CON:UB][LIMB][RIGHT][CATEGORY:LEG_REAR]
+	[DEFAULT_RELSIZE:20]
+[BP:LA3:left third leg:STP][CON:UB][LIMB][LEFT][CATEGORY:LEG_REAR]
+	[DEFAULT_RELSIZE:20]
+[BP:RF3:right third foot:right third feet][CON:RA3][STANCE][RIGHT][CATEGORY:FOOT_REAR]
+	[DEFAULT_RELSIZE:4]
+[BP:LF3:left third foot:left third feet][CON:LA3][STANCE][LEFT][CATEGORY:FOOT_REAR]
+	[DEFAULT_RELSIZE:4]
+[BP:RA4:right fourth leg:STP][CON:UB][LIMB][RIGHT][CATEGORY:LEG_REAR]
+	[DEFAULT_RELSIZE:20]
+[BP:LA4:left fourth leg:STP][CON:UB][LIMB][LEFT][CATEGORY:LEG_REAR]
+	[DEFAULT_RELSIZE:20]
+[BP:RF4:right fourth foot:right fourth feet][CON:RA4][STANCE][RIGHT][CATEGORY:FOOT_REAR]
+	[DEFAULT_RELSIZE:4]
+[BP:LF4:left fourth foot:left fourth feet][CON:LA4][STANCE][LEFT][CATEGORY:FOOT_REAR]
+	[DEFAULT_RELSIZE:4]
+}}
+
+{{ark body|token=ARK_ARACHNID_LUNG|status=2
+|raws=
+[BP:LUNG:book lung:book lungs][CONTYPE:UPPERBODY][BREATHE][INTERNAL][SMALL][RIGHT][CATEGORY:LUNG]
+	[DEFAULT_RELSIZE:2]
+}}
+
+{{ark body|token=ARK_ARACHNID_6EYES|status=2
+|raws=
+[BP:EYE1:first eye:STP][CONTYPE:HEAD][SIGHT][EMBEDDED][SMALL][CATEGORY:EYE]
+	[DEFAULT_RELSIZE:1]
+[BP:EYE2:second eye:STP][CONTYPE:HEAD][SIGHT][EMBEDDED][SMALL][CATEGORY:EYE]
+	[DEFAULT_RELSIZE:1]
+[BP:EYE3:third eye:STP][CONTYPE:HEAD][SIGHT][EMBEDDED][SMALL][CATEGORY:EYE]
+	[DEFAULT_RELSIZE:1]
+[BP:EYE4:fourth eye:STP][CONTYPE:HEAD][SIGHT][EMBEDDED][SMALL][CATEGORY:EYE]
+	[DEFAULT_RELSIZE:1]
+[BP:EYE5:fifth eye:STP][CONTYPE:HEAD][SIGHT][EMBEDDED][SMALL][CATEGORY:EYE]
+	[DEFAULT_RELSIZE:1]
+[BP:EYE6:sixth eye:STP][CONTYPE:HEAD][SIGHT][EMBEDDED][SMALL][CATEGORY:EYE]
+	[DEFAULT_RELSIZE:1]
+}}
+
+==[http://en.wikipedia.org/wiki/List_of_families_of_spiders Aranae (spiders)]==
+
+{{ark variation|status=2
+|raws=
+[CREATURE_TILE:249] vanilla spider tile
+[CARNIVORE]
+[VERMIN]
+[BODY:ARK_ARACHNID_CEPHALOTHORAX_LEGS_FEET:ARK_ARACHNID_LUNG:ARK_SPIDER_8EYES:ARK_SPIDER_2FANGS:ARK_SPIDER_GLANDS:HEART:GUTS:BRAIN:MOUTH]
+[BODY_DETAIL_PLAN:EXOSKELETON_TISSUE_LAYERS:CHITIN:FAT:MUSCLE]
+[SELECT_TISSUE_LAYER:HEART:BY_CATEGORY:HEART]
+	[TL_MAJOR_ARTERIES]
+[BODY_DETAIL_PLAN:STANDARD_HEAD_POSITIONS]
+[USE_MATERIAL_TEMPLATE:VENOM:CREATURE_EXTRACT_TEMPLATE]
+	[ENTERS_BLOOD] 
+[USE_MATERIAL_TEMPLATE:SILK:SILK_TEMPLATE]
+}}
+
+{{ark body|token=ARK_SPIDER_8EYES|status=2
+|raws=
+[BP:EYE1:first eye:STP][CONTYPE:HEAD][SIGHT][EMBEDDED][SMALL][CATEGORY:EYE]
+	[DEFAULT_RELSIZE:1]
+[BP:EYE2:second eye:STP][CONTYPE:HEAD][SIGHT][EMBEDDED][SMALL][CATEGORY:EYE]
+	[DEFAULT_RELSIZE:1]
+[BP:EYE3:third eye:STP][CONTYPE:HEAD][SIGHT][EMBEDDED][SMALL][CATEGORY:EYE]
+	[DEFAULT_RELSIZE:1]
+[BP:EYE4:fourth eye:STP][CONTYPE:HEAD][SIGHT][EMBEDDED][SMALL][CATEGORY:EYE]
+	[DEFAULT_RELSIZE:1]
+[BP:EYE5:fifth eye:STP][CONTYPE:HEAD][SIGHT][EMBEDDED][SMALL][CATEGORY:EYE]
+	[DEFAULT_RELSIZE:1]
+[BP:EYE6:sixth eye:STP][CONTYPE:HEAD][SIGHT][EMBEDDED][SMALL][CATEGORY:EYE]
+	[DEFAULT_RELSIZE:1]
+[BP:EYE7:seventh eye:STP][CONTYPE:HEAD][SIGHT][EMBEDDED][SMALL][CATEGORY:EYE]
+	[DEFAULT_RELSIZE:1]
+[BP:EYE8:eighth eye:STP][CONTYPE:HEAD][SIGHT][EMBEDDED][SMALL][CATEGORY:EYE]
+	[DEFAULT_RELSIZE:1]
+}}
+
+{{ark body|token=ARK_SPIDER_2FANGS|status=2
+|raws=
+[BP:R_FANG:right fang:right fangs][CONTYPE:HEAD][CATEGORY:TOOTH][SOCKET][SMALL]
+	[DEFAULT_RELSIZE:1]
+[BP:L_FANG:left fang:left fangs][CONTYPE:HEAD][CATEGORY:TOOTH][SOCKET][SMALL]
+	[DEFAULT_RELSIZE:1]
+}}
+
+{{ark body|token=ARK_SPIDER_GLANDS|status=2
+|raws=
+[BP:GLAND_SILK:silk gland:silk gland][CONTYPE:LOWERBODY][INTERNAL][SMALL]
+	[DEFAULT_RELSIZE:1]
+	[UNDER_PRESSURE]
+[BP:GLAND_VENOM:venom gland:venom glands][CONTYPE:UPPERBODY][INTERNAL][SMALL]
+	[DEFAULT_RELSIZE:1]
+	[UNDER_PRESSURE]
+}}
+
+{{ark abstract creature|status=2
+|raws=
+[NAME:spider:spiders:spider]
+[PREFSTRING:architectural masterstrokes]
+[PREFSTRING:killing of annoying flies]
+}}
+
+===[http://en.wikipedia.org/wiki/Araneomorphae Araneomorphae]===
+
+====Agelenoidea (funnel-web spiders)====
+
+=====Nephila=====
+
+Golden orb-web spider http://en.wikipedia.org/wiki/Nephila_clavipes [http://entnemdept.ufl.edu/creatures/misc/golden_silk_spider.htm] [http://animaldiversity.ummz.umich.edu/site/accounts/information/Nephila_clavipes.html]
+{{ark creature|status=2
+|raws_start=
+[NAME:golden orb-web spider:golden orb-web spiders:golden orb-web spider]
+[CASTE_NAME:golden orb-web spider:golden orb-web spiders:golden orb-web spider]
+[DESCRIPTION:The large size and bright colors make this spider distinctive. The web can reach one meter in width, the yellow threads appearing as a rich gold in sunlight.]
+[PREFSTRING:golden webs]
+|raws_main=
+[COLOR:6:0:0] 
+[BIOME:ANY_WETLAND]
+[NO_WINTER]
+[MAXAGE:1:2]  
+[SELECT_MATERIAL:SILK]
+	[STATE_COLOR:ALL:GOLD]
+	[MATERIAL_VALUE:2]
+[WEBBER:LOCAL_CREATURE_MAT:SILK]
+[CASTE:FEMALE]
+	[FEMALE]
+	[CHANGE_BODY_SIZE_PERC:200] should make female 200% bigger, does it?
+[CASTE:MALE]
+	[MALE]
+	[CHANGE_BODY_SIZE_PERC:50] see above
+
+}}
+
+=====Tegenaria=====
+
+House spider http://en.wikipedia.org/wiki/Tegenaria_domestica [http://www.eol.org/pages/1200102] [http://bugguide.net/node/view/31445]
+{{ark creature|status=1
+|raws_start=
+[NAME:house spider:house spiders:house spider]
+[CASTE_NAME:house spider:house spiders:house spider]
+[DESCRIPTION:A common spider with elongated body with somewhat flattened thorax and straight abdomen. Mostly found in light caves, houses and other dry places]
+[PREFSTRING:dark color]
+|raws_main=
+[BIOME:ANY_TEMPERATE]
+[SELECT_MATERIAL:VENOM]
+	[SYNDROME]
+		[SYN_NAME:house spider bite]
+		[SYN_AFFECTED_CLASS:GENERAL_POISON]
+		[SYN_IMMUNE_CREATURE:{THIS_CREATURE}:ALL]
+		[SYN_INJECTED]
+		[CE_SWELLING:SEV:30:PROB:80:RESISTABLE:LOCALIZED:START:20:PEAK:70:END:200]
+		effect: small swelling - affects: local bodypart - duration: short
+[VERMIN_BITE:2:bitten:LOCAL_CREATURE_MAT:VENOM]
+[SET_TL_GROUP:BY_CATEGORY:ALL:SKIN]
+	[TL_COLOR_MODIFIER:BLACK:3:SEPIA:1:RAW_UMBER:1:DARK_BROWN:1]
+		[TLCM_NOUN:skin:SINGULAR]
+}}
+
+====Araneoidea (orb weaver)====
+
+=====Araneidae=====
+
+Jewel box spider http://en.wikipedia.org/wiki/Gasteracantha_cancriformis [http://animaldiversity.ummz.umich.edu/site/accounts/information/Gasteracantha_cancriformis.html] [http://bugguide.net/node/view/2026]
+{{ark creature|status=1
+|raws_start=
+[NAME:jewel box spider:jewel box spiders:jewel box spider]
+[CASTE_NAME:jewel box spider:jewel box spiders:jewel box spider]
+[DESCRIPTION:A very small spider with a crab-like belly. The six spine-like projections on the abdomen are characteristic.]
+[PREFSTRING:colored bellies]
+|raws_main=
+[BIOME:SHRUBLAND_TEMPERATE]
+[MAXAGE:1:1]
+[DIURNAL] 
+}}
+
+=====Archaeidae =====
+
+Assassin spider http://en.wikipedia.org/wiki/Archaeidae [http://nature.berkeley.edu/~hwood/] [http://zipcodezoo.com/Key/Animalia/Archaeidae_Family.asp]
+{{ark creature|status=1
+|raws_start=
+[NAME:assassin spider:assassin spiders:assassin spider]
+[CASTE_NAME:assassin spider:assassin spiders:assassin spider]
+[DESCRIPTION:Plate and jaws are greatly elongated giving the spider the appearance of a neck and head, almost making them look bird-like. These spiders are specialised in hunting and killing other spiders, thus their name.]
+[PREFSTRING:astonishing apperance]
+|raws_main=
+[BIOME:ANY_TROPICAL]
+They definitly have venom and it is known to paralyse other spiders but the impact on humans (and dwarfs ^^) is unknown.
+}}
+
+=====Araneus=====
+
+Cross Spider http://en.wikipedia.org/wiki/European_garden_spider [http://www.arkive.org/garden-spider/araneus-diadematus/info.html] [http://www.nicksspiders.com/nicksspiders/araneusdiadematus.htm]
+{{ark creature|status=1
+|raws_start=
+[NAME:cross spider:cross spiders:cross spider]
+[CASTE_NAME:cross spider:cross spiders:cross spider]
+[DESCRIPTION:Cross spiders have mottled markings across the back with five or more large white dots forming a cross. They are known to chirp when threatened.]
+[PREFSTRING:cute sounds]
+|raws_main=
+[BIOME:ANY_TEMPERATE]
+}}
+
+Marbled orb-weaver http://en.wikipedia.org/wiki/Araneus_marmoreus [http://bugguide.net/node/view/2016] 
+{{ark creature|status=1
+|raws_start=
+[NAME:marbled orb-weaver:marbled orb-weaver:marbled orb-weaver]
+[CASTE_NAME:marbled orb-weaver:marbled orb-weaver:marbled orb-weaver]
+[DESCRIPTION:This spider has a broad spectrum of shapes across its huge round belly.]
+[PREFSTRING:big bellies]
+|raws_main=
+[BIOME:ANY_TEMPERATE_FOREST]
+[NOCTURNAL]
+}}
+
+=====Argiope=====
+
+Silver spider http://en.wikipedia.org/wiki/Argiope_argentata [http://www.sdnhm.org/fieldguide/inverts/argi-arg.html] [http://bugguide.net/node/view/2033]
+{{ark creature|status=1
+|raws_start=
+[NAME:silver spider:silver spiders:silver spider]
+[CASTE_NAME:silver spider:silver spiders:silver spider]
+[DESCRIPTION:The body of the Silver spider tends to be primarily silver with brown and orange colourations further back on the abdomen on the top, with a primarily brown underbelly.]
+|raws_main=
+[BIOME:ANY_SAVANNA]
+[SELECT_MATERIAL:VENOM]
+	[SYNDROME]
+		[SYN_NAME:silver spider bite]
+		[SYN_AFFECTED_CLASS:GENERAL_POISON]
+		[SYN_IMMUNE_CREATURE:{THIS_CREATURE}:ALL]
+		[SYN_INJECTED]
+		[CE_PAIN:SEV:40:PROB:80:RESISTABLE:LOCALIZED:START:10:PEAK:100:END:200]
+		effect: little pain - affects: local bodypart - duration: short
+[VERMIN_BITE:2:bitten:LOCAL_CREATURE_MAT:VENOM]
+}}
+
+=====Cyrtophora=====
+
+Tentweb spider http://en.wikipedia.org/wiki/Cyrtophora_citricola [http://www.doacs.state.fl.us/pi/enpp/ento/entcirc/ent411.pdf] [http://www.biodiversityexplorer.org/arachnids/spiders/araneidae/cyrtophora_citricola.htm]
+{{ark creature|status=1
+|raws_start=
+[NAME:tentweb spider:tentweb spiders:tentweb spider]
+[CASTE_NAME:tentweb spider:tentweb spiders:tentweb spider]
+[DESCRIPTION:Their horizontal web forms a cone in the middle, with many support lines holding it. The color may vary greatly; whereas many sport a black and white pattern, others are brown, males sometimes appear black.]
+[PREFSTRING:tent-shaped webs]
+|raws_main=
+[BIOME:ANY_TROPICAL_BROADLEAF]
+}}
+
+=====Linyphiidae=====
+
+Money spider http://en.wikipedia.org/wiki/Bowl_and_doily_spider [http://bugguide.net/node/view/2043] 
+{{ark creature|status=1
+|raws_start=
+[NAME:money spider:money spiders:money spider]
+[CASTE_NAME:money spider:money spiders:money spider] 
+[DESCRIPTION:A small spider,  that weaves a fairly complex sheet web system consisting of an inverted dome shaped web.The spider hangs from the underside of the "bowl", and bites through the web.]
+[PREFSTRING:granting fortune]
+|raws_main=
+[BIOME:ANY_TEMPERATE]
+}}
+
+=====Mastophoreae=====
+
+Bolas spider http://en.wikipedia.org/wiki/Mastophora [http://nathistoc.bio.uci.edu/spiders/Mastophora.htm] [http://insectsspiders.suite101.com/article.cfm/bola_spiders_eat_moths]
+{{ark creature|status=1
+|raws_start=
+[NAME:bolas spider:bolas spiders:bolas spider]
+[CASTE_NAME:bolas spider:bolas spiders:bolas spider] 
+[DESCRIPTION:A spider that does't spin the typical web. Instead, they hunt by using a sticky 'capture blob' of silk on the end of a line, known as a 'bolas'. If threatened or removed from the surface, bolas spiders produce a pungent odor.]
+[PREFSTRING:hunting technique]
+|raws_main=
+[BIOME:FOREST_TROPICAL_DRY_BROADLEAF]
+[NOCTURNAL]
+}}
+
+=====Micrathena=====
+
+Arrowhead weaver http://en.wikipedia.org/wiki/Micrathena_sagittata [http://bugguide.net/node/view/2020]
+{{ark creature|status=1
+|raws_start=
+[NAME:arrowhead weaver:arrowhead weavers:arrowhead weaver]
+[CASTE_NAME:arrowhead weaver:arrowhead weavers:arrowhead weaver] 
+[DESCRIPTION:This is a striking spider with a distinctive arrow-shaped abdomen which is largely yellow, with black depressions above and variable red and black patterning below.]
+[PREFSTRING:nice shape]
+|raws_main=
+[BIOME:GRASSLAND_TEMPERATE]
+[BIOME:ANY_TEMPERATE_FOREST]
+}}
+
+=====Tetragnathidae=====
+
+Dark stone spider* http://en.wikipedia.org/wiki/Meta_menardi
+{{ark creature|status=1
+|raws_start=
+[NAME:dark stone spider:dark stone spiders:dark stone spider]
+[CASTE_NAME:dark stone spider:dark stone spiders:dark stone spider] 
+[DESCRIPTION:They are reddish brown in colour and can only be found in caves. Egg sacs are tear shaped white pendants usually hanging from the roof of the habitat by a silk thread.]
+|raws_main=
+[BIOME:SUBTERRANEAN_CHASM]
+[ALL_ACTIVE]
+}}
+
+=====Theridiidae=====
+
+Black widow http://en.wikipedia.org/wiki/Latrodectus_mactans [http://bugguide.net/node/view/26336]
+{{ark creature|status=1
+|raws_start=
+[NAME:black widow:black widows:black widow]
+[CASTE_NAME:black widow:black widows:black widow] 
+[DESCRIPTION:A highly venomous species of spider.They are well known for the distinctive black and red coloring of the female and for the fact that she will occasionally eat her mate after reproduction.]
+[PREFSTRING:deadly venom]
+|raws_main=
+[BIOME:ANY_TEMPERATE_FOREST]
+[SELECT_MATERIAL:VENOM]
+	[SYNDROME]
+		[SYN_NAME:black widow bite]
+		[SYN_AFFECTED_CLASS:GENERAL_POISON]
+		[SYN_IMMUNE_CREATURE:{THIS_CREATURE}:ALL]
+		[SYN_INJECTED]
+		[CE_PAIN:SEV:95:PROB:90:RESISTABLE:SIZE_DILUTES:START:200:PEAK:500:END:1000]
+		effect: unbearable pain - affects: whole body
+		[CE_SWELLING:SEV:80:PROB:80:RESISTABLE:LOCALIZED:START:100:PEAK:400:END:900]
+		effect: huge swelling - affects: local bodypart
+		[CE_FEVER:SEV:50:PROB:70:RESISTABLE:SIZE_DILUTES:START:500:PEAK:1300:END:1500]
+		effect: quite high fever - affects: whole body
+[VERMIN_BITE:2:bitten:LOCAL_CREATURE_MAT:VENOM]
+}}
+
+Dewdrop spider http://en.wikipedia.org/wiki/Argyrodes [http://www.ozanimals.com/Spider/Dew-Drop-Spider/Argyrodes/antipodianus.html]
+{{ark creature|status=1
+|raws_start=
+[NAME:dewdrop spider:dewdrop spiders:dewdrop spider]
+[CASTE_NAME:dewdrop spider:dewdrop spiders:dewdrop spider]
+[DESCRIPTION:This spider steals other spider's prey. They invade and reside in their host's web even though they can spin their own webs. They are black with silvery markings and a dewdrop-shaped abdomen.]
+[PREFSTRING:parasitic way of life]
+|raws_main=
+[BIOME:SHRUBLAND_TEMPERATE]
+[BIOME:ANY_TEMPERATE_FOREST]
+}}
+
+Redback spider http://en.wikipedia.org/wiki/Redback_spider [http://eolspecies.lifedesks.org/pages/18105] [http://www.ozanimals.com/Spider/Redback-Spider/Latrodectus/hasselti.html]
+{{ark creature|status=1
+|raws_start=
+[NAME:redback spider:redback spiders:redback spider]
+[CASTE_NAME:redback spider:redback spiders:redback spider] 
+[DESCRIPTION:The Redback spider is a potentially dangerous spider that resembles a Black widow spider.The body is a deep black colour (occasionally brownish), often containing an obvious orange to red longitudinal stripe on the upper abdomen.]
+[PREFSTRING:colored bellies]
+|raws_main=
+[BIOME:ANY_TEMPERATE_FOREST] 
+[SELECT_MATERIAL:VENOM]
+	[SYNDROME]
+		[SYN_NAME:redback spider bite]
+		[SYN_AFFECTED_CLASS:GENERAL_POISON]
+		[SYN_IMMUNE_CREATURE:{THIS_CREATURE}:ALL]
+		[SYN_INJECTED]
+		serios evil spider venom - but should cause no death
+		[CE_PAIN:SEV:85:PROB:90:RESISTABLE:LOCALIZED:START:100:PEAK:500:END:1000]
+		effect: extreme pain - affects: local bodypart
+		[CE_PAIN:SEV:55:PROB:90:RESISTABLE:LOCALIZED:BP:BY_CATEGORY:UPPERBODY:ALL:START:100:PEAK:500:END:1200]
+		effect: serious pain - affects: chest
+		[CE_SWELLING:SEV:50:PROB:80:RESISTABLE:LOCALIZED:START:100:PEAK:400:END:900]
+		effect: big swelling - affects: local bodypart
+		[CE_FEVER:SEV:35:PROB:70:RESISTABLE:SIZE_DILUTES:START:300:PEAK:1000:END:1300]
+		effect: quite high fever - affects: whole body
+		[CE_NAUSEA:SEV:40:PROB:100:RESISTABLE:SIZE_DILUTES:START:10:PEAK:1000:END:1300]
+		effect: vomitting
+[VERMIN_BITE:2:bitten:LOCAL_CREATURE_MAT:VENOM]
+}}
+====Dictynoidea====
+
+=====Cybaeidae=====
+
+Water spider http://en.wikipedia.org/wiki/Diving_bell_spider [http://www.eol.org/pages/1200199]
+
+{{ark creature|status=1
+|raws_start=
+[NAME:water spider:water spiders:water spider]
+[CASTE_NAME:water spider:water spiders:water spider] 
+[DESCRIPTION:It is the only spider that spends its whole life under water. However it breathes air, which it traps in a bubble held by hairs on its abdomen and legs. Their fangs are robust enough to pierce dwarfen skin and the bite is said to be quite painful.]
+[PREFSTRING:silvery aura]
+|raws_main=
+[AMPHIBIOUS]
+[BIOME:ANY_POOL]
+[SELECT_MATERIAL:VENOM]
+[MAXAGE:1:2] 
+	[SYNDROME]
+		[SYN_NAME:water spider bite]
+		[SYN_AFFECTED_CLASS:GENERAL_POISON]
+		[SYN_IMMUNE_CREATURE:{THIS_CREATURE}:ALL]
+		[SYN_INJECTED]
+		[CE_PAIN:SEV:20:PROB:80:RESISTABLE:LOCALIZED:START:1:PEAK:50:END:300]
+		effect: some pain - affects: local bodypart
+		[CE_FEVER:SEV:20:PROB:70:RESISTABLE:SIZE_DILUTES:START:200:PEAK:600:END:800]
+		effect: only feverish symptoms - affects: whole body
+[VERMIN_BITE:2:bitten:LOCAL_CREATURE_MAT:VENOM]
+}}
+
+====Entelegynae====
+
+=====Lycosoidae=====
+
+Blind wolf spider http://en.wikipedia.org/wiki/Kauai_cave_wolf_spider [http://www.animalaqua.com/kauai-cave-wolf-spider/] [http://www.earlham.edu/~reyeras/noeyedbigeyed.htm]
+{{ark creature|status=1
+|raws_start=
+[NAME:blind wolf spider:blind wolf spiders:blind wolf spider]
+[CASTE_NAME:blind wolf spider:blind wolf spiders:blind wolf spider] 
+[DESCRIPTION:This spider is reddish brown and completely harmless to dwarfs. This species has completely lost its eyes.]
+[PREFSTRING:getting along without eyes]
+|raws_main=
+[BIOME:SUBTERRANEAN_CHASM]
+[CAVE_ADAPT]
+[APPLY_CURRENT_CREATURE_VARIATION]
+[GO_TO_TAG:BODY]
+	[CV_REMOVE_TAG:BODY]
+	[APPLY_CURRENT_CREATURE_VARIATION]
+	[CV_ADD_TAG:BODY:ARK_ARACHNID_CEPHALOTHORAX_LEGS_FEET:ARK_ARACHNID_LUNG:ARK_SPIDER_2FANGS:ARK_SPIDER_GLANDS:HEART:GUTS:BRAIN:MOUTH]
+[GO_TO_END]
+no idea if this will work
+}}
+
+Grey wolf spider http://en.wikipedia.org/wiki/Lycosa_tarantula
+{{ark creature|status=1
+|raws_start=
+[NAME:grey wolf spider:grey wolf spiders:grey wolf spider]
+[CASTE_NAME:grey wolf spider:grey wolf spiders:grey wolf spider] 
+[DESCRIPTION:Their body tends to be primarily grey with brown colorations. They are a nocturnal species and generally lurk at the mouths of their burrows waiting for prey.]
+|raws_main=
+[BIOME:SAVANNA_TEMPERATE]
+[BIOME:SHRUBLAND_TEMPERATE]
+[NOCTURNAL]
+[CARNIVORE]
+[MAXAGE:2:5] 
+}}
+
+Tundra wolf spider http://en.wikipedia.org/wiki/Pardosa_glacialis
+{{ark creature|status=1
+|raws_start=
+[NAME:tundra wolf spider:tundra wolf spiders:tundra wolf spider]
+[CASTE_NAME:tundra wolf spider:tundra wolf spiders:tundra wolf spider] 
+[DESCRIPTION:Their bodys are black with silvery camouflage. This spider only lives in cold outlands.]
+[PREFSTRING:surviving in chilly regions]
+|raws_main=
+[BIOME:TUNDRA]
+[BIOME:FOREST_TAIGA]
+[CARNIVORE]
+[NOCTURNAL]
+[MAXAGE:2:4] 
+}}
+
+Green lynx spider http://en.wikipedia.org/wiki/Green_lynx_spider [http://entnemdept.ufl.edu/creatures/beneficial/green_lynx_spider.htm]
+{{ark creature|status=1
+|raws_start=
+[NAME:green lynx spider:green lynx spiders:green lynx spider]
+[CASTE_NAME:green lynx spider:green lynx spiders:green lynx spider] 
+[DESCRIPTION:The green lynx spider is a conspicuous bright-green spider found on shrubs.The eye region is clothed with white appressed hairs.Gravid females are able to change their color to fit their background.]
+[PREFSTRING:bright-green color]
+|raws_main=
+[BIOME:SHRUBLAND_TROPICAL]
+}}
+
+Wandering spider http://en.wikipedia.org/wiki/Brazilian_wandering_spider [http://scienceray.com/biology/zoology/the-brazilian-wandering-spider-the-worlds-deadliest-spider/] [http://bugguide.net/node/view/73883]
+{{ark creature|status=1
+|raws_start=
+[NAME:wandering spider:wandering spiders:wandering spider]
+[CASTE_NAME:wandering spider:wandering spiders:wandering spider] 
+[DESCRIPTION:An aggressive and highly venomous spider found in tropical regions. The wandering spiders are so-called because they wander the jungle floor at night, rather than residing in a lair or maintaining a web.]
+|raws_main=
+[BIOME:SAVANNA_TROPICAL]
+[BIOME:FOREST_TROPICAL_DRY_BROADLEAF]
+[SELECT_MATERIAL:VENOM]
+	[SYNDROME]
+		[SYN_NAME:wandering spider bite]
+		[SYN_AFFECTED_CLASS:GENERAL_POISON]
+		[SYN_IMMUNE_CREATURE:{THIS_CREATURE}:ALL]
+		[SYN_INJECTED]
+		[CE_PAIN:SEV:100:PROB:30:RESISTABLE:SIZE_DILUTES:START:5:PEAK:500:END:1000]
+		effect: unbearable pain - affects: whole body
+		[CE_PARALYSIS:SEV:100:PROB:30:RESISTABLE:SIZE_DILUTES:START:5:PEAK:300:END:1500]
+		effect: progressive paralysis leads to suffocation - affects: whole body
+[VERMIN_BITE:2:bitten:LOCAL_CREATURE_MAT:VENOM]
+}}
+
+=====Pisauridae=====
+
+Fishing spider http://en.wikipedia.org/wiki/Dolomedes_triton [http://animaldiversity.ummz.umich.edu/site/accounts/information/Dolomedes_triton.html] [http://www.eol.org/pages/1198650]
+
+{{ark creature|status=1
+|raws_start=
+[NAME:fishing spider:fishing spiders:fishing spider]
+[CASTE_NAME:fishing spider:fishing spiders:fishing spider] 
+[DESCRIPTION:This spider makes use of its very good vision when diving to capture its prey. Coloring is grey to brown with light areas and light spots on its brown abdomen]
+[PREFSTRING: ability to dive.]
+|raws_main=
+[BIOME:ANY_WETLAND]
+[DIURNAL]
+}}
+
+====Eresoidea====
+
+=====Eresidae=====
+
+Ladybird spider http://en.wikipedia.org/wiki/Eresus [http://www.arkive.org/ladybird-spider/eresus-sandaliatus/info.html] [http://www.eol.org/pages/1185644]
+
+{{ark creature|status=1
+|raws_start=
+[NAME:ladybird spider:ladybird spiders:ladybird spider]
+[CASTE_NAME:ladybird spider:ladybird spiders:ladybird spider] 
+[DESCRIPTION:Ladybird spiders live in burrows with silk trip-wires covered with dense fluffy threads that radiate outwards to catch their prey. The males have a bright orange or vermilion back with four large black spots and two smaller ones, and superficially resemble a ladybird.]
+[PREFSTRING:colored bellies]
+|raws_main=
+[BIOME:SHRUBLAND_TEMPERATE]
+[BIOME:ANY_TEMPERATE_FOREST]
+}}
+
+====Filistatoidea====
+
+=====Filistatidae=====
+
+Crevice weaver http://en.wikipedia.org/wiki/Kukulcania_hibernalis [http://bugguide.net/node/view/26400/bgimage]
+{{ark creature|status=1
+|raws_start=
+[NAME:Crevice weaver:Crevice weavers:Crevice weaver]
+[CASTE_NAME:Crevice weaver:Crevice weaver:Crevice weaver] 
+[DESCRIPTION:Female spiders are rarely seen, as they build radial webs around crevices. Males, on the other hand, typically wander in search of insects and females to mate with, having no particular territory.]
+|raws_main=
+[BIOME:SHRUBLAND_TEMPERATE]
+[BIOME:GRASSLAND_TEMPERATE]
+}}
+
+====Salticidea (jumping spiders)====
+
+=====Salticidae=====
+
+Ant-mimicking spider http://en.wikipedia.org/wiki/Myrmarachne [http://en.wikipedia.org/wiki/Myrmarachne_plataleoides]
+{{ark creature|status=1
+|raws_start=
+[NAME:Ant-mimicking spider:Ant-mimicking spiders:Ant-mimicking spider]
+[CASTE_NAME:Ant-mimicking spider:Ant-mimicking spiders:Ant-mimicking spider] 
+[DESCRIPTION:A Spider that mimics weaver ants in morphology and behaviour. By mimicking the ants they are able to stay close to them and gain protection from predators.]
+[PREFSTRING:disguises]
+|raws_main=
+[BIOME:SHRUBLAND_TROPICAL]
+[BIOME:ANY_TROPICAL_FOREST]
+}}
+
+Black jumping spider http://en.wikipedia.org/wiki/Maevia_inclemens [http://bugguide.net/node/view/2030] [http://www.eol.org/pages/1212635]
+{{ark creature|status=1
+|raws_start=
+[NAME:Black jumping spider:Black jumping spiders:Black jumping spider]
+[CASTE_NAME:Black jumping spider:Black jumping spiders:Black jumping spider] 
+[DESCRIPTION:Two different male forms occur: One is black with yellowish small tufts of black hair on the cephalothorax. The second form, which is grayish with red, white and black markings, resembles the female, which has faint V-shaped markings.]
+[PREFSTRING:colors]
+|raws_main=
+[BIOME:SHRUBLAND_TEMPERATE]
+[BIOME:ANY_TEMPERATE_FOREST]
+}}
+
+Green jumping spider http://en.wikipedia.org/wiki/Mopsus_(genus) [http://www.brisbaneinsects.com/brisbane_spiders/GreenJumpingSpiders.htm]
+{{ark creature|status=1
+|raws_start=
+[NAME:Green jumping spider:Green jumping spiders:Green jumping spider]
+[CASTE_NAME:Green jumping spider:Green jumping spiders:Green jumping spider] 
+[DESCRIPTION:The males are strikingly colored and decorated with long white "side whiskers", which rise to a peak surmounted by a topknot of black hairs. Females don't have the whiskers and topknot, but instead feature a red and white elegant "mask". This species has a very uncommon way of reproduction: the adult male lives together with the subadult female in an adjacent nest until it matures, then he mates with her inside her nest. ]
+[PREFSTRING:mask]
+|raws_main=
+[BIOME:SHRUBLAND_TROPICAL]
+[BIOME:SAVANNA_TROPICAL]
+}}
+
+Herbivorous jumping spider http://en.wikipedia.org/wiki/Bagheera_kiplingi [http://scienceblogs.com/notrocketscience/2009/10/bagheera_kiplingi_-_the_mostly_vegetarian_spider.php]
+{{ark creature|status=1
+|raws_start=
+[NAME:Herbivorous jumping spider:Herbivorous jumping spiders:Herbivorous jumping spider]
+[CASTE_NAME:Herbivorous jumping spider:Herbivorous jumping spiders:Herbivorous jumping spider] 
+[DESCRIPTION:A colorful spider that lives in the tropics. They have have amber legs and a black and red body. ]
+[PREFSTRING:love of plants]
+|raws_main=
+[BIOME:SHRUBLAND_TROPICAL]
+[BIOME:SAVANNA_TROPICAL]
+}}
+
+Jumping mountain spider http://en.wikipedia.org/wiki/Euophrys_omnisuperstes
+{{ark creature|status=1
+|raws_start=
+[NAME:Jumping mountain spider:Jumping mountain spiders:Jumping mountain spider]
+[CASTE_NAME:Jumping mountain spider:Jumping mountain spiders:Jumping mountain spider] 
+[DESCRIPTION:A very small dark brown spider that lives in the mountains. Its eyes are close-set.]
+[PREFSTRING:love of mountains]
+|raws_main=
+[BIOME:MOUNTAIN]
+}}
+
+Gliding spider http://en.wikipedia.org/wiki/Maratus_volans (Colorful tropical species)
+{{ark creature|status=1
+|raws_start=
+[NAME:Gliding spider:Gliding spiders:Gliding spider]
+[CASTE_NAME:Gliding spider:Gliding spiders:Gliding spider] 
+[DESCRIPTION:A brown spider with a colorful abdomen. Their males dance to attract mates.]
+[FLIER]
+[PREFSTRING:ability to fly]
+|raws_main=
+[BIOME:ANY_TEMPERATE_FOREST]
+}}
+
+
+Pike jumping spider http://en.wikipedia.org/wiki/Marpissa_pikei
+{{ark creature|status=1
+|raws_start=
+[NAME:Pike jumping spider:Pike jumping spiders:Pike jumping spider]
+[CASTE_NAME:Pike jumping spider:Pike jumping spiders:Pike jumping spider] 
+[DESCRIPTION:A gray spider with an elongated form. It hides among twigs and blades of grass.]
+[PREFSTRING:elongated body]
+|raws_main=
+[BIOME:ANY_DESERT]
+}}
+
+
+Portia spider http://en.wikipedia.org/wiki/Portia_(genus)
+{{ark creature|status=1
+|raws_start=
+[NAME:Portia spider:Portia spiders:Portia spider]
+[CASTE_NAME:Portia spider:Portia spiders:Portia spider] 
+[DESCRIPTION:A small brown spider that consumes other spider.]
+[PREFSTRING:violence]
+|raws_main=
+[BIOME:ANY_TEMPERATE]
+}}
+
+
+Moustache spider http://en.wikipedia.org/wiki/Phidippus_mystaceus
+{{ark creature|status=1
+|raws_start=
+[NAME:Moustache spider:Moustache spiders:Moustache spider]
+[CASTE_NAME:Moustache spider:Moustache spiders:Moustache spider] 
+[DESCRIPTION:A grey spider with white fur and patterns on their abdomen.]
+[PREFSTRING:pretty features]
+|raws_main=
+[BIOME:ANY_TEMPERATE]
+}}
+
+
+Zebra spider http://en.wikipedia.org/wiki/Zebra_spider
+{{ark creature|status=1
+|raws_start=
+[NAME:Zebra spider:Zebra spiders:Zebra spider]
+[CASTE_NAME:Zebra spider:Zebra spiders:Zebra spider] 
+[DESCRIPTION:A spider with black and white stripes. Their females are bigger than males.]
+[PREFSTRING:stripes]
+|raws_main=
+[BIOME:ANY_TEMPERATE]
+}}
+
+====Scytodoidea====
+
+=====Scytodidae=====
+
+Spitting spider http://en.wikipedia.org/wiki/Spitting_spider
+
+=====Sicariidae=====
+
+Brown recluse spider http://en.wikipedia.org/wiki/Loxosceles_reclusa
+
+Six-eyed sand spider http://en.wikipedia.org/wiki/Six-eyed_sand_spider
+
+====Sparassoidea====
+
+=====Heteropoda=====
+
+Brown huntsman spider http://en.wikipedia.org/wiki/Heteropoda_venatoria
+
+=====Leucorchestris=====
+
+White lady http://en.wikipedia.org/wiki/Leucorchestris_arenicola [http://www.photoshelter.com/c/solvinzankl/gallery-img-show/Namib-Desert/G00007mcVUzfl9rQ/?&_bqG==30&_bqH==eJwLdM32SS8syggtynHOcC1ydyzI1XYycc6OMnK0sjI0MLCyco_3dLF1NwAC89zksNCqtBzLokA1d894d0cfH9egSGzSAIb2Gk8-&I_ID=I0000vn0ieyV_zSI]
+
+====Thomisoidea (crab spiders)====
+
+=====Misumena=====
+
+Flower crab spider http://en.wikipedia.org/wiki/Misumena
+
+Goldenrod crab spider http://en.wikipedia.org/wiki/Misumena_vatia (astonishing color)
+
+====Uloboroidea====
+
+=====Deinopidae=====
+
+Ogre-faced spider http://en.wikipedia.org/wiki/Deinopis
+
+===[http://en.wikipedia.org/wiki/Mesothelae Mesothelae (Burrowing Spiders)]===
+
+====Heptathela====
+
+Burrowing spider http://en.wikipedia.org/wiki/Heptathela_kimurai
+{{ark creature|status=1
+|raws_start=
+[NAME:Burrowing spider:Burrowing spiders:Burrowing spider]
+[CASTE_NAME:Burrowing spider:Burrowing spiders:Burrowing spider] 
+[DESCRIPTION:A brown spider that digs burrows.]
+[PREFSTRING:digging]
+|raws_main=
+[BIOME:ANY_TEMPERATE]
+}}
+
+===[http://en.wikipedia.org/wiki/Mygalomorphae Mygalomorphae]===
+
+====Atypoidea====
+
+=====Sphodros=====
+
+Black purse-web spider http://en.wikipedia.org/wiki/Sphodros_niger
+
+Red legged purseweb spider http://en.wikipedia.org/wiki/Sphodros_rufipes (Webs were used by locals as bandages.)
+
+====Ctenizoidea====
+
+=====Ctenizidae=====
+
+Black trapdoor spider* ''lat. Ummidia sp.'' http://en.wikipedia.org/wiki/Ctenizidae
+
+====Hexatheloidea====
+
+=====Hexathelidae=====
+
+Funnel-web spider http://en.wikipedia.org/wiki/Sydney_funnel-web_spider
+
+====Idiopidae====
+
+=====Idiopidae=====
+
+Brown trapdoor spider http://en.wikipedia.org/wiki/Sydney_brown_trapdoor_spider
+
+====Migoidea====
+
+=====Actinopodidae=====
+
+Mouse spider http://en.wikipedia.org/wiki/Missulena
+
+====Theraphosidae (Tarantulas)====
+
+=====Acanthoscurria=====
+
+Pinktoe tarantula http://en.wikipedia.org/wiki/Pinktoe_tarantula
+
+Whitebanded tarantula http://en.wikipedia.org/wiki/Acanthoscurria_geniculata
+
+=====Aphonopelma=====
+
+Brown tarantula http://en.wikipedia.org/wiki/Aphonopelma_hentzi
+
+Striped-knee tarantula http://en.wikipedia.org/wiki/Aphonopelma_seemanni
+
+=====Avicularia=====
+
+Red Tree Spider http://en.wikipedia.org/wiki/Avicularia_versicolor (looks amazing!)
+
+=====Brachypelma=====
+
+Black velvet spider http://en.wikipedia.org/wiki/Brachypelma_vagans
+
+Curlyhair spider http://en.wikipedia.org/wiki/Brachypelma_albopilosum
+
+Flame knee spider http://en.wikipedia.org/wiki/Brachypelma_auratum
+
+Fire leg spider http://en.wikipedia.org/wiki/Brachypelma_boehmei
+
+=====Citharischius=====
+
+King baboon spider http://en.wikipedia.org/wiki/King_baboon_spider
+
+=====Ephebopus=====
+
+Skeleton tarantula http://en.wikipedia.org/wiki/Ephebopus_murinus
+
+=====Haplopelma=====
+
+Cobalt blue tarantula http://en.wikipedia.org/wiki/Cobalt_blue_tarantula 
+
+Golden earth tiger http://en.wikipedia.org/wiki/Chinese_bird_spider [http://www.zoocon.com/Herps/Inverts/Haplopelma_schmidti_Golden_01.jpg]
+
+=====Theraphosa=====
+
+Goliath Birdeater http://en.wikipedia.org/wiki/Goliath_birdeater
+
+==Scorpiones (scorpions)==
+
+===Buthidae (thik-tailed scorpions)===
+
+Fat-tailed scorpion http://en.wikipedia.org/wiki/Fattail_scorpion
+
+Deathstalker scorpion http://en.wikipedia.org/wiki/Deathstalker
+
+Spitting scorpion http://en.wikipedia.org/wiki/Parabuthus_transvaalicus [http://s146.photobucket.com/albums/r264/galapoheros/?action==view&current==DSCN9794.flv] (Sprays venom from its tail.)
+
+===Caraboctonidae===
+
+Hairy desert scorpion http://en.wikipedia.org/wiki/Giant_desert_hairy_scorpion
+
+===Euscorpiidae===
+
+Yellow-tailed scorpion http://en.wikipedia.org/wiki/Euscorpius_flavicaudis
+
+===Scorpionidae===
+
+Emperor scorpion http://en.wikipedia.org/wiki/Emperor_scorpion
+
+===Vaejovidae===
+
+Dark cave scorpion http://bugguide.net/node/view/34626 (Cave-dweller)
+
+==Solifugae (camel spiders)==
+Solifuge http://en.wikipedia.org/wiki/Solifugae (Generalised all-purpose solifugid or wind scorpion, or camel spider or whatever you want to call it)
+
+==Amblypygi (tailless whip scorpions)==
+
+Tailless whip scorpion http://en.wikipedia.org/wiki/Amblypygi [http://www.livescience.com/animals/070319_sweet_spiders.html] (Likes to snuggle.=))
+
+==Thelyphonida (whip scorpions)==
+Whip scorpion / Vinegarroon http://en.wikipedia.org/wiki/Thelyphonida (Can spray an unpleasant acidic solution at interlopers)

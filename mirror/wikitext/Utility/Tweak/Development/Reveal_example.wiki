@@ -1,0 +1,118 @@
+<pre>using System;
+using System.Windows.Forms;
+using Gibbed.DwarfFortress.Utilities;
+
+namespace Gibbed.DwarfFortress.Tools.Reveal
+{
+	public class Module : IModule
+	{
+		private readonly Guid _Id = new Guid("{0D303765-8D64-4e46-B7AD-3BD6999F281F}");
+		public Guid Id { get { return this._Id; } }
+		public string Name { get { return "Reveal"; } }
+		public string Description { get { return "Reveals loaded tiles in the local region."; } }
+		public string Author { get { return "Rick (rick@gibbed.us)"; } }
+		public string Website { get { return "http://www.dwarffortresswiki.net/index.php/User:Rick/Tweak/Core_Modules#Reveal"; } }
+		public Version Version { get { return new Version(1, 1); } }
+		public bool HideIfUnsupported { get { return false; } }
+
+		public bool SupportsMode(ModuleMode mode)
+		{
+			return mode == ModuleMode.Gui;
+		}
+
+		public bool SupportsVersion(IVersion version)
+		{
+			return
+				version.HasAddress("map_data") &&
+				version.HasAddress("map_x_count") &&
+				version.HasAddress("map_y_count") &&
+				version.HasAddress("map_z_count") &&
+				version.HasOffset("map_data_designation_offset");
+		}
+
+		public void Run(ModuleMode mode, IVersion version, IMemory memory, ILogger log, string[] args)
+		{
+			UInt32 map, xcount, ycount, zcount, designation;
+			byte[] data, xoffsets, yoffsets, zoffsets;
+
+			map = memory.ReadU32(version.GetAddress("map_data"));
+
+			if (map == 0)
+			{
+				MessageBox.Show("Map data is not yet available!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+				return;
+			}
+
+			if (MessageBox.Show(
+				"Are you sure you want to reveal the map?" + Environment.NewLine +
+				Environment.NewLine +
+				"This could break any ability to get magma and" +
+				Environment.NewLine +
+				"adamantine related structures / options!", "Question",
+				MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No)
+			{
+				return;
+			}
+
+			if (memory.Suspend() == false)
+			{
+				memory.Resume();
+				MessageBox.Show("Failed to suspend process.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+				return;
+			}
+
+			designation = version.GetOffset("map_data_designation_offset");
+
+			xcount = memory.ReadU32(version.GetAddress("map_x_count"));
+			ycount = memory.ReadU32(version.GetAddress("map_y_count"));
+			zcount = memory.ReadU32(version.GetAddress("map_z_count"));
+			
+			data = new byte[256 * 4];
+			xoffsets = new byte[xcount * 4];
+			yoffsets = new byte[ycount * 4];
+			zoffsets = new byte[zcount * 4];
+
+			memory.Read(map, ref xoffsets);
+			for (int bx = 0; bx < xcount; bx++)
+			{
+				memory.Read(BitConverter.ToUInt32(xoffsets, bx * 4), ref yoffsets);
+
+				for (int by = 0; by < ycount; by++)
+				{
+					memory.Read(BitConverter.ToUInt32(yoffsets, by * 4), ref zoffsets);
+
+					for (int bz = 0; bz < zcount; bz++)
+					{
+						UInt32 block = BitConverter.ToUInt32(zoffsets, bz * 4);
+
+						if (block == 0)
+						{
+							continue;
+						}
+
+						memory.Read(block + designation, ref data);
+
+						for (int i = 0; i < 16 * 16; i++)
+						{
+							byte[] newdata = BitConverter.GetBytes(BitConverter.ToUInt32(data, i * 4) & ~0x200);
+							
+							data[(i * 4) + 0] = newdata[0];
+							data[(i * 4) + 1] = newdata[1];
+							data[(i * 4) + 2] = newdata[2];
+							data[(i * 4) + 3] = newdata[3];
+						}
+
+						memory.Write(block + designation, ref data);
+					}
+				}
+			}
+
+			if (memory.Resume() == false)
+			{
+				MessageBox.Show("Failed to resume process.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+			}
+		}
+	}
+}</pre>
+
+[[Category:Hacking|Tweak]]

@@ -1,0 +1,42 @@
+{{Quality|Fine|14:11, 13 June 2014 (UTC)}}
+{{uv|DF2012}}
+[http://www.bay12forums.com/smf/index.php?topic=50643.0 '''Dfterm2'''] is a remote Dwarf Fortress playing software for multiple users through telnet. It has been replaced by [[Utility:Dfterm3|Dfterm3]], which has similar functions through an easier-to-use web interface.  
+
+===On linux===
+You need to compile the program directly from source. To do so you need to install the following packages:
+* ICU development libraries
+* Boost development libraries (at least version 1.42)
+* OpenSSL development libraries
+* CMake
+* PCRE development libraries
+* g++ and usual development tools
+* lua ( > 5.1 Doesn't work) (use 5.0)
+* git
+
+First, you need to obtain the source code, using the following commands in git:
+<pre>
+$ git clone git://genodeen.net/dfterm2
+$ cd dfterm2
+$ git submodule init
+$ git submodule update
+</pre>
+
+Next, you have to use CMake to configure the building system:
+<pre>$ cmake .</pre>
+
+Thirdly, use this command to start the compiling:
+<pre>$ make</pre>
+
+''If compilation failed, [http://www.bay12forums.com/smf/index.php?topic=50643.0 visit the DFterm2 page on the Bay12 forums] for support.''
+
+The final step is to add an administrator account using 
+<pre>
+$ ./dfterm2_configure --adduser (username) (password) admin 
+$ ./dfterm2
+</pre>
+
+To connect to the server from a linux machine, you need to use the following command:
+<pre>$ telnet 127.0.0.1 8000</pre>
+
+[[Category:Utilities]]
+[[ru:Utility:Dfterm2]]

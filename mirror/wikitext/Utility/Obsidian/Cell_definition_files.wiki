@@ -1,0 +1,122 @@
+This page contains technical information about the [[Utility:Obsidian | Obsidian visualizer]]
+
+This list of files define the internal representation of the Cell engine, to be exposed to Lua and used by other modules (like the geometry generator or terrain exporters)
+
+==Fortress==
+This describes the top level object that holds all of the components like terrain, creatures, etc., as well as static information about the fortress.
+<pre>
+	<class name="Fortress" api="yes">
+		<ctor/>
+		
+		<!-- TODO: Need a good default fortress size. How many tiles is the default 4x4 embark? -->
+
+		<property name="SizeX" type="Int32" default="16">
+			<get/>
+		</property>
+
+		<property name="SizeY" type="Int32" default="16">
+			<get/>
+		</property>
+
+		<property name="SizeZ" type="Int32" default="16">
+			<get/>
+		</property>
+
+		<vector name="Maps" type="Map">
+			<note>A fortress can have multiple maps, to represent timestamps of the fortress terrain over time</note>
+			<get_index/>
+			<size/>
+			<push_back/>
+		</vector>
+
+		<vector name="Materials" type="Material">
+			<get_index/>
+		</vector>
+
+		<method name="LoadFromDF">
+			<return type="Void"/>
+		</method>
+	</class>
+</pre>
+
+==Map==
+This just a collection of cells that describes the current map. Maps have a timestamp, so a fortress can hold multiple map instances to represent the development of the fortress over time
+<pre>
+	<class name="Map" api="yes">
+		<ctor/>
+
+		<reference name="Fortress" type="Fortress">
+			<get/>
+		</reference>
+
+		<property name="TimeStamp" type="ROString">
+			<get/>
+		</property>
+
+		<array name="Cells" type="Cell">
+			<dimension name="x" size="Fortress.SizeX"/>
+			<dimension name="y" size="Fortress.SizeY"/>
+			<dimension name="z" size="Fortress.SizeZ"/>
+			<get_index/>
+			<set_index/>
+		</array>
+
+		<property name="OpenSpace" type="Cell">
+			<note>This is a readonly cell representing the default OpenSpace cell</note>
+			<get/>
+		</property>
+	</class>
+</pre>
+
+==Cell==
+Each cell holds everything that you need to know about a specific tile in the fortress, including a reference to the terrain type, a reference to any building or construction that occupies that space, as well as lists of items, contaminants, liquids and creatures in that tile.
+<pre>
+	<class name="Cell" api="yes">
+		<ctor/>
+
+		<reference name="Map" type="Map">
+			<get/>
+		</reference>
+
+		<property name="PosX" type="Int32" default="-1">
+			<get/>
+		</property>
+
+		<property name="PosY" type="Int32" default="-1">
+			<get/>
+		</property>
+
+		<property name="PosZ" type="Int32" default="-1">
+			<get/>
+		</property>
+
+		<reference name="Terrain" type="Terrain">
+			<note>I'm assuming that the all of the terrain information can be encapsulated in a terrain type. Changing the terrain will be done through the Map object</note>
+			<get/>
+		</property>
+
+		<reference name="Construction" type="Construction">
+			<note>I'm assuming only one construction can exist in a cell at a time. Changing the construction will be done through the Map object</note>
+			<get/>
+		</list>
+
+		<list name="Items" type="Item" reference="yes">
+			<note>Should the cell own the items, or just reference them?</note>
+			<get/>
+		</list>
+
+		<reference name="Building" type="Building">
+			<note>Placing/removing buildings via the Map object will handle attaching/detaching themselves from the cell</note>
+			<get/>
+		</reference>
+
+		<internal>
+			<reference name="Top" type="Cell"/>
+			<reference name="Bottom" type="Cell"/>
+			<reference name="Left" type="Cell"/>
+			<reference name="Right" type="Cell"/>
+			<reference name="Up" type="Cell"/>
+			<reference name="Down" type="Cell"/>
+		</internal>
+	</class>
+</pre>

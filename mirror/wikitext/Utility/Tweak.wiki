@@ -1,0 +1,84 @@
+{{Quality|Superior|01:30, 29 September 2013 (UTC)}}
+{{uv|40d}}
+'''Tweak is obsolete, and its functions are now provided through [[utility:DFHack|DFHack]].'''
+
+[[Image:Dwarf Fortress Tweak.png|right]]
+
+Tweak is a utility for Dwarf Fortress created by [[User:Rick|Rick]] which can load modules that provide different functionality to the user for tweaking, or editing Dwarf Fortress memory. It will attempt to automatically identify the version of the running Dwarf Fortress process and automatically load data related to that version.
+
+It is written in C# and requires the [http://www.microsoft.com/downloads/details.aspx?FamilyID=333325FD-AE52-4E35-B531-508D977D32A6 .NET 3.5 Runtime], as well as the .net 2.0 as well as the .net 1.1 SEPARATELY installed.
+
+There are many modules - both written by myself and others.
+
+==Installing Tweak==
+
+Tweak does not have an installer, but it does have several directories and many files within them, so it is suggested not to directly extract to your Dwarf Fortress directory, if it must, I would suggest putting it in a subdirectory named 'tweak' or equivilent.
+
+The ZIP file for Tweak comes with everything in the '''tweak''' directory to make this easier.
+
+==Updating Tweak for a new version of Dwarf Fortress==
+
+To update Gibbed's Utilities for a new version of DF:
+
+# Download, install and launch the Utilities, if not already done so.
+# Open versions.xml in Notepad.
+# Copy the last line in the <versions> section to a new line below it.  The last two lines of the <versions> section should now be identical.
+# On the new line you just created, change the version number to match the version of DF you have installed.  Delete the "hash" value.
+# In the "Versions" sub folder of the "tweak" folder, create a new folder with the exact same name as the version number you just typed into versions.xml.
+# Go to [http://www.geocities.com/jifodus/tables/dwarvis/ Dwarvis' Page] and download the core.xml that matches your version of DF.  Save it to the folder you just created, and rename it to "core.xml"
+# Open a new Notepad window
+# Bring up Gibbed's utilities, and under the File menu, click "Select Process".  Click yes on the confirmation.
+# When asked if you want to look up the hash, click "No."
+# Under the Tools menu, click "Log"
+# Right-click in the Log window, and choose Copy All.
+# Paste the log in the blank Notepad window.
+# On the line that starts with "Verbose: Selected game with process ID" (Should be the second to last line) copy the hash value without the leading space or trailing period.
+# Paste the hash value into the blank spot on the last line of the <versions> section in versions.xml.
+# Save and close versions.xml
+# Close the Untitled Notepad window.
+# Close the Log window.
+# Close Gibbed's Utilities.
+# Relaunch Gibbed's Utilities.
+# Under the File menu, click "Select Process" and click yes on the confirmation.
+# All the circles next to the items in the list should turn red.  You are now ready to go!
+
+==Core Modules==
+
+''For more details on Core Modules [[User:Rick/Tweak/Core Modules|see the Core Modules article]].
+*[[User:Rinn/AdjustProfile|Adjust Profile]] - Allows editing of the skills for starting dwarves in the prepare screen.
+*Adjust Start - Allows editing of starting dwarf count and starting points.
+*Enable Magma Buildings - Enables magma buildings.
+*Heal - Heal or hurts a creature.
+*Lookup Addresses - Pattern scanning for finding addresses in new versions of Dwarf Fortress.
+*Resume - Resumes a stuck process.
+*Reveal - Reveals all allocated tiles on the map.
+*[[User:Rick/Tweak/Tile_Edit|Tile Edit]] - Edit nearly all properties of a selected tile.
+*Warp - Warp a creature to another location.
+
+==Installing modules==
+
+Todo: But pretty much you just drop the files from the plugin into directory Tweak is installed to.
+
+==Get more modules==
+
+Looking for more modules? You can likely [[:Category:Tweak_Modules|find more in the Tweak Modules category]].
+
+==Download Tweak==
+
+'''Requires [http://www.microsoft.com/downloads/details.aspx?FamilyID=333325FD-AE52-4E35-B531-508D977D32A6 .NET 3.5 Runtime]!'''
+
+The current version of Tweak is '''1.2.0.1'''. See the [[User:Rick/Tweak/Changelog|changelog for detailed information on changes since last version]].
+
+'''Mirrors to download Tweak 1.2.0.1 from'''
+*[http://dffd.wimbli.com/file.php?id=666 From Dwarf Fortress File Depot] - updated with offsets for DF 0.28.181.40d
+*[http://dffd.wimbli.com/file.php?id=74 From Dwarf Fortress File Depot] - Please try this one first, if it doesn't work use another one.
+*[http://df.pipboy.us/tweak/tweak_1201.zip df.pipboy.us]
+
+==Found a bug? Have a suggestion?==
+
+[[User_talk:Rick/Tweak|Report it on the talk page!]]
+
+==XML files? Developing modules?==
+
+[[User:Rick/Tweak/Development|See the development article for more details]].
+[[Category:Tweak]][[Category:Hacking|Tweak]][[Category:Utilities]]

@@ -1,0 +1,30 @@
+{{Quality|Fine|12:18, 4 May 2014 (UTC)}}
+{{uv|DF2012}}
+{{Infobox utility
+<!--| image = File:Dfhack-logo.png -->
+| misc  =
+* [http://www.joelpt.net/quickfort/ Offical website]
+* [http://www.bay12forums.com/smf/index.php?topic=35931.0 Bay12Forum]
+* [https://github.com/joelpt/quickfort github]
+}}
+
+:''Quickfort is now part of the official [[DFHack]] release''.
+
+'''Quickfort''' is a [[v0.34:Utilities|utility]] for [[fortress mode]] that helps you build fortresses from "blueprint" .csv files (comma separated values). These files are easily created and edited in an app like Excel. Most building-oriented DF commands are supported through the use of multiple .csv files to describe the different phases of DF construction (designation, building, stockpiles, and making adjustments. Recent versions of Quickfort work by converting the blueprint into a native macro for Dwarf Fortress, then executing the macro.  This allows for enormously faster playback compared to early versions or DF Designator.  
+
+== About == 
+The original idea came from Valdemar’s auto-designation macro. Joel Thornton reimplemented the core logic in Python and extended its functionality with Quickfort 2.0. In (year?) it was implemented as DFHack-native implementation, called [https://docs.dfhack.org/en/stable/docs/tools/quickfort.html DFHack Quickfort].
+
+==Links==
+* [https://www.mediafire.com/folder/u38qsqr1bq6wu/Community_Quickfort_Blueprints_v2 The Quickfort Community Blueprints] are a large collection of blueprints, published to remove the last hint of hassle in creating a fortress.  You can download the lot without a paid account [http://www.mediafire.com/download/n6im1ok6z02n8nc/Community_Quickfort_Blueprints_v2.zip here].
+* video tutorials - Arumba has made an excellent pair of video tutorials ([https://www.youtube.com/watch?v=pHcXVC2--PI part one], [https://www.youtube.com/watch?v=AEB946mmNSw part two]) for quickfort.
+
+Tools that converts images to Quickfort blueprints:
+
+* [http://www.bay12forums.com/smf/index.php?topic=55025 ChromaFort] - Chromafort is a tool designed to complement [[Utilities#Quickfort|Quickfort]], by converting images into quickfort-compatible .csv files.  It works with 24-bit bitmap (.bmp) files.  There are a number of known issues that can affect any image that is not square, and the size must be an exponent of two (8, 16, 32, 64...); other images may show nonexistent colours and/or come out highly distorted.
+
+* [http://www.bay12forums.com/smf/index.php?topic=138590 Picturefort] - Picturefort is an attempt to make "Chromafort, but ''better''" - it performs the same function of converting an image to a [[Utilities#Quickfort|Quickfort]]-compatible .csv file.  Unlike Chromafort, Picturefort can handle a large number of image formats (though .bmp or .png are recommended); images can be of any shape and within reason size; and while as of May 2014 it is only available on Windows, there are plans for a Linux version.
+
+* [http://www.bay12forums.com/smf/index.php?topic=154849.0 Symmetricity] - A fortress planner with a focus on multiple planes of symmetry. It can output csv for quickfort. It's early in development so it's probably not suitable for serious use cases.
+
+* [https://fortplanner.com Fortplanner] - A browser based Quickfort blueprint grid editor. Lets you draw designations, buildings, and stockpiles directly on a grid and export to a Quickfort compatible .csv.

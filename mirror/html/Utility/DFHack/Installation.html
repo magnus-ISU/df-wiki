@@ -1,0 +1,32 @@
+<div class="mw-parser-output"><h1><span class="mw-headline" id="Installation">Installation</span></h1>
+<p>DFHack works on Windows XP, Vista, 7, most modern Linux distributions, and OS X 10.6 and later. On Windows, only the SDL version of DF is supported. Releases are available on <a rel="nofollow" class="external text" href="https://github.com/DFHack/dfhack/releases">Github</a>.
+</p>
+
+<h3><span class="mw-headline" id="Windows">Windows</span></h3>
+<ul><li>Get the archive meant for your system. Extract the contents into your DF folder. <b>Be sure to replace the SDL.dll file with the downloaded one</b>, as it's used by DFHack to operate its magic.</li>
+<li>You're ready to use DFHack. Simply run Dwarf Fortress.exe and you should see a separate command-line prompt window.</li></ul>
+<h3><span class="mw-headline" id="OS_X">OS X</span></h3>
+<ul><li>Get the archive meant for your system. Extract the contents into your DF folder.</li>
+<li>Run 'dfhack' in a terminal or by double clicking on the dfhack file in your DF folder. If you run DFHack through Finder, you may need to go into System Preferences -&gt; Security and Privacy -&gt; General, and enable the program to run. Dwarf Fortress should start and the terminal be taken over and turned into a DFHack prompt.</li></ul>
+<h3><span class="mw-headline" id="Linux">Linux</span></h3>
+<ul><li>Get the archive meant for your system and your current gcc version. If you're not sure, try the latest version first (4.9.2 as of September 2014) before trying downgraded versions.</li>
+<li>Run 'dfhack' in a terminal. Dwarf Fortress should start and the terminal be taken over and turned into a DFHack prompt.</li></ul>
+<p>Note: a dfhack <a rel="nofollow" class="external text" href="https://aur.archlinux.org/packages/dfhack/">package</a> is available to Arch users at the AUR. A dfhack <a rel="nofollow" class="external text" href="http://gpo.zugaina.org/games-util/dfhack">port</a> is also available to Gentoo users.
+</p>
+<h3><span class="mw-headline" id="Pre-bundled_packages">Pre-bundled packages</span></h3>
+<p>Most <a href="/index.php/Utility:Lazy_Newb_Pack" title="Utility:Lazy Newb Pack">recent starter packs</a> include DFHack pre-installed; simply run Dwarf Fortress as usual. Note that every DF update will break existing DFHack versions; if a DF release is very recent, the DFHack team may not have had the time to update it to the latest DF version, and the latest starter packs may not include it.
+</p>
+<h2><span class="mw-headline" id="Configuration">Configuration</span></h2>
+<p>Once you've got DFHack set up and running along with Dwarf Fortress, you can configure it so it grafts all the additional plugins and scripts to the game. There are several files that allow you to do that:
+</p>
+<ul><li>dfhack.init will pre-load a specific set of commands for you every time you start the game. By default, it isn't present in a fresh DFHack release; if you haven't configured one, the game will load a file called dfhack.init-example (present by default) instead and prompt you to rename it to dfhack.init, which you should probably do before you tweak it.</li>
+<li>onLoad.init will pre-load every time you load a save to the game. It is found in the save's raw folder when it is present.</li>
+<li>onLoadWorld.init acts globally for every world you load, similarly to onLoad.init, and is located in the same folder as dfhack.init (create it if necessary)</li></ul>
+<h2><span class="mw-headline" id="Uninstallation">Uninstallation</span></h2>
+<ul><li>Remove the <tt>hack</tt> folder from your DF folder.
+<ul><li>If <a href="/index.php/Stonesense" class="mw-redirect" title="Stonesense">Stonesense</a> is installed, also remove the <tt>stonesense</tt> folder.</li>
+<li>If <a href="/index.php/Utility:Isoworld" class="mw-redirect" title="Utility:Isoworld">Isoworld</a> is installed, also remove the <tt>isoworld</tt> folder.</li></ul></li>
+<li>Remove the <tt>dfhack.init</tt> and <tt>dfhack.init-example</tt> files if they exist.</li>
+<li>Remove residual log files that may remain such as dfhack.history, tiletypes.history, liquids.history, ss_fix.log, stderr.log, stdout.log</li>
+<li>On Windows, remove <tt>SDL.dll</tt> and rename <tt>SDLreal.dll</tt> to <tt>SDL.dll</tt>.</li>
+<li>On Linux and OS X, remove the <tt>dfhack</tt> and <tt>dfhack-run</tt> scripts.</li></ul></div>

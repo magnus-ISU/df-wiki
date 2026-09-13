@@ -1,0 +1,78 @@
+{{uv|multiple}}
+[[Category:Utilities]]
+=Gibbed's Dwarf Fortress Tileset Compiler=
+
+[[Image:Dwarf Fortress Tileset Compiler Example Zoomed.png|right|example of a created tileset]]
+Tileset Compiler (or ''TSC'' for short) is a utility for Dwarf Fortress created by [[User:Rick|Rick]] which attempts to ease the creation of graphical creature tilesets.
+
+It is written in C# and requires the [http://www.microsoft.com/downloads/details.aspx?FamilyID=0856eacb-4362-4b0d-8edd-aab15c5e04f5 .NET 2.0 Runtime].
+
+==Features==
+
+*Tileset images will be created properly aligned in width and height so that Dwarf Fortress will load them correctly - this means images that are not a multiple of 4 will function correctly (15x15 tilesets!).
+
+*A checkboard pattern will be drawn so it is easier to distinguish tiles.
+
+*Ensures that tiles do not overlap same positions, and will warn about such.
+
+*Tiles will be centered horizontally if too small width wise, and aligned to the bottom if too small height wise.
+
+==Usage==
+
+TSC is currently a console-based utility. Future versions may sport a proper UI.
+
+To use TSC, all you have to do is specify a '''graphics_name.txt''' file for it to parse and build a tileset from.
+
+It will attempt to open images based on definitions found in the file - it will attempt to first open a PNG, then a TGA, then a BMP.
+
+All paths loaded and saved to are relative to the input file name given to TSC.
+
+===Example===
+
+====Input====
+
+<tt>tsc.exe graphics_example.txt</tt>
+
+====Output====
+
+<tt>Warning: Could not find tiles\dwarves\default\dwarf_default_default<br />
+Warning: Could not find tiles\dwarves\default\dwarf_default_miner<br />
+Created C:\DF\tscexample\example/dwarves.bmp</tt>
+
+====Explanation====
+
+TSC loads graphics_example.txt, sees two entries, <tt>[DEFAULT:DWARVES:0:0:ADD_COLOR]</tt> and <tt>[MINER:DWARVES:1:0:AS_IS:DEFAULT]</tt>.
+
+It derives the following file names from these entries:
+*<tt>tiles\dwarves\default\dwarf_default_default</tt>
+*<tt>tiles\dwarves\default\dwarf_default_miner</tt>
+
+This is from the following format:
+
+<tt>tiles\''tile page name''\''state name''\''tile page name''_''state name''_''profession name''</tt>
+
+When loading an image:
+
+*It checks for it in three different formats: PNG, TGA, and BMP.
+
+*If it finds one it will load and use it.
+
+*If it does not find one, and it is a <tt>CHILD</tt> profession, it will check for a <tt>DEFAULT</tt> image and will load and use it.
+
+*If it still does not, then it will check for <tt>tiles\missing.png</tt> and load and use it.
+
+*If that still does not, it will not draw any tile at all.
+
+==Download Tileset Compiler==
+
+'''Requires [http://www.microsoft.com/downloads/details.aspx?FamilyID=0856eacb-4362-4b0d-8edd-aab15c5e04f5 .NET 2.0 Runtime]!'''
+
+The current version of TSC is '''1.0.0.0'''.
+
+'''Mirrors to download Tweak 1.0.0.0 from'''
+*[http://dffd.wimbli.com/file.php?id=86 From Dwarf Fortress File Deposit] - Please try this one first, if it doesn't work use another one.
+*[http://df.pipboy.us/tilesetcompiler/tilesetcompiler_1000.zip df.pipboy.us]
+
+==Found a bug? Have a suggestion?==
+
+[[User_talk:Rick/Tileset_Compiler|Report it on the talk page!]]

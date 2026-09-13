@@ -1,0 +1,193 @@
+<div class="mw-parser-output"><div id="page-quality-rating" style="text-align: right;margin: 0.8em 0;font-size:75%">
+ <a href="/index.php/Dwarf_Fortress_Wiki:Quality#Tattered" title="Dwarf Fortress Wiki:Quality"><span id="stub-quality" style="text-decoration:none; color:#333333">xTATTEREDx</span></a> <span style="font-weight:bold;" class="dot">&#160;·</span> <a href="/index.php/Dwarf_Fortress_Wiki:Quality#Fine" title="Dwarf Fortress Wiki:Quality"><span id="fine-quality" style="text-decoration:none; color:#CA7A02;">+FINE+</span></a> <span style="font-weight:bold;" class="dot">&#160;·</span> <a href="/index.php/Dwarf_Fortress_Wiki:Quality#Superior" title="Dwarf Fortress Wiki:Quality"><span id="superior-quality" style="padding:0.2em; border:1px solid #b8f; border-radius: 2px; -webkit-border-radius: 2px; -moz-border-radius: 2px; -o-border-radius: 2px; -ms-border-radius: 2px; background:#e4ccff; color:#8800cc;">*SUPERIOR*</span></a> <span style="font-weight:bold;" class="dot">&#160;·</span> <a href="/index.php/Dwarf_Fortress_Wiki:Quality#Exceptional" title="Dwarf Fortress Wiki:Quality"><span id="exceptional-quality" style="text-decoration:none; color:#0088CC;">≡EXCEPTIONAL≡</span></a> <span style="font-weight:bold;" class="dot">&#160;·</span> <a href="/index.php/Dwarf_Fortress_Wiki:Quality#Masterwork" title="Dwarf Fortress Wiki:Quality"><span id="masterwork-quality" style="text-decoration:none; color:#72A329;">☼MASTERWORK☼</span></a></div>
+<table class="version-table" style="text-align: center; margin: 3px auto 5px; padding: 0.25em; padding-top:1em; border-radius: 3px; -webkit-border-radius: 3px; -moz-border-radius: 3px; -o-border-radius: 3px; -ms-border-radius: 3px;; border: 2px solid #99ddff; background: #eef5ff; min-width:27em"><tbody><tr><td style="padding: 0.3em 0.3em; width: 100%;"><span>This utility page applies to multiple versions of DF.</span><br />
+<div style="float: right; font-size:75%; padding-right:2px; margin-top:-2px; margin-bottom:-7px;"><span class="version-link"><a href="/index.php/Template:Uv" class="mw-redirect" title="Template:Uv"><span style="text-decoration: none; color: #0088CC;">More Info</span></a></span></div></td></tr>
+</tbody></table>
+<table class="infobox" style="border: 1px solid #a2a9b1; border-spacing: 3px; background-color: #f8f9fa;color: black; margin: 0.5em 0 0.5em 1em; padding: 0.2em; float: right; clear: right; font-size: 88%; line-height: 1.5em; width: 200px;"><caption style=""><b>Stonesense</b></caption><tbody><tr><td colspan="2"><a href="/index.php/File:Stonesense_screen.png" class="image"><img alt="Stonesense screen.png" src="/images/thumb/e/e1/Stonesense_screen.png/200px-Stonesense_screen.png" decoding="async" width="200" height="156" srcset="/images/thumb/e/e1/Stonesense_screen.png/300px-Stonesense_screen.png 1.5x, /images/thumb/e/e1/Stonesense_screen.png/400px-Stonesense_screen.png 2x" /></a></td></tr><tr><th colspan="2" class="" style="text-align:center;"><b>Information</b></th></tr><tr><td colspan="2">
+<ul><li><a rel="nofollow" class="external text" href="http://www.bay12forums.com/smf/index.php?topic=106497">Bay12Forum Thread</a></li>
+<li><a rel="nofollow" class="external text" href="https://docs.dfhack.org/en/latest/docs/tools/stonesense.html">Documentation</a></li>
+<li><a href="/index.php/Utility:Stonesense/Content_repository" title="Utility:Stonesense/Content repository">Content Repository</a></li>
+<li><a rel="nofollow" class="external text" href="https://github.com/peterix/stonesense">Github page</a></li></ul></td></tr>
+</tbody></table>
+<p><b>Stonesense</b> is a 3D visualizer <a href="/index.php/Utility" class="mw-redirect" title="Utility">utility</a> for <i>Dwarf Fortress</i>, implemented as a <a href="/index.php/Utility:DFHack" title="Utility:DFHack">DFHack</a> plugin, that lets you view your <i>Dwarf Fortress</i> world in a classic isometric perspective. 
+</p><p>There is an <a rel="nofollow" class="external text" href="http://www.bay12forums.com/smf/index.php?topic=106497">official thread</a> for feedback, questions, requests or bug reports.  There is also <a rel="nofollow" class="external text" href="http://www.bay12forums.com/smf/index.php?topic=48172.0">a thread dedicated to screenshots</a> taken using Stonesense.  
+</p>
+
+<h2><span class="mw-headline" id="For_Users">For Users</span></h2>
+<p>Stonesense is distributed as part of <a href="/index.php/Utility:DFHack" title="Utility:DFHack">DFHack</a>. The command <code>stonesense</code> opens a separate viewer window, which has read-only access to the game.  It can follow the game view, or be moved independently.
+</p>
+<h3><span class="mw-headline" id="Overlay">Overlay</span></h3>
+<p>In DF2014 up to v47.0, it was also possible to use Stonesense as a live overlay of the map in the main <i>Dwarf Fortress</i> window, replacing the usual 2D tiles. The DFHack command for this is <code>stonesense overlay</code>, but print mode must not be set to "TWBT" for this to run.  For best results, edit [segmentsize_z:2] in init.txt, and if you are unable to see the edges of the map with the overlay active, try also decreasing or increasing the [segmentsize_XY] - normal values are 50 to 80 depending on screen resolution. The overlay is not working in v50 Steam/Premium. 
+</p><p>Stonsense was part of the <a href="/index.php/Utility:Lazy_Newb_Pack" title="Utility:Lazy Newb Pack">Lazy Newb Pack</a>.
+</p>
+<h3><span class="mw-headline" id="Controls">Controls</span></h3>
+<p>These lists of key bindings are not exhaustive. The most up-to-date and complete list can be found at the <a rel="nofollow" class="external text" href="https://github.com/DFHack/stonesense/blob/master/resources/keybinds.txt">Stonesense Github page</a>. The <code>keybindings.txt</code> file may also be edited to change or add additional keybindings to Stonesense. Mouse controls are hard-coded and cannot be changed. 
+</p>
+<table class="wikitable collapsible collapsed" style="width:700px;">
+<tbody><tr>
+<th colspan="2">Mouse Controls
+</th></tr>
+<tr>
+<td><b>Left click</b>
+</td>
+<td>Move debug cursor (if available)
+</td></tr>
+<tr>
+<td><b>Scrollwheel</b>
+</td>
+<td>Move up and down
+</td></tr>
+<tr>
+<td><b>Right click</b>
+</td>
+<td>Recenter screen
+</td></tr>
+<tr>
+<td><b>Ctrl-Scroll</b>
+</td>
+<td>Increase/decrease Z depth shown
+</td></tr></tbody></table>
+<table class="wikitable collapsible collapsed" style="width:700px;">
+<tbody><tr>
+<th colspan="4">Keyboard controls
+</th></tr>
+<tr>
+<th colspan="2">Movement controls
+</th>
+<th colspan="2">View Filters
+</th></tr>
+<tr>
+<td><b>F</b>
+</td>
+<td>Cycle Tracking Mode
+</td>
+<td><b>F2</b>
+</td>
+<td>Toggle OSD overlay
+</td></tr>
+<tr>
+<td><b>Enter</b>
+</td>
+<td>Rotate view 90 degrees
+</td>
+<td style="width: 30pt;"><b>D</b>
+</td>
+<td>Toggle Designations
+</td></tr>
+<tr>
+<td><b>R</b>
+</td>
+<td>Reload segment
+</td>
+<td><b>I</b>
+</td>
+<td>Toggle Stocks
+</td></tr>
+<tr>
+<td><b>C</b>
+</td>
+<td>Chop walls
+</td>
+<td><b>U</b>
+</td>
+<td>Toggle Zones
+</td></tr>
+<tr>
+<td><b>S</b>
+</td>
+<td>Toggle single layer
+</td>
+<td><b>M</b>
+</td>
+<td>Toggle Creature Moods
+</td></tr>
+<tr>
+<td><b>. (Period)</b>
+</td>
+<td>Zoom in
+</td>
+<td><b>P</b>
+</td>
+<td>Cycle Professions (off/icons/names)
+</td></tr>
+<tr>
+<td><b>, (Comma)</b>
+</td>
+<td>Zoom out
+</td>
+<td><b>J</b>
+</td>
+<td>Cycle Jobs (off/icon/description)
+</td></tr>
+<tr>
+<td><b>Alt+(Arrow Key)</b>
+</td>
+<td>Offset view
+</td>
+<td><b>N</b>
+</td>
+<td>Toggle Creatures Names
+</td></tr>
+<tr>
+<td><b>9</b>
+</td>
+<td>Decrease Z-layer
+</td>
+<td><b>B</b>
+</td>
+<td>Toggle hidden tile transparency
+</td></tr>
+<tr>
+<td><b>0</b>
+</td>
+<td>Increase Z-layer
+</td>
+<td><b>H</b>
+</td>
+<td>Toggle revealing hidden tiles (cheater! :P)
+</td></tr>
+<tr>
+<td>
+</td>
+<td>
+</td>
+<td><b>/</b>
+</td>
+<td>Toggle hotkey overlay
+</td></tr></tbody></table>
+<h2><span class="mw-headline" id="For_modders_and_developers">For modders and developers</span></h2>
+<ul><li>If you just want to <b>add existing content</b>: The <a href="/index.php/Utility:Stonesense/Content_repository" title="Utility:Stonesense/Content repository">Stonesense Content Repository</a> contains content packs that allow you to extend Stonesense functionality. These packs are made by members of the DF community.</li>
+<li>If you want to <b>create your own content</b>: You can learn how to create custom content for Stonesense at <a href="/index.php/Utility:Stonesense/Adding_Content" title="Utility:Stonesense/Adding Content">Utility:Stonesense/Adding_Content</a></li>
+<li>If you want to <b>tweak Stonesense's source code</b>&#160;: Stonesense is one of the many DFHack plugins. It comes with DFHack's source code, and if you manage to compile DFHack, then you've managed to compile Stonesense.</li></ul>
+<h2><span class="mw-headline" id="Credits">Credits</span></h2>
+<ul><li>Stonesense was written by Jonask, peterix, kaypy and Japa.</li>
+<li>Lead graphic development was done by Solifuge.</li>
+<li>Dfhack library was written by peterix.</li>
+<li>Additional Graphics and code were contributed by many many people, including (in alphabetical order):
+<ul><li>7¢ Nickel, BatCountry, Belal, DeKaFu, Dante, Deon, dyze, Errol, fifth angel, frumpton, IDreamOfGiniCoeff, Impaler, Japa, jarathor, Jiri Petru, Lord Nightmare, McMe, Mike Mayday, Nexii Malthus, peterix, Seuss, soup, Talvara, winner, Xandrin.</li></ul></li></ul>
+<p>(This list is not rigorously updated)
+</p>
+<h2><span class="mw-headline" id="Gallery">Gallery</span></h2>
+<ul class="gallery mw-gallery-traditional">
+		<li class="gallerybox" style="width: 235px"><div style="width: 235px">
+			<div class="thumb" style="width: 230px;"><div style="margin:15px auto;"><a href="/index.php/File:Roadtruss.jpg" class="image"><img alt="" src="/images/thumb/3/3d/Roadtruss.jpg/115px-Roadtruss.jpg" decoding="async" width="115" height="120" srcset="/images/thumb/3/3d/Roadtruss.jpg/172px-Roadtruss.jpg 1.5x, /images/thumb/3/3d/Roadtruss.jpg/230px-Roadtruss.jpg 2x" /></a></div></div>
+			<div class="gallerytext">
+<p>Roadtruss, a tower <a href="/index.php/Megaproject" title="Megaproject">megaproject</a> by Crossroads Inc.
+</p>
+			</div>
+		</div></li>
+		<li class="gallerybox" style="width: 235px"><div style="width: 235px">
+			<div class="thumb" style="width: 230px;"><div style="margin:18.5px auto;"><a href="/index.php/File:Stonesense_prev.jpg" class="image"><img alt="" src="/images/thumb/d/d5/Stonesense_prev.jpg/200px-Stonesense_prev.jpg" decoding="async" width="200" height="113" srcset="/images/thumb/d/d5/Stonesense_prev.jpg/300px-Stonesense_prev.jpg 1.5x, /images/thumb/d/d5/Stonesense_prev.jpg/400px-Stonesense_prev.jpg 2x" /></a></div></div>
+			<div class="gallerytext">
+<p>...
+</p>
+			</div>
+		</div></li>
+		<li class="gallerybox" style="width: 235px"><div style="width: 235px">
+			<div class="thumb" style="width: 230px;"><div style="margin:18px auto;"><a href="/index.php/File:STV1.png" class="image"><img alt="" src="/images/thumb/f/f8/STV1.png/200px-STV1.png" decoding="async" width="200" height="114" srcset="/images/thumb/f/f8/STV1.png/300px-STV1.png 1.5x, /images/f/f8/STV1.png 2x" /></a></div></div>
+			<div class="gallerytext">
+<p>Example of Seuss's Tweaked Vegetation
+</p>
+			</div>
+		</div></li>
+</ul></div>

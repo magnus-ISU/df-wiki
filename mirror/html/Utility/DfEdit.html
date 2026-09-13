@@ -1,0 +1,45 @@
+<div class="mw-parser-output"><table class="version-table" style="text-align: center; margin: 3px auto 5px; padding: 0.25em; padding-top:1em; border-radius: 3px; -webkit-border-radius: 3px; -moz-border-radius: 3px; -o-border-radius: 3px; -ms-border-radius: 3px;; border: 2px solid #ddbb88; background: #fff5ee; min-width:27em"><tbody><tr><td style="padding: 0.3em 0.3em; width: 100%;"><span>This utility page is about v0.28.121.40d, an <b>older version</b> of DF.</span><br />
+<div style="float: right; font-size:75%; padding-right:2px; margin-top:-2px; margin-bottom:-7px;"><span class="version-link"><a href="/index.php/Template:Uv" class="mw-redirect" title="Template:Uv"><span style="text-decoration: none; color: #CA7A02;">More Info</span></a></span></div></td></tr>
+</tbody></table>
+<p>You may find it at <a rel="nofollow" class="external text" href="http://bartabox.banquise.net/df/dfedit.py">this link</a>, and you'll need pydbg (comes with paimai) and probably python 2.4 for windows. Here is what is does.
+</p><p>In order to use it, you must have <a href="/index.php/Dwarf_Fortress" title="Dwarf Fortress">Dwarf Fortress</a> running. Here are the commandline arguments:
+</p><p>No arguments&#160;: list dwarves
+listcreatures&#160;: list all creatures (redirect into a file to read it&#160;!)
+</p><p>The output will look like:
+</p>
+<pre>dwarven ral kivishmamot 2899 [0 0 0] [Pa:0 Fa:0 Hu:7a0a Th:3cbf Dr:9b33] (0xd4e9750) GUEST? 80004001 12000070 65535 4d/a1
+dwarven �zum geshudunib 289a [1 0 0] [Pa:0 Fa:0 Hu:6210 Th:4c26 Dr:a659] (0xd4e9dc0) GUEST? 80004000 12000070 65535 3e/a7
+dwarven dod�k k�buksosh 289b [0 1 0] [Pa:0 Fa:0 Hu:7d49 Th:49b0 Dr:a12b] (0x9c56de8) GUEST? 80004000 12000070 65535 3c/9c
+dwarven s�kzul kasbentulon      289c [0 0 0] [Pa:0 Fa:0 Hu:79d4 Th:400e Dr:9e36] (0x9c57458) GUEST? 80004000 12000070 65535 48/9c
+dwarven zulban cogothsin        289d [0 1 0] [Pa:0 Fa:0 Hu:7681 Th:5140 Dr:afaf] (0x9c57ac8) GUEST? 80004000 12000070 65535 33/a5
+dwarven at�r othsinducim        289e [1 1 0] [Pa:0 Fa:0 Hu:69af Th:9fe Dr:9119] (0xd611d58) GUEST? 80004001 12000070 65535 46/9e
+dwarven rith vumoml�r   289f [0 0 0] [Pa:0 Fa:0 Hu:72a5 Th:2537 Dr:9d74] (0xd6123c8) GUEST? 80004000 12000040 65535 45/a1
+</pre>
+<p>The following fields are displayed, in order:
+</p>
+<ul><li>race name</li>
+<li>dwarf name (not the proper race name, will soon be fixed)</li>
+<li>ID (persistent, used in legends, used by other commands!)</li>
+<li>str / agi / tough</li>
+<li>pain, tiredness, hungryness, thristyness, drownsiness</li>
+<li>ptr to the structure</li>
+<li>tentative flag interpretation</li>
+<li>flags @fe4 &amp; @fe8</li>
+<li>mood (65535 == no mood)</li>
+<li>stuff for my own use&#160;:)</li></ul>
+<p>healall&#160;: heals all dwarves
+maim racename&#160;: maims all creatures with this race name!
+</p><p>There are other options, but here are the two mood related options:
+</p>
+<ul><li>detail id&#160;: will print details about creature id. This will include the MOOD vector! (and the skill that will be advanced)</li>
+<li>mood id skilltype main_metal secondary_metal&#160;:
+<ul><li>you must select the creature id corresponding to the moody dwarf</li>
+<li>skilltype refers to the skill that will be advanced</li>
+<li>main_metal is the what the item main metal will be</li>
+<li>secondary metal is what the other items will be</li></ul></li></ul>
+<p>It's quite crude and you'll want to use it like that:
+</p>
+<pre>dfedit.py 2899 weaponsmith steel aluminum
+</pre>
+<p>This will change your dwarf requirement to a bar of <a href="/index.php/Steel" title="Steel">steel</a> and several bars of <a href="/index.php/Aluminum" title="Aluminum">aluminum</a>, he'll create a legendary weapon and become master <a href="/index.php/Weaponsmith" title="Weaponsmith">weaponsmith</a>.
+</p></div>

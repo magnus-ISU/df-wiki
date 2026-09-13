@@ -1,0 +1,41 @@
+=Installation=
+
+DFHack works on Windows XP, Vista, 7, most modern Linux distributions, and OS X 10.6 and later. On Windows, only the SDL version of DF is supported. Releases are available on [https://github.com/DFHack/dfhack/releases Github].
+
+__TOC__
+===Windows===
+
+* Get the archive meant for your system. Extract the contents into your DF folder. '''Be sure to replace the SDL.dll file with the downloaded one''', as it's used by DFHack to operate its magic.
+* You're ready to use DFHack. Simply run Dwarf Fortress.exe and you should see a separate command-line prompt window.
+
+===OS X===
+
+* Get the archive meant for your system. Extract the contents into your DF folder. 
+* Run 'dfhack' in a terminal or by double clicking on the dfhack file in your DF folder. If you run DFHack through Finder, you may need to go into System Preferences -> Security and Privacy -> General, and enable the program to run. Dwarf Fortress should start and the terminal be taken over and turned into a DFHack prompt.
+
+===Linux===
+
+* Get the archive meant for your system and your current gcc version. If you're not sure, try the latest version first (4.9.2 as of September 2014) before trying downgraded versions.
+* Run 'dfhack' in a terminal. Dwarf Fortress should start and the terminal be taken over and turned into a DFHack prompt.
+
+Note: a dfhack [https://aur.archlinux.org/packages/dfhack/ package] is available to Arch users at the AUR. A dfhack [http://gpo.zugaina.org/games-util/dfhack port] is also available to Gentoo users.
+
+===Pre-bundled packages===
+Most [[Utility:Lazy Newb Pack|recent starter packs]] include DFHack pre-installed; simply run Dwarf Fortress as usual. Note that every DF update will break existing DFHack versions; if a DF release is very recent, the DFHack team may not have had the time to update it to the latest DF version, and the latest starter packs may not include it.
+
+==Configuration==
+
+Once you've got DFHack set up and running along with Dwarf Fortress, you can configure it so it grafts all the additional plugins and scripts to the game. There are several files that allow you to do that:
+* dfhack.init will pre-load a specific set of commands for you every time you start the game. By default, it isn't present in a fresh DFHack release; if you haven't configured one, the game will load a file called dfhack.init-example (present by default) instead and prompt you to rename it to dfhack.init, which you should probably do before you tweak it.
+* onLoad.init will pre-load every time you load a save to the game. It is found in the save's raw folder when it is present.
+* onLoadWorld.init acts globally for every world you load, similarly to onLoad.init, and is located in the same folder as dfhack.init (create it if necessary)
+
+==Uninstallation==
+
+* Remove the {{tt|hack}} folder from your DF folder.
+** If [[Stonesense]] is installed, also remove the {{tt|stonesense}} folder.
+** If [[Utility:Isoworld|Isoworld]] is installed, also remove the {{tt|isoworld}} folder.
+* Remove the {{tt|dfhack.init}} and {{tt|dfhack.init-example}} files if they exist.
+* Remove residual log files that may remain such as dfhack.history, tiletypes.history, liquids.history, ss_fix.log, stderr.log, stdout.log
+* On Windows, remove {{tt|SDL.dll}} and rename {{tt|SDLreal.dll}} to {{tt|SDL.dll}}.
+* On Linux and OS X, remove the {{tt|dfhack}} and {{tt|dfhack-run}} scripts.

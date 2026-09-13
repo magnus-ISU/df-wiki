@@ -1,0 +1,35 @@
+{{Quality|Superior|05:29, 1 May 2014 (UTC)}}
+{{av}}
+
+An '''XML dump''' of a world's history can be generated from [[Legends]] mode by pressing {{k|x}}, and will be placed in the ''Dwarf Fortress'' root folder. The dump consists of many internals ''Dwarf Fortress'' tracks about the world in [[wikipedia:XML|XML format]].  Be warned that the generated XML file can be quite large, even a gigabyte or more, especially for long-lived worlds with many [[historical figure]]s.  The dump is currently incomplete and is missing a lot of data about the world.  The third-party utility [[Utility:DFHack|DFHack]] can output a more thorough legends_plus.xml dump that includes at least some of the missing information. 
+
+== Format ==
+
+A non-exhaustive breakdown of ''Dwarf Fortress'' XML export tags is available [http://pastebin.com/wb2zLvRh here].
+
+The [[v0.31:XML_dump|v0.31 xml dump page]] contains a lot of detail about the dumped information, and a lot of it is still accurate for this version.
+
+=== seconds72 ===
+
+These values specify when during the year an event occurred.  For example, the ''birth_seconds72'' and ''death_seconds72'' subelements of ''historical_figure'' elements have values of this type. 
+
+There are 12 months in a ''Dwarf Fortress'' [[Calendar|year]], exactly 28 days in each month, 24 hours in each day, 60 minutes in each hour, and 60 seconds in each minute.  Divide seconds by 72 to get the seconds72 value.  There are 1,200 seconds72 in a day.  There are 403,200 seconds72 in a ''Dwarf Fortress'' year.
+
+== Troubleshooting ==
+
+If you have played a fortress and then exported legends, you may get an error about unreadable HEX characters.  This is caused by older versions of [[utility:DFHack|DFHack]], where plugins (such as "workflow") saved their settings as unreadable historical figures.  There are several ways to fix this:
+* Clear the settings for the various plugins in fortress mode before exporting legends
+* Edit the xml by hand, [http://www.bay12forums.com/smf/index.php?topic=72702.msg4629392#msg4629392 as described here] (any platform)
+* Use the [http://www.bay12forums.com/smf/index.php?topic=131307 Legends Processing script] (windows only), which fixes the xml and also creates a compressed folder as described above
+
+Versions of DFHack made for Dwarf Fortress 0.47.01 and later should not suffer from this problem.
+
+== See Also ==
+* [[Legends|Legends Mode]]
+* [[Utilities#Legends_Viewer|Legends Viewer (utility)]]
+* [[Utilities#Legends_tools|Legends Utilities]]
+* [[World History file]]
+* [[World Sites file]]
+
+{{Category|Files}}
+[[ru:XML dump]]

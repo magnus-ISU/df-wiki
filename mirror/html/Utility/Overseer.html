@@ -1,0 +1,16 @@
+<div class="mw-parser-output"><div class="thumb tright"><div class="thumbinner" style="width:302px;"><a href="/index.php/File:Overseer.png" class="image"><img alt="" src="/images/thumb/f/f5/Overseer.png/300px-Overseer.png" decoding="async" width="300" height="227" class="thumbimage" srcset="/images/thumb/f/f5/Overseer.png/450px-Overseer.png 1.5x, /images/thumb/f/f5/Overseer.png/600px-Overseer.png 2x" /></a>  <div class="thumbcaption"><div class="magnify"><a href="/index.php/File:Overseer.png" class="internal" title="Enlarge"></a></div>Overseer Screenshot</div></div></div>
+
+<h2><span class="mw-headline" id="Fortress_Overseer">Fortress Overseer</span></h2>
+<p>Fortress Overseer is a full 3D DF2012 <a href="/index.php/v0.31:Utilities" title="v0.31:Utilities">visualizer</a> by thewonderidiot and sexymustard. More information can be found in the <a rel="nofollow" class="external text" href="http://www.bay12forums.com/smf/index.php?topic=63484.0">bay12forums topic</a>, and Overseer itself can be downloaded from <span class="plainlinks"><a rel="nofollow" class="external text" href="http://dffd.bay12games.com/file.php?id=3882">its page on DFFD</a></span> or <a rel="nofollow" class="external text" href="https://github.com/downloads/mikestewart/Overseer/Overseer0.51.exe">the github mirror</a>. The currently (outdated) linux version can be downloaded <a rel="nofollow" class="external text" href="http://dffd.wimbli.com/file.php?id=3291">here.</a>
+</p><p>Overseer uses Ogre3D in conjunction with the DFHack library.
+</p>
+<h2><span class="mw-headline" id="Adding_Custom_Content">Adding Custom Content</span></h2>
+<h3><span class="mw-headline" id="Models">Models</span></h3>
+<p>Models are stored in the /models/ directory. Models use Ogre's .mesh format. Exporters can be downloaded from the Ogre wiki for various 3D modelling programs.
+</p>
+<h3><span class="mw-headline" id="Materials">Materials</span></h3>
+<p>Ogre has a very robust material system. More information can be found in <a rel="nofollow" class="external text" href="http://www.ogre3d.org/docs/manual/manual_14.html">the Ogre manual</a>. The included generateMaterials.py script will populate the material scripts using info from the diffuse and normal texture directories, generating colors for other techniques from the colors directory (thanks to Japa for use of his stonesense colors).
+</p>
+<h4><span class="mw-headline" id="Images">Images</span></h4>
+<p>Images for a material must have the same name the material has in the raws. Diffuse textures are found in /materials/images/diffuse. Their dimensions should be a power of two. If they have an accompanying normal map, it needs to be named with the same name as the diffuse texture but with an n on the end (eg, if native_gold.bmp is the diffuse texture, native_goldn.bmp is its normal map). The normal maps go in /materials/images/normal. Of course, this layout can be changed as long as the resources.cfg file in the root Overseer directory is updated accordingly.
+</p></div>

@@ -1,0 +1,199 @@
+{{Quality|Exceptional|02:12, 3 November 2014 (UTC)}}
+{{uv|DF2014}}
+
+The '''Lazy Newb Pack''' or '''Starter Pack''' are [[utility|packages]] to get people started with ''Dwarf Fortress''. They bundle the game with some of the best community graphics packs, tools, and interface improvements already configured. Simply download the version that matches your operating system, and start playing ''Dwarf Fortress''.
+
+Despite the name, the modern packs are ideal for new and veteran players alike. Using a pack lets you focus on playing the game, while still having access to quality-of-life additions like graphics/tilesets, utilities, and being able to change common settings without editing text files.
+
+Packs also make a great basis to start your own set of [[utilities]] from as you don't need to find, configure, compile, install, and update every tool for yourself.
+
+Separate packs are available for Windows, Mac, and Linux. Each platform's version is maintained by different community contributors. These can be found further down this page, see: [[#Where do I get a Pack?]].
+
+== What is a Pack? ==
+
+A Starter pack (sometimes referred to as a "Lazy Newb Pack") is a pack that includes many utilities that a veteran player might want, while configuring everything in such a way that it is still easier for new players.  In general, it's safe to simply ignore any option you don't understand and trust that the default settings will be okay.
+
+The packages are built around the idea that newbies will likely have more difficulty with the game than with a package of utilities - which often make the game easier - and that there are many players who are not new but would still prefer an option to get all the extras in one place with a minimum of fiddling.  Most include just about everything that still works and could be useful.  
+
+It is also important to note that most of the contents of each pack were created by many members of the community and just collected, configured, and redistributed by the maintainer of each pack.  Of course there are a few personal touches too, but the vast majority of each is thanks to others - and not least Tarn and Zach for ''Dwarf Fortress'' itself.
+
+;Pack options overview: <!-- 2019 -->
+<gallery mode="packed" heights=300px>
+File:Lnp-gui1.png|Options tab
+File:Lnp-gui2.png|Graphics tab
+File:Lnp-gui3.png|Utilities tab
+File:Lnp-gui5.png|Advanced tab
+File:lnp-dfhack.png|DFHack tab
+</gallery>
+
+== Where do I get a Pack? ==
+
+There are several packs available for different platforms, with different maintainers and release schedules.
+
+===Windows: PeridexisErrant's DF Starter Pack===
+* DF v0.47.05
+* Maintained by [[User:PeridexisErrant|PeridexisErrant]]
+* [http://www.bay12forums.com/smf/index.php?topic=126076 Forum thread]
+* [https://dffd.bay12games.com/file.php?id=7622 Download] ([http://df.wicked-code.com/ mirror])
+* [https://github.com/PeridexisErrant/starter-pack Related GitHub repo]
+
+This pack was maintained by PeridexisErrant, and aimed to include everything - while ensuring that ignoring any option still works for new players. Contents and a changelog are listed on the forum thread (linked above).
+
+====Bugs====
+The last version of this pack includes a bugged version of Vettlingr's graphics, see [http://www.bay12forums.com/smf/index.php?topic=172078.msg8387924#msg8387924 this forum post] for a fix.
+
+There was also one more version of [[DFHack]] after the one in this pack, and those using this pack to play adventurer mode will want to either [https://github.com/DFHack/dfhack/releases/tag/0.47.05-r8 update] that or [https://docs.dfhack.org/en/0.47.05-r8/docs/tools/overlay.html reconfigure its overlay] which covers up parts of the interface.
+
+
+====Historical versions====
+Older versions are available on the mirror site or on DFFD for some notable DF versions:
+* [https://dffd.bay12games.com/file.php?id=14793 0.44.12]
+* [https://dffd.bay12games.com/file.php?id=13201 0.43.05]
+* [https://dffd.bay12games.com/file.php?id=12936 0.43.03] (the last 32-bit version of this pack)
+* [https://dffd.bay12games.com/file.php?id=11309 0.40.24]
+* [https://dffd.bay12games.com/file.php?id=8687 0.34.11]
+
+===Linux: LinuxDwarfPack===
+* DF v0.47.05
+* Maintained by McArcady
+* [http://www.bay12forums.com/smf/index.php?topic=157712 Forum thread]
+* [https://dffd.bay12games.com/who.php?id=7393 Download] ([https://github.com/McArcady/lnp-forge/releases/ mirror])
+* [https://github.com/McArcady/lnp-forge/actions?query=workflow%3A%22Build+LinuxDwarfPack+package%22 Continuous builds]
+* [https://github.com/McArcady/lnp-forge Related GitHub repo]
+
+A simple ready-to-play pack for Linux, with tilesets and utilities. Packages are available for Debian/Ubuntu, Redhat, Arch and in AppImage format.
+
+A legacy version of this pack for v0.44.12 is also available [https://dffd.bay12games.com/file.php?id=14668 here].
+
+===Linux: LinuxLNP===
+* DF v0.47.04
+* was Maintained by Enay
+* [http://www.bay12forums.com/smf/index.php?topic=163211.0 Forum thread]
+* Discontinued
+
+This package was a traditional package of compiled utilities, maintained and tested on Debian Jessie (64bit). It worked out-of-the-box with Debian-derived (Ubuntu, Mint, etc.) distributions, but is no longer supported, updated, or available.
+
+An unofficial RPM package of this pack for Fedora can be found [https://github.com/corollari/lazy-newb-pack-fedora here].
+
+===Mac: Lazy Mac Pack===
+* DF v0.47.05
+* Maintained by Jecowa
+* [http://www.bay12forums.com/smf/index.php?topic=158322.0 Forum thread]
+* Downloads: [https://dffd.bay12games.com/file.php?id=12202 DFHack version], [https://dffd.bay12games.com/file.php?id=12310 lite version]
+
+A Lazy Newb Pack for Mac with lots of graphics packs but with not so many utilities. The "lite" version includes fewer utilities - see the forum thread for details.
+
+===Mac: Elpuma's Mac Starter Pack===
+* DF v0.47.05
+* Maintained by Elpuma
+* [https://dffd.bay12games.com/file.php?id=13905 Download] ([https://github.com/jipumarino/dfdl/releases/tag/0.4.2 outdated mirror])
+* [https://github.com/jipumarino/dfdl Related GitHub repo]
+
+This is actually a script to download the individual parts and assemble them into a pack you can run. See the readme on the repo for usage instructions to get an updated pack.
+
+== History of packs==
+[[File:Lazy-newb-pack-screenshot.0.31.12.v4.6.png|thumb|Screenshot of the primary user interface in Lazy Newb Pack v4.6 for DF 0.31.12 from June 2010. Created on Linux in 2017 with wine. ]]
+[[File:Lazy-newb-pack-screenshot-v7-2010.png|thumb|Screenshot of the LucasUP released in 2010]]
+
+Maintaining a pack is a lot of work, and over the years, people inevitably lose time or motivation to update their packs. Eventually, someone new steps up and releases their own pack.
+
+This section is provided for information, and should not be interpreted as a recommendation for these packs.  It may however be interesting to look back at how the LNP/Starter Pack movement evolved.  
+
+==== The first Lazy Newb Pack ====
+
+The first pack with the name Lazy Newb Pack (LNP) was created by [http://www.bay12forums.com/smf/index.php?action=profile;u=16293 LucasUP] for Windows and DF version 0.31.12 and posted [http://www.bay12forums.com/smf/index.php?topic=59026 in the bay12forums] on June 11, 2010. Before the LNP, it was becoming common for the community to bundle up their own distributions of ''Dwarf Fortress'' with tile sets, graphics, and mods to make them more accessible to players. Other notable packs from this era are [http://www.bay12forums.com/smf/index.php?topic=57557.0 Phoebus graphics] and [http://www.bay12forums.com/smf/index.php?topic=53649.0 Mayday's Graphic Set]. The LNP distinguished itself by providing an interface for changing common DF settings, instead of editing the raw text files included with the game.
+
+The first versions of the LNP included a text-based interface (seen on the right) that only permitted the user to enable/disable [[aquifers]] and choose from the Phoebus, Mayday, and Ironhand graphics packs. They included the utilities [[DFHack]], [[Utility:DwarfForeman|Dwarf Foreman]], [[Dwarf Therapist]], [http://www.bay12forums.com/smf/index.php?topic=57428.0 PerfectWorldDF], [http://www.joelpt.net/quickfort/  Quickfort], [http://www.bay12forums.com/smf/index.php?topic=59056.0 Runesmith] , [[Stonesense]].
+
+==== The original launcher with a GUI ====
+On December 31, 2010 [http://www.bay12forums.com/smf/index.php?topic=59026.msg1845333#msg1845333 LucasUP released] the first version of the Lazy Newb Pack that contained the graphical interface launcher that is well known today. It became the key component of the pack, which allows easy configuration of the DF installation, choose graphics packs, launching of utilities, and provided one click toggling of settings instead of editing configuration files by hand.  The original launcher was built with Visual Basic and .NET 3.5, and for several years this meant that the LNP was only available for Windows systems.
+
+In 2012 Dricus created a [http://www.bay12forums.com/smf/index.php?topic=124613 Java-based launcher], which was cross platform and more flexible, but also required manual configuration. This launcher was never finished and so never achieved wide usage, however some early Mac and Linux packs were available based on this version. It wasn't a complete pack, but just the launcher component that could be used to build platform-specific packs.
+
+==== The End of the First Age ====
+
+In order to elicit help and contributions from the community LucasUP opensourced his graphical interface in February 2013 by releasing [https://github.com/LucasUP/LazyNewbPack/ the source on github] ([http://www.bay12forums.com/smf/index.php?topic=123384.0 forum post]).
+
+By the late autumn of year 2013 the LNP was out of date with new DF releases, and users were clamoring for an update. LucasUP's life had become too busy to focus on the LNP. On November 16, 2013 LucasUP declared his tenure as overseer over, thanked the community for their support and gave his blessings for the successor packs that had appeared on the scene.
+
+<blockquote>
+<div style="border: 1px dashed grey; padding: 5px;">
+Hello guys. I think I have to apologize for my long absence.  :(
+
+Yes it was my intention to let others work on and maybe eventually take over The Lazy Newb pack after I had released it open source. But It was NOT my intention to go dead silent for so long and have it be such a forced/jarring transition. I'm really sorry about that.
+Of course other life responsibilities took me away from LNP, but I don't really have great excuses for why I didn't at least give you guys any updates on myself or re-direct you to other versions sooner, other than just my mind has been elsewhere.
+
+Sorry for any frustration this has caused you guys, and I hope I haven't caused too much ill-will. I feel like a jerk and like I've just been trying to avoid confronting that. :(
+I've updated the OP to link to the new Windows/Linux/Mac packages. If there's anything else you guys would like to see from me, I am happy to hear from you.
+I do read and respond to my PMs too, if you wanted to say/ask me something in private.
+
+Edit:
+
+I just also wanted to say, on a more positive note, that I am really happy and proud to see how many people have cared enough about LNP to want to continue it and work on it. The fact that there is now working and regularly updated Win/Mac/Linux versions is really fantastic, and its something I would have never achieved myself. So, thanks to the DF community! You guys and girls are awesome.
+</div>
+</blockquote>
+-- [http://www.bay12forums.com/smf/index.php?topic=59026.msg4768489#msg4768489 original post]
+
+==== PyLNP: The modern cross platform launcher ====
+
+In mid-2014 Pidgeot released the [http://www.bay12forums.com/smf/index.php?topic=140808 PyLNP launcher] built in Python and compatible with all platforms. As of 2017 the PyLNP is the core launcher of all lazy newb / starter packs available. A number of improvements to the feature set have been made since the original windows-only launcher by LucasUP, including raw merging of graphics to perserve settings, mod management, color schemes, and managing multiple installations of ''Dwarf Fortress''. There are [http://pylnp.birdiesoft.dk/docs/dev/#id5 even more] not mentioned here.
+
+All modern packs since 2014 use the PyLNP launcher. Note that "PyLNP" and "LNP" are not interchangeable - the former refers to the launcher itself, while the latter refers to a pack as a whole.
+
+PyLNP started as a port of LucasUP and tolyK’s Lazy Newb Pack Launcher to Python, with the goal of making a launcher available on all the platforms supported by ''Dwarf Fortress''. Its biggest innovation is the [http://pylnp.birdiesoft.dk/docs/dev/content.html PyLNP content format], a standard for defining manifests for graphics, tilesets, keybinds, utilities, etc that allows a modular and custom pack to be built.
+
+=== Lazy? Newb? Starter Pack? ===
+
+The original pack by LucasUP was named the Lazy Newb Pack, and LucasUP themselves explained the name as "This package is for ''Newbs'' and those too ''Lazy'' to put everything together every new version" (emphasis original). Most derivative packs over the years have retained that name more out of brand recognition and as homage to LucasUP's first attempts.
+
+In November 2013 PeridexisErrant, the maintainer of the current pack for the Windows platform, renamed his pack from "PeridexisErrant's LNP" to "PeridexisErrant's Starter Pack". He [https://www.reddit.com/r/dwarffortress/comments/1qt7c1/df_starter_pack_updated_classic_lazy_newb_pack/cdgpqxq/ has said] the primary reason for the renaming was to distinguish the old legacy LNP from his own pack when providing support to players, as often players would have a problem with the pack and ask PeridexisErrant for help only for him to discover they were using an older version of the pack that he didn't publish nor maintain. He changed the name before the [[DF2014:Release_information|big 2014 release]] in order to help steer new players towards his new maintained starter pack, and prevent them from finding and using old unsupported versions of the LNP.
+
+The maintainers of the different Mac OSX packs have used different names over the years including MacNewbie, and Lazy Mac Pack. The Linux maintainers have remained with the original LNP moniker.
+
+=== Other historical packs ===
+
+Early on, while there were releases of ''Dwarf Fortress'' for Mac and Linux, there were no Lazy Newb Packs offered. The very first batch-script based version of LucasUP's LNP inadvertently worked on Linux via wine, but after the switch to the GUI launcher built with .NET, support for Linux was lost.
+
+The general availability of GUI based launchers (and the packs built around) them for Mac and Linux didn't come about until Dricus' java-based launcher project [http://www.bay12forums.com/smf/index.php?topic=130236.msg4521675#msg4521675 in August 2013].
+
+==== Mac OS X ====
+In April 2012, [http://www.bay12forums.com/smf/index.php?action=profile;u=69756 iXen] released [http://www.bay12forums.com/smf/index.php?topic=106790.0 the MacNewbie Pack] as an alternative to the Windows LNP. It was for version release 0.34.07 of ''Dwarf Fortress''. The pack was updated for several months until its final release, v0.6 Cyan, in May. The pack was notable as it included the first GUI launcher for Mac OS. It was built with Apple's Cocoa technology and included special keybindings to make gameplay easier on Apple Wireless & MacBook Keyboards.
+
+<gallery widths=200px>
+File:Macnewbie2.png|Screenshot of the MacNewbie pack v0.6 Cyan for ''Dwarf Fortress'' v0.34.11 by iXen. 
+File:Macnewbie1.png|Screenshot of the MacNewbie pack v0.6 Cyan for ''Dwarf Fortress'' v0.34.11 by iXen. 
+</gallery>
+
+[http://www.bay12forums.com/smf/index.php?action=profile;u=94479 Fricy] released [http://www.bay12forums.com/smf/index.php?topic=128960  his spiritual successor] to the MacNewbie pack on July 10, 2014 for ''Dwarf Fortress'' v0.40.01. It was based on Dricus' cross platform java launcher has 26 releases from July 2014 until November 28, 2015. It was last updated in November 2015 in January ''Dwarf Fortress'' v0.42.04.
+
+==== Linux ====
+
+The [http://www.bay12forums.com/smf/index.php?topic=130792 Lazy Newb Pack Installer for Linux] created by Andrewd18 in September 2013, was a Linux installer shell script that installed the ''Dwarf Fortress'' Lazy Newb Pack. It downloaded and built a DF installation from available source code and binaries, and also checked for the dependencies required by 64-bit systems.  The home of this pack was [https://github.com/andrewd18/df-lnp-installer on Github]. It was last updated on June 2014 for ''Dwarf Fortress'' v0.34.11.
+
+[http://www.bay12forums.com/smf/index.php?topic=140966 Beautato's Linux Lazy Newb Pack] released in July 2014 was a more traditional package of compiled utilities that was previously maintained and tested on Ubuntu. It was last updated in March 2015 for ''Dwarf Fortress'' v0.40.24.
+
+In March 2017 [http://www.bay12forums.com/smf/index.php?action=profile;u=114577 Enay] took up maintainership of the LNP for Linux calling it [http://www.bay12forums.com/smf/index.php?topic=163211.0 LinuxLNP] and released only for 64-bit systems.
+
+The LinuxDwarfPack provides packages for Debian/Ubuntu, Arch and RedHat systems, as well as an AppImage and a regular tar.gz package. Releases and nightly builds may be downloaded on the  [https://github.com/McArcady/lnp-forge/releases Github page of lnp-forge].
+
+== The Making of a Pack ==
+
+There are many people involved in the making of a LNP/Starter pack for ''Dwarf Fortress'', starting from Tarn and Zach releasing DF, to the many tilesets and graphics creators, the creators of the utilities (e.g, Soundsense, Dwarf Therapist),  the reverse engineering work down by the [[DFHack]] folks, to the many more who contribute on the forums, help manage bug reports, create and test mods, etc.
+
+Creating a pack is a process of curating a set of tilesets, graphics, and utilities and bundling them together with a launcher as well as the latest ''Dwarf Fortress'' release, then, optionally, making this bundle available for download
+
+Over the years the process of making a pack has become more formalized and automated, and a community has formed to make the process easier and provide continuity when someone inevitably retires.
+
+As of 2017, pack maintenance and creation is centered around the following projects:
+
+* The [https://github.com/Pidgeot/python-lnp PyLNP launcher] is maintained by Pidgeot and is available on Github
+* The [https://github.com/Lazy-Newb-Pack LazyNewbPack organization on github] provides a home for shared resources and code
+* The [https://github.com/DFgraphics/DFgraphics DFgraphics github repository] is a shared home for graphics and tilesets to ease routine maintenance
+* The [https://github.com/PeridexisErrant/starter-pack starter-pack builder] by PeridexisErrant that helps build a pack from scratch
+* The [https://github.com/McArcady/lnp-forge lnp-forge project] is a pack builder targeting Linux and macOS
+* The [https://github.com/jipumarino/dfdl dfdl project] is a pack builder for macOS
+
+
+
+{{Category|Utilities}}
+[[ru:Utility:Lazy Newb Pack]][[zh:Lazy Newb Pack]]

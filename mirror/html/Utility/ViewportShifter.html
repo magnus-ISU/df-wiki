@@ -1,0 +1,113 @@
+<div class="mw-parser-output"><table class="version-table" style="text-align: center; margin: 3px auto 5px; padding: 0.25em; padding-top:1em; border-radius: 3px; -webkit-border-radius: 3px; -moz-border-radius: 3px; -o-border-radius: 3px; -ms-border-radius: 3px;; border: 2px solid #ddbb88; background: #fff5ee; min-width:27em"><tbody><tr><td style="padding: 0.3em 0.3em; width: 100%;"><span>This utility page is about v0.28.121.40d, an <b>older version</b> of DF.</span><br />
+<div style="float: right; font-size:75%; padding-right:2px; margin-top:-2px; margin-bottom:-7px;"><span class="version-link"><a href="/index.php/Template:Uv" class="mw-redirect" title="Template:Uv"><span style="text-decoration: none; color: #CA7A02;">More Info</span></a></span></div></td></tr>
+</tbody></table>
+<div class="floatright"><a href="/index.php/File:ViewportShifter.png" class="image"><img alt="ViewportShifter.png" src="/images/6/68/ViewportShifter.png" decoding="async" width="636" height="284" /></a></div>
+<p>This is a module for <a href="/index.php/User:Rick/Tweak" class="mw-redirect" title="User:Rick/Tweak">Gibbed's Dwarf Fortress Tweak</a> utility that allows flexible movement of the game's viewport.  It's primary purpose is to overcoming the limitation of the standard ten tile movement amount, allowing one to shift the viewport a single tile at a time.  This will allow perfect centering of the view on any feature of the fortress.  For convenience, the hotkeys are also available for interaction.  Aside from being able to move the viewport to a hotkey's stored location and being able to set a hotkey's location to the current view, one can also reset a hotkey to it's default unassigned state.  Finally, viewport rectangle and cursor location coordinates are also provided at the bottom of the window.
+</p>
+
+<h2><span class="mw-headline" id="Basic_Navigation">Basic Navigation</span></h2>
+<p>The grid of arrows on the left side of the window are for basic horizontal navigation.  Buttons with a single arrow will move the view one tile at a time, while buttons with two arrows will move in increments of ten.  The button in the center of these arrows is used to move the cursor to the center of the viewport, if the cursor is visible at the time.  The two buttons in the center of the window are used move up or down a single z level at a time.
+</p>
+<h2><span class="mw-headline" id="Hotkeys">Hotkeys</span></h2>
+<p>On the right side of the window are two columns of hotkeys.  They are labeled by the key(s) used to activate them.  Next to each label are three buttons.  The first, an arrow, is used to move the view to the location associated with the hotkey, just as if you had pressed the hotkey while in-game.  The second button, a floppy disc, saves the current view for that hotkey.  The third button, a crossed out circle, resets the hotkey's location to its default unassigned state.
+</p>
+<h2><span class="mw-headline" id="Coordinates">Coordinates</span></h2>
+<p>At the bottom of the window, the viewport's rectangle coordinates and the cursor's location coordinates are displayed.  The viewport rectangle is described by its top-left corner and its bottom right corner.  Both these points represent the corner cells <i>within</i> the rectangle.  These two points are followed by the viewport's size.  The cursor location will only be shown when the cursor itself is visible.  Additionally, due to some technical difficulties, even if the cursor is visible, the location will not always be displayed.  The cursor location is guaranteed to be displayed while in the following menus:  look (<span style="white-space: nowrap;"><span class="keyboard-key nowrap" style="border: 1px solid #aaa; border-radius: 0.2em; -webkit-border-radius: 0.2em; -moz-border-radius: 0.2em; -o-border-radius: 0.2em; -ms-border-radius: 0.2em; -moz-box-shadow: 0.1em 0.2em 0.2em #ddd; -webkit-box-shadow: 0.1em 0.2em 0.2em #ddd; box-shadow: 0.1em 0.2em 0.2em #ddd; background-color: #f9f9f9; background-image: -moz-linear-gradient(top, #eee, #f9f9f9, #eee); background-image: -o-linear-gradient(top, #eee, #f9f9f9, #eee); background-image: -webkit-linear-gradient(top, #eee, #f9f9f9, #eee); background-image: linear-gradient(to bottom, #eee, #f9f9f9, #eee); padding: 0.1em 0.3em; font-family: inherit; font-size: 0.9em;" title="">k</span></span>), squads (<span style="white-space: nowrap;"><span class="keyboard-key nowrap" style="border: 1px solid #aaa; border-radius: 0.2em; -webkit-border-radius: 0.2em; -moz-border-radius: 0.2em; -o-border-radius: 0.2em; -ms-border-radius: 0.2em; -moz-box-shadow: 0.1em 0.2em 0.2em #ddd; -webkit-box-shadow: 0.1em 0.2em 0.2em #ddd; box-shadow: 0.1em 0.2em 0.2em #ddd; background-color: #f9f9f9; background-image: -moz-linear-gradient(top, #eee, #f9f9f9, #eee); background-image: -o-linear-gradient(top, #eee, #f9f9f9, #eee); background-image: -webkit-linear-gradient(top, #eee, #f9f9f9, #eee); background-image: linear-gradient(to bottom, #eee, #f9f9f9, #eee); padding: 0.1em 0.3em; font-family: inherit; font-size: 0.9em;" title="">x</span></span>), designations (<span style="white-space: nowrap;"><span class="keyboard-key nowrap" style="border: 1px solid #aaa; border-radius: 0.2em; -webkit-border-radius: 0.2em; -moz-border-radius: 0.2em; -o-border-radius: 0.2em; -ms-border-radius: 0.2em; -moz-box-shadow: 0.1em 0.2em 0.2em #ddd; -webkit-box-shadow: 0.1em 0.2em 0.2em #ddd; box-shadow: 0.1em 0.2em 0.2em #ddd; background-color: #f9f9f9; background-image: -moz-linear-gradient(top, #eee, #f9f9f9, #eee); background-image: -o-linear-gradient(top, #eee, #f9f9f9, #eee); background-image: -webkit-linear-gradient(top, #eee, #f9f9f9, #eee); background-image: linear-gradient(to bottom, #eee, #f9f9f9, #eee); padding: 0.1em 0.3em; font-family: inherit; font-size: 0.9em;" title="">d</span></span>), stockpiles (<span style="white-space: nowrap;"><span class="keyboard-key nowrap" style="border: 1px solid #aaa; border-radius: 0.2em; -webkit-border-radius: 0.2em; -moz-border-radius: 0.2em; -o-border-radius: 0.2em; -ms-border-radius: 0.2em; -moz-box-shadow: 0.1em 0.2em 0.2em #ddd; -webkit-box-shadow: 0.1em 0.2em 0.2em #ddd; box-shadow: 0.1em 0.2em 0.2em #ddd; background-color: #f9f9f9; background-image: -moz-linear-gradient(top, #eee, #f9f9f9, #eee); background-image: -o-linear-gradient(top, #eee, #f9f9f9, #eee); background-image: -webkit-linear-gradient(top, #eee, #f9f9f9, #eee); background-image: linear-gradient(to bottom, #eee, #f9f9f9, #eee); padding: 0.1em 0.3em; font-family: inherit; font-size: 0.9em;" title="">p</span></span>), and zones (<span style="white-space: nowrap;"><span class="keyboard-key nowrap" style="border: 1px solid #aaa; border-radius: 0.2em; -webkit-border-radius: 0.2em; -moz-border-radius: 0.2em; -o-border-radius: 0.2em; -ms-border-radius: 0.2em; -moz-box-shadow: 0.1em 0.2em 0.2em #ddd; -webkit-box-shadow: 0.1em 0.2em 0.2em #ddd; box-shadow: 0.1em 0.2em 0.2em #ddd; background-color: #f9f9f9; background-image: -moz-linear-gradient(top, #eee, #f9f9f9, #eee); background-image: -o-linear-gradient(top, #eee, #f9f9f9, #eee); background-image: -webkit-linear-gradient(top, #eee, #f9f9f9, #eee); background-image: linear-gradient(to bottom, #eee, #f9f9f9, #eee); padding: 0.1em 0.3em; font-family: inherit; font-size: 0.9em;" title="">i</span></span>).
+</p><p>Tweak is a utility for Dwarf Fortress created by <a href="/index.php/User:Rick" title="User:Rick">Rick</a> which can load modules that provide different functionality to the user for tweaking, or editing Dwarf Fortress memory. It will attempt to automatically identify the version of the running Dwarf Fortress process and automatically load data related to that version.
+</p>
+<h2><span class="mw-headline" id="Installation">Installation</span></h2>
+<h3><span class="mw-headline" id="Required_Components">Required Components</span></h3>
+<ul><li><a rel="nofollow" class="external text" href="http://dffd.wimbli.com/file.php?id=357">Exponent.DwarfFortress.Tools.ViewportShifter.zip</a> (extract this into the tweak/plugins/ subfolder)</li>
+<li><a href="/index.php/User:Rick/Tweak" class="mw-redirect" title="User:Rick/Tweak">Gibbed's Dwarf Fortress Tweak</a></li>
+<li><a rel="nofollow" class="external text" href="http://www.microsoft.com/downloads/details.aspx?FamilyID=333325FD-AE52-4E35-B531-508D977D32A6">.NET 3.5 Runtime</a></li></ul>
+<h3><span class="mw-headline" id="Memory_XML_File_Addition">Memory XML File Addition</span></h3>
+<p>Below is a list of all the required memory addresses and offsets for each version of Dwarf Fortress on which this utility has been tested.  You will need to make sure that they all exist within the xml files under the appropriate subfolder in tweak/versions.
+</p>
+<h4><span class="mw-headline" id="v0.28.181.40d">v0.28.181.40d</span></h4>
+<p>Version Hash Code:  2c686c26307dcccd7c36cc79737ebe4f
+</p>
+<pre>&lt;address name="menu_state" value="0x01393260" /&gt;
+&lt;address name="view_state" value="0x009FC368" /&gt;
+&lt;address name="mouse_x" value="0x009FC294" /&gt;
+&lt;address name="mouse_y" value="0x009FC298" /&gt;
+&lt;address name="mouse_z" value="0x009FC29C" /&gt;
+&lt;address name="viewport_x" value="0x00D457F4" /&gt;
+&lt;address name="viewport_y" value="0x00D73868" /&gt;
+&lt;address name="viewport_z" value="0x00D73844" /&gt;
+&lt;address name="window_grid_x" value="0x01706D4C" /&gt;
+&lt;address name="window_grid_y" value="0x01706D50" /&gt;
+&lt;address name="hotkeys" value="0x01392FA8" /&gt;
+&lt;offset name="hotkeys_offset_enabled" value="0x0000" /&gt;
+&lt;offset name="hotkeys_offset_x" value="0x0004" /&gt;
+&lt;offset name="hotkeys_offset_y" value="0x0008" /&gt;
+&lt;offset name="hotkeys_offset_z" value="0x000C" /&gt;
+&lt;offset name="hotkey_offset" value="0x002C" /&gt;
+&lt;address name="map_data" value="0x015C4D58"/&gt;
+&lt;address name="map_x_count" value="0x015C4D70"/&gt;
+&lt;address name="map_y_count" value="0x015C4D74"/&gt;
+&lt;address name="map_z_count" value="0x015C4D78"/&gt;
+</pre>
+<h4><span class="mw-headline" id="v0.28.181.40a">v0.28.181.40a</span></h4>
+<pre>&lt;address name="menu_state" value="0x01392268" /&gt;
+&lt;address name="view_state" value="0x009FB368" /&gt;
+&lt;address name="mouse_x" value="0x009FB294" /&gt;
+&lt;address name="mouse_y" value="0x009FB298" /&gt;
+&lt;address name="mouse_z" value="0x009FB29C" /&gt;
+&lt;address name="viewport_x" value="0x00D447FC" /&gt;
+&lt;address name="viewport_y" value="0x00D72870" /&gt;
+&lt;address name="viewport_z" value="0x00D7284C" /&gt;
+&lt;address name="window_grid_x" value="0x01704ECC" /&gt;
+&lt;address name="window_grid_y" value="0x01704ED0" /&gt;
+&lt;address name="hotkeys" value="0x01391FB0" /&gt;
+&lt;offset name="hotkeys_offset_enabled" value="0x0000" /&gt;
+&lt;offset name="hotkeys_offset_x" value="0x0004" /&gt;
+&lt;offset name="hotkeys_offset_y" value="0x0008" /&gt;
+&lt;offset name="hotkeys_offset_z" value="0x000C" /&gt;
+&lt;offset name="hotkey_offset" value="0x002C" /&gt;
+&lt;address name="map_data" value="0x015C3D60"/&gt;
+&lt;address name="map_x_count" value="0x015C3D78"/&gt;
+&lt;address name="map_y_count" value="0x015C3D7C"/&gt;
+&lt;address name="map_z_count" value="0x015C3D80"/&gt;
+</pre>
+<h4><span class="mw-headline" id="v0.28.181.39f">v0.28.181.39f</span></h4>
+<pre>&lt;address name="menu_state" value="0x01386260" /&gt;
+&lt;address name="view_state" value="0x009EF368" /&gt;
+&lt;address name="mouse_x" value="0x009EF294" /&gt;
+&lt;address name="mouse_y" value="0x009EF298" /&gt;
+&lt;address name="mouse_z" value="0x009EF29C" /&gt;
+&lt;address name="viewport_x" value="0x00D387FC" /&gt;
+&lt;address name="viewport_y" value="0x00D66870" /&gt;
+&lt;address name="viewport_z" value="0x00D6684C" /&gt;
+&lt;address name="window_grid_x" value="0x016F8A7C" /&gt;
+&lt;address name="window_grid_y" value="0x016F8A80" /&gt;
+&lt;address name="hotkeys" value="0x01385FA8" /&gt;
+&lt;offset name="hotkeys_offset_enabled" value="0x0000" /&gt;
+&lt;offset name="hotkeys_offset_x" value="0x0004" /&gt;
+&lt;offset name="hotkeys_offset_y" value="0x0008" /&gt;
+&lt;offset name="hotkeys_offset_z" value="0x000C" /&gt;
+&lt;offset name="hotkey_offset" value="0x002C" /&gt;
+&lt;address name="map_data" value="0x015B7920"/&gt;
+&lt;address name="map_x_count" value="0x015B7938"/&gt;
+&lt;address name="map_y_count" value="0x015B793C"/&gt; 
+&lt;address name="map_z_count" value="0x015B7940"/&gt;
+</pre>
+<h4><span class="mw-headline" id="v0.28.181.39e">v0.28.181.39e</span></h4>
+<pre>&lt;address name="menu_state" value="0x0132FDB0" /&gt;
+&lt;address name="view_state" value="0x009E3358" /&gt;
+&lt;address name="mouse_x" value="0x009E3284" /&gt;
+&lt;address name="mouse_y" value="0x009E3288" /&gt;
+&lt;address name="mouse_z" value="0x009E328C" /&gt;
+&lt;address name="viewport_x" value="0x00CE23C4" /&gt;
+&lt;address name="viewport_y" value="0x00D103C0" /&gt;
+&lt;address name="viewport_z" value="0x00D1039C" /&gt;
+&lt;address name="hotkeys" value="0x0132FAF8" /&gt;
+&lt;offset name="hotkeys_offset_enabled" value="0x0000" /&gt;
+&lt;offset name="hotkeys_offset_x" value="0x0004" /&gt;
+&lt;offset name="hotkeys_offset_y" value="0x0008" /&gt;
+&lt;offset name="hotkeys_offset_z" value="0x000C" /&gt;
+&lt;offset name="hotkey_offset" value="0x002C" /&gt;
+&lt;address name="map_data" value="0x01561470"/&gt;
+&lt;address name="map_x_count" value="0x01561488"/&gt;
+&lt;address name="map_y_count" value="0x0156148C"/&gt;
+&lt;address name="map_z_count" value="0x01561490"/&gt;
+</pre></div>

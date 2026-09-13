@@ -1,0 +1,61 @@
+{{Infobox utility
+| update= 2022
+<!--| image = File:Dwarf-therapist-logo.png-->
+| misc  =
+* [http://www.bay12forums.com/smf/index.php?topic=168411.0 Bay12Forum]
+* [https://github.com/Dwarf-Therapist/Dwarf-Therapist/ Github] [https://github.com/Dwarf-Therapist/Dwarf-Therapist/releases Download]
+* [https://github.com/Dwarf-Therapist/Manual/releases Manual] (outdated)
+* [[Utility:Dwarf Therapist/Addons Repository|Addons Repository]]
+}}
+
+: ''It makes Dwarf fortress playable.  It's that good. Get it! - unknown source.'' 
+
+'''Dwarf Therapist''' gives you an advanced GUI to manage and check dwarf job allocations, military assignments, statistics (such as attributes, personality traits, happiness, and health), sort dwarves by various criteria (e.g. profession, migration wave, happiness, number of assigned jobs etc.) and generally manage the Dwarven Resources of your fortress in a very convenient way. It further contains the "labor optimizer" a semi-automatic labor management system.
+
+== Installation and use ==
+To get started, download the archive for your OS from the [https://github.com/Dwarf-Therapist/Dwarf-Therapist/releases releases page]. Versions are usually available for Windows and Linux. If there is not yet a release for the current version of ''Dwarf Fortress'' for your OS, use the latest version and see [[#Updating|Updating]] below. Extract the archive to a folder, a Games folder in your user folder is a good place. 
+[[File:dwarf_therapist.png|thumb|280px|right|Screenshot of Dwarf Therapist, this screen showing a spreadsheet of dwarves, their skill levels and currently assigned labors, plus other information.]]
+Start ''Dwarf Fortress'' and load a fortress save, then run the Dwarf Therapist executable from the folder you extracted to. It will start in a separate window and automatically connect to ''Dwarf Fortress''. The application will load the current population data and show it in the default tabs; there are other tabs you can add, like Health to see the health status of all dwarves at once.
+
+To actually edit any labors, you will need to click "Allow labor changes" first and confirm you want to use Dwarf Therapist for setting labors. Note that any changes only become active after you select "Commit Changes" on the right below the list of pending changes (or on the main tool bar or by pressing {{k|sep=+|ctrl|t}}. 
+
+== Updating ==
+When ''Dwarf Fortress'' updates, Dwarf Therapist must update as well, to match the new coding details. However, it is not necessary to wait for a current Dwarf Therapist update; as soon as there is an updated [[DFHack]] (which should happen with every DF update), then DFHack can generate the necessary updated memory layout. [http://www.bay12forums.com/smf/index.php?topic=168411.msg8532557#msg8532557][https://www.bay12forums.com/smf/index.php?topic=168411.msg8539193#msg8539193]
+
+:1) Open ''Dwarf Fortress'', and open your current game save. Open the DFHack console (default hotkey {{k|`}}), and type <code>devel/export-dt-ini</code>. ''(This is a standard DF Hack command - if you typed everything correctly, it will recognize it as an option.)'' Hit {{k|Enter}} to run the command; if you did it correctly, it will be confirmed by the text <code>Command finished successfully</code> and create a file named <code>therapist.ini</code> in the ''Dwarf Fortress'' root directory.
+
+:2.1) Find the newly created <code>therapist.ini</code> (from Step 1)...
+
+::2.1a) For <u>Windows</u> using the the <u>Steam</u> version of ''Dwarf Fortress'', open File Explorer, right-click the game entry in the Steam library, and choose <code>Browse local files</code> in the <code>Manage</code> sub-menu, which will open the location (usually <code>C:\Program Files (x86)\Steam\SteamApps\common\Dwarf Fortress</code>.) For <u>other</u> ''(i.e. non-Steam)'' versions of DF, you should know where you extracted the game to, but you can do a file Search for "Dwarf Fortress".
+
+::2.1b) For <u>Linux</u>, this step is parallel to the above, using the <code>find</code> or <code>locate</code> command.
+
+:2.2) Right-click and Copy (or Cut) the newly created <code>therapist.ini</code> (from Step 1) that you just found.
+
+:3) Open Dwarf Therapist, and close the <code>Unidentified game version</code> pop-up message. Open the <code>File</code> drop-down menu, and select the <code>Open data directory</code> option to open that location. Open the <code>memory_layouts</code> directory, then the <code>windows</code> or <code>linux</code> directory as appropriate for your operating system.
+
+:4) Paste the newly created <code>therapist.ini</code> file (from step 1) that you copied from the ''Dwarf Fortress'' directory (in step 2) to inside the appropriate Dwarf Therapist "memory layouts/<your operating system>" file (from step 3).  Overwrite any old "therapist.ini" file there.*
+
+:5) Dwarf Therapist then needs to be restarted before it will see the new file.  Your ''Dwarf Fortress'' game and save will be unaffected.
+
+: * The new file will work as named, but if you want to use Dwarf Therapist with multiple versions of ''Dwarf Fortress'', you'll want to rename it.
+
+== Addons ==
+A collection of customizations for Dwarf Therapist submitted by the community is maintained at the [[Utility:Dwarf Therapist/Addons Repository|Addons Repository]]. These files contain:
+
+* custom professions
+* custom roles
+* optimization plans
+* filter scripts
+* new grid views
+
+== History ==
+Initially released in 2009 by Trey Stout (or chmod, as known on the forums), who kept updating and expanding it until 2010. DwarfEngineer took over development through 2012. Splinterz' 2013 fork of Dwarf Therapist is the currently maintained version, by Clément since 2017, and is fully compatible with v50+ [[premium]] and classic.
+
+Up to version 41.2.5 Dwarf Therapist was also available as a native macOS release for use with the native macOS versions of ''Dwarf Fortress'', the last of those being version [[DF2014:Release_information/0.47.05|0.47.05]].
+
+== Links ==
+[https://www.youtube.com/watch?v=Wdfah-eNX-Q A Dwarf Therapist Starting Guide (Video Tutorial)]
+
+[[Category:Utilities]]
+[[ru:Utility:Dwarf therapist]]

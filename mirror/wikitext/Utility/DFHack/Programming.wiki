@@ -1,0 +1,297 @@
+<pre>v1.1 (see change log at the end)</pre>
+
+== INTRODUCTION ==
+
+DFHack is a Dwarf Fortress (DF) memory access library and a set of basic tools that use it (see the documentation at https://docs.dfhack.org/en/stable/ ).
+
+It is possible for developers to write plugins for DFHack, in order to extend the capabilities of DFHack (and therefore DF's gameplay). The plugins come mainly in two flavours:
+* C++ plugins: libraries written in C++ that need to be compiled. They can use DFHack's low level functions very closely, and they will be able to perform complex functions ''very'' quickly.
+* Lua and Ruby scripts: text-based scripts which can be dropped into place and modified on the fly. Certain things can be easier to do, and error handling is better in general, but the downside is that they can be quite ''slow'' - for example, trying to reveal the entire map from Lua may take an entire minute, while the C++ plugin can do it in a tiny fraction of a second. This document is focused entirely on plugins - if you would like to learn more about writing scripts, see https://docs.dfhack.org/en/stable/docs/Lua%20API.html
+
+This document explains how to get started at writing C++ plugins with Microsoft Visual C++ 2010, step by step. It is intended for people who are totally new to DFHack.
+
+== Getting Dwarf Fortress ==
+
+You'll need a test environment to run your script. Hence the need of getting DF. I'd recommend getting the latest "Lazy Newb Pack", which includes not only Dwarf Fortress but also DFHack and other nice things, ready-to-use:
+* Download the latest "Lazy Newb Pack".
+You can run DF once and observe the DFHack console. Type <code>die</code> in that window to observe that the command line works (<code>die</code> is a command to force-close DF).
+
+== Getting DFHack ==
+
+You must download the sources, and build them.
+* Follow exactly the steps described in DFHack's documentation: https://docs.dfhack.org/en/stable/docs/Compile.html
+
+== Make yourself comfy ==
+=== Windows ===
+As explained in the compiling guidelines (above), there are several scripts available, that will do different things : some will just build, some will also install the results to your DF's "hack" folder. To save some time, here is how you can set up Visual C++ to do a build+install every time you press <code>F7</code>:
+* Open <code>dfhack.sln</code> in Visual C++
+* Right-click on the Solution, and select "Properties"
+* Go to "configuration properties"–&gt;"Configuration"
+* In the full list of projects, uncheck <code>ALL_BUILD</code>, and instead check <code>INSTALL</code>
+
+== Create your very own plugin ==
+; What are the requirements for a plugin?
+* A set of C++ source files (there can be just one if you want!)
+* The libraries (<code>.lib</code>) it will use
+* The protobufs it will use (if any!)
+Protobuf (protocol buffer) is a special serialization standard developed by Google, and its main use in DFHack is for communicating with other processes via TCP/IP (e.g. so you can write a separate application that communicates with DFHack to access/modify the game's memory). As such, it is outside of the scope of this document. Only a handful of plugins use that technology, such as <code>rename</code> and <code>isoworldremote</code>.
+
+The libraries are all the 3rd-party libraries you want to use in your project. The good news is that most libraries normally used in C++ have a high probability to be already used by some other plugin. In most cases, the only special library you're going to use is going to be "lua", and only if your plugin is going to provide special functions that can be invoked from scripts.
+
+; The first step is to add your plugin to the list of plugins :
+* Open <code>dfhack/plugins/CMakeLists.txt</code>
+* Locate the section listing all the plugins : they start with <code>DFHACK_PLUGIN</code>
+* Add a line with your own plugin: <code>DFHACK_PLUGIN(myplugin myplugin.cpp)</code>, and save the file.
+* Create a blank file called <code>myplugin.cpp</code> in <code>dfhack/plugins</code>, alongside all the other plugins
+
+Now you need to run DFHack's awesome build scripts, to make them generate all the relevant project files for you:
+* Observe all the batch files in <code>dfhack/build</code> starting with "generate" 
+* Run your favourite one. For example, you can choose <code>generate-MSVC-minimal.bat</code>
+Once this finishes, Visual C++ will prompt you to reload the project if you have it open, and once you do so you'll notice that your project "myplugin" has magically appeared. However, since the source file is still blank, it's not exactly ready to compile.
+
+== Mandatory C++ instructions ==
+
+Open any simple plugin (e.g. <code>tubefill.cpp</code> ) and observe its structure.
+
+At the top will be a block of #include statements to allow you to use DFHack. This block can vary, but in nearly all cases it should contain the following:
+
+<pre>#include "Core.h"
+#include "Console.h"
+#include "Export.h"
+#include "PluginManager.h"
+#include "DataDefs.h"
+
+using namespace DFHack;</pre>
+
+These 5 headers are required for pretty much ''every'' plugin - depending on what you're doing, you'll want to include some extras as well.
+
+Let's imagine your plugin will be a command called from DFHack's console. Well then, that command will call an actual function. It is that function that you declare here:
+
+<pre>command_result tubefill(color_ostream &amp;out, std::vector&lt;std::string&gt; &amp; params);</pre>
+
+For now, the function only gets declared, we'll define it later in the source code. You'll need to do the same, by replacing <code>tubefill</code> with 
+<code>myplugin</code>
+
+Now, tell DFHack's global plugin engine to be aware of our plugin (so that it can load it, etc.):
+
+<pre>DFHACK_PLUGIN("tubefill");</pre>
+From now on, every time you see "tubefill", replace it with "myplugin".
+
+; Each plugin has two central functions:
+* <code>DFhackCExport command_result plugin_init(color_ostream&, std::vector<PluginCommand>&)</code>. This is run when the plugin gets loaded, whether or not its command gets run from the command line.
+* <code>DFhackCExport command_result plugin_shutdown(color_ostream)&</code>. This is run when the plugin gets unloaded (i.e. when DFHack shuts down).
+'''Note the <code>DFhackCExport</code> before the function signatures. This is required so that DFHack can load your plugin.'''
+
+The <code>color_ostream&</code> parameter to these functions is an output stream that prints to the DFHack console. You can use this to output debug messages when your plugin is being loaded/unloaded. (An example of using such an output stream is given in the section [http://dwarffortresswiki.org/index.php/Utility:DFHack/Programming#Simplest_possible_plugin:_Hello_world.21 Simplest possible plugin].)
+
+The second parameter to the <code>plugin_init</code> function is important -- it is a reference to the list of available commands. You use this to add your own command which calls the <code>myplugin</code> function you declared earlier.
+
+As an example, <code>tubefill</code> uses this code to add the "tubefill" command so it can be run in the console:
+
+<pre>DFhackCExport command_result plugin_init ( color_ostream &out, std::vector <PluginCommand> &commands)
+{
+    commands.push_back(PluginCommand("tubefill","Fill in all the adamantine tubes again.",tubefill, false,
+        "Replenishes mined out adamantine but does not fill hollow adamantine tubes.\n"
+        "Specify 'hollow' to fill hollow tubes, but beware glitchy HFS spawns.\n"));
+    return CR_OK;
+}</pre>
+Details:
+
+* <code>"tubefill"</code> will be the string to which the command line must respond, when entered. 
+* <code>tubefill</code> is the function that must be called when the command is typed into the command line. 
+* <code>"Fill in all the adamantine tubes again."</code> and <code>"Replenishes mined out adamantine..."</code> are the "manual" that will be displayed in the help or when the command is called with the wrong parameters (see below how to test that).
+
+<code>tubefill</code>'s <code>plugin_shutdown</code>, however, is empty (it just returns the standardized "OK" return code : <code>CR_OK</code>). That's because the plugin is simple and doesn't need to delete objects, or close connections, or do any kind of post-processing.
+
+Finally, you'll find the actual function definition:
+
+<pre>command_result tubefill(color_ostream &amp;out, std::vector&lt;std::string&gt; &amp; params)
+{
+    ...
+    return CR_OK;
+}
+</pre>
+
+
+== Simplest possible plugin: Hello world! ==
+
+Here is how to just have a message displayed in the DFHack console when someone enters your command:
+
+<pre>command_result myplugin (color_ostream &amp;out, std::vector &lt;std::string&gt; &amp; parameters)
+{
+    out.print("Hello Monsieur Ouxx!\n");
+    return CR_OK;
+}
+</pre>
+Please note that you have other outputs available:
+
+<pre>out.printerr("Oh my gosh, this is an error.\n");</pre>
+You can now test your plugin : Press F7, then run DF and enter "myplugin" in the DFHack console. You should see the message "Hello Monsieur Ouxx!".
+
+== Parameters checking ==
+
+You might want to test that your command was called with the relevant parameters. Here is an example of how to do it:
+
+<pre>command_result myplugin (color_ostream &amp;out, std::vector &lt;std::string&gt; &amp; parameters)
+{
+    bool param1_ok, param2_ok;
+    for(size_t i = 0; i &lt; parameters.size();i++)
+    {
+        if(parameters[i] == "param1")
+            param1_ok = true;
+        else if(parameters[i] == "param2")
+            param2_ok = true;
+        else
+            return CR_WRONG_USAGE;
+    }
+    if(!param1_ok &amp;&amp; !param2_ok)
+        return CR_WRONG_USAGE;
+
+    return CR_OK;
+}</pre>
+As explained before, if <code>CR_WRONG_USAGE</code> is returned, then the verbose help text defined in <code>commands.push_back</code> will be displayed.
+
+Another interesting approach to that (as seen in plugin "buildingplan"):
+
+<pre>if (!parameters.empty())
+{
+    if (parameters.size() == 1 &amp;&amp; toLower(parameters[0])[0] == 'v')
+    {
+        out &lt;&lt; "Building Plan" &lt;&lt; endl &lt;&lt; "Version: " &lt;&lt; PLUGIN_VERSION &lt;&lt; endl;
+    }
+    else if (parameters.size() == 2 &amp;&amp; toLower(parameters[0]) == "debug")
+    {
+        show_debugging = (toLower(parameters[1]) == "on");
+        out &lt;&lt; "Debugging " &lt;&lt; ((show_debugging) ? "enabled" : "disabled") &lt;&lt; endl;
+    }        
+}</pre>
+
+== Suspend the core! ==
+
+This might be the MOST IMPORTANT section in this document. Never ever forget to suspend the game's core execution before you manipulate anything in its internal data. It is done by adding the following statement:
+
+<pre>CoreSuspender suspend;</pre>
+
+There is no need to actually ''do'' anything with this variable - simply declaring it will cause Dwarf Fortress to be suspended, and once the variable goes out of scope (e.g. when the plugin function returns), the game will be unsuspended.
+
+You will observe that most plugins actually start with that instruction. Fortunately, our "Hello world" plugin doesn't manipulate any internal data, so we didn't need that. But that's about to change.
+
+== Create your own viewscreen ==
+
+Many plugins add menus to DF in order to extend capabilities (or, at least, sort out DF's mess). A good example of that is the plugin <code>buildingplan</code>. It displays a menu with lists of materials, and allows to filter the materials. Lists and filters. That's what DF is all about!
+
+[[File:DFHack_Plugin-_buildingplan_screenshot.png|300px]]
+
+You make them fit into a "viewscreen", that is: an additional screen that will fit into DF. This section is about creating a NEW viewscreen, not replacing one already existing in DF.
+
+Have a look at class <code>ViewscreenChooseMaterial</code> : it extends DFHack-provided class <code>dfhack_viewscreen</code>:
+
+<pre>class ViewscreenChooseMaterial : public dfhack_viewscreen
+{
+...</pre>
+It needs to implement the two following functions:
+
+<pre>void feed(set&lt;df::interface_key&gt; *input)
+{
+    ...
+}
+
+void render()
+{
+    ...
+    dfhack_viewscreen::render();
+    ...
+}</pre>
+Notice how <code>render</code> calls the overridden function of its parent class.
+
+You will find more examples in the plugin <code>manipulator</code>. Have a look at class <code>viewscreen_unitlaborsst</code>.
+
+See also: "Replacing an existing view screen"
+
+== Manipulate the display ==
+
+Once your viewscreen is up and running with its very own <code>render</code> function, you may do whatever you please with the display:
+
+<pre>Screen::clear();                                    //delete the screen
+Screen::drawBorder("  Building Material  ");        //create a new DF-style screen, with a title and a border
+
+masks_column.display(selected_column == 0);         //display our column (read this tutorial further)
+
+int32_t y = gps-&gt;dimy - 3;                          //do some calculation on the window size, to position stuff
+OutputHotkeyString(2, y, "Toggle", "Enter");        //define some hotkey
+x += 3;
+OutputHotkeyString(x, y, "Save", "Shift-Enter");</pre>
+
+== List columns ==
+In class <code>ViewscreenChooseMaterial</code>'s private members, you'll see this:
+
+<pre>ListColumn&lt;df::dfhack_material_category&gt; masks_column;</pre>
+
+<code>ListColumn</code> is a template provided by DFHack. Just feed it with anything you like.
+
+== Manipulating DF's data ==
+
+Start with observing the class <code>ItemFilter</code>. You'll notice that DF exposes pretty much every possible type of object/item from the game. And what DF doesn't, DFHack does. You'll immediately notice these:
+
+* df::dfhack_material_category
+* MaterialInfo
+* df::item_quality
+
+Have a look at <code>vector&lt;string&gt; getMaterialFilterAsVector()</code>. It shows you how to get the description from a material, as a string:
+
+<pre>transform_(materials, descriptions, material_to_string_fn);
+
+if (descriptions.size() == 0)
+    bitfield_to_string(&amp;descriptions, mat_mask);</pre>
+
+== Managing speed ==
+
+Some plugins need to run regular processing, but at a certain rate, in order not to block DF. Here is how <code>buildingplan</code> handles game ticks (important: this is only provided as an out-of-context code snippet, with no further explanations):
+
+<pre>#define DAY_TICKS 1200
+DFhackCExport command_result plugin_onupdate(color_ostream &amp;out)
+{
+    static decltype(world-&gt;frame_counter) last_frame_count = 0;
+    if ((world-&gt;frame_counter - last_frame_count) &gt;= DAY_TICKS/2)
+    {
+        last_frame_count = world-&gt;frame_counter;
+        planner.doCycle();
+    }
+
+    return CR_OK;
+}</pre>
+
+== Modifying an existing viewscreen ==
+Maybe you don't want to add an additional viewscreen, but instead add features to one that already exists in DF. In that case, creating a child to <code>dfhack_viewscreen</code>` (as seen in section "Create your own view screen") and implementing <code>render</code> and <code>feed</code> is not enough. Instead, you need to create a child of DF's actual viewscreen and '''interpose''' those two functions in it.
+
+That's the case of class <code>buildingplan_hook</code> in plugin <code>buildingplan</code>.
+
+You will notice that, unlike <code>ViewscreenChooseMaterial</code>, it extends class <code>df::viewscreen_dwarfmodest</code> instead of <code>dfhack_viewscreen</code>:
+
+<pre>struct buildingplan_hook : public df::viewscreen_dwarfmodest
+{</pre>
+The following instructions are then required to glue everything together:
+
+<pre>DEFINE_VMETHOD_INTERPOSE(void, feed, (set&lt;df::interface_key&gt; *input))
+{
+    ...
+}
+
+DEFINE_VMETHOD_INTERPOSE(void, render, ())
+{   
+    ...
+}</pre>
+Once you've defined how the two functions will insert into DF, you can put them to action:
+
+<pre>IMPLEMENT_VMETHOD_INTERPOSE(buildingplan_hook, feed);
+IMPLEMENT_VMETHOD_INTERPOSE(buildingplan_hook, render);</pre>
+
+Note that this will completely ''replace'' the original viewscreen logic with whatever you provide - in order to call the original code (e.g. for the usual default behavior), you can do "INTERPOSE_NEXT(function_name)(args);". Depending on how the original viewscreen works, you'll have to make sure you do it in the right place.
+
+See also: "Create your own viewscreen"
+
+== CHANGE LOG ==
+* v1.0 Redaction
+* v1.1
+** moved "return CR_OK;" in one of the code snippets
+** corrected a mistake about the need of using "DEFINE_VMETHOD_INTERPOSE"

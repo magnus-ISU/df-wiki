@@ -1,0 +1,269 @@
+<div class="mw-parser-output"><div id="page-quality-rating" style="text-align: right;margin: 0.8em 0;font-size:75%">
+ <a href="/index.php/Dwarf_Fortress_Wiki:Quality#Tattered" title="Dwarf Fortress Wiki:Quality"><span id="stub-quality" style="text-decoration:none; color:#333333">xTATTEREDx</span></a> <span style="font-weight:bold;" class="dot">&#160;·</span> <a href="/index.php/Dwarf_Fortress_Wiki:Quality#Fine" title="Dwarf Fortress Wiki:Quality"><span id="fine-quality" style="text-decoration:none; color:#CA7A02;">+FINE+</span></a> <span style="font-weight:bold;" class="dot">&#160;·</span> <a href="/index.php/Dwarf_Fortress_Wiki:Quality#Superior" title="Dwarf Fortress Wiki:Quality"><span id="superior-quality" style="padding:0.2em; border:1px solid #b8f; border-radius: 2px; -webkit-border-radius: 2px; -moz-border-radius: 2px; -o-border-radius: 2px; -ms-border-radius: 2px; background:#e4ccff; color:#8800cc;">*SUPERIOR*</span></a> <span style="font-weight:bold;" class="dot">&#160;·</span> <a href="/index.php/Dwarf_Fortress_Wiki:Quality#Exceptional" title="Dwarf Fortress Wiki:Quality"><span id="exceptional-quality" style="text-decoration:none; color:#0088CC;">≡EXCEPTIONAL≡</span></a> <span style="font-weight:bold;" class="dot">&#160;·</span> <a href="/index.php/Dwarf_Fortress_Wiki:Quality#Masterwork" title="Dwarf Fortress Wiki:Quality"><span id="masterwork-quality" style="text-decoration:none; color:#72A329;">☼MASTERWORK☼</span></a></div>
+
+<h1><span class="mw-headline" id="Basics">Basics</span></h1>
+<h3><span class="mw-headline" id="Creating_Distributable_Content_Files">Creating Distributable Content Files</span></h3>
+<p>The default way of distributing content for <a href="/index.php/Stonesense" class="mw-redirect" title="Stonesense">Stonesense</a> is to create an archive of the XML configs and the image files. Upload this archive together with a description to the <a href="/index.php/Utility:Stonesense/Content_repository" title="Utility:Stonesense/Content repository">Utility:Stonesense/Content_repository</a> page, in much the same way tilesets and graphic packs are distributed for Dwarf Fortress, see the <a href="/index.php/Tileset_repository" title="Tileset repository">Tileset repository</a> for reference.
+</p><p>Keep in mind that users installing your content pack will need to place the files in the correct content folder (creatures buildings, etc) and add the XML files to their index.txt file.
+</p>
+<h3><span class="mw-headline" id="Multiple_Definition_Files">Multiple Definition Files</span></h3>
+<p>Stonesense searches for images in the order that they are found top to bottom in the index file, then in the definition files. So if you are adding a custom set of sprites for something already in the system, you need to add it to the *top* of the index file.
+</p>
+<h3><span class="mw-headline" id="Tips_and_Tricks">Tips and Tricks</span></h3>
+<p>While simple creature definitions arent much use without a sheetIndex attribute, it can be useful to define variants without giving the base creature a sprite. This would cause the game to keep looking for creature definitions, allowing you to, for example, define custom professions in one file while still using the basic definitions.
+</p>
+<h2><span class="mw-headline" id="Understanding_Sprites">Understanding Sprites</span></h2>
+<p>Understanding how Stonesense deals with sprites is central to anyone who wishes to modify the content. The scheme is not very complicated, and this guide will give a short introduction to how they work.  The way sprites are loaded is fairly generalized. With the exception of floors, which we will discuss later, all sprites are 32x32 pixels big and come in groups known as <i>Sprite Sheets</i>. There are no alpha values yet, so partial transparency is not supported. RGB 255,0,255 (Magenta pink) is considered fully transparent. All sprites are loaded and rendered in 32bit fullcolor pngs.
+</p><p>Here's an example of a typical Stonesense sprite: <br />
+<a href="/index.php/File:Stonesene_sprite_sample.png" class="image"><img alt="Stonesene sprite sample.png" src="/images/5/5f/Stonesene_sprite_sample.png" decoding="async" width="32" height="32" /></a>
+</p><p>Note that, in order not to conflict with neighboring sprites, a sprite must actually be within a smaller area than its 32x32 block. A template for the area used by most sprites is:<br />
+<a href="/index.php/File:Stonesene_sprite_template.png" class="image"><img alt="Stonesene sprite template.png" src="/images/c/c2/Stonesene_sprite_template.png" decoding="async" width="34" height="33" /></a>
+</p><p>The solid area is the floor space taken up by a sprite, while the dotted box indicates the volume above this area corresponding to one z-level.
+</p>
+<h3><span class="mw-headline" id="Sprite_Sheets">Sprite Sheets</span></h3>
+<p>There can be an arbitrary number of sprite sheets configured for Stonesense, yet some are always present as they contain default sprites (see further down). Most of the content XML files allow users to specify sprite sheets, and this is done by adding a <b>file</b> attribute to the content nodes. By convention sprite sheets should be placed in their appropriate folder, with creature sprite sheets in the <i>creatures</i> folder etc. For more information on this, see the specific pages on content configuration. 
+</p><p><b>A very helpful tips for modders:</b> Pressing <b>F10</b> in Stonesense will bring up a screen where one can cycle through all the loaded sprite sheets, with sprite indexes superimposed. 
+</p>
+<h3><span class="mw-headline" id="Sprite_Index">Sprite Index</span></h3>
+<p>Sprite Index (sometimes referred to as Sheet Index) is a concept for referring to a specific sprite on a sheet. The index starts with the upper left sprite which has index zero. It then increments to the right. Stonesense is hardcoded to 20 sprites wide sheets, this means that the last sprite to the right in the first row has Sprite Index 19. The first sprite on the second row has index 20. This boundary is hardcoded and changing the size of the sheet will not affect it.
+</p><p>This image shows how sprites are indexed. Note: Grid added for readability.<br />
+<a href="/index.php/File:Stonesene_indexed_sprites.png" class="image"><img alt="Stonesene indexed sprites.png" src="/images/c/cc/Stonesene_indexed_sprites.png" decoding="async" width="640" height="176" /></a>
+</p>
+<h3><span class="mw-headline" id="Specific_Sprite_Sheets">Specific Sprite Sheets</span></h3>
+<p><b>objects.png</b> is the default sheet for buildings and vegetation. Also used for all hard-coded content, like default plants, the cursor, default walls and liquid.  
+</p><p><b>creatures.png</b> is the default sprite sheet for creatures. If no file is specified in a creature node, this is the sheet it will use.  
+</p><p><b>floors.png</b> holds all the Stonesense floors. Unlike the other sprite sheet, this sheet is hard-coded with sprite dimensions of 32x20 pixels.
+</p><p>Stonesense is fully configurable in the way it renders creatures. No information is hardcoded, but rather loaded from the creature databases found in the creatures directory.
+</p>
+<h1><span class="mw-headline" id="Creatures">Creatures</span></h1>
+<h2><span class="mw-headline" id="index.txt">index.txt</span></h2>
+<p>The first thing the game does when loading the creature configuration is to look in the creatures/index.txt file. It uses this file to tell it what configuration files are available, and in what order to load them (this becomes important later).
+The format of the file very straight forward; each line specifies the path of a file to be loaded. The paths are relative to index.txt.
+</p>
+<h2><span class="mw-headline" id="Creature_XML_files">Creature XML files</span></h2>
+<p>Stonesense is fully configurable in the way it renders creatures. No information is hardcoded, but rather loaded from the creature databases found in the creatures directory.
+</p>
+<h3><span class="mw-headline" id="Simple_configuration">Simple configuration</span></h3>
+<p>In it's simplest from, a creature configuration file might look like this:
+</p>
+<pre>&lt;?xml version="1.0"?&gt;
+&lt;creatures&gt;
+  &lt;creature gameID="MACAQUE_RHESUS" sheetIndex="2" /&gt;
+  &lt;creature gameID="MUSKOX" sheetIndex="25" /&gt;
+  &lt;creature gameID="COW" sheetIndex="5" /&gt;
+&lt;/creatures&gt;
+</pre>
+<p>As you probably guess, this defines three creatures by their ID: A rhesus monkey, a muskox and a cow. The three animals use the sprites numbered 2, 25 and 5 respectively. No special sprite sheet is specified, so the default creature sheet will be used, <i>creatures.png</i>. More on this later.
+</p><p>As you can see, each creature is identified by a <b>gameID</b> attribute. This has to match one of the known creature types in Dwarf Fortress, as defined in the <b>[CREATURE:critter_name]</b> part of the raws. This gameID tag is case sensitive. If Stonesense is unable to match your gameID with one from Dwarf Fortress, a log message will be written to <i>Stonesense.log</i> upon loading a map.
+</p>
+<h3><span class="mw-headline" id="Professions">Professions</span></h3>
+<p>The &lt;creature&gt; tag can be quite a bit more advanced than what we've seen so far. One thing it is often relevant to distinguish is creature professions. A creature's profession is set by the game, and examples might include "WOODCRAFTER", "ADMINISTRATOR" or "MACEMAN". A complete list of creature professions can be found <a href="/index.php/Unit_type_token" title="Unit type token">here</a>. Also note that all races have the same creature strings, meaning a dwarf swordsman will still be a "SWORDS<i>MAN</i>".
+</p><p>To separate creatures on their professions, we first need to add a &lt;variant&gt; node to the base creature node.
+By adding a <b>prof</b> attribute to this node, we can display different sprites for different creature professions. 
+</p><p><b>Note:</b> The game always picks the <i>first</i> &lt;variant&gt; node that matches.
+</p><p>Let's have a look at a typical creature configuration that includes professions:
+</p>
+<pre>&lt;creature gameID="DWARF" sheetIndex="0" file="creatures/dwarves.png"&gt;
+  &lt;variant prof="MINER" sheetIndex="1" /&gt;
+  &lt;variant prof="CLERK" sheetIndex="2" /&gt;
+  &lt;variant prof="AXEMAN" sheetIndex="3" /&gt;
+&lt;/creature&gt;
+</pre>
+<p>Here we see three professions defined. Notice how the &lt;creature&gt; node now has been expanded. 
+</p><p>Also note that the &lt;creature&gt; node still contains a sheetIndex attribute. This is the default creature sprite, meaning that if a dwarf does not match any of the &lt;variant&gt; nodes, it will be shown as this sprite index (in this case 0).
+The corresponding sprite sheet (here called <i>dwarves.png</i>) would look something like this:
+</p><p><a href="/index.php/File:Stonesene_dwarf_prof.png" class="image"><img alt="Stonesene dwarf prof.png" src="/images/a/ad/Stonesene_dwarf_prof.png" decoding="async" width="153" height="33" /></a>
+</p>
+<h3><span class="mw-headline" id="Children_and_babies">Children and babies</span></h3>
+<p>Children and babies always have the professions "CHILD" and "BABY", and these can be used to have indicate creature ages. Consider the following example for cats and kittens:
+</p>
+<pre>&lt;creature gameID="CAT" sheetIndex="20"&gt;
+  &lt;variant prof="CHILD" sheetIndex="21" /&gt;
+&lt;/creature&gt;
+</pre>
+<p>Here the cat sprite would be at index 20, and kittens at 21.
+</p>
+<h3><span class="mw-headline" id="Creature_Genders">Creature Genders</span></h3>
+<p>Each &lt;variant&gt; node can be extended with a <i>sex</i> attribute to add an additional condition for creature gender.
+For most races. dwarves included, the attribute can have one of two values, "M" for male or "F" for female. However, if the creature has more than two castes, a number must be used, starting from "1", and continuing in order that the castes are listed in the rawfile.  As of Stonesense Felsite v3.1, castes can be specified by name such as caste="WARRIOR".
+Again a simple example would be beneficial:
+</p>
+<pre>&lt;creature gameID="HUMAN" sheetIndex="100"&gt;
+  &lt;variant prof="BOWMAN" sex="M" sheetIndex="106" /&gt;
+  &lt;variant prof="BOWMAN" sex="F" sheetIndex="107" /&gt;
+  &lt;variant sex="F" sheetIndex="101" /&gt;
+&lt;/creature&gt;
+</pre>
+<p>This simplified human config shows two different sprites used for bowmen. Male bowmen will use sprite index 106 and female bow-women will use 107. 
+Another very important thing to note here is the last entry, which only specifies a gender, and no profession. This means the only criteria for this node is that the creature is Human, and it's female. Hence 101 is the default sprite for human females. Together with the default sprite defined in the &lt;creature&gt; node itself (sheetIndex = 100), it allows us to have separate default sprites for men and women.
+</p>
+<h3><span class="mw-headline" id="Special_Creatures">Special Creatures</span></h3>
+<p>Sometimes creatures appear as zombies, or skeletons. To tell these creatures apart from normal ones, you can use the <b>special</b> attribute to the &lt;variant&gt; node. 
+It accepts three types of arguments, <i>Normal</i>, <i>Zombie</i> or <i>Skeleton</i>,
+and is used in the exact same way as the <b>sex</b> attribute.
+</p>
+<h3><span class="mw-headline" id="Coloring_creatures">Coloring creatures</span></h3>
+<p>As of Stonesense Slate RC2, creatures can be automatically colored by numerous factors, using the <i>color</i> attribute. Valid values are:
+</p><p><i>profession</i>: The sprite is colored according to the creature's current profession. this works the same way as in Dwarf Fortress.
+</p><p><i>bodypart</i>: The sprite is colored according to one of the creatures body part colors. this requires an additional <i>bodypart</i> attribute that describes which body part to get the color from.
+</p><p><i>material</i>: The sprite is colored according to the floor it is standing on. this probably not very useful, unless you have a chameleon creature.
+</p><p><i>vein</i>: Same as above, but the color comes from the ore veins, disregarding constructions.
+</p><p><i>layer</i>: Same as above, but the color comes from the rock layer, disregarding veins and constructions.
+</p><p><i>xml</i>: Manually specify a color in the creature definition, requires additional <i>red</i>, <i>green</i>, and <i>blue</i> attributes.
+</p><p><i>none</i>: No color is used.
+</p><p>An example:
+</p>
+<pre>&lt;creature gameID="HUMAN" sheetIndex="0"&gt;
+  &lt;variant sex="M" sheetIndex="4" color="profession" /&gt;
+  &lt;variant sex="F" sheetIndex="4" color="bodypart" bodypart="skin" /&gt;
+  &lt;variant sex="F" job="AXEMAN" sheetIndex="4" color="xml" red="123" green="0" blue="255" /&gt;
+&lt;/creature&gt;
+</pre>
+<h3><span class="mw-headline" id="Subsprites">Subsprites</span></h3>
+<p>Each creature definition can also have any number of subsprites that are layered onto it like a paper doll. each subsprite can be colored differently, so you can have, say, a dwarf with a base sprite, a hair sprite, that's colored according to the hair-color of the dwarf, and a skin sprite, that's colored according to the skin-color of the dwarf.
+</p><p>An example should help:
+</p><p><a href="/index.php/File:Japa_gobbos.png" class="image"><img alt="Japa gobbos.png" src="/images/2/21/Japa_gobbos.png" decoding="async" width="256" height="32" /></a>
+</p>
+<pre>&lt;?xml version="1.0"?&gt;
+&lt;creatures&gt;
+  &lt;creature gameID="GOBLIN" sheetIndex="0" file="gobbos.png" color="bodypart" bodypart="skin"&gt;
+    &lt;subsprite sheetIndex="1" color="bodypart" bodypart="hair" /&gt;
+    &lt;subsprite sheetIndex="2" /&gt;
+    &lt;subsprite sheetIndex="3" color="profession" /&gt;
+    &lt;variant sex="F" sheetIndex="4" color="bodypart" bodypart="skin"&gt;
+      &lt;subsprite sheetIndex="5" color="bodypart" bodypart="hair" /&gt;
+      &lt;subsprite sheetIndex="6" /&gt;
+      &lt;subsprite sheetIndex="7" color="profession" /&gt;
+    &lt;/variant&gt;
+  &lt;/creature&gt;
+&lt;/creatures&gt;
+</pre>
+<p>Here, we have a main goblin sprite, that is colored according to the skin color of the individual goblin (usually a shade of green) this is the goblin's body. Then a second sprite is layered over it, which is the hair sprite, and is colored according to the hair. The third layer has no color change, and contains things like claws and eyes, that we don't want to be colored. The final layer contains the clothes, which are colored according to the goblin's profession. this will give us the following completed sprite:
+</p><p><a href="/index.php/File:Japa_gobbo.png" class="image"><img alt="Japa gobbo.png" src="/images/b/b5/Japa_gobbo.png" decoding="async" width="64" height="64" /></a>
+</p>
+<h3><span class="mw-headline" id="Animating_Creatures">Animating Creatures</span></h3>
+<p>Adding animations to creatures is really quite simple. But before we dive into it, it makes sense to look at how Stonesense animations work.
+</p><p>Currently, the game cycles through six frames at a steady pace. The speed at which these frames are cycles can be specified in the init file, but it global and shared between all sprites.
+</p><p>To add animations to a creature, we add another condition attribute, <i>frames</i>, to the &lt;variant&gt; node, like this:
+</p>
+<pre>  &lt;variant sheetIndex = 7 frames = "012" /&gt;
+</pre>
+<p>Here frames is set to the value "012". This means that this variant node is valid at frames 0, 1 and 2. It is NOT valid, at frames 3, 4 and 5. Remember there are six frames in total, from 0 to 5.
+The value of the frames attribute is treated as a string, not as a number. This is important to note, as "frames=354" has the same effect as <i>frames=453</i>, and indeed also <i>frames="3 5, 4"</i> or <i>frames="3x5@ .4"</i>. The invalid characters are simply ignored.
+</p><p>An example
+Let's make an animated Giant Bat, using this awesome sprite sheet made by Beefmo:
+</p><p><a href="/index.php/File:Beefmo_giantbat.png" class="image"><img alt="Beefmo giantbat.png" src="/images/4/47/Beefmo_giantbat.png" decoding="async" width="96" height="32" /></a>
+</p><p>Now, to configure up a basic animation for a giant bat, we could add something like this to Wildlife.xml:
+</p>
+<pre>&lt;creature gameID="BAT_GIANT" sheetIndex = 0 file="giantbat.png" &gt; 
+  &lt;variant sheetIndex = 2 frames = "345"/&gt;
+&lt;/creature&gt;
+</pre>
+<p>This will create a simple 2-frame animation. Each frame is used for the same length of time, since the default is used for frames 0, 1 and 2, and the overriding variant is used for frames 3, 4 and 5.
+Hint: If you want the bat to flap its wings faster, change the frames for the variant to "024".
+</p><p>But Beefmo's giant bat sheet has three frames, so let's add them all for a complete animation:
+</p>
+<pre>&lt;creature gameID="BAT_GIANT" sheetIndex = 0 file="giantbat.png" &gt; 
+  &lt;variant sheetIndex = 0 frames = "05"/&gt;
+  &lt;variant sheetIndex = 1 frames = "14"/&gt;
+  &lt;variant sheetIndex = 2 frames = "23"/&gt;
+&lt;/creature&gt;
+</pre>
+<p>Notice how the frames are used twice, to make a nice cyclic animation. 
+The indexed sprites will be drawn in order 0 1 2 2 1 0.
+</p>
+<h1><span class="mw-headline" id="Vegetation">Vegetation</span></h1>
+<p>Vegetation content can be found in the <i>vegetation</i> folder of Stonesense.
+</p><p>Just like with all the other configurable content, the active plant and shrub XML files are outlined in an <i>index.txt</i> file.
+</p><p>The buildup of these XML files is very simple. Take a look at this example config file for trees:
+</p>
+<pre>&lt;?xml version="1.0"&#160;?&gt;
+&lt;trees file="vegetation/trees.png"&gt;
+  &lt;plant gameID = "ACACIA" sheetIndex = 0 /&gt;
+  &lt;plant gameID = "ALDER" sheetIndex = 1 /&gt;
+  &lt;plant gameID = "ASH" sheetIndex = 2 /&gt;
+  &lt;plant gameID = "BIRCH" sheetIndex = 31 /&gt;
+&lt;/trees&gt;
+</pre>
+<p>And this one for shrubs:
+</p>
+<pre>&lt;?xml version="1.0"&#160;?&gt;
+&lt;shrubs file="vegetation/shrubs.png"&gt; 
+  &lt;plant gameID = "MUSHROOM_HELMET_PLUMP" sheetIndex = 0 /&gt;
+  &lt;plant gameID = "GRASS_TAIL_PIG" sheetIndex = 1 /&gt;
+  &lt;plant gameID = "GRASS_WHEAT_CAVE" sheetIndex = 2 /&gt;
+  &lt;plant gameID = "POD_SWEET" sheetIndex = 3 /&gt;
+&lt;/shrubs&gt;
+</pre>
+<p>Note that the only difference is the root node, both of which contain &lt;plant&gt; nodes.
+The plant nodes should be rather straight forward; it only has two attributes:
+</p>
+<ul><li>gameID: the name of the shrub or tree, as defined by the DF raw files. See here <a href="/index.php/Talk:Stonesense:Adding_Vegetation" class="mw-redirect" title="Talk:Stonesense:Adding Vegetation">for a complete list</a>.</li>
+<li><a href="/index.php/Stonesense:Sprites#Sprite_Index" class="mw-redirect" title="Stonesense:Sprites">sheetIndex</a>: the index of the sprite to be drawn for this plant.</li></ul>
+<p>Which sprite sheet the sheetIndex attributes refers to is specified by the file attribute in the root node.
+The examples above uses "trees.png" and "shrubs.png" respectively.
+If no file is specified, it will use the Objects.png in the Stonesense root folder.
+</p><p>Tree saplings and dead trees can be defined as well by adding the appropriate keywords to their plant entry:
+</p>
+<pre>  &lt;plant gameID = "ALDER" dead="true" sapling="true" sheetIndex = 31 /&gt;
+</pre>
+<p>There is no support for young shrubs, so the "sapling" keyword does nothing for shrubbery.
+At present, (in Stonsense Granite) the value of the "dead" and "sapling" keywords is ignored, so:
+</p>
+<pre>  &lt;plant gameID = "ALDER" dead="false" sapling="true" sheetIndex = 31 /&gt;
+</pre>
+<p>... will still select for dead saplings.
+</p>
+<h1><span class="mw-headline" id="Buildings">Buildings</span></h1>
+<p>Building content can be found in the <i>buildings</i> folder of Stonesense.
+</p><p>As with other content, the content is outlined with an <i>index.txt</i> file, but unlike other content, the included content is very complex and difficult to follow.
+</p><p>Each tile in a workshop has a PositionIndex, starting at 0 for the northwest corner as shown in the 3x3 examples below:
+</p><p><a href="/index.php/File:SimpleWorkshopExample.png" class="image"><img alt="SimpleWorkshopExample.png" src="/images/5/5b/SimpleWorkshopExample.png" decoding="async" width="1086" height="701" /></a>
+</p><p>This workshop was generated from the simplest possible code, to serve as an example for basic workshop construction.  Far more advanced processing is possible, as can be seen from the content included with Stonesense.
+</p>
+<pre>&lt;?xml version="1.0"&#160;?&gt;
+
+&lt;building name="Example Building" game_type="Workshop" game_subtype="Custom" game_custom="TEST" file="TEST.png"&gt; 
+    
+    &lt;if&gt;
+        &lt;PositionIndex value=0 /&gt;
+        &lt;sprite index=0 /&gt;
+    &lt;/if&gt;
+    &lt;if&gt;
+        &lt;PositionIndex value=1 /&gt;
+        &lt;sprite index=1 /&gt;
+    &lt;/if&gt;
+    &lt;if&gt;
+        &lt;PositionIndex value=2 /&gt;
+        &lt;sprite index=2 /&gt;
+    &lt;/if&gt;
+    &lt;if&gt;
+        &lt;PositionIndex value=3 /&gt;
+        &lt;sprite index=3 /&gt;
+    &lt;/if&gt;
+    &lt;if&gt;
+        &lt;PositionIndex value=4 /&gt;
+        &lt;sprite index=4 /&gt;
+    &lt;/if&gt;
+    &lt;if&gt;
+        &lt;PositionIndex value=5 /&gt;
+        &lt;sprite index=5 /&gt;
+    &lt;/if&gt;
+    &lt;if&gt;
+        &lt;PositionIndex value=6 /&gt;
+        &lt;sprite index=6 /&gt;
+    &lt;/if&gt;
+    &lt;if&gt;
+        &lt;PositionIndex value=7 /&gt;
+        &lt;sprite index=7 /&gt;
+    &lt;/if&gt;
+    &lt;if&gt;
+        &lt;PositionIndex value=8 /&gt;
+        &lt;sprite index=8 /&gt;
+    &lt;/if&gt;
+    
+&lt;/building&gt; 
+</pre>
+<p>The above XML code and this graphic produced the example seen above.  Note that only the "floor" of each tile was defined in this spritesheet.  Actual workshops would likely include taller images.
+</p><p><a href="/index.php/File:SimpleSpritesheetExample.png" class="image"><img alt="SimpleSpritesheetExample.png" src="/images/e/e8/SimpleSpritesheetExample.png" decoding="async" width="320" height="32" /></a>
+</p></div>

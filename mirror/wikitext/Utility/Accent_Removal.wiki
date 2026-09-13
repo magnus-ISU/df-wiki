@@ -1,0 +1,276 @@
+==Overview==
+[[Image:Rj-unitlist.png|thumb|right|Replacing accented letters with normal ones in the raws fixes this problem.]]
+Some tile sets use the accented characters for additional graphical symbols. This can make racial language text difficult to read. You can remove the accented characters and symbols from the data files. This works on existing worlds and saved games.
+
+Since the structure of language files might change, it is safest if you remove the problem characters from the files yourself. Here are four methods to do just that. The first (Jackard's) only works on Windows, but is probably the easiest for novice users. The second (frobnic8's) will work anywhere Python does (i.e. just about anywhere). The third is a quick fix that works in Linux and the fourth is a small Windows application.
+
+==[[User:Jackard|Jackard]]'s [http://www.inforapid.de/html/searchreplace.htm InfoRapid] Script== 
+Download [http://www.inforapid.de/html/searchreplace.htm Inforapid Search and Replace.]
+
+Save the list below to a text file.
+
+Find the following files in <code>DF\raw\objects</code>:
+*<code>language_DWARF.txt</code>
+*<code>language_ELF.txt</code>
+*<code>language_GOBLIN.txt</code>
+*<code>language_HUMAN.txt</code>
+
+Select them all, right-click and choose 'Search with InfoRapid' from the menu.
+
+Click the Replace tab that shows up in the lower half of the window.
+
+Select your text file from before in the Replace With field, make sure Replace is set to 'Whole Search Expression' and click Start.
+
+A prompt will appear asking for confirmation. Check the Replace All button and click Yes. When the program stops running you are done.
+
+<pre><Command>
+	<Search>„</Search>
+	<Replace>a</Replace>
+</Command>
+<Command>
+	<Search> </Search>
+	<Replace>a</Replace>
+</Command>
+<Command>
+	<Search>ƒ</Search>
+	<Replace>a</Replace>
+</Command>
+<Command>
+	<Search>†</Search>
+	<Replace>a</Replace>
+</Command>
+<Command>
+	<Search>…</Search>
+	<Replace>a</Replace>
+</Command>
+<Command>
+	<Search>‡</Search>
+	<Replace>c</Replace>
+</Command>
+<Command>
+	<Search>‰</Search>
+	<Replace>e</Replace>
+</Command>
+<Command>
+	<Search>‚</Search>
+	<Replace>e</Replace>
+</Command>
+<Command>
+	<Search>Š</Search>
+	<Replace>e</Replace>
+</Command>
+<Command>
+	<Search>ˆ</Search>
+	<Replace>e</Replace>
+</Command>
+<Command>
+	<Search>‹</Search>
+	<Replace>i</Replace>
+</Command>
+<Command>
+	<Search></Search>
+	<Replace>i</Replace>
+</Command>
+<Command>
+	<CaseSensitive>Yes</CaseSensitive>
+	<Search>¡</Search>
+	<Replace>i</Replace>
+</Command>
+<Command>
+	<Search>Œ</Search>
+	<Replace>i</Replace>
+</Command>
+<Command>
+	<Search>¤</Search>
+	<Replace>n</Replace>
+</Command>
+<Command>
+	<Search>•</Search>
+	<Replace>o</Replace>
+</Command>
+<Command>
+	<Search>”</Search>
+	<Replace>o</Replace>
+</Command>
+<Command>
+	<Search>“</Search>
+	<Replace>o</Replace>
+</Command>
+<Command>
+	<Search>¢</Search>
+	<Replace>o</Replace>
+</Command>
+<Command>
+	<Search>—</Search>
+	<Replace>u</Replace>
+</Command>
+<Command>
+	<Search>–</Search>
+	<Replace>u</Replace>
+</Command>
+<Command>
+	<Search>£</Search>
+	<Replace>u</Replace>
+</Command>
+<Command>
+	<Search>˜</Search>
+	<Replace>y</Replace>
+</Command>
+</pre>
+
+==[[User:Frobnic8|frobnic8]]'s Modified [http://www.python.org Python] Script==
+If you have the programming language Python installed on your machine (or don't mind installing it) and aren't scared of a command prompt, here is an alternate method. Python comes pre-installed on Mac OS X and almost all distributions of Linux. (If you are using Windows, the command line instructions shown will need to be modified slightly.)
+
+<ol>
+<li>Ensure you have [http://www.python.org Python] installed.</li>
+<li>Copy and paste code below into a file called <code>ascii_hammer.py</code> in the <code>raw/objects</code> sub-directory of your Dwarf Fortress directory. (The ASCII Hammer: Is that a name worthy of Dwarf Fortress, or what?)<p><pre>
+#!/usr/bin/env python
+"""Convert Dwarf Fortress Language files from extended ascii to
+unaccented ascii. Based on the unicode hammer from:
+http://code.activestate.com/recipes/251871-latin1-to-ascii-the-unicode-hammer/
+
+by frobnic8
+"""
+
+
+from glob import glob
+from shutil import move
+
+def latin1_to_ascii(unicrap):
+    """This takes a UNICODE string and replaces Latin-1 characters with
+    something equivalent in 7-bit ASCII. It returns a plain ASCII string.
+    This function makes a best effort to convert Latin-1 characters into
+    ASCII equivalents. It does not just strip out the Latin-1 characters.
+    All characters in the standard 7-bit ASCII range are preserved.
+    In the 8th bit range all the Latin-1 accented letters are converted
+    to unaccented equivalents. Most symbol characters are converted to
+    something meaningful. Anything not converted is deleted.
+    """
+    xlate = {
+            0x80: 'C',
+            0x81: 'u',
+            0x82: 'e',
+            0x83: 'a',
+            0x84: 'a',
+            0x85: 'a',
+            0x86: 'a',
+            0x87: 'c',
+            0x88: 'e',
+            0x89: 'e',
+            0x8a: 'e',
+            0x8b: 'i',
+            0x8c: 'i',
+            0x8d: 'i',
+            0x8e: 'A',
+            0x8f: 'A',
+            0x90: 'E',
+            0x91: 'ae',
+            0x92: "AE",
+            0x93: 'o',
+            0x94: "o",
+            0x95: 'o',
+            0x96: 'u',
+            0x97: 'u',
+            0x98: 'y',
+            0x99: 'O',
+            0x9a: 'U',
+            0x9b: 'c',
+            0x9c: 'E',
+            0x9d: 'Y',
+            0x9e: 'P',
+            0x9f: 'f',
+            0xa0: 'a',
+            0xa1: 'i',
+            0xa2: 'o',
+            0xa3: 'u',
+            0xa4: 'n',
+            0xa5: 'N',
+            0xa6: 'a',
+            0xa7: 'o',
+            0xa8: 'b',
+            0xa9: 'r',
+            0xaa: 'n',
+            0xab: '1/2',
+            0xac: '1/4',
+            0xad: 'i',
+            0xae: '<<',
+            0xaf: '>>',
+            0xe0: 'a',
+            0xe1: 'B',
+            0xe2: 't',
+            0xe3: 'n',
+            0xe4: 'E',
+            0xe5: 'o',
+            0xe6: 'u',
+            0xe7: 't',
+            0xe8: 'o',
+            0xe9: 'o',
+            0xea: 'o',
+            0xeb: 'o',
+            0xec: 'oo',
+            0xed: 'o',
+            0xee: 'e',
+            0xef: 'N',
+            0xf0: 'E',
+            0xf1: 't',
+            0xf2: 'D',
+            0xf3: 'k',
+            0xf4: 'f',
+            0xf5: 'j',
+            0xf6: 'i',
+            0xf7: 'e',
+            0xf8: 'o',
+            0xf9: 'o',
+            0xfa: 'i',
+            0xfb: 'v',
+            0xfc: 'n',
+            0xfd: 'z',
+            }
+
+
+    r = ''
+    for i in unicrap:
+        if ord(i) in xlate:
+            r += xlate[ord(i)]
+        elif ord(i) >= 0x80:
+            pass
+        else:
+            r += str(i)
+    return r
+
+if __name__ == '__main__':
+    for lang in glob('language_*'):
+        source = open(lang)
+        dest = open('tmp_' + lang, 'w')
+        for line in source:
+            dest.write(latin1_to_ascii(line))
+        source.close()
+        dest.close()
+	move(lang, 'orig_' + lang)
+        move('tmp_' + lang, lang)
+
+</pre></p></li>
+<li>Double click on the <code>ascii_hammer.py</code> file in the folder.
+<li>Enjoy!</li>
+</ol>
+
+== The Linux way ==
+
+Conversion between character sets is a standard part of Linux.  To convert all the files in one go, change to the "raw/objects" directory and run this command:
+
+ for f in language_*.txt; do \
+   iconv -f CP437 -t ASCII//TRANSLIT $f > $f.new; \
+   mv -fv $f.new $f; \
+ done
+
+All accented characters are converted to their normal, non-accented versions.  Other characters (if any) are converted to their closest 7-bit ASCII representation.
+
+This will overwrite the original language files.  If you want them back, you can always unzip them again:
+
+ unzip -j '''''path-to-zipfile''''' raw/objects/language_\*.txt
+
+== [[User:Hermano|Hermano]]s small app ==
+
+For Windows users there is this small [http://dffd.wimbli.com/file.php?id=2088 application] that replaces accented characters from files by just dragging & dropping the file on the application icon.
+
+[[category:Utility:Outdated]]

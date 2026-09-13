@@ -1,0 +1,298 @@
+<div class="mw-parser-output"><table class="version-table" style="text-align: center; margin: 3px auto 5px; padding: 0.25em; padding-top:1em; border-radius: 3px; -webkit-border-radius: 3px; -moz-border-radius: 3px; -o-border-radius: 3px; -ms-border-radius: 3px;; border: 2px solid #ddbb88; background: #fff5ee; min-width:27em"><tbody><tr><td style="padding: 0.3em 0.3em; width: 100%;"><span>This utility page is about v0.34.11, an <b>older version</b> of DF.</span><br />
+<div style="float: right; font-size:75%; padding-right:2px; margin-top:-2px; margin-bottom:-7px;"><span class="version-link"><a href="/index.php/Template:Uv" class="mw-redirect" title="Template:Uv"><span style="text-decoration: none; color: #CA7A02;">More Info</span></a></span></div></td></tr>
+</tbody></table>
+<p>WARNING: this page is very outdated and has not been maintained since early 2012. 
+</p>
+
+<h2><span class="mw-headline" id="DFusion_info_page">DFusion info page</span></h2>
+<p>Thread for discussions: <a rel="nofollow" class="external text" href="http://www.bay12forums.com/smf/index.php?topic=93317.0">Thread</a>
+</p>
+<h2><span class="mw-headline" id="Usage">Usage</span></h2>
+<p>Dfusion plugin offers four DFhack commands: 'dfusion', 'dfuse' and 'lua', 'runlua'.
+</p>
+<h3><span class="mw-headline" id="lua">lua</span></h3>
+<p>Runs an interactive lua console. For more on lua commands see <a rel="nofollow" class="external text" href="http://www.lua.org/manual/5.1/manual.html">Lua reference manual</a> or google "lua". Also this command could be ran with filepath as an argument. Then it runs that file as a lua script file. E.g. <i>lua dfusion/temp.lua</i> runs a file  &lt;your df path&gt;/dfusion/temp.lua.
+</p>
+<h3><span class="mw-headline" id="runlua">runlua</span></h3>
+<p>Similar to <i>lua &lt;filename&gt;</i> but not interactive, to be used with hotkeys
+</p>
+<h3><span class="mw-headline" id="dfusion">dfusion</span></h3>
+<p>First this command runs all plugins' init.lua part then show a menu. Type number to run specified plugin.
+</p><p>Note: You may see the following error when running dfusion in DFHack: "dfusion/common.lua:45: . Text region not found!"
+</p><p>You just have to do an easy text change to fix it.  Find this line in DF/dfusion/common.lua (it's near the top):
+local pos=string.find(v.name,".text") or string.find(v.name,"libs/Dwarf_Fortress")
+</p><p>Then, replace ".text" with "Dwarf Fortress.exe" and save.
+</p>
+<h3><span class="mw-headline" id="dfuse">dfuse</span></h3>
+<p>Similar to dfusion but not interactive. To be used with hotkeys (later will have command support).
+</p><p><br />
+Also dfuse/dfusion runs an init script located at 'save directory/dfusion/init.lua'. And 'initcustom.lua' if it exists
+</p>
+<h2><span class="mw-headline" id="Exported_functions_and_objects">Exported functions and objects</span></h2>
+<p>The DF is accessed by object 'df'. This object holds all the types, globals table and some helper functions.
+Up-to-date api help could be found here: <a rel="nofollow" class="external free" href="https://github.com/peterix/dfhack/blob/master/LUA_API.rst">https://github.com/peterix/dfhack/blob/master/LUA_API.rst</a>
+</p>
+<h3><span class="mw-headline" id="Examples">Examples</span></h3>
+<pre>first_unit=df.global.world.units.all[0] --gets first unit
+first_unit.name.first_name="Urist"
+</pre>
+<p>You can iterate in all the objects:
+</p>
+<pre>for k,v in pairs(df.global.world.units.all) do --gets ALL the units
+   v.name.first_name="Urist" --now everyone will be called URIST!!
+end
+</pre>
+<p>Also all the flags can be accessed by name or by number:
+</p>
+<pre>first_unit.flags1.dead=true --is same as...
+first_unit.flags1[1]=true --... this
+</pre>
+<p>For convienence there is function printall:
+</p>
+<pre>printall(df.global.world.units.all) --prints all the units, with locations in memory
+</pre>
+<h3><span class="mw-headline" id="Other_objects">Other objects</span></h3>
+<h4><span class="mw-headline" id="Console.">Console.</span></h4>
+<table class="wikitable">
+
+<tbody><tr>
+<th>name
+</th>
+<th>description
+</th>
+<th>example
+</th></tr>
+<tr>
+<td>print
+</td>
+<td>prints a message to dfhack console
+</td>
+<td>Console.print("Hello world!")
+</td></tr>
+<tr>
+<td>printerr
+</td>
+<td>prints an error message to dfhack console
+</td>
+<td>Console.printerr("Error  world!")
+</td></tr>
+<tr>
+<td>clear
+</td>
+<td>clears console
+</td>
+<td>Console.clear()
+</td></tr>
+<tr>
+<td>color
+</td>
+<td>sets text color
+</td>
+<td>Console.color(2)
+</td></tr>
+<tr>
+<td>reset_color
+</td>
+<td>resets text color to defaults
+</td>
+<td>Console.reset_color()
+</td></tr>
+<tr>
+<td>cursor
+</td>
+<td>sets if the cursor should be visible
+</td>
+<td>Console.cursor(true)
+</td></tr>
+<tr>
+<td>msleep
+</td>
+<td>waits for x milliseconds
+</td>
+<td>Console.msleep(200)
+</td></tr>
+<tr>
+<td>get_columns
+</td>
+<td>returns number of columns in the console
+</td>
+<td>Console.get_columns()
+</td></tr>
+<tr>
+<td>get_rows
+</td>
+<td>returns number of rows in the console
+</td>
+<td>Console.get_rows()
+</td></tr>
+<tr>
+<td>lineedit
+</td>
+<td>asks user for input
+</td>
+<td>Console.lineedit("Type in your name:")
+</td></tr></tbody></table>
+<h4><span class="mw-headline" id="Process.">Process.</span></h4>
+<h4><span class="mw-headline" id="VersionInfo.">VersionInfo.</span></h4>
+<h4><span class="mw-headline" id="engine.">engine.</span></h4>
+<table class="wikitable">
+
+<tbody><tr>
+<th>name
+</th>
+<th>description
+</th>
+<th>example
+</th></tr>
+<tr>
+<td>peek(b\w\d)
+</td>
+<td>reads byte\word\double word from memory
+</td>
+<td>peekb(0x15486)
+</td></tr>
+<tr>
+<td>peekarb
+</td>
+<td>reads a chunk of memory
+</td>
+<td>peekarb(0x15486,100) -- reads 100 bytes from 0x15486
+</td></tr>
+<tr>
+<td>peekstr
+</td>
+<td>reads a string from memory
+</td>
+<td>peekstr(0x15486)
+</td></tr>
+<tr>
+<td>poke(b\w\d)
+</td>
+<td>writes byte\word\double word to memory
+</td>
+<td>peekb(0x15486,100)
+</td></tr>
+<tr>
+<td>pokearb
+</td>
+<td>writes a chunk of memory (gotten with peekarb)
+</td>
+<td>pokearb(0x15486,data,100) -- writes 100 bytes from data to 0x15486
+</td></tr>
+<tr>
+<td>pokestr
+</td>
+<td>writes a string to memory
+</td>
+<td>pokestr(0x15486,"Hello world")
+</td></tr></tbody></table>
+<h4><span class="mw-headline" id="FunctionCall.">FunctionCall.</span></h4>
+<table class="wikitable">
+
+<tbody><tr>
+<th>name
+</th>
+<th>description
+</th>
+<th>example
+</th></tr>
+<tr>
+<td>call(f_ptr,calling_convention,arguments...)
+</td>
+<td>calls a function from df. Supports up to 7 arguments. Danger: this could (and probably will) crash df if used incorrectly.
+</td>
+<td>FunctionCall.call(somepointertofunction,FunctionCall.THIS_CALL,thisptr)
+</td></tr>
+<tr>
+<td>THIS_CALL
+</td>
+<td>a numeric constant for function calling convention.
+</td>
+<td>-
+</td></tr>
+<tr>
+<td>STD_CALL
+</td>
+<td>-"-
+</td>
+<td>-
+</td></tr>
+<tr>
+<td>FAST_CALL
+</td>
+<td>-"-
+</td>
+<td>-
+</td></tr>
+<tr>
+<td>CDECL_CALL
+</td>
+<td>-"-
+</td>
+<td>-
+</td></tr></tbody></table>
+<h3><span class="mw-headline" id="From_scripts">From scripts</span></h3>
+<p>These commands are exported from script files. Most of them are in "common.lua" file.
+</p>
+<h3><span class="mw-headline" id="Patterns">Patterns</span></h3>
+<p>DEPRECATED use df.&lt;subitem&gt;
+</p>
+<h2><span class="mw-headline" id="How_to">How to</span></h2>
+<p>This section explains in detail some of more complex things that could be done with dfusion.
+</p><p>Individual units can be modified - skills, jobs, attributes, etc. This example selects a unit under the look cursor, updates the name and updates the level and experience for selected skills. 
+</p>
+<pre>--Takes a selected unit and instantly turns them into Morul - upgrading all appropriate skills to Legendary or higher, as appropriate
+--By Martin, 5/25/2012, excerpt for demonstration purposes
+--This code gets cut/pasted at the end of /dfusion/tools/init.lua
+function tools.morul(unit)
+  --include the utils library which we need later
+  utils = require 'utils'
+  --a unit address can be passed into this function, handle the case where one isn't
+  if unit==nil then
+    unit=getCreatureAtPointer()  --place the x pointer on top of the creature you want to change. best use is the look pointer 'k' and not 'v'
+  end
+  --Set the name. Surname is comprised of an array of references [words] into the language file. Each entry grabs a word fragment and the name is all of these catenated 
+  unit.name.first_name = "Morul"
+  unit.name.words[0] = 1416  --[T_WORD:CHANNEL:catten]
+  unit.name.words[1] = 1304  --[T_WORD:BEND:mat]
+
+  --skill level we wish to apply to all labors. Dabbling is 0, Legendary is 15
+  labor_rating = 15
+  --the skill level we wish to apply to all military skills. 
+  military_rating = 70
+  
+  --These are the skill ids we want to add. The ids were identified in game_data.ini in DwarfTherapist.
+  skill = { 0,2,3,4,5,6,7,8,9,10,11,12,13,14,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,41,42,43,44,45,46,47,48,49,54,55,57,58,59,60,61,62,63,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80,81,82,83,84,85,86,87,88,89,95,96,97,98,99,100,101,102,103,104,105,109,110,111,112,113,114,115 }
+  --These are the military skills that will get higher values. Subset of the list above.
+  military = { 38,39,41,42,43,44,45,46,54,99,100,101,102,103,104,105 }
+
+  --ipairs iterates over each indexed item in the skill list. Lua index is 1 based, so remember that.
+  for sk,sv in ipairs(skill) do
+    --assume the labor rating will apply
+    new_rating = labor_rating
+    --iterate over the military list
+    for _,v in ipairs(military) do
+      --if the value from the skill list iteration is in the military list...
+      if v == sv then
+        --then use the military skill level
+        new_rating = military_rating
+      end
+    end
+    --the skills need to be inserted in a particular way. This standard function passes the id, the skill level, and the experience value, and tells the tool to keep the skills sorted by id. 
+    --the experience calculation reflects the minimum experience to earn the level and allows skills to continue to advance.
+    utils.insert_or_update(unit.status.current_soul.skills, { new = true, id = sv, rating = new_rating, experience = (new_rating * 500) + (new_rating * (new_rating - 1)) * 50}, 'id')
+  end
+  
+  -- walk over each of the skills we just set and print them out so we can confirm each update
+  for sk,sv in ipairs(unit.status.current_soul.skills) do
+    -- print the skill data. Printall will print entire tables and is handy at poking at the data structures
+    printall(sv)
+  end
+end
+
+--add the function above to the dfusion menu system as a submenu under the 'Tools' menu.
+tools.menu:add("Morul",tools.morul)
+</pre>
+<h2><span class="mw-headline" id="Tips_and_Tricks">Tips and Tricks</span></h2>
+<ul><li>To use dfusion's functionality in lua first run <i>dfuse</i> and then use run <i>lua</i></li>
+<li>You can bind keys to lua commands (in dfusion context) like this: <i>keybindings add Shift-R "dfuse adv_tools.reincarnate()"</i></li></ul></div>

@@ -1,0 +1,67 @@
+{{Quality|Superior|00:45, 6 November 2013 (UTC)}}
+{{uv|DF2014}}
+{{Infobox utility
+| image = File:Breezeicons-mimetypes-64-audio-x-generic.svg<!-- replace with logo if available-->
+| misc  =
+* [http://df.zweistein.cz/soundsense/ Official website]
+* [http://www.bay12forums.com/smf/index.php?topic=60287 Bay12forum thread]
+* [http://dffd.bay12games.com/file.php?id=11849 DFFD download page]
+* [https://github.com/zwei2stein/df-soundsense Github page]
+* [[Utility:SoundSense/Documentation|Documentation]]
+}}
+[[File:soundsense_prev.png|thumb|200px|Equipped with a self-updater.]]
+
+'''SoundSense''' is a sound-engine [[Utility]] for Dwarf Fortress, which replaces the single background guitar with a collection of sounds and music that play depending on context. This context is drawn mostly from entries in the [[gamelog.txt]], recent versions of SoundSense come with [[Utility:DFHack|dfhack]] script that writes extra information to the gamelog that significantly expand its capabilities. 
+
+SoundSense has a [[Utility:SoundSense/Documentation|more advanced documentation here on the wiki]].  
+
+==General information==
+
+SoundSense is focused on Fortress Mode, and provides a very large set of audio cues for events - it can be very helpful in alerting the player of combat, a strange mood, ghosts, weather, and many other things.  
+
+Adventure Mode kind of works. The battle sounds function quite well because they are mostly the same as those in Fortress Mode. But SoundSense is still a bit lacking in other adventure sounds, because Adventure Mode does not log many useful events. For example, encountering a megabeast or a quest mob is resolved in chat, leaving no message in the game log to trigger SoundSense.  
+
+Occasionally, the music in SoundSense will stop for a short period; this is not a bug - it was done to let ears rest. A few tracks have a silent start and may take a minute or longer to become audible. If in doubt, you can see what is currently playing in GUI under the volume slider. During periods of silence, this will typically show "10s silence" or similar.  
+
+SoundSense will only play music immediately on load if the (included) "soundsense-season" script for [[Utility:DFHack|DFHack]] is run (which it is in the default configuration) - otherwise it will wait until the season changes; there is no way to tell before this which music to play.
+
+==Installation==
+
+Detailed instructions are available on the [http://df.zweistein.cz/soundsense/ official website].  
+
+* SoundSense requires Java 7, which most computers already have.  
+* Download SoundSense and extract the .zip as a subfolder next to ''Dwarf Fortress'' (or add the path to configuration.xml)
+* Move dfhack plugins and scripts to the hack folder if you use these
+* Run soundsense.exe, and choose "update soundpack"
+
+Note that a simple install of SoundSense includes only a few sample sounds, for the proper effect you need to download the soundpack.  
+
+Finally, remember that SoundSense needs to run in the background. Ideally, you should start SoundSense BEFORE you start ''Dwarf Fortress''.
+
+SoundSense is included and preconfigured in [[Utility:Lazy_Newb_Pack|the Lazy Newb Pack]] and requires no setup beyond pressing "update soundpack" to download the sound files.
+
+==Mod compatibility==
+
+SoundSense was designed for "vanilla" (unmodified) ''Dwarf Fortress''. It should work fine with most mods, but there is no guarantee of compatibility. Some mods create unusual behavior or involve events that SoundSense does not detect - in other words, SoundSense lacks sounds for mod-specific events. For example: gunshot sounds for mods that add guns are not included, but you can add them for yourself. Some events that work normally in vanilla DF may also trigger so frequently with a mod as to be very annoying.
+
+==For Mac Users==
+Installing Java is '''not necessary''' if you have any apps that distribute Java, like Minecraft or Mathematica.  To do this,
+
+# Determine the folder containing the "java" file in the app.  It will have a path like <code>/Applications/Mathematica.app/Contents/SystemFiles/Java/MacOSX-x86-64/bin</code>
+# Add a new line to soundSense.sh '''immediately after the first line''' of the form <code>PATH="EXAMPLEPATH:$PATH"</code>, where <code>EXAMPLEPATH</code> is the path you determined.
+::* For example: <code>PATH="/Applications/Mathematica.app/Contents/SystemFiles/Java/MacOSX-x86-64/bin:$PATH"</code>
+
+The first 3 lines of soundSense.sh should now read something like:
+
+<pre>#!/bin/sh
+PATH="/Applications/Mathematica.app/Contents/SystemFiles/Java/MacOSX-x86-64/bin:$PATH"
+dir=${0%/*}</pre>
+
+==For Linux Users==
+Locating the gamelog.txt may be a bit difficult, because the file for Linux versions of ''Dwarf Fortress'' is not in the usual spot.  To find, simply navigate to your home directory and open the .dwarffortress folder. (it is hidden by default)  The gamelog file will be located inside.
+
+==Sparring Sound Spam==
+The game does not distinguish between combat sounds and sparring sounds. You can remove the combat sounds under packs\battle, (LNP\utilities\Soundsense\packs\battle). Consider renaming the subfolders of blocked/hit/miss/movement/wrestling/unitsurprised. You can then rename them when real combat happens.
+
+
+[[ru:SoundSense]]

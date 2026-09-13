@@ -1,0 +1,14 @@
+[[Category:Tweak]]
+=1.2.0.1=
+*Fixed problem in Tile Edit where it wouldn't allow you to actually edit tile values.
+
+=1.2.0.0=
+*Major refactoring and reorganization of Tweak itself, no longer forced to work with only one process (and having to restart Tweak to get it working again).
+*Improved user interface in Tweak and several modules.
+*New Options dialog & saved to file (configuration.xml).
+*New module: Enable Magma Buildings
+*Fixed bugs with opening processes (silly mistake) that would have caused an incorrect error if Tweak did not have the necessary privileges to access a process.
+*Fixed Warp bug where the source tile would not have its occupancy flags updated properly.
+*Improvements to the IModule interface (development-wise, not UI wise). The IModule interface is now solidified and will not ever change again.
+*Reorganized some version data files.
+*Many other small changes I forget to mention, I hadn't moved Tweak to SVN until roughly just before 1.2.0.0 was ready :(

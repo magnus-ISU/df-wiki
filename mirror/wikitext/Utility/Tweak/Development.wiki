@@ -1,0 +1,17 @@
+[[Category:Tweak]][[Category:Hacking|Tweak]]
+=Developing Modules=
+''Please add any questions about developing modules to the talk page so that I can make this page better.''
+
+==Helpful Stuff==
+
+*[http://dffd.wimbli.com/file.php?id=145 Visual Studio template for Tweak Modules]
+*[http://dffd.wimbli.com/file.php?id=146 IntelliSense XML file for Visual Studio for Gibbed.DwarfFortress.Utilities]
+*[[User:Rick/Tweak/Development/Reveal example|Example module code - Reveal]]
+
+The template should go in '''My Documents\Visual Studio 2008\Templates\ProjectTemplates''' - do not extract the ZIP file.
+
+(I assume the path should be similar for Visual Studio 2005, but I cannot confirm that it works in 2005).
+
+The intellisense XML should go in the directory with Gibbed.DwarfFortress.Utilities.xml, but I am not sure if this is required.
+
+You may need to manually fix the reference in the project to Gibbed.DwarfFortress.Utilities to the correct location.

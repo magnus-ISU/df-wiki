@@ -1,0 +1,16 @@
+[[File:overseer.png|thumb|right|Overseer Screenshot]]
+==Fortress Overseer==
+Fortress Overseer is a full 3D DF2012 [[v0.31:Utilities|visualizer]] by thewonderidiot and sexymustard. More information can be found in the [http://www.bay12forums.com/smf/index.php?topic=63484.0 bay12forums topic], and Overseer itself can be downloaded from {{DFFD|3882|its page on DFFD}} or [https://github.com/downloads/mikestewart/Overseer/Overseer0.51.exe the github mirror]. The currently (outdated) linux version can be downloaded [http://dffd.wimbli.com/file.php?id=3291 here.]
+
+Overseer uses Ogre3D in conjunction with the DFHack library.
+
+==Adding Custom Content==
+===Models===
+Models are stored in the /models/ directory. Models use Ogre's .mesh format. Exporters can be downloaded from the Ogre wiki for various 3D modelling programs.
+
+===Materials===
+Ogre has a very robust material system. More information can be found in [http://www.ogre3d.org/docs/manual/manual_14.html the Ogre manual]. The included generateMaterials.py script will populate the material scripts using info from the diffuse and normal texture directories, generating colors for other techniques from the colors directory (thanks to Japa for use of his stonesense colors).
+====Images====
+Images for a material must have the same name the material has in the raws. Diffuse textures are found in /materials/images/diffuse. Their dimensions should be a power of two. If they have an accompanying normal map, it needs to be named with the same name as the diffuse texture but with an n on the end (eg, if native_gold.bmp is the diffuse texture, native_goldn.bmp is its normal map). The normal maps go in /materials/images/normal. Of course, this layout can be changed as long as the resources.cfg file in the root Overseer directory is updated accordingly.
+
+[[Category:Utilities]]

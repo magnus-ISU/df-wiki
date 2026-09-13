@@ -1,0 +1,54 @@
+<div class="mw-parser-output"><table class="version-table" style="text-align: center; margin: 3px auto 5px; padding: 0.25em; padding-top:1em; border-radius: 3px; -webkit-border-radius: 3px; -moz-border-radius: 3px; -o-border-radius: 3px; -ms-border-radius: 3px;; border: 2px solid #99ddff; background: #eef5ff; min-width:27em"><tbody><tr><td style="padding: 0.3em 0.3em; width: 100%;"><span>This utility page applies to multiple versions of DF.</span><br />
+<div style="float: right; font-size:75%; padding-right:2px; margin-top:-2px; margin-bottom:-7px;"><span class="version-link"><a href="/index.php/Template:Uv" class="mw-redirect" title="Template:Uv"><span style="text-decoration: none; color: #0088CC;">More Info</span></a></span></div></td></tr>
+</tbody></table>
+
+<h1><span id="Gibbed's_Dwarf_Fortress_Tileset_Compiler"></span><span class="mw-headline" id="Gibbed.27s_Dwarf_Fortress_Tileset_Compiler">Gibbed's Dwarf Fortress Tileset Compiler</span></h1>
+<div class="floatright"><a href="/index.php/File:Dwarf_Fortress_Tileset_Compiler_Example_Zoomed.png" class="image" title="example of a created tileset"><img alt="example of a created tileset" src="/images/3/34/Dwarf_Fortress_Tileset_Compiler_Example_Zoomed.png" decoding="async" width="320" height="256" /></a></div>
+<p>Tileset Compiler (or <i>TSC</i> for short) is a utility for Dwarf Fortress created by <a href="/index.php/User:Rick" title="User:Rick">Rick</a> which attempts to ease the creation of graphical creature tilesets.
+</p><p>It is written in C# and requires the <a rel="nofollow" class="external text" href="http://www.microsoft.com/downloads/details.aspx?FamilyID=0856eacb-4362-4b0d-8edd-aab15c5e04f5">.NET 2.0 Runtime</a>.
+</p>
+<h2><span class="mw-headline" id="Features">Features</span></h2>
+<ul><li>Tileset images will be created properly aligned in width and height so that Dwarf Fortress will load them correctly - this means images that are not a multiple of 4 will function correctly (15x15 tilesets!).</li></ul>
+<ul><li>A checkboard pattern will be drawn so it is easier to distinguish tiles.</li></ul>
+<ul><li>Ensures that tiles do not overlap same positions, and will warn about such.</li></ul>
+<ul><li>Tiles will be centered horizontally if too small width wise, and aligned to the bottom if too small height wise.</li></ul>
+<h2><span class="mw-headline" id="Usage">Usage</span></h2>
+<p>TSC is currently a console-based utility. Future versions may sport a proper UI.
+</p><p>To use TSC, all you have to do is specify a <b>graphics_name.txt</b> file for it to parse and build a tileset from.
+</p><p>It will attempt to open images based on definitions found in the file - it will attempt to first open a PNG, then a TGA, then a BMP.
+</p><p>All paths loaded and saved to are relative to the input file name given to TSC.
+</p>
+<h3><span class="mw-headline" id="Example">Example</span></h3>
+<h4><span class="mw-headline" id="Input">Input</span></h4>
+<p><tt>tsc.exe graphics_example.txt</tt>
+</p>
+<h4><span class="mw-headline" id="Output">Output</span></h4>
+<p><tt>Warning: Could not find tiles\dwarves\default\dwarf_default_default<br />
+Warning: Could not find tiles\dwarves\default\dwarf_default_miner<br />
+Created C:\DF\tscexample\example/dwarves.bmp</tt>
+</p>
+<h4><span class="mw-headline" id="Explanation">Explanation</span></h4>
+<p>TSC loads graphics_example.txt, sees two entries, <tt>[DEFAULT:DWARVES:0:0:ADD_COLOR]</tt> and <tt>[MINER:DWARVES:1:0:AS_IS:DEFAULT]</tt>.
+</p><p>It derives the following file names from these entries:
+</p>
+<ul><li><tt>tiles\dwarves\default\dwarf_default_default</tt></li>
+<li><tt>tiles\dwarves\default\dwarf_default_miner</tt></li></ul>
+<p>This is from the following format:
+</p><p><tt>tiles\<i>tile page name</i>\<i>state name</i>\<i>tile page name</i>_<i>state name</i>_<i>profession name</i></tt>
+</p><p>When loading an image:
+</p>
+<ul><li>It checks for it in three different formats: PNG, TGA, and BMP.</li></ul>
+<ul><li>If it finds one it will load and use it.</li></ul>
+<ul><li>If it does not find one, and it is a <tt>CHILD</tt> profession, it will check for a <tt>DEFAULT</tt> image and will load and use it.</li></ul>
+<ul><li>If it still does not, then it will check for <tt>tiles\missing.png</tt> and load and use it.</li></ul>
+<ul><li>If that still does not, it will not draw any tile at all.</li></ul>
+<h2><span class="mw-headline" id="Download_Tileset_Compiler">Download Tileset Compiler</span></h2>
+<p><b>Requires <a rel="nofollow" class="external text" href="http://www.microsoft.com/downloads/details.aspx?FamilyID=0856eacb-4362-4b0d-8edd-aab15c5e04f5">.NET 2.0 Runtime</a>!</b>
+</p><p>The current version of TSC is <b>1.0.0.0</b>.
+</p><p><b>Mirrors to download Tweak 1.0.0.0 from</b>
+</p>
+<ul><li><a rel="nofollow" class="external text" href="http://dffd.wimbli.com/file.php?id=86">From Dwarf Fortress File Deposit</a> - Please try this one first, if it doesn't work use another one.</li>
+<li><a rel="nofollow" class="external text" href="http://df.pipboy.us/tilesetcompiler/tilesetcompiler_1000.zip">df.pipboy.us</a></li></ul>
+<h2><span id="Found_a_bug?_Have_a_suggestion?"></span><span class="mw-headline" id="Found_a_bug.3F_Have_a_suggestion.3F">Found a bug? Have a suggestion?</span></h2>
+<p><a href="/index.php?title=User_talk:Rick/Tileset_Compiler&amp;action=edit&amp;redlink=1" class="new" title="User talk:Rick/Tileset Compiler (page does not exist)">Report it on the talk page!</a>
+</p></div>

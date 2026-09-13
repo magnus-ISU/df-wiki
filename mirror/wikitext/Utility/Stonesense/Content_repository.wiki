@@ -1,0 +1,198 @@
+Note that most of the content below has either been added to Stonesense, or fallen out of date with later updates to DF.  Check the history of this page for edit times!
+
+== Vegetation ==
+
+=== Seuss's Tweaked Vegetation ===
+{{StonesenseContentPack|
+|image=[[File:STV1.png]]
+|download link=[http://dffd.wimbli.com/file.php?id=1699 DFFD File]
+|author=Seuss
+|installation=Replace vegetation folder in your stonesense directory with this one and make sure the line "vegetation/index.txt" is above "terrain/index.txt" in the main index file.
+|comments=These are the vegetation files I use. I edit and change stuff as I play so this may be more updated than the official vegetation files.
+
+An Important note:
+There is a small fix to the terrain under vegetation but it will only work if in your main index.txt file you have "vegetation/index.txt" above "terrain/index.txt".
+This is not necessary but it does improve visual quality.
+}}
+
+=== Belannaer's Underground trees ===
+{{StonesenseContentPack|
+|image=[[File:underground_trees.png]]
+|download link=[http://dffd.wimbli.com/file.php?id=1980 DFFD File]
+|author=Belannaer
+|installation=Extract files into Stonesense/Vegetation and add underground_trees.xml to the index.txt.
+|comments=New underground trees. From left to right: black cap, nether cap, goblin cap, tunnel tube, spore tree, blood thorn, fungiwood. Fungiwood graphic is from the original trees.png in Stonesense.
+|included in=Slate 2.2
+}}
+
+=== Therahedwig's darker grass ===
+{{StonesenseContentPack|
+|image=http://img.ie/164bc.png
+|download link=[http://dffd.wimbli.com/file.php?id=3617 DFFD File]
+|author=TheraHedwig
+|installation=Just unzip the file inside the stonesense directory and add GD/index.txt to the index file, above all the other entries.
+|comments=If you don't like the ramps, go into the GD directory, delete SSGDramps1.png and rename SSGDramps2.png into SSGDramps1.png.
+}}
+
+== Creatures ==
+
+=== Beefmo's Subterranean Animal Pack ===
+{{StonesenseContentPack|
+|image=[[File:Beefmo sub.gif‎]]
+|download link=[http://dffd.wimbli.com/file.php?id=1698 DFFD File]
+|author=Beefmo
+|installation=Extract files into Stonesense/Creatures and add beefmo_subterranean.xml to the index.txt
+|comments=Animated Subterranean Animal pack that does not include the animal men yet.
+|included in=Slate 2.2
+}}
+
+=== Beefmo's Large Ocean Animal Pack (WIP)===
+{{StonesenseContentPack|
+|image=[[File:Beefmo ocean title.gif‎]]
+|download link=[http://dffd.wimbli.com/file.php?id=1736 DFFD File]
+|author=Beefmo
+|installation=Extract files into Stonesense/Creatures and add beefmo_large_ocean.xml to the index.txt
+|comments=WIP Sprite sheet for the large_ocean set of creatures.
+|included in=Slate 2.2
+}}
+
+=== Beefmo's Common domestic animal pack===
+{{StonesenseContentPack|
+|image=[[File:Background_common.gif‎]]
+|download link=[http://dffd.wimbli.com/file.php?id=1931 DFFD File]
+|author=Beefmo
+|installation=Extract files into Stonesense/Creatures and add beefmo_domestics.xml to the index.txt
+|comments=Sprite sheet for Common Domestic animals<br>
+<nowiki>***</nowiki> This appears to be an older version.  A larger Beefmo's Domestic graphics file is included with Stonesense.
+|included in=Slate 2.2
+}}
+
+=== Crash2455's Easily Distinguishable Soldiers ===
+{{StonesenseContentPack|
+|image=[[File:Soldiers.png]]
+|download link=[http://dffd.wimbli.com/file.php?id=1801 DFFD File]
+|author=Crash2455
+|installation=Place into your creatures directory.  You may want to back up your default "dwarves.png"
+|comments=Color-coded soldiers make a return in this tileset.
+}}
+
+=== Caldfir's Dwarves ===
+{{StonesenseContentPack|
+|image=[[File:Caldwarf2.jpg‎]]
+|download link=[http://dffd.wimbli.com/file.php?id=4804 Colour] [http://dffd.wimbli.com/file.php?id=1839 Original]
+|author=Caldfir
+|installation=Extract files into Stonesense/Creatures (remember to backup the original versions before overwriting!)
+|comments=WIP Sprite sheet that expands the number of different dwarf sprites significantly. 
+}}
+
+=== Belannaer's Goblin Pack ===
+{{StonesenseContentPack|
+|image=[[File:goblin_shot.png]]
+|download link=[http://dffd.wimbli.com/file.php?id=1972 DFFD File]
+|author=Belannaer
+|installation=Extract files into Stonesense/Creatures and add goblins.xml to the index.txt
+|comments=Sprite sheet for nearly all goblin jobs and positions.
+|included in=Slate 2.2
+}}
+
+=== Greiger's Dracon Race Pack ===
+{{StonesenseContentPack|
+|image=[[File:GreigerDracon.png]]
+|download link=[http://dffd.wimbli.com/file.php?id=1696 DFFD File]
+|author=Greiger
+|installation=Simply extract into Stonesense/Creatures and add Dracon.xml to the index file.
+|comments=A set of sprites for custom dragonman races.  Not useful for vanilla, but folks with a dragonman race could use these sprites to have fewer ? icons around.  Updated for Stonesense slate on 5/5/2010.
+}}
+
+=== Jordix's Wild Animals ===
+{{StonesenseContentPack|
+|image=[[File:wild_animals.png‎]]
+|download link=[http://dffd.wimbli.com/file.php?id=2594 DFFD File]
+|author=Jordix
+|installation=Extract into Stonesense/creatures and add wild_animals.xml to the index.txt; see also the Readme.
+|comments=Graphics for some above-ground wild animals. No animations or separate graphics for children yet.
+|included in=Slate 2.2
+}}
+
+=== HugoLuman's Daleks ===
+{{StonesenseContentPack|]
+|image=[[File:DalekSpriteScreenie.png]]
+|download link=[http://dffd.wimbli.com/file.php?id=6046 DFFD File]
+|author=HugoLuman
+|installation=Open dfDaleks.rar and find StonesenseDalekSprites.rar. Extract that into Stonesense/creatures and add daleks.xml to the index.txt
+|comments=A sprite for Daleks from my Dalek mod. 
+}}
+
+== Buildings ==
+
+=== Alternate well ===
+{{StonesenseContentPack|
+|image=[[File:TundraStonesenseAltWell.png]]
+|download link=[http://dffd.wimbli.com/file.php?id=1725 DFFD File]
+|author=Dark_Tundra
+|installation=Extract files into Stonesense/buildings and add TundraAltWell.xml to the top of /buildings/index.txt
+|comments=A round well for Stonesense
+(also first time using a wiki.)
+}}
+
+== Terrain ==
+
+=== Additional Ramps ===
+{{StonesenseContentPack|
+|image=[[File:Stoneramps.png]]
+|download link=[http://dffd.wimbli.com/file.php?id=1717 DFFD File]
+|author=kaypy
+|installation=Extract files into Stonesense/terrain and add UpdatedRamps.xml to the top of /terrain/index.txt
+|comments=Additional ramps. I will try to keep this updated as I get around to adding more.
+
+Stone
+
+Stone Brick (thanks Dark_Tundra)
+
+Glass x 2
+
+Ice
+
+Wood (v2)
+
+Dirt
+}}
+
+=== Directional Walls ===
+{{StonesenseContentPack|
+|image=[[File:TundraDirectionalWalls.png]]
+|download link=[http://dffd.wimbli.com/file.php?id=1913 DFFD File]
+|author=Dark_Tundra
+|installation=Extract files into Stonesense/terrain and add DirectionalWalls.xml to the top of /terrain/index.txt
+|comments=Walls with angled corners. Smoothed stone and constructed.
+}}
+
+=== Stonesense Grim Dark ===
+{{StonesenseContentPack|
+|image=Available on DFFD
+|download link=[http://dffd.wimbli.com/file.php?id=3842 DFFD File]
+|author=TheraHedwig
+|installation=Just put this in the stonesense folder and add "Grim Dark/index.txt" to the top of the index file.
+|comments=This mod replaced some of the stone-tiles of stonesense with more detailed ones.
+
+Get the darker grass here: http://dffd.wimbli.com/file.php?id=3617
+
+May have a few bugs.}}
+
+== How do I add my Content Pack to this page? ==
+
+Follow the template below : 
+=== Name of Pack ===
+{{StonesenseContentPack|
+|image=
+|download link=''Link to download''
+|author=''Your user name''
+|installation=''Instructions on how to install your content pack''
+|comments=''Description of your content pack''
+}}
+[[Category:Stonesense]]
+
+
+== How do I create my own content? ==
+
+See http://dwarffortresswiki.org/index.php/Utility:Stonesense/Adding_Content

@@ -1,0 +1,73 @@
+<div class="mw-parser-output"><div id="page-quality-rating" style="text-align: right;margin: 0.8em 0;font-size:75%">
+ <a href="/index.php/Dwarf_Fortress_Wiki:Quality#Tattered" title="Dwarf Fortress Wiki:Quality"><span id="stub-quality" style="text-decoration:none; color:#333333">xTATTEREDx</span></a> <span style="font-weight:bold;" class="dot">&#160;·</span> <a href="/index.php/Dwarf_Fortress_Wiki:Quality#Fine" title="Dwarf Fortress Wiki:Quality"><span id="fine-quality" style="text-decoration:none; color:#CA7A02;">+FINE+</span></a> <span style="font-weight:bold;" class="dot">&#160;·</span> <a href="/index.php/Dwarf_Fortress_Wiki:Quality#Superior" title="Dwarf Fortress Wiki:Quality"><span id="superior-quality" style="padding:0.2em; border:1px solid #b8f; border-radius: 2px; -webkit-border-radius: 2px; -moz-border-radius: 2px; -o-border-radius: 2px; -ms-border-radius: 2px; background:#e4ccff; color:#8800cc;">*SUPERIOR*</span></a> <span style="font-weight:bold;" class="dot">&#160;·</span> <a href="/index.php/Dwarf_Fortress_Wiki:Quality#Exceptional" title="Dwarf Fortress Wiki:Quality"><span id="exceptional-quality" style="text-decoration:none; color:#0088CC;">≡EXCEPTIONAL≡</span></a> <span style="font-weight:bold;" class="dot">&#160;·</span> <a href="/index.php/Dwarf_Fortress_Wiki:Quality#Masterwork" title="Dwarf Fortress Wiki:Quality"><span id="masterwork-quality" style="text-decoration:none; color:#72A329;">☼MASTERWORK☼</span></a></div>
+<table class="version-table" style="text-align: center; margin: 3px auto 5px; padding: 0.25em; padding-top:1em; border-radius: 3px; -webkit-border-radius: 3px; -moz-border-radius: 3px; -o-border-radius: 3px; -ms-border-radius: 3px;; border: 2px solid #ddbb88; background: #fff5ee; min-width:27em"><tbody><tr><td style="padding: 0.3em 0.3em; width: 100%;"><span>This utility page is about v0.28.121.40d, an <b>older version</b> of DF.</span><br />
+<div style="float: right; font-size:75%; padding-right:2px; margin-top:-2px; margin-bottom:-7px;"><span class="version-link"><a href="/index.php/Template:Uv" class="mw-redirect" title="Template:Uv"><span style="text-decoration: none; color: #CA7A02;">More Info</span></a></span></div></td></tr>
+</tbody></table>
+<p><b>Tweak is obsolete, and its functions are now provided through <a href="/index.php/Utility:DFHack" title="Utility:DFHack">DFHack</a>.</b>
+</p>
+<div class="floatright"><a href="/index.php/File:Dwarf_Fortress_Tweak.png" class="image"><img alt="Dwarf Fortress Tweak.png" src="/images/9/9a/Dwarf_Fortress_Tweak.png" decoding="async" width="640" height="320" /></a></div>
+<p>Tweak is a utility for Dwarf Fortress created by <a href="/index.php/User:Rick" title="User:Rick">Rick</a> which can load modules that provide different functionality to the user for tweaking, or editing Dwarf Fortress memory. It will attempt to automatically identify the version of the running Dwarf Fortress process and automatically load data related to that version.
+</p><p>It is written in C# and requires the <a rel="nofollow" class="external text" href="http://www.microsoft.com/downloads/details.aspx?FamilyID=333325FD-AE52-4E35-B531-508D977D32A6">.NET 3.5 Runtime</a>, as well as the .net 2.0 as well as the .net 1.1 SEPARATELY installed.
+</p><p>There are many modules - both written by myself and others.
+</p>
+
+<h2><span class="mw-headline" id="Installing_Tweak">Installing Tweak</span></h2>
+<p>Tweak does not have an installer, but it does have several directories and many files within them, so it is suggested not to directly extract to your Dwarf Fortress directory, if it must, I would suggest putting it in a subdirectory named 'tweak' or equivilent.
+</p><p>The ZIP file for Tweak comes with everything in the <b>tweak</b> directory to make this easier.
+</p>
+<h2><span class="mw-headline" id="Updating_Tweak_for_a_new_version_of_Dwarf_Fortress">Updating Tweak for a new version of Dwarf Fortress</span></h2>
+<p>To update Gibbed's Utilities for a new version of DF:
+</p>
+<ol><li>Download, install and launch the Utilities, if not already done so.</li>
+<li>Open versions.xml in Notepad.</li>
+<li>Copy the last line in the &lt;versions&gt; section to a new line below it.  The last two lines of the &lt;versions&gt; section should now be identical.</li>
+<li>On the new line you just created, change the version number to match the version of DF you have installed.  Delete the "hash" value.</li>
+<li>In the "Versions" sub folder of the "tweak" folder, create a new folder with the exact same name as the version number you just typed into versions.xml.</li>
+<li>Go to <a rel="nofollow" class="external text" href="http://www.geocities.com/jifodus/tables/dwarvis/">Dwarvis' Page</a> and download the core.xml that matches your version of DF.  Save it to the folder you just created, and rename it to "core.xml"</li>
+<li>Open a new Notepad window</li>
+<li>Bring up Gibbed's utilities, and under the File menu, click "Select Process".  Click yes on the confirmation.</li>
+<li>When asked if you want to look up the hash, click "No."</li>
+<li>Under the Tools menu, click "Log"</li>
+<li>Right-click in the Log window, and choose Copy All.</li>
+<li>Paste the log in the blank Notepad window.</li>
+<li>On the line that starts with "Verbose: Selected game with process ID" (Should be the second to last line) copy the hash value without the leading space or trailing period.</li>
+<li>Paste the hash value into the blank spot on the last line of the &lt;versions&gt; section in versions.xml.</li>
+<li>Save and close versions.xml</li>
+<li>Close the Untitled Notepad window.</li>
+<li>Close the Log window.</li>
+<li>Close Gibbed's Utilities.</li>
+<li>Relaunch Gibbed's Utilities.</li>
+<li>Under the File menu, click "Select Process" and click yes on the confirmation.</li>
+<li>All the circles next to the items in the list should turn red.  You are now ready to go!</li></ol>
+<h2><span class="mw-headline" id="Core_Modules">Core Modules</span></h2>
+<p><i>For more details on Core Modules <a href="/index.php/User:Rick/Tweak/Core_Modules" class="mw-redirect" title="User:Rick/Tweak/Core Modules">see the Core Modules article</a>.</i>
+</p>
+<ul><li><a href="/index.php/User:Rinn/AdjustProfile" class="mw-redirect" title="User:Rinn/AdjustProfile">Adjust Profile</a> - Allows editing of the skills for starting dwarves in the prepare screen.</li>
+<li>Adjust Start - Allows editing of starting dwarf count and starting points.</li>
+<li>Enable Magma Buildings - Enables magma buildings.</li>
+<li>Heal - Heal or hurts a creature.</li>
+<li>Lookup Addresses - Pattern scanning for finding addresses in new versions of Dwarf Fortress.</li>
+<li>Resume - Resumes a stuck process.</li>
+<li>Reveal - Reveals all allocated tiles on the map.</li>
+<li><a href="/index.php/User:Rick/Tweak/Tile_Edit" class="mw-redirect" title="User:Rick/Tweak/Tile Edit">Tile Edit</a> - Edit nearly all properties of a selected tile.</li>
+<li>Warp - Warp a creature to another location.</li></ul>
+<h2><span class="mw-headline" id="Installing_modules">Installing modules</span></h2>
+<p>Todo: But pretty much you just drop the files from the plugin into directory Tweak is installed to.
+</p>
+<h2><span class="mw-headline" id="Get_more_modules">Get more modules</span></h2>
+<p>Looking for more modules? You can likely <a href="/index.php/Category:Tweak_Modules" title="Category:Tweak Modules">find more in the Tweak Modules category</a>.
+</p>
+<h2><span class="mw-headline" id="Download_Tweak">Download Tweak</span></h2>
+<p><b>Requires <a rel="nofollow" class="external text" href="http://www.microsoft.com/downloads/details.aspx?FamilyID=333325FD-AE52-4E35-B531-508D977D32A6">.NET 3.5 Runtime</a>!</b>
+</p><p>The current version of Tweak is <b>1.2.0.1</b>. See the <a href="/index.php/User:Rick/Tweak/Changelog" class="mw-redirect" title="User:Rick/Tweak/Changelog">changelog for detailed information on changes since last version</a>.
+</p><p><b>Mirrors to download Tweak 1.2.0.1 from</b>
+</p>
+<ul><li><a rel="nofollow" class="external text" href="http://dffd.wimbli.com/file.php?id=666">From Dwarf Fortress File Depot</a> - updated with offsets for DF 0.28.181.40d</li>
+<li><a rel="nofollow" class="external text" href="http://dffd.wimbli.com/file.php?id=74">From Dwarf Fortress File Depot</a> - Please try this one first, if it doesn't work use another one.</li>
+<li><a rel="nofollow" class="external text" href="http://df.pipboy.us/tweak/tweak_1201.zip">df.pipboy.us</a></li></ul>
+<h2><span id="Found_a_bug?_Have_a_suggestion?"></span><span class="mw-headline" id="Found_a_bug.3F_Have_a_suggestion.3F">Found a bug? Have a suggestion?</span></h2>
+<p><a href="/index.php/User_talk:Rick/Tweak" class="mw-redirect" title="User talk:Rick/Tweak">Report it on the talk page!</a>
+</p>
+<h2><span id="XML_files?_Developing_modules?"></span><span class="mw-headline" id="XML_files.3F_Developing_modules.3F">XML files? Developing modules?</span></h2>
+<p><a href="/index.php/User:Rick/Tweak/Development" class="mw-redirect" title="User:Rick/Tweak/Development">See the development article for more details</a>.
+</p></div>

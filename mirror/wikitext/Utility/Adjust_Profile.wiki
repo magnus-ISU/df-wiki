@@ -1,0 +1,28 @@
+{{uv|40d}}
+[[Image:AdjustProfile.png]]
+
+[http://dffd.wimbli.com/file.php?id=117 Download Location]
+
+This program allows edits to be made to the starting skills of the initial Dwarves using an external program. Currently it doesn't adjust the amount of points you have remaining to spend on skills and items, though this may be added in a future release. Created by [[User:Rinn | Rinn]].
+
+This program Requires [[User:Rick|Rick's]] [[User:Rick/Tweak|Tweak Utility]] to load and run.
+
+== Features ==
+* Reads and writes a dwarf's starting skills
+* Allows for saving and loading profiles
+* Copying and pasting profiles between dwarves
+
+== Usage ==
+* Can only be run when on the preparation screen in Dwarf Fortress
+* Individual skills are limited between 0 and 15 points as any number over 15 doesn't add additional ranks. If there is desire I'll remove the cap
+* Numbers can be increased and decreased by the + and - keys respectively
+* The * key will set the number to 15 and the / key will set it to 0
+* Changing a number in the tool won't immediately change the value in game. Tou must click the 'Write Profile' button to do so
+
+== Changelog ==
+* 1.1 - Fixed a crash when changing the text property a non-selected tab.
+* 1.0 - Released module bundled in with Tweak.
+
+[[Category:Tweak]]
+[[Category:Tweak_Modules]]
+[[Category:Utilities]]
