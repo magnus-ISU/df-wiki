@@ -1,0 +1,191 @@
+<div class="mw-parser-output"><table class="metadata plainlinks ambox ambox-content" style="" role="presentation">
+<tbody><tr><td class="mbox-image"><div style="width: 52px;"><img alt="" src="https://upload.wikimedia.org/wikipedia/commons/f/f4/Ambox_content.png?utm_source=commons.wikimedia.org&amp;utm_campaign=imageinfo&amp;utm_content=original" decoding="async" width="40" height="40" /></div></td><td class="mbox-text" style=""><span class="mbox-text-span">This page is not yet complete!<span class="hide-when-compact">  </span><span class="hide-when-compact"> </span></span></td></tr></tbody></table>
+
+<h1><span class="mw-headline" id="Custom_parser_functions">Custom parser functions</span></h1>
+<h2><span class="mw-headline" id="String_functions">String functions</span></h2>
+<h3><span class="mw-headline" id="char">char</span></h3>
+<p>Returns a <a href="/index.php/CP437" class="mw-redirect" title="CP437">CP437</a> character.
+</p><p>
+Example: </p><pre>{{#char:1}}</pre>
+<p>&#8594; ☺
+</p>
+<h3><span class="mw-headline" id="strc">strc</span></h3>
+<p>Expands backslash escape sequences, such as:
+</p>
+<table class="wikitable">
+<tbody><tr>
+<th>Text</th>
+<th>Produces
+</th></tr>
+<tr>
+<td>\n</td>
+<td>newline
+</td></tr>
+<tr>
+<td>\t</td>
+<td>tab
+</td></tr></tbody></table><p>
+Example: </p><pre>Some example{{#strc:\t}}text</pre>
+<p>Produces:
+</p>
+<pre>Some example	text</pre>
+<h3><span class="mw-headline" id="strcount">strcount</span></h3>
+<p>Returns the number of occurrences of the second parameter in the first parameter. Case-sensitive
+</p><p>
+Example: </p><pre>{{#strcount:This string sure has a lot of "T"'s in it! | t}}</pre>
+<p>&#8594; 3
+</p>
+<h3><span class="mw-headline" id="stricount">stricount</span></h3>
+<p>Same as strcount, but case-insensitive.
+</p><p>
+Example: </p><pre>{{#stricount:This string sure has a lot of "T"'s in it! | t}}</pre>
+<p>&#8594; 5
+</p>
+<h3><span class="mw-headline" id="stripos">stripos</span></h3><p>
+Example: </p><pre></pre>
+<p>&#8594; 
+</p>
+<h3><span class="mw-headline" id="stristr">stristr</span></h3><p>
+Example: </p><pre></pre>
+<p>&#8594; 
+</p>
+<h3><span class="mw-headline" id="strlen">strlen</span></h3><p>
+Example: </p><pre></pre>
+<p>&#8594; 
+</p>
+<h3><span class="mw-headline" id="strpos">strpos</span></h3><p>
+Example: </p><pre></pre>
+<p>&#8594; 
+</p>
+<h3><span class="mw-headline" id="strripos">strripos</span></h3><p>
+Example: </p><pre></pre>
+<p>&#8594; 
+</p>
+<h3><span class="mw-headline" id="strrpos">strrpos</span></h3><p>
+Example: </p><pre></pre>
+<p>&#8594; 
+</p>
+<h3><span class="mw-headline" id="strsplit">strsplit</span></h3><p>
+Example: </p><pre></pre>
+<p>&#8594; 
+</p>
+<h3><span class="mw-headline" id="strstr">strstr</span></h3><p>
+Example: </p><pre></pre>
+<p>&#8594; 
+</p>
+<h3><span class="mw-headline" id="sha1">sha1</span></h3>
+<p>Returns the <a href="http://en.wikipedia.org/wiki/sha1" class="extiw" title="wikipedia:sha1">sha1</a> hash of the first parameter.
+</p><p>
+Example: </p><pre>{{#sha1:Dwarf Fortress}}</pre>
+<p>&#8594; e71c8ec81bef5a3717cba2e82840b8bbdc6570d1
+</p>
+<h3><span class="mw-headline" id="md5">md5</span></h3>
+<p>Returns the <a href="http://en.wikipedia.org/wiki/md5" class="extiw" title="wikipedia:md5">md5</a> hash of the first parameter.
+</p><p>
+Example: </p><pre>{{#md5:Dwarf Fortress}}</pre>
+<p>&#8594; c5d1f740e7c056187c120083d2405a6a
+</p>
+<h3><span class="mw-headline" id="splitrand">splitrand</span></h3>
+<p>Splits a string and returns a random piece
+</p><p>Example: <a href="/index.php/Main_Page/Quote" title="Main Page/Quote">Main Page/Quote</a>
+</p>
+<h2><span class="mw-headline" id="Math_functions">Math functions</span></h2>
+<h3><span class="mw-headline" id="randint">randint</span></h3>
+<p>Returns a random integer between the two arguments provided.
+</p><p>
+Example: </p><pre>{{#randint:1|6}}</pre>
+<p>&#8594; 5
+</p>
+<pre>{{#randint:6|1}}</pre>
+<p>&#8594; 2
+</p><p><br />
+</p>
+<h3><span class="mw-headline" id="ordinal">ordinal</span></h3>
+<pre>{{#ordinal:1}}</pre>
+<p>&#8594; 1st
+</p>
+<h2><span id="Wikitext/utility_functions"></span><span class="mw-headline" id="Wikitext.2Futility_functions">Wikitext/utility functions</span></h2>
+<h3><span class="mw-headline" id="colorconvert">colorconvert</span></h3>
+<p>Converts a color from one format to another.
+</p><p>Usage:
+</p>
+<pre>{{#colorconvert: <i>color</i> | <i>from_format</i> | <i>to_format</i> }}
+</pre>
+<p>See {{<a href="/index.php/Template:Color_scheme" title="Template:Color scheme">color scheme</a>}} for an example.
+</p><p>Supported formats:
+</p>
+<table class="wikitable pre-table">
+
+<tbody><tr>
+<th>format
+</th>
+<th>example
+</th>
+<th>result
+</th></tr>
+<tr>
+<td><pre>rgb</pre>
+</td>
+<td><pre>{{#colorconvert:rgb(255,128,12)|rgb|hex}}</pre>
+</td>
+<td><pre>#ff800c</pre>
+</td></tr>
+<tr>
+<td><pre>hex</pre>
+</td>
+<td><pre>{{#colorconvert:#ff800c|hex|rgb}}</pre>
+</td>
+<td><pre>rgb(255, 128, 12)</pre>
+</td></tr>
+<tr>
+<td><pre>rgb1</pre>*
+</td>
+<td><pre>{{#colorconvert:rgb(255,128,12)|rgb|rgb1}}</pre>
+</td>
+<td><pre>255</pre>
+</td></tr>
+<tr>
+<td><pre>rgb2</pre>*
+</td>
+<td><pre>{{#colorconvert:rgb(255,128,12)|rgb|rgb2}}</pre>
+</td>
+<td><pre>128</pre>
+</td></tr>
+<tr>
+<td><pre>rgb3</pre>*
+</td>
+<td><pre>{{#colorconvert:rgb(255,128,12)|rgb|rgb3}}</pre>
+</td>
+<td><pre>12</pre>
+</td></tr></tbody></table>
+<p><small>*These can only be used as the third argument</small>
+</p>
+<h3><span class="mw-headline" id="param">param</span></h3>
+<p>For use in templates: Returns the first parameter found from a list of parameter names, or the last argument if none were found. Intended to be easier to read than a chain of template default arguments. The following lines are equivalent:
+</p>
+<pre>{{{first|{{{2|{{{1|{{{last|None of the parameters were found}}}}}}}}}}}}
+{{#param:first|2|1|last|None of the parameters were found}}
+</pre>
+<p>Example: 
+</p><p>
+"Template:Sample" contains: </p><pre>{{#param:first|2|1|last|None of the parameters were found}}</pre>
+<hr />
+<pre>{{sample|first=text}}</pre>
+<p>&#8594; text
+</p>
+<hr />
+<pre>{{sample|text}}</pre>
+<p>&#8594; text
+</p>
+<hr />
+<pre>{{sample|foo|bar}}</pre>
+<p>&#8594; bar
+</p>
+<hr />
+<pre>{{sample|a|b|last=c|first=First!}}</pre>
+<p>&#8594; First!
+</p>
+<hr />
+<pre>{{sample|3=foo}}</pre>
+<p>&#8594; None of the parameters were found
+</p></div>

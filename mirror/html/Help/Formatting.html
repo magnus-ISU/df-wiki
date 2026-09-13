@@ -1,0 +1,1026 @@
+<div class="mw-parser-output"><p>You can format your text by using wiki markup. This consists of normal characters like asterisks, apostrophes or equal&#160;signs which have a special function in the wiki, sometimes depending on their position. For example, to format a word in <i>italic</i>, you include it in two pairs of apostrophes like <code>''this''</code>.
+</p>
+
+<h2><span class="mw-headline" id="Text_formatting_markup">Text formatting markup</span></h2>
+<table class="wikitable">
+<tbody><tr>
+<th>Description
+</th>
+<th width="40%">You type
+</th>
+<th width="40%">You get
+</th></tr>
+<tr>
+<th colspan="3" style="background: #ABE">Character (inline) formatting – <i>applies anywhere</i>
+</th></tr>
+<tr>
+<td>Italic text
+</td>
+<td><pre>''italic''
+</pre>
+</td>
+<td>
+<p><i>italic</i>
+</p>
+</td></tr>
+<tr>
+<td>Bold text
+</td>
+<td><pre>'''bold'''
+</pre>
+</td>
+<td>
+<p><b>bold</b>
+</p>
+</td></tr>
+<tr>
+<td>Bold and italic
+</td>
+<td><pre>'''''bold &amp; italic'''''
+</pre>
+</td>
+<td>
+<p><i><b>bold &amp; italic</b></i>
+</p>
+</td></tr>
+<tr>
+<td>Strike text
+</td>
+<td><pre>&lt;strike&gt; strike text &lt;/strike&gt;
+</pre>
+</td>
+<td><strike> strike text </strike>
+</td></tr>
+<tr>
+<td>Escape wiki markup
+</td>
+<td><pre>&lt;nowiki&gt;no ''markup''&lt;/nowiki&gt;
+</pre>
+</td>
+<td>
+<p>no ''markup''
+</p>
+</td></tr>
+<tr>
+<td>Escape wiki markup once
+</td>
+<td><pre>[[API]]&lt;nowiki/&gt;extension
+</pre>
+</td>
+<td>
+<p><a href="/index.php?title=API&amp;action=edit&amp;redlink=1" class="new" title="API (page does not exist)">API</a>extension
+</p>
+</td></tr>
+<tr>
+<th colspan="3" style="background: #ABE">Section formatting – <i>only at the beginning of the line</i>
+</th></tr>
+<tr>
+<td>Headings of different levels
+</td>
+<td><pre>
+
+== Level 2 ==
+
+=== Level 3 ===
+
+==== Level 4 ====
+
+===== Level 5 =====
+
+====== Level 6 ======
+
+</pre>
+<hr />
+</td>
+<td>
+<h2><span class="mw-headline" id="Level_2">Level 2</span></h2>
+<h3><span class="mw-headline" id="Level_3">Level 3</span></h3>
+<h4><span class="mw-headline" id="Level_4">Level 4</span></h4>
+<h5><span class="mw-headline" id="Level_5">Level 5</span></h5>
+<h6><span class="mw-headline" id="Level_6">Level 6</span></h6>
+</td></tr>
+<tr>
+<td>Horizontal rule
+</td>
+<td><pre>Text before
+----
+Text after
+</pre>
+</td>
+<td>
+<p>Text before
+</p>
+<hr />
+<p>Text after
+</p>
+</td></tr>
+<tr>
+<td>Bullet list
+</td>
+<td>
+<pre>* Start each line
+* with an [[Wikipedia:asterisk|asterisk]] (*).
+** More asterisks give deeper
+*** and deeper levels.
+* Line breaks &lt;br /&gt;don't break levels.
+*** But jumping levels creates empty space.
+Any other start ends the list.
+</pre>
+</td>
+<td>
+<ul><li>Start each line</li>
+<li>with an <a href="http://en.wikipedia.org/wiki/asterisk" class="extiw" title="wikipedia:asterisk">asterisk</a> (*).
+<ul><li>More asterisks give deeper
+<ul><li>and deeper levels.</li></ul></li></ul></li>
+<li>Line breaks <br />don't break levels.
+<ul><li><ul><li>But jumping levels creates empty space.</li></ul></li></ul></li></ul>
+<p>Any other start ends the list.
+</p>
+</td></tr>
+<tr>
+<td>Numbered list
+</td>
+<td>
+<pre># Start each line
+# with a [[Wikipedia:Number_sign|number sign]] (#).
+## More number signs give deeper
+### and deeper
+### levels.
+# Line breaks &lt;br /&gt;don't break levels.
+### But jumping levels creates empty space.
+# Blank lines
+
+# end the list and start another.
+Any other start also
+ends the list.
+</pre>
+</td>
+<td>
+<ol><li>Start each line</li>
+<li>with a <a href="http://en.wikipedia.org/wiki/Number_sign" class="extiw" title="wikipedia:Number sign">number sign</a> (#).
+<ol><li>More number signs give deeper
+<ol><li>and deeper</li>
+<li>levels.</li></ol></li></ol></li>
+<li>Line breaks <br />don't break levels.
+<ol><li><ol><li>But jumping levels creates empty space.</li></ol></li></ol></li>
+<li>Blank lines</li></ol>
+<ol><li>end the list and start another.</li></ol>
+<p>Any other start also
+ends the list.
+</p>
+</td></tr>
+<tr>
+<td>Definition list
+</td>
+<td><pre>;item 1
+: definition 1
+;item 2
+: definition 2-1
+: definition 2-2
+</pre>
+</td>
+<td>
+<dl><dt>item 1</dt>
+<dd>definition 1</dd>
+<dt>item 2</dt>
+<dd>definition 2-1</dd>
+<dd>definition 2-2</dd></dl>
+</td></tr>
+<tr>
+<td>Indent text
+</td>
+<td><pre>: Single indent
+:: Double indent
+::::: Multiple indent
+</pre>
+<hr />
+</td>
+<td>
+<dl><dd>Single indent
+<dl><dd>Double indent
+<dl><dd><dl><dd><dl><dd>Multiple indent</dd></dl></dd></dl></dd></dl></dd></dl></dd></dl>
+</td></tr>
+<tr>
+<td>Mixture of different types of list
+</td>
+<td>
+<pre># one
+# two
+#* two point one
+#* two point two
+# three
+#; three item one
+#: three def one
+# four
+#: four def one
+#: this looks like a continuation
+#: and is often used
+#: instead &lt;br /&gt;of &lt;nowiki&gt;&lt;br /&gt;&lt;/nowiki&gt;
+# five
+## five sub 1
+### five sub 1 sub 1
+## five sub 2
+</pre>
+<hr />
+</td>
+<td>
+<ol><li>one</li>
+<li>two
+<ul><li>two point one</li>
+<li>two point two</li></ul></li>
+<li>three
+<dl><dt>three item one</dt>
+<dd>three def one</dd></dl></li>
+<li>four
+<dl><dd>four def one</dd>
+<dd>this looks like a continuation</dd>
+<dd>and is often used</dd>
+<dd>instead <br />of &lt;br /&gt;</dd></dl></li>
+<li>five
+<ol><li>five sub 1
+<ol><li>five sub 1 sub 1</li></ol></li>
+<li>five sub 2<span id="pre"></span></li></ol></li></ol>
+</td></tr>
+<tr>
+<td>Preformatted text
+</td>
+<td><pre> Start each line with a space.
+ Text is '''preformatted''' and
+ ''markups'' '''''can''''' be done.
+</pre>
+<hr />
+</td>
+<td>
+<pre>Start each line with a space.
+Text is <b>preformatted</b> and
+<i>markups</i> <i><b>can</b></i> be done.
+</pre>
+</td></tr>
+<tr>
+<td>Preformatted text blocks
+</td>
+<td><pre> &lt;nowiki&gt;Start with a space in the first column,
+(before the &lt;nowiki&gt;).
+
+Then your block format will be
+    maintained.
+ 
+This is good for copying in code blocks:
+
+def function():
+    """documentation string"""
+
+    if True:
+        print True
+    else:
+        print False&lt;/nowiki&gt;
+</pre>
+</td>
+<td>
+<pre>Start with a space in the first column,
+(before the &lt;nowiki&gt;).
+
+Then your block format will be
+    maintained.
+
+This is good for copying in code blocks:
+
+def function():
+    """documentation string"""
+
+    if True:
+        print True
+    else:
+        print False
+</pre>
+</td></tr></tbody></table>
+<h2><span class="mw-headline" id="Paragraphs">Paragraphs</span></h2>
+<p>MediaWiki ignores single line breaks. To start a new paragraph, leave an empty line. You can force a line break within a paragraph with the HTML tag <code>&lt;br /&gt;</code>.
+</p>
+<h2><span class="mw-headline" id="HTML_tags">HTML tags</span></h2>
+<p>Some <a href="http://en.wikipedia.org/wiki/HTML" class="extiw" title="wikipedia:HTML">HTML</a> tags are allowed in MediaWiki, for example <code>&lt;code&gt;</code>, <code>&lt;div&gt;</code>, <code>&lt;span&gt;</code> and <code>&lt;font&gt;</code>. These apply anywhere you insert them.
+</p>
+<table class="wikitable">
+<tbody><tr>
+<th>Description
+</th>
+<th width="40%">You type
+</th>
+<th width="40%">You get
+</th></tr>
+<tr>
+<td>Inserted <br />(Displays as underline in most browsers)
+</td>
+<td><pre>&lt;ins&gt;Inserted&lt;/ins&gt;
+
+or
+
+&lt;u&gt;Underline&lt;/u&gt;
+</pre>
+</td>
+<td>
+<p><ins>Inserted</ins>
+</p><p>or
+</p><p><u>Underline</u>
+</p>
+</td></tr>
+<tr>
+<td>Deleted <br />(Displays as strikethrough in most browsers)
+</td>
+<td><pre>&lt;s&gt;Struck out&lt;/s&gt;
+
+or
+
+&lt;del&gt;Deleted&lt;/del&gt;
+
+</pre>
+</td>
+<td>
+<p><s>Struck out</s>
+</p><p>or
+</p><p><del>Deleted</del>
+</p>
+</td></tr>
+<tr>
+<td>Fixed width text
+</td>
+<td><pre>&lt;code&gt;Source code&lt;/code&gt;
+
+or
+
+&lt;tt&gt;Fixed width text&lt;/tt&gt;
+</pre>
+</td>
+<td>
+<p><code>Source code</code>
+</p><p>or
+</p><p><tt>Fixed width text</tt>
+</p>
+</td></tr>
+<tr>
+<td>Blockquotes
+</td>
+<td><pre>Text before
+&lt;blockquote&gt;Blockquote&lt;/blockquote&gt;
+Text after
+</pre>
+</td>
+<td>
+<p>Text before
+</p>
+<blockquote><p>Blockquote</p></blockquote>
+<p>Text after
+</p>
+</td></tr>
+<tr>
+<td>Comment
+</td>
+<td><pre>&lt;!-- This is a comment --&gt;
+Comments are only visible 
+in the edit zone.
+</pre>
+</td>
+<td>
+<p>Comments are only visible 
+in the edit zone.
+</p>
+</td></tr>
+<tr>
+<td>Completely preformatted text
+</td>
+<td><pre>&lt;pre&gt; Text is '''preformatted''' and 
+''markups'' '''''cannot''''' be done&lt;/pre&gt;
+</pre>
+<hr />
+</td>
+<td>
+<pre> Text is '''preformatted''' and 
+''markups'' '''''cannot''''' be done</pre>
+</td></tr>
+<tr>
+<td><b>Customized</b> preformatted text
+</td>
+<td><pre>&lt;pre style="color: red"&gt;
+Text is '''preformatted''' 
+with a style and 
+''markups'' '''''cannot''''' be done
+&lt;/pre&gt;
+</pre>
+<hr />
+</td>
+<td>
+<pre style="color: red">Text is '''preformatted''' 
+with a style and 
+''markups'' '''''cannot''''' be done
+</pre>
+</td></tr></tbody></table>
+<p>continued:
+</p>
+<table class="wikitable">
+<tbody><tr>
+<th>Description
+</th>
+<th width="40%">You type
+</th>
+<th width="40%">You get
+</th></tr>
+<tr>
+<td><b>Customized</b> preformatted text with text wrap according to available width
+</td>
+<td><pre>&lt;pre style="white-space: pre-wrap; 
+white-space: -moz-pre-wrap; 
+white-space: -pre-wrap; 
+white-space: -o-pre-wrap; 
+word-wrap: break-word;"&gt;
+This long sentence is used to demonstrate text wrapping. This additional sentence makes the text even longer.
+&lt;/pre&gt;
+</pre>
+</td>
+<td>
+<pre style="white-space: pre-wrap; white-space: -moz-pre-wrap; white-space: -pre-wrap; white-space: -o-pre-wrap; word-wrap: break-word;">This long sentence is used to demonstrate text wrapping. This additional sentence makes the text even longer.
+</pre>
+</td></tr>
+<tr>
+<td>Preformatted text with text wrap according to available width
+</td>
+<td><pre>&lt;code&gt;
+This long sentence is used to demonstrate text wrapping. This additional sentence makes the text even longer.
+&lt;/code&gt;
+</pre>
+</td>
+<td><code>
+</code><p><code>This long sentence is used to demonstrate text wrapping. This additional sentence makes the text even longer.
+</code>
+</p>
+</td></tr></tbody></table>
+<h2><span class="mw-headline" id="Inserting_symbols">Inserting symbols</span></h2>
+<p>Symbols and other special characters not available on your keyboard can be inserted through a special sequence of characters. Those sequences are called HTML entities. For example, the following sequence (entity)&#160;<b>&amp;rarr;</b> when inserted will be shown as <ins>right arrow</ins> HTML symbol &#8594; and <b>&amp;mdash;</b> when inserted will be shown as an <ins>em dash</ins> HTML symbol&#160;&#8212;. 
+</p>
+<hr />
+<table class="wikitable" align="center" width="100%">
+<tbody><tr>
+<th colspan="32">HTML symbol entities <span style="font-weight:normal">(mouse over to see HTML representation)</span>
+</th></tr>
+<tr align="center">
+<td><b><span title="&amp;Aacute;">&#193;</span></b>
+</td>
+<td><b><span title="&amp;aacute;">&#225;</span></b>
+</td>
+<td><b><span title="&amp;Acirc;">&#194;</span></b>
+</td>
+<td><b><span title="&amp;acirc;">&#226;</span></b>
+</td>
+<td><b><span title="&amp;acute;">&#180;</span></b>
+</td>
+<td><b><span title="&amp;AElig;">&#198;</span></b>
+</td>
+<td><b><span title="&amp;aelig;">&#230;</span></b>
+</td>
+<td><b><span title="&amp;Agrave;">&#192;</span></b>
+</td>
+<td><b><span title="&amp;agrave;">&#224;</span></b>
+</td>
+<td><b><span title="&amp;alefsym;">&#8501;</span></b>
+</td>
+<td><b><span title="&amp;Alpha;">&#913;</span></b>
+</td>
+<td><b><span title="&amp;alpha;">&#945;</span></b>
+</td>
+<td><b><span title="&amp;amp;">&amp;</span></b>
+</td>
+<td><b><span title="&amp;and;">&#8743;</span></b>
+</td>
+<td><b><span title="&amp;ang;">&#8736;</span></b>
+</td>
+<td><b><span title="&amp;Aring;">&#197;</span></b>
+</td>
+<td><b><span title="&amp;aring;">&#229;</span></b>
+</td>
+<td><b><span title="&amp;asymp;">&#8776;</span></b>
+</td>
+<td><b><span title="&amp;Atilde;">&#195;</span></b>
+</td>
+<td><b><span title="&amp;atilde;">&#227;</span></b>
+</td>
+<td><b><span title="&amp;Auml;">&#196;</span></b>
+</td>
+<td><b><span title="&amp;auml;">&#228;</span></b>
+</td>
+<td><b><span title="&amp;bdquo;">&#8222;</span></b>
+</td>
+<td><b><span title="&amp;Beta;">&#914;</span></b>
+</td>
+<td><b><span title="&amp;beta;">&#946;</span></b>
+</td>
+<td><b><span title="&amp;brvbar;">&#166;</span></b>
+</td>
+<td><b><span title="&amp;bull;">&#8226;</span></b>
+</td>
+<td><b><span title="&amp;cap;">&#8745;</span></b>
+</td>
+<td><b><span title="&amp;Ccedil;">&#199;</span></b>
+</td>
+<td><b><span title="&amp;ccedil;">&#231;</span></b>
+</td>
+<td><b><span title="&amp;cedil;">&#184;</span></b>
+</td>
+<td><b><span title="&amp;cent;">&#162;</span></b>
+</td></tr>
+<tr align="center">
+<td><b><span title="&amp;Chi;">&#935;</span></b>
+</td>
+<td><b><span title="&amp;chi;">&#967;</span></b>
+</td>
+<td><b><span title="&amp;circ;">&#710;</span></b>
+</td>
+<td><b><span title="&amp;clubs;">&#9827;</span></b>
+</td>
+<td><b><span title="&amp;cong;">&#8773;</span></b>
+</td>
+<td><b><span title="&amp;copy;">&#169;</span></b>
+</td>
+<td><b><span title="&amp;crarr;">&#8629;</span></b>
+</td>
+<td><b><span title="&amp;cup;">&#8746;</span></b>
+</td>
+<td><b><span title="&amp;curren;">&#164;</span></b>
+</td>
+<td><b><span title="&amp;dagger;">&#8224;</span></b>
+</td>
+<td><b><span title="&amp;Dagger;">&#8225;</span></b>
+</td>
+<td><b><span title="&amp;darr;">&#8595;</span></b>
+</td>
+<td><b><span title="&amp;dArr;">&#8659;</span></b>
+</td>
+<td><b><span title="&amp;deg;">&#176;</span></b>
+</td>
+<td><b><span title="&amp;Delta;">&#916;</span></b>
+</td>
+<td><b><span title="&amp;delta;">&#948;</span></b>
+</td>
+<td><b><span title="&amp;diams;">&#9830;</span></b>
+</td>
+<td><b><span title="&amp;divide;">&#247;</span></b>
+</td>
+<td><b><span title="&amp;Eacute;">&#201;</span></b>
+</td>
+<td><b><span title="&amp;eacute;">&#233;</span></b>
+</td>
+<td><b><span title="&amp;Ecirc;">&#202;</span></b>
+</td>
+<td><b><span title="&amp;ecirc;">&#234;</span></b>
+</td>
+<td><b><span title="&amp;Egrave;">&#200;</span></b>
+</td>
+<td><b><span title="&amp;egrave;">&#232;</span></b>
+</td>
+<td><b><span title="&amp;empty;">&#8709;</span></b>
+</td>
+<td><b><span title="&amp;emsp;">&#8195;</span></b>
+</td>
+<td><b><span title="&amp;ensp;">&#8194;</span></b>
+</td>
+<td><b><span title="&amp;Epsilon;">&#917;</span></b>
+</td>
+<td><b><span title="&amp;epsilon;">&#949;</span></b>
+</td>
+<td><b><span title="&amp;equiv;">&#8801;</span></b>
+</td>
+<td><b><span title="&amp;Eta;">&#919;</span></b>
+</td>
+<td><b><span title="&amp;eta;">&#951;</span></b>
+</td></tr>
+<tr align="center">
+<td><b><span title="&amp;ETH;">&#208;</span></b>
+</td>
+<td><b><span title="&amp;eth;">&#240;</span></b>
+</td>
+<td><b><span title="&amp;Euml;">&#203;</span></b>
+</td>
+<td><b><span title="&amp;euml;">&#235;</span></b>
+</td>
+<td><b><span title="&amp;euro;">&#8364;</span></b>
+</td>
+<td><b><span title="&amp;exist;">&#8707;</span></b>
+</td>
+<td><b><span title="&amp;fnof;">&#402;</span></b>
+</td>
+<td><b><span title="&amp;forall;">&#8704;</span></b>
+</td>
+<td><b><span title="&amp;frac12;">&#189;</span></b>
+</td>
+<td><b><span title="&amp;frac14;">&#188;</span></b>
+</td>
+<td><b><span title="&amp;frac34;">&#190;</span></b>
+</td>
+<td><b><span title="&amp;frasl;">&#8260;</span></b>
+</td>
+<td><b><span title="&amp;Gamma;">&#915;</span></b>
+</td>
+<td><b><span title="&amp;gamma;">&#947;</span></b>
+</td>
+<td><b><span title="&amp;ge;">&#8805;</span></b>
+</td>
+<td><b><span title="&amp;gt;">&gt;</span></b>
+</td>
+<td><b><span title="&amp;harr;">&#8596;</span></b>
+</td>
+<td><b><span title="&amp;hArr;">&#8660;</span></b>
+</td>
+<td><b><span title="&amp;hearts;">&#9829;</span></b>
+</td>
+<td><b><span title="&amp;hellip;">&#8230;</span></b>
+</td>
+<td><b><span title="&amp;Iacute;">&#205;</span></b>
+</td>
+<td><b><span title="&amp;iacute;">&#237;</span></b>
+</td>
+<td><b><span title="&amp;Icirc;">&#206;</span></b>
+</td>
+<td><b><span title="&amp;icirc;">&#238;</span></b>
+</td>
+<td><b><span title="&amp;iexcl;">&#161;</span></b>
+</td>
+<td><b><span title="&amp;Igrave;">&#204;</span></b>
+</td>
+<td><b><span title="&amp;igrave;">&#236;</span></b>
+</td>
+<td><b><span title="&amp;image;">&#8465;</span></b>
+</td>
+<td><b><span title="&amp;infin;">&#8734;</span></b>
+</td>
+<td><b><span title="&amp;int;">&#8747;</span></b>
+</td>
+<td><b><span title="&amp;Iota;">&#921;</span></b>
+</td>
+<td><b><span title="&amp;iota;">&#953;</span></b>
+</td></tr>
+<tr align="center">
+<td><b><span title="&amp;iquest;">&#191;</span></b>
+</td>
+<td><b><span title="&amp;isin;">&#8712;</span></b>
+</td>
+<td><b><span title="&amp;Iuml;">&#207;</span></b>
+</td>
+<td><b><span title="&amp;iuml;">&#239;</span></b>
+</td>
+<td><b><span title="&amp;Kappa;">&#922;</span></b>
+</td>
+<td><b><span title="&amp;kappa;">&#954;</span></b>
+</td>
+<td><b><span title="&amp;Lambda;">&#923;</span></b>
+</td>
+<td><b><span title="&amp;lambda;">&#955;</span></b>
+</td>
+<td><b><span title="&amp;lang;">&#9001;</span></b>
+</td>
+<td><b><span title="&amp;laquo;">&#171;</span></b>
+</td>
+<td><b><span title="&amp;larr;">&#8592;</span></b>
+</td>
+<td><b><span title="&amp;lArr;">&#8656;</span></b>
+</td>
+<td><b><span title="&amp;lceil;">&#8968;</span></b>
+</td>
+<td><b><span title="&amp;ldquo;">&#8220;</span></b>
+</td>
+<td><b><span title="&amp;le;">&#8804;</span></b>
+</td>
+<td><b><span title="&amp;lfloor;">&#8970;</span></b>
+</td>
+<td><b><span title="&amp;lowast;">&#8727;</span></b>
+</td>
+<td><b><span title="&amp;loz;">&#9674;</span></b>
+</td>
+<td><b><span title="&amp;lrm;">&#8206;</span></b>
+</td>
+<td><b><span title="&amp;lsaquo;">&#8249;</span></b>
+</td>
+<td><b><span title="&amp;lsquo;">&#8216;</span></b>
+</td>
+<td><b><span title="&amp;lt;">&lt;</span></b>
+</td>
+<td><b><span title="&amp;macr;">&#175;</span></b>
+</td>
+<td><b><span title="&amp;mdash;">&#8212;</span></b>
+</td>
+<td><b><span title="&amp;micro;">&#181;</span></b>
+</td>
+<td><b><span title="&amp;middot;">&#183;</span></b>
+</td>
+<td><b><span title="&amp;minus;">&#8722;</span></b>
+</td>
+<td><b><span title="&amp;Mu;">&#924;</span></b>
+</td>
+<td><b><span title="&amp;mu;">&#956;</span></b>
+</td>
+<td><b><span title="&amp;nabla;">&#8711;</span></b>
+</td>
+<td><b><span title="&amp;nbsp;">&#160;</span></b>
+</td>
+<td><b><span title="&amp;ndash;">&#8211;</span></b>
+</td></tr>
+<tr align="center">
+<td><b><span title="&amp;ne;">&#8800;</span></b>
+</td>
+<td><b><span title="&amp;ni;">&#8715;</span></b>
+</td>
+<td><b><span title="&amp;not;">&#172;</span></b>
+</td>
+<td><b><span title="&amp;notin;">&#8713;</span></b>
+</td>
+<td><b><span title="&amp;nsub;">&#8836;</span></b>
+</td>
+<td><b><span title="&amp;Ntilde;">&#209;</span></b>
+</td>
+<td><b><span title="&amp;ntilde;">&#241;</span></b>
+</td>
+<td><b><span title="&amp;Nu;">&#925;</span></b>
+</td>
+<td><b><span title="&amp;nu;">&#957;</span></b>
+</td>
+<td><b><span title="&amp;Oacute;">&#211;</span></b>
+</td>
+<td><b><span title="&amp;oacute;">&#243;</span></b>
+</td>
+<td><b><span title="&amp;Ocirc;">&#212;</span></b>
+</td>
+<td><b><span title="&amp;ocirc;">&#244;</span></b>
+</td>
+<td><b><span title="&amp;OElig;">&#338;</span></b>
+</td>
+<td><b><span title="&amp;oelig;">&#339;</span></b>
+</td>
+<td><b><span title="&amp;Ograve;">&#210;</span></b>
+</td>
+<td><b><span title="&amp;ograve;">&#242;</span></b>
+</td>
+<td><b><span title="&amp;oline;">&#8254;</span></b>
+</td>
+<td><b><span title="&amp;Omega;">&#937;</span></b>
+</td>
+<td><b><span title="&amp;omega;">&#969;</span></b>
+</td>
+<td><b><span title="&amp;Omicron;">&#927;</span></b>
+</td>
+<td><b><span title="&amp;omicron;">&#959;</span></b>
+</td>
+<td><b><span title="&amp;oplus;">&#8853;</span></b>
+</td>
+<td><b><span title="&amp;or;">&#8744;</span></b>
+</td>
+<td><b><span title="&amp;ordf;">&#170;</span></b>
+</td>
+<td><b><span title="&amp;ordm;">&#186;</span></b>
+</td>
+<td><b><span title="&amp;Oslash;">&#216;</span></b>
+</td>
+<td><b><span title="&amp;oslash;">&#248;</span></b>
+</td>
+<td><b><span title="&amp;Otilde;">&#213;</span></b>
+</td>
+<td><b><span title="&amp;otilde;">&#245;</span></b>
+</td>
+<td><b><span title="&amp;otimes;">&#8855;</span></b>
+</td>
+<td><b><span title="&amp;Ouml;">&#214;</span></b>
+</td></tr>
+<tr align="center">
+<td><b><span title="&amp;ouml;">&#246;</span></b>
+</td>
+<td><b><span title="&amp;para;">&#182;</span></b>
+</td>
+<td><b><span title="&amp;part;">&#8706;</span></b>
+</td>
+<td><b><span title="&amp;permil;">&#8240;</span></b>
+</td>
+<td><b><span title="&amp;perp;">&#8869;</span></b>
+</td>
+<td><b><span title="&amp;Phi;">&#934;</span></b>
+</td>
+<td><b><span title="&amp;phi;">&#966;</span></b>
+</td>
+<td><b><span title="&amp;Pi;">&#928;</span></b>
+</td>
+<td><b><span title="&amp;pi;">&#960;</span></b>
+</td>
+<td><b><span title="&amp;piv;">&#982;</span></b>
+</td>
+<td><b><span title="&amp;plusmn;">&#177;</span></b>
+</td>
+<td><b><span title="&amp;pound;">&#163;</span></b>
+</td>
+<td><b><span title="&amp;prime;">&#8242;</span></b>
+</td>
+<td><b><span title="&amp;Prime;">&#8243;</span></b>
+</td>
+<td><b><span title="&amp;prod;">&#8719;</span></b>
+</td>
+<td><b><span title="&amp;prop;">&#8733;</span></b>
+</td>
+<td><b><span title="&amp;Psi;">&#936;</span></b>
+</td>
+<td><b><span title="&amp;psi;">&#968;</span></b>
+</td>
+<td><b><span title="&amp;quot;">&quot;</span></b>
+</td>
+<td><b><span title="&amp;radic;">&#8730;</span></b>
+</td>
+<td><b><span title="&amp;rang;">&#9002;</span></b>
+</td>
+<td><b><span title="&amp;raquo;">&#187;</span></b>
+</td>
+<td><b><span title="&amp;rarr;">&#8594;</span></b>
+</td>
+<td><b><span title="&amp;rArr;">&#8658;</span></b>
+</td>
+<td><b><span title="&amp;rceil;">&#8969;</span></b>
+</td>
+<td><b><span title="&amp;rdquo;">&#8221;</span></b>
+</td>
+<td><b><span title="&amp;real;">&#8476;</span></b>
+</td>
+<td><b><span title="&amp;reg;">&#174;</span></b>
+</td>
+<td><b><span title="&amp;rfloor;">&#8971;</span></b>
+</td>
+<td><b><span title="&amp;Rho;">&#929;</span></b>
+</td>
+<td><b><span title="&amp;rho;">&#961;</span></b>
+</td>
+<td><b><span title="&amp;rlm;">&#8207;</span></b>
+</td></tr>
+<tr align="center">
+<td><b><span title="&amp;rsaquo;">&#8250;</span></b>
+</td>
+<td><b><span title="&amp;rsquo;">&#8217;</span></b>
+</td>
+<td><b><span title="&amp;sbquo;">&#8218;</span></b>
+</td>
+<td><b><span title="&amp;Scaron;">&#352;</span></b>
+</td>
+<td><b><span title="&amp;scaron;">&#353;</span></b>
+</td>
+<td><b><span title="&amp;sdot;">&#8901;</span></b>
+</td>
+<td><b><span title="&amp;sect;">&#167;</span></b>
+</td>
+<td><b><span title="&amp;shy;">&#173;</span></b>
+</td>
+<td><b><span title="&amp;Sigma;">&#931;</span></b>
+</td>
+<td><b><span title="&amp;sigma;">&#963;</span></b>
+</td>
+<td><b><span title="&amp;sigmaf;">&#962;</span></b>
+</td>
+<td><b><span title="&amp;sim;">&#8764;</span></b>
+</td>
+<td><b><span title="&amp;spades;">&#9824;</span></b>
+</td>
+<td><b><span title="&amp;sub;">&#8834;</span></b>
+</td>
+<td><b><span title="&amp;sube;">&#8838;</span></b>
+</td>
+<td><b><span title="&amp;sum;">&#8721;</span></b>
+</td>
+<td><b><span title="&amp;sup;">&#8835;</span></b>
+</td>
+<td><b><span title="&amp;sup1;">&#185;</span></b>
+</td>
+<td><b><span title="&amp;sup2;">&#178;</span></b>
+</td>
+<td><b><span title="&amp;sup3;">&#179;</span></b>
+</td>
+<td><b><span title="&amp;supe;">&#8839;</span></b>
+</td>
+<td><b><span title="&amp;szlig;">&#223;</span></b>
+</td>
+<td><b><span title="&amp;Tau;">&#932;</span></b>
+</td>
+<td><b><span title="&amp;tau;">&#964;</span></b>
+</td>
+<td><b><span title="&amp;there4;">&#8756;</span></b>
+</td>
+<td><b><span title="&amp;Theta;">&#920;</span></b>
+</td>
+<td><b><span title="&amp;theta;">&#952;</span></b>
+</td>
+<td><b><span title="&amp;thetasym;">&#977;</span></b>
+</td>
+<td><b><span title="&amp;thinsp;">&#8201;</span></b>
+</td>
+<td><b><span title="&amp;THORN;">&#222;</span></b>
+</td>
+<td><b><span title="&amp;thorn;">&#254;</span></b>
+</td>
+<td><b><span title="&amp;tilde;">&#732;</span></b>
+</td></tr>
+<tr align="center">
+<td><b><span title="&amp;times;">&#215;</span></b>
+</td>
+<td><b><span title="&amp;trade;">&#8482;</span></b>
+</td>
+<td><b><span title="&amp;Uacute;">&#218;</span></b>
+</td>
+<td><b><span title="&amp;uacute;">&#250;</span></b>
+</td>
+<td><b><span title="&amp;uarr;">&#8593;</span></b>
+</td>
+<td><b><span title="&amp;uArr;">&#8657;</span></b>
+</td>
+<td><b><span title="&amp;Ucirc;">&#219;</span></b>
+</td>
+<td><b><span title="&amp;ucirc;">&#251;</span></b>
+</td>
+<td><b><span title="&amp;Ugrave;">&#217;</span></b>
+</td>
+<td><b><span title="&amp;ugrave;">&#249;</span></b>
+</td>
+<td><b><span title="&amp;uml;">&#168;</span></b>
+</td>
+<td><b><span title="&amp;upsih;">&#978;</span></b>
+</td>
+<td><b><span title="&amp;Upsilon;">&#933;</span></b>
+</td>
+<td><b><span title="&amp;upsilon;">&#965;</span></b>
+</td>
+<td><b><span title="&amp;Uuml;">&#220;</span></b>
+</td>
+<td><b><span title="&amp;uuml;">&#252;</span></b>
+</td>
+<td><b><span title="&amp;weierp;">&#8472;</span></b>
+</td>
+<td><b><span title="&amp;Xi;">&#926;</span></b>
+</td>
+<td><b><span title="&amp;xi;">&#958;</span></b>
+</td>
+<td><b><span title="&amp;Yacute;">&#221;</span></b>
+</td>
+<td><b><span title="&amp;yacute;">&#253;</span></b>
+</td>
+<td><b><span title="&amp;yen;">&#165;</span></b>
+</td>
+<td><b><span title="&amp;yuml;">&#255;</span></b>
+</td>
+<td><b><span title="&amp;Yuml;">&#376;</span></b>
+</td>
+<td><b><span title="&amp;Zeta;">&#918;</span></b>
+</td>
+<td><b><span title="&amp;zeta;">&#950;</span></b>
+</td>
+<td><b><span title="&amp;zwj;">&#8205;</span></b>
+</td>
+<td><b><span title="&amp;zwnj;">&#8204;</span></b>
+</td></tr></tbody></table>
+<table class="wikitable">
+<tbody><tr>
+<th>Description
+</th>
+<th width="40%">You type
+</th>
+<th width="40%">You get
+</th></tr>
+<tr>
+<td>Copyright symbol
+</td>
+<td><tt><pre>&amp;copy;
+</pre></tt>
+</td>
+<td>
+<dl><dd><dl><dd><dl><dd><b>&#169;</b></dd></dl></dd></dl></dd></dl>
+</td></tr>
+<tr>
+<td>Greek delta letter symbol
+</td>
+<td><tt><pre>&amp;delta;
+</pre></tt>
+</td>
+<td>
+<dl><dd><dl><dd><dl><dd><b>&#948;</b></dd></dl></dd></dl></dd></dl>
+</td></tr>
+<tr>
+<td>Euro currency symbol
+</td>
+<td><tt><pre>&amp;euro;
+</pre></tt>
+</td>
+<td>
+<dl><dd><dl><dd><dl><dd><b>&#8364;</b></dd></dl></dd></dl></dd></dl>
+</td></tr></tbody></table>
+<p>See the list of all HTML entities on the Wikipedia article <a href="http://en.wikipedia.org/wiki/List_of_HTML_entities" class="extiw" title="wikipedia:List of HTML entities">List of HTML entities</a>. Additionally, MediaWiki supports two non-standard entity reference sequences: <code>&amp;רלמ;</code> and <code>&amp;رلم;</code> which are both considered equivalent to <code>&amp;rlm;</code> which is a <a href="http://en.wikipedia.org/wiki/Right-to-left_mark" class="extiw" title="wikipedia:Right-to-left mark">right-to-left mark</a>. (Used when combining right to left languages with left to right languages in the same page.)
+</p>
+<h2><span id="HTML_tags_and_symbol_entities_displayed_themselves_(with_and_without_interpreting_them)"></span><span class="mw-headline" id="HTML_tags_and_symbol_entities_displayed_themselves_.28with_and_without_interpreting_them.29">HTML tags and symbol entities displayed themselves (with and without interpreting them)</span></h2>
+<dl><dd><tt>&amp;amp;euro;</tt> &#160;&#8594; <b>&amp;euro;</b></dd></dl>
+<dl><dd><tt>&lt;span style="color: red; text-decoration: line-through;"&gt;Typo to be corrected&lt;/span&gt;</tt> &#160;&#8594; <b><span style="color: red; text-decoration: line-through;">Typo to be corrected</span></b></dd></dl>
+<dl><dd><tt>&amp;lt;span style="color: red; text-decoration: line-through;"&gt;Typo to be corrected&amp;lt;/span&gt;</tt> &#160;&#8594; <b>&lt;span style="color: red; text-decoration: line-through;"&gt;Typo to be corrected&lt;/span&gt;</b></dd></dl>
+<h3><span class="mw-headline" id="Nowiki_for_HTML">Nowiki for HTML</span></h3>
+<p>&lt;nowiki /&gt; can prohibit (HTML) tags:
+</p>
+<ul><li>&lt;&lt;nowiki /&gt;pre&gt; &#160;&#8594; &lt;pre&gt;</li></ul>
+<p>But <i>not</i> &amp; symbol escapes:
+</p>
+<ul><li>&amp;&lt;nowiki /&gt;amp; &#160;&#8594; &amp;</li></ul>
+<h2><span class="mw-headline" id="Other_formatting">Other formatting</span></h2>
+<p>You can find more references at <a href="/index.php/Help:Contents" title="Help:Contents">Help:Contents</a>.
+</p></div>

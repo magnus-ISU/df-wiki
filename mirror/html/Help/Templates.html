@@ -1,0 +1,233 @@
+<div class="mw-parser-output"><table style="margin: 0 10%; border-collapse: collapse; background: #eee; border: 1px solid #aaaaaa; border-left: 10px solid #cccccc; width:80%; margin-bottom: 10px">
+
+<tbody><tr>
+<td style="padding: 0.5em 0.5em; width: 100%;">This is a public-domain help page, taken directly from <a href="http://en.wikipedia.org/wiki/mw:Help:Templates" class="extiw" title="wikipedia:mw:Help:Templates">MediaWiki.org</a>.
+<p><small>Information specific to the Dwarf Fortress wiki should go on <a href="/index.php?title=Help:Templates/DFWiki&amp;action=edit&amp;redlink=1" class="new" title="Help:Templates/DFWiki (page does not exist)">this page</a> instead.</small>
+</p>
+</td></tr></tbody></table>
+<p>If you have standard texts you want to include on several pages, the MediaWiki template feature comes into play.
+</p>
+
+<h2><span class="mw-headline" id="Creation">Creation</span></h2>
+<p>Templates are standard wiki pages whose content is designed to be <a href="/index.php?title=W:Wikipedia:Transclusion&amp;action=edit&amp;redlink=1" class="new" title="W:Wikipedia:Transclusion (page does not exist)">transcluded</a> (embedded) inside other pages. Templates follow a convention that the name is prefixed with "<code>Template:</code>", assigning it to that <a href="/index.php?title=Help:Namespaces&amp;action=edit&amp;redlink=1" class="new" title="Help:Namespaces (page does not exist)">namespace</a>; besides this, you can <a href="/index.php?title=Help:Starting_a_new_page&amp;action=edit&amp;redlink=1" class="new" title="Help:Starting a new page (page does not exist)">create them like any other wiki page</a>.
+</p><p>The simplest use of templates is as follows. If you create a page called "Template:Welcome" with contents:
+</p>
+<pre>Hello! Welcome to the wiki.
+</pre>
+<p>you'll have created your first template! If you then insert the code:
+</p>
+<pre>{{Welcome}}
+</pre>
+<p>in any other page, when that page is viewed the text "Hello! Welcome to the wiki." will appear instead of <code>{{Welcome}}</code>. The template content is "transcluded" into the other page, i.e. it is integrated in the page.
+</p><p>You can then insert <code>{{Welcome}}</code> at any point of any page where you wish to welcome someone. Suppose it is used in 100 pages. If you then change the template contents to:
+</p>
+<pre>Hi there! Welcome to this wonderful wiki.
+</pre>
+<p>and revisit any of the 100 pages where the template was used, you'll see the new text instead of the original one. In this way, you have changed the content of 100 pages without editing them, because the template is transcluded into these pages.
+</p><p>This is the basic mechanism. There are several additional features of transclusion that enrich this mechanism and make templates very useful.
+</p>
+<h2><span class="mw-headline" id="Usage">Usage</span></h2>
+<p>Templates can be used in other pages in these ways:
+</p>
+<ul><li><code>{{Name}}</code> — as described above, this link will be dynamically replaced by the current content of [[Template:Name]] at the time the page with the template link is loaded. The link will remain unchanged in the page's source.</li>
+<li><code>{{subst:Name}}</code> — when this template link is used, it will be replaced once and for all with the content of [[Template:Name]] as of the time the page with the link is <b>saved</b>: a copy of the contents of [[Template:Name]] will be <i>substituted</i> for the template link. The contents are then a part of the including page, and can be edited normally, separately from the original. <i>Note</i>: changes to the source template page will <i>not</i> be propagated to the page with the template link.</li>
+<li><code>{{safesubst:Name}}</code> — this was introduced in <a href="/index.php?title=Rev:61710&amp;action=edit&amp;redlink=1" class="new" title="Rev:61710 (page does not exist)">rev:61710</a> to allow for substitution that doesn't break transclusion, see <a href="/index.php?title=W:en:Help:Substitution&amp;action=edit&amp;redlink=1" class="new" title="W:en:Help:Substitution (page does not exist)">w:en:Help:Substitution#The safesubst: modifier</a>.</li>
+<li><code>{{msgnw:Name}}</code> includes the template in a form that displays it as raw wiki syntax (the way <code>&lt;nowiki&gt;</code> does) when the page containing it is fetched.</li></ul>
+<p>In fact, an ordinary wiki page can also be used as a template, simply by specifying the namespace it resides in, so:
+</p>
+<ul><li><code>{{Template:Pagename}}</code>  includes <code>[[Template:Pagename]]</code></li>
+<li><code>{{Foo:Pagename}}</code>       includes <code>[[Foo:Pagename]]</code></li>
+<li><code>{{:Pagename}}</code>          includes <code>[[Pagename]]</code>
+<ul><li><code>{{subst::Pagename}}</code>    replaces itself with the contents of <code>[[Pagename]]</code></li></ul></li></ul>
+<p>If no such namespace exists, the full title is assumed to be a template:
+</p>
+<ul><li><code>{{Foo:Bar}}</code>            includes <code>[[Template:Foo:Bar]]</code></li></ul>
+<h2><span class="mw-headline" id="Parameters">Parameters</span></h2>
+<p>To enrich the mechanism of transclusion, MediaWiki allows parameters to be passed to a template when it is transcluded. Parameters allow the template to produce different contents or have different behaviors.
+</p><p>Suppose you wish to insert a little thank you note in the <a href="/index.php/Help:Talk_pages" title="Help:Talk pages">talk page</a> of other users, such as:
+</p>
+<div class="noprint" style="float:none; border:1px solid blue;width:200px;background-color:#F5F5F5;padding:2px;">
+<table cellspacing="0">
+<tbody><tr>
+<td><div class="floatnone"><a href="/index.php/File:Example.jpg" class="image" title="Example sunflower image"><img alt="Example sunflower image" src="/images/thumb/a/a9/Example.jpg/80px-Example.jpg" decoding="async" width="80" height="27" srcset="/images/thumb/a/a9/Example.jpg/120px-Example.jpg 1.5x, /images/thumb/a/a9/Example.jpg/160px-Example.jpg 2x" /></a></div>
+</td>
+<td style="padding-left:5px;"><b>A little thank you...</b> <br /><small>for all your effort. <br />hugs, Me</small>
+</td></tr></tbody></table></div>
+<p>The thank you note will have a reason (in this case, "all your effort") and a signature ("Me"). Your objective is that any user is able to thank any other user, for any reason whatsoever.
+</p><p>So that the note will look similar everywhere it is used, you can define a template called <a href="/index.php/Template:Thankyou" title="Template:Thankyou">Template:Thankyou</a>, for example. Although the note should look similar whenever a user thanks another user, its specific contents (i.e. the reason and the signature) will be different. For that reason, you should pass them as parameters. If we ignore the remaining elements to format the box and place the image, the core content of the template will be this:
+</p>
+<pre>'''A little thank you...'''
+for {{{1}}}.
+hugs, {{{2}}}</pre>
+<p>Notice the use of <code>{{{1}}}</code> and <code>{{{2}}}</code>. This is the way to identify, within templates, the parameters that will be passed in when the template is used. Note that, within the template, each parameter is surrounded by <b>three</b> braces: <code>{{{ }}}</code>. This is different from normal template name usage.
+</p><p>When using the template on a page, you fill in the parameter values, separated by a "pipe" character (<code>|</code>). MediaWiki allows parameters to be passed to the template in three ways: Anonymously, Numbered, and Named.
+</p>
+<h3><span class="mw-headline" id="Anonymous_parameters">Anonymous parameters</span></h3>
+<p>To pass in anonymous parameters, list the values of those parameters sequentially:
+</p>
+<pre>{{Thankyou|all your effort|Me}}
+</pre>
+<p>In this case, the <code>{{Thankyou}}</code> template receives parameters <code>{{{1}}}=all your effort</code> and <code>{{{2}}}=Me</code>, producing:
+</p>
+<div class="noprint" style="float:none; border:1px solid blue;width:200px;background-color:#F5F5F5;padding:2px;">
+<table cellspacing="0">
+<tbody><tr>
+<td><div class="floatnone"><a href="/index.php/File:Example.jpg" class="image" title="Example sunflower image"><img alt="Example sunflower image" src="/images/thumb/a/a9/Example.jpg/80px-Example.jpg" decoding="async" width="80" height="27" srcset="/images/thumb/a/a9/Example.jpg/120px-Example.jpg 1.5x, /images/thumb/a/a9/Example.jpg/160px-Example.jpg 2x" /></a></div>
+</td>
+<td style="padding-left:5px;"><b>A little thank you...</b> <br /><small>for all your effort. <br />hugs, Me</small>
+</td></tr></tbody></table></div>
+<p><br />
+The order in which anonymous parameters are passed in is crucial to its behaviour. Reversing the order of the parameters, like so:
+</p>
+<pre>{{Thankyou|Me|all your effort}}
+</pre>
+<p>would produce this result:
+</p>
+<div class="noprint" style="float:none; border:1px solid blue;width:200px;background-color:#F5F5F5;padding:2px;">
+<table cellspacing="0">
+<tbody><tr>
+<td><div class="floatnone"><a href="/index.php/File:Example.jpg" class="image" title="Example sunflower image"><img alt="Example sunflower image" src="/images/thumb/a/a9/Example.jpg/80px-Example.jpg" decoding="async" width="80" height="27" srcset="/images/thumb/a/a9/Example.jpg/120px-Example.jpg 1.5x, /images/thumb/a/a9/Example.jpg/160px-Example.jpg 2x" /></a></div>
+</td>
+<td style="padding-left:5px;"><b>A little thank you...</b> <br /><small>for Me. <br />hugs, all your effort</small>
+</td></tr></tbody></table></div>
+<p><br />
+<b>Note:</b> identifying parameters by order (with <code>{{{1}}}</code>, etc.) works <i>only</i> with anonymous parameters. If your page identifies any parameter by number or name, as shown below, this method will no longer be available to the template which receives them.
+</p>
+<h3><span class="mw-headline" id="Numbered_parameters">Numbered parameters</span></h3>
+<p>To pass in parameters by number, identify each parameter when passing it:
+</p>
+<pre>{{Thankyou|2=Me|1=your friendship}}
+</pre>
+<p>This time, template <code>{{Thankyou}}</code> receives parameters <code>{{{1}}}=your friendship</code> and <code>{{{2}}}=Me</code>, though they have been supplied in inverse order, and produces:
+</p>
+<div class="noprint" style="float:none; border:1px solid blue;width:200px;background-color:#F5F5F5;padding:2px;">
+<table cellspacing="0">
+<tbody><tr>
+<td><div class="floatnone"><a href="/index.php/File:Example.jpg" class="image" title="Example sunflower image"><img alt="Example sunflower image" src="/images/thumb/a/a9/Example.jpg/80px-Example.jpg" decoding="async" width="80" height="27" srcset="/images/thumb/a/a9/Example.jpg/120px-Example.jpg 1.5x, /images/thumb/a/a9/Example.jpg/160px-Example.jpg 2x" /></a></div>
+</td>
+<td style="padding-left:5px;"><b>A little thank you...</b> <br /><small>for your friendship. <br />hugs, Me</small>
+</td></tr></tbody></table></div>
+<p><br />
+</p>
+<h3><span class="mw-headline" id="Named_parameters">Named parameters</span></h3>
+<p>The third way of passing parameters is by name, instead of numbers. In this case, the template contents would be changed to:
+</p>
+<pre>'''A little thank you...'''
+for {{{reason}}}.
+hugs, {{{signature}}}</pre>
+<p>Within the template, we use <code>{{{reason}}}</code> and <code>{{{signature}}}</code> to identify each parameter, instead of a number. To pass these parameters by name, identify each parameter when passing it:
+</p>
+<pre>{{Thankyou|signature=Me|reason=being who you are}}
+</pre>
+<p>In this case, template <code>{{Thankyou}}</code> receives parameters <code>{{{reason}}}=being who you are</code> and <code>{{{signature}}}=Me</code> and produces:
+</p>
+<div class="noprint" style="float:none; border:1px solid blue;width:200px;background-color:#F5F5F5;padding:2px;">
+<table cellspacing="0">
+<tbody><tr>
+<td><div class="floatnone"><a href="/index.php/File:Example.jpg" class="image" title="Example sunflower image"><img alt="Example sunflower image" src="/images/thumb/a/a9/Example.jpg/80px-Example.jpg" decoding="async" width="80" height="27" srcset="/images/thumb/a/a9/Example.jpg/120px-Example.jpg 1.5x, /images/thumb/a/a9/Example.jpg/160px-Example.jpg 2x" /></a></div>
+</td>
+<td style="padding-left:5px;"><b>A little thank you...</b> <br /><small>for being who you are. <br />hugs, Me</small>
+</td></tr></tbody></table></div>
+<p>The advantage of using named parameters in your template, besides also being flexible in the order parameters can be passed, is that it makes the template code much easier to understand if there are many parameters.
+</p>
+<h3><span class="mw-headline" id="Default_values">Default values</span></h3>
+<p>If you transclude a template that expects parameters, but do not provide them, in this way:
+</p>
+<pre>{{Thankyou}}
+</pre>
+<p>in the numbered parameters example above you would get the following:
+</p>
+<div class="noprint" style="float:none; border:1px solid blue;width:200px;background-color:#F5F5F5;padding:2px;">
+<table cellspacing="0">
+<tbody><tr>
+<td><div class="floatnone"><a href="/index.php/File:Example.jpg" class="image" title="Example sunflower image"><img alt="Example sunflower image" src="/images/thumb/a/a9/Example.jpg/80px-Example.jpg" decoding="async" width="80" height="27" srcset="/images/thumb/a/a9/Example.jpg/120px-Example.jpg 1.5x, /images/thumb/a/a9/Example.jpg/160px-Example.jpg 2x" /></a></div>
+</td>
+<td style="padding-left:5px;"><b>A little thank you...</b> <br /><small>for {{{1}}}. <br />hugs, {{{2}}}</small>
+</td></tr></tbody></table></div>
+<p>Since no parameters were passed in, the template presents the parameters themselves, instead of their respective values. In these cases, it may be useful to define <i>default</i> values for the parameters, i.e. values that will be used if no value is passed in. For example, if the template contents are changed to:
+</p>
+<pre>'''A little thank you...'''
+for {{{reason|everything}}}.
+hugs, {{{signature|Me}}}</pre>
+<p>then <code>{{{reason|everything}}}</code> defines that if no parameter <code>{{{reason}}}</code> is provided, then the value <code>everything</code> will be used. Similarly, <code>{{{signature|Me}}}</code>, defaults parameter <code>{{{signature}}}</code> to value <code>Me</code>. Now, transcluding the template again without passing any parameter, results in the following:
+</p>
+<div class="noprint" style="float:none; border:1px solid blue;width:200px;background-color:#F5F5F5;padding:2px;">
+<table cellspacing="0">
+<tbody><tr>
+<td><div class="floatnone"><a href="/index.php/File:Example.jpg" class="image" title="Example sunflower image"><img alt="Example sunflower image" src="/images/thumb/a/a9/Example.jpg/80px-Example.jpg" decoding="async" width="80" height="27" srcset="/images/thumb/a/a9/Example.jpg/120px-Example.jpg 1.5x, /images/thumb/a/a9/Example.jpg/160px-Example.jpg 2x" /></a></div>
+</td>
+<td style="padding-left:5px;"><b>A little thank you...</b> <br /><small>for everything. <br />hugs, Me</small>
+</td></tr></tbody></table></div>
+<p><br />
+</p>
+<h2><span class="mw-headline" id="Control_template_inclusion">Control template inclusion</span></h2>
+<p>By default, a template's content is displayed in its entirety, both when viewed directly and when included in another page. However, you can control which parts of a template will be seen and included by the use of the <code>&lt;noinclude&gt;</code> and
+<code>&lt;includeonly&gt;</code> tags.
+</p><p>Anything between <code>&lt;noinclude&gt;</code> and <code>&lt;/noinclude&gt;</code> will be seen only when the template's page is being viewed directly, but not when it is included in another page. This is useful when you want to include text or code in a template that you do not want to propagate to any pages which include it, such as:
+</p>
+<ul><li><a href="/index.php/Help:Categories" title="Help:Categories">Category</a> links when categorizing the template itself</li>
+<li><a href="/index.php/Help:Links#Interlanguage_links" title="Help:Links">interlanguage links</a> to similar templates in other languages</li>
+<li>Explanatory text about how to use the template</li></ul>
+<p>Likewise, anything between <code>&lt;includeonly&gt;</code> and <code>&lt;/includeonly&gt;</code> will be processed and displayed only when the page is being included, but not when the template page is being viewed directly, and is useful in situations such as:
+</p>
+<ul><li><a href="/index.php/Help:Categories" title="Help:Categories"> Categorizing</a> pages which include the template. <i>Note:</i> when changing the categories applied by a template in this fashion, the categorization of the pages which include that template may not be updated until some time later: this is handled by the <a href="/index.php?title=Template:Mediawiki&amp;action=edit&amp;redlink=1" class="new" title="Template:Mediawiki (page does not exist)">Template:Mediawiki</a>. To force the re-categorization of a particular page, open that page for editing and save it without changes.</li>
+<li>Ensuring that the template's code is not executed when viewing the template page itself. Typically this is because it expects parameters, and its execution without parameters has an undesired result.</li></ul>
+<p>Everything outside <code>&lt;noinclude&gt;</code> and
+<code>&lt;includeonly&gt;</code> tags is processed and displayed normally; that is, both when the template page is being viewed directly and when the template is included in another page.
+</p>
+<h2><span class="mw-headline" id="Organizing_templates">Organizing templates</span></h2>
+<p>For templates to be effective, users need to find them, and find out how to use them. 
+</p><p>To find them, users can:
+</p>
+<ol><li>Click <b>Special Pages &gt; All Pages</b></li>
+<li>In the <b>Namespace</b> list, choose <b>Template</b> and click <b>Go</b>.</li></ol>
+<p>To give usage information, include an example like this one on the template page:
+</p>
+<pre>&lt;noinclude&gt;
+== Usage ==
+Welcome users:
+{{Thankyou|reason=your reason|signature=your signature}}
+&lt;/noinclude&gt;
+</pre>
+<p>Then, an editor can simply copy and paste the example to use the template.
+</p>
+<h2><span class="mw-headline" id="Copying_from_one_wiki_to_another">Copying from one wiki to another</span></h2>
+<p>Templates often require <a rel="nofollow" class="external text" href="http://meta.wikimedia.org/wiki/Help:CSS">CSS</a> or other templates, so users frequently have trouble copying templates from one wiki to another. The steps below should work for most templates.
+</p>
+<h3><span class="mw-headline" id="MediaWiki_code">MediaWiki code</span></h3>
+<p>If you have import rights on the new wiki:
+</p>
+<ol><li>Go to <a href="/index.php/Special:Export" title="Special:Export">Special:Export</a> on the original wiki, and download an .xml file with the complete history of all necessary templates, as follows:
+<ul><li>Enter the name of the template in the big text box, e.g. "Template:Welcome". Pay special attention to capitalization and special characters — if the template name isn't exactly correct, the export may still occur but the .xml file will not have the expected data.</li>
+<li>Check the box "Include templates".</li>
+<li><b>Uncheck</b> the box "Include only the current revision".</li>
+<li>Click Export.</li></ul></li>
+<li>Go to <a href="/index.php/Special:Import" title="Special:Import">Special:Import</a> on the new wiki and upload the .xml file.</li></ol>
+<p>If you don't have import rights on the new wiki:
+</p>
+<ol><li>Go to <a href="/index.php/Special:Export" title="Special:Export">Special:Export</a> on the original wiki, and download an .xml file with the latest version only of all necessary templates, as follows:
+<ul><li>Enter the name of the template in the big text box.</li>
+<li>Check the box "Include templates".</li>
+<li><b>Check</b> the box "Include only the current revision".</li>
+<li>Click Export.</li>
+<li>Open the file in a text editor and replace certain <a href="/index.php?title=W:en:XML_entity&amp;action=edit&amp;redlink=1" class="new" title="W:en:XML entity (page does not exist)">XML entities</a> with the corresponding characters: &amp;lt; → &lt;, &amp;gt; → &gt;, &amp;quot; → " and &amp;amp; → &amp;. Because of XML syntax rules, these entities appear in the XML file, but they should not appear in the edit box of the MediaWiki instance.</li>
+<li>Manually copy the text inside the <code>&lt;text&gt;</code> tag of each listed template into a similarly named template in your wiki. In the edit summary of each template, link to the original page for attribution.</li></ul></li></ol>
+<p>This will copy the entire code necessary, and will suffice for some templates.
+</p>
+<h3><span class="mw-headline" id="Extensions">Extensions</span></h3>
+<p>An extension often used in templates is ParserFunctions. Visit page <a href="/index.php?title=Template:Mediawiki&amp;action=edit&amp;redlink=1" class="new" title="Template:Mediawiki (page does not exist)">Template:Mediawiki</a> and check if any of the functions listed there are used in the templates you've copied. If so, you have to install the <a href="/index.php?title=Template:Mediawiki&amp;action=edit&amp;redlink=1" class="new" title="Template:Mediawiki (page does not exist)">Template:Mediawiki</a>. To install it, you'll need system admin access to the server of your MediaWiki installation.
+</p>
+<h3><span class="mw-headline" id="CSS_and_JavaScript_code">CSS and JavaScript code</span></h3>
+<p>Besides MediaWiki code, many templates make use of CSS and some rely on JavaScript to work fully. If the copied templates are not behaving as expected, this may be the cause. To copy the required CSS and JavaScript to your wiki you'll normally need to have admin priviledges, because you'll be editing system messages in the "MediaWiki:" namespace.
+</p>
+<ol><li>Look for the use of CSS classes (text like <code>class="foobar"</code>) in the template text. If those classes appear in "MediaWiki:Common.css" or "MediaWiki:Monobook.css" on the original wiki, copy them to "MediaWiki:Common.css" on the new wiki and check if the template is now fine.</li>
+<li>If the copied template is still not working as expected, check if there is code in "MediaWiki:Common.js" or "MediaWiki:Monobook.js" on the original wiki. If so, you can try copying it to "MediaWiki:Common.js" on the new wiki. Normally, it is a good idea to only copy code from trusted sources, and first browsing the code to identify and select the parts that are relevant. You may find comments that can serve as clues to identify the functionality of each part.</li></ol>
+<h2><span class="mw-headline" id="See_also">See also</span></h2>
+<ul><li><a href="/index.php?title=Help:External_searches&amp;action=edit&amp;redlink=1" class="new" title="Help:External searches (page does not exist)">Help:External searches</a> &#8212; a template special use case example</li>
+<li><a href="/index.php?title=Help:Magic_words&amp;action=edit&amp;redlink=1" class="new" title="Help:Magic words (page does not exist)">Help:Magic words</a> &#8212; fancy stuff you may find in some templates</li>
+<li><a href="/index.php?title=Help:Parser_functions_in_templates&amp;action=edit&amp;redlink=1" class="new" title="Help:Parser functions in templates (page does not exist)">Help:Parser functions in templates</a></li>
+<li><a href="/index.php?title=Template:Meta&amp;action=edit&amp;redlink=1" class="new" title="Template:Meta (page does not exist)">Template:Meta</a> – contains a much more thorough manual on how exactly templates function
+<ul><li><a href="/index.php?title=Template:Meta&amp;action=edit&amp;redlink=1" class="new" title="Template:Meta (page does not exist)">Template:Meta</a> – describes even more advanced techniques such dynamic template calls and variable variables</li></ul></li>
+<li><a href="/index.php?title=Template:Meta&amp;action=edit&amp;redlink=1" class="new" title="Template:Meta (page does not exist)">Template:Meta</a> – embedding pages from <a href="/index.php?title=Help:Namespaces&amp;action=edit&amp;redlink=1" class="new" title="Help:Namespaces (page does not exist)">namespaces</a> other than <code>Template:</code>.</li></ul>
+<p><a href="/index.php?title=Template:Languages&amp;action=edit&amp;redlink=1" class="new" title="Template:Languages (page does not exist)">Template:Languages</a>
+</p></div>

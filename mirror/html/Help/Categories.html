@@ -1,0 +1,79 @@
+<div class="mw-parser-output"><p>Categories, a software feature of MediaWiki, provide automatic indexes that are useful as tables of contents.
+</p><p>You can categorize pages and files by adding one or more <b>Category</b>  tags to the content text. These tags create links at the bottom of the page that take you to the list of all pages in that category, which makes it easy to browse related articles.
+</p>
+
+<h2><span class="mw-headline" id="Basics">Basics</span></h2>
+<ul><li>To add a page to a category manually:
+<ul><li>If the category relates to <b>a specific version of DF</b> (for example, <a href="/index.php/Category:40d:Animals" title="Category:40d:Animals">Category:40d:Animals</a>), add <code>{{Category|<i>Category Name</i>}}</code> to the end of the article.</li>
+<li>If the category relates to <b>DF in general</b>, or unlikely to change in other versions (for example, <a href="/index.php/Category:Disambiguation" title="Category:Disambiguation">Category:Disambiguation</a>), add <code>[[Category:<i>Category Name</i>]]</code> to the end of the article.</li></ul></li></ul>
+<dl><dd>Note that many categories are automatically included with templates; the list of an article's categories is displayed at the bottom of the page. You only need to add categories manually if they don't appear in the <i>generated</i> page, even though they may not appear in the page's source.</dd></dl>
+<h2><span class="mw-headline" id="Summary">Summary</span></h2>
+<p>Each of the pages in the <b>Category</b> <a href="/index.php/Help:Namespace" title="Help:Namespace">namespace</a> represents a so-called <b>category</b>, a grouping of related pages, and contains an index for the pages of its category. For example, this page belongs to "<a href="/index.php/Category:Help" title="Category:Help">Category:Help</a>". If you open the "<a href="/index.php/Category:Help" title="Category:Help">Category:Help</a>" page, you will see a link to this page there.
+</p><p>When a page belongs to one or more categories, these categories appear at the bottom of the page (or in the upper-right corner, depending on the <a href="http://en.wikipedia.org/wiki/mw:Help:Preferences" class="extiw" title="wikipedia:mw:Help:Preferences">skin</a> being used).
+</p><p>The category pages themselves contain 2 parts&#160;:
+</p>
+<ul><li>at their beginning, an optional part may contain text that can be edited, like any other page,</li>
+<li>at their end, an ever present, automatically generated, alphabetical list of all pages in that category, in the form of links. (In fact, in ASCII order. See <a href="http://en.wikipedia.org/wiki/mw:Help:Special_page" class="extiw" title="wikipedia:mw:Help:Special page">Special page</a>).</li></ul>
+<p>To assign a category to a page:
+</p>
+<ul><li>If the page is a <b>generic</b> page (not version-specific, e.g. <a href="/index.php/Character_table" title="Character table">Character table</a>) Add the link "[[Category:<i>Category name</i>]]" to the page's wikitext.</li>
+<li>If the page is about a specific version of Dwarf Fortress, use {{Category|<i>Caregory name</i>}} instead. This places the page into a <i>sub-category</i>, which contains pages specific to the same version.</li></ul>
+<p>The usual place to add a category is at the bottom of the page.
+</p><p>To link a category page within a page as a normal wiki link (without adding the page to the category), prefix the link name with a colon.  For example: [[:Category:<i>Category name</i>]]
+</p><p>New categories can be <a href="/index.php/Dwarf_Fortress_Wiki:PR" class="mw-redirect" title="Dwarf Fortress Wiki:PR">created</a> before assigning any page to it, in the same way as any other regular page.
+</p><p>Individual wikis may have their own top-level categories, such as <a href="http://en.wikipedia.org/wiki/Category:Contents" class="extiw" title="wikipedia:Category:Contents">Category:Contents</a> in Wikipedia.
+</p>
+<h2><span class="mw-headline" id="List_of_Categories">List of Categories</span></h2>
+<p>For a complete list of all categories which have at least one page, see <a href="/index.php/Special:Categories" title="Special:Categories">Special:Categories</a>.
+</p><p>For a complete list of all created/edited categories, including the ones that don't have any page, see <a href="/index.php/Special:AllPages/Category:" title="Special:AllPages/Category:">Special:Allpages/Category:</a> (note the colon at the end).
+</p>
+<h2><span class="mw-headline" id="Adding_a_page_to_a_category">Adding a page to a category</span></h2>
+<p>To add a page or uploaded file to a category, simply edit the page and add the following text (where <i><b>Name</b></i> is the name of the category you want to add it to).
+</p>
+<pre>[[Category:<i><b>Name</b></i>]] (generic pages)
+{{Category|<i><b>Name</b></i>}} (version-specific pages)
+</pre>
+<p>Any number of Category tags may be added to the page and the page will be listed in all of them. Category tags, along with <a href="/index.php?title=Manual:Interwiki&amp;action=edit&amp;redlink=1" class="new" title="Manual:Interwiki (page does not exist)">interwiki language links</a> placed in the sidebar, are usually added at the very bottom of the page for the convenience of other editors. 
+</p><p>On a categorised page, categories are displayed in the Categories: box strictly in the order they appear in the wikitext. 
+</p>
+<h3><span class="mw-headline" id="Sort_key">Sort key</span></h3>
+<p>By default, a page is sorted within a category under the first letter of its name — <i>without the namespace</i>. Also, MediaWiki groups accented characters separately from their unaccented version, so pages starting by À, Á, Ä, will be listed under separate headings, instead of under heading A.
+</p><p>A <i>sort key</i> specifies under which letter heading, and where in the category list, the page will appear. You can add a sort key by placing it inside the tag after a pipe character. For example, the tag below will add the page under heading "S".
+</p>
+<pre>[[Category:<i><b>Name</b></i>|<i><b>Sort</b></i>]] (generic pages)
+{{Category|<i><b>Name</b></i>|<i><b>Sort</b></i>}} (version-specific pages)
+</pre>
+<p><b>Sort keys are case-sensitive, and spaces and other characters are also valid.</b> (Spaces will place the page at the beginning of the list.) The order of the sections within a category follows the Unicode sort order. The sort key does not change the page title displayed in the category.
+</p><p>See <a href="http://en.wikipedia.org/wiki/Help:Sorting" class="extiw" title="wikipedia:Help:Sorting">Help:Sorting</a> on Wikipedia for further information on category sorting.
+</p>
+<h2><span class="mw-headline" id="Creating_a_category_page">Creating a category page</span></h2>
+<p>Categories exist even if their page has not been created, but these categories are isolated from others and serve little purpose for organization or navigation.
+</p><p>A category is created by creating a page in the <i><b>Category:</b></i> namespace. A category page can be created the same way as other wiki pages; just add "<code>Category:</code>" before the page title.
+</p><p>If you are unable to create a category, <a href="/index.php/Dwarf_Fortress_Wiki:PR" class="mw-redirect" title="Dwarf Fortress Wiki:PR">post a request here!</a>
+</p><p>To avoid extra work, try <a href="/index.php/Special:Search" title="Special:Search">searching</a> in this wiki before creating a new category. The list of all categories can be found in "Special pages" in the "tools" box of the <a href="http://en.wikipedia.org/wiki/mw:Help:Navigation#Sidebar" class="extiw" title="wikipedia:mw:Help:Navigation">sidebar</a>.
+</p><p>Unlike other wiki pages, it is <i>not</i> possible to rename (move) a category. Instead, it is necessary to create a new category and change the Category tag on every page (ideally using <a href="/index.php/Special:WhatLinksHere" title="Special:WhatLinksHere">Special:WhatLinksHere</a> to locate pages, or making a bot request for widely-used categories). The new category will <i>not</i> have the older category's page history, which is undesirable if there are many revisions.
+</p>
+<h2><span class="mw-headline" id="Managing_the_category_hierarchy">Managing the category hierarchy</span></h2>
+<p>Categories may belong to other categories in a hierarchy. Since category pages are much like any other page, a Category tag may be added to the bottom of a category page. 
+</p><p>It is a good idea to organize all categories into a hierarchy with a single top level category. The category structure can take the form of a tree with separate branches, but more often will have a graph structure. Generally, there should be a contiguous chain of parent-child links between each category and the top level category. 
+</p>
+<h2><span class="mw-headline" id="Hidden_categories">Hidden categories</span></h2>
+<p>The categories that a page is in are normally listed at the bottom of the page. 
+In Mediawiki 1.13+,
+a category can be hidden from this list by adding the <a href="/index.php?title=Help:Magic_words&amp;action=edit&amp;redlink=1" class="new" title="Help:Magic words (page does not exist)">magic word</a> "<code>__HIDDENCAT__</code>" to the category page. Hidden categories are not hidden from category pages (<a href="/index.php?title=Template:Bugzilla&amp;action=edit&amp;redlink=1" class="new" title="Template:Bugzilla (page does not exist)">Template:Bugzilla</a>).
+</p><p>Users can choose to see hidden categories in a separate "Hidden categories" list, by checking "Show hidden categories" in the "Appearance" section of <a href="/index.php/Special:Preferences" title="Special:Preferences">Special:Preferences</a>.
+</p><p>Hidden categories are automatically added to <a href="/index.php/Category:Hidden_categories" title="Category:Hidden categories">Category:Hidden categories</a>. This category is specified in the system message <a href="/index.php/MediaWiki:Hidden-category-category" title="MediaWiki:Hidden-category-category">MediaWiki:Hidden-category-category</a>.
+</p><p><i>See also:</i> <a href="http://en.wikipedia.org/wiki/m:Help:Category#Hidden_categories" class="extiw" title="wikipedia:m:Help:Category">hidden categories</a>
+</p>
+<h2><span class="mw-headline" id="Linking_to_a_category">Linking to a category</span></h2>
+<p>To create a link to a category, use a leading colon before the category name (without this colon, the current page would be added to the category):
+</p>
+<dl><dd><code>[[:Category:Help]]</code> &#8594; <b><a href="/index.php/Category:Help" title="Category:Help">Category:Help</a></b></dd></dl>
+<p>To change the link text, write the text inside the link tag after a pipe:
+</p>
+<dl><dd><code>[[:Category:Help|Help category]]</code> &#8594; <b><a href="/index.php/Category:Help" title="Category:Help">Help category</a></b></dd></dl>
+<p><a href="/index.php/Help:Redirects" class="mw-redirect" title="Help:Redirects">Redirect pages</a> that redirect to categories must also use the colon, otherwise they will be added to the category instead of redirecting.
+</p>
+<h2><span class="mw-headline" id="Redirecting_a_category">Redirecting a category</span></h2>
+<p>Like normal wiki pages, category pages can be redirected to other normal or category pages. <i>However</i>, this is not recommended, as pages categorised in redirected categories do <i>not</i> get categorised in the target category (<a href="http://en.wikipedia.org/wiki/bugzilla:3311" class="extiw" title="wikipedia:bugzilla:3311">bugzilla:3311</a>). Some Wikimedia sites use a "category redirect" template to mark redirected categories, allowing manual or automated cleanup of pages categorised there.
+</p></div>

@@ -1,0 +1,180 @@
+{{ambox|type=orange|text=This page is not yet complete!}}
+= Custom parser functions =
+== String functions ==
+
+=== char ===
+Returns a [[CP437]] character.
+
+Example: <pre>{{#char:1}}</pre>
+&rarr; {{#char:1}}
+
+=== strc ===
+
+Expands backslash escape sequences, such as:
+
+{|class="wikitable"
+! Text !! Produces
+|-
+| \n || newline
+|-
+| \t || tab
+|}
+
+Example: <pre>Some example{{#strc:\t}}text</pre>
+Produces:
+{{#tag:pre|Some example{{#strc:\t}}text}}
+
+=== strcount ===
+
+Returns the number of occurrences of the second parameter in the first parameter. Case-sensitive
+
+Example: <pre>{{#strcount:This string sure has a lot of "T"'s in it! | t}}</pre>
+&rarr; {{#strcount:This string sure has a lot of "T"'s in it! | t}}
+
+=== stricount ===
+
+Same as strcount, but case-insensitive.
+
+Example: <pre>{{#stricount:This string sure has a lot of "T"'s in it! | t}}</pre>
+&rarr; {{#stricount:This string sure has a lot of "T"'s in it! | t}}
+
+=== stripos ===
+
+Example: <pre></pre>
+&rarr; 
+
+=== stristr ===
+
+Example: <pre></pre>
+&rarr; 
+
+=== strlen ===
+
+Example: <pre></pre>
+&rarr; 
+
+=== strpos ===
+
+Example: <pre></pre>
+&rarr; 
+
+=== strripos ===
+
+Example: <pre></pre>
+&rarr; 
+
+=== strrpos ===
+
+Example: <pre></pre>
+&rarr; 
+
+=== strsplit ===
+
+Example: <pre></pre>
+&rarr; 
+
+=== strstr ===
+
+Example: <pre></pre>
+&rarr; 
+
+=== sha1 ===
+
+Returns the [[wikipedia:sha1|sha1]] hash of the first parameter.
+
+Example: <pre>{{#sha1:Dwarf Fortress}}</pre>
+&rarr; {{#sha1:Dwarf Fortress}}
+
+=== md5 ===
+
+Returns the [[wikipedia:md5|md5]] hash of the first parameter.
+
+Example: <pre>{{#md5:Dwarf Fortress}}</pre>
+&rarr; {{#md5:Dwarf Fortress}}
+
+=== splitrand ===
+Splits a string and returns a random piece
+
+Example: [[Main Page/Quote]]
+
+== Math functions ==
+
+=== randint ===
+
+Returns a random integer between the two arguments provided.
+
+Example: <pre>{{#randint:1|6}}</pre>
+&rarr; {{#randint:1|6}}
+
+<pre>{{#randint:6|1}}</pre>
+&rarr; {{#randint:6|1}}
+
+
+=== ordinal ===
+<pre>{{#ordinal:1}}</pre>
+&rarr; {{#ordinal:1}}
+
+== Wikitext/utility functions ==
+
+=== colorconvert ===
+Converts a color from one format to another.
+
+Usage:
+ {{<nowiki/>#colorconvert: ''color'' | ''from_format'' | ''to_format'' }}
+
+See {{tl|color scheme}} for an example.
+
+Supported formats:
+{| class="wikitable pre-table"
+|-
+! format
+! example
+! result
+|-
+| <pre>rgb</pre>
+| <pre>{{#colorconvert:rgb(255,128,12)|rgb|hex}}</pre>
+| {{#tag:pre|{{#colorconvert:rgb(255,128,12)|rgb|hex}}}}
+|-
+| <pre>hex</pre>
+| <pre>{{#colorconvert:#ff800c|hex|rgb}}</pre>
+| {{#tag:pre|{{#colorconvert:#ff800c|hex|rgb}}}}
+|-
+| <pre>rgb1</pre>*
+| <pre>{{#colorconvert:rgb(255,128,12)|rgb|rgb1}}</pre>
+| {{#tag:pre|{{#colorconvert:rgb(255,128,12)|rgb|rgb1}}}}
+|-
+| <pre>rgb2</pre>*
+| <pre>{{#colorconvert:rgb(255,128,12)|rgb|rgb2}}</pre>
+| {{#tag:pre|{{#colorconvert:rgb(255,128,12)|rgb|rgb2}}}}
+|-
+| <pre>rgb3</pre>*
+| <pre>{{#colorconvert:rgb(255,128,12)|rgb|rgb3}}</pre>
+| {{#tag:pre|{{#colorconvert:rgb(255,128,12)|rgb|rgb3}}}}
+|}
+<nowiki/><small>*These can only be used as the third argument</small>
+=== param ===
+
+For use in templates: Returns the first parameter found from a list of parameter names, or the last argument if none were found. Intended to be easier to read than a chain of template default arguments. The following lines are equivalent:
+<pre>
+{{{first|{{{2|{{{1|{{{last|None of the parameters were found}}}}}}}}}}}}
+{{#param:first|2|1|last|None of the parameters were found}}
+</pre>
+
+Example: 
+
+"Template:Sample" contains: <pre>{{#param:first|2|1|last|None of the parameters were found}}</pre>
+----
+<pre>{{sample|first=text}}</pre>
+&rarr; text
+----
+<pre>{{sample|text}}</pre>
+&rarr; text
+----
+<pre>{{sample|foo|bar}}</pre>
+&rarr; bar
+----
+<pre>{{sample|a|b|last=c|first=First!}}</pre>
+&rarr; First!
+----
+<pre>{{sample|3=foo}}</pre>
+&rarr; None of the parameters were found

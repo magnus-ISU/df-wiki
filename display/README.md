@@ -5,10 +5,13 @@ source of every page is under [`mirror/`](../mirror).
 
 ## Sections
 
+- [Bloodline](Bloodline/)
 - [DF2014](DF2014/)
+- [Help](Help/)
 - [Main](Main/)
 - [Masterwork](Masterwork/)
 - [Modification](Modification/)
+- [Tutorial](Tutorial/)
 - [Utility](Utility/)
 
-*Index generated 2026-09-13; 13777 of 16802 pages stored.*
+*Index generated 2026-09-13; 13977 of 16802 pages stored.*

@@ -1,0 +1,46 @@
+Links provide easy references to other pages within the wiki, or other websites, that can be clicked on. A link is defined by using single or double square brackets. Further explanation is below.
+
+==Internal links==
+Internal links are links that go to any page on the Dwarf Fortress wiki. You do not need to include the entire {{Tooltip|URL|Exact location of a page on the internet}} when using internal links, only the page name.
+To make an internal link, you can simply click on the button with blue underlined text on it, but the point of this page is to explain how to make them in the source.
+An internal link looks like this in the code:<br />
+ <nowiki>[[Main page]]</nowiki>
+And on the page, it looks like this:<br />
+[[Main page]]
+
+In cases where you want a link to a page without showing the page name to the viewer(that's quite common), you can use a vertical pipe in the link, like this:<br />
+ <nowiki>Click [[Main page|here]] to go to the main page of the wiki.</nowiki>
+On the page, it looks like this:<br />
+Click [[Main page|here]] to go to the main page of the wiki.
+
+
+==External links==
+External links are links that go to any page on the internet, even pages on this wiki. However, the convention is to use internal links for that purpose, seeing as it is not only easier, but also makes the source look a lot more organized. Again, you can also simply click the globe-with-paper icon, but the point of this page is to describe the syntax.
+An external link is written like this:
+ <nowiki>[http://www.google.com]</nowiki>
+To achieve this:<br />
+[http://www.google.com]<br />
+However, the result above doesn't look like anything meaningful, so it is a lot more common to use link text to replace the full URL, similar to internal links.
+It looks like this:
+ <nowiki>[http://www.google.com Google]</nowiki>
+Noticed that there is no pipe, but instead of a pipe, a space? That's because URLs cant contain spaces, but page names on the wiki can. That's all technical, and the reason for it is beyond the scope of this page.
+Anyway, the syntax above will magically turn into this when saved:<br />
+[http://www.google.com Google]
+
+==Redirects==
+Redirect links are actually internal links, but with a special purpose. A redirect link can be the only thing on a page, and if there is anything else on it, then the redirect link wont work(actually, it only doesn't if there is any content before the link, anything after it is simply text). A redirect link will be automatically followed when a user clicks a link to the page containing a redirect link.
+A random example of a redirect is [[Butcher|this page]]. Notice how it instead '''redirects''' you to another page? You may not actually notice at first, but take a look at the title, and look a bit under it... see that link? Click on it. Then you will see the actual contents of the redirect page without being redirected to the target page.
+A redirect link is created like this:<br />
+ <nowiki>#REDIRECT [[Target page]]</nowiki>
+There is no point in showing what the code turns into, because it wont work. You can try it out in a sandbox(usually a page in your own userspace) if you are that willing.
+
+You may be familiar with namespaces. If you are not, please visit the [[Help:Namespace|help page on namespaces]].
+Double redirects are redirects that lead to another redirect, which, counterintuitively, do not redirect to the page the second redirect goes to; which is often the "real page". There are rules for (double) redirects on this wiki, and can be found [[DF:R|here]]. Please make sure you follow those rules, as it will cause a lot of trouble, generally unnecessary, preventable trouble if you don't follow these rules.
+
+==Redlinks==
+A redlink is, surprise, a link that is red. A redlink is a link to a page that doesn't exist.
+A redlink can be easily created by making a link containing a reference to something completely random:
+ <nowiki>[[FJEIGHIH8ODHG8RHGIOH8E7684YH8EHGE|This link is absolute nonsense!]]</nowiki>
+To make it morph into this:<br />
+[[FJEIGHIH8ODHG8RHGIOH8E7684YH8EHGE|This link is absolute nonsense!]]<br />
+Please make sure that you, when you link to a page, make sure that it exists - preferably by using the preview button when editing a page. Redlinks have absolutely no practical purpose on any wiki whatsoever, except for indicating that a certain link does not work. There is really no point in creating a redlink either, and this page explains how a redlink is created for the purpose of explaining links.

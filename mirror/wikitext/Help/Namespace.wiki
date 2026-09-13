@@ -1,0 +1,52 @@
+A '''namespace''' is a prefix in a page's title that serves as a way to organize large groups of pages (in contrast, [[Help:Category|Categories]] are added on a page-by-page basis). For instance, this page is in the Help namespace, and [[DF2012:Alcohol]] is in the DF2012 namespace. The namespace a page is in can be easily identified by looking at the page title; For instance, on this page, "Help" is the namespace, and "Namespace" is the page name. They are separated by a colon (":").
+
+A page without a namespace is in the '''main namespace''', or "Mainspace" (all pages are in a namespace, even if it is not apparent from the title).  Also note that colons do not necessarily indicate a namespace - for example, [[Foo:Example]] is in the main namespace, since the "Foo" namespace does not exist (the page name is "Foo:Example"). [[:Category:DF2012:Flying]] is in the "Category" namespace (the page name is "DF2012:Flying").
+
+==Uses==
+On this wiki, namespaces are used to categorize pages for versions of Dwarf Fortress - we can also use categories, but that would not allow us to make multiple pages on the same subject for different versions. Any pages in the Main namespace are either the Main Page, or redirects.
+Any wiki can have their own use and meaning for namespaces - for instance, a wiki might not use namespaces at all, having every content page in the Main space, and another wiki may have many namespaces in use, each for their own subject. <s>These wikis are often most untidy and unorganized.</s> There is no convention for namespaces that spans across every website running the MediaWiki software, as they are in no way connected (except for cross-wiki affiliation).
+
+==List of namespaces==
+Here is a list of every namespace currently in use. Note that every namespace has their own talk namespace, and is named after the parent namespace, suffixed by "Talk". For instance, the talk space for the Help namespaces is named "Help Talk".
+
+Also note that all namespaces (and aliases) are case-insensitive. For example, DF2012 and df2012 are functionally the same (although the wiki will change "df2012" to "DF2012" in titles). 
+* 23a: this namespace is for articles about version 0.23.130.23a.
+* 40d: this namespace is for articles about version 0.28.181.40d.
+* v0.31: this namespace is for articles about version 0.31.25.
+* v0.34: this namespace is for articles about version 0.34.11.
+* DF2014: this namespace is for articles about version 0.47.05.
+* Help: this namespace is for articles that describe wiki concepts, or teach new editors how things work.
+* Dwarf Fortress Wiki: These are for projects, wiki rules, and other wiki-specific discussion. Discussions about specific pages should instead go to their own talk page.
+* '''Main''': These pages are not specific to a version of DF, including the [[Main Page]], [[orthogonal]], [[ASCII Art Reward]], etc. They currently also provide information {{current/version/ns|v50}}, which is the latest version of Dwarf Fortress.
+* Masterwork: These are articles on Masterwork Dwarf Fortress, which is a mod.
+* Category: These represent categories, which help organize pages by topic rather than by version.
+* User: These pages are for users themselves to make. Logged-in users can create a '''user page''' with information about themselves, DF-related projects, or anything else they want. Users can also create any pages they like in their "userspace", as subpages of their user page. For example, a user named Bob can create User:Bob, User:Bob/sandbox, User:Bob/this/is/a/long/list/of/subpages, and so on. Users should generally avoid editing other users' user pages.
+** User talk pages are special: leaving a message on a user's talk page automatically notifies the user. (However, editing user talk subpages does not generate a notification)
+
+
+===Special namespaces===
+* File: These are not actually content pages - anything is this namespace is a media file, and those can be audio, video and pictures.
+* MediaWiki: Pages in this namespace are system messages, controlling text that appears on the wiki (e.g. the sidebar or the "View history" tab). These pages can only be edited by administrators.
+* Special: These pages are controlled by the software this wiki is using, and cannot be edited by normal means. They are necessary for a variety of tasks on the wiki.
+
+===Aliases===
+{| class="wikitable" style="min-width:30%"
+|-
+! Alias
+! Redirects to
+|-
+|cv || {{DF:Current}}
+|-
+|DF2010 || v0.31
+|-
+|DF || rowspan=2|Dwarf Fortress Wiki
+|-
+|Project
+|-
+|MA || Masterwork
+|-
+|Mod || Modification
+|-
+|MW || MediaWiki
+|}
+For example, [[DF2010:Cat]] and [[v0.31:Cat]] link to the same page.
