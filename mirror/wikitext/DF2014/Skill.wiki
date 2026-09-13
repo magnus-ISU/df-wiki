@@ -1,0 +1,426 @@
+{{Quality|Masterwork|11:43, 21 April 2018 (UTC)}}
+{{av}}
+''See also: [[Combat skill]]''
+
+[[File:skill_icon.png|120px|right]]'''Skills''' are used by [[dwarves]] and other [[creature]]s to accomplish almost every task in the game. Higher levels of a skill allow a dwarf to accomplish the respective task more quickly and/or more effectively. Whenever a skill is used, [[experience]] is gained for that skill, allowing the dwarf to progress to higher skill levels. [[Creatures]] aside from dwarves may also possess skills that match what species they are (e.g. [[cat]]s and [[monkey]]s having legendary skill in climbing).
+
+If a dwarf does not use a skill for a prolonged period of time, the skill will be labeled "rusty." If the rusty skill continues to remain unused, it will eventually be labeled "very rusty," or "V rusty" in-game. Skills remaining at 'very rusty' for prolonged periods of time will gradually suffer permanent experience loss. It is not possible to know in-game whether a given skill has suffered level loss, but any utility capable of reading exact XP levels will show a skill with a lost level as being at 100% of the XP required to take it to the next skill level. See [[#Skill rust|Rust]] below for more details.
+
+To determine what skills a dwarf has, press {{K|v}} and highlight the dwarf, then press {{K|g}} to ensure you are on the general information page. The skills will be grouped into three toggleable types: {{K|c}}ombat, la{{K|b}}or and {{K|m}}iscellaneous skills. Included on the list are the levels of each skill, and, if applicable, "rusty" or "V rusty" notifications.
+
+== Skill level names ==
+
+The names of skill levels are as follows, in order of the experience required to achieve them:
+{| class="wikitable"
+|-
+! Rank
+! Skill Name
+! Notes
+|-
+| 0
+| {{Raw Tile|<small>Not</small>|7:0:1}}
+| (No skill)
+|-
+| 0
+| {{Raw Tile|<small>Dabbling</small>|6:0:0}}
+| This level isn't displayed on the "prepare for journey carefully" screen.
+|-
+| 1
+| {{Raw Tile|<small>Novice</small>|7:0:0}}
+| 
+|-
+| 2
+| {{Raw Tile|<small>Adequate</small>|7:0:1}}
+| 
+|-
+| 3
+| {{Raw Tile|<small>Competent</small>|3:0:0}}
+| 
+|-
+| 4
+| {{Raw Tile|<small>Skilled</small>|3:0:0}}
+| 
+|-
+| 5
+| {{Raw Tile|<small>Proficient</small>|3:0:0}}
+| Maximum possible skill level for dwarves while "preparing for journey carefully".
+|-
+| 6
+| {{Raw Tile|<small>Talented</small>|3:0:1}}
+| 
+|-
+| 7
+| {{Raw Tile|<small>Adept</small>|3:0:1}}
+| 
+|-
+| 8
+| {{Raw Tile|<small>Expert</small>|3:0:1}}
+| 
+|-
+| 9
+| {{Raw Tile|<small>Professional</small>|2:0:1}}
+| 
+|-
+| 10
+| {{Raw Tile|<small>Accomplished</small>|2:0:1}}
+| 
+|-
+| 11
+| {{Raw Tile|<small>Great</small>|2:0:1}}
+| Characters with this level of a specified [[weapons|weapon]] mastery (including [[wrestling]]) or higher are [[elite]].  
+|-
+| 12
+| {{Raw Tile|<small>Master</small>|2:0:1}}
+| 
+|-
+| 13
+| {{Raw Tile|<small>High Master</small>|2:0:1}}
+| 
+|-
+| 14
+| {{Raw Tile|<small>Grand Master</small>|2:0:1}}
+| Maximum possible skill for any creature in the [[object testing arena]].
+|-
+| 15+
+| {{Raw Tile|<small>Legendary</small>|5:0:1}}
+|
+|}
+
+== Skills in use ==
+[[File:blink_preview.gif|thumb|208px|right|Blinking legendary dwarves.]] Skills are never referred to in-game by "level number", but for all practical purposes, that is how they are treated by the game. "Dabbling" is not functionally a level, with "Novice" being level 1, and "Legendary" being any level 15 and up. 
+
+All skills take (400 + 100 * the new level) experience points to gain a level, meaning Novice takes 500 experience points, and reaching Legendary from Grand Master takes 1900 experience points, or 18000 total experience.
+
+Many skills can gain practical levels beyond level 15, or "Legendary". [[Farming]], [[plant gathering]], and [[fishing]] use an older formula for calculating yields which effectively caps the skill level at "Legendary+5", but most other crafting skills use the following formula to determine the [[quality]] of the resulting item:
+# Find the effective skill level (i.e. Novice=1, Legendary=15), ''uncapped'', with status penalties applied (see below)
+# Roll for item quality "points": <code>rand(0..10) + rand(0..(level * 5) / 2) + rand(0..(level * 5) / 2)</code> (where <code>rand(0..N)</code> returns a number from 0 to N, inclusive)
+# Add points for physical attributes: <code>(rand(0..phys_attr1) / 100) + (rand(0..phys_attr2) / 250) + (rand(0..phys_attr3) / 250)</code> (for whichever attributes are actually associated with the skill)
+# Add points for mental attributes: <code>(rand(0..ment_attr1) / 100) + (rand(0..ment_attr2) / 250) + (rand(0..ment_attr3) / 250)</code> (see above)
+# Adjust points based on focus (or lack thereof): <code>points = (points * current_focus) / undistracted_focus</code>
+# Apply status penalties '''again''', this time to the "points"
+# If you have a Curse (or Blessing) with a Luck modifier, apply it to the points: <code>points = (points * luck_mul_percent) / 100</code>
+# Add 10 points if the item being produced matches an Item preference on the maker
+# Add 10 points if the item being produced matches a Material preference on the maker
+# Feed the points into the following formula:
+#* 0-21 - base quality
+#* 22-29 - Well-crafted
+#* 30-34 - Fine
+#* 35-44 - Superior
+#* 45-54 - Exceptional
+#* 55+ - 1/3 Masterwork, 2/3 Exceptional
+
+Labors with or without quality often have a time period associated with them, and skill levels reduce this significantly.  Legendary skill can eliminate all time required to do a job down to a single action, exponentially increasing productivity.
+
+Combat skills can scale upwards to a functionally impossible-to-reach degree, meaning that simply reaching Legendary in a combat skill only means they've just started climbing the ranks of the legendary warriors of ''Dwarf Fortress''. A Legendary +100 warrior will hit more regularly and deal more damage than a "mere" Legendary +10, although it takes nearly three-quarters of a million more experience points to get there.
+
+==Skill penalties==
+Dwarves which are suffering from various status ailments will have all of their skill levels reduced, causing them to work slower and produce lower-[[quality]] goods where relevant. The latter is unimportant for non-quality tasks such as [[wood cutting]] or [[furnace operating]], but you may want to delay construction of, say, [[platinum]] [[statue]]s or [[steel]] [[armor|breastplates]], if the [[smith]] forging them is famished or hollow-eyed from lack of sleep. For instance, dwarves that aren't in a martial trance that have pain above a certain level get all their rolls halved.
+
+Each of the following status ailments can impact a Dwarf's skills:
+* Nausea - reduce by 50%<sup>1</sup>
+* Winded - reduce by 50%<sup>1</sup>
+* Stunned - reduce by 50%<sup>1</sup>
+* Dizzy - reduce by 50%<sup>1</sup>
+* Fever - reduce by 50%<sup>1</sup>
+* Blind - reduce by 75%<sup>1</sup>
+* Extreme Pain - reduce by 75%<sup>12</sup>
+* Tired - reduce by 25%<sup>1</sup>
+* Over-Exert - reduce by 25% twice<sup>1</sup>
+* Exhausted - reduce by 25% three times<sup>1</sup>
+* Dehydrated - reduce by 50%
+* Starving - reduce by 50%
+* Very Drowsy - reduce by 50%
+* Thirsty for Blood - reduce by 25% or 50%, depending on severity
+:<sup>1</sup> - Does not apply to dwarves who are Enraged, in a Martial Trance, or throwing a [[Tantrum]]
+:<sup>2</sup> - Does not apply to dwarves who are in a Strange Mood or are Insane
+
+Notably, having multiple status ailments will result in '''cumulative''' penalties - for example, being both Stunned and Dizzy will cause all skill levels to drop by 75%.
+
+== Professions ==
+Skills are grouped under "professional" categories (shown below), each category represented by a specific color. The display color for a dwarf reflects its current profession, which is determined by their highest level (not [[experience]]) of their skills. Professions do not affect skills or tasks in any way, professions are merely a reflection of the highest skill, and a loose way to differentiate dwarves with different types of skills. It is not perfect, but it can help when trying to spot a specific dwarf in a list or a crowd.
+
+So (and assuming it's their highest skill) your Miners are always light gray, your Metal Workers are always dark gray, Masons (and Engravers) are always white, your Mechanics (and Siege Engineers and Pump Operators) are always red, and those waves of olive [[migrant]]s are all "Farmers" of some stripe. This is not to say that a dwarf doesn't also have some other skill(s) from a different category, ones that may be just lower than their highest skill (which is determining the color for their current profession), so be sure to examine each new arrival - but that's their current best, and so their current color/profession. 
+
+A dwarf with no skill levels above [[Skill#Skill level names|dabbling]] is displayed as "peasant" as their listed "profession", falling in the teal "miscellaneous" category.
+
+The one exception to this are some of your appointed [[noble]] positions, which are the magenta/purple of the Administrator category. Appointing a new noble will apply that magenta color to the new "noble" dwarf, regardless of their previous profession.
+
+Professions can change as skills are increased. When a skill in a new category is raised to a higher level than any in other categories, creating a new "highest" status, the dwarf will change listed profession and display color accordingly. This change is accompanied by a minor [[announcement]] to that effect.
+
+{| style="margin: 0 auto"
+|-
+| valign='top' |
+
+{{Skill Box|Miner|7:0|7:0|
+* [[Miner]]
+}}
+
+{{Skill Box|[[Woodworker]]|6:1|6:1|
+* [[Bowyer]]
+* [[Carpenter]]
+* [[Wood cutter]]
+}}
+
+{{Skill Box|[[Stoneworker]]|7:1|7:1|
+* [[Engraver]]
+* [[Mason]]
+}}
+
+{{Skill Box|[[Ranger]]|2:0|2:0|
+* [[Ambusher]]
+* [[Animal caretaker]]
+* [[Animal dissector]]
+* [[Animal trainer]]
+* [[Trapper]]
+}}
+
+{{Skill Box|[[Doctor]]|5:0|5:0|
+* [[Bone doctor]]
+* [[Crutch-walker]]
+* [[Diagnostician]]
+* [[Surgeon]]
+* [[Suturer]]
+* [[Wound dresser]]
+}}
+
+| valign='top' |
+
+{{Skill Box|[[Farmer]]|6:0|6:0|
+* [[Beekeeper]]
+* [[Brewer]]
+* [[Butcher]]
+* [[Cheese maker]]
+* [[Cook]]
+* [[Dyer]]
+* [[Gelder]]
+* [[Grower]]
+* [[Herbalist]]
+* [[Lye maker]]
+* [[Milker]]
+* [[Miller]]
+* [[Potash maker]]
+* [[Presser]]
+* [[Shearer]]
+* [[Soaper]]
+* [[Spinner]]
+* [[Tanner]]
+* [[Thresher]]
+* [[Wood burner]]
+}}
+
+{{Skill Box|[[Fishery worker]]|1:0|1:0|
+* [[Fish cleaner]]
+* [[Fish dissector]]
+* [[Fisherdwarf]]
+}}
+
+{{Skill Box|[[Metalsmithing|Metalsmith]]|0:1|0:1|
+* [[Armorsmith]]
+* [[Furnace operator]]
+* [[Metal crafter]]
+* [[Blacksmith|Metalsmith]]
+* [[Weaponsmith]]
+}}
+
+| valign='top' |
+
+{{Skill Box|[[Jeweler]]|2:1|2:1|
+* [[Gem cutter]]
+* [[Gem setter]]
+}}
+
+{{Skill Box|[[Craftsdwarf]]|1:1|1:1|
+* [[Bookbinder]]
+* [[Bone carver]]
+* [[Clothier]]
+* [[Glassmaker]]
+* [[Glazer]]
+* [[Leatherworker]]
+* [[Papermaker]]
+* [[Potter]]
+* [[Stone crafter]]
+* [[Strand extractor]]
+* [[Wax worker]]
+* [[Weaver]]
+* [[Wood crafter]]
+}}
+
+{{Skill Box|[[Engineer]]|4:1|4:1|
+* [[Mechanic]]
+* [[Pump operator]]
+* [[Siege engineer]]
+* [[Siege operator]]
+}}
+
+{{Skill Box|Other Jobs|3:0|3:0|
+* [[Alchemy|Alchemist]]
+* [[Knapper]]
+}}
+
+{{Skill Box|[[Administrator]]|5:0|5:0|
+* [[Appraiser]]
+* [[Building designer]]
+* [[Organizer]]
+* [[Record keeper]]
+}}
+
+| valign='top' |
+
+{{Skill Box|[[Military]]|0:1|0:0|type=m|
+* [[Archer]]
+* [[Armor user]]
+* [[Axeman]]
+* [[Biter]]
+* [[Blowgunner]]
+* [[Bowman]]
+* [[Crossbowman]]
+* [[Dodger]]
+* [[Discipline]]
+* [[Fighter]]
+* [[Hammerman]]
+* [[Kicker]]
+* [[Knife user]]
+* [[Lasher]]
+* [[Maceman]]
+* [[Military tactics]]
+* [[Misc. object user]]
+* [[Pikeman]]
+* [[Shield user]]
+* [[Spearman]]
+* [[Striker]]
+* [[Swordsman]]
+* [[Thrower]]
+* [[Wrestler]]
+}}
+
+{{Skill Box|[[Broker]]|3:0|3:0|
+* [[Comedian]]
+* [[Conversationalist]]
+* [[Flatterer]]
+* [[Intimidator]]
+* [[Judge of intent]]
+* [[Liar]]
+* [[Negotiator]]
+* [[Persuader]]
+}}
+
+| valign='top' |
+
+{{Skill Box|Miscellaneous|3:0|3:0|
+* [[Climber]]
+* [[Concentration]]
+* [[Consoler]]
+* [[Leader]]
+* [[Observer]]
+* [[Pacifier]]
+* [[Reader]]
+* [[Rider]]
+* [[Schemer]]
+* [[Student]]
+* [[Swimmer]]
+* [[Teacher]]
+* [[Tracker]]
+}}
+
+{{Skill Box|Performance|3:0|3:0|
+* [[Dancer]]
+* [[Singer]]
+* [[Musician]]
+* [[Poet]]
+* [[Speaker]]
+* [[Keyboardist]]
+* [[Stringed instrumentalist]]
+* [[Wind instrumentalist]]
+* [[Percussionist]]
+}}
+
+{{Skill Box|Scholar|3:0|3:0|
+* [[Critical thinker]]
+* [[Logician]]
+* [[Mathematician]]
+* [[Astronomer]]
+* [[Chemist]]
+* [[Geographer]]
+* [[Optics engineer]]
+* [[Fluid engineer]]
+* [[Wordsmith]]
+* [[Writer]]
+}}
+
+{{Skill Box|Unused|3:0|3:0|
+* [[Balance]]
+* [[Coordination]]
+* [[Druid]]
+}}
+
+|}
+
+==Skills, attributes and traits==
+*'''Skills and [[attribute]]s''': 
+**.. are both trained by being used in activities they relate to.
+**.. both influence future success of these activities, like craft quality, work speed, combat survivability, accuracy and damage.
+**The dwarf's profession is determined by their highest-ranking skill group.
+**Crafting skills are increased by [[preferences]], allowing the the dwarf to make items beyond their skill level.
+**The dwarf's highest moodable skill determines potential artifact types during a [[strange mood]].
+
+*'''[[Personality trait|Traits]]''':
+**can be changed (at least beliefs change through arguments).
+**affect which [[social skill]]s gain experience ''(if the dwarf has X trait it will not gain experience in X skill)'' at all.
+**give [[thought]]s when performing certain activities.
+**influence choice of [[artifact]] materials.
+
+To summarize, it goes like this:
+
+ Thought <--triggers-- Activity ----trains----> Attribute
+    ^          ,----------|                         |
+ modifies   modifies    trains                   increases
+    | ,--------'          |                         |
+    | v                   v                         v
+  Trait --influences--> Skill --increases--> Dwarf performance
+    |           ,---------|
+  item        item        |
+ material     type    determines
+    |  ,--------'         |
+    v  v                  v
+ Artifact <--chosen-- Profession
+              dwarf
+
+Since the same skills can be used by various professions, and the same [[attribute]]s are trained by various skills, this allows for [[cross-training]].
+
+As [[Personality trait|traits]] can limit learning some skills, which can be required by some Noble positions, the need arises to:
+*avoid appointing a dwarf that will never learn a certain skill to a Noble position that uses it:
+**''appointing a [[Personality trait|straightforward]] dwarf as a [[broker]] will result in a [[consoler]], non-[[flatterer]], non-[[liar]] broker''.
+*appoint a dwarf with a useful effect given by a [[Personality trait|trait]] to a profession that benefits from it:
+**''appointing an [[Personality trait|undisciplined]] dwarf to an important job will result in [[fun|fun]]''.
+**''appointing an [[Personality trait|angry]] dwarf to [[soldier]] will result in more [[Status_icon|enraged]] bonuses.
+
+==Skill rust==
+Every skill has the following set of improvement and decay counters, which are caste specific:
+
+{{token|SKILL_RATE|c}} (Default is {{token|SKILL_RATE|cr|100:8:16:16}})
+ * % of improvement points you get (Default 100)
+ * unused counter cap (Default 8)
+ * rust counter cap (Default 16)
+ * demotion counter cap (Default 16)
+
+Once per day, each skill's "unused" counter increments by 1, and if it reaches the cap (without the skill ever being used), it resets to zero and increments the rust counter. Once the rust counter reaches its cap, it resets to zero, adds a "layer" of rust to the skill (to a maximum of 6), and increments the demotion counter. When the demotion counter reaches its cap, it resets to zero and the skill level is ''permanently'' reduced by 1 (and must be re-earned). With the default numbers, it takes about 4 and a half months before rust sets in, 2 years and 3 months before rust maxes out, and 6 years before actual skill levels begin to decay.
+
+The {{DFtext|Rusty}} and {{DFtext|V.Rusty}} descriptions which are appended to a skill within ''Dwarf Fortress'' are determined by the following conditions:
+*Rusty: A skill level greater than 0, and the number of rust layers is at least 50% of the original skill level.
+*Very Rusty: A skill level greater than or equal to 4, and the number of rust layers is at least 75% of the original skill level.
+
+Since a skill can never gain more than 6 levels of rust, only skills between "Skilled" and "Expert" can ever show as "V. Rusty", and only skills at "Master" or lower can ever show as "Rusty" - higher level skills will silently accumulate rust until they are eventually demoted below "High Master", then the rust will become visible.
+
+Whenever experience is gained, the skill's "unused" counter is reset to zero, its "rust" and "demotion" counters are ''decremented'' by 1, and one or more levels of rust are removed depending on the amount of experience gained:
+* 50% of the gained experience (rounded down, plus 1) is lost
+* 10% of the lost experience (rounded down, plus 1) is spent toward removing rust
+* If it was enough to remove ''more'' rust than was accumulated, then the XP penalty is set to 10 points per remaining rust level, minus 10
+
+Since most crafting jobs give 30 points of experience, this means it would take 3 jobs to work away 6 levels of rust, each giving only 14 points of experience; if the skill only has 1 level of rust, a single job would work it away without losing any experience.
+
+==Performances==
+
+Randomly generated musical [[instrument]]s and musical compositions are also considered skills and gain experience from use, though it is not clear how greater skill levels affect anything or if these performance-related skills rust.
+
+{{Category|Skills| }}
+[[ru:Skill]]

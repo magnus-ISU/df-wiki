@@ -1,0 +1,49 @@
+{{Quality|Exceptional|21:32, 8 November 2019 (UTC)}}
+{{av}}
+:''This article refers to "hide" in terms of the skin of a creature, for the article on hiding items and buildings, see [[cv:Hide_Items_or_Buildings|Hide Items or Buildings]].''
+
+[[File:skin_texture.jpg|thumb|230px|right|Skin texture.]]
+[[File:fish_scales.jpg|thumb|230px|right|Fish scales, another type of skin.]]
+[[File:chitin_view.jpg|thumb|230px|right|Insect chitin, yet another type of skin.]]'''Skin''' is a tissue layer common to most [[creature]]s. Different types of creatures have different types of skin.
+* Most mundane creatures have raw hide, which displays in-game as '''skin'''. This is the only type that can be tanned into leather.
+* Arthropod creatures have untannable '''chitin'''. Much tougher than normal skin, chitin serves as the skeleton of most creatures that have it, meaning damage immediately affects structural function.
+* Reptilian creatures and fish generally have untannable '''scales'''. Somewhat tougher than ordinary skin, scales slightly reduce damage from weaker sources.
+
+Skins (both fresh and rotten) are stored in a [[refuse]] [[stockpile]]. Each butchering job produces a single skin, and tanning a hide only a single piece of leather, regardless of the creature (or body part) size{{bug|3732}}.
+
+== Skin uses ==
+Raw skin can be processed at a [[tanner's shop]] by a dwarf with the [[tanning]] labor enabled in order to produce [[leather]], or a dwarf with the [[tanner]] labor enabled can bring a skin and a bucket of [[milk of lime]] to a [[tanner's shop]] to produce a sheet of parchment. Skins are automatically tanned if the "Auto tan" [[standing orders#Workshop orders|order]] is enabled. If skins are not tanned automatically, you can use your [[manager]] to automatically queue "Tan a Hide" jobs, or manually queue jobs from a tanner's shop. Scales and chitin cannot be tanned (aside from [[modding|shenanigans being done]]).
+
+== Leather ==
+{{main|Leather}}
+Leather is used to make low-grade [[armor]] and [[clothing]]. Leather is also used to make [[bag]]s, [[quiver]]s, [[backpack]]s, [[waterskin]]s, [[clothing]], [[shield]]s, [[armor]], [[trade good|crafts]] and [[decorate|decorations]]. The process of making and using leather is part of the [[meat industry]], rather than the [[clothing industry]].
+
+== Modding scales to be usable in leatherworking ==
+{{mod}}
+If you want to make items out of scale or chitin, add these tokens to SCALE_TEMPLATE or CHITIN_TEMPLATE in material_template_default.txt in the game [[raw file|raw]]s:
+
+<div style="height:100px; overflow:auto;"><pre>
+	[LEATHER]
+	[ITEMS_LEATHER]
+	[BUTCHER_SPECIAL:SKIN_TANNED:NONE]
+</pre></div>
+
+This will make butchering yield several sheets of the creature's scale that are usable in leatherworking, instead of regular unusable scales.
+
+== See also ==
+*[[Leather]]
+*[[Meat industry]]
+*[[Armor]]
+*[[Paper industry]]
+
+{{Translation
+| dwarven = salul
+| elvish  = tipi
+| goblin  = duspbu
+| human   = lubbe
+}}
+
+{{materials}}
+
+[[ru:DF2012:Skin]]
+{{Category|Body parts}}

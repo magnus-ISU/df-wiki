@@ -1,0 +1,79 @@
+{{Quality|Exceptional}}
+{{av}}
+{{Distinguish|Slate}}
+{{Buggy}}
+{{Spoiler}}
+
+{{stonelookup/0|wiki=no}}
+
+'''Slade''' is the stone that makes up the surrounding layers of [[Hell|eerie cavern]]s. After dwarves dig deep enough down into [[adamantine]] veins, large, demonic caverns made of slade will open up and spew forth demons. [[Demonic fortress|Curious structure]]s (now removed), [[underworld spire]]s and [[vault]]s are also made entirely of slade.
+
+Slade is '''very''', '''''very''''' heavy - according to the density specified in the raws (200 grams per cubic centimeter, about the density of the core of the sun!), a single boulder weighs around '''20 metric tons'''; by comparison, an equivalent volume of freshly mined [[native platinum|platinum nuggets]] only weighs around 2.1 metric tons (and takes a ''very'' long time to haul) - making slade around ''9.348 times as dense as platinum'', and thus the heaviest material in the game.
+
+In fortress mode, it is no longer{{version|0.47.05}} possible to mine through slade walls. You can still [[obsidian]]-cast them and then mine that. However, this will not yield any slade boulders, which appeared to be like any other stone when mined. Due to the extreme weight, dwarves hauling it move very slowly.
+
+It is possible to use weapons made out of this extremely dense material in Arena mode - tests show that weapons and armor made out of this superdense rock are at least comparable to, if not stronger than even adamantine.
+
+Slade has a natural immunity to [[dragonfire]] since it does not have a specific heat or any state change temperatures defined in the raws.
+
+{{D for Dwarf}}
+
+It may be interesting to note that our friends at Wikipedia also believe [http://en.wikipedia.org/wiki/Slade] Slade to be a hard rock and a heavy metal.
+
+== Mining Slade ==
+
+{{removed feature
+|version=0.47.05
+|section=1
+|This technique does not work in v0.47.05 and above, though obsidian casting slade into something other than slade allows it to be mined.
+}}
+
+'''How to mine Slade:'''
+
+Step 1. Construct (do not dig) a down stair directly above some unrevealed slade.
+
+Step 2. Dig an up stair directly below the down stair.
+
+It is best to build one down stair, then dig the slade beneath it before building more stairs, because digging one staircase will prematurely reveal the slade below any other constructed staircases, rendering it unminable.
+
+
+'''Old method:'''  
+  
+[http://www.bay12forums.com/smf/index.php?topic=108189.0 Original Thread]
+
+[http://www.youtube.com/watch?v=urM19dQrsJ4 Video Demonstration Part 1]
+
+[http://www.youtube.com/watch?v=Hcalni8h8Ak Video Demonstration Part 2]
+
+
+The exact mechanics at work here are not fully understood. When a dwarf descends through an opening in the Eerie Glowing Pits, the game seems to generate new stone layers in the unrevealed area below. These generated stone layers are a copy of the stone type directly above them. The unrevealed layer will change to become the same as a construction built directly above. Testing has shown that this transformation may only occur once, the first time a dwarf descends below the surface of the Eerie Glowing Pit. A diorite block floor constructed on the slade cavern floor will create diorite rough hewn walls beneath the slade layer. It is also possible to use rare or useful stone to duplicate them. If you build a rough raw adamantine floor over the slade cavern floor, you will find raw adamantine below. 
+
+
+Step 1. Find a location with accessible unrevealed SMR (Semi-Molten Rock) above Hell and an Eerie pit tile adjacent to a slade cavern floor. You'll want the magma flow tile directly above it. You'll need enough room to engineer a cavern collapse to drop a floor down and land it in the Eerie Pit tile.
+
+Step 2. Prepare the drop site in Hell. Construct a normal floor over the Eerie pit tile. The Magma Flow tile will land here.
+
+Step 3. Prepare the drop shaft in the SMR. Unlike the long difficult method of [[semi-molten rock|tunnelling]] through SMR, once you are in the underworld, you can construct scaffolding up to the unrevealed ceiling and dig staircases from bottom to top through Semi Molten Rock with no problems. Don't mine through the magma flow tile. You need it for the next steps. Channel out the stairs from top to bottom to leave an open shaft with nothing in it. Remove all scaffolding in the way between the Magma flow tile on top and the constructed floor over the [[Hell|Eerie Glowing Pit]].
+
+Step 4. Prepare a Cave-in above the Magma flow tile. Build a support directly on the Magma Flow tile and construct a floor on top of it. Then make sure its disconnected and supported only from underneath. Link the support pillar to a lever.
+
+Step 5. Prepare the mining area. This is the most important step. You'll only be able to mine slade and duplicate stone in area that have constructed floors. You need to build constructed floors over the slade cavern floor over the entire area you plan to mine slade from. Floor over the entire area before you continue. It may not be possible to convert anymore unrevealed tiles after you begin. Use High value materials like iron ore or raw adamantine to pave the floors with. They will be duplicated and can be mined out for profit.
+
+Step 6. Pull the lever to trigger the cave-in, the Magma Flow tile will fall down and crash through the constructed floor above the Eerie pit. This will punch an 'open space' hole in the Eerie Pit. 
+
+Step 7. Get a miner in there. Do whatever you can to get a miner to drop into that open space. I have him stand on a constructed staircase and remove it while standing on top. He will fall one Z-level and be stuck below.
+
+Step 8. Use the stuck miner to build a constructed floor on an adjacent Eerie pit tile. This gives him a place to stand. 
+
+Step 9. Make him build an upstair on the magma flow tile then remove it. the magma flow tile will be gone and replaced with a normal stone or soil cavern floor
+
+Step 10. Make him channel straight down from where that magma flow was. Go as deep as you want, the bottom Z level of the map should be very close though. Start to mine out the area. You'll find you can only mine out as far as you've built the constructed floors from Step 5..
+
+Step 11. Mine or build upstairs every other tile. Extend those stairs upward to just under the floor above. The upper Z-level, just under the cavern floor will not be changed into natural stone. It will remain slade and can be mined from below.
+
+[[File:slade_prev.jpg|thumb|340px|center|Usually surrounded by demons.]]
+==Bugs==
+* Although slade is not intended to be diggable, it can be channeled through floors from above, leaving the wall underneath it.{{bug|708}}
+* Jewelers may randomly try to cut slade, despite not finding any of it on the map.
+{{gamedata}}
+{{stones}}
