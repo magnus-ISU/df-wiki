@@ -1,0 +1,86 @@
+This page is for testing the [[:Category:Ark_Project_templates|Ark Project templates]].
+
+
+{{ark section|status=1}}
+
+{{ark section|status=2}}
+
+{{ark section|status=3}}
+
+=Vertebrates=
+
+{{ark variation|status=1
+|raws=
+[VERTEBRATE_VARIATION_GOES_HERE]
+}}
+
+{{ark body|status=2
+|raws=
+[BODY:VERTEBRATE_STUFF]
+	[ETC]
+
+[BODY:MORE_VERTEBRATE_STuff]
+	[ETC]
+}}
+
+==Mammals==
+
+{{ark variation|status=2
+|raws=
+[MAMMAL_VARIATION_GOES_HERE]
+}}
+
+Grizzly bear http://en.wikipedia.org/wiki/Grizzly_bear
+{{ark creature|status=1
+|raws_start=
+[NAME:grizzly bear:grizzly bears:grizzly bear] 
+|raws_main=
+[FAT:7]
+[DIURNAL]
+[BIOME:FOREST_TAIGA]
+[BIOME:ANY_TEMPERATE_FOREST]
+[STANDARD_FLESH]
+[HOMEOTHERM:10067]
+}}
+{{ark body|status=1
+|raws=
+[BODY:BEAR_CLAW]
+[BP:BEAR_CLAW]
+	[DELICIOUS]
+}}
+
+Cougar http://en.wikipedia.org/wiki/Cougar
+{{ark creature|status=2
+|raws_start=
+[NAME:cougar:cougars:cougar]
+|raws_main=
+[DESCRIPTION:A large solitary feline.  It is found in mountains and woodland, ambushing its prey.]
+[CREATURE_TILE:'C'][COLOR:6:0:1]
+[PETVALUE:100]
+[BIOME:ANY_TEMPERATE_FOREST]
+[BIOME:ANY_TROPICAL_FOREST]
+[PREFSTRING:cunning]
+}}
+
+Deer http://en.wikipedia.org/wiki/Deer
+{{ark creature|status=3
+|raws_start=
+[NAME:deer:deer:deer] 
+|raws_main=
+[BENIGN][MEANDERER]
+[PETVALUE:50]
+[GRASSTRAMPLE:0]
+[PREFSTRING:grace][NATURAL][PET]
+}}
+
+==Reptiles==
+
+{{ark variation|status=3
+|raws=
+[REPTILE_VARIATION_GOES_HERE]
+}}
+
+{{ark abstract creature|status=2
+|raws=
+[PREFSTRING:scaly skin]
+}}

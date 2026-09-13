@@ -1,0 +1,178 @@
+{{mod}}
+
+{{Modification
+|name = Expanded Plants
+|version = 0.40.24-3
+|df version = 0.40.24
+|last update = 01/16/2015
+|download = http://dffd.wimbli.com/file.php?id=9195
+}}
+
+Expanded Plants (formerly Plant Fixes) is a French Vanilla/Modest Module-style mod which seeks to provide more true-to-life versions of plants present in the vanilla game. 
+
+This includes modifying plants' available biomes; modifying seasonal availability & growing seasons; adding growths to plants where appropriate (e.g. seedheads); and adding new plant products. It does not include adding new plants at this time.
+
+==The Mod So Far==
+
+Work on the mod so far has been under the name Plant Fixes. In the future, Expanded Plants will be released in standalone and Modest Module formats.
+
+===Nonstandard Growths Obtainable===
+
+The following edible plant growths are not harvestable in fortress mode in vanilla ''Dwarf Fortress'', but are harvestable in Expanded Plants. 
+
+* Feather tree eggs
+* Walnuts
+* Almonds
+* Hazelnuts
+* Pecans
+* Cacao beans
+* Coffee beans
+* And more!
+
+===No Crops with Unobtainable Seeds===
+
+The following plants have (plantable) seeds that are unobtainable in vanilla ''Dwarf Fortress'', but are obtainable in Expanded Plants:
+
+* Lettuce
+* Onion
+* Cabbage
+* Garlic
+* Acacia seeds
+* Bitter vetch
+* Broad beans
+* Green beans
+* Red beans
+* Peanuts
+* Bambara groundnuts
+* String beans
+* Lentils
+* And more!
+
+Additionally, all plants which are processed to bag produce 2 seeds each, since farmers are just as likely to gather the bag item as to gather the whole shrub.
+
+===No Useless Seeds===
+
+In vanilla, dwarves store all seeds in bags, regardless of whether any stockpiles can receive them, or whether they can be used in any way. In Expanded Plants, seeds with absolutely no use - not edible, not millable, not plantable - simply disintegrate. Here are some of the seeds you don't need to deal with anymore:
+
+* Cherry pits
+* Apple seeds
+* Orange seeds
+* Plum pits
+* Avocado pits
+* Banana seeds
+* Bayberry seeds
+* And more!
+
+===Seasonal Grains===
+
+Who ever heard of brewing a ''stalk'' of grain whole, after picking it in the spring? In Expanded Plants, seedheads are growths in their own right. This change applies to more than just the traditional grains! Some affected plants are:
+
+* Cave wheat
+* Longland grass
+* Spelt
+* Artichoke
+* Hemp
+* And more!
+
+Once a seedhead is harvested, it can be brewed or milled whole, producing no seeds**; or it can be threshed to produce seeds, which can then be planted, cooked, or (in the case of hemp) pressed for oil. 
+
+Be careful! If you fall behind on your threshing, you might find yourself drinking the last of your wheat!
+
+===Adventure-usable Plants===
+
+In vanilla adventure mode, the caverns are a food desert. Plump helmets, plump helmets everywhere, and not a bite to eat! 
+
+In Plant Features, plump helmets can be picked and eaten. So can pig tail stalks and rope reed blades, for spinning to thread, for use by other mods.
+
+===New uses for existing plants!===
+
+* Pineapple fiber fabric
+* Apricot kernel oil & soap
+* Avocado oil & soap
+* Abaca fiber fabric
+* Oat beer
+* Saguaro wine
+* Candlenut oil & soap
+* Almond oil & soap
+* And more!
+
+These are all uses that these plants are put to in real life!
+
+==The Future of the Mod==
+
+===Biomes & Growing Seasons Update===
+
+The next big push in Expanded Plants is the big biome & growing season overhaul. You may have noticed that in vanilla, all the plants flower and fruit at the same time, regardless of species. 
+
+This requires a ''lot'' of information to be collected and organized before I can even start making changes. '''Expanded Plants needs your help!''' If you're interested in helping to collate the real-life information the mod is based on, please see the [[/Plants|Plants table]].
+
+====Accommodating different kinds of plants====
+
+Some plants don't produce seeds. So I'mma make a reaction to "Prepare tuber for planting" or something, that will turn a tuber into a "seed tuber" (this is a real thing), with the same graphic as the tuber, but unusable for anything but planting. I ''could'' make it edible, but since it'll be by material/logically a seed, that would make it show up in the seeds tab of the kitchen menu, which would be weird.
+
+====Necessary Reactions====
+
+This has been moved to [[/Reactions|its own page]].
+
+===Peanut Butter & Jelly===
+
+Nut butters and fruit preserves are something I'd like to add.
+
+===Bark & Bark Dyes===
+
+A lot of dyes are sourced from the barks of different plants. Implementing tiers of wood with and without bark would allow the creation of these dyes. This could also be used to overhaul the leather industry, as tannin is usually sourced from bark as well.
+
+===Basketweaving===
+
+It would make sense to also add basketry as a way of constructing furniture, baskets (bags and large pots), hats, etc.
+
+Terminology:
+
+* Grasses & rushes produce "coiled" products.
+* Palms & yucca produce "plaited" products.
+* Roots & bark produce "twined" products.
+* Reed (palm core), canes, and wood strips produce "splint" products.
+
+Cereal/grass crops produce straw, and all kinds of vines can also be used in basketmaking. Baskets can be woven tight enough to hold water, so no worries there.
+
+===Value rebalancing===
+
+With additional processing of fruits to create preserves, it would make sense to rebalance the [[Modification:Expanded_Plants/Values|material values]] of different plant products.
+
+===Hard Brewing===
+
+Brewing and dying are extremely simplified in vanilla DF. (That's dying as in dye, not death!) A Hard Crafting module would add additional steps to both:
+
+====Dying====
+
+Different dyes generally require separate facilities, because they require specific equipment made of specific materials. Then there are mordants, aka fixatives, which differ according to the fabric being dyed and the source of the dye.
+
+====Brewing====
+
+=====Fruit Wines=====
+
+Wines are made from fruits.
+
+Fruits should first be pressed to juice or pulp, then aged in the open air for a few weeks. If a pulp, it is then pressed to liquid after this first aging. Then it's aged for a few months more in closed casks.
+
+=====Ales/Beers=====
+
+Ales are made from starch, usually seeds. Non-seed starches must usually be brewed in combination with seeds, as the fermentation of starch is facilitated by enzymes from the seeds which convert starches to sugars.
+
+Will continue this later, see [http://en.wikipedia.org/wiki/Brewing#Brewing_process| the wiki page] though.
+
+=====Starch Wines=====
+
+These are alcohols made from starches which have been broken into sugar by microbes rather than by malt enzymes. The starch source is milled not quite to flour, but down to small starchy bits, then washed, then soaked, then steamed, then set for a week to mold. Water & yeast are added to the moldy rice, forming the "main mash." This ferments for 2-3 weeks and is then filtered/pressed to remove the solids. Then it's left to age for 9-12 months.
+
+=====Kilju=====
+
+Kilju is undistilled moonshine made with pretty much pure sugar. It is brewed extremely quickly & easily: sugar + water + yeast + flavoring + 3-7 days of aging. Mead is a kilju under this definition.
+
+=====Distillation=====
+
+Fruit wines are distilled to brandies.
+Ales are distilled to whiskeys & vodkas.
+Kiljus are distilled to rums.
+Starch wines are distilled to arracks.
+{{Category|Modification:Expanded Plants}}

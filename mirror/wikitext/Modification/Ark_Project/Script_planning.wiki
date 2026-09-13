@@ -1,0 +1,24 @@
+== Tree builder ==
+
+* figure out links between pages and subpages, report orphans as errors
+
+== Variation ==
+
+* insert CREATURE_VARIATION at beginning, get token from section header (prepend with ARK_), indent all other tags
+* insert CV_ADD_TAG before all creature tags
+* insert SELECT_CASTE:ALL at the end
+
+== Creature ==
+
+* insert CREATURE at beginning, get creature token from NAME tag (prepend with ARK_), indent all other tags
+* replace {THIS_CREATURE} with creature token
+* prepend ARK_ to body stuff
+
+== Body ==
+
+* prepend ARK_ to body token
+
+== Abstract creature ==
+
+* insert CREATURE at beginning, get creature token from NAME tag (prepend with ARK_), indent all other tags
+* insert DOES_NOT_EXIST and maybe other tags

@@ -1,0 +1,20 @@
+<pre>
+[PLANT:BABY TOES SUCCULENT]
+	Fenestraria
+	[NAME:baby toes succulent][NAME_PLURAL:baby toes succulents][ADJ:baby toes succulent]
+	[USE_MATERIAL_TEMPLATE:STRUCTURAL:STRUCTURAL_PLANT_TEMPLATE]
+	[BASIC_MAT:LOCAL_PLANT_MAT:STRUCTURAL]
+	[GRASS]
+	[GRASS_TILES:'.':',':'`':''']
+	[GRASS_COLORS:2:0:1:2:0:1:2:0:1:2:0:1]
+	[DRY]
+	[BIOME:ANY_DESERT]
+	[GROWTH:FLOWER]
+		[GROWTH_NAME:baby toes succulent flower:STP]
+		[GROWTH_ITEM:PLANT_GROWTH:NONE:LOCAL_PLANT_MAT:STRUCTURAL]
+		[GROWTH_DENSITY:1]
+		[GROWTH_TIMING:185000:244000]
+		[GROWTH_PRINT:5:5:7:0:1:185000:244000:1]
+</pre>
+
+{{Template:Modification:Expanded_Plants/Plants}}

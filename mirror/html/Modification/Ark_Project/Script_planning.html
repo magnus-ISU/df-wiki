@@ -1,0 +1,16 @@
+<div class="mw-parser-output">
+<h2><span class="mw-headline" id="Tree_builder">Tree builder</span></h2>
+<ul><li>figure out links between pages and subpages, report orphans as errors</li></ul>
+<h2><span class="mw-headline" id="Variation">Variation</span></h2>
+<ul><li>insert CREATURE_VARIATION at beginning, get token from section header (prepend with ARK_), indent all other tags</li>
+<li>insert CV_ADD_TAG before all creature tags</li>
+<li>insert SELECT_CASTE:ALL at the end</li></ul>
+<h2><span class="mw-headline" id="Creature">Creature</span></h2>
+<ul><li>insert CREATURE at beginning, get creature token from NAME tag (prepend with ARK_), indent all other tags</li>
+<li>replace {THIS_CREATURE} with creature token</li>
+<li>prepend ARK_ to body stuff</li></ul>
+<h2><span class="mw-headline" id="Body">Body</span></h2>
+<ul><li>prepend ARK_ to body token</li></ul>
+<h2><span class="mw-headline" id="Abstract_creature">Abstract creature</span></h2>
+<ul><li>insert CREATURE at beginning, get creature token from NAME tag (prepend with ARK_), indent all other tags</li>
+<li>insert DOES_NOT_EXIST and maybe other tags</li></ul></div>

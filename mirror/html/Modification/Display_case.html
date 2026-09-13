@@ -1,0 +1,43 @@
+<div class="mw-parser-output"><table class="metadata plainlinks ambox ambox-notice" style="border-left: 10px solid #50b076;" role="presentation">
+<tbody><tr><td class="mbox-image"><div style="width: 52px; margin: 0 40px 0 20px;"><a href="/index.php/File:Mod_icon.png" class="image"><img alt="Mod" src="/images/thumb/1/1a/Mod_icon.png/48px-Mod_icon.png" decoding="async" width="48" height="48" srcset="/images/thumb/1/1a/Mod_icon.png/72px-Mod_icon.png 1.5x, /images/thumb/1/1a/Mod_icon.png/96px-Mod_icon.png 2x" /></a></div></td><td class="mbox-text" style=""><span class="mbox-text-span">This page includes <b><a href="/index.php/Category:Mods" title="Category:Mods">mods</a></b>.  The content is not part of normal DF as released.  Changing game files can sometimes cause unexpected results, and should always be done with care and caution.<span class="hide-when-compact">  </span><span class="hide-when-compact"> </span></span></td></tr></tbody></table> 
+<p>A <b>display case</b> is a building that shows off the fruits of your fortress in a way your dwarves can appreciate. To build it takes one <a href="/index.php/Block" title="Block">block</a>, one clear <a href="/index.php/Glass" title="Glass">glass</a> <a href="/index.php/Box" class="mw-redirect" title="Box">box</a>, and one object to display; the displayed object is both protected from thieves and added to the value of the room and the fortress. Unfortunately, dwarves will not admire the object directly like they might built furniture, but it's still better than stuffing those <a href="/index.php/Legendary_artifact" title="Legendary artifact">legendary amulets and figurines</a> into a bin.
+</p><p>This mod was <a rel="nofollow" class="external text" href="http://www.bay12forums.com/smf/index.php?topic=57243.msg1249306#msg1249306">originally created by user kaypy on the forum</a>, and serves as a great introduction to modding.
+</p><p><br />
+To install the mod, add this workshop to your raw/objects/building_custom.txt file:
+</p>
+<div style="clear:both;"></div>
+<table class="collapsible collapsed infobox gamedata" style="background: #fdfdfd; border: 1px solid #aaa; font-size: 88%; margin: 0 auto -1px; vertical-align: middle; width: 100%; max-width: 100em; table-layout: fixed;">
+<tbody><tr style="line-height: 1.5em;"><th scope="col" style="background: #cce6b3; padding: 0.25em 1em; text-align: center; display: table-cell;&#32;;"><div style="font-size: 114%; margin: 0 9em;">Raws</div></th></tr>
+<tr style="line-height: 1.5em; text-align: left; display: table-cell;"><td><div style="overflow: auto;"><span class="gamedata-content" style="font-family: monospace; font-size:1.25em; white-space:pre;">
+Display case
+Requires:
+1 unit building material
+1 clear glass box
+1 object to display
+[BUILDING_WORKSHOP:DISPLAY_CASE]
+	[NAME:Display Case]
+	[NAME_COLOR:7:0:1]
+	[DIM:1:1]
+	[WORK_LOCATION:1:1]
+	[BUILD_LABOR:MASON]
+	[BUILD_KEY:CUSTOM_SHIFT_D]
+	[BLOCK:1:0]
+	[TILE:0:1:'#']
+	[COLOR:0:1:0:7:0]
+	[TILE:1:1:'#']
+	[COLOR:1:1:0:7:0]
+	[TILE:2:1:'#']
+	[COLOR:2:1:0:7:0]
+	[TILE:3:1:147]
+	[COLOR:3:1:7:0:0]
+	[BUILD_ITEM:1:BLOCKS:NONE:NONE:NONE][CAN_USE_ARTIFACT]
+	[BUILD_ITEM:1:BOX:NONE:GLASS_CLEAR:NONE][CAN_USE_ARTIFACT]
+	[BUILD_ITEM:1:NONE:NONE:NONE:NONE][CAN_USE_ARTIFACT] </span></div></td></tr></tbody></table>
+<p><br />
+Then, in raw/objects/entity_default.txt add this line under [ENTITY:MOUNTAIN]:
+</p>
+<pre>[PERMITTED_BUILDING:DISPLAY_CASE]
+</pre>
+<p><br />
+That's it. Now every dwarven civilization you generate will be able to create "display case" buildings. (Note that generating a new world is necessary to pick up the changes to the mountain entity; if you want to add display cases to an existing world you can "re-purpose" the soap makers workshop or screw press workshops.) To build a display case, use <span style="white-space: nowrap;"><span class="keyboard-key nowrap" style="border: 1px solid #aaa; border-radius: 0.2em; -webkit-border-radius: 0.2em; -moz-border-radius: 0.2em; -o-border-radius: 0.2em; -ms-border-radius: 0.2em; -moz-box-shadow: 0.1em 0.2em 0.2em #ddd; -webkit-box-shadow: 0.1em 0.2em 0.2em #ddd; box-shadow: 0.1em 0.2em 0.2em #ddd; background-color: #f9f9f9; background-image: -moz-linear-gradient(top, #eee, #f9f9f9, #eee); background-image: -o-linear-gradient(top, #eee, #f9f9f9, #eee); background-image: -webkit-linear-gradient(top, #eee, #f9f9f9, #eee); background-image: linear-gradient(to bottom, #eee, #f9f9f9, #eee); padding: 0.1em 0.3em; font-family: inherit; font-size: 0.9em;" title="">b</span></span>, <span style="white-space: nowrap;"><span class="keyboard-key nowrap" style="border: 1px solid #aaa; border-radius: 0.2em; -webkit-border-radius: 0.2em; -moz-border-radius: 0.2em; -o-border-radius: 0.2em; -ms-border-radius: 0.2em; -moz-box-shadow: 0.1em 0.2em 0.2em #ddd; -webkit-box-shadow: 0.1em 0.2em 0.2em #ddd; box-shadow: 0.1em 0.2em 0.2em #ddd; background-color: #f9f9f9; background-image: -moz-linear-gradient(top, #eee, #f9f9f9, #eee); background-image: -o-linear-gradient(top, #eee, #f9f9f9, #eee); background-image: -webkit-linear-gradient(top, #eee, #f9f9f9, #eee); background-image: linear-gradient(to bottom, #eee, #f9f9f9, #eee); padding: 0.1em 0.3em; font-family: inherit; font-size: 0.9em;" title="">w</span></span>, <span style="white-space: nowrap;"><span class="keyboard-key nowrap" style="border: 1px solid #aaa; border-radius: 0.2em; -webkit-border-radius: 0.2em; -moz-border-radius: 0.2em; -o-border-radius: 0.2em; -ms-border-radius: 0.2em; -moz-box-shadow: 0.1em 0.2em 0.2em #ddd; -webkit-box-shadow: 0.1em 0.2em 0.2em #ddd; box-shadow: 0.1em 0.2em 0.2em #ddd; background-color: #f9f9f9; background-image: -moz-linear-gradient(top, #eee, #f9f9f9, #eee); background-image: -o-linear-gradient(top, #eee, #f9f9f9, #eee); background-image: -webkit-linear-gradient(top, #eee, #f9f9f9, #eee); background-image: linear-gradient(to bottom, #eee, #f9f9f9, #eee); padding: 0.1em 0.3em; font-family: inherit; font-size: 0.9em;" title="Shift-d">D</span></span>.
+</p></div>
