@@ -1,0 +1,172 @@
+{{Quality|Exceptional|21:42, 17 May 2015 (UTC)}}
+{{av}}
+{{Modding}}
+
+'''Language tokens''' are used within the language_*.txt raw files. Each [[token]] is permitted in a specific context.
+
+__TOC__
+{{clear}}
+
+==WORD==
+{| {{prettytable}}
+|- bgcolor="#dddddd"
+! width="20%" | Token
+! width="20%" | Arguments
+! width="60%" | Description
+
+|-
+| {{text anchor|NOUN}}
+|
+* singular
+* plural
+| Begins defining a noun usage of a word.
+
+|-
+| {{text anchor|ADJ}}
+|
+* adjective
+| Begins defining an adjective usage of a word.
+
+|-
+| {{text anchor|PREFIX}}
+|
+* prefix
+| Begins defining a prefix usage of a word.
+
+|-
+| {{text anchor|VERB}}
+|
+* present first person
+* present third person
+* [[wikipedia:preterite|preterite]]
+* past participle
+* present participle
+| Defines a verb usage of a word.
+
+|-
+| {{text anchor|ADJ_DIST}}
+| number 1-7
+| Determines what order the adjective being defined comes in when in a string of multiple adjectives.
+
+|-
+| {{text anchor|THE_NOUN_SING}}
+| 
+| Lets the singular noun form of the word be used after "the" ("The X of Y", where X is the word with the tag).
+
+|-
+| {{text anchor|THE_NOUN_PLUR}} 
+| 
+| As above, but with plural ("The Xs of Y").
+
+|-
+| {{text anchor|THE_COMPOUND_NOUN_SING}}
+| 
+| Lets the singular noun form of the word be used as part of a compound noun after "the" ("The Z-X of Y").
+
+|-
+| {{text anchor|THE_COMPOUND_NOUN_PLUR}}
+| 
+| As above, but with plural ("The Z-Xs of Y").
+
+|-
+| {{text anchor|THE_COMPOUND_ADJ}}
+| 
+| Lets the adjective form of the word be used as part of a compound noun after "the" ("The Z-X of Y").
+
+|-
+| {{text anchor|OF_NOUN_SING}}
+| 
+| Lets the singular noun form of the word be used after "of" ("The Y of X").
+
+|-
+| {{text anchor|OF_NOUN_PLUR}}
+| 
+| As above, but with plural ("The Y of Xs").
+
+|-
+| {{text anchor|FRONT_COMPOUND_NOUN_SING}}
+| 
+| Lets the singular noun form of the word be used at the front of a compound noun ("XY", as in surnames).
+
+|-
+| {{text anchor|FRONT_COMPOUND_NOUN_PLUR}} 
+| 
+| As above, but with plural.
+
+|-
+| {{text anchor|REAR_COMPOUND_NOUN_SING}}
+|
+| Lets the singular noun form of the word be used at the rear of a compound noun ("YX", as in surnames).
+
+|-
+| {{text anchor|REAR_COMPOUND_NOUN_PLUR}}
+| 
+| As above, but with plural.
+
+|-
+| {{text anchor|FRONT_COMPOUND_ADJ}}
+| 
+| Lets the adjective form of the word be used at the front of a compound noun.
+
+|-
+| {{text anchor|REAR_COMPOUND_ADJ}}
+| 
+| As above, but at the rear instead.
+
+|-
+| {{text anchor|FRONT_COMPOUND_PREFIX}}
+| 
+| Allows the prefix form to be appended as a prefix to a compound noun.
+
+|-
+| {{text anchor|THE_COMPOUND_PREFIX}}
+| 
+| Allows the prefix form to be appended as a prefix to a compound noun following "the".
+
+|-
+| {{text anchor|STANDARD_VERB}}
+| 
+| Allows the verb to be used in a compound noun and for its participles to be used as adjectives.
+|}
+
+==SYMBOL==
+{| {{prettytable}}
+|- bgcolor="#dddddd"
+! width="20%" | Token
+! width="20%" | Arguments
+! width="60%" | Description
+
+|-
+| {{text anchor|S_WORD}}
+|
+* WORD
+| Specifies the given WORD (defined in #REDIRECT [[language_words.txt]]) as belonging to the symbol being defined. A given word can belong to multiple symbols.
+|}
+
+==TRANSLATION==
+
+{| {{prettytable}}
+|- bgcolor="#dddddd"
+! width="20%" | Token
+! width="20%" | Arguments
+! width="60%" | Description
+
+|-
+| {{text anchor|T_WORD}}
+|
+* WORD
+* translation
+| Specifies a translation from a given WORD (defined in language_words.txt) into the language being defined.
+|}
+
+==English instead of dwarven language==
+You can hack the language files with this regular expression command:
+
+'''<nowiki>:%s/T_WORD:\([A-Z_ -]*\):[^\]]*\]/T_WORD:\1:\L\1]/</nowiki>'''
+
+==See also==
+[[40d:Language]] (has expanded explanations of parts of the language system, which seems to still be the same in this version)
+
+{{Category|Modding}}
+{{Category|Tokens}}
+[[ru:Language token]]

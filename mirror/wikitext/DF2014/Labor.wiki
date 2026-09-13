@@ -1,0 +1,476 @@
+{{Quality|Exceptional|17:27, 14 August 2014 (UTC)}}
+{{av}}
+{{quote|'''"To get a job done, a dwarf has to do it."''' - Boss Urist McOverstates-the-obvious}}[[File:labor_preview.jpg|thumb|220px|right|"Put both your backs into it!"]]'''Labor''' is how jobs get done in a fortress and which labors are enabled for a dwarf determines which jobs they can perform. The skill level and [[attribute]]s of an individual determine how effectively they perform a job, and a dwarf's overall skill levels determine which profession the game assigns to them.
+
+==Introduction to labor==
+Your dwarves function as semi-autonomous entities, usually fulfilling their own basic needs, and sometimes performing jobs when able. Each job corresponds to a '''labor''' which a dwarf must have enabled to perform. Enabling labors tells them what jobs they can do, and multiple can be assigned to each dwarf, but specialization means faster skill gain (and some jobs have conflicting tool requirements described below). Jobs are created in various ways, including [[designation]]s, [[zone]]s, [[workshop]] tasks, and [[manager]] work orders, and once created, an idle dwarf with that labor enabled will be assigned the job.
+
+=== Basic terminology ===
+*'''Labor:''' the ability to complete a job specific to a given type of work, which must be assigned individually to each dwarf.
+*'''Preference:''' a somewhat ambiguous term associated with the process of assigning a labor to a dwarf.  Dwarves do not merely ''prefer'' assigned labors over unassigned labors; instead, they will '''completely refuse''' to do unassigned labors.
+*'''Skill:'''  the level of proficiency a dwarf has when performing a specific labor.  Skill increases with experience in completing the work.  (The terms labor and skill are '''NOT''' synonyms.  Skill is a measure of proficiency for a given labor, while a labor is the ability to do the work.) 
+*'''[[Unit_type_token|Profession]]:'''  Each dwarf is assigned a professional title, which is determined from the dwarf's assigned / preferred labors that has the highest skill level.
+*'''Job:'''  a specific task or work order queued to be completed, which can only be completed by a dwarf assigned to the labor that corresponds to the job.  Typically there are multiple jobs that can be completed by a specific labor.
+:*Additionally, basic needs also appear as jobs, such as [[Food|eating]], [[sleep]]ing, [[Alcohol|drinking]], etc..  These are not assigned, but are created automatically as needed.
+*'''Social Skill:'''  [[Social skill]]s are not labors, in that no work is performed using them, but they are similar in that they are unique abilities which will increase in competency the more they are used.  
+*'''Miscellaneous Abilities:'''  are similar to labors and social skills, but, again, are not used in the performance of work.  An example is [[swimming]].
+
+===Assigning labors===
+There are several steps required to assign a particular labor to a dwarf.  For an example, let's say you have designated a section of underground [[rock]] to be [[mining|mined]] in order to make a tunnel for your fortress.  This designation of work is a "job", and will now appear in your {{k|j}}obs [[menu]] as "dig".  In order for a dwarf to complete the job, you must assign a dwarf the [[mining]] labor.  This can be done as follows:<br />
+
+# From the main map screen, select the [[unit list]] menu, {{k|u}}, which will list all your dwarves and show their current activity.
+#* Alternatively, you can use the {{k|v}}iew menu. 
+# From the [[unit list]] menu, arrow scroll down to select the dwarf whom you want to assign a labor to then select {{k|z}} to zoom to their location.  Your view will change to the main map, and the dwarf you have chosen should be flashing on and off.  In the task window on the right you will see information about the selected dwarf,  in the Dwarf Details menu.
+#* The default view for the selected dwarf in the Dwarf Details menu is 'general' {{k|g}}, which will list the dwarf's nickname or first name, dwarven last name, and profession, followed below by their [[Technical tricks#Settings - d_init.txt|nickname]] or first name and last name as it reads in English, and their [[noble]] title if they are a [[noble]].  This is followed by a list that shows the current job (or lack thereof) in blue text, [[combat]] role {{k|c}}, labors {{k|b}}, and miscellaneous [[social skill]]s and abilities {{k|m}}.  To see only the current labors, turn the combat {{k|c}} and miscellaneous {{k|m}} sections off.
+#  From the Dwarf Details screen, select {{k|p}} for preference, and then {{k|l}} for labor.  This will take you to the Labor Categories screen, which categorizes the individual labor options into various categories based on similarity of work.  (See Labor Categories below.)
+#* Note that [[Mining]] is unique on the list, as it is the only item that is a labor in its own right, and not a category of several labors.
+#  Scroll through the list using the {{k|+}} or {{k|-}} keys, select a category, and scroll through the individual labor list, and once you have the desired labor selected, press {{k|Enter}}.  For this example, since Mining is a labor and not a category you need only select [[Mining]] from the category menu.
+#  Exiting:  To return to the Dwarf Details screen, select preference {{k|p}} then general {{k|g}}, and you should see the new assigned labor in the list.  You can also exit directly to the main screen by selecting {{k|Esc}}.<br />
+#* Note that changes in labors '''will not always take effect immediately''', if a labor, say Mining, is deselected on a dwarf who is performing the job, they will first finish mining the current tile and then stop mining.
+
+[[File:pinklabor.png|thumb|223px|right|Pink-colored labor choices.]]If the dwarf is undergoing military training, then activated labors will be marked in pink, denoting that a dwarf is not able to perform those labors.
+
+{{TipBox2|titlebg=#dd0|float=right|Utilities|You may have noticed that the UI for managing dwarves is a bit difficult to use. If you are using a supported operating system, [[Utilities#Dwarf Therapist|Dwarf Therapist]] and/or [[Utility:DFHack|DFHack]] can make this much easier.}}
+
+'''Note:'''  The word '''"preference"''' can be confusing, as it suggests that a dwarf will do work associated with any labor, but will 'prefer' and prioritize work associated with labors you have assigned.  '''This is not the case.'''  A dwarf will '''only''' do work associated with assigned preferred labors, so it is not a preference, but in fact functions as a switch to enable or disable the labor.  (Prioritization of work is based on several factors that are not fully understood, but are presented in [[micromanaging tricks]].)
+
+Once designated as a '''labor preference''', a single labor can be applied to many different jobs.  For instance, a dwarf with the [[bone carving]] labor designated might carve a totem out of a skull, craft bone practice [[bolt]]s for a [[crossbow]], create bone [[armor]], or carve bone [[craft]]s to trade.  Each of these is a different possible job allowed by designating the associated labor.
+
+=== Labor and tool requirements ===
+For a few specific jobs, a matching '''tool''' is also required for a dwarf to obey the job assignment.  Any active [[miner]] needs a [[pick]], any active wood cutter needs a [[battle axe]], and any active [[hunter]] needs a  [[crossbow]] (with quiver and bolts).  If a labor needs a tool, the labor is considered '''exclusive''' such that you can only assign <u>one</u> of the three labors listed to any single dwarf at any one time. 
+
+This means that a dwarf cannot be, for instance, a [[Miner]] and a [[Hunter]] simultaneously, since both labors require a tool. If a dwarf is assigned a tool-labor and another tool-labor was previously assigned to said dwarf, the (old) tool-labor is automatically and silently unassigned, and that tool is immediately dropped where they stand at the time. 
+
+Additionally, the assignment of these tools '''overrides''' any [[Squad|uniform]] assigned to a dwarf's [[squad]], so [[military]] dwarves should never be assigned any of the aforementioned labors. 
+
+To be used, a tool cannot be [[forbidden]], nor in possession of another dwarf (even one that does not currently have a job), and a [[path]] must be available from the dwarf to that type of tool. If a tool is not available, the dwarf will typically attempt to fulfil other [[need]]s. It is possible, by using locked doors etc. to limit the paths, to force a specific tool to be assigned to a dwarf, but otherwise the tool will be randomly assigned, sometimes involving a dwarf walking long distances and past perfectly useful tools to find the one they think they want.
+
+=== Labor and facility requirements  ===
+Many jobs require a workshop or some other [[Furnace|facility]] in order to be completed.  Jobs are designated by way of the workshop, and any dwarf with the corresponding labor associated with the workshop will go to the shop, provided they are not eating, sleeping, drinking, etc..., and begin to complete the task.  Most workshop jobs also require some raw materials in order to complete the production.
+
+== Labor categories ==
+Labor is divided into the following categories which are typically related by function or material, and for which there are multiple labors associated with each category:
+* '''[[Mining]]''': 
+::: [[Mining]]
+*  '''[[Wood industry|Woodworking]]''': 
+::: [[Carpentry]], [[Crossbow-making]], [[Wood cutting]]
+*  '''[[Stone industry|Stoneworking]]''': 
+::: [[Masonry]], [[Stone detailing]]
+*  '''[[Hunting]]'''/Related:  
+::: [[Animal care]]*, [[Animal training]], [[Hunting]], [[Small animal dissection]]*, [[Trapping]]*
+*  '''[[Healthcare]]''':   
+::: [[Diagnosis]], [[Dressing wounds]], Feed Patients/Prisoners, Recovering Wounded, [[Setting bones]], [[Surgery]], [[Suturing]]
+*  '''[[Farming]]'''/Related:   
+::: [[Beekeeping]], [[Brewing]], [[Butchery]], [[Cheese making]], [[Cooking]], [[Dyeing]], [[Grower|Farming (Fields)]], [[Gelder|Gelding]], [[Lye maker|Lye Making]], [[Milking]], [[Milling]], [[Herbalist|Plant Gathering]], [[Thresher|Plant Processing]], [[Potash maker|Potash Making]], [[Presser|Pressing]], [[Shearing]], [[Soaper|Soap making]], [[Spinning]], [[Tanning]], [[Wood burner|Wood Burning]]
+*  '''[[Fishing]]'''/Related:   
+::: [[Fishing]], [[Fish cleaning]], [[Fish dissection]]
+*  '''[[Metal industry|Metalsmithing]]''':  
+::: [[Armoring]], [[Blacksmithing]], [[Furnace operating]], [[Metalcrafting]], [[Weaponsmithing]]
+*  '''[[Jewelry]]''':   
+::: [[Gem cutting]], [[Gem setting]]
+*  '''[[Crafts]]''':   
+::: [[Bookbinder|Book Binding]], [[Bone carver|Bone Carving]], [[Clothier|Clothesmaking]], [[Glassmaker|Glassmaking]], [[Glazer|Glazing]], [[Leatherworker|Leatherworking]],  [[Papermaker|Papermaking]], [[Potter|Pottery]], [[Stone crafter|Stonecrafting]], [[Strand extractor|Strand Extraction]], [[Wax worker|Wax Working]],  [[Weaver|Weaving]], [[Wood crafter|Woodcrafting]]
+*  '''[[Engineer]]ing''':   
+::: [[Mechanic]], [[Pump operator|Pump operating]], [[Siege engineer]], [[Siege operator]]
+*  '''[[Hauling]]''':   
+::: Animal/Food/Furniture/Item/[[Refuse]]/Stone/Trade Good/Water/Wood Hauling, Burial, Push/Haul Vehicles
+*  '''Other''' Jobs:   
+::: [[Alchemy]]*, [[Architecture]], [[Cleaning]], [[Construction removal]], [[Lever operation]], Road building, Wall/Floor construction
+
+: '''* Useless / Limited''' Labors:
+::* As of 8-2014, Animal Care & Alchemy are not functioning.
+::* Trapping, Small Animal Dissection, and Fish Dissection have limited utility. 
+
+
+In the preference screen, a labor category is dark gray if there are no labors under it enabled, light gray if there are some jobs enabled, and white if all jobs are enabled. ''(These distinctions can sometimes be very hard to tell apart in the default [[color scheme]].)''
+
+=== Jobs that are not associated with a labor ===
+* Basic Needs: [[food|eat]]ing, [[thirst|drinking]], [[sleep]]ing, going [[on break]], [[party]]ing, [[clean self|cleaning themselves]], and [[rest]]ing. 
+* A few things are listed as "No Job" but can be considered labors in a different sense: running scared, not having a path to anyplace useful, and being [[insane]].
+
+== Managing labor and demand ==
+* To quickly change a dwarf's labor preferences, access the labor screen by {{k|v}}iewing the dwarf, then select {{k|p}}references and {{k|l}}abor. Use {{k|+}} and {{k|-}} to move the cursor up and down to highlight different categories or skills to enable or disable.  Or, use [[Utilities#Dwarf Therapist|Dwarf Therapist]]/[[Utility:DFHack|DFHack]].
+* Using {{k|u}} can help you quickly locate dwarves. Select a dwarf, hit {{k|z}} for "zoom to creature" and you'll automatically be placed in view mode on that dwarf. Use {{k|p}}-{{k|l}} to get to the labor configuration menu.
+* You can view a list of all current, queued, and suspended jobs on the {{k|j}}obs menu.  A list of what job each dwarf is currently performing is visible on the {{k|u}}nits menu.
+* A [[manager]] is incredibly useful for managing production jobs ([[workshop]] based).  He or she can queue up a significant list of jobs without the need to select the various workshops, and place orders in bulk (or to be repeated).  That said, there are some caveats, the most important being that queued jobs must be done in the correct order of materials required, or the orders will auto cancel.  Also, you should not assign your manager to labors that are in high demand, as this will keep them from going to their [[office]] to place the orders.
+* [[Migrants|Migrating]] dwarves will typically arrive with a certain number of labors already active.  You will probably want to change the assigned labors, as often they will not meet your demand, or may be useless based on your access to raw materials.
+
+== Advanced labor management and design ==
+Managing your dwarves can be a tricky and time-consuming business.  Many a fortress has been abandoned not because of destruction from external threat, but rather from labor management fatigue. [[Utilities#Dwarf Therapist|Dwarf Therapist]] or [[Utility:DFHack|DFHack]] are both useful tools that assist you in managing your labors.
+
+As your fortress grows, so will your labor pool, and the way you assign that labor will change over time.  Typically at embark, you will have at least one Miner, a Wood cutter, Farmer, Carpenter, Mason/Stonecrafter, Cook/Brewer, Mechanic/Architect, one of which will also be a Broker / Appraiser.  There are multiple combinations but this is typical (see [[Embark]] and [[Starting build]]).  Early on, you will probably want to focus on fortress design and development, such that you will place priority on [[mining]] and [[masonry]], supplemented by [[carpentry]].
+
+In order to maximize the benefit of highly skilled labor, you will eventually want to specialize your labor, such that each dwarf has a very limited number of labors assigned.
+
+Hauling:  Nothing can bog down your production like the distraction of hauling jobs.  Losing your fort to a siege is [[fun]], but losing because all your skilled laborers spend all their time hauling stuff is no fun.  One solution is to use dedicated haulers.  The migrants who appear having no skilled labor, and whose attributes pretty much suck all around, aka [[peasant]]s, are best used as dedicated haulers.
+
+== Labor, skill, and product quality ==
+The amount of [[experience]] a dwarf has with a certain labor will determine how well they go about performing this labor; the more experience, the greater the skill. Certain job types can be completed more quickly, based on the skill in the labor.  There are exceptions, such as [[Health care|nursing]] and [[hauling]] which will never be completed more quickly, regardless of skill.  
+
+Certain labors will produce products that have a [[quality]] tag, typically those associated with the production of an item from a workshop.  The table below lists in which labors the dwarf's experience will impact the quality of produced items and in which labors a higher experience will only be beneficial for the speed of production.
+
+* Many labors, most notably [[hauling]], have no associated skill, do not generate experience, and do not improve with practice.   
+
+{| border="1" cellpadding="5" cellspacing="0" class="wikitable"
+! Category !! Labors !! Quality-effects? !! Details
+|-
+| Mining ||
+* [[Mining]] 
+| no 
+| speed only
+|-
+| rowspan=3 |Woodworker ||
+* [[Carpentry]]
+| yes
+| item, furniture, and designed building quality
+|-
+|
+* [[Crossbow-making]]
+| yes
+| weapon quality
+|-
+|
+* [[Wood cutting]]
+| no 
+| speed only
+|-
+| rowspan=2 | Stoneworking ||
+* [[Masonry]]
+| yes
+| item, furniture, and designed building quality
+|-
+|
+* [[Stone detailing]]
+| yes 
+| engraving quality, speed only for smoothing and track carving
+|-
+| rowspan=5 | Hunting/Related ||
+* [[Animal training]]
+| yes 
+| training quality
+|-
+|
+* [[Animal care]]
+| no
+| not implemented
+|-
+|
+* [[Hunting]]
+| no
+| success rate tends to rise from increasing ambusher and marksdwarf skills
+|-
+|
+* [[Trapping]]
+| no
+| success rate? trap quality?{{verify}}
+|-
+|
+* [[Small animal dissection]]
+| no
+| speed only
+|-
+| [[Healthcare]] (Doctoral) ||
+* [[Diagnosis]]
+* [[Surgery]]
+* [[Setting bones]]
+* [[Suturing]]
+* [[Dressing wounds]]
+| yes
+| success chance, accuracy (and speed) of treatment <br />
+|-
+| [[Healthcare]] (Nursing) ||
+* [[Feed patients/prisoners]]
+* [[Recovering wounded]]
+| no 
+| unskilled
+|-
+| rowspan=20 | Farming/Related ||
+* [[Butchery]]
+| no
+| speed only
+|-
+|
+* [[Tanning]]
+| no
+| speed only
+|-
+|
+* [[Farming (fields)]]
+| yes
+| crop yield (stack size)
+|-
+|
+* [[Dyeing]]
+| yes
+| dye quality
+|-
+|
+* [[Gelding]]
+| no
+| less likely to be injured
+|-
+|
+* [[Soap making]]
+| no
+| speed only
+|-
+|
+* [[Wood burning]]
+| no
+| speed only
+|-
+|
+* [[Potash making]]
+| no
+| speed only
+|-
+|
+* [[Lye making]]
+| no
+| speed only
+|-
+|
+* [[Milling]]
+| no
+| speed only
+|-
+|
+* [[Brewing]]
+| no
+| speed only
+|-
+|
+* [[Plant gathering]]
+| yes
+| success and plant yield (stack size)
+|-
+|
+* [[Plant processing]]
+| no
+| speed only
+|-
+|
+* [[Cheese making]]
+| no
+| speed only
+|-
+|
+* [[Milking]]
+| no
+| speed only
+|-
+|
+* [[Shearing]]
+| no
+| speed only
+|-
+|
+* [[Spinning]]
+| no
+| speed only
+|-
+|
+* [[Cooking]]
+| yes
+| meal and ingredient quality
+|-
+|
+* [[Pressing]]
+| no
+| speed only
+|-
+|
+* [[Beekeeping]]
+| no
+| speed only{{verify}}
+|-
+| rowspan=3 | Fishing/Related ||
+* [[Fishing]]
+| yes
+| fish stack size
+|-
+|
+* [[Fish cleaning]]
+| no
+| speed only
+|-
+|
+* [[Fish dissection]]
+| no
+| speed only
+|-
+| rowspan=5 | Metalsmithing ||
+* [[Furnace operating]]
+| no
+| speed only
+|-
+|
+* [[Weaponsmithing]]
+| yes
+| weapon quality
+|-
+|
+* [[Armoring]]
+| yes
+| armor quality
+|-
+|
+* [[Blacksmithing]]
+| yes
+| item, furniture, designed building quality
+|-
+|
+* [[Metalcrafting]]
+| yes
+| craft, item, decoration, designed building quality
+|-
+| rowspan=2 | Jewelry ||
+* [[Gem cutting]]
+| yes
+| gem craft quality
+|-
+|
+* [[Gem setting]]
+| yes
+| decoration quality
+|-
+| rowspan=11 | Crafts ||
+* [[Leatherworker|Leatherworking]]
+| yes
+| clothing, decoration, craft quality
+|-
+|
+* [[Wood crafter|Woodcrafting]]
+| yes
+| craft quality
+|-
+|
+* [[Stone crafter|Stonecrafting]]
+| yes
+| craft quality
+|-
+|
+* [[Bone carving]]
+| yes
+| craft, decoration quality
+|-
+|
+* [[Glassmaking]]
+| yes
+| craft, item, furniture quality
+|-
+|
+* [[Weaver|Weaving]]
+| yes
+| cloth quality
+|-
+|
+* [[Clothier|Clothesmaking]]
+| yes
+| clothing, decoration quality 
+|-
+|
+* [[Strand extractor|Strand extraction]]
+| no
+| speed only
+|-
+|
+* [[Potter|Pottery]]
+| yes
+| craft, item, furniture quality
+|-
+|
+* [[Glazer|Glazing]]
+| yes
+| glaze quality
+|-
+|
+* [[Wax worker|Wax working]]
+| yes
+| craft quality
+|-
+| rowspan=4 | Engineering  ||
+* [[Siege engineer|Siege engineering]]
+| yes
+| part, ammunition quality
+|-
+|
+* [[Siege operator|Siege operating]]
+| yes
+| accuracy
+|-
+|
+* [[Mechanic|Mechanics]]
+| yes
+| mechanism, furniture quality
+|-
+|
+* [[Pump operator|Pump operating]]
+| no
+| -
+|-
+| [[Hauling]] ||
+* Stone hauling
+* Wood hauling
+* Item hauling
+* Burial
+* Food hauling
+* Refuse hauling
+* Furniture hauling
+* [[Hauling#Animal hauling|Animal hauling]]
+* Trade Good Hauling
+* Water Hauling 
+* [[Hauling#Push /Haul Vehicle|Push/Haul Vehicle]]
+| no
+| unskilled
+|-
+| rowspan=7 | Other Jobs ||
+* [[Architecture]]
+| yes
+| building design quality
+|-
+|
+* [[Alchemy]]
+| no
+| not implemented
+|-
+|
+* [[Cleaning]]
+| no
+| unskilled
+|-
+|
+* [[Lever operation]]
+| no
+| unskilled
+|-
+|
+* Road building
+| no
+| unskilled
+|-
+|
+* Wall/floor construction
+| no
+| unskilled
+|-
+|
+* [[Construction removal]]
+| no
+| unskilled
+|}<br />
+
+==Strange moods==
+{{main|Strange mood}}
+A dwarf under a strange mood will perform a specific task to create an [[artifact]] that is outside of the player's control. Until they complete the task, both they and the workshop they claim will be unavailable for any labor. If the dwarf cannot complete the artifact, they will go [[insane]] and be permanently unable to perform any labor.
+
+{{Translation
+| dwarven = èrith
+| elvish  = equa
+| goblin  = akul
+| human   = ebe
+}}
+
+{{Category|Skills}}
+{{Category|Interface}}
+[[ru:Labor]]

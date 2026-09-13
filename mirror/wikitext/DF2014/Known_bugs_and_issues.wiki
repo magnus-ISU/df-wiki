@@ -1,0 +1,78 @@
+{{Quality|Superior|23:36, 4 September 2013 (UTC)}}
+{{av}}
+:''"Bugs" redirects here. For insects, see [[Vermin]] and [[Creature]].''
+[[File:bug_icon.png|100px|right]]''''Dwarf Fortress'' is a constant work-in-progress, and is thus full of '''bugs'''. Some of them are minor and completely harmless, some are small and annoying, and some are major and even game-changing. Some of the best-known bugs are compiled below; an official compilation of all bugs, and their development status, can be found on the [https://www.bay12games.com/dwarves/mantisbt/my_view_page.php Mantis Bug Tracker]. Please do '''not''' report bugs here; they should be reported on the [https://www.bay12games.com/dwarves/mantisbt/my_view_page.php bug tracker] instead. If you have issues signing up for the bug tracker, see the [http://www.bay12forums.com/smf/index.php?board=6.0 forum bug tracker board] for instructions (but don't report bugs on the forum either).
+
+Some bugs {{dffd|6741|were fixed in v0.34}} by a temporary binary patch made by Quietust and other users; most of these fixes were rolled into v0.40.
+
+== Severe bugs ==
+{{catbox|DF2014:Bugs}}These bugs can significantly interfere with play.  They may do this by crashing the game, making certain parts of the game unavailable, or giving players a bad time.
+
+* {{bugl|11014}}: Crash from corrupted military equipment lists (v0.44)
+**Workaround: refrain from [[raid]]ing
+* {{bugl|10369}}: Crash when Dwarves return from mission (v0.44) -- one major cause fixed in v0.44.10
+**Workaround: refrain from [[raid]]ing
+* {{bugl|9905}}: Crash when filtering material type condition in work order
+**Workaround: avoid using job manager material selection in large worlds
+* {{bugl|9653}}: Tavern keeper/performers repeatedly serve alcohol until patrons drink themselves to death
+**Workaround: do not assign tavern keepers or performers, or do not place any alcohol within the tavern zone
+* {{bugl|9593}}: Caravans/invasions sometimes get "stuck" off-map
+**Workaround: teleport merchants on to map with dfhack
+**Workaround: save prior to arrival, and reload until the caravan successfully appears
+* {{bugl|7161}}: Morale is screwy -- saves demonstrating morale problems in v0.44.03+ requested 
+** Workaround: mod creatures to have natural Discipline skill
+** Workaround: barracks training raises Discipline
+** Workaround: continual exposure to sentient corpses raises Discipline (along with feelings of horror)
+* {{bugl|7185}}: Scared traders immediately scuttle wagons and leave. 
+* {{bugl|9004}}: Items in containers are "unavailable" while a dwarf is hauling another item to store in the container
+** Workaround: new STORE_DIST_* settings in [[d_init.txt]] can tweak the behavior.
+** Workaround: clever [[stockpile design]]s can reduce the impact
+** Workaround: avoid using containers (use [[exploit|quantum stockpiles]], [[minecart]] stockpiles, or no stockpiles instead)
+* {{bugl|7107}} Fighting berserk citizens and citizen werebeasts causes defenders to lose loyalty.
+* {{bugl|565}}: [Freez]es when generating [...] world with "Complete Edge Oceans" set to anything besides 0 or 4
+
+== New bugs ==
+These bugs are new in recent versions (v0.42+).  (There are many more; these are just a few of the most prominent.)
+
+* {{bugl|10878}}: "Civil war" with parent civilization
+* {{bugl|10490}}: "Spies" arrive as part of migrant group
+* {{bugl|10349}}: Were-dwarves stuck in weird spot between injured and healed
+* {{bugl|10346}}: NPCs demanding other characters identify themselves in a loop
+* {{bugl|9588}}: Animal people with [MEANDERER] tag move too slowly
+* {{bugl|9221}}: Visiting scholars leave carrying fortress books/scrolls/copies/codices
+
+== Lingering bugs ==
+These bugs are not new to v0.42/v0.44, but have been confirmed as still existing.  (Year numbers in parenthesis.)
+
+* {{bugl|1451}} (2010): Military equipment interferes with civilian equipment (picks/axes/crossbows/quivers). It is not possible to use a single axe for both [[wood cutter|wood cutting]] and combat, or a single pick for both [[miner|mining]] and combat. Crossbows in the hands of [[hunter]]s can also cause problems.
+* {{bugl|94}} (2010): Seriously wounded dwarves sometimes don't get taken to bed.
+* {{bugl|2712}} (2010): Weapons, especially whips, cut through steel armor like butter.
+**Workaround: appropriate [[modding]] to [http://www.bay12forums.com/smf/index.php?topic=115448 nerf] these weapons
+* {{bugl|2780}} (2010): Pond/pool populations (e.g. pond turtles) do not replenish, gradually become [[extinct]]
+** Supposedly fixed in 0.40.01 but reported to still be happening with ponds
+* {{bugl|535}} (2010): Equipping weapons/armor on military is erratic. This is a long-standing bug that has been slowly but surely rolled back.
+* {{bugl|296}} (2010): Pools/smears/spatters of blood, dust and other materials multiply themselves, get tracked around too much. [[Contaminant]] physics are strange in ''Dwarf Fortress''; instead of washing away, when exposed to running water, they will actually multiply to other tiles.
+**Workaround: routinely run [https://github.com/DFHack/dfhack/blob/master/Readme.rst#clean clean] in [[Utility:DFHack|DFHack]]
+* {{bugl|4550}} (2011): Dodging into river/lava/pit etc. Apparently, dwarves are stupid. Related: they tend to get thrown off of [[waterfall]]s and die from fall damage because they did not account for the current.
+* {{bugl|425}} (2010): Dwarves perform [[cleaning]] erratically at best -- improved in v0.44.06
+**Workaround: routinely run [https://github.com/DFHack/dfhack/blob/master/Readme.rst#clean clean] in [[Utility:DFHack|DFHack]]
+* {{bugl|39}} (2010): "Guts is bruised," "guts has popped out"
+* {{bugl|5986}} (2012): Designating large areas for smoothing slows game to a crawl.
+* {{bugl|797}} (2010): Animals repeatedly path through "tightly closed" [[door]]s causing lag.
+* {{bugl|4065}} (2011): Untradeable creatures (hostiles, wild animals) are released from [[cage]]s when the cages are ordered taken to the [[trade depot]].
+* {{bugl|1582}} (2010): Injured dwarf in bed in stocked hospital ignored by idle doctors. Medical jobs are too low-priority, and will be ignored in favor of pretty much everything else, hauling included, forcing players that need to administer medical care to disable all other labors; and even then, doctors tend to idle a bit in between their jobs.
+* {{bugl|5097}} (2012): Names overwriting text with TrueType and {{bugl|5696}} strange gaps in report texts.  
+**Workaround: Hitting F12 to toggle TrueType can often get you around this problem.
+* {{bugl|2587}} (2010): Saving fails silently when folder is not writeable (due to full disk, permissions, etc) 
+* {{bugl|8698}} (2015): Dwarf entering a strange mood when isolated (e.g. on a stepladder) causes severe lag
+* {{bugl|7872}} (2014): Trees grow through bridges, can make the bridge unusable.
+* {{bugl|7760}} (2014): Dwarves construct walls from wrong side, wall themselves out of fortress or into alcove
+* {{bugl|7423}} (2014): Embark-purchased fruit must be removed from bags before [[brewing]].
+* {{bugl|9440}} (2016): Wounded dwarves die of dehydration if they grab a goblet they can't use
+**Workaround: forbid all goblets so dwarves will drink straight from the barrels
+* {{bugl|7769}} (2017): Historical figures who are mortally wounded (destruction of head, neck, torso etc.) are sometimes considered to be still alive in worldgen and may appear in migrant waves, only to quickly die due to suffocation and/or missing vital organs
+
+
+{{Category|Bugs| }}
+[[Category:Game development]]
+[[ru:Known bugs and issues]]

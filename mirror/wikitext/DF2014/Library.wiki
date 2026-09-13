@@ -1,0 +1,50 @@
+{{Quality|Exceptional|10:05, 10 August 2016 (UTC)}}
+{{av}}
+{{new in v0.42}}
+[[File:DnD Invisible stalker.png|thumb|illustration of a medieval library]]
+
+'''Libraries''' are [[locations]]. At a library, [[scholar]]s can write [[book]]s (quires, which are bound into codices, and scrolls) and [[scribe]]s can create copies. Any dwarves in your fortress will go to libraries to read books or idle around, giving them happy [[thought]]s.
+
+==Setting up a library==
+* Hit {{k|i}} to designate the zone for your library. Set it to a meeting area with {{k|m}}, hit {{k|l}} to designate it as a location. See the [[locations]] page for more details.
+* Build [[bookcase]]s to store written books, and [[container]]s to store writing material (blank quires and [[scroll]]s). (not paper sheets, they ''must'' be made into blank scrolls/books ''before'' writing).
+* Build [[table]]s and [[chair]]s.
+* Designate [[scholar]]s and [[scribe]]s as desired (via the {{k|l}} Locations menu).
+Libraries function best as a single activity zone - scholars in separate activity zones cannot discuss [[Topic|topics]] with each other, even if both zones belong to the same library. Scholars in the same activity zone can discuss [[Topic|topics]] together, regardless of distance, line of sight, or ability to path to each other. So, with the correct design, a scholar who must be separated from the general population for [[werebeast|whatever]] [[vampire|reason]] can still contribute to the research effort.
+
+==Obtaining scholars and books==
+If your library permits [[visitor]]s, scholars from civilizations around the world will come to your fort to study, often bringing books of their own. These scholars will engage in various [[topic]]s with your scholars and each other, and will sometimes write their own books while visiting (using your supplies of writing materials in the process). These books effectively become property of your fortress, as the author usually doesn't take their books away upon leaving, although they may take some of your own in return{{Bug|9221}}. Visiting scholars may petition to become a permanent part of your fortress for the purpose of studying. The rate at which they visit your library and apply for residency might be related to the number of books in your library.
+
+If you retire your fort, scholars will continue to visit your library during retirement even if the library does not permit visitors. On unretirement, those scholars will be bugged and unable to behave normally in your fort, so it's best to delete your library activity zone before retirement.
+
+Even with visitors, it takes a long, long time for your scholars to generate much knowledge or write many books in your fort. You can speed up this process by taking books from other libraries, with [[mission]]s or [[adventurer mode|adventurers]]. [[Legends mode]] can show you where the libraries are in your world.
+
+==Urist's Lever==
+It was [http://www.bay12forums.com/smf/index.php?topic=156319.420 discovered] that by putting an unlinked lever in the back of a library, assigning only the [[scholar]]s and [[scribe]]s to use it, then assigning them to pull the lever, with high priority on repeat... due to the vagaries of dwarven psychology, they will find themselves unable to resist reading, writing, or pondering something. This is a good way to increase the productivity of your fortresses' best and brightest.
+
+==Library Management==
+In vanilla DF, it's rather difficult to get information about the books you own: who wrote them, how many copies you own, what topics they cover, etc. Fortunately, [http://www.bay12forums.com/smf/index.php?topic=170462.0 there's a DFHack script] that makes all that very clear.
+
+==Adventure mode==
+[[File:Humanlibrary_43.PNG|200px|thumb|right|The study area of a human library]]
+[[File:Humanlibrary2_43.PNG|200px|thumb|right|An upper floor of a human library, dedicated to storing books]]
+
+In the rest of the world, libraries are generated [[structure]]s that can be found in human [[town]]s and dwarven [[fortress]]es. Like the libraries in fortress mode, they will be frequented by scholars who spend their days discussing scholarly topics. The number of books and scholars in a given generated library depends on the history of the site. A library found in a town with a poor history may be almost empty of books and scholars alike.
+
+The ground floor in a generated library is typically used as a study area, and furnished with chairs, tables and a container with usable writing materials. A [[ramp]]-staircase connects the ground floor to higher floors as well as a basement. Basements and higher floors are typically used to store the books, and contain several bookcases. Libraries found in fortresses only have two floors, while those found in towns can span many stories high.
+
+Libraries have an effect in world gen, based on the original and copied books that are there.  Every year, each library gets five turns to pick a book.  If the book has a poetic/music/dance form, it has a chance to make that form well-known in the entire parent civ, as a form of cultural diffusion.  If the book promotes a value at a certain level, it makes a roll against the author's skill roll when they wrote the book.  The local site civ can have their values shifted by 1-2 points (it takes 10 or more to change the visible text for the value), and the parent civ can also be shifted a point, and all sites under the parent civ have a chance to be shifted a point as well.  
+
+{{Translation
+| dwarven = koshosh
+| elvish  = dethara
+| goblin  = ruspdo
+| human   = adith
+}}
+
+{{World}}
+
+{{Category|Locations}}
+{{Category|Adventurer mode}}
+
+[[Fr:Bibliothèque (library)]]
