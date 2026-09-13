@@ -1,0 +1,13 @@
+The '''outdent''' template is used to reduce any possible confusion by visually connecting two bodies of text that are not only above and below each other, but are misaligned due to the indentation of one of them. This is particularly useful on a busy talk page, where this template can show that someone's comment still pertains to the same conversation, despite a complete removal/disuse of any indentations.
+
+==Examples==
+Simply typing <code><nowiki>{{outdent}}</nowiki></code> will create the following below:<br>
+{{outdent}}
+
+Here is a more visual and direct example:<br>
+<div id="tempexample" style="color: #779;">
+:Here is someone's talk page comment. -- ''username1''
+:::Here is someone else's talk page comment. -- ''username2''
+:::::Here is a third person's comment, that has the most indentations of them all. -- ''username3''
+{{outdent}}
+Here is a fourth comment, that has no indentations, but is still part of the same conversation. -- ''username4''</div>

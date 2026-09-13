@@ -1,0 +1,27 @@
+<div class="mw-parser-output"><div class="plainlinks" style="clear: both; margin: 1em 0 0 0; border: 1px solid #aaa; background-color: #f0f0f8; padding: 5px 1em; border-radius: .4em; -webkit-border-radius: .4em; -moz-border-radius: .4em; -o-border-radius: .4em; -ms-border-radius: .4em;">
+<h2><span id="(view_-_edit_-__history_-__purge)_Documentation"></span><span class="mw-headline" id=".28view_-_edit_-_.0Ahistory_-_.0Apurge.29_Documentation"><span style="float: right; font-size: small; font-family: sans-serif;">
+(<a href="/index.php/Template:Nsv/doc" title="Template:Nsv/doc"><span title="View this documentation">view</span></a> - <a rel="nofollow" class="external text" href="//dwarffortresswiki.org/index.php?title=Template:Nsv/doc&amp;action=edit"><span title="Edit this documentation">edit</span></a> - 
+<a rel="nofollow" class="external text" href="//dwarffortresswiki.org/index.php?title=Template:Nsv/doc&amp;action=history"><span title="Documentation history">history</span></a> - 
+<a rel="nofollow" class="external text" href="//dwarffortresswiki.org/index.php?title=Template:Nsv&amp;action=purge"><span title="Purge this documentation (causes it to be updated; use only if it doesn&#39;t update after editing, NOT in a preview)">purge</span></a>)</span> Documentation</span></h2>
+<p>{{<a class="mw-selflink selflink">nsv</a>}} is the inverse of {{<a href="/index.php/Template:Ns" title="Template:Ns">ns</a>}}—it takes a namespace and returns the corresponding version.
+</p>
+<h2><span class="mw-headline" id="Usage">Usage</span></h2>
+<pre>{{nsv|1|release=|title=}}</pre>
+<h3><span class="mw-headline" id="Parameters">Parameters</span></h3>
+<ul><li><code>1</code> — Namespace (<code>DF2014</code>, <code>v0.34</code>, <code>DF2012</code>, <code>v0.31</code>, <code>DF2010</code>, <code>40d</code>, <code>23a</code>). Putting a nonexistent namespace in the first parameter or leaving it in blank will result in this error message: 53.16. If the parameter is not included at all, it returns the most recent version of the game instead.</li>
+<li><code>title</code> — Displays a leading "v" or "DF&#160;" in front of the version number. Case insensitive.
+<ul><li>"v" — Accepts <code>version</code>, <code>ver</code>, or <code>v</code>.</li>
+<li>"DF&#160;" — Accepts <code>dwarf fortress</code>, <code>dwarffortress</code>, or <code>df</code>.</li></ul></li></ul>
+<h3><span class="mw-headline" id="Examples">Examples</span></h3>
+<pre>* {{nsv|DF2012}}
+* {{nsv|v0.31}}
+* {{nsv|40d|title=Dwarf Fortress}}
+* {{nsv|23a|title=v}}
+* {{nsv}} (equivalent to {{Current/version}})
+</pre>
+<ul><li>0.34.11</li>
+<li>0.31.25</li>
+<li>DF&#160;0.28.121.40d</li>
+<li>v0.23.130.23a</li>
+<li><span class="error">Error: Namespace not found</span> (equivalent to 53.16)</li></ul>
+</div></div>

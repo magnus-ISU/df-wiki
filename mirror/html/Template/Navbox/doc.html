@@ -1,0 +1,251 @@
+<div class="mw-parser-output"><p>This template is used for creating <a href="/index.php/Category:Navigation_templates" title="Category:Navigation templates">navigational templates</a> (also known as navboxes).
+</p>
+
+<h2><span class="mw-headline" id="Usage">Usage</span></h2>
+<p>Please remove the parameters that are left blank.
+</p>
+<pre style="overflow: auto;">{{Navbox
+| name  = {{subst:PAGENAME}}{{subst:null|Don't change anything on this line. It will change itself when you save.}}
+| title =
+| state = {{{state|}}}
+
+| above =
+
+| group1 =
+| list1  =
+
+| group2 =
+| list2  =
+
+| group3 =
+| list3  =
+
+&lt;!-- ... (up to group30 &amp; list30) --&gt;
+
+| below =
+}}
+</pre>
+<h2><span class="mw-headline" id="Parameters">Parameters</span></h2>
+<h3><span class="mw-headline" id="Setup_parameters">Setup parameters</span></h3>
+<dl><dd><code>name</code> — the title portion of the template's page location, i.e. <code>[[Template:NAME HERE]]</code>. Required for the top-left navbar to work properly.
+<dl><dd>When creating a new navbox, you can set this parameter to <code>{{subst:PAGENAME}}</code>; this will automatically turn into the template's name when you save your changes.</dd></dl></dd>
+<dd><code>state</code> — sets the initial collapsed state. Common values include <code>autocollapse</code>, <code>collapsed</code>, <code>uncollapsed</code> and <code>expanded</code>. Defaults to <code>autocollapse</code>. It is strongly recommended to set this parameter to <code>{{{state|}}}</code>, as this allows users to change the navbox's state locally, e.g. <code>{{Creatures|state=expanded}}</code>.
+<dl><dd><code>autocollapse</code> — hides the content if there is another collapsible element on the page. Otherwise, it shows the content.</dd>
+<dd><code>collapsed</code> — hides the content.</dd>
+<dd><code>expanded</code> or <code>uncollapsed</code> — shows the content.</dd></dl></dd>
+<dd><code>navbar</code> — disables the navigation links on the top-left. Only accepts <code>off</code>.</dd>
+<dd><code>border</code> or <code>{{{1}}}</code> — accepted values are <code>subgroup</code> and <code>child</code>. See <a href="#Child_navboxes">§ Child navboxes</a>.</dd></dl>
+<h3><span class="mw-headline" id="Cells">Cells</span></h3>
+<dl><dd><code>title</code> — title text.</dd>
+<dd><code>above</code> — text between the title bar and the first group/list.</dd>
+<dd><code>group<sub>n</sub></code> (<i>group1</i>, <i>group2</i>, ... , <i>group30</i>) — text displayed inside a box on the left side of its <i>list</i>. Can be omitted. It won't display if its <i>list</i> is empty or undefined.</dd>
+<dd><code>list<sub>n</sub></code> (<i>list1</i>, <i>list2</i>, ... , <i>group30</i>) — main content, usually a list of links. Unlike <i>group</i>, it can exist on its own; if <i>group</i> is omitted, the text will be centered.</dd>
+<dd><code>below</code> — footer text (bar below groups and lists).</dd></dl>
+<h3><span class="mw-headline" id="Style_parameters">Style parameters</span></h3>
+<p>Quotations ("") or <code>style=</code> are unnecessary.
+</p>
+<dl><dd><code>bodystyle</code> — CSS style for the &lt;table&gt; element.</dd>
+<dd><code>titlestyle</code> — CSS style for the title bar.</dd>
+<dd><code>basestyle</code> — Combination of titlestyle, abovestyle, belowstyle and groupstyle. Overwritten by titlestyle, abovestyle, belowstyle, groupstyle and group<sub>n</sub>style.</dd>
+<dd><code>abovestyle</code> — CSS style for the above bar.</dd>
+<dd><code>belowstyle</code> — CSS style for the below bar.</dd>
+<dd><code>groupstyle</code> — CSS style for all group boxes.</dd>
+<dd><code>group<sub>n</sub>style</code> — CSS style for a specific group box, where <sub>n</sub> denotes the group (group1style → group1, etc.).</dd>
+<dd><code>liststyle</code> —  CSS style for all lists.</dd>
+<dd><code>list<sub>n</sub>style</code> — CSS style for a specific list, where <sub>n</sub> denotes the list (list1style → list1, etc.).</dd>
+<dd><code>listpadding</code> — sets the padding for lists. Default is <code>0em 0.25em</code>.</dd></dl>
+<h4><span class="mw-headline" id="Default_styles">Default styles</span></h4>
+<div class="mw-highlight mw-highlight-lang-css mw-content-ltr" dir="ltr"><pre><span></span><span class="nt">bodystyle</span>  <span class="o">=</span> <span class="nt">background</span><span class="o">:</span> <span class="p">#</span><span class="nn">fdfdfd</span><span class="o">;</span> <span class="nt">border</span><span class="o">:</span> <span class="nt">1px</span> <span class="nt">solid</span> <span class="p">#</span><span class="nn">aaa</span><span class="o">;</span> <span class="nt">font-size</span><span class="o">:</span> <span class="nt">88</span><span class="o">%;</span> <span class="nt">margin</span><span class="o">:</span> <span class="nt">0</span> <span class="nt">auto</span> <span class="nt">-1px</span><span class="o">;</span> <span class="nt">vertical-align</span><span class="o">:</span> <span class="nt">middle</span><span class="o">;</span> <span class="nt">width</span><span class="o">:</span> <span class="nt">60</span><span class="o">%;</span>
+<span class="nt">titlestyle</span> <span class="o">=</span> <span class="nt">background</span><span class="o">:</span> <span class="p">#</span><span class="nn">ccccff</span><span class="o">;</span> <span class="nt">border</span><span class="o">:</span> <span class="nt">1px</span> <span class="nt">solid</span> <span class="p">#</span><span class="nn">aaa</span><span class="o">;</span> <span class="nt">padding</span><span class="o">:</span> <span class="nt">0</span><span class="p">.</span><span class="nc">25em</span> <span class="nt">1em</span><span class="o">;</span> <span class="nt">text-align</span><span class="o">:</span> <span class="nt">center</span><span class="o">;</span>
+<span class="nt">abovestyle</span> <span class="o">=</span> <span class="nt">background</span><span class="o">:</span> <span class="p">#</span><span class="nn">ddddff</span><span class="o">;</span> <span class="nt">padding</span><span class="o">:</span> <span class="nt">0</span><span class="p">.</span><span class="nc">25em</span> <span class="nt">1em</span><span class="o">;</span> <span class="nt">text-align</span><span class="o">:</span> <span class="nt">center</span><span class="o">;</span>
+<span class="nt">belowstyle</span> <span class="o">=</span> <span class="nt">background</span><span class="o">:</span> <span class="p">#</span><span class="nn">ddddff</span><span class="o">;</span> <span class="nt">padding</span><span class="o">:</span> <span class="nt">0</span><span class="p">.</span><span class="nc">25em</span> <span class="nt">1em</span><span class="o">;</span> <span class="nt">text-align</span><span class="o">:</span> <span class="nt">center</span><span class="o">;</span>
+<span class="nt">groupstyle</span> <span class="o">=</span> <span class="nt">background</span><span class="o">:</span> <span class="p">#</span><span class="nn">ddddff</span><span class="o">;</span> <span class="nt">padding</span><span class="o">:</span> <span class="nt">0</span><span class="p">.</span><span class="nc">25em</span> <span class="nt">1em</span><span class="o">;</span> <span class="nt">text-align</span><span class="o">:</span> <span class="nt">right</span><span class="o">;</span> <span class="nt">white-space</span><span class="o">:</span> <span class="nt">nowrap</span><span class="o">;</span> <span class="nt">width</span><span class="o">:</span> <span class="nt">1</span><span class="o">%;</span>
+<span class="nt">liststyle</span>  <span class="o">=</span> <span class="nt">background</span><span class="o">:</span> <span class="nt">transparent</span><span class="o">;</span> <span class="nt">padding</span><span class="o">:</span> <span class="nt">0</span><span class="o">;</span> <span class="nt">text-align</span><span class="o">:</span> <span class="nt">left</span><span class="o">/</span><span class="nt">center</span><span class="o">;</span>
+</pre></div>
+<p>A list defaults to <code>text-align: left;</code> if it has a group, if not it defaults to <code>text-align: center;</code>. Although lists have their padding set to 0, as shown here, the actual value is <code>0 0.25em;</code>, which is defined in each list's &lt;div&gt; instead.
+</p>
+<h2><span class="mw-headline" id="Layout">Layout</span></h2>
+<h3><span class="mw-headline" id="Without_above_and_below">Without above and below</span></h3>
+<table class="collapsible uncollapsed infobox" style="background: #fdfdfd; border: 1px solid #aaa; font-size: 88%; margin: 0 auto -1px; vertical-align: middle; width: 100%; max-width: 100em;"><tbody><tr style="line-height: 1.5em;"><th scope="col" colspan="2" style="background: #ccf; padding: 0.25em 1em; text-align: center;&#32;;"><div class="plainlinks" style="float: left; padding-left: 0.4em; font-size: 70%; font-weight: normal; white-space: nowrap;"><a class="mw-selflink selflink"><span title="View this template">V</span></a><span style="font-weight: bold; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;">&#160;·&#160;</span><a href="/index.php?title=Template_talk:Navbox/doc&amp;action=edit&amp;redlink=1" class="new" title="Template talk:Navbox/doc (page does not exist)"><span title="Discuss this template">T</span></a><span style="font-weight: bold; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;">&#160;·&#160;</span><a rel="nofollow" class="external text" href="https://dwarffortresswiki.org/index.php?title=Template:Navbox/doc&amp;action=edit"><span title="Edit this template">E</span></a></div><div style="font-size: 114%; margin: 0 6em;">
+{{{title}}}</div></th></tr><tr style="line-height: 1.5em;"><th scope="row" style="background: #ddf; padding: 0.25em 1em; text-align: right; white-space: nowrap; width: 1%;&#32;;&#32;;">{{{group1}}}</th><td style="background: transparent; padding: 0; text-align: left;&#32;;"><div style="padding: 0em 0.25em">
+{{{list1}}}</div></td></tr><tr style="line-height: 1.5em;"><th scope="row" style="background: #ddf; padding: 0.25em 1em; text-align: right; white-space: nowrap; width: 1%;&#32;;&#32;;">{{{group2}}}</th><td style="background: transparent; padding: 0; text-align: left;&#32;;"><div style="padding: 0em 0.25em">
+{{{list2}}}</div></td></tr><tr style="line-height: 1.5em;"><td colspan="2" style="background: transparent; padding: 0; text-align: center;&#32;;"><div style="padding: 0em 0.25em">
+{{{list3}}} <i>without {{{group3}}}</i></div></td></tr><tr style="line-height: 1.5em;"><th scope="row" style="background: #ddf; padding: 0.25em 1em; text-align: right; white-space: nowrap; width: 1%;&#32;;&#32;;">{{{group4}}}</th><td style="background: transparent; padding: 0; text-align: left;&#32;;"><div style="padding: 0em 0.25em">
+{{{list4}}}</div></td></tr></tbody></table>
+<h3><span class="mw-headline" id="With_above_and_below">With above and below</span></h3>
+<table class="collapsible uncollapsed infobox" style="background: #fdfdfd; border: 1px solid #aaa; font-size: 88%; margin: 0 auto -1px; vertical-align: middle; width: 100%; max-width: 100em;"><tbody><tr style="line-height: 1.5em;"><th scope="col" colspan="2" style="background: #ccf; padding: 0.25em 1em; text-align: center;&#32;;"><div class="plainlinks" style="float: left; padding-left: 0.4em; font-size: 70%; font-weight: normal; white-space: nowrap;"><a class="mw-selflink selflink"><span title="View this template">V</span></a><span style="font-weight: bold; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;">&#160;·&#160;</span><a href="/index.php?title=Template_talk:Navbox/doc&amp;action=edit&amp;redlink=1" class="new" title="Template talk:Navbox/doc (page does not exist)"><span title="Discuss this template">T</span></a><span style="font-weight: bold; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;">&#160;·&#160;</span><a rel="nofollow" class="external text" href="https://dwarffortresswiki.org/index.php?title=Template:Navbox/doc&amp;action=edit"><span title="Edit this template">E</span></a></div><div style="font-size: 114%; margin: 0 6em;">
+{{{title}}}</div></th></tr><tr style="line-height: 1.5em;"><td colspan="2" style="background: #ddf; padding: 0.25em 1em; text-align: center;&#32;;">
+{{{above}}}</td></tr><tr style="line-height: 1.5em;"><th scope="row" style="background: #ddf; padding: 0.25em 1em; text-align: right; white-space: nowrap; width: 1%;&#32;;&#32;;">{{{group1}}}</th><td style="background: transparent; padding: 0; text-align: left;&#32;;"><div style="padding: 0em 0.25em">
+{{{list1}}}</div></td></tr><tr style="line-height: 1.5em;"><th scope="row" style="background: #ddf; padding: 0.25em 1em; text-align: right; white-space: nowrap; width: 1%;&#32;;&#32;;">{{{group2}}}</th><td style="background: transparent; padding: 0; text-align: left;&#32;;"><div style="padding: 0em 0.25em">
+{{{list2}}}</div></td></tr><tr style="line-height: 1.5em;"><td colspan="2" style="background: transparent; padding: 0; text-align: center;&#32;;"><div style="padding: 0em 0.25em">
+{{{list3}}} <i>without {{{group3}}}</i></div></td></tr><tr style="line-height: 1.5em;"><th scope="row" style="background: #ddf; padding: 0.25em 1em; text-align: right; white-space: nowrap; width: 1%;&#32;;&#32;;">{{{group4}}}</th><td style="background: transparent; padding: 0; text-align: left;&#32;;"><div style="padding: 0em 0.25em">
+{{{list4}}}</div></td></tr><tr style="line-height: 1.5em;"><td colspan="2" style="background: #ddf; padding: 0.25em 1em; text-align: center;&#32;;">
+{{{below}}}</td></tr></tbody></table>
+<h3><span id="Without_groups,_above_and_below"></span><span class="mw-headline" id="Without_groups.2C_above_and_below">Without groups, above and below</span></h3>
+<table class="collapsible uncollapsed infobox" style="background: #fdfdfd; border: 1px solid #aaa; font-size: 88%; margin: 0 auto -1px; vertical-align: middle; width: 100%; max-width: 100em;"><tbody><tr style="line-height: 1.5em;"><th scope="col" colspan="2" style="background: #ccf; padding: 0.25em 1em; text-align: center;&#32;;"><div class="plainlinks" style="float: left; padding-left: 0.4em; font-size: 70%; font-weight: normal; white-space: nowrap;"><a class="mw-selflink selflink"><span title="View this template">V</span></a><span style="font-weight: bold; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;">&#160;·&#160;</span><a href="/index.php?title=Template_talk:Navbox/doc&amp;action=edit&amp;redlink=1" class="new" title="Template talk:Navbox/doc (page does not exist)"><span title="Discuss this template">T</span></a><span style="font-weight: bold; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;">&#160;·&#160;</span><a rel="nofollow" class="external text" href="https://dwarffortresswiki.org/index.php?title=Template:Navbox/doc&amp;action=edit"><span title="Edit this template">E</span></a></div><div style="font-size: 114%; margin: 0 6em;">
+{{{title}}}</div></th></tr><tr style="line-height: 1.5em;"><td colspan="2" style="background: transparent; padding: 0; text-align: center;&#32;;"><div style="padding: 0em 0.25em">
+{{{list1}}}</div></td></tr><tr style="line-height: 1.5em;"><td colspan="2" style="background: transparent; padding: 0; text-align: center;&#32;;"><div style="padding: 0em 0.25em">
+{{{list2}}}</div></td></tr><tr style="line-height: 1.5em;"><td colspan="2" style="background: transparent; padding: 0; text-align: center;&#32;;"><div style="padding: 0em 0.25em">
+{{{list3}}}</div></td></tr><tr style="line-height: 1.5em;"><td colspan="2" style="background: transparent; padding: 0; text-align: center;&#32;;"><div style="padding: 0em 0.25em">
+{{{list4}}}</div></td></tr></tbody></table>
+<h2><span class="mw-headline" id="Example">Example</span></h2>
+<pre style="overflow: auto;">{{Navbox
+| name  = Navbox/doc
+| title = [[Soil]]
+| state = expanded
+| navbar = off
+| titlestyle = background-color: #FFFF00;
+| basestyle = background-color: #C0C0C0;
+
+| group1 = Topsoil
+| list1  = [[Loam]] • [[Loamy sand]] • [[Peat]] • [[Sandy clay loam]] • [[Sandy loam]] • [[Silt]] • [[Silt loam]] • [[Silty clay loam]]
+
+| group2style = background-color: #00FFFF; color: white;
+| group2 = Ocean floor
+| list2  = [[Calcareous ooze]] • [[Pelagic clay]] • [[Siliceous ooze]]
+
+| group3 = [[Sand]]
+| list3  = [[Sand (tan)]] • [[Black sand]] • [[Red sand]] • [[White sand]] • [[Yellow sand]]
+
+| group4 = Clay
+| list4style = border: 1px solid black; font-size: 114%;
+| list4  = [[Clay]] • [[Clay loam]] • [[Fire clay]] • [[Sandy clay]] • [[Silty clay]]
+
+| below = See also: [[Template:DF2014 stones|Stones]]
+}}
+</pre>
+<table class="collapsible expanded infobox" style="background: #fdfdfd; border: 1px solid #aaa; font-size: 88%; margin: 0 auto -1px; vertical-align: middle; width: 100%; max-width: 100em;"><tbody><tr style="line-height: 1.5em;"><th scope="col" colspan="2" style="background: #ccf; padding: 0.25em 1em; text-align: center; background-color: #C0C0C0;; background-color: #FFFF00;"><div style="font-size: 114%; margin: 0 6em;">
+<a href="/index.php/Soil" title="Soil">Soil</a></div></th></tr><tr style="line-height: 1.5em;"><th scope="row" style="background: #ddf; padding: 0.25em 1em; text-align: right; white-space: nowrap; width: 1%; background-color: #C0C0C0;;&#32;;">Topsoil</th><td style="background: transparent; padding: 0; text-align: left;&#32;;"><div style="padding: 0em 0.25em">
+<a href="/index.php/Loam" title="Loam">Loam</a> • <a href="/index.php/Loamy_sand" title="Loamy sand">Loamy sand</a> • <a href="/index.php/Peat" title="Peat">Peat</a> • <a href="/index.php/Sandy_clay_loam" title="Sandy clay loam">Sandy clay loam</a> • <a href="/index.php/Sandy_loam" title="Sandy loam">Sandy loam</a> • <a href="/index.php/Silt" title="Silt">Silt</a> • <a href="/index.php/Silt_loam" title="Silt loam">Silt loam</a> • <a href="/index.php/Silty_clay_loam" title="Silty clay loam">Silty clay loam</a></div></td></tr><tr style="line-height: 1.5em;"><th scope="row" style="background: #ddf; padding: 0.25em 1em; text-align: right; white-space: nowrap; width: 1%; background-color: #C0C0C0;;&#32;; background-color: #00FFFF; color: white;">Ocean floor</th><td style="background: transparent; padding: 0; text-align: left;&#32;;"><div style="padding: 0em 0.25em">
+<a href="/index.php/Calcareous_ooze" title="Calcareous ooze">Calcareous ooze</a> • <a href="/index.php/Pelagic_clay" title="Pelagic clay">Pelagic clay</a> • <a href="/index.php/Siliceous_ooze" title="Siliceous ooze">Siliceous ooze</a></div></td></tr><tr style="line-height: 1.5em;"><th scope="row" style="background: #ddf; padding: 0.25em 1em; text-align: right; white-space: nowrap; width: 1%; background-color: #C0C0C0;;&#32;;"><a href="/index.php/Sand" title="Sand">Sand</a></th><td style="background: transparent; padding: 0; text-align: left;&#32;;"><div style="padding: 0em 0.25em">
+<a href="/index.php/Sand_(tan)" title="Sand (tan)">Sand (tan)</a> • <a href="/index.php/Black_sand" title="Black sand">Black sand</a> • <a href="/index.php/Red_sand" title="Red sand">Red sand</a> • <a href="/index.php/White_sand" title="White sand">White sand</a> • <a href="/index.php/Yellow_sand" title="Yellow sand">Yellow sand</a></div></td></tr><tr style="line-height: 1.5em;"><th scope="row" style="background: #ddf; padding: 0.25em 1em; text-align: right; white-space: nowrap; width: 1%; background-color: #C0C0C0;;&#32;;">Clay</th><td style="background: transparent; padding: 0; text-align: left;&#32;; border: 1px solid black; font-size: 114%;"><div style="padding: 0em 0.25em">
+<a href="/index.php/Clay" title="Clay">Clay</a> • <a href="/index.php/Clay_loam" title="Clay loam">Clay loam</a> • <a href="/index.php/Fire_clay" title="Fire clay">Fire clay</a> • <a href="/index.php/Sandy_clay" title="Sandy clay">Sandy clay</a> • <a href="/index.php/Silty_clay" title="Silty clay">Silty clay</a></div></td></tr><tr style="line-height: 1.5em;"><td colspan="2" style="background: #ddf; padding: 0.25em 1em; text-align: center; background-color: #C0C0C0;;">
+See also: <a href="/index.php/Template:DF2014_stones" title="Template:DF2014 stones">Stones</a></td></tr></tbody></table>
+<h2><span class="mw-headline" id="Child_navboxes">Child navboxes</span></h2>
+<h3><span class="mw-headline" id="Usage_2">Usage</span></h3>
+<pre style="overflow: auto;">{{Navbox
+| name = {{subst:PAGENAME}}
+| title = Title
+
+| group1 = [optional]
+| list1  = {{Navbox|child
+   ...child navbox parameters...
+ }}
+
+...
+}}
+</pre>
+<h3><span class="mw-headline" id="Multiple_subgroups_example">Multiple subgroups example</span></h3>
+<pre style="overflow: auto;">{{Navbox
+| name  = Navbox/doc
+| title = Multiple subgroups example
+| state = expanded
+| above = Above
+
+| group1 = Group 1
+| list1 = List 1
+
+| group2 = Group 2
+| list2 = {{Navbox|child
+  | group1 = Group 2.1
+  | list1 = List 2.1
+  | list2 = List 2.2 ''without Group 2.2''
+  | group3 = Group 2.3
+  | list3 = List 2.3
+ }}
+
+| group3 = Group 3
+| list3 = List 3
+
+| group4 = Group 4
+| list4 = {{Navbox|child
+  | group1 = Group 4.1
+  | list1 = List 4.1
+  | group2 = Group 4.2
+  | list2 = {{Navbox|child
+    | group1 = Group 4.2.1
+    | list1 = List 4.2.1
+    | group2 = Group 4.2.2
+    | list2 = {{Navbox|child
+      | group1 = Group 4.2.2.1
+      | list1 = List 4.2.2.1
+     }}
+    | group3 = Group 4.2.3
+    | list3 = List 4.2.3
+   }}
+  | group3 = Group 4.3
+  | list3 = List 4.3
+ }}
+
+| below = Below
+}}
+</pre>
+<table class="collapsible expanded infobox" style="background: #fdfdfd; border: 1px solid #aaa; font-size: 88%; margin: 0 auto -1px; vertical-align: middle; width: 100%; max-width: 100em;"><tbody><tr style="line-height: 1.5em;"><th scope="col" colspan="2" style="background: #ccf; padding: 0.25em 1em; text-align: center;&#32;;"><div class="plainlinks" style="float: left; padding-left: 0.4em; font-size: 70%; font-weight: normal; white-space: nowrap;"><a class="mw-selflink selflink"><span title="View this template">V</span></a><span style="font-weight: bold; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;">&#160;·&#160;</span><a href="/index.php?title=Template_talk:Navbox/doc&amp;action=edit&amp;redlink=1" class="new" title="Template talk:Navbox/doc (page does not exist)"><span title="Discuss this template">T</span></a><span style="font-weight: bold; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;">&#160;·&#160;</span><a rel="nofollow" class="external text" href="https://dwarffortresswiki.org/index.php?title=Template:Navbox/doc&amp;action=edit"><span title="Edit this template">E</span></a></div><div style="font-size: 114%; margin: 0 6em;">
+Multiple subgroups example</div></th></tr><tr style="line-height: 1.5em;"><td colspan="2" style="background: #ddf; padding: 0.25em 1em; text-align: center;&#32;;">
+Above</td></tr><tr style="line-height: 1.5em;"><th scope="row" style="background: #ddf; padding: 0.25em 1em; text-align: right; white-space: nowrap; width: 1%;&#32;;&#32;;">Group 1</th><td style="background: transparent; padding: 0; text-align: left;&#32;;"><div style="padding: 0em 0.25em">
+List 1</div></td></tr><tr style="line-height: 1.5em;"><th scope="row" style="background: #ddf; padding: 0.25em 1em; text-align: right; white-space: nowrap; width: 1%;&#32;;&#32;;">Group 2</th><td style="background: transparent; padding: 0; text-align: left;&#32;;"><div style="padding: 0em 0.25em">
+</div><table class="infobox" style="background: transparent; border: none; border-spacing: 0; color: inherit; width: 100%;"><tbody><tr style="line-height: 1.5em;"><th scope="row" style="background: #e6e6ff; border-top: none; padding: 0.25em 1em; text-align: right; white-space: nowrap; width: 1%;&#32;;&#32;;">Group 2.1</th><td style="background: transparent; border-top: none; border-left: 2px solid #fdfdfd; padding: 0; text-align: left;&#32;;"><div style="padding: 0em 0.25em">
+List 2.1</div></td></tr><tr style="line-height: 1.5em;"><td colspan="2" style="background: transparent; border-top: 2px solid #fdfdfd; border-left: none; padding: 0; text-align: left;&#32;;"><div style="padding: 0em 0.25em">
+List 2.2 <i>without Group 2.2</i></div></td></tr><tr style="line-height: 1.5em;"><th scope="row" style="background: #e6e6ff; border-top: 2px solid #fdfdfd; padding: 0.25em 1em; text-align: right; white-space: nowrap; width: 1%;&#32;;&#32;;">Group 2.3</th><td style="background: transparent; border-top: 2px solid #fdfdfd; border-left: 2px solid #fdfdfd; padding: 0; text-align: left;&#32;;"><div style="padding: 0em 0.25em">
+List 2.3</div></td></tr></tbody></table><div></div></td></tr><tr style="line-height: 1.5em;"><th scope="row" style="background: #ddf; padding: 0.25em 1em; text-align: right; white-space: nowrap; width: 1%;&#32;;&#32;;">Group 3</th><td style="background: transparent; padding: 0; text-align: left;&#32;;"><div style="padding: 0em 0.25em">
+List 3</div></td></tr><tr style="line-height: 1.5em;"><th scope="row" style="background: #ddf; padding: 0.25em 1em; text-align: right; white-space: nowrap; width: 1%;&#32;;&#32;;">Group 4</th><td style="background: transparent; padding: 0; text-align: left;&#32;;"><div style="padding: 0em 0.25em">
+</div><table class="infobox" style="background: transparent; border: none; border-spacing: 0; color: inherit; width: 100%;"><tbody><tr style="line-height: 1.5em;"><th scope="row" style="background: #e6e6ff; border-top: none; padding: 0.25em 1em; text-align: right; white-space: nowrap; width: 1%;&#32;;&#32;;">Group 4.1</th><td style="background: transparent; border-top: none; border-left: 2px solid #fdfdfd; padding: 0; text-align: left;&#32;;"><div style="padding: 0em 0.25em">
+List 4.1</div></td></tr><tr style="line-height: 1.5em;"><th scope="row" style="background: #e6e6ff; border-top: 2px solid #fdfdfd; padding: 0.25em 1em; text-align: right; white-space: nowrap; width: 1%;&#32;;&#32;;">Group 4.2</th><td style="background: transparent; border-top: 2px solid #fdfdfd; border-left: 2px solid #fdfdfd; padding: 0; text-align: left;&#32;;"><div style="padding: 0em 0.25em">
+</div><table class="infobox" style="background: transparent; border: none; border-spacing: 0; color: inherit; width: 100%;"><tbody><tr style="line-height: 1.5em;"><th scope="row" style="background: #e6e6ff; border-top: none; padding: 0.25em 1em; text-align: right; white-space: nowrap; width: 1%;&#32;;&#32;;">Group 4.2.1</th><td style="background: transparent; border-top: none; border-left: 2px solid #fdfdfd; padding: 0; text-align: left;&#32;;"><div style="padding: 0em 0.25em">
+List 4.2.1</div></td></tr><tr style="line-height: 1.5em;"><th scope="row" style="background: #e6e6ff; border-top: 2px solid #fdfdfd; padding: 0.25em 1em; text-align: right; white-space: nowrap; width: 1%;&#32;;&#32;;">Group 4.2.2</th><td style="background: transparent; border-top: 2px solid #fdfdfd; border-left: 2px solid #fdfdfd; padding: 0; text-align: left;&#32;;"><div style="padding: 0em 0.25em">
+</div><table class="infobox" style="background: transparent; border: none; border-spacing: 0; color: inherit; width: 100%;"><tbody><tr style="line-height: 1.5em;"><th scope="row" style="background: #e6e6ff; border-top: none; padding: 0.25em 1em; text-align: right; white-space: nowrap; width: 1%;&#32;;&#32;;">Group 4.2.2.1</th><td style="background: transparent; border-top: none; border-left: 2px solid #fdfdfd; padding: 0; text-align: left;&#32;;"><div style="padding: 0em 0.25em">
+List 4.2.2.1</div></td></tr></tbody></table><div></div></td></tr><tr style="line-height: 1.5em;"><th scope="row" style="background: #e6e6ff; border-top: 2px solid #fdfdfd; padding: 0.25em 1em; text-align: right; white-space: nowrap; width: 1%;&#32;;&#32;;">Group 4.2.3</th><td style="background: transparent; border-top: 2px solid #fdfdfd; border-left: 2px solid #fdfdfd; padding: 0; text-align: left;&#32;;"><div style="padding: 0em 0.25em">
+List 4.2.3</div></td></tr></tbody></table><div></div></td></tr><tr style="line-height: 1.5em;"><th scope="row" style="background: #e6e6ff; border-top: 2px solid #fdfdfd; padding: 0.25em 1em; text-align: right; white-space: nowrap; width: 1%;&#32;;&#32;;">Group 4.3</th><td style="background: transparent; border-top: 2px solid #fdfdfd; border-left: 2px solid #fdfdfd; padding: 0; text-align: left;&#32;;"><div style="padding: 0em 0.25em">
+List 4.3</div></td></tr></tbody></table><div></div></td></tr><tr style="line-height: 1.5em;"><td colspan="2" style="background: #ddf; padding: 0.25em 1em; text-align: center;&#32;;">
+Below</td></tr></tbody></table>
+<h3><span class="mw-headline" id="Collapsible_subgroups_example">Collapsible subgroups example</span></h3>
+<pre style="overflow: auto;">{{Navbox
+| name   = Navbox/doc
+| title  = Collapsible subgroups example
+| state  = expanded
+
+| list1  = {{Navbox|child
+  | title  = Collapsible subgroup 1
+  | group1 = Group 1.1
+  | list1  = List 1.1
+  | group2 = Group 1.2
+  | list2  = List 1.2
+ }}
+
+| list2  = {{Navbox|child
+  | title  = Collapsible subgroup 2
+  | state  = expanded
+  | above  = Above
+  | group1 = Group 2.1
+  | list1  = List 2.1
+  | group2 = Group 2.2
+  | list2  = List 2.2
+  | below  = Below
+ }}
+
+| group3 = Group 3
+| list3  = {{Navbox|child
+  | title  = Collapsible subgroup 3
+  | group1 = Group 3.1
+  | list1  = List 3.1
+  | group2 = Group 3.2
+  | list2  = List 3.2
+ }}
+}}
+</pre>
+<table class="collapsible expanded infobox" style="background: #fdfdfd; border: 1px solid #aaa; font-size: 88%; margin: 0 auto -1px; vertical-align: middle; width: 100%; max-width: 100em;"><tbody><tr style="line-height: 1.5em;"><th scope="col" colspan="2" style="background: #ccf; padding: 0.25em 1em; text-align: center;&#32;;"><div class="plainlinks" style="float: left; padding-left: 0.4em; font-size: 70%; font-weight: normal; white-space: nowrap;"><a class="mw-selflink selflink"><span title="View this template">V</span></a><span style="font-weight: bold; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;">&#160;·&#160;</span><a href="/index.php?title=Template_talk:Navbox/doc&amp;action=edit&amp;redlink=1" class="new" title="Template talk:Navbox/doc (page does not exist)"><span title="Discuss this template">T</span></a><span style="font-weight: bold; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;">&#160;·&#160;</span><a rel="nofollow" class="external text" href="https://dwarffortresswiki.org/index.php?title=Template:Navbox/doc&amp;action=edit"><span title="Edit this template">E</span></a></div><div style="font-size: 114%; margin: 0 6em;">
+Collapsible subgroups example</div></th></tr><tr style="line-height: 1.5em;"><td colspan="2" style="background: transparent; padding: 0; text-align: center;&#32;;"><div style="padding: 0em 0.25em">
+</div><table class="collapsible autocollapse infobox" style="background: transparent; border: none; border-spacing: 0; color: inherit; width: 100%;"><tbody><tr style="line-height: 1.5em;"><th scope="col" colspan="2" style="background: #ddf; padding: 0.25em 1em; text-align: center;&#32;;"><div style="font-size: 114%; margin: 0 6em;">
+Collapsible subgroup 1</div></th></tr><tr style="line-height: 1.5em;"><th scope="row" style="background: #e6e6ff; border-top: 2px solid #fdfdfd; padding: 0.25em 1em; text-align: right; white-space: nowrap; width: 1%;&#32;;&#32;;">Group 1.1</th><td style="background: transparent; border-top: 2px solid #fdfdfd; border-left: 2px solid #fdfdfd; padding: 0; text-align: left;&#32;;"><div style="padding: 0em 0.25em">
+List 1.1</div></td></tr><tr style="line-height: 1.5em;"><th scope="row" style="background: #e6e6ff; border-top: 2px solid #fdfdfd; padding: 0.25em 1em; text-align: right; white-space: nowrap; width: 1%;&#32;;&#32;;">Group 1.2</th><td style="background: transparent; border-top: 2px solid #fdfdfd; border-left: 2px solid #fdfdfd; padding: 0; text-align: left;&#32;;"><div style="padding: 0em 0.25em">
+List 1.2</div></td></tr></tbody></table><div></div></td></tr><tr style="line-height: 1.5em;"><td colspan="2" style="background: transparent; padding: 0; text-align: center;&#32;;"><div style="padding: 0em 0.25em">
+</div><table class="collapsible expanded infobox" style="background: transparent; border: none; border-spacing: 0; color: inherit; width: 100%;"><tbody><tr style="line-height: 1.5em;"><th scope="col" colspan="2" style="background: #ddf; padding: 0.25em 1em; text-align: center;&#32;;"><div style="font-size: 114%; margin: 0 6em;">
+Collapsible subgroup 2</div></th></tr><tr style="line-height: 1.5em;"><td colspan="2" style="background: #e6e6ff; border-top: 2px solid #fdfdfd; padding: 0.25em 1em; text-align: center;&#32;;">
+Above</td></tr><tr style="line-height: 1.5em;"><th scope="row" style="background: #e6e6ff; border-top: 2px solid #fdfdfd; padding: 0.25em 1em; text-align: right; white-space: nowrap; width: 1%;&#32;;&#32;;">Group 2.1</th><td style="background: transparent; border-top: 2px solid #fdfdfd; border-left: 2px solid #fdfdfd; padding: 0; text-align: left;&#32;;"><div style="padding: 0em 0.25em">
+List 2.1</div></td></tr><tr style="line-height: 1.5em;"><th scope="row" style="background: #e6e6ff; border-top: 2px solid #fdfdfd; padding: 0.25em 1em; text-align: right; white-space: nowrap; width: 1%;&#32;;&#32;;">Group 2.2</th><td style="background: transparent; border-top: 2px solid #fdfdfd; border-left: 2px solid #fdfdfd; padding: 0; text-align: left;&#32;;"><div style="padding: 0em 0.25em">
+List 2.2</div></td></tr><tr style="line-height: 1.5em;"><td colspan="2" style="background: #e6e6ff; border-top: 2px solid #fdfdfd; padding: 0.25em 1em; text-align: center;&#32;;">
+Below</td></tr></tbody></table><div></div></td></tr><tr style="line-height: 1.5em;"><th scope="row" style="background: #ddf; padding: 0.25em 1em; text-align: right; white-space: nowrap; width: 1%;&#32;;&#32;;">Group 3</th><td style="background: transparent; padding: 0; text-align: left;&#32;;"><div style="padding: 0em 0.25em">
+</div><table class="collapsible autocollapse infobox" style="background: transparent; border: none; border-spacing: 0; color: inherit; width: 100%;"><tbody><tr style="line-height: 1.5em;"><th scope="col" colspan="2" style="background: #ddf; padding: 0.25em 1em; text-align: center;&#32;;"><div style="font-size: 114%; margin: 0 6em;">
+Collapsible subgroup 3</div></th></tr><tr style="line-height: 1.5em;"><th scope="row" style="background: #e6e6ff; border-top: 2px solid #fdfdfd; padding: 0.25em 1em; text-align: right; white-space: nowrap; width: 1%;&#32;;&#32;;">Group 3.1</th><td style="background: transparent; border-top: 2px solid #fdfdfd; border-left: 2px solid #fdfdfd; padding: 0; text-align: left;&#32;;"><div style="padding: 0em 0.25em">
+List 3.1</div></td></tr><tr style="line-height: 1.5em;"><th scope="row" style="background: #e6e6ff; border-top: 2px solid #fdfdfd; padding: 0.25em 1em; text-align: right; white-space: nowrap; width: 1%;&#32;;&#32;;">Group 3.2</th><td style="background: transparent; border-top: 2px solid #fdfdfd; border-left: 2px solid #fdfdfd; padding: 0; text-align: left;&#32;;"><div style="padding: 0em 0.25em">
+List 3.2</div></td></tr></tbody></table><div></div></td></tr></tbody></table></div>

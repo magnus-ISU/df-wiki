@@ -1,0 +1,31 @@
+{{tl|nsv}} is the inverse of {{tl|ns}}—it takes a namespace and returns the corresponding version.
+
+== Usage ==
+
+<pre><nowiki>{{nsv|1|release=|title=}}</nowiki></pre>
+
+=== Parameters ===
+
+* <code>1</code> — Namespace (<code>DF2014</code>, <code>v0.34</code>, <code>DF2012</code>, <code>v0.31</code>, <code>DF2010</code>, <code>40d</code>, <code>23a</code>). Putting a nonexistent namespace in the first parameter or leaving it in blank will result in this error message: {{nsv|}}. If the parameter is not included at all, it returns the most recent version of the game instead.
+* <code>title</code> — Displays a leading "v" or "DF&nbsp;" in front of the version number. Case insensitive.
+** "v" — Accepts <code>version</code>, <code>ver</code>, or <code>v</code>.
+** "DF&nbsp;" — Accepts <code>dwarf fortress</code>, <code>dwarffortress</code>, or <code>df</code>.
+
+=== Examples ===
+
+<pre>
+* {{nsv|DF2012}}
+* {{nsv|v0.31}}
+* {{nsv|40d|title=Dwarf Fortress}}
+* {{nsv|23a|title=v}}
+* {{nsv}} (equivalent to {{Current/version}})
+</pre>
+
+* {{nsv|DF2012}}
+* {{nsv|v0.31|r=9}}
+* {{nsv|40d|title=Dwarf Fortress}}
+* {{nsv|23a|title=v}}
+* {{nsv}} (equivalent to {{Current/version}})
+
+<includeonly>[[Category:Version templates]]</includeonly>
+<noinclude>[[Category:Template Documentation]]</noinclude>

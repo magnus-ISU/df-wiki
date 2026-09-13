@@ -1,0 +1,18 @@
+{{ambox
+|type=notice
+|bordercolor=#50b076
+|image=[[File:Mod icon.png|48px|alt=Mod]]
+|imagestyle=margin: 0 40px 0 20px;
+|text=This {{{1|page}}} includes '''[[:Category:Mods|mods]]'''.  The content is not part of normal DF as released.  Changing game files can sometimes cause unexpected results, and should always be done with care and caution.
+}}<includeonly>{{#ifeq:{{{cat|}}}|nocat||{{Category|Mods}}}}</includeonly><noinclude>
+----
+
+=== Usage ===
+ {{t|Mod}} or {{t|mod|''location''}}
+where ''location'' is an optional parameter for use in sections or subsections (e.g. <code>{{<nowiki/>mod|section}}</code>).
+
+Pages are automatically added to [[:Category:Mods]]; this behavior can be disabled by adding a "cat=nocat" parameter:
+
+ {{<nowiki/>Mod|cat=nocat}}
+
+[[Category:Templates]]</noinclude>

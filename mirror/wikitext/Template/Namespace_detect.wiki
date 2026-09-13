@@ -1,0 +1,7 @@
+{{#switch:{{#if:{{NAMESPACE}}|{{lower:{{NAMESPACE}}}}|main}}
+|talk|df2012 talk|v0.31 talk|40d talk|23a talk={{{talk|talk}}}
+|main|df2012|v0.31|40d|23a={{{main|main}}}
+|file={{{file|file}}}
+|category={{{category|category}}}
+|#default={{{other|other}}}
+}}

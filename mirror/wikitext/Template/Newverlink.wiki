@@ -1,0 +1,1 @@
+{{#ifeq:{{NAMESPACE}}|{{{1}}}||{{#ifexist:{{{1}}}:{{PAGENAME}}|[[{{{1}}}:{{PAGENAME}}|{{{2}}}]]{{dot}}|<font style="font-size:95%">{{avbadlink|{{{1}}}:{{PAGENAME}}|{{{2}}}}}</font>{{dot}}}}}}

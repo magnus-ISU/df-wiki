@@ -1,0 +1,40 @@
+'''Messages''' are part of a system which uses ''templates'' to store translations. This is a middle ground between using &lt;translate>, which is difficult to use with template markup, and using {{<nowiki/>int:}} for translations, which requires admin rights to edit messages.
+
+==Creating a new message==
+First, keep in mind that messages are meant to be used for markup-heavy pages, like templates.
+* If you want to translate a content page, use the Translate tool on that page &mdash; it's easier to use, update translations with, and is designed specifically for content.
+* If you want to edit '''system messages''', such as the "edit" tabs above a page or the text on [[Special:RecentChanges]], you will need to edit [[wikipedia:mw:Help:System message|system messages]], which require admin rights.
+===Naming conventions===
+* If the message you are creating is for a single template, create it in the following location:
+ Template:{{tc|#f0f|'''Template name'''}}/msg/''message name''
+* If the message you are creating is likely to be used in many templates, you have multiple choices:
+** If it is used in a single template most often, and in other templates occasionally (such as auxiliary templates), place it under the template that uses it most (see above)
+** If it is used by a wide range of templates that all have a common role (e.g. creature-related templates), use a descriptive template name (this does not have to exist &mdash; messages can be placed at <code>Template:Creature/msg/messagename</code> without Template:creature existing, for example).
+** If it is a generic message which isn't necessarily part of a given template, but will be used ''in templates'', place it at:
+ Template:Msg/''message name''
+===Enabling translation===
+'''Before you save''' (ideally), you will need to wrap the contents in the message in &lt;translate> tags and mark the page for translation, just like a normal page. (This makes pages appear at the standard language subpages, which can be easily transcluded from the {{<nowiki/>msg}} template).
+
+== Details ==
+This template relies ''heavily'' on [[Mediawiki:Language-code]] - if this is not defined for a certain language, all messages for that language will fall back to English.
+These messages should appear in {{#language:{{INTERFACELANGUAGE}}}}, which is your current interface language setting. The following links can be used to change your language ''temporarily'':
+
+[{{fullurl:Template:Msg|uselang=en}} English] {{dot}} [{{fullurl:Template:Msg|uselang=es}} Spanish] {{dot}} [{{fullurl:Template:Msg|uselang=fr}} French] {{dot}} [{{fullurl:Template:Msg|uselang=de}} German] {{dot}} [{{fullurl:Template:Msg|uselang=da}} Danish]
+
+For reference, the following languages are defined. If you attempt to use a language not defined here, ''all'' messages will fall back to English, even if translations exist for them in the appropriate /msg subpage. If you need to enable a language not listed here, post on the talk page.
+{{Special:PrefixIndex/Mediawiki:language-code}}
+
+==Examples==
+<pre>{{msg|example}}</pre>
+gives: {{msg|example}}
+
+<pre>{{msg|t=av|old}}</pre>
+gives: {{msg|t=av|old}}
+
+=== Generic examples ===
+These pages should not exist, but take note of the path names:
+<pre>{{msg|message that does not exist}}</pre>
+gives: <code>{{msg|message that does not exist}}</code>
+
+<pre>{{msg|t=template|message}}</pre>
+gives: <code>{{msg|t=template|message}}</code>

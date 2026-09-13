@@ -1,0 +1,58 @@
+<includeonly>{{infostart|{{{name}}}}}
+{{#ifeq:{{NAMESPACE}}| |
+{{infocell|{{{sample|}}}}}{{{sprite|}}}}}
+{{infocell|{{Mineral/picture|tile={{{tile|?}}}|icon={{{icon|•}}}|color={{{color}}}|itemcolor={{#ifeq:{{{itemcolor|}}}||{{{color}}}|{{{itemcolor}}}}}}}}}
+{{#if:{{{graphic|}}}|{{infoheader|Graphic}}
+{{infocell|[[File:{{{graphic}}}|center]]}}|{{!-}}}}
+{{#if:{{{uses|}}}|{{infoheader|Uses}}
+{{infocell|{{{uses|}}}}}|{{!-}}}}
+{{#if:{{{location|}}}|{{infoheader|Location}}
+{{infocell|{{{location|}}}}}|{{!-}}}}
+{{#if:{{{properties|}}}|{{infoheader|Properties}}
+{{#if:{{{graphic2|}}}|{{infocell|*Rough gem: [[File:{{{graphic2}}}]]|}}|{{!-}}}}
+{{infocell|{{{properties|}}}}}|{{!-}}}}
+{{#if:{{{contains|}}}|{{infoheader|Contains}}
+{{infocell|{{{contains|}}}}}|{{!-}}}}
+{{#ifeq:{{{wiki}}}|no||{{infocell|style=text-align:center; background-color: #eee; border-top: 1px solid #aaa|1=[[wikipedia:{{#if:{{{wiki|}}}| {{{wiki}}}|{{{name}}}}}|Wikipedia article]]}}|{{!-}}}}
+{{infoend}}</includeonly><noinclude>
+
+Usage:
+<pre><nowiki>
+{{Mineral|name=Bituminous coal|
+|sample=
+[[File:Bituminous coalSample.png|200px|right]]
+|sprite=[[File:Bituminous coal sprite.png|left]]
+|graphic2=(filename.png) (This is used for gems only!)
+|tile=☼|icon=☼|color=0:7:1
+|uses =
+* 3 coke at [[smelter]]
+* [[mason's workshop|Masonry]]
+* [[craftsdwarf's workshop|Stone crafting]]
+* [[Construction]]
+|location =
+* [[Sedimentary layer]]s
+* Found as veins
+|properties =
+* Can [[ignite]]
+* [[Economic stone]]
+* [[Material value]] 1}}
+</nowiki></pre>
+{{Mineral|name=Bituminous coal|
+|sample=[[File:Bituminous coalSample.png|256px|center]]
+|graphic=Bituminous coal sprite.png
+|tile=☼|icon=☼|color=0:7:1
+|uses =
+* 3 coke at [[smelter]]
+* [[mason's workshop|Masonry]]
+* [[craftsdwarf's workshop|Stone crafting]]
+* [[Construction]]
+|location =
+* [[Sedimentary layer]]s
+* Found as veins
+|properties =
+* Can [[ignite]]
+* [[Economic stone]]
+* [[Material value]] 1}}
+
+[[Category:materials templates]]
+</noinclude>

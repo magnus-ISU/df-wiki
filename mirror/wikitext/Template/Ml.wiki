@@ -1,0 +1,16 @@
+<includeonly>[[Main:{{{1|}}}|{{{2|{{{1|}}}}}}]]</includeonly><noinclude>
+Simple template for linking to mainspace from an article in a versioned namespace, particularly for redirects only existing in the mainspace. For example, [[kitten]] (<code><nowiki>[[kitten]]</nowiki></code>) works here, but not in a DF2012 article - you need to use [[Main:kitten|kitten]] (<code><nowiki>[[Main:kitten|kitten]]</nowiki></code>).
+
+Usage: Similar to using double-bracket syntax (2 parameters, link title is the first parameter if the second is left blank).
+
+<pre>{{ml|kitten}}</pre>
+{{ml|kitten}}
+<pre>{{ml|kitten|this page}}</pre>
+{{ml|kitten|this page}}
+
+'''Note:''' <code>subst</code>ing this template will work, and is probably helpful in some cases (see {{tl|unsigned}})
+
+==See also==
+{{tl|Tl}}: A template to link to templates
+
+</noinclude>

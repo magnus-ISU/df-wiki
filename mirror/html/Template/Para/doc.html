@@ -1,0 +1,95 @@
+<div class="mw-parser-output"><table class="plainlinks ombox ambox-notice" style="margin-bottom:1.0em;">
+<tbody><tr>
+<td class="mbox-image">
+  <img alt="" src="https://thumb.wikimedia.org/wikipedia/commons/thumb/1/15/Edit-copy_green.svg/40px-Edit-copy_green.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=imageinfo&amp;utm_content=thumbnail" decoding="async" width="40" height="40" srcset="https://thumb.wikimedia.org/wikipedia/commons/thumb/1/15/Edit-copy_green.svg/60px-Edit-copy_green.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=imageinfo&amp;utm_content=thumbnail 1.5x, https://thumb.wikimedia.org/wikipedia/commons/thumb/1/15/Edit-copy_green.svg/120px-Edit-copy_green.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=imageinfo&amp;utm_content=thumbnail 2x" /></td>
+<td class="mbox-text" style=""> This is a documentation subpage for <a href="/index.php/Template:Para" title="Template:Para">Template:Para</a>.<br />It contains usage information, <a href="http://en.wikipedia.org/wiki/Categorization" class="extiw" title="wikipedia:Categorization">categories</a> and other content that is not part of the original template page. </td>
+</tr>
+</tbody></table>
+
+<h2><span class="mw-headline" id="Usage">Usage</span></h2>
+<p>This template is for giving examples of <a href="http://en.wikipedia.org/wiki/Template_messages" class="extiw" title="wikipedia:Template messages">template</a> parameter source code (useful in template documentation and talk page discussions of template code).
+</p><p>It must have at least one or two parameters itself. The first parameter is the name of the example parameter to display (this may be <i>empty</i>, but it must be <i>present</i>). The second (optional) parameter is a value for the first example parameter; or, if the first parameter is empty, the second illustrates an example <a href="/index.php/Help:Templates#Parameters" title="Help:Templates">unnamed parameter</a> (which in some cases may serve as a pre-defined parameter that takes no <code>|=<a href="/index.php?title=Template:Var&amp;action=edit&amp;redlink=1" class="new" title="Template:Var (page does not exist)">Template:Var</a></code> after it, e.g. the <code class="tpl-para" style="word-break:break-word;">&#124;section</code> in <a href="/index.php?title=Template:Tlx&amp;action=edit&amp;redlink=1" class="new" title="Template:Tlx (page does not exist)">Template:Tlx</a>).
+</p>
+<h3><span class="mw-headline" id="Examples">Examples</span></h3>
+<table class="wikitable">
+<tbody><tr>
+<th>Code
+</th>
+<th>Result
+</th>
+<th>Notes
+</th></tr>
+<tr>
+<td><a href="/index.php?title=Template:Tlx&amp;action=edit&amp;redlink=1" class="new" title="Template:Tlx (page does not exist)">Template:Tlx</a>
+</td>
+<td><code class="tpl-para" style="word-break:break-word;">&#124;name&#61;</code>
+</td>
+<td>
+</td></tr>
+<tr>
+<td><a href="/index.php?title=Template:Tlx&amp;action=edit&amp;redlink=1" class="new" title="Template:Tlx (page does not exist)">Template:Tlx</a>
+</td>
+<td><code class="tpl-para" style="word-break:break-word;">&#124;title&#61;The Oxford English Dictionary</code>
+</td>
+<td>
+</td></tr>
+<tr>
+<td><a href="/index.php?title=Template:Tlx&amp;action=edit&amp;redlink=1" class="new" title="Template:Tlx (page does not exist)">Template:Tlx</a>
+</td>
+<td><code class="tpl-para" style="word-break:break-word;">&#124;section</code>
+</td>
+<td>For <a href="/index.php/Help:Templates#Parameters" title="Help:Templates">unnamed parameters</a>; note empty first parameter in the code
+</td></tr>
+<tr>
+<td><code>{{para|{{var|parameter}}|{{var|value}}}}</code>
+</td>
+<td><code class="tpl-para" style="word-break:break-word;">&#124;<a href="/index.php?title=Template:Var&amp;action=edit&amp;redlink=1" class="new" title="Template:Var (page does not exist)">Template:Var</a>&#61;<a href="/index.php?title=Template:Var&amp;action=edit&amp;redlink=1" class="new" title="Template:Var (page does not exist)">Template:Var</a></code>
+</td>
+<td>
+</td></tr></tbody></table>
+<p>When using literal, pre-specified parameter names and values, simply provide them (as in the first through third examples above). When illustrating hypothetical/example parameter names, or variable or user-definable values, use something like <a href="/index.php?title=Template:Tlx&amp;action=edit&amp;redlink=1" class="new" title="Template:Tlx (page does not exist)">Template:Tlx</a> and/or <a href="/index.php?title=Template:Tnull&amp;action=edit&amp;redlink=1" class="new" title="Template:Tnull (page does not exist)">Template:Tnull</a> (as in the last example above).
+</p>
+<h2><span class="mw-headline" id="Parameters">Parameters</span></h2>
+<ul><li><code class="tpl-para" style="word-break:break-word;">&#124;1&#61;</code> or first unnamed parameter – the parameter name. Give this parameter as explicitly blank and just fill in parameter 2 when you want to show an <a href="/index.php/Help:Templates#Parameters" title="Help:Templates">unnamed parameter</a> (which, depending on the context, may serve as a valueless parameter name); e.g., <a href="/index.php?title=Template:Tnull&amp;action=edit&amp;redlink=1" class="new" title="Template:Tnull (page does not exist)">Template:Tnull</a> → <code class="tpl-para" style="word-break:break-word;">&#124;section</code></li>
+<li><code class="tpl-para" style="word-break:break-word;">&#124;2&#61;</code> or second unnamed parameter – the value name.  When the first parameter is given but is blank, the second represents an unnamed parameter's value (or a valueless parameter name), as illustrated above.</li>
+<li><code class="tpl-para" style="word-break:break-word;">&#124;plain&#61;y</code> (or any other value besides <a href="/index.php?title=Template:Kbd&amp;action=edit&amp;redlink=1" class="new" title="Template:Kbd (page does not exist)">Template:Kbd</a>) – removes the faint border and light-grey background, which may be useful in various situations. The border and text color are set to <a href="/index.php?title=Template:Samp&amp;action=edit&amp;redlink=1" class="new" title="Template:Samp (page does not exist)">Template:Samp</a>, to use the colors of the surrounding text. This parameter cooperates with the two below, in that if either are used, the text will be colorized while the border and background will still be removed.</li>
+<li><code class="tpl-para" style="word-break:break-word;">&#124;mxt&#61;y</code> or <code class="tpl-para" style="word-break:break-word;">&#124;green&#61;y</code> – to apply the style (green text, but still monospaced as code) that would be applied by <a href="/index.php?title=Template:Tlx&amp;action=edit&amp;redlink=1" class="new" title="Template:Tlx (page does not exist)">Template:Tlx</a> ("monospaced example text").  This is so that <a href="/index.php?title=Template:Tnull&amp;action=edit&amp;redlink=1" class="new" title="Template:Tnull (page does not exist)">Template:Tnull</a> can be used inside a passage of <a href="/index.php?title=Template:Tnull&amp;action=edit&amp;redlink=1" class="new" title="Template:Tnull (page does not exist)">Template:Tnull</a> content without the  markup inside <a href="/index.php?title=Template:Tnull&amp;action=edit&amp;redlink=1" class="new" title="Template:Tnull (page does not exist)">Template:Tnull</a> overriding the color of <a href="/index.php?title=Template:Tnull&amp;action=edit&amp;redlink=1" class="new" title="Template:Tnull (page does not exist)">Template:Tnull</a>. This parameter cooperates with <code class="tpl-para" style="word-break:break-word;">&#124;plain&#61;</code> in applying the color but respecting the removal of border and background.</li>
+<li><code class="tpl-para" style="word-break:break-word;">&#124;!mxt&#61;y</code> or <code class="tpl-para" style="word-break:break-word;">&#124;red&#61;y</code> – same as above, but applies the red of <a href="/index.php?title=Template:Tlx&amp;action=edit&amp;redlink=1" class="new" title="Template:Tlx (page does not exist)">Template:Tlx</a>, the "bad monospaced example text" template.</li>
+<li><code class="tpl-para" style="word-break:break-word;">&#124;style&#61;</code> – to apply arbitrary CSS style, for some specialized contextual purpose. Example: <code class="tpl-para" style="word-break:break-word;">&#124;style&#61;background-color: Yellow;</code>. Any color, background-color, or border specified here will override those provided by any of the above parameters, regardless of the order in which the parameters are given in the template.  As this template uses a  element, only CSS that can apply to inline elements (not block elements) will work. Like the above parameters, it applies to the entire output.
+<ul><li>If you want to only style the parameter name and/or the value, just do so directly;<br />e.g.: <code>{{para|page|{{var|'''single''' page number}}}}</code>, <code>{{para|page'''''&lt;u&gt;s&lt;/u&gt;'''''|{{var|page '''range''', or '''multiple''' individual pages, or both}}}}</code><br />gives: <code class="tpl-para" style="word-break:break-word;">&#124;page&#61;<a href="/index.php?title=Template:Var&amp;action=edit&amp;redlink=1" class="new" title="Template:Var (page does not exist)">Template:Var</a></code>, <code class="tpl-para" style="word-break:break-word;">&#124;page<i><b><u>s</u></b></i>&#61;<a href="/index.php?title=Template:Var&amp;action=edit&amp;redlink=1" class="new" title="Template:Var (page does not exist)">Template:Var</a></code></li></ul></li></ul>
+<h2><span class="mw-headline" id="TemplateData">TemplateData</span></h2>
+<p>&lt;templatedata&gt;
+{
+	"params": {
+		"1": {
+			"label": "Parameter name",
+			"description": "The parameter name. Give this parameter as explicitly blank and just fill in parameter 2 when you want to show an unnamed parameter",
+			"type": "string",
+			"suggested": true
+		},
+		"2": {
+			"label": "Value name",
+			"description": "The value name. When the first parameter is given but is blank, the second represents an unnamed parameter's value (or a valueless parameter name).",
+			"type": "string",
+			"suggested": true
+		},
+		"plain": {
+			"description": "Removes the faint border and light-grey background",
+			"type": "boolean"
+		},
+		"mxt": {},
+		"green": {},
+		"!mxt": {},
+		"red": {},
+		"style": {
+			"description": "Apply arbitrary CSS style, for some specialized contextual purpose.",
+			"example": "background-color: Yellow;",
+			"type": "content"
+		}
+	},
+	"description": "Gives examples of template parameter source code"
+}
+&lt;/templatedata&gt;
+</p>
+<h2><span class="mw-headline" id="See_also">See also</span></h2>
+<ul><li><a rel="nofollow" class="external free" href="https://en.wikipedia.org/wiki/Template:Para/doc">https://en.wikipedia.org/wiki/Template:Para/doc</a></li></ul></div>

@@ -1,0 +1,7 @@
+<includeonly>{{#vardefine:v|{{#rreplace:{{{1}}}|^v|\1}}}}{{ambox|text={{#if:{{{1|}}}|{{#ifexist:{{ns|{{{1}}}}}:Release information/{{#var:v}}|
+{{#ifeq:{{#var:v}}|0.21.93.19a|{{error|[[23a:Release information|DF 0.21.93.19a]] is the first public release of Dwarf Fortress}}|This {{{2|page}}} contains information only relevant to [[{{ns|{{{1}}}}}:Release information/{{#var:v}}|DF {{#var:v}}]]{{#ifeq:{{#var:v}}|{{Current/version}}||&nbsp;and newer}}. Most or all of this information does not apply to previous versions. Older saves from previous versions {{#switch:{{#var:v}}|0.27.169.32a|0.31.01|0.34.01|0.40.01=are not|0.21.93.19b|0.21.101.19b|0.21.101.19c|0.21.104.19a|0.21.104.19c|0.21.104.21c|0.22.110.22a|0.22.110.22b|0.22.110.22c|0.22.110.22d|0.22.110.23b|0.22.110.23c|0.22.120.23b|0.22.121.23a|0.23.125.23a|0.23.125.23b|0.34.02|0.40.02|0.40.03=in the {{ns|{{{1}}}}} release cycle are not|in the {{ns|{{{1}}}}} release cycle are still}} [[save compatibility|compatible]] with this version.}}|{{error|Version number "{{{1}}}" not found'''}}}}|{{error|Version number not specified}}}}
+|image=[[File:{{#switch:{{#strsplit:{{{1}}}|.|2}}|#default=Ambox notice.svg|40=Globe.svg|42=Beer mug.svg|43=Tux Paint fort.svg|44=Swords.svg|47=Spy silhouette.svg}}|40x40px]]
+|bordercolor=#0f0}}{{#ifeq:{{{cat|}}}|nocat||[[Category:New in {{#var:v}}]]}}</includeonly><noinclude>
+{{documentation}}
+[[Category:Version templates]]
+</noinclude>

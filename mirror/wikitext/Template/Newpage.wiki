@@ -1,0 +1,10 @@
+{{#vardefine:newpage_type|{{#switch:{{NAMESPACE}}|User=user page|Template=template|#default={{#ifeq:{{TALKSPACE}}|{{NAMESPACE}}|talk page|page}}}}}}
+{| style="margin: 0 10%; border-collapse: collapse; background: #efe; border: 1px solid #8a8; border-left: 10px solid #00cc00; width:80%; margin-bottom: 10px"
+|-
+| style="padding: 1.0em 0.5em; width: 5%; height: 100%; text-align: center; color:#080;" | '''<span style="vertical-align: middle; font-family: verdana"><span style="font-size: 210%">{{colorlinks|#080|[[Template:np|+]]}}</span></span>'''
+| style="padding: 0.5em 0.5em; width: 100%;" |{{colorlinks|#070|<includeonly>This {{#var:newpage_type}} has been {{#switch:{{lc:{{{type|pr}}}}}|pr=[[DF:PR|created by request]]|cp=[[Special:CreatePage|created by request]]|#default=created}}{{#if:{{{1|}}}|<nowiki> </nowiki>by {{user|{{{1}}}}}.|.}}</includeonly><noinclude>This is the '''{{<nowiki/>newpage}}''' template, to be used as a placeholder for newly-created pages (e.g. pages requested at [[DF:PR]])</noinclude>}}<includeonly>
+
+<small>To remove this message, {{action|edit||delete the <code><nowiki>{{newpage}}</nowiki></code> (or <code><nowiki>{{np}}</nowiki></code>) tag}} from this page.</small></includeonly>
+|}
+<includeonly>{{#switch:{{lc:{{NAMESPACE}}}}|mediawiki=|#default=[[Category:New pages]] [[Category:New {{#var:newpage_type}}s]]}}</includeonly>
+<noinclude>[[Category:Templates]]{{doc}}</noinclude>

@@ -1,0 +1,12 @@
+{{#invoke:versions/parserFunctions|getNamespaceByIndex|{{{id|{{ns-rel-id|{{{1}}}}}}}}|}}<noinclude>
+* When given an unnamed parameter, returns a normalized namespace name
+* When given an ``id`` parameter, acts as the opposite of {{tl|ns-rel-id}}
+
+<nowiki>{{ns-name|DF2012}}</nowiki> &rarr; {{ns-name|DF2012}}
+
+<nowiki>{{ns-name|id=1}}</nowiki> &rarr; {{ns-name|id=1}}
+
+<nowiki>{{ns-name|unknown}}</nowiki> &rarr; {{ns-name|unknown}}
+
+[[Category:Version templates]]
+</noinclude>

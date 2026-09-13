@@ -1,0 +1,28 @@
+<noinclude>
+Some notes on this bar:
+* "Up-to-date" includes all articles without the version tag, which could still have some missing info. Might be worth tracking those separately.
+* The numbers aren't exact, since the categories may include a few irrelevant pages outside the main namespace (sandboxes, talk pages).
+
+
+</noinclude>{{
+
+#vardefine: totalCurrentArticles | 
+      {{#expr: {{formatnum:{{NUMBEROFARTICLES}}|R}} 
+             - {{formatnum:{{PAGESINCATEGORY:Obsolete}}|R}} 
+             - {{formatnum:{{PAGESINCATEGORY:Obsolete features}}|R}}
+      }}
+}}{{
+#vardefine: articlesNeedingReview | {{formatnum:{{PAGESINCATEGORY:Migrated pages needing review}}|R}}
+}}{{
+#vardefine: sectionsNeedingReview | {{formatnum:{{PAGESINCATEGORY:Migrated pages with sections needing review}}|R}}
+}}{{
+#vardefine: upToDateArticles | 
+  {{#expr: 
+    {{#var:totalCurrentArticles}} 
+    - {{#var:articlesNeedingReview}}
+    - {{#var:sectionsNeedingReview}}
+  }}
+}}{{
+Template:3-way progress bar|{{#var:upToDateArticles}}|{{#var:sectionsNeedingReview}}|{{#var:articlesNeedingReview}}
+|text=[[Dwarf_Fortress_Wiki:Version_migration|'''{{#var:upToDateArticles}} articles up-to-date for v50; {{#var:sectionsNeedingReview}} partially migrated; {{#var:articlesNeedingReview}} remaining''']]
+}}

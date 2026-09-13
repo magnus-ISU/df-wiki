@@ -1,0 +1,7 @@
+Use to create a template that combines {{{1}}} to {{{100}}} into one parameter, ignoring the pipes separating the arguments.
+
+==Examples==
+'''Page: Template:Foo'''
+ Foo: <nowiki>''{{</nowiki>subst:Params/combine arguments<nowiki>}}''</nowiki>
+After saving, becomes:
+ Foo: <nowiki>''{{{1|}}}{{{2|}}}{{{3|}}}...{{{100|}}}''</nowiki>

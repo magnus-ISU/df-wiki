@@ -1,0 +1,87 @@
+<includeonly>{| style='border: 1px solid #000; width: 17em; border-spacing: 0; margin: 0 0 1em 1em; float: right'
+|+ '''{{{noble|Noble}}}'''
+|-
+! colspan="2" style="border-bottom: 1px solid #aaa; background: #eee; padding: 0.1em 0.25em" | [[Zone|Room]] requirements
+| style='width: 0.5em; background: #f0f; border-bottom: 1px solid #aaa; border-left: 1px solid #aaa' rowspan='0'| &nbsp;
+|-
+! style="text-align: left; white-space: nowrap; font-weight: normal; padding: 0.1em 0.25em" | [[Office]]
+| style="padding: 0.1em 0.25em" | {{{office|''None''}}}
+|-
+! style="text-align: left; white-space: nowrap; font-weight: normal; padding: 0.1em 0.25em" | [[Bedroom|Quarters]]
+| style="padding: 0.1em 0.25em" | {{{quarters|''None''}}}
+|-
+! style="text-align: left; white-space: nowrap; font-weight: normal; padding: 0.1em 0.25em" | [[Dining room]]
+| style="padding: 0.1em 0.25em" | {{{dining|''None''}}}
+|-
+! style="text-align: left; white-space: nowrap; font-weight: normal; padding: 0.1em 0.25em" | [[Tomb]]
+| style="padding: 0.1em 0.25em" | {{{tomb|''None''}}}
+|-
+! colspan="3" style="border-top: 1px solid #aaa; border-bottom: 1px solid #aaa; background: #eee; padding: 0.1em 0.25em" | [[Furniture]] requirements
+|-
+! style="text-align: left; white-space: nowrap; font-weight: normal; padding: 0.1em 0.25em" | Chests
+| style="padding: 0.1em 0.25em" | {{{chests|''None''}}}
+|-
+! style="text-align: left; white-space: nowrap; font-weight: normal; padding: 0.1em 0.25em" | Cabinets
+| style="padding: 0.1em 0.25em" | {{{cabinets|''None''}}}
+|-
+! style="text-align: left; white-space: nowrap; font-weight: normal; padding: 0.1em 0.25em" | Weapon racks
+| style="padding: 0.1em 0.25em" | {{{racks|''None''}}}
+|-
+! style="text-align: left; white-space: nowrap; font-weight: normal; padding: 0.1em 0.25em" | Armor stands
+| style="padding: 0.1em 0.25em" | {{{stands|''None''}}}
+|-
+! colspan="3" style="border-top: 1px solid #aaa; border-bottom: 1px solid #aaa; background: #eee; padding: 0.1em 0.25em" | Other
+|-
+! style="text-align: left; white-space: nowrap; font-weight: normal; padding: 0.1em 0.25em" | Mandates
+| style="padding: 0.1em 0.25em" | {{{mandates|''None''}}}
+|-
+! style="text-align: left; white-space: nowrap; font-weight: normal; padding: 0.1em 0.25em" | Demands
+| style="padding: 0.1em 0.25em" | {{{demands|''None''}}}
+|-
+! colspan="3" style="border-top: 1px solid #aaa; border-bottom: 1px solid #aaa; background: #eee; padding: 0.1em 0.25em" | Arrival conditions
+|-
+| colspan="3" |
+{{{arrival|<div style='text-align: center; padding: 0.2em 0'>''None''</div>}}}
+|-
+! colspan="3" style="border-top: 1px solid #aaa; border-bottom: 1px solid #aaa; background: #eee; padding: 0.1em 0.25em" | Function
+|-
+| colspan="3" |
+{{{function|<div style='text-align: center; padding: 0.2em 0'>''None''</div>}}}
+|}{{#ifeq:{{NAMESPACE}}|User||{{Category|Nobles}}}}</includeonly><noinclude>
+{{Noble
+| noble=Dungeon Master
+| office=Office
+| quarters=Quarters
+| dining=Dining Room
+| tomb=Burial Chamber
+| chests=1
+| cabinets=1
+| racks=1
+| stands=1
+| arrival=
+* 50 population
+* Discover hidden site feature
+| function=
+* Tame exotic animals
+}}
+Usage and result:
+<pre><nowiki>
+{{Noble
+| noble=Dungeon Master
+| office=Office
+| quarters=Quarters
+| dining=Dining Room
+| tomb=Burial Chamber
+| chests=1
+| cabinets=1
+| racks=1
+| stands=1
+| arrival=
+* 50 population
+* Discover hidden site feature
+| function=
+* Tame exotic animals
+}}
+</nowiki></pre>
+
+[[Category:Templates]]</noinclude>

@@ -1,0 +1,43 @@
+<includeonly>|-
+| [[{{ucfirst:{{tagentry|{{{{{1}}}/raw}}|STATE_NAME_ADJ|2}}}}]]
+| {{Tile|≡|{{tagvalue|{{{{{1|}}}/raw}}|DISPLAY_COLOR|notfound=1:1:1}}}}{{Tile|‼|{{tagvalue|{{{{{1|}}}/raw}}|BUILD_COLOR|notfound=1:1:1}}}}
+| {{{source|}}}
+| {{#expr: {{tagvalue|{{{{{1|}}}/raw}}|SOLID_DENSITY|notfound=1}} / 1000}}
+| {{tagvalue|{{{{{1|}}}/raw}}|MELTING_POINT|notfound=1}}
+| {{tagvalue|{{{{{1|}}}/raw}}|MATERIAL_VALUE|notfound=1}}
+| {{#expr: {{tagvalue|{{{{{1|}}}/raw}}|IMPACT_YIELD|notfound=1}} / 1000}}
+| {{#expr: {{tagvalue|{{{{{1|}}}/raw}}|IMPACT_FRACTURE|notfound=1}} / 1000}}
+| {{tagvalue|{{{{{1|}}}/raw}}|IMPACT_STRAIN_AT_YIELD|notfound=1}}
+| {{#expr: {{tagvalue|{{{{{1|}}}/raw}}|SHEAR_YIELD|notfound=1}} / 1000}}
+| {{#expr: {{tagvalue|{{{{{1|}}}/raw}}|SHEAR_FRACTURE|notfound=1}} / 1000}}
+| {{tagvalue|{{{{{1|}}}/raw}}|SHEAR_STRAIN_AT_YIELD|notfound=1}}
+| {{tagvalue|{{{{{1|}}}/raw}}|MAX_EDGE|notfound=1}}
+| {{{notes|}}}</includeonly>
+<noinclude>
+
+Use for building information tables about metals. Example:
+
+{| class="wikitable sortable"
+|-
+! Metal
+! Tile
+! Source
+! Density
+! Melt Point
+! Value
+! I yield
+! I fract
+! I elast
+! S yield
+! S fract
+! S elast
+! Max Edge
+! Notes
+{{Metaltablelookup/aux|DF2012:Iron|DF2012:Iron|source=Hematite, limonite, magnetite|notes=Fine for all weapons, armor}}
+{{Metaltablelookup/aux|DF2012:Copper|DF2012:Copper|source=Hematite, limonite, magnetite|notes=Fine for all weapons, armor}}
+{{Metaltablelookup/aux|DF2012:Bronze|DF2012:Bronze|source=Hematite, limonite, magnetite|notes=Fine for all weapons, armor}}{{Metaltablelookup/aux|Masterwork:Bifrost|Masterwork:Bifrost|source=Hematite, limonite, magnetite|notes=Fine for all weapons, armor}}
+|}
+
+[[category:raw templates]]
+
+</noinclude>

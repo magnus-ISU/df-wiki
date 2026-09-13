@@ -1,0 +1,340 @@
+This template is used for creating [[:Category:Navigation templates|navigational templates]] (also known as navboxes).
+
+==Usage==
+Please remove the parameters that are left blank.
+
+<pre style="overflow: auto;">{{Navbox
+| name  = {{subst:PAGENAME}}{{subst:null|Don't change anything on this line. It will change itself when you save.}}
+| title =
+| state = {{{state|}}}
+
+| above =
+
+| group1 =
+| list1  =
+
+| group2 =
+| list2  =
+
+| group3 =
+| list3  =
+
+<!-- ... (up to group30 & list30) -->
+
+| below =
+}}
+</pre>
+
+==Parameters==
+===Setup parameters===
+: <code>name</code> — the title portion of the template's page location, i.e. <code><nowiki>[[Template:NAME HERE]]</nowiki></code>. Required for the top-left navbar to work properly.
+::When creating a new navbox, you can set this parameter to <code><nowiki>{{subst:PAGENAME}}</nowiki></code>; this will automatically turn into the template's name when you save your changes.
+: <code>state</code> — sets the initial collapsed state. Common values include <code>autocollapse</code>, <code>collapsed</code>, <code>uncollapsed</code> and <code>expanded</code>. Defaults to <code>autocollapse</code>. It is strongly recommended to set this parameter to <code><nowiki>{{{state|}}}</nowiki></code>, as this allows users to change the navbox's state locally, e.g. <code><nowiki>{{Creatures|state=expanded}}</nowiki></code>.
+:: <code>autocollapse</code> — hides the content if there is another collapsible element on the page. Otherwise, it shows the content.
+:: <code>collapsed</code> — hides the content.
+:: <code>expanded</code> or <code>uncollapsed</code> — shows the content.
+: <code>navbar</code> — disables the navigation links on the top-left. Only accepts <code>off</code>.
+: <code>border</code> or <code>{{{1}}}</code> — accepted values are <code>subgroup</code> and <code>child</code>. See [[#Child navboxes|§ Child navboxes]].
+
+===Cells===
+: <code>title</code> — title text.
+: <code>above</code> — text between the title bar and the first group/list.
+: <code>group<sub>n</sub></code> (''group1'', ''group2'', ... , ''group30'') — text displayed inside a box on the left side of its ''list''. Can be omitted. It won't display if its ''list'' is empty or undefined.
+: <code>list<sub>n</sub></code> (''list1'', ''list2'', ... , ''group30'') — main content, usually a list of links. Unlike ''group'', it can exist on its own; if ''group'' is omitted, the text will be centered.
+: <code>below</code> — footer text (bar below groups and lists).
+
+===Style parameters===
+Quotations ("") or <code>style=</code> are unnecessary.
+
+: <code>bodystyle</code> — CSS style for the <nowiki><table></nowiki> element.
+: <code>titlestyle</code> — CSS style for the title bar.
+: <code>basestyle</code> — Combination of titlestyle, abovestyle, belowstyle and groupstyle. Overwritten by titlestyle, abovestyle, belowstyle, groupstyle and group<sub>n</sub>style.
+: <code>abovestyle</code> — CSS style for the above bar.
+: <code>belowstyle</code> — CSS style for the below bar.
+: <code>groupstyle</code> — CSS style for all group boxes.
+: <code>group<sub>n</sub>style</code> — CSS style for a specific group box, where <sub>n</sub> denotes the group (group1style → group1, etc.).
+: <code>liststyle</code> —  CSS style for all lists.
+: <code>list<sub>n</sub>style</code> — CSS style for a specific list, where <sub>n</sub> denotes the list (list1style → list1, etc.).
+: <code>listpadding</code> — sets the padding for lists. Default is <code>0em 0.25em</code>.
+
+====Default styles====
+<syntaxhighlight lang="css">
+bodystyle  = background: #fdfdfd; border: 1px solid #aaa; font-size: 88%; margin: 0 auto -1px; vertical-align: middle; width: 60%;
+titlestyle = background: #ccccff; border: 1px solid #aaa; padding: 0.25em 1em; text-align: center;
+abovestyle = background: #ddddff; padding: 0.25em 1em; text-align: center;
+belowstyle = background: #ddddff; padding: 0.25em 1em; text-align: center;
+groupstyle = background: #ddddff; padding: 0.25em 1em; text-align: right; white-space: nowrap; width: 1%;
+liststyle  = background: transparent; padding: 0; text-align: left/center;
+</syntaxhighlight>
+
+A list defaults to <code>text-align: left;</code> if it has a group, if not it defaults to <code>text-align: center;</code>. Although lists have their padding set to 0, as shown here, the actual value is <code>0 0.25em;</code>, which is defined in each list's <nowiki><div></nowiki> instead.
+
+==Layout==
+===Without above and below===
+{{Navbox
+| name = Navbox/doc
+| state = uncollapsed
+| title  = {{{title}}}
+| group1 = {{{group1}}}
+| list1  = {{{list1}}}
+| group2 = {{{group2}}}
+| list2  = {{{list2}}}
+| list3  = {{{list3}}} ''without {{{group3}}}''
+| group4 = {{{group4}}}
+| list4  = {{{list4}}}
+}}
+
+===With above and below===
+{{Navbox
+| name = Navbox/doc
+| state = uncollapsed
+| title  = {{{title}}}
+| above  = {{{above}}}
+| group1 = {{{group1}}}
+| list1  = {{{list1}}}
+| group2 = {{{group2}}}
+| list2  = {{{list2}}}
+| list3  = {{{list3}}} ''without {{{group3}}}''
+| group4 = {{{group4}}}
+| list4  = {{{list4}}}
+| below  = {{{below}}}
+}}
+
+===Without groups, above and below===
+{{Navbox
+| name = Navbox/doc
+| state = uncollapsed
+| title = {{{title}}}
+| list1 = {{{list1}}}
+| list2 = {{{list2}}}
+| list3 = {{{list3}}}
+| list4 = {{{list4}}}
+}}
+
+==Example==
+<pre style="overflow: auto;">{{Navbox
+| name  = Navbox/doc
+| title = [[Soil]]
+| state = expanded
+| navbar = off
+| titlestyle = background-color: #FFFF00;
+| basestyle = background-color: #C0C0C0;
+
+| group1 = Topsoil
+| list1  = [[Loam]] • [[Loamy sand]] • [[Peat]] • [[Sandy clay loam]] • [[Sandy loam]] • [[Silt]] • [[Silt loam]] • [[Silty clay loam]]
+
+| group2style = background-color: #00FFFF; color: white;
+| group2 = Ocean floor
+| list2  = [[Calcareous ooze]] • [[Pelagic clay]] • [[Siliceous ooze]]
+
+| group3 = [[Sand]]
+| list3  = [[Sand (tan)]] • [[Black sand]] • [[Red sand]] • [[White sand]] • [[Yellow sand]]
+
+| group4 = Clay
+| list4style = border: 1px solid black; font-size: 114%;
+| list4  = [[Clay]] • [[Clay loam]] • [[Fire clay]] • [[Sandy clay]] • [[Silty clay]]
+
+| below = See also: [[Template:DF2014 stones|Stones]]
+}}
+</pre>
+
+{{Navbox
+| name  = Navbox/doc
+| title = [[Soil]]
+| state = expanded
+| navbar = off
+| titlestyle = background-color: #FFFF00;
+| basestyle = background-color: #C0C0C0;
+
+| group1 = Topsoil
+| list1  = [[Loam]] • [[Loamy sand]] • [[Peat]] • [[Sandy clay loam]] • [[Sandy loam]] • [[Silt]] • [[Silt loam]] • [[Silty clay loam]]
+
+| group2style = background-color: #00FFFF; color: white;
+| group2 = Ocean floor
+| list2  = [[Calcareous ooze]] • [[Pelagic clay]] • [[Siliceous ooze]]
+
+| group3 = [[Sand]]
+| list3  = [[Sand (tan)]] • [[Black sand]] • [[Red sand]] • [[White sand]] • [[Yellow sand]]
+
+| group4 = Clay
+| list4style = border: 1px solid black; font-size: 114%;
+| list4  = [[Clay]] • [[Clay loam]] • [[Fire clay]] • [[Sandy clay]] • [[Silty clay]]
+
+| below = See also: [[Template:DF2014 stones|Stones]]
+}}
+
+==Child navboxes==
+===Usage===
+<pre style="overflow: auto;">{{Navbox
+| name = {{subst:PAGENAME}}
+| title = Title
+
+| group1 = [optional]
+| list1  = {{Navbox|child
+   ...child navbox parameters...
+ }}
+
+...
+}}
+</pre>
+
+===Multiple subgroups example===
+<pre style="overflow: auto;">{{Navbox
+| name  = Navbox/doc
+| title = Multiple subgroups example
+| state = expanded
+| above = Above
+
+| group1 = Group 1
+| list1 = List 1
+
+| group2 = Group 2
+| list2 = {{Navbox|child
+  | group1 = Group 2.1
+  | list1 = List 2.1
+  | list2 = List 2.2 ''without Group 2.2''
+  | group3 = Group 2.3
+  | list3 = List 2.3
+ }}
+
+| group3 = Group 3
+| list3 = List 3
+
+| group4 = Group 4
+| list4 = {{Navbox|child
+  | group1 = Group 4.1
+  | list1 = List 4.1
+  | group2 = Group 4.2
+  | list2 = {{Navbox|child
+    | group1 = Group 4.2.1
+    | list1 = List 4.2.1
+    | group2 = Group 4.2.2
+    | list2 = {{Navbox|child
+      | group1 = Group 4.2.2.1
+      | list1 = List 4.2.2.1
+     }}
+    | group3 = Group 4.2.3
+    | list3 = List 4.2.3
+   }}
+  | group3 = Group 4.3
+  | list3 = List 4.3
+ }}
+
+| below = Below
+}}
+</pre>
+
+{{Navbox
+| name  = Navbox/doc
+| title = Multiple subgroups example
+| state = expanded
+| above = Above
+
+| group1 = Group 1
+| list1 = List 1
+
+| group2 = Group 2
+| list2 = {{Navbox|child
+  | group1 = Group 2.1
+  | list1 = List 2.1
+  | list2 = List 2.2 ''without Group 2.2''
+  | group3 = Group 2.3
+  | list3 = List 2.3
+ }}
+
+| group3 = Group 3
+| list3 = List 3
+
+| group4 = Group 4
+| list4 = {{Navbox|child
+  | group1 = Group 4.1
+  | list1 = List 4.1
+  | group2 = Group 4.2
+  | list2 = {{Navbox|child
+    | group1 = Group 4.2.1
+    | list1 = List 4.2.1
+    | group2 = Group 4.2.2
+    | list2 = {{Navbox|child
+      | group1 = Group 4.2.2.1
+      | list1 = List 4.2.2.1
+     }}
+    | group3 = Group 4.2.3
+    | list3 = List 4.2.3
+   }}
+  | group3 = Group 4.3
+  | list3 = List 4.3
+ }}
+
+| below = Below
+}}
+
+===Collapsible subgroups example===
+<pre style="overflow: auto;">{{Navbox
+| name   = Navbox/doc
+| title  = Collapsible subgroups example
+| state  = expanded
+
+| list1  = {{Navbox|child
+  | title  = Collapsible subgroup 1
+  | group1 = Group 1.1
+  | list1  = List 1.1
+  | group2 = Group 1.2
+  | list2  = List 1.2
+ }}
+
+| list2  = {{Navbox|child
+  | title  = Collapsible subgroup 2
+  | state  = expanded
+  | above  = Above
+  | group1 = Group 2.1
+  | list1  = List 2.1
+  | group2 = Group 2.2
+  | list2  = List 2.2
+  | below  = Below
+ }}
+
+| group3 = Group 3
+| list3  = {{Navbox|child
+  | title  = Collapsible subgroup 3
+  | group1 = Group 3.1
+  | list1  = List 3.1
+  | group2 = Group 3.2
+  | list2  = List 3.2
+ }}
+}}
+</pre>
+
+{{Navbox
+| name   = Navbox/doc
+| title  = Collapsible subgroups example
+| state  = expanded
+
+| list1  = {{Navbox|child
+  | title  = Collapsible subgroup 1
+  | group1 = Group 1.1
+  | list1  = List 1.1
+  | group2 = Group 1.2
+  | list2  = List 1.2
+ }}
+
+| list2  = {{Navbox|child
+  | title  = Collapsible subgroup 2
+  | state  = expanded
+  | above  = Above
+  | group1 = Group 2.1
+  | list1  = List 2.1
+  | group2 = Group 2.2
+  | list2  = List 2.2
+  | below  = Below
+ }}
+
+| group3 = Group 3
+| list3  = {{Navbox|child
+  | title  = Collapsible subgroup 3
+  | group1 = Group 3.1
+  | list1  = List 3.1
+  | group2 = Group 3.2
+  | list2  = List 3.2
+ }}
+}}<includeonly>[[Category:Navigation templates|*]]</includeonly>
+<noinclude>[[Category:Template Documentation]]</noinclude>

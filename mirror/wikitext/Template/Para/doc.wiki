@@ -1,0 +1,77 @@
+{{Documentation subpage}}
+<!-- PLEASE ADD CATEGORIES AND INTERWIKIS AT THE BOTTOM OF THIS PAGE -->
+
+== Usage ==
+This template is for giving examples of [[Wikipedia:Template messages|template]] parameter source code (useful in template documentation and talk page discussions of template code).
+
+It must have at least one or two parameters itself. The first parameter is the name of the example parameter to display (this may be ''empty'', but it must be ''present''). The second (optional) parameter is a value for the first example parameter; or, if the first parameter is empty, the second illustrates an example [[Help:Templates#Parameters|unnamed parameter]] (which in some cases may serve as a pre-defined parameter that takes no <code>{{!}}{{=}}{{var|value}}</code> after it, e.g. the {{para||section}} in {{tlx|Refimprove|section}}).
+
+=== Examples ===
+{| class="wikitable"
+! Code
+! Result
+! Notes
+|-
+ | {{tlx|para|name}}
+ | {{para|name}}
+ | 
+|-
+ | {{tlx|para|title|The Oxford English Dictionary}}
+ | {{para|title|The Oxford English Dictionary}}
+ | 
+|-
+ | {{tlx|para|2=<span style="font-size:1pt;">&nbsp;</span>|3=section}}
+ | {{para||section}}
+ | For [[Help:Templates#Parameters|unnamed parameters]]; note empty first parameter in the code
+|-
+ | <code><nowiki>{{para|{{var|parameter}}|{{var|value}}}}</nowiki></code>
+ | {{para|{{var|parameter}}|{{var|value}}}}
+ | 
+|}
+When using literal, pre-specified parameter names and values, simply provide them (as in the first through third examples above). When illustrating hypothetical/example parameter names, or variable or user-definable values, use something like {{tlx|var|parameter}} and/or {{tnull|var|value}} (as in the last example above).
+
+== Parameters ==
+* {{para|1}} or first unnamed parameter – the parameter name. Give this parameter as explicitly blank and just fill in parameter 2 when you want to show an [[Help:Templates#Parameters|unnamed parameter]] (which, depending on the context, may serve as a valueless parameter name); e.g., {{tnull|para||section}} → {{para||section}}
+* {{para|2}} or second unnamed parameter – the value name.  When the first parameter is given but is blank, the second represents an unnamed parameter's value (or a valueless parameter name), as illustrated above.
+* {{para|plain|y}} (or any other value besides {{kbd|y}}) – removes the faint border and light-grey background, which may be useful in various situations. The border and text color are set to {{samp|inherit}}, to use the colors of the surrounding text. This parameter cooperates with the two below, in that if either are used, the text will be colorized while the border and background will still be removed.
+* {{para|mxt|y}} or {{para|green|y}} – to apply the style (green text, but still monospaced as code) that would be applied by {{tlx|mxt}} ("monospaced example text").  This is so that {{tnull|para}} can be used inside a passage of {{tnull|mxt}} content without the {{tag|code|o}} markup inside {{tnull|para}} overriding the color of {{tnull|mxt}}. This parameter cooperates with {{para|plain}} in applying the color but respecting the removal of border and background.
+* {{para|!mxt|y}} or {{para|red|y}} – same as above, but applies the red of {{tlx|!mxt}}, the "bad monospaced example text" template.
+* {{para|style}} – to apply arbitrary CSS style, for some specialized contextual purpose. Example: {{para|style|background-color: Yellow;}}. Any color, background-color, or border specified here will override those provided by any of the above parameters, regardless of the order in which the parameters are given in the template.  As this template uses a {{tag|span|o}} element, only CSS that can apply to inline elements (not block elements) will work. Like the above parameters, it applies to the entire output.
+** If you want to only style the parameter name and/or the value, just do so directly;<br />e.g.: <code><nowiki>{{para|page|{{var|'''single''' page number}}}}</nowiki></code>, <code><nowiki>{{para|page'''''<u>s</u>'''''|{{var|page '''range''', or '''multiple''' individual pages, or both}}}}</nowiki></code><br />gives: {{para|page|{{var|'''single''' page number}}}}, {{para|page'''''<u>s</u>'''''|{{var|page '''range''', or '''multiple''' individual pages, or both}}}}
+
+==TemplateData==
+<templatedata>
+{
+	"params": {
+		"1": {
+			"label": "Parameter name",
+			"description": "The parameter name. Give this parameter as explicitly blank and just fill in parameter 2 when you want to show an unnamed parameter",
+			"type": "string",
+			"suggested": true
+		},
+		"2": {
+			"label": "Value name",
+			"description": "The value name. When the first parameter is given but is blank, the second represents an unnamed parameter's value (or a valueless parameter name).",
+			"type": "string",
+			"suggested": true
+		},
+		"plain": {
+			"description": "Removes the faint border and light-grey background",
+			"type": "boolean"
+		},
+		"mxt": {},
+		"green": {},
+		"!mxt": {},
+		"red": {},
+		"style": {
+			"description": "Apply arbitrary CSS style, for some specialized contextual purpose.",
+			"example": "background-color: Yellow;",
+			"type": "content"
+		}
+	},
+	"description": "Gives examples of template parameter source code"
+}
+</templatedata>
+
+== See also ==
+* https://en.wikipedia.org/wiki/Template:Para/doc

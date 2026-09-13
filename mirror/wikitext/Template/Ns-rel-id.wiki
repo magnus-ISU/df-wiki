@@ -1,0 +1,13 @@
+<includeonly>{{#invoke:versions/parserFunctions|getIndexFor|{{{1}}}|{{{2|}}}}}</includeonly><noinclude>
+Returns a major release ID given a namespace name.
+
+<nowiki>{{ns-rel-id|23a}}</nowiki> &rarr; {{ns-rel-id|23a}}
+
+<nowiki>{{ns-rel-id|v0.31}}</nowiki> &rarr; {{ns-rel-id|v0.31}}
+
+<nowiki>{{ns-rel-id|0.47.03}}</nowiki> &rarr; {{ns-rel-id|0.47.03}}
+
+<nowiki>{{ns-rel-id|50.02}}</nowiki> &rarr; {{ns-rel-id|50.02}}
+
+[[Category:Version templates]]
+</noinclude>

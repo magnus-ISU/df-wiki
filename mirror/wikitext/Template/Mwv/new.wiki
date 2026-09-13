@@ -1,0 +1,8 @@
+<includeonly>{{#ifexist:{{#var:mwv-page}}/{{{1}}}|{{{1}}},}}</includeonly><noinclude>
+Use to add new versions to {{tl|mwv}} (see instructions given in source)
+==Usage==
+<pre>{{mwv/new|vVERSIONx}}</pre>
+*<code>v</code> is required
+*<code>VERSION</code> is the ''major version'' (e.g. <code>4</code>)
+*<code>x</code> is the ''minor version'' (e.g. <code>a</code>), if it exists
+</noinclude>

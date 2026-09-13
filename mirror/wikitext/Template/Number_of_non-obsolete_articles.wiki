@@ -1,0 +1,5 @@
+<noinclude>Number of total articles on this wiki, minus those marked obsolete (i.e. pertaining to older-than-current versions):</noinclude>
+{{#expr: {{formatnum:{{NUMBEROFARTICLES}}|R}} 
+             - {{formatnum:{{PAGESINCATEGORY:Obsolete}}|R}} 
+             - {{formatnum:{{PAGESINCATEGORY:Obsolete features}}|R}}
+ }}

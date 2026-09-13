@@ -1,0 +1,31 @@
+The {{tl|New in}} message box is put at the top of articles that contain information only relevant to recently released [[version]]s of ''Dwarf Fortress''. It notifies readers that certain features, mechanics, and elements of the game mentioned in the article are applicable to the version and after, but not versions prior to. The message box also specifies whether or not older saves from previous versions are still [[save compatibility|compatible]] in the version.
+
+== Usage ==
+
+<pre><nowiki>{{New in|1|2}}</nowiki></pre>
+
+=== Parameters ===
+
+* <code>1</code> – Version number.
+* <code>2</code> – Overrides the word "page" (optional).
+
+=== Examples ===
+
+ {{#delay:New in|{{Current/version}}}}
+ {{#delay:New in|0.47.05}}
+ {{#delay:New in|0.44.01}}
+ {{#delay:New in|0.43.01|article}}
+ {{#delay:New in|0.42.01|section}}
+ {{#delay:New in|0.40.03|category}}
+ {{#delay:New in|0.34.01|template}}
+
+{{New in|{{Current/version}}|cat=nocat}}
+{{New in|0.47.05|cat=nocat}}
+{{New in|0.44.01|cat=nocat}}
+{{New in|0.43.01|article|cat=nocat}}
+{{New in|0.42.01|section|cat=nocat}}
+{{New in|0.40.03|category|cat=nocat}}
+{{New in|0.34.01|template|cat=nocat}}
+
+<includeonly>[[Category:Version templates]]</includeonly>
+<noinclude>[[Category:Template Documentation]]</noinclude>

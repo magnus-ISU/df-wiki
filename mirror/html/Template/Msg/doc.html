@@ -1,0 +1,51 @@
+<div class="mw-parser-output"><p><b>Messages</b> are part of a system which uses <i>templates</i> to store translations. This is a middle ground between using &lt;translate&gt;, which is difficult to use with template markup, and using {{int:}} for translations, which requires admin rights to edit messages.
+</p>
+
+<h2><span class="mw-headline" id="Creating_a_new_message">Creating a new message</span></h2>
+<p>First, keep in mind that messages are meant to be used for markup-heavy pages, like templates.
+</p>
+<ul><li>If you want to translate a content page, use the Translate tool on that page &#8212; it's easier to use, update translations with, and is designed specifically for content.</li>
+<li>If you want to edit <b>system messages</b>, such as the "edit" tabs above a page or the text on <a href="/index.php/Special:RecentChanges" title="Special:RecentChanges">Special:RecentChanges</a>, you will need to edit <a href="http://en.wikipedia.org/wiki/mw:Help:System_message" class="extiw" title="wikipedia:mw:Help:System message">system messages</a>, which require admin rights.</li></ul>
+<h3><span class="mw-headline" id="Naming_conventions">Naming conventions</span></h3>
+<ul><li>If the message you are creating is for a single template, create it in the following location:</li></ul>
+<pre>Template:<span style="color:#f0f"><b>Template name</b></span>/msg/<i>message name</i>
+</pre>
+<ul><li>If the message you are creating is likely to be used in many templates, you have multiple choices:
+<ul><li>If it is used in a single template most often, and in other templates occasionally (such as auxiliary templates), place it under the template that uses it most (see above)</li>
+<li>If it is used by a wide range of templates that all have a common role (e.g. creature-related templates), use a descriptive template name (this does not have to exist &#8212; messages can be placed at <code>Template:Creature/msg/messagename</code> without Template:creature existing, for example).</li>
+<li>If it is a generic message which isn't necessarily part of a given template, but will be used <i>in templates</i>, place it at:</li></ul></li></ul>
+<pre>Template:Msg/<i>message name</i>
+</pre>
+<h3><span class="mw-headline" id="Enabling_translation">Enabling translation</span></h3>
+<p><b>Before you save</b> (ideally), you will need to wrap the contents in the message in &lt;translate&gt; tags and mark the page for translation, just like a normal page. (This makes pages appear at the standard language subpages, which can be easily transcluded from the {{msg}} template).
+</p>
+<h2><span class="mw-headline" id="Details">Details</span></h2>
+<p>This template relies <i>heavily</i> on <a href="/index.php/MediaWiki:Language-code" title="MediaWiki:Language-code">Mediawiki:Language-code</a> - if this is not defined for a certain language, all messages for that language will fall back to English.
+These messages should appear in English, which is your current interface language setting. The following links can be used to change your language <i>temporarily</i>:
+</p><p><a rel="nofollow" class="external text" href="//dwarffortresswiki.org/index.php?title=Template:Msg&amp;uselang=en">English</a> <span style="font-weight:bold;" class="dot">&#160;·</span> <a rel="nofollow" class="external text" href="//dwarffortresswiki.org/index.php?title=Template:Msg&amp;uselang=es">Spanish</a> <span style="font-weight:bold;" class="dot">&#160;·</span> <a rel="nofollow" class="external text" href="//dwarffortresswiki.org/index.php?title=Template:Msg&amp;uselang=fr">French</a> <span style="font-weight:bold;" class="dot">&#160;·</span> <a rel="nofollow" class="external text" href="//dwarffortresswiki.org/index.php?title=Template:Msg&amp;uselang=de">German</a> <span style="font-weight:bold;" class="dot">&#160;·</span> <a rel="nofollow" class="external text" href="//dwarffortresswiki.org/index.php?title=Template:Msg&amp;uselang=da">Danish</a>
+</p><p>For reference, the following languages are defined. If you attempt to use a language not defined here, <i>all</i> messages will fall back to English, even if translations exist for them in the appropriate /msg subpage. If you need to enable a language not listed here, post on the talk page.
+</p>
+<div class="mw-prefixindex-body"><ul class="mw-prefixindex-list"><li><a href="/index.php/MediaWiki:Language-code" title="MediaWiki:Language-code">Language-code</a></li>
+<li><a href="/index.php/MediaWiki:Language-code/da" title="MediaWiki:Language-code/da">Language-code/da</a></li>
+<li><a href="/index.php/MediaWiki:Language-code/de" title="MediaWiki:Language-code/de">Language-code/de</a></li>
+<li><a href="/index.php/MediaWiki:Language-code/en" title="MediaWiki:Language-code/en">Language-code/en</a></li>
+<li><a href="/index.php/MediaWiki:Language-code/es" title="MediaWiki:Language-code/es">Language-code/es</a></li>
+<li><a href="/index.php/MediaWiki:Language-code/fr" title="MediaWiki:Language-code/fr">Language-code/fr</a></li>
+<li><a href="/index.php/MediaWiki:Language-code/it" title="MediaWiki:Language-code/it">Language-code/it</a></li>
+</ul></div>
+<h2><span class="mw-headline" id="Examples">Examples</span></h2>
+<pre>{{msg|example}}</pre>
+<p>gives: This is an example message.
+</p>
+<pre>{{msg|t=av|old}}</pre>
+<p>gives: <a href="/index.php?title=Template:Av/msg/old/en&amp;action=edit&amp;redlink=1" class="new" title="Template:Av/msg/old/en (page does not exist)">Template:Av/msg/old/en</a>
+</p>
+<h3><span class="mw-headline" id="Generic_examples">Generic examples</span></h3>
+<p>These pages should not exist, but take note of the path names:
+</p>
+<pre>{{msg|message that does not exist}}</pre>
+<p>gives: <code><a href="/index.php?title=Template:Msg/message_that_does_not_exist/en&amp;action=edit&amp;redlink=1" class="new" title="Template:Msg/message that does not exist/en (page does not exist)">Template:Msg/message that does not exist/en</a></code>
+</p>
+<pre>{{msg|t=template|message}}</pre>
+<p>gives: <code><a href="/index.php?title=Template:Template/msg/message/en&amp;action=edit&amp;redlink=1" class="new" title="Template:Template/msg/message/en (page does not exist)">Template:Template/msg/message/en</a></code>
+</p></div>

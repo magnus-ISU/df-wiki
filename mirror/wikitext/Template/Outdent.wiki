@@ -1,0 +1,30 @@
+<span class="outdent-template" style="display:block; margin-top:-0.5em; color:#AAA;"><!--
+--><span style="display:inline-block; overflow:hidden;">┌</span><!--
+--><span style="display:inline-block; overflow:hidden; width:{{{{{|safesubst:}}}#switch:{{{1|}}}
+|:=0.8
+|::=2.4
+|:::=4.0
+|::::=5.6
+|:::::=7.2
+|::::::=9
+|:::::::=10.6
+|::::::::=12
+|:::::::::=13.6
+|::::::::::=15.2
+|:::::::::::=16.8
+|::::::::::::=18.4
+|:::::::::::::=20
+|::::::::::::::=21.6
+|:::::::::::::::=23.2
+|::::::::::::::::=24.8
+|:::::::::::::::::=26.4
+|::::::::::::::::::=28
+|:::::::::::::::::::=29.6
+|::::::::::::::::::::=31.2
+|#default={{#expr:{{{1|10}}}*1.6-0.8}}}}em;"><!--
+-->────────────────────────────────────────────────────────────────────────────────────────────────────</span><!--
+--><span style="display:inline-block; overflow:hidden;">┘</span><!--
+--></span><!--
+--><span></span><noinclude>
+{{Documentation}}
+</noinclude>

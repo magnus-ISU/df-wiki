@@ -1,0 +1,215 @@
+<includeonly><!--
+ -->{{#switch:{{{border|{{{1|}}}}}}|subgroup|child=</div>|#default=}}<!--
+ --><table class="{{#if:{{{title|}}}|collapsible {{#if:{{{state|}}}|{{{state}}}|autocollapse}}|}} infobox" <!--
+ -->style="{{#switch:{{{border|{{{1|}}}}}}|subgroup|child=background: transparent; border: none; border-spacing: 0; color: inherit; width: 100%|#default=background: #fdfdfd; border: 1px solid #aaa; font-size: 88%; margin: 0 auto -1px; vertical-align: middle; width: 100%; max-width: 100em}}; {{{bodystyle|}}}"><!--
+
+
+--- title & navbar ---
+ -->{{#if:{{{title|}}}|<!--
+ --><tr style="line-height: 1.5em;"><th scope="col" colspan="2" <!--
+ -->style="{{#switch:{{{border|{{{1|}}}}}}|subgroup|child=background: #ddf|#default=background: #ccf}}; padding: 0.25em 1em; text-align: center; {{{basestyle|}}}; {{{titlestyle|}}}"><!--
+ -->{{#switch:{{{border|{{{1|}}}}}}|subgroup|child=|#default=<!--
+ -->{{#if:{{{name|}}}|{{#switch:{{{navbar}}}|off=|#default=<!--
+ -->{{nav header|{{PAGENAME:{{{name}}}}}}}<!--
+ -->}}|}}}}<div style="font-size: 114%; margin: 0 6em;">
+{{{title}}}</div></th></tr>|}}<!--
+
+
+--- above ---
+ -->{{#if:{{{above|}}}|<!--
+ --><tr style="line-height: 1.5em;"><td colspan="2" <!--
+ -->style="background: #{{#switch:{{{border|{{{1|}}}}}}|subgroup|child=e6e6ff; border-top: {{#if:{{{title|}}}|2px solid #fdfdfd|none}}|#default=ddf}}; padding: 0.25em 1em; text-align: center; {{{basestyle|}}}; {{{abovestyle|}}}">
+{{{above}}}</td></tr>|}}<!--
+
+
+--- 1st group/list ---
+ -->{{#if:{{{list1|}}}|<!--
+ --><tr style="line-height: 1.5em;">{{#if:{{{group1|}}}|<th scope="row" style="background: #{{#switch:{{{border|{{{1|}}}}}}|subgroup|child=e6e6ff; border-top: {{#if:{{{title|{{{above|}}}}}}|2px solid #fdfdfd|none}}|#default=ddf}}; padding: 0.25em 1em; text-align: right; white-space: nowrap; width: 1%; {{{basestyle|}}}; {{{groupstyle|}}}; {{{group1style|}}}">{{{group1}}}</th>|}}<!--
+ --><td {{#if:{{{group1|}}}||colspan="2"}} style="background: transparent; {{#switch:{{{border|{{{1|}}}}}}|subgroup|child=border-top: {{#if:{{{title|{{{above|}}}}}}|2px solid #fdfdfd|none}}; border-left: {{#if:{{{group1|}}}|2px solid #fdfdfd|none}};|#default=}} padding: 0; text-align: {{#if:{{{group1|}}}|left|{{#switch:{{{border|{{{1|}}}}}}|subgroup|child=left|#default=center}}}}; {{{liststyle|}}}; {{{list1style|}}}"><div style="padding: {{{listpadding|0em 0.25em}}}">
+{{{list1}}}</div></td></tr>|}}<!--
+
+--- 2nd group/list ---
+ -->{{#if:{{{list2|}}}|<!--
+ --><tr style="line-height: 1.5em;">{{#if:{{{group2|}}}|<th scope="row" style="background: #{{#switch:{{{border|{{{1|}}}}}}|subgroup|child=e6e6ff; border-top: {{#if:{{{title|{{{above|{{{list1|}}}}}}}}}|2px solid #fdfdfd|none}}|#default=ddf}}; padding: 0.25em 1em; text-align: right; white-space: nowrap; width: 1%; {{{basestyle|}}}; {{{groupstyle|}}}; {{{group2style|}}}">{{{group2}}}</th>|}}<!--
+ --><td {{#if:{{{group2|}}}||colspan="2"}} style="background: transparent; {{#switch:{{{border|{{{1|}}}}}}|subgroup|child=border-top: {{#if:{{{title|{{{above|{{{list1|}}}}}}}}}|2px solid #fdfdfd|none}}; border-left: {{#if:{{{group2|}}}|2px solid #fdfdfd|none}};|#default=}} padding: 0; text-align: {{#if:{{{group2|}}}|left|{{#switch:{{{border|{{{1|}}}}}}|subgroup|child=left|#default=center}}}}; {{{liststyle|}}}; {{{list2style|}}}"><div style="padding: {{{listpadding|0em 0.25em}}}">
+{{{list2}}}</div></td></tr>|}}<!--
+
+--- 3rd group/list ---
+ -->{{#if:{{{list3|}}}|<!--
+ --><tr style="line-height: 1.5em;">{{#if:{{{group3|}}}|<th scope="row" style="background: #{{#switch:{{{border|{{{1|}}}}}}|subgroup|child=e6e6ff; border-top: {{#if:{{{title|{{{above|{{{list1|}}}}}}}}}|2px solid #fdfdfd|none}}|#default=ddf}}; padding: 0.25em 1em; text-align: right; white-space: nowrap; width: 1%; {{{basestyle|}}}; {{{groupstyle|}}}; {{{group3style|}}}">{{{group3}}}</th>|}}<!--
+ --><td {{#if:{{{group3|}}}||colspan="2"}} style="background: transparent; {{#switch:{{{border|{{{1|}}}}}}|subgroup|child=border-top: {{#if:{{{title|{{{above|{{{list1|}}}}}}}}}|2px solid #fdfdfd|none}}; border-left: {{#if:{{{group3|}}}|2px solid #fdfdfd|none}};|#default=}} padding: 0; text-align: {{#if:{{{group3|}}}|left|{{#switch:{{{border|{{{1|}}}}}}|subgroup|child=left|#default=center}}}}; {{{liststyle|}}}; {{{list3style|}}}"><div style="padding: {{{listpadding|0em 0.25em}}}">
+{{{list3}}}</div></td></tr>|}}<!--
+
+--- 4th group/list ---
+ -->{{#if:{{{list4|}}}|<!--
+ --><tr style="line-height: 1.5em;">{{#if:{{{group4|}}}|<th scope="row" style="background: #{{#switch:{{{border|{{{1|}}}}}}|subgroup|child=e6e6ff; border-top: {{#if:{{{title|{{{above|{{{list1|}}}}}}}}}|2px solid #fdfdfd|none}}|#default=ddf}}; padding: 0.25em 1em; text-align: right; white-space: nowrap; width: 1%; {{{basestyle|}}}; {{{groupstyle|}}}; {{{group4style|}}}">{{{group4}}}</th>|}}<!--
+ --><td {{#if:{{{group4|}}}||colspan="2"}} style="background: transparent; {{#switch:{{{border|{{{1|}}}}}}|subgroup|child=border-top: {{#if:{{{title|{{{above|{{{list1|}}}}}}}}}|2px solid #fdfdfd|none}}; border-left: {{#if:{{{group4|}}}|2px solid #fdfdfd|none}};|#default=}} padding: 0; text-align: {{#if:{{{group4|}}}|left|{{#switch:{{{border|{{{1|}}}}}}|subgroup|child=left|#default=center}}}}; {{{liststyle|}}}; {{{list4style|}}}"><div style="padding: {{{listpadding|0em 0.25em}}}">
+{{{list4}}}</div></td></tr>|}}<!--
+
+--- 5th group/list ---
+ -->{{#if:{{{list5|}}}|<!--
+ --><tr style="line-height: 1.5em;">{{#if:{{{group5|}}}|<th scope="row" style="background: #{{#switch:{{{border|{{{1|}}}}}}|subgroup|child=e6e6ff; border-top: {{#if:{{{title|{{{above|{{{list1|}}}}}}}}}|2px solid #fdfdfd|none}}|#default=ddf}}; padding: 0.25em 1em; text-align: right; white-space: nowrap; width: 1%; {{{basestyle|}}}; {{{groupstyle|}}}; {{{group5style|}}}">{{{group5}}}</th>|}}<!--
+ --><td {{#if:{{{group5|}}}||colspan="2"}} style="background: transparent; {{#switch:{{{border|{{{1|}}}}}}|subgroup|child=border-top: {{#if:{{{title|{{{above|{{{list1|}}}}}}}}}|2px solid #fdfdfd|none}}; border-left: {{#if:{{{group5|}}}|2px solid #fdfdfd|none}};|#default=}} padding: 0; text-align: {{#if:{{{group5|}}}|left|{{#switch:{{{border|{{{1|}}}}}}|subgroup|child=left|#default=center}}}}; {{{liststyle|}}}; {{{list5style|}}}"><div style="padding: {{{listpadding|0em 0.25em}}}">
+{{{list5}}}</div></td></tr>|}}<!--
+
+--- 6th group/list ---
+ -->{{#if:{{{list6|}}}|<!--
+ --><tr style="line-height: 1.5em;">{{#if:{{{group6|}}}|<th scope="row" style="background: #{{#switch:{{{border|{{{1|}}}}}}|subgroup|child=e6e6ff; border-top: {{#if:{{{title|{{{above|{{{list1|}}}}}}}}}|2px solid #fdfdfd|none}}|#default=ddf}}; padding: 0.25em 1em; text-align: right; white-space: nowrap; width: 1%; {{{basestyle|}}}; {{{groupstyle|}}}; {{{group6style|}}}">{{{group6}}}</th>|}}<!--
+ --><td {{#if:{{{group6|}}}||colspan="2"}} style="background: transparent; {{#switch:{{{border|{{{1|}}}}}}|subgroup|child=border-top: {{#if:{{{title|{{{above|{{{list1|}}}}}}}}}|2px solid #fdfdfd|none}}; border-left: {{#if:{{{group6|}}}|2px solid #fdfdfd|none}};|#default=}} padding: 0; text-align: {{#if:{{{group6|}}}|left|{{#switch:{{{border|{{{1|}}}}}}|subgroup|child=left|#default=center}}}}; {{{liststyle|}}}; {{{list6style|}}}"><div style="padding: {{{listpadding|0em 0.25em}}}">
+{{{list6}}}</div></td></tr>|}}<!--
+
+--- 7th group/list ---
+ -->{{#if:{{{list7|}}}|<!--
+ --><tr style="line-height: 1.5em;">{{#if:{{{group7|}}}|<th scope="row" style="background: #{{#switch:{{{border|{{{1|}}}}}}|subgroup|child=e6e6ff; border-top: {{#if:{{{title|{{{above|{{{list1|}}}}}}}}}|2px solid #fdfdfd|none}}|#default=ddf}}; padding: 0.25em 1em; text-align: right; white-space: nowrap; width: 1%; {{{basestyle|}}}; {{{groupstyle|}}}; {{{group7style|}}}">{{{group7}}}</th>|}}<!--
+ --><td {{#if:{{{group7|}}}||colspan="2"}} style="background: transparent; {{#switch:{{{border|{{{1|}}}}}}|subgroup|child=border-top: {{#if:{{{title|{{{above|{{{list1|}}}}}}}}}|2px solid #fdfdfd|none}}; border-left: {{#if:{{{group7|}}}|2px solid #fdfdfd|none}};|#default=}} padding: 0; text-align: {{#if:{{{group7|}}}|left|{{#switch:{{{border|{{{1|}}}}}}|subgroup|child=left|#default=center}}}}; {{{liststyle|}}}; {{{list7style|}}}"><div style="padding: {{{listpadding|0em 0.25em}}}">
+{{{list7}}}</div></td></tr>|}}<!--
+
+--- 8th group/list ---
+ -->{{#if:{{{list8|}}}|<!--
+ --><tr style="line-height: 1.5em;">{{#if:{{{group8|}}}|<th scope="row" style="background: #{{#switch:{{{border|{{{1|}}}}}}|subgroup|child=e6e6ff; border-top: {{#if:{{{title|{{{above|{{{list1|}}}}}}}}}|2px solid #fdfdfd|none}}|#default=ddf}}; padding: 0.25em 1em; text-align: right; white-space: nowrap; width: 1%; {{{basestyle|}}}; {{{groupstyle|}}}; {{{group8style|}}}">{{{group8}}}</th>|}}<!--
+ --><td {{#if:{{{group8|}}}||colspan="2"}} style="background: transparent; {{#switch:{{{border|{{{1|}}}}}}|subgroup|child=border-top: {{#if:{{{title|{{{above|{{{list1|}}}}}}}}}|2px solid #fdfdfd|none}}; border-left: {{#if:{{{group8|}}}|2px solid #fdfdfd|none}};|#default=}} padding: 0; text-align: {{#if:{{{group8|}}}|left|{{#switch:{{{border|{{{1|}}}}}}|subgroup|child=left|#default=center}}}}; {{{liststyle|}}}; {{{list8style|}}}"><div style="padding: {{{listpadding|0em 0.25em}}}">
+{{{list8}}}</div></td></tr>|}}<!--
+
+--- 9th group/list ---
+ -->{{#if:{{{list9|}}}|<!--
+ --><tr style="line-height: 1.5em;">{{#if:{{{group9|}}}|<th scope="row" style="background: #{{#switch:{{{border|{{{1|}}}}}}|subgroup|child=e6e6ff; border-top: {{#if:{{{title|{{{above|{{{list1|}}}}}}}}}|2px solid #fdfdfd|none}}|#default=ddf}}; padding: 0.25em 1em; text-align: right; white-space: nowrap; width: 1%; {{{basestyle|}}}; {{{groupstyle|}}}; {{{group9style|}}}">{{{group9}}}</th>|}}<!--
+ --><td {{#if:{{{group9|}}}||colspan="2"}} style="background: transparent; {{#switch:{{{border|{{{1|}}}}}}|subgroup|child=border-top: {{#if:{{{title|{{{above|{{{list1|}}}}}}}}}|2px solid #fdfdfd|none}}; border-left: {{#if:{{{group9|}}}|2px solid #fdfdfd|none}};|#default=}} padding: 0; text-align: {{#if:{{{group9|}}}|left|{{#switch:{{{border|{{{1|}}}}}}|subgroup|child=left|#default=center}}}}; {{{liststyle|}}}; {{{list9style|}}}"><div style="padding: {{{listpadding|0em 0.25em}}}">
+{{{list9}}}</div></td></tr>|}}<!--
+
+--- 10th group/list ---
+ -->{{#if:{{{list10|}}}|<!--
+ --><tr style="line-height: 1.5em;">{{#if:{{{group10|}}}|<th scope="row" style="background: #{{#switch:{{{border|{{{1|}}}}}}|subgroup|child=e6e6ff; border-top: {{#if:{{{title|{{{above|{{{list1|}}}}}}}}}|2px solid #fdfdfd|none}}|#default=ddf}}; padding: 0.25em 1em; text-align: right; white-space: nowrap; width: 1%; {{{basestyle|}}}; {{{groupstyle|}}}; {{{group10style|}}}">{{{group10}}}</th>|}}<!--
+ --><td {{#if:{{{group10|}}}||colspan="2"}} style="background: transparent; {{#switch:{{{border|{{{1|}}}}}}|subgroup|child=border-top: {{#if:{{{title|{{{above|{{{list1|}}}}}}}}}|2px solid #fdfdfd|none}}; border-left: {{#if:{{{group10|}}}|2px solid #fdfdfd|none}};|#default=}} padding: 0; text-align: {{#if:{{{group10|}}}|left|{{#switch:{{{border|{{{1|}}}}}}|subgroup|child=left|#default=center}}}}; {{{liststyle|}}}; {{{list10style|}}}"><div style="padding: {{{listpadding|0em 0.25em}}}">
+{{{list10}}}</div></td></tr>|}}<!--
+
+--- 11th group/list ---
+ -->{{#if:{{{list11|}}}|<!--
+ --><tr style="line-height: 1.5em;">{{#if:{{{group11|}}}|<th scope="row" style="background: #{{#switch:{{{border|{{{1|}}}}}}|subgroup|child=e6e6ff; border-top: {{#if:{{{title|{{{above|{{{list1|}}}}}}}}}|2px solid #fdfdfd|none}}|#default=ddf}}; padding: 0.25em 1em; text-align: right; white-space: nowrap; width: 1%; {{{basestyle|}}}; {{{groupstyle|}}}; {{{group11style|}}}">{{{group11}}}</th>|}}<!--
+ --><td {{#if:{{{group11|}}}||colspan="2"}} style="background: transparent; {{#switch:{{{border|{{{1|}}}}}}|subgroup|child=border-top: {{#if:{{{title|{{{above|{{{list1|}}}}}}}}}|2px solid #fdfdfd|none}}; border-left: {{#if:{{{group11|}}}|2px solid #fdfdfd|none}};|#default=}} padding: 0; text-align: {{#if:{{{group11|}}}|left|{{#switch:{{{border|{{{1|}}}}}}|subgroup|child=left|#default=center}}}}; {{{liststyle|}}}; {{{list11style|}}}"><div style="padding: {{{listpadding|0em 0.25em}}}">
+{{{list11}}}</div></td></tr>|}}<!--
+
+--- 12th group/list ---
+ -->{{#if:{{{list12|}}}|<!--
+ --><tr style="line-height: 1.5em;">{{#if:{{{group12|}}}|<th scope="row" style="background: #{{#switch:{{{border|{{{1|}}}}}}|subgroup|child=e6e6ff; border-top: {{#if:{{{title|{{{above|{{{list1|}}}}}}}}}|2px solid #fdfdfd|none}}|#default=ddf}}; padding: 0.25em 1em; text-align: right; white-space: nowrap; width: 1%; {{{basestyle|}}}; {{{groupstyle|}}}; {{{group12style|}}}">{{{group12}}}</th>|}}<!--
+ --><td {{#if:{{{group12|}}}||colspan="2"}} style="background: transparent; {{#switch:{{{border|{{{1|}}}}}}|subgroup|child=border-top: {{#if:{{{title|{{{above|{{{list1|}}}}}}}}}|2px solid #fdfdfd|none}}; border-left: {{#if:{{{group12|}}}|2px solid #fdfdfd|none}};|#default=}} padding: 0; text-align: {{#if:{{{group12|}}}|left|{{#switch:{{{border|{{{1|}}}}}}|subgroup|child=left|#default=center}}}}; {{{liststyle|}}}; {{{list12style|}}}"><div style="padding: {{{listpadding|0em 0.25em}}}">
+{{{list12}}}</div></td></tr>|}}<!--
+
+--- 13th group/list ---
+ -->{{#if:{{{list13|}}}|<!--
+ --><tr style="line-height: 1.5em;">{{#if:{{{group13|}}}|<th scope="row" style="background: #{{#switch:{{{border|{{{1|}}}}}}|subgroup|child=e6e6ff; border-top: {{#if:{{{title|{{{above|{{{list1|}}}}}}}}}|2px solid #fdfdfd|none}}|#default=ddf}}; padding: 0.25em 1em; text-align: right; white-space: nowrap; width: 1%; {{{basestyle|}}}; {{{groupstyle|}}}; {{{group13style|}}}">{{{group13}}}</th>|}}<!--
+ --><td {{#if:{{{group13|}}}||colspan="2"}} style="background: transparent; {{#switch:{{{border|{{{1|}}}}}}|subgroup|child=border-top: {{#if:{{{title|{{{above|{{{list1|}}}}}}}}}|2px solid #fdfdfd|none}}; border-left: {{#if:{{{group13|}}}|2px solid #fdfdfd|none}};|#default=}} padding: 0; text-align: {{#if:{{{group13|}}}|left|{{#switch:{{{border|{{{1|}}}}}}|subgroup|child=left|#default=center}}}}; {{{liststyle|}}}; {{{list13style|}}}"><div style="padding: {{{listpadding|0em 0.25em}}}">
+{{{list13}}}</div></td></tr>|}}<!--
+
+--- 14th group/list ---
+ -->{{#if:{{{list14|}}}|<!--
+ --><tr style="line-height: 1.5em;">{{#if:{{{group14|}}}|<th scope="row" style="background: #{{#switch:{{{border|{{{1|}}}}}}|subgroup|child=e6e6ff; border-top: {{#if:{{{title|{{{above|{{{list1|}}}}}}}}}|2px solid #fdfdfd|none}}|#default=ddf}}; padding: 0.25em 1em; text-align: right; white-space: nowrap; width: 1%; {{{basestyle|}}}; {{{groupstyle|}}}; {{{group14style|}}}">{{{group14}}}</th>|}}<!--
+ --><td {{#if:{{{group14|}}}||colspan="2"}} style="background: transparent; {{#switch:{{{border|{{{1|}}}}}}|subgroup|child=border-top: {{#if:{{{title|{{{above|{{{list1|}}}}}}}}}|2px solid #fdfdfd|none}}; border-left: {{#if:{{{group14|}}}|2px solid #fdfdfd|none}};|#default=}} padding: 0; text-align: {{#if:{{{group14|}}}|left|{{#switch:{{{border|{{{1|}}}}}}|subgroup|child=left|#default=center}}}}; {{{liststyle|}}}; {{{list14style|}}}"><div style="padding: {{{listpadding|0em 0.25em}}}">
+{{{list14}}}</div></td></tr>|}}<!--
+
+--- 15th group/list ---
+ -->{{#if:{{{list15|}}}|<!--
+ --><tr style="line-height: 1.5em;">{{#if:{{{group15|}}}|<th scope="row" style="background: #{{#switch:{{{border|{{{1|}}}}}}|subgroup|child=e6e6ff; border-top: {{#if:{{{title|{{{above|{{{list1|}}}}}}}}}|2px solid #fdfdfd|none}}|#default=ddf}}; padding: 0.25em 1em; text-align: right; white-space: nowrap; width: 1%; {{{basestyle|}}}; {{{groupstyle|}}}; {{{group15style|}}}">{{{group15}}}</th>|}}<!--
+ --><td {{#if:{{{group15|}}}||colspan="2"}} style="background: transparent; {{#switch:{{{border|{{{1|}}}}}}|subgroup|child=border-top: {{#if:{{{title|{{{above|{{{list1|}}}}}}}}}|2px solid #fdfdfd|none}}; border-left: {{#if:{{{group15|}}}|2px solid #fdfdfd|none}};|#default=}} padding: 0; text-align: {{#if:{{{group15|}}}|left|{{#switch:{{{border|{{{1|}}}}}}|subgroup|child=left|#default=center}}}}; {{{liststyle|}}}; {{{list15style|}}}"><div style="padding: {{{listpadding|0em 0.25em}}}">
+{{{list15}}}</div></td></tr>|}}<!--
+
+--- 16th group/list ---
+ -->{{#if:{{{list16|}}}|<!--
+ --><tr style="line-height: 1.5em;">{{#if:{{{group16|}}}|<th scope="row" style="background: #{{#switch:{{{border|{{{1|}}}}}}|subgroup|child=e6e6ff; border-top: {{#if:{{{title|{{{above|{{{list1|}}}}}}}}}|2px solid #fdfdfd|none}}|#default=ddf}}; padding: 0.25em 1em; text-align: right; white-space: nowrap; width: 1%; {{{basestyle|}}}; {{{groupstyle|}}}; {{{group16style|}}}">{{{group16}}}</th>|}}<!--
+ --><td {{#if:{{{group16|}}}||colspan="2"}} style="background: transparent; {{#switch:{{{border|{{{1|}}}}}}|subgroup|child=border-top: {{#if:{{{title|{{{above|{{{list1|}}}}}}}}}|2px solid #fdfdfd|none}}; border-left: {{#if:{{{group16|}}}|2px solid #fdfdfd|none}};|#default=}} padding: 0; text-align: {{#if:{{{group16|}}}|left|{{#switch:{{{border|{{{1|}}}}}}|subgroup|child=left|#default=center}}}}; {{{liststyle|}}}; {{{list16style|}}}"><div style="padding: {{{listpadding|0em 0.25em}}}">
+{{{list16}}}</div></td></tr>|}}<!--
+
+--- 17th group/list ---
+ -->{{#if:{{{list17|}}}|<!--
+ --><tr style="line-height: 1.5em;">{{#if:{{{group17|}}}|<th scope="row" style="background: #{{#switch:{{{border|{{{1|}}}}}}|subgroup|child=e6e6ff; border-top: {{#if:{{{title|{{{above|{{{list1|}}}}}}}}}|2px solid #fdfdfd|none}}|#default=ddf}}; padding: 0.25em 1em; text-align: right; white-space: nowrap; width: 1%; {{{basestyle|}}}; {{{groupstyle|}}}; {{{group17style|}}}">{{{group17}}}</th>|}}<!--
+ --><td {{#if:{{{group17|}}}||colspan="2"}} style="background: transparent; {{#switch:{{{border|{{{1|}}}}}}|subgroup|child=border-top: {{#if:{{{title|{{{above|{{{list1|}}}}}}}}}|2px solid #fdfdfd|none}}; border-left: {{#if:{{{group17|}}}|2px solid #fdfdfd|none}};|#default=}} padding: 0; text-align: {{#if:{{{group17|}}}|left|{{#switch:{{{border|{{{1|}}}}}}|subgroup|child=left|#default=center}}}}; {{{liststyle|}}}; {{{list17style|}}}"><div style="padding: {{{listpadding|0em 0.25em}}}">
+{{{list17}}}</div></td></tr>|}}<!--
+
+--- 18th group/list ---
+ -->{{#if:{{{list18|}}}|<!--
+ --><tr style="line-height: 1.5em;">{{#if:{{{group18|}}}|<th scope="row" style="background: #{{#switch:{{{border|{{{1|}}}}}}|subgroup|child=e6e6ff; border-top: {{#if:{{{title|{{{above|{{{list1|}}}}}}}}}|2px solid #fdfdfd|none}}|#default=ddf}}; padding: 0.25em 1em; text-align: right; white-space: nowrap; width: 1%; {{{basestyle|}}}; {{{groupstyle|}}}; {{{group18style|}}}">{{{group18}}}</th>|}}<!--
+ --><td {{#if:{{{group18|}}}||colspan="2"}} style="background: transparent; {{#switch:{{{border|{{{1|}}}}}}|subgroup|child=border-top: {{#if:{{{title|{{{above|{{{list1|}}}}}}}}}|2px solid #fdfdfd|none}}; border-left: {{#if:{{{group18|}}}|2px solid #fdfdfd|none}};|#default=}} padding: 0; text-align: {{#if:{{{group18|}}}|left|{{#switch:{{{border|{{{1|}}}}}}|subgroup|child=left|#default=center}}}}; {{{liststyle|}}}; {{{list18style|}}}"><div style="padding: {{{listpadding|0em 0.25em}}}">
+{{{list18}}}</div></td></tr>|}}<!--
+
+--- 19th group/list ---
+ -->{{#if:{{{list19|}}}|<!--
+ --><tr style="line-height: 1.5em;">{{#if:{{{group19|}}}|<th scope="row" style="background: #{{#switch:{{{border|{{{1|}}}}}}|subgroup|child=e6e6ff; border-top: {{#if:{{{title|{{{above|{{{list1|}}}}}}}}}|2px solid #fdfdfd|none}}|#default=ddf}}; padding: 0.25em 1em; text-align: right; white-space: nowrap; width: 1%; {{{basestyle|}}}; {{{groupstyle|}}}; {{{group19style|}}}">{{{group19}}}</th>|}}<!--
+ --><td {{#if:{{{group19|}}}||colspan="2"}} style="background: transparent; {{#switch:{{{border|{{{1|}}}}}}|subgroup|child=border-top: {{#if:{{{title|{{{above|{{{list1|}}}}}}}}}|2px solid #fdfdfd|none}}; border-left: {{#if:{{{group19|}}}|2px solid #fdfdfd|none}};|#default=}} padding: 0; text-align: {{#if:{{{group19|}}}|left|{{#switch:{{{border|{{{1|}}}}}}|subgroup|child=left|#default=center}}}}; {{{liststyle|}}}; {{{list19style|}}}"><div style="padding: {{{listpadding|0em 0.25em}}}">
+{{{list19}}}</div></td></tr>|}}<!--
+
+--- 20th group/list ---
+ -->{{#if:{{{list20|}}}|<!--
+ --><tr style="line-height: 1.5em;">{{#if:{{{group20|}}}|<th scope="row" style="background: #{{#switch:{{{border|{{{1|}}}}}}|subgroup|child=e6e6ff; border-top: {{#if:{{{title|{{{above|{{{list1|}}}}}}}}}|2px solid #fdfdfd|none}}|#default=ddf}}; padding: 0.25em 1em; text-align: right; white-space: nowrap; width: 1%; {{{basestyle|}}}; {{{groupstyle|}}}; {{{group20style|}}}">{{{group20}}}</th>|}}<!--
+ --><td {{#if:{{{group20|}}}||colspan="2"}} style="background: transparent; {{#switch:{{{border|{{{1|}}}}}}|subgroup|child=border-top: {{#if:{{{title|{{{above|{{{list1|}}}}}}}}}|2px solid #fdfdfd|none}}; border-left: {{#if:{{{group20|}}}|2px solid #fdfdfd|none}};|#default=}} padding: 0; text-align: {{#if:{{{group20|}}}|left|{{#switch:{{{border|{{{1|}}}}}}|subgroup|child=left|#default=center}}}}; {{{liststyle|}}}; {{{list20style|}}}"><div style="padding: {{{listpadding|0em 0.25em}}}">
+{{{list20}}}</div></td></tr>|}}<!--
+
+--- 21st group/list ---
+ -->{{#if:{{{list21|}}}|<!--
+ --><tr style="line-height: 1.5em;">{{#if:{{{group21|}}}|<th scope="row" style="background: #{{#switch:{{{border|{{{1|}}}}}}|subgroup|child=e6e6ff; border-top: {{#if:{{{title|{{{above|{{{list1|}}}}}}}}}|2px solid #fdfdfd|none}}|#default=ddf}}; padding: 0.25em 1em; text-align: right; white-space: nowrap; width: 1%; {{{basestyle|}}}; {{{groupstyle|}}}; {{{group21style|}}}">{{{group21}}}</th>|}}<!--
+ --><td {{#if:{{{group21|}}}||colspan="2"}} style="background: transparent; {{#switch:{{{border|{{{1|}}}}}}|subgroup|child=border-top: {{#if:{{{title|{{{above|{{{list1|}}}}}}}}}|2px solid #fdfdfd|none}}; border-left: {{#if:{{{group21|}}}|2px solid #fdfdfd|none}};|#default=}} padding: 0; text-align: {{#if:{{{group21|}}}|left|{{#switch:{{{border|{{{1|}}}}}}|subgroup|child=left|#default=center}}}}; {{{liststyle|}}}; {{{list21style|}}}"><div style="padding: {{{listpadding|0em 0.25em}}}">
+{{{list21}}}</div></td></tr>|}}<!--
+
+--- 22nd group/list ---
+ -->{{#if:{{{list22|}}}|<!--
+ --><tr style="line-height: 1.5em;">{{#if:{{{group22|}}}|<th scope="row" style="background: #{{#switch:{{{border|{{{1|}}}}}}|subgroup|child=e6e6ff; border-top: {{#if:{{{title|{{{above|{{{list1|}}}}}}}}}|2px solid #fdfdfd|none}}|#default=ddf}}; padding: 0.25em 1em; text-align: right; white-space: nowrap; width: 1%; {{{basestyle|}}}; {{{groupstyle|}}}; {{{group22style|}}}">{{{group22}}}</th>|}}<!--
+ --><td {{#if:{{{group22|}}}||colspan="2"}} style="background: transparent; {{#switch:{{{border|{{{1|}}}}}}|subgroup|child=border-top: {{#if:{{{title|{{{above|{{{list1|}}}}}}}}}|2px solid #fdfdfd|none}}; border-left: {{#if:{{{group22|}}}|2px solid #fdfdfd|none}};|#default=}} padding: 0; text-align: {{#if:{{{group22|}}}|left|{{#switch:{{{border|{{{1|}}}}}}|subgroup|child=left|#default=center}}}}; {{{liststyle|}}}; {{{list22style|}}}"><div style="padding: {{{listpadding|0em 0.25em}}}">
+{{{list22}}}</div></td></tr>|}}<!--
+
+--- 23rd group/list ---
+ -->{{#if:{{{list23|}}}|<!--
+ --><tr style="line-height: 1.5em;">{{#if:{{{group23|}}}|<th scope="row" style="background: #{{#switch:{{{border|{{{1|}}}}}}|subgroup|child=e6e6ff; border-top: {{#if:{{{title|{{{above|{{{list1|}}}}}}}}}|2px solid #fdfdfd|none}}|#default=ddf}}; padding: 0.25em 1em; text-align: right; white-space: nowrap; width: 1%; {{{basestyle|}}}; {{{groupstyle|}}}; {{{group23style|}}}">{{{group23}}}</th>|}}<!--
+ --><td {{#if:{{{group23|}}}||colspan="2"}} style="background: transparent; {{#switch:{{{border|{{{1|}}}}}}|subgroup|child=border-top: {{#if:{{{title|{{{above|{{{list1|}}}}}}}}}|2px solid #fdfdfd|none}}; border-left: {{#if:{{{group23|}}}|2px solid #fdfdfd|none}};|#default=}} padding: 0; text-align: {{#if:{{{group23|}}}|left|{{#switch:{{{border|{{{1|}}}}}}|subgroup|child=left|#default=center}}}}; {{{liststyle|}}}; {{{list23style|}}}"><div style="padding: {{{listpadding|0em 0.25em}}}">
+{{{list23}}}</div></td></tr>|}}<!--
+
+--- 24th group/list ---
+ -->{{#if:{{{list24|}}}|<!--
+ --><tr style="line-height: 1.5em;">{{#if:{{{group24|}}}|<th scope="row" style="background: #{{#switch:{{{border|{{{1|}}}}}}|subgroup|child=e6e6ff; border-top: {{#if:{{{title|{{{above|{{{list1|}}}}}}}}}|2px solid #fdfdfd|none}}|#default=ddf}}; padding: 0.25em 1em; text-align: right; white-space: nowrap; width: 1%; {{{basestyle|}}}; {{{groupstyle|}}}; {{{group24style|}}}">{{{group24}}}</th>|}}<!--
+ --><td {{#if:{{{group24|}}}||colspan="2"}} style="background: transparent; {{#switch:{{{border|{{{1|}}}}}}|subgroup|child=border-top: {{#if:{{{title|{{{above|{{{list1|}}}}}}}}}|2px solid #fdfdfd|none}}; border-left: {{#if:{{{group24|}}}|2px solid #fdfdfd|none}};|#default=}} padding: 0; text-align: {{#if:{{{group24|}}}|left|{{#switch:{{{border|{{{1|}}}}}}|subgroup|child=left|#default=center}}}}; {{{liststyle|}}}; {{{list24style|}}}"><div style="padding: {{{listpadding|0em 0.25em}}}">
+{{{list24}}}</div></td></tr>|}}<!--
+
+--- 25th group/list ---
+ -->{{#if:{{{list25|}}}|<!--
+ --><tr style="line-height: 1.5em;">{{#if:{{{group25|}}}|<th scope="row" style="background: #{{#switch:{{{border|{{{1|}}}}}}|subgroup|child=e6e6ff; border-top: {{#if:{{{title|{{{above|{{{list1|}}}}}}}}}|2px solid #fdfdfd|none}}|#default=ddf}}; padding: 0.25em 1em; text-align: right; white-space: nowrap; width: 1%; {{{basestyle|}}}; {{{groupstyle|}}}; {{{group25style|}}}">{{{group25}}}</th>|}}<!--
+ --><td {{#if:{{{group25|}}}||colspan="2"}} style="background: transparent; {{#switch:{{{border|{{{1|}}}}}}|subgroup|child=border-top: {{#if:{{{title|{{{above|{{{list1|}}}}}}}}}|2px solid #fdfdfd|none}}; border-left: {{#if:{{{group25|}}}|2px solid #fdfdfd|none}};|#default=}} padding: 0; text-align: {{#if:{{{group25|}}}|left|{{#switch:{{{border|{{{1|}}}}}}|subgroup|child=left|#default=center}}}}; {{{liststyle|}}}; {{{list25style|}}}"><div style="padding: {{{listpadding|0em 0.25em}}}">
+{{{list25}}}</div></td></tr>|}}<!--
+
+--- 26th group/list ---
+ -->{{#if:{{{list26|}}}|<!--
+ --><tr style="line-height: 1.5em;">{{#if:{{{group26|}}}|<th scope="row" style="background: #{{#switch:{{{border|{{{1|}}}}}}|subgroup|child=e6e6ff; border-top: {{#if:{{{title|{{{above|{{{list1|}}}}}}}}}|2px solid #fdfdfd|none}}|#default=ddf}}; padding: 0.25em 1em; text-align: right; white-space: nowrap; width: 1%; {{{basestyle|}}}; {{{groupstyle|}}}; {{{group26style|}}}">{{{group26}}}</th>|}}<!--
+ --><td {{#if:{{{group26|}}}||colspan="2"}} style="background: transparent; {{#switch:{{{border|{{{1|}}}}}}|subgroup|child=border-top: {{#if:{{{title|{{{above|{{{list1|}}}}}}}}}|2px solid #fdfdfd|none}}; border-left: {{#if:{{{group26|}}}|2px solid #fdfdfd|none}};|#default=}} padding: 0; text-align: {{#if:{{{group26|}}}|left|{{#switch:{{{border|{{{1|}}}}}}|subgroup|child=left|#default=center}}}}; {{{liststyle|}}}; {{{list26style|}}}"><div style="padding: {{{listpadding|0em 0.25em}}}">
+{{{list26}}}</div></td></tr>|}}<!--
+
+--- 27th group/list ---
+ -->{{#if:{{{list27|}}}|<!--
+ --><tr style="line-height: 1.5em;">{{#if:{{{group27|}}}|<th scope="row" style="background: #{{#switch:{{{border|{{{1|}}}}}}|subgroup|child=e6e6ff; border-top: {{#if:{{{title|{{{above|{{{list1|}}}}}}}}}|2px solid #fdfdfd|none}}|#default=ddf}}; padding: 0.25em 1em; text-align: right; white-space: nowrap; width: 1%; {{{basestyle|}}}; {{{groupstyle|}}}; {{{group27style|}}}">{{{group27}}}</th>|}}<!--
+ --><td {{#if:{{{group27|}}}||colspan="2"}} style="background: transparent; {{#switch:{{{border|{{{1|}}}}}}|subgroup|child=border-top: {{#if:{{{title|{{{above|{{{list1|}}}}}}}}}|2px solid #fdfdfd|none}}; border-left: {{#if:{{{group27|}}}|2px solid #fdfdfd|none}};|#default=}} padding: 0; text-align: {{#if:{{{group27|}}}|left|{{#switch:{{{border|{{{1|}}}}}}|subgroup|child=left|#default=center}}}}; {{{liststyle|}}}; {{{list27style|}}}"><div style="padding: {{{listpadding|0em 0.25em}}}">
+{{{list27}}}</div></td></tr>|}}<!--
+
+--- 28th group/list ---
+ -->{{#if:{{{list28|}}}|<!--
+ --><tr style="line-height: 1.5em;">{{#if:{{{group28|}}}|<th scope="row" style="background: #{{#switch:{{{border|{{{1|}}}}}}|subgroup|child=e6e6ff; border-top: {{#if:{{{title|{{{above|{{{list1|}}}}}}}}}|2px solid #fdfdfd|none}}|#default=ddf}}; padding: 0.25em 1em; text-align: right; white-space: nowrap; width: 1%; {{{basestyle|}}}; {{{groupstyle|}}}; {{{group28style|}}}">{{{group28}}}</th>|}}<!--
+ --><td {{#if:{{{group28|}}}||colspan="2"}} style="background: transparent; {{#switch:{{{border|{{{1|}}}}}}|subgroup|child=border-top: {{#if:{{{title|{{{above|{{{list1|}}}}}}}}}|2px solid #fdfdfd|none}}; border-left: {{#if:{{{group28|}}}|2px solid #fdfdfd|none}};|#default=}} padding: 0; text-align: {{#if:{{{group28|}}}|left|{{#switch:{{{border|{{{1|}}}}}}|subgroup|child=left|#default=center}}}}; {{{liststyle|}}}; {{{list28style|}}}"><div style="padding: {{{listpadding|0em 0.25em}}}">
+{{{list28}}}</div></td></tr>|}}<!--
+
+--- 29th group/list ---
+ -->{{#if:{{{list29|}}}|<!--
+ --><tr style="line-height: 1.5em;">{{#if:{{{group29|}}}|<th scope="row" style="background: #{{#switch:{{{border|{{{1|}}}}}}|subgroup|child=e6e6ff; border-top: {{#if:{{{title|{{{above|{{{list1|}}}}}}}}}|2px solid #fdfdfd|none}}|#default=ddf}}; padding: 0.25em 1em; text-align: right; white-space: nowrap; width: 1%; {{{basestyle|}}}; {{{groupstyle|}}}; {{{group29style|}}}">{{{group29}}}</th>|}}<!--
+ --><td {{#if:{{{group29|}}}||colspan="2"}} style="background: transparent; {{#switch:{{{border|{{{1|}}}}}}|subgroup|child=border-top: {{#if:{{{title|{{{above|{{{list1|}}}}}}}}}|2px solid #fdfdfd|none}}; border-left: {{#if:{{{group29|}}}|2px solid #fdfdfd|none}};|#default=}} padding: 0; text-align: {{#if:{{{group29|}}}|left|{{#switch:{{{border|{{{1|}}}}}}|subgroup|child=left|#default=center}}}}; {{{liststyle|}}}; {{{list29style|}}}"><div style="padding: {{{listpadding|0em 0.25em}}}">
+{{{list29}}}</div></td></tr>|}}<!--
+
+--- 30th group/list ---
+ -->{{#if:{{{list30|}}}|<!--
+ --><tr style="line-height: 1.5em;">{{#if:{{{group30|}}}|<th scope="row" style="background: #{{#switch:{{{border|{{{1|}}}}}}|subgroup|child=e6e6ff; border-top: {{#if:{{{title|{{{above|{{{list1|}}}}}}}}}|2px solid #fdfdfd|none}}|#default=ddf}}; padding: 0.25em 1em; text-align: right; white-space: nowrap; width: 1%; {{{basestyle|}}}; {{{groupstyle|}}}; {{{group30style|}}}">{{{group30}}}</th>|}}<!--
+ --><td {{#if:{{{group30|}}}||colspan="2"}} style="background: transparent; {{#switch:{{{border|{{{1|}}}}}}|subgroup|child=border-top: {{#if:{{{title|{{{above|{{{list1|}}}}}}}}}|2px solid #fdfdfd|none}}; border-left: {{#if:{{{group30|}}}|2px solid #fdfdfd|none}};|#default=}} padding: 0; text-align: {{#if:{{{group30|}}}|left|{{#switch:{{{border|{{{1|}}}}}}|subgroup|child=left|#default=center}}}}; {{{liststyle|}}}; {{{list30style|}}}"><div style="padding: {{{listpadding|0em 0.25em}}}">
+{{{list30}}}</div></td></tr>|}}<!--
+
+
+--- below ---
+ -->{{#if:{{{below|}}}|<!--
+ --><tr style="line-height: 1.5em;"><td colspan="2" <!--
+ -->style="background: #{{#switch:{{{border|{{{1|}}}}}}|subgroup|child=e6e6ff; border-top: {{#if:{{{title|{{{above|{{{list1|{{{list2|{{{list3|{{{list4|{{{list5|{{{list6|{{{list7|{{{list8|{{{list9|{{{list10|{{{list11|{{{list12|{{{list13|{{{list14|{{{list15|{{{list16|{{{list17|{{{list18|{{{list19|{{{list20|}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}|2px solid #fdfdfd|none}}|#default=ddf}}; padding: 0.25em 1em; text-align: center; {{{basestyle|}}}; {{{belowstyle|}}}">
+{{{below}}}</td></tr>|}}<!--
+
+
+ --></table>{{#switch:{{{border|{{{1|}}}}}}|subgroup|child=<div>|#default=}}</includeonly><noinclude>
+{{documentation}}
+</noinclude>

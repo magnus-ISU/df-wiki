@@ -1,0 +1,15 @@
+{{documentation subpage}}
+
+This is like [[:Template:Version]] except for whole articles or sections.<br>
+The use for which it was created was for articles copypasted from the old wiki.
+
+Articles that include this template are automatically added to [[:Category:Needs update]].
+
+More details can be included in a named parameter: 
+<pre>{{old|Details here}}</pre> 
+{{old|Details here}}
+
+A single version can be referenced with a ``v`` parameter: 
+<pre>{{old|v=0.47.05}}</pre> 
+{{old|v=0.47.05}}
+<includeonly>[[Category:Templates]]</includeonly>

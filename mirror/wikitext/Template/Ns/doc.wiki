@@ -1,0 +1,32 @@
+Takes a version number and returns the corresponding namespace.
+
+== Examples ==
+50.03: {{ns|50.03}}
+
+0.43.05: {{ns|0.43.05}}
+
+0.44: {{ns|0.44}} (trailing components not required)
+
+0.34.11: {{ns|0.34.11}}
+
+0.34.02: {{ns|0.34.02}}
+
+0.31.19: {{ns|0.31.19}}
+
+v0.31.07: {{ns|v0.31.07}} (Leading "v" is ignored)
+
+0.28.121.40c: {{ns|0.28.121.40c}}
+
+0.23.130.23a: {{ns|0.23.130.23a}}
+
+unrecognized: {{ns|unrecognized}}
+
+==See also==
+{{tl|nsv}} (the inverse of this template)
+<pre>{{ns|{{nsv|DF2012}}}}</pre>
+{{ns|{{nsv|DF2012}}}}
+<pre>{{nsv|{{ns|v0.31.25}}}}</pre>
+{{nsv|{{ns|v0.31.25}}}}
+
+<includeonly>[[Category:Version templates]]</includeonly>
+<noinclude>[[Category:Template Documentation]]</noinclude>

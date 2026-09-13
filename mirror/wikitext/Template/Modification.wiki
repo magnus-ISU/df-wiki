@@ -1,0 +1,37 @@
+{| style='border: 1px solid #000; width: 17em; border-spacing: 0; margin: 0 0 1em 1em; float: right'
+|+ Modification
+|-
+! colspan="2" style="border-bottom: 1px solid #aaa; background: #eee; padding: 0.1em 0.25em" | '''{{{name|Name}}}'''
+|-
+! style="text-align: left; white-space: nowrap; font-weight: normal; padding: 0.1em 0.25em" | Version
+| style="padding: 0.1em 0.25em" | {{{version|??}}}
+|-
+! style="text-align: left; white-space: nowrap; font-weight: normal; padding: 0.1em 0.25em" | Updated
+| style="padding: 0.1em 0.25em" | {{#if:{{{last update|}}}|{{#time:F j, Y|{{{last update}}}}}|??}}
+|-
+! style="text-align: left; white-space: nowrap; font-weight: normal; padding: 0.1em 0.25em" | For DF Version
+| style="padding: 0.1em 0.25em" | {{{df version|??}}}
+<includeonly>|-
+| {{#ifeq:{{{df version|}}}|{{Current/version}}||colspan="2" style="text-align:center; background:rgb(204,0,0)"}}|{{#ifeq:{{{df version|}}}|{{Current/version}}||'''Out of date for current version'''}}
+</includeonly>|-
+! colspan="3" style="border-top: 1px solid #aaa; border-bottom: 1px solid #aaa; background: #eee; padding: 0.1em 0.25em" | [{{{download|}}} Download]
+
+|}<noinclude>
+Usage:
+<pre><nowiki>
+{{Modification
+| name        = Mod Name
+| version     = 1.0
+| last update = 01/23/2010
+| df version  = 0.28.181.40d
+| download    = http://www.linktodownload.com
+}}
+</nowiki></pre>
+{{Modification
+| name        = Mod Name
+| version     = 1.0
+| last update = 01/23/2010
+| df version  = 0.28.181.40d
+| download    = http://www.linktodownload.com
+}}
+[[Category:Templates]]</noinclude>

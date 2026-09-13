@@ -1,0 +1,107 @@
+<noinclude>
+{{multi-tile tree table head}}
+</noinclude>
+|-
+|style="background:black;text-align:center;"|{{tile|{{{symbol|?}}}|{{{color|7:0:1}}}}}
+| style="text-align:center;"|{{{sapling|}}}{{{graphic|<span style="color:#999;">None</span>}}}
+|[[{{{name|}}}|{{{alt|{{{name|}}}}}}]]<sup>{{{super|}}}</sup>
+|{{{decid|No}}}
+|
+{| align="center" width="100%"
+|{{BiomeColor|{{{biome|}}}}}{{#if:{{{biome2|}}}|<br />{{BiomeColor|{{{biome2|}}}}}}}{{#if:{{{biome3|}}}|<br />{{BiomeColor|{{{biome3|}}}}}}}{{#if:{{{biome4|}}}|<br />{{BiomeColor|{{{biome4|}}}}}}}{{#if:{{{biome5|}}}|<br />{{BiomeColor|{{{biome5|}}}}}}}{{#if:{{{biome6|}}}|<br />{{BiomeColor|{{{biome6|}}}}}}}{{#if:{{{biome7|}}}|<br />{{BiomeColor|{{{biome7|}}}}}}}{{#if:{{{biome8|}}}|<br />{{BiomeColor|{{{biome8|}}}}}}}{{#if:{{{biome9|}}}|<br />{{BiomeColor|{{{biome9|}}}}}}}
+|-
+|{{#switch:{{{dry}}}|yes|y={{wetdry||dry}}|no|n={{wetdry|wet|}}|both|b={{wetdry|wet|dry}}|{{wetdry||}}}}
+|}
+|{{aligncolor|{{{align|All}}}}}
+|{{{tile1|{{tile|O|6:0}}{{tile|═|6:0}}{{tile|⌂|6:0}} trunk<br />{{tile|─|6:0}} thick branches<br />{{tile|¼|2:0}} branches<br />{{tile|;|2:0}} twigs<br />{{tile|¼|6:0}} roots}}}{{#if:{{{tile2|}}}|<br />{{{tile2|}}}|}}{{#if:{{{tile3|}}}|<br />{{{tile3|}}}|}}{{#if:{{{tile4|}}}|<br />{{{tile4|}}}|}}{{#if:{{{tile5|}}}|<br />{{{tile5|}}}|}}{{#if:{{{tile6|}}}|<br />{{{tile6|}}}|}}{{#if:{{{tile7|}}}|<br />{{{tile7|}}}|}}{{#if:{{{tile8|}}}|<br />{{{tile8|}}}|}}{{#if:{{{tile9|}}}|<br />{{{tile9|}}}|}}
+|{{{dense|—}}}
+|{{#if:{{{drink|}}}||data-sort-value="—"}}|{{{drink|''None''}}}
+|{{#if:{{{drink|}}}|{{{drinkv|10}}}☼|—}}
+|style="background:{{#switch:{{{eat|n}}}|y=rgb(144, 255, 144)|n=rgb(255, 144, 144)|#default=rgb(238, 220, 130)}}"|{{#switch:{{{eat|n}}}|y=Yes|n=No|p=Pr<sup>3</sup>|#default={{{eat|}}}}}
+|style="background:{{#switch:{{{cook|n}}}|y=rgb(144, 255, 144)|n=rgb(255, 144, 144)|#default=rgb(238, 220, 130)}};"|{{#switch:{{{cook|n}}}|y=Yes|n=No|p=Pr<sup>3</sup>|{{{cook|}}}}}
+|{{{grow1|''None''}}}{{#if:{{{grow2|}}}|<br />{{{grow2|}}}|}}{{#if:{{{grow3|}}}|<br />{{{grow3|}}}|}}{{#if:{{{grow4|}}}|<br />{{{grow4|}}}|}}{{#if:{{{grow5|}}}|<br />{{{grow5|}}}|}}{{#if:{{{grow6|}}}|<br />{{{grow6|}}}|}}{{#if:{{{grow7|}}}|<br />{{{grow7|}}}|}}{{#if:{{{grow8|}}}|<br />{{{grow8|}}}|}}{{#if:{{{grow9|}}}|<br />{{{grow9|}}}|}}<noinclude>
+|}
+
+==Use==
+<pre>
+name=Tree article link
+alt=Alternate label of link
+super=superscript next to name (optional)
+color=tile color
+decid=Yes/No (not included=No)
+biome=Biome Name (see Biome tokens)
+biome2=,biome3=,biome4=,...,biome9= (for multiple biomes)
+dry=wet/dry (y=dry, n=wet, b=both, not included=none)
+align=Good/Evil/Savage (not included if All)
+tile1={{tile||0:0}} tree part (if this is not included, it will display the default tree parts as shown above)
+tile2=,tile3=,tile4,...,tile9=
+dense=wood density
+drink=Tree fruit alcohol (optional)
+drinkv=drink value×5 (optional)
+eat=eat raw (y=yes, not included=no)
+cook=eat cooked (y=yes, p=processed, not included=no)
+grow1={{tile||0:0:0}} growth 1
+grow2=,grow3,grow4,...grow9=
+graphic=trunk graphic
+sapling=sapling graphic
+
+Example:
+
+{{multi-tile tree table head}}
+{{multi-tile tree table row|name=Oak|super=5|symbol=♠|color=2:0|decid=Yes|biome=Any Temperate Broadleaf|dry=y|dense=0.700
+  |eat=y|cook=y
+  |grow1={{tile|♠|2:0}}{{tile|♠|6:1}}{{tile|♠|4:1}}{{tile|♠|4:0}} leaf
+  |grow2={{tile|♣|2:0}} flower
+  |grow3={{tile|•|6:0}} acorn
+  }}
+{{multi-tile tree table row|name=Tower-cap|symbol=♠|color=7:1|decid=No|biome=Wet Cavern/Layers 1-2|dry=b|dense=0.600
+  |tile1={{tile|O|7:1}} trunk
+  |tile2={{tile|O|7:1}}{{tile|║|7:1}}{{tile|▲|7:1}}{{tile|∙|7:1}} cap
+  |eat=n|cook=n
+  }}
+{{multi-tile tree table row|name=Glumprong|symbol=┤|color=5:0|decid=No|biome=Not Freezing|dry=y|align=Evil|dense=1.200
+  |tile1={{tile|O|5:0}}{{tile|═|5:0}}{{tile|⌂|5:0}} trunk
+  |tile2={{tile|¼|5:0}} roots
+  |eat=n|cook=n
+  }}
+{{multi-tile tree table row|name=Banana|alt=Plantain|super=3|symbol=Γ|color=2:0|decid=No|biome=Any Tropical|dry=y|dense=0.600
+  |tile1={{tile|O|2:0}}{{tile|⌂|2:0}} trunk
+  |tile2={{tile|¼|6:0}} roots
+  |drink=Banana beer|drinkv=10|eat=y|cook=y
+  |grow1={{tile|♠|2:0}} leaf
+  |grow2={{tile|♣|4:0}} flower
+  |grow3={{tile|%|6:1}} fruit
+  }}
+|}
+
+↓</pre>
+
+{{multi-tile tree table head}}
+{{multi-tile tree table row|name=Oak|super=5|symbol=♠|color=2:0|decid=Yes|biome=Any Temperate Broadleaf|dry=y|dense=0.700
+  |eat=y|cook=y
+  |grow1={{tile|♠|2:0}}{{tile|♠|6:1}}{{tile|♠|4:1}}{{tile|♠|4:0}} leaf
+  |grow2={{tile|♣|2:0}} flower
+  |grow3={{tile|•|6:0}} acorn
+  }}
+{{multi-tile tree table row|name=Tower-cap|symbol=♠|color=7:1|decid=No|biome=Subterranean Water/Layers 1-2|dry=b|dense=0.600
+  |tile1={{tile|O|7:1}} trunk
+  |tile2={{tile|O|7:1}}{{tile|║|7:1}}{{tile|▲|7:1}}{{tile|∙|7:1}} cap
+  |eat=n|cook=n
+  }}
+{{multi-tile tree table row|name=Glumprong|symbol=┤|color=5:0|decid=No|biome=Not Freezing|dry=y|align=Evil|dense=1.200
+  |tile1={{tile|O|5:0}}{{tile|═|5:0}}{{tile|⌂|5:0}} trunk
+  |tile2={{tile|¼|5:0}} roots
+  |eat=n|cook=n
+  }}
+{{multi-tile tree table row|name=Banana|alt=Plantain|super=3|symbol=Γ|color=2:0|decid=No|biome=Any Tropical|dry=y|dense=0.600
+  |tile1={{tile|O|2:0}}{{tile|⌂|2:0}} trunk
+  |tile2={{tile|¼|6:0}} roots
+  |drink=Banana beer|drinkv=10|eat=y|cook=y
+  |grow1={{tile|♠|2:0}} leaf
+  |grow2={{tile|♣|4:0}} flower
+  |grow3={{tile|%|6:1}} fruit
+  }}
+|}
+
+==See also==
+*[[:Template:Multi-tile tree table head]]</noinclude>
