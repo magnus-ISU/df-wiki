@@ -1,0 +1,12 @@
+{{release notes}}
+
+: This fixes some large and small problems with yesterday's release.  Save corruption was quite possible, so upgrading is important!  You can still bring your old saves from 0.40.03+ into this new version.
+:&mdash;Toady One, December 19, 2014
+
+== Major bug fixes ==
+* Made hauling jobs that chain to other hauling jobs respect job postings, instead of causing crashes and other horror
+* Fixed stair/ramp removal
+
+== Other bug fixes/tweaks ==
+* Made digging look up/down for continuing jobs
+* Fixed problem with harvest jobs stealing dwarves from each other

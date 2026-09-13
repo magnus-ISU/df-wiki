@@ -1,0 +1,32 @@
+{{release notes}}
+
+: Here is the first release for September! As usual, a few bugs like sleep screwups, cowardly companions and wandering children might persist for a while into old saves until the system clears itself out. 
+:&mdash;Toady One, September 3, 2014
+
+== Major bug fixes ==
+* Accounted for site populations properly when moving around (stopping doubling in lairs/player forts)
+* Removed the old animal people camp items, as they cause duplication errors and will work with a better overall army framework later
+* Handle some more instances where led creatures could drag their leader into conflicts (a dwarf caging a goblin, for example)
+* Made historical figures react properly to historical undead
+* Made chained animal checks respect z coordinate properly
+* Gave your companions a bit of a courage boost in terms of intervening in conflicts
+* Fixed some problem with resource stockpiles causing shop types to revert on insurrection
+
+== Other bug fixes/tweaks ==
+* Made dwarf children not seek their mothers when idle, especially in violation of area restrictions
+* Made dwarves prefer claimable rooms to dormitory master beds
+* Stopped uninjured dwarves from sleeping in beds in active hospital zones
+* Tried to make items in markets/homes match races more closely (cannot be completed until later -- right now, resources are based on original site owners)
+* Stopped brief necro master-apprentice relationships from forming in towns
+* Stopped other necro tower townish behavior like fake grazing disputes
+* Made sleeping on the floor respect burrow assignments
+* Made strength/agility/tissue layer effects work for gaits (Quietust)
+* Stopped overuse of plant structure tag causing people to say they preferred to eat trees
+* Fixed other issues causing dwarves to be able to prefer the wrong (generated) materials
+* Stopped adventure skill list from overflowing on status screen
+* Discounted rust when listing relevant skill for squad candidate
+* Stopped evaporation of 1/7 liquid when over 7/7 liquid of the same kind
+* Made flying adventurer able to fly over ramps without using them
+* Fixed missing bindings for animal training keys (Quietust)
+* Adjusted firing rate for projectiles again to make them more like the older versions
+* Made adamantine clothing available in arena

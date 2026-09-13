@@ -1,0 +1,38 @@
+{{release notes}}
+
+: Here's another release which cleans up various outstanding issues.
+:&mdash;Toady One, December 12, 2015
+
+== Major bug fixes ==
+* Fixed world generation crash from wandering artist writing a book
+* Fixed crash from retiring locations in certain circumstances
+* Fixed crash associated to adventurer sleeping in inn rooms
+* Fixed issue with militia not picking up armor
+* Fixed error causing some instruments in chests to not be played
+* Fixed error causing instruments and drink service to fail in dining rooms
+* Fixed error causing scribes not to use some blank writing materials
+* Fixed error causing overall scribe operation to be stalled by a bad target codex
+* Made training marksdwarves want both combat and training ammunition and fetch stacks appropriately (thanks to ag for analyzing this one)
+* Fixed issue with starting instrument causing it to duplicate
+* Fixed one way for horses to become playable (not sure about dogs/donkeys)
+* Stopped dead/caged commanders from stopping invaders from moving (thanks to vjek for preparing a very useful and funny save)
+* Stopped cats from dying of alcohol poisoning after walking over damp tavern floors and cleaning themselves (reduced effect)
+* Put new caps in place on animals in towns during world generation
+* Stopped bookbinders and string makers from trying to use loose spider webs (thanks to Knight Otu for reminded me about raw tag)
+
+== Other bug fixes/tweaks ==
+* Made the add new task list remember where it was again
+* Tweaked how distance is calculated for certain jobs
+* Stopped certain ramp/channel digging jobs from temporarily disturbing pathing and distance calculations (thanks to Loci for reproducible procedure)
+* Made edible seed-type growths gatherable
+* Stopped wander history spam for adventurer
+* Stopped nobles from other civilizations from making mandates and demands
+* Stopped weapon slayer list from giving away fort vampires
+* Handled some basic shaped conflicts with clothing vs. armor
+* Changed how owned objects are managed with clothing -- might be some trinket drops in old saves
+* Allowed goblets on embark
+* Made modded wood furnace reactions list properly
+* Fixed typo with untitled written content
+* Fixed typo in haunting conversation
+* Fixed several typos in personality/value strings
+* Fixed instrument values in old saves

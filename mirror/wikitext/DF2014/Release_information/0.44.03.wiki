@@ -1,0 +1,22 @@
+{{release notes}}
+
+: Here are some bug fixes to close out the year. Notably, visitors shouldn't arrive in such large numbers so early on, and fewer of them should overstay their welcome (in old saves, people already in transit will arrive, but it should taper off.) Adventure mode commanders etc. should recognize more of your accomplishments properly and not talk about unknown creatures so much, but identities have introduced some non-trivial issues there that we'll have to build through more carefully, and there'll be some ongoing silliness. 
+:&mdash;Toady One, December 25, 2017
+
+== Major bug fixes ==
+* Fixed crash from guide agreements
+* Fixed crash related to off-loaded items coming into play
+* Made agents and roaming questers respect visitor cap
+* Fixed problem causing agents not to check fort for tavern
+* Made fort-visiting questers leave properly
+* Made fort claim certain looted artifacts properly instead of leaving them on edge of map
+* Fixed several cases of "unknown creature" utterances
+* Fixed problem with neighbors not recognizing you, including commander and other quest givers
+* Stopped undisplayed items from lingering on display furniture
+* Made dwarven off-site squads stranded during preparation return to the fort
+* Made 32-bit Mac version recognize new keys
+
+== Other bug fixes/tweaks ==
+* Fixed broken plant indicator on food stockpile
+* Made opinion monologues on performances etc. show text properly
+* Made log show completed kill orders properly

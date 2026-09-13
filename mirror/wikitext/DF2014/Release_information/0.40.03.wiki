@@ -1,0 +1,18 @@
+{{release notes}}
+
+Version 0.40.03 broke save game compatibility with previous versions in the 0.40 series.
+
+:Here's the next one! Many more crash issues fixed. Mystery babies and large city walls had a corrupting effect that was not possible to manage, so saves are not compatible yet again. I'll try to keep saves together as we move forward, but there aren't any guarantees, especially this early on. If things have settled down on the stability front, I can finally move on to the optimizations and other issues. We'll see what happens!
+:&mdash;Toady One, July 13, 2014
+
+== Major bug fixes ==
+*Fixed relationship screen crash from certain historial/old-player-fort migrants and adventurer migrants
+*Fixed adv retirement cloning
+*Fixed crash when game tries to realize certain low population sites
+*Fixed crash/corruption problem from large city walls
+*Fixed crash when asking about site trade partners
+*Fixed problem causing travelers originating from realized forts/sewers/dungeons to go out of map bounds (caused crashes)
+*Stopped the babies of the world from appearing in the unit list (and associated minimap crash)
+
+== Other bug fixes/tweaks ==
+*Made farm plant list refresh properly with season selection

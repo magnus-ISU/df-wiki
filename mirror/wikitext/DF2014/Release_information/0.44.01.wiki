@@ -1,0 +1,41 @@
+{{release notes}}
+
+: This is the artifact release, featuring the ability to send your dwarves off to cause trouble in the world, improved kobold sites, cover identities, artifact questers, and a bit of artifact diplomacy. 
+:&mdash;Toady One, November 22, 2017
+
+== New stuff ==
+* Ability to send out squads to raid sites, rescuing prisoners and recovering artifacts
+* Display cases and pedestals, museum zones, both in forts and other sites
+* Can view the world map w/ rumors from fort mode
+* Artifacts created during worldgen: dwarf moods, named heroic objects, holy relics, heirlooms
+* New artifact events in play and worldgen: questers seek artifacts and ask for or steal them, invaders demand artifacts
+* New historical events associated to the creation of artifacts (used in fort and worldgen)
+* Agents used by civilizations to gather information, can assume cover identities
+* Improved kobold site maps
+* Goblin site denizens demand an identity instead of immediately attacking every stranger
+* More modding control over pets and other animals
+* Adventurer can assume a cover identity at will
+* Adventurer can name their possessions
+* New adventurer reputations related to artifacts
+* New religious activity: monks, pilgrims and prophets
+* Museums and other room types can be added to fort locations like taverns and libraries
+* Various additional data in the XML export
+
+== Major bug fixes ==
+* Fixed weapon trap crash vs. item breakage
+* Fixed bug preventing monster slayers from visiting those forts with monsters to slay
+* Made animated skulls, hair and other bits easier to pulp
+* Made idle and vermin-hunting dwarves come down from trees more successfully
+* Made thirst/hunger and being pushed out of the way less likely to terminate dances
+
+== Other bug fixes/tweaks ==
+* Alphabetized broad stock screen categories
+* Fixed problem with historical bodies not respecting wounds/processing
+* Fixed bug causing religions to worship too many gods, with duplicates
+* Made simple burrow beasts start in caves as possible
+* Fixed broken historical collection linkage with beast attacks during festivals
+* Fixed one instance of broken animal person greetings
+* Stopped natural animals from w.g. rampaging through sites owned by entities at peace with wildlife
+* Took age into account for w.g. fights vs. body size (e.g. proper dragon size)
+* Stopped people from being enough to satisfy a need to see great beasts
+* Made visitors less nervous about going to neutral locations

@@ -1,0 +1,16 @@
+{{release notes}}
+
+:Just some cleaning before we embark on the villain changes. There's a new offloading popup that can come up on the season change if you have enough activity in your world; it can take a little time in larger worlds, but that's all time that is no longer intermittent lag and it's also less time overall due to reduced redundancies. If you have an autosave, the offload will be incorporated into that, so autosaves might seem slightly longer (if so, you are also getting the same lag reduction.)
+:&mdash;[[Main:Toady One|Toady One]], June 23, 2018
+
+== Major bug fixes ==
+* Fixed crash from corrupted units
+* Made baron elevate to count properly
+* Removed intermittent lag from off-site conceptions and births (added seasonal unit offloading)
+* Made squad orders respect successful site conquest (so new members don't try to reconquer)
+
+== Other bug fixes/tweaks ==
+* Fixed broken display for multiple adventurer agreements
+* Show proper mission text for messengers instead of No Job
+* Made tantruming dwarves cancel activities
+* Controlled how market links are formed somewhat

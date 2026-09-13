@@ -1,0 +1,699 @@
+{{Quality|Masterwork|17:56, 5 July 2018 (UTC)}}
+{{av}}
+:''For installation instructions, see [[Installation]].''
+:''This is a quickstart guide for [[dwarf fortress mode]] for those who have never played before and quickly want to jump in head-first.'' ''If you are looking to learn adventure mode instead, see the [[Adventure mode quick start]] guide.''
+:''Also see [[Tutorials]] for more detailed tutorials that people have submitted.''
+{{TipBox2|float=right|Before you get started...|Always remember that '''losing is [[fun]]!''' Be prepared to lose a few fortresses before you get all the way through this guide &ndash; it can be easy to accidentally kill the entire fortress while learning. But remember: losing means that next time, ''[[#Situational Awareness|you'll remember how you lost]].'' In a big way, ''Dwarf Fortress'' follows the principle of learning from one's mistakes.}}
+
+So, you want to play '''Dwarf Fortress''', but you have no idea what to do. That's understandable; in ''Dwarf Fortress'' you can really do anything you like. It is a huge, complex, and totally open-ended game. But in order to do anything, first you need a sustainable fortress. It turns out that this is not as hard as you might think.
+
+As this article doesn't always contain the exact key sequences needed to do everything described, you will likely need to refer to the [[Dwarf fortress mode|Fortress Mode Reference Guide]] and the rest of the wiki while reading this.
+
+[[File:FlowchartDF pre v50.png|thumb|446px|right|[[Main:From Caravan to Happy Dwarves|From Caravan to Happy Dwarves]] - This is a flowchart showing approximately what sequence of actions players usually take when starting up a new fort. Feel free to ignore it if you want. It's not necessary to refer to this to understand the rest of the guide, but by the time you finish the guide it will probably all make sense.]]
+
+__TOC__
+
+= Common UI Concepts =
+
+{{TipBox2|float=right|titlebg=#0a0|Keeping Up|While the guide contains many links, you may still need to look something up. Refer to the [[Dwarf fortress mode|Fortress Mode Reference Guide]] or use the wiki [[Special:Search|search]] function. Also, don't hesitate to [[Main:Troubleshooting|ask for help]] if you can't find answers on the wiki.}}
+
+Contrary to what you might be used to, the ''Dwarf Fortress'' interface uses a combination of key presses, instead of clicking through menus with the mouse, so, for example, instead of clicking on the Build menu, then on the Workshop submenu, and finally on the specific workshop, you press {{k|b}}-{{k|w}}-{{k|c}}. All the keys you can use in a menu are shown in green somewhere on the screen. (If you see any displayed in red, those are added through [[Utility:DFHack|DFHack]].)
+
+This is just the Quickstart Guide, so we skip lots of details on the UI. If you're looking for more UI help as you get deeper into your first fortress, you may also want to read this section in the [[Dwarf_fortress_mode#Gameplay_user_interface|Fortress Mode Guide]].
+{{KeyConventions}}
+
+== Options menu ==
+{{main|Dwarf_fortress_mode#Options_screen|l1=Options screen}}
+
+Most basic game-related tasks (saving, keybindings, sound, etc.) are performed through the options menu, which can be reached with {{k|Esc}} from the main screen.
+
+To save and quit back to the main menu, select {{DFtext|Save Game}}. Note that there is no "save and continue" option, but saves can be [[saved game folder|backed up and reloaded]]. (If you have DFHack, you can use the ''quicksave'' command.)
+
+{{tc|#d00|Unless you know what you are doing, do not select either}} {{DFtext|Retire the Fortress (for the time being)}} or {{DFtext|Abandon the Fortress to Ruin}}! These will essentially cause you to lose your save.
+
+== Init Files ==
+Some items related to gameplay (graphics / tiles used, features enabled, population cap, etc) are not available from in-game options screens, but instead are changed by editing certain text files located in the game's data/ folder.  Most of these can be safely ignored for first-time players.  However, you may wish to make a couple changes before you start:
+* In [[init.txt]], change screen size, or set up [[tilesets]] or alternate font instead of the default ASCII text interface.  (Note that the rest of this guide uses the default font settings.)
+* In [[d_init.txt]], enable [[Autosave]] and/or change the save interval.  Dwarf Fortress does crash occasionally, which can mean hours of lost work.  Auto-save checkpoints your fort periodically (season, year, etc) so that in case of computer disaster things can be restored from somewhat recently.
+
+=World Generation=
+
+First, [[World generation|generate a new world]]. ''Dwarf Fortress'' worlds are always procedurally randomly generated - there is no "default" or "standard" world. Luckily, the basic version of this process is simple, and with these suggested settings won't take too long. Wait until the game shows that the world has been generated, in this case at year 125, since stopping history too soon can limit material availability for embark and trade.
+
+
+{{TipBox2|titlebg=#00a|Starting World|
+For your first game, [[World generation|generate a new world]] using the {{DFtext|Create New World!}} option in the main menu with the following options:
+
+* {{DFtext|World Size}} is {{DFtext|Medium|3:1}}
+
+* {{DFtext|History}} is {{DFtext|Short|3:1}}
+
+* {{DFtext|Number of Civilizations}} is {{DFtext|Medium|3:1}}
+
+* {{DFtext|Number of Sites}} is {{DFtext|Medium|3:1}}
+
+* {{DFtext|Number of Beasts}} is {{DFtext|Low|3:1}}
+
+* {{DFtext|Natural Savagery}} is {{DFtext|Very Low|3:1}}
+
+* {{DFtext|Mineral Occurrence}} is {{DFtext|Everywhere|3:1}}
+
+Then hit {{k|y}} to generate the world. Note that you don't need to understand what's happening during world generation at this point, you can inspect the world during embark. At the end of world creation, hit {{k|Enter}} to Accept your newly created world.
+}}
+
+= Embark =
+{{main|Embark}}
+
+Embarking is the process of choosing a site, outfitting your initial dwarves, and sending them on their way. Select {{DFtext|Start Playing}} from the main menu, then {{DFtext|Dwarf Fortress}}. The game will load and update the world, then show the '''Choose Fortress Location''' screen. There are three maps: Local, Region, and World.
+* '''World''' shows the whole world.
+* '''Region''' shows all of the region tiles in the part of the world indicated by the cursor on the world map.
+* '''Local''' shows all of the local embark tiles in the region tile indicated by the cursor on the region map.
+In the local map area is the highlighted embark area that you can move around with {{K|u}} {{K|m}} {{K|k}} {{K|h}} and resize with {{K|U}} {{K|M}} {{K|K}} {{K|H}}. This highlighted square will be your play area after you embark; you cannot directly act or see details [[Civilization_and_World_Info|outside of this area]] during your game. Use {{k|↑}} {{k|↓}} {{k|←}} {{k|→}} to move the region and world cursors around. Hold down {{K|Shift}} while doing this to move more rapidly.
+
+== Choosing a Good Site ==
+
+Choosing a good embark site is crucial for beginners. Highly skilled players can run a fortress on an evil glacier, but for now, stick to friendly environments. Look for features in an embark site that will make your first fort easier to manage. 
+
+{{ambox
+|type=type
+|text=The highlighted embark area may contain '''multiple biomes''', and the game will display {{DFtext|F1F2F3|2:1}}&#8288;{{DFtext|:&nbsp;View&nbsp;Biome|7:1}} near the bottom right. It is '''very important''' to press {{K|F1}}, {{K|F2}}, etc, to check all of them (Macs and laptops may require {{k|fn}}-{{k|F1}}). Each may have significantly different features such as an aquifer or evil biome '''not initially shown''' in the info due to not being in the main biome (the one visible with {{k|F1}}).
+}}
+
+
+{{TipBox2|titlebg=#00a|Starting Site| 
+[[File:Quickstart-good-location.png|thumb|300px|right|An example of a good starting site.]]
+For your first game, find a site with the following properties:
+*'''NO [[Aquifer]]''' (or at least not a heavy or varied aquifer. This is '''''very''''' important!)
+*'''Trees:''' Woodland or Heavily Forested (or, at the very least, sparsely forested)
+*'''Surroundings:''' Serene, calm, or at least '''not''' any evil or savage biome.
+*A '''River'''
+The following are also good to have, but focus on getting a decent site, not a perfect one. 
+*'''Temperature:''' Warm
+*'''Clay or Soil''' makes farming easier when starting out
+*'''Shallow Metals''' (That's Metals, plural, not Metal. You want more than one.)
+*'''Deep Metal(s)''' 
+*'''Flux Stone''' For your steel industry
+*Use {{k|Tab}} to check your neighbors and avoid places with '''towers''', '''goblins''', or other groups at war with you.
+See '''[[/Starting site/]]''' for more info on why these characteristics are important.}}
+
+[[File:Quickstart-finder.png|thumb|right|Initial finder criteria]]
+While finding a site is not as simple as world generation, the {{K|f}}ind tool can help quite a bit. Use {{k|↑}} {{k|↓}} {{k|←}} {{k|→}} to change the criteria as shown to the right, then press {{k|Enter}} to start the search.
+[[File:Quickstart-finder-partial.png|thumb|right|Finder partial match missing Good surroundings]]
+If the search completes and the world map is covered with red flashing {{DFtext|X|4:1}}s, that means that it couldn't find any area matching your criteria. The criteria list shows which criteria it couldn't meet in red for the closest match — try changing or removing the red criteria and searching again. Or, you can put only some criteria into the tool (at the very least, No Heavy/Varied Aquifer) and add more to narrow the search. Note that "Calm" is classified as Neutral with Low Savagery (see [[Surroundings#Combinations_of_surroundings|the chart here]] for why) and that Neutral is Medium Evil on the finder criteria, while Good is Low Evil.)
+
+Once the find tool has finished searching with matches found, press {{K|ESC}} to look at the results. Any region in which it found a match will be indicated by a green flashing {{DFtext|X|2:1}} on the region and world maps. Since the find tool '''only''' indicates '''regions''' containing matches, you will need to check the local map manually (with {{k|u}} {{k|m}} {{k|k}} {{k|h}}) until you find the most suitable site. Don't forget that there can be multiple biomes to check with {{K|F1}}, {{K|F2}}, etc.
+
+Additionally, you can resize your embark area using {{k|U}} {{k|M}} {{k|K}} {{k|H}}. A 4x4 embark (the default) is usually reasonable, but you may want to change the size to avoid an undesirable biome or match your finder criteria.
+
+If you are unable to find a site that you are willing to embark on, you could always create a new world. Otherwise, once you have the right area highlighted on the local map, press {{K|e}} to move onto the next step.
+
+== Skills and Equipment ==
+{{TipBox2|float=right|titlebg=#0a0|Optional: Preparing Carefully|If, at this point, you'd like to get into all of the details of picking individual skills and equipment for your expedition, select {{DFtext|Prepare for the journey carefully}} and see '''[[Quickstart_guide/Preparing_carefully|Preparing carefully]]''' for instructions. '''This is completely optional'''.
+And preparing carefully makes little difference in the long run, especially without experience as to what to change.}}
+
+Now the '''Prepare for the Journey''' screen should appear. You will be given the choice to either:
+*{{DFtext|Play Now!}}
+*{{DFtext|Prepare for the journey carefully}}.
+
+Selecting {{DFtext|Play Now!}} will start you out with a default set of equipment that is reasonably safe, allowing you to skip having to set up your skills and equipment. If you'd like to get going now, just select that option.
+{{clear}}
+
+=A Minimal Fortress=
+[[File:Quickstart-map-starting.png|thumb|right|Starting out. In this example, the dwarves will be digging out an entrance tunnel in the sandy cliff on the right. (You can use {{K|Tab}} to show or hide the overview map.)]]
+
+At this point, you have embarked, and your dwarves have arrived at their destination. You will see your dwarves clustered around their wagonful of supplies, somewhere near the center of your map. '''Immediately hit {{K|Space}} to pause the game''' unless it is already paused.
+
+==Surveying the Area==
+'''Do not unpause the game just yet.''' Take a look around. Use the {{K|k}} command and the arrow keys (remember that {{k|Shift}}+arrow keys will move faster). Look up and down a few [[z-level]]s with {{K|&lt;}} and {{K|&gt;}} ({{k-|Shift|,}} and {{k-|Shift|.}} on many keyboards). The mousewheel will zoom the map in and out. Place the cursor on various tiles to familiarize yourself with what the symbols mean.  If you get lost, you can press {{K|F1}} (or {{k-|Fn|F1}} on some systems) to return to the wagon.  (You can define more [[hotkeys]] later, to jump quickly to other sites of interest.) Notice the terrain features, the vegetation, and any minerals visible. If you chose a site with flowing water, where is it? What about pools of water? The more carefully you examine your site before breaking ground, the better off you will be.
+
+Remember that this is more of a simulation than a game.  It is not "play balanced", and you can very easily find yourself in impossible situations. That is all part of the [[fun]], because even when you lose, you create an interesting story. Your wagon serves as the initial meeting area for your dwarves. Since you should have started in a non-freezing, calm (low savagery), non-evil biome, you shouldn't face any immediate danger, but if for some reason the area around your wagon proves to be unsafe, immediately designate another meeting zone using {{K|i}} (see [[#Temporary Meeting Area|Temporary Meeting Area]] below).
+
+==Controlling Your Dwarves==
+The first thing to keep in mind is that, for the most part, you can't directly control your dwarves the way you control characters in a typical fantasy RPG. Instead, you '''designate''' things that need to be done and then dwarves with the appropriate labor assignments will decide what to do. 
+
+Some tasks receive a higher priority. For example, if a dwarf needs to eat, then he will go eat, and only get around to digging a tunnel once he is done eating. It is also possible to designate things that no dwarf is able to do. For example, if you designate an area to mine, but no dwarf has mining as one of his allowed labors, or no dwarf has a [[pick]], then the mining will never get done, and the game will not always advise you of why.
+
+So, what you are doing throughout the game is essentially giving your dwarves a detailed group-wide to-do list, but it's up to them to figure out which one of them will execute any given task if the task is even possible. Often many of the details of how a task is performed (such as exactly which rock will be used to make crafts) are left up to them (though you ''can'' specify the details of tasks, such as the material or design, in the {{k|d}}etails menus in workshops).
+
+===''Stout Labor''===
+{{TipBox2|float=right|titlebg=#0a0|Easier menus on a laptop|
+If you're on a laptop (or using a restricted keyboard), you may notice that using {{k|+}} to scroll upward on some menus is inconvenient, since it requires the {{k|Shift}} key.
+
+Fortunately, this is easy to change to {{k|1==}}:
+# Press {{k|Esc}} to access the [[#Options menu|options menu]] and select {{DFtext|Key Bindings}}
+# Select {{DFtext|General}}, scroll down to {{DFtext|Move secondary selector down}} (using the arrow keys), move right, and select {{DFtext|Add binding}}
+# Press {{k|1==}} and select either option that appears.
+# Press {{k|Esc}} and select {{DFtext|Save and exit}}
+
+See [[Key bindings]] for more info.
+}}
+{{TipBox2|float=right|titlebg=#aa0|Utilities|2=
+You may have noticed that the UI for managing dwarves is a bit difficult to use. There are a few utilities available for this purpose (for Windows, Mac OS X, and most Linux systems): 
+* '''[[Utilities#Dwarf_Therapist|Dwarf Therapist]]''' can make labor management considerably easier, especially when you're dealing with twenty times the number of dwarves you have now. It can group and sort dwarves by multiple attributes and display their preferences, mood, and more.
+* '''[[Utility:DFHack|DFHack]]''' includes "Dwarf Manipulator", a UI for managing labors. It has fewer features than Dwarf Therapist, but displays much of the same information and is adequate for normal use. In addition, it is accessible from within DF via {{k-|u|l}}, eliminating the need to constantly switch between applications.
+}}
+
+'''Labors''' are how you control what types of tasks a dwarf will do. For example, if the [[Fishing]] labor is enabled for a dwarf, that dwarf is allowed to engage in fishing. When dwarves are idle, it could be because you haven't given them anything to do, or it could be because none of the idle dwarves have been told that they're allowed to do the types of tasks you've designated. For example, if you designate an area to mine, but none of the dwarves have the mining labor enabled, they will all just sit around ignoring your mining designation, thinking that it isn't their job. Dwarves will automatically have some labors enabled if they start out with skill in those labors, and some labors (such as hauling and cleaning) are enabled for all dwarves by default. This is why you didn't need to enable any labors on dwarves to get them to haul and mine, but later you may need a labor that no dwarf is currently capable of. Look over your dwarves' assigned [[labor]]s: Press {{K|v}} (View Units) then place the cursor on a dwarf. Now, press {{K|p}}-{{K|l}} for "preferences: labors". You will see a list of labor categories that you can navigate using {{K|-}} and {{K|+}}. You can enter each category with {{k|Enter}} (except for mining, which is a single labor), toggle each labor off and on with {{K|Enter}}, and get back out with {{K|Esc}}. After exiting the View Units menu, you can use {{K|u}} (the units screen) to help you locate dwarves. Hit {{K|u}}, select a dwarf, hit {{K|z}} for "zoom to creature" and you'll automatically be placed in view mode on that dwarf. (Then use {{K|p}}-{{K|l}} to get to the labor configuration menu if necessary.)
+
+Even if no dwarves have the corresponding skills, ensure the following labors are set as specified:
+
+{| class="wikitable"
+! Category
+! Labor
+! Dwarves Assigned
+|-
+| Woodworking || [[wood cutter|Wood Cutting]] || 1 or more
+|-
+| Stoneworking || [[engraver|Stone Detailing]] || 1 or more
+|-
+| Hunting/Related || [[ambusher|Hunting]] || 0 (disabled for all)
+|-
+| Farming/Related || [[wood burner|Wood Burning]] || 1 or more
+|-
+| Farming/Related || [[herbalist|Plant Gathering]] || 1 or more
+|-
+| Fishing/Related || [[fisherdwarf|Fishing]] || 0 (disabled for all)
+|-
+| Metalsmithing || [[furnace operator|Furnace Operating]] || 1 or more
+|-
+| Metalsmithing || [[armorsmith|Armoring]] || 1 or more
+|-
+| Metalsmithing || [[weaponsmith|Weaponsmithing]] || 1 or more
+|-
+| Metalsmithing || [[blacksmith|Blacksmithing]] || 1 or more
+|-
+| Metalsmithing || [[metal crafter|Metalcrafting]] || 1 or more
+|-
+| Jewelry || [[gem cutter|Gem Cutting]] || 1 or more
+|}
+
+It's important to disable fishing and hunting until you have your initial fort completed &mdash; dwarves with these labors enabled will constantly be outside attempting to perform them. When you're first starting out you don't want dwarves wandering around alone where they can get killed (in addition, they won't be doing anything useful, like hauling). Note that ''any'' unskilled dwarf can perform any labor given the necessary equipment and materials. Dwarves with no skill will simply be slow and produce a smaller quantity of lower-quality goods in a given time period, but they will gain skill points as they do so.
+
+==Strike The Earth!==
+{{TipBox2|titlebg=green|float=right|Getting your dwarves to safety|
+As you now know, you can't control your dwarves directly. So how do you tell them to get inside your newly dug rooms?
+*[[Activity_zone#Meeting_area|Meeting Area]] You can designate a Meeting Area zone inside the new rooms. Press {{k|i}}, then draw the rectangle to create a zone. Afterwards make it a Meeting Area. ''See also the [[zone]] page for more information.''
+*[[Stockpiles]] (see [[Quickstart_guide#Stockpiles|below]]) Stockpiles tell your dwarves where to put things. Create a stockpile for everything, and dwarves will start to haul all your items there.}}
+Decide where you will build your main entrance. Generally, you will want to get all your dwarves and supplies inside a protected area as quickly as possible. The best strategy is to put the entrance near your wagon to speed up the process of hauling all of your supplies inside.
+
+The {{K|d}}esignations menu allows you to select areas to dig. There are multiple methods of digging:
+* '''[[Mining]]''' removes solid, floor-to-ceiling terrain (natural 'walls') on the z-level selected, leaving behind a rock or soil surface (also referred to as a natural floor). This does '''not''' do anything in areas without natural walls (for example, the surface or previously-mined areas).
+* '''[[Channel]]ing''' removes ''natural'' (rock/soil) floors (either created naturally or by mining) and creates a ramp (▲) on the z-level below. Note that you will see a down arrow (▼) on the current z-level, indicating a ramp on the level below. (For best results, ensure that the area below is unrevealed, i.e. black).
+
+To designate an area for digging:
+#Hit {{K|d}} to bring up the [[Designations Menu]].
+#Hit {{K|d}} to mine or {{k|h}} to channel (see above)
+#Place the cursor on one corner of the rectangular area you want to designate and press {{K|Enter}}.
+#Move the cursor to the other corner of the rectangle and press {{K|Enter}}. A rectangle will be highlighted and a miner will start to dig out this area once you exit the menu (with {{K|Esc}}) and unpause the game with {{K|Space}}.
+
+This is basically how all of the designation commands work. Everything has to be designated one rectangle at a time, but rectangles can be many tiles wide. After you press {{K|d}} to designate, make sure it's set to "Standard" in the settings at the bottom, rather than "Marker only." You can set this with {{K|m}}. If it's set to "Marker only", the designation will not be carried out.
+
+[[File:Digging Channeling tiles.PNG|200px|thumb|right|Demonstrating the difference between mining and channeling. Mining creates empty space on the same level where it is designated. Channeling creates empty space in the level below, clearing the floor. The levels are connected by up/down ramps. ]]
+
+{{TipBox2|titlebg=red|float=left|Channeling|
+Note that channeling can be [[fun|dangerous]]. Unless you know what you're doing, you should only ever make a pit one z-level deep. If you dig a pit multiple z-levels deep, only the lowest level will have an upward [[ramp]], which is not enough for dwarves to leave the pit. (Dwarves can [[climb]] out in some circumstances, but this is unreliable.) 
+
+<diagram>
+Pit depth: 1 z-level  2 z-levels  2 z-levels
+Ground[%26]      [#2:1]__[#4:1][%31][#2:1]__       __ __       __ [#4:1][%31][#2:1]_
+             [#6:1][@4:1][%178][%178][#4:1][@][%30][#6:1][@4:1][%178][%178][@#]       [#6:1][@4:1][%178][%178][#4:1][@][%31][#6:1][@4:1][%178][%178][@#]       [#6:1][@4:1][%178][%178][#4:1][@][%31][#6:1][#4:1][@][%30][#6:1][@4:1][%178][@#] 
+             [#6:1][@4:1][%178][%178][%178][%178][%178][@#]       [#6:1][@4:1][%178][%178][#4:1][@][%30][#6:1][@4:1][%178][%178][@#]       [#6:1][@4:1][%178][%178][#4:1][@][%30][#6:1][@4:1][%178][%178][@#] 
+                         [#6:1][@4:1][%178][%178][%178][%178][%178][@#]       [#6:1][@4:1][%178][%178][%178][%178][%178][@#] 
+</diagram>
+
+This diagram shows the cross-section (side view) of 1x1 pits channeled 1 z-level deep, 2 z-levels deep and the correct way to do a 2 z-level deep ramp. The appearance of "downward ramps" can be confusing as there is no such thing - the down arrow indicates a ramp on the level below. Dwarves in the first pit can walk up the ramp to ground level and escape, while dwarves in the second pit cannot use the ramp at all. The third pit lets dwarves walk back to the surface again since the two ramps are offset to produce a continued slope. In short, channels (particularly channels multiple z-levels deep) can be dangerous. Digging an entryway from the surface level is one of the few times you'll ever need to channel.
+
+<small>Stairs can also be used for an entryway, but channels allow [[wagon]]s entry to your fortress.</small>
+}}
+If your wagon is near a [[cliff]] or hill (generally speaking, any difference in levels, usually shown by the existence of natural ramps), you can just designate a tunnel to mine ({{K|d}}-{{K|d}}) into the cliff to create an entryway. If the wagon is surrounded by flat terrain, [[channel]] out a 3x3 rectangle on the surface with {{K|d}}-{{K|h}} to create a sort of pit with ramps on the edges, then go down one z-level with {{K|&gt;}} and tunnel into one wall of the pit (with {{K|d}}-{{K|d}}) to create your entry.
+
+Dig a hallway one tile wide and ''at least'' 10 long, ideally more like 20 ({{k|Shift}} moves 10 tiles when digging, so this can be easily accomplished by pressing {{k|Shift}}+an arrow key twice). This will be your entryway.
+
+Your entryway defines the boundary between your safe and protected inner fort, and the big, bad, outside world. You want this to be your only entrance, so that you only have to worry about defending this one opening. A somewhat-outdated video guide to starting a fortress can be found [https://www.youtube.com/watch?v=CLYDcuk29bE&feature=plcp here]. (Note that this applies to v0.34.11, not v{{current/version/ns}}, so some parts may be inaccurate in the current version.)
+
+{{clear}}
+=== ''Additional miners'' ===
+Mining will go faster if you have more than one dwarf doing it. By default, only one dwarf has the Mining labor enabled, but this can be changed fairly easily: 
+* Choose a dwarf that isn't doing anything especially useful (the fish cleaner is a good choice for a beginning fortress, but you can always change your mind if you end up with a useless peasant later on)
+* Press {{k|v}}, navigate to the dwarf, and press {{k|p}}-{{k|l}}
+* Enable the "Mining" option (see [[#Stout Labor|Stout Labor]] above)
+* Exit with {{k|Esc}}
+The next time you designate an area for mining, both of your miners should start working (assuming they're not busy doing something else).
+
+'''Notes:'''
+* Each miner requires a [[pick]]. A standard embark comes with 2 picks. If you want more than two miners, you'll need to forge more picks (forging is covered later in this guide). Two miners should be adequate for most fortresses, but more miners can add reliability (for when a miner decides to sleep) and speed. For now, you'll almost never need more than two miners, but you'll want more once your fortress expands.
+* If you're digging a one-tile-wide hallway, only one miner can work from an end.
+* Mining, Wood Cutting, & Hunting labors are mutually exclusive - a dwarf can only have up to one of these professions active at a time. For this reason, it's not recommended to make your only woodcutter a miner, since they won't be able to cut wood anymore.
+
+==Delving Secure Lodgings==
+Near the middle of the entry tunnel, build a 5x5 room, and link it to the entrance tunnel with a 3-tile-wide passageway. Expand the main entry tunnel to ''three'' tiles wide from the entrance of the new room to the outside entry. At the end of the entry tunnel, dig a small room, which will later become your main stairwell. Two tiles past that, dig a larger room, which will later become your general stockpile, and connect it to the stairwell with a narrow passageway.
+
+[[File:Quickstart lodgings 1.png|thumb|right|An example layout, as described in this section. Note the 3-tile wide passage - this allows merchants to access your depot, which will go in the 5x5 room. Note that the turn also needs to be 3 tiles wide; otherwise, wagons won't be able to access the room.]]
+
+
+=== ''Room dimensions'' ===
+Apart from wagon access (3 tiles wide), the trade depot (5x5), and other workshops (3x3), there are no fixed dimensions you need to worry about. The lower limiting factor is the traffic your tunnels receive (dwarves may have to start climbing over each other), and the space your rooms need (stockpiles, tables/chairs, livestock). The practical maximum size is limited by how long it takes your miners to dig the rooms out, especially if they're digging in stone instead of soil (digging through soil is much faster). Most sites have at least one level soil layer below ground level, which is where you're digging right now, but as you dig deeper you'll hit stone (if you haven't already), and digging will become slower. In most fortresses, even the main hallways never need to be wider than 3 tiles, and needing more than 3 tiles of stairs per floor is very rare. A 3x3 per floor staircase (9 stairs!) is absolute overkill for anything but 20-year-old 300-resident capitals. For most tunnels in your fortress, 2 tiles wide will be sufficient, and many will be fine at just 1 tile wide. 11x11 is a convenient size for stockpile rooms, as the {{k|Shift}}+arrow keys move the cursor 11 tiles. However, something smaller is perfectly fine for rarer stockpiles, offices, and small dining rooms. Commoners’ bedrooms need not be larger than the amount of furniture you want inside.
+
+=== ''Mining safety'' ===
+While mining, take care to avoid digging into [[water]]. Dwarves are usually poor swimmers, and are unlikely to escape from an underground flood. However, it is safe to mine ''next to'' underground water, as long as you leave at least one "wall" tile between them (see the picture to the right). You can also mine one z-level under a body of water (for example, mining under a river), but you will have to designate each tile individually because DF automatically cancels digging of newly-revealed "damp" tiles (tiles are considered damp when they are adjacent to a water tile, regardless of whether the water tile is on the same z-level or not).
+
+Also note that '''water can flow diagonally''':
+<diagram>
+[#00f]≈[#]▓.▓   [#00f]≈[#]▓.▓
+▓▓.▓   ▓..▓
+      
+[#0f0]ok[#]     [#f00]flood[#]
+</diagram>
+
+=== ''Stockpiles'' ===
+[[File:Quickstart-custom-stockpile.png|right|thumb|Keep corpses, refuse, stone and wood out of general use stockpiles. You can come back and change the settings on this stockpile using {{K|q}}, selecting the stockpile, then pressing {{K|s}}. Try to remember to come back here to disable/forbid types of things as you create more specific stockpiles for them.]]
+'''Stockpiles''' are very important. These areas are where your dwarves will drop things for storage when they aren't needed elsewhere. To create a '''general purpose stockpile''' for your first storage area:
+#Hit {{K|p}} to open the Stockpiles menu.
+#Use {{K|t}} to change the [[Stockpile#Custom_stockpiles|custom stockpile]] settings to {{K|e}}nable everything but '''Corpses''', '''Refuse''', '''Stone''', '''Gems''', and '''Wood'''. Use directional keys, {{K|e}}nable, {{K|d}}isable to do this.
+#{{k|Esc}} out of that screen back to the stockpiles menu.
+#Hit {{K|c}} to select Custom Stockpile, if it isn't already selected.
+#Designate the whole 11x11 storage room as a custom stockpile. This works just like designating an area to dig: place the cursor on one corner of the room, hit {{K|Enter}}, move to the opposite corner, and hit {{K|Enter}} again.
+#Press {{K|Esc}} to get out of the Stockpiles menu.
+Once you exit the stockpiles menu and unpause, you should see dwarves running off to haul everything from your wagon into the new stockpile area. Later, if you like, you can change what sort of things the stockpile accepts by hitting {{K|q}} (Set Building Tasks/Prefs), placing the cursor on the stockpile, then pressing {{K|s}} to get to the stockpile settings.
+
+It is particularly important to '''keep wood, stone, refuse, and corpses out of your general purpose stockpile''', so you may want to double check to make sure all of these things are disabled in the stockpile settings. Failure to keep these things out of this stockpile will rapidly fill it up, causing workshops to become cluttered when dwarves can't store things in the stockpile.
+'''Note:''' When assigning stockpiles, you should make sure they're in a vacant area (i.e. the tiles should not have any items already stored on them). Dwarves will not haul items to occupied tiles, so make sure the area is vacant (and already mined out) before assigning a stockpile.
+
+=== ''Stairways'' ===
+
+{{TipBox2|float=right|titlebg=#0a0|width=45%|Up, Down, Up/Down: Types of Stairs|
+In Dwarf Fortress, every [[z-level]] is composed of a [[floor]] and a [[wall]] (or "space between floors"). The confusingly named "down" and "up" [[stairs]] have nothing to do with the direction creatures can move to; instead, down stairs penetrate floors, while up stairs penetrate walls. Up/down stairs penetrate the wall and the floor below. ''(note the picture to the left)''
+
+Consequently, you will normally use up/down stairs, and use down and up stairs only for the top and bottom-most level of your staircase respectively. If you're not sure whether you want to expand the staircase in the future, use up/down stairs at the end.
+}}
+
+Designate a downward [[Stairs|stairway]] in the room you dug out for the stairwell (''not'' the 5x5 room that you dug out earlier) with {{K-|d|j}}. Notice that after your miner digs the stairway, it doesn't automatically create another stairway on the z-level below. If you hit {{K|&gt;}} to move the view down a z-level you'll see that there's no stairway below, but there is a revealed tile of rock/soil. Because of the down stairway that was dug, this tile is now accessible to miners. You can then designate an up/down stairway on it with {{K-|d|i}} and the miner dwarf will dig it out. Below that you can then dig out another up/down stairway and so on. For now just dig down one level; we will deepen the stairwell later.
+
+[[Image:DF2014 Terraform.png|thumb|left|600px|''This is how the different stairs would look like from the side.'']]
+
+{{clear}}
+
+==Temporary Meeting Area==
+[[File:Quickstart lodgings 2.png|thumb|right|An example meeting area. Note that this layer has a different type of soil than the layer above - this can happen often. Also note that the "north" side of this room is directly below the lake in the level above, but no water is present.]]
+
+On the second z-level below ground (the one below the stockpile level, which you just reached with the staircase), dig a short, 3-tile wide passageway (this only needs to be 1-2 tiles long). Past that, dig out a room between 5x5 and 7x7, leaving room to enlarge it in at least one direction in the future. Using the {{k|i}} key, create an activity zone in the room you just created, filling the entire room (be careful not to make this too small lest your [[overcrowding|overcrowded]] animals start fighting). This works much like creating a stockpile except that you draw the rectangle before defining what the area is for. Draw the rectangle, filling the entire room, and set it to be a {{K|m}}eeting area. Your idle dwarves will hang around in this area, hopefully keeping them inside the fort and out of trouble. 
+
+NOTE: Again, make sure your [[DF2014:Activity_zone|activity zone]] is already mined out before attempting to designate the meeting area.
+
+{{clear}}
+
+==Refuse==
+[[File:Dwarf fort tut miasma.jpg|thumb|right|Avoiding [[Miasma]]]]
+Outside your fort entrance, use {{K|p}} followed by {{K|r}} to create a stock{{K|p}}ile for [[Stockpile#Refuse|{{K|r}}efuse]] ''at least'' 5x5 in size. This should be outside in the open or you will have problems with [[Miasma]]. If you do not disable [[vermin]] (Item Types -> remains), you will probably have to expand it later as it will fill up with vermin remains rather quickly. If you are seeing refuse appear in your general-purpose stockpile instead of the refuse pile, use {{K|q}} on the general stockpile and check its {{K|s}}ettings to make sure refuse has been disabled.
+{{clear}}
+
+==Food==
+
+Food is necessary for your dwarves' survival -  to keep functioning, they require constant supplies of food and drink - the {{k|z}} stock screen can be used to monitor how much food and drink is available. Luckily, your dwarves will eat almost everything raw, including plants.
+
+===''Farming''===
+For a reliable, long-term food and alcohol supply, you'll need to set up a farm. Dig out a medium-sized room in a [[soil]] layer (including sand, clay, loam, silt, peat, and ooze) accessible from inside your existing fortress. 5x5 is a good size to start with, but you'll want to leave room to expand in at least one direction. You must pick an ''underground'' area with mud or soil*. Placing this near the stockpiles is more efficient, since farmers won't need to travel as far.
+
+[[File:Quickstart layout 3.png|thumb|right|A 5x5 room with a 3x3 farm plot]]
+
+<!-- EXPAND (maybe with help for locating soil, etc -->
+<sub>* Hopefully you have chosen a site with a soil layer, which will make farming much easier, but if not you will need to [[Irrigation|irrigate]] to create the required mud on stone floors.</sub>
+
+Use {{K|b}}-{{k|p}} to build a 3x3 [[Farming|farm plot]] in the room you just created. Notice that some types of buildings (as well as most constructions) are not designated corner-to-corner like digging designations, stockpiles, or activity zones. Instead, you define the length and width of the building using {{K|u}}{{K|m}}{{K|k}}{{K|h}} and position it with the directional keys. Use {{K|u}}{{K|m}}{{K|k}}{{K|k}} to make the plot 3x3 and position it in the room, ideally near the wall to leave space for more plots later on.
+
+Remember that you must enable the {{DFtext|Farming (Fields)}} labor for at least one dwarf, or the farm plot won't get built and farming will not take place. (If you selected "Play Now" earlier then you will start with a dwarf with farming enabled.)
+
+{{K|Esc}} out of the build menu and wait for the farmer dwarf to create the plot. Once the plot is built, use {{K|q}} to set the plot to grow [[plump helmet]]s during all seasons. You can use {{K|+}} and {{K|-}} to select plump helmets (pressing {{k|-}} once should do the trick). Select with {{K|enter}}. '''You will need to press {{K|a}}, {{K|b}}, {{K|c}}, {{K|d}} and select Plump Helmets for each season''' &mdash; otherwise you'll end up with an idle field for 3/4ths of the year.
+
+Later, if you are curious what is planted in each plot this season and how much, select the [[Controls_guide#View_items_in_buildings.2C_t|View Items in Buildings]] command {{K|t}} and move to the farm plot.
+
+Note that a default embark starts with ''five'' plump helmet seeds &mdash; for now, only half of your field will end up being planted. Eventually, as your dwarves consume plump helmets, more seeds will become available and will be automatically planted by an unoccupied farmer.
+:''For more troubleshooting tips, see [[How do I build a farm]]''
+{{clear}}
+
+=== ''Emergency food sources'' ===
+Occasionally, even with a working plump helmet farm, you may experience food shortages. For now, you should have plenty of food on hand left over from embarking. However, if you ever run low on food, there are a few ways to obtain more:
+
+==== ''Plant gathering'' ====
+If you have shrubs ({{raw tile|"|2:0}}) growing above ground, you can harvest plants from them. Note that this requires a dwarf with the {{dftext|Plant gathering}} labor enabled (under {{dftext|Farming}}), and time (this can take a while for an inexperienced dwarf, and it doesn't always yield edible plants). To start, {{k|d}}esignate some {{k|p}}lants to be gathered on the surface (similar to selecting an area for mining, except it only selects plants in the given rectangle). Once processed, some will leave behind harvested plants (often edible berries).
+
+====''Butchering''====
+If you suddenly run low on food, butchering an animal is another option. Build a [[butcher]] shop ({{k|b}}, {{k|w}}, {{k|u}}) and mark one of your animals for slaughtering (press {{k|v}}, move the cursor to the animal, then press {{k|p}}, {{k|s}}). A dwarf with the butchering labor enabled will haul the animal off to the butcher's shop, work for a while, and produce neat stacks of meat products.
+
+==Building material==
+Initially, [[wood]] is probably a good choice for building material, as it's lightweight and can be easily obtained. You will need plenty of building materials as your fortress grows, but wood will suffice for now. If you are unable to locate enough wood (or if you run out of trees, which is unlikely at this point), extend your staircase down to a stone level ({{k|d}}-{{k|i}}) and mine out a small area (at least 5x5) to obtain stone.
+
+Even if you don't have trees, you can obtain 3 logs from your embark wagon. Press {{K|q}}, place the cursor on your wagon, and hit {{K|x}} to deconstruct it. This will flag the wagon for disassembly. Eventually a carpenter will come along and turn the useless wagon into 3 units of wood. (Removing other buildings is done the same way.)
+
+===''Woodcutting''===
+{{Update in next major version}}
+Assuming your site has [[tree]]s above ground, now is a good time to start obtaining wood. Create a stock{{K|p}}ile for {{K|w}}ood outside your entrance (preferably near to it). As it will only be temporary, don't make it too big (maybe 5x3, or 15 tiles total). Later, you will move this closer to your carpenter's workshop (once you build one), so don't worry about placement too much. Also near the entry, designate a couple of trees to be chopped down with {{K|d}}-{{K|t}}. One tree will produce many logs, so only designate three to five at this point. If you designate too many trees, your woodcutters will spend all of their time chopping them down and hauling the resulting logs, instead of doing other work. As soon as one tree is cut down and its wood stored in a stockpile, you can proceed to the next step (your woodcutter will continue cutting down any remaining designated trees).
+
+==Drinks==
+Drinks can be more problematic than food, since they require more preparation (except for [[water]], that is). In warmer weather, you can specify a "water source" activity zone ({{k|i}}-{{k|w}}) around a lake or river on the surface to keep your dwarves from dying of thirst, but dwarves deprived of [[alcohol]] slow down and become unhappy. In addition, drinking outside can be dangerous &mdash; dwarves running outside constantly risk running into wild animals, or worse. Creating a [[still]] to brew alcohol is the simplest solution to these problems.
+
+You need a [[brewer]] to brew drinks. Unfortunately, your brewer is also your woodcutter (with a default embark), who is busy cutting down trees. You will want to make a different dwarf your brewer instead, since both your brewer and woodcutter will be busy (and one dwarf can't do both jobs at the same time).
+# Find your woodcutter in the {{k|u}}nits list, select it, and press {{k|z}} (this selects the dwarf without you having to search your entire map). Use the {{k|p}}-{{k|l}} menu to disable brewing (located under "Farming/related" &mdash; you can navigate this menu with the {{k|+}} and {{k|-}} buttons).
+# Pick another dwarf that isn't doing anything useful. Right now, this can probably be your fish cleaner, but you can change this as soon as some migrants arrive (by following these steps again).
+# Use the {{k|u}}-{{k|z}}-{{k|p}}-{{k|l}} menu again to enable brewing on the new dwarf.
+
+[[File:Quickstart still 1.png|thumb|right|A completed still]]
+Assuming you have building materials available (which you will if your woodcutter has been doing their job), you can now create a still:
+# Dig out a 3x3 area connected to the farm plot.
+# Use {{k|b}}-{{k|w}}-{{k|l}} to build a still. Position it in the 3x3 area you just created and press {{k|Enter}}.
+# Use {{K|Enter}} to select a building material for the still (this is probably one of the logs you just cut down by default).
+# Use {{k|Esc}} to exit the menu, and unpause the game.
+After a short delay, your new brewer should run off, drag a log over to the workshop site, and build the workshop. (This is also how building other workshops works, but you won't need to do that yet).
+
+To brew drinks, use {{k|q}} to select the still and press {{k|a}}dd task-{{k|b}}rew drink. '''This will not work yet''', since you don't have any empty barrels or rock pots, but you should start brewing in the first six months (see [[Calendar]] and [[Status]]).
+{{clear}}
+
+==Pasture==
+{{TipBox2|float=right|Grazers|
+If you aren't sure whether or not an animal is a grazer, you can check {{catlink|Grazer|this category}}. (You can also [[Special:search|search]] for the animal on this wiki.)
+}}
+If you have any grazing animals with you, such as the draft animals used to pull your wagon, they will die if they are kept away from grass for too long. Use {{K|i}} to create a Pe{{K|n}}/[[Pasture]] zone over a grassy area outside and assign your grazing animals to it using {{K|N}} (while still selecting the zone). This area needs to be about 10x10 or so to ensure they have enough grass and don't trample it all. The amount of grass required varies greatly, depending on the type(s) of animals being pastured.  If you intend to keep grazing animals permanently, you may need vastly larger pastures later.  As an alternative, you might wish to [[Butcher's shop|slaughter]] your largest animals for food and materials.
+
+==Designing your first fortress==
+While this guide recommends a vertical fortress design around a central stairwell, with each z-level being used for a particular purpose, it is not really that important to use this design for your first fortress. Therefore, feel free to put any of the areas described in the rest of this guide on your main level or wherever you want as long as dwarves can get to them without going outside the fort. In other words, you can think of the "levels" described in the guide more as areas that can really all be on the same level if you have space. Later you can ponder over what makes things most efficient, but for now just do whatever you find easiest. Note that you may need to dig down a bit to get to stone if you have more than one z-level of sand/clay/soil below the surface.
+
+==Workshops==
+[[File:Quickstart workshops 1.png|thumb|right|An example workshop layout. The gem stockpile (empty) is north of the Jeweler's workshop (southwest corner), the wood stockpile is east of the Carpenter's workshop (northwest corner), and the stone stockpile occupies the rest of the space. Note the wheelbarrow (Ö/umlaut-O) in the stone stockpile.]]
+Most labors of your dwarves need a place where they can process raw materials &mdash; [[workshop]]s. Almost all of them occupy a 3x3 square, and most of them require just 1 unit of any building material (wood, stone, metal). Dig your stairwell down one level (with {{K-|d|i}}), if you haven't already. It's fine if this layer is soil &mdash; in fact, soil is better, since it's easier to dig through (if you only have one soil layer, you can put these workshops somewhere on your first level). Dig space for your workshops off of the stairwell. It will hold your [[Mechanic's_workshop|mechanic's]], [[Mason's_workshop|mason's]], [[Carpenter's_workshop|carpenter's]], and [[Jeweler's_workshop|jeweler's]] [[workshop]]s. Something to consider is stockpile proximity: the farther away the material is the dwarves use, the more time they waste with walking. So for now, dig out some more space for stockpiles close to where your new workshops will be (wood for your carpenter, stone for your mason and mechanic, and gems for your jeweler).
+It doesn't matter if you put everything in one large room or dig out small rooms for each workshop and stockpile. Note however that some tiles of workshops are impassable: they appear as dark green 'X' when you choose a location (the specific wiki pages of the workshops also show you this). So before you build small 3x3 rooms for each workshop, make sure your dwarves will be able to reach them. Once you've dug out your rooms, set your miners to work by adding a z-level or two to the staircase (you can designate multiple z-levels at once using {{k|&lt;}} and {{k|&gt;}}, just like moving up and down). Hopefully you'll obtain some stone by doing this, which will be useful eventually. While your miners are busy, use {{K-|b|w}} to build the workshops, using whatever building material you have. If you are still digging in soil and don't have stone yet, just use wood; the material really doesn't matter in this case. Be sure that your craftsdwarves still have labors corresponding to each workshop enabled (see [[#Stout Labor|Stout Labor]] above) so they will begin construction. (Dwarves already busy mining or hauling may not immediately stop to construct workshops; if you like, you may temporarily disable other labors in order to jumpstart workshop construction.) If the construction of any building gets "suspended" just use {{K|q}} to unsuspend it. (This can happen if another dwarf or object is blocking the way. See [[#"Garbage" Dumping|Garbage Dumping]] below if you find you need to remove an object.)
+
+{{TipBox2|float=right|titlebg=#0a0|Too Good for Menial Peon Work|Certain labors are crucial in setting up a fort. At some point you may want to disable less important labors such as hauling for dwarves with the crucial skills of mining, masonry, architecture, carpentry, mechanics, and maybe others. You want these dwarves working on creating beds, doors, and trap components before hauling stone and cleaning.}}
+Remove the temporary wood stockpile you created outside (using {{K-|p|x}} and selecting the entire stockpile) and dwarves will move the wood to the new wood storage area.
+
+Go to your mason's shop with {{K|q}} and use {{K|a}} to queue up one [[table|{{k|t}}able]] and one [[throne]]/{{k|c}}hair. You will find out why you need these in a second, but now is a good time to start building them. If you still don't have any stone at this point just use wood at the carpenter's workshop.
+
+At this point, it is a good idea to build a few [[wheelbarrow]]s to make hauling large objects (particularly stone) more efficient. Queue up 2 or 3 at the carpenter's workshop. (Wheelbarrows are located near the bottom of the list, on a separate page. They are not visible initially, so you'll need to scroll with {{k|+}} or {{k|-}} &mdash; scrolling up with {{k|-}} is more efficient, as it wraps to the bottom of the list.) While the wheelbarrows are being built, select your stone stockpile with {{k|q}} and use {{k|w}} to increase "Max Wheelbarrow" to 3 (the maximum). Your dwarves will automatically move wheelbarrows to the stockpile once they are built.
+
+===''"Where did I build that ____?"''===
+As you build workshops, furnaces, Trade Depot, other buildings, rooms and even zones, you may start to lose track of where they all are -- or where they're supposed to be built, but some dwarf is too busy eating/drinking/hauling. There are a couple of commands available from the main UI that will help you locate what you built.
+
+* You can View {{K|R}}ooms/Buildings to see a Building List, and also Zoom {{K|t}}o the building/item, or {{K|q}}uery the building tasks.
+
+* For incomplete buildings/constructions, you can also open the {{K|j}}ob list and then Go to {{K|b}}uilding to find the intended location.
+
+{{clear}}
+
+== Brewing ==
+You'll need [[barrel]]s to store drinks for your dwarves. The stockpile you set up earlier will use as many barrels as possible to store items in, which means they can't be used to store drinks. To change this, press {{k|p}} to access the stockpile menu and use {{k|*}} to increase the number of "reserved" barrels (i.e. barrels kept out of stockpiles - 5 barrels is good for now). Queue up two or three barrels in your carpenter's workshop with {{k|a}}-{{k|v}}. (If you run out of wood at any point, cut down another tree or two outside). If a lack of wood cancelled a job, you will need to queue the job again. Go back to your still and order some drinks to be {{k|a}}-{{k|b}}rewed. Each drink requires one barrel and one edible plant, such as a plump helmet. Even if none of yours have been harvested yet, you should have some left over from embark. Also, brewing plump helmets creates ''two'' seeds from one plant, which makes plump helmets an excellent choice for a beginning fortress. Five barrels should be plenty for now (each plant makes 5 "units", or servings, of booze, and dwarves don't need to drink too often, so 30 units should last you a whole year. When the stocks get low, you'll probably want to start queueing up more drinks to be made (you should have more empty barrels by then)).
+
+=="Garbage" Dumping==
+{{main|Garbage dump}}
+
+'''Note that garbage is not the same thing as refuse.''' [[Stockpile#Refuse|Refuse]] is [[Miasma|rotting stuff]]. Garbage is anything you designate to be hauled to a [[Activity_zone#Garbage_Dump|garbage dump]], even important things that aren't really garbage. Think of your garbage dump zone as a way to specify that objects you select will be brought to a specific area.
+
+Use {{K|i}} to create a 1x1 activity zone somewhere near your mason's and mechanic's workshops and set it to be a garbage {{k|d}}ump. Unlike stockpile areas where you are limited to storing one object per tile, any number of items may be piled in a garbage area. That means you will only need one tile to hold as much "garbage" as you like.  Although many of the room sizes in this guide are suggestions, think of the 1x1 garbage dump size as mandatory.  At some point you will probably want to retrieve an important item from your garbage dump, and the more tiles your dump contains, the harder it will be to find anything in it. Press {{k|d}}-{{k|b}} to get to the mass dump/forbid screen and select the {{k|d}}ump option. With "dump" selected, designate a rectangle over the loose stones cluttering up your living area (if there are any – this often isn't a problem yet if you've built your fort in a soil layer). This will designate this stone to be transported to a garbage dump zone. Be sure not to designate the stone in your stockpiles by mistake, since that will only cause your dwarves to perform unnecessary hauling. Once the stone from your living area has been moved there, it will be set as [[Forbid|forbidden]]. Before it can be used you will need to unforbid it using the same {{k|d}}-{{k|b}} screen, hitting {{k|c}} to claim it. Note that dwarves hauling stone (or any large, heavy objects) move slowly, and can take a lot of time to reach their destination. This can be a major waste of time if you designate 50 boulders to be dumped at once. Unless the stone is in the way of something, you don't ''need'' to dump it every time you dig out a new area. Stones lying on the ground don't slow dwarves down at all. If there is a particular dwarf you don't want hauling "garbage", you can disable the "Refuse Hauling" labor (under the "Hauling" category). Miners are good candidates, since they are far more useful when digging than when moving the stone they just dug out.
+
+Congratulations! Knowing how to use garbage dump zones puts you head and shoulders above many new players - it takes some people weeks to figure this out.
+
+==Trading==
+Not all embark sites have all the resources you need for a successful fortress, but every site has ''something'' you can sell. A talented dwarf can process any useless resource into something valuable, and [[trading]] is a good way to sell those goods.
+
+''Note that producing goods creates [[wealth]] and getting too much wealth too fast can have [[Immigration#Migrant_wave_sizes|unwanted]] [[Siege|consequences]].''
+===Trade Depot===
+Build a [[trade depot]] using {{K|b}}-{{K|D}} in the 5x5 room you created near your entrance. This is where [[caravan]]s will park their stuff and where [[trading]] will take place when one arrives. (as stated earlier, the wagons are 3x3 so the entrance tunnel needs to be at least 3x3 for the wagons to go by). You will need one [[architect]], which will be enabled on your mason if you selected {{DFtext|Play now!}} at embark. You also need at least 3 logs or boulders to build the depot.
+
+===Producing for export===
+While there are some goods that are more valuable, and some that are less valuable, it's a good idea to simply produce/export what you have too much of and to import what you have too little of. 
+Generally though, [[Gem]]s and [[Finished goods]] are decent exports for a new player.
+
+===Trading===
+Once a caravan has arrived, you can mark the goods you want to sell through the Trade Depot, and your dwarves will begin moving them to the depot. Be careful not to sell wooden items to [[Elf|Elves]]; '''this includes containers:''' even a wooden bin full of metal crafts will make them upset. Also note that the traders will want to make a profit off of you. While they're happy with about 200%, the more profit they make on your site, the more goods they will bring next time, so it can be a good idea to give them even better deals.
+
+''A more detailed overview of the entire process is [[Trading#Trading_Flowchart|here]].''
+
+===What to buy===
+In your first fortress, your priority should be importing some [[food]] and [[alcohol]]. In addition, you might want more [[Meat industry|livestock]], [[seed]]s (comes with a free bag), and - depending on what resources you are missing - additional [[pick]]s, [[barrel]]s, [[wood]], [[bag]]s, as well as [[rope]] and a [[bucket]] (for a well). While you're at it, check if you need an [[anvil]]. Maybe you forgot to bring one, or a [[kea]] stole it. Always having a small supply of ''all 3 kinds'' of [[cloth]], some [[gem]]s, [[leather]], a bit of [[sand]] (free bag!) are handy to have, as those are hard to come by on short notice.
+If you're short on weapons-grade [[metal]] for your military, import not only actual metal [[bar]]s and [[ore]]s, buy ''all'' metal goods you can afford and [[Melt item|melt]] them down in a [[smelter]] to increase your yield.
+
+===Troubleshooting===
+Once the depot is built, use {{K|D}} from the main menu to make sure your depot is accessible. (This command is only available once the depot is built – before building, the command will be disabled, and while the depot is under construction everything will flash red until the depot is built). Once completed, checking {{k|D}}epot access will flash some of the following symbols:
+* {{raw tile|X|4:4:1}}: This tile is not accessible by wagon. This could be because something is blocking it (a tree, a natural [[boulder]], etc.).
+* {{raw tile|W|2:2:1}}: This tile is accessible by wagon. (These tiles will radiate outward from the depot, not from the map edges.)
+:This is good, but does not guarantee wagons will be able to reach the depot. Make sure you see the words {{DFtext|Depot accessible|2:1}} in the menu.
+* {{raw tile|D|3:2:1}} The depot is accessible via wagon. 
+* {{raw tile|D|6:2:1}} The depot is '''not''' accessible by wagon. See below.
+
+If you see the message {{DFtext|Depot inaccessible|4:1}} in the menu (or the {{raw tile|D|6:2:1}}) symbol over the depot, try these solutions:
+* Is the path to the depot (in your fortress) less than 3 tiles wide? If so, expand the entranceway and try {{k|D}} again.
+* Are there [[tree]]s blocking a path to the depot outside? Try clearing a path by cutting down a few (you probably won't need to cut ''all'' the trees in a 3-tile wide path); usually cutting some at the end of a path of {{raw tile|W|2:2:1}}'s clears a path.
+* Are there [[boulder]]s ({{raw tile|∞|7:0:0}}) blocking the path outside? To remove them easily, you need an [[engraver]]. If you selected "play now", you should have one already. Select {{k|d}}-{{k|s}}mooth Stone and designate the boulder(s) for smoothing. They should flash this symbol: {{raw tile|┼|7:0:1}}
+* Is the path to the depot only accessible via stairs or did you build traps in the way? Wagons cannot pass traps or stairs, even if they're 3x3 wide.
+It's possible that there are multiple obstacles blocking the depot, so keep checking {{k|D}}epot access until the {{DFtext|Depot accessible|2:1}} message appears.
+
+
+''Note that even if your depot is inaccessible to wagons, traders still will come without wagons. They will carry much less goods and you can sell them much less, because their carrying capacity is greatly reduced.''
+
+== Migrants ==
+{{gametext|Some migrants have arrived.}}
+At some point soon, you'll most likely be getting migrants (if you haven't already). You'll usually get between 5 and 15 migrants in the first 2 waves, which occur sometime during your second and third seasons. See [[/Migrants|this page]] for advice when you receive migrants.
+
+== Bedrooms ==
+Up to this point, your dwarves have probably been sleeping on dirt or rock in your fortress. While this is fine for a short time, your dwarves will gradually become less happy if they are forced to sleep without a bed. Under normal circumstances beds can only be made from wood, so be sure to designate some more trees to be cut down if you're short on logs.
+
+[[Bedroom design|Designing living quarters]] is largely a matter of personal preference and aesthetic sense. While a few useful designs are discussed here, there are many other options. In general, try to keep the bedrooms close to the stairs, and make your access hallways at least two tiles wide to reduce congestion. 
+
+=== Location ===
+Because noise generated from certain jobs (especially mining and woodcutting) can bother sleeping dwarves, doing these jobs within 8 tiles of a sleeping dwarf should be avoided (see [[noise]] for more information). There are two ways of accomplishing this:
+* Placing bedrooms at the end of a hallway at least 8 tiles long will avoid most noise (as long as you are careful to avoid noisy jobs directly above or below the bedrooms).
+* Extending your fortress down several z-levels will also work (9 levels from the surface is a safe choice), although extending a 3x3 staircase takes more work than extending a single hallway.
+Both options work equally well, as long as you are careful to avoid disturbing sleeping dwarves. Ultimately it depends on how you want your fortress to look. 
+
+=== Layout ===
+Due to the limited resources of a new fortress, setting up a communal sleeping area in a dormitory is often the best short-term solution. However, you can also set up individual bedrooms for dwarves.
+
+'''Benefits of individual bedrooms:'''
+* Dwarves are happier with their own bedroom and furniture.
+* Individual rooms can increase your fort's perceived wealth.
+'''Benefits of dormitories:'''
+* Dormitories are easier to set up and expand (only one room is necessary, and each dwarf only requires one bed).
+* Sleeping dwarves are much less likely to be attacked when other dwarves are around them.
+* Multiple dwarves can sleep in a dormitory. In contrast, only one dwarf can ever sleep in a bedroom (dwarves cannot sleep in another dwarf's bedroom, even when unoccupied).
+* Far fewer beds are needed – in a fort of 50 dwarves, for example, around five dwarves will be sleeping at a time (on average). A dormitory, therefore, rarely requires above ten beds, while individual bedrooms would require 50 beds to be built.
+* Even when all of the beds are occupied, dwarves will still sleep in the general area of the dormitory. This is more convenient than having dwarves sleeping all over your fort.
+For now, setting up a dormitory is easiest (although you can change this later, if you feel the need to).
+
+=== Building ===
+Queue up as many beds as you need in a carpenter's workshop (no more than 3 or 4 should be necessary for a dormitory). Beds are queued with {{k|q}}-{{k|a}}-{{k|b}} at a [[carpenter's workshop]] and built with {{k|b}}-{{k|b}}. (As long as your furniture/general-purpose stockpile isn't full yet, dwarves will store beds in them as they are finished, so there may be a delay before they're available to be built.)
+
+'''Setting up a dormitory:'''
+# Dig out an empty room in the location you selected.
+# Once you have a bed ready, build it near the middle of the room (towards the end away from the entrance).
+# Use {{k|q}} to select the bed and {{k|r}} to turn it into a bedroom. Resize the room until it fills the area you dug out (positioning the bed away from the entrance makes it easier to avoid extending the room out into the hallway). If you decide you don't like the position of the bed, remove it with {{k|q}}-{{k|x}} and place it again.
+# Press {{k|d}} to turn the room into a dormitory (the menu should read {{DFtext|d: Dormitory <Y>}})
+Once you have more beds built, you can place them in the same room. You don't need to mark them as dormitories as long as they're in the area you designated for the bedroom.
+
+[[File:Quickstart-level-7-bedrooms.png|thumb|right|An example of individual bedrooms (with furniture, discussed below)]]
+'''Setting up individual bedrooms:'''
+# Dig out a small room for each bed (the size and shape are up to you, but 2 to 4 tiles generally works best).
+# Build each bed in a room when ready
+# Use {{k|q}}-{{k|r}} to mark the bed as a bedroom.
+You should see {{DFtext|Current owner: Nobody}} in the menu. A dwarf will eventually get around to claiming the bedroom – you don't need to assign each dwarf to a specific bedroom.
+
+==Nobles and Administrators==
+Hit the {{k|n}} key to open up the [[Noble|nobles and administrators]] screen.  The most important positions to assign are '''[[manager]]''', '''[[broker]]''', and '''[[bookkeeper]]'''. 
+* A '''manager''' will allow you to queue up [[work order]], which will greatly simplify managing your production. 
+* A '''bookkeeper''' will allow you to maintain inventory counts on the {{K|z}} screen so you'll know what you do and don't have. 
+* A '''broker''' is necessary to trade with a caravan once one has arrived at your [[trade depot]].
+
+===Manager & Bookkeeper===
+Your [[expedition leader]] is a good choice for manager and bookkeeper when starting out. Don't worry that it's just one dwarf doing all this; none of these jobs take very long.
+
+While you are on this screen, highlight the bookkeeper and {{K|s}}et them to work for "Highest Precision" (all counts accurate). This will help train [[record keeper|bookkeeping]] faster and ensure that you aren't dealing with vague inventory counts. 
+:''See [[Stocks]] for a detailed explanation of the {{k|z}}-stocks screen.''
+
+===Broker===
+The broker should be another one of your other dwarves (rather than being the same as your bookkeeper) so that they're not too busy doing bookkeeping to actually talk to the traders when a trade delegation arrives.
+
+Don't worry about the [[chief medical dwarf]] yet. He/she will be needed when you set up your [[Healthcare|hospital]] which won't be covered in this guide. Feel free to go check out the [[Healthcare]] guide once you're done. 
+
+===Offices (Studies)===
+Some of your administrative positions (manager and bookkeeper) require an [[office]] in order to function. If your manager, for example, doesn't have an office, you will not be able to do any of the things that require a manager even though you have one assigned. 
+[[File:Quickstart-noble-selection.png|right|thumb|Nobles screen. The red stuff turns white once an office is assigned.]]
+
+Earlier you should have queued up a table and throne in your mason's shop, and they should be done by now. 
+# Dig out a room near your sleeping quarters or stockpiles (at least 1x3, no more than 5x5).  
+# Place the furniture in it with {{k|b}}-{{k|c}} (chair) and {{k|b}}-{{k|t}} (table). 
+# Wait for the dwarves to install the furniture
+# Use {{K|q}} to select the '''chair'''/throne (not the table), select "Make Throne Room or Study" ({{k|r}}), size the room appropriately, and then {{k|a}}ssign the chair to your expedition leader (who should be both your bookkeeper and manager). 
+# Hit {{K|n}} to verify that these positions now have the office they need (if so, {{DFtext|[REQUIRE]|7:1}} should no longer be red).
+
+==Furniture==
+{{TipBox2|float=right|titlebg=#0a0|width=45%|Different Names, Same Thing|As you've noticed, some things have different names based on what they're made of (for example, chairs vs. thrones and chests vs. coffers) even if they're functionally the same (material almost never makes a difference). [[Furniture#Furniture_types_with_multiple_names|Here's a list.]]
+
+[[Bed]]s are a notable exception &mdash; they can only be made of wood.
+}}
+Now would be a good time to start building some [[furniture]]. You could queue up all these items directly from your workshops, but why not give your new manager a little practice?
+Using the manager screen {{k|j}}-{{k|m}}, hit {{k|q}} to queue up a new job, and type "[[bed]]", and then select "construct bed." Set the quantity to around 4 (or more, depending on how many beds you need). Next, queue up at least four [[table]]s, eight [[throne]]s/chairs, and four doors. Make sure you select a material you have – rock or wood will both work for all of these (except beds), so use whatever you have in your stockpiles. If you like, you can also queue up a few wooden [[chest]]s or rock coffers and [[cabinet]]s (which can be used in bedrooms, if you set up individual bedrooms). The tables and chairs will go in your [[dining room]], speaking of which...
+
+==Dining and Food Prep Area==
+Right off the main stairwell (any unused area by the staircase will work), create three rooms. One will be for general food storage, one a [[dining room|dining hall]], and one a [[kitchen]]. The kitchen will allow you to make [[Cook#Recipes|prepared food]]. Make the room for the kitchen 5x5. The storage area and dining hall should be larger. Ideally, leave empty space on at least one side of your dining hall so that it can be expanded later if necessary.
+
+[[File:Quickstart_dining_area.png|right|thumb|Dining level with dining hall (east), kitchen (north), storage area (west), fishery, butcher's workshop, and tanner's workshop (south).]]
+
+Use {{K|b}}-{{K|w}}-{{k|z}} to build the kitchen in the middle of the 5x5 room. Use {{k|p}} to create {{K|f}}ood stockpiles in the remaining space around it, as well as the entire food storage room. Go back to your general-purpose stockpile on the top level and use {{K|q}} to change the {{K|s}}ettings to {{K|d}}isable Food. This will cause any food in your general purpose stockpile to get moved to your new food-only stockpiles. Hit {{K|z}} and select ''[[Kitchen]]'' from the top of the screen, then disable all cooking for plants, using {{K|c}}, {{K|C}} does everything (disable is red) and enable brewing for them so that they will only be used for brewing. Also disable alcoholic beverages for cooking, otherwise your cooks will waste perfectly good hooch in their cooking. The only time you might want to use alcohol in cooking is when you have lots of booze but are running out of food. If you plan to do any fishing, dig out another area and create a [[Fishery]] on this level so the uncleaned fish your fisherdwarf just caught can be cleaned (gutted) for consumption or cooking. If you plan to do any hunting or [[Status#Animal_Status_Screen|slaughter]] any animals, create a [[Butcher's shop]] on this level so animal corpses can be butchered. The fishery/butcher's shop can be placed behind the kitchen or the general food stockpile, for example. A door is recommended for the butcher's shop in order to contain [[Miasma]] should something rot, and to otherwise avoid offending squeamish dwarves. Eventually, go check out the subpage on [[/Stockpiles/]] for more information on fine-tuning these stockpiles for maximum efficiency. For now you can safely procrastinate on this and move on to the next section.
+
+==Placing Furniture==
+Once your furnishings are complete, you need to place them in rooms using the {{K|b}}uild command. Put the new {{k|c}}hairs and {{k|t}}ables in the dining room. If you like, you can add doors for aesthetics (they can be useful in case something starts rotting in your food stockpiles). If you created chests and cabinets, you can add them to each room if you want, but it is not urgent now.
+
+==Meeting Hall==
+Use {{K|q}} on one of the tables you just placed in the dining room, define the area as a {{k|r}}oom, and configure it to be a meeting {{k|h}}all. This will cause idle dwarves to hang around in the dining hall. You want idlers in a central location, close to where you will be placing your emergency drawbridge levers. You should probably remove the temporary meeting area (and any other meeting areas that you created earlier) with {{K|i}}-{{k|x}}.
+
+==Checking Supplies==
+{{TipBox2|float=right|titlebg=#a00|Hostile Wilds|Before turning on either hunting or fishing, examine the {{K|u}}nits screen to see if there are any dangerous critters your hunters/fishers need worry about. With hunting especially, you may need to check this screen frequently.}}
+Use the {{K|z}} ([[status]]) screen to check your stock levels. How much food and booze do you have left? You only have unprepared food at this point, and the booze you brought with you, but soon you will be making more. If you are running low on food, you can designate gathering some [[shrub|outdoor plants]], [[Status#Animal_Status_Screen|slaughter]] some animals, turn on [[fishing]], or turn on [[hunting]] to tide you over for a bit. Hunting and slaughtering animals both require a butcher's shop.
+
+==Brewing and Cooking==
+Once your first crop of plump helmets starts to come in, you will want to start [[brewing]] as a [[repeat]]ing task. Also, now would be a good time to start [[cooking]] actual meals rather than forcing your dwarves to eat raw food. Cooking [[Cooking#Recipes|easy meals]] will train dwarves faster, but they may be happier with [[Cooking#Recipes|lavish meals]]. So, you might want to cook easy ones until your cook or cooks skill up to a certain point then have them start making lavish meals. Prepared food is cooked from two (easy), three (fine), or four (lavish) raw food/alcohol ingredients. Each prepared food item will be called a 'something' (for instance, a specific animal meat) "biscuit", "stew", or "roast" depending on the lavishness of the meal.
+
+{{TipBox2|float=right|titlebg=#0a0|Conserving Resources|Some things absolutely require wood (like beds and charcoal), but others can be made out of more common materials like stone. For this reason it's best, especially in the beginning, to make everything that you can out of stone. For example, you could make wood chests and barrels, but stone coffers and rock pots would let you save wood for things that require it and help you rid yourself of all that stone. And if you decide you want solid gold chests or something later when you have more resources, you can always throw out the rock coffers.}}
+Speaking of booze, in order to keep the booze flowing, you will need to create some [[barrel]]s, or some stone [[pot]]s. Your dwarves should have emptied a few barrels by now to get you started, but you will definitely need more. A ''lot'' more.  If you have an abundance of trees, then you can designate some more for cutting, and have your carpenter make a bunch of wooden barrels, but it may be more prudent to make a [[Craftsdwarf's workshop]], make sure someone has the [[Stonecrafting]] labor enabled, and build a bunch of rock pots. (Rock pots are essentially barrels made of rock.) And don't worry that you've made too many; you almost can't get enough of them. Keep checking your food and drink stock levels on the {{K|z}} screen periodically. While cooked food (properly stockpiled) and alcohol don't spoil, there is really no need to stock 2,000 units of dwarven wine at this point. Ten times the number of drinks and meals as you have dwarves is more than enough. If you start running out of food or drinks, designate some wild plants for harvesting, [[Status#Animal_Status_Screen|slaughter]] some of your animals, start hunting or fishing, or start more farms. (Actually, now would be a fine time to make another 3x3 farm. Set it to produce [[sweet pod]]s in the spring and summer, [[cave wheat]] or [[pig tail]]s (your choice) in the fall (autumn), and [[plump helmet]]s in the winter. Having multiple types of plants will give your dwarves more variety in their food and drink, keeping them from [[Thought|grumbling]].)
+
+==Storage Space==
+{{TipBox2|titlebg=#0a0|float=right|Advanced Stockpiling|Check out the [[/Stockpiles|Stockpiles]] sub-page for more information on fine-tuning your stockpiles, especially in the food production area. This is somewhat complicated and it can safely be skipped if you don't feel like tinkering with stockpiles right now.}}
+You should probably start making some wooden '''[[Bin|bins]]''' to help you store more stuff in less space. You might not need them yet, but you certainly will later. Bins are somewhat like barrels/pots, but they can store things other than just food and drink. Bins will also reduce the amount of labor needed to [[haul]] things to your trade depot or other stockpiles. So designate some more trees to be chopped down and queue up some bins. As with barrels and pots, you almost can't have enough bins.
+
+==Situational Awareness==
+At this point you might already have lost one or two games. Understanding why that happened is the most important part to get better and avoid frustration. To do so, you should be aware of what situation your fortress is in at all times: Are there enemies on the map? Do your dwarves have enough food? How many dwarves do you have? What season is it?
+
+Along with just loo{{K|k}}ing around periodically, there are 4 screens that can help you with these questions:
+
+* The {{K|u}}nit screen with its various tabs. Keep an eye out for invaders, dangerous animals and so on
+* The status screen ({{K|z}}) and its "stocks" subscreen ''(Remember to appoint a [[bookkeeper]] and set him to the highest accuracy)''. Pay attention to the current date and your supplies.
+* {{K|a}}nnouncements, and
+* Combat {{K|r}}eports
+
+Check them periodically and you will be able to recognize problems earlier and avoid disasters better.
+
+=Beyond a Minimal Fortress=
+
+By now you should have your main entrance created, along with a farm, general-purpose stockpile, refuse pile (for trash), and [[trade depot]]. Somewhere you should have a mason's shop, a mechanic's shop, a carpenter's shop, and a jeweler's shop, surrounded by appropriate storage piles with garbage zone (for excess stone). You should also have a furnished dining area with kitchen, still, and food storage, and a residential area with furnished bedrooms and an office. You should have selected your administrators, and might even have an optional fishery, butcher's shop, craftsdwarf's workshop, or other stuff. At this point, you have all the components of a minimal but functional fortress! Your next steps will be to make it safer and better-protected, to set up your [[metal industry]], and later to prepare your [[military|militia]].
+
+==Traps==
+Start producing '''[[mechanism]]s''' at your [[mechanic's workshop]]. Queue up ten. After they are built, use them to create [[Trap#Stone-fall_Trap|stone fall traps]] using {{K|b}}-{{K|T}}. Be sure not to block access to your depot! Queue up some [[cage]]s, and more mechanisms, and use these to create some [[Trap#Cage_Trap|cage traps]] right after your stone traps. Cage traps are incredibly effective at stopping ambushers, but traps in general will not protect you from [[thief|thieves and kidnappers]] who will almost always bypass them. (To deal with these ambushers, see the next section on [[#Guard Animals|guard animals]]). Continue to fill up your entry hall with alternating rows of stone and cage traps as the parts become available. Ideally you want to have enough cage traps to take out most of the [[goblin]]s so your military will only have to mop up.
+
+Note that traps will block wagons from reaching your trade depot (although pack animals will still arrive safely). A few ways to avoid this are shown below:
+
+{|
+|-
+|<diagram>
+[#1:1]^^^^^
+[#2:1].....
+.....
+.....
+[#1:1]^^^^^
+</diagram>
+|A simple strategy, most useful above ground where invaders can come from the sides – underground, this is less useful (invaders don't tend to emerge from the walls). 
+'''Legend:''' In this diagram and the one below, traps are blue {{DFtext|^|1:1}} (^) symbols, and the green {{DFtext|.|2:1}} and red {{DFtext|.|4}} (.) symbols represent the ground and cave floor.
+|-
+|<diagram fg="4:0">
+░░░░░░░░░
+░.......░
+░.......░
+░.......░
+....[#1:1]^[#]....
+....[#1:1]^[#]....
+....[#1:1]^[#]....
+░░░░░░░░░
+</diagram>
+|A more complex design, but also extremely effective (best used underground). The majority of invaders will choose to take the shortest path, directly through the traps. This can also be extended to make a wider group of traps of a longer safe route.
+
+This is relatively easy to implement if you already have a 3-tile wide hallway – just dig a small loop off it and place traps in the old location.
+|}
+
+Note that this is only necessary when caravans can't get to your trade depot, because the hallway is filled with traps - if your trade depot is not behind a trap-lined hallway, you can safely make a hallway full of traps - citizens won't trigger traps.
+
+If you place a trap somewhere you didn't mean to, remove it with {{k|t}}-{{k|x}} or {{k|q}}-{{k|x}}.
+
+==Guard Animals==
+Create one 1x1 [[pasture]] near the beginning of your entryway, in the middle tile, using {{K|i}}. Using the {{K|N}} key inside the zone interface, assign a [[dog]] or other non-grazing animal to it. This animal will spot thieves and raiders before they gain entrance to your fortress. Try to pick a disposable animal, as it ''will'' be slaughtered by the first ambush raiders. Ideally, don't assign female animals; you want them safe for [[Meat industry#Breeding|breeding]] (you should make sure to keep at least one male around for breeding as well).
+
+==Drawbridge==
+In case of an [[ambush]] or [[siege]], you will want to close up your fort, keeping the goblins out until your [[squad]]s have formed up and are in position. Therefore, you can build a [[Bridge|drawbridge]] ({{K|b}}-{{K|g}}) to seal off your entryway. Make sure to use {{K|w}}, {{K|a}}, {{K|d}}, or {{K|x}} to make it raise up in the right direction, which then forms a barrier to block enemy ranged units. If you don't get the orientation of the bridge correct, it will just retract (disappear) instead of raising up, allowing enemy ranged units to fire across. 
+
+Put the drawbridge between the trade depot and the hall-o-traps so you can lock things out of the fort. Build a lever ({{K|b}}-{{K|T}}-{{K|l}}) near your meeting area and [[Lever#Linking|link]] it to the drawbridge by using {{K|q}} on the lever. (This linking will require 3 [[mechanisms]] in total.)
+
+==Metal Industry==
+[[File:Quickstart-level-2-forge.png|thumb|right|Level -2: Forge and smelters with ore stockpile in the middle.]]
+Now, below your first workshop level, dig out four more 5x5 rooms around the stairwell. Three of these will be [[smelter]]s ({{k-|b|e|s}}), and one a [[metalsmith's forge]] ({{k-|b|w|f}}). Designate stockpiles for {{K|b}}ars around the smelters and forge. The bar stockpiles will hold [[Fuel|coke and charcoal]] and metal [[bar]]s. You will probably need larger bar stockpiles, but you can dig out more space and expand them later. Also dig out some space and create a stockpile for [[ore]] somewhere nearby. To make an ore stockpile, designate a {{K|s}}tone stockpile, then use {{K|q}} to change the {{K|s}}ettings on it to forbid all types of stone other than ore. Finally, go to your general-purpose stockpile on the top level and use {{K|q}} to disable Bars. Stone should already be disabled on this stockpile, and if so, then ore is already disabled for it.
+
+===Wood Burning===
+Somewhere near your carpenter's shop, near your wood stockpile, dig out an area and build a [[wood furnace]] ({{k-|b|e|w}}).  This is where you will create charcoal (see below) and ash (for making soap). Dwarf Fortress has two forms of carbon which are useful as [[fuel]] in the metal industry: ''charcoal'' (which is charred wood), and ''coke'' (refined coal).  They are completely interchangeable.  If your map has a lot of '''lignite''' or '''bituminous coal''', you can process that into coke, using charcoal to jump-start the process. If you don't find coal on your map, you'll need to either dig down to [[magma]] or make charcoal out of wood to run your forges and smelters, but don't worry about this yet. You need to do some digging around.
+
+===Mining===
+{{TipBox2|float=right|titlebg=#0a0|"I have struck what?"|New players who don't have a degree in geology usually find themselves confused as to what all these mineral names mean. In DF you'll never strike "iron ore" but you will strike [[magnetite]] or [[limonite]] which are [[ore]]s of [[iron]]. If you don't know that these things are ores of iron then it obviously won't occur to you to try to smelt iron. Note that ores usually look like {{Raw Tile|£|6:7:1}} before they are mined and {{Raw Tile|*|6:1}} after, though the colors will differ.  See '''''[[The Non-Dwarf's Guide to Rock]]''''' to help you figure out exactly what you've found.}}
+At this point you want to start looking for metal ore. You may have already found some while digging out rooms, in which case you can just mine into the walls of the rooms to get more ore. If you haven't found ore yet or you want to see what else you can find, you will need to dig [[Exploratory mining|exploratory tunnels]] looking for ores, minerals, and [[gem]]s. For now just start digging tunnels out from your stairwell or rooms in all directions and see what you run into. Note that digging into '''damp stone''' or '''warm stone''' is not recommended as those areas may be holding back water or lava which can flood your fort.
+
+===Fuel===
+Whether you find [[coal]] or not, you will need to burn wood into at least one unit of [[charcoal]]. If you find some coal ([[lignite]] or [[bituminous coal]]), start your [[smelter]]s out processing it into [[coke]] using your charcoal to get things started. From then out you can burn coke to make more coal into more coke and so on. Put these coke-making jobs on repeat. Only use one smelter to begin with, but you should be getting a group of [[Immigration|immigrants]] fairly soon, if you haven't already, and you can put them to work in the other smelters. Don't give up on finding coal right away. Dig around for a while and if you're starting to get impatient then burn some more wood into charcoal, smelt some ore, and make some [[weapon]]s. If you rely on charcoal for fuel then you'll be needing a ''lot'' of wood, so in that case dig out another room near the furnace and create a wood stockpile. You might also want to just remove a smelter, replace it with a [[wood furnace]], and create the new wood stockpile down in the smelting area. Finally, go designate more trees for chopping.
+
+===Forging===
+{{TipBox2|float=right|titlebg=#0a0|Alternative Energy|If you don't find coal then you will have to continue to burn wood into charcoal, or dig down to the bottom of the map and find the magma sea so you can power [[magma smelter]]s and [[magma forge]]s. Getting to magma can be difficult for various reasons that you will discover, so make sure you are ready for some trouble before you go that direction. Burning charcoal should work out okay in the short term.}}
+Once you have smelted some ore to get metal bars, and have additional bars of either coal or charcoal, you can start forging metal items. Here are some suggestions on what to make first:
+#'''[[Pick]]s''' - You may have only started out with one pick which limits the number of miners you have to one. By this point you are probably wishing you had more miners. Make a few picks and give some dwarves the mining labor once you get some immigrants. It doesn't matter what metal you use to make picks, at least when it comes to mining, so even copper is perfectly good.
+#'''[[Weapon]]s''' - Picks actually make pretty good weapons, but there can be some issues equipping them because they're tied to the mining labor. You may want to make a few axes. They make good weapons, at least against most lightly armored opponents you're likely to encounter first, and can be used to chop trees. Start with 5 or so.
+#'''[[Armor]]''' - You're going to want some armor. Start with mail shirts, helms, leggings, then gauntlets and boots. Start with 3 or so of each in the order listed, then make more later when your military grows.  Also make some shields out of wood, unless you're swimming in metal (since the shield's material doesn't matter for defensive purposes).  Once you have the essentials covered, you can include breastplates (but they take 3 bars of metal to make, and they don't cover as much of the torso and arms as a mail shirt). 
+An important thing to note is that mail shirts protect the upper leg as well as the torso and arms, and high boots protect the lower leg. As dwarves have no knees (at least in military terms), high boots and mail shirts are sufficient to protect your dwarves' legs.
+[[Steel]] is the best normal metal to make armor and most weapons out of, but you will likely find that you want some arms before you can make steel. [[Iron]] is good, as is [[bronze]]. [[Copper]] is not ideal, but it still works and is better than no metal weapons/armor at all.
+
+==Gemcutting and Trinkets==
+You should have uncovered some [[gem]]s by now, so put your [[jeweler]] to work [[Gem cutter|cutting]] them. These will be used for [[Trading|trade]].  Only buy things that you need in the first year. [[Finished goods|Stone crafts]] produced by a craftsdwarf can make good trading goods as well. To get enough goods, you will need to dedicate a craftsdwarf's workshop and craftsdwarf to this task full-time, but you're very unlikely to ever run out of stone.
+
+==Sticking to the Plan==
+{{TipBox2|float=right|titlebg=#a00|Getting Distracted|Say one of your new immigrants turns out to be a legendary weaver. Should you plant some pig tails and create a loom for him? '''No!''' Put his legendary butt to work smelting metal or something that's part of your current industry even though he has no skill at it. Do not split your efforts yet. You can make use of his unique talents later when you can afford to diversify your industry.}}
+Metalsmithing will be your primary economic activity, with cutting gems (and possibly making stone crafts) being used to give you some short-term [[wealth]] until the [[metal industry]] gets going. This means you will need miners, haulers, smiths and furnace operators. Unless a dwarf is doing something else vital to the proper functioning of your fort, such as training in the militia, making traps, cooking food, and so forth, they should be doing one of those four things.
+
+==Wealth and Invasion==
+{{TipBox2|float=right|titlebg=#a00|Crafting Invitations for Trouble|Creating too much wealth initially is a sure fire method of pulling down a goblin ambush that you are ill-equipped to deal with. Titans will also start attacking you should your wealth go over a certain amount. For this reason, spend no time smelting gold, smoothing, or engraving anything yet. Most of the wealth you create in the beginning should be the [[weapon|sharp pointy kind]].}}
+You may have struck [[gold]] or some other valuable metal, and you may be tempted to put your furnaces and smiths to work creating valuable metal crafts. Don't do it! Until you have your militia formed and fully equipped with armor and weaponry, your smelters and forge should be doing nothing else but smelting cheaper materials like coal, iron, making pig iron and steel if possible, and making weapons and armor. Making [[steel]] will actually increase your wealth quite a bit, but at least you can stab and beat things to death with steel; you can't make weapons from gold.
+
+=Military=
+
+Your '''military''' is an important part of fortress defense. Unless you have totally cut yourself off from the outside world, then you will want at least some sort of military. Once you reach this point, you should hopefully have enough dwarves to start a small military training program. You will need at least 5 dwarves who aren't otherwise doing anything important. If you don't have any spare dwarves yet, or just don't want to mess with it yet, just skip to the next section and come back to this later. Don't wait too long to set up your military though; you especially will want soldiers before you reach a population of 80 dwarves. (You will find out why.) When you're ready to start up your military, see the [[Military quickstart]] guide.
+
+= What Next? =
+
+Congratulations! If you've made it this far then you have a self-sustaining fort going and can now start to branch out into whatever you are interested in exploring. Expect some goblin invasions, forgotten beasts, titans, dragons, giants, and other creatures to interrupt your activities at various points. This is part of the [[fun]].
+
+Here are some things that people almost always do eventually, though not necessarily in any particular order (these are somewhat essential):
+*Build [[coffin]]s and a graveyard or [[tomb]]s for dead dwarves and pets
+*Set up a [[Healthcare|hospital]]
+*Build a [[well]]
+*Start producing [[textile industry|clothing]] to replace [[wear|worn-out attire]]
+*Build a [[jail]] for unruly dwarves
+*Set up [[Scheduling#Alert_Levels|civilian alerts]] to get civilians to a safe area during ambushes and sieges
+
+Here are some things that players often do as their population grows:
+*[[Smoothing|Smooth]] and [[engraving|engrave]] walls and floors
+*Produce [[Meat industry|Meat]], [[Egg production|eggs]], milk and [[Beekeeping industry|honey]]
+*Continue to expand the [[military]]
+*Explore new [[Industry|industries]]
+*Dig down to the [[caverns]] and create a defended lower entrance with traps to defend the fort against the [[creatures|denizens]] below
+*Enable [[Animal training]] for a dwarf and train some war animals
+*Build a [[Mass pitting]] system to dispose of caged enemies
+*Build above-ground [[construction]]s such as an archery tower or garden
+*Create a [[statue|statue garden]] or [[zoo]]
+*Farm in an [[Farming#Above-ground_farming|above-ground farm plot]]
+*Dig down to [[magma]] and set up [[magma forge]]s and [[magma smelter]]s to avoid the need for fuel
+*Build [[machine component]]s to pump magma and water
+*Create more [[Trap design|elaborate traps]] such as magma and drowning chambers
+*Try some [[stupid dwarf trick]]s
+
+You may also want to just read over the [[Dwarf fortress mode|Fortress Mode Reference Guide]] and the many other very useful documents on the wiki to give you other ideas of what to do.
+
+Keep in mind that how you play is not set in stone. Some people never defend, some start a [[Megaprojects|megaproject]] right after settling, some never dig and just build an above ground castle or town using logs. Some never smelt ore, some start smelting as soon as they arrive. Some make their home in the dangerous natural caverns. Some deal with invaders by flooding the map or isolating themselves completely. And that's not even considering the [[List of mods|mods]] and some of the crazier [[challenges]] that people have come up with. There's really no one "right" way to play DF.
+
+= Feedback =
+If you have any feedback on this guide, you can leave a message on the [[{{TALKPAGENAME}}|talk page]] for this article, or in [http://www.bay12forums.com/smf/index.php?topic=83452.0 this thread] on the forums.
+
+{{Getting Started}}
+{{Category|Fortress mode}}
+{{Category|Quickstart guide}}
+
+[[de:DF2012:Schnellstart]]
+[[ru:Быстрый старт]]
+[[zh:Quickstart guide]]

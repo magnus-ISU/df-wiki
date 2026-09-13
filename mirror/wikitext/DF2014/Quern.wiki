@@ -1,0 +1,59 @@
+{{Quality|Exceptional|15:25, 2 February 2015 (UTC)}}
+{{av}} 
+
+{{Workshop|name=Quern|key=q|job=
+* [[Milling]]
+* [[Papermaking]]
+|construction=
+* [[Furniture|Quern]]
+|construction_job=
+* [[Milling]]
+|use=
+* [[Blade weed]]
+* [[Cave wheat]]
+* [[Dimple cup]]
+* [[Hide root]]
+* [[Longland grass]]
+* [[Quarry bush|Rock nut]]
+* [[Sliver barb]]
+* [[Sweet pod]]
+* [[Whip vine]]
+* [[Cotton]]
+* [[Flax]]
+* [[Hemp]]
+* [[Jute]]
+* [[Kenaf]]
+* [[Pig tail]]
+* [[Ramie]]
+* [[Rope reed]]
+|production=
+* [[Flour|Dwarven wheat flour]]
+* [[Dwarven sugar]]
+* [[Flour|Longland flour]]
+* [[Quarry bush|Rock nut paste]]
+* [[Whip vine flour]]
+* [[Dimple dye]]
+* [[Emerald dye]]
+* [[Redroot dye]]
+* [[Sliver dye]]
+* [[Slurry]]
+}}
+
+A '''quern''' is a single-square [[workshop]] used to grind certain [[plant]]s into [[sugar]], [[flour]], [[dye]], and [[slurry]]. Each milling job requires an empty [[bag]], as the process will also produce [[seed]]s from plants being milled. Unlike a [[millstone]], the quern is powered by the dwarf using it to perform the labor. A {{k|q}}uern must be created at a [[Mason's workshop]] before it can be built as a workshop.
+
+The quern may also be used to mill seeds/nuts to [[Quarry bush|paste]].
+
+Ensuring the exclusive milling of certain plants (to, say, produce only dye, not flour) is cumbersome. It requires a stockpile that only allows these plants and setting it to {{K|q}}-'{{K|g}}ive To A Pile/Workshop', as the quern provides no menu to specify what to mill. You also need a furniture stockpile that allows only bags (deactivate wood, stone and metal as material to avoid it being cluttered with coffers,) setting that to 'giving' to the quern too.  It doesn't need to be two separate stockpiles, as the custom menu does allow item commingling.  
+
+If you don't set custom stockpile(s), the miller will pick the closest random plant and bag, with the usual, occasionally surprising definition of closest.  Additionally, you have to ensure somehow that the plants arrive at the right stockpile, for example by not allowing them on any other. Once you got this working, repeat for every other plant you want to mill, either switching the 'give' orders every time or setting up a separate quern for every plant combination.
+
+For general details read [[Stockpile#Give_to_a_stockpile.2Fworkshop|Giving to a Stockpile/Workshop]].
+
+Alternatively, to preserve what little sanity a DF player has left, just forbid all millable plants you don't want milled (for example from the [[stocks]] menu) and (re-)claim them once the milling job is done.
+
+As another alternative, the utility [[Utility:DFHack|DFHack]] provides a "job item-material" command that allows you to specify a plant to mill.
+
+== How to ==
+Command for building: {{k|b}}-{{k|w}}-{{k|q}}
+
+{{Workshops}}

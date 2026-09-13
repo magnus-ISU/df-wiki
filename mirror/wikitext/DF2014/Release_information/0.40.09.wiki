@@ -1,0 +1,39 @@
+{{release notes}}
+
+:The cleaning continues with this release!
+:&mdash;Toady One, August 17, 2014
+
+== Major bug fixes ==
+* Fixed problem causing domestic underground animals to be placed beyond their number (and then replaced at that new number)
+* Made people not so eager to jump in on the side of their relatives and friends if the relative/friend is berserk/etc.
+* Made creatures prefer to flee normally if possible (rather than jumping off cliffs etc.)
+* Stopped liquid flows in confined spaces from sometimes making items disappear
+* Made items that froze in ice reappear properly when ice melts
+* Allowed dwarves interested in marriage to start relationships properly (Quietust)
+* Removed some vestigial code stopping wagons from moving properly after move/attack speed split
+* Fixed a wagon AI error that caused them to fail to unload sometimes
+* Gave wagons the ability to go past each other in certain instances
+* Made invaders not come back as ghosts
+* Stopped non-historical dwarves from coming back as ghosts (put in fix for old saves that should lay them to rest soon after unpause)
+* Stopped ghosts from being considered in regular sight code
+* Fixed the defend burrow order
+* Allowed items made from gem materials (including large gems) to be stored in finished goods pile
+* Fixed broken logic that made trade good hauling require both trade good hauling and lever operation labors
+
+== Other bug fixes/tweaks ==
+* Fixed up quarry bush bag job vs. rock nuts
+* Added appropriate announcements for some additional circumstances under which a fort dwarf could assume a civ-level position
+* Added embark warning if civ is dead
+* Added optional confirmation window after preparing embark (default: pops up if points remain)
+* Printed job after name when following unit
+* Marked dwarves as "New Arrival" on unit/job screen instead of "No Job" while they are new
+* Added pole-setting parameters for world gen, allowed north+south pole and no-pole options
+* Fixed an error causing nearby site maps to be offloaded too often
+* Made hill dwarf sites put animals in pastures properly
+* Made animals not placed in pasture/waste/yard get placed even if their preferred type isn't available
+* Fixed some manual typos (Gorobay)
+* Initialized strict pop cap to 220 if not present in d_init
+* Made alerts without names show properly as "Alert State #" in squad mode
+* Finished updating pineapple raws
+* Made several export filenames use the format (region)-YYYYY-MM-DD-(etc)
+* Added error for unrecognized CREATURE in entity raw

@@ -1,0 +1,15 @@
+{{release notes}}
+
+: Smoothed out some rough areas in the adventure part of the release.  We'll be continuing on with bug fix releases.
+:&mdash;Toady One, May 11, 2016
+
+== Major bug fixes ==
+* Stopped zone corruption problem from adventure sites (caused crashes)
+* Stopped adventure camps from being aged by the age of the world repeatedly
+* Stopped certain site build orders from skipping the collapse check
+* Stopped prisoners in goblin sites from starting no quarter fights with their rescuers
+* Made people that join you stop personal/shared activities that might interfere them from following you
+
+== Other bug fixes/tweaks ==
+* Stopped felling of trees in the arena, so you wouldn't be teleported to a weird hidden region map
+* Indicated child/baby state of prisoners during look etc.
