@@ -1,0 +1,138 @@
+local env = {}
+
+local namespaces = {
+	{
+		-- namespace is the canonical namespace name (not an alias), e.g. the list at Special:AllPages
+		namespace = '23a',
+		-- versions are sorted in ascending order 
+		versions = {'0.21', '0.22', '0.23'},
+	},
+	{
+		namespace = '40d',
+		versions = {'0.27', '0.28'},
+	},
+	{
+		namespace = 'v0.31',
+		versions = {'0.31'},
+		aliases = {'DF2010'},
+	},
+	{
+		namespace = 'v0.34',
+		versions = {'0.34'},
+		aliases = {'DF2012'},
+	},
+	{
+		namespace = 'DF2014',
+		versions = {'0.40', '0.42', '0.43', '0.44', '0.47'},
+	},
+	{
+		namespace = 'Main',
+		versions = {'50'},
+		aliases = {'cv', ''},
+	},
+	-- mods: use the canonical name for the namespace index too, because they aren't sequenced
+	Masterwork = {
+		namespace = 'Masterwork',
+		versions = {},
+	},
+}
+local namespace_to_data = {}
+local version_to_namespace = {}
+local alias_to_namespace = {}
+for i, data in pairs(namespaces) do
+	if tonumber(i) ~= nil then
+		data.index = i
+	end
+	data.canonical_version = data.versions[#data.versions]
+	namespace_to_data[data.namespace] = data
+	namespace_to_data[string.lower(data.namespace)] = data
+	if not data.category_prefix then
+		data.category_prefix = data.namespace
+	end
+	for _, version in pairs(data.versions or {}) do
+		version_to_namespace[version] = data.namespace
+	end
+	for _, alias in pairs(data.aliases or {}) do
+		alias_to_namespace[alias] = data.namespace
+		alias_to_namespace[string.lower(alias)] = data.namespace
+	end
+end
+
+function env.normalizeNamespace(ns, default)
+	ns = string.lower(ns)
+	ns = alias_to_namespace[ns] or ns
+	ns = string.lower(ns)
+	if namespace_to_data[ns] then
+		return namespace_to_data[ns].namespace
+	elseif default then
+		return default
+	else
+		error('Unknown namespace: ' .. ns)
+	end
+end
+
+function env.isNamespaceKnown(ns)
+	if namespace_to_data[env.normalizeNamespace(ns, '')] then
+		return true
+	end
+end
+
+function env.isNamespaceVersioned(ns)
+	if env.getIndexForNamespace(ns, '') ~= '' then
+		return true
+	end
+end
+
+function env.versionToNamespace(version, default)
+	local parts = mw.text.split(version:gsub('^v', ''), '.', true)
+	local key = ''
+	while #parts > 0 do
+		if key ~= '' then
+			key = key .. '.'
+		end
+		key = key .. table.remove(parts, 1)
+		if version_to_namespace[key] then
+			return version_to_namespace[key]
+		end
+	end
+	if default then
+		return default
+	end
+	error('Unknown version: ' .. version)
+end
+
+function env.getNamespaceByIndex(i, default)
+	local data = namespaces[tonumber(i)]
+	if data then
+		return data.namespace
+	elseif default then
+		return default
+	else
+		error('Unknown namespace index: ' .. tostring(i))
+	end
+end
+
+function env.getIndexForNamespace(ns, default)
+	local data = namespace_to_data[env.normalizeNamespace(ns, '')]
+	if data then
+		return data.index
+	elseif default then
+		return default
+	else
+		error('Unknown namespace: ' .. tostring(ns))
+	end
+end
+
+function env.getIndexForVersion(v, default)
+	return env.getIndexForNamespace(env.versionToNamespace(v, default), default)
+end
+
+function env.getIndexFor(key, default)
+	local res = env.getIndexForNamespace(key, '')
+	if res ~= '' then
+		return res
+	end
+	return env.getIndexForVersion(key, default)
+end
+
+return env

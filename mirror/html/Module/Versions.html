@@ -1,0 +1,145 @@
+<div class="mw-parser-output"><div lang="en" dir="ltr" class="mw-content-ltr">
+<p>Version/namespace helpers.
+</p><p>For use in templates, see <a href="/index.php/Module:Versions/parserFunctions" title="Module:Versions/parserFunctions">module:versions/parserFunctions</a>
+</p>
+<hr />
+</div><div class="mw-highlight"><pre><span></span><span class="kd">local</span> <span class="n">env</span> <span class="o">=</span> <span class="p">{}</span>
+
+<span class="kd">local</span> <span class="n">namespaces</span> <span class="o">=</span> <span class="p">{</span>
+	<span class="p">{</span>
+		<span class="c1">-- namespace is the canonical namespace name (not an alias), e.g. the list at Special:AllPages</span>
+		<span class="n">namespace</span> <span class="o">=</span> <span class="s1">&#39;23a&#39;</span><span class="p">,</span>
+		<span class="c1">-- versions are sorted in ascending order </span>
+		<span class="n">versions</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;0.21&#39;</span><span class="p">,</span> <span class="s1">&#39;0.22&#39;</span><span class="p">,</span> <span class="s1">&#39;0.23&#39;</span><span class="p">},</span>
+	<span class="p">},</span>
+	<span class="p">{</span>
+		<span class="n">namespace</span> <span class="o">=</span> <span class="s1">&#39;40d&#39;</span><span class="p">,</span>
+		<span class="n">versions</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;0.27&#39;</span><span class="p">,</span> <span class="s1">&#39;0.28&#39;</span><span class="p">},</span>
+	<span class="p">},</span>
+	<span class="p">{</span>
+		<span class="n">namespace</span> <span class="o">=</span> <span class="s1">&#39;v0.31&#39;</span><span class="p">,</span>
+		<span class="n">versions</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;0.31&#39;</span><span class="p">},</span>
+		<span class="n">aliases</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;DF2010&#39;</span><span class="p">},</span>
+	<span class="p">},</span>
+	<span class="p">{</span>
+		<span class="n">namespace</span> <span class="o">=</span> <span class="s1">&#39;v0.34&#39;</span><span class="p">,</span>
+		<span class="n">versions</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;0.34&#39;</span><span class="p">},</span>
+		<span class="n">aliases</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;DF2012&#39;</span><span class="p">},</span>
+	<span class="p">},</span>
+	<span class="p">{</span>
+		<span class="n">namespace</span> <span class="o">=</span> <span class="s1">&#39;DF2014&#39;</span><span class="p">,</span>
+		<span class="n">versions</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;0.40&#39;</span><span class="p">,</span> <span class="s1">&#39;0.42&#39;</span><span class="p">,</span> <span class="s1">&#39;0.43&#39;</span><span class="p">,</span> <span class="s1">&#39;0.44&#39;</span><span class="p">,</span> <span class="s1">&#39;0.47&#39;</span><span class="p">},</span>
+	<span class="p">},</span>
+	<span class="p">{</span>
+		<span class="n">namespace</span> <span class="o">=</span> <span class="s1">&#39;Main&#39;</span><span class="p">,</span>
+		<span class="n">versions</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;50&#39;</span><span class="p">},</span>
+		<span class="n">aliases</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;cv&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">},</span>
+	<span class="p">},</span>
+	<span class="c1">-- mods: use the canonical name for the namespace index too, because they aren&#39;t sequenced</span>
+	<span class="n">Masterwork</span> <span class="o">=</span> <span class="p">{</span>
+		<span class="n">namespace</span> <span class="o">=</span> <span class="s1">&#39;Masterwork&#39;</span><span class="p">,</span>
+		<span class="n">versions</span> <span class="o">=</span> <span class="p">{},</span>
+	<span class="p">},</span>
+<span class="p">}</span>
+<span class="kd">local</span> <span class="n">namespace_to_data</span> <span class="o">=</span> <span class="p">{}</span>
+<span class="kd">local</span> <span class="n">version_to_namespace</span> <span class="o">=</span> <span class="p">{}</span>
+<span class="kd">local</span> <span class="n">alias_to_namespace</span> <span class="o">=</span> <span class="p">{}</span>
+<span class="kr">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">data</span> <span class="kr">in</span> <span class="nb">pairs</span><span class="p">(</span><span class="n">namespaces</span><span class="p">)</span> <span class="kr">do</span>
+	<span class="kr">if</span> <span class="nb">tonumber</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="o">~=</span> <span class="kc">nil</span> <span class="kr">then</span>
+		<span class="n">data</span><span class="p">.</span><span class="n">index</span> <span class="o">=</span> <span class="n">i</span>
+	<span class="kr">end</span>
+	<span class="n">data</span><span class="p">.</span><span class="n">canonical_version</span> <span class="o">=</span> <span class="n">data</span><span class="p">.</span><span class="n">versions</span><span class="p">[</span><span class="o">#</span><span class="n">data</span><span class="p">.</span><span class="n">versions</span><span class="p">]</span>
+	<span class="n">namespace_to_data</span><span class="p">[</span><span class="n">data</span><span class="p">.</span><span class="n">namespace</span><span class="p">]</span> <span class="o">=</span> <span class="n">data</span>
+	<span class="n">namespace_to_data</span><span class="p">[</span><span class="nb">string.lower</span><span class="p">(</span><span class="n">data</span><span class="p">.</span><span class="n">namespace</span><span class="p">)]</span> <span class="o">=</span> <span class="n">data</span>
+	<span class="kr">if</span> <span class="ow">not</span> <span class="n">data</span><span class="p">.</span><span class="n">category_prefix</span> <span class="kr">then</span>
+		<span class="n">data</span><span class="p">.</span><span class="n">category_prefix</span> <span class="o">=</span> <span class="n">data</span><span class="p">.</span><span class="n">namespace</span>
+	<span class="kr">end</span>
+	<span class="kr">for</span> <span class="n">_</span><span class="p">,</span> <span class="n">version</span> <span class="kr">in</span> <span class="nb">pairs</span><span class="p">(</span><span class="n">data</span><span class="p">.</span><span class="n">versions</span> <span class="ow">or</span> <span class="p">{})</span> <span class="kr">do</span>
+		<span class="n">version_to_namespace</span><span class="p">[</span><span class="n">version</span><span class="p">]</span> <span class="o">=</span> <span class="n">data</span><span class="p">.</span><span class="n">namespace</span>
+	<span class="kr">end</span>
+	<span class="kr">for</span> <span class="n">_</span><span class="p">,</span> <span class="n">alias</span> <span class="kr">in</span> <span class="nb">pairs</span><span class="p">(</span><span class="n">data</span><span class="p">.</span><span class="n">aliases</span> <span class="ow">or</span> <span class="p">{})</span> <span class="kr">do</span>
+		<span class="n">alias_to_namespace</span><span class="p">[</span><span class="n">alias</span><span class="p">]</span> <span class="o">=</span> <span class="n">data</span><span class="p">.</span><span class="n">namespace</span>
+		<span class="n">alias_to_namespace</span><span class="p">[</span><span class="nb">string.lower</span><span class="p">(</span><span class="n">alias</span><span class="p">)]</span> <span class="o">=</span> <span class="n">data</span><span class="p">.</span><span class="n">namespace</span>
+	<span class="kr">end</span>
+<span class="kr">end</span>
+
+<span class="kr">function</span> <span class="nc">env</span><span class="p">.</span><span class="nf">normalizeNamespace</span><span class="p">(</span><span class="n">ns</span><span class="p">,</span> <span class="n">default</span><span class="p">)</span>
+	<span class="n">ns</span> <span class="o">=</span> <span class="nb">string.lower</span><span class="p">(</span><span class="n">ns</span><span class="p">)</span>
+	<span class="n">ns</span> <span class="o">=</span> <span class="n">alias_to_namespace</span><span class="p">[</span><span class="n">ns</span><span class="p">]</span> <span class="ow">or</span> <span class="n">ns</span>
+	<span class="n">ns</span> <span class="o">=</span> <span class="nb">string.lower</span><span class="p">(</span><span class="n">ns</span><span class="p">)</span>
+	<span class="kr">if</span> <span class="n">namespace_to_data</span><span class="p">[</span><span class="n">ns</span><span class="p">]</span> <span class="kr">then</span>
+		<span class="kr">return</span> <span class="n">namespace_to_data</span><span class="p">[</span><span class="n">ns</span><span class="p">].</span><span class="n">namespace</span>
+	<span class="kr">elseif</span> <span class="n">default</span> <span class="kr">then</span>
+		<span class="kr">return</span> <span class="n">default</span>
+	<span class="kr">else</span>
+		<span class="nb">error</span><span class="p">(</span><span class="s1">&#39;Unknown namespace: &#39;</span> <span class="o">..</span> <span class="n">ns</span><span class="p">)</span>
+	<span class="kr">end</span>
+<span class="kr">end</span>
+
+<span class="kr">function</span> <span class="nc">env</span><span class="p">.</span><span class="nf">isNamespaceKnown</span><span class="p">(</span><span class="n">ns</span><span class="p">)</span>
+	<span class="kr">if</span> <span class="n">namespace_to_data</span><span class="p">[</span><span class="n">env</span><span class="p">.</span><span class="n">normalizeNamespace</span><span class="p">(</span><span class="n">ns</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">)]</span> <span class="kr">then</span>
+		<span class="kr">return</span> <span class="kc">true</span>
+	<span class="kr">end</span>
+<span class="kr">end</span>
+
+<span class="kr">function</span> <span class="nc">env</span><span class="p">.</span><span class="nf">isNamespaceVersioned</span><span class="p">(</span><span class="n">ns</span><span class="p">)</span>
+	<span class="kr">if</span> <span class="n">env</span><span class="p">.</span><span class="n">getIndexForNamespace</span><span class="p">(</span><span class="n">ns</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">)</span> <span class="o">~=</span> <span class="s1">&#39;&#39;</span> <span class="kr">then</span>
+		<span class="kr">return</span> <span class="kc">true</span>
+	<span class="kr">end</span>
+<span class="kr">end</span>
+
+<span class="kr">function</span> <span class="nc">env</span><span class="p">.</span><span class="nf">versionToNamespace</span><span class="p">(</span><span class="n">version</span><span class="p">,</span> <span class="n">default</span><span class="p">)</span>
+	<span class="kd">local</span> <span class="n">parts</span> <span class="o">=</span> <span class="n">mw</span><span class="p">.</span><span class="n">text</span><span class="p">.</span><span class="n">split</span><span class="p">(</span><span class="n">version</span><span class="p">:</span><span class="n">gsub</span><span class="p">(</span><span class="s1">&#39;^v&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">),</span> <span class="s1">&#39;.&#39;</span><span class="p">,</span> <span class="kc">true</span><span class="p">)</span>
+	<span class="kd">local</span> <span class="n">key</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
+	<span class="kr">while</span> <span class="o">#</span><span class="n">parts</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="kr">do</span>
+		<span class="kr">if</span> <span class="n">key</span> <span class="o">~=</span> <span class="s1">&#39;&#39;</span> <span class="kr">then</span>
+			<span class="n">key</span> <span class="o">=</span> <span class="n">key</span> <span class="o">..</span> <span class="s1">&#39;.&#39;</span>
+		<span class="kr">end</span>
+		<span class="n">key</span> <span class="o">=</span> <span class="n">key</span> <span class="o">..</span> <span class="nb">table.remove</span><span class="p">(</span><span class="n">parts</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+		<span class="kr">if</span> <span class="n">version_to_namespace</span><span class="p">[</span><span class="n">key</span><span class="p">]</span> <span class="kr">then</span>
+			<span class="kr">return</span> <span class="n">version_to_namespace</span><span class="p">[</span><span class="n">key</span><span class="p">]</span>
+		<span class="kr">end</span>
+	<span class="kr">end</span>
+	<span class="kr">if</span> <span class="n">default</span> <span class="kr">then</span>
+		<span class="kr">return</span> <span class="n">default</span>
+	<span class="kr">end</span>
+	<span class="nb">error</span><span class="p">(</span><span class="s1">&#39;Unknown version: &#39;</span> <span class="o">..</span> <span class="n">version</span><span class="p">)</span>
+<span class="kr">end</span>
+
+<span class="kr">function</span> <span class="nc">env</span><span class="p">.</span><span class="nf">getNamespaceByIndex</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">default</span><span class="p">)</span>
+	<span class="kd">local</span> <span class="n">data</span> <span class="o">=</span> <span class="n">namespaces</span><span class="p">[</span><span class="nb">tonumber</span><span class="p">(</span><span class="n">i</span><span class="p">)]</span>
+	<span class="kr">if</span> <span class="n">data</span> <span class="kr">then</span>
+		<span class="kr">return</span> <span class="n">data</span><span class="p">.</span><span class="n">namespace</span>
+	<span class="kr">elseif</span> <span class="n">default</span> <span class="kr">then</span>
+		<span class="kr">return</span> <span class="n">default</span>
+	<span class="kr">else</span>
+		<span class="nb">error</span><span class="p">(</span><span class="s1">&#39;Unknown namespace index: &#39;</span> <span class="o">..</span> <span class="nb">tostring</span><span class="p">(</span><span class="n">i</span><span class="p">))</span>
+	<span class="kr">end</span>
+<span class="kr">end</span>
+
+<span class="kr">function</span> <span class="nc">env</span><span class="p">.</span><span class="nf">getIndexForNamespace</span><span class="p">(</span><span class="n">ns</span><span class="p">,</span> <span class="n">default</span><span class="p">)</span>
+	<span class="kd">local</span> <span class="n">data</span> <span class="o">=</span> <span class="n">namespace_to_data</span><span class="p">[</span><span class="n">env</span><span class="p">.</span><span class="n">normalizeNamespace</span><span class="p">(</span><span class="n">ns</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">)]</span>
+	<span class="kr">if</span> <span class="n">data</span> <span class="kr">then</span>
+		<span class="kr">return</span> <span class="n">data</span><span class="p">.</span><span class="n">index</span>
+	<span class="kr">elseif</span> <span class="n">default</span> <span class="kr">then</span>
+		<span class="kr">return</span> <span class="n">default</span>
+	<span class="kr">else</span>
+		<span class="nb">error</span><span class="p">(</span><span class="s1">&#39;Unknown namespace: &#39;</span> <span class="o">..</span> <span class="nb">tostring</span><span class="p">(</span><span class="n">ns</span><span class="p">))</span>
+	<span class="kr">end</span>
+<span class="kr">end</span>
+
+<span class="kr">function</span> <span class="nc">env</span><span class="p">.</span><span class="nf">getIndexForVersion</span><span class="p">(</span><span class="n">v</span><span class="p">,</span> <span class="n">default</span><span class="p">)</span>
+	<span class="kr">return</span> <span class="n">env</span><span class="p">.</span><span class="n">getIndexForNamespace</span><span class="p">(</span><span class="n">env</span><span class="p">.</span><span class="n">versionToNamespace</span><span class="p">(</span><span class="n">v</span><span class="p">,</span> <span class="n">default</span><span class="p">),</span> <span class="n">default</span><span class="p">)</span>
+<span class="kr">end</span>
+
+<span class="kr">function</span> <span class="nc">env</span><span class="p">.</span><span class="nf">getIndexFor</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="n">default</span><span class="p">)</span>
+	<span class="kd">local</span> <span class="n">res</span> <span class="o">=</span> <span class="n">env</span><span class="p">.</span><span class="n">getIndexForNamespace</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">)</span>
+	<span class="kr">if</span> <span class="n">res</span> <span class="o">~=</span> <span class="s1">&#39;&#39;</span> <span class="kr">then</span>
+		<span class="kr">return</span> <span class="n">res</span>
+	<span class="kr">end</span>
+	<span class="kr">return</span> <span class="n">env</span><span class="p">.</span><span class="n">getIndexForVersion</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="n">default</span><span class="p">)</span>
+<span class="kr">end</span>
+
+<span class="kr">return</span> <span class="n">env</span>
+</pre></div>
+</div>

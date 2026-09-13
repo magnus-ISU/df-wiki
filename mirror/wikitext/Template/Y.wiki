@@ -1,0 +1,18 @@
+<noinclude>
+Simple cell template for filling in a comparison table.
+
+USAGE:
+
+<nowiki>{{Y}}</nowiki>
+
+{| class="wikitable"
+|-
+|</noinclude>{{X|{{{1|Y}}}|bg={{{bg|DDFBFF}}}}}<noinclude>
+|}
+
+<nowiki>{{Y | YES! | bg=00FF00 }}</nowiki>
+
+{| class="wikitable"
+|-
+|{{X | YES! | bg=00FF00 }}
+|}

@@ -1,0 +1,10 @@
+<includeonly>{{delete|Incorrect namespace{{#if:{{{1|}}}|<nowiki>;</nowiki> moved to [[{{{1}}}:{{PAGENAME}}]]}}}}</includeonly><noinclude>
+Marks an incorrectly-namespaced page for deletion.
+
+Note that pages in an incorrect namespace should ideally be moved to the '''correct''' namespace before the original is tagged for deletion.
+
+Usage:
+ {<nowiki/>{wrong namespace}}
+or:
+ {<nowiki/>{wrong namespace|''correct namespace''}}
+</noinclude>

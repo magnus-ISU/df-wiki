@@ -1,0 +1,22 @@
+<includeonly><code>{{#rreplace:{{{1}}}|(.)|<span>$1</span>}}</code></includeonly><noinclude>
+This displays the generated wiki source code ''before rendering'' (for debugging complex templates)
+==Examples==
+<pre>{{wikisrc|This is a [[link]].}}</pre>
+{{wikisrc|This is a [[link]].}}
+----
+Note that templates are expanded:
+<pre>{{wikisrc|{{av}}}}</pre>
+{{wikisrc|{{av}}}}
+<pre>{{wikisrc|This is a [[link]] and a {{template}}}}</pre>
+{{wikisrc|This is a [[link]] and a {{template}}}}
+([[Template:template]] does not exist, so a link is produced to it instead.)
+----
+A recursive example:
+<pre>{{wikisrc|A {{wikisrc}} example}}</pre>
+{{wikisrc|A {{wikisrc}} example}}
+----
+Another, more complex example (note that each character in the &lt;code> tags is surrounded by a &lt;span> tag)
+<pre>{{wikisrc|A {{wikisrc|An inner {{wikisrc}} inclusion}} example}}</pre>
+{{wikisrc|A {{wikisrc|An inner {{wikisrc}} inclusion}} example}}
+
+</noinclude>

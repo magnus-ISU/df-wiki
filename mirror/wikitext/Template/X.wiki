@@ -1,0 +1,20 @@
+<noinclude>
+Simple cell template for filling in a comparison table.
+
+USAGE:
+
+<nowiki>{{X}}</nowiki>
+
+{| class="wikitable"
+|-
+|</noinclude>style="background: #{{{bg|DDFBFF}}}; color: {{{color|black}}}; vertical-align: middle; text-align: {{{align|center}}}; {{{style|}}}" |{{{1|X}}}<noinclude>
+|}
+
+<nowiki>{{x | on! | bg=00FF00 | color=black | align=right | style=font-size:25px; }}</nowiki>
+
+{| class="wikitable"
+|-
+|style="background: #00FF00; color: black; vertical-align: middle; text-align: right; font-size:25px;" |on!
+|}
+
+</noinclude>

@@ -1,0 +1,17 @@
+return function(env)
+	local out = {}
+	for k, v in pairs(env) do
+		if type(v) == 'function' then
+			out[k] = function(frame)
+				local args = {}
+				local i = 1
+				while frame.args[i] do
+					args[i] = frame.args[i]
+					i = i + 1
+				end
+				return v(unpack(args))
+			end
+		end
+	end
+	return out
+end
