@@ -116,6 +116,7 @@
 - [Bilou](Bilou/)
 - [Birch](Birch/)
 - [Bismuth](Bismuth/)
+- [Bismuth_bronze](Bismuth_bronze/)
 - [Bismuthinite](Bismuthinite/)
 - [Bitter_melon](Bitter_melon/)
 - [Bitter_orange](Bitter_orange/)
@@ -1579,7 +1580,7 @@
 - [Zinc](Zinc/)
 - [Zoysia](Zoysia/)
 
-## Pages (5089)
+## Pages (5090)
 
 - [!!](!!.md)
 - [%s](%25s.md)
@@ -2005,6 +2006,7 @@
 - [Black opal](Black_opal.md)
 - [Black pyrope](Black_pyrope.md)
 - [Black sand](Black_sand.md)
+- [Black zircon](Black_zircon.md)
 - [Black-cap](Black-cap.md)
 - [Black-crested gibbon](Black-crested_gibbon.md)
 - [Black-handed gibbon](Black-handed_gibbon.md)
